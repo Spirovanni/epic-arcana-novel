@@ -1,0 +1,21 @@
+{
+  "name": "epic-arcana-novel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.52.0",
+    "deepseek": "^0.0.2",
+    "dotenv": "^16.5.0",
+    "openai": "5"
+  }
+}
