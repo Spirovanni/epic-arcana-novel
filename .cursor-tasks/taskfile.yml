@@ -1,0 +1,22 @@
+version: "3"
+
+tasks:
+  draft-next:
+    desc: "Call AI gateway to draft the next incomplete scene"
+    commands:
+      - node draft_scripts/draftNext.mjs
+
+  open-scene:
+    desc: "Open the latest draft in Cursor editor"
+    commands:
+      - cursor docs/scenes/$(ls -t docs/scenes | head -n1)
+
+  run-n8n:
+    desc: "Start n8n in local Docker"
+    commands:
+      - docker compose up n8n
+
+  test:
+    desc: "Run lint + unit tests"
+    commands:
+      - npm run lint && npm run test
