@@ -1,0 +1,130 @@
+// ChronoScriptor: Unified Product Requirements Specification (PRD)
+// Prepared for Cursor IDE + Taskmaster-AI
+
+/**
+ * PROJECT OVERVIEW:
+ * ChronoScriptor is an AI-assisted, story-driven authoring platform for speculative fiction and historical fantasy built around nonlinear timelines, tarot-based Trionfi systems, and character evolution arcs.
+ * It is also a tiered membership platform empowering community participation in story development, voting rights, co-authoring privileges, and lore creation influence.
+ */
+
+/**
+ * CORE OBJECTIVES:
+ * - Deliver a modular creative engine with deep AI support
+ * - Render a custom fantasy map (from user-supplied artwork) using Mapbox/Leaflet
+ * - Provide timeline-aware scene editing and character arc tracking
+ * - Support lore-based interactivity and crowd-based narrative shaping
+ */
+
+// 🔧 TECH STACK
+Frontend:
+- Next.js 15+ (App Router), React 19 (RC), TailwindCSS, shadcn/ui
+Backend:
+- Next.js API Routes with Prisma ORM
+- PostgreSQL (via Supabase)
+Authentication:
+- Clerk
+Payments:
+- Stripe
+Deployment:
+- Vercel (Edge Functions + CDN)
+AI/Automation:
+- Taskmaster-AI (OpenAI, Claude)
+Interactivity:
+- Mapbox GL JS or Leaflet.js, ReactFlow, Mermaid.js
+
+// 📁 FILE STRUCTURE
+/app
+├── layout.tsx
+├── page.tsx
+├── map/              → Map interface using custom image + interactive pins
+├── timeline/         → Branching timeline editor + paradox visualizer
+├── characters/       → Character matrix + emotional/temporal arcs
+├── trionfi/          → Deck builder, scene/card links
+├── scenes/           → Tiptap editor with Trionfi tag support
+├── codex/            → Lore wiki with MDX + AI search
+├── account/          → Member portal & tier settings
+├── api/              → Taskmaster-AI endpoints & subscription logic
+
+// 🗃 DATABASE SCHEMA (SUPABASE)
+- profiles(id, email, membership_tier, display_name)
+- locations(id, name, description, arcana, coordinates)
+- scenes(id, title, summary, cards_used[], timeline_id, location_id)
+- characters(id, name, arc_data, affinity_cards[], relationships)
+- timelines(id, name, branches[], convergence_points[], paradox_flags[])
+- trionfi_cards(id, name, arcana_type, effects, activation_cost)
+- lore_entries(id, keyword, content_md, related_scenes[])
+
+// 💳 MEMBERSHIP TIERS (Stripe/LemonSqueezy)
+1. Reader – view completed lore, chapters, and timelines
+2. Scribe – comment/annotate story branches and character arcs
+3. Oracle – vote on lore, card meanings, and chapter outcomes
+4. Architect – co-author, branch, or propose new canonical forks
+
+// 🗺 MAP INTEGRATION INSTRUCTIONS
+### Leaflet.js Approach (for PNG map):
+- Place your custom image (e.g. `public/maps/laurasia.png`)
+- Use CRS.Simple projection:
+```tsx
+<MapContainer center={[500, 750]} zoom={2} crs={L.CRS.Simple}>
+  <ImageOverlay url="/maps/laurasia.png" bounds={[[0, 0], [1000, 1500]]} />
+  {locations.map(loc => <Marker position={loc.coords}><Popup>{loc.name}</Popup></Marker>)}
+</MapContainer>
+```
+
+### Mapbox Tiles Approach:
+- Upload your map as a tileset via Mapbox Studio
+- Use Mapbox GL JS with custom style URL
+- Pull lore pin data from Supabase `locations` table
+
+// 🤖 TASKMASTER-AI API ROUTES
+- /api/prompt/scene-rewrite
+- /api/prompt/timeline-analysis
+- /api/prompt/card-usage-suggestions
+- /api/prompt/lore-expansion
+
+// ✨ UI FEATURES
+- Tarot-scroll dark theme
+- Color-coded timelines and Trionfi deck markers
+- Scene voting, badge system, and real-time collaboration hooks
+
+// ✅ MVP DELIVERABLES
+- Interactive map with lore markers
+- Timeline branching + paradox tracker
+- Trionfi deck builder + tagging system
+- Scene editor with card, location, and timeline fields
+- Lore codex (MDX + AI search)
+- Account management + membership tiers
+- Taskmaster-AI co-authoring prompts
+
+// 🔮 FUTURE FEATURES
+- Agent-based simulation of storylines
+- MidJourney/Sora-generated art overlays
+- Export to PDF/Markdown/ePub
+- Mobile co-authoring companion app
+- Public chapter polling with version history
+
+// 🔁 LOGICAL DEPENDENCY ORDER
+1. Auth and membership schema
+2. Lore + character data models
+3. Map and scene editor
+4. Timeline logic and paradox visualizer
+5. Taskmaster AI hooks + prompt tuning
+6. Community voting, card meta-engine, and role escalation
+
+// 🧠 TASKMASTER PROMPT EXAMPLES
+- "Rewrite Chapter 4 using 'The Magician' as symbolic lens."
+- "Compare Salasa's arc across timeline_beta and gamma."
+- "Show paradox risk if Francisco never meets Novella."
+- "Suggest forbidden card combos that would trigger narrative collapse."
+
+// 📈 SUCCESS METRICS
+- 50% of users submit or annotate 3+ chapters
+- 70% map interaction within 7 days
+- 25% co-authoring tier adoption
+- 100+ Trionfi combinations explored monthly
+
+// 🛡 RISK MITIGATION
+- Start with 2 timeline branches
+- Preload 20 base cards and 10 location nodes
+- Limit early paradox checking to major nodes
+- Use community-curated card archetypes early on 

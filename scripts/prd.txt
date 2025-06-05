@@ -1,0 +1,104 @@
+<context>
+# Overview  
+ChronoScriptor is an AI-assisted interactive storycrafting environment tailored for authors writing speculative fiction involving time travel, tarot-based powers, and complex narrative arcs. It enables writers to visually manage timelines, build immersive world maps, track Trionfi card-based story mechanics, and draft chapters that evolve with lore and character progression. Ideal for solo authors or collaborative writers managing multilayered plots.
+
+# Core Features  
+- **Interactive World Map**  
+  - Connect story events to real map coordinates and landmarks from your fictional world.
+  - Visual navigation into lore, faction presence, and character scenes.
+  - Map click reveals scene, lore, and Trionfi interactions.
+
+- **Timeline Editor**  
+  - Allows tracking of multiple timelines (Alpha/Beta/Gamma) and their convergence points.
+  - Visual paradox flags, character appearances, and story arc overlays.
+  - Essential for writers dealing with alternate histories or branching storylines.
+
+- **Trionfi Card System**  
+  - Tag scenes, characters, and powers with custom tarot-based abilities.
+  - Manages card combinations, costs, effects, and narrative impact.
+  - Interacts with timeline and location systems for deep lore immersion.
+
+- **Scene and Chapter Builder**  
+  - Markdown-based editor with custom fields for POV, conflict, resolution, and timeline impact.
+  - Integrates Taskmaster AI for rewrite prompts, stylistic suggestions, and pacing feedback.
+
+- **Character Matrix and Relationship Tracker**  
+  - Visual journey maps for arcs and transformations.
+  - Graph-based view of relationships including romantic, familial, or betrayal arcs.
+  - Highlights Trionfi affinities and evolution stages.
+
+- **Lore Codex**  
+  - Searchable, taggable encyclopedia of story lore, including characters, places, artifacts, and cultures.
+  - Filter by Arcana, faction, or timeline.
+</context>
+
+<PRD>
+# Technical Architecture  
+- **System Components**:  
+  - Next.js 15+ (App Router)
+  - TailwindCSS (UI styling)
+  - Supabase (PostgreSQL, Auth)
+  - Cursor IDE and Taskmaster AI (OpenAI/Claude endpoints)
+  - Optional: Prisma ORM or Drizzle for database access
+
+- **Data Models**:  
+  - `locations`: id, name, description, arcana, coordinates, faction
+  - `timelines`: id, name, branches, paradox_flags, convergence_points
+  - `characters`: id, name, bio, affinities, arc_stages, relationships
+  - `scenes`: id, title, summary, POV, conflict, timeline_id, card_tags, location_id
+  - `trionfi_cards`: id, name, arcana_type, effects, cost, forbidden_combinations
+  - `lore_entries`: id, keyword, content, type (location, character, artifact)
+
+- **APIs and Integrations**:  
+  - Taskmaster AI Prompt APIs
+    - `/api/prompt/scene-rewrite`
+    - `/api/prompt/timeline-analysis`
+    - `/api/prompt/card-usage`
+  - Mapbox or Leaflet.js for interactive map overlays
+  - ReactFlow or d3.js for timeline graph
+
+- **Infrastructure Requirements**:  
+  - Vercel for frontend hosting
+  - Supabase for managed backend
+  - GitHub CI for deployments
+
+# Development Roadmap  
+## MVP Requirements  
+- Interactive Map (basic pin placement + lore modal)
+- Scene Builder (markdown editor with metadata fields)
+- Character Manager (editable cards with relationships)
+- Trionfi Card Index (view, tag, link to scenes)
+- Basic Timeline View (text-based or simple graph)
+- Lore Codex Search
+
+## Future Enhancements  
+- Full timeline graph with paradox engine
+- AI-enhanced character arc generation
+- Card Combination Simulator
+- Dynamic Story Summarizer (AI synopsis for timelines)
+- Multiplayer collaboration support
+- Integration with visual render engines (Sora/Midjourney)
+
+# Logical Dependency Chain
+- **Foundation First**:
+  - DB schema and Supabase setup
+  - Auth and file routing (Next.js layout & auth shell)
+
+- **Usable Frontend ASAP**:
+  - Start with Scene Builder → connect to character & card systems
+  - Add Lore Codex and basic Map overlays
+
+- **Layered Enhancements**:
+  - Add Timeline editor once characters and scenes are trackable
+  - Introduce Taskmaster AI endpoints after basic UI tested
+
+# Risks and Mitigations  
+- **Complexity of timeline data**: abstract into modular branches early, use ReactFlow or GraphQL fragments
+- **Feature creep**: start with usable writing hub, delay full paradox engine
+- **AI prompts overreach**: start with editing and summarization, not content generation
+- **Resource constraints**: prioritize frontend usefulness over backend perfection
+
+# Appendix  
+- Research: Storybook design inspired by Novel Factory, Aeon Timeline, and Twine
+- Technical references: Leaflet.js, Supabase, Prisma, Mermaid.js for visuals
+</PRD>
