@@ -1,35 +1,37 @@
 <context>
 # Overview  
-ChronoScriptor is an AI-assisted interactive storycrafting environment tailored for authors writing speculative fiction involving time travel, tarot-based powers, and complex narrative arcs. It enables writers to visually manage timelines, build immersive world maps, track Trionfi card-based story mechanics, and draft chapters that evolve with lore and character progression. Ideal for solo authors or collaborative writers managing multilayered plots.
+ChronoScriptor is an AI-assisted interactive storycrafting environment built for speculative fiction authors working with time travel, tarot-based magic systems, and complex narrative arcs. It enables writers to build and manage chapters connected to timelines, characters, Trionfi mechanics, and evolving lore. Optimized for Sudowrite-style drafting and Epicarcana-based tracking, it integrates Neon as the core database for dynamic content linking across your novel.
 
 # Core Features  
-- **Interactive World Map**  
-  - Connect story events to real map coordinates and landmarks from your fictional world.
-  - Visual navigation into lore, faction presence, and character scenes.
-  - Map click reveals scene, lore, and Trionfi interactions.
+- **Chapter-Centric World Map**  
+  - Connect chapter events to precise locations and lore.
+  - Clickable map reveals linked chapters, Trionfi card effects, and setting changes.
+  - Designed to support chapter clustering per region or timeline.
 
-- **Timeline Editor**  
-  - Allows tracking of multiple timelines (Alpha/Beta/Gamma) and their convergence points.
-  - Visual paradox flags, character appearances, and story arc overlays.
-  - Essential for writers dealing with alternate histories or branching storylines.
+- **Timeline & Paradox System**  
+  - Track chapter branches across Alpha, Beta, and Gamma timelines.
+  - Highlights paradox triggers, convergence points, and key divergences.
+  - Allows chapter-level anchoring to specific timeline threads.
 
-- **Trionfi Card System**  
-  - Tag scenes, characters, and powers with custom tarot-based abilities.
-  - Manages card combinations, costs, effects, and narrative impact.
-  - Interacts with timeline and location systems for deep lore immersion.
+- **Trionfi Card Engine**  
+  - Embed Trionfi cards into chapters, scenes, and character moments.
+  - Tracks card usage, combinations, costs, forbidden overlaps.
+  - Syncs with Neon to reflect card state changes across chapters.
 
-- **Scene and Chapter Builder**  
-  - Markdown-based editor with custom fields for POV, conflict, resolution, and timeline impact.
-  - Integrates Taskmaster AI for rewrite prompts, stylistic suggestions, and pacing feedback.
+- **Chapter Builder with Sudowrite Sync**  
+  - Markdown-based editor with metadata: POV, emotion, card used, timeline effect.
+  - Exports to Sudowrite for drafting, imports style and tone feedback into JSON structure.
+  - Integrated with Epicarcana for visual tracking of chapter completion and quality.
 
-- **Character Matrix and Relationship Tracker**  
-  - Visual journey maps for arcs and transformations.
-  - Graph-based view of relationships including romantic, familial, or betrayal arcs.
-  - Highlights Trionfi affinities and evolution stages.
+- **Character Arc & Relationship Visualizer**  
+  - Graph-style matrix connecting characters, chapter arcs, and Trionfi affinities.
+  - Timeline filters: see character status across all timelines.
+  - Supports love triangles, betrayal arcs, and redemptive loops.
 
-- **Lore Codex**  
-  - Searchable, taggable encyclopedia of story lore, including characters, places, artifacts, and cultures.
-  - Filter by Arcana, faction, or timeline.
+- **Lore & Narrative Codex**  
+  - Unified encyclopedia for timeline events, places, factions, artifacts, and prophecies.
+  - Auto-tags references found in chapters and links back to Neon entries.
+  - Filterable by Trionfi, timeline, or location type.
 </context>
 
 <PRD>
@@ -37,68 +39,75 @@ ChronoScriptor is an AI-assisted interactive storycrafting environment tailored 
 - **System Components**:  
   - Next.js 15+ (App Router)
   - TailwindCSS (UI styling)
-  - Supabase (PostgreSQL, Auth)
-  - Cursor IDE and Taskmaster AI (OpenAI/Claude endpoints)
-  - Optional: Prisma ORM or Drizzle for database access
+  - Neon (PostgreSQL with branching support)
+  - Cursor IDE + Taskmaster AI (OpenAI/Claude endpoints)
+  - Optional: Drizzle ORM or Prisma client for Neon
 
 - **Data Models**:  
-  - `locations`: id, name, description, arcana, coordinates, faction
-  - `timelines`: id, name, branches, paradox_flags, convergence_points
-  - `characters`: id, name, bio, affinities, arc_stages, relationships
-  - `scenes`: id, title, summary, POV, conflict, timeline_id, card_tags, location_id
-  - `trionfi_cards`: id, name, arcana_type, effects, cost, forbidden_combinations
-  - `lore_entries`: id, keyword, content, type (location, character, artifact)
+  - `chapters`: id, title, number, summary, POV, trionfi_card_ids[], location_id, timeline_id, draft_status, style_notes
+  - `timelines`: id, name, branch_name, convergence_events[], paradox_flags[]
+  - `characters`: id, name, bio, arc_stages[], trionfi_affinities[], relationship_links[]
+  - `scenes`: id, chapter_id, name, beat_type, conflict, resolution, card_used, word_count
+  - `trionfi_cards`: id, name, arcana_type, divine_effect, activation_method, forbidden_combos[]
+  - `locations`: id, name, type, sensory_details, arcana_linked, factions_present
+  - `lore_entries`: id, keyword, category (location, character, item, event), content, tag_links[]
 
 - **APIs and Integrations**:  
-  - Taskmaster AI Prompt APIs
-    - `/api/prompt/scene-rewrite`
-    - `/api/prompt/timeline-analysis`
-    - `/api/prompt/card-usage`
-  - Mapbox or Leaflet.js for interactive map overlays
-  - ReactFlow or d3.js for timeline graph
+  - **Sudowrite Sync**:
+    - `/api/sync/chapter-style`
+    - `/api/prompt/sudowrite-draft-upload`
+  - **Taskmaster AI**:
+    - `/api/prompt/scene-analysis`
+    - `/api/prompt/card-forecast`
+    - `/api/prompt/arc-consistency`
+  - Map: Mapbox (preferred) or Leaflet.js
+  - Timeline Visualization: ReactFlow with Neon timeline joins
 
 - **Infrastructure Requirements**:  
-  - Vercel for frontend hosting
-  - Supabase for managed backend
-  - GitHub CI for deployments
+  - Vercel or Netlify for frontend deployment
+  - Neon for relational + branching database
+  - GitHub CI for pull-based deployment flows
+  - n8n webhook integrations for chapter event triggers and JSON file exports
 
 # Development Roadmap  
-## MVP Requirements  
-- Interactive Map (basic pin placement + lore modal)
-- Scene Builder (markdown editor with metadata fields)
-- Character Manager (editable cards with relationships)
-- Trionfi Card Index (view, tag, link to scenes)
-- Basic Timeline View (text-based or simple graph)
-- Lore Codex Search
+## MVP Goals  
+- Scene & Chapter Builder (Sudowrite-ready)
+- Interactive Timeline Tracker (basic branch view)
+- Character Visual Matrix (arc + Trionfi overlay)
+- Trionfi Index + Chapter Linking
+- Lore Codex (searchable + auto-tagged)
+- Neon Schema + CRUD UI for chapters
 
 ## Future Enhancements  
-- Full timeline graph with paradox engine
-- AI-enhanced character arc generation
-- Card Combination Simulator
-- Dynamic Story Summarizer (AI synopsis for timelines)
-- Multiplayer collaboration support
-- Integration with visual render engines (Sora/Midjourney)
+- Paradox Validation System (with AI feedback on risk)
+- Chapter Impact Graph (visualize ripple effects)
+- Multiplayer Timeline Editing
+- Sudowrite AI Feedback Summarizer (style feedback extraction)
+- Auto-linked poetic symbolism analyzer
+- Export system to generate submission-ready manuscript from Neon data
 
-# Logical Dependency Chain
-- **Foundation First**:
-  - DB schema and Supabase setup
-  - Auth and file routing (Next.js layout & auth shell)
+# Logical Dependency Chain  
+- **Core Foundation**:
+  - Neon DB schema + Vercel front-end layout
+  - Auth shell + route protections (Next.js middleware)
 
-- **Usable Frontend ASAP**:
-  - Start with Scene Builder → connect to character & card systems
-  - Add Lore Codex and basic Map overlays
+- **Writing Hub First**:
+  - Build Chapter Builder → integrate with Sudowrite sync
+  - Add Trionfi indexing + card-to-chapter mapping
+  - Hook Lore Codex to Neon for auto-tagging
 
-- **Layered Enhancements**:
-  - Add Timeline editor once characters and scenes are trackable
-  - Introduce Taskmaster AI endpoints after basic UI tested
+- **Advanced Logic Later**:
+  - Add timeline branching once core content is stable
+  - Introduce Taskmaster endpoints to refine tone, paradoxes, arc cohesion
 
 # Risks and Mitigations  
-- **Complexity of timeline data**: abstract into modular branches early, use ReactFlow or GraphQL fragments
-- **Feature creep**: start with usable writing hub, delay full paradox engine
-- **AI prompts overreach**: start with editing and summarization, not content generation
-- **Resource constraints**: prioritize frontend usefulness over backend perfection
+- **Sudowrite format drift**: create JSON->Markdown sync bridge, validate structure in both directions
+- **Timeline linking bugs**: use strong Neon foreign keys, staged data updates
+- **Too much AI feedback**: prioritize structure suggestions first, style tuning later
+- **Early burnout**: MVP should support complete novel start-to-finish for 1 book
 
 # Appendix  
-- Research: Storybook design inspired by Novel Factory, Aeon Timeline, and Twine
-- Technical references: Leaflet.js, Supabase, Prisma, Mermaid.js for visuals
+- Comparative Research: Sudowrite, StoryShop, Novel Crafter, Aeon Timeline, Plottr
+- Design Inspirations: Dante’s Divine Comedy, Tarot Kabbalah maps, Italo Calvino structures
+- Utilities: Mermaid.js for flowchart overlays, Neon branching for timeline simulations
 </PRD>

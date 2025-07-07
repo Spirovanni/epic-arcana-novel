@@ -1,24 +1,45 @@
 {
   "name": "epic-arcana-novel",
   "version": "1.0.0",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
+  "type": "module",
+  "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "draft": "node draft_scripts/draftNext.mjs"
+    "draft": "node draft_scripts/draftNext.mjs",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "directories": {
+    "docs": "docs"
+  },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
     "deepseek": "^0.0.2",
     "dotenv": "^16.5.0",
     "node-fetch": "^3.3.2",
     "openai": "^5.0.1",
-    "task-master-ai": "^0.16.1"
+    "task-master-ai": "^0.16.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "15.3.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4.1.11",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "typescript": "^5"
   }
 }
