@@ -5,9 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ThemeToggleButton } from '@/components/ThemeToggleButton';
 import { DropdownMenu } from '@/components/DropdownMenu';
+import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { isSignedIn, user } = useUser();
 
   const navItems = [
     { name: 'Timeline', href: '/timeline' },
@@ -21,21 +23,23 @@ export function Navbar() {
       description: 'Interactive map connecting chapters to locations and lore',
       href: '/features/world-map',
       icon: '🗺️',
-      category: 'Core Features'
+      category: 'Writing Tools'
     },
     {
       title: 'Timeline & Paradox System',
       description: 'Track Alpha, Beta, Gamma timelines and paradox triggers',
       href: '/features/timelines',
       icon: '⏳',
-      category: 'Core Features'
+      category: 'Core Features',
+      featured: true
     },
     {
       title: 'Trionfi Card Engine',
       description: 'Embed tarot-based magic system into scenes and chapters',
       href: '/features/trionfi-cards',
       icon: '🃏',
-      category: 'Core Features'
+      category: 'Core Features',
+      featured: true
     },
     {
       title: 'Chapter Builder',
@@ -63,7 +67,8 @@ export function Navbar() {
       description: 'Taskmaster AI for scene analysis and arc consistency',
       href: '/features/ai-tools',
       icon: '🤖',
-      category: 'AI Tools'
+      category: 'AI Tools',
+      featured: true
     },
     {
       title: 'Sudowrite Sync',
@@ -146,18 +151,45 @@ export function Navbar() {
               </motion.div>
             ))}
             
-            {/* CTA Button */}
+            {/* Auth Buttons */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.8 }}
+              className="flex items-center space-x-4"
             >
-              <Link
-                href="/dashboard"
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
-              >
-                Get Started
-              </Link>
+              {isSignedIn ? (
+                <>
+                  <Link
+                    href="/dashboard"
+                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105"
+                  >
+                    Dashboard
+                  </Link>
+                  <UserButton 
+                    appearance={{
+                      elements: {
+                        avatarBox: "w-10 h-10 rounded-full border-2 border-gray-200 dark:border-gray-700 hover:border-purple-500 dark:hover:border-purple-400 transition-colors",
+                        userButtonPopoverCard: "shadow-2xl border border-gray-200 dark:border-gray-700",
+                        userButtonPopoverActionButton: "hover:bg-gray-50 dark:hover:bg-gray-800"
+                      }
+                    }}
+                  />
+                </>
+              ) : (
+                <>
+                  <SignInButton mode="modal">
+                    <button className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-200">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <SignUpButton mode="modal">
+                    <button className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg transform hover:scale-105">
+                      Get Started
+                    </button>
+                  </SignUpButton>
+                </>
+              )}
             </motion.div>
           </motion.div>
 
@@ -267,13 +299,44 @@ export function Navbar() {
                   transition={{ duration: 0.2, delay: (navItems.length + 1) * 0.1 }}
                   className="pt-2"
                 >
-                  <Link
-                    href="/dashboard"
-                    className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md inline-block"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get Started
-                  </Link>
+                  {isSignedIn ? (
+                    <div className="flex items-center space-x-4">
+                      <Link
+                        href="/dashboard"
+                        className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md inline-block"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Dashboard
+                      </Link>
+                      <UserButton 
+                        appearance={{
+                          elements: {
+                            avatarBox: "w-10 h-10 rounded-full border-2 border-gray-200 dark:border-gray-700",
+                            userButtonPopoverCard: "shadow-2xl border border-gray-200 dark:border-gray-700"
+                          }
+                        }}
+                      />
+                    </div>
+                  ) : (
+                    <div className="space-y-2">
+                      <SignInButton mode="modal">
+                        <button 
+                          className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-200 py-2"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Sign In
+                        </button>
+                      </SignInButton>
+                      <SignUpButton mode="modal">
+                        <button 
+                          className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md inline-block"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          Get Started
+                        </button>
+                      </SignUpButton>
+                    </div>
+                  )}
                 </motion.div>
               </div>
             </motion.div>

@@ -10,6 +10,17 @@ interface DropdownItem {
   href: string;
   icon?: string;
   category?: string;
+  featured?: boolean;
+  gradient?: string;
+}
+
+interface FeatureCard {
+  title: string;
+  description: string;
+  href: string;
+  icon: string;
+  gradient: string;
+  items?: string[];
 }
 
 interface DropdownMenuProps {
@@ -36,7 +47,35 @@ export function DropdownMenu({ trigger, items, title }: DropdownMenuProps) {
     };
   }, []);
 
-  const groupedItems = items.reduce((acc, item) => {
+  const featureCards: FeatureCard[] = [
+    {
+      title: "Timeline System",
+      description: "Master the complexity of time travel narratives with our advanced timeline management.",
+      href: "/features/timelines",
+      icon: "⏳",
+      gradient: "from-purple-500 to-blue-500",
+      items: ["Alpha Timeline", "Beta Timeline", "Gamma Timeline", "Paradox Detection"]
+    },
+    {
+      title: "Trionfi Cards",
+      description: "Integrate tarot-based magic seamlessly into your narrative structure.",
+      href: "/features/trionfi-cards",
+      icon: "🃏",
+      gradient: "from-amber-500 to-orange-500",
+      items: ["Card Database", "Scene Integration", "Divination Logic", "Arcana Powers"]
+    },
+    {
+      title: "AI Writing Tools",
+      description: "Enhance your creative process with intelligent writing assistance.",
+      href: "/features/ai-tools",
+      icon: "🤖",
+      gradient: "from-emerald-500 to-teal-500",
+      items: ["Taskmaster AI", "Scene Analysis", "Arc Consistency", "Character Insights"]
+    }
+  ];
+
+  const quickAccessItems = items.filter(item => !item.featured);
+  const groupedQuickAccess = quickAccessItems.reduce((acc, item) => {
     const category = item.category || 'General';
     if (!acc[category]) {
       acc[category] = [];
@@ -60,7 +99,7 @@ export function DropdownMenu({ trigger, items, title }: DropdownMenuProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="absolute top-full left-0 mt-2 w-96 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 overflow-hidden"
+            className="absolute top-full left-0 mt-2 w-[800px] bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 overflow-hidden"
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -75,59 +114,97 @@ export function DropdownMenu({ trigger, items, title }: DropdownMenuProps) {
               </div>
             )}
 
-            <div className="py-2">
-              {Object.entries(groupedItems).map(([category, categoryItems]) => (
-                <div key={category}>
-                  {category !== 'General' && (
-                    <div className="px-6 py-2">
-                      <h4 className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        {category}
-                      </h4>
-                    </div>
-                  )}
-                  
-                  {categoryItems.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      onClick={() => setIsOpen(false)}
+            {/* Main Content Grid */}
+            <div className="flex">
+              {/* Left Side - Feature Cards */}
+              <div className="flex-1 p-6 border-r border-gray-200 dark:border-gray-700">
+                <div className="space-y-4">
+                  {featureCards.map((card, index) => (
+                    <motion.div
+                      key={card.href}
+                      className="group relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.2, delay: index * 0.1 }}
+                      whileHover={{ scale: 1.02 }}
                     >
-                      <motion.div
-                        className="relative px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer"
-                        onMouseEnter={() => setHoveredItem(item.href)}
-                        onMouseLeave={() => setHoveredItem(null)}
-                        whileHover={{ x: 4 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <div className="flex items-start space-x-4">
-                          {item.icon && (
-                            <div className="flex-shrink-0 mt-1">
-                              <span className="text-2xl">{item.icon}</span>
-                            </div>
-                          )}
+                      <Link href={card.href} onClick={() => setIsOpen(false)}>
+                        <div className="flex items-start p-4">
+                          {/* Icon with gradient background */}
+                          <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br ${card.gradient} flex items-center justify-center text-white text-xl mr-4 group-hover:scale-110 transition-transform duration-300`}>
+                            {card.icon}
+                          </div>
+                          
+                          {/* Content */}
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium text-gray-900 dark:text-white">
-                              {item.title}
+                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                              {card.title}
+                            </h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 mb-3">
+                              {card.description}
                             </p>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                              {item.description}
-                            </p>
+                            
+                            {/* Feature List */}
+                            <div className="grid grid-cols-2 gap-1">
+                              {card.items?.map((item, i) => (
+                                <div key={i} className="flex items-center text-xs text-gray-500 dark:text-gray-400">
+                                  <div className="w-1 h-1 bg-gray-400 rounded-full mr-2"></div>
+                                  {item}
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                        
-                        {hoveredItem === item.href && (
-                          <motion.div
-                            className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 to-blue-600"
-                            initial={{ opacity: 0, scaleY: 0 }}
-                            animate={{ opacity: 1, scaleY: 1 }}
-                            transition={{ duration: 0.2 }}
-                          />
-                        )}
-                      </motion.div>
-                    </Link>
+                      </Link>
+                    </motion.div>
                   ))}
                 </div>
-              ))}
+              </div>
+              
+              {/* Right Side - Quick Access Lists */}
+              <div className="w-80 p-6">
+                <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-4">Quick Access</h3>
+                <div className="space-y-6">
+                  {Object.entries(groupedQuickAccess).map(([category, categoryItems]) => (
+                    <div key={category}>
+                      <h4 className="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+                        {category}
+                      </h4>
+                      <div className="space-y-1">
+                        {categoryItems.map((item) => (
+                          <Link
+                            key={item.href}
+                            href={item.href}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            <motion.div
+                              className="flex items-center px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer group"
+                              onMouseEnter={() => setHoveredItem(item.href)}
+                              onMouseLeave={() => setHoveredItem(null)}
+                              whileHover={{ x: 4 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              {item.icon && (
+                                <span className="text-lg mr-3 group-hover:scale-110 transition-transform duration-200">
+                                  {item.icon}
+                                </span>
+                              )}
+                              <div className="flex-1 min-w-0">
+                                <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                                  {item.title}
+                                </p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                                  {item.description}
+                                </p>
+                              </div>
+                            </motion.div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
 
             <div className="px-6 py-4 bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
