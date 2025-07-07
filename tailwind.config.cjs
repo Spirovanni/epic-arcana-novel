@@ -95,8 +95,8 @@ module.exports = {
       screens: {
         'prose': '65ch',
         'wide-prose': '80ch',
-      }
-    },
+      },
+      },
   },
   plugins: [
     require('@tailwindcss/typography'),
