@@ -1,0 +1,95 @@
+{
+    "Card_Structure": {
+        "major_arcana": {
+            "count": 22,
+            "power_level": "Divine",
+            "description": "Each card represents a fundamental force of reality and human experience",
+            "temporal_impact": "Can create, alter, or destroy timelines",
+            "activation_requirement": "Requires deep spiritual connection and understanding"
+        },
+        "minor_arcana": {
+            "suits": {
+                "Temporalis": {
+                    "element": "Time",
+                    "domain": "Past, present, future manipulation",
+                    "court_cards": ["Keeper", "Navigator", "Weaver", "Master"],
+                    "numbered_cards": "1-10 representing temporal cycles"
+                },
+                "Animae": {
+                    "element": "Soul",
+                    "domain": "Human consciousness and emotion",
+                    "court_cards": ["Seeker", "Guardian", "Healer", "Sovereign"],
+                    "numbered_cards": "1-10 representing stages of spiritual growth"
+                },
+                "Stellae": {
+                    "element": "Divine",
+                    "domain": "Celestial power and divine will",
+                    "court_cards": ["Herald", "Prophet", "Oracle", "Deity"],
+                    "numbered_cards": "1-10 representing divine hierarchy"
+                },
+                "Materiae": {
+                    "element": "Matter",
+                    "domain": "Physical reality and transformation",
+                    "court_cards": ["Artisan", "Alchemist", "Builder", "Destroyer"],
+                    "numbered_cards": "1-10 representing states of matter"
+                }
+            },
+            "power_level": "Mortal to Semi-Divine",
+            "temporal_impact": "Can influence but not fundamentally alter timelines"
+        }
+    },
+    "Power_Sources": {
+        "human_will": {
+            "description": "The card user's personal determination and understanding",
+            "strength": "Grows with experience and self-knowledge",
+            "limitation": "Capped by mortal understanding"
+        },
+        "divine_essence": {
+            "description": "Residual power from the cards' creation",
+            "strength": "Immense but difficult to control",
+            "limitation": "Can overwhelm unprepared users"
+        },
+        "temporal_resonance": {
+            "description": "Energy drawn from timeline intersections",
+            "strength": "Varies based on temporal location",
+            "limitation": "Unstable near paradoxes"
+        },
+        "collective_belief": {
+            "description": "Power drawn from those who believe in the cards",
+            "strength": "Grows as more people use the cards",
+            "limitation": "Can be corrupted by mass fear or desire"
+        }
+    },
+    "Activation_Methods": {
+        "meditation": {
+            "user": "Scholars and mystics",
+            "process": "Deep contemplation on card meaning",
+            "power_level": "Moderate but stable",
+            "risk": "Low"
+        },
+        "ritual": {
+            "user": "Priests and occultists",
+            "process": "Ceremonial invocation with specific rites",
+            "power_level": "High",
+            "risk": "Moderate - can attract divine attention"
+        },
+        "intuition": {
+            "user": "Natural sensitives like La Signora",
+            "process": "Instinctive connection to card essence",
+            "power_level": "Variable but potentially extreme",
+            "risk": "High - unpredictable results"
+        },
+        "academic": {
+            "user": "Researchers like Francisco",
+            "process": "Systematic study and application",
+            "power_level": "Low to moderate",
+            "risk": "Low but limited potential"
+        },
+        "desperate_invocation": {
+            "user": "Anyone in extreme circumstances",
+            "process": "Raw emotional plea",
+            "power_level": "Explosive but brief",
+            "risk": "Extreme - can cause paradoxes"
+        }
+    }
+} 

@@ -1,0 +1,104 @@
+{
+    "Places_of_Prominence_Laurasia": [
+      {
+        "name": "Hyperborea Library",
+        "other_names": ["The Citadel of the Shining Ones"],
+        "sensory_description": "A vast, crystalline fortress that glows with a soft, ethereal light.  The air is filled with the sound of distant chimes and the scent of frost.",
+        "location": "Located at the northernmost point of Laurasia, surrounded by the icy expanse of the Hyperborean Sea.",
+        "type": "Cyclopean Library-City",
+        "description": "A tiered citadel of translucent ice-stone that refracts polar sunlight into reading chambers below.  Scrolls here are etched on mica leaves that sing when turned.",
+        "notable_features": "Contains the only intact copy of the lost ‘Cicero Codex Borealis’.  Frost-lamps powered by aurora energy keep ink from fading.",
+        "lore": "Founded by the Shining Ones before the last axial tilt; scholars claim its vaults shift location whenever the Pole Star realigns.",
+        "affiliation": "Neutral—policed by the Varangian Archivists",
+        "linked_arcana": "The Hermit"
+      },
+      {
+        "name": "Citadel of Borealis",
+        "other_names": ["The Chrono-Fortress"],
+        "sensory_description": "A towering structure of shimmering ice and stone, surrounded by a swirling aurora.  The air is crisp and filled with the scent of pine.",
+        "location": "Located in the heart of the Hyperborean Sea, surrounded by a vast expanse of ice and snow.",
+        "type": "Fortress-Observatory",
+        "description": "A hexagonal bastion perched on a basalt column rising from the Sea of Glass.  Its ramparts double as an armillary sphere tracking convergent timelines.",
+        "notable_features": "Houses the Chrono-Bell whose toll resets minor paradoxes within a day’s march.",
+        "lore": "Built by Roger de Flor’s engineer-magi during the First Catalan Incursion; now garrisoned by knights of the Order of the Dragon.",
+        "affiliation": "Grand Catalan Company",
+        "linked_arcana": "The Tower"
+      },
+      {
+        "name": "Ironroot Mountains",
+        "other_names": ["The Orichalcum Peaks"],
+        "sensory_description": "A range of jagged peaks that glint with metallic hues, surrounded by the scent of molten metal and the sound of clanging hammers.",
+        "location": "Stretching across the western edge of Laurasia, bordering the Sea of Orichalcum.",
+        "type": "Mountain Range",
+        "description": "Jagged peaks shot through with metallic trees whose sap smelts into orichalcum.",
+        "notable_features": "Canyons echo with ‘Smith-songs’—natural harmonics that temper blades left to resonate overnight.",
+        "lore": "Legend holds that the Kusanagi was re-forged here after shattering a dragon’s scale.",
+        "affiliation": "Independent dwarf-clans & Hospitaller prospectors",
+        "linked_arcana": "Strength"
+      },
+      {
+        "name": "Selene Gate",
+        "type": "Moon-Temple & Portal",
+        "description": "Marble arch flanked by twin crescent pylons; at syzygy it opens a mirror-path to Gondwana’s Shadow Coast.",
+        "notable_features": "Central altar floats on a column of lunar gravity, allowing weightless martial training.",
+        "lore": "Custodied by Salasa Atumari’s tide-priests who levy ‘silver tithes’ for each crossing.",
+        "affiliation": "Salasa’s Tide Cult",
+        "linked_arcana": "The High Priestess"
+      },
+      {
+        "name": "Hollow Spire",
+        "type": "Natural/Arcane Monolith",
+        "description": "A kilometer-high needle of obsidian with a spiraling cavity down its core; ascending winds produce organ-like drones.",
+        "notable_features": "Acoustics translate spoken vows into binding geasa enforced by the land itself.",
+        "lore": "Petrarch is prophesied to utter a verse here that will shatter Dagon’s deterministic script.",
+        "affiliation": "Neutral—pilgrimage site for poets & oath-breakers alike",
+        "linked_arcana": "Judgement"
+      },
+      {
+        "name": "Aurum Bazaar",
+        "type": "Floating Market-City",
+        "description": "Golden barges chained together on the River Zephyr, trading relics, spices, and fragments of future history.",
+        "notable_features": "Chrono-merchants accept memories as currency; too many bargains leave patrons hollow-eyed but prescient.",
+        "lore": "Site where Giovanna first senses the Cintamani’s pulse resonating with the Golden Fleece badges.",
+        "affiliation": "Merchant Syndicate of the White Company",
+        "linked_arcana": "The Wheel of Fortune"
+      },
+      {
+        "name": "Rift of Ages",
+        "type": "Temporal Chasm",
+        "description": "A desert gorge cleft by a meteor of Prima Materia; layers of exposed strata display epochs out of order.",
+        "notable_features": "Travelers descending its terraces experience time ratios that halve each level—an hour above equals years below.",
+        "lore": "Templar cartographers mapped a stair-path that lets one converse with ancestors five generations past.",
+        "affiliation": "Knights Templar (clandestine dig site)",
+        "linked_arcana": "Temperance"
+      },
+      {
+        "name": "Mechanikos",
+        "type": "Clockwork City",
+        "description": "Interlocking brass districts rotate on cogs the size of coliseums, aligning streets with constellations every midnight.",
+        "notable_features": "Central Orrery Tower predicts portal flares three days ahead—crucial for Zanetti scheduling.",
+        "lore": "Founded by a guild of Lazarite lepers who replaced failing limbs with gear-prostheses.",
+        "affiliation": "Order of St. Lazarus",
+        "linked_arcana": "The Magician"
+      },
+      {
+        "name": "Glass Sea of Zephyria",
+        "type": "Petrified Inland Sea",
+        "description": "Waves frozen mid-crest in transparent quartz, allowing passage over submarine ruins visible beneath one’s feet.",
+        "notable_features": "Standing atop the tallest ‘wave’ grants line-of-sight to every other place in Laurasia for a heartbeat at dawn.",
+        "lore": "Varangian sagas say the sea was flash-frozen when a Shining One dropped the Golden Apple into its depths.",
+        "affiliation": "Nomadic Oracle-fishers",
+        "linked_arcana": "The Hanged Man"
+      },
+      {
+        "name": "Ebon-Heath Sanctuary",
+        "type": "Sacred Grove",
+        "description": "Blackbark yews form a labyrinth whose paths rearrange with each equinox; silver owls guard silent pools of memory.",
+        "notable_features": "Drinking the pool’s water lets mortals speak once with a deceased loved one—at the cost of their oldest memory.",
+        "lore": "Dante buried a sealed canto here, accessible only when the labyrinth spells his true love’s name.",
+        "affiliation": "Custodes of the Holy Trinity",
+        "linked_arcana": "Death"
+      }
+    ]
+  }
+  

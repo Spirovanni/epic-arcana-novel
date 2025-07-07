@@ -1,0 +1,193 @@
+{
+    "timeline": [
+      {
+        "id": "myth-001",
+        "label": "Forging of the Trionfi",
+        "year": null,
+        "era": "Mythic",
+        "historical": false,
+        "summary": "Shining Ones create the 22 Major Arcana, embedding timeline-shaping power."
+      },
+      {
+        "id": "hist-48bce-001",
+        "label": "Alexandrian Library Fire",
+        "year": -48,
+        "era": "Late Roman Republic",
+        "historical": true,
+        "summary": "Caesar's siege fire destroys scroll stacks; refugees spirit Thoth papyri north—the future 'Book of Thoth' nucleus. During Caesar's siege of Alexandria, dockside flames damage store-rooms of the Great Library; fleeing scholars carry crates that later seed the legendary Book of Thoth."
+      },
+      {
+        "id": "hist-45bce-001",
+        "label": "Cicero drafts De Gloria",
+        "year": -45,
+        "year_end": -44,
+        "era": "Late Roman Republic",
+        "historical": true,
+        "summary": "Composed at Tusculum; annotated copy ('Cicero Codex Borealis') will be hidden in Hyperborea Library and later drive Petrarch's quest."
+      },
+      {
+        "id": "hist-43bce-001",
+        "label": "Cicero's death",
+        "year": -43,
+        "era": "Roman Republic",
+        "historical": true,
+        "summary": "Cicero's death triggers a timeline-A paradox."
+      },
+      {
+        "id": "hist-42bce-001",
+        "label": "Cicero Codex Borealis hidden",
+        "year": -42,
+        "era": "Late Roman Republic",
+        "historical": true,
+        "summary": "Atticus (or another Ciceronian ally) smuggles the annotated De Gloria to the Hyperborea Library during the post-proscription chaos."
+      },
+      {
+        "id": "opt-13bce-001",
+        "label": "Consecration of the Ara Pacis",
+        "year": -13,
+        "era": "Augustan Age",
+        "historical": false,
+        "summary": "Altar reliefs animate every Great Conjunction; next cycle reveals Hannibal breach timing."
+      },
+      {
+        "id": "hist-9ce-001",
+        "label": "Battle of the Teutoburg Forest",
+        "year": 9,
+        "era": "Early Roman Empire",
+        "historical": true,
+        "summary": "Three legions (XVII-XIX) are wiped out by Arminius; their lost eagles become coveted relics in later centuries."
+      },
+      {
+        "id": "hist-79ce-001",
+        "label": "Eruption of Mount Vesuvius",
+        "year": 79,
+        "era": "Early Roman Empire",
+        "historical": true,
+        "summary": "Pompeii and Herculaneum entombed in ash—later excavations in the story uncover a fresco resembling the Wheel of Fortune."
+      },
+      {
+        "id": "fic-128ce-001",
+        "label": "Hyperborea Library opens to Roman envoys",
+        "year": 128,
+        "era": "Hadrianic Era",
+        "historical": false,
+        "summary": "Emperor Hadrian dispatches a secret delegation beyond the Arctic Circle; their sealed report hints at a city of ice-glass archives."
+      },
+      {
+        "id": "hist-212ce-001",
+        "label": "Constitutio Antoniniana",
+        "year": 212,
+        "era": "Severan Dynasty",
+        "historical": true,
+        "summary": "Edict of Caracalla grants Roman citizenship to nearly all free men in the empire."
+      },
+      {
+        "id": "fic-271ce-001",
+        "label": "Second (unrecorded) Vesuvius breach",
+        "year": 271,
+        "era": "Crisis of the Third Century",
+        "historical": false,
+        "summary": "A minor fissure releases a burst of chronotonic ash—later mined by alchemists to forge time-reactive inks for the Trionfi cards."
+      },
+      {
+        "id": "hist-312ce-001",
+        "label": "Vision at the Milvian Bridge",
+        "year": 312,
+        "era": "Constantinian Era",
+        "historical": true,
+        "summary": "On the eve of battle, Constantine adopts the Chi-Rho standard after a visionary sign, altering imperial religious policy."
+      },  
+      {
+        "id": "hist-1302-001",
+        "label": "Dante's exile",
+        "year": 1302,
+        "era": "Late Middle Ages",
+        "historical": true,
+        "summary": "Frees Dante to join the Zanetti Train as chronicler."
+      },
+      {
+        "id": "story-1305-001",
+        "label": "First Roger de Flor death",
+        "year": 1305,
+        "era": "Late Middle Ages",
+        "historical": false,
+        "summary": "Assassinated at Adrianople in timeline-A; establishes recurring death loops."
+      },
+      {
+        "id": "story-1321-001",
+        "label": "Petrarch drafts Trionfi deck",
+        "year": 1321,
+        "month": "March",
+        "day": 1,
+        "historical": false,
+        "summary": "At University of Bologna he sketches the first card prototypes."
+      },
+      {
+        "id": "arc-fp-1321-01",
+        "label": "Creation of Trionfi & first meeting with La Signora",
+        "year": 1321,
+        "month": "April",
+        "day": 6,
+        "historical": false,
+        "summary": "Inciting-incident cluster: Petrarch invents the Trionfi deck; Giovanna (La Signora del Gioco) enters his life; the cards' latent power flickers."
+      },
+      {
+        "id": "story-1321-002",
+        "label": "Zanetti Train manifests in Bologna",
+        "year": 1321,
+        "month": "May",
+        "day": 1,
+        "historical": false,
+        "summary": "Anachronistic locomotive sparks the adventure."
+      },
+      {
+        "id": "arc-fp-1321-02",
+        "label": "Boarding the Zanetti Train",
+        "year": 1321,
+        "month": "May",
+        "day": 4,
+        "historical": false,
+        "summary": "Rising-action beat: Petrarch departs Bologna with Dante and the Grand Catalan Company, stepping into the wider temporal conflict."
+      },
+      {
+        "id": "story-1321-003",
+        "label": "Recruitment of La Signora del Gioco",
+        "year": 1321,
+        "month": "June",
+        "day": 11,
+        "historical": false,
+        "summary": "Dante persuades Giovanna to bring Petrarch aboard."
+      },
+      {
+        "id": "story-1321-004",
+        "label": "Petrarch's first Fool activation",
+        "year": 1321,
+        "month": "July",
+        "day": 21,
+        "historical": false,
+        "summary": "Resets a minor paradox while departing for Pangea."
+      },
+      {
+        "id": "arc-fp-1321-03",
+        "label": "Midpoint—discovery of Cicero's lost manuscript",
+        "year": 1321,
+        "month": "September",
+        "historical": false,
+        "summary": "Petrarch finds the annotated *De Gloria* (Cicero Codex) and realises the full stakes of Dagon's scheme."
+      },
+      {
+        "id": "story-1325-001",
+        "label": "Roger's third death stand",
+        "year": 1325,
+        "historical": false,
+        "summary": "Dies defending the train; Dante accepts fixed points in time."
+      },
+      {
+        "id": "proj-1330-001",
+        "label": "Projected Crown Ritual deadline",
+        "year": 1330,
+        "historical": false,
+        "summary": "If protagonists fail, Dagon unleashes Hannibal's host, sealing Inferno gate."
+      }
+    ]
+} 

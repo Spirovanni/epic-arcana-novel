@@ -1,0 +1,312 @@
+{
+    "Character_Arcs": {
+        "Francisco_Petrarch": {
+            "arc_type": "Hero's Journey",
+            "stages": {
+                "initial_state": {
+                    "description": "Young law student at University of Bologna, infatuated with Novella d'Andrea",
+                    "characteristics": [
+                        "Intellectual curiosity",
+                        "Social naivety",
+                        "Family expectations",
+                        "Hidden poetic talent"
+                    ],
+                    "conflicts": [
+                        "Father's expectations vs. personal desires",
+                        "Academic pressure vs. creative impulses",
+                        "Social status vs. true identity"
+                    ]
+                },
+                "inciting_incident": {
+                    "description": "Creation of Trionfi cards and encounter with La Signora del Gioco",
+                    "key_events": [
+                        "Development of card game",
+                        "First meeting with La Signora",
+                        "Discovery of cards' power",
+                        "Initial temporal awareness"
+                    ],
+                    "character_development": [
+                        "Awakening to greater possibilities",
+                        "First steps toward destiny",
+                        "Recognition of hidden talents"
+                    ]
+                },
+                "rising_action": {
+                    "description": "Journey with Dante and the Grand Catalan Company",
+                    "key_events": [
+                        "Boarding the Zanetti Train",
+                        "Learning from Dante",
+                        "Confronting Dagon's influence",
+                        "Developing relationship with La Signora"
+                    ],
+                    "character_development": [
+                        "Growing understanding of temporal mechanics",
+                        "Deepening connection to Trionfi cards",
+                        "Expanding worldview",
+                        "Strengthening resolve"
+                    ]
+                },
+                "midpoint": {
+                    "description": "Discovery of Cicero's lost work and understanding of true purpose",
+                    "key_events": [
+                        "Finding the manuscript",
+                        "Understanding its significance",
+                        "Confronting Dagon directly",
+                        "Realizing the stakes"
+                    ],
+                    "character_development": [
+                        "Shift from student to leader",
+                        "Acceptance of responsibility",
+                        "Understanding of true power",
+                        "Commitment to greater cause"
+                    ]
+                },
+                "falling_action": {
+                    "description": "Battle for control of the timeline and confrontation with Hannibal",
+                    "key_events": [
+                        "Leading the resistance",
+                        "Strategic planning",
+                        "Alliance building",
+                        "Final preparations"
+                    ],
+                    "character_development": [
+                        "Strategic thinking",
+                        "Leadership skills",
+                        "Moral clarity",
+                        "Personal sacrifice"
+                    ]
+                },
+                "resolution": {
+                    "description": "Final confrontation and establishment of new order",
+                    "key_events": [
+                        "Final battle with Dagon",
+                        "Restoration of timeline",
+                        "Return to Bologna",
+                        "Integration of experiences"
+                    ],
+                    "character_development": [
+                        "Complete transformation",
+                        "Balance of power and wisdom",
+                        "Understanding of true legacy",
+                        "Integration of past and future"
+                    ]
+                }
+            },
+            "thematic_elements": {
+                "power": {
+                    "development": "From seeking power to understanding responsibility",
+                    "key_moments": [
+                        "Creation of Trionfi cards",
+                        "First use of temporal abilities",
+                        "Confrontation with Dagon",
+                        "Final resolution"
+                    ]
+                },
+                "knowledge": {
+                    "development": "From academic pursuit to cosmic understanding",
+                    "key_moments": [
+                        "University studies",
+                        "Discovery of Cicero's work",
+                        "Learning from Dante",
+                        "Understanding of temporal mechanics"
+                    ]
+                },
+                "love": {
+                    "development": "From infatuation to transformative love",
+                    "key_moments": [
+                        "Initial attraction to Novella",
+                        "Meeting La Signora",
+                        "Growing connection",
+                        "Transcendent love"
+                    ]
+                }
+            }
+        },
+        "La_Signora_del_Gioco": {
+            "arc_type": "Transformation",
+            "stages": {
+                "initial_state": {
+                    "description": "Giovanna De Sade, hiding her true identity",
+                    "characteristics": [
+                        "Social masking",
+                        "Hidden power",
+                        "Fear of judgment",
+                        "Desire for change"
+                    ],
+                    "conflicts": [
+                        "Heritage vs. identity",
+                        "Power vs. responsibility",
+                        "Past vs. future"
+                    ]
+                },
+                "transformation": {
+                    "description": "Emergence of La Signora del Gioco",
+                    "key_events": [
+                        "Discovery of true power",
+                        "Connection to Trionfi cards",
+                        "Meeting Francisco",
+                        "Understanding of role"
+                    ],
+                    "character_development": [
+                        "Acceptance of power",
+                        "Embracing true identity",
+                        "Growing confidence",
+                        "Strategic thinking"
+                    ]
+                },
+                "confrontation": {
+                    "description": "Battle against Dagon and establishment of new order",
+                    "key_events": [
+                        "Direct confrontation",
+                        "Alliance building",
+                        "Power demonstration",
+                        "Strategic planning"
+                    ],
+                    "character_development": [
+                        "Full power realization",
+                        "Leadership emergence",
+                        "Strategic mastery",
+                        "Personal transformation"
+                    ]
+                },
+                "resolution": {
+                    "description": "Integration of identities and establishment of new role",
+                    "key_events": [
+                        "Final battle",
+                        "Power balance",
+                        "Identity integration",
+                        "New beginning"
+                    ],
+                    "character_development": [
+                        "Complete transformation",
+                        "Balance of power",
+                        "True self-acceptance",
+                        "Future vision"
+                    ]
+                }
+            },
+            "thematic_elements": {
+                "identity": {
+                    "development": "From hidden identity to true self",
+                    "key_moments": [
+                        "Initial masking",
+                        "Power discovery",
+                        "Identity acceptance",
+                        "Full integration"
+                    ]
+                },
+                "power": {
+                    "development": "From feared power to controlled strength",
+                    "key_moments": [
+                        "Power discovery",
+                        "Initial control",
+                        "Strategic use",
+                        "Mastery"
+                    ]
+                },
+                "love": {
+                    "development": "From isolation to connection",
+                    "key_moments": [
+                        "Initial meeting with Francisco",
+                        "Growing connection",
+                        "Power sharing",
+                        "Complete union"
+                    ]
+                }
+            }
+        },
+        "Dagon_Atumari": {
+            "arc_type": "Antagonist's Journey",
+            "stages": {
+                "initial_state": {
+                    "description": "Ancient deity seeking control",
+                    "characteristics": [
+                        "Divine power",
+                        "Strategic mind",
+                        "Hidden agenda",
+                        "Complex motivations"
+                    ],
+                    "conflicts": [
+                        "Order vs. chaos",
+                        "Control vs. free will",
+                        "Past vs. future"
+                    ]
+                },
+                "rising_action": {
+                    "description": "Manipulation of events and characters",
+                    "key_events": [
+                        "Discovery of Trionfi cards",
+                        "Manipulation of timeline",
+                        "Alliance building",
+                        "Power consolidation"
+                    ],
+                    "character_development": [
+                        "Growing influence",
+                        "Strategic planning",
+                        "Power demonstration",
+                        "Control expansion"
+                    ]
+                },
+                "confrontation": {
+                    "description": "Direct conflict with protagonists",
+                    "key_events": [
+                        "Final battle",
+                        "Power demonstration",
+                        "Strategic moves",
+                        "Ultimate confrontation"
+                    ],
+                    "character_development": [
+                        "Power peak",
+                        "Strategic mastery",
+                        "Control loss",
+                        "Transformation"
+                    ]
+                },
+                "resolution": {
+                    "description": "Transformation or defeat",
+                    "key_events": [
+                        "Final confrontation",
+                        "Power balance",
+                        "Transformation",
+                        "New order"
+                    ],
+                    "character_development": [
+                        "Understanding",
+                        "Acceptance",
+                        "Transformation",
+                        "Integration"
+                    ]
+                }
+            },
+            "thematic_elements": {
+                "power": {
+                    "development": "From absolute control to understanding",
+                    "key_moments": [
+                        "Initial control",
+                        "Power expansion",
+                        "Control loss",
+                        "Understanding"
+                    ]
+                },
+                "order": {
+                    "development": "From rigid order to balanced chaos",
+                    "key_moments": [
+                        "Initial order",
+                        "Control attempts",
+                        "Order disruption",
+                        "New balance"
+                    ]
+                },
+                "transformation": {
+                    "development": "From antagonist to transformed being",
+                    "key_moments": [
+                        "Initial state",
+                        "Power peak",
+                        "Confrontation",
+                        "Transformation"
+                    ]
+                }
+            }
+        }
+    }
+} 

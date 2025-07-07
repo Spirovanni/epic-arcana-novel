@@ -1,0 +1,26 @@
+{
+    "Offensive_Uses": {
+        "timeline_assault": {
+            "method": "Force paradoxes on enemies",
+            "cards": "The Tower, Death, The Devil",
+            "defense": "Temporal shielding or The Hermit"
+        },
+        "reality_warping": {
+            "method": "Alter enemy's immediate reality",
+            "cards": "The Magician, The Moon, Wheel of Fortune",
+            "defense": "Strong will or The Emperor"
+        }
+    },
+    "Defensive_Uses": {
+        "temporal_shield": {
+            "method": "Create timeline bubble",
+            "cards": "The Hermit, Strength, The Star",
+            "duration": "Varies with user power"
+        },
+        "paradox_immunity": {
+            "method": "Exist outside normal timeline",
+            "cards": "The Fool, The Hanged Man, The World",
+            "cost": "Temporary timeline disconnection"
+        }
+    }
+} 
