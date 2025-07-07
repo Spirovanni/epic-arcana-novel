@@ -4,15 +4,74 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ThemeToggleButton } from '@/components/ThemeToggleButton';
+import { DropdownMenu } from '@/components/DropdownMenu';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { name: 'Features', href: '#features' },
     { name: 'Timeline', href: '/timeline' },
     { name: 'Characters', href: '/characters' },
     { name: 'Documentation', href: '/docs' },
+  ];
+
+  const featureItems = [
+    {
+      title: 'Chapter-Centric World Map',
+      description: 'Interactive map connecting chapters to locations and lore',
+      href: '/features/world-map',
+      icon: '🗺️',
+      category: 'Core Features'
+    },
+    {
+      title: 'Timeline & Paradox System',
+      description: 'Track Alpha, Beta, Gamma timelines and paradox triggers',
+      href: '/features/timelines',
+      icon: '⏳',
+      category: 'Core Features'
+    },
+    {
+      title: 'Trionfi Card Engine',
+      description: 'Embed tarot-based magic system into scenes and chapters',
+      href: '/features/trionfi-cards',
+      icon: '🃏',
+      category: 'Core Features'
+    },
+    {
+      title: 'Chapter Builder',
+      description: 'Markdown editor with Sudowrite sync and AI integration',
+      href: '/features/chapter-builder',
+      icon: '✍️',
+      category: 'Writing Tools'
+    },
+    {
+      title: 'Character Arc Visualizer',
+      description: 'Graph-style matrix for character relationships and development',
+      href: '/features/character-arcs',
+      icon: '🎭',
+      category: 'Writing Tools'
+    },
+    {
+      title: 'Lore & Narrative Codex',
+      description: 'Unified encyclopedia with auto-tagging and linking',
+      href: '/features/lore-codex',
+      icon: '📚',
+      category: 'Writing Tools'
+    },
+    {
+      title: 'AI Integration',
+      description: 'Taskmaster AI for scene analysis and arc consistency',
+      href: '/features/ai-tools',
+      icon: '🤖',
+      category: 'AI Tools'
+    },
+    {
+      title: 'Sudowrite Sync',
+      description: 'Seamless integration with Sudowrite for drafting',
+      href: '/features/sudowrite-sync',
+      icon: '🔄',
+      category: 'AI Tools'
+    }
   ];
 
   return (
@@ -43,12 +102,39 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
+            {/* Features Dropdown */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
+              <DropdownMenu
+                trigger={
+                  <div className="flex items-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-200 relative group">
+                    Features
+                    <svg 
+                      className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+                  </div>
+                }
+                items={featureItems}
+                title="ChronoScriptor Features"
+              />
+            </motion.div>
+
+            {/* Other Nav Items */}
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.5 + index * 0.1 }}
+                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
               >
                 <Link
                   href={item.href}
@@ -124,13 +210,46 @@ export function Navbar() {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <div className="flex flex-col space-y-4">
+                {/* Features in Mobile */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2, delay: 0 }}
+                >
+                  <div className="text-gray-700 dark:text-gray-300 font-medium py-2">
+                    Features
+                  </div>
+                  <div className="ml-4 space-y-2">
+                    {featureItems.slice(0, 4).map((feature, index) => (
+                      <Link
+                        key={feature.href}
+                        href={feature.href}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <span className="mr-2">{feature.icon}</span>
+                        {feature.title}
+                      </Link>
+                    ))}
+                    <Link
+                      href="/features"
+                      className="text-sm text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 py-1 block"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      View all features →
+                    </Link>
+                  </div>
+                </motion.div>
+
+                {/* Other Nav Items */}
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.2, delay: index * 0.1 }}
+                    transition={{ duration: 0.2, delay: (index + 1) * 0.1 }}
                   >
                     <Link
                       href={item.href}
@@ -145,7 +264,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2, delay: navItems.length * 0.1 }}
+                  transition={{ duration: 0.2, delay: (navItems.length + 1) * 0.1 }}
                   className="pt-2"
                 >
                   <Link
