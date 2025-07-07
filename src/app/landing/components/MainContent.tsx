@@ -26,11 +26,10 @@ export function MainContent() {
       {/* Background Overlay for Visual Depth */}
       <div className="absolute inset-0 z-0 opacity-10">
         <Image
-          src="/globe.svg" // Consider a more thematic background later
+          src="/globe.svg"
           alt="Background Pattern"
-          layout="fill"
-          objectFit="cover"
-          className="pointer-events-none"
+          fill
+          className="pointer-events-none object-cover"
         />
       </div>
 

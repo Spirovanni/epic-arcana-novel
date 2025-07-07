@@ -1,7 +1,5 @@
-const plugin = require('tailwindcss/plugin');
-
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   darkMode: 'class',
   content: [
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -96,54 +94,7 @@ module.exports = {
         'prose': '65ch',
         'wide-prose': '80ch',
       },
-      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/typography'),
-    plugin(function({ addComponents, theme }) {
-      addComponents({
-        '.story-card': {
-          backgroundColor: theme('colors.white'),
-          borderRadius: theme('borderRadius.lg'),
-          padding: theme('spacing.card-padding'),
-          boxShadow: theme('boxShadow.md'),
-          transition: 'transform 0.2s',
-          '&:hover': {
-            transform: 'translateY(-2px)',
-            boxShadow: theme('boxShadow.lg'),
-          },
-          '.dark &': {
-            backgroundColor: theme('colors.gray.800'),
-          }
-        },
-        '.timeline-node': {
-          position: 'relative',
-          padding: theme('spacing.4'),
-          borderLeftColor: theme('colors.timeline-alpha.DEFAULT'),
-          borderLeftWidth: '4px',
-          marginLeft: theme('spacing.timeline-gutter'),
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            left: '-10px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-            width: '16px',
-            height: '16px',
-            borderRadius: '9999px',
-            backgroundColor: theme('colors.white'),
-            borderWidth: '4px',
-            borderColor: theme('colors.timeline-alpha.DEFAULT'),
-          },
-          '.dark &': {
-            borderLeftColor: theme('colors.timeline-alpha.dark'),
-            '&::before': {
-              backgroundColor: theme('colors.gray.800'),
-              borderColor: theme('colors.timeline-alpha.dark'),
-            }
-          }
-        }
-      })
-    })
-  ],
-}; 
+  plugins: [],
+} 
