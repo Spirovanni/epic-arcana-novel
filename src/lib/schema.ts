@@ -250,6 +250,7 @@ export const chapters = pgTable('chapters', {
   tarotFamily: varchar('tarot_family', { length: 50 }),
   tarotCardItem: varchar('tarot_card_item', { length: 50 }),
   colorTheme: jsonb('color_theme'), // name, hex, rgb values
+  iconPath: varchar('icon_path', { length: 255 }), // e.g., "chapters/book1/chapter1.png"
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });

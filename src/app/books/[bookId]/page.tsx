@@ -9,6 +9,7 @@ interface Chapter {
   title: string;
   chapterNumber: number;
   description: string;
+  iconPath?: string;
   colorTheme: {
     name: string;
     hex: string;
@@ -27,10 +28,29 @@ const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
     return luminance > 0.5 ? 'text-black' : 'text-white';
 };
 
+// Helper function to get chapter icon path with fallback
+const getChapterIconPath = (chapter: Chapter, bookNumber: number): string => {
+  // If iconPath is explicitly set in database, use it
+  if (chapter.iconPath) {
+    return `/icons/${chapter.iconPath}`;
+  }
+  
+  // Auto-generate path based on book and chapter numbers
+  const defaultPath = `/icons/chapters/book${bookNumber}/chapter${chapter.chapterNumber}.png`;
+  return defaultPath;
+};
+
+// Helper function to handle icon loading errors
+const handleIconError = (e: React.SyntheticEvent<HTMLImageElement>) => {
+  const target = e.target as HTMLImageElement;
+  target.src = '/icons/fallback/default-chapter.svg';
+};
+
 export default function BookDetailPage() {
   const params = useParams();
   const bookId = params.bookId as string;
   const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [bookNumber, setBookNumber] = useState<number>(1);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -40,7 +60,8 @@ export default function BookDetailPage() {
         const response = await fetch(`/api/books/${bookId}/chapters`);
         if (response.ok) {
           const data = await response.json();
-          setChapters(data);
+          setChapters(data.chapters);
+          setBookNumber(data.book.bookNumber);
         }
       } catch (error) {
         console.error('Failed to fetch chapters:', error);
@@ -64,20 +85,45 @@ export default function BookDetailPage() {
         </Link>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {chapters.map((chapter) => (
-          <div
-            key={chapter.id}
-            className="aspect-square rounded-lg flex flex-col justify-between p-4 transition-transform duration-300 ease-in-out hover:scale-105 shadow-lg"
-            style={{ backgroundColor: chapter.colorTheme?.hex || '#ffffff' }}
-          >
-            <div className={`font-bold ${getTextColor(chapter.colorTheme?.hex)}`}>
-              {chapter.chapterNumber}
+        {chapters.map((chapter) => {
+          const iconPath = getChapterIconPath(chapter, bookNumber);
+          const textColor = getTextColor(chapter.colorTheme?.hex);
+          
+          return (
+            <div
+              key={chapter.id}
+              className="aspect-square rounded-2xl p-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl shadow-xl relative overflow-hidden backdrop-blur-sm border border-white/10"
+              style={{ backgroundColor: chapter.colorTheme?.hex || '#ffffff' }}
+            >
+              {/* Icon positioned in top-right area, 75% size, fully contained */}
+              <div className="w-3/4 h-3/4 absolute top-2 right-2">
+                <img
+                  src={iconPath}
+                  alt={`Chapter ${chapter.chapterNumber} icon`}
+                  className="w-full h-full object-contain drop-shadow-lg"
+                  onError={handleIconError}
+                />
+              </div>
+              
+              {/* Modern chapter number - top left with glassmorphism */}
+              <div className={`absolute top-4 left-4 font-black text-2xl ${textColor} z-20 px-3 py-1 rounded-xl bg-white/20 backdrop-blur-md border border-white/30 shadow-lg`}>
+                {chapter.chapterNumber}
+              </div>
+              
+              {/* Modern title - slimmed bottom area with larger font */}
+              <div className="absolute bottom-2 left-2 right-2 z-20 h-12">
+                <div className={`${textColor} backdrop-blur-xl bg-white/30 border-2 border-white/40 rounded-xl px-4 py-2 shadow-2xl h-full flex items-center`}>
+                  <h2 className="font-black text-2xl leading-tight tracking-wide w-full text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
+                    {chapter.title}
+                  </h2>
+                </div>
+              </div>
+              
+              {/* Subtle gradient overlay for depth */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 pointer-events-none"></div>
             </div>
-            <h2 className={`text-lg font-semibold ${getTextColor(chapter.colorTheme?.hex)}`}>
-              {chapter.title}
-            </h2>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
