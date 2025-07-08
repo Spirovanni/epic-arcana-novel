@@ -1,0 +1,432 @@
+"use client";
+
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Location } from '../page';
+import PangeaMap from './PangeaMap';
+import { focusOnNaples, CameraSettings } from '../utils/mapNavigation';
+
+interface InteractiveWorldMapProps {
+  locations: Location[];
+  activeTimeline: 'alpha' | 'beta' | 'gamma';
+  onLocationClick: (location: Location) => void;
+  selectedLocation: Location | null;
+}
+
+export function InteractiveWorldMap({ 
+  locations, 
+  activeTimeline, 
+  onLocationClick, 
+  selectedLocation 
+}: InteractiveWorldMapProps) {
+  const [hoveredLocation, setHoveredLocation] = useState<Location | null>(null);
+  // Calculate initial Naples-focused position
+  const getInitialNaplesView = () => {
+    // Use standard viewport size for initial calculation (will adjust on first render)
+    const defaultViewport = { width: 1200, height: 800 };
+    try {
+      return focusOnNaples(defaultViewport);
+    } catch {
+      return { center: { x: 0, y: 0 }, zoom: 1 };
+    }
+  };
+
+  const initialView = getInitialNaplesView();
+  const [mapCenter, setMapCenter] = useState(initialView.center);
+  const [mapZoom, setMapZoom] = useState(initialView.zoom);
+  const [selectedRegion, setSelectedRegion] = useState<string | null>('_275_-_Naples'); // Start with Naples selected
+  const [isPanMode, setIsPanMode] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const mapRef = useRef<HTMLDivElement>(null);
+  const svgRef = useRef<SVGSVGElement>(null);
+
+  const timelineColors = {
+    alpha: { primary: '#10b981', secondary: '#047857', bg: 'from-emerald-500/20' },
+    beta: { primary: '#f59e0b', secondary: '#d97706', bg: 'from-amber-500/20' },
+    gamma: { primary: '#8b5cf6', secondary: '#7c3aed', bg: 'from-violet-500/20' }
+  };
+
+  const currentTheme = timelineColors[activeTimeline];
+
+  const handleLocationHover = (location: Location | null) => {
+    setHoveredLocation(location);
+  };
+
+  const handleRegionClick = (regionId: string) => {
+    setSelectedRegion(regionId);
+    // Find location that matches this region
+    const matchedLocation = locations.find(loc => 
+      loc.name.toLowerCase().includes(regionId.toLowerCase()) ||
+      regionId.toLowerCase().includes(loc.name.toLowerCase())
+    );
+    if (matchedLocation) {
+      onLocationClick(matchedLocation);
+    }
+  };
+
+  const handleRegionHover = (regionId: string | null) => {
+    // Optional: show region name in tooltip
+    console.log('Hovering region:', regionId);
+  };
+
+  // Adjust Naples focus when viewport size changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (mapRef.current && selectedRegion === '_275_-_Naples') {
+        autoFocusOnNaples();
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedRegion]);
+
+  const handleZoom = (direction: 'in' | 'out') => {
+    setMapZoom(prev => {
+      const newZoom = direction === 'in' ? prev * 1.2 : prev / 1.2;
+      return Math.max(0.5, Math.min(3, newZoom));
+    });
+  };
+
+  const resetView = () => {
+    setMapCenter({ x: 0, y: 0 });
+    setMapZoom(1);
+  };
+
+  const focusOnRegion = (cameraSettings: CameraSettings) => {
+    setMapCenter(cameraSettings.center);
+    setMapZoom(cameraSettings.zoom);
+  };
+
+  const autoFocusOnNaples = () => {
+    if (!mapRef.current) return;
+    
+    const viewport = {
+      width: mapRef.current.clientWidth,
+      height: mapRef.current.clientHeight
+    };
+    
+    const naplesSettings = focusOnNaples(viewport);
+    focusOnRegion(naplesSettings);
+    setSelectedRegion('_275_-_Naples'); // Highlight Naples region
+  };
+
+  const togglePanMode = () => {
+    setIsPanMode(!isPanMode);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!isPanMode) return;
+    
+    setIsDragging(true);
+    setDragStart({
+      x: e.clientX - mapCenter.x,
+      y: e.clientY - mapCenter.y
+    });
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !isPanMode) return;
+    
+    setMapCenter({
+      x: e.clientX - dragStart.x,
+      y: e.clientY - dragStart.y
+    });
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  return (
+    <div className="relative w-full h-full overflow-hidden bg-slate-800">
+      {/* SVG Map Background */}
+      <div className="absolute inset-0">
+        <PangeaMap
+          ref={svgRef}
+          activeTimeline={activeTimeline}
+          selectedRegion={selectedRegion}
+          onRegionClick={handleRegionClick}
+          onRegionHover={handleRegionHover}
+          zoom={mapZoom}
+          center={mapCenter}
+          isPanMode={isPanMode}
+        />
+      </div>
+
+      {/* Map Controls */}
+      <div className="absolute top-4 right-4 z-20 flex flex-col space-y-2">
+        {/* Pan Mode Toggle */}
+        <motion.button
+          onClick={togglePanMode}
+          className={`w-10 h-10 rounded-lg shadow-lg flex items-center justify-center transition-colors ${
+            isPanMode 
+              ? 'bg-purple-600 hover:bg-purple-700 text-white' 
+              : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+          }`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title={isPanMode ? 'Exit pan mode' : 'Enable pan mode'}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isPanMode ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+            )}
+          </svg>
+        </motion.button>
+        <motion.button
+          onClick={() => handleZoom('in')}
+          className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="text-lg font-bold text-gray-700 dark:text-gray-300">+</span>
+        </motion.button>
+        <motion.button
+          onClick={() => handleZoom('out')}
+          className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <span className="text-lg font-bold text-gray-700 dark:text-gray-300">−</span>
+        </motion.button>
+        <motion.button
+          onClick={autoFocusOnNaples}
+          className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Focus on Naples"
+        >
+          <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+          </svg>
+        </motion.button>
+        <motion.button
+          onClick={resetView}
+          className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title="Reset view"
+        >
+          <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+        </motion.button>
+      </div>
+
+      {/* Timeline Indicator */}
+      <div className="absolute top-4 left-4 z-20">
+        <motion.div
+          className={`px-4 py-2 rounded-lg shadow-lg bg-gradient-to-r ${currentTheme.bg} backdrop-blur-sm border border-white/20`}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex items-center space-x-3">
+            <div 
+              className="w-3 h-3 rounded-full"
+              style={{ backgroundColor: currentTheme.primary }}
+            />
+            <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
+              {activeTimeline.charAt(0).toUpperCase() + activeTimeline.slice(1)} Timeline
+            </span>
+            {selectedRegion === '_275_-_Naples' && (
+              <span className="text-xs text-gray-600 dark:text-gray-400 ml-2">
+                • Naples Region
+              </span>
+            )}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Map Container */}
+      <div 
+        ref={mapRef}
+        className={`w-full h-full relative select-none ${
+          isPanMode ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'
+        }`}
+        style={{
+          transform: `translate(${mapCenter.x}px, ${mapCenter.y}px) scale(${mapZoom})`,
+          transformOrigin: 'center'
+        }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseLeave}
+      >
+        {/* Locations */}
+        {locations.map((location, index) => {
+          const isSelected = selectedLocation?.id === location.id;
+          const isHovered = hoveredLocation?.id === location.id;
+          
+          return (
+            <motion.div
+              key={location.id}
+              className="absolute cursor-pointer group"
+              style={{
+                left: location.coordinates?.x || 400 + (index * 50),
+                top: location.coordinates?.y || 300 + (index * 50)
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              onClick={() => onLocationClick(location)}
+              onMouseEnter={() => handleLocationHover(location)}
+              onMouseLeave={() => handleLocationHover(null)}
+            >
+              {/* Location Ring */}
+              <motion.div
+                className={`absolute inset-0 rounded-full border-2 ${
+                  isSelected ? 'border-4' : ''
+                }`}
+                style={{
+                  borderColor: isSelected || isHovered ? currentTheme.primary : currentTheme.secondary,
+                  width: isSelected ? '60px' : '50px',
+                  height: isSelected ? '60px' : '50px',
+                  marginLeft: isSelected ? '-5px' : '0',
+                  marginTop: isSelected ? '-5px' : '0'
+                }}
+                animate={{
+                  scale: isHovered ? 1.1 : 1,
+                  borderColor: isSelected || isHovered ? currentTheme.primary : currentTheme.secondary
+                }}
+                transition={{ duration: 0.2 }}
+              />
+              
+              {/* Location Dot */}
+              <motion.div
+                className="relative z-10 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg"
+                style={{ 
+                  backgroundColor: isSelected || isHovered ? currentTheme.primary : currentTheme.secondary 
+                }}
+                animate={{
+                  scale: isHovered ? 1.1 : 1,
+                  backgroundColor: isSelected || isHovered ? currentTheme.primary : currentTheme.secondary
+                }}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {getLocationIcon(location.linked_arcana)}
+              </motion.div>
+
+              {/* Location Name Tooltip */}
+              <AnimatePresence>
+                {isHovered && (
+                  <motion.div
+                    className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 dark:bg-gray-700 text-white text-sm rounded-lg shadow-lg whitespace-nowrap z-30"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="font-medium">{location.name}</div>
+                    <div className="text-xs text-gray-300 mt-1">{location.type}</div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-700"></div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
+              {/* Chapter Indicators */}
+              {location.chapters && location.chapters.length > 0 && (
+                <motion.div
+                  className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold shadow-lg"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ delay: index * 0.1 + 0.3 }}
+                >
+                  {location.chapters.length}
+                </motion.div>
+              )}
+
+              {/* Arcana Badge */}
+              <motion.div
+                className="absolute -bottom-1 -right-1 w-5 h-5 bg-gradient-to-br from-purple-500 to-blue-500 text-white text-xs rounded-full flex items-center justify-center font-bold shadow-lg"
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: index * 0.1 + 0.5 }}
+              >
+                🃏
+              </motion.div>
+            </motion.div>
+          );
+        })}
+
+        {/* Connection Lines (for related locations) */}
+        <svg className="absolute inset-0 pointer-events-none" style={{ zIndex: 1 }}>
+          {locations.map((location, index) => {
+            if (index === 0) return null;
+            const prevLocation = locations[index - 1];
+            const startX = (prevLocation.coordinates?.x || 400) + 25;
+            const startY = (prevLocation.coordinates?.y || 300) + 25;
+            const endX = (location.coordinates?.x || 400) + 25;
+            const endY = (location.coordinates?.y || 300) + 25;
+
+            return (
+              <motion.line
+                key={`connection-${index}`}
+                x1={startX}
+                y1={startY}
+                x2={endX}
+                y2={endY}
+                stroke={currentTheme.secondary}
+                strokeWidth="2"
+                strokeDasharray="5,5"
+                opacity="0.3"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+              />
+            );
+          })}
+        </svg>
+      </div>
+
+      {/* Legend */}
+      <div className="absolute bottom-4 left-4 z-20 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-xs">
+        <h3 className="font-medium text-gray-900 dark:text-white mb-3">Map Legend</h3>
+        <div className="space-y-2 text-sm">
+          <div className="flex items-center space-x-2">
+            <div className="w-4 h-4 rounded-full bg-red-500 flex items-center justify-center text-white text-xs">
+              #
+            </div>
+            <span className="text-gray-600 dark:text-gray-400">Chapter count</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="w-4 h-4 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white text-xs">
+              🃏
+            </div>
+            <span className="text-gray-600 dark:text-gray-400">Linked Arcana</span>
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="w-4 h-1 bg-gray-400" style={{ borderStyle: 'dashed' }}></div>
+            <span className="text-gray-600 dark:text-gray-400">Timeline connections</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const getLocationIcon = (arcana: string): string => {
+  const iconMap: Record<string, string> = {
+    'The Hermit': '🏔️',
+    'The Tower': '🏰',
+    'Strength': '⚔️',
+    'The High Priestess': '🌙',
+    'Judgement': '⚖️',
+    'The Wheel of Fortune': '💰',
+    'Temperance': '⏳',
+    'The Magician': '⚙️',
+    'The Hanged Man': '🌊',
+    'Death': '🌲'
+  };
+  
+  return iconMap[arcana] || '📍';
+};

@@ -9,9 +9,10 @@ import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { isSignedIn, user } = useUser();
+  const { isSignedIn } = useUser();
 
   const navItems = [
+    { name: 'Books', href: '/books' },
     { name: 'Timeline', href: '/timeline' },
     { name: 'Characters', href: '/characters' },
     { name: 'Documentation', href: '/docs' },
@@ -275,7 +276,7 @@ export function Navbar() {
                 </motion.div>
 
                 {/* Other Nav Items */}
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}
