@@ -2,31 +2,31 @@ import pandas as pd
 import json
 
 df = pd.read_excel('HFP-X1.xlsx', sheet_name='Story-Line')
-book5_rows = df[df['Book Unique Identifier'] == 'MT 5']
+book1_rows = df[df['Book Unique Identifier'] == 'MT 1']
 
 def safe_get(row, col):
     val = row.get(col, "")
     return "" if pd.isna(val) else val
 
-book5_json = {
-    "book_unique_identifier": "MT 5",
-    "fantasy_book_name": safe_get(book5_rows.iloc[0], 'Fantasy Book Name'),
-    "non_fiction_book": safe_get(book5_rows.iloc[0], 'Non-Fiction Book'),
-    "book_subject": safe_get(book5_rows.iloc[0], 'Book Subject'),
-    "focus_of_book": safe_get(book5_rows.iloc[0], 'Focus of Book'),
-    "book_description": safe_get(book5_rows.iloc[0], 'Book Description'),
-    "unique_theme": safe_get(book5_rows.iloc[0], 'Unique Theme'),
-    "enneagram": safe_get(book5_rows.iloc[0], 'Ennegram'),
-    "military": safe_get(book5_rows.iloc[0], 'Military'),
-    "business_model_generation": safe_get(book5_rows.iloc[0], 'Business Model Generation'),
-    "personality_type": safe_get(book5_rows.iloc[0], 'Personality Type'),
-    "9_habits_covey": safe_get(book5_rows.iloc[0], '9 Habits Covey'),
-    "sin": safe_get(book5_rows.iloc[0], 'Sin'),
-    "business_model_you": safe_get(book5_rows.iloc[0], 'Business Model You'),
+book1_json = {
+    "book_unique_identifier": "MT 1",
+    "fantasy_book_name": safe_get(book1_rows.iloc[0], 'Fantasy Book Name'),
+    "non_fiction_book": safe_get(book1_rows.iloc[0], 'Non-Fiction Book'),
+    "book_subject": safe_get(book1_rows.iloc[0], 'Book Subject'),
+    "focus_of_book": safe_get(book1_rows.iloc[0], 'Focus of Book'),
+    "book_description": safe_get(book1_rows.iloc[0], 'Book Description'),
+    "unique_theme": safe_get(book1_rows.iloc[0], 'Unique Theme'),
+    "enneagram": safe_get(book1_rows.iloc[0], 'Ennegram'),
+    "military": safe_get(book1_rows.iloc[0], 'Military'),
+    "business_model_generation": safe_get(book1_rows.iloc[0], 'Business Model Generation'),
+    "personality_type": safe_get(book1_rows.iloc[0], 'Personality Type'),
+    "9_habits_covey": safe_get(book1_rows.iloc[0], '9 Habits Covey'),
+    "sin": safe_get(book1_rows.iloc[0], 'Sin'),
+    "business_model_you": safe_get(book1_rows.iloc[0], 'Business Model You'),
     "sections": []
 }
 
-for _, row in book5_rows.iterrows():
+for _, row in book1_rows.iterrows():
     section = {
         "section_name": safe_get(row, 'Novel Section Name'),
         "major_task": safe_get(row, 'Major Task'),
@@ -73,9 +73,10 @@ for _, row in book5_rows.iterrows():
             }
         ]
     }
-    book5_json["sections"].append(section)
+    book1_json["sections"].append(section)
 
-with open("book5_expanded_codex.json", "w", encoding="utf-8") as f:
-    json.dump(book5_json, f, indent=2, ensure_ascii=False)
+with open("book1_expanded_codex.json", "w", encoding="utf-8") as f:
+    json.dump(book1_json, f, indent=2, ensure_ascii=False)
 
-print("Book 5 JSON file created: book5_expanded_codex.json")
+print("Book 1 JSON file created: book1_expanded_codex.json")
+
