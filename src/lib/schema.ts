@@ -255,6 +255,15 @@ export const chapters = pgTable('chapters', {
   updatedAt: timestamp('updated_at').defaultNow(),
 });
 
+export const chapterPages = pgTable('chapter_pages', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
+  pageNumber: integer('page_number').notNull(),
+  content: text('content').default(''),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
 export const scenes = pgTable('scenes', {
   id: uuid('id').primaryKey().defaultRandom(),
   chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),

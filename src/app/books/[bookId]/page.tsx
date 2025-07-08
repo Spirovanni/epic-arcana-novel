@@ -90,9 +90,10 @@ export default function BookDetailPage() {
           const textColor = getTextColor(chapter.colorTheme?.hex);
           
           return (
-            <div
+            <Link 
               key={chapter.id}
-              className="aspect-square rounded-2xl p-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl shadow-xl relative overflow-hidden backdrop-blur-sm border border-white/10"
+              href={`/chapters/${chapter.id}`}
+              className="block aspect-square rounded-2xl p-4 transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl shadow-xl relative overflow-hidden backdrop-blur-sm border border-white/10"
               style={{ backgroundColor: chapter.colorTheme?.hex || '#ffffff' }}
             >
               {/* Icon positioned in top-right area, 75% size, fully contained */}
@@ -121,7 +122,7 @@ export default function BookDetailPage() {
               
               {/* Subtle gradient overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/10 pointer-events-none"></div>
-            </div>
+            </Link>
           );
         })}
       </div>

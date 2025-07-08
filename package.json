@@ -22,6 +22,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.52.0",
     "@clerk/nextjs": "^6.23.3",
+    "@heroicons/react": "^2.2.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/pg": "^8.15.4",
     "deepseek": "^0.0.2",
