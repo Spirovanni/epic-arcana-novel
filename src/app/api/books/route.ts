@@ -1,25 +1,44 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { books, chapters } from '@/lib/schema';
+import { books, taskMasters } from '@/lib/schema';
 import { asc, eq } from 'drizzle-orm';
 
 export async function GET() {
   try {
     const allBooks = await db.select().from(books).orderBy(asc(books.bookNumber));
     
-    // Get the first chapter's color theme for each book
+    // Get the first task master's color theme for each book
     const booksWithColors = await Promise.all(
       allBooks.map(async (book) => {
-        const firstChapter = await db
-          .select({ colorTheme: chapters.colorTheme })
-          .from(chapters)
-          .where(eq(chapters.bookId, book.id))
-          .orderBy(asc(chapters.chapterNumber))
+        const firstTaskMaster = await db
+          .select({ 
+            colorName: taskMasters.colorName,
+            hexCode: taskMasters.hexCode,
+            red: taskMasters.red,
+            green: taskMasters.green,
+            blue: taskMasters.blue
+          })
+          .from(taskMasters)
+          .where(eq(taskMasters.bookId, book.id))
           .limit(1);
         
+        const taskMaster = firstTaskMaster[0];
+        
         return {
-          ...book,
-          colorTheme: firstChapter[0]?.colorTheme || null
+          id: book.id,
+          title: book.title,
+          bookNumber: book.bookNumber,
+          fictionNovelTitle: book.fictionNovelTitle,
+          summary: book.description,
+          colorTheme: taskMaster ? {
+            name: taskMaster.colorName,
+            hex: taskMaster.hexCode,
+            rgb: {
+              red: taskMaster.red,
+              green: taskMaster.green,
+              blue: taskMaster.blue
+            }
+          } : null
         };
       })
     );

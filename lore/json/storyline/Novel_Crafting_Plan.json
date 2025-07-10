@@ -1,0 +1,149 @@
+{
+  "title": "Novel Crafting Plan: Anvil of the Ancient Ones",
+  "timeline": "3-Month Timeline (12 Weeks)",
+  "phases": [
+    {
+      "name": "Phase 1: Planning & Worldbuilding",
+      "weeks": [
+        {
+          "week": 1,
+          "title": "Story Architecture",
+          "daily_goals": [
+            {
+              "days": "Day 1-2",
+              "tasks": [
+                "Finalize plot structure using Novel Factory's roadmap",
+                "Map all 40 scenes to Tarot cards and Hero's Journey",
+                "Create timeline tracking for multiple storylines"
+              ]
+            },
+            {
+              "days": "Day 3-4",
+              "tasks": [
+                "Character relationship mapping in Scrivener",
+                "Create character sheets for all major/minor characters",
+                "Map character arcs across timelines"
+              ]
+            },
+            {
+              "days": "Day 5-7",
+              "tasks": [
+                "World-building consolidation",
+                "Import all JSON files into Scrivener's research folder",
+                "Create location maps and timeline charts"
+              ]
+            }
+          ],
+          "tools_focus": [
+            "Novel Factory",
+            "Scrivener"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Scene Planning",
+          "daily_goals": [
+            {
+              "days": "Day 1-3",
+              "tasks": [
+                "Create detailed scene cards (8 scenes/day)",
+                "Each scene: POV, conflict, resolution, timeline impact",
+                "Link scenes to Tarot symbolism"
+              ]
+            },
+            {
+              "days": "Day 4-5",
+              "tasks": [
+                "Subplot integration",
+                "Map Gherardo's betrayal arc",
+                "Plan Salasa/Roger romance",
+                "Design Medici conspiracy timeline"
+              ]
+            },
+            {
+              "days": "Day 6-7",
+              "tasks": [
+                "Pacing analysis",
+                "Create tension/release chart",
+                "Plan cliffhangers and revelations"
+              ]
+            }
+          ],
+          "tools_focus": [
+            "NovelCrafter",
+            "Scrivener"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Pre-Writing Preparation",
+          "daily_goals": [
+            {
+              "days": "Day 1-2",
+              "tasks": [
+                "Create chapter outlines (3-4 chapters/day)",
+                "Opening hook for each chapter",
+                "Closing tension/cliffhanger"
+              ]
+            },
+            {
+              "days": "Day 3-4",
+              "tasks": [
+                "Develop prose style guide",
+                "Create character voice samples",
+                "Establish narrative tone variations"
+              ]
+            },
+            {
+              "days": "Day 5-7",
+              "tasks": [
+                "Research completion",
+                "Historical fact-checking",
+                "Latin phrases and period terminology",
+                "Tarot symbolism deep dive"
+              ]
+            }
+          ],
+          "tools_focus": [
+            "Sudowrite",
+            "ChatGPT"
+          ]
+        }
+      ]
+    }
+  ],
+  "key_story_elements_checklist": {
+    "core_elements": {
+      "theme": "Free will vs. determinism",
+      "central_question": "Can humanity break free from divine control?",
+      "stakes": "The fate of human autonomy across all timelines"
+    },
+    "plot_structure": {
+      "act_1": "Scenes 1-10: Setup and Catalyst",
+      "act_2a": "Scenes 11-20: Complications and Tests",
+      "act_2b": "Scenes 21-30: Deepening Crisis",
+      "act_3": "Scenes 31-40: Climax and Resolution"
+    },
+    "character_development": {
+      "Francisco": "Naive scholar \u2192 Confident wielder of fate",
+      "La Signora": "Hidden identity \u2192 Empowered woman",
+      "Dante": "Guide \u2192 Chronicler of reality",
+      "Gherardo": "Jealous brother \u2192 Redeemed/Damned",
+      "Dagon": "Divine tyrant \u2192 Challenged deity"
+    },
+    "pacing_guidelines": {
+      "chapter_length": "2,500-3,500 words",
+      "scene_length": "1,000-2,000 words",
+      "tension_peaks": "Every 3-4 chapters",
+      "quiet_moments": "After each major revelation",
+      "cliffhangers": "End of each chapter"
+    },
+    "subplots": {
+      "romantic": "Francisco/Novella/La Signora triangle",
+      "political": "Colonna vs. Medici conspiracy",
+      "mythological": "Salasa/Roger forbidden love",
+      "personal": "Gherardo's redemption arc",
+      "philosophical": "Nature of time and fate"
+    }
+  }
+}

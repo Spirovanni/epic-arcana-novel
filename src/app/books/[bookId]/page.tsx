@@ -3,6 +3,9 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import ResponsiveText from '@/components/ResponsiveText';
 
 interface Chapter {
   id: string;
@@ -51,6 +54,7 @@ export default function BookDetailPage() {
   const bookId = params.bookId as string;
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [bookNumber, setBookNumber] = useState<number>(1);
+  const [bookTitle, setBookTitle] = useState<string>('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -62,6 +66,7 @@ export default function BookDetailPage() {
           const data = await response.json();
           setChapters(data.chapters);
           setBookNumber(data.book.bookNumber);
+          setBookTitle(data.book.title);
         }
       } catch (error) {
         console.error('Failed to fetch chapters:', error);
@@ -73,18 +78,56 @@ export default function BookDetailPage() {
   }, [bookId]);
 
   if (loading) {
-    return <div className="text-center p-10">Loading chapters...</div>;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <Navbar />
+        <Breadcrumbs items={[
+          { label: 'Books', href: '/books' },
+          { label: bookTitle || 'Loading...', current: true }
+        ]} />
+        <div className="flex items-center justify-center min-h-[50vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 dark:border-indigo-400 mx-auto mb-4"></div>
+            <p className="text-gray-600 dark:text-gray-400">Loading chapters...</p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-4xl font-bold">Chapters</h1>
-        <Link href={`/outline/${bookId}`} className="text-blue-500 hover:underline">
-          View Full Outline
-        </Link>
-      </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      <Navbar />
+      <Breadcrumbs items={[
+        { label: 'Books', href: '/books' },
+        { label: bookTitle, current: true }
+      ]} />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-200 text-sm font-semibold mb-4">
+            Book {bookNumber}
+          </div>
+          <h1 className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-4">
+            {bookTitle}
+          </h1>
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+            Explore the {chapters.length} chapters of this transformative journey through time and consciousness.
+          </p>
+          <div className="mt-6">
+            <Link 
+              href={`/outline/${bookId}`} 
+              className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              View Full Outline
+            </Link>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
         {chapters.map((chapter) => {
           const iconPath = getChapterIconPath(chapter, bookNumber);
           const textColor = getTextColor(chapter.colorTheme?.hex);
@@ -111,12 +154,18 @@ export default function BookDetailPage() {
                 {chapter.chapterNumber}
               </div>
               
-              {/* Modern title - slimmed bottom area with larger font */}
+              {/* Modern title - fully responsive text sizing */}
               <div className="absolute bottom-2 left-2 right-2 z-20 h-12">
-                <div className={`${textColor} backdrop-blur-xl bg-white/30 border-2 border-white/40 rounded-xl px-4 py-2 shadow-2xl h-full flex items-center`}>
-                  <h2 className="font-black text-2xl leading-tight tracking-wide w-full text-center" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>
-                    {chapter.title}
-                  </h2>
+                <div className={`${textColor} backdrop-blur-xl bg-white/30 border-2 border-white/40 rounded-xl px-2 py-1 shadow-2xl h-full flex items-center justify-center`}>
+                  <ResponsiveText
+                    text={chapter.title}
+                    className={`font-black tracking-wide text-center w-full ${textColor}`}
+                    style={{ 
+                      textShadow: '2px 2px 4px rgba(0,0,0,0.5)'
+                    }}
+                    maxFontSize={24}
+                    minFontSize={10}
+                  />
                 </div>
               </div>
               
@@ -125,6 +174,7 @@ export default function BookDetailPage() {
             </Link>
           );
         })}
+        </div>
       </div>
     </div>
   );

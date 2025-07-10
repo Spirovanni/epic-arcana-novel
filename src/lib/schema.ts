@@ -58,8 +58,10 @@ export const characters = pgTable('characters', {
     deathPlace: varchar('death_place', { length: 255 }),
     deathPlaceDescription: text('death_place_description'),
     aka: varchar('aka', { length: 255 }),
+    slug: varchar('slug', { length: 255 }).unique(), // SEO-friendly URL
     primaryAffinityId: uuid('primary_affinity_id').references(() => trionfiCards.id),
     evolution: jsonb('evolution'),
+    lastSeenChapter: integer('last_seen_chapter'), // NEW: Track where they are in the book
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),
 });
@@ -230,6 +232,53 @@ export const books = pgTable('books', {
   enneagramDescription: text('enneagram_description'),
   coveryCoveyHabit: varchar('covey_habit', { length: 100 }),
   associatedSin: varchar('associated_sin', { length: 50 }),
+  // New fields from Book 1 JSON
+  epicNovelPlot: varchar('epic_novel_plot', { length: 255 }),
+  uniqueTheme: varchar('unique_theme', { length: 255 }),
+  businessModelGeneration: varchar('business_model_generation', { length: 100 }),
+  businessModelYou: varchar('business_model_you', { length: 255 }),
+  type: varchar('type', { length: 50 }), // "Major Task"
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+// Task Masters - New hierarchical structure from Book JSON
+export const taskMasters = pgTable('task_masters', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  bookId: uuid('book_id').references(() => books.id).notNull(),
+  uniqueIdentifier: varchar('unique_identifier', { length: 50 }),
+  type: varchar('type', { length: 50 }),
+  colorName: varchar('color_name', { length: 100 }),
+  hexCode: varchar('hex_code', { length: 7 }),
+  red: integer('red'),
+  green: integer('green'),
+  blue: integer('blue'),
+  title: varchar('title', { length: 255 }).notNull(),
+  tagline: text('tagline'),
+  description: text('description'),
+  fictionNovelSectionTitle: varchar('fiction_novel_section_title', { length: 255 }),
+  fictionNovelSectionDescription: text('fiction_novel_section_description'),
+  fictionNovelSectionTagline: text('fiction_novel_section_tagline'),
+  fictionNovelSectionBooksInfluencedBy: jsonb('fiction_novel_section_books_influenced_by'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+// Major Task Groups - Intermediate organizational layer
+export const majorTaskGroups = pgTable('major_task_groups', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  taskMasterId: uuid('task_master_id').references(() => taskMasters.id).notNull(),
+  uniqueIdentifier: varchar('unique_identifier', { length: 50 }),
+  type: varchar('type', { length: 50 }),
+  colorName: varchar('color_name', { length: 100 }),
+  hexCode: varchar('hex_code', { length: 7 }),
+  red: integer('red'),
+  green: integer('green'),
+  blue: integer('blue'),
+  title: varchar('title', { length: 255 }).notNull(),
+  description: text('description'),
+  tagline: text('tagline'),
+  booksInfluencedBy: jsonb('books_influenced_by'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
@@ -237,6 +286,7 @@ export const books = pgTable('books', {
 export const chapters = pgTable('chapters', {
   id: uuid('id').primaryKey().defaultRandom(),
   bookId: uuid('book_id').references(() => books.id).notNull(),
+  majorTaskGroupId: uuid('major_task_group_id').references(() => majorTaskGroups.id),
   chapterNumber: integer('chapter_number').notNull(),
   uniqueIdentifier: varchar('unique_identifier', { length: 50 }),
   title: varchar('title', { length: 255 }),
@@ -251,6 +301,28 @@ export const chapters = pgTable('chapters', {
   tarotCardItem: varchar('tarot_card_item', { length: 50 }),
   colorTheme: jsonb('color_theme'), // name, hex, rgb values
   iconPath: varchar('icon_path', { length: 255 }), // e.g., "chapters/book1/chapter1.png"
+  // New fields from specific task groups
+  type: varchar('type', { length: 50 }), // "Specific Task Group"
+  colorName: varchar('color_name', { length: 100 }),
+  hexCode: varchar('hex_code', { length: 7 }),
+  red: integer('red'),
+  green: integer('green'),
+  blue: integer('blue'),
+  focusArea: varchar('focus_area', { length: 100 }),
+  connectionToMajorTaskGroup: text('connection_to_major_task_group'),
+  specificTaskGroupDescription: text('specific_task_group_description'),
+  specificTaskGroupTagline: text('specific_task_group_tagline'),
+  specificTaskGroupBooksInfluencedBy: jsonb('specific_task_group_books_influenced_by'),
+  terminalLearningObjectives: jsonb('terminal_learning_objectives'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const chapterPages = pgTable('chapter_pages', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
+  pageNumber: integer('page_number').notNull(),
+  content: text('content').default(''),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
@@ -293,7 +365,7 @@ export const scenes = pgTable('scenes', {
   updatedAt: timestamp('updated_at').defaultNow(),
 });
 
-export const taskGroups: any = pgTable('task_groups', {
+export const taskGroups = pgTable('task_groups', {
   id: uuid('id').primaryKey().defaultRandom(),
   chapterId: uuid('chapter_id').references(() => chapters.id),
   parentTaskGroupId: uuid('parent_task_group_id'),

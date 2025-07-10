@@ -1,9 +1,9 @@
-CREATE TYPE "public"."affinity_type" AS ENUM('secondary', 'forbidden');--> statement-breakpoint
-CREATE TYPE "public"."arcana_type" AS ENUM('major', 'minor');--> statement-breakpoint
-CREATE TYPE "public"."character_type" AS ENUM('historical', 'mythic', 'fantasy');--> statement-breakpoint
-CREATE TYPE "public"."station_type" AS ENUM('major_hub', 'minor_stop');--> statement-breakpoint
-CREATE TYPE "public"."suit" AS ENUM('Temporalis', 'Animae', 'Stellae', 'Materiae');--> statement-breakpoint
-CREATE TYPE "public"."train_component_type" AS ENUM('locomotive', 'passenger_car', 'observation_car');--> statement-breakpoint
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'affinity_type') THEN CREATE TYPE "public"."affinity_type" AS ENUM('secondary', 'forbidden'); END IF; END $$;
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'arcana_type') THEN CREATE TYPE "public"."arcana_type" AS ENUM('major', 'minor'); END IF; END $$;
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'character_type') THEN CREATE TYPE "public"."character_type" AS ENUM('historical', 'mythic', 'fantasy'); END IF; END $$;
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'station_type') THEN CREATE TYPE "public"."station_type" AS ENUM('major_hub', 'minor_stop'); END IF; END $$;
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'suit') THEN CREATE TYPE "public"."suit" AS ENUM('Temporalis', 'Animae', 'Stellae', 'Materiae'); END IF; END $$;
+DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'train_component_type') THEN CREATE TYPE "public"."train_component_type" AS ENUM('locomotive', 'passenger_car', 'observation_car'); END IF; END $$;
 CREATE TABLE "books" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"series_id" uuid NOT NULL,
