@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon } from '@heroicons/react/24/outline';
+import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.png';
 
@@ -47,6 +47,7 @@ export default function CharacterProfilePage() {
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState<string | null>(null);
+  const [promptCopied, setPromptCopied] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -118,6 +119,19 @@ export default function CharacterProfilePage() {
   const handleFieldChange = (field: keyof Character, value: any) => {
     if (!editData) return;
     setEditData({ ...editData, [field]: value });
+  };
+
+  const handleCopyPrompt = async () => {
+    const promptText = isEditing ? (editData?.imagePrompt || '') : (character?.imagePrompt || '');
+    if (!promptText) return;
+    
+    try {
+      await navigator.clipboard.writeText(promptText);
+      setPromptCopied(true);
+      setTimeout(() => setPromptCopied(false), 2000);
+    } catch (error) {
+      console.error('Failed to copy prompt:', error);
+    }
   };
 
   const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -500,9 +514,19 @@ export default function CharacterProfilePage() {
                       <div className="space-y-4">
                         {/* Image Prompt */}
                         <div>
-                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                            AI Prompt
-                          </label>
+                          <div className="flex justify-between items-center mb-2">
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                              AI Prompt
+                            </label>
+                            <button
+                              onClick={handleCopyPrompt}
+                              disabled={!character?.imagePrompt && !editData?.imagePrompt}
+                              className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900/50"
+                            >
+                              <ClipboardIcon className="w-4 h-4 mr-1" />
+                              {promptCopied ? 'Copied!' : 'Copy Prompt'}
+                            </button>
+                          </div>
                           {isEditing ? (
                             <textarea
                               value={editData?.imagePrompt || ''}
