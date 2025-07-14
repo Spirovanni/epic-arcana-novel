@@ -84,8 +84,8 @@ export async function PUT(request, { params }) {
   try {
     const data = await request.json();
     
-    // Remove fields that shouldn't be updated directly
-    const { id, createdAt, slug: _, ...updateData } = data;
+    // Remove fields that shouldn't be updated directly and fields that may not exist in DB
+    const { id, createdAt, slug: _, imagePrompt, openArtLink, customSetting, ...updateData } = data;
     
     const updatedCharacter = await db
       .update(characters)
@@ -99,7 +99,23 @@ export async function PUT(request, { params }) {
         name: characters.name,
         characterType: characters.characterType,
         slug: characters.slug,
+        aka: characters.aka,
+        pronouns: characters.pronouns,
+        relation: characters.relation,
+        role: characters.role,
+        description: characters.description,
+        personality: characters.personality,
+        background: characters.background,
+        physicalDescription: characters.physicalDescription,
+        dialogueStyle: characters.dialogueStyle,
+        groups: characters.groups,
+        birthYear: characters.birthYear,
+        died: characters.died,
+        birthPlace: characters.birthPlace,
+        deathPlace: characters.deathPlace,
         imageUrl: characters.imageUrl,
+        lastSeenChapter: characters.lastSeenChapter,
+        createdAt: characters.createdAt,
         updatedAt: characters.updatedAt
       });
 
