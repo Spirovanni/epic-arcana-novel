@@ -29,6 +29,8 @@ type Character = {
   birthPlace?: string | null;
   deathPlace?: string | null;
   imageUrl?: string | null;
+  createdAt?: string | null;
+  updatedAt?: string | null;
 };
 
 function CharacterCard({ character }: { character: Character }) {
@@ -111,7 +113,23 @@ export default function CharactersPage() {
           setError(data.error);
           setCharacters([]);
         } else if (Array.isArray(data)) {
-          setCharacters(data);
+          // Sort characters: those with profile pictures first (by oldest upload date), then those without
+          const sortedCharacters = data.sort((a, b) => {
+            // First, prioritize characters with profile pictures
+            const aHasImage = Boolean(a.imageUrl);
+            const bHasImage = Boolean(b.imageUrl);
+            
+            if (aHasImage && !bHasImage) return -1;
+            if (!aHasImage && bHasImage) return 1;
+            
+            // If both have images or both don't have images, sort by updatedAt (ascending - oldest first)
+            const aDate = new Date(a.updatedAt || a.createdAt || '0');
+            const bDate = new Date(b.updatedAt || b.createdAt || '0');
+            
+            return aDate.getTime() - bDate.getTime();
+          });
+          
+          setCharacters(sortedCharacters);
           setError(null);
         } else {
           // If data is not an array, set empty array
