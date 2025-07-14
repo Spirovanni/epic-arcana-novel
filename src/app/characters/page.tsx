@@ -28,6 +28,7 @@ type Character = {
   died?: string | null;
   birthPlace?: string | null;
   deathPlace?: string | null;
+  imageUrl?: string | null;
 };
 
 function CharacterCard({ character }: { character: Character }) {
@@ -38,7 +39,13 @@ function CharacterCard({ character }: { character: Character }) {
         {/* Avatar Section - Fixed Height */}
         <div className="relative mb-4 flex-shrink-0">
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden shadow-lg">
-            <Image src={placeholderImg} alt={character.name} width={64} height={64} className="w-16 h-16 object-cover rounded-full" />
+            <Image 
+              src={character.imageUrl || placeholderImg} 
+              alt={character.name} 
+              width={64} 
+              height={64} 
+              className="w-16 h-16 object-cover rounded-full" 
+            />
           </div>
           {character.lastSeenChapter && (
             <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full flex items-center justify-center shadow-md">
@@ -93,12 +100,30 @@ function CharacterCard({ character }: { character: Character }) {
 export default function CharactersPage() {
   const [characters, setCharacters] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/characters')
       .then(res => res.json())
       .then(data => {
-        setCharacters(data);
+        // Check if the response is an error object or an array
+        if (data.error) {
+          setError(data.error);
+          setCharacters([]);
+        } else if (Array.isArray(data)) {
+          setCharacters(data);
+          setError(null);
+        } else {
+          // If data is not an array, set empty array
+          setCharacters([]);
+          setError('Invalid response format');
+        }
+        setLoading(false);
+      })
+      .catch(err => {
+        console.error('Failed to fetch characters:', err);
+        setError('Failed to fetch characters');
+        setCharacters([]);
         setLoading(false);
       });
   }, []);
@@ -138,6 +163,27 @@ export default function CharactersPage() {
                   <div className="h-8 bg-gray-200 dark:bg-gray-700 rounded flex-shrink-0" />
                 </div>
               ))}
+            </div>
+          ) : error ? (
+            <div className="text-center py-12">
+              <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-6 max-w-md mx-auto">
+                <h3 className="text-lg font-semibold text-red-800 dark:text-red-200 mb-2">Failed to Load Characters</h3>
+                <p className="text-red-600 dark:text-red-400">{error}</p>
+                <button 
+                  onClick={() => window.location.reload()} 
+                  className="mt-4 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-lg transition-colors"
+                >
+                  Retry
+                </button>
+              </div>
+            </div>
+          ) : characters.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 max-w-md mx-auto">
+                <UsersIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">No Characters Found</h3>
+                <p className="text-gray-600 dark:text-gray-400">No characters have been created yet.</p>
+              </div>
             </div>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 auto-rows-fr">

@@ -7,7 +7,66 @@ export async function GET(request, { params }) {
   const { slug } = params;
   try {
     console.log('Fetching character with slug:', slug);
-    const result = await db.select().from(characters).where(eq(characters.slug, slug));
+    // Try to select all fields first, then fallback to core fields if there are schema issues
+    let result;
+    try {
+      result = await db.select({
+        id: characters.id,
+        name: characters.name,
+        aka: characters.aka,
+        pronouns: characters.pronouns,
+        relation: characters.relation,
+        role: characters.role,
+        description: characters.description,
+        lastSeenChapter: characters.lastSeenChapter,
+        personality: characters.personality,
+        background: characters.background,
+        physicalDescription: characters.physicalDescription,
+        dialogueStyle: characters.dialogueStyle,
+        groups: characters.groups,
+        birthYear: characters.birthYear,
+        died: characters.died,
+        birthPlace: characters.birthPlace,
+        deathPlace: characters.deathPlace,
+        slug: characters.slug,
+        characterType: characters.characterType,
+        imageUrl: characters.imageUrl,
+        createdAt: characters.createdAt,
+        updatedAt: characters.updatedAt,
+      }).from(characters).where(eq(characters.slug, slug));
+    } catch (schemaError) {
+      console.log('Schema error detected, falling back to core fields only:', schemaError);
+      // If there's a schema error, select only core fields
+      result = await db.select({
+        id: characters.id,
+        name: characters.name,
+        aka: characters.aka,
+        pronouns: characters.pronouns,
+        relation: characters.relation,
+        role: characters.role,
+        description: characters.description,
+        lastSeenChapter: characters.lastSeenChapter,
+        personality: characters.personality,
+        background: characters.background,
+        physicalDescription: characters.physicalDescription,
+        dialogueStyle: characters.dialogueStyle,
+        groups: characters.groups,
+        birthYear: characters.birthYear,
+        died: characters.died,
+        birthPlace: characters.birthPlace,
+        deathPlace: characters.deathPlace,
+        slug: characters.slug,
+        characterType: characters.characterType,
+        createdAt: characters.createdAt,
+        updatedAt: characters.updatedAt,
+      }).from(characters).where(eq(characters.slug, slug));
+      
+      // Add imageUrl as null if the field doesn't exist
+      if (result.length > 0) {
+        result = result.map(char => ({ ...char, imageUrl: null }));
+      }
+    }
+    
     console.log('Query result:', result);
     if (!result || result.length === 0) {
       console.log('Character not found for slug:', slug);

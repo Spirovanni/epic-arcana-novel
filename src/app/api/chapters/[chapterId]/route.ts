@@ -55,64 +55,75 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     }, 0);
 
     // Get all character arcs and filter them client-side for now
-    const characterArcsData = await db
-      .select({
-        character: characters,
-        arc: characterArcs
-      })
-      .from(characterArcs)
-      .leftJoin(characters, eq(characterArcs.characterId, characters.id));
+    // Wrapped in try-catch to handle schema mismatches gracefully
+    let characterArcsData = [];
+    let chapterCharacterGuidance = [];
+    
+    try {
+      characterArcsData = await db
+        .select({
+          character: characters,
+          arc: characterArcs
+        })
+        .from(characterArcs)
+        .leftJoin(characters, eq(characterArcs.characterId, characters.id));
 
-    // Process character arc data to extract relevant information for this chapter
-    const chapterCharacterGuidance = characterArcsData
-      .map(({ character, arc }) => {
-        try {
-          if (!arc || !arc.stages) return null;
-          
-          const stages = arc.stages as any;
-          let relevantStage = null;
-          let relevantBookPage = null;
+      // Process character arc data to extract relevant information for this chapter
+      chapterCharacterGuidance = characterArcsData
+        .map(({ character, arc }) => {
+          try {
+            if (!arc || !arc.stages) return null;
+            
+            const stages = arc.stages as any;
+            let relevantStage = null;
+            let relevantBookPage = null;
 
-          // Find the stage and book page that matches this chapter
-          for (const [stageKey, stageData] of Object.entries(stages || {})) {
-            if (stageData && typeof stageData === 'object' && 'book_pages' in stageData) {
-              const bookPages = (stageData as any).book_pages;
-              if (Array.isArray(bookPages)) {
-                const matchingPage = bookPages.find((page: any) => 
-                  page.book === book?.bookNumber && page.chapter === chapter.chapterNumber
-                );
-                if (matchingPage) {
-                  relevantStage = stageKey;
-                  relevantBookPage = matchingPage;
-                  break;
+            // Find the stage and book page that matches this chapter
+            for (const [stageKey, stageData] of Object.entries(stages || {})) {
+              if (stageData && typeof stageData === 'object' && 'book_pages' in stageData) {
+                const bookPages = (stageData as any).book_pages;
+                if (Array.isArray(bookPages)) {
+                  const matchingPage = bookPages.find((page: any) => 
+                    page.book === book?.bookNumber && page.chapter === chapter.chapterNumber
+                  );
+                  if (matchingPage) {
+                    relevantStage = stageKey;
+                    relevantBookPage = matchingPage;
+                    break;
+                  }
                 }
               }
             }
+
+            // Only return if we found relevant development for this chapter
+            if (!relevantBookPage) return null;
+
+            return {
+              character: {
+                id: character?.id,
+                name: character?.name,
+                description: character?.description
+              },
+              arc: {
+                id: arc.id,
+                arcType: arc.arcType,
+                triumphTheme: arc.triumphTheme,
+                stage: relevantStage,
+                development: relevantBookPage
+              }
+            };
+          } catch (error) {
+            console.error('Error processing character arc:', error);
+            return null;
           }
-
-          // Only return if we found relevant development for this chapter
-          if (!relevantBookPage) return null;
-
-          return {
-            character: {
-              id: character?.id,
-              name: character?.name,
-              description: character?.description
-            },
-            arc: {
-              id: arc.id,
-              arcType: arc.arcType,
-              triumphTheme: arc.triumphTheme,
-              stage: relevantStage,
-              development: relevantBookPage
-            }
-          };
-        } catch (error) {
-          console.error('Error processing character arc:', error);
-          return null;
-        }
-      })
-      .filter(item => item !== null); // Remove null entries
+        })
+        .filter(item => item !== null); // Remove null entries
+    } catch (error) {
+      console.error('Error fetching character arcs (schema mismatch - continuing without character guidance):', error);
+      // Continue without character guidance rather than failing the entire API call
+      characterArcsData = [];
+      chapterCharacterGuidance = [];
+    }
 
     // Format the response with all available chapter data
     return NextResponse.json({

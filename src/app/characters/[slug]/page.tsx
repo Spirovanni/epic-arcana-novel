@@ -32,6 +32,8 @@ type Character = {
   imagePrompt?: string | null;
   openArtLink?: string | null;
   customSetting?: string | null;
+  // Character Image
+  imageUrl?: string | null;
 };
 
 export default function CharacterProfilePage() {
@@ -43,6 +45,8 @@ export default function CharacterProfilePage() {
   const [isEditing, setIsEditing] = useState(false);
   const [editData, setEditData] = useState<Character | null>(null);
   const [saving, setSaving] = useState(false);
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState<string | null>(null);
 
   useEffect(() => {
     setLoading(true);
@@ -116,6 +120,68 @@ export default function CharacterProfilePage() {
     setEditData({ ...editData, [field]: value });
   };
 
+  const handleImageUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    setUploadError(null);
+
+    try {
+      const formData = new FormData();
+      formData.append('image', file);
+
+      const response = await fetch(`/api/characters/${slug}/image`, {
+        method: 'POST',
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        // Update both current character and edit data
+        setCharacter(prev => prev ? { ...prev, imageUrl: result.imageUrl } : null);
+        if (editData) {
+          setEditData(prev => prev ? { ...prev, imageUrl: result.imageUrl } : null);
+        }
+      } else {
+        setUploadError(result.error || 'Failed to upload image');
+      }
+    } catch (error) {
+      setUploadError('Failed to upload image');
+      console.error('Upload error:', error);
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  const handleImageRemove = async () => {
+    setUploading(true);
+    setUploadError(null);
+
+    try {
+      const response = await fetch(`/api/characters/${slug}/image`, {
+        method: 'DELETE',
+      });
+
+      if (response.ok) {
+        // Update both current character and edit data
+        setCharacter(prev => prev ? { ...prev, imageUrl: null } : null);
+        if (editData) {
+          setEditData(prev => prev ? { ...prev, imageUrl: null } : null);
+        }
+      } else {
+        const result = await response.json();
+        setUploadError(result.error || 'Failed to remove image');
+      }
+    } catch (error) {
+      setUploadError('Failed to remove image');
+      console.error('Remove error:', error);
+    } finally {
+      setUploading(false);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -163,10 +229,42 @@ export default function CharacterProfilePage() {
               {/* Header Section */}
               <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 px-8 py-12">
                 <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
-                  <div className="relative">
+                  <div className="relative group">
                     <div className="w-48 h-48 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/30">
-                      <Image src={placeholderImg} alt={character.name} width={192} height={192} className="w-full h-full object-cover rounded-xl" />
+                      <Image 
+                        src={character.imageUrl || placeholderImg} 
+                        alt={character.name} 
+                        width={192} 
+                        height={192} 
+                        className="w-full h-full object-cover rounded-xl" 
+                      />
                     </div>
+                    
+                    {/* Upload Controls */}
+                    <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-2xl flex items-center justify-center">
+                      <div className="flex flex-col items-center space-y-2">
+                        <label className="cursor-pointer bg-white/90 hover:bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
+                          {uploading ? 'Uploading...' : 'Upload Image'}
+                          <input
+                            type="file"
+                            accept="image/jpeg,image/jpg,image/png,image/webp"
+                            onChange={handleImageUpload}
+                            disabled={uploading}
+                            className="hidden"
+                          />
+                        </label>
+                        {character.imageUrl && (
+                          <button
+                            onClick={handleImageRemove}
+                            disabled={uploading}
+                            className="bg-red-500/90 hover:bg-red-600 text-white font-medium py-1 px-3 rounded-lg transition-colors text-xs"
+                          >
+                            Remove
+                          </button>
+                        )}
+                      </div>
+                    </div>
+
                     {character.lastSeenChapter !== null && (
                       <div className="absolute -bottom-3 -right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                         Chapter {character.lastSeenChapter}
@@ -255,6 +353,31 @@ export default function CharacterProfilePage() {
                     ) : character.description ? (
                       <p className="text-lg text-white/90 leading-relaxed max-w-2xl">{character.description}</p>
                     ) : null}
+
+                    {/* Upload Error Display */}
+                    {uploadError && (
+                      <div className="mt-4 max-w-2xl">
+                        <div className="bg-red-500/20 border border-red-400/30 rounded-lg p-3">
+                          <p className="text-red-200 text-sm">{uploadError}</p>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Image Upload Guidelines */}
+                    <div className="mt-6 max-w-2xl">
+                      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
+                        <h4 className="text-white font-medium mb-2 flex items-center">
+                          <PhotoIcon className="w-4 h-4 mr-2" />
+                          Image Upload Guidelines
+                        </h4>
+                        <ul className="text-white/80 text-sm space-y-1">
+                          <li>• <strong>Recommended:</strong> Up to 1,500x1,500 pixels (square)</li>
+                          <li>• <strong>File types:</strong> JPG, PNG, WebP</li>
+                          <li>• <strong>Max size:</strong> 5MB</li>
+                          <li>• <strong>Best quality:</strong> High-resolution portrait images</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                   
                   {/* Edit Controls */}

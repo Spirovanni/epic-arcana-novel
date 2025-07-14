@@ -66,6 +66,8 @@ export const characters = pgTable('characters', {
     imagePrompt: text('image_prompt'),
     openArtLink: varchar('open_art_link', { length: 500 }),
     customSetting: text('custom_setting'),
+    // Character Image
+    imageUrl: varchar('image_url', { length: 255 }),
     createdAt: timestamp('created_at').defaultNow(),
     updatedAt: timestamp('updated_at').defaultNow(),
 });
