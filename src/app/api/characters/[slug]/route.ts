@@ -18,4 +18,32 @@ export async function GET(request, { params }) {
     console.error('Error fetching character:', error);
     return NextResponse.json({ error: 'Failed to fetch character', details: String(error) }, { status: 500 });
   }
+}
+
+export async function PUT(request, { params }) {
+  const { slug } = params;
+  try {
+    const data = await request.json();
+    
+    // Remove fields that shouldn't be updated directly
+    const { id, createdAt, slug: _, ...updateData } = data;
+    
+    const updatedCharacter = await db
+      .update(characters)
+      .set({
+        ...updateData,
+        updatedAt: new Date()
+      })
+      .where(eq(characters.slug, slug))
+      .returning();
+
+    if (updatedCharacter.length === 0) {
+      return NextResponse.json({ error: 'Character not found' }, { status: 404 });
+    }
+
+    return NextResponse.json(updatedCharacter[0]);
+  } catch (error) {
+    console.error('Error updating character:', error);
+    return NextResponse.json({ error: 'Failed to update character', details: String(error) }, { status: 500 });
+  }
 } 

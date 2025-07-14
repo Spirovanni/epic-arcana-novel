@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.png';
 
@@ -28,6 +28,10 @@ type Character = {
   died?: string | null;
   birthPlace?: string | null;
   deathPlace?: string | null;
+  // Image Details for AI Generation
+  imagePrompt?: string | null;
+  openArtLink?: string | null;
+  customSetting?: string | null;
 };
 
 export default function CharacterProfilePage() {
@@ -36,6 +40,9 @@ export default function CharacterProfilePage() {
   const [related, setRelated] = useState<Character[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [editData, setEditData] = useState<Character | null>(null);
+  const [saving, setSaving] = useState(false);
 
   useEffect(() => {
     setLoading(true);
@@ -66,6 +73,48 @@ export default function CharacterProfilePage() {
       setLoading(false);
     });
   }, [slug]);
+
+  const handleEdit = () => {
+    setEditData({ ...character });
+    setIsEditing(true);
+  };
+
+  const handleCancel = () => {
+    setIsEditing(false);
+    setEditData(null);
+  };
+
+  const handleSave = async () => {
+    if (!editData) return;
+    
+    setSaving(true);
+    try {
+      const response = await fetch(`/api/characters/${slug}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editData),
+      });
+
+      if (response.ok) {
+        const updatedCharacter = await response.json();
+        setCharacter(updatedCharacter);
+        setIsEditing(false);
+        setEditData(null);
+      } else {
+        setError('Failed to save character changes');
+      }
+    } catch (error) {
+      setError('Failed to save character changes');
+      console.error('Save error:', error);
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  const handleFieldChange = (field: keyof Character, value: any) => {
+    if (!editData) return;
+    setEditData({ ...editData, [field]: value });
+  };
 
   return (
     <>
@@ -125,31 +174,118 @@ export default function CharacterProfilePage() {
                     )}
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{character.name}</h1>
-                    {character.aka && (
-                      <div className="text-xl text-white/90 mb-4">aka {character.aka}</div>
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        value={editData?.name || ''}
+                        onChange={(e) => handleFieldChange('name', e.target.value)}
+                        className="text-4xl md:text-5xl font-bold text-white mb-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-2 focus:ring-2 focus:ring-white/50 w-full max-w-2xl"
+                        placeholder="Character name"
+                      />
+                    ) : (
+                      <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{character.name}</h1>
                     )}
-                    <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
-                      {character.pronouns && (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
-                          <UserIcon className="w-4 h-4 mr-1" />
-                          {character.pronouns}
-                        </span>
-                      )}
-                      {character.role && (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
-                          <TagIcon className="w-4 h-4 mr-1" />
-                          {character.role}
-                        </span>
-                      )}
-                      {character.relation && (
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
-                          {character.relation}
-                        </span>
-                      )}
-                    </div>
-                    {character.description && (
+                    
+                    {isEditing ? (
+                      <input
+                        type="text"
+                        value={editData?.aka || ''}
+                        onChange={(e) => handleFieldChange('aka', e.target.value)}
+                        className="text-xl text-white/90 mb-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-3 py-1 focus:ring-2 focus:ring-white/50 w-full max-w-lg"
+                        placeholder="Also known as..."
+                      />
+                    ) : character.aka ? (
+                      <div className="text-xl text-white/90 mb-4">aka {character.aka}</div>
+                    ) : null}
+                    
+                    {isEditing ? (
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+                        <input
+                          type="text"
+                          value={editData?.pronouns || ''}
+                          onChange={(e) => handleFieldChange('pronouns', e.target.value)}
+                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          placeholder="Pronouns"
+                        />
+                        <input
+                          type="text"
+                          value={editData?.role || ''}
+                          onChange={(e) => handleFieldChange('role', e.target.value)}
+                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          placeholder="Role"
+                        />
+                        <input
+                          type="text"
+                          value={editData?.relation || ''}
+                          onChange={(e) => handleFieldChange('relation', e.target.value)}
+                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          placeholder="Relation"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
+                        {character.pronouns && (
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                            <UserIcon className="w-4 h-4 mr-1" />
+                            {character.pronouns}
+                          </span>
+                        )}
+                        {character.role && (
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                            <TagIcon className="w-4 h-4 mr-1" />
+                            {character.role}
+                          </span>
+                        )}
+                        {character.relation && (
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                            {character.relation}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                    
+                    {isEditing ? (
+                      <textarea
+                        value={editData?.description || ''}
+                        onChange={(e) => handleFieldChange('description', e.target.value)}
+                        rows={3}
+                        className="w-full max-w-2xl px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                        placeholder="Character description..."
+                      />
+                    ) : character.description ? (
                       <p className="text-lg text-white/90 leading-relaxed max-w-2xl">{character.description}</p>
+                    ) : null}
+                  </div>
+                  
+                  {/* Edit Controls */}
+                  <div className="flex flex-col space-y-3">
+                    {!isEditing ? (
+                      <button
+                        onClick={handleEdit}
+                        className="inline-flex items-center px-4 py-2 bg-white/20 hover:bg-white/30 text-white font-medium rounded-lg transition-colors duration-200 backdrop-blur-sm"
+                      >
+                        <PencilIcon className="w-4 h-4 mr-2" />
+                        Edit Character
+                      </button>
+                    ) : (
+                      <div className="flex space-x-2">
+                        <button
+                          onClick={handleSave}
+                          disabled={saving}
+                          className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 disabled:bg-green-400 text-white font-medium rounded-lg transition-colors duration-200"
+                        >
+                          <CheckIcon className="w-4 h-4 mr-2" />
+                          {saving ? 'Saving...' : 'Save'}
+                        </button>
+                        <button
+                          onClick={handleCancel}
+                          disabled={saving}
+                          className="inline-flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 disabled:bg-red-400 text-white font-medium rounded-lg transition-colors duration-200"
+                        >
+                          <XMarkIcon className="w-4 h-4 mr-2" />
+                          Cancel
+                        </button>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -160,30 +296,157 @@ export default function CharacterProfilePage() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
-                    {character.personality && (
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Personality</h3>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{character.personality}</p>
+                    {/* Personality Section */}
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Personality</h3>
+                      {isEditing ? (
+                        <textarea
+                          value={editData?.personality || ''}
+                          onChange={(e) => handleFieldChange('personality', e.target.value)}
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          placeholder="Describe the character's personality..."
+                        />
+                      ) : (
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          {character.personality || 'No personality description yet.'}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Background Section */}
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Background</h3>
+                      {isEditing ? (
+                        <textarea
+                          value={editData?.background || ''}
+                          onChange={(e) => handleFieldChange('background', e.target.value)}
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          placeholder="Describe the character's background..."
+                        />
+                      ) : (
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          {character.background || 'No background information yet.'}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Physical Description Section */}
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Physical Description</h3>
+                      {isEditing ? (
+                        <textarea
+                          value={editData?.physicalDescription || ''}
+                          onChange={(e) => handleFieldChange('physicalDescription', e.target.value)}
+                          rows={4}
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          placeholder="Describe the character's physical appearance..."
+                        />
+                      ) : (
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          {character.physicalDescription || 'No physical description yet.'}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Dialogue Style Section */}
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Dialogue Style</h3>
+                      {isEditing ? (
+                        <textarea
+                          value={editData?.dialogueStyle || ''}
+                          onChange={(e) => handleFieldChange('dialogueStyle', e.target.value)}
+                          rows={3}
+                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          placeholder="Describe the character's way of speaking..."
+                        />
+                      ) : (
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                          {character.dialogueStyle || 'No dialogue style information yet.'}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Image Details Section */}
+                    <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-700">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
+                        <PhotoIcon className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-400" />
+                        Image Details for AI Generation
+                      </h3>
+                      <div className="space-y-4">
+                        {/* Image Prompt */}
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            AI Prompt
+                          </label>
+                          {isEditing ? (
+                            <textarea
+                              value={editData?.imagePrompt || ''}
+                              onChange={(e) => handleFieldChange('imagePrompt', e.target.value)}
+                              rows={3}
+                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
+                              placeholder="Enter AI prompt for generating this character's image..."
+                            />
+                          ) : (
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
+                              {character.imagePrompt || 'No AI prompt defined yet.'}
+                            </p>
+                          )}
+                        </div>
+
+                        {/* OpenArt Link */}
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            OpenArt Link
+                          </label>
+                          {isEditing ? (
+                            <input
+                              type="url"
+                              value={editData?.openArtLink || ''}
+                              onChange={(e) => handleFieldChange('openArtLink', e.target.value)}
+                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
+                              placeholder="https://openart.ai/..."
+                            />
+                          ) : (
+                            <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
+                              {character.openArtLink ? (
+                                <a
+                                  href={character.openArtLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline"
+                                >
+                                  {character.openArtLink}
+                                </a>
+                              ) : (
+                                <span className="text-gray-500 dark:text-gray-400">No OpenArt link provided.</span>
+                              )}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Custom Setting */}
+                        <div>
+                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                            Custom Setting
+                          </label>
+                          {isEditing ? (
+                            <textarea
+                              value={editData?.customSetting || ''}
+                              onChange={(e) => handleFieldChange('customSetting', e.target.value)}
+                              rows={3}
+                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
+                              placeholder="Any custom settings or notes for image generation..."
+                            />
+                          ) : (
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
+                              {character.customSetting || 'No custom settings defined.'}
+                            </p>
+                          )}
+                        </div>
                       </div>
-                    )}
-                    {character.background && (
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Background</h3>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{character.background}</p>
-                      </div>
-                    )}
-                    {character.physicalDescription && (
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Physical Description</h3>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{character.physicalDescription}</p>
-                      </div>
-                    )}
-                    {character.dialogueStyle && (
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Dialogue Style</h3>
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{character.dialogueStyle}</p>
-                      </div>
-                    )}
+                    </div>
                   </div>
 
                   {/* Sidebar Info */}
@@ -191,44 +454,95 @@ export default function CharacterProfilePage() {
                     {/* Life Details */}
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Life Details</h3>
-                      <div className="space-y-3">
-                        {character.birthYear && (
-                          <div className="flex items-center">
-                            <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">Born</div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthYear}</div>
-                            </div>
+                      {isEditing ? (
+                        <div className="space-y-3">
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Birth Year</label>
+                            <input
+                              type="text"
+                              value={editData?.birthYear || ''}
+                              onChange={(e) => handleFieldChange('birthYear', e.target.value)}
+                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              placeholder="e.g., 1265 CE"
+                            />
                           </div>
-                        )}
-                        {character.died && (
-                          <div className="flex items-center">
-                            <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">Died</div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">{character.died}</div>
-                            </div>
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Death Year</label>
+                            <input
+                              type="text"
+                              value={editData?.died || ''}
+                              onChange={(e) => handleFieldChange('died', e.target.value)}
+                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              placeholder="e.g., 1321 CE"
+                            />
                           </div>
-                        )}
-                        {character.birthPlace && (
-                          <div className="flex items-start">
-                            <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">Birthplace</div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthPlace}</div>
-                            </div>
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Birth Place</label>
+                            <input
+                              type="text"
+                              value={editData?.birthPlace || ''}
+                              onChange={(e) => handleFieldChange('birthPlace', e.target.value)}
+                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              placeholder="e.g., Florence, Italy"
+                            />
                           </div>
-                        )}
-                        {character.deathPlace && (
-                          <div className="flex items-start">
-                            <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
-                            <div>
-                              <div className="text-sm font-medium text-gray-900 dark:text-white">Deathplace</div>
-                              <div className="text-sm text-gray-600 dark:text-gray-400">{character.deathPlace}</div>
-                            </div>
+                          <div>
+                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Death Place</label>
+                            <input
+                              type="text"
+                              value={editData?.deathPlace || ''}
+                              onChange={(e) => handleFieldChange('deathPlace', e.target.value)}
+                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              placeholder="e.g., Ravenna, Italy"
+                            />
                           </div>
-                        )}
-                      </div>
+                        </div>
+                      ) : (
+                        <div className="space-y-3">
+                          {(character.birthYear || character.died || character.birthPlace || character.deathPlace) ? (
+                            <>
+                              {character.birthYear && (
+                                <div className="flex items-center">
+                                  <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
+                                  <div>
+                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Born</div>
+                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthYear}</div>
+                                  </div>
+                                </div>
+                              )}
+                              {character.died && (
+                                <div className="flex items-center">
+                                  <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
+                                  <div>
+                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Died</div>
+                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.died}</div>
+                                  </div>
+                                </div>
+                              )}
+                              {character.birthPlace && (
+                                <div className="flex items-start">
+                                  <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
+                                  <div>
+                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Birthplace</div>
+                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthPlace}</div>
+                                  </div>
+                                </div>
+                              )}
+                              {character.deathPlace && (
+                                <div className="flex items-start">
+                                  <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
+                                  <div>
+                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Deathplace</div>
+                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.deathPlace}</div>
+                                  </div>
+                                </div>
+                              )}
+                            </>
+                          ) : (
+                            <p className="text-sm text-gray-500 dark:text-gray-400 italic">No life details recorded yet.</p>
+                          )}
+                        </div>
+                      )}
                     </div>
 
                     {/* Groups */}
