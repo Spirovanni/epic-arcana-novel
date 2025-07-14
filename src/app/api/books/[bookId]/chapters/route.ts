@@ -41,11 +41,17 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
       }
     }));
 
-    // Group chapters by chapter number and take the first one of each
+    // Group chapters by chapter number and prefer entries with shorter, cleaner titles
     const chaptersByNumber = new Map();
     formattedChapters.forEach(chapter => {
-      if (!chaptersByNumber.has(chapter.chapterNumber)) {
+      const existing = chaptersByNumber.get(chapter.chapterNumber);
+      if (!existing) {
         chaptersByNumber.set(chapter.chapterNumber, chapter);
+      } else {
+        // Prefer entries with shorter titles (likely to be proper chapter titles vs descriptions)
+        if (chapter.title && chapter.title.length < existing.title.length) {
+          chaptersByNumber.set(chapter.chapterNumber, chapter);
+        }
       }
     });
 

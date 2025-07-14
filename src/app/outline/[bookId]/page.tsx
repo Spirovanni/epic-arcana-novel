@@ -1,16 +1,22 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import WritingGuidanceCard from '@/components/WritingGuidanceCard';
+import WritingAssistantSidebar from '@/components/WritingAssistantSidebar';
 import { 
   ChevronRightIcon, 
   ChevronDownIcon,
   DocumentTextIcon,
   FolderIcon,
-  FolderOpenIcon
+  FolderOpenIcon,
+  PencilIcon,
+  BookOpenIcon,
+  SparklesIcon,
+  ClipboardDocumentListIcon
 } from '@heroicons/react/24/outline';
 
 interface TaskGroup {
@@ -26,6 +32,48 @@ interface Book {
   id: string;
   title: string;
   bookNumber: number;
+}
+
+interface WritingGuidance {
+  id: string;
+  chapterId: string;
+  chapterNumber: number;
+  title: string;
+  chapter?: {
+    id: string;
+    title: string;
+    description: string;
+    iconPath: string;
+    colorTheme: {
+      name: string;
+      hex: string;
+    };
+  };
+  writingDetails: {
+    povType: string;
+    povCharacter: string;
+    tense: string;
+    whyThisPovAndTense: string;
+    summary: string;
+    keyPlotDevelopments: string[];
+    narrativeFunction: string[];
+    toneAndVisualPrompts: string[];
+    tipsForWriting: string[];
+    fullText: string;
+  };
+  writingProgress: {
+    isStarted: boolean;
+    wordCount: number;
+    completionRate: number;
+    lastUpdated: string;
+  };
+}
+
+interface WritingStats {
+  totalChapters: number;
+  chaptersStarted: number;
+  totalWords: number;
+  estimatedCompletionTime: number;
 }
 
 const TaskGroupNode = ({ node, level = 0 }: { node: TaskGroup; level?: number }) => {
@@ -112,20 +160,28 @@ const TaskGroupNode = ({ node, level = 0 }: { node: TaskGroup; level?: number })
 
 export default function OutlinePage() {
   const params = useParams();
+  const router = useRouter();
   const bookId = params.bookId as string;
   const [outline, setOutline] = useState<TaskGroup[]>([]);
   const [book, setBook] = useState<Book | null>(null);
   const [loading, setLoading] = useState(true);
+  const [viewMode, setViewMode] = useState<'outline' | 'writing'>('outline');
+  const [writingGuidance, setWritingGuidance] = useState<WritingGuidance[]>([]);
+  const [writingStats, setWritingStats] = useState<WritingStats | null>(null);
+  const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
+  const [showWritingAssistant, setShowWritingAssistant] = useState(false);
+  const [currentChapter] = useState<WritingGuidance | null>(null);
 
   useEffect(() => {
     if (!bookId) return;
 
-    async function fetchOutline() {
+    async function fetchData() {
       try {
-        // Fetch book info and outline data in parallel
-        const [outlineResponse, bookResponse] = await Promise.all([
+        // Fetch all data in parallel
+        const [outlineResponse, bookResponse, writingGuidanceResponse] = await Promise.all([
           fetch(`/api/outline/${bookId}`),
-          fetch(`/api/books/${bookId}`)
+          fetch(`/api/books/${bookId}`),
+          fetch(`/api/books/${bookId}/writing-guidance`)
         ]);
 
         if (outlineResponse.ok) {
@@ -150,14 +206,20 @@ export default function OutlinePage() {
           const bookData = await bookResponse.json();
           setBook(bookData);
         }
+
+        if (writingGuidanceResponse.ok) {
+          const guidanceData = await writingGuidanceResponse.json();
+          setWritingGuidance(guidanceData.guidance || []);
+          setWritingStats(guidanceData.stats || null);
+        }
       } catch (error) {
-        console.error('Failed to fetch outline:', error);
+        console.error('Failed to fetch data:', error);
       } finally {
         setLoading(false);
       }
     }
 
-    fetchOutline();
+    fetchData();
   }, [bookId]);
 
   if (loading) {
@@ -195,11 +257,53 @@ export default function OutlinePage() {
             {book && `Book ${book.bookNumber}`}
           </div>
           <h1 className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-4">
-            {book?.title} - Story Outline
+            {book?.title} - {viewMode === 'writing' ? 'Writing Guide' : 'Story Outline'}
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Explore the hierarchical structure of task groups that drive the narrative forward.
+            {viewMode === 'writing' 
+              ? 'Comprehensive writing guidance for each chapter with AI-powered assistance.'
+              : 'Explore the hierarchical structure of task groups that drive the narrative forward.'
+            }
           </p>
+          
+          {/* Mode Toggle */}
+          <div className="flex items-center justify-center gap-4 mt-8">
+            <div className="flex bg-white dark:bg-gray-800 rounded-lg p-1 shadow-lg">
+              <button
+                onClick={() => setViewMode('outline')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
+                  viewMode === 'outline'
+                    ? 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              >
+                <ClipboardDocumentListIcon className="w-4 h-4" />
+                Story Outline
+              </button>
+              <button
+                onClick={() => setViewMode('writing')}
+                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
+                  viewMode === 'writing'
+                    ? 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              >
+                <PencilIcon className="w-4 h-4" />
+                Writing Guide
+              </button>
+            </div>
+            
+            {viewMode === 'writing' && (
+              <button
+                onClick={() => setShowWritingAssistant(true)}
+                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors shadow-lg"
+              >
+                <SparklesIcon className="w-4 h-4" />
+                Writing Assistant
+              </button>
+            )}
+          </div>
+          
           <div className="mt-6">
             <Link 
               href={`/books/${bookId}`}
@@ -237,21 +341,104 @@ export default function OutlinePage() {
           </div>
         )}
 
-        {/* Outline Content */}
+        {/* Content */}
         <div className="space-y-6">
-          {outline.length === 0 ? (
-            <div className="text-center py-12">
-              <DocumentTextIcon className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No Outline Available</h3>
-              <p className="text-gray-500 dark:text-gray-500">This book doesn't have any task groups defined yet.</p>
-            </div>
+          {viewMode === 'outline' ? (
+            /* Outline Content */
+            outline.length === 0 ? (
+              <div className="text-center py-12">
+                <DocumentTextIcon className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No Outline Available</h3>
+                <p className="text-gray-500 dark:text-gray-500">This book doesn&apos;t have any task groups defined yet.</p>
+              </div>
+            ) : (
+              outline.map((node) => (
+                <TaskGroupNode key={node.id} node={node} />
+              ))
+            )
           ) : (
-            outline.map((node) => (
-              <TaskGroupNode key={node.id} node={node} />
-            ))
+            /* Writing Guide Content */
+            <div className="space-y-6">
+              {/* Writing Stats */}
+              {writingStats && (
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                      {writingStats.totalChapters}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400">Total Chapters</div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
+                      {writingStats.chaptersStarted}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400">Started</div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                      {writingStats.totalWords.toLocaleString()}
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400">Words Written</div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
+                    <div className="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
+                      {writingStats.estimatedCompletionTime}h
+                    </div>
+                    <div className="text-gray-600 dark:text-gray-400">Est. Time</div>
+                  </div>
+                </div>
+              )}
+
+              {/* Writing Guidance Cards */}
+              {writingGuidance.length === 0 ? (
+                <div className="text-center py-12">
+                  <BookOpenIcon className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No Writing Guidance Available</h3>
+                  <p className="text-gray-500 dark:text-gray-500">Writing guidance hasn&apos;t been imported for this book yet.</p>
+                </div>
+              ) : (
+                writingGuidance.map((guidance) => (
+                  <WritingGuidanceCard
+                    key={guidance.id}
+                    guidance={guidance}
+                    isExpanded={expandedChapters.has(guidance.id)}
+                    onToggleExpanded={() => {
+                      const newExpanded = new Set(expandedChapters);
+                      if (newExpanded.has(guidance.id)) {
+                        newExpanded.delete(guidance.id);
+                      } else {
+                        newExpanded.add(guidance.id);
+                      }
+                      setExpandedChapters(newExpanded);
+                    }}
+                    onStartWriting={(chapterId) => {
+                      router.push(`/chapters/${chapterId}`);
+                    }}
+                    onViewChapter={(chapterId) => {
+                      router.push(`/chapters/${chapterId}`);
+                    }}
+                  />
+                ))
+              )}
+            </div>
           )}
         </div>
       </div>
+
+      {/* Writing Assistant Sidebar */}
+      <WritingAssistantSidebar
+        isOpen={showWritingAssistant}
+        onClose={() => setShowWritingAssistant(false)}
+        currentChapter={currentChapter ? {
+          id: currentChapter.chapterId,
+          number: currentChapter.chapterNumber,
+          title: currentChapter.title,
+          guidance: currentChapter.writingDetails
+        } : undefined}
+        onStartSession={(chapterId) => {
+          router.push(`/chapters/${chapterId}`);
+        }}
+      />
     </div>
   );
 }

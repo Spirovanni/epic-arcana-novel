@@ -29,8 +29,9 @@ export default function Navbar() {
     setMounted(true);
   }, []);
 
+
   return (
-    <nav className="bg-gradient-to-r from-indigo-900 via-purple-900 to-violet-900 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-2xl border-b border-purple-500/20 dark:border-gray-700/50">
+    <nav className="relative z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-violet-900 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-2xl border-b border-purple-500/20 dark:border-gray-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo and Brand */}
@@ -109,12 +110,15 @@ export default function Navbar() {
           <div className="flex items-center space-x-4">
             {/* Theme Toggle */}
             <button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => {
+                const newTheme = theme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+              }}
               className="p-2 rounded-lg text-purple-200 hover:text-white hover:bg-white/10 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-purple-500"
               aria-label="Toggle theme"
             >
               {!mounted ? (
-                <div className="w-5 h-5" />
+                <div className="w-5 h-5 bg-gray-400 rounded" />
               ) : theme === 'dark' ? (
                 <SunIcon className="w-5 h-5" />
               ) : (

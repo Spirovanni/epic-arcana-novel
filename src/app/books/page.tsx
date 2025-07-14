@@ -22,7 +22,7 @@ interface Book {
   } | null;
 }
 
-// Helper function to determine text color based on background luminance
+// Helper functions for enhanced color styling
 const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
   if (!bgColor) return 'text-black';
   const color = bgColor.startsWith('#') ? bgColor.substring(1, 7) : bgColor;
@@ -31,6 +31,26 @@ const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
   const b = parseInt(color.substring(4, 6), 16);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   return luminance > 0.5 ? 'text-black' : 'text-white';
+};
+
+// Generate sophisticated gradient backgrounds
+const createGradientBackground = (hex: string) => {
+  const lighterHex = adjustBrightness(hex, 20);
+  const darkerHex = adjustBrightness(hex, -30);
+  return `linear-gradient(135deg, ${hex}E6 0%, ${lighterHex}CC 25%, ${hex}B3 50%, ${darkerHex}E6 100%)`;
+};
+
+// Adjust color brightness
+const adjustBrightness = (hex: string, percent: number) => {
+  const color = hex.startsWith('#') ? hex.substring(1, 7) : hex;
+  const num = parseInt(color, 16);
+  const amt = Math.round(2.55 * percent);
+  const R = (num >> 16) + amt;
+  const G = (num >> 8 & 0x00FF) + amt;
+  const B = (num & 0x0000FF) + amt;
+  return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+    (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+    (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
 };
 
 export default function BooksPage() {
@@ -75,19 +95,28 @@ export default function BooksPage() {
       <Breadcrumbs items={[{ label: 'Books', current: true }]} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-4">
-            Epic Arcana Chronicles
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-black text-gray-900 dark:text-gray-100 mb-6 tracking-tight">
+            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 dark:from-indigo-400 dark:via-purple-400 dark:to-indigo-600 bg-clip-text text-transparent">
+              Epic Arcana
+            </span>
+            <br />
+            <span className="text-gray-800 dark:text-gray-200">Chronicles</span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-light">
             Journey through nine transformative books of temporal mastery, each revealing unique aspects of Francisco's evolution across time and consciousness.
           </p>
+          <div className="mt-8 flex justify-center">
+            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {books.map((book) => {
-          const backgroundColor = book.colorTheme?.hex || '#f3f4f6';
+          const backgroundColor = book.colorTheme?.hex || '#6366f1';
           const textColorClass = getTextColor(backgroundColor);
+          const gradientBg = createGradientBackground(backgroundColor);
+          const glowColor = backgroundColor + '40'; // Add transparency for glow effect
           
           return (
             <Link 
@@ -95,44 +124,86 @@ export default function BooksPage() {
               key={book.id} 
               className="group block"
             >
-              <div className="relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] h-[320px]">
+              <div 
+                className="relative overflow-hidden rounded-2xl transition-all duration-500 transform hover:scale-[1.03] hover:rotate-1 h-[360px] group-hover:shadow-2xl"
+                style={{
+                  boxShadow: `0 25px 50px -12px ${glowColor}, 0 0 0 1px ${backgroundColor}20`,
+                  filter: 'hover:brightness(1.1)'
+                }}
+              >
+                {/* Animated gradient background */}
                 <div 
-                  className="p-8 h-full flex flex-col justify-between relative"
-                  style={{ 
-                    background: `linear-gradient(135deg, ${backgroundColor} 0%, ${backgroundColor}dd 100%)` 
+                  className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{ background: gradientBg }}
+                />
+                
+                {/* Mystical overlay pattern */}
+                <div 
+                  className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500"
+                  style={{
+                    backgroundImage: `radial-gradient(circle at 20% 80%, ${backgroundColor}60 0%, transparent 50%), radial-gradient(circle at 80% 20%, ${backgroundColor}60 0%, transparent 50%)`
                   }}
-                >
-                  {/* Decorative elements */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-16 translate-x-16"></div>
-                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-black/10 rounded-full translate-y-12 -translate-x-12"></div>
+                />
+                
+                <div className="relative z-10 p-8 h-full flex flex-col justify-between">
+                  {/* Enhanced decorative elements */}
+                  <div className="absolute top-0 right-0 w-40 h-40 rounded-full -translate-y-20 translate-x-20 group-hover:scale-110 transition-transform duration-700"
+                    style={{ background: `radial-gradient(circle, ${backgroundColor}20 0%, transparent 70%)` }}></div>
+                  <div className="absolute bottom-0 left-0 w-32 h-32 rounded-full translate-y-16 -translate-x-16 group-hover:scale-110 transition-transform duration-700"
+                    style={{ background: `radial-gradient(circle, ${backgroundColor}30 0%, transparent 70%)` }}></div>
                   
-                  <div className="relative z-10">
-                    <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold mb-4 ${textColorClass} bg-white/20 backdrop-blur-sm`}>
-                      Book {book.bookNumber}
+                  {/* Mystical sparkles */}
+                  <div className="absolute top-4 left-4 w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
+                  <div className="absolute top-12 right-8 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                  <div className="absolute bottom-16 left-8 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+                  
+                  <div className="relative z-20">
+                    <div className={`inline-flex items-center px-4 py-2 rounded-full text-xs font-bold mb-6 ${textColorClass} backdrop-blur-md border group-hover:scale-105 transition-all duration-300`}
+                      style={{ 
+                        background: `linear-gradient(135deg, ${backgroundColor}40, ${backgroundColor}60)`,
+                        borderColor: `${backgroundColor}60`,
+                        boxShadow: `0 4px 12px ${backgroundColor}30`
+                      }}>
+                      <span className="tracking-wider">BOOK {book.bookNumber}</span>
                     </div>
-                    <h2 className={`text-2xl font-black mb-3 ${textColorClass} leading-tight group-hover:scale-105 transition-transform duration-200 line-clamp-3`}>
+                    <h2 className={`text-3xl font-black mb-4 ${textColorClass} leading-tight group-hover:scale-105 transition-all duration-300 tracking-tight`}
+                      style={{ textShadow: `0 2px 8px ${backgroundColor}80` }}>
                       {book.title}
                     </h2>
                   </div>
                   
-                  <div className="relative z-10 space-y-3">
-                    <p className={`text-sm ${textColorClass} opacity-90 leading-relaxed line-clamp-2`}>
+                  <div className="relative z-20 space-y-4">
+                    <p className={`text-base ${textColorClass} opacity-95 leading-relaxed font-medium tracking-wide`}
+                      style={{ textShadow: `0 1px 3px ${backgroundColor}60` }}>
                       {book.fictionNovelTitle}
                     </p>
                     {book.colorTheme && (
-                      <div className={`inline-flex items-center px-2 py-1 rounded-md text-xs font-medium ${textColorClass} bg-black/20`}>
+                      <div className={`inline-flex items-center px-3 py-2 rounded-xl text-xs font-bold ${textColorClass} backdrop-blur-md border group-hover:scale-105 transition-all duration-300`}
+                        style={{
+                          background: `linear-gradient(135deg, ${backgroundColor}50, ${backgroundColor}70)`,
+                          borderColor: `${backgroundColor}80`,
+                          boxShadow: `0 4px 12px ${backgroundColor}40`
+                        }}>
                         <div 
-                          className="w-2 h-2 rounded-full mr-2" 
-                          style={{ backgroundColor: book.colorTheme.hex }}
+                          className="w-3 h-3 rounded-full mr-2 shadow-lg" 
+                          style={{ 
+                            backgroundColor: book.colorTheme.hex,
+                            boxShadow: `0 0 8px ${book.colorTheme.hex}80, inset 0 1px 0 rgba(255,255,255,0.3)`
+                          }}
                         ></div>
-                        {book.colorTheme.name}
+                        <span className="tracking-wider uppercase">{book.colorTheme.name}</span>
                       </div>
                     )}
                   </div>
                   
-                  {/* Hover arrow */}
-                  <div className={`absolute bottom-4 right-4 w-8 h-8 ${textColorClass} opacity-0 group-hover:opacity-100 transition-all duration-200 transform translate-x-2 group-hover:translate-x-0`}>
-                    <svg className="w-full h-full" fill="currentColor" viewBox="0 0 20 20">
+                  {/* Enhanced hover arrow */}
+                  <div className={`absolute bottom-6 right-6 w-10 h-10 ${textColorClass} opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-4 group-hover:translate-x-0 rotate-12 group-hover:rotate-0`}
+                    style={{
+                      background: `linear-gradient(135deg, ${backgroundColor}60, ${backgroundColor}80)`,
+                      borderRadius: '50%',
+                      boxShadow: `0 4px 12px ${backgroundColor}50`
+                    }}>
+                    <svg className="w-6 h-6 m-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>

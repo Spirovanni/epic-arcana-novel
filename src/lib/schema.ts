@@ -336,6 +336,11 @@ export const scenes = pgTable('scenes', {
   preliminarySceneFocus: varchar('preliminary_scene_focus', { length: 255 }),
   preliminarySceneDescription: text('preliminary_scene_description'),
   description: text('description'),
+  // Scene Structure Fields
+  setup: text('setup'),
+  sensoryDetail: text('sensory_detail'),
+  internalConflict: text('internal_conflict'),
+  beatGoal: text('beat_goal'),
   tarotSymbolism: text('tarot_symbolism'),
   heroJourneyStage: varchar('hero_journey_stage', { length: 100 }),
   pages: varchar('pages', { length: 50 }),
@@ -481,6 +486,26 @@ export const timelineDivergencePoints = pgTable('timeline_divergence_points', {
   historicalConsequences: jsonb('historical_consequences'), // Long-term effects on history
   fantasyJustification: text('fantasy_justification'), // How fantasy elements explain the change
   cascadeEffects: jsonb('cascade_effects'), // Secondary changes this causes
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const chapterWritingGuidance = pgTable('chapter_writing_guidance', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
+  bookId: uuid('book_id').references(() => books.id).notNull(),
+  chapterNumber: integer('chapter_number').notNull(),
+  title: varchar('title', { length: 255 }).notNull(),
+  povType: varchar('pov_type', { length: 100 }), // "3rd Person Limited", etc.
+  povCharacter: varchar('pov_character', { length: 255 }), // Character name
+  tense: varchar('tense', { length: 50 }), // "Past Tense", etc.
+  whyThisPovAndTense: text('why_this_pov_and_tense'), // Explanation
+  summary: text('summary'), // Chapter summary
+  keyPlotDevelopments: jsonb('key_plot_developments'), // Array of strings
+  narrativeFunction: jsonb('narrative_function'), // Array of strings
+  toneAndVisualPrompts: jsonb('tone_and_visual_prompts'), // Array of strings
+  tipsForWriting: jsonb('tips_for_writing'), // Array of strings
+  fullText: text('full_text'), // Complete Sudowrite guidance text
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });

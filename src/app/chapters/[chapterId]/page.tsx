@@ -4,12 +4,14 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
+import { useTheme } from 'next-themes';
 import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, PlusIcon, LightBulbIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
 import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
 import CharacterToolkitHUD from '@/components/CharacterToolkitHUD';
+import SceneManager from '@/components/SceneManager';
 
 // Simple HTML editor component for React 19 compatibility
 const SimpleHTMLEditor = ({ value, onChange, onSave }: { 
@@ -63,7 +65,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
   };
   
   return (
-    <div className="border rounded-lg overflow-hidden">
+    <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-white dark:bg-gray-900">
       {/* Toolbar */}
       <div className="bg-gray-50 dark:bg-gray-700 border-b dark:border-gray-600 p-3 flex flex-wrap items-center gap-3">
         {/* Formatting Buttons */}
@@ -159,7 +161,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
       <div className="min-h-[350px]">
         {isPreview ? (
           <div 
-            className="p-4 prose prose-sm max-w-none"
+            className="p-4 prose prose-sm max-w-none prose-gray dark:prose-invert bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
             dangerouslySetInnerHTML={{ __html: value }}
           />
         ) : (
@@ -167,8 +169,24 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
             id="content-editor"
             value={value}
             onChange={(e) => handleContentChange(e.target.value)}
-            className="w-full h-[350px] p-4 border-0 resize-none focus:outline-none font-mono text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800"
-            placeholder="Start writing your chapter content here..."
+            onPaste={(e) => {
+              // Get pasted text
+              const pastedText = e.clipboardData?.getData('text') || '';
+              if (pastedText.length > 500) {
+                // Add visual feedback for large paste
+                const indicator = document.createElement('div');
+                indicator.textContent = 'Large content detected - distributing across pages...';
+                indicator.className = 'fixed top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg z-50 animate-fade-in';
+                document.body.appendChild(indicator);
+                setTimeout(() => {
+                  if (document.body.contains(indicator)) {
+                    document.body.removeChild(indicator);
+                  }
+                }, 3000);
+              }
+            }}
+            className="w-full h-[350px] p-4 border-0 resize-none focus:outline-none font-mono text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+            placeholder="Start writing your chapter content here... (Large content will automatically create new pages)"
           />
         )}
       </div>
@@ -289,7 +307,7 @@ interface ChapterData {
   };
 }
 
-// Helper functions
+// Enhanced helper functions for sophisticated chapter theming
 const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
   if (!bgColor) return 'text-black';
   const color = bgColor.startsWith('#') ? bgColor.substring(1, 7) : bgColor;
@@ -298,6 +316,33 @@ const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
   const b = parseInt(color.substring(4, 6), 16);
   const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
   return luminance > 0.5 ? 'text-black' : 'text-white';
+};
+
+// Generate sophisticated gradient backgrounds for chapter theming
+const createChapterGradient = (hex: string) => {
+  const lighterHex = adjustBrightness(hex, 20);
+  const darkerHex = adjustBrightness(hex, -30);
+  return `linear-gradient(135deg, ${hex}E6 0%, ${lighterHex}CC 25%, ${hex}B3 50%, ${darkerHex}E6 100%)`;
+};
+
+// Create background gradient for main page
+const createPageBackground = (hex: string) => {
+  const lighterHex = adjustBrightness(hex, 40);
+  const darkerHex = adjustBrightness(hex, -40);
+  return `linear-gradient(135deg, ${lighterHex}20 0%, ${hex}10 25%, ${darkerHex}20 100%)`;
+};
+
+// Adjust color brightness
+const adjustBrightness = (hex: string, percent: number) => {
+  const color = hex.startsWith('#') ? hex.substring(1, 7) : hex;
+  const num = parseInt(color, 16);
+  const amt = Math.round(2.55 * percent);
+  const R = (num >> 16) + amt;
+  const G = (num >> 8 & 0x00FF) + amt;
+  const B = (num & 0x0000FF) + amt;
+  return '#' + (0x1000000 + (R < 255 ? R < 1 ? 0 : R : 255) * 0x10000 +
+    (G < 255 ? G < 1 ? 0 : G : 255) * 0x100 +
+    (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
 };
 
 const getChapterIconPath = (chapter: Chapter, bookNumber: number): string => {
@@ -347,9 +392,11 @@ export default function ChapterWritingPage() {
   const params = useParams();
   const chapterId = params.chapterId as string;
   const { user } = useUser();
+  const { theme } = useTheme();
   
   const [data, setData] = useState<ChapterData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'write' | 'scenes' | 'tasks'>('overview');
   const [currentPage, setCurrentPage] = useState(0);
   const [editingPage, setEditingPage] = useState<ChapterPage | null>(null);
@@ -357,6 +404,11 @@ export default function ChapterWritingPage() {
   const [showPrompts, setShowPrompts] = useState(false);
   const [permissions, setPermissions] = useState({ canRead: false, canWrite: false, canAdmin: false });
   const [showToolkit, setShowToolkit] = useState(false);
+
+  // Handle client-side mounting
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Check user permissions - TEMPORARILY ALLOWING ALL ACCESS FOR DEVELOPMENT
   useEffect(() => {
@@ -406,6 +458,42 @@ export default function ChapterWritingPage() {
     fetchChapterData();
   }, [chapterId]);
 
+  // Clean up excess pages beyond 15
+  useEffect(() => {
+    if (data && !loading && data.pages.length > 15) {
+      cleanupExcessPages();
+    }
+  }, [data && !loading]);
+
+  // Clean up pages beyond the 15-page limit
+  const cleanupExcessPages = async () => {
+    if (!data || data.pages.length <= 15) return;
+    
+    const excessPages = data.pages.slice(15); // Pages beyond the 15th
+    console.log(`Cleaning up ${excessPages.length} excess pages beyond the 15-page limit`);
+    
+    try {
+      const deletePromises = excessPages.map(page => 
+        fetch(`/api/chapters/${chapterId}/pages/${page.id}`, {
+          method: 'DELETE',
+        })
+      );
+      
+      await Promise.all(deletePromises);
+      
+      // Update state to remove excess pages
+      setData(prev => prev ? {
+        ...prev,
+        pages: prev.pages.slice(0, 15),
+        stats: { ...prev.stats, pageCount: Math.min(prev.stats.pageCount, 15) }
+      } : null);
+      
+      console.log(`Successfully cleaned up excess pages`);
+    } catch (error) {
+      console.error('Failed to clean up excess pages:', error);
+    }
+  };
+
   // Fetch AI prompts
   const fetchAiPrompts = async () => {
     try {
@@ -441,8 +529,13 @@ export default function ChapterWritingPage() {
     }
   };
 
-  // Add new page
+  // Add new page (with 15-page limit)
   const addNewPage = async () => {
+    if (!data || data.pages.length >= 15) {
+      console.log('Cannot add page: 15-page limit reached');
+      return;
+    }
+    
     try {
       const response = await fetch(`/api/chapters/${chapterId}/pages`, {
         method: 'POST',
@@ -464,6 +557,45 @@ export default function ChapterWritingPage() {
     }
   };
 
+  // Create all remaining pages up to 15
+  const ensureAllPagesExist = async () => {
+    if (!data) return;
+    
+    const currentPageCount = data.pages.length;
+    if (currentPageCount >= 15) {
+      console.log('15-page limit already reached');
+      return;
+    }
+    
+    const pagesNeeded = Math.min(15 - currentPageCount, 15); // Ensure we never exceed 15
+    
+    if (pagesNeeded > 0) {
+      try {
+        for (let i = 0; i < pagesNeeded; i++) {
+          // Double-check we haven't exceeded the limit
+          if (data.pages.length + i >= 15) break;
+          
+          const response = await fetch(`/api/chapters/${chapterId}/pages`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ content: '' }),
+          });
+          
+          if (response.ok) {
+            const newPage = await response.json();
+            setData(prev => prev ? {
+              ...prev,
+              pages: [...prev.pages, newPage],
+              stats: { ...prev.stats, pageCount: prev.stats.pageCount + 1 }
+            } : null);
+          }
+        }
+      } catch (error) {
+        console.error('Failed to create pages:', error);
+      }
+    }
+  };
+
   // Auto-continue to next page when current page is complete
   const checkForAutoContinuation = (content: string, currentPageIndex: number) => {
     const currentPageNumber = currentPageIndex + 1;
@@ -478,6 +610,101 @@ export default function ChapterWritingPage() {
     else if (charCount >= goal && currentPageIndex === (data?.pages.length || 0) - 1 && (data?.pages.length || 0) < 15) {
       addNewPage();
     }
+  };
+
+  // Enhanced content handler for large pastes - auto-distribute across pages
+  const handleLargeContentPaste = async (content: string, startPageIndex: number) => {
+    const maxCharsPerPage = 2000;
+    const firstPageMax = 1000;
+    const cleanContent = content.replace(/<[^>]*>/g, ''); // Strip existing HTML for character counting
+    const totalChars = cleanContent.length;
+    
+    // If content fits in current page, just update it
+    const currentPageGoal = getPageGoal(startPageIndex + 1, data?.pages.length || 0);
+    if (totalChars <= currentPageGoal) {
+      return; // Let normal flow handle it
+    }
+
+    // Calculate how many pages we need
+    let remainingChars = totalChars;
+    let currentPageIndex = startPageIndex;
+    let neededPages = 0;
+    
+    // Calculate pages needed
+    while (remainingChars > 0) {
+      const pageGoal = currentPageIndex === 0 ? firstPageMax : maxCharsPerPage;
+      remainingChars -= pageGoal;
+      neededPages++;
+      currentPageIndex++;
+    }
+
+    // Create additional pages if needed
+    const currentPageCount = data?.pages.length || 0;
+    const pagesNeeded = Math.min(neededPages, 15 - currentPageCount); // Respect 15 page limit
+    
+    for (let i = 0; i < pagesNeeded - 1; i++) {
+      await addNewPage();
+    }
+
+    // Wait a bit for pages to be created, then distribute content
+    setTimeout(() => distributeContentAcrossPages(content, startPageIndex), 100);
+  };
+
+  // Distribute content across multiple pages
+  const distributeContentAcrossPages = (content: string, startPageIndex: number) => {
+    if (!data) return;
+    
+    const cleanContent = content.replace(/<[^>]*>/g, '');
+    const paragraphs = content.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+    
+    let currentPageIndex = startPageIndex;
+    let currentPageContent = '';
+    let paragraphIndex = 0;
+    
+    const updatedPages = [...data.pages];
+    
+    while (paragraphIndex < paragraphs.length && currentPageIndex < updatedPages.length) {
+      const pageGoal = getPageGoal(currentPageIndex + 1, updatedPages.length);
+      
+      // Add paragraphs to current page until we reach the goal
+      while (paragraphIndex < paragraphs.length) {
+        const nextParagraph = paragraphs[paragraphIndex];
+        const nextParagraphChars = nextParagraph.replace(/<[^>]*>/g, '').length;
+        
+        // Check if adding this paragraph would exceed the page goal
+        if (countCharacters(currentPageContent + nextParagraph) > pageGoal && currentPageContent.length > 0) {
+          break;
+        }
+        
+        currentPageContent += (currentPageContent ? '\n\n' : '') + nextParagraph;
+        paragraphIndex++;
+      }
+      
+      // Update the page content
+      if (currentPageIndex < updatedPages.length) {
+        updatedPages[currentPageIndex] = {
+          ...updatedPages[currentPageIndex],
+          content: currentPageContent
+        };
+      }
+      
+      // Move to next page
+      currentPageIndex++;
+      currentPageContent = '';
+    }
+    
+    // Update state with distributed content
+    setData(prev => prev ? {
+      ...prev,
+      pages: updatedPages
+    } : null);
+    
+    // Save all updated pages
+    updatedPages.forEach((page, index) => {
+      if (index >= startPageIndex && page.content) {
+        savePage(page.id, page.content);
+      }
+    });
   };
 
   if (loading) {
@@ -522,16 +749,33 @@ export default function ChapterWritingPage() {
     );
   }
 
-  const { chapter, book, scenes, taskGroups, pages, stats } = data;
+  const { chapter, book, scenes, taskGroups, pages: allPages, stats } = data;
+  // Limit to first 15 pages only and ensure proper numbering
+  const pages = allPages
+    .slice(0, 15)
+    .map((page, index) => ({
+      ...page,
+      pageNumber: index + 1 // Ensure sequential numbering 1-15
+    }));
   const iconPath = getChapterIconPath(chapter, book.bookNumber);
-  const textColor = getTextColor(chapter.colorTheme?.hex);
+  const chapterHex = chapter.colorTheme?.hex || '#6366f1';
+  const textColor = getTextColor(chapterHex);
   const isDarkTheme = textColor === 'text-white';
+  const gradientBg = createChapterGradient(chapterHex);
+  const glowColor = chapterHex + '40';
   
   const currentPageData = pages[currentPage];
   const currentPageWordCount = currentPageData ? countWords(currentPageData.content) : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+      {/* Subtle mystical overlay */}
+      <div 
+        className="absolute inset-0 opacity-5 pointer-events-none"
+        style={{
+          backgroundImage: `radial-gradient(circle at 20% 20%, ${chapterHex}40 0%, transparent 50%), radial-gradient(circle at 80% 80%, ${chapterHex}30 0%, transparent 50%)`
+        }}
+      />
       <Navbar />
       <Breadcrumbs items={[
         { label: 'Books', href: '/books' },
@@ -539,14 +783,28 @@ export default function ChapterWritingPage() {
         { label: `Chapter ${chapter.chapterNumber}: ${chapter.title}`, current: true }
       ]} />
       
-      {/* Hero Header */}
+      {/* Enhanced Hero Header */}
       <div 
         className="relative overflow-hidden"
         style={{ 
-          background: `linear-gradient(135deg, ${chapter.colorTheme?.hex || '#ffffff'} 0%, ${chapter.colorTheme?.hex || '#ffffff'}99 100%)`
+          background: gradientBg,
+          boxShadow: `0 20px 40px -12px ${glowColor}`
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/10 to-black/30 pointer-events-none"></div>
+        
+        {/* Mystical pattern overlay */}
+        <div 
+          className="absolute inset-0 opacity-20 pointer-events-none"
+          style={{
+            backgroundImage: `radial-gradient(circle at 25% 75%, ${chapterHex}60 0%, transparent 50%), radial-gradient(circle at 75% 25%, ${chapterHex}40 0%, transparent 50%)`
+          }}
+        />
+        
+        {/* Animated sparkles */}
+        <div className="absolute top-8 left-8 w-1 h-1 bg-white/60 rounded-full animate-pulse pointer-events-none"></div>
+        <div className="absolute top-16 right-12 w-1 h-1 bg-white/40 rounded-full animate-pulse pointer-events-none" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-16 w-1 h-1 bg-white/50 rounded-full animate-pulse pointer-events-none" style={{ animationDelay: '2s' }}></div>
         
         {/* Navigation */}
         <div className="relative z-10 container mx-auto px-6 py-4">
@@ -614,9 +872,16 @@ export default function ChapterWritingPage() {
         </div>
       </div>
 
-      {/* Content Tabs */}
-      <div className="container mx-auto px-6 py-6">
-        <div className="flex flex-wrap gap-2 mb-6 bg-white dark:bg-gray-800 rounded-xl p-1 shadow-lg w-fit mx-auto">
+      {/* Enhanced Content Tabs */}
+      <div className="container mx-auto px-6 py-6 relative z-10">
+        <div 
+          className="flex flex-wrap gap-2 mb-6 backdrop-blur-md rounded-xl p-1 w-fit mx-auto shadow-2xl border"
+          style={{
+            background: `linear-gradient(135deg, ${chapterHex}20, ${chapterHex}10)`,
+            borderColor: `${chapterHex}30`,
+            boxShadow: `0 8px 32px ${glowColor}`
+          }}
+        >
           {[
             { key: 'overview', label: 'Overview', icon: BookOpenIcon },
             { key: 'write', label: 'Write', icon: SparklesIcon },
@@ -626,14 +891,18 @@ export default function ChapterWritingPage() {
             <button
               key={key}
               onClick={() => setActiveTab(key as any)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition-all ${
+              className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
                 activeTab === key
-                  ? 'bg-blue-600 dark:bg-blue-500 text-white shadow-lg'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? `text-white shadow-xl transform scale-105`
+                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:scale-105'
               }`}
+              style={activeTab === key ? {
+                background: `linear-gradient(135deg, ${chapterHex}, ${adjustBrightness(chapterHex, -20)})`,
+                boxShadow: `0 4px 20px ${chapterHex}60`
+              } : {}}
             >
-              <Icon className="w-4 h-4" />
-              <span>{label}</span>
+              <Icon className="w-5 h-5" />
+              <span className="tracking-wide">{label}</span>
             </button>
           ))}
         </div>
@@ -642,18 +911,29 @@ export default function ChapterWritingPage() {
         <div className="max-w-6xl mx-auto">
           {activeTab === 'overview' && (
             <div className="space-y-6">
-              {/* Chapter Overview */}
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              {/* Enhanced Chapter Overview */}
+              <div 
+                className="backdrop-blur-md rounded-xl shadow-2xl p-6 border"
+                style={{
+                  background: `linear-gradient(135deg, ${chapterHex}08, ${chapterHex}05)`,
+                  borderColor: `${chapterHex}20`,
+                  boxShadow: `0 8px 32px ${glowColor}`
+                }}
+              >
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
-                  <BookOpenIcon className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
-                  Chapter Overview
+                  <BookOpenIcon className="w-6 h-6 mr-2" style={{ color: chapterHex }} />
+                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
+                    Chapter Overview
+                  </span>
                 </h2>
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     {chapter.tagline && (
                       <div>
                         <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Tagline</h3>
-                        <p className="text-gray-900 dark:text-gray-100 bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2 italic">
+                        <p 
+                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 italic font-medium border border-gray-200 dark:border-gray-600"
+                        >
                           "{chapter.tagline}"
                         </p>
                       </div>
@@ -661,7 +941,9 @@ export default function ChapterWritingPage() {
                     {chapter.focusArea && (
                       <div>
                         <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Focus Area</h3>
-                        <p className="text-gray-900 dark:text-gray-100 bg-green-50 dark:bg-green-900/30 rounded px-3 py-2">
+                        <p 
+                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 font-medium border border-gray-200 dark:border-gray-600"
+                        >
                           {chapter.focusArea}
                         </p>
                       </div>
@@ -669,7 +951,9 @@ export default function ChapterWritingPage() {
                     {chapter.connectionToMajorTaskGroup && (
                       <div>
                         <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Connection to Major Task Group</h3>
-                        <p className="text-gray-900 dark:text-gray-100 bg-amber-50 dark:bg-amber-900/30 rounded px-3 py-2 text-sm">
+                        <p 
+                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600"
+                        >
                           {chapter.connectionToMajorTaskGroup}
                         </p>
                       </div>
@@ -706,7 +990,7 @@ export default function ChapterWritingPage() {
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Tarot Information */}
                 {(chapter.tarotFamily || chapter.tarotCardItem || chapter.tarotCardLink) && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                       <SparklesIcon className="w-6 h-6 mr-2 text-purple-600 dark:text-purple-400" />
                       Tarot & Symbolism
@@ -736,7 +1020,7 @@ export default function ChapterWritingPage() {
 
                 {/* Epic Novel Structure */}
                 {(chapter.epicNovelSectionName || chapter.epicChapterFocus || chapter.epicNovelPages || chapter.epicNovelChapterFocus) && (
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                     <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                       <BookOpenIcon className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
                       Epic Structure
@@ -773,7 +1057,7 @@ export default function ChapterWritingPage() {
 
               {/* Learning Objectives */}
               {chapter.terminalLearningObjectives && (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                     <AcademicCapIcon className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
                     Learning Objectives
@@ -793,7 +1077,7 @@ export default function ChapterWritingPage() {
 
               {/* Task Master and Major Task Group Context */}
               {(data.taskMaster || data.majorTaskGroup) && (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                     <AcademicCapIcon className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
                     Hierarchical Context
@@ -824,13 +1108,13 @@ export default function ChapterWritingPage() {
               )}
 
               {/* Character Arc Guidance */}
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+              <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                 <CharacterArcGuidance characterGuidance={data?.characterGuidance || []} />
               </div>
 
               {/* Books Influenced By */}
               {chapter.booksInfluencedBy && (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                     <BookOpenIcon className="w-6 h-6 mr-2 text-amber-600 dark:text-amber-400" />
                     Literary Influences
@@ -860,7 +1144,7 @@ export default function ChapterWritingPage() {
           {activeTab === 'write' && (
             <div className="space-y-6">
               {!permissions.canWrite && (
-                <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-xl p-6 text-center">
+                <div className="bg-yellow-50/95 dark:bg-yellow-900/40 backdrop-blur-sm border border-yellow-200 dark:border-yellow-700 rounded-xl p-6 text-center">
                   <h3 className="text-lg font-semibold text-yellow-800 dark:text-yellow-200 mb-2">Writing Access Required</h3>
                   <p className="text-yellow-700 dark:text-yellow-300">You need admin access or a paid membership to edit chapters.</p>
                 </div>
@@ -869,7 +1153,7 @@ export default function ChapterWritingPage() {
               {permissions.canWrite && (
                 <>
                   {/* Writing Tools */}
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
+                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                       <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Chapter Writing</h2>
                       <div className="flex gap-2">
@@ -884,19 +1168,24 @@ export default function ChapterWritingPage() {
                           <ClipboardDocumentCheckIcon className="w-4 h-4" />
                           <span>Toolkit</span>
                         </button>
+                        {allPages.length > 15 && (
+                          <button
+                            onClick={cleanupExcessPages}
+                            className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm"
+                          >
+                            🗑️ Clean Pages
+                          </button>
+                        )}
                         <button
                           onClick={fetchAiPrompts}
-                          className="flex items-center space-x-2 px-4 py-2 bg-purple-600 dark:bg-purple-500 text-white rounded-lg hover:bg-purple-700 dark:hover:bg-purple-600 transition-colors"
+                          className="flex items-center space-x-2 px-4 py-2 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium"
+                          style={{
+                            background: `linear-gradient(135deg, ${chapterHex}, ${adjustBrightness(chapterHex, -20)})`,
+                            boxShadow: `0 4px 20px ${chapterHex}60`
+                          }}
                         >
                           <LightBulbIcon className="w-4 h-4" />
                           <span>AI Prompts</span>
-                        </button>
-                        <button
-                          onClick={addNewPage}
-                          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
-                        >
-                          <PlusIcon className="w-4 h-4" />
-                          <span>Add Page</span>
                         </button>
                       </div>
                     </div>
@@ -912,8 +1201,11 @@ export default function ChapterWritingPage() {
                         </div>
                         <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
                           <div 
-                            className="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full transition-all duration-300"
-                            style={{ width: `${getOverallProgress(pages)}%` }}
+                            className="h-3 rounded-full transition-all duration-300"
+                            style={{ 
+                              width: `${getOverallProgress(pages)}%`,
+                              background: `linear-gradient(90deg, ${chapterHex}, ${adjustBrightness(chapterHex, 20)})`
+                            }}
                           ></div>
                         </div>
                         <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -926,7 +1218,7 @@ export default function ChapterWritingPage() {
                     {/* Page Navigation */}
                     {pages.length > 0 && (
                       <div className="mb-6">
-                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Pages</h3>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Pages (15 max)</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {pages.map((page, index) => {
                             const progress = getPageProgress(page.content || '', page.pageNumber, pages.length);
@@ -1016,6 +1308,10 @@ export default function ChapterWritingPage() {
                           <SimpleHTMLEditor
                             value={currentPageData.content}
                             onChange={(content) => {
+                              const previousContent = currentPageData.content || '';
+                              const contentDiff = content.length - previousContent.length;
+                              
+                              // Update current page content first
                               setData(prev => prev ? {
                                 ...prev,
                                 pages: prev.pages.map(p => 
@@ -1023,15 +1319,19 @@ export default function ChapterWritingPage() {
                                 )
                               } : null);
                               
-                              // Check for auto-continuation
-                              checkForAutoContinuation(content, currentPage);
+                              // Check if this is a large paste operation (more than 500 characters added at once)
+                              if (contentDiff > 500) {
+                                // Handle large content paste by distributing across pages
+                                handleLargeContentPaste(content, currentPage);
+                              }
+                              // Remove auto-continuation - let users manually navigate pages
                             }}
                             onSave={() => savePage(currentPageData.id, currentPageData.content)}
                           />
                         </div>
                         
                         {/* Page Goal Information */}
-                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                        <div className="bg-gray-50/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-lg p-4 border border-gray-200/50 dark:border-gray-600/50">
                           <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Page Goal</h4>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
                             {currentPageData.pageNumber === 1 && (
@@ -1044,6 +1344,31 @@ export default function ChapterWritingPage() {
                               <p>Final page goal: 300 characters minimum (~50 words)</p>
                             )}
                           </div>
+                          
+                          {/* Page completion suggestion */}
+                          {(() => {
+                            const charCount = countCharacters(currentPageData.content || '');
+                            const goal = getPageGoal(currentPageData.pageNumber, pages.length);
+                            const isComplete = charCount >= goal;
+                            const hasNextPage = currentPage < pages.length - 1;
+                            
+                            if (isComplete && hasNextPage) {
+                              return (
+                                <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/30 rounded-lg border border-green-200 dark:border-green-700">
+                                  <p className="text-green-700 dark:text-green-300 text-sm font-medium mb-2">
+                                    ✓ Page goal reached!
+                                  </p>
+                                  <button
+                                    onClick={() => setCurrentPage(currentPage + 1)}
+                                    className="text-xs bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded transition-colors"
+                                  >
+                                    Continue to Page {currentPage + 2} →
+                                  </button>
+                                </div>
+                              );
+                            }
+                            return null;
+                          })()}
                         </div>
                       </div>
                     )}
@@ -1053,10 +1378,10 @@ export default function ChapterWritingPage() {
                         <BookOpenIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
                         <p className="text-gray-600 dark:text-gray-300 mb-4">No pages created yet</p>
                         <button
-                          onClick={addNewPage}
+                          onClick={ensureAllPagesExist}
                           className="px-6 py-3 bg-blue-600 dark:bg-blue-500 text-white rounded-lg hover:bg-blue-700 dark:hover:bg-blue-600 transition-colors"
                         >
-                          Create First Page
+                          Create All 15 Pages
                         </button>
                       </div>
                     )}
@@ -1067,7 +1392,7 @@ export default function ChapterWritingPage() {
               {/* AI Prompts Modal */}
               {showPrompts && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto">
+                  <div className="bg-white/98 dark:bg-gray-800/98 backdrop-blur-sm rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto border border-gray-200/50 dark:border-gray-600/50">
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-6">
                         <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">AI Writing Prompts</h2>
@@ -1097,69 +1422,7 @@ export default function ChapterWritingPage() {
           )}
 
           {activeTab === 'scenes' && (
-            <div className="space-y-4">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Chapter Scenes</h2>
-              {scenes.length === 0 ? (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
-                  <BookOpenIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-300">No scenes have been created for this chapter yet.</p>
-                </div>
-              ) : (
-                <div className="grid gap-4">
-                  {scenes.map((scene) => (
-                    <div key={scene.id} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-1">
-                            Scene {scene.sceneNumber}: {scene.title}
-                          </h3>
-                          <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">{scene.description}</p>
-                        </div>
-                        {scene.pages && (
-                          <div className="bg-gray-100 dark:bg-gray-700 rounded px-2 py-1 text-xs font-semibold text-gray-700 dark:text-gray-200">
-                            {scene.pages} pages
-                          </div>
-                        )}
-                      </div>
-                      
-                      <div className="grid md:grid-cols-2 gap-3 text-sm">
-                        {scene.focus && (
-                          <div>
-                            <h4 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Focus</h4>
-                            <p className="text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 rounded px-2 py-1">{scene.focus}</p>
-                          </div>
-                        )}
-                        {scene.heroJourneyStage && (
-                          <div>
-                            <h4 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Hero's Journey</h4>
-                            <p className="text-gray-600 dark:text-gray-300 bg-gray-50 dark:bg-gray-700 rounded px-2 py-1">{scene.heroJourneyStage}</p>
-                          </div>
-                        )}
-                        {scene.primaryTarotCard && (
-                          <div>
-                            <h4 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Primary Tarot Card</h4>
-                            <p className="text-gray-600 dark:text-gray-300 bg-purple-50 dark:bg-purple-900/30 rounded px-2 py-1">{scene.primaryTarotCard}</p>
-                          </div>
-                        )}
-                        {scene.historicalDate && (
-                          <div>
-                            <h4 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Historical Date</h4>
-                            <p className="text-gray-600 dark:text-gray-300 bg-amber-50 dark:bg-amber-900/30 rounded px-2 py-1">{scene.historicalDate}</p>
-                          </div>
-                        )}
-                      </div>
-                      
-                      {scene.tarotSymbolism && (
-                        <div className="mt-3 pt-3 border-t dark:border-gray-700">
-                          <h4 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Tarot Symbolism</h4>
-                          <p className="text-gray-600 dark:text-gray-300 bg-purple-50 dark:bg-purple-900/30 rounded px-2 py-1 text-sm">{scene.tarotSymbolism}</p>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
+            <SceneManager chapterId={chapterId} chapterColorHex={chapterHex} />
           )}
 
           {activeTab === 'tasks' && (
@@ -1215,7 +1478,7 @@ export default function ChapterWritingPage() {
               )}
 
               {taskGroups.major.length === 0 && taskGroups.specific.length === 0 && (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
+                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-12 text-center border border-gray-200/50 dark:border-gray-600/50">
                   <AcademicCapIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
                   <p className="text-gray-600 dark:text-gray-300">No task groups have been created for this chapter yet.</p>
                 </div>
