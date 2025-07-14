@@ -4,7 +4,7 @@ import { characters } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
 export async function GET(request, { params }) {
-  const { slug } = params;
+  const { slug } = await params;
   try {
     console.log('Fetching character with slug:', slug);
     // Try to select all fields first, then fallback to core fields if there are schema issues
@@ -80,7 +80,7 @@ export async function GET(request, { params }) {
 }
 
 export async function PUT(request, { params }) {
-  const { slug } = params;
+  const { slug } = await params;
   try {
     const data = await request.json();
     
@@ -94,7 +94,14 @@ export async function PUT(request, { params }) {
         updatedAt: new Date()
       })
       .where(eq(characters.slug, slug))
-      .returning();
+      .returning({
+        id: characters.id,
+        name: characters.name,
+        characterType: characters.characterType,
+        slug: characters.slug,
+        imageUrl: characters.imageUrl,
+        updatedAt: characters.updatedAt
+      });
 
     if (updatedCharacter.length === 0) {
       return NextResponse.json({ error: 'Character not found' }, { status: 404 });

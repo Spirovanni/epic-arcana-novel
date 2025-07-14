@@ -12,7 +12,7 @@ const MAX_HEIGHT = 1500;
 
 export async function POST(request: NextRequest, { params }: { params: { slug: string } }) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
     const data = await request.formData();
     const file: File | null = data.get('image') as unknown as File;
 
@@ -83,7 +83,13 @@ export async function POST(request: NextRequest, { params }: { params: { slug: s
           updatedAt: new Date()
         })
         .where(eq(characters.slug, slug))
-        .returning();
+        .returning({
+          id: characters.id,
+          name: characters.name,
+          slug: characters.slug,
+          imageUrl: characters.imageUrl,
+          updatedAt: characters.updatedAt
+        });
 
       console.log('Database update result:', updatedCharacter);
 
@@ -120,7 +126,7 @@ export async function POST(request: NextRequest, { params }: { params: { slug: s
 
 export async function DELETE(request: NextRequest, { params }: { params: { slug: string } }) {
   try {
-    const { slug } = params;
+    const { slug } = await params;
 
     // Get current character to find existing image
     const characterResult = await db
