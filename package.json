@@ -11,7 +11,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node --loader ts-node/esm seed-final.mjs"
+    "seed": "node --loader ts-node/esm seed-final.mjs",
+    "sync-from-outline": "tsx scripts/sync-from-outline.ts",
+    "sync-books": "tsx scripts/sync-books-from-outline.ts",
+    "sync-task-masters": "tsx scripts/sync-task-masters-from-outline.ts",
+    "sync-comprehensive": "tsx scripts/sync-comprehensive-from-outline.ts",
+    "sync-epic-arcana": "tsx scripts/sync-epic-arcana-from-outline.ts"
   },
   "keywords": [],
   "author": "",
@@ -50,6 +55,7 @@
     "eslint-config-next": "15.3.5",
     "postcss": "^8.5.6",
     "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5"
   }
 }

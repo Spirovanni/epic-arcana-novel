@@ -30,6 +30,9 @@ export async function GET(request, { params }) {
         deathPlace: characters.deathPlace,
         slug: characters.slug,
         characterType: characters.characterType,
+        imagePrompt: characters.imagePrompt,
+        openArtLink: characters.openArtLink,
+        customSetting: characters.customSetting,
         imageUrl: characters.imageUrl,
         createdAt: characters.createdAt,
         updatedAt: characters.updatedAt,
@@ -61,9 +64,15 @@ export async function GET(request, { params }) {
         updatedAt: characters.updatedAt,
       }).from(characters).where(eq(characters.slug, slug));
       
-      // Add imageUrl as null if the field doesn't exist
+      // Add missing fields as null if they don't exist
       if (result.length > 0) {
-        result = result.map(char => ({ ...char, imageUrl: null }));
+        result = result.map(char => ({ 
+          ...char, 
+          imageUrl: null,
+          imagePrompt: null,
+          openArtLink: null,
+          customSetting: null
+        }));
       }
     }
     

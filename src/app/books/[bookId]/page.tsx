@@ -75,6 +75,8 @@ export default function BookDetailPage() {
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [bookNumber, setBookNumber] = useState<number>(1);
   const [bookTitle, setBookTitle] = useState<string>('');
+  const [bookPrimaryColor, setBookPrimaryColor] = useState<string>('#6366f1');
+  const [bookColorName, setBookColorName] = useState<string>('Default');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -87,6 +89,8 @@ export default function BookDetailPage() {
           setChapters(data.chapters);
           setBookNumber(data.book.bookNumber);
           setBookTitle(data.book.title);
+          setBookPrimaryColor(data.book.primaryColor || '#FFA500');
+          setBookColorName(data.book.primaryColorName || 'Orange');
         }
       } catch (error) {
         console.error('Failed to fetch chapters:', error);
@@ -107,7 +111,7 @@ export default function BookDetailPage() {
         ]} />
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 dark:border-indigo-400 mx-auto mb-4"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 mx-auto mb-4" style={{ borderBottomColor: bookPrimaryColor }}></div>
             <p className="text-gray-600 dark:text-gray-400">Loading chapters...</p>
           </div>
         </div>
@@ -125,22 +129,48 @@ export default function BookDetailPage() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-600/20 backdrop-blur-md border border-indigo-300/30 text-indigo-800 dark:text-indigo-200 text-sm font-bold mb-6 shadow-lg">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full mr-3 animate-pulse"></span>
+          <div 
+            className="inline-flex items-center px-6 py-3 rounded-full backdrop-blur-md border text-sm font-bold mb-6 shadow-lg"
+            style={{
+              background: `linear-gradient(to right, ${bookPrimaryColor}33, ${bookPrimaryColor}40)`,
+              borderColor: `${bookPrimaryColor}50`,
+              color: getTextColor(bookPrimaryColor) === 'text-white' ? '#ffffff' : bookPrimaryColor
+            }}
+          >
+            <span 
+              className="w-2 h-2 rounded-full mr-3 animate-pulse"
+              style={{ backgroundColor: bookPrimaryColor }}
+            ></span>
             BOOK {bookNumber}
           </div>
           <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
-            <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-800 dark:from-indigo-400 dark:via-purple-400 dark:to-indigo-600 bg-clip-text text-transparent">
+            <span 
+              className="bg-clip-text text-transparent"
+              style={{
+                background: `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, 20)}, ${adjustBrightness(bookPrimaryColor, -10)})`,
+                WebkitBackgroundClip: 'text'
+              }}
+            >
               {bookTitle}
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-light mb-8">
-            Explore the <span className="font-bold text-indigo-600 dark:text-indigo-400">{chapters.length} chapters</span> of this transformative journey through time and consciousness.
+            Explore the <span className="font-bold" style={{ color: bookPrimaryColor }}>{chapters.length} chapters</span> of this transformative journey through time and consciousness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
               href={`/outline/${bookId}`} 
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 group"
+              className="inline-flex items-center px-8 py-4 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 group"
+              style={{
+                background: `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})`,
+                '--hover-bg': `linear-gradient(to right, ${adjustBrightness(bookPrimaryColor, -20)}, ${adjustBrightness(bookPrimaryColor, -30)})`
+              } as React.CSSProperties}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = `linear-gradient(to right, ${adjustBrightness(bookPrimaryColor, -20)}, ${adjustBrightness(bookPrimaryColor, -30)})`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})`;
+              }}
             >
               <svg className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -155,11 +185,16 @@ export default function BookDetailPage() {
             </Link>
           </div>
           <div className="mt-8 flex justify-center">
-            <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>
+            <div 
+              className="w-24 h-1 rounded-full"
+              style={{
+                background: `linear-gradient(to right, transparent, ${bookPrimaryColor}, transparent)`
+              }}
+            ></div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-8">
         {chapters.map((chapter) => {
           const iconPath = getChapterIconPath(chapter, bookNumber);
           const textColor = getTextColor(chapter.colorTheme?.hex);

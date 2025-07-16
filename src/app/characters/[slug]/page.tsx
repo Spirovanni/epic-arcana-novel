@@ -244,7 +244,7 @@ export default function CharacterProfilePage() {
               <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 px-8 py-12">
                 <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                   <div className="relative group">
-                    <div className="w-48 h-48 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/30">
+                    <div className="w-48 h-48 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/30 transition-transform duration-300 hover:scale-200 hover:z-10">
                       <Image 
                         src={character.imageUrl || placeholderImg} 
                         alt={character.name} 
@@ -257,16 +257,34 @@ export default function CharacterProfilePage() {
                     {/* Upload Controls */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-2xl flex items-center justify-center">
                       <div className="flex flex-col items-center space-y-2">
-                        <label className="cursor-pointer bg-white/90 hover:bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                          {uploading ? 'Uploading...' : 'Upload Image'}
-                          <input
-                            type="file"
-                            accept="image/jpeg,image/jpg,image/png,image/webp"
-                            onChange={handleImageUpload}
-                            disabled={uploading}
-                            className="hidden"
-                          />
-                        </label>
+                        <div className="relative group/upload">
+                          <label className="cursor-pointer bg-white/90 hover:bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
+                            {uploading ? 'Uploading...' : 'Upload Image'}
+                            <input
+                              type="file"
+                              accept="image/jpeg,image/jpg,image/png,image/webp"
+                              onChange={handleImageUpload}
+                              disabled={uploading}
+                              className="hidden"
+                            />
+                          </label>
+                          
+                          {/* Image Upload Guidelines Tooltip */}
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover/upload:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
+                            <div className="bg-gray-900 text-white text-xs rounded-lg p-3 shadow-lg min-w-[250px]">
+                              <div className="font-semibold mb-2">Image Upload Guidelines</div>
+                              <ul className="space-y-1 text-xs">
+                                <li>• Formats: JPG, PNG, WebP</li>
+                                <li>• Max size: 5MB</li>
+                                <li>• Max dimensions: 1500x1500px</li>
+                                <li>• Square images work best</li>
+                              </ul>
+                              {/* Arrow pointing down */}
+                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                            </div>
+                          </div>
+                        </div>
+                        
                         {character.imageUrl && (
                           <button
                             onClick={handleImageRemove}
@@ -378,7 +396,7 @@ export default function CharacterProfilePage() {
                     )}
 
                     {/* Image Upload Guidelines */}
-                    <div className="mt-6 max-w-2xl">
+                    {/* <div className="mt-6 max-w-2xl">
                       <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
                         <h4 className="text-white font-medium mb-2 flex items-center">
                           <PhotoIcon className="w-4 h-4 mr-2" />
@@ -391,7 +409,7 @@ export default function CharacterProfilePage() {
                           <li>• <strong>Best quality:</strong> High-resolution portrait images</li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   
                   {/* Edit Controls */}
@@ -723,7 +741,7 @@ export default function CharacterProfilePage() {
                       className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-indigo-50 dark:hover:bg-indigo-900/50 transition-all duration-200 hover:shadow-lg"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-200 hover:z-10">
                           <Image src={placeholderImg} alt={c.name} width={48} height={48} className="w-full h-full object-cover rounded-full" />
                         </div>
                         <div className="flex-1 min-w-0">

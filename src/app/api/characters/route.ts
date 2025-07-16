@@ -29,6 +29,9 @@ export async function GET() {
         deathPlace: characters.deathPlace,
         slug: characters.slug,
         characterType: characters.characterType,
+        imagePrompt: characters.imagePrompt,
+        openArtLink: characters.openArtLink,
+        customSetting: characters.customSetting,
         imageUrl: characters.imageUrl,
         createdAt: characters.createdAt,
         updatedAt: characters.updatedAt,
@@ -60,8 +63,14 @@ export async function GET() {
         updatedAt: characters.updatedAt,
       }).from(characters);
       
-      // Add imageUrl as null for all characters if the field doesn't exist
-      allCharacters = allCharacters.map(char => ({ ...char, imageUrl: null }));
+      // Add missing fields as null for all characters if they don't exist
+      allCharacters = allCharacters.map(char => ({ 
+        ...char, 
+        imageUrl: null,
+        imagePrompt: null,
+        openArtLink: null,
+        customSetting: null
+      }));
     }
     
     console.log('Found characters:', allCharacters.length);

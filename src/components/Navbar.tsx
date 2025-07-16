@@ -15,11 +15,13 @@ import {
   SunIcon,
   MoonIcon,
   UsersIcon,
-  ClockIcon
+  ClockIcon,
+  ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isBooksDropdownOpen, setIsBooksDropdownOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { user, isLoaded } = useUser();
   const { theme, setTheme } = useTheme();
@@ -28,6 +30,23 @@ export default function Navbar() {
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isBooksDropdownOpen) {
+        const dropdown = document.getElementById('books-dropdown');
+        if (dropdown && !dropdown.contains(event.target as Node)) {
+          setIsBooksDropdownOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isBooksDropdownOpen]);
 
 
   return (
@@ -64,13 +83,141 @@ export default function Navbar() {
                 <HomeIcon className="w-4 h-4 mr-2" />
                 Home
               </Link>
-              <Link
-                href="/books"
-                className="group flex items-center px-4 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
-              >
-                <BookOpenIcon className="w-4 h-4 mr-2" />
-                Books
-              </Link>
+              
+              {/* Books Dropdown */}
+              <div className="relative" id="books-dropdown">
+                <button
+                  onClick={() => setIsBooksDropdownOpen(!isBooksDropdownOpen)}
+                  className="group flex items-center px-4 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
+                >
+                  <BookOpenIcon className="w-4 h-4 mr-2" />
+                  Books
+                  <ChevronDownIcon className="w-4 h-4 ml-1" />
+                </button>
+                
+                {isBooksDropdownOpen && (
+                  <div className="absolute left-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 z-50">
+                    <div className="py-1">
+                      <Link
+                        href="/books"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <BookOpenIcon className="w-4 h-4 mr-3 inline" />
+                        All Books
+                      </Link>
+                      <Link
+                        href="/trilogies"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <SparklesIcon className="w-4 h-4 mr-3 inline" />
+                        Trilogies
+                      </Link>
+                      <hr className="my-1 border-gray-200 dark:border-gray-600" />
+                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                        The Trionfi Genesis
+                      </div>
+                      <Link
+                        href="/books/1"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
+                          Crown of the Ancient Ones
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/2"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
+                          Rise of the Triassic Nine
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/3"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
+                          Awake Iron!
+                        </div>
+                      </Link>
+                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                        The Wheel of Realms
+                      </div>
+                      <Link
+                        href="/books/4"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                          Maiden of Mercy
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/5"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-violet-500 rounded-full mr-3"></div>
+                          Holder of the Life Force
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/6"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-teal-500 rounded-full mr-3"></div>
+                          The City of Shadows
+                        </div>
+                      </Link>
+                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                        The Arcana Ascended
+                      </div>
+                      <Link
+                        href="/books/7"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                          Dark Path to Victory
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/8"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                          Inferno Garden
+                        </div>
+                      </Link>
+                      <Link
+                        href="/books/9"
+                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                        onClick={() => setIsBooksDropdownOpen(false)}
+                      >
+                        <div className="flex items-center">
+                          <div className="w-3 h-3 bg-amber-500 rounded-full mr-3"></div>
+                          The Blades of Triumph
+                        </div>
+                      </Link>
+                    </div>
+                  </div>
+                )}
+              </div>
               <Link
                 href="/characters"
                 className="group flex items-center px-4 py-2 rounded-lg text-sm font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
@@ -199,6 +346,14 @@ export default function Navbar() {
               >
                 <BookOpenIcon className="w-5 h-5 mr-3" />
                 Books
+              </Link>
+              <Link
+                href="/trilogies"
+                className="flex items-center px-3 py-2 rounded-lg text-base font-medium text-purple-100 hover:text-white hover:bg-white/10 transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <SparklesIcon className="w-5 h-5 mr-3" />
+                Trilogies
               </Link>
               <Link
                 href="/characters"

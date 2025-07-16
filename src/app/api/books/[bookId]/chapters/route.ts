@@ -57,9 +57,42 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
 
     const uniqueChapters = Array.from(chaptersByNumber.values()).sort((a, b) => a.chapterNumber - b.chapterNumber);
 
+    // Add book theme color based on book number
+    const getBookTheme = (bookNumber: number) => {
+      switch (bookNumber) {
+        case 1:
+          return { color: '#FFA500', name: 'Orange' };
+        case 2:
+          return { color: '#E34234', name: 'Vermillion' };
+        case 3:
+          return { color: '#FF00FF', name: 'Magenta' };
+        case 4:
+          return { color: '#800080', name: 'Purple' };
+        case 5:
+          return { color: '#7F00FF', name: 'Violet' };
+        case 6:
+          return { color: '#008080', name: 'Teal' };
+        case 7:
+          return { color: '#008000', name: 'Green' };
+        case 8:
+          return { color: '#7FFF00', name: 'Chartreuse' };
+        case 9:
+          return { color: '#FFBF00', name: 'Amber' };
+        default:
+          return { color: '#6366f1', name: 'Indigo' };
+      }
+    };
+
+    const bookTheme = getBookTheme(book[0].bookNumber);
+    const bookWithTheme = {
+      ...book[0],
+      primaryColor: bookTheme.color,
+      primaryColorName: bookTheme.name
+    };
+
     // Return both book info and chapters
     return NextResponse.json({
-      book: book[0],
+      book: bookWithTheme,
       chapters: uniqueChapters
     });
   } catch (error) {

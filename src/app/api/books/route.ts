@@ -7,7 +7,7 @@ export async function GET() {
   try {
     const allBooks = await db.select().from(books).orderBy(asc(books.bookNumber));
     
-    // Get the first task master's color theme for each book
+    // Get task master color data for each book (now synced from l_outline.json)
     const booksWithColors = await Promise.all(
       allBooks.map(async (book) => {
         const firstTaskMaster = await db
@@ -26,9 +26,10 @@ export async function GET() {
         
         return {
           id: book.id,
-          title: book.title,
+          title: book.fictionNovelTitle || book.title, // Use fiction title as main title
           bookNumber: book.bookNumber,
           fictionNovelTitle: book.fictionNovelTitle,
+          originalTitle: book.title, // Keep original title for reference
           summary: book.description,
           colorTheme: taskMaster ? {
             name: taskMaster.colorName,

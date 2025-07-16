@@ -40,7 +40,7 @@ function CharacterCard({ character }: { character: Character }) {
       <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-200 dark:border-gray-700 cursor-pointer h-full">
         {/* Avatar Section - Fixed Height */}
         <div className="relative mb-4 flex-shrink-0">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden shadow-lg">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-300 hover:scale-200 hover:z-10">
             <Image 
               src={character.imageUrl || placeholderImg} 
               alt={character.name} 

@@ -20,21 +20,16 @@ export function InteractiveWorldMap({
   selectedLocation 
 }: InteractiveWorldMapProps) {
   const [hoveredLocation, setHoveredLocation] = useState<Location | null>(null);
-  // Calculate initial Naples-focused position
-  const getInitialNaplesView = () => {
-    // Use standard viewport size for initial calculation (will adjust on first render)
-    const defaultViewport = { width: 1200, height: 800 };
-    try {
-      return focusOnNaples(defaultViewport);
-    } catch {
-      return { center: { x: 0, y: 0 }, zoom: 1 };
-    }
+  // Calculate initial Europe/Asia/Africa-focused position
+  const getInitialWorldView = () => {
+    // Center on Europe/Asia/Africa view as shown in the screenshot
+    return { center: { x: -200, y: -100 }, zoom: 1.0 };
   };
 
-  const initialView = getInitialNaplesView();
+  const initialView = getInitialWorldView();
   const [mapCenter, setMapCenter] = useState(initialView.center);
   const [mapZoom, setMapZoom] = useState(initialView.zoom);
-  const [selectedRegion, setSelectedRegion] = useState<string | null>('_275_-_Naples'); // Start with Naples selected
+  const [selectedRegion, setSelectedRegion] = useState<string | null>(null); // Start with world view
   const [isPanMode, setIsPanMode] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -70,28 +65,32 @@ export function InteractiveWorldMap({
     console.log('Hovering region:', regionId);
   };
 
-  // Adjust Naples focus when viewport size changes
+  // Maintain world view when viewport size changes
   useEffect(() => {
     const handleResize = () => {
-      if (mapRef.current && selectedRegion === '_275_-_Naples') {
-        autoFocusOnNaples();
+      if (mapRef.current) {
+        // Maintain the current world-centered view
+        const currentView = getInitialWorldView();
+        setMapCenter(currentView.center);
+        setMapZoom(currentView.zoom);
       }
     };
 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [selectedRegion]);
+  }, []);
 
   const handleZoom = (direction: 'in' | 'out') => {
     setMapZoom(prev => {
       const newZoom = direction === 'in' ? prev * 1.2 : prev / 1.2;
-      return Math.max(0.5, Math.min(3, newZoom));
+      return Math.max(0.5, Math.min(10, newZoom));
     });
   };
 
   const resetView = () => {
-    setMapCenter({ x: 0, y: 0 });
-    setMapZoom(1);
+    // Center on Europe/Asia/Africa view as shown in the screenshot
+    setMapCenter({ x: -200, y: -100 });
+    setMapZoom(1.0);
   };
 
   const focusOnRegion = (cameraSettings: CameraSettings) => {
@@ -237,9 +236,9 @@ export function InteractiveWorldMap({
             <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
               {activeTimeline.charAt(0).toUpperCase() + activeTimeline.slice(1)} Timeline
             </span>
-            {selectedRegion === '_275_-_Naples' && (
+            {selectedRegion && (
               <span className="text-xs text-gray-600 dark:text-gray-400 ml-2">
-                • Naples Region
+                • {selectedRegion.replace(/[_-]/g, ' ')}
               </span>
             )}
           </div>
