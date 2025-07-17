@@ -203,6 +203,7 @@ interface ColorTheme {
 interface Chapter {
   id: string;
   title: string;
+  specific_task_group_title: string;
   chapterNumber: number;
   description: string;
   focus: string;
@@ -841,7 +842,7 @@ export default function ChapterWritingPage() {
             <div className="flex-1 space-y-4">
               <div>
                 <h1 className={`text-3xl lg:text-4xl font-black ${textColor} mb-2 leading-tight`} style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-                  {chapter.focusArea}
+                  {chapter.title}
                 </h1>
                 <p className={`text-lg ${textColor} opacity-90`} style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
                   {chapter.description}

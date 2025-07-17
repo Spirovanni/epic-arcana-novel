@@ -254,8 +254,10 @@ async function syncEpicArcanaData() {
                 }
                 
                 // Sync chapters (specific task groups)
-                if (majorTaskGroupData.specific_task_groups) {
-                  for (const [specificTaskGroupKey, specificTaskGroupData] of Object.entries(majorTaskGroupData.specific_task_groups)) {
+                // Handle both "specific_task_groups" and "Specific_task_groups" variations
+                const specificTaskGroups = majorTaskGroupData.specific_task_groups || majorTaskGroupData.Specific_task_groups;
+                if (specificTaskGroups) {
+                  for (const [specificTaskGroupKey, specificTaskGroupData] of Object.entries(specificTaskGroups)) {
                     const chapterMatch = specificTaskGroupData.chapter?.match(/(\d+)/);
                     const chapterNumber = chapterMatch ? parseInt(chapterMatch[1], 10) : 0;
                     
@@ -267,6 +269,7 @@ async function syncEpicArcanaData() {
                       chapterNumber,
                       uniqueIdentifier: specificTaskGroupData.unique_identifier,
                       title: specificTaskGroupData.specific_task_group_title,
+                      chapterTitle: specificTaskGroupData.specific_task_group_title, // NEW: for chapter_title field
                       focus: specificTaskGroupData.focus_area,
                       epicNovelPages: specificTaskGroupData.epic_novel_pages,
                       epicChapterFocus: specificTaskGroupData.epic_chapter_focus,
