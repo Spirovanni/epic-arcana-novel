@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { PlusIcon, PencilIcon, TrashIcon, UserIcon, BookOpenIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { useRouter } from 'next/navigation';
+import { PlusIcon, PencilIcon, TrashIcon, UserIcon, BookOpenIcon, ClockIcon, EyeIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
 interface Scene {
   id: string;
@@ -86,6 +87,7 @@ const HERO_JOURNEY_STAGES = [
 ];
 
 export default function SceneManager({ chapterId, chapterColorHex }: SceneManagerProps) {
+  const router = useRouter();
   const [scenes, setScenes] = useState<Scene[]>([]);
   const [characters, setCharacters] = useState<Character[]>([]);
   const [showAddForm, setShowAddForm] = useState(false);
@@ -476,74 +478,103 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
           scenes.map((scene) => (
             <div
               key={scene.id}
-              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-shadow"
+              className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg hover:shadow-lg transition-all duration-200 hover:border-indigo-300 dark:hover:border-indigo-600 cursor-pointer group"
+              onClick={() => router.push(`/scenes/${scene.id}`)}
             >
-              <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <span className="px-2 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900 rounded">
-                      Scene {scene.sceneNumber}
-                    </span>
-                    {scene.heroJourneyStage && (
-                      <span className="px-2 py-1 text-xs font-medium text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900 rounded">
-                        {HERO_JOURNEY_STAGES.find(s => s.value === scene.heroJourneyStage)?.label}
+              <div className="p-4">
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-3 mb-2">
+                      <span className="px-2 py-1 text-xs font-medium text-indigo-700 dark:text-indigo-300 bg-indigo-100 dark:bg-indigo-900 rounded">
+                        Scene {scene.sceneNumber}
                       </span>
-                    )}
-                    {scene.primaryTarotCard && (
-                      <span className="px-2 py-1 text-xs font-medium text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 rounded">
-                        {scene.primaryTarotCard}
-                      </span>
-                    )}
+                      {scene.heroJourneyStage && (
+                        <span className="px-2 py-1 text-xs font-medium text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900 rounded">
+                          {HERO_JOURNEY_STAGES.find(s => s.value === scene.heroJourneyStage)?.label}
+                        </span>
+                      )}
+                      {scene.primaryTarotCard && (
+                        <span className="px-2 py-1 text-xs font-medium text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900 rounded">
+                          {scene.primaryTarotCard}
+                        </span>
+                      )}
+                    </div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                      {scene.title}
+                    </h4>
                   </div>
-                  <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
-                    {scene.title}
-                  </h4>
-                  {scene.focus && (
-                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                      <strong>Focus:</strong> {scene.focus}
-                    </p>
-                  )}
-                  {scene.description && (
-                    <p className="text-sm text-gray-700 dark:text-gray-300 mb-3">
-                      {scene.description}
-                    </p>
-                  )}
-                  
-                  {/* Scene Structure Display */}
-                  <div className="space-y-2">
-                    {scene.setup && (
-                      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
-                        <h5 className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-1">SETUP</h5>
-                        <p className="text-sm text-blue-900 dark:text-blue-100">{scene.setup}</p>
-                      </div>
-                    )}
-                    {scene.sensoryDetail && (
-                      <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                        <h5 className="text-xs font-semibold text-green-700 dark:text-green-300 mb-1">SENSORY DETAIL</h5>
-                        <p className="text-sm text-green-900 dark:text-green-100">{scene.sensoryDetail}</p>
-                      </div>
-                    )}
-                    {scene.internalConflict && (
-                      <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-3">
-                        <h5 className="text-xs font-semibold text-orange-700 dark:text-orange-300 mb-1">INTERNAL CONFLICT</h5>
-                        <p className="text-sm text-orange-900 dark:text-orange-100">{scene.internalConflict}</p>
-                      </div>
-                    )}
-                    {scene.beatGoal && (
-                      <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
-                        <h5 className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1">BEAT GOAL</h5>
-                        <p className="text-sm text-purple-900 dark:text-purple-100">{scene.beatGoal}</p>
-                      </div>
-                    )}
+                  <div className="flex items-center space-x-2 ml-4">
+                    <button 
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        router.push(`/scenes/${scene.id}`);
+                      }}
+                      className="p-2 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                      title="View details"
+                    >
+                      <EyeIcon className="w-4 h-4" />
+                    </button>
+                    <button 
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-2 text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      title="Edit scene"
+                    >
+                      <PencilIcon className="w-4 h-4" />
+                    </button>
+                    <button 
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-2 text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+                      title="Delete scene"
+                    >
+                      <TrashIcon className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
-                <div className="flex items-center space-x-2 ml-4">
-                  <button className="p-2 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
-                    <PencilIcon className="w-4 h-4" />
-                  </button>
-                  <button className="p-2 text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-colors">
-                    <TrashIcon className="w-4 h-4" />
-                  </button>
+
+                {/* Compact Scene Info */}
+                <div className="space-y-3">
+                  {scene.setup && (
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3">
+                      <h5 className="text-xs font-semibold text-blue-700 dark:text-blue-300 mb-1 flex items-center">
+                        <BookOpenIcon className="w-3 h-3 mr-1" />
+                        SETUP
+                      </h5>
+                      <p className="text-sm text-blue-900 dark:text-blue-100 line-clamp-2">
+                        {scene.setup.length > 120 ? `${scene.setup.substring(0, 120)}...` : scene.setup}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {scene.beatGoal && (
+                    <div className="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-3">
+                      <h5 className="text-xs font-semibold text-purple-700 dark:text-purple-300 mb-1 flex items-center">
+                        <SparklesIcon className="w-3 h-3 mr-1" />
+                        BEAT GOAL
+                      </h5>
+                      <p className="text-sm text-purple-900 dark:text-purple-100 line-clamp-2">
+                        {scene.beatGoal.length > 100 ? `${scene.beatGoal.substring(0, 100)}...` : scene.beatGoal}
+                      </p>
+                    </div>
+                  )}
+
+                  {scene.symbolism && (
+                    <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-lg p-3">
+                      <h5 className="text-xs font-semibold text-emerald-700 dark:text-emerald-300 mb-1 flex items-center">
+                        <SparklesIcon className="w-3 h-3 mr-1" />
+                        SYMBOLISM
+                      </h5>
+                      <p className="text-sm text-emerald-900 dark:text-emerald-100">
+                        {scene.symbolism}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Click indicator */}
+                <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 text-center group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                    Click to view full scene details →
+                  </p>
                 </div>
               </div>
             </div>

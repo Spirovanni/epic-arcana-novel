@@ -216,6 +216,8 @@ interface Chapter {
   tarotCardItem: string;
   colorTheme: ColorTheme;
   iconPath?: string;
+  previousChapterId?: string;
+  nextChapterId?: string;
 }
 
 interface Book {
@@ -808,7 +810,7 @@ export default function ChapterWritingPage() {
         <div className="absolute bottom-20 left-16 w-1 h-1 bg-white/50 rounded-full animate-pulse pointer-events-none" style={{ animationDelay: '2s' }}></div>
         
         {/* Navigation */}
-        <div className="relative z-10 container mx-auto px-6 py-4">
+        <div className="relative z-10 container mx-auto px-6 py-4 flex justify-between items-center">
           <Link 
             href={`/books/${book.id}`}
             className={`inline-flex items-center space-x-2 ${textColor} hover:opacity-80 transition-opacity`}
@@ -816,6 +818,23 @@ export default function ChapterWritingPage() {
             <ArrowLeftIcon className="w-5 h-5" />
             <span>Back to {book.title}</span>
           </Link>
+
+          <div className="flex items-center space-x-2">
+            {chapter.previousChapterId && (
+              <Link href={`/chapters/${chapter.previousChapterId}`} className={`${textColor} hover:opacity-80 transition-opacity p-2 rounded-full bg-white/10 hover:bg-white/20`}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </Link>
+            )}
+            {chapter.nextChapterId && (
+              <Link href={`/chapters/${chapter.nextChapterId}`} className={`${textColor} hover:opacity-80 transition-opacity p-2 rounded-full bg-white/10 hover:bg-white/20`}>
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            )}
+          </div>
         </div>
 
         {/* Header Content */}

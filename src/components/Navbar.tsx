@@ -19,6 +19,13 @@ import {
   ChevronDownIcon
 } from '@heroicons/react/24/outline';
 
+interface Book {
+  id: string;
+  bookNumber: number;
+  title: string;
+  fictionNovelTitle: string;
+}
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBooksDropdownOpen, setIsBooksDropdownOpen] = useState(false);

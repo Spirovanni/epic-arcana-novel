@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters } from '@/lib/schema';
+import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters, scenes } from '@/lib/schema';
 import { eq, asc, and, sql } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
@@ -23,6 +23,20 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     }
 
     const { chapter, book } = chapterData[0];
+
+    // Get all chapters for the book to find next/previous
+    const allBookChapters = await db
+      .select({
+        id: chapters.id,
+        chapterNumber: chapters.chapterNumber,
+      })
+      .from(chapters)
+      .where(eq(chapters.bookId, book.id))
+      .orderBy(asc(chapters.chapterNumber));
+
+    const currentIndex = allBookChapters.findIndex(c => c.id === chapterId);
+    const previousChapterId = currentIndex > 0 ? allBookChapters[currentIndex - 1].id : null;
+    const nextChapterId = currentIndex < allBookChapters.length - 1 ? allBookChapters[currentIndex + 1].id : null;
     
     // Get major task group information
     let majorTaskGroupData = null;
@@ -48,6 +62,13 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
       .from(chapterPages)
       .where(eq(chapterPages.chapterId, chapterId))
       .orderBy(asc(chapterPages.pageNumber));
+
+    // Get scenes for the chapter
+    const chapterScenes = await db
+      .select()
+      .from(scenes)
+      .where(eq(scenes.chapterId, chapterId))
+      .orderBy(asc(scenes.sceneNumber));
 
     // Calculate word count from pages
     const totalWordCount = pages.reduce((count, page) => {
@@ -150,12 +171,14 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
           hex: chapter.hexCode,
           rgb: [chapter.red, chapter.green, chapter.blue]
         },
-        iconPath: chapter.iconPath
+        iconPath: chapter.iconPath,
+        previousChapterId,
+        nextChapterId,
       },
       book,
       majorTaskGroup: majorTaskGroupData?.majorTaskGroup || null,
       taskMaster: majorTaskGroupData?.taskMaster || null,
-      scenes: [], // Empty for now, but keeping for compatibility
+      scenes: chapterScenes,
       taskGroups: {
         major: [],
         specific: [],
@@ -164,7 +187,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
       pages,
       characterGuidance: chapterCharacterGuidance,
       stats: {
-        sceneCount: 0,
+        sceneCount: chapterScenes.length,
         taskGroupCount: 0,
         majorTaskGroupCount: majorTaskGroupData ? 1 : 0,
         specificTaskGroupCount: 0,
@@ -175,6 +198,66 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     });
   } catch (error) {
     console.error(`Error fetching chapter ${params.chapterId}:`, error);
+    return new NextResponse('Internal Server Error', { status: 500 });
+  }
+}
+
+export async function PUT(request: Request, { params }: { params: { chapterId: string } }) {
+  try {
+    const { chapterId } = params;
+    const body = await request.json();
+
+    // Map frontend field names to database column names for chapters
+    const updateData: any = {};
+    
+    const chapterFieldMappings: { [key: string]: string } = {
+      'title': 'title',
+      'description': 'description',
+      'focus': 'focus',
+      'focusArea': 'focusArea',
+      'pov': 'pov',
+      'tense': 'tense',
+      'coreEmotion': 'coreEmotion',
+      'sceneTone': 'sceneTone',
+      'epicNovelPages': 'epicNovelPages',
+      'epicChapterFocus': 'epicChapterFocus',
+      'epicNovelChapterFocus': 'epicNovelChapterFocus',
+      'epicNovelSectionName': 'epicNovelSectionName',
+      'tarotCardLink': 'tarotCardLink',
+      'tarotFamily': 'tarotFamily',
+      'tarotCardItem': 'tarotCardItem',
+      'connectionToMajorTaskGroup': 'connectionToMajorTaskGroup',
+      'terminalLearningObjectives': 'terminalLearningObjectives',
+      'specificTaskGroupTagline': 'specificTaskGroupTagline',
+      'specificTaskGroupDescription': 'specificTaskGroupDescription',
+      'specificTaskGroupBooksInfluencedBy': 'specificTaskGroupBooksInfluencedBy',
+      'colorName': 'colorName',
+      'hexCode': 'hexCode',
+      'red': 'red',
+      'green': 'green',
+      'blue': 'blue'
+    };
+
+    // Only include fields that are defined in the schema
+    for (const [frontendField, dbField] of Object.entries(chapterFieldMappings)) {
+      if (body[frontendField] !== undefined) {
+        updateData[dbField] = body[frontendField];
+      }
+    }
+
+    const updatedChapter = await db
+      .update(chapters)
+      .set(updateData)
+      .where(eq(chapters.id, chapterId))
+      .returning();
+
+    if (updatedChapter.length === 0) {
+      return new NextResponse('Chapter Not Found', { status: 404 });
+    }
+
+    return NextResponse.json(updatedChapter[0]);
+  } catch (error) {
+    console.error(`Error updating chapter ${params.chapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

@@ -5053,6 +5053,18 @@ postgres-interval@^1.1.0:
   dependencies:
     xtend "^4.0.0"
 
+postgres-js@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/postgres-js/-/postgres-js-0.1.0.tgz"
+  integrity sha512-vvqdSv87YmfoeaT+8TzOsrtv7odxg8esToUf/j7y3lY/6eJAVGz4THrV3xwizdS1Eg8XtKqBx7XaBo3vvATlXw==
+  dependencies:
+    strtok ">=0.1.1"
+
+postgres@^3.4.7, postgres@>=3:
+  version "3.4.7"
+  resolved "https://registry.npmjs.org/postgres/-/postgres-3.4.7.tgz"
+  integrity sha512-Jtc2612XINuBjIl/QTWsV5UvE8UHuNblcO3vVADSrKsrc6RqGX6lOW1cEo3CM2v0XG4Nat8nI+YM7/f26VxXLw==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/prelude-ls/-/prelude-ls-1.2.1.tgz"
@@ -5752,6 +5764,11 @@ strnum@^1.0.5:
   version "1.1.2"
   resolved "https://registry.npmjs.org/strnum/-/strnum-1.1.2.tgz"
   integrity sha512-vrN+B7DBIoTTZjnPNewwhx6cBA/H+IS7rfW68n7XxC1y7uoiGQBxaKzqucGUgavX15dJgiGztLJ8vxuEzwqBdA==
+
+strtok@>=0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/strtok/-/strtok-0.1.1.tgz"
+  integrity sha512-oFxZ1solwmTdMCf9THelBG5mvRz8tvpD+zj0vl9oFwj/wADdrYOx2R0YHYqok8RMurquDD2ymSncoZowxttAsA==
 
 strtok3@^10.2.2:
   version "10.3.1"

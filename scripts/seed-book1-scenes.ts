@@ -77,32 +77,38 @@ async function extractBook1ScenesData(): Promise<{ [chapterNumber: number]: Chap
   function extractChapterData(obj: any): void {
     if (typeof obj !== 'object' || obj === null) return;
     
-    for (const key in obj) {
-      // Look for Book 1 chapters with scenes data
-      if (key === 'unique_identifier' && 
-          typeof obj[key] === 'string' && 
-          obj[key].includes('STG 1.') && 
-          obj.chapter && 
-          obj.chapter.startsWith('Chapter ') &&
-          obj.scenes) {
-        
-        const chapterNumberMatch = obj.chapter.match(/Chapter (\\d+)/);
-        if (chapterNumberMatch) {
-          const chapterNumber = parseInt(chapterNumberMatch[1]);
-          
-          book1Chapters[chapterNumber] = {
-            chapter: obj.chapter,
-            pov: obj.pov || '3rd Person Limited',
-            tense: obj.tense || 'Past Tense',
-            core_emotion: obj.core_emotion || 'Tension and conflict',
-            scene_tone: obj.scene_tone || 'Dramatic and intense',
-            scenes: obj.scenes
-          };
-          
-          console.log(`✓ Extracted data for ${obj.chapter}: ${obj.scenes.length} scenes`);
-        }
-      }
+    // Debug logging - only for chapters with scenes
+    if (obj.unique_identifier && obj.unique_identifier.includes('STG 1.') && obj.scenes) {
+      console.log(`Found STG 1 chapter with scenes: ${obj.unique_identifier} - ${obj.chapter}`);
+    }
+    
+    // Check if current object has the structure we need
+    if (obj.unique_identifier && 
+        typeof obj.unique_identifier === 'string' && 
+        obj.unique_identifier.includes('STG 1.') && 
+        obj.chapter && 
+        obj.chapter.startsWith('Chapter ') &&
+        obj.scenes) {
       
+      const chapterNumberMatch = obj.chapter.match(/Chapter (\d+)/);
+      if (chapterNumberMatch) {
+        const chapterNumber = parseInt(chapterNumberMatch[1]);
+        
+        book1Chapters[chapterNumber] = {
+          chapter: obj.chapter,
+          pov: obj.pov || '3rd Person Limited',
+          tense: obj.tense || 'Past Tense',
+          core_emotion: obj.core_emotion || 'Tension and conflict',
+          scene_tone: obj.scene_tone || 'Dramatic and intense',
+          scenes: obj.scenes
+        };
+        
+        console.log(`✓ Extracted data for ${obj.chapter}: ${obj.scenes.length} scenes`);
+      }
+    }
+    
+    // Recursively search all nested objects
+    for (const key in obj) {
       extractChapterData(obj[key]);
     }
   }
@@ -120,33 +126,28 @@ async function seedScenesForChapter(
 ): Promise<void> {
   console.log(`\\nSeeding scenes for Chapter ${chapterNumber}...`);
   
-  // Update chapter with metadata
-  await db
-    .update(chapters)
-    .set({
-      pov: chapterData.pov,
-      tense: chapterData.tense,
-      coreEmotion: chapterData.core_emotion,
-      sceneTone: chapterData.scene_tone
-    })
-    .where(eq(chapters.id, chapterId));
+  // Update chapter with metadata using raw SQL
+  await sql`
+    UPDATE chapters 
+    SET pov = ${chapterData.pov}, 
+        tense = ${chapterData.tense}, 
+        core_emotion = ${chapterData.core_emotion}, 
+        scene_tone = ${chapterData.scene_tone}
+    WHERE id = ${chapterId}
+  `;
   
   console.log(`  ✓ Updated chapter metadata`);
   
-  // Delete existing scenes for this chapter
-  await db.delete(scenes).where(eq(scenes.chapterId, chapterId));
+  // Delete existing scenes for this chapter using raw SQL
+  await sql`DELETE FROM scenes WHERE chapter_id = ${chapterId}`;
   console.log(`  ✓ Cleared existing scenes`);
   
-  // Insert new scenes
+  // Insert new scenes using raw SQL to avoid schema mismatch
   for (const scene of chapterData.scenes) {
-    await db.insert(scenes).values({
-      chapterId: chapterId,
-      sceneNumber: scene.scene_number,
-      title: scene.title,
-      setup: scene.setup,
-      symbolism: scene.symbolism,
-      beatGoal: scene.beat_goal
-    });
+    await sql`
+      INSERT INTO scenes (chapter_id, scene_number, title, setup, symbolism)
+      VALUES (${chapterId}, ${scene.scene_number}, ${scene.title || 'Untitled Scene'}, ${scene.setup || ''}, ${scene.symbolism || ''})
+    `;
   }
   
   console.log(`  ✓ Inserted ${chapterData.scenes.length} scenes`);
