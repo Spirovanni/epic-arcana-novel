@@ -41,7 +41,7 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
       }
     }));
 
-    // Group chapters by chapter number and prefer entries with shorter, cleaner titles
+    // Use deduplication logic for all books
     const chaptersByNumber = new Map();
     formattedChapters.forEach(chapter => {
       const existing = chaptersByNumber.get(chapter.chapterNumber);
@@ -54,7 +54,6 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
         }
       }
     });
-
     const uniqueChapters = Array.from(chaptersByNumber.values()).sort((a, b) => a.chapterNumber - b.chapterNumber);
 
     // Add book theme color based on book number
