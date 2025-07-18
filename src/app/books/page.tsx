@@ -64,7 +64,7 @@ export default function BooksPage() {
         const response = await fetch('/api/books');
         if (response.ok) {
           const data = await response.json();
-          setBooks(data);
+          setBooks(data.books || []);
         }
       } catch (error) {
         console.error('Failed to fetch books:', error);
@@ -169,7 +169,7 @@ export default function BooksPage() {
                     </div>
                     <h2 className={`text-3xl font-black mb-2 ${textColorClass} leading-tight group-hover:scale-105 transition-all duration-300 tracking-tight`}
                       style={{ textShadow: `0 2px 8px ${backgroundColor}80` }}>
-                      {book.title}
+                      {book.fictionNovelTitle || book.title}
                     </h2>
                     {book.originalTitle && (
                       <p className={`text-sm ${textColorClass} opacity-80 font-medium mb-4 tracking-wide`}

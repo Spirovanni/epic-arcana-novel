@@ -24,18 +24,47 @@ interface Book {
   bookNumber: number;
   title: string;
   fictionNovelTitle: string;
+  originalTitle?: string;
+  summary?: string;
+  colorTheme?: {
+    name: string;
+    hex: string;
+    rgb: {
+      red: number;
+      green: number;
+      blue: number;
+    };
+  };
 }
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBooksDropdownOpen, setIsBooksDropdownOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const [books, setBooks] = useState<Book[]>([]);
   const { user, isLoaded } = useUser();
   const { theme, setTheme } = useTheme();
 
   // Prevent hydration mismatch by waiting for client-side hydration
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  // Fetch books for the dropdown
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch('/api/books');
+        if (response.ok) {
+          const data = await response.json();
+          setBooks(data.books || []);
+        }
+      } catch (error) {
+        console.error('Failed to fetch books:', error);
+      }
+    };
+    
+    fetchBooks();
   }, []);
 
   // Close dropdown when clicking outside
@@ -122,105 +151,78 @@ export default function Navbar() {
                         Trilogies
                       </Link>
                       <hr className="my-1 border-gray-200 dark:border-gray-600" />
-                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        The Trionfi Genesis
-                      </div>
-                      <Link
-                        href="/books/1"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-orange-500 rounded-full mr-3"></div>
-                          Crown of the Ancient Ones
+                      {/* Dynamic book links */}
+                      {books.length > 0 && (
+                        <>
+                          <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                            The Trionfi Genesis
+                          </div>
+                          {books.filter(book => book.bookNumber >= 1 && book.bookNumber <= 3).map(book => (
+                            <Link
+                              key={book.id}
+                              href={`/books/${book.id}`}
+                              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                              onClick={() => setIsBooksDropdownOpen(false)}
+                            >
+                              <div className="flex items-center">
+                                <div className={`w-3 h-3 rounded-full mr-3 ${
+                                  book.bookNumber === 1 ? 'bg-orange-500' :
+                                  book.bookNumber === 2 ? 'bg-red-500' :
+                                  'bg-pink-500'
+                                }`}></div>
+                                {book.fictionNovelTitle}
+                              </div>
+                            </Link>
+                          ))}
+                          <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                            The Wheel of Realms
+                          </div>
+                          {books.filter(book => book.bookNumber >= 4 && book.bookNumber <= 6).map(book => (
+                            <Link
+                              key={book.id}
+                              href={`/books/${book.id}`}
+                              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                              onClick={() => setIsBooksDropdownOpen(false)}
+                            >
+                              <div className="flex items-center">
+                                <div className={`w-3 h-3 rounded-full mr-3 ${
+                                  book.bookNumber === 4 ? 'bg-purple-500' :
+                                  book.bookNumber === 5 ? 'bg-violet-500' :
+                                  'bg-teal-500'
+                                }`}></div>
+                                {book.fictionNovelTitle}
+                              </div>
+                            </Link>
+                          ))}
+                          <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                            The Arcana Ascended
+                          </div>
+                          {books.filter(book => book.bookNumber >= 7 && book.bookNumber <= 9).map(book => (
+                            <Link
+                              key={book.id}
+                              href={`/books/${book.id}`}
+                              className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                              onClick={() => setIsBooksDropdownOpen(false)}
+                            >
+                              <div className="flex items-center">
+                                <div className={`w-3 h-3 rounded-full mr-3 ${
+                                  book.bookNumber === 7 ? 'bg-green-500' :
+                                  book.bookNumber === 8 ? 'bg-yellow-500' :
+                                  'bg-amber-500'
+                                }`}></div>
+                                {book.fictionNovelTitle}
+                              </div>
+                            </Link>
+                          ))}
+                        </>
+                      )}
+                      
+                      {/* Fallback for when books haven't loaded yet */}
+                      {books.length === 0 && (
+                        <div className="px-4 py-2 text-sm text-gray-500 dark:text-gray-400">
+                          Loading books...
                         </div>
-                      </Link>
-                      <Link
-                        href="/books/2"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-red-500 rounded-full mr-3"></div>
-                          Rise of the Triassic Nine
-                        </div>
-                      </Link>
-                      <Link
-                        href="/books/3"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-pink-500 rounded-full mr-3"></div>
-                          Awake Iron!
-                        </div>
-                      </Link>
-                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        The Wheel of Realms
-                      </div>
-                      <Link
-                        href="/books/4"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
-                          Maiden of Mercy
-                        </div>
-                      </Link>
-                      <Link
-                        href="/books/5"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-violet-500 rounded-full mr-3"></div>
-                          Holder of the Life Force
-                        </div>
-                      </Link>
-                      <Link
-                        href="/books/6"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-teal-500 rounded-full mr-3"></div>
-                          The City of Shadows
-                        </div>
-                      </Link>
-                      <div className="px-4 py-2 text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-                        The Arcana Ascended
-                      </div>
-                      <Link
-                        href="/books/7"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
-                          Dark Path to Victory
-                        </div>
-                      </Link>
-                      <Link
-                        href="/books/8"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
-                          Inferno Garden
-                        </div>
-                      </Link>
-                      <Link
-                        href="/books/9"
-                        className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-                        onClick={() => setIsBooksDropdownOpen(false)}
-                      >
-                        <div className="flex items-center">
-                          <div className="w-3 h-3 bg-amber-500 rounded-full mr-3"></div>
-                          The Blades of Triumph
-                        </div>
-                      </Link>
+                      )}
                     </div>
                   </div>
                 )}

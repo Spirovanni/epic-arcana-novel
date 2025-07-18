@@ -44,7 +44,7 @@ export async function GET() {
       })
     );
     
-    return NextResponse.json(booksWithColors);
+    return NextResponse.json({ books: booksWithColors });
   } catch (error) {
     console.error('Error fetching books:', error);
     return new NextResponse('Internal Server Error', { status: 500 });
