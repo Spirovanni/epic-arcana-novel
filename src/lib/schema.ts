@@ -320,6 +320,11 @@ export const chapters = pgTable('chapters', {
   specificTaskGroupTagline: text('specific_task_group_tagline'),
   specificTaskGroupBooksInfluencedBy: jsonb('specific_task_group_books_influenced_by'),
   terminalLearningObjectives: jsonb('terminal_learning_objectives'),
+  // Chapter-level scene metadata
+  pov: varchar('pov', { length: 100 }),
+  tense: varchar('tense', { length: 50 }),
+  coreEmotion: varchar('core_emotion', { length: 255 }),
+  sceneTone: varchar('scene_tone', { length: 255 }),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
@@ -350,6 +355,7 @@ export const scenes = pgTable('scenes', {
   tarotSymbolism: text('tarot_symbolism'),
   heroJourneyStage: varchar('hero_journey_stage', { length: 100 }),
   pages: varchar('pages', { length: 50 }),
+  symbolism: text('symbolism'),
   // Enhanced Tarot Integration
   primaryTarotCard: varchar('primary_tarot_card', { length: 100 }), // Main card for the scene
   secondaryTarotCards: jsonb('secondary_tarot_cards'), // Supporting cards
