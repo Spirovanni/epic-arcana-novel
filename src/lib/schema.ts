@@ -320,6 +320,7 @@ export const chapters = pgTable('chapters', {
   specificTaskGroupTagline: text('specific_task_group_tagline'),
   specificTaskGroupBooksInfluencedBy: jsonb('specific_task_group_books_influenced_by'),
   terminalLearningObjectives: jsonb('terminal_learning_objectives'),
+  summary: text('summary'),
   // Chapter-level scene metadata
   pov: varchar('pov', { length: 100 }),
   tense: varchar('tense', { length: 50 }),

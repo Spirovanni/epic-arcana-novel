@@ -166,6 +166,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup,
         terminalLearningObjectives: chapter.terminalLearningObjectives,
         booksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy,
+        summary: chapter.summary,
         colorTheme: {
           name: chapter.colorName,
           hex: chapter.hexCode,
@@ -231,6 +232,7 @@ export async function PUT(request: Request, { params }: { params: { chapterId: s
       'specificTaskGroupTagline': 'specificTaskGroupTagline',
       'specificTaskGroupDescription': 'specificTaskGroupDescription',
       'specificTaskGroupBooksInfluencedBy': 'specificTaskGroupBooksInfluencedBy',
+      'summary': 'summary',
       'colorName': 'colorName',
       'hexCode': 'hexCode',
       'red': 'red',

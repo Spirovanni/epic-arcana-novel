@@ -12,6 +12,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
 import CharacterToolkitHUD from '@/components/CharacterToolkitHUD';
 import SceneManager from '@/components/SceneManager';
+import TaskChecklist from '@/components/TaskChecklist';
 
 // Simple HTML editor component for React 19 compatibility
 const SimpleHTMLEditor = ({ value, onChange, onSave }: { 
@@ -407,6 +408,10 @@ export default function ChapterWritingPage() {
   const [showPrompts, setShowPrompts] = useState(false);
   const [permissions, setPermissions] = useState({ canRead: false, canWrite: false, canAdmin: false });
   const [showToolkit, setShowToolkit] = useState(false);
+  const [totalTasks, setTotalTasks] = useState(0);
+  const [isEditingOverview, setIsEditingOverview] = useState(false);
+  const [editedChapter, setEditedChapter] = useState<any>(null);
+  const [isSavingOverview, setIsSavingOverview] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
@@ -597,6 +602,58 @@ export default function ChapterWritingPage() {
         console.error('Failed to create pages:', error);
       }
     }
+  };
+
+  // Save chapter overview data
+  const saveChapterOverview = async () => {
+    if (!editedChapter) return;
+    
+    setIsSavingOverview(true);
+    try {
+      const response = await fetch(`/api/chapters/${chapterId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(editedChapter),
+      });
+      
+      if (response.ok) {
+        const updatedChapter = await response.json();
+        setData(prev => prev ? {
+          ...prev,
+          chapter: { ...prev.chapter, ...editedChapter }
+        } : null);
+        setIsEditingOverview(false);
+        setEditedChapter(null);
+      }
+    } catch (error) {
+      console.error('Failed to save chapter overview:', error);
+    } finally {
+      setIsSavingOverview(false);
+    }
+  };
+
+  // Start editing overview
+  const startEditingOverview = () => {
+    if (!data?.chapter) return;
+    setEditedChapter({
+      title: data.chapter.title || '',
+      tagline: data.chapter.tagline || '',
+      focusArea: data.chapter.focusArea || '',
+      connectionToMajorTaskGroup: data.chapter.connectionToMajorTaskGroup || '',
+      summary: data.chapter.summary || ''
+    });
+    setIsEditingOverview(true);
+  };
+
+  // Cancel editing overview
+  const cancelEditingOverview = () => {
+    setIsEditingOverview(false);
+    setEditedChapter(null);
+  };
+
+  // Update edited chapter field
+  const updateEditedChapterField = (field: string, value: string) => {
+    setEditedChapter(prev => prev ? { ...prev, [field]: value } : null);
   };
 
   // Auto-continue to next page when current page is complete
@@ -906,7 +963,7 @@ export default function ChapterWritingPage() {
             { key: 'overview', label: 'Overview', icon: BookOpenIcon },
             { key: 'write', label: 'Write', icon: SparklesIcon },
             { key: 'scenes', label: `Scenes (${stats.sceneCount})`, icon: ClockIcon },
-            { key: 'tasks', label: `Tasks (${stats.taskGroupCount})`, icon: AcademicCapIcon },
+            { key: 'tasks', label: `Tasks (${totalTasks})`, icon: AcademicCapIcon },
           ].map(({ key, label, icon: Icon }) => (
             <button
               key={key}
@@ -940,46 +997,105 @@ export default function ChapterWritingPage() {
                   boxShadow: `0 8px 32px ${glowColor}`
                 }}
               >
-                <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
-                  <BookOpenIcon className="w-6 h-6 mr-2" style={{ color: chapterHex }} />
-                  <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
-                    Chapter Overview
-                  </span>
-                </h2>
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center">
+                    <BookOpenIcon className="w-6 h-6 mr-2" style={{ color: chapterHex }} />
+                    <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
+                      Chapter Overview
+                    </span>
+                  </h2>
+                  {permissions.canWrite && (
+                    <div className="flex items-center space-x-2">
+                      {isEditingOverview ? (
+                        <>
+                          <button
+                            onClick={saveChapterOverview}
+                            disabled={isSavingOverview}
+                            className="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors disabled:opacity-50"
+                          >
+                            {isSavingOverview ? (
+                              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                            ) : (
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                            )}
+                            <span>{isSavingOverview ? 'Saving...' : 'Save'}</span>
+                          </button>
+                          <button
+                            onClick={cancelEditingOverview}
+                            className="flex items-center space-x-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors"
+                          >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                            <span>Cancel</span>
+                          </button>
+                        </>
+                      ) : (
+                        <button
+                          onClick={startEditingOverview}
+                          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                        >
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                          </svg>
+                          <span>Edit</span>
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </div>
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="space-y-4">
-                    {chapter.tagline && (
-                      <div>
-                        <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Tagline</h3>
-                        <p 
-                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 italic font-medium border border-gray-200 dark:border-gray-600"
-                        >
-                          "{chapter.tagline}"
+                    <div>
+                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Tagline</h3>
+                      {isEditingOverview ? (
+                        <input
+                          type="text"
+                          value={editedChapter?.tagline || ''}
+                          onChange={(e) => updateEditedChapterField('tagline', e.target.value)}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium italic focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          placeholder="Enter chapter tagline..."
+                        />
+                      ) : (
+                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 italic font-medium border border-gray-200 dark:border-gray-600">
+                          "{chapter.tagline || 'No tagline set'}"
                         </p>
-                      </div>
-                    )}
-                    {chapter.focusArea && (
-                      <div>
-                        <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Focus Area</h3>
-                        <p 
-                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 font-medium border border-gray-200 dark:border-gray-600"
-                        >
-                          {chapter.focusArea}
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Focus Area</h3>
+                      {isEditingOverview ? (
+                        <input
+                          type="text"
+                          value={editedChapter?.focusArea || ''}
+                          onChange={(e) => updateEditedChapterField('focusArea', e.target.value)}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          placeholder="Enter focus area..."
+                        />
+                      ) : (
+                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 font-medium border border-gray-200 dark:border-gray-600">
+                          {chapter.focusArea || 'No focus area set'}
                         </p>
-                      </div>
-                    )}
-                    {chapter.connectionToMajorTaskGroup && (
-                      <div>
-                        <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Connection to Major Task Group</h3>
-                        <p 
-                          className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600"
-                        >
-                          {chapter.connectionToMajorTaskGroup}
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Connection to Major Task Group</h3>
+                      {isEditingOverview ? (
+                        <textarea
+                          value={editedChapter?.connectionToMajorTaskGroup || ''}
+                          onChange={(e) => updateEditedChapterField('connectionToMajorTaskGroup', e.target.value)}
+                          rows={4}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
+                          placeholder="Enter connection to major task group..."
+                        />
+                      ) : (
+                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
+                          {chapter.connectionToMajorTaskGroup || 'No connection specified'}
                         </p>
-                      </div>
-                    )}
-                  </div>
-                  <div className="space-y-4">
+                      )}
+                    </div>
                     {/* Color Theme */}
                     <div>
                       <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Color Theme</h3>
@@ -994,14 +1110,23 @@ export default function ChapterWritingPage() {
                         </div>
                       </div>
                     </div>
-                    {/* Chapter Position */}
+                  </div>
+                  <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Chapter Position</h3>
-                      <div className="bg-indigo-50 dark:bg-indigo-900/30 rounded px-3 py-2">
-                        <p className="text-gray-900 dark:text-gray-100">
-                          Chapter {chapter.chapterNumber} of {book.title}
+                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Summary</h3>
+                      {isEditingOverview ? (
+                        <textarea
+                          value={editedChapter?.summary || ''}
+                          onChange={(e) => updateEditedChapterField('summary', e.target.value)}
+                          rows={8}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
+                          placeholder="Enter chapter summary..."
+                        />
+                      ) : (
+                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
+                          {chapter.summary || 'No summary available'}
                         </p>
-                      </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -1446,64 +1571,11 @@ export default function ChapterWritingPage() {
           )}
 
           {activeTab === 'tasks' && (
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Task Groups</h2>
-              
-              {taskGroups.major.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3">Major Task Groups</h3>
-                  <div className="grid gap-4">
-                    {taskGroups.major.map((taskGroup) => (
-                      <div key={taskGroup.id} className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl shadow-lg p-6 border-l-4 border-blue-500 dark:border-blue-400">
-                        <h4 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">{taskGroup.title}</h4>
-                        {taskGroup.tagline && (
-                          <p className="text-blue-700 dark:text-blue-300 font-medium mb-2 italic">"{taskGroup.tagline}"</p>
-                        )}
-                        <p className="text-gray-700 dark:text-gray-300 mb-3 text-sm">{taskGroup.description}</p>
-                        
-                        {taskGroup.focusArea && (
-                          <div className="mb-2">
-                            <h5 className="font-semibold text-gray-700 dark:text-gray-200 mb-1 text-sm">Focus Area</h5>
-                            <p className="text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-gray-800/60 rounded px-2 py-1 text-sm">{taskGroup.focusArea}</p>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {taskGroups.specific.length > 0 && (
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-3">Specific Task Groups</h3>
-                  <div className="grid gap-4">
-                    {taskGroups.specific.map((taskGroup) => (
-                      <div key={taskGroup.id} className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-xl shadow-lg p-6 border-l-4 border-green-500 dark:border-green-400">
-                        <h4 className="text-lg font-bold text-gray-800 dark:text-gray-100 mb-2">{taskGroup.title}</h4>
-                        {taskGroup.tagline && (
-                          <p className="text-green-700 dark:text-green-300 font-medium mb-2 italic">"{taskGroup.tagline}"</p>
-                        )}
-                        <p className="text-gray-700 dark:text-gray-300 mb-3 text-sm">{taskGroup.description}</p>
-                        
-                        {taskGroup.focusArea && (
-                          <div className="mb-2">
-                            <h5 className="font-semibold text-gray-700 dark:text-gray-200 mb-1 text-sm">Focus Area</h5>
-                            <p className="text-gray-600 dark:text-gray-300 bg-white/60 dark:bg-gray-800/60 rounded px-2 py-1 text-sm">{taskGroup.focusArea}</p>
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {taskGroups.major.length === 0 && taskGroups.specific.length === 0 && (
-                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-12 text-center border border-gray-200/50 dark:border-gray-600/50">
-                  <AcademicCapIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-300">No task groups have been created for this chapter yet.</p>
-                </div>
-              )}
-            </div>
+            <TaskChecklist 
+              chapterId={chapterId} 
+              chapterData={data} 
+              onTaskCountChange={setTotalTasks}
+            />
           )}
         </div>
       </div>

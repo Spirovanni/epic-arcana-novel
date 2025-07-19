@@ -300,6 +300,7 @@ async function syncEpicArcanaData() {
                       specificTaskGroupTagline: specificTaskGroupData.specific_task_group_tagline,
                       specificTaskGroupBooksInfluencedBy: sanitizeJsonData(specificTaskGroupData.specific_task_group_books_influenced_by),
                       terminalLearningObjectives: sanitizeJsonData(specificTaskGroupData.terminal_learning_objectives),
+                      summary: specificTaskGroupData.summary,
                       updatedAt: new Date()
                     };
                     
