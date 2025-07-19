@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, EyeIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, EyeIcon, CalendarIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -44,6 +44,8 @@ interface Scene {
   chronologicalSequence?: number;
   storySequence?: number;
   timelineSignificance?: string;
+  timeline_date?: string;
+  timeline_variant?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -396,6 +398,72 @@ export default function SceneDetailPage() {
                   </div>
                 )}
               </>
+            )}
+          </div>
+
+          {/* Timeline Management */}
+          <div className="bg-cyan-50 dark:bg-cyan-900/20 rounded-xl p-6 border border-cyan-200 dark:border-cyan-800 mb-8">
+            <h3 className="text-lg font-semibold text-cyan-900 dark:text-cyan-100 mb-4 flex items-center">
+              <ClockIcon className="w-5 h-5 mr-2" />
+              Timeline Management
+            </h3>
+            {isEditing ? (
+              <div className="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    <CalendarIcon className="w-4 h-4 inline mr-1" />
+                    Timeline Date
+                  </label>
+                  <input
+                    type="text"
+                    name="timeline_date"
+                    value={editedScene?.timeline_date || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-2 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="e.g., January 10, 1320"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    <GlobeAltIcon className="w-4 h-4 inline mr-1" />
+                    Timeline Variant
+                  </label>
+                  <select
+                    name="timeline_variant"
+                    value={editedScene?.timeline_variant || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-2 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                  >
+                    <option value="">Select timeline variant</option>
+                    <option value="Prime Timeline">Prime Timeline</option>
+                    <option value="Divergence Point Alpha">Divergence Point Alpha</option>
+                    <option value="Pangea Insertion">Pangea Insertion</option>
+                    <option value="Timeline Fracture">Timeline Fracture</option>
+                    <option value="Convergence Point">Convergence Point</option>
+                  </select>
+                </div>
+              </div>
+            ) : (
+              <div className="grid md:grid-cols-2 gap-4">
+                {(scene.timeline_date || editedScene?.timeline_date) && (
+                  <div>
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-1 flex items-center">
+                      <CalendarIcon className="w-4 h-4 mr-1" />
+                      Timeline Date
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100">{scene.timeline_date || editedScene?.timeline_date}</p>
+                  </div>
+                )}
+                {(scene.timeline_variant || editedScene?.timeline_variant) && (
+                  <div>
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-1 flex items-center">
+                      <GlobeAltIcon className="w-4 h-4 mr-1" />
+                      Timeline Variant
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100">{scene.timeline_variant || editedScene?.timeline_variant}</p>
+                  </div>
+                )}
+              </div>
             )}
           </div>
 
