@@ -501,47 +501,56 @@
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
+                              "title": "The University of Bologna",
                               "setup": "In the first chapter, we are introduced to Francisco Petrarch, a young man attending the University of Bologna in 1321. He is struggling with feelings of despair and isolation, as he feels disconnected from his peers and his own family.",
                               "symbolism": "Symbolic elements of scene 1",
                               "beat_goal": "Advance the narrative through scene 1",
                               "pov": "3rd Person Limited",
                               "tense": "Past Tense",
                               "core_emotion": "Tension and conflict",
-                              "scene_tone": "Dramatic and intense"
+                              "scene_tone": "Dramatic and intense",
+                              "timeline_date": "1/10/1320",
+                              "timeline_variant": "Prime Timeline"
+
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
+                              "title": "The Lecture",
                               "setup": "Francisco Petrarch attends a crowded lecture at the University of Bologna, feeling isolated and disconnected despite being surrounded by people. During the lecture, he accidentally encounters Novella d'Andrea, the daughter of Giovanni d'Andrea, who is covering her father's lecture from behind a screen.",
                               "symbolism": "Symbolic elements of scene 2",
                               "beat_goal": "Advance the narrative through scene 2",
                               "pov": "3rd Person Limited",
                               "tense": "Past Tense",
                               "core_emotion": "Tension and conflict",
-                              "scene_tone": "Dramatic and intense"
+                              "scene_tone": "Dramatic and intense",
+                              "timeline_date": "1/10/1320",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
+                              "title": "The Encounter",
                               "setup": "This encounter leads Francisco to question the nature of intrigue and what lies behind the screen of reality. He also introduces his Trionfi cards in a mysterious context, hinting at their unusual power and nature.",
                               "symbolism": "Symbolic elements of scene 3",
                               "beat_goal": "Advance the narrative through scene 3",
                               "pov": "3rd Person Limited",
                               "tense": "Past Tense",
                               "core_emotion": "Tension and conflict",
-                              "scene_tone": "Dramatic and intense"
+                              "scene_tone": "Dramatic and intense",
+                              "timeline_date": "1/10/1320",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
+                              "title": "The Card",
                               "setup": "He notices a feature of a card he never noticed before and it is a large arched pathway going through a city square with what appears to be two metal rails on the floor going into the tunnel. The chapter ends with the distant grumbling of a train far away.",
                               "symbolism": "Symbolic elements of scene 4",
                               "beat_goal": "Advance the narrative through scene 4",
                               "pov": "3rd Person Limited",
                               "tense": "Past Tense",
                               "core_emotion": "Tension and conflict",
-                              "scene_tone": "Dramatic and intense"
+                              "scene_tone": "Dramatic and intense",
+                              "timeline_date": "1/10/1320",
+                              "timeline_variant": "Prime Timeline"
                             }
                           ]
                         },
@@ -660,8 +669,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Stunned recognition mixed with exhilarating terror",
                               "scene_tone": "Mystical and chaotic, with undertones of destiny calling",
-                              "timeline_date": "1321, the day after Francisco's vision in the cards",
-                              "timeline_variant": "Prime timeline - the moment the ordinary world shatters forever"
+                              "timeline_date": "1/11/1320",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 2,
@@ -673,8 +682,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Overwhelming awe mixed with desperate eagerness to understand",
                               "scene_tone": "Revelatory and profound, with ancient wisdom meeting youthful potential",
-                              "timeline_date": "1321, shortly after the train's arrival",
-                              "timeline_variant": "Prime timeline - Dante's first contact with Francisco, crucial to preventing temporal collapse"
+                              "timeline_date": "1/11/1320 ",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 3,
@@ -686,8 +695,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Resolute determination battling overwhelming uncertainty",
                               "scene_tone": "Solemn and momentous, with undertones of destiny accepted and courage found",
-                              "timeline_date": "1321, as the sun sets on Francisco's ordinary life",
-                              "timeline_variant": "Prime timeline - the moment Francisco truly commits to becoming the hero the timelines need"
+                              "timeline_date": "1/11/1320",
+                              "timeline_variant": "Prime Timeline"
                             }
                           ]
                         },
@@ -803,8 +812,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Conflicted determination mixed with guilt",
                               "scene_tone": "Tense, introspective, with undercurrents of familial discord",
-                              "timeline_date": "1321, early morning after the train's arrival",
-                              "timeline_variant": "Prime timeline - events proceeding as originally destined"
+                              "timeline_date": "1/11/1320",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 2,
@@ -816,8 +825,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Awakening wonder tinged with bittersweet sadness",
                               "scene_tone": "Mystical and contemplative, with emotional warmth and underlying melancholy",
-                              "timeline_date": "1321, late afternoon",
-                              "timeline_variant": "Prime timeline - Francisco's natural magical abilities beginning to manifest"
+                              "timeline_date": "1/11/1320",
+                              "timeline_variant": "Prime Timeline"
                             },
                             {
                               "scene_number": 3,
@@ -829,8 +838,8 @@
                               "tense": "Third person limited, past tense",
                               "core_emotion": "Exhilarating anticipation mixed with resolute courage",
                               "scene_tone": "Epic and transformative, with undertones of destiny and adventure",
-                              "timeline_date": "1321, dawn of departure day",
-                              "timeline_variant": "Prime timeline - the moment Francisco's heroic destiny truly begins"
+                              "timeline_date": "1/11/1320",
+                              "timeline_variant": "Prime Timeline"
                             }
                           ]
                         }
