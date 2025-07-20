@@ -155,7 +155,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         description: chapter.specificTaskGroupDescription || chapter.description,
         focus: chapter.focus,
         focusArea: chapter.focusArea,
-        tagline: chapter.specificTaskGroupTagline,
+        tagline: chapter.specificTaskGroupTagline || chapter.tagline || 'No tagline set',
         epicNovelPages: chapter.epicNovelPages,
         epicChapterFocus: chapter.epicChapterFocus,
         epicNovelChapterFocus: chapter.epicNovelChapterFocus,
@@ -163,14 +163,14 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         tarotCardLink: chapter.tarotCardLink,
         tarotFamily: chapter.tarotFamily,
         tarotCardItem: chapter.tarotCardItem,
-        connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup,
+        connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || 'No connection specified',
         terminalLearningObjectives: chapter.terminalLearningObjectives,
         booksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy,
         summary: chapter.summary,
-        colorTheme: {
-          name: chapter.colorName,
-          hex: chapter.hexCode,
-          rgb: [chapter.red, chapter.green, chapter.blue]
+        colorTheme: chapter.colorTheme || {
+          name: chapter.colorName || 'Orange',
+          hex: chapter.hexCode || '#FFA500',  
+          rgb: [chapter.red || 255, chapter.green || 165, chapter.blue || 0]
         },
         iconPath: chapter.iconPath,
         previousChapterId,
