@@ -28,21 +28,24 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
     }
 
     // Format chapters with color theme and group by chapter number
-    const formattedChapters = bookChapters.map(chapter => ({
-      ...chapter,
-      // Use the colorTheme from database or provide fallback
-      colorTheme: chapter.colorTheme || {
-        name: 'Orange',
-        hex: '#FFA500',
-        rgb: { red: 255, green: 165, blue: 0 }
-      },
-      // Add individual color fields for backward compatibility
-      colorName: chapter.colorTheme?.name,
-      hexCode: chapter.colorTheme?.hex,
-      red: chapter.colorTheme?.rgb?.red,
-      green: chapter.colorTheme?.rgb?.green,
-      blue: chapter.colorTheme?.rgb?.blue
-    }));
+    // Filter out chapters with invalid/missing IDs
+    const formattedChapters = bookChapters
+      .filter(chapter => chapter.id && chapter.id.trim() !== '')
+      .map(chapter => ({
+        ...chapter,
+        // Use the colorTheme from database or provide fallback
+        colorTheme: chapter.colorTheme || {
+          name: 'Orange',
+          hex: '#FFA500',
+          rgb: { red: 255, green: 165, blue: 0 }
+        },
+        // Add individual color fields for backward compatibility
+        colorName: chapter.colorTheme?.name,
+        hexCode: chapter.colorTheme?.hex,
+        red: chapter.colorTheme?.rgb?.red,
+        green: chapter.colorTheme?.rgb?.green,
+        blue: chapter.colorTheme?.rgb?.blue
+      }));
 
     // Use deduplication logic for all books
     const chaptersByNumber = new Map();

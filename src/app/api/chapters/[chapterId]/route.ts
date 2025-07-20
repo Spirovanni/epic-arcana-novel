@@ -7,6 +7,9 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
   try {
     const { chapterId } = await params;
     
+    // Log the chapter ID being requested for debugging
+    console.log(`API: Fetching chapter with ID: ${chapterId}`);
+    
     // Get chapter with book information
     const chapterData = await db
       .select({
@@ -19,10 +22,12 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
       .limit(1);
     
     if (chapterData.length === 0) {
+      console.error(`API: No chapter found with ID: ${chapterId}`);
       return new NextResponse('Chapter Not Found', { status: 404 });
     }
 
     const { chapter, book } = chapterData[0];
+    
 
     // Get all chapters for the book to find next/previous
     const allBookChapters = await db
@@ -147,7 +152,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     }
 
     // Format the response with all available chapter data
-    return NextResponse.json({
+    const responseData = {
       chapter: {
         id: chapter.id,
         title: chapter.title,
@@ -167,6 +172,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         terminalLearningObjectives: chapter.terminalLearningObjectives,
         booksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy,
         summary: chapter.summary,
+        description: chapter.specificTaskGroupDescription || chapter.description,
         colorTheme: chapter.colorTheme || {
           name: chapter.colorName || 'Orange',
           hex: chapter.hexCode || '#FFA500',  
@@ -196,7 +202,10 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         wordCount: totalWordCount,
         characterArcsCount: chapterCharacterGuidance.length
       }
-    });
+    };
+    
+    
+    return NextResponse.json(responseData);
   } catch (error) {
     console.error(`Error fetching chapter ${params.chapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });

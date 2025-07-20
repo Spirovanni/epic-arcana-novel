@@ -258,11 +258,12 @@ async function syncEpicArcanaData() {
                 const specificTaskGroups = majorTaskGroupData.specific_task_groups || majorTaskGroupData.Specific_task_groups;
                 if (specificTaskGroups) {
                   for (const [specificTaskGroupKey, specificTaskGroupData] of Object.entries(specificTaskGroups)) {
-                    const chapterMatch = specificTaskGroupData.chapter?.match(/(\d+)/);
+                    const chapterMatch = (specificTaskGroupData as any).chapter?.match(/(\d+)/);
                     const chapterNumber = chapterMatch ? parseInt(chapterMatch[1], 10) : 0;
                     
                     if (chapterNumber === 0) continue;
                     
+
                     const chapterDbData = {
                       bookId,
                       majorTaskGroupId,
@@ -295,7 +296,13 @@ async function syncEpicArcanaData() {
                       green: specificTaskGroupData.green || 0,
                       blue: specificTaskGroupData.blue || 0,
                       focusArea: specificTaskGroupData.focus_area,
-                      connectionToMajorTaskGroup: specificTaskGroupData.connection_to_major_task_group,
+                      connectionToMajorTaskGroup: (() => {
+                        // Find the connection field dynamically due to potential encoding issues
+                        const connectionField = Object.keys(specificTaskGroupData as any).find((key: string) => 
+                          key.includes('connection') && key.includes('major_task_group')
+                        );
+                        return connectionField ? (specificTaskGroupData as any)[connectionField] : null;
+                      })(),
                       specificTaskGroupDescription: specificTaskGroupData.specific_task_group_description,
                       specificTaskGroupTagline: specificTaskGroupData.specific_task_group_tagline,
                       specificTaskGroupBooksInfluencedBy: sanitizeJsonData(specificTaskGroupData.specific_task_group_books_influenced_by),

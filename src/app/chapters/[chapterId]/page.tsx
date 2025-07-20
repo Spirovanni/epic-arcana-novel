@@ -450,11 +450,28 @@ export default function ChapterWritingPage() {
         const response = await fetch(`/api/chapters/${chapterId}`);
         if (response.ok) {
           const chapterData = await response.json();
+          
+          
           setData(chapterData);
           
           // Set first page as current if pages exist
           if (chapterData.pages && chapterData.pages.length > 0) {
             setCurrentPage(0);
+          }
+        } else {
+          // Log detailed error information for debugging
+          console.error(`Failed to fetch chapter ${chapterId}:`, {
+            status: response.status,
+            statusText: response.statusText,
+            url: response.url
+          });
+          
+          // Try to get error message from response
+          try {
+            const errorText = await response.text();
+            console.error('Server error message:', errorText);
+          } catch (e) {
+            console.error('Could not read error response');
           }
         }
       } catch (error) {
@@ -640,7 +657,8 @@ export default function ChapterWritingPage() {
       tagline: data.chapter.tagline || '',
       focusArea: data.chapter.focusArea || '',
       connectionToMajorTaskGroup: data.chapter.connectionToMajorTaskGroup || '',
-      summary: data.chapter.summary || ''
+      summary: data.chapter.summary || '',
+      description: data.chapter.description || ''
     });
     setIsEditingOverview(true);
   };
@@ -1118,13 +1136,29 @@ export default function ChapterWritingPage() {
                         <textarea
                           value={editedChapter?.summary || ''}
                           onChange={(e) => updateEditedChapterField('summary', e.target.value)}
-                          rows={8}
+                          rows={4}
                           className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
                           placeholder="Enter chapter summary..."
                         />
                       ) : (
                         <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
                           {chapter.summary || 'No summary available'}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Description</h3>
+                      {isEditingOverview ? (
+                        <textarea
+                          value={editedChapter?.description || ''}
+                          onChange={(e) => updateEditedChapterField('description', e.target.value)}
+                          rows={4}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
+                          placeholder="Enter chapter description..."
+                        />
+                      ) : (
+                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
+                          {chapter.description || 'No description available'}
                         </p>
                       )}
                     </div>
