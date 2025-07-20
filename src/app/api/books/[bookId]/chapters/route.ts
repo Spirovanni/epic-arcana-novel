@@ -19,11 +19,7 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
       title: chapters.title,
       chapterNumber: chapters.chapterNumber,
       description: chapters.specificTaskGroupDescription,
-      colorName: chapters.colorName,
-      hexCode: chapters.hexCode,
-      red: chapters.red,
-      green: chapters.green,
-      blue: chapters.blue,
+      colorTheme: chapters.colorTheme,
       iconPath: chapters.iconPath
     }).from(chapters).where(eq(chapters.bookId, bookId)).orderBy(asc(chapters.chapterNumber));
 
@@ -34,11 +30,18 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
     // Format chapters with color theme and group by chapter number
     const formattedChapters = bookChapters.map(chapter => ({
       ...chapter,
-      colorTheme: {
-        name: chapter.colorName,
-        hex: chapter.hexCode,
-        rgb: [chapter.red, chapter.green, chapter.blue]
-      }
+      // Use the colorTheme from database or provide fallback
+      colorTheme: chapter.colorTheme || {
+        name: 'Orange',
+        hex: '#FFA500',
+        rgb: { red: 255, green: 165, blue: 0 }
+      },
+      // Add individual color fields for backward compatibility
+      colorName: chapter.colorTheme?.name,
+      hexCode: chapter.colorTheme?.hex,
+      red: chapter.colorTheme?.rgb?.red,
+      green: chapter.colorTheme?.rgb?.green,
+      blue: chapter.colorTheme?.rgb?.blue
     }));
 
     // Use deduplication logic for all books
