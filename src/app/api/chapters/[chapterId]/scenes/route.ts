@@ -72,6 +72,14 @@ export async function POST(request: Request, { params }: { params: { chapterId: 
         chronologicalSequence: data.chronologicalSequence,
         storySequence: data.storySequence,
         timelineSignificance: data.timelineSignificance,
+        // Timeline and context fields
+        timeline_date: data.timeline_date,
+        timeline_variant: data.timeline_variant,
+        location: data.location,
+        pov: data.pov,
+        tense: data.tense,
+        core_emotion: data.core_emotion,
+        scene_tone: data.scene_tone,
       })
       .returning();
 

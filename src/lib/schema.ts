@@ -379,6 +379,14 @@ export const scenes = pgTable('scenes', {
   chronologicalSequence: integer('chronological_sequence'), // Order in real chronology
   storySequence: integer('story_sequence'), // Order in narrative
   timelineSignificance: text('timeline_significance'), // Why this moment matters historically
+  // Additional timeline and context fields from l_outline.json
+  timeline_date: varchar('timeline_date', { length: 50 }), // e.g., "1/10/1320"
+  timeline_variant: varchar('timeline_variant', { length: 100 }), // e.g., "Prime Timeline", "Timeline Fracture"
+  location: varchar('location', { length: 255 }), // e.g., "Bologna City Square, Italy"
+  pov: varchar('pov', { length: 100 }), // Point of view character or style
+  tense: varchar('tense', { length: 100 }), // Narrative tense
+  core_emotion: varchar('core_emotion', { length: 255 }), // Primary emotional state
+  scene_tone: varchar('scene_tone', { length: 255 }), // Overall atmosphere/tone
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });

@@ -47,6 +47,7 @@ export async function PUT(request: Request, { params }: { params: { sceneId: str
       'sensoryDetail': 'sensoryDetail',
       'internalConflict': 'internalConflict', 
       'beatGoal': 'beatGoal',
+      'beat_goal': 'beatGoal',
       'symbolism': 'symbolism',
       'tarotSymbolism': 'tarotSymbolism',
       'heroJourneyStage': 'heroJourneyStage',
@@ -54,7 +55,19 @@ export async function PUT(request: Request, { params }: { params: { sceneId: str
       'primaryTarotCard': 'primaryTarotCard',
       'secondaryTarotCards': 'secondaryTarotCards',
       'preliminarySceneFocus': 'preliminarySceneFocus',
-      'preliminarySceneDescription': 'preliminarySceneDescription'
+      'preliminarySceneDescription': 'preliminarySceneDescription',
+      // Timeline and context fields
+      'timeline_date': 'timeline_date',
+      'timeline_variant': 'timeline_variant',
+      'location': 'location',
+      'pov': 'pov',
+      'tense': 'tense',
+      'core_emotion': 'core_emotion',
+      'scene_tone': 'scene_tone',
+      'chronologicalSequence': 'chronologicalSequence',
+      'temporalDivergencePoint': 'temporalDivergencePoint',
+      'realWorldContext': 'realWorldContext',
+      'timelineSignificance': 'timelineSignificance'
     };
 
     // Only include fields that are defined in the schema

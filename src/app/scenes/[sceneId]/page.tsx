@@ -18,6 +18,7 @@ interface Scene {
   sensoryDetail?: string;
   internalConflict?: string;
   beatGoal?: string;
+  beat_goal?: string;
   symbolism?: string;
   preliminarySceneFocus?: string;
   preliminarySceneDescription?: string;
@@ -46,6 +47,11 @@ interface Scene {
   timelineSignificance?: string;
   timeline_date?: string;
   timeline_variant?: string;
+  location?: string;
+  pov?: string;
+  tense?: string;
+  core_emotion?: string;
+  scene_tone?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -408,7 +414,7 @@ export default function SceneDetailPage() {
               Timeline Management
             </h3>
             {isEditing ? (
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
                     <CalendarIcon className="w-4 h-4 inline mr-1" />
@@ -419,8 +425,8 @@ export default function SceneDetailPage() {
                     name="timeline_date"
                     value={editedScene?.timeline_date || ''}
                     onChange={handleSceneInputChange}
-                    className="w-full p-2 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
-                    placeholder="e.g., January 10, 1320"
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="e.g., 1/10/1320"
                   />
                 </div>
                 <div>
@@ -432,35 +438,127 @@ export default function SceneDetailPage() {
                     name="timeline_variant"
                     value={editedScene?.timeline_variant || ''}
                     onChange={handleSceneInputChange}
-                    className="w-full p-2 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
                   >
                     <option value="">Select timeline variant</option>
                     <option value="Prime Timeline">Prime Timeline</option>
+                    <option value="Timeline Fracture">Timeline Fracture</option>
                     <option value="Divergence Point Alpha">Divergence Point Alpha</option>
                     <option value="Pangea Insertion">Pangea Insertion</option>
-                    <option value="Timeline Fracture">Timeline Fracture</option>
                     <option value="Convergence Point">Convergence Point</option>
                   </select>
                 </div>
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    📍 Location
+                  </label>
+                  <input
+                    type="text"
+                    name="location"
+                    value={editedScene?.location || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="e.g., Bologna City Square, Italy"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    🔄 Chronological Sequence
+                  </label>
+                  <input
+                    type="number"
+                    name="chronologicalSequence"
+                    value={editedScene?.chronologicalSequence || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="Chronological order"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    ⚡ Temporal Divergence
+                  </label>
+                  <input
+                    type="text"
+                    name="temporalDivergencePoint"
+                    value={editedScene?.temporalDivergencePoint || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="Key divergence point"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2">
+                    🌍 Real World Context
+                  </label>
+                  <input
+                    type="text"
+                    name="realWorldContext"
+                    value={editedScene?.realWorldContext || ''}
+                    onChange={handleSceneInputChange}
+                    className="w-full p-3 border border-cyan-300 dark:border-cyan-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                    placeholder="Historical context"
+                  />
+                </div>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 gap-4">
-                {(scene.timeline_date || editedScene?.timeline_date) && (
-                  <div>
-                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-1 flex items-center">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {(scene.timeline_date || scene.historicalDate) && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
                       <CalendarIcon className="w-4 h-4 mr-1" />
                       Timeline Date
                     </h4>
-                    <p className="text-cyan-900 dark:text-cyan-100">{scene.timeline_date || editedScene?.timeline_date}</p>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-semibold">{scene.timeline_date || scene.historicalDate}</p>
                   </div>
                 )}
-                {(scene.timeline_variant || editedScene?.timeline_variant) && (
-                  <div>
-                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-1 flex items-center">
+                {scene.timeline_variant && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
                       <GlobeAltIcon className="w-4 h-4 mr-1" />
                       Timeline Variant
                     </h4>
-                    <p className="text-cyan-900 dark:text-cyan-100">{scene.timeline_variant || editedScene?.timeline_variant}</p>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-semibold">{scene.timeline_variant}</p>
+                  </div>
+                )}
+                {scene.location && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
+                      📍 Location
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-semibold">{scene.location}</p>
+                  </div>
+                )}
+                {scene.chronologicalSequence && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
+                      🔄 Chronological Sequence
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-semibold">#{scene.chronologicalSequence}</p>
+                  </div>
+                )}
+                {scene.temporalDivergencePoint && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
+                      ⚡ Temporal Divergence
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100 font-semibold">{scene.temporalDivergencePoint}</p>
+                  </div>
+                )}
+                {scene.realWorldContext && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
+                      🌍 Real World Context
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100">{scene.realWorldContext}</p>
+                  </div>
+                )}
+                {scene.timelineSignificance && (
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-cyan-300 dark:border-cyan-600 md:col-span-2 lg:col-span-3">
+                    <h4 className="text-sm font-medium text-cyan-700 dark:text-cyan-300 mb-2 flex items-center">
+                      ⭐ Timeline Significance
+                    </h4>
+                    <p className="text-cyan-900 dark:text-cyan-100">{scene.timelineSignificance}</p>
                   </div>
                 )}
               </div>
@@ -468,62 +566,219 @@ export default function SceneDetailPage() {
           </div>
 
           {/* Chapter Context */}
-          <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-6 mb-8">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Chapter Context</h3>
+          <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-6 border border-indigo-200 dark:border-indigo-800 mb-8">
+            <h3 className="text-lg font-semibold text-indigo-900 dark:text-indigo-100 mb-4 flex items-center">
+              <BookOpenIcon className="w-5 h-5 mr-2" />
+              Chapter Context
+            </h3>
             {isEditing ? (
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="space-y-6">
+                {/* Narrative Perspective */}
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">POV</h4>
-                  <select name="pov" value={editedChapter?.pov || ''} onChange={handleChapterInputChange} className="w-full p-2 border rounded dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600">
-                    <option value="">Select POV</option>
-                    <option value="First Person">First Person</option>
-                    <option value="Second Person">Second Person</option>
-                    <option value="Third Person Limited">Third Person Limited</option>
-                    <option value="Third Person Omniscient">Third Person Omniscient</option>
-                  </select>
+                  <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Narrative Perspective</h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        👁️ Point of View
+                      </label>
+                      <input
+                        type="text"
+                        name="pov"
+                        value={editedScene?.pov || ''}
+                        onChange={handleSceneInputChange}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="e.g., Francisco, 3rd Person Limited"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        ⏰ Narrative Tense
+                      </label>
+                      <input
+                        type="text"
+                        name="tense"
+                        value={editedScene?.tense || ''}
+                        onChange={handleSceneInputChange}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="e.g., Past Tense, Third person limited"
+                      />
+                    </div>
+                  </div>
                 </div>
+                
+                {/* Emotional Context */}
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Tense</h4>
-                  <select name="tense" value={editedChapter?.tense || ''} onChange={handleChapterInputChange} className="w-full p-2 border rounded dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600">
-                    <option value="">Select Tense</option>
-                    <option value="Past">Past</option>
-                    <option value="Present">Present</option>
-                    <option value="Future">Future</option>
-                  </select>
+                  <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Emotional Context</h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        ❤️ Core Emotion
+                      </label>
+                      <input
+                        type="text"
+                        name="core_emotion"
+                        value={editedScene?.core_emotion || ''}
+                        onChange={handleSceneInputChange}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="e.g., Tension and conflict"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        🎭 Scene Tone
+                      </label>
+                      <input
+                        type="text"
+                        name="scene_tone"
+                        value={editedScene?.scene_tone || ''}
+                        onChange={handleSceneInputChange}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="e.g., Dramatic and intense"
+                      />
+                    </div>
+                  </div>
                 </div>
+                
+                {/* Story Structure */}
                 <div>
-                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Core Emotion</h4>
-                  <input type="text" name="coreEmotion" value={editedChapter?.coreEmotion || ''} onChange={handleChapterInputChange} className="w-full p-2 border rounded dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600" />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Scene Tone</h4>
-                  <input type="text" name="sceneTone" value={editedChapter?.sceneTone || ''} onChange={handleChapterInputChange} className="w-full p-2 border rounded dark:bg-gray-800 dark:text-gray-200 dark:border-gray-600" />
+                  <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Story Structure</h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        🎯 Beat Goal
+                      </label>
+                      <textarea
+                        name="beat_goal"
+                        value={editedScene?.beat_goal || ''}
+                        onChange={handleSceneInputChange}
+                        rows={3}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="What this scene should accomplish..."
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
+                        🌏 Hero's Journey Stage
+                      </label>
+                      <input
+                        type="text"
+                        name="heroJourneyStage"
+                        value={editedScene?.heroJourneyStage || ''}
+                        onChange={handleSceneInputChange}
+                        className="w-full p-3 border border-indigo-300 dark:border-indigo-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-200"
+                        placeholder="e.g., ordinary_world, call_to_adventure"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             ) : (
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {chapter.pov && (
+              <div className="space-y-6">
+                {/* Narrative Perspective Display */}
+                {(scene.pov || scene.tense) && (
                   <div>
-                    <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">POV</h4>
-                    <p className="text-gray-900 dark:text-gray-100">{chapter.pov}</p>
+                    <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Narrative Perspective</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {scene.pov && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            👁️ Point of View
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100 font-semibold">{scene.pov}</p>
+                        </div>
+                      )}
+                      {scene.tense && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            ⏰ Narrative Tense
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100 font-semibold">{scene.tense}</p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
-                {chapter.tense && (
+                
+                {/* Emotional Context Display */}
+                {(scene.core_emotion || scene.scene_tone) && (
                   <div>
-                    <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Tense</h4>
-                    <p className="text-gray-900 dark:text-gray-100">{chapter.tense}</p>
+                    <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Emotional Context</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {scene.core_emotion && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            ❤️ Core Emotion
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100">{scene.core_emotion}</p>
+                        </div>
+                      )}
+                      {scene.scene_tone && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            🎭 Scene Tone
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100">{scene.scene_tone}</p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
-                {chapter.coreEmotion && (
+                
+                {/* Story Structure Display */}
+                {(scene.beat_goal || scene.heroJourneyStage) && (
                   <div>
-                    <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Core Emotion</h4>
-                    <p className="text-gray-900 dark:text-gray-100">{chapter.coreEmotion}</p>
+                    <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Story Structure</h4>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {scene.beat_goal && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            🎯 Beat Goal
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100">{scene.beat_goal}</p>
+                        </div>
+                      )}
+                      {scene.heroJourneyStage && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            🌏 Hero's Journey Stage
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100">{scene.heroJourneyStage}</p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
-                {chapter.sceneTone && (
+                
+                {/* Scene Metadata Display */}
+                {(scene.pages || scene.sceneNumber || scene.storySequence) && (
                   <div>
-                    <h4 className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-1">Scene Tone</h4>
-                    <p className="text-gray-900 dark:text-gray-100">{chapter.sceneTone}</p>
+                    <h4 className="text-md font-semibold text-indigo-800 dark:text-indigo-200 mb-3">Scene Metadata</h4>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      {scene.pages && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            📄 Pages
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100 font-semibold">{scene.pages}</p>
+                        </div>
+                      )}
+                      {scene.sceneNumber && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            🔢 Scene Number
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100 font-semibold">#{scene.sceneNumber}</p>
+                        </div>
+                      )}
+                      {scene.storySequence && (
+                        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
+                          <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
+                            📈 Story Sequence
+                          </h5>
+                          <p className="text-indigo-900 dark:text-indigo-100 font-semibold">#{scene.storySequence}</p>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>

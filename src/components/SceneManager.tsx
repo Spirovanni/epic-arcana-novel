@@ -42,6 +42,12 @@ interface Scene {
   timelineSignificance?: string;
   timeline_date?: string;
   timeline_variant?: string;
+  location?: string;
+  pov?: string;
+  tense?: string;
+  core_emotion?: string;
+  scene_tone?: string;
+  symbolism?: string;
   createdAt: string;
   updatedAt: string;
 }
@@ -122,8 +128,13 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
     storyTimelineDate: '',
     realWorldContext: '',
     timelineSignificance: '',
-    timeline_date: 'January 10, 1320',
+    timeline_date: '1/10/1320',
     timeline_variant: 'Prime Timeline',
+    location: 'Bologna City Square, Italy',
+    pov: '3rd Person Limited',
+    tense: 'Past Tense',
+    core_emotion: 'Tension and conflict',
+    scene_tone: 'Dramatic and intense',
   });
 
   useEffect(() => {
@@ -213,8 +224,13 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
       storyTimelineDate: '',
       realWorldContext: '',
       timelineSignificance: '',
-      timeline_date: 'January 10, 1320',
+      timeline_date: '1/10/1320',
       timeline_variant: 'Prime Timeline',
+      location: 'Bologna City Square, Italy',
+      pov: '3rd Person Limited',
+      tense: 'Past Tense',
+      core_emotion: 'Tension and conflict',
+      scene_tone: 'Dramatic and intense',
     });
     setSelectedCharacter('');
     setPovStyle('third_person_limited');
@@ -453,7 +469,7 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
             </div>
 
             {/* Timeline Management */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   <ClockIcon className="w-4 h-4 inline mr-1" />
@@ -464,7 +480,7 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
                   value={formData.timeline_date}
                   onChange={(e) => setFormData({ ...formData, timeline_date: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                  placeholder="e.g., January 10, 1320"
+                  placeholder="e.g., 1/10/1320"
                 />
               </div>
               <div>
@@ -478,11 +494,23 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
                 >
                   <option value="">Select timeline variant</option>
                   <option value="Prime Timeline">Prime Timeline</option>
+                  <option value="Timeline Fracture">Timeline Fracture</option>
                   <option value="Divergence Point Alpha">Divergence Point Alpha</option>
                   <option value="Pangea Insertion">Pangea Insertion</option>
-                  <option value="Timeline Fracture">Timeline Fracture</option>
                   <option value="Convergence Point">Convergence Point</option>
                 </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                  📍 Location
+                </label>
+                <input
+                  type="text"
+                  value={formData.location}
+                  onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  placeholder="e.g., Bologna City Square, Italy"
+                />
               </div>
             </div>
 
