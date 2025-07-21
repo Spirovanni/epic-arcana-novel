@@ -103,7 +103,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       chapters: uniqueChapters
     });
   } catch (error) {
-    console.error(`Error fetching chapters for book ${params.bookId}:`, error);
+    const { bookId: errorBookId } = await params;
+    console.error(`Error fetching chapters for book ${errorBookId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
