@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import Navbar from '@/components/Navbar';
@@ -25,7 +25,6 @@ import {
   TrophyIcon,
   AcademicCapIcon,
   ChevronRightIcon,
-  ChevronLeftIcon,
   CogIcon
 } from '@heroicons/react/24/outline';
 
@@ -107,11 +106,84 @@ export default function BookDetailPage() {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'chapters' | 'analytics' | 'goals'>('overview');
 
-  useEffect(() => {
-    fetchBookDetail();
-  }, [bookId]);
+  const fetchBookDetail = useCallback(async () => {
+    const generateMockBookDetail = (): BookDetail => {
+      const bookTitles = [
+        "Crown of the Ancient Ones",
+        "Veil of Secrets Unveiled", 
+        "Echoes of Enchantment",
+        "Maiden of Mercy",
+        "The Order of Justice",
+        "Beauty Unleashed",
+        "Dark Path to Victory",
+        "Splendor of the Ancient Garden",
+        "Kingdom Come"
+      ];
+  
+      const bookNum = parseInt(bookId.split('-')[1]) || 1;
+      
+      return {
+        id: bookId,
+        title: bookTitles[bookNum - 1] || "Unknown Book",
+        bookNumber: bookNum,
+        description: "An epic fantasy journey exploring the depths of virtue, temporal mechanics, and character transformation through the lens of ancient wisdom and mystical arcana.",
+        totalChapters: 40,
+        completedChapters: 35 + Math.floor(Math.random() * 5),
+        totalPages: 600 + Math.floor(Math.random() * 200),
+        totalWords: 65000 + Math.floor(Math.random() * 25000),
+        targetWords: 80000,
+        estimatedReadingTime: 240 + Math.floor(Math.random() * 60),
+        status: ['completed', 'in_progress', 'draft'][Math.floor(Math.random() * 3)] as 'completed' | 'in_progress' | 'draft',
+        startDate: new Date(2024, bookNum - 1, 1).toISOString(),
+        targetCompletionDate: new Date(2024, bookNum + 2, 1).toISOString(),
+        lastUpdated: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(),
+        colorTheme: {
+          name: ['Orange', 'Blue', 'Green', 'Purple', 'Red', 'Amber', 'Cyan', 'Pink', 'Indigo'][bookNum - 1] || 'Blue',
+          hex: ['#FF6B35', '#4F46E5', '#10B981', '#8B5CF6', '#EF4444', '#F59E0B', '#06B6D4', '#EC4899', '#6366F1'][bookNum - 1] || '#4F46E5',
+          rgb: [255, 107, 53]
+        },
+        themes: ['virtue', 'temporal mechanics', 'character transformation', 'ancient wisdom'],
+        genres: ['fantasy', 'historical fiction', 'philosophical fiction', 'adventure'],
+        writingGoals: {
+          dailyWords: 500 + Math.floor(Math.random() * 500),
+          weeklyWords: 3500 + Math.floor(Math.random() * 1500),
+          monthlyChapters: 4 + Math.floor(Math.random() * 3)
+        },
+        progressMetrics: {
+          plotDevelopment: 75 + Math.floor(Math.random() * 25),
+          characterDevelopment: 80 + Math.floor(Math.random() * 20),
+          worldBuilding: 85 + Math.floor(Math.random() * 15),
+          thematicDepth: 70 + Math.floor(Math.random() * 30),
+          editingComplete: 60 + Math.floor(Math.random() * 40)
+        },
+        qualityMetrics: {
+          averageChapterLength: 1800 + Math.floor(Math.random() * 400),
+          consistencyScore: 75 + Math.floor(Math.random() * 25),
+          pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as 'fast' | 'moderate' | 'slow',
+          complexity: ['moderate', 'complex'][Math.floor(Math.random() * 2)] as 'moderate' | 'complex',
+          readabilityScore: 70 + Math.floor(Math.random() * 30)
+        },
+        writingHistory: Array.from({ length: 30 }, (_, i) => ({
+          date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString(),
+          wordsWritten: Math.floor(Math.random() * 1000),
+          hoursSpent: 1 + Math.floor(Math.random() * 4),
+          chaptersWorkedOn: [Math.floor(Math.random() * 40) + 1],
+          mood: ['excellent', 'good', 'okay', 'difficult'][Math.floor(Math.random() * 4)] as 'excellent' | 'good' | 'okay' | 'difficult',
+          notes: Math.random() > 0.7 ? 'Great progress on character development today' : undefined
+        })),
+        chapters: Array.from({ length: 40 }, (_, i) => ({
+          id: `chapter-${i + 1}`,
+          number: i + 1,
+          title: `Chapter ${i + 1}: The Journey Continues`,
+          words: 1500 + Math.floor(Math.random() * 800),
+          pages: 12 + Math.floor(Math.random() * 6),
+          status: i < 35 ? 'completed' : ['in_progress', 'draft', 'not_started'][Math.floor(Math.random() * 3)] as 'completed' | 'in_progress' | 'draft' | 'not_started',
+          lastUpdated: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
+          completionPercentage: i < 35 ? 100 : Math.floor(Math.random() * 100)
+        }))
+      };
+    };
 
-  const fetchBookDetail = async () => {
     try {
       const response = await fetch(`/api/dashboard/books/${bookId}`);
       if (response.ok) {
@@ -127,84 +199,11 @@ export default function BookDetailPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [bookId]);
 
-  const generateMockBookDetail = (): BookDetail => {
-    const bookTitles = [
-      "Crown of the Ancient Ones",
-      "Veil of Secrets Unveiled", 
-      "Echoes of Enchantment",
-      "Maiden of Mercy",
-      "The Order of Justice",
-      "Beauty Unleashed",
-      "Dark Path to Victory",
-      "Splendor of the Ancient Garden",
-      "Kingdom Come"
-    ];
-
-    const bookNum = parseInt(bookId.split('-')[1]) || 1;
-    
-    return {
-      id: bookId,
-      title: bookTitles[bookNum - 1] || "Unknown Book",
-      bookNumber: bookNum,
-      description: "An epic fantasy journey exploring the depths of virtue, temporal mechanics, and character transformation through the lens of ancient wisdom and mystical arcana.",
-      totalChapters: 40,
-      completedChapters: 35 + Math.floor(Math.random() * 5),
-      totalPages: 600 + Math.floor(Math.random() * 200),
-      totalWords: 65000 + Math.floor(Math.random() * 25000),
-      targetWords: 80000,
-      estimatedReadingTime: 240 + Math.floor(Math.random() * 60),
-      status: ['completed', 'in_progress', 'draft'][Math.floor(Math.random() * 3)] as any,
-      startDate: new Date(2024, bookNum - 1, 1).toISOString(),
-      targetCompletionDate: new Date(2024, bookNum + 2, 1).toISOString(),
-      lastUpdated: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(),
-      colorTheme: {
-        name: ['Orange', 'Blue', 'Green', 'Purple', 'Red', 'Amber', 'Cyan', 'Pink', 'Indigo'][bookNum - 1] || 'Blue',
-        hex: ['#FF6B35', '#4F46E5', '#10B981', '#8B5CF6', '#EF4444', '#F59E0B', '#06B6D4', '#EC4899', '#6366F1'][bookNum - 1] || '#4F46E5',
-        rgb: [255, 107, 53]
-      },
-      themes: ['virtue', 'temporal mechanics', 'character transformation', 'ancient wisdom'],
-      genres: ['fantasy', 'historical fiction', 'philosophical fiction', 'adventure'],
-      writingGoals: {
-        dailyWords: 500 + Math.floor(Math.random() * 500),
-        weeklyWords: 3500 + Math.floor(Math.random() * 1500),
-        monthlyChapters: 4 + Math.floor(Math.random() * 3)
-      },
-      progressMetrics: {
-        plotDevelopment: 75 + Math.floor(Math.random() * 25),
-        characterDevelopment: 80 + Math.floor(Math.random() * 20),
-        worldBuilding: 85 + Math.floor(Math.random() * 15),
-        thematicDepth: 70 + Math.floor(Math.random() * 30),
-        editingComplete: 60 + Math.floor(Math.random() * 40)
-      },
-      qualityMetrics: {
-        averageChapterLength: 1800 + Math.floor(Math.random() * 400),
-        consistencyScore: 75 + Math.floor(Math.random() * 25),
-        pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as any,
-        complexity: ['moderate', 'complex'][Math.floor(Math.random() * 2)] as any,
-        readabilityScore: 70 + Math.floor(Math.random() * 30)
-      },
-      writingHistory: Array.from({ length: 30 }, (_, i) => ({
-        date: new Date(Date.now() - i * 24 * 60 * 60 * 1000).toISOString(),
-        wordsWritten: Math.floor(Math.random() * 1000),
-        hoursSpent: 1 + Math.floor(Math.random() * 4),
-        chaptersWorkedOn: [Math.floor(Math.random() * 40) + 1],
-        mood: ['excellent', 'good', 'okay', 'difficult'][Math.floor(Math.random() * 4)] as any,
-        notes: Math.random() > 0.7 ? 'Great progress on character development today' : undefined
-      })),
-      chapters: Array.from({ length: 40 }, (_, i) => ({
-        id: `chapter-${i + 1}`,
-        number: i + 1,
-        title: `Chapter ${i + 1}: The Journey Continues`,
-        words: 1500 + Math.floor(Math.random() * 800),
-        pages: 12 + Math.floor(Math.random() * 6),
-        status: i < 35 ? 'completed' : ['in_progress', 'draft', 'not_started'][Math.floor(Math.random() * 3)] as any,
-        lastUpdated: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
-        completionPercentage: i < 35 ? 100 : Math.floor(Math.random() * 100)
-      }))
-    };
-  };
+  useEffect(() => {
+    fetchBookDetail();
+  }, [bookId, fetchBookDetail]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -381,7 +380,7 @@ export default function BookDetailPage() {
               ].map(({ key, label, icon: Icon }) => (
                 <button
                   key={key}
-                  onClick={() => setActiveTab(key as any)}
+                  onClick={() => setActiveTab(key as 'overview' | 'chapters' | 'analytics' | 'goals')}
                   className={`flex items-center space-x-2 py-2 px-1 border-b-2 font-medium text-sm transition-colors ${
                     activeTab === key
                       ? 'border-indigo-500 text-indigo-600 dark:text-indigo-400'
@@ -520,7 +519,7 @@ export default function BookDetailPage() {
                       </div>
                       {session.notes && (
                         <div className="text-xs text-gray-600 dark:text-gray-400 max-w-xs truncate">
-                          "{session.notes}"
+                          &quot;{session.notes}&quot;
                         </div>
                       )}
                     </div>

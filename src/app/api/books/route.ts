@@ -39,7 +39,15 @@ export async function GET() {
               green: taskMaster.green,
               blue: taskMaster.blue
             }
-          } : null
+          } : {
+            name: 'Indigo',
+            hex: '#4f46e5',
+            rgb: {
+              red: 79,
+              green: 70,
+              blue: 229
+            }
+          }
         };
       })
     );

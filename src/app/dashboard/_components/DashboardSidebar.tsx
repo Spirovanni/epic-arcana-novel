@@ -28,7 +28,7 @@ interface SidebarProps {
 interface NavItem {
   name: string;
   href: string;
-  icon: any;
+  icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, "ref"> & { title?: string | undefined; titleId?: string | undefined; } & React.RefAttributes<SVGSVGElement>>;
   badge?: string | number;
   children?: NavItem[];
 }

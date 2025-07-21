@@ -19,8 +19,12 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
       title: chapters.title,
       chapterNumber: chapters.chapterNumber,
       description: chapters.specificTaskGroupDescription,
-      colorTheme: chapters.colorTheme,
-      iconPath: chapters.iconPath
+      iconPath: chapters.iconPath,
+      colorName: chapters.colorName,
+      hexCode: chapters.hexCode,
+      red: chapters.red,
+      green: chapters.green,
+      blue: chapters.blue
     }).from(chapters).where(eq(chapters.bookId, bookId)).orderBy(asc(chapters.chapterNumber));
 
     if (bookChapters.length === 0) {
@@ -34,17 +38,15 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
       .map(chapter => ({
         ...chapter,
         // Use the colorTheme from database or provide fallback
-        colorTheme: chapter.colorTheme || {
-          name: 'Orange',
-          hex: '#FFA500',
-          rgb: { red: 255, green: 165, blue: 0 }
+        colorTheme: {
+          name: chapter.colorName || 'Orange',
+          hex: chapter.hexCode || '#FFA500',
+          rgb: { 
+            red: chapter.red, 
+            green: chapter.green, 
+            blue: chapter.blue 
+          }
         },
-        // Add individual color fields for backward compatibility
-        colorName: chapter.colorTheme?.name,
-        hexCode: chapter.colorTheme?.hex,
-        red: chapter.colorTheme?.rgb?.red,
-        green: chapter.colorTheme?.rgb?.green,
-        blue: chapter.colorTheme?.rgb?.blue
       }));
 
     // Use deduplication logic for all books

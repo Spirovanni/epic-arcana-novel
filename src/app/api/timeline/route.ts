@@ -1,8 +1,7 @@
 import { NextResponse } from 'next/server';
 import { drizzle } from 'drizzle-orm/node-postgres';
 import { Client } from 'pg';
-import { timelineEvents, scenes, chapters } from '../../../lib/schema';
-import { eq } from 'drizzle-orm';
+import { timelineEvents, scenes } from '../../../lib/schema';
 
 export async function GET() {
   try {

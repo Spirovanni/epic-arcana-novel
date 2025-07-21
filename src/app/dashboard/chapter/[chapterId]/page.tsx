@@ -1,19 +1,17 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { 
-  ChartBarIcon,
   BookOpenIcon,
   DocumentTextIcon,
   ClockIcon,
   AcademicCapIcon,
   SparklesIcon,
   ArrowTrendingUpIcon,
-  CalendarDaysIcon,
   PencilSquareIcon,
   CheckCircleIcon,
   TrophyIcon,
@@ -99,12 +97,7 @@ export default function ChapterAnalyticsPage() {
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'progress' | 'writing' | 'content' | 'timeline'>('overview');
 
-  useEffect(() => {
-    if (!chapterId) return;
-    fetchChapterAnalytics();
-  }, [chapterId]);
-
-  const fetchChapterAnalytics = async () => {
+  const fetchChapterAnalytics = useCallback(async () => {
     try {
       const response = await fetch(`/api/dashboard/chapter/${chapterId}`);
       if (response.ok) {
@@ -116,7 +109,12 @@ export default function ChapterAnalyticsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [chapterId]);
+
+  useEffect(() => {
+    if (!chapterId) return;
+    fetchChapterAnalytics();
+  }, [chapterId, fetchChapterAnalytics]);
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -188,7 +186,7 @@ export default function ChapterAnalyticsPage() {
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">Chapter Not Found</h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">The chapter analytics you're looking for doesn't exist.</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">The chapter analytics you&apos;re looking for doesn&apos;t exist.</p>
             <Link 
               href="/dashboard" 
               className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200"
@@ -282,7 +280,7 @@ export default function ChapterAnalyticsPage() {
           ].map(({ key, label, icon: Icon }) => (
             <button
               key={key}
-              onClick={() => setActiveTab(key as any)}
+              onClick={() => setActiveTab(key as 'overview' | 'progress' | 'writing' | 'content' | 'timeline')}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition-all ${
                 activeTab === key
                   ? 'bg-indigo-600 dark:bg-indigo-500 text-white shadow-lg'

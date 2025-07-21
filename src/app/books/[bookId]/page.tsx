@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -76,7 +77,6 @@ export default function BookDetailPage() {
   const [bookNumber, setBookNumber] = useState<number>(1);
   const [bookTitle, setBookTitle] = useState<string>('');
   const [bookPrimaryColor, setBookPrimaryColor] = useState<string>('#6366f1');
-  const [bookColorName, setBookColorName] = useState<string>('Default');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -90,7 +90,6 @@ export default function BookDetailPage() {
           setBookNumber(data.book.bookNumber);
           setBookTitle(data.book.title);
           setBookPrimaryColor(data.book.primaryColor || '#FFA500');
-          setBookColorName(data.book.primaryColorName || 'Orange');
         }
       } catch (error) {
         console.error('Failed to fetch chapters:', error);
@@ -233,9 +232,11 @@ export default function BookDetailPage() {
               
               {/* Top-right icon positioning */}
               <div className="w-24 h-24 absolute top-4 right-4 z-30 group-hover:scale-110 transition-transform duration-500">
-                <img
+                <Image
                   src={iconPath}
                   alt={`Chapter ${chapter.chapterNumber} icon`}
+                  width={96}
+                  height={96}
                   className="w-full h-full object-contain drop-shadow-2xl filter brightness-110 contrast-110"
                   onError={handleIconError}
                   style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.3))' }}
@@ -287,7 +288,7 @@ export default function BookDetailPage() {
               </svg>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">No Chapters Yet</h3>
-            <p className="text-gray-600 dark:text-gray-400">This book's chapters are still being prepared for your journey.</p>
+            <p className="text-gray-600 dark:text-gray-400">This book&apos;s chapters are still being prepared for your journey.</p>
           </div>
         )}
       </div>

@@ -3,6 +3,12 @@ import { db } from '@/lib/db';
 import { chapters, books, scenes, taskGroups } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
+// Define more specific types based on the schema
+type Chapter = typeof chapters.$inferSelect;
+type Book = typeof books.$inferSelect;
+type Scene = typeof scenes.$inferSelect;
+type TaskGroup = typeof taskGroups.$inferSelect;
+
 export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
   try {
     const chapterId = params.chapterId;
@@ -45,7 +51,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
   }
 }
 
-function generateWritingPrompts(chapter: any, book: any, scenes: any[], taskGroups: any[]) {
+function generateWritingPrompts(chapter: Chapter, book: Book, chapterScenes: Scene[], chapterTaskGroups: TaskGroup[]) {
   const prompts = [];
 
   // Story Structure Prompts
@@ -71,7 +77,7 @@ function generateWritingPrompts(chapter: any, book: any, scenes: any[], taskGrou
   }
 
   // Scene-Based Prompts
-  scenes.forEach((scene, index) => {
+  chapterScenes.forEach((scene) => {
     if (scene.heroJourneyStage) {
       prompts.push({
         category: 'Scene Development',
@@ -89,7 +95,7 @@ function generateWritingPrompts(chapter: any, book: any, scenes: any[], taskGrou
   });
 
   // Task Group Based Prompts
-  taskGroups.forEach(taskGroup => {
+  chapterTaskGroups.forEach(taskGroup => {
     if (taskGroup.type === 'Major Task Group') {
       prompts.push({
         category: 'Learning Integration',

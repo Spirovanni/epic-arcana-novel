@@ -105,7 +105,7 @@ export default function BooksPage() {
             <span className="text-gray-800 dark:text-gray-200">Chronicles</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-light">
-            Journey through nine transformative books of temporal mastery, each revealing unique aspects of Francisco's evolution across time and consciousness.
+            Journey through nine transformative books of temporal mastery, each revealing unique aspects of Francisco&apos;s evolution across time and consciousness.
           </p>
           <div className="mt-8 flex justify-center">
             <div className="w-24 h-1 bg-gradient-to-r from-transparent via-indigo-500 to-transparent rounded-full"></div>

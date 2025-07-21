@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { chapters, taskGroups } from '@/lib/schema';
-import { eq, inArray } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: { bookId: string } }) {
   try {

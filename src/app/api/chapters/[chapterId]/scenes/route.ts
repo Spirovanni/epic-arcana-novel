@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { scenes, characters } from '@/lib/schema';
+import { scenes } from '@/lib/schema';
 import { eq, desc } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: { chapterId: string } }) {

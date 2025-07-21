@@ -116,7 +116,7 @@ export default function CharacterProfilePage() {
     }
   };
 
-  const handleFieldChange = (field: keyof Character, value: any) => {
+  const handleFieldChange = (field: keyof Character, value: string | number | string[] | null) => {
     if (!editData) return;
     setEditData({ ...editData, [field]: value });
   };

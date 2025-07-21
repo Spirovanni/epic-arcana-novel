@@ -7,8 +7,6 @@ import { eq } from 'drizzle-orm';
 
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
-const MAX_WIDTH = 1500;
-const MAX_HEIGHT = 1500;
 
 export async function POST(request: NextRequest, { params }: { params: { slug: string } }) {
   try {
@@ -54,8 +52,6 @@ export async function POST(request: NextRequest, { params }: { params: { slug: s
     if (characterResult.length === 0) {
       return NextResponse.json({ error: 'Character not found' }, { status: 404 });
     }
-
-    const character = characterResult[0];
 
     // Create filename with character slug and timestamp
     const timestamp = Date.now();

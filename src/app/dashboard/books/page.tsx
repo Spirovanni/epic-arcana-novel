@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -9,13 +9,10 @@ import SimpleChart from '@/components/SimpleChart';
 import { 
   BookOpenIcon,
   ChartBarIcon,
-  ClockIcon,
   DocumentTextIcon,
   PencilSquareIcon,
   SparklesIcon,
-  CalendarDaysIcon,
   ArrowTrendingUpIcon,
-  FunnelIcon,
   MagnifyingGlassIcon,
   Squares2X2Icon,
   ListBulletIcon,
@@ -95,11 +92,7 @@ export default function BooksDashboardPage() {
   const [sortBy, setSortBy] = useState<'bookNumber' | 'progress' | 'lastUpdated' | 'wordCount'>('bookNumber');
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    fetchBooksData();
-  }, []);
-
-  const fetchBooksData = async () => {
+  const fetchBooksData = useCallback(async () => {
     try {
       // This would fetch from your API
       const response = await fetch('/api/dashboard/books');
@@ -116,7 +109,11 @@ export default function BooksDashboardPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    fetchBooksData();
+  }, [fetchBooksData]);
 
   const generateMockBooks = (): BookStats[] => {
     const bookTitles = [
@@ -143,7 +140,7 @@ export default function BooksDashboardPage() {
       averageWordsPerChapter: 1800 + Math.floor(Math.random() * 400),
       estimatedReadingTime: 180 + Math.floor(Math.random() * 60),
       lastUpdated: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString(),
-      status: ['completed', 'in_progress', 'draft'][Math.floor(Math.random() * 3)] as any,
+      status: ['completed', 'in_progress', 'draft'][Math.floor(Math.random() * 3)] as 'completed' | 'in_progress' | 'draft',
       startDate: new Date(2024, 0, 1 + i * 30).toISOString(),
       dailyWordGoal: 500 + Math.floor(Math.random() * 500),
       weeklyWordGoal: 3500 + Math.floor(Math.random() * 1500),
@@ -167,13 +164,13 @@ export default function BooksDashboardPage() {
         wordsPerDay: 200 + Math.floor(Math.random() * 600),
         wordsPerWeek: 1500 + Math.floor(Math.random() * 3000),
         chaptersPerMonth: 3 + Math.floor(Math.random() * 5),
-        trend: ['increasing', 'stable', 'decreasing'][Math.floor(Math.random() * 3)] as any
+        trend: ['increasing', 'stable', 'decreasing'][Math.floor(Math.random() * 3)] as 'increasing' | 'stable' | 'decreasing'
       },
       qualityMetrics: {
         averageChapterLength: 1800 + Math.floor(Math.random() * 400),
         consistencyScore: 70 + Math.floor(Math.random() * 30),
-        pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as any,
-        complexity: ['simple', 'moderate', 'complex'][Math.floor(Math.random() * 3)] as any
+        pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as 'fast' | 'moderate' | 'slow',
+        complexity: ['simple', 'moderate', 'complex'][Math.floor(Math.random() * 3)] as 'simple' | 'moderate' | 'complex'
       }
     }));
   };
@@ -186,7 +183,7 @@ export default function BooksDashboardPage() {
       duration: 30 + Math.floor(Math.random() * 120),
       wordsWritten: 200 + Math.floor(Math.random() * 800),
       chaptersWorkedOn: [`Chapter ${Math.floor(Math.random() * 40) + 1}`],
-      mood: ['excellent', 'good', 'okay', 'difficult'][Math.floor(Math.random() * 4)] as any,
+      mood: ['excellent', 'good', 'okay', 'difficult'][Math.floor(Math.random() * 4)] as 'excellent' | 'good' | 'okay' | 'difficult',
       notes: Math.random() > 0.5 ? 'Made good progress on character development' : undefined
     }));
   };
@@ -419,7 +416,7 @@ export default function BooksDashboardPage() {
                 {/* Sort by */}
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as 'bookNumber' | 'progress' | 'lastUpdated' | 'wordCount')}
                   className="px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                 >
                   <option value="bookNumber">Book Number</option>

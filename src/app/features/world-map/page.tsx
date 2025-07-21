@@ -49,7 +49,6 @@ export default function WorldMapPage() {
   const [activeTimeline, setActiveTimeline] = useState<'alpha' | 'beta' | 'gamma'>('alpha');
   const [showChapterSidebar, setShowChapterSidebar] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [svgRegions, setSvgRegions] = useState<SVGRegion[]>([]);
 
   const timelines: Timeline[] = [
     {

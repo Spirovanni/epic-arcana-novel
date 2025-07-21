@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters, scenes } from '@/lib/schema';
-import { eq, asc, and, sql } from 'drizzle-orm';
+import { eq, asc } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
   try {
@@ -100,16 +100,16 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
           try {
             if (!arc || !arc.stages) return null;
             
-            const stages = arc.stages as any;
+            const stages = arc.stages as Record<string, { book_pages?: { book: number; chapter: number }[] }>;
             let relevantStage = null;
             let relevantBookPage = null;
 
             // Find the stage and book page that matches this chapter
             for (const [stageKey, stageData] of Object.entries(stages || {})) {
               if (stageData && typeof stageData === 'object' && 'book_pages' in stageData) {
-                const bookPages = (stageData as any).book_pages;
+                const bookPages = stageData.book_pages;
                 if (Array.isArray(bookPages)) {
-                  const matchingPage = bookPages.find((page: any) => 
+                  const matchingPage = bookPages.find((page: { book: number; chapter: number }) => 
                     page.book === book?.bookNumber && page.chapter === chapter.chapterNumber
                   );
                   if (matchingPage) {
@@ -147,8 +147,6 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     } catch (error) {
       console.error('Error fetching character arcs (schema mismatch - continuing without character guidance):', error);
       // Continue without character guidance rather than failing the entire API call
-      characterArcsData = [];
-      chapterCharacterGuidance = [];
     }
 
     // Format the response with all available chapter data
@@ -172,8 +170,7 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
         terminalLearningObjectives: chapter.terminalLearningObjectives,
         booksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy,
         summary: chapter.summary,
-        description: chapter.specificTaskGroupDescription || chapter.description,
-        colorTheme: chapter.colorTheme || {
+        colorTheme: {
           name: chapter.colorName || 'Orange',
           hex: chapter.hexCode || '#FFA500',  
           rgb: [chapter.red || 255, chapter.green || 165, chapter.blue || 0]
@@ -218,9 +215,9 @@ export async function PUT(request: Request, { params }: { params: { chapterId: s
     const body = await request.json();
 
     // Map frontend field names to database column names for chapters
-    const updateData: any = {};
+    const updateData: Partial<typeof chapters.$inferInsert> = {};
     
-    const chapterFieldMappings: { [key: string]: string } = {
+    const chapterFieldMappings: { [key: string]: keyof typeof chapters.$inferInsert } = {
       'title': 'title',
       'description': 'description',
       'focus': 'focus',

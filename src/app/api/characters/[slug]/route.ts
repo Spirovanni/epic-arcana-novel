@@ -94,7 +94,7 @@ export async function PUT(request, { params }) {
     const data = await request.json();
     
     // Remove fields that shouldn't be updated directly
-    const { id, createdAt, slug: _, ...updateData } = data;
+    const { ...updateData } = data;
     
     const updatedCharacter = await db
       .update(characters)

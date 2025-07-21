@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 // Mock data structure - replace with actual database queries
 const mockStats = {
@@ -272,7 +272,7 @@ const mockTopChapters = [
   }
 ];
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // In a real application, you would fetch this data from your database
     // Example database queries:

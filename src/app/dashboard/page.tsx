@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import SimpleChart from '@/components/SimpleChart';
@@ -18,10 +17,7 @@ import {
   ClockIcon,
   AcademicCapIcon,
   SparklesIcon,
-  ArrowTrendingUpIcon,
-  CalendarDaysIcon,
-  PencilSquareIcon,
-  ChevronRightIcon
+  PencilSquareIcon
 } from '@heroicons/react/24/outline';
 
 interface DashboardStats {
@@ -100,40 +96,6 @@ export default function DashboardPage() {
     }
   };
 
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric'
-    });
-  };
-
-  const getActivityIcon = (type: string) => {
-    switch (type) {
-      case 'page_created':
-        return <DocumentTextIcon className="w-4 h-4 text-green-500" />;
-      case 'page_updated':
-        return <PencilSquareIcon className="w-4 h-4 text-blue-500" />;
-      case 'chapter_created':
-        return <BookOpenIcon className="w-4 h-4 text-purple-500" />;
-      default:
-        return <ClockIcon className="w-4 h-4 text-gray-500" />;
-    }
-  };
-
-  const getActivityText = (activity: ActivityItem) => {
-    switch (activity.type) {
-      case 'page_created':
-        return `New page created in ${activity.chapterTitle}`;
-      case 'page_updated':
-        return `Page updated in ${activity.chapterTitle}`;
-      case 'chapter_created':
-        return `New chapter created: ${activity.title}`;
-      default:
-        return activity.title;
-    }
-  };
-
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
@@ -188,7 +150,7 @@ export default function DashboardPage() {
             ].map(({ key, label, icon: Icon }) => (
               <button
                 key={key}
-                onClick={() => setActiveView(key as any)}
+                onClick={() => setActiveView(key as 'overview' | 'books' | 'chapters')}
                 className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
                   activeView === key
                     ? 'bg-indigo-600 dark:bg-indigo-500 text-white shadow-lg'

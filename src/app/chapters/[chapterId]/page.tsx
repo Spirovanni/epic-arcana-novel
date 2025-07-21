@@ -1,12 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
-import { useTheme } from 'next-themes';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, PlusIcon, LightBulbIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
-import dynamic from 'next/dynamic';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
@@ -23,7 +22,6 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
   const [isPreview, setIsPreview] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
-  const [originalValue] = useState(value);
   
   const insertFormat = (tag: string) => {
     const textarea = document.getElementById('content-editor') as HTMLTextAreaElement;
@@ -50,7 +48,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
 
   const handleContentChange = (newContent: string) => {
     onChange(newContent);
-    setHasUnsavedChanges(newContent !== originalValue);
+    setHasUnsavedChanges(true);
   };
 
   const handleSave = async () => {
@@ -252,7 +250,7 @@ interface TaskGroup {
   description: string;
   tagline: string;
   focusArea: string;
-  learningObjectives: any;
+  learningObjectives: Record<string, unknown>;
 }
 
 interface ChapterPage {
@@ -329,13 +327,6 @@ const createChapterGradient = (hex: string) => {
   return `linear-gradient(135deg, ${hex}E6 0%, ${lighterHex}CC 25%, ${hex}B3 50%, ${darkerHex}E6 100%)`;
 };
 
-// Create background gradient for main page
-const createPageBackground = (hex: string) => {
-  const lighterHex = adjustBrightness(hex, 40);
-  const darkerHex = adjustBrightness(hex, -40);
-  return `linear-gradient(135deg, ${lighterHex}20 0%, ${hex}10 25%, ${darkerHex}20 100%)`;
-};
-
 // Adjust color brightness
 const adjustBrightness = (hex: string, percent: number) => {
   const color = hex.startsWith('#') ? hex.substring(1, 7) : hex;
@@ -381,7 +372,7 @@ const getPageProgress = (content: string, pageNumber: number, totalPages: number
   return Math.min(100, (charCount / goal) * 100);
 };
 
-const getOverallProgress = (pages: any[]): number => {
+const getOverallProgress = (pages: ChapterPage[]): number => {
   const maxPages = 15;
   const completedPages = pages.filter(page => {
     const charCount = countCharacters(page.content || '');
@@ -396,26 +387,22 @@ export default function ChapterWritingPage() {
   const params = useParams();
   const chapterId = params.chapterId as string;
   const { user } = useUser();
-  const { theme } = useTheme();
   
   const [data, setData] = useState<ChapterData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mounted, setMounted] = useState(false);
   const [activeTab, setActiveTab] = useState<'overview' | 'write' | 'scenes' | 'tasks'>('overview');
   const [currentPage, setCurrentPage] = useState(0);
-  const [editingPage, setEditingPage] = useState<ChapterPage | null>(null);
   const [aiPrompts, setAiPrompts] = useState<AIPrompt[]>([]);
   const [showPrompts, setShowPrompts] = useState(false);
   const [permissions, setPermissions] = useState({ canRead: false, canWrite: false, canAdmin: false });
   const [showToolkit, setShowToolkit] = useState(false);
   const [totalTasks, setTotalTasks] = useState(0);
   const [isEditingOverview, setIsEditingOverview] = useState(false);
-  const [editedChapter, setEditedChapter] = useState<any>(null);
+  const [editedChapter, setEditedChapter] = useState<Partial<Chapter> | null>(null);
   const [isSavingOverview, setIsSavingOverview] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
-    setMounted(true);
   }, []);
 
   // Check user permissions - TEMPORARILY ALLOWING ALL ACCESS FOR DEVELOPMENT
@@ -442,6 +429,33 @@ export default function ChapterWritingPage() {
     // }
   }, [user]);
 
+  // Function to get task count for the chapter (using same logic as TaskChecklist)
+  const getTaskCount = (): number => {
+    // Same mock data structure as TaskChecklist component
+    const mockChapterTasks = {
+      character_arcs: {
+        "Francisco": "Initial state - Young law student with hidden poetic talent, struggling with father's expectations vs. personal desires. Academic pressure conflicts with creative impulses. Social naivety evident in his infatuation with Novella.",
+        "Novella": "Intelligent daughter hiding behind conventions, representing Francisco's idealized view of love and knowledge.",
+        "Dante": "Mysterious guide introduction - Hints at his chronicle manipulation abilities. Shows deeper knowledge of temporal mechanics than he initially reveals."
+      },
+      story_gaps_addressed: {
+        "trionfi_system": "Francisco's first unintentional activation shows him seeing the train pathway on the card - establishes cards as windows to other realities/timelines.",
+        "temporal_mechanics": "The distant train grumbling represents the first temporal disturbance, setting up timeline awareness.",
+        "character_motivation": "Francisco's preparation shows his growing courage despite fear - establishes his heroic potential beneath academic exterior."
+      },
+      series_connections: {
+        "book_9_parallel": "Opening despair will transform into universal hope when Francisco gives up his singular greatness for humanity's potential.",
+        "the_fool_journey": "Francisco's first step as The Fool, unaware of the cosmic significance of his simple card game creation.",
+        "timeline_convergence": "This chapter's events will echo in the final book when all timelines converge into a single moment of choice."
+      }
+    };
+
+    // Calculate total task count (3 + 3 + 3 = 9)
+    return Object.keys(mockChapterTasks.character_arcs).length + 
+           Object.keys(mockChapterTasks.story_gaps_addressed).length + 
+           Object.keys(mockChapterTasks.series_connections).length;
+  };
+
   // Fetch chapter data
   useEffect(() => {
     if (!chapterId) return;
@@ -458,6 +472,9 @@ export default function ChapterWritingPage() {
           if (chapterData.pages && chapterData.pages.length > 0) {
             setCurrentPage(0);
           }
+
+          // Set task count on page load
+          setTotalTasks(getTaskCount());
         } else {
           // Log detailed error information for debugging
           console.error(`Failed to fetch chapter ${chapterId}:`, {
@@ -470,7 +487,7 @@ export default function ChapterWritingPage() {
           try {
             const errorText = await response.text();
             console.error('Server error message:', errorText);
-          } catch (e) {
+          } catch {
             console.error('Could not read error response');
           }
         }
@@ -483,15 +500,8 @@ export default function ChapterWritingPage() {
     fetchChapterData();
   }, [chapterId]);
 
-  // Clean up excess pages beyond 15
-  useEffect(() => {
-    if (data && !loading && data.pages.length > 15) {
-      cleanupExcessPages();
-    }
-  }, [data && !loading]);
-
   // Clean up pages beyond the 15-page limit
-  const cleanupExcessPages = async () => {
+  const cleanupExcessPages = useCallback(async () => {
     if (!data || data.pages.length <= 15) return;
     
     const excessPages = data.pages.slice(15); // Pages beyond the 15th
@@ -517,7 +527,14 @@ export default function ChapterWritingPage() {
     } catch (error) {
       console.error('Failed to clean up excess pages:', error);
     }
-  };
+  }, [data, chapterId]);
+
+  // Clean up excess pages beyond 15
+  useEffect(() => {
+    if (data && !loading && data.pages.length > 15) {
+      cleanupExcessPages();
+    }
+  }, [data, loading, cleanupExcessPages]);
 
   // Fetch AI prompts
   const fetchAiPrompts = async () => {
@@ -634,7 +651,6 @@ export default function ChapterWritingPage() {
       });
       
       if (response.ok) {
-        const updatedChapter = await response.json();
         setData(prev => prev ? {
           ...prev,
           chapter: { ...prev.chapter, ...editedChapter }
@@ -672,22 +688,6 @@ export default function ChapterWritingPage() {
   // Update edited chapter field
   const updateEditedChapterField = (field: string, value: string) => {
     setEditedChapter(prev => prev ? { ...prev, [field]: value } : null);
-  };
-
-  // Auto-continue to next page when current page is complete
-  const checkForAutoContinuation = (content: string, currentPageIndex: number) => {
-    const currentPageNumber = currentPageIndex + 1;
-    const charCount = countCharacters(content);
-    const goal = getPageGoal(currentPageNumber, data?.pages.length || 0);
-    
-    // If page is complete and there's a next page, auto-switch
-    if (charCount >= goal && currentPageIndex < (data?.pages.length || 0) - 1) {
-      setCurrentPage(currentPageIndex + 1);
-    }
-    // If page is complete and it's the last page, but not at max pages, create new page
-    else if (charCount >= goal && currentPageIndex === (data?.pages.length || 0) - 1 && (data?.pages.length || 0) < 15) {
-      addNewPage();
-    }
   };
 
   // Enhanced content handler for large pastes - auto-distribute across pages
@@ -732,7 +732,6 @@ export default function ChapterWritingPage() {
   const distributeContentAcrossPages = (content: string, startPageIndex: number) => {
     if (!data) return;
     
-    const cleanContent = content.replace(/<[^>]*>/g, '');
     const paragraphs = content.split(/\n\s*\n/).filter(p => p.trim().length > 0);
     
     let currentPageIndex = startPageIndex;
@@ -747,7 +746,6 @@ export default function ChapterWritingPage() {
       // Add paragraphs to current page until we reach the goal
       while (paragraphIndex < paragraphs.length) {
         const nextParagraph = paragraphs[paragraphIndex];
-        const nextParagraphChars = nextParagraph.replace(/<[^>]*>/g, '').length;
         
         // Check if adding this paragraph would exceed the page goal
         if (countCharacters(currentPageContent + nextParagraph) > pageGoal && currentPageContent.length > 0) {
@@ -814,7 +812,7 @@ export default function ChapterWritingPage() {
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">Chapter Not Found</h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">The chapter you're looking for doesn't exist or has been moved.</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">The chapter you&apos;re looking for doesn&apos;t exist or has been moved.</p>
             <Link 
               href="/books" 
               className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200"
@@ -827,7 +825,7 @@ export default function ChapterWritingPage() {
     );
   }
 
-  const { chapter, book, scenes, taskGroups, pages: allPages, stats } = data;
+  const { chapter, book, pages: allPages, stats } = data;
   // Limit to first 15 pages only and ensure proper numbering
   const pages = allPages
     .slice(0, 15)
@@ -919,9 +917,11 @@ export default function ChapterWritingPage() {
             <div className="flex-shrink-0">
               <div className="w-32 h-32 lg:w-40 lg:h-40 relative">
                 <div className={`absolute inset-0 rounded-2xl ${isDarkTheme ? 'bg-white/20' : 'bg-black/10'} backdrop-blur-md border-2 ${isDarkTheme ? 'border-white/30' : 'border-black/20'} shadow-2xl`}>
-                  <img
+                  <Image
                     src={iconPath}
                     alt={`Chapter ${chapter.chapterNumber} icon`}
+                    width={160}
+                    height={160}
                     className="w-full h-full object-contain p-4 drop-shadow-xl"
                     onError={handleIconError}
                   />
@@ -985,7 +985,7 @@ export default function ChapterWritingPage() {
           ].map(({ key, label, icon: Icon }) => (
             <button
               key={key}
-              onClick={() => setActiveTab(key as any)}
+              onClick={() => setActiveTab(key as 'overview' | 'write' | 'scenes' | 'tasks')}
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
                 activeTab === key
                   ? `text-white shadow-xl transform scale-105`
@@ -1078,7 +1078,7 @@ export default function ChapterWritingPage() {
                         />
                       ) : (
                         <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 italic font-medium border border-gray-200 dark:border-gray-600">
-                          "{chapter.tagline || 'No tagline set'}"
+                          &quot;{chapter.tagline || 'No tagline set'}&quot;
                         </p>
                       )}
                     </div>
@@ -1235,21 +1235,28 @@ export default function ChapterWritingPage() {
               </div>
 
               {/* Learning Objectives */}
-              {chapter.terminalLearningObjectives && (
+              {chapter.terminalLearningObjectives && typeof chapter.terminalLearningObjectives === 'object' && (
                 <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                     <AcademicCapIcon className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
                     Learning Objectives
                   </h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {Object.entries(chapter.terminalLearningObjectives).map(([key, objective]) => (
-                      <div key={key} className="bg-green-50 dark:bg-green-900/30 rounded-lg p-4">
-                        <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </h3>
-                        <p className="text-green-700 dark:text-green-300 text-sm">{objective}</p>
-                      </div>
-                    ))}
+                    {Object.entries(chapter.terminalLearningObjectives).map(([key, objective]: [string, unknown]) => {
+                      // Handle nested objects safely
+                      const objectiveText = typeof objective === 'object' && objective !== null 
+                        ? JSON.stringify(objective, null, 2)
+                        : String(objective || '');
+                      
+                      return (
+                        <div key={key} className="bg-green-50 dark:bg-green-900/30 rounded-lg p-4">
+                          <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2 capitalize">
+                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                          </h3>
+                          <pre className="text-green-700 dark:text-green-300 text-sm whitespace-pre-wrap">{objectiveText}</pre>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -1268,7 +1275,7 @@ export default function ChapterWritingPage() {
                         <p className="text-indigo-900 dark:text-indigo-100 font-medium mb-2">{data.taskMaster.title}</p>
                         <p className="text-indigo-700 dark:text-indigo-300 text-sm">{data.taskMaster.description}</p>
                         {data.taskMaster.tagline && (
-                          <p className="text-indigo-600 dark:text-indigo-400 text-xs mt-2 italic">"{data.taskMaster.tagline}"</p>
+                          <p className="text-indigo-600 dark:text-indigo-400 text-xs mt-2 italic">&quot;{data.taskMaster.tagline}&quot;</p>
                         )}
                       </div>
                     )}
@@ -1278,7 +1285,7 @@ export default function ChapterWritingPage() {
                         <p className="text-cyan-900 dark:text-cyan-100 font-medium mb-2">{data.majorTaskGroup.title}</p>
                         <p className="text-cyan-700 dark:text-cyan-300 text-sm">{data.majorTaskGroup.description}</p>
                         {data.majorTaskGroup.tagline && (
-                          <p className="text-cyan-600 dark:text-cyan-400 text-xs mt-2 italic">"{data.majorTaskGroup.tagline}"</p>
+                          <p className="text-cyan-600 dark:text-cyan-400 text-xs mt-2 italic">&quot;{data.majorTaskGroup.tagline}&quot;</p>
                         )}
                       </div>
                     )}
@@ -1292,28 +1299,45 @@ export default function ChapterWritingPage() {
               </div>
 
               {/* Books Influenced By */}
-              {chapter.booksInfluencedBy && (
+              {chapter.booksInfluencedBy && typeof chapter.booksInfluencedBy === 'object' && (
                 <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
                     <BookOpenIcon className="w-6 h-6 mr-2 text-amber-600 dark:text-amber-400" />
                     Literary Influences
                   </h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {Object.entries(chapter.booksInfluencedBy).map(([key, book]) => (
-                      <div key={key} className="bg-amber-50 dark:bg-amber-900/30 rounded-lg p-4">
-                        <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">
-                          {book.title}
-                        </h3>
-                        <p className="text-amber-700 dark:text-amber-300 text-sm mb-2">
-                          by {book.author}
-                        </p>
-                        {book.section_of_focus && (
-                          <p className="text-amber-600 dark:text-amber-400 text-xs">
-                            Focus: {book.section_of_focus}
-                          </p>
-                        )}
-                      </div>
-                    ))}
+                    {Object.entries(chapter.booksInfluencedBy).map(([key, book]) => {
+                      // Handle nested objects safely
+                      if (typeof book === 'object' && book !== null) {
+                        return (
+                          <div key={key} className="bg-amber-50 dark:bg-amber-900/30 rounded-lg p-4">
+                            <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">
+                              {book.title || key}
+                            </h3>
+                            <p className="text-amber-700 dark:text-amber-300 text-sm mb-2">
+                              by {book.author || 'Unknown Author'}
+                            </p>
+                            {book.section_of_focus && (
+                              <p className="text-amber-600 dark:text-amber-400 text-xs">
+                                Focus: {book.section_of_focus}
+                              </p>
+                            )}
+                            {book.section_description && (
+                              <p className="text-amber-600 dark:text-amber-400 text-xs mt-1">
+                                {book.section_description}
+                              </p>
+                            )}
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div key={key} className="bg-amber-50 dark:bg-amber-900/30 rounded-lg p-4">
+                            <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">{key}</h3>
+                            <p className="text-amber-700 dark:text-amber-300 text-sm">{String(book || '')}</p>
+                          </div>
+                        );
+                      }
+                    })}
                   </div>
                 </div>
               )}

@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { extractSVGRegions, SVGRegion, getRegionsByType, searchRegions } from '../utils/svgRegionExtractor';
+import { SVGRegion, getRegionsByType, searchRegions } from '../utils/svgRegionExtractor';
 
 interface RegionBrowserProps {
   onRegionSelect: (region: SVGRegion) => void;
@@ -10,33 +10,18 @@ interface RegionBrowserProps {
 }
 
 export function RegionBrowser({ onRegionSelect, selectedRegion }: RegionBrowserProps) {
-  const [regions, setRegions] = useState<SVGRegion[]>([]);
+  const [regions] = useState<SVGRegion[]>([]);
   const [filteredRegions, setFilteredRegions] = useState<SVGRegion[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedType, setSelectedType] = useState<SVGRegion['type'] | 'all'>('all');
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading] = useState(true);
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     loadRegions();
   }, []);
 
-  useEffect(() => {
-    filterRegions();
-  }, [regions, searchTerm, selectedType]);
-
-  const loadRegions = async () => {
-    try {
-      const loadedRegions = await extractSVGRegions();
-      setRegions(loadedRegions);
-      setIsLoading(false);
-    } catch (error) {
-      console.error('Error loading regions:', error);
-      setIsLoading(false);
-    }
-  };
-
-  const filterRegions = () => {
+  const filterRegions = useCallback(() => {
     let filtered = regions;
 
     if (searchTerm) {
@@ -48,7 +33,11 @@ export function RegionBrowser({ onRegionSelect, selectedRegion }: RegionBrowserP
     }
 
     setFilteredRegions(filtered);
-  };
+  }, [regions, searchTerm, selectedType]);
+
+  useEffect(() => {
+    filterRegions();
+  }, [regions, searchTerm, selectedType, filterRegions]);
 
   const getTypeCounts = () => {
     const counts = regions.reduce((acc, region) => {

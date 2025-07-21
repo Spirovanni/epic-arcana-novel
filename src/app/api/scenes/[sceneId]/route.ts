@@ -36,10 +36,10 @@ export async function PUT(request: Request, { params }: { params: { sceneId: str
     const body = await request.json();
 
     // Convert camelCase to snake_case for database fields
-    const updateData: any = {};
+    const updateData: Partial<typeof scenes.$inferInsert> = {};
     
     // Map frontend field names to database column names
-    const fieldMappings: { [key: string]: string } = {
+    const fieldMappings: { [key: string]: keyof typeof scenes.$inferInsert } = {
       'title': 'title',
       'focus': 'focus', 
       'description': 'description',

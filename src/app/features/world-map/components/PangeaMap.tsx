@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect, useRef, useState } from 'react';
+import React, { forwardRef, useEffect, useRef, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface PangeaMapProps {
@@ -14,7 +14,7 @@ interface PangeaMapProps {
 }
 
 const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
-  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, center, isPanMode = false }, ref) => {
+  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, center, isPanMode = false }) => {
     const [svgContent, setSvgContent] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -35,31 +35,7 @@ const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
       }
     };
 
-    useEffect(() => {
-      if (!svgContent || !containerRef.current) return;
-
-      const container = containerRef.current;
-      const svgElement = container.querySelector('svg');
-      if (!svgElement) return;
-
-      // Apply timeline-specific styling
-      applyTimelineStyles(svgElement, activeTimeline);
-
-      // Add interactivity to regions
-      addRegionInteractivity(svgElement);
-
-      return () => {
-        // Cleanup event listeners
-        const regions = svgElement.querySelectorAll('g[id]');
-        regions.forEach(region => {
-          region.removeEventListener('click', handleRegionClickEvent);
-          region.removeEventListener('mouseenter', handleRegionHoverEvent);
-          region.removeEventListener('mouseleave', handleRegionLeaveEvent);
-        });
-      };
-    }, [svgContent, activeTimeline, selectedRegion, isPanMode]);
-
-    const applyTimelineStyles = (svg: SVGSVGElement, timeline: 'alpha' | 'beta' | 'gamma') => {
+    const applyTimelineStyles = useCallback((svg: SVGSVGElement, timeline: 'alpha' | 'beta' | 'gamma') => {
       const styleElement = svg.querySelector('style') || document.createElement('style');
       
       const timelineStyles = {
@@ -120,9 +96,54 @@ const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
 
       // Apply timeline class to SVG
       svg.setAttribute('class', `timeline-${timeline}`);
+    }, [isPanMode]);
+
+    const handleRegionClickEvent = useCallback((event: Event) => {
+      if (isPanMode) return;
+      
+      const target = event.currentTarget as SVGGElement;
+      const regionId = target.id;
+      if (regionId) {
+        onRegionClick(regionId);
+      }
+    }, [isPanMode, onRegionClick]);
+
+    const showTooltip = useCallback((event: Event, regionId: string) => {
+      const mouseEvent = event as MouseEvent;
+      const tooltip = document.createElement('div');
+      tooltip.className = 'region-tooltip';
+      tooltip.textContent = formatRegionName(regionId);
+      tooltip.style.left = `${mouseEvent.clientX}px`;
+      tooltip.style.top = `${mouseEvent.clientY}px`;
+      document.body.appendChild(tooltip);
+    }, []);
+
+    const hideTooltip = () => {
+      const tooltip = document.querySelector('.region-tooltip');
+      if (tooltip) {
+        document.body.removeChild(tooltip);
+      }
     };
 
-    const addRegionInteractivity = (svg: SVGSVGElement) => {
+    const handleRegionHoverEvent = useCallback((event: Event) => {
+      if (isPanMode) return;
+      
+      const target = event.currentTarget as SVGGElement;
+      const regionId = target.id;
+      if (regionId) {
+        onRegionHover(regionId);
+        showTooltip(event, regionId);
+      }
+    }, [isPanMode, onRegionHover, showTooltip]);
+
+    const handleRegionLeaveEvent = useCallback(() => {
+      if (isPanMode) return;
+      
+      onRegionHover(null);
+      hideTooltip();
+    }, [isPanMode, onRegionHover]);
+
+    const addRegionInteractivity = useCallback((svg: SVGSVGElement) => {
       const regions = svg.querySelectorAll('g[id]');
       
       regions.forEach(region => {
@@ -141,52 +162,31 @@ const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
           region.classList.remove('selected');
         }
       });
-    };
+    }, [handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, selectedRegion]);
 
-    const handleRegionClickEvent = (event: Event) => {
-      if (isPanMode) return;
-      
-      const target = event.currentTarget as SVGGElement;
-      const regionId = target.id;
-      if (regionId) {
-        onRegionClick(regionId);
-      }
-    };
+    useEffect(() => {
+      if (!svgContent || !containerRef.current) return;
 
-    const handleRegionHoverEvent = (event: Event) => {
-      if (isPanMode) return;
-      
-      const target = event.currentTarget as SVGGElement;
-      const regionId = target.id;
-      if (regionId) {
-        onRegionHover(regionId);
-        showTooltip(event, regionId);
-      }
-    };
+      const container = containerRef.current;
+      const svgElement = container.querySelector('svg');
+      if (!svgElement) return;
 
-    const handleRegionLeaveEvent = () => {
-      if (isPanMode) return;
-      
-      onRegionHover(null);
-      hideTooltip();
-    };
+      // Apply timeline-specific styling
+      applyTimelineStyles(svgElement, activeTimeline);
 
-    const showTooltip = (event: Event, regionId: string) => {
-      const mouseEvent = event as MouseEvent;
-      const tooltip = document.createElement('div');
-      tooltip.className = 'region-tooltip';
-      tooltip.textContent = formatRegionName(regionId);
-      tooltip.style.left = `${mouseEvent.clientX}px`;
-      tooltip.style.top = `${mouseEvent.clientY}px`;
-      document.body.appendChild(tooltip);
-    };
+      // Add interactivity to regions
+      addRegionInteractivity(svgElement);
 
-    const hideTooltip = () => {
-      const tooltip = document.querySelector('.region-tooltip');
-      if (tooltip) {
-        document.body.removeChild(tooltip);
-      }
-    };
+      return () => {
+        // Cleanup event listeners
+        const regions = svgElement.querySelectorAll('g[id]');
+        regions.forEach(region => {
+          region.removeEventListener('click', handleRegionClickEvent);
+          region.removeEventListener('mouseenter', handleRegionHoverEvent);
+          region.removeEventListener('mouseleave', handleRegionLeaveEvent);
+        });
+      };
+    }, [svgContent, activeTimeline, selectedRegion, isPanMode, applyTimelineStyles, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent]);
 
     const formatRegionName = (regionId: string) => {
       return regionId

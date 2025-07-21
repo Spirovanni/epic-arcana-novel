@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import DashboardSidebar from '../../_components/DashboardSidebar';
@@ -17,13 +17,6 @@ import {
   CalendarDaysIcon,
   FireIcon,
   TrophyIcon,
-  AcademicCapIcon,
-  CheckCircleIcon,
-  XCircleIcon,
-  ExclamationTriangleIcon,
-  InformationCircleIcon,
-  FunnelIcon,
-  Squares2X2Icon,
   TableCellsIcon,
   ChevronUpIcon,
   ChevronDownIcon,
@@ -134,11 +127,7 @@ export default function BooksAnalyticsPage() {
   const [sortBy, setSortBy] = useState<'bookNumber' | 'completion' | 'quality' | 'productivity'>('bookNumber');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
-  useEffect(() => {
-    fetchAnalyticsData();
-  }, [selectedTimeRange]);
-
-  const fetchAnalyticsData = async () => {
+  const fetchAnalyticsData = useCallback(async () => {
     try {
       const response = await fetch(`/api/dashboard/books/analytics?range=${selectedTimeRange}`);
       if (response.ok) {
@@ -152,11 +141,14 @@ export default function BooksAnalyticsPage() {
       // Generate mock data for development
       setBooksData(generateMockBooksAnalytics());
       setSeriesData(generateMockSeriesAnalytics());
-      setTimeRangeData(generateMockTimeRangeData());
     } finally {
       setLoading(false);
     }
-  };
+  }, [selectedTimeRange]);
+
+  useEffect(() => {
+    fetchAnalyticsData();
+  }, [selectedTimeRange, fetchAnalyticsData]);
 
   const generateMockBooksAnalytics = (): BookAnalytics[] => {
     const bookTitles = [
@@ -184,7 +176,7 @@ export default function BooksAnalyticsPage() {
         id: `book-${i + 1}`,
         title: bookTitles[i],
         bookNumber: i + 1,
-        status: statuses[i] as any,
+        status: statuses[i] as 'draft' | 'in_progress' | 'completed' | 'published',
         colorTheme: {
           name: ['Orange', 'Blue', 'Green', 'Purple', 'Red', 'Amber', 'Cyan', 'Pink', 'Indigo'][i],
           hex: colors[i]
@@ -211,8 +203,8 @@ export default function BooksAnalyticsPage() {
           editingComplete: statuses[i] === 'completed' ? 90 + Math.floor(Math.random() * 10) : 30 + Math.floor(Math.random() * 50),
           consistencyScore: 75 + Math.floor(Math.random() * 25),
           readabilityScore: 70 + Math.floor(Math.random() * 30),
-          pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as any,
-          complexity: ['moderate', 'complex'][Math.floor(Math.random() * 2)] as any
+          pacing: ['fast', 'moderate', 'slow'][Math.floor(Math.random() * 3)] as 'fast' | 'moderate' | 'slow',
+          complexity: ['moderate', 'complex'][Math.floor(Math.random() * 2)] as 'moderate' | 'complex'
         },
         developmentTimeline: {
           started: new Date(2024, i, 1).toISOString(),
@@ -245,7 +237,7 @@ export default function BooksAnalyticsPage() {
           },
           currentStreak: Math.floor(Math.random() * 25),
           longestStreak: 35 + Math.floor(Math.random() * 30),
-          productivityTrend: ['increasing', 'stable', 'decreasing'][Math.floor(Math.random() * 3)] as any
+          productivityTrend: ['increasing', 'stable', 'decreasing'][Math.floor(Math.random() * 3)] as 'increasing' | 'stable' | 'decreasing'
         },
         comparativeRanking: {
           wordCountRank: Math.floor(Math.random() * 9) + 1,
@@ -270,21 +262,6 @@ export default function BooksAnalyticsPage() {
       projectedCompletionDate: new Date(2024, 11, 31).toISOString(),
       overallQualityScore: 82,
       consistencyAcrossBooks: 78
-    };
-  };
-
-  const generateMockTimeRangeData = (): TimeRangeData => {
-    const days = selectedTimeRange === '7d' ? 7 : selectedTimeRange === '30d' ? 30 : selectedTimeRange === '90d' ? 90 : 365;
-    
-    return {
-      range: selectedTimeRange,
-      data: Array.from({ length: days }, (_, i) => ({
-        date: new Date(Date.now() - (days - i - 1) * 24 * 60 * 60 * 1000).toISOString(),
-        wordsWritten: Math.floor(Math.random() * 800) + 200,
-        hoursWritten: Math.random() * 4 + 1,
-        chaptersCompleted: Math.random() > 0.8 ? 1 : 0,
-        booksWorkedOn: [`book-${Math.floor(Math.random() * 9) + 1}`]
-      }))
     };
   };
 
@@ -417,7 +394,7 @@ export default function BooksAnalyticsPage() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Time Range:</span>
                   <select
                     value={selectedTimeRange}
-                    onChange={(e) => setSelectedTimeRange(e.target.value as any)}
+                    onChange={(e) => setSelectedTimeRange(e.target.value as '7d' | '30d' | '90d' | '1y' | 'all')}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
                   >
                     <option value="7d">Last 7 Days</option>
@@ -433,7 +410,7 @@ export default function BooksAnalyticsPage() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Sort by:</span>
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)}
+                    onChange={(e) => setSortBy(e.target.value as 'bookNumber' | 'completion' | 'quality' | 'productivity')}
                     className="px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm"
                   >
                     <option value="bookNumber">Book Number</option>
@@ -464,7 +441,7 @@ export default function BooksAnalyticsPage() {
                 ].map(({ key, label, icon: Icon }) => (
                   <button
                     key={key}
-                    onClick={() => setSelectedView(key as any)}
+                    onClick={() => setSelectedView(key as 'overview' | 'development' | 'productivity' | 'quality')}
                     className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                       selectedView === key
                         ? 'bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
