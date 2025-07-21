@@ -28,6 +28,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
     const { chapter, book } = chapterData[0];
     
+    if (!book) {
+      return new NextResponse('Book Not Found', { status: 404 });
+    }
 
     // Get all chapters for the book to find next/previous
     const allBookChapters = await db
