@@ -88,7 +88,7 @@ export default function TimelinesPage() {
 
   useEffect(() => {
     fetchTimelineData();
-  }, []);
+  }, [fetchTimelineData]);
 
   const fetchTimelineData = useCallback(async () => {
     try {
@@ -194,7 +194,7 @@ export default function TimelinesPage() {
         id: 'branch-gamma-1',
         name: 'The Alchemist\'s Transformation',
         timeline: 'gamma',
-        description: 'Experimental timeline exploring Francisco&apos;s potential as an alchemist, wielding intentional strategy and active passion.',
+        description: 'Experimental timeline exploring Francisco\'s potential as an alchemist, wielding intentional strategy and active passion.',
         startEvent: 'event-23',
         probability: 43,
         status: 'dormant',
@@ -231,7 +231,7 @@ export default function TimelinesPage() {
         id: 'paradox-3',
         severity: 'error',
         type: 'timeline_conflict',
-        description: 'Beta and Gamma timelines show incompatible outcomes for the Zanetti Train&apos;s destination.',
+        description: 'Beta and Gamma timelines show incompatible outcomes for the Zanetti Train\'s destination.',
         affectedEvents: ['event-45', 'event-48'],
         suggestedResolution: 'Consolidate timeline outcomes or introduce probability matrices.',
         detectedAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),
@@ -467,7 +467,7 @@ export default function TimelinesPage() {
               ].map(({ key, label, icon: Icon }) => (
                 <button
                   key={key}
-                  onClick={() => setSelectedView(key as 'timeline' | 'branches' | 'paradoxes' | 'convergences'))
+                  onClick={() => setSelectedView(key as 'timeline' | 'branches' | 'paradoxes' | 'convergences')}
                   className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     selectedView === key
                       ? 'bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
