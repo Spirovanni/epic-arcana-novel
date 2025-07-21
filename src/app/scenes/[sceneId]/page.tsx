@@ -85,11 +85,6 @@ export default function SceneDetailPage() {
   const [editedScene, setEditedScene] = useState<Scene | null>(null);
   const [editedChapter, setEditedChapter] = useState<Chapter | null>(null);
 
-  useEffect(() => {
-    if (!sceneId) return;
-    fetchSceneData();
-  }, [sceneId, fetchSceneData]);
-
   const fetchSceneData = useCallback(async () => {
     try {
       const response = await fetch(`/api/scenes/${sceneId}`);
@@ -107,6 +102,11 @@ export default function SceneDetailPage() {
       setLoading(false);
     }
   }, [sceneId]);
+
+  useEffect(() => {
+    if (!sceneId) return;
+    fetchSceneData();
+  }, [sceneId, fetchSceneData]);
 
   const handleSceneInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (!editedScene) return;
