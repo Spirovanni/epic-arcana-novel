@@ -65,7 +65,7 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
     } finally {
       setLoading(false);
     }
-  }, [chapterId, chapterData, onTaskCountChange]);
+  }, [chapterId, onTaskCountChange]);
 
   const extractTasksFromChapterData = (): TaskItem[] => {
     const extractedTasks: TaskItem[] = [];
