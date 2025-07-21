@@ -137,11 +137,6 @@ export default function SceneManager({ chapterId }: SceneManagerProps) {
     scene_tone: 'Dramatic and intense',
   });
 
-  useEffect(() => {
-    fetchScenes();
-    fetchCharacters();
-  }, [chapterId, fetchScenes]);
-
   const fetchScenes = useCallback(async () => {
     try {
       const response = await fetch(`/api/chapters/${chapterId}/scenes`);
@@ -155,6 +150,11 @@ export default function SceneManager({ chapterId }: SceneManagerProps) {
       setLoading(false);
     }
   }, [chapterId]);
+
+  useEffect(() => {
+    fetchScenes();
+    fetchCharacters();
+  }, [chapterId, fetchScenes]);
 
   const fetchCharacters = async () => {
     try {
