@@ -467,7 +467,7 @@ export default function TimelinesPage() {
               ].map(({ key, label, icon: Icon }) => (
                 <button
                   key={key}
-                  onClick={() => setSelectedView(key as 'list' | 'timeline' | 'calendar'))
+                  onClick={() => setSelectedView(key as 'timeline' | 'branches' | 'paradoxes' | 'convergences'))
                   className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     selectedView === key
                       ? 'bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 shadow-sm'

@@ -156,18 +156,6 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
   };
 
   // Removed unused getCategoryColor function
-  const unusedGetCategoryColor = (category: string) => {
-    switch (category) {
-      case 'character_arcs':
-        return 'bg-blue-500';
-      case 'story_gaps_addressed':
-        return 'bg-green-500';
-      case 'series_connections':
-        return 'bg-purple-500';
-      default:
-        return 'bg-gray-500';
-    }
-  };
 
   const getCategoryBorderColor = (category: string) => {
     switch (category) {
