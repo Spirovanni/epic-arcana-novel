@@ -110,7 +110,7 @@ export default function TimelinesPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   const generateMockEvents = (): TimelineEvent[] => {
     const militaryOrders = [
