@@ -85,8 +85,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
     // Get all character arcs and filter them client-side for now
     // Wrapped in try-catch to handle schema mismatches gracefully
-    let characterArcsData = [];
-    let chapterCharacterGuidance = [];
+    let characterArcsData: any[] = [];
+    let chapterCharacterGuidance: any[] = [];
     
     try {
       characterArcsData = await db
