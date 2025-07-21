@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { scenes } from '@/lib/schema';
 import { eq, desc } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const { chapterId } = params;
+    const { chapterId } = await params;
     
     const chapterScenes = await db
       .select()
@@ -20,9 +20,9 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
   }
 }
 
-export async function POST(request: Request, { params }: { params: { chapterId: string } }) {
+export async function POST(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const { chapterId } = params;
+    const { chapterId } = await params;
     const data = await request.json();
     
     // Get the next scene number for this chapter

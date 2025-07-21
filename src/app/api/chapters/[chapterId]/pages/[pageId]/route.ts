@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { chapterPages } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
-export async function PUT(request: Request, { params }: { params: { chapterId: string; pageId: string } }) {
+export async function PUT(request: Request, { params }: { params: Promise<{ chapterId: string; pageId: string }> }) {
   try {
-    const { pageId } = params;
+    const { pageId } = await params;
     const { content } = await request.json();
     
     const updatedPage = await db
@@ -23,14 +23,15 @@ export async function PUT(request: Request, { params }: { params: { chapterId: s
 
     return NextResponse.json(updatedPage[0]);
   } catch (error) {
-    console.error(`Error updating page ${params.pageId}:`, error);
+    const { pageId: errorPageId } = await params;
+    console.error(`Error updating page ${errorPageId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
 
-export async function DELETE(request: Request, { params }: { params: { chapterId: string; pageId: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise<{ chapterId: string; pageId: string }> }) {
   try {
-    const { pageId } = params;
+    const { pageId } = await params;
     
     const deletedPage = await db
       .delete(chapterPages)
@@ -43,7 +44,8 @@ export async function DELETE(request: Request, { params }: { params: { chapterId
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error(`Error deleting page ${params.pageId}:`, error);
+    const { pageId: errorPageId } = await params;
+    console.error(`Error deleting page ${errorPageId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

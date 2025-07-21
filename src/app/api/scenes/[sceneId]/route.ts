@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { scenes, chapters, books } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { sceneId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ sceneId: string }> }) {
   try {
-    const { sceneId } = params;
+    const { sceneId } = await params;
 
     const sceneData = await db
       .select({
@@ -25,14 +25,15 @@ export async function GET(request: Request, { params }: { params: { sceneId: str
 
     return NextResponse.json(sceneData[0]);
   } catch (error) {
-    console.error(`Error fetching scene ${params.sceneId}:`, error);
+    const { sceneId: errorSceneId } = await params;
+    console.error(`Error fetching scene ${errorSceneId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
 
-export async function PUT(request: Request, { params }: { params: { sceneId: string } }) {
+export async function PUT(request: Request, { params }: { params: Promise<{ sceneId: string }> }) {
   try {
-    const { sceneId } = params;
+    const { sceneId } = await params;
     const body = await request.json();
 
     // Convert camelCase to snake_case for database fields
@@ -89,14 +90,15 @@ export async function PUT(request: Request, { params }: { params: { sceneId: str
 
     return NextResponse.json(updatedScene[0]);
   } catch (error) {
-    console.error(`Error updating scene ${params.sceneId}:`, error);
+    const { sceneId: errorSceneId } = await params;
+    console.error(`Error updating scene ${errorSceneId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
 
-export async function DELETE(request: Request, { params }: { params: { sceneId: string } }) {
+export async function DELETE(request: Request, { params }: { params: Promise<{ sceneId: string }> }) {
   try {
-    const { sceneId } = params;
+    const { sceneId } = await params;
 
     const deletedScene = await db
       .delete(scenes)
@@ -109,7 +111,8 @@ export async function DELETE(request: Request, { params }: { params: { sceneId: 
 
     return NextResponse.json({ message: 'Scene deleted successfully' });
   } catch (error) {
-    console.error(`Error deleting scene ${params.sceneId}:`, error);
+    const { sceneId: errorSceneId } = await params;
+    console.error(`Error deleting scene ${errorSceneId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { chapters, taskGroups } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { bookId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
   try {
-    const bookId = params.bookId;
+    const { bookId } = await params;
 
     // 1. Get all chapters for the book
     const bookChapters = await db.select({ id: chapters.id }).from(chapters).where(eq(chapters.bookId, bookId));
@@ -35,7 +35,8 @@ export async function GET(request: Request, { params }: { params: { bookId: stri
 
     return NextResponse.json(bookTaskGroups);
   } catch (error) {
-    console.error(`Error fetching outline for book ${params.bookId}:`, error);
+    const { bookId: errorBookId } = await params;
+    console.error(`Error fetching outline for book ${errorBookId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

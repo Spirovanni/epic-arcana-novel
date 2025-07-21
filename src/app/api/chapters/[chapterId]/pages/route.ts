@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { chapterPages } from '@/lib/schema';
 import { eq, asc, desc } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const chapterId = params.chapterId;
+    const { chapterId } = await params;
     
     const pages = await db
       .select()
@@ -15,14 +15,15 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
 
     return NextResponse.json(pages);
   } catch (error) {
-    console.error(`Error fetching pages for chapter ${params.chapterId}:`, error);
+    const { chapterId: errorChapterId } = await params;
+    console.error(`Error fetching pages for chapter ${errorChapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
 
-export async function POST(request: Request, { params }: { params: { chapterId: string } }) {
+export async function POST(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const chapterId = params.chapterId;
+    const { chapterId } = await params;
     const { content = '', pageNumber } = await request.json();
     
     // If no page number specified, get the next available page number
@@ -49,7 +50,8 @@ export async function POST(request: Request, { params }: { params: { chapterId: 
 
     return NextResponse.json(newPage[0]);
   } catch (error) {
-    console.error(`Error creating page for chapter ${params.chapterId}:`, error);
+    const { chapterId: errorChapterId } = await params;
+    console.error(`Error creating page for chapter ${errorChapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

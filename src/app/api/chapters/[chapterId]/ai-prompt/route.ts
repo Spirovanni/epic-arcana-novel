@@ -9,9 +9,9 @@ type Book = typeof books.$inferSelect;
 type Scene = typeof scenes.$inferSelect;
 type TaskGroup = typeof taskGroups.$inferSelect;
 
-export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const chapterId = params.chapterId;
+    const { chapterId } = await params;
     
     // Get comprehensive chapter data
     const chapterData = await db

@@ -226,10 +226,10 @@ const generateMockChapterAnalytics = (chapterId: string): ChapterAnalytics => {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { chapterId: string } }
+  { params }: { params: Promise<{ chapterId: string }> }
 ) {
   try {
-    const { chapterId } = params;
+    const { chapterId } = await params;
     
     if (!chapterId) {
       return NextResponse.json(
