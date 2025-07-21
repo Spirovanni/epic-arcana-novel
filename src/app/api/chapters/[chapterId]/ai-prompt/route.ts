@@ -30,6 +30,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
     const { chapter, book } = chapterData[0];
     
+    if (!book) {
+      return new NextResponse('Book Not Found', { status: 404 });
+    }
+    
     // Get scenes and task groups for context
     const chapterScenes = await db
       .select()
