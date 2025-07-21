@@ -51,7 +51,7 @@ async function checkBook2Colors() {
         console.log(`Chapter ${chapterNum}: ${ch.colorName || 'No Color'} - ${ch.hexCode || 'No Hex'} (${ch.title || 'No Title'})`);
       } else {
         console.log(`Chapter ${chapterNum}: 🔄 ${chapterEntries.length} DUPLICATES`);
-        chapterEntries.forEach((ch, i) => {
+        chapterEntries.forEach((ch: typeof bookChapters[0], i) => {
           console.log(`  ${i + 1}. ${ch.colorName || 'No Color'} - ${ch.hexCode || 'No Hex'} (${ch.title || 'No Title'})`);
         });
       }
