@@ -88,7 +88,7 @@ export default function TimelinesPage() {
 
   useEffect(() => {
     fetchTimelineData();
-  }, [fetchTimelineData]);
+  }, []);
 
   const fetchTimelineData = useCallback(async () => {
     try {
@@ -119,7 +119,7 @@ export default function TimelinesPage() {
     ];
     
     const artifacts = [
-      "Cup of Jamshid", "Golden Apple", "Kusanagi", "Philosopher&apos;s Stone", 
+      "Cup of Jamshid", "Golden Apple", "Kusanagi", "Philosopher's Stone", 
       "Cintamani Stone", "Zanetti Train", "Trionfi Cards"
     ];
 
@@ -132,12 +132,12 @@ export default function TimelinesPage() {
       id: `event-${i + 1}`,
       title: [
         "Francisco Discovers the Temporal Rift",
-        "Dante&apos;s Journey Through the Inferno Portal",
-        "The Varangian Guard&apos;s First Loop",
+        "Dante's Journey Through the Inferno Portal",
+        "The Varangian Guard's First Loop",
         "Convergence at the Zanetti Station",
-        "Petrarch&apos;s Temporal Vision",
+        "Petrarch's Temporal Vision",
         "The Great Paradox Crisis",
-        "Roger de Flor&apos;s Timeline Intervention",
+        "Roger de Flor's Timeline Intervention",
         "Discovery of the Alpha Codex",
         "The Beta Timeline Collapse",
         "Gamma Reality Stabilization"
@@ -168,19 +168,19 @@ export default function TimelinesPage() {
     return [
       {
         id: 'branch-alpha-1',
-        name: 'The Operative&apos;s Path',
+        name: 'The Operative\'s Path',
         timeline: 'alpha',
         description: 'Primary timeline where Francisco follows the path of the Operative, mastering discerning intervention and strategic anticipation.',
         startEvent: 'event-1',
         probability: 85,
         status: 'active',
-        divergencePoint: 'Francisco&apos;s choice at the Temporal Crossroads',
+        divergencePoint: 'Francisco\'s choice at the Temporal Crossroads',
         affectedCharacters: ['Francisco', 'Dante', 'The Operative'],
         outcomes: ['Mastery of temporal mechanics', 'Alliance with the Varangian Guard', 'Discovery of the Alpha Codex']
       },
       {
         id: 'branch-beta-1',
-        name: 'The Observer&apos;s Vision',
+        name: 'The Observer\'s Vision',
         timeline: 'beta',
         description: 'Alternative timeline where Francisco develops observer capabilities, focusing on intelligence gathering and balanced force.',
         startEvent: 'event-12',
@@ -192,13 +192,13 @@ export default function TimelinesPage() {
       },
       {
         id: 'branch-gamma-1',
-        name: 'The Alchemist&apos;s Transformation',
+        name: 'The Alchemist\'s Transformation',
         timeline: 'gamma',
         description: 'Experimental timeline exploring Francisco&apos;s potential as an alchemist, wielding intentional strategy and active passion.',
         startEvent: 'event-23',
         probability: 43,
         status: 'dormant',
-        divergencePoint: 'Discovery of the Philosopher&apos;s Stone fragment',
+        divergencePoint: 'Discovery of the Philosopher\'s Stone fragment',
         affectedCharacters: ['Francisco', 'The Alchemist', 'Petrarch'],
         outcomes: ['Transmutation abilities', 'Reality manipulation', 'Gamma timeline creation']
       }
@@ -211,7 +211,7 @@ export default function TimelinesPage() {
         id: 'paradox-1',
         severity: 'critical',
         type: 'temporal_loop',
-        description: 'Francisco&apos;s intervention in the past creates a causal loop where his own existence depends on events he caused.',
+        description: 'Francisco\'s intervention in the past creates a causal loop where his own existence depends on events he caused.',
         affectedEvents: ['event-5', 'event-15', 'event-32'],
         suggestedResolution: 'Implement a quantum uncertainty buffer at the divergence point to break the causal chain.',
         detectedAt: new Date().toISOString(),
@@ -251,7 +251,7 @@ export default function TimelinesPage() {
         triggerEvents: ['event-10', 'event-25', 'event-40'],
         outcome: 'Timeline unification and reality stabilization',
         probability: 78,
-        consequences: ['Universal temporal mastery', 'End of paradoxes', 'Francisco&apos;s final transformation']
+        consequences: ['Universal temporal mastery', 'End of paradoxes', 'Francisco\'s final transformation']
       },
       {
         id: 'convergence-2',
