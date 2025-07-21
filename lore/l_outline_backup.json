@@ -51380,3 +51380,65 @@ You are my trusted co-author and we are going to build something big and very in
 15-	"trilogy_consequence"
 
 From the Trilogy Notes above the chapter for that trilogy, and the chapters written before to write the scenes in chapter 15 of Book 1.  You will fill in the blank datapoints of chapter 8 scenes. Chapter 15 starts on line 2762 .The options for Timeline Variants are "Prime Timeline", "Divergence Point Alpha", "Pangea Insertion",  "Timeline Fracture", and "Convergence Point" In this file: '/Users/xaviermartinez/dev/cursor/epic-arcana-novel/lore/l_outline.json' . The fillable area starts on line 2838.  At the end of the creation I need you to seed the data to the database.
+
+
+
+You are my trusted co-author and we are going to builds something big and very interesting for the world. I need your talented writing skills to help me craft a beautiful and epic story. We are going to create this one chapter at a time using our established Single Chapter Authoring 
+  Strategy.
+  PROCESS OVERVIEW:
+  You will first read the supporting information like the:
+  1. "primary_objective"
+  2. "thematic_focus"
+  3. "key_arcana"
+  4. "essential_plot_points"
+  5. "required_scenes"
+  6. "character_introductions"
+  7. "seeds_for_ending"
+  8. "narrative_arc"
+  9. "tone"
+  10. "worldbuilding_milestones"
+  11. "pivotal_events"
+  12. "emotional_arc"
+  13. "core_questions"
+  14. "trilogy_consequence"
+  From the Trilogy Notes above the target chapter, and review the chapters written before to write the scenes for Chapter [20] of Book [1].
+  CHAPTER SPECIFICATIONS:
+  - Chapter [20] starts on line [3742] in '/Users/xaviermartinez/dev/cursor/epic-arcana-novel/lore/l_outline.json'
+  - The fillable area starts on line [3818]
+  - Write 2-4 scenes maximum (adjust based on story pace
+  and page restrictions)
+  - Use proper Timeline Variants: "Prime Timeline", "Divergence Point Alpha", "Pangea Insertion", "Timeline Fracture", or "Convergence Point"
+
+  TIMELINE INTEGRITY REQUIREMENTS:
+  - CRITICAL: Consult /Users/xaviermartinez/dev/cursor/epic
+  -arcana-novel/TIMELINE_REFERENCE.md for the next available date
+  - Use specific dates and times of day following the established chronology (last chapter ended on [DATE])
+  - Include both date and time of day in every scene's timeline_date field (format: "MM/DD/YYYY - Time of Day")
+  - Follow the time of day conventions: Dawn, Morning, Midday, Afternoon, Evening, Night
+  MAINTENANCE SCRIPTS REFERENCE:
+  After completion, use these scripts for timeline maintenance:
+  - scripts/update-timeline-dates.mjs - Updates outline file timeline dates
+  - scripts/update-database-timeline-dates.mjs - Synchronizes database with timeline dates
+  - scripts/seed-chapter-[X]-scenes.mjs - Seeds specific chapter data to database
+  DELIVERABLES:
+  1. Complete all fillable datapoints for the target chapter (plot, title, summary, character_arcs, story_gaps_addressed, location_details, series_connections)
+  2. Write 2-4 detailed scenes with proper timeline dates/times
+  3. Ensure all scenes have: scene_title, setup, symbolism, beat_goal, pov, tense, core_emotion, scene_tone,  timeline_date, timeline_variant, location
+  4. Create and run a seeding script to add the data to the database without disrupting existing content
+  5. Update TIMELINE_REFERENCE.md with the new chapter's dates for future reference
+
+  QUALITY STANDARDS:
+  - Maintain epic fantasy tone with rich worldbuilding
+  - Ensure narrative continuity with previous chapters
+  - Develop character arcs meaningfully
+  - Include proper symbolism and thematic elements
+  - Write engaging, dramatic scenes that advance the plot
+  - Preserve timeline integrity across all scenes
+
+  TARGET CHAPTER: Chapter [20] of Book [1]
+  THEME: [Chapter Theme]
+  STARTING LINE: [3742]
+  NEXT AVAILABLE DATE: [Check TIMELINE_REFERENCE.md]
+
+Please begin by reading the chapter structure and trilogy context, then proceed with our established authoring process.  
+
