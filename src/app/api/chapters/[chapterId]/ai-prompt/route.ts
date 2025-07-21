@@ -46,7 +46,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
     return NextResponse.json({ prompts });
   } catch (error) {
-    console.error(`Error generating AI prompts for chapter ${params.chapterId}:`, error);
+    const { chapterId } = await params;
+    console.error(`Error generating AI prompts for chapter ${chapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }

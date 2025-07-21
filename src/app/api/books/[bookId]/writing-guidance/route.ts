@@ -85,7 +85,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     });
 
   } catch (error) {
-    console.error(`Error fetching writing guidance for book ${params.bookId}:`, error);
+    const { bookId } = await params;
+    console.error(`Error fetching writing guidance for book ${bookId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 } 
