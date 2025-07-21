@@ -3,9 +3,9 @@ import { db } from '@/lib/db';
 import { chapterWritingGuidance, chapters, books } from '@/lib/schema';
 import { eq, asc } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { bookId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
   try {
-    const bookId = params.bookId;
+    const { bookId } = await params;
 
     // Get book information
     const book = await db.select().from(books).where(eq(books.id, bookId)).limit(1);
