@@ -8,7 +8,7 @@ import { eq } from 'drizzle-orm';
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
-export async function POST(request: NextRequest, { params }: { params: { slug: string } }) {
+export async function POST(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   try {
     const { slug } = await params;
     const data = await request.formData();
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest, { params }: { params: { slug: s
   }
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { slug: string } }) {
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   try {
     const { slug } = await params;
 
