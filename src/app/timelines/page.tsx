@@ -132,12 +132,12 @@ export default function TimelinesPage() {
       id: `event-${i + 1}`,
       title: [
         "Francisco Discovers the Temporal Rift",
-        "Dante's Journey Through the Inferno Portal",
-        "The Varangian Guard's First Loop",
+        "Dante&apos;s Journey Through the Inferno Portal",
+        "The Varangian Guard&apos;s First Loop",
         "Convergence at the Zanetti Station",
-        "Petrarch's Temporal Vision",
+        "Petrarch&apos;s Temporal Vision",
         "The Great Paradox Crisis",
-        "Roger de Flor's Timeline Intervention",
+        "Roger de Flor&apos;s Timeline Intervention",
         "Discovery of the Alpha Codex",
         "The Beta Timeline Collapse",
         "Gamma Reality Stabilization"
@@ -155,14 +155,14 @@ export default function TimelinesPage() {
         "Artifact power amplified",
         "Reality stability decreased"
       ],
-      paradoxRisk: ['none', 'low', 'medium', 'high', 'critical'][Math.floor(Math.random() * 5)] as any,
+      paradoxRisk: ['none', 'low', 'medium', 'high', 'critical'][Math.floor(Math.random() * 5)] as 'none' | 'low' | 'medium' | 'high' | 'critical',
       isConvergencePoint: Math.random() > 0.8,
       relatedEvents: [`event-${Math.floor(Math.random() * 50) + 1}`],
       militaryOrder: Math.random() > 0.5 ? militaryOrders[Math.floor(Math.random() * militaryOrders.length)] : undefined,
       artifacts: Math.random() > 0.6 ? [artifacts[Math.floor(Math.random() * artifacts.length)]] : undefined,
       location: ["Bologna", "Constantinople", "Pangea", "The Inferno", "Zanetti Station"][Math.floor(Math.random() * 5)]
     }));
-  }, []);
+  };
 
   const generateMockBranches = (): TimelineBranch[] => {
     return [
