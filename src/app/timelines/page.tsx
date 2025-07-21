@@ -119,7 +119,7 @@ export default function TimelinesPage() {
     ];
     
     const artifacts = [
-      "Cup of Jamshid", "Golden Apple", "Kusanagi", "Philosopher's Stone", 
+      "Cup of Jamshid", "Golden Apple", "Kusanagi", "Philosopher&apos;s Stone", 
       "Cintamani Stone", "Zanetti Train", "Trionfi Cards"
     ];
 
@@ -180,7 +180,7 @@ export default function TimelinesPage() {
       },
       {
         id: 'branch-beta-1',
-        name: 'The Observer\'s Vision',
+        name: 'The Observer&apos;s Vision',
         timeline: 'beta',
         description: 'Alternative timeline where Francisco develops observer capabilities, focusing on intelligence gathering and balanced force.',
         startEvent: 'event-12',
@@ -192,13 +192,13 @@ export default function TimelinesPage() {
       },
       {
         id: 'branch-gamma-1',
-        name: 'The Alchemist\'s Transformation',
+        name: 'The Alchemist&apos;s Transformation',
         timeline: 'gamma',
-        description: 'Experimental timeline exploring Francisco\'s potential as an alchemist, wielding intentional strategy and active passion.',
+        description: 'Experimental timeline exploring Francisco&apos;s potential as an alchemist, wielding intentional strategy and active passion.',
         startEvent: 'event-23',
         probability: 43,
         status: 'dormant',
-        divergencePoint: 'Discovery of the Philosopher\'s Stone fragment',
+        divergencePoint: 'Discovery of the Philosopher&apos;s Stone fragment',
         affectedCharacters: ['Francisco', 'The Alchemist', 'Petrarch'],
         outcomes: ['Transmutation abilities', 'Reality manipulation', 'Gamma timeline creation']
       }
@@ -211,7 +211,7 @@ export default function TimelinesPage() {
         id: 'paradox-1',
         severity: 'critical',
         type: 'temporal_loop',
-        description: 'Francisco\'s intervention in the past creates a causal loop where his own existence depends on events he caused.',
+        description: 'Francisco&apos;s intervention in the past creates a causal loop where his own existence depends on events he caused.',
         affectedEvents: ['event-5', 'event-15', 'event-32'],
         suggestedResolution: 'Implement a quantum uncertainty buffer at the divergence point to break the causal chain.',
         detectedAt: new Date().toISOString(),
@@ -231,7 +231,7 @@ export default function TimelinesPage() {
         id: 'paradox-3',
         severity: 'error',
         type: 'timeline_conflict',
-        description: 'Beta and Gamma timelines show incompatible outcomes for the Zanetti Train\'s destination.',
+        description: 'Beta and Gamma timelines show incompatible outcomes for the Zanetti Train&apos;s destination.',
         affectedEvents: ['event-45', 'event-48'],
         suggestedResolution: 'Consolidate timeline outcomes or introduce probability matrices.',
         detectedAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(),
@@ -251,7 +251,7 @@ export default function TimelinesPage() {
         triggerEvents: ['event-10', 'event-25', 'event-40'],
         outcome: 'Timeline unification and reality stabilization',
         probability: 78,
-        consequences: ['Universal temporal mastery', 'End of paradoxes', 'Francisco\'s final transformation']
+        consequences: ['Universal temporal mastery', 'End of paradoxes', 'Francisco&apos;s final transformation']
       },
       {
         id: 'convergence-2',
