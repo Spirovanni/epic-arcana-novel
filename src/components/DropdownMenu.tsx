@@ -179,8 +179,8 @@ export function DropdownMenu({ trigger, items, title }: DropdownMenuProps) {
                           >
                             <motion.div
                               className="flex items-center px-3 py-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer group"
-                              onMouseEnter={() => setHoveredItem(item.href)}
-                              onMouseLeave={() => setHoveredItem(null)}
+                              onMouseEnter={() => {}}
+                              onMouseLeave={() => {}}
                               whileHover={{ x: 4 }}
                               transition={{ duration: 0.2 }}
                             >

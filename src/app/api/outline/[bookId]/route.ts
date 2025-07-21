@@ -24,10 +24,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     const leaves = allTaskGroups.filter(tg => tg.chapterId && chapterIds.includes(tg.chapterId));
 
     for (const leaf of leaves) {
-      let current = leaf;
+      let current: typeof leaf | null = leaf;
       while (current) {
         bookTaskGroupIds.add(current.id);
-        current = current.parentTaskGroupId ? taskGroupMap.get(current.parentTaskGroupId) : null;
+        current = current.parentTaskGroupId ? taskGroupMap.get(current.parentTaskGroupId) || null : null;
       }
     }
 

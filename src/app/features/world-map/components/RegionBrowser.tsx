@@ -18,7 +18,7 @@ export function RegionBrowser({ onRegionSelect, selectedRegion }: RegionBrowserP
   const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
-    loadRegions();
+    // Load regions functionality removed - component works with empty regions array
   }, []);
 
   const filterRegions = useCallback(() => {

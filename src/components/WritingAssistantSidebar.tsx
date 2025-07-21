@@ -161,7 +161,7 @@ export default function WritingAssistantSidebar({
                 return (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as 'guidance' | 'structure' | 'characters' | 'themes' | 'review')}
+                    onClick={() => setActiveTab(tab.id as 'session' | 'guidance' | 'tips' | 'progress')}
                     className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-medium transition-colors ${
                       isActive
                         ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30'
@@ -270,13 +270,13 @@ export default function WritingAssistantSidebar({
                         </h3>
                         <div className="text-sm space-y-1">
                           <p className="text-amber-700 dark:text-amber-300">
-                            <span className="font-medium">POV:</span> {currentChapter.guidance.povType}
+                            <span className="font-medium">POV:</span> {String(currentChapter.guidance.povType || '')}
                           </p>
                           <p className="text-amber-700 dark:text-amber-300">
-                            <span className="font-medium">Character:</span> {currentChapter.guidance.povCharacter}
+                            <span className="font-medium">Character:</span> {String(currentChapter.guidance.povCharacter || '')}
                           </p>
                           <p className="text-amber-700 dark:text-amber-300">
-                            <span className="font-medium">Tense:</span> {currentChapter.guidance.tense}
+                            <span className="font-medium">Tense:</span> {String(currentChapter.guidance.tense || '')}
                           </p>
                         </div>
                       </div>
@@ -288,7 +288,7 @@ export default function WritingAssistantSidebar({
                           Key Plot Points
                         </h3>
                         <ul className="text-sm space-y-1">
-                          {currentChapter.guidance.keyPlotDevelopments?.slice(0, 3).map((point: string, index: number) => (
+                          {Array.isArray(currentChapter.guidance.keyPlotDevelopments) && currentChapter.guidance.keyPlotDevelopments.slice(0, 3).map((point: string, index: number) => (
                             <li key={index} className="flex items-start gap-2">
                               <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
                               <span className="text-blue-700 dark:text-blue-300">{point}</span>

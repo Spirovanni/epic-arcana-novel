@@ -156,7 +156,7 @@ export default function TimelinePage() {
               <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Filter:</label>
               <select 
                 value={selectedTimeline} 
-                onChange={(e) => setSelectedTimeline(e.target.value)}
+                onChange={(e) => setSelectedTimeline(e.target.value as 'all' | 'historical' | 'fantasy')}
                 className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
                 <option value="all">All Events</option>

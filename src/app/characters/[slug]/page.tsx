@@ -11,8 +11,8 @@ const placeholderImg = '/icons/fallback/default-chapter.png';
 
 type Character = {
   id?: string;
-  slug: string;
-  name: string;
+  slug?: string;
+  name?: string;
   aka?: string | null;
   pronouns?: string | null;
   relation?: string | null;
@@ -247,7 +247,7 @@ export default function CharacterProfilePage() {
                     <div className="w-48 h-48 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/30 transition-transform duration-300 hover:scale-200 hover:z-10">
                       <Image 
                         src={character.imageUrl || placeholderImg} 
-                        alt={character.name} 
+                        alt={character.name || 'Character'} 
                         width={192} 
                         height={192} 
                         className="w-full h-full object-cover rounded-xl" 
@@ -734,7 +734,7 @@ export default function CharacterProfilePage() {
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Characters</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                  {related.map((c) => (
+                  {related.filter((c) => c.slug).map((c) => (
                     <Link 
                       key={c.slug} 
                       href={`/characters/${c.slug}`} 
@@ -742,11 +742,11 @@ export default function CharacterProfilePage() {
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-200 hover:z-10">
-                          <Image src={placeholderImg} alt={c.name} width={48} height={48} className="w-full h-full object-cover rounded-full" />
+                          <Image src={placeholderImg} alt={c.name || 'Character'} width={48} height={48} className="w-full h-full object-cover rounded-full" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200 truncate">
-                            {c.name}
+                            {c.name || 'Unknown Character'}
                           </p>
                           {c.role && (
                             <p className="text-xs text-gray-500 dark:text-gray-400 truncate">

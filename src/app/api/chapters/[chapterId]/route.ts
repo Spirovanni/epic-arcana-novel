@@ -163,7 +163,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
         description: chapter.specificTaskGroupDescription || chapter.description,
         focus: chapter.focus,
         focusArea: chapter.focusArea,
-        tagline: chapter.specificTaskGroupTagline || chapter.tagline || 'No tagline set',
+        tagline: chapter.specificTaskGroupTagline || 'No tagline set',
         epicNovelPages: chapter.epicNovelPages,
         epicChapterFocus: chapter.epicChapterFocus,
         epicNovelChapterFocus: chapter.epicNovelChapterFocus,

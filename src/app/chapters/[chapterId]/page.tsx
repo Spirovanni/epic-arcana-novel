@@ -206,6 +206,14 @@ interface Chapter {
   chapterNumber: number;
   description: string;
   focus: string;
+  focusArea?: string;
+  connectionToMajorTaskGroup?: string;
+  summary?: string;
+  tagline?: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  terminalLearningObjectives?: any;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  booksInfluencedBy?: any;
   epicNovelPages: string;
   epicChapterFocus: string;
   epicNovelChapterFocus: string;
@@ -217,6 +225,7 @@ interface Chapter {
   iconPath?: string;
   previousChapterId?: string;
   nextChapterId?: string;
+  [key: string]: unknown;
 }
 
 interface Book {
@@ -307,6 +316,8 @@ interface ChapterData {
     wordCount: number;
     characterArcsCount: number;
   };
+  taskMaster?: TaskGroup;
+  majorTaskGroup?: TaskGroup;
 }
 
 // Enhanced helper functions for sophisticated chapter theming
@@ -670,7 +681,6 @@ export default function ChapterWritingPage() {
     if (!data?.chapter) return;
     setEditedChapter({
       title: data.chapter.title || '',
-      tagline: data.chapter.tagline || '',
       focusArea: data.chapter.focusArea || '',
       connectionToMajorTaskGroup: data.chapter.connectionToMajorTaskGroup || '',
       summary: data.chapter.summary || '',
@@ -1309,22 +1319,23 @@ export default function ChapterWritingPage() {
                     {Object.entries(chapter.booksInfluencedBy).map(([key, book]) => {
                       // Handle nested objects safely
                       if (typeof book === 'object' && book !== null) {
+                        const bookObj = book as { title?: string; author?: string; section_of_focus?: string; section_description?: string };
                         return (
                           <div key={key} className="bg-amber-50 dark:bg-amber-900/30 rounded-lg p-4">
                             <h3 className="font-semibold text-amber-800 dark:text-amber-200 mb-2">
-                              {book.title || key}
+                              {bookObj.title || key}
                             </h3>
                             <p className="text-amber-700 dark:text-amber-300 text-sm mb-2">
-                              by {book.author || 'Unknown Author'}
+                              by {bookObj.author || 'Unknown Author'}
                             </p>
-                            {book.section_of_focus && (
+                            {bookObj.section_of_focus && (
                               <p className="text-amber-600 dark:text-amber-400 text-xs">
-                                Focus: {book.section_of_focus}
+                                Focus: {bookObj.section_of_focus}
                               </p>
                             )}
-                            {book.section_description && (
+                            {bookObj.section_description && (
                               <p className="text-amber-600 dark:text-amber-400 text-xs mt-1">
-                                {book.section_description}
+                                {bookObj.section_description}
                               </p>
                             )}
                           </div>
@@ -1631,7 +1642,7 @@ export default function ChapterWritingPage() {
           {activeTab === 'tasks' && (
             <TaskChecklist 
               chapterId={chapterId} 
-              chapterData={data} 
+              chapterData={data.chapter} 
               onTaskCountChange={setTotalTasks}
             />
           )}

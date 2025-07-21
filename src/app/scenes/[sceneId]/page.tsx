@@ -108,7 +108,7 @@ export default function SceneDetailPage() {
     fetchSceneData();
   }, [sceneId, fetchSceneData]);
 
-  const handleSceneInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleSceneInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (!editedScene) return;
     const { name, value } = e.target;
     setEditedScene({ ...editedScene, [name]: value });

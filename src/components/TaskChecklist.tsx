@@ -21,10 +21,6 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
   const [tasks, setTasks] = useState<TaskItem[]>([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetchTasksFromChapter();
-  }, [chapterId, chapterData, fetchTasksFromChapter]);
-
   const fetchTasksFromChapter = useCallback(async () => {
     try {
       // Extract tasks from chapter data or l_outline.json
@@ -66,6 +62,10 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
       setLoading(false);
     }
   }, [chapterId, onTaskCountChange]);
+
+  useEffect(() => {
+    fetchTasksFromChapter();
+  }, [chapterId, chapterData, fetchTasksFromChapter]);
 
   const extractTasksFromChapterData = (): TaskItem[] => {
     const extractedTasks: TaskItem[] = [];

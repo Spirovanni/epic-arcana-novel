@@ -86,10 +86,6 @@ export default function TimelinesPage() {
   const [filterEventType, setFilterEventType] = useState<string>('all');
   const [showParadoxAlerts, setShowParadoxAlerts] = useState(true);
 
-  useEffect(() => {
-    fetchTimelineData();
-  }, [fetchTimelineData]);
-
   const fetchTimelineData = useCallback(async () => {
     try {
       const response = await fetch('/api/timelines');
@@ -111,6 +107,10 @@ export default function TimelinesPage() {
       setLoading(false);
     }
   }, []);
+
+  useEffect(() => {
+    fetchTimelineData();
+  }, [fetchTimelineData]);
 
   const generateMockEvents = (): TimelineEvent[] => {
     const militaryOrders = [

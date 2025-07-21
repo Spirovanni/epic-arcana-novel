@@ -3,7 +3,7 @@ import { db } from '@/lib/db';
 import { characters } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
 
-export async function GET(request, { params }) {
+export async function GET(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
     console.log('Fetching character with slug:', slug);
@@ -88,7 +88,7 @@ export async function GET(request, { params }) {
   }
 }
 
-export async function PUT(request, { params }) {
+export async function PUT(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
     const data = await request.json();

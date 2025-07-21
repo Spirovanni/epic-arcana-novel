@@ -148,7 +148,7 @@ const TaskGroupNode = ({ node, level = 0 }: { node: TaskGroup; level?: number })
         
         {hasChildren && isExpanded && (
           <div className="mt-6 space-y-4">
-            {node.children.map((child) => (
+            {node.children?.map((child) => (
               <TaskGroupNode key={child.id} node={child} level={level + 1} />
             ))}
           </div>
@@ -187,15 +187,21 @@ export default function OutlinePage() {
         if (outlineResponse.ok) {
           const taskGroups: TaskGroup[] = await outlineResponse.json();
           
-          const taskGroupMap = new Map(taskGroups.map(tg => [tg.id, { ...tg, children: [] }]));
+          const taskGroupMap = new Map(taskGroups.map(tg => [tg.id, { ...tg, children: [] as TaskGroup[] }]));
           const hierarchy: TaskGroup[] = [];
 
           for(const tg of taskGroups) {
               if(tg.parentTaskGroupId && taskGroupMap.has(tg.parentTaskGroupId)) {
                   const parent = taskGroupMap.get(tg.parentTaskGroupId);
-                  parent.children.push(taskGroupMap.get(tg.id));
+                  const child = taskGroupMap.get(tg.id);
+                  if (parent && child) {
+                      parent.children.push(child);
+                  }
               } else if (!tg.parentTaskGroupId) {
-                  hierarchy.push(taskGroupMap.get(tg.id));
+                  const rootItem = taskGroupMap.get(tg.id);
+                  if (rootItem) {
+                      hierarchy.push(rootItem);
+                  }
               }
           }
           

@@ -266,7 +266,7 @@ export default function BooksAnalyticsPage() {
   };
 
   const sortedBooks = [...booksData].sort((a, b) => {
-    let aValue, bValue;
+    let aValue: number, bValue: number;
     
     switch (sortBy) {
       case 'completion':
@@ -274,8 +274,8 @@ export default function BooksAnalyticsPage() {
         bValue = (b.metrics.completedChapters / b.metrics.totalChapters) * 100;
         break;
       case 'quality':
-        aValue = Object.values(a.qualityScores).slice(0, 5).reduce((sum, val) => sum + val, 0) / 5;
-        bValue = Object.values(b.qualityScores).slice(0, 5).reduce((sum, val) => sum + val, 0) / 5;
+        aValue = Object.values(a.qualityScores).slice(0, 5).reduce((sum: number, val) => sum + (typeof val === 'number' ? val : 0), 0) / 5;
+        bValue = Object.values(b.qualityScores).slice(0, 5).reduce((sum: number, val) => sum + (typeof val === 'number' ? val : 0), 0) / 5;
         break;
       case 'productivity':
         aValue = a.productivityMetrics.wordsPerHour;
@@ -592,7 +592,7 @@ export default function BooksAnalyticsPage() {
                     <tbody className="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
                       {sortedBooks.map((book) => {
                         const completionRate = (book.metrics.completedChapters / book.metrics.totalChapters) * 100;
-                        const qualityScore = Object.values(book.qualityScores).slice(0, 5).reduce((sum, val) => sum + val, 0) / 5;
+                        const qualityScore = Object.values(book.qualityScores).slice(0, 5).reduce((sum: number, val) => sum + (typeof val === 'number' ? val : 0), 0) / 5;
                         
                         return (
                           <tr key={book.id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
@@ -874,7 +874,7 @@ export default function BooksAnalyticsPage() {
                 <SimpleChart
                   type="bar"
                   data={sortedBooks.map(book => {
-                    const qualityScore = Object.values(book.qualityScores).slice(0, 5).reduce((sum, val) => sum + val, 0) / 5;
+                    const qualityScore = Object.values(book.qualityScores).slice(0, 5).reduce((sum: number, val) => sum + (typeof val === 'number' ? val : 0), 0) / 5;
                     return {
                       label: `Book ${book.bookNumber}`,
                       value: qualityScore,

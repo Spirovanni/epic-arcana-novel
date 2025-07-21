@@ -276,7 +276,7 @@ export function Navbar() {
                 </motion.div>
 
                 {/* Other Nav Items */}
-                {navItems.map((item) => (
+                {navItems.map((item, index) => (
                   <motion.div
                     key={item.name}
                     initial={{ opacity: 0, x: -20 }}

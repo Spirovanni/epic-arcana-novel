@@ -126,7 +126,6 @@ export default function TrilogiesPage() {
         const response = await fetch('/api/books');
         if (response.ok) {
           const data = await response.json();
-          setBooks(data);
           
           // Organize books into trilogies
           const updatedTrilogies = TRILOGY_DATA.map(trilogy => ({
