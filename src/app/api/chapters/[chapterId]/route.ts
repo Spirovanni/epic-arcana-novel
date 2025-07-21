@@ -85,7 +85,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
 
     // Get all character arcs and filter them client-side for now
     // Wrapped in try-catch to handle schema mismatches gracefully
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let characterArcsData: any[] = [];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let chapterCharacterGuidance: any[] = [];
     
     try {
