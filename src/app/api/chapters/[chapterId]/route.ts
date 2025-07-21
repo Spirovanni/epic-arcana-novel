@@ -3,7 +3,7 @@ import { db } from '@/lib/db';
 import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters, scenes } from '@/lib/schema';
 import { eq, asc } from 'drizzle-orm';
 
-export async function GET(request: Request, { params }: { params: { chapterId: string } }) {
+export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
     const { chapterId } = await params;
     
@@ -204,14 +204,15 @@ export async function GET(request: Request, { params }: { params: { chapterId: s
     
     return NextResponse.json(responseData);
   } catch (error) {
-    console.error(`Error fetching chapter ${params.chapterId}:`, error);
+    const { chapterId: errorChapterId } = await params;
+    console.error(`Error fetching chapter ${errorChapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
 
-export async function PUT(request: Request, { params }: { params: { chapterId: string } }) {
+export async function PUT(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
-    const { chapterId } = params;
+    const { chapterId } = await params;
     const body = await request.json();
 
     // Map frontend field names to database column names for chapters
@@ -265,7 +266,8 @@ export async function PUT(request: Request, { params }: { params: { chapterId: s
 
     return NextResponse.json(updatedChapter[0]);
   } catch (error) {
-    console.error(`Error updating chapter ${params.chapterId}:`, error);
+    const { chapterId: errorChapterId } = await params;
+    console.error(`Error updating chapter ${errorChapterId}:`, error);
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
