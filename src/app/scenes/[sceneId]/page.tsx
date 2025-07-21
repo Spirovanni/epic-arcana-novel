@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, EyeIcon, CalendarIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
@@ -26,7 +26,7 @@ interface Scene {
   heroJourneyStage?: string;
   pages?: string;
   primaryTarotCard?: string;
-  secondaryTarotCards?: any;
+  secondaryTarotCards?: string[];
   tarotCardId?: string;
   tarotNarrativeRole?: string;
   franciscoTarotConnection?: string;
@@ -38,7 +38,7 @@ interface Scene {
   cardReversalSignificance?: string;
   historicalDate?: string;
   storyTimelineDate?: string;
-  historicalEventIds?: any;
+  historicalEventIds?: string[];
   temporalDivergencePoint?: string;
   realWorldContext?: string;
   alternateTimelineVariant?: string;
@@ -88,9 +88,9 @@ export default function SceneDetailPage() {
   useEffect(() => {
     if (!sceneId) return;
     fetchSceneData();
-  }, [sceneId]);
+  }, [sceneId, fetchSceneData]);
 
-  const fetchSceneData = async () => {
+  const fetchSceneData = useCallback(async () => {
     try {
       const response = await fetch(`/api/scenes/${sceneId}`);
       if (response.ok) {
@@ -106,7 +106,7 @@ export default function SceneDetailPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [sceneId]);
 
   const handleSceneInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (!editedScene) return;
@@ -114,11 +114,7 @@ export default function SceneDetailPage() {
     setEditedScene({ ...editedScene, [name]: value });
   };
 
-  const handleChapterInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    if (!editedChapter) return;
-    const { name, value } = e.target;
-    setEditedChapter({ ...editedChapter, [name]: value });
-  };
+  // Removed unused function
 
   const handleUpdate = async () => {
     if (!editedScene || !editedChapter) return;
@@ -193,7 +189,7 @@ export default function SceneDetailPage() {
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">Scene Not Found</h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">The scene you're looking for doesn't exist or has been moved.</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">The scene you&apos;re looking for doesn&apos;t exist or has been moved.</p>
             <Link 
               href="/books" 
               className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200"
@@ -658,7 +654,7 @@ export default function SceneDetailPage() {
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2">
-                        🌏 Hero's Journey Stage
+                        🌏 Hero&apos;s Journey Stage
                       </label>
                       <input
                         type="text"
@@ -740,7 +736,7 @@ export default function SceneDetailPage() {
                       {scene.heroJourneyStage && (
                         <div className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-indigo-300 dark:border-indigo-600">
                           <h5 className="text-sm font-medium text-indigo-700 dark:text-indigo-300 mb-2 flex items-center">
-                            🌏 Hero's Journey Stage
+                            🌏 Hero&apos;s Journey Stage
                           </h5>
                           <p className="text-indigo-900 dark:text-indigo-100">{scene.heroJourneyStage}</p>
                         </div>

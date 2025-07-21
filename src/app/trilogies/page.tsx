@@ -116,7 +116,7 @@ const createTrilogyGradient = (colors: string[]) => {
 };
 
 export default function TrilogiesPage() {
-  const [books, setBooks] = useState<Book[]>([]);
+  // Removed unused books state
   const [trilogies, setTrilogies] = useState<Trilogy[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -218,7 +218,7 @@ export default function TrilogiesPage() {
 
         {/* Trilogies */}
         <div className="space-y-16">
-          {trilogies.map((trilogy, index) => {
+          {trilogies.map((trilogy) => {
             const gradientBg = createTrilogyGradient(trilogy.gradientColors);
             const primaryColor = trilogy.gradientColors[0];
             const textColorClass = getTextColor(primaryColor);
@@ -261,7 +261,7 @@ export default function TrilogiesPage() {
                         </p>
                         <p className={`text-base ${textColorClass} opacity-95 leading-relaxed italic`}
                           style={{ textShadow: `0 1px 3px ${primaryColor}60` }}>
-                          "{trilogy.tagline}"
+                          &quot;{trilogy.tagline}&quot;
                         </p>
                       </div>
                       

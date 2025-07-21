@@ -70,7 +70,7 @@ const calculateRegionCenter = (group: SVGGElement): { x: number; y: number } => 
       x: bbox.x + bbox.width / 2,
       y: bbox.y + bbox.height / 2
     };
-  } catch (error) {
+  } catch {
     // Fallback if getBBox fails
     return { x: 0, y: 0 };
   }
@@ -85,7 +85,7 @@ const calculateBoundingBox = (group: SVGGElement): { x: number; y: number; width
       width: bbox.width,
       height: bbox.height
     };
-  } catch (error) {
+  } catch {
     return { x: 0, y: 0, width: 0, height: 0 };
   }
 };

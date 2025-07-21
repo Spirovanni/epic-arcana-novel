@@ -42,7 +42,7 @@ interface WritingAssistantSidebarProps {
     id: string;
     number: number;
     title: string;
-    guidance?: any;
+    guidance?: { [key: string]: unknown };
   };
   writingSession?: WritingSession;
   onStartSession?: (chapterId: string) => void;
@@ -161,7 +161,7 @@ export default function WritingAssistantSidebar({
                 return (
                   <button
                     key={tab.id}
-                    onClick={() => setActiveTab(tab.id as any)}
+                    onClick={() => setActiveTab(tab.id as 'guidance' | 'structure' | 'characters' | 'themes' | 'review')}
                     className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-medium transition-colors ${
                       isActive
                         ? 'text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30'
@@ -336,7 +336,7 @@ export default function WritingAssistantSidebar({
                   <div className="bg-purple-50 dark:bg-purple-900/30 rounded-lg p-4">
                     <h3 className="font-semibold text-purple-800 dark:text-purple-200 mb-3 flex items-center gap-2">
                       <ChartBarIcon className="w-4 h-4" />
-                      Today's Progress
+                      Today&apos;s Progress
                     </h3>
                     <div className="grid grid-cols-2 gap-3 text-sm">
                       <div>

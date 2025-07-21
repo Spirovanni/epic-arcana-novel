@@ -156,7 +156,7 @@ export default function TimelinePage() {
               <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Filter:</label>
               <select 
                 value={selectedTimeline} 
-                onChange={(e) => setSelectedTimeline(e.target.value as any)}
+                onChange={(e) => setSelectedTimeline(e.target.value)}
                 className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               >
                 <option value="all">All Events</option>
@@ -390,7 +390,7 @@ export default function TimelinePage() {
               <div className="space-y-3">
                 <div className="p-3 border border-blue-200 dark:border-blue-800 rounded-lg">
                   <div className="font-medium text-sm text-blue-800 dark:text-blue-200">1321-09-14</div>
-                  <div className="text-xs text-blue-600 dark:text-blue-400">Dante's Transcendence</div>
+                  <div className="text-xs text-blue-600 dark:text-blue-400">Dante&apos;s Transcendence</div>
                   <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">
                     Multiple timeline possibilities converge at this critical moment
                   </p>

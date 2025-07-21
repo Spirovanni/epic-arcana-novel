@@ -6,7 +6,7 @@ import { InteractiveWorldMap } from './components/InteractiveWorldMap';
 import { LocationDetailModal } from './components/LocationDetailModal';
 import { MapControls } from './components/MapControls';
 import { ChapterSidebar } from './components/ChapterSidebar';
-import { extractSVGRegions, findMatchingRegion, SVGRegion } from './utils/svgRegionExtractor';
+import { extractSVGRegions, findMatchingRegion } from './utils/svgRegionExtractor';
 
 export interface Location {
   id: string;
@@ -75,7 +75,6 @@ export default function WorldMapPage() {
     try {
       // Load SVG regions first
       const regions = await extractSVGRegions();
-      setSvgRegions(regions);
       
       // Use static data directly since we don't have an API endpoint yet
       const locationsData = [

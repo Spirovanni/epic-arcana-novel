@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -8,17 +8,11 @@ import {
   ClockIcon,
   ArrowPathIcon,
   ExclamationTriangleIcon,
-  ChartBarIcon,
-  DocumentTextIcon,
   EyeIcon,
-  PlusIcon,
   MagnifyingGlassIcon,
-  FunnelIcon,
-  AdjustmentsHorizontalIcon,
   ChevronRightIcon,
   CheckCircleIcon,
   XMarkIcon,
-  InformationCircleIcon,
   BoltIcon,
   StarIcon,
   CalendarDaysIcon
@@ -94,9 +88,9 @@ export default function TimelinesPage() {
 
   useEffect(() => {
     fetchTimelineData();
-  }, []);
+  }, [fetchTimelineData]);
 
-  const fetchTimelineData = async () => {
+  const fetchTimelineData = useCallback(async () => {
     try {
       const response = await fetch('/api/timelines');
       if (response.ok) {
@@ -150,8 +144,8 @@ export default function TimelinesPage() {
       ][i % 10],
       description: `A critical event in the temporal mechanics of the Epic Arcana universe, involving complex interactions between characters, artifacts, and military orders across multiple timelines.`,
       timestamp: new Date(1300 + Math.floor(Math.random() * 50), Math.floor(Math.random() * 12), Math.floor(Math.random() * 28)).toISOString(),
-      timeline: ['alpha', 'beta', 'gamma'][Math.floor(Math.random() * 3)] as any,
-      eventType: ['character_action', 'plot_point', 'world_event', 'convergence', 'paradox'][Math.floor(Math.random() * 5)] as any,
+      timeline: ['alpha', 'beta', 'gamma'][Math.floor(Math.random() * 3)] as 'alpha' | 'beta' | 'gamma',
+      eventType: ['character_action', 'plot_point', 'world_event', 'convergence', 'paradox'][Math.floor(Math.random() * 5)] as 'character_action' | 'plot_point' | 'world_event' | 'convergence' | 'paradox',
       chapterId: `chapter-${Math.floor(Math.random() * 40) + 1}`,
       bookId: `book-${Math.floor(Math.random() * 9) + 1}`,
       characters: [characters[Math.floor(Math.random() * characters.length)], characters[Math.floor(Math.random() * characters.length)]],
@@ -168,19 +162,19 @@ export default function TimelinesPage() {
       artifacts: Math.random() > 0.6 ? [artifacts[Math.floor(Math.random() * artifacts.length)]] : undefined,
       location: ["Bologna", "Constantinople", "Pangea", "The Inferno", "Zanetti Station"][Math.floor(Math.random() * 5)]
     }));
-  };
+  }, []);
 
   const generateMockBranches = (): TimelineBranch[] => {
     return [
       {
         id: 'branch-alpha-1',
-        name: 'The Operative\'s Path',
+        name: 'The Operative&apos;s Path',
         timeline: 'alpha',
         description: 'Primary timeline where Francisco follows the path of the Operative, mastering discerning intervention and strategic anticipation.',
         startEvent: 'event-1',
         probability: 85,
         status: 'active',
-        divergencePoint: 'Francisco\'s choice at the Temporal Crossroads',
+        divergencePoint: 'Francisco&apos;s choice at the Temporal Crossroads',
         affectedCharacters: ['Francisco', 'Dante', 'The Operative'],
         outcomes: ['Mastery of temporal mechanics', 'Alliance with the Varangian Guard', 'Discovery of the Alpha Codex']
       },
@@ -417,10 +411,10 @@ export default function TimelinesPage() {
                     { key: 'alpha', label: 'Alpha', color: 'blue' },
                     { key: 'beta', label: 'Beta', color: 'green' },
                     { key: 'gamma', label: 'Gamma', color: 'purple' }
-                  ].map(({ key, label, color }) => (
+                  ].map(({ key, label }) => (
                     <button
                       key={key}
-                      onClick={() => setSelectedTimeline(key as any)}
+                      onClick={() => setSelectedTimeline(key as 'all' | 'alpha' | 'beta' | 'gamma')}
                       className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                         selectedTimeline === key
                           ? 'bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 shadow-sm'
@@ -473,7 +467,7 @@ export default function TimelinesPage() {
               ].map(({ key, label, icon: Icon }) => (
                 <button
                   key={key}
-                  onClick={() => setSelectedView(key as any)}
+                  onClick={() => setSelectedView(key as 'list' | 'timeline' | 'calendar'))
                   className={`flex items-center space-x-1 px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                     selectedView === key
                       ? 'bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 shadow-sm'

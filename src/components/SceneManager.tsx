@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { PlusIcon, PencilIcon, TrashIcon, UserIcon, BookOpenIcon, ClockIcon, EyeIcon, SparklesIcon } from '@heroicons/react/24/outline';
 
@@ -21,7 +21,7 @@ interface Scene {
   heroJourneyStage?: string;
   pages?: string;
   primaryTarotCard?: string;
-  secondaryTarotCards?: any;
+  secondaryTarotCards?: string[];
   tarotCardId?: string;
   tarotNarrativeRole?: string;
   franciscoTarotConnection?: string;
@@ -33,7 +33,7 @@ interface Scene {
   cardReversalSignificance?: string;
   historicalDate?: string;
   storyTimelineDate?: string;
-  historicalEventIds?: any;
+  historicalEventIds?: string[];
   temporalDivergencePoint?: string;
   realWorldContext?: string;
   alternateTimelineVariant?: string;
@@ -94,7 +94,7 @@ const HERO_JOURNEY_STAGES = [
   { value: 'return_elixir', label: 'Return with the Elixir' },
 ];
 
-export default function SceneManager({ chapterId, chapterColorHex }: SceneManagerProps) {
+export default function SceneManager({ chapterId }: SceneManagerProps) {
   const router = useRouter();
   const [scenes, setScenes] = useState<Scene[]>([]);
   const [characters, setCharacters] = useState<Character[]>([]);
@@ -140,9 +140,9 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
   useEffect(() => {
     fetchScenes();
     fetchCharacters();
-  }, [chapterId]);
+  }, [chapterId, fetchScenes]);
 
-  const fetchScenes = async () => {
+  const fetchScenes = useCallback(async () => {
     try {
       const response = await fetch(`/api/chapters/${chapterId}/scenes`);
       if (response.ok) {
@@ -154,7 +154,7 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
     } finally {
       setLoading(false);
     }
-  };
+  }, [chapterId]);
 
   const fetchCharacters = async () => {
     try {
@@ -237,10 +237,7 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
     setTense('past');
   };
 
-  const getCharacterName = (characterId: string) => {
-    const character = characters.find(c => c.id === characterId);
-    return character ? character.name : 'Unknown Character';
-  };
+  // Removed unused getCharacterName function
 
   if (loading) {
     return (
@@ -439,7 +436,7 @@ export default function SceneManager({ chapterId, chapterColorHex }: SceneManage
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  Hero's Journey Stage
+                  Hero&apos;s Journey Stage
                 </label>
                 <select
                   value={formData.heroJourneyStage}

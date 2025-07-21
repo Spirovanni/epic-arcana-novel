@@ -254,7 +254,7 @@ export function Navbar() {
                     Features
                   </div>
                   <div className="ml-4 space-y-2">
-                    {featureItems.slice(0, 4).map((feature, index) => (
+                    {featureItems.slice(0, 4).map((feature) => (
                       <Link
                         key={feature.href}
                         href={feature.href}

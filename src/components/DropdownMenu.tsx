@@ -31,7 +31,7 @@ interface DropdownMenuProps {
 
 export function DropdownMenu({ trigger, items, title }: DropdownMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+  // Removed unused hoveredItem state
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

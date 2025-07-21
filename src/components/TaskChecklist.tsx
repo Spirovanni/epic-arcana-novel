@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 interface TaskItem {
@@ -13,7 +13,7 @@ interface TaskItem {
 
 interface TaskChecklistProps {
   chapterId: string;
-  chapterData: any;
+  chapterData: { id: string; title: string; [key: string]: unknown };
   onTaskCountChange?: (count: number) => void;
 }
 
@@ -23,9 +23,9 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
 
   useEffect(() => {
     fetchTasksFromChapter();
-  }, [chapterId, chapterData]);
+  }, [chapterId, chapterData, fetchTasksFromChapter]);
 
-  const fetchTasksFromChapter = async () => {
+  const fetchTasksFromChapter = useCallback(async () => {
     try {
       // Extract tasks from chapter data or l_outline.json
       const response = await fetch(`/api/chapters/${chapterId}/tasks`);
@@ -65,7 +65,7 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
     } finally {
       setLoading(false);
     }
-  };
+  }, [chapterId, chapterData, onTaskCountChange]);
 
   const extractTasksFromChapterData = (): TaskItem[] => {
     const extractedTasks: TaskItem[] = [];
@@ -155,7 +155,8 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
     }
   };
 
-  const getCategoryColor = (category: string) => {
+  // Removed unused getCategoryColor function
+  const unusedGetCategoryColor = (category: string) => {
     switch (category) {
       case 'character_arcs':
         return 'bg-blue-500';

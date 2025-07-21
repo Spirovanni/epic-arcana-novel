@@ -6,7 +6,6 @@ import {
   ChevronRightIcon,
   BookOpenIcon,
   UserIcon,
-  ClockIcon,
   LightBulbIcon,
   PencilIcon,
   EyeIcon,
