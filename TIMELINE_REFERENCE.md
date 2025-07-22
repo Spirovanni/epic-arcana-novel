@@ -101,10 +101,16 @@ This document provides the canonical timeline for the Epic Arcana series, starti
 - **Scene 2**: 2/20/1320 - Morning (The Death of Students)
 - **Scene 3**: 2/20/1320 - Afternoon (The Birth of Cosmic Agents)
 
+#### Chapter 27: "The Seven Paths"
+**Theme**: Opportunities/Discernment (The Road Back - Seizing Cosmic Opportunities)
+- **Scene 1**: 2/22/1320 - Dawn (The Chamber of Seven Paths)
+- **Scene 2**: 2/22/1320 - Morning (The Test of True Sight)
+- **Scene 3**: 2/22/1320 - Afternoon (The Chosen Path)
+
 ## Timeline Guidelines for Future Chapters
 
-### For Chapter 26 and Beyond:
-- **Next available date**: 2/21/1320
+### For Chapter 28 and Beyond:
+- **Next available date**: 2/23/1320
 - **Recommended pattern**: 1-3 days per chapter depending on narrative intensity
 - **Academy training chapters**: Often single-day intensive experiences
 - **Travel/quest chapters**: May span multiple days
@@ -150,8 +156,8 @@ All timeline dates are synchronized between:
 - Database `scenes` table (`historicalDate` field)
 - Future chapter generation scripts
 
-**Last Updated**: After Chapter 25 completion  
-**Next Update Required**: Before Chapter 26 creation
+**Last Updated**: After Chapter 27 completion  
+**Next Update Required**: Before Chapter 28 creation
 
 ---
 
