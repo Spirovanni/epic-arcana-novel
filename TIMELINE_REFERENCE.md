@@ -107,10 +107,28 @@ This document provides the canonical timeline for the Epic Arcana series, starti
 - **Scene 2**: 2/22/1320 - Morning (The Test of True Sight)
 - **Scene 3**: 2/22/1320 - Afternoon (The Chosen Path)
 
+#### Chapter 28: "The Six Victories"
+**Theme**: Achievement/Mastery (The Road Back - Achieving Cosmic Mastery)
+- **Scene 1**: 2/23/1320 - Dawn (The Six Chambers of Achievement)
+- **Scene 2**: 2/23/1320 - Morning (The Trials of Mastery)
+- **Scene 3**: 2/23/1320 - Afternoon (The Final Victory)
+
+#### Chapter 29: "The Three Wounds"
+**Theme**: Disruption/Innovation (The Road Back - Facing Cosmic Disruption)
+- **Scene 1**: 2/24/1320 - Dawn (The Mission Assignment)
+- **Scene 2**: 2/24/1320 - Morning (The Triple Cascade Failure)
+- **Scene 3**: 2/24/1320 - Afternoon (Innovation Through Disruption)
+
+#### Chapter 30: "The Balanced Choice"
+**Theme**: Restoration/Balance (The Road Back - Restoring Cosmic Balance)
+- **Scene 1**: 2/25/1320 - Dawn (The Assessment of Damage)
+- **Scene 2**: 2/25/1320 - Morning (The Chamber of Balanced Choices)
+- **Scene 3**: 2/25/1320 - Afternoon (The Restoration Begins)
+
 ## Timeline Guidelines for Future Chapters
 
-### For Chapter 28 and Beyond:
-- **Next available date**: 2/23/1320
+### For Chapter 31 and Beyond:
+- **Next available date**: 2/26/1320
 - **Recommended pattern**: 1-3 days per chapter depending on narrative intensity
 - **Academy training chapters**: Often single-day intensive experiences
 - **Travel/quest chapters**: May span multiple days
@@ -156,8 +174,8 @@ All timeline dates are synchronized between:
 - Database `scenes` table (`historicalDate` field)
 - Future chapter generation scripts
 
-**Last Updated**: After Chapter 27 completion  
-**Next Update Required**: Before Chapter 28 creation
+**Last Updated**: After Chapter 30 completion  
+**Next Update Required**: Before Chapter 31 creation
 
 ---
 
