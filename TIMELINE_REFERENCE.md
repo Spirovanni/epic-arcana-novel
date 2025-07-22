@@ -125,10 +125,58 @@ This document provides the canonical timeline for the Epic Arcana series, starti
 - **Scene 2**: 2/25/1320 - Morning (The Chamber of Balanced Choices)
 - **Scene 3**: 2/25/1320 - Afternoon (The Restoration Begins)
 
-## Timeline Guidelines for Future Chapters
+#### Chapter 31: "The Six Foundations"
+**Theme**: Deployment/Execution (The Road Back - Deploying Cosmic Skills)
+- **Scene 1**: 2/26/1320 - Dawn (The Strategic Deployment)
+- **Scene 2**: 2/26/1320 - Morning (Coordinated Execution)
+- **Scene 3**: 2/26/1320 - Afternoon (The Foundation Network)
 
-### For Chapter 31 and Beyond:
-- **Next available date**: 2/26/1320
+#### Chapter 32: "The Five Conflicts"
+**Theme**: Passion/Conflict (The Road Back - Channeling Cosmic Passion)
+- **Scene 1**: 2/27/1320 - Dawn (The Passionate Colleague)
+- **Scene 2**: 2/27/1320 - Morning (The Five Escalating Conflicts)
+- **Scene 3**: 2/27/1320 - Afternoon (Channeling the Storm)
+
+#### Chapter 33: "The Seven Stands"
+**Theme**: Valor/Courage (The Road Back - Demonstrating Cosmic Valor)
+- **Scene 1**: 2/28/1320 - Dawn (The Cosmic Threat Emerges)
+- **Scene 2**: 2/28/1320 - Morning (The Stand of Valor)
+- **Scene 3**: 2/28/1320 - Afternoon (The Legacy of Courage)
+
+#### Chapter 34: "The Crowned Vision"
+**Theme**: Inspire/Motivation (The Road Back - Inspiring Cosmic Leadership)
+- **Scene 1**: 3/1/1320 - Dawn (The Royal Summons)
+- **Scene 2**: 3/1/1320 - Morning (The Crowned Vision)
+- **Scene 3**: 3/1/1320 - Afternoon (The Inspired Academy)
+
+#### Chapter 35: "The Burden of Ten"
+**Theme**: Ambition/Achievement (The Road Back - Mastering Cosmic Ambition)
+- **Scene 1**: 3/2/1320 - Dawn (The Weight of Ten Worlds)
+- **Scene 2**: 3/2/1320 - Morning (Carrying the Burden Forward)
+- **Scene 3**: 3/2/1320 - Afternoon (The Ambitious Foundation)
+
+#### Chapter 36: "The Three Convergences"
+**Theme**: Collaborations/Partnerships (Rescue from Without - Cosmic Collaboration)
+- **Scene 1**: 3/3/1320 - Dawn (The First Convergence)
+- **Scene 2**: 3/3/1320 - Morning (The Second Convergence)
+- **Scene 3**: 3/3/1320 - Afternoon (The Third Convergence)
+
+#### Chapter 37: "The Ace Ascendant" ⭐ CLIMAX ⭐
+**Theme**: Potentiality/Possibilities (The Resurrection - Cosmic Potential Unleashed)
+- **Scene 1**: 3/4/1320 - Dawn (The Universal Threat)
+- **Scene 2**: 3/4/1320 - Morning (The Ace Ascendant)
+- **Scene 3**: 3/4/1320 - Afternoon (The New Cosmic Order)
+
+#### Chapter 38: "The High Priestess Awakened" 📚 FALLING ACTION 📚
+**Theme**: Inner Knowledge/Self-Discovery (The Return with the Elixir - Inner Knowledge Integration)
+- **Scene 1**: 3/5/1320 - Dawn (The Awakened Consciousness)
+- **Scene 2**: 3/5/1320 - Morning (The Bridge Between Worlds)  
+- **Scene 3**: 3/5/1320 - Afternoon (The Elixir Prepared)
+
+## Timeline Guidelines for Remaining Book 1 Chapters
+
+### For Chapters 39-40 (Final Resolution):
+- **Next available date**: 3/6/1320
 - **Recommended pattern**: 1-3 days per chapter depending on narrative intensity
 - **Academy training chapters**: Often single-day intensive experiences
 - **Travel/quest chapters**: May span multiple days
@@ -174,8 +222,8 @@ All timeline dates are synchronized between:
 - Database `scenes` table (`historicalDate` field)
 - Future chapter generation scripts
 
-**Last Updated**: After Chapter 30 completion  
-**Next Update Required**: Before Chapter 31 creation
+**Last Updated**: After Chapter 38 completion - FALLING ACTION  
+**Next Update Required**: Before Chapter 39 creation
 
 ---
 
