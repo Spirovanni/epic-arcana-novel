@@ -65,10 +65,46 @@ This document provides the canonical timeline for the Epic Arcana series, starti
 - **Scene 2**: 2/14/1320 - Morning (Francisco's Story Comes Alive)
 - **Scene 3**: 2/14/1320 - Afternoon (Zara's Trial of Instant Innovation)
 
+#### Chapter 20: "The Trial of Echoing Temptations"
+**Theme**: Stability/Leadership (Supreme Ordeal)
+- **Scene 1**: 2/15/1320 - Dawn (The Summons from Beyond)
+- **Scene 2**: 2/15/1320 - Morning (The Mirror of Abandoned Dreams)
+- **Scene 3**: 2/15/1320 - Afternoon (The Guardian's Final Judgment)
+
+#### Chapter 21: "The Forge of Perseverance"
+**Theme**: Perseverance/Resilience (The Reward)
+- **Scene 1**: 2/16/1320 - Dawn (The Hall of Infinite Lessons)
+- **Scene 2**: 2/16/1320 - Morning (The Training of Endless Commitment)
+- **Scene 3**: 2/16/1320 - Afternoon (The Covenant of Eternal Service)
+
+#### Chapter 22: "The Treasury of Infinite Choices"
+**Theme**: Investing/Wealth (Strategic Resource Management)
+- **Scene 1**: 2/17/1320 - Dawn (The Master Treasurer's Welcome)
+- **Scene 2**: 2/17/1320 - Morning (The Investment Simulation)
+- **Scene 3**: 2/17/1320 - Afternoon (The Portfolio of Purpose)
+
+#### Chapter 23: "The Goddess of Mindful Direction"
+**Theme**: Direction/Mindfulness (The Meeting with a Goddess)
+- **Scene 1**: 2/18/1320 - Dawn (The Divine Revelation)
+- **Scene 2**: 2/18/1320 - Morning (The Temple of Present Moment)
+- **Scene 3**: 2/18/1320 - Afternoon (The Integration of Magician Mastery)
+
+#### Chapter 24: "The Harmonic Convergence"
+**Theme**: Harmony/Mindfulness (The Reward - Integration)
+- **Scene 1**: 2/19/1320 - Dawn (The Academy Crisis)
+- **Scene 2**: 2/19/1320 - Morning (The Harmonic Council)
+- **Scene 3**: 2/19/1320 - Afternoon (The Unified Academy Accords)
+
+#### Chapter 25: "The Phoenix Protocol"
+**Theme**: New Beginnings/Transformation (The Reward - Identity Transformation)
+- **Scene 1**: 2/20/1320 - Dawn (The Council's Recognition)
+- **Scene 2**: 2/20/1320 - Morning (The Death of Students)
+- **Scene 3**: 2/20/1320 - Afternoon (The Birth of Cosmic Agents)
+
 ## Timeline Guidelines for Future Chapters
 
-### For Chapter 20 and Beyond:
-- **Next available date**: 2/15/1320
+### For Chapter 26 and Beyond:
+- **Next available date**: 2/21/1320
 - **Recommended pattern**: 1-3 days per chapter depending on narrative intensity
 - **Academy training chapters**: Often single-day intensive experiences
 - **Travel/quest chapters**: May span multiple days
@@ -114,8 +150,8 @@ All timeline dates are synchronized between:
 - Database `scenes` table (`historicalDate` field)
 - Future chapter generation scripts
 
-**Last Updated**: After Chapter 19 completion  
-**Next Update Required**: Before Chapter 20 creation
+**Last Updated**: After Chapter 25 completion  
+**Next Update Required**: Before Chapter 26 creation
 
 ---
 
