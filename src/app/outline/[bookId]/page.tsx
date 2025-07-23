@@ -5,8 +5,6 @@ import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import WritingGuidanceCard from '@/components/WritingGuidanceCard';
-import WritingAssistantSidebar from '@/components/WritingAssistantSidebar';
 import { 
   ChevronRightIcon, 
   ChevronDownIcon,
@@ -16,144 +14,322 @@ import {
   PencilIcon,
   BookOpenIcon,
   SparklesIcon,
-  ClipboardDocumentListIcon
+  ClipboardDocumentListIcon,
+  CalendarDaysIcon,
+  MapPinIcon,
+  EyeIcon,
+  UserIcon,
+  HeartIcon,
+  PlayIcon,
+  CheckCircleIcon,
+  ClockIcon,
+  StarIcon,
+  BeakerIcon,
+  FireIcon,
+  TrophyIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
-interface TaskGroup {
+interface Scene {
   id: string;
+  sceneNumber: number;
   title: string;
   description: string;
-  type: string;
-  parentTaskGroupId: string | null;
-  children?: TaskGroup[];
+  setup: string;
+  beatGoal: string;
+  tarotSymbolism: string;
+  timeline_date: string;
+  timeline_variant: string;
+  location: string;
+  pov: string;
+  core_emotion: string;
+  scene_tone: string;
+}
+
+interface Chapter {
+  id: string;
+  title: string;
+  chapterNumber: number;
+  description: string;
+  summary: string;
+  plot: string;
+  heroJourneyBeat: string;
+  saveTheCatBeat: string;
+  focus: string;
+  focusArea: string;
+  colorTheme: {
+    name: string;
+    hex: string;
+    rgb: { red: number; green: number; blue: number };
+  };
+  tarotFamily: string;
+  tarotCardLink: string;
+  scenes: Scene[];
 }
 
 interface Book {
   id: string;
   title: string;
   bookNumber: number;
-}
-
-interface WritingGuidance {
-  id: string;
-  chapterId: string;
-  chapterNumber: number;
-  title: string;
-  chapter?: {
-    id: string;
-    title: string;
+  theme: {
+    color: string;
+    name: string;
     description: string;
-    iconPath: string;
-    colorTheme: {
-      name: string;
-      hex: string;
-    };
-  };
-  writingDetails: {
-    povType: string;
-    povCharacter: string;
-    tense: string;
-    whyThisPovAndTense: string;
-    summary: string;
-    keyPlotDevelopments: string[];
-    narrativeFunction: string[];
-    toneAndVisualPrompts: string[];
-    tipsForWriting: string[];
-    fullText: string;
-  };
-  writingProgress: {
-    isStarted: boolean;
-    wordCount: number;
-    completionRate: number;
-    lastUpdated: string;
   };
 }
 
-interface WritingStats {
+interface Stats {
   totalChapters: number;
-  chaptersStarted: number;
-  totalWords: number;
-  estimatedCompletionTime: number;
+  completedChapters: number;
+  totalScenes: number;
+  completedScenes: number;
+  completionPercentage: number;
 }
 
-const TaskGroupNode = ({ node, level = 0 }: { node: TaskGroup; level?: number }) => {
-  const [isExpanded, setIsExpanded] = useState(true);
-  const hasChildren = node.children && node.children.length > 0;
+interface OutlineData {
+  book: Book;
+  chapters: Chapter[];
+  stats: Stats;
+}
+
+const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: { 
+  chapter: Chapter; 
+  isExpanded: boolean; 
+  onToggleExpanded: () => void;
+}) => {
+  const [showScenes, setShowScenes] = useState(false);
   
-  const getNodeColor = (type: string) => {
-    switch (type.toLowerCase()) {
-      case 'major task group':
-        return 'bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-blue-200 dark:border-blue-800';
-      case 'specific task group':
-        return 'bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border-green-200 dark:border-green-800';
-      default:
-        return 'bg-gradient-to-r from-gray-50 to-slate-50 dark:from-gray-800/50 dark:to-slate-800/50 border-gray-200 dark:border-gray-700';
-    }
+  const getChapterIcon = (chapterNumber: number) => {
+    if (chapterNumber <= 10) return <RocketLaunchIcon className="w-5 h-5" />;
+    if (chapterNumber <= 20) return <BeakerIcon className="w-5 h-5" />;
+    if (chapterNumber <= 30) return <FireIcon className="w-5 h-5" />;
+    if (chapterNumber <= 39) return <StarIcon className="w-5 h-5" />;
+    return <TrophyIcon className="w-5 h-5" />;
   };
 
-  const getTypeIcon = (type: string) => {
-    switch (type.toLowerCase()) {
-      case 'major task group':
-        return hasChildren ? (isExpanded ? <FolderOpenIcon className="w-5 h-5" /> : <FolderIcon className="w-5 h-5" />) : <DocumentTextIcon className="w-5 h-5" />;
-      case 'specific task group':
-        return <DocumentTextIcon className="w-5 h-5" />;
-      default:
-        return <DocumentTextIcon className="w-5 h-5" />;
-    }
+  const getStoryPhase = (chapterNumber: number) => {
+    if (chapterNumber <= 10) return { name: "Beginning", color: "bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-200" };
+    if (chapterNumber <= 20) return { name: "Rising Action", color: "bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-200" };
+    if (chapterNumber <= 30) return { name: "Midpoint", color: "bg-purple-100 text-purple-800 dark:bg-purple-900/50 dark:text-purple-200" };
+    if (chapterNumber === 37) return { name: "Climax", color: "bg-red-100 text-red-800 dark:bg-red-900/50 dark:text-red-200" };
+    if (chapterNumber === 38) return { name: "Falling Action", color: "bg-orange-100 text-orange-800 dark:bg-orange-900/50 dark:text-orange-200" };
+    if (chapterNumber === 39) return { name: "Resolution", color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900/50 dark:text-indigo-200" };
+    if (chapterNumber === 40) return { name: "Grand Finale", color: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/50 dark:text-yellow-200" };
+    return { name: "Development", color: "bg-gray-100 text-gray-800 dark:bg-gray-900/50 dark:text-gray-200" };
   };
+
+  const phase = getStoryPhase(chapter.chapterNumber);
+  const isComplete = chapter.title && chapter.summary && chapter.scenes.length > 0;
 
   return (
-    <div className={`${level > 0 ? 'ml-6' : ''} mb-4`}>
-      <div className={`rounded-xl p-6 border shadow-lg hover:shadow-xl transition-all duration-200 ${getNodeColor(node.type)}`}>
-        <div className="flex items-start gap-4">
-          <div className="flex items-center gap-2">
-            <div className="text-blue-600 dark:text-blue-400">
-              {getTypeIcon(node.type)}
-            </div>
-            {hasChildren && (
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="p-1 rounded-md hover:bg-white/50 dark:hover:bg-black/20 transition-colors"
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden">
+      {/* Chapter Header */}
+      <div 
+        className="p-6 cursor-pointer"
+        onClick={onToggleExpanded}
+        style={{ 
+          background: `linear-gradient(135deg, ${chapter.colorTheme.hex}15 0%, ${chapter.colorTheme.hex}25 100%)`,
+          borderBottom: `2px solid ${chapter.colorTheme.hex}30`
+        }}
+      >
+        <div className="flex items-start justify-between">
+          <div className="flex items-start gap-4 flex-1">
+            <div className="flex items-center gap-3">
+              <div 
+                className="p-2 rounded-lg text-white shadow-lg"
+                style={{ backgroundColor: chapter.colorTheme.hex }}
               >
-                {isExpanded ? (
-                  <ChevronDownIcon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                ) : (
-                  <ChevronRightIcon className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                )}
-              </button>
-            )}
-          </div>
-          
-          <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-3 mb-2">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                {node.title}
-              </h3>
-              <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${
-                node.type.toLowerCase() === 'major task group' 
-                  ? 'bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-200' 
-                  : 'bg-green-100 dark:bg-green-900/50 text-green-800 dark:text-green-200'
-              }`}>
-                {node.type}
-              </span>
+                {getChapterIcon(chapter.chapterNumber)}
+              </div>
+              <div className="flex flex-col gap-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-semibold text-gray-600 dark:text-gray-400">
+                    Chapter {chapter.chapterNumber}
+                  </span>
+                  <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${phase.color}`}>
+                    {phase.name}
+                  </span>
+                  {isComplete && (
+                    <CheckCircleIcon className="w-4 h-4 text-green-500" />
+                  )}
+                </div>
+              </div>
             </div>
             
-            {node.description && (
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                {node.description}
-              </p>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight">
+                {chapter.title || `Chapter ${chapter.chapterNumber}`}
+              </h3>
+              
+              <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mb-3">
+                <div className="flex items-center gap-1">
+                  <SparklesIcon className="w-4 h-4" />
+                  <span>{chapter.focus || chapter.focusArea || 'Theme TBD'}</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <DocumentTextIcon className="w-4 h-4" />
+                  <span>{chapter.scenes.length} scenes</span>
+                </div>
+                {chapter.tarotFamily && (
+                  <div className="flex items-center gap-1">
+                    <StarIcon className="w-4 h-4" />
+                    <span>{chapter.tarotFamily}</span>
+                  </div>
+                )}
+              </div>
+              
+              {chapter.heroJourneyBeat && (
+                <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Hero's Journey:</strong> {chapter.heroJourneyBeat.split(' - ')[0]}
+                </div>
+              )}
+              
+              {chapter.summary && (
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2">
+                  {chapter.summary}
+                </p>
+              )}
+            </div>
+          </div>
+          
+          <div className="flex items-center gap-2 ml-4">
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowScenes(!showScenes);
+              }}
+              className="p-2 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-white/80 dark:hover:bg-black/40 transition-colors"
+              title="Toggle scenes"
+            >
+              <DocumentTextIcon className="w-4 h-4" />
+            </button>
+            <Link 
+              href={`/chapters/${chapter.id}`}
+              onClick={(e) => e.stopPropagation()}
+              className="p-2 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-white/80 dark:hover:bg-black/40 transition-colors"
+              title="View chapter"
+            >
+              <EyeIcon className="w-4 h-4" />
+            </Link>
+            <div className="p-1">
+              {isExpanded ? (
+                <ChevronDownIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              ) : (
+                <ChevronRightIcon className="w-5 h-5 text-gray-600 dark:text-gray-400" />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Expanded Content */}
+      {isExpanded && (
+        <div className="p-6 space-y-6">
+          {/* Chapter Details */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {chapter.plot && (
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Plot</h4>
+                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                  {chapter.plot}
+                </p>
+              </div>
+            )}
+            
+            {chapter.heroJourneyBeat && (
+              <div>
+                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Hero's Journey</h4>
+                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                  {chapter.heroJourneyBeat}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex gap-3">
+            <Link 
+              href={`/chapters/${chapter.id}`}
+              className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors text-sm font-medium"
+            >
+              <BookOpenIcon className="w-4 h-4" />
+              View Chapter
+            </Link>
+            {chapter.tarotCardLink && (
+              <a 
+                href={chapter.tarotCardLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors text-sm font-medium"
+              >
+                <StarIcon className="w-4 h-4" />
+                Tarot Card
+              </a>
             )}
           </div>
         </div>
-        
-        {hasChildren && isExpanded && (
-          <div className="mt-6 space-y-4">
-            {node.children?.map((child) => (
-              <TaskGroupNode key={child.id} node={child} level={level + 1} />
-            ))}
+      )}
+
+      {/* Scenes */}
+      {showScenes && chapter.scenes.length > 0 && (
+        <div className="border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50">
+          <div className="p-6">
+            <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
+              <DocumentTextIcon className="w-4 h-4" />
+              Scenes ({chapter.scenes.length})
+            </h4>
+            <div className="space-y-3">
+              {chapter.scenes.map((scene) => (
+                <div 
+                  key={scene.id}
+                  className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
+                >
+                  <div className="flex items-start justify-between mb-2">
+                    <h5 className="font-medium text-gray-900 dark:text-gray-100">
+                      Scene {scene.sceneNumber}: {scene.title || 'Untitled Scene'}
+                    </h5>
+                    <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
+                      {scene.timeline_date && (
+                        <div className="flex items-center gap-1">
+                          <CalendarDaysIcon className="w-3 h-3" />
+                          {scene.timeline_date}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    {scene.location && (
+                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                        <MapPinIcon className="w-3 h-3" />
+                        <span>{scene.location}</span>
+                      </div>
+                    )}
+                    {scene.pov && (
+                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                        <UserIcon className="w-3 h-3" />
+                        <span>{scene.pov}</span>
+                      </div>
+                    )}
+                    {scene.core_emotion && (
+                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
+                        <HeartIcon className="w-3 h-3" />
+                        <span>{scene.core_emotion}</span>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {scene.setup && (
+                    <p className="text-gray-700 dark:text-gray-300 text-sm mt-3 leading-relaxed">
+                      {scene.setup}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -162,64 +338,23 @@ export default function OutlinePage() {
   const params = useParams();
   const router = useRouter();
   const bookId = params.bookId as string;
-  const [outline, setOutline] = useState<TaskGroup[]>([]);
-  const [book, setBook] = useState<Book | null>(null);
+  const [outlineData, setOutlineData] = useState<OutlineData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [viewMode, setViewMode] = useState<'outline' | 'writing'>('outline');
-  const [writingGuidance, setWritingGuidance] = useState<WritingGuidance[]>([]);
-  const [writingStats, setWritingStats] = useState<WritingStats | null>(null);
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
-  const [showWritingAssistant, setShowWritingAssistant] = useState(false);
-  const [currentChapter] = useState<WritingGuidance | null>(null);
+  const [viewMode, setViewMode] = useState<'grid' | 'timeline'>('grid');
 
   useEffect(() => {
     if (!bookId) return;
 
     async function fetchData() {
       try {
-        // Fetch all data in parallel
-        const [outlineResponse, bookResponse, writingGuidanceResponse] = await Promise.all([
-          fetch(`/api/outline/${bookId}`),
-          fetch(`/api/books/${bookId}`),
-          fetch(`/api/books/${bookId}/writing-guidance`)
-        ]);
-
-        if (outlineResponse.ok) {
-          const taskGroups: TaskGroup[] = await outlineResponse.json();
-          
-          const taskGroupMap = new Map(taskGroups.map(tg => [tg.id, { ...tg, children: [] as TaskGroup[] }]));
-          const hierarchy: TaskGroup[] = [];
-
-          for(const tg of taskGroups) {
-              if(tg.parentTaskGroupId && taskGroupMap.has(tg.parentTaskGroupId)) {
-                  const parent = taskGroupMap.get(tg.parentTaskGroupId);
-                  const child = taskGroupMap.get(tg.id);
-                  if (parent && child) {
-                      parent.children.push(child);
-                  }
-              } else if (!tg.parentTaskGroupId) {
-                  const rootItem = taskGroupMap.get(tg.id);
-                  if (rootItem) {
-                      hierarchy.push(rootItem);
-                  }
-              }
-          }
-          
-          setOutline(hierarchy);
-        }
-
-        if (bookResponse.ok) {
-          const bookData = await bookResponse.json();
-          setBook(bookData);
-        }
-
-        if (writingGuidanceResponse.ok) {
-          const guidanceData = await writingGuidanceResponse.json();
-          setWritingGuidance(guidanceData.guidance || []);
-          setWritingStats(guidanceData.stats || null);
+        const response = await fetch(`/api/books/${bookId}/outline-complete`);
+        if (response.ok) {
+          const data = await response.json();
+          setOutlineData(data);
         }
       } catch (error) {
-        console.error('Failed to fetch data:', error);
+        console.error('Failed to fetch outline data:', error);
       } finally {
         setLoading(false);
       }
@@ -228,223 +363,198 @@ export default function OutlinePage() {
     fetchData();
   }, [bookId]);
 
+  const toggleChapterExpanded = (chapterId: string) => {
+    const newExpanded = new Set(expandedChapters);
+    if (newExpanded.has(chapterId)) {
+      newExpanded.delete(chapterId);
+    } else {
+      newExpanded.add(chapterId);
+    }
+    setExpandedChapters(newExpanded);
+  };
+
+  const expandAll = () => {
+    if (outlineData) {
+      setExpandedChapters(new Set(outlineData.chapters.map(c => c.id)));
+    }
+  };
+
+  const collapseAll = () => {
+    setExpandedChapters(new Set());
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <Navbar />
         <Breadcrumbs items={[
           { label: 'Books', href: '/books' },
-          { label: book?.title || 'Loading...', href: `/books/${bookId}` },
+          { label: 'Loading...', href: `/books/${bookId}` },
           { label: 'Outline', current: true }
         ]} />
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 dark:border-indigo-400 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading outline...</p>
+            <p className="text-gray-600 dark:text-gray-400">Loading epic outline...</p>
           </div>
         </div>
       </div>
     );
   }
 
+  if (!outlineData) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+        <Navbar />
+        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+          <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Outline Not Found</h1>
+          <p className="text-gray-600 dark:text-gray-400">We couldn't load the outline for this book.</p>
+        </div>
+      </div>
+    );
+  }
+
+  const { book, chapters, stats } = outlineData;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <Navbar />
       <Breadcrumbs items={[
         { label: 'Books', href: '/books' },
-        { label: book?.title || 'Book', href: `/books/${bookId}` },
-        { label: 'Story Outline', current: true }
+        { label: book.title, href: `/books/${bookId}` },
+        { label: 'Epic Outline', current: true }
       ]} />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
+        {/* Epic Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-200 text-sm font-semibold mb-4">
-            {book && `Book ${book.bookNumber}`}
+          <div 
+            className="inline-flex items-center px-6 py-3 rounded-full text-white font-bold text-lg mb-6 shadow-lg"
+            style={{ backgroundColor: book.theme.color }}
+          >
+            <TrophyIcon className="w-6 h-6 mr-2" />
+            Book {book.bookNumber}: {book.theme.name}
           </div>
-          <h1 className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-4">
-            {book?.title} - {viewMode === 'writing' ? 'Writing Guide' : 'Story Outline'}
+          <h1 className="text-5xl font-black bg-gradient-to-r from-gray-900 to-gray-600 dark:from-gray-100 dark:to-gray-400 bg-clip-text text-transparent mb-4">
+            {book.title}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            {viewMode === 'writing' 
-              ? 'Comprehensive writing guidance for each chapter with AI-powered assistance.'
-              : 'Explore the hierarchical structure of task groups that drive the narrative forward.'
-            }
+          <p className="text-2xl text-gray-600 dark:text-gray-400 mb-6 font-medium">
+            {book.theme.description}
           </p>
-          
-          {/* Mode Toggle */}
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <div className="flex bg-white dark:bg-gray-800 rounded-lg p-1 shadow-lg">
-              <button
-                onClick={() => setViewMode('outline')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
-                  viewMode === 'outline'
-                    ? 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
-                }`}
-              >
-                <ClipboardDocumentListIcon className="w-4 h-4" />
-                Story Outline
-              </button>
-              <button
-                onClick={() => setViewMode('writing')}
-                className={`flex items-center gap-2 px-4 py-2 rounded-md transition-colors ${
-                  viewMode === 'writing'
-                    ? 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300'
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
-                }`}
-              >
-                <PencilIcon className="w-4 h-4" />
-                Writing Guide
-              </button>
-            </div>
-            
-            {viewMode === 'writing' && (
-              <button
-                onClick={() => setShowWritingAssistant(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors shadow-lg"
-              >
-                <SparklesIcon className="w-4 h-4" />
-                Writing Assistant
-              </button>
-            )}
+          <div className="text-lg text-gray-500 dark:text-gray-500">
+            Francisco's Epic Journey from Law Student to Master of Two Worlds
           </div>
           
-          <div className="mt-6">
+          <div className="mt-8">
             <Link 
               href={`/books/${bookId}`}
-              className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-bold rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16l-4-4m0 0l4-4m-4 4h18" />
-              </svg>
-              Back to Chapters
+              <RocketLaunchIcon className="w-6 h-6 mr-3" />
+              Explore Chapters
             </Link>
           </div>
         </div>
 
-        {/* Stats */}
-        {outline.length > 0 && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-              <div className="text-3xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">
-                {outline.length}
-              </div>
-              <div className="text-gray-600 dark:text-gray-400">Root Task Groups</div>
+        {/* Epic Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-100 dark:from-green-900/30 dark:to-emerald-900/30 rounded-xl shadow-lg p-6 text-center border-2 border-green-200 dark:border-green-800">
+            <div className="text-4xl font-black text-green-600 dark:text-green-400 mb-2">
+              {stats.totalChapters}
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {outline.reduce((acc, node) => acc + (node.children?.length || 0), 0)}
-              </div>
-              <div className="text-gray-600 dark:text-gray-400">Sub Task Groups</div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                {outline.reduce((acc, node) => acc + 1 + (node.children?.length || 0), 0)}
-              </div>
-              <div className="text-gray-600 dark:text-gray-400">Total Elements</div>
-            </div>
+            <div className="text-green-800 dark:text-green-200 font-semibold">Total Chapters</div>
           </div>
-        )}
-
-        {/* Content */}
-        <div className="space-y-6">
-          {viewMode === 'outline' ? (
-            /* Outline Content */
-            outline.length === 0 ? (
-              <div className="text-center py-12">
-                <DocumentTextIcon className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No Outline Available</h3>
-                <p className="text-gray-500 dark:text-gray-500">This book doesn&apos;t have any task groups defined yet.</p>
-              </div>
-            ) : (
-              outline.map((node) => (
-                <TaskGroupNode key={node.id} node={node} />
-              ))
-            )
-          ) : (
-            /* Writing Guide Content */
-            <div className="space-y-6">
-              {/* Writing Stats */}
-              {writingStats && (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                      {writingStats.totalChapters}
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-400">Total Chapters</div>
-                  </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                      {writingStats.chaptersStarted}
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-400">Started</div>
-                  </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                      {writingStats.totalWords.toLocaleString()}
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-400">Words Written</div>
-                  </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 text-center">
-                    <div className="text-3xl font-bold text-amber-600 dark:text-amber-400 mb-2">
-                      {writingStats.estimatedCompletionTime}h
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-400">Est. Time</div>
-                  </div>
-                </div>
-              )}
-
-              {/* Writing Guidance Cards */}
-              {writingGuidance.length === 0 ? (
-                <div className="text-center py-12">
-                  <BookOpenIcon className="w-16 h-16 text-gray-400 dark:text-gray-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-600 dark:text-gray-400 mb-2">No Writing Guidance Available</h3>
-                  <p className="text-gray-500 dark:text-gray-500">Writing guidance hasn&apos;t been imported for this book yet.</p>
-                </div>
-              ) : (
-                writingGuidance.map((guidance) => (
-                  <WritingGuidanceCard
-                    key={guidance.id}
-                    guidance={guidance}
-                    isExpanded={expandedChapters.has(guidance.id)}
-                    onToggleExpanded={() => {
-                      const newExpanded = new Set(expandedChapters);
-                      if (newExpanded.has(guidance.id)) {
-                        newExpanded.delete(guidance.id);
-                      } else {
-                        newExpanded.add(guidance.id);
-                      }
-                      setExpandedChapters(newExpanded);
-                    }}
-                    onStartWriting={(chapterId) => {
-                      router.push(`/chapters/${chapterId}`);
-                    }}
-                    onViewChapter={(chapterId) => {
-                      router.push(`/chapters/${chapterId}`);
-                    }}
-                  />
-                ))
-              )}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-xl shadow-lg p-6 text-center border-2 border-blue-200 dark:border-blue-800">
+            <div className="text-4xl font-black text-blue-600 dark:text-blue-400 mb-2">
+              {stats.completedChapters}
             </div>
-          )}
+            <div className="text-blue-800 dark:text-blue-200 font-semibold">Completed</div>
+          </div>
+          <div className="bg-gradient-to-br from-purple-50 to-violet-100 dark:from-purple-900/30 dark:to-violet-900/30 rounded-xl shadow-lg p-6 text-center border-2 border-purple-200 dark:border-purple-800">
+            <div className="text-4xl font-black text-purple-600 dark:text-purple-400 mb-2">
+              {stats.totalScenes}
+            </div>
+            <div className="text-purple-800 dark:text-purple-200 font-semibold">Total Scenes</div>
+          </div>
+          <div className="bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-900/30 dark:to-red-900/30 rounded-xl shadow-lg p-6 text-center border-2 border-orange-200 dark:border-orange-800">
+            <div className="text-4xl font-black text-orange-600 dark:text-orange-400 mb-2">
+              {stats.completedScenes}
+            </div>
+            <div className="text-orange-800 dark:text-orange-200 font-semibold">Epic Scenes</div>
+          </div>
+          <div className="bg-gradient-to-br from-yellow-50 to-amber-100 dark:from-yellow-900/30 dark:to-amber-900/30 rounded-xl shadow-lg p-6 text-center border-2 border-yellow-200 dark:border-yellow-800">
+            <div className="text-4xl font-black text-yellow-600 dark:text-yellow-400 mb-2">
+              {stats.completionPercentage}%
+            </div>
+            <div className="text-yellow-800 dark:text-yellow-200 font-semibold">Complete</div>
+          </div>
+        </div>
+
+        {/* Controls */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+              Chapter Journey
+            </h2>
+            <span className="text-gray-500 dark:text-gray-400">
+              • {chapters.length} chapters of epic adventure
+            </span>
+          </div>
+          
+          <div className="flex items-center gap-4">
+            <button
+              onClick={expandAll}
+              className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg hover:bg-indigo-200 dark:hover:bg-indigo-900/70 transition-colors text-sm font-medium"
+            >
+              Expand All
+            </button>
+            <button
+              onClick={collapseAll}
+              className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+            >
+              Collapse All
+            </button>
+          </div>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Story Progress</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400">{stats.completionPercentage}% complete</span>
+          </div>
+          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
+            <div 
+              className="bg-gradient-to-r from-green-500 to-emerald-500 h-3 rounded-full transition-all duration-500 shadow-sm"
+              style={{ width: `${stats.completionPercentage}%` }}
+            ></div>
+          </div>
+        </div>
+
+        {/* Chapters */}
+        <div className="space-y-6">
+          {chapters.map((chapter) => (
+            <ChapterCard
+              key={chapter.id}
+              chapter={chapter}
+              isExpanded={expandedChapters.has(chapter.id)}
+              onToggleExpanded={() => toggleChapterExpanded(chapter.id)}
+            />
+          ))}
+        </div>
+
+        {/* Epic Footer */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold text-lg shadow-lg">
+            <SparklesIcon className="w-6 h-6 mr-2" />
+            Epic Arcana: The Master's Journey Complete!
+            <SparklesIcon className="w-6 h-6 ml-2" />
+          </div>
+          <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">
+            From ambitious law student to Master of Two Worlds in {chapters.length} epic chapters
+          </p>
         </div>
       </div>
-
-      {/* Writing Assistant Sidebar */}
-      <WritingAssistantSidebar
-        isOpen={showWritingAssistant}
-        onClose={() => setShowWritingAssistant(false)}
-        currentChapter={currentChapter ? {
-          id: currentChapter.chapterId,
-          number: currentChapter.chapterNumber,
-          title: currentChapter.title,
-          guidance: currentChapter.writingDetails
-        } : undefined}
-        onStartSession={(chapterId) => {
-          router.push(`/chapters/${chapterId}`);
-        }}
-      />
     </div>
   );
 }
