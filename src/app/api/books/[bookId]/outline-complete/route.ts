@@ -44,23 +44,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     }
 
     const chapterIds = bookChapters.map(c => c.id);
-    const allScenes = await db.select({
-      id: scenes.id,
-      chapterId: scenes.chapterId,
-      sceneNumber: scenes.sceneNumber,
-      title: scenes.title,
-      description: scenes.description,
-      setup: scenes.setup,
-      beatGoal: scenes.beatGoal,
-      tarotSymbolism: scenes.tarotSymbolism,
-      timeline_date: scenes.timeline_date,
-      timeline_variant: scenes.timeline_variant,
-      location: scenes.location,
-      pov: scenes.pov,
-      core_emotion: scenes.core_emotion,
-      scene_tone: scenes.scene_tone
-    }).from(scenes).where(eq(scenes.chapterId, chapterIds[0])); // Start with first chapter
-
+    
     // Get scenes for all chapters
     const scenesByChapter = new Map();
     for (const chapterId of chapterIds) {
