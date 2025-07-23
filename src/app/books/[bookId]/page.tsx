@@ -21,6 +21,29 @@ interface Chapter {
   };
 }
 
+interface Scene {
+  id: string;
+  chapterId: string;
+  sceneNumber: number;
+  title: string;
+  description?: string;
+  setup?: string;
+  beatGoal?: string;
+  pov?: string;
+  location?: string;
+  timeline_date?: string;
+  core_emotion?: string;
+  scene_tone?: string;
+  primaryTarotCard?: string;
+  chapter?: {
+    title: string;
+    chapterNumber: number;
+    colorTheme: {
+      hex: string;
+    };
+  };
+}
+
 // Enhanced helper functions for sophisticated styling
 const getTextColor = (bgColor: string): 'text-white' | 'text-black' => {
     if (!bgColor) return 'text-black';
@@ -74,30 +97,56 @@ export default function BookDetailPage() {
   const params = useParams();
   const bookId = params.bookId as string;
   const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [scenes, setScenes] = useState<Scene[]>([]);
   const [bookNumber, setBookNumber] = useState<number>(1);
   const [bookTitle, setBookTitle] = useState<string>('');
   const [bookPrimaryColor, setBookPrimaryColor] = useState<string>('#6366f1');
   const [loading, setLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<'chapters' | 'scenes'>('chapters');
 
   useEffect(() => {
     if (!bookId) return;
-    async function fetchChapters() {
+    async function fetchBookData() {
       try {
-        const response = await fetch(`/api/books/${bookId}/chapters`);
-        if (response.ok) {
-          const data = await response.json();
-          setChapters(data.chapters);
-          setBookNumber(data.book.bookNumber);
-          setBookTitle(data.book.title);
-          setBookPrimaryColor(data.book.primaryColor || '#FFA500');
+        const [chaptersResponse, outlineResponse] = await Promise.all([
+          fetch(`/api/books/${bookId}/chapters`),
+          fetch(`/api/books/${bookId}/outline-complete`)
+        ]);
+        
+        if (chaptersResponse.ok) {
+          const chaptersData = await chaptersResponse.json();
+          setChapters(chaptersData.chapters);
+          setBookNumber(chaptersData.book.bookNumber);
+          setBookTitle(chaptersData.book.title);
+          setBookPrimaryColor(chaptersData.book.primaryColor || '#FFA500');
+        }
+        
+        if (outlineResponse.ok) {
+          const outlineData = await outlineResponse.json();
+          const allScenes: Scene[] = [];
+          outlineData.chapters.forEach((chapter: Chapter & { scenes?: Scene[] }) => {
+            if (chapter.scenes) {
+              chapter.scenes.forEach((scene: Scene) => {
+                allScenes.push({
+                  ...scene,
+                  chapter: {
+                    title: chapter.title,
+                    chapterNumber: chapter.chapterNumber,
+                    colorTheme: chapter.colorTheme
+                  }
+                });
+              });
+            }
+          });
+          setScenes(allScenes);
         }
       } catch (error) {
-        console.error('Failed to fetch chapters:', error);
+        console.error('Failed to fetch book data:', error);
       } finally {
         setLoading(false);
       }
     }
-    fetchChapters();
+    fetchBookData();
   }, [bookId]);
 
   if (loading) {
@@ -154,7 +203,7 @@ export default function BookDetailPage() {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-light mb-8">
-            Explore the <span className="font-bold" style={{ color: bookPrimaryColor }}>{chapters.length} chapters</span> of this transformative journey through time and consciousness.
+            Explore the <span className="font-bold" style={{ color: bookPrimaryColor }}>{chapters.length} chapters</span> and <span className="font-bold" style={{ color: bookPrimaryColor }}>{scenes.length} scenes</span> of this transformative journey through time and consciousness.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
@@ -193,7 +242,51 @@ export default function BookDetailPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-8">
+        {/* Tabs Navigation */}
+        <div className="flex justify-center mb-12">
+          <div className="flex bg-white/10 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl p-2 border border-gray-200/20 dark:border-gray-700/30">
+            <button
+              onClick={() => setActiveTab('chapters')}
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2
+                ${activeTab === 'chapters' 
+                  ? 'text-white shadow-lg' 
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              style={{
+                background: activeTab === 'chapters' 
+                  ? `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})` 
+                  : 'transparent'
+              }}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Chapters ({chapters.length})
+            </button>
+            <button
+              onClick={() => setActiveTab('scenes')}
+              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2
+                ${activeTab === 'scenes' 
+                  ? 'text-white shadow-lg' 
+                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
+                }`}
+              style={{
+                background: activeTab === 'scenes' 
+                  ? `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})` 
+                  : 'transparent'
+              }}
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              All Scenes ({scenes.length})
+            </button>
+          </div>
+        </div>
+
+        {/* Chapters Tab Content */}
+        {activeTab === 'chapters' && (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-8">
         {chapters.map((chapter) => {
           const iconPath = getChapterIconPath(chapter, bookNumber);
           const textColor = getTextColor(chapter.colorTheme?.hex);
@@ -277,10 +370,94 @@ export default function BookDetailPage() {
             </Link>
           );
         })}
-        </div>
+          </div>
+        )}
         
-        {/* Enhanced footer section */}
-        {chapters.length === 0 && (
+        {/* Scenes Tab Content */}
+        {activeTab === 'scenes' && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {scenes.map((scene) => {
+              const chapterHex = scene.chapter?.colorTheme?.hex || bookPrimaryColor;
+              const textColor = getTextColor(chapterHex);
+              
+              return (
+                <Link
+                  key={scene.id}
+                  href={`/scenes/${scene.id}`}
+                  className="group block bg-white/10 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-gray-200/20 dark:border-gray-700/30 hover:bg-white/20 dark:hover:bg-gray-700/50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
+                >
+                  {/* Scene Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div 
+                        className={`px-3 py-1 rounded-lg font-bold text-sm ${textColor} shadow-lg`}
+                        style={{
+                          background: `linear-gradient(135deg, ${chapterHex}80, ${chapterHex}A0)`,
+                        }}
+                      >
+                        Ch{scene.chapter?.chapterNumber} • S{scene.sceneNumber}
+                      </div>
+                      {scene.primaryTarotCard && (
+                        <div className="text-2xl" title={`Tarot: ${scene.primaryTarotCard}`}>
+                          🔮
+                        </div>
+                      )}
+                    </div>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  
+                  {/* Scene Title */}
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-opacity-80 transition-colors">
+                    {scene.title}
+                  </h3>
+                  
+                  {/* Chapter Context */}
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                    {scene.chapter?.title}
+                  </p>
+                  
+                  {/* Scene Details */}
+                  <div className="space-y-2 text-sm">
+                    {scene.description && (
+                      <p className="text-gray-700 dark:text-gray-300 line-clamp-2">
+                        {scene.description}
+                      </p>
+                    )}
+                    
+                    {/* Metadata Row */}
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {scene.pov && (
+                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-md text-xs">
+                          POV: {scene.pov}
+                        </span>
+                      )}
+                      {scene.location && (
+                        <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-md text-xs">
+                          📍 {scene.location}
+                        </span>
+                      )}
+                      {scene.core_emotion && (
+                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-md text-xs">
+                          💭 {scene.core_emotion}
+                        </span>
+                      )}
+                      {scene.timeline_date && (
+                        <span className="px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-md text-xs">
+                          📅 {scene.timeline_date}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        )}
+        
+        {/* Empty States */}
+        {activeTab === 'chapters' && chapters.length === 0 && (
           <div className="text-center py-16">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full mb-6">
               <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -289,6 +466,18 @@ export default function BookDetailPage() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">No Chapters Yet</h3>
             <p className="text-gray-600 dark:text-gray-400">This book&apos;s chapters are still being prepared for your journey.</p>
+          </div>
+        )}
+        
+        {activeTab === 'scenes' && scenes.length === 0 && (
+          <div className="text-center py-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full mb-6">
+              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">No Scenes Yet</h3>
+            <p className="text-gray-600 dark:text-gray-400">This book&apos;s scenes are still being crafted for your adventure.</p>
           </div>
         )}
       </div>
