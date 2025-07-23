@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
@@ -46,9 +46,6 @@ interface Chapter {
   chapterNumber: number;
   description: string;
   summary: string;
-  plot: string;
-  heroJourneyBeat: string;
-  saveTheCatBeat: string;
   focus: string;
   focusArea: string;
   colorTheme: {
@@ -172,11 +169,6 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
                 )}
               </div>
               
-              {chapter.heroJourneyBeat && (
-                <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                  <strong>Hero's Journey:</strong> {chapter.heroJourneyBeat.split(' - ')[0]}
-                </div>
-              )}
               
               {chapter.summary && (
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2">
@@ -220,25 +212,14 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
       {isExpanded && (
         <div className="p-6 space-y-6">
           {/* Chapter Details */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {chapter.plot && (
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Plot</h4>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                  {chapter.plot}
-                </p>
-              </div>
-            )}
-            
-            {chapter.heroJourneyBeat && (
-              <div>
-                <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Hero's Journey</h4>
-                <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                  {chapter.heroJourneyBeat}
-                </p>
-              </div>
-            )}
-          </div>
+          {chapter.description && (
+            <div>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Description</h4>
+              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                {chapter.description}
+              </p>
+            </div>
+          )}
 
           {/* Action Buttons */}
           <div className="flex gap-3">
@@ -330,12 +311,10 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
 
 export default function OutlinePage() {
   const params = useParams();
-  const router = useRouter();
   const bookId = params.bookId as string;
   const [outlineData, setOutlineData] = useState<OutlineData | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
-  const [viewMode, setViewMode] = useState<'grid' | 'timeline'>('grid');
 
   useEffect(() => {
     if (!bookId) return;
@@ -402,7 +381,7 @@ export default function OutlinePage() {
         <Navbar />
         <div className="max-w-4xl mx-auto px-4 py-12 text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Outline Not Found</h1>
-          <p className="text-gray-600 dark:text-gray-400">We couldn't load the outline for this book.</p>
+          <p className="text-gray-600 dark:text-gray-400">We couldn&apos;t load the outline for this book.</p>
         </div>
       </div>
     );
@@ -436,7 +415,7 @@ export default function OutlinePage() {
             {book.theme.description}
           </p>
           <div className="text-lg text-gray-500 dark:text-gray-500">
-            Francisco's Epic Journey from Law Student to Master of Two Worlds
+            Francisco&apos;s Epic Journey from Law Student to Master of Two Worlds
           </div>
           
           <div className="mt-8">
@@ -541,7 +520,7 @@ export default function OutlinePage() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-bold text-lg shadow-lg">
             <SparklesIcon className="w-6 h-6 mr-2" />
-            Epic Arcana: The Master's Journey Complete!
+            Epic Arcana: The Master&apos;s Journey Complete!
             <SparklesIcon className="w-6 h-6 ml-2" />
           </div>
           <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">

@@ -20,9 +20,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       chapterNumber: chapters.chapterNumber,
       description: chapters.description,
       summary: chapters.summary,
-      plot: chapters.plot,
-      heroJourneyBeat: chapters.heroJourneyBeat,
-      saveTheCatBeat: chapters.saveTheCatBeat,
       focus: chapters.focus,
       focusArea: chapters.focusArea,
       colorName: chapters.colorName,
@@ -87,7 +84,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     const totalScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) => sum + scenes.length, 0);
     const completedChapters = chaptersWithScenes.filter(c => c.title && c.summary && c.scenes.length > 0).length;
     const completedScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) => 
-      sum + scenes.filter(s => s.title && s.setup).length, 0);
+      sum + scenes.filter((s: { title: string | null; setup: string | null }) => s.title && s.setup).length, 0);
 
     // Get book theme based on book number
     const getBookTheme = (bookNumber: number) => {
