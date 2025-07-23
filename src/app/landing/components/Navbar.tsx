@@ -20,6 +20,14 @@ export function Navbar() {
 
   const featureItems = [
     {
+      title: 'Epic Arcana Book 1 Outline',
+      description: 'Complete interactive outline of Francisco\'s journey from law student to Master of Two Worlds',
+      href: '/outline/3e26f59f-da2d-4f26-acd6-f68ed1a4af8d',
+      icon: '📖',
+      category: 'Core Features',
+      featured: true
+    },
+    {
       title: 'Chapter-Centric World Map',
       description: 'Interactive map connecting chapters to locations and lore',
       href: '/features/world-map',
