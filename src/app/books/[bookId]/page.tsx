@@ -106,8 +106,10 @@ export default function BookDetailPage() {
 
   useEffect(() => {
     if (!bookId) return;
+    console.log('🔍 Fetching data for book ID:', bookId);
     async function fetchBookData() {
       try {
+        console.log('📞 Making API calls...');
         const [chaptersResponse, outlineResponse] = await Promise.all([
           fetch(`/api/books/${bookId}/chapters`),
           fetch(`/api/books/${bookId}/outline-complete`)
@@ -123,8 +125,10 @@ export default function BookDetailPage() {
         
         if (outlineResponse.ok) {
           const outlineData = await outlineResponse.json();
+          console.log('📖 Book outline data:', outlineData);
           const allScenes: Scene[] = [];
           outlineData.chapters.forEach((chapter: Chapter & { scenes?: Scene[] }) => {
+            console.log(`📑 Chapter "${chapter.title}": ${chapter.scenes?.length || 0} scenes`);
             if (chapter.scenes) {
               chapter.scenes.forEach((scene: Scene) => {
                 allScenes.push({
@@ -138,6 +142,7 @@ export default function BookDetailPage() {
               });
             }
           });
+          console.log(`🎬 Total scenes loaded: ${allScenes.length}`);
           setScenes(allScenes);
         }
       } catch (error) {
@@ -375,7 +380,14 @@ export default function BookDetailPage() {
         
         {/* Scenes Tab Content */}
         {activeTab === 'scenes' && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <>
+            {/* Debug info */}
+            <div className="mb-4 p-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+              <p className="text-sm text-blue-800 dark:text-blue-200">
+                Debug: Found {scenes.length} scenes in {chapters.length} chapters for book ID: {bookId}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {scenes.map((scene) => {
               const chapterHex = scene.chapter?.colorTheme?.hex || bookPrimaryColor;
               const textColor = getTextColor(chapterHex);
@@ -453,7 +465,8 @@ export default function BookDetailPage() {
                 </Link>
               );
             })}
-          </div>
+            </div>
+          </>
         )}
         
         {/* Empty States */}
