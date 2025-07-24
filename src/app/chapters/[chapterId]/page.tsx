@@ -244,6 +244,7 @@ interface Scene {
   title: string;
   focus: string;
   description: string;
+  beatGoal?: string;
   tarotSymbolism: string;
   heroJourneyStage: string;
   pages: string;
@@ -351,6 +352,49 @@ const adjustBrightness = (hex: string, percent: number) => {
     (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
 };
 
+// Format chapter data for Sudowrite
+const formatChapterForSudowrite = (chapter: Chapter, scenes: Scene[]): string => {
+  const parts = [];
+  
+  // Chapter Header
+  parts.push(`CHAPTER ${chapter.chapterNumber}: ${chapter.title}`);
+  parts.push('='.repeat(50));
+  parts.push('');
+  
+  // Chapter Summary
+  if (chapter.summary) {
+    parts.push('CHAPTER SUMMARY:');
+    parts.push(chapter.summary);
+    parts.push('');
+  }
+  
+  // Chapter Description
+  if (chapter.description) {
+    parts.push('CHAPTER DESCRIPTION:');
+    parts.push(chapter.description);
+    parts.push('');
+  }
+  
+  // Scene Beat Goals
+  if (scenes.length > 0) {
+    parts.push('SCENE BEAT GOALS:');
+    parts.push('-'.repeat(30));
+    scenes.forEach((scene, index) => {
+      parts.push(`Scene ${scene.sceneNumber}: ${scene.title}`);
+      if (scene.beatGoal) {
+        parts.push(`Beat Goal: ${scene.beatGoal}`);
+      } else if (scene.focus) {
+        parts.push(`Focus: ${scene.focus}`);
+      }
+      if (index < scenes.length - 1) {
+        parts.push('');
+      }
+    });
+  }
+  
+  return parts.join('\n');
+};
+
 const getChapterIconPath = (chapter: Chapter, bookNumber: number): string => {
   if (chapter.iconPath) {
     return `/icons/${chapter.iconPath}`;
@@ -411,6 +455,7 @@ export default function ChapterWritingPage() {
   const [isEditingOverview, setIsEditingOverview] = useState(false);
   const [editedChapter, setEditedChapter] = useState<Partial<Chapter> | null>(null);
   const [isSavingOverview, setIsSavingOverview] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
@@ -698,6 +743,36 @@ export default function ChapterWritingPage() {
   // Update edited chapter field
   const updateEditedChapterField = (field: string, value: string) => {
     setEditedChapter(prev => prev ? { ...prev, [field]: value } : null);
+  };
+
+  // Copy chapter data to clipboard
+  const handleCopyChapter = async () => {
+    if (!data?.chapter) return;
+    
+    try {
+      const formattedText = formatChapterForSudowrite(data.chapter, data.scenes);
+      await navigator.clipboard.writeText(formattedText);
+      setIsCopied(true);
+      
+      // Reset the copied state after 2 seconds
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    } catch (error) {
+      console.error('Failed to copy chapter data:', error);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = formatChapterForSudowrite(data.chapter, data.scenes);
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    }
   };
 
   // Enhanced content handler for large pastes - auto-distribute across pages
@@ -1061,15 +1136,36 @@ export default function ChapterWritingPage() {
                           </button>
                         </>
                       ) : (
-                        <button
-                          onClick={startEditingOverview}
-                          className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
-                        >
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                          </svg>
-                          <span>Edit</span>
-                        </button>
+                        <div className="flex items-center space-x-2">
+                          <button
+                            onClick={startEditingOverview}
+                            className="flex items-center space-x-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors"
+                          >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                            <span>Edit</span>
+                          </button>
+                          <button
+                            onClick={handleCopyChapter}
+                            className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                              isCopied 
+                                ? 'bg-green-600 hover:bg-green-700 text-white' 
+                                : 'bg-purple-600 hover:bg-purple-700 text-white'
+                            }`}
+                          >
+                            {isCopied ? (
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                            ) : (
+                              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                              </svg>
+                            )}
+                            <span>{isCopied ? 'Copied!' : 'Copy for Sudowrite'}</span>
+                          </button>
+                        </div>
                       )}
                     </div>
                   )}
