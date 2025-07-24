@@ -35,6 +35,15 @@ interface Scene {
   core_emotion?: string;
   scene_tone?: string;
   primaryTarotCard?: string;
+  internalConflict?: string;
+  sensoryDetail?: string;
+  symbolism?: string;
+  tarotSymbolism?: string;
+  tarotNarrativeRole?: string;
+  heroJourneyStage?: string;
+  characterGrowthElement?: string;
+  temporalPowerManifested?: string;
+  timelineSignificance?: string;
   chapter?: {
     title: string;
     chapterNumber: number;
@@ -93,6 +102,106 @@ const handleIconError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   target.src = '/icons/fallback/default-chapter.svg';
 };
 
+// Format scene data for Sudowrite
+const formatSceneForSudowrite = (scene: Scene): string => {
+  const parts = [];
+  
+  // Scene Header
+  parts.push(`SCENE: ${scene.title}`);
+  parts.push(`Chapter: ${scene.chapter?.title} (Ch${scene.chapter?.chapterNumber})`);
+  parts.push(`Scene Number: ${scene.sceneNumber}`);
+  parts.push('---');
+  
+  // Core Scene Information
+  if (scene.description) {
+    parts.push(`DESCRIPTION:\n${scene.description}`);
+    parts.push('');
+  }
+  
+  if (scene.setup) {
+    parts.push(`SETUP:\n${scene.setup}`);
+    parts.push('');
+  }
+  
+  if (scene.beatGoal) {
+    parts.push(`SCENE GOAL/BEAT:\n${scene.beatGoal}`);
+    parts.push('');
+  }
+  
+  // Character & Narrative Context
+  if (scene.pov) {
+    parts.push(`POINT OF VIEW: ${scene.pov}`);
+  }
+  
+  if (scene.core_emotion) {
+    parts.push(`CORE EMOTION: ${scene.core_emotion}`);
+  }
+  
+  if (scene.scene_tone) {
+    parts.push(`SCENE TONE: ${scene.scene_tone}`);
+  }
+  
+  if (scene.location) {
+    parts.push(`LOCATION: ${scene.location}`);
+  }
+  
+  if (scene.timeline_date) {
+    parts.push(`TIMELINE: ${scene.timeline_date}`);
+  }
+  
+  // Advanced Context
+  if (scene.internalConflict) {
+    parts.push('');
+    parts.push(`INTERNAL CONFLICT:\n${scene.internalConflict}`);
+  }
+  
+  if (scene.sensoryDetail) {
+    parts.push('');
+    parts.push(`SENSORY DETAILS:\n${scene.sensoryDetail}`);
+  }
+  
+  if (scene.symbolism) {
+    parts.push('');
+    parts.push(`SYMBOLISM:\n${scene.symbolism}`);
+  }
+  
+  // Tarot Integration
+  if (scene.primaryTarotCard) {
+    parts.push('');
+    parts.push(`TAROT CARD: ${scene.primaryTarotCard}`);
+    
+    if (scene.tarotSymbolism) {
+      parts.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
+    }
+    
+    if (scene.tarotNarrativeRole) {
+      parts.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
+    }
+  }
+  
+  // Character Development
+  if (scene.heroJourneyStage) {
+    parts.push('');
+    parts.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
+  }
+  
+  if (scene.characterGrowthElement) {
+    parts.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
+  }
+  
+  // Temporal Powers & Timeline
+  if (scene.temporalPowerManifested) {
+    parts.push('');
+    parts.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
+  }
+  
+  if (scene.timelineSignificance) {
+    parts.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
+  }
+  
+  return parts.join('\n');
+};
+
 export default function BookDetailPage() {
   const params = useParams();
   const bookId = params.bookId as string;
@@ -103,13 +212,40 @@ export default function BookDetailPage() {
   const [bookPrimaryColor, setBookPrimaryColor] = useState<string>('#6366f1');
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'chapters' | 'scenes'>('chapters');
+  const [copiedSceneId, setCopiedSceneId] = useState<string | null>(null);
+
+  // Copy scene data to clipboard
+  const handleCopyScene = async (scene: Scene) => {
+    try {
+      const formattedText = formatSceneForSudowrite(scene);
+      await navigator.clipboard.writeText(formattedText);
+      setCopiedSceneId(scene.id);
+      
+      // Reset the copied state after 2 seconds
+      setTimeout(() => {
+        setCopiedSceneId(null);
+      }, 2000);
+    } catch (error) {
+      console.error('Failed to copy scene data:', error);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = formatSceneForSudowrite(scene);
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      setCopiedSceneId(scene.id);
+      setTimeout(() => {
+        setCopiedSceneId(null);
+      }, 2000);
+    }
+  };
 
   useEffect(() => {
     if (!bookId) return;
-    console.log('🔍 Fetching data for book ID:', bookId);
     async function fetchBookData() {
       try {
-        console.log('📞 Making API calls...');
         const [chaptersResponse, outlineResponse] = await Promise.all([
           fetch(`/api/books/${bookId}/chapters`),
           fetch(`/api/books/${bookId}/outline-complete`)
@@ -125,10 +261,8 @@ export default function BookDetailPage() {
         
         if (outlineResponse.ok) {
           const outlineData = await outlineResponse.json();
-          console.log('📖 Book outline data:', outlineData);
           const allScenes: Scene[] = [];
           outlineData.chapters.forEach((chapter: Chapter & { scenes?: Scene[] }) => {
-            console.log(`📑 Chapter "${chapter.title}": ${chapter.scenes?.length || 0} scenes`);
             if (chapter.scenes) {
               chapter.scenes.forEach((scene: Scene) => {
                 allScenes.push({
@@ -142,7 +276,6 @@ export default function BookDetailPage() {
               });
             }
           });
-          console.log(`🎬 Total scenes loaded: ${allScenes.length}`);
           setScenes(allScenes);
         }
       } catch (error) {
@@ -381,12 +514,6 @@ export default function BookDetailPage() {
         {/* Scenes Tab Content */}
         {activeTab === 'scenes' && (
           <>
-            {/* Debug info */}
-            <div className="mb-4 p-4 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
-              <p className="text-sm text-blue-800 dark:text-blue-200">
-                Debug: Found {scenes.length} scenes in {chapters.length} chapters for book ID: {bookId}
-              </p>
-            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {scenes.map((scene) => {
               const chapterHex = scene.chapter?.colorTheme?.hex || bookPrimaryColor;
@@ -415,9 +542,37 @@ export default function BookDetailPage() {
                         </div>
                       )}
                     </div>
-                    <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    <div className="flex items-center gap-2">
+                      {/* Copy Button */}
+                      <button
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          handleCopyScene(scene);
+                        }}
+                        className={`p-2 rounded-lg transition-all duration-200 hover:scale-110 ${
+                          copiedSceneId === scene.id
+                            ? 'bg-green-500 text-white'
+                            : 'bg-white/20 hover:bg-white/30 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100'
+                        }`}
+                        title={copiedSceneId === scene.id ? 'Copied!' : 'Copy scene data for Sudowrite'}
+                      >
+                        {copiedSceneId === scene.id ? (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                          </svg>
+                        )}
+                      </button>
+                      
+                      {/* Navigate Arrow */}
+                      <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
                   
                   {/* Scene Title */}

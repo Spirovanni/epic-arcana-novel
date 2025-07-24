@@ -84,6 +84,7 @@ export default function SceneDetailPage() {
   const [isEditing, setIsEditing] = useState(false);
   const [editedScene, setEditedScene] = useState<Scene | null>(null);
   const [editedChapter, setEditedChapter] = useState<Chapter | null>(null);
+  const [isCopied, setIsCopied] = useState(false);
 
   const fetchSceneData = useCallback(async () => {
     try {
@@ -165,6 +166,134 @@ export default function SceneDetailPage() {
       } catch (error) {
         console.error('Failed to delete scene:', error);
       }
+    }
+  };
+
+  // Format scene data for Sudowrite
+  const formatSceneForSudowrite = (scene: Scene): string => {
+    const parts = [];
+    
+    // Scene Header
+    parts.push(`SCENE: ${scene.title}`);
+    parts.push(`Chapter: ${chapter?.title} (Ch${chapter?.chapterNumber})`);
+    parts.push(`Scene Number: ${scene.sceneNumber}`);
+    parts.push('---');
+    
+    // Core Scene Information
+    if (scene.description) {
+      parts.push(`DESCRIPTION:\n${scene.description}`);
+      parts.push('');
+    }
+    
+    if (scene.setup) {
+      parts.push(`SETUP:\n${scene.setup}`);
+      parts.push('');
+    }
+    
+    if (scene.beatGoal) {
+      parts.push(`SCENE GOAL/BEAT:\n${scene.beatGoal}`);
+      parts.push('');
+    }
+    
+    // Character & Narrative Context
+    if (scene.pov) {
+      parts.push(`POINT OF VIEW: ${scene.pov}`);
+    }
+    
+    if (scene.core_emotion) {
+      parts.push(`CORE EMOTION: ${scene.core_emotion}`);
+    }
+    
+    if (scene.scene_tone) {
+      parts.push(`SCENE TONE: ${scene.scene_tone}`);
+    }
+    
+    if (scene.location) {
+      parts.push(`LOCATION: ${scene.location}`);
+    }
+    
+    if (scene.timeline_date) {
+      parts.push(`TIMELINE: ${scene.timeline_date}`);
+    }
+    
+    // Advanced Context
+    if (scene.internalConflict) {
+      parts.push('');
+      parts.push(`INTERNAL CONFLICT:\n${scene.internalConflict}`);
+    }
+    
+    if (scene.sensoryDetail) {
+      parts.push('');
+      parts.push(`SENSORY DETAILS:\n${scene.sensoryDetail}`);
+    }
+    
+    if (scene.symbolism) {
+      parts.push('');
+      parts.push(`SYMBOLISM:\n${scene.symbolism}`);
+    }
+    
+    // Tarot Integration
+    if (scene.primaryTarotCard) {
+      parts.push('');
+      parts.push(`TAROT CARD: ${scene.primaryTarotCard}`);
+      
+      if (scene.tarotSymbolism) {
+        parts.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
+      }
+      
+      if (scene.tarotNarrativeRole) {
+        parts.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
+      }
+    }
+    
+    // Character Development
+    if (scene.heroJourneyStage) {
+      parts.push('');
+      parts.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
+    }
+    
+    if (scene.characterGrowthElement) {
+      parts.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
+    }
+    
+    // Temporal Powers & Timeline
+    if (scene.temporalPowerManifested) {
+      parts.push('');
+      parts.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
+    }
+    
+    if (scene.timelineSignificance) {
+      parts.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
+    }
+    
+    return parts.join('\n');
+  };
+
+  // Copy scene data to clipboard
+  const handleCopyScene = async (scene: Scene) => {
+    try {
+      const formattedText = formatSceneForSudowrite(scene);
+      await navigator.clipboard.writeText(formattedText);
+      setIsCopied(true);
+      
+      // Reset the copied state after 2 seconds
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+    } catch (error) {
+      console.error('Failed to copy scene data:', error);
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea');
+      textArea.value = formatSceneForSudowrite(scene);
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
+      
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
     }
   };
 
@@ -269,7 +398,26 @@ export default function SceneDetailPage() {
                   <button onClick={() => setIsEditing(false)} className="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">Cancel</button>
                 </>
               ) : (
-                <button onClick={() => setIsEditing(true)} className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700">Edit</button>
+                <>
+                  <button onClick={() => setIsEditing(true)} className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700">Edit</button>
+                  <button 
+                    onClick={() => handleCopyScene(scene)} 
+                    className={`px-4 py-2 text-sm font-medium text-white rounded-lg flex items-center space-x-2 transition-colors duration-200 ${
+                      isCopied ? 'bg-green-600 hover:bg-green-700' : 'bg-blue-600 hover:bg-blue-700'
+                    }`}
+                  >
+                    {isCopied ? (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    ) : (
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    )}
+                    <span>{isCopied ? 'Copied!' : 'Copy for Sudowrite'}</span>
+                  </button>
+                </>
               )}
               <button onClick={handleDelete} className="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover:bg-red-700">Delete</button>
             </div>
