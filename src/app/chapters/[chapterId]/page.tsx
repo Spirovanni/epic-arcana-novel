@@ -749,29 +749,48 @@ export default function ChapterWritingPage() {
   const handleCopyChapter = async () => {
     if (!data?.chapter) return;
     
+    const formattedText = formatChapterForSudowrite(data.chapter, data.scenes);
+    
+    // Check if clipboard API is available and we're in a secure context
+    if (navigator.clipboard && window.isSecureContext) {
+      try {
+        await navigator.clipboard.writeText(formattedText);
+        setIsCopied(true);
+        
+        // Reset the copied state after 2 seconds
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 2000);
+        return;
+      } catch (error) {
+        console.error('Clipboard API failed:', error);
+      }
+    }
+    
+    // Fallback for older browsers or non-secure contexts
     try {
-      const formattedText = formatChapterForSudowrite(data.chapter, data.scenes);
-      await navigator.clipboard.writeText(formattedText);
-      setIsCopied(true);
-      
-      // Reset the copied state after 2 seconds
-      setTimeout(() => {
-        setIsCopied(false);
-      }, 2000);
-    } catch (error) {
-      console.error('Failed to copy chapter data:', error);
-      // Fallback for older browsers
       const textArea = document.createElement('textarea');
-      textArea.value = formatChapterForSudowrite(data.chapter, data.scenes);
+      textArea.value = formattedText;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      textArea.style.top = '-999999px';
       document.body.appendChild(textArea);
+      textArea.focus();
       textArea.select();
-      document.execCommand('copy');
+      
+      const successful = document.execCommand('copy');
       document.body.removeChild(textArea);
       
-      setIsCopied(true);
-      setTimeout(() => {
-        setIsCopied(false);
-      }, 2000);
+      if (successful) {
+        setIsCopied(true);
+        setTimeout(() => {
+          setIsCopied(false);
+        }, 2000);
+      } else {
+        console.error('Fallback copy failed');
+      }
+    } catch (error) {
+      console.error('Failed to copy chapter data:', error);
     }
   };
 
