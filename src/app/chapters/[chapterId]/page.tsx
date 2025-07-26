@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
@@ -510,6 +510,8 @@ export default function ChapterWritingPage() {
   const [isSavingOverview, setIsSavingOverview] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
@@ -844,6 +846,48 @@ export default function ChapterWritingPage() {
       }
     } catch (error) {
       console.error('Failed to copy chapter data:', error);
+    }
+  };
+
+  // Delete all content from all pages
+  const deleteAllContent = async () => {
+    if (!data?.pages || isDeleting) return;
+    
+    setIsDeleting(true);
+    
+    try {
+      // Clear content from all pages
+      const updatedPages = data.pages.map(page => ({
+        ...page,
+        content: ''
+      }));
+      
+      // Update state immediately for UI feedback
+      setData(prev => prev ? {
+        ...prev,
+        pages: updatedPages
+      } : null);
+      
+      // Save all empty pages to database
+      const savePromises = updatedPages.map(page => 
+        fetch(`/api/chapters/${chapterId}/pages/${page.id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: '' })
+        })
+      );
+      
+      await Promise.all(savePromises);
+      
+      // Close the confirmation modal
+      setShowDeleteConfirmation(false);
+      
+    } catch (error) {
+      console.error('Failed to delete all content:', error);
+      // Refresh data to restore state if delete failed - reload the page to get fresh data
+      window.location.reload();
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -1556,6 +1600,14 @@ export default function ChapterWritingPage() {
                           </button>
                         )}
                         <button
+                          onClick={() => setShowDeleteConfirmation(true)}
+                          className="flex items-center space-x-2 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm"
+                          disabled={isDeleting}
+                        >
+                          <TrashIcon className="w-4 h-4" />
+                          <span>{isDeleting ? 'Deleting...' : 'Delete All Content'}</span>
+                        </button>
+                        <button
                           onClick={fetchAiPrompts}
                           className="flex items-center space-x-2 px-4 py-2 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium"
                           style={{
@@ -1820,6 +1872,51 @@ export default function ChapterWritingPage() {
         isVisible={showToolkit}
         onClose={() => setShowToolkit(false)}
       />
+
+      {/* Delete Confirmation Modal */}
+      {showDeleteConfirmation && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 max-w-md mx-4 border border-gray-200 dark:border-gray-600">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="flex-shrink-0 w-10 h-10 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
+                <TrashIcon className="w-5 h-5 text-red-600 dark:text-red-400" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                  Delete All Content
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  This action cannot be undone
+                </p>
+              </div>
+            </div>
+            
+            <div className="mb-6">
+              <p className="text-gray-700 dark:text-gray-300">
+                Are you sure you want to delete all content from all pages in this chapter? 
+                This will permanently remove all written content and cannot be undone.
+              </p>
+            </div>
+            
+            <div className="flex space-x-3 justify-end">
+              <button
+                onClick={() => setShowDeleteConfirmation(false)}
+                className="px-4 py-2 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                disabled={isDeleting}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={deleteAllContent}
+                className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                disabled={isDeleting}
+              >
+                {isDeleting ? 'Deleting...' : 'Delete All Content'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
