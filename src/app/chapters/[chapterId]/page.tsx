@@ -473,20 +473,39 @@ const getPageGoal = (pageNumber: number): number => {
   return 2000; // All other pages including last page: 2000 characters
 };
 
+const isPageComplete = (page: ChapterPage, allPages: ChapterPage[]): boolean => {
+  const charCount = countCharacters(page.content || '');
+  const goal = getPageGoal(page.pageNumber);
+  
+  // Consider complete if at 95% of goal
+  const isNearlyComplete = charCount >= (goal * 0.95);
+  
+  // Check if content continues to next page (space-limited)
+  const nextPageIndex = allPages.findIndex(p => p.pageNumber === page.pageNumber + 1);
+  const hasNextPage = nextPageIndex !== -1;
+  const nextPageHasContent = hasNextPage && (allPages[nextPageIndex].content || '').trim().length > 0;
+  
+  // Page is complete if it's nearly full OR if content continues to next page
+  return isNearlyComplete || (hasNextPage && nextPageHasContent && charCount > (goal * 0.8));
+};
 
-const getPageProgress = (content: string, pageNumber: number): number => {
+
+const getPageProgress = (content: string, pageNumber: number, allPages?: ChapterPage[], currentPage?: ChapterPage): number => {
   const charCount = countCharacters(content);
   const goal = getPageGoal(pageNumber);
-  return Math.min(100, (charCount / goal) * 100);
+  const baseProgress = (charCount / goal) * 100;
+  
+  // If we have page context, check if it should be considered complete
+  if (allPages && currentPage && isPageComplete(currentPage, allPages)) {
+    return 100;
+  }
+  
+  return Math.min(100, baseProgress);
 };
 
 const getOverallProgress = (pages: ChapterPage[]): number => {
   const maxPages = 15;
-  const completedPages = pages.filter(page => {
-    const charCount = countCharacters(page.content || '');
-    const goal = getPageGoal(page.pageNumber);
-    return charCount >= goal;
-  }).length;
+  const completedPages = pages.filter(page => isPageComplete(page, pages)).length;
   
   return Math.min(100, (completedPages / maxPages) * 100);
 };
@@ -1572,7 +1591,7 @@ export default function ChapterWritingPage() {
                                 <li>• <strong>Pages 2-15:</strong> 2000 characters max (~350 words each)</li>
                                 <li>• <strong>Auto-Distribution:</strong> Large content (500+ chars) automatically fills pages to maximum capacity</li>
                                 <li>• <strong>Smart Filling:</strong> Pages fill completely before moving to next page</li>
-                                <li>• <strong>Progress Tracking:</strong> Green bars show completion vs. character goals</li>
+                                <li>• <strong>Completion:</strong> Pages are 100% complete at 95% of goal OR when content continues to next page</li>
                               </ul>
                             </div>
                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-800"></div>
@@ -1652,10 +1671,10 @@ export default function ChapterWritingPage() {
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Pages (15 max)</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {pages.map((page, index) => {
-                            const progress = getPageProgress(page.content || '', page.pageNumber);
+                            const progress = getPageProgress(page.content || '', page.pageNumber, pages, page);
                             const charCount = countCharacters(page.content || '');
                             const goal = getPageGoal(page.pageNumber);
-                            const isComplete = charCount >= goal;
+                            const isComplete = isPageComplete(page, pages);
                             
                             return (
                               <div key={page.id} className="relative">
@@ -1724,13 +1743,13 @@ export default function ChapterWritingPage() {
                           <div className="flex items-center justify-between mb-1">
                             <span className="text-sm text-gray-600 dark:text-gray-400">Page Progress</span>
                             <span className="text-sm text-gray-500 dark:text-gray-500">
-                              {Math.round(getPageProgress(currentPageData.content || '', currentPageData.pageNumber))}%
+                              {Math.round(getPageProgress(currentPageData.content || '', currentPageData.pageNumber, pages, currentPageData))}%
                             </span>
                           </div>
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                             <div 
                               className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
-                              style={{ width: `${getPageProgress(currentPageData.content || '', currentPageData.pageNumber)}%` }}
+                              style={{ width: `${getPageProgress(currentPageData.content || '', currentPageData.pageNumber, pages, currentPageData)}%` }}
                             ></div>
                           </div>
                         </div>
@@ -1778,9 +1797,7 @@ export default function ChapterWritingPage() {
                           
                           {/* Page completion suggestion */}
                           {(() => {
-                            const charCount = countCharacters(currentPageData.content || '');
-                            const goal = getPageGoal(currentPageData.pageNumber);
-                            const isComplete = charCount >= goal;
+                            const isComplete = isPageComplete(currentPageData, pages);
                             const hasNextPage = currentPage < pages.length - 1;
                             
                             if (isComplete && hasNextPage) {
