@@ -13,11 +13,10 @@ interface PangeaMapProps {
   isPanMode?: boolean;
 }
 
-const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
-  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, center, isPanMode = false }) => {
+const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
+  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, center, isPanMode = false }, ref) => {
     const [svgContent, setSvgContent] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
-    const containerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
       loadSVG();
@@ -165,9 +164,11 @@ const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
     }, [handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, selectedRegion]);
 
     useEffect(() => {
-      if (!svgContent || !containerRef.current) return;
-
-      const container = containerRef.current;
+      if (!svgContent || !ref || typeof ref === 'function') return;
+      
+      const container = ref.current;
+      if (!container) return;
+      
       const svgElement = container.querySelector('svg');
       if (!svgElement) return;
 
@@ -212,7 +213,7 @@ const PangeaMap = forwardRef<SVGSVGElement, PangeaMapProps>(
 
     return (
       <div 
-        ref={containerRef}
+        ref={ref}
         className="w-full h-full"
         style={{
           transform: `translate(${center.x}px, ${center.y}px) scale(${zoom})`,

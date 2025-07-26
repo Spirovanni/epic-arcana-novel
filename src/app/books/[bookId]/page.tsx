@@ -102,104 +102,181 @@ const handleIconError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   target.src = '/icons/fallback/default-chapter.svg';
 };
 
-// Format scene data for Sudowrite
+// Six-Act Structure Data
+const getSixActStructure = (bookNumber: number) => {
+  const actStructures: Record<number, Array<{
+    title: string;
+    subtitle: string;
+    chapters: string;
+    startChapter: number;
+    endChapter: number;
+  }>> = {
+    1: [
+      { title: "Origins", subtitle: "The Law Student's Hidden Gifts", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The Tarot Cards Call", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Mastering the Ancient Arts", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Cosmic Purpose Unveiled", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "Battle for Understanding", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Master of Two Worlds", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    2: [
+      { title: "Origins", subtitle: "Timeline Walker Emerges", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The First Temporal Breach", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Learning Time's Language", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Chronicle Conspiracy", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "War Across Time", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Guardian of Moments", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    3: [
+      { title: "Origins", subtitle: "The Ancient Enemy Stirs", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "Dagon's First Strike", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Forging the Alliance", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The True Nature of Evil", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "The Siege of Reality", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Architect of Defense", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    4: [
+      { title: "Origins", subtitle: "When Time Breaks Apart", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The Fracturing Event", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Navigating Broken Worlds", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Pattern Behind Chaos", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "Mending What Was Broken", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Weaver of Timelines", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    5: [
+      { title: "Origins", subtitle: "Multiple Realities Collide", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The Great Convergence Begins", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Uniting Fractured Selves", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Universal Design", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "The Battle for All Worlds", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Shepherd of Realities", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    6: [
+      { title: "Origins", subtitle: "The Final Pieces Move", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "Dagon's Ultimate Scheme", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "The Hardest Sacrifices", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The True Cost of Victory", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "Everything on the Line", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Master of Sacrifice", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    7: [
+      { title: "Origins", subtitle: "After the Great War", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The Healing Begins", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Rebuilding What Was Lost", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The New World Order", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "Resistance to Change", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Architect of Renewal", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    8: [
+      { title: "Origins", subtitle: "Beyond All Limitations", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "The Infinite Path Opens", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "Transcending Human Bounds", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Cosmic Truth", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "The Ultimate Choice", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Champion of Infinite", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ],
+    9: [
+      { title: "Origins", subtitle: "The Final Beginning", chapters: "1-7", startChapter: 1, endChapter: 7 },
+      { title: "Catalyst", subtitle: "Universal Awakening", chapters: "8-13", startChapter: 8, endChapter: 13 },
+      { title: "Trials", subtitle: "The Last Great Test", chapters: "14-20", startChapter: 14, endChapter: 20 },
+      { title: "Revelation", subtitle: "The Purpose of Everything", chapters: "21-27", startChapter: 21, endChapter: 27 },
+      { title: "Confrontation", subtitle: "The Ultimate Triumph", chapters: "28-35", startChapter: 28, endChapter: 35 },
+      { title: "Transformation", subtitle: "Herald of New Dawn", chapters: "36-40", startChapter: 36, endChapter: 40 }
+    ]
+  };
+  
+  return actStructures[bookNumber] || actStructures[1];
+};
+
+// Format scene data for Sudowrite as one continuous paragraph
 const formatSceneForSudowrite = (scene: Scene): string => {
-  const parts = [];
+  const elements = [];
   
   // Scene Header
-  parts.push(`SCENE: ${scene.title}`);
-  parts.push(`Chapter: ${scene.chapter?.title} (Ch${scene.chapter?.chapterNumber})`);
-  parts.push(`Scene Number: ${scene.sceneNumber}`);
-  parts.push('---');
+  elements.push(`SCENE: ${scene.title}`);
+  elements.push(`Chapter: ${scene.chapter?.title} (Ch${scene.chapter?.chapterNumber})`);
+  elements.push(`Scene Number: ${scene.sceneNumber}`);
   
   // Core Scene Information
   if (scene.description) {
-    parts.push(`DESCRIPTION:\n${scene.description}`);
-    parts.push('');
+    elements.push(`DESCRIPTION: ${scene.description}`);
   }
   
   if (scene.setup) {
-    parts.push(`SETUP:\n${scene.setup}`);
-    parts.push('');
+    elements.push(`SETUP: ${scene.setup}`);
   }
   
   if (scene.beatGoal) {
-    parts.push(`SCENE GOAL/BEAT:\n${scene.beatGoal}`);
-    parts.push('');
+    elements.push(`SCENE GOAL/BEAT: ${scene.beatGoal}`);
   }
   
   // Character & Narrative Context
   if (scene.pov) {
-    parts.push(`POINT OF VIEW: ${scene.pov}`);
+    elements.push(`POINT OF VIEW: ${scene.pov}`);
   }
   
   if (scene.core_emotion) {
-    parts.push(`CORE EMOTION: ${scene.core_emotion}`);
+    elements.push(`CORE EMOTION: ${scene.core_emotion}`);
   }
   
   if (scene.scene_tone) {
-    parts.push(`SCENE TONE: ${scene.scene_tone}`);
+    elements.push(`SCENE TONE: ${scene.scene_tone}`);
   }
   
   if (scene.location) {
-    parts.push(`LOCATION: ${scene.location}`);
+    elements.push(`LOCATION: ${scene.location}`);
   }
   
   if (scene.timeline_date) {
-    parts.push(`TIMELINE: ${scene.timeline_date}`);
+    elements.push(`TIMELINE: ${scene.timeline_date}`);
   }
   
   // Advanced Context
   if (scene.internalConflict) {
-    parts.push('');
-    parts.push(`INTERNAL CONFLICT:\n${scene.internalConflict}`);
+    elements.push(`INTERNAL CONFLICT: ${scene.internalConflict}`);
   }
   
   if (scene.sensoryDetail) {
-    parts.push('');
-    parts.push(`SENSORY DETAILS:\n${scene.sensoryDetail}`);
+    elements.push(`SENSORY DETAILS: ${scene.sensoryDetail}`);
   }
   
   if (scene.symbolism) {
-    parts.push('');
-    parts.push(`SYMBOLISM:\n${scene.symbolism}`);
+    elements.push(`SYMBOLISM: ${scene.symbolism}`);
   }
   
   // Tarot Integration
   if (scene.primaryTarotCard) {
-    parts.push('');
-    parts.push(`TAROT CARD: ${scene.primaryTarotCard}`);
+    elements.push(`TAROT CARD: ${scene.primaryTarotCard}`);
     
     if (scene.tarotSymbolism) {
-      parts.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
+      elements.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
     }
     
     if (scene.tarotNarrativeRole) {
-      parts.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
+      elements.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
     }
   }
   
   // Character Development
   if (scene.heroJourneyStage) {
-    parts.push('');
-    parts.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
+    elements.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
   }
   
   if (scene.characterGrowthElement) {
-    parts.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
+    elements.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
   }
   
   // Temporal Powers & Timeline
   if (scene.temporalPowerManifested) {
-    parts.push('');
-    parts.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
+    elements.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
   }
   
   if (scene.timelineSignificance) {
-    parts.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
+    elements.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
   }
   
-  return parts.join('\n');
+  // Join all elements with " | " to create one continuous paragraph
+  return elements.join(' | ');
 };
 
 export default function BookDetailPage() {
@@ -422,92 +499,147 @@ export default function BookDetailPage() {
           </div>
         </div>
 
-        {/* Chapters Tab Content */}
+        {/* Chapters Tab Content - Six-Act Structure */}
         {activeTab === 'chapters' && (
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-5 gap-8">
-        {chapters.map((chapter) => {
-          const iconPath = getChapterIconPath(chapter, bookNumber);
-          const textColor = getTextColor(chapter.colorTheme?.hex);
-          const chapterHex = chapter.colorTheme?.hex || '#6366f1';
-          const gradientBg = createChapterGradient(chapterHex);
-          const glowColor = chapterHex + '40';
-          
-          return (
-            <Link 
-              key={chapter.id}
-              href={`/chapters/${chapter.id}`}
-              className="block aspect-square transition-all duration-500 ease-out hover:scale-110 hover:rotate-2 group relative overflow-hidden"
-              style={{
-                borderRadius: '24px',
-                boxShadow: `0 20px 40px -12px ${glowColor}, 0 0 0 1px ${chapterHex}30`,
-              }}
-            >
-              {/* Enhanced gradient background */}
-              <div 
-                className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-                style={{ background: gradientBg }}
-              />
+          <div className="space-y-12">
+            {getSixActStructure(bookNumber).map((act, actIndex) => {
+              const actChapters = chapters.filter(chapter => 
+                chapter.chapterNumber >= act.startChapter && chapter.chapterNumber <= act.endChapter
+              );
               
-              {/* Mystical overlay pattern */}
-              <div 
-                className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
-                style={{
-                  backgroundImage: `radial-gradient(circle at 25% 75%, ${chapterHex}60 0%, transparent 50%), radial-gradient(circle at 75% 25%, ${chapterHex}40 0%, transparent 50%)`
-                }}
-              />
+              // Act color progression
+              const actColors = ['#8B5CF6', '#EC4899', '#F59E0B', '#10B981', '#3B82F6', '#EF4444'];
+              const actColor = actColors[actIndex] || '#6366f1';
               
-              {/* Animated sparkles */}
-              <div className="absolute top-3 left-3 w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
-              <div className="absolute top-16 right-6 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-              <div className="absolute bottom-6 left-4 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-              
-              {/* Top-right icon positioning */}
-              <div className="w-24 h-24 absolute top-4 right-4 z-30 group-hover:scale-110 transition-transform duration-500">
-                <Image
-                  src={iconPath}
-                  alt={`Chapter ${chapter.chapterNumber} icon`}
-                  width={96}
-                  height={96}
-                  className="w-full h-full object-contain drop-shadow-2xl filter brightness-110 contrast-110"
-                  onError={handleIconError}
-                  style={{ filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.3))' }}
-                />
-              </div>
-              
-              {/* Enhanced chapter number */}
-              <div className={`absolute top-4 left-4 font-black text-2xl ${textColor} z-20 px-4 py-2 rounded-xl backdrop-blur-md border shadow-2xl group-hover:scale-110 transition-all duration-300`}
-                style={{
-                  background: `linear-gradient(135deg, ${chapterHex}60, ${chapterHex}80)`,
-                  borderColor: `${chapterHex}80`,
-                  textShadow: `0 2px 8px ${chapterHex}80`
-                }}>
-                {chapter.chapterNumber}
-              </div>
-              
-              {/* Chapter title only at bottom */}
-              <div className="absolute bottom-3 left-3 right-3 z-20 h-12">
-                <div className={`${textColor} backdrop-blur-xl border-2 rounded-xl px-3 py-2 shadow-2xl h-full flex items-center justify-center group-hover:scale-105 transition-all duration-300`}
-                  style={{
-                    background: `linear-gradient(135deg, ${chapterHex}50, ${chapterHex}70)`,
-                    borderColor: `${chapterHex}80`,
-                  }}>
-                  <ResponsiveText
-                    text={chapter.title}
-                    className={`font-bold tracking-wide text-center w-full ${textColor}`}
-                    style={{ 
-                      textShadow: `0 2px 6px ${chapterHex}80`
-                    }}
-                    maxFontSize={16}
-                    minFontSize={9}
-                  />
+              return (
+                <div key={actIndex} className="space-y-6">
+                  {/* Act Header */}
+                  <div className="text-center relative">
+                    <div 
+                      className="inline-flex items-center px-8 py-4 rounded-2xl backdrop-blur-md border shadow-2xl mb-4"
+                      style={{
+                        background: `linear-gradient(135deg, ${actColor}20, ${actColor}30)`,
+                        borderColor: `${actColor}40`,
+                      }}
+                    >
+                      <div 
+                        className="w-3 h-3 rounded-full mr-4 animate-pulse"
+                        style={{ backgroundColor: actColor }}
+                      ></div>
+                      <div className="text-left">
+                        <h2 
+                          className="text-2xl font-black tracking-wide"
+                          style={{ color: actColor }}
+                        >
+                          Act {actIndex + 1}: {act.title}
+                        </h2>
+                        <p className="text-lg text-gray-600 dark:text-gray-400 font-medium italic">
+                          "{act.subtitle}"
+                        </p>
+                        <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
+                          Chapters {act.chapters} • {actChapters.length} chapters
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Act divider */}
+                    <div 
+                      className="w-32 h-1 rounded-full mx-auto"
+                      style={{
+                        background: `linear-gradient(to right, transparent, ${actColor}, transparent)`
+                      }}
+                    ></div>
+                  </div>
+
+                  {/* Act Chapters Grid */}
+                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-6">
+                    {actChapters.map((chapter) => {
+                      const iconPath = getChapterIconPath(chapter, bookNumber);
+                      const textColor = getTextColor(chapter.colorTheme?.hex);
+                      const chapterHex = chapter.colorTheme?.hex || '#6366f1';
+                      const gradientBg = createChapterGradient(chapterHex);
+                      const glowColor = chapterHex + '40';
+                      
+                      return (
+                        <Link 
+                          key={chapter.id}
+                          href={`/chapters/${chapter.id}`}
+                          className="block aspect-square transition-all duration-500 ease-out hover:scale-110 hover:rotate-2 group relative overflow-hidden"
+                          style={{
+                            borderRadius: '20px',
+                            boxShadow: `0 15px 30px -8px ${glowColor}, 0 0 0 1px ${chapterHex}30`,
+                          }}
+                        >
+                          {/* Enhanced gradient background */}
+                          <div 
+                            className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-500"
+                            style={{ background: gradientBg }}
+                          />
+                          
+                          {/* Mystical overlay pattern */}
+                          <div 
+                            className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+                            style={{
+                              backgroundImage: `radial-gradient(circle at 25% 75%, ${chapterHex}60 0%, transparent 50%), radial-gradient(circle at 75% 25%, ${chapterHex}40 0%, transparent 50%)`
+                            }}
+                          />
+                          
+                          {/* Animated sparkles */}
+                          <div className="absolute top-2 left-2 w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
+                          <div className="absolute top-8 right-3 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+                          <div className="absolute bottom-4 left-2 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+                          
+                          {/* Top-right icon positioning */}
+                          <div className="w-16 h-16 absolute top-2 right-2 z-30 group-hover:scale-110 transition-transform duration-500">
+                            <Image
+                              src={iconPath}
+                              alt={`Chapter ${chapter.chapterNumber} icon`}
+                              width={64}
+                              height={64}
+                              className="w-full h-full object-contain drop-shadow-2xl filter brightness-110 contrast-110"
+                              onError={handleIconError}
+                              style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
+                            />
+                          </div>
+                          
+                          {/* Enhanced chapter number */}
+                          <div className={`absolute top-2 left-2 font-black text-lg ${textColor} z-20 px-2 py-1 rounded-lg backdrop-blur-md border shadow-xl group-hover:scale-110 transition-all duration-300`}
+                            style={{
+                              background: `linear-gradient(135deg, ${chapterHex}60, ${chapterHex}80)`,
+                              borderColor: `${chapterHex}80`,
+                              textShadow: `0 1px 4px ${chapterHex}80`
+                            }}>
+                            {chapter.chapterNumber}
+                          </div>
+                          
+                          {/* Chapter title at bottom */}
+                          <div className="absolute bottom-2 left-2 right-2 z-20">
+                            <div className={`${textColor} backdrop-blur-xl border rounded-lg px-2 py-1 shadow-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300`}
+                              style={{
+                                background: `linear-gradient(135deg, ${chapterHex}50, ${chapterHex}70)`,
+                                borderColor: `${chapterHex}80`,
+                              }}>
+                              <ResponsiveText
+                                text={chapter.title}
+                                className={`font-bold tracking-wide text-center w-full ${textColor}`}
+                                style={{ 
+                                  textShadow: `0 1px 3px ${chapterHex}80`
+                                }}
+                                maxFontSize={12}
+                                minFontSize={8}
+                              />
+                            </div>
+                          </div>
+                          
+                          {/* Enhanced mystical overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none group-hover:from-white/10 group-hover:to-black/10 transition-all duration-500"></div>
+                        </Link>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-              
-              {/* Enhanced mystical overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none group-hover:from-white/10 group-hover:to-black/10 transition-all duration-500"></div>
-            </Link>
-          );
-        })}
+              );
+            })}
           </div>
         )}
         

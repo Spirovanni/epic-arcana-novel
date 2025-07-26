@@ -169,104 +169,95 @@ export default function SceneDetailPage() {
     }
   };
 
-  // Format scene data for Sudowrite
+  // Format scene data for Sudowrite as one continuous paragraph
   const formatSceneForSudowrite = (scene: Scene): string => {
-    const parts = [];
+    const elements = [];
     
     // Scene Header
-    parts.push(`SCENE: ${scene.title}`);
-    parts.push(`Chapter: ${chapter?.title} (Ch${chapter?.chapterNumber})`);
-    parts.push(`Scene Number: ${scene.sceneNumber}`);
-    parts.push('---');
+    elements.push(`SCENE: ${scene.title}`);
+    elements.push(`Chapter: ${chapter?.title} (Ch${chapter?.chapterNumber})`);
+    elements.push(`Scene Number: ${scene.sceneNumber}`);
     
     // Core Scene Information
     if (scene.description) {
-      parts.push(`DESCRIPTION:\n${scene.description}`);
-      parts.push('');
+      elements.push(`DESCRIPTION: ${scene.description}`);
     }
     
     if (scene.setup) {
-      parts.push(`SETUP:\n${scene.setup}`);
-      parts.push('');
+      elements.push(`SETUP: ${scene.setup}`);
     }
     
     if (scene.beatGoal) {
-      parts.push(`SCENE GOAL/BEAT:\n${scene.beatGoal}`);
-      parts.push('');
+      elements.push(`SCENE GOAL/BEAT: ${scene.beatGoal}`);
     }
     
     // Character & Narrative Context
     if (scene.pov) {
-      parts.push(`POINT OF VIEW: ${scene.pov}`);
+      elements.push(`POINT OF VIEW: ${scene.pov}`);
     }
     
     if (scene.core_emotion) {
-      parts.push(`CORE EMOTION: ${scene.core_emotion}`);
+      elements.push(`CORE EMOTION: ${scene.core_emotion}`);
     }
     
     if (scene.scene_tone) {
-      parts.push(`SCENE TONE: ${scene.scene_tone}`);
+      elements.push(`SCENE TONE: ${scene.scene_tone}`);
     }
     
     if (scene.location) {
-      parts.push(`LOCATION: ${scene.location}`);
+      elements.push(`LOCATION: ${scene.location}`);
     }
     
     if (scene.timeline_date) {
-      parts.push(`TIMELINE: ${scene.timeline_date}`);
+      elements.push(`TIMELINE: ${scene.timeline_date}`);
     }
     
     // Advanced Context
     if (scene.internalConflict) {
-      parts.push('');
-      parts.push(`INTERNAL CONFLICT:\n${scene.internalConflict}`);
+      elements.push(`INTERNAL CONFLICT: ${scene.internalConflict}`);
     }
     
     if (scene.sensoryDetail) {
-      parts.push('');
-      parts.push(`SENSORY DETAILS:\n${scene.sensoryDetail}`);
+      elements.push(`SENSORY DETAILS: ${scene.sensoryDetail}`);
     }
     
     if (scene.symbolism) {
-      parts.push('');
-      parts.push(`SYMBOLISM:\n${scene.symbolism}`);
+      elements.push(`SYMBOLISM: ${scene.symbolism}`);
     }
     
     // Tarot Integration
     if (scene.primaryTarotCard) {
-      parts.push('');
-      parts.push(`TAROT CARD: ${scene.primaryTarotCard}`);
+      elements.push(`TAROT CARD: ${scene.primaryTarotCard}`);
       
       if (scene.tarotSymbolism) {
-        parts.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
+        elements.push(`TAROT SYMBOLISM: ${scene.tarotSymbolism}`);
       }
       
       if (scene.tarotNarrativeRole) {
-        parts.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
+        elements.push(`TAROT NARRATIVE ROLE: ${scene.tarotNarrativeRole}`);
       }
     }
     
     // Character Development
     if (scene.heroJourneyStage) {
-      parts.push('');
-      parts.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
+      elements.push(`HERO'S JOURNEY STAGE: ${scene.heroJourneyStage}`);
     }
     
     if (scene.characterGrowthElement) {
-      parts.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
+      elements.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
     }
     
     // Temporal Powers & Timeline
     if (scene.temporalPowerManifested) {
-      parts.push('');
-      parts.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
+      elements.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
     }
     
     if (scene.timelineSignificance) {
-      parts.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
+      elements.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
     }
     
-    return parts.join('\n');
+    // Join all elements with " | " to create one continuous paragraph
+    return elements.join(' | ');
   };
 
   // Copy scene data to clipboard
