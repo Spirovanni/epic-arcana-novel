@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
@@ -468,22 +468,15 @@ const ExpandableDescription = ({ description, textColor, isExpanded, onToggle }:
   );
 };
 
-const getPageGoal = (pageNumber: number, totalPages: number): number => {
+const getPageGoal = (pageNumber: number): number => {
   if (pageNumber === 1) return 1000; // First page: 1000 characters
-  if (pageNumber === totalPages && totalPages > 1) return 300; // Last page: 300 characters minimum
-  return 2000; // All other pages: 2000 characters
+  return 2000; // All other pages including last page: 2000 characters
 };
 
-const getPageMaxCapacity = (pageNumber: number, totalPages: number): number => {
-  // Maximum capacity for pages - fill these completely before moving to next page
-  if (pageNumber === 1) return 1500; // First page: 1500 characters max
-  if (pageNumber === totalPages && totalPages > 1) return 1000; // Last page: 1000 characters max
-  return 3000; // All other pages: 3000 characters max
-};
 
-const getPageProgress = (content: string, pageNumber: number, totalPages: number): number => {
+const getPageProgress = (content: string, pageNumber: number): number => {
   const charCount = countCharacters(content);
-  const goal = getPageGoal(pageNumber, totalPages);
+  const goal = getPageGoal(pageNumber);
   return Math.min(100, (charCount / goal) * 100);
 };
 
@@ -491,7 +484,7 @@ const getOverallProgress = (pages: ChapterPage[]): number => {
   const maxPages = 15;
   const completedPages = pages.filter(page => {
     const charCount = countCharacters(page.content || '');
-    const goal = getPageGoal(page.pageNumber, pages.length);
+    const goal = getPageGoal(page.pageNumber);
     return charCount >= goal;
   }).length;
   
@@ -859,21 +852,21 @@ export default function ChapterWritingPage() {
     const cleanContent = content.replace(/<[^>]*>/g, ''); // Strip existing HTML for character counting
     const totalChars = cleanContent.length;
     
-    // If content fits in current page max capacity, just update it
-    const currentPageMaxCapacity = getPageMaxCapacity(startPageIndex + 1, data?.pages.length || 0);
-    if (totalChars <= currentPageMaxCapacity) {
+    // If content fits in current page goal, just update it
+    const currentPageGoal = getPageGoal(startPageIndex + 1);
+    if (totalChars <= currentPageGoal) {
       return; // Let normal flow handle it
     }
 
-    // Calculate how many pages we need based on maximum capacity
+    // Calculate how many pages we need based on character goals
     let remainingChars = totalChars;
     let currentPageIndex = startPageIndex;
     let neededPages = 0;
     
-    // Calculate pages needed using max capacity
+    // Calculate pages needed using character goals
     while (remainingChars > 0) {
-      const pageMaxCapacity = getPageMaxCapacity(currentPageIndex + 1, 15); // Use 15 as total pages for calculation
-      remainingChars -= pageMaxCapacity;
+      const pageGoal = getPageGoal(currentPageIndex + 1);
+      remainingChars -= pageGoal;
       neededPages++;
       currentPageIndex++;
     }
@@ -903,15 +896,15 @@ export default function ChapterWritingPage() {
     const updatedPages = [...data.pages];
     
     while (paragraphIndex < paragraphs.length && currentPageIndex < updatedPages.length) {
-      const pageMaxCapacity = getPageMaxCapacity(currentPageIndex + 1, updatedPages.length);
+      const pageGoal = getPageGoal(currentPageIndex + 1);
       
-      // Add paragraphs to current page until we reach the maximum capacity
+      // Add paragraphs to current page until we reach the character goal (stay within limit)
       while (paragraphIndex < paragraphs.length) {
         const nextParagraph = paragraphs[paragraphIndex];
         const potentialContent = currentPageContent + (currentPageContent ? '\n\n' : '') + nextParagraph;
         
-        // Check if adding this paragraph would exceed the page maximum capacity
-        if (countCharacters(potentialContent) > pageMaxCapacity && currentPageContent.length > 0) {
+        // Check if adding this paragraph would exceed the page goal
+        if (countCharacters(potentialContent) > pageGoal && currentPageContent.length > 0) {
           break;
         }
         
@@ -1530,7 +1523,25 @@ export default function ChapterWritingPage() {
                   {/* Writing Tools */}
                   <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
-                      <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Chapter Writing</h2>
+                      <div className="flex items-center space-x-2">
+                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Chapter Writing</h2>
+                        <div className="relative group">
+                          <InformationCircleIcon className="w-5 h-5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 cursor-help" />
+                          <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-80 p-4 bg-gray-900 dark:bg-gray-800 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
+                            <div className="space-y-2">
+                              <h4 className="font-semibold">Chapter Writing Guide:</h4>
+                              <ul className="space-y-1">
+                                <li>• <strong>Page 1:</strong> 1000 characters max (~175 words)</li>
+                                <li>• <strong>Pages 2-15:</strong> 2000 characters max (~350 words each)</li>
+                                <li>• <strong>Auto-Distribution:</strong> Large content (500+ chars) automatically fills pages to maximum capacity</li>
+                                <li>• <strong>Smart Filling:</strong> Pages fill completely before moving to next page</li>
+                                <li>• <strong>Progress Tracking:</strong> Green bars show completion vs. character goals</li>
+                              </ul>
+                            </div>
+                            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-800"></div>
+                          </div>
+                        </div>
+                      </div>
                       <div className="flex gap-2">
                         <button
                           onClick={() => setShowToolkit(!showToolkit)}
@@ -1596,9 +1607,9 @@ export default function ChapterWritingPage() {
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Pages (15 max)</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {pages.map((page, index) => {
-                            const progress = getPageProgress(page.content || '', page.pageNumber, pages.length);
+                            const progress = getPageProgress(page.content || '', page.pageNumber);
                             const charCount = countCharacters(page.content || '');
-                            const goal = getPageGoal(page.pageNumber, pages.length);
+                            const goal = getPageGoal(page.pageNumber);
                             const isComplete = charCount >= goal;
                             
                             return (
@@ -1658,7 +1669,7 @@ export default function ChapterWritingPage() {
                           <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center gap-4">
                             <span>{currentPageWordCount} words</span>
                             <span>
-                              {countCharacters(currentPageData.content || '')} / {getPageGoal(currentPageData.pageNumber, pages.length)} chars
+                              {countCharacters(currentPageData.content || '')} / {getPageGoal(currentPageData.pageNumber)} chars
                             </span>
                           </div>
                         </div>
@@ -1668,13 +1679,13 @@ export default function ChapterWritingPage() {
                           <div className="flex items-center justify-between mb-1">
                             <span className="text-sm text-gray-600 dark:text-gray-400">Page Progress</span>
                             <span className="text-sm text-gray-500 dark:text-gray-500">
-                              {Math.round(getPageProgress(currentPageData.content || '', currentPageData.pageNumber, pages.length))}%
+                              {Math.round(getPageProgress(currentPageData.content || '', currentPageData.pageNumber))}%
                             </span>
                           </div>
                           <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                             <div 
                               className="bg-gradient-to-r from-blue-500 to-cyan-500 h-2 rounded-full transition-all duration-300"
-                              style={{ width: `${getPageProgress(currentPageData.content || '', currentPageData.pageNumber, pages.length)}%` }}
+                              style={{ width: `${getPageProgress(currentPageData.content || '', currentPageData.pageNumber)}%` }}
                             ></div>
                           </div>
                         </div>
@@ -1723,7 +1734,7 @@ export default function ChapterWritingPage() {
                           {/* Page completion suggestion */}
                           {(() => {
                             const charCount = countCharacters(currentPageData.content || '');
-                            const goal = getPageGoal(currentPageData.pageNumber, pages.length);
+                            const goal = getPageGoal(currentPageData.pageNumber);
                             const isComplete = charCount >= goal;
                             const hasNextPage = currentPage < pages.length - 1;
                             
