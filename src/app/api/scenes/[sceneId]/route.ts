@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { scenes, chapters, books } from '@/lib/schema';
-import { eq } from 'drizzle-orm';
+import { eq, gt, lt, and, asc, desc } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: Promise<{ sceneId: string }> }) {
   try {
@@ -23,7 +23,51 @@ export async function GET(request: Request, { params }: { params: Promise<{ scen
       return new NextResponse('Scene Not Found', { status: 404 });
     }
 
-    return NextResponse.json(sceneData[0]);
+    const { scene, chapter, book } = sceneData[0];
+
+    // Get previous scene (within same chapter)
+    const previousScene = await db
+      .select({
+        id: scenes.id,
+        title: scenes.title,
+        sceneNumber: scenes.sceneNumber
+      })
+      .from(scenes)
+      .where(
+        and(
+          eq(scenes.chapterId, scene.chapterId),
+          lt(scenes.sceneNumber, scene.sceneNumber)
+        )
+      )
+      .orderBy(desc(scenes.sceneNumber))
+      .limit(1);
+
+    // Get next scene (within same chapter)
+    const nextScene = await db
+      .select({
+        id: scenes.id,
+        title: scenes.title,
+        sceneNumber: scenes.sceneNumber
+      })
+      .from(scenes)
+      .where(
+        and(
+          eq(scenes.chapterId, scene.chapterId),
+          gt(scenes.sceneNumber, scene.sceneNumber)
+        )
+      )
+      .orderBy(asc(scenes.sceneNumber))
+      .limit(1);
+
+    return NextResponse.json({
+      scene,
+      chapter,
+      book,
+      navigation: {
+        previousScene: previousScene[0] || null,
+        nextScene: nextScene[0] || null
+      }
+    });
   } catch (error) {
     const { sceneId: errorSceneId } = await params;
     console.error(`Error fetching scene ${errorSceneId}:`, error);

@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, EyeIcon, CalendarIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ChevronLeftIcon, ChevronRightIcon, BookOpenIcon, SparklesIcon, ClockIcon, EyeIcon, CalendarIcon, GlobeAltIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -72,6 +72,19 @@ interface Book {
   bookNumber: number;
 }
 
+interface SceneNavigation {
+  previousScene: {
+    id: string;
+    title: string;
+    sceneNumber: number;
+  } | null;
+  nextScene: {
+    id: string;
+    title: string;
+    sceneNumber: number;
+  } | null;
+}
+
 export default function SceneDetailPage() {
   const params = useParams();
   const router = useRouter();
@@ -80,6 +93,7 @@ export default function SceneDetailPage() {
   const [scene, setScene] = useState<Scene | null>(null);
   const [chapter, setChapter] = useState<Chapter | null>(null);
   const [book, setBook] = useState<Book | null>(null);
+  const [navigation, setNavigation] = useState<SceneNavigation | null>(null);
   const [loading, setLoading] = useState(true);
   const [isEditing, setIsEditing] = useState(false);
   const [editedScene, setEditedScene] = useState<Scene | null>(null);
@@ -94,6 +108,7 @@ export default function SceneDetailPage() {
         setScene(data.scene);
         setChapter(data.chapter);
         setBook(data.book);
+        setNavigation(data.navigation);
         setEditedScene(data.scene);
         setEditedChapter(data.chapter);
       }
@@ -334,7 +349,7 @@ export default function SceneDetailPage() {
       
       {/* Header */}
       <div className="container mx-auto px-6 py-6">
-        <div className="mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <Link 
             href={`/chapters/${chapter.id}?tab=scenes`}
             className="inline-flex items-center space-x-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
@@ -342,6 +357,43 @@ export default function SceneDetailPage() {
             <ArrowLeftIcon className="w-5 h-5" />
             <span>Back to Chapter {chapter.chapterNumber}</span>
           </Link>
+
+          {/* Scene Navigation */}
+          {navigation && (
+            <div className="flex items-center space-x-3">
+              {navigation.previousScene ? (
+                <Link
+                  href={`/scenes/${navigation.previousScene.id}`}
+                  className="inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  title={`Previous: ${navigation.previousScene.title}`}
+                >
+                  <ChevronLeftIcon className="w-4 h-4" />
+                  <span>Scene {navigation.previousScene.sceneNumber}</span>
+                </Link>
+              ) : (
+                <div className="inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-400 dark:text-gray-600 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg cursor-not-allowed">
+                  <ChevronLeftIcon className="w-4 h-4" />
+                  <span>First Scene</span>
+                </div>
+              )}
+
+              {navigation.nextScene ? (
+                <Link
+                  href={`/scenes/${navigation.nextScene.id}`}
+                  className="inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  title={`Next: ${navigation.nextScene.title}`}
+                >
+                  <span>Scene {navigation.nextScene.sceneNumber}</span>
+                  <ChevronRightIcon className="w-4 h-4" />
+                </Link>
+              ) : (
+                <div className="inline-flex items-center space-x-2 px-4 py-2 text-sm font-medium text-gray-400 dark:text-gray-600 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg cursor-not-allowed">
+                  <span>Last Scene</span>
+                  <ChevronRightIcon className="w-4 h-4" />
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-xl p-8 border border-gray-200/50 dark:border-gray-600/50">
