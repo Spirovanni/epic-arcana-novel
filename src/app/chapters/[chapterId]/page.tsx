@@ -477,7 +477,12 @@ const isPageComplete = (page: ChapterPage, allPages: ChapterPage[]): boolean => 
   const charCount = countCharacters(page.content || '');
   const goal = getPageGoal(page.pageNumber);
   
-  // Consider complete if at 95% of goal
+  // Special rule for page 15 (final page): only needs 15% to be complete
+  if (page.pageNumber === 15) {
+    return charCount >= (goal * 0.15); // 300 characters for page 15 (15% of 2000)
+  }
+  
+  // Consider complete if at 95% of goal for other pages
   const isNearlyComplete = charCount >= (goal * 0.95);
   
   // Check if content continues to next page (space-limited)
@@ -1588,10 +1593,11 @@ export default function ChapterWritingPage() {
                               <h4 className="font-semibold">Chapter Writing Guide:</h4>
                               <ul className="space-y-1">
                                 <li>• <strong>Page 1:</strong> 1000 characters max (~175 words)</li>
-                                <li>• <strong>Pages 2-15:</strong> 2000 characters max (~350 words each)</li>
+                                <li>• <strong>Pages 2-14:</strong> 2000 characters max (~350 words each)</li>
+                                <li>• <strong>Page 15:</strong> 2000 characters max, but only needs 15% (300 chars) to be complete</li>
                                 <li>• <strong>Auto-Distribution:</strong> Large content (500+ chars) automatically fills pages to maximum capacity</li>
                                 <li>• <strong>Smart Filling:</strong> Pages fill completely before moving to next page</li>
-                                <li>• <strong>Completion:</strong> Pages are 100% complete at 95% of goal OR when content continues to next page</li>
+                                <li>• <strong>Completion:</strong> Pages 1-14 are 100% complete at 95% of goal OR when content continues to next page</li>
                               </ul>
                             </div>
                             <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900 dark:border-t-gray-800"></div>
