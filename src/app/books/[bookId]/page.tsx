@@ -534,7 +534,7 @@ export default function BookDetailPage() {
                           Act {actIndex + 1}: {act.title}
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 font-medium italic">
-                          "{act.subtitle}"
+                          &ldquo;{act.subtitle}&rdquo;
                         </p>
                         <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
                           Chapters {act.chapters} • {actChapters.length} chapters

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect, useRef, useState, useCallback } from 'react';
+import React, { forwardRef, useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
 interface PangeaMapProps {
@@ -187,7 +187,7 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
           region.removeEventListener('mouseleave', handleRegionLeaveEvent);
         });
       };
-    }, [svgContent, activeTimeline, selectedRegion, isPanMode, applyTimelineStyles, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent]);
+    }, [svgContent, activeTimeline, selectedRegion, isPanMode, applyTimelineStyles, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, ref]);
 
     const formatRegionName = (regionId: string) => {
       return regionId

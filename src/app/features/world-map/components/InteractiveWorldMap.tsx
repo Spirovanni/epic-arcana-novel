@@ -34,7 +34,7 @@ export function InteractiveWorldMap({
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const mapRef = useRef<HTMLDivElement>(null);
-  const svgRef = useRef<SVGSVGElement>(null);
+  const svgRef = useRef<HTMLDivElement>(null);
 
   const timelineColors = {
     alpha: { primary: '#10b981', secondary: '#047857', bg: 'from-emerald-500/20' },
