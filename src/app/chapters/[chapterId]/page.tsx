@@ -474,6 +474,13 @@ const getPageGoal = (pageNumber: number, totalPages: number): number => {
   return 2000; // All other pages: 2000 characters
 };
 
+const getPageMaxCapacity = (pageNumber: number, totalPages: number): number => {
+  // Maximum capacity for pages - fill these completely before moving to next page
+  if (pageNumber === 1) return 1500; // First page: 1500 characters max
+  if (pageNumber === totalPages && totalPages > 1) return 1000; // Last page: 1000 characters max
+  return 3000; // All other pages: 3000 characters max
+};
+
 const getPageProgress = (content: string, pageNumber: number, totalPages: number): number => {
   const charCount = countCharacters(content);
   const goal = getPageGoal(pageNumber, totalPages);
@@ -849,26 +856,24 @@ export default function ChapterWritingPage() {
 
   // Enhanced content handler for large pastes - auto-distribute across pages
   const handleLargeContentPaste = async (content: string, startPageIndex: number) => {
-    const maxCharsPerPage = 2000;
-    const firstPageMax = 1000;
     const cleanContent = content.replace(/<[^>]*>/g, ''); // Strip existing HTML for character counting
     const totalChars = cleanContent.length;
     
-    // If content fits in current page, just update it
-    const currentPageGoal = getPageGoal(startPageIndex + 1, data?.pages.length || 0);
-    if (totalChars <= currentPageGoal) {
+    // If content fits in current page max capacity, just update it
+    const currentPageMaxCapacity = getPageMaxCapacity(startPageIndex + 1, data?.pages.length || 0);
+    if (totalChars <= currentPageMaxCapacity) {
       return; // Let normal flow handle it
     }
 
-    // Calculate how many pages we need
+    // Calculate how many pages we need based on maximum capacity
     let remainingChars = totalChars;
     let currentPageIndex = startPageIndex;
     let neededPages = 0;
     
-    // Calculate pages needed
+    // Calculate pages needed using max capacity
     while (remainingChars > 0) {
-      const pageGoal = currentPageIndex === 0 ? firstPageMax : maxCharsPerPage;
-      remainingChars -= pageGoal;
+      const pageMaxCapacity = getPageMaxCapacity(currentPageIndex + 1, 15); // Use 15 as total pages for calculation
+      remainingChars -= pageMaxCapacity;
       neededPages++;
       currentPageIndex++;
     }
@@ -898,18 +903,19 @@ export default function ChapterWritingPage() {
     const updatedPages = [...data.pages];
     
     while (paragraphIndex < paragraphs.length && currentPageIndex < updatedPages.length) {
-      const pageGoal = getPageGoal(currentPageIndex + 1, updatedPages.length);
+      const pageMaxCapacity = getPageMaxCapacity(currentPageIndex + 1, updatedPages.length);
       
-      // Add paragraphs to current page until we reach the goal
+      // Add paragraphs to current page until we reach the maximum capacity
       while (paragraphIndex < paragraphs.length) {
         const nextParagraph = paragraphs[paragraphIndex];
+        const potentialContent = currentPageContent + (currentPageContent ? '\n\n' : '') + nextParagraph;
         
-        // Check if adding this paragraph would exceed the page goal
-        if (countCharacters(currentPageContent + nextParagraph) > pageGoal && currentPageContent.length > 0) {
+        // Check if adding this paragraph would exceed the page maximum capacity
+        if (countCharacters(potentialContent) > pageMaxCapacity && currentPageContent.length > 0) {
           break;
         }
         
-        currentPageContent += (currentPageContent ? '\n\n' : '') + nextParagraph;
+        currentPageContent = potentialContent;
         paragraphIndex++;
       }
       
