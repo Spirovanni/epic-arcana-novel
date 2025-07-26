@@ -852,77 +852,70 @@ export default function ChapterWritingPage() {
     const cleanContent = content.replace(/<[^>]*>/g, ''); // Strip existing HTML for character counting
     const totalChars = cleanContent.length;
     
-    // If content fits in current page goal, just update it
+    // If content fits in current page goal, just update it normally
     const currentPageGoal = getPageGoal(startPageIndex + 1);
     if (totalChars <= currentPageGoal) {
       return; // Let normal flow handle it
     }
 
-    // Calculate how many pages we need based on character goals
-    let remainingChars = totalChars;
-    let currentPageIndex = startPageIndex;
-    let neededPages = 0;
-    
-    // Calculate pages needed using character goals
-    while (remainingChars > 0) {
-      const pageGoal = getPageGoal(currentPageIndex + 1);
-      remainingChars -= pageGoal;
-      neededPages++;
-      currentPageIndex++;
-    }
-
-    // Create additional pages if needed
-    const currentPageCount = data?.pages.length || 0;
-    const pagesNeeded = Math.min(neededPages, 15 - currentPageCount); // Respect 15 page limit
-    
-    for (let i = 0; i < pagesNeeded - 1; i++) {
-      await addNewPage();
-    }
-
-    // Wait a bit for pages to be created, then distribute content
-    setTimeout(() => distributeContentAcrossPages(content, startPageIndex), 100);
+    // For large content, let the distribution function handle page creation as needed
+    // This ensures sequential filling without pre-calculating pages
+    await distributeContentAcrossPages(content, startPageIndex);
   };
 
-  // Distribute content across multiple pages
-  const distributeContentAcrossPages = (content: string, startPageIndex: number) => {
+  // Distribute content across multiple pages - fills each page to maximum capacity first
+  const distributeContentAcrossPages = async (content: string, startPageIndex: number) => {
     if (!data) return;
     
-    const paragraphs = content.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+    // Split content into individual words to maximize packing efficiency
+    const words = content.split(/\s+/).filter(w => w.trim().length > 0);
     
     let currentPageIndex = startPageIndex;
-    let currentPageContent = '';
-    let paragraphIndex = 0;
+    let currentPageWords: string[] = [];
+    let wordIndex = 0;
     
     const updatedPages = [...data.pages];
     
-    while (paragraphIndex < paragraphs.length && currentPageIndex < updatedPages.length) {
-      const pageGoal = getPageGoal(currentPageIndex + 1);
-      
-      // Add paragraphs to current page until we reach the character goal (stay within limit)
-      while (paragraphIndex < paragraphs.length) {
-        const nextParagraph = paragraphs[paragraphIndex];
-        const potentialContent = currentPageContent + (currentPageContent ? '\n\n' : '') + nextParagraph;
-        
-        // Check if adding this paragraph would exceed the page goal
-        if (countCharacters(potentialContent) > pageGoal && currentPageContent.length > 0) {
-          break;
-        }
-        
-        currentPageContent = potentialContent;
-        paragraphIndex++;
+    while (wordIndex < words.length) {
+      // Ensure we have enough pages
+      if (currentPageIndex >= updatedPages.length && updatedPages.length < 15) {
+        await addNewPage();
+        // Wait for page creation and refresh data
+        await new Promise(resolve => setTimeout(resolve, 100));
+        return distributeContentAcrossPages(content, startPageIndex); // Restart with updated pages
       }
       
-      // Update the page content
+      if (currentPageIndex >= updatedPages.length) {
+        break; // Can't create more pages, stop
+      }
+      
+      const pageGoal = getPageGoal(currentPageIndex + 1);
+      
+      // Fill current page to maximum capacity within the character goal
+      while (wordIndex < words.length) {
+        const nextWord = words[wordIndex];
+        const testContent = [...currentPageWords, nextWord].join(' ');
+        
+        // Check if adding this word would exceed the page goal
+        if (countCharacters(testContent) > pageGoal && currentPageWords.length > 0) {
+          break; // This word would exceed the limit, stop adding to current page
+        }
+        
+        currentPageWords.push(nextWord);
+        wordIndex++;
+      }
+      
+      // Update the page content with all words that fit
       if (currentPageIndex < updatedPages.length) {
         updatedPages[currentPageIndex] = {
           ...updatedPages[currentPageIndex],
-          content: currentPageContent
+          content: currentPageWords.join(' ')
         };
       }
       
       // Move to next page
       currentPageIndex++;
-      currentPageContent = '';
+      currentPageWords = [];
     }
     
     // Update state with distributed content
