@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
@@ -368,13 +368,6 @@ const formatChapterForSudowrite = (chapter: Chapter, scenes: Scene[]): string =>
     parts.push('');
   }
   
-  // Chapter Description
-  if (chapter.description) {
-    parts.push('CHAPTER DESCRIPTION:');
-    parts.push(chapter.description);
-    parts.push('');
-  }
-  
   // Scene Beat Goals
   if (scenes.length > 0) {
     parts.push('SCENE BEAT GOALS:');
@@ -413,6 +406,66 @@ const countWords = (text: string): number => {
 
 const countCharacters = (text: string): number => {
   return text.replace(/<[^>]*>/g, '').length;
+};
+
+// Component to handle description with expand/collapse functionality
+const ExpandableDescription = ({ description, textColor, isExpanded, onToggle }: {
+  description: string;
+  textColor: string;
+  isExpanded: boolean;
+  onToggle: () => void;
+}) => {
+  if (!description) return null;
+
+  // Split description into words and approximate lines based on typical line length
+  const words = description.split(/\s+/);
+  const wordsPerLine = 12; // Approximate words per line for this text size
+  const maxLines = 10;
+  const maxWordsCollapsed = maxLines * wordsPerLine;
+  
+  const shouldTruncate = words.length > maxWordsCollapsed;
+  const displayText = isExpanded ? description : words.slice(0, maxWordsCollapsed).join(' ');
+  
+  if (!shouldTruncate) {
+    // If content is short enough, just display normally without expand button
+    return (
+      <p className={`text-lg ${textColor} opacity-90`} style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
+        {description}
+      </p>
+    );
+  }
+
+  return (
+    <div className="relative pr-20 pb-8">
+      <p className={`text-lg ${textColor} opacity-90 whitespace-pre-line`} style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
+        {displayText}
+        {!isExpanded && '...'}
+      </p>
+      
+      {/* Expand/Collapse Button - positioned in bottom right */}
+      <button
+        onClick={onToggle}
+        className={`absolute bottom-0 right-0 flex items-center space-x-1 px-3 py-1.5 rounded-lg transition-all duration-200 backdrop-blur-md border-2 shadow-lg ${
+          textColor === 'text-white' 
+            ? 'bg-white/25 border-white/40 hover:bg-white/35 text-white' 
+            : 'bg-black/15 border-black/30 hover:bg-black/25 text-black'
+        }`}
+        style={{ 
+          textShadow: '1px 1px 2px rgba(0,0,0,0.5)',
+          zIndex: 10
+        }}
+      >
+        <span className="text-xs font-semibold">
+          {isExpanded ? 'Show Less' : 'Show More'}
+        </span>
+        {isExpanded ? (
+          <ChevronUpIcon className="w-4 h-4" />
+        ) : (
+          <ChevronDownIcon className="w-4 h-4" />
+        )}
+      </button>
+    </div>
+  );
 };
 
 const getPageGoal = (pageNumber: number, totalPages: number): number => {
@@ -456,6 +509,7 @@ export default function ChapterWritingPage() {
   const [editedChapter, setEditedChapter] = useState<Partial<Chapter> | null>(null);
   const [isSavingOverview, setIsSavingOverview] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
@@ -728,8 +782,7 @@ export default function ChapterWritingPage() {
       title: data.chapter.title || '',
       focusArea: data.chapter.focusArea || '',
       connectionToMajorTaskGroup: data.chapter.connectionToMajorTaskGroup || '',
-      summary: data.chapter.summary || '',
-      description: data.chapter.description || ''
+      summary: data.chapter.summary || ''
     });
     setIsEditingOverview(true);
   };
@@ -1042,9 +1095,12 @@ export default function ChapterWritingPage() {
                 <h1 className={`text-3xl lg:text-4xl font-black ${textColor} mb-2 leading-tight`} style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
                   {chapter.title}
                 </h1>
-                <p className={`text-lg ${textColor} opacity-90`} style={{ textShadow: '1px 1px 2px rgba(0,0,0,0.2)' }}>
-                  {chapter.description}
-                </p>
+                <ExpandableDescription
+                  description={chapter.description}
+                  textColor={textColor}
+                  isExpanded={isDescriptionExpanded}
+                  onToggle={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+                />
               </div>
 
               {/* Stats */}
@@ -1268,22 +1324,6 @@ export default function ChapterWritingPage() {
                       ) : (
                         <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
                           {chapter.summary || 'No summary available'}
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Description</h3>
-                      {isEditingOverview ? (
-                        <textarea
-                          value={editedChapter?.description || ''}
-                          onChange={(e) => updateEditedChapterField('description', e.target.value)}
-                          rows={4}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
-                          placeholder="Enter chapter description..."
-                        />
-                      ) : (
-                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
-                          {chapter.description || 'No description available'}
                         </p>
                       )}
                     </div>
