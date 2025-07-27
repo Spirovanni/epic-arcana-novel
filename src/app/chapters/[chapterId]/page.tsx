@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
-import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon, TrashIcon } from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon, TrashIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
@@ -352,7 +352,8 @@ const adjustBrightness = (hex: string, percent: number) => {
     (B < 255 ? B < 1 ? 0 : B : 255)).toString(16).slice(1);
 };
 
-// Format chapter data for Sudowrite
+// Format chapter data for Sudowrite (legacy function, kept for potential future use)
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const formatChapterForSudowrite = (chapter: Chapter, scenes: Scene[]): string => {
   const parts = [];
   
@@ -824,49 +825,60 @@ export default function ChapterWritingPage() {
     setEditedChapter(prev => prev ? { ...prev, [field]: value } : null);
   };
 
-  // Copy chapter data to clipboard
+  // Copy chapter data to clipboard with all pages in order
   const handleCopyChapter = async () => {
     if (!data?.chapter) return;
     
-    const formattedText = formatChapterForSudowrite(data.chapter, data.scenes);
-    
-    // Check if clipboard API is available and we're in a secure context
-    if (navigator.clipboard && window.isSecureContext) {
-      try {
-        await navigator.clipboard.writeText(formattedText);
-        setIsCopied(true);
-        
-        // Reset the copied state after 2 seconds
-        setTimeout(() => {
-          setIsCopied(false);
-        }, 2000);
-        return;
-      } catch (error) {
-        console.error('Clipboard API failed:', error);
-      }
-    }
-    
-    // Fallback for older browsers or non-secure contexts
     try {
-      const textArea = document.createElement('textarea');
-      textArea.value = formattedText;
-      textArea.style.position = 'fixed';
-      textArea.style.left = '-999999px';
-      textArea.style.top = '-999999px';
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
+      // Fetch the formatted chapter content from our export API
+      const response = await fetch(`/api/chapters/${data.chapter.id}/export`);
+      if (!response.ok) {
+        throw new Error('Failed to export chapter');
+      }
       
-      const successful = document.execCommand('copy');
-      document.body.removeChild(textArea);
+      const exportData = await response.json();
+      const formattedText = exportData.formattedContent;
       
-      if (successful) {
-        setIsCopied(true);
-        setTimeout(() => {
-          setIsCopied(false);
-        }, 2000);
-      } else {
-        console.error('Fallback copy failed');
+      // Check if clipboard API is available and we're in a secure context
+      if (navigator.clipboard && window.isSecureContext) {
+        try {
+          await navigator.clipboard.writeText(formattedText);
+          setIsCopied(true);
+          
+          // Reset the copied state after 2 seconds
+          setTimeout(() => {
+            setIsCopied(false);
+          }, 2000);
+          return;
+        } catch (error) {
+          console.error('Clipboard API failed:', error);
+        }
+      }
+      
+      // Fallback for older browsers or non-secure contexts
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = formattedText;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        textArea.style.top = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        
+        if (successful) {
+          setIsCopied(true);
+          setTimeout(() => {
+            setIsCopied(false);
+          }, 2000);
+        } else {
+          console.error('Fallback copy failed');
+        }
+      } catch (error) {
+        console.error('Fallback copy method failed:', error);
       }
     } catch (error) {
       console.error('Failed to copy chapter data:', error);
@@ -1631,6 +1643,17 @@ export default function ChapterWritingPage() {
                         >
                           <TrashIcon className="w-4 h-4" />
                           <span>{isDeleting ? 'Deleting...' : 'Delete All Content'}</span>
+                        </button>
+                        <button
+                          onClick={handleCopyChapter}
+                          className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors text-sm ${
+                            isCopied 
+                              ? 'bg-green-600 hover:bg-green-700 text-white' 
+                              : 'bg-blue-600 hover:bg-blue-700 text-white'
+                          }`}
+                        >
+                          <ClipboardIcon className="w-4 h-4" />
+                          <span>{isCopied ? 'Copied!' : 'Copy Chapter'}</span>
                         </button>
                         <button
                           onClick={fetchAiPrompts}
