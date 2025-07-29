@@ -49,18 +49,18 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       };
     });
 
-    // Strip HTML tags and format the content for plain text export
+    // Strip HTML tags and format the content for plain text export with paragraph indentation
     const stripHtml = (html: string): string => {
       return html
-        .replace(/<h[1-6][^>]*>/gi, '\n\n')
-        .replace(/<\/h[1-6]>/gi, '\n')
-        .replace(/<p[^>]*>/gi, '\n')
-        .replace(/<\/p>/gi, '\n')
-        .replace(/<br\s*\/?>/gi, '\n')
-        .replace(/<blockquote[^>]*>/gi, '\n"')
-        .replace(/<\/blockquote>/gi, '"\n')
-        .replace(/<strong[^>]*>|<\/strong>/gi, '**')
-        .replace(/<em[^>]*>|<\/em>/gi, '*')
+        .replace(/<h[1-6][^>]*>/gi, '')
+        .replace(/<\/h[1-6]>/gi, '')
+        .replace(/<p[^>]*>/gi, '    ') // Start paragraphs with 4 spaces for indentation
+        .replace(/<\/p>/gi, '')
+        .replace(/<br\s*\/?>/gi, ' ')
+        .replace(/<blockquote[^>]*>/gi, '    "')
+        .replace(/<\/blockquote>/gi, '"')
+        .replace(/<strong[^>]*>|<\/strong>/gi, '')
+        .replace(/<em[^>]*>|<\/em>/gi, '')
         .replace(/<[^>]+>/g, '')
         .replace(/&nbsp;/g, ' ')
         .replace(/&amp;/g, '&')
@@ -68,26 +68,16 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
+        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
         .trim();
     };
 
-    // Format the complete chapter content
-    let formattedContent = `${book.title}\n`;
-    formattedContent += `Chapter ${chapter.chapterNumber}: ${chapter.title}\n`;
-    formattedContent += `${'='.repeat(50)}\n\n`;
-    
-    if (chapter.description) {
-      formattedContent += `${chapter.description}\n\n`;
-    }
-
-    // Add all pages with their content
-    orderedPages.forEach((page) => {
-      if (page.content && page.content.trim()) {
-        formattedContent += `Page ${page.pageNumber}\n`;
-        formattedContent += `${'-'.repeat(20)}\n`;
-        formattedContent += `${stripHtml(page.content)}\n\n`;
-      }
-    });
+    // Format only the main body content - combine all pages seamlessly
+    const formattedContent = orderedPages
+      .filter(page => page.content && page.content.trim())
+      .map(page => stripHtml(page.content || ''))
+      .filter(content => content.trim())
+      .join('');
 
     return NextResponse.json({
       chapter: {
