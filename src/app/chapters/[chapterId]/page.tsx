@@ -169,8 +169,27 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
             value={value}
             onChange={(e) => handleContentChange(e.target.value)}
             onPaste={(e) => {
+              // Prevent default paste behavior
+              e.preventDefault();
+              
               // Get pasted text
               const pastedText = e.clipboardData?.getData('text') || '';
+              
+              // Convert indented text to HTML paragraphs
+              const htmlContent = convertIndentedTextToHtml(pastedText);
+              
+              // Get current cursor position
+              const textarea = e.target as HTMLTextAreaElement;
+              const start = textarea.selectionStart;
+              const end = textarea.selectionEnd;
+              const currentValue = textarea.value;
+              
+              // Insert the converted HTML content at cursor position
+              const newContent = currentValue.substring(0, start) + htmlContent + currentValue.substring(end);
+              
+              // Update the content
+              handleContentChange(newContent);
+              
               if (pastedText.length > 500) {
                 // Add visual feedback for large paste
                 const indicator = document.createElement('div');
@@ -514,6 +533,54 @@ const getOverallProgress = (pages: ChapterPage[]): number => {
   const completedPages = pages.filter(page => isPageComplete(page, pages)).length;
   
   return Math.min(100, (completedPages / maxPages) * 100);
+};
+
+// Convert indented paragraphs to HTML format
+const convertIndentedTextToHtml = (text: string): string => {
+  // Split text into lines
+  const lines = text.split('\n');
+  let htmlContent = '';
+  let inParagraph = false;
+  
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    const trimmedLine = line.trim();
+    
+    // Skip empty lines - they end the current paragraph
+    if (!trimmedLine) {
+      if (inParagraph) {
+        htmlContent += '</p>';
+        inParagraph = false;
+      }
+      continue;
+    }
+    
+    // Check if line starts with indentation (4+ spaces or tab) or is the first line
+    const isIndented = line.match(/^(\s{4,}|\t+)/) || !inParagraph;
+    
+    if (isIndented) {
+      // Start new paragraph if already in one
+      if (inParagraph) {
+        htmlContent += '</p>';
+      }
+      htmlContent += '<p>' + trimmedLine;
+      inParagraph = true;
+    } else if (inParagraph) {
+      // Continue current paragraph with a space (for wrapped lines)
+      htmlContent += ' ' + trimmedLine;
+    } else {
+      // If not in a paragraph and not indented, treat as new paragraph
+      htmlContent += '<p>' + trimmedLine;
+      inParagraph = true;
+    }
+  }
+  
+  // Close final paragraph if needed
+  if (inParagraph) {
+    htmlContent += '</p>';
+  }
+  
+  return htmlContent;
 };
 
 export default function ChapterWritingPage() {
@@ -929,7 +996,11 @@ export default function ChapterWritingPage() {
 
   // Enhanced content handler for large pastes - auto-distribute across pages
   const handleLargeContentPaste = async (content: string, startPageIndex: number) => {
-    const cleanContent = content.replace(/<[^>]*>/g, ''); // Strip existing HTML for character counting
+    // First, convert indented text to HTML paragraphs
+    const htmlContent = convertIndentedTextToHtml(content);
+    
+    // Then strip HTML for character counting
+    const cleanContent = htmlContent.replace(/<[^>]*>/g, '');
     const totalChars = cleanContent.length;
     
     // If content fits in current page goal, just update it normally
@@ -940,7 +1011,7 @@ export default function ChapterWritingPage() {
 
     // For large content, let the distribution function handle page creation as needed
     // This ensures sequential filling without pre-calculating pages
-    await distributeContentAcrossPages(content, startPageIndex);
+    await distributeContentAcrossPages(htmlContent, startPageIndex);
   };
 
   // Distribute content across multiple pages - fills each page to maximum capacity first

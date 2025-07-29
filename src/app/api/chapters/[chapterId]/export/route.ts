@@ -54,10 +54,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       return html
         .replace(/<h[1-6][^>]*>/gi, '')
         .replace(/<\/h[1-6]>/gi, '')
-        .replace(/<p[^>]*>/gi, '    ') // Start paragraphs with 4 spaces for indentation
+        .replace(/<p[^>]*>/gi, '\n    ') // Start paragraphs with newline + 4 spaces for indentation
         .replace(/<\/p>/gi, '')
         .replace(/<br\s*\/?>/gi, ' ')
-        .replace(/<blockquote[^>]*>/gi, '    "')
+        .replace(/<blockquote[^>]*>/gi, '\n    "')
         .replace(/<\/blockquote>/gi, '"')
         .replace(/<strong[^>]*>|<\/strong>/gi, '')
         .replace(/<em[^>]*>|<\/em>/gi, '')
@@ -68,7 +68,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
         .replace(/&gt;/g, '>')
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
-        .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+        .replace(/[ \t]+/g, ' ') // Replace multiple spaces/tabs with single space, but preserve newlines
+        .replace(/\n\s*\n/g, '\n') // Remove extra blank lines
         .trim();
     };
 
