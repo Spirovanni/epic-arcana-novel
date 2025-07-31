@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer } from 'drizzle-orm/pg-core';
+import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real } from 'drizzle-orm/pg-core';
 
 export const locations = pgTable('locations', {
   id: uuid('id').primaryKey().defaultRandom(),
@@ -527,6 +527,74 @@ export const chapterWritingGuidance = pgTable('chapter_writing_guidance', {
   toneAndVisualPrompts: jsonb('tone_and_visual_prompts'), // Array of strings
   tipsForWriting: jsonb('tips_for_writing'), // Array of strings
   fullText: text('full_text'), // Complete Sudowrite guidance text
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+// Character Arc 3D Visualization Tables
+export const storyCards = pgTable('story_cards', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  characterArcId: uuid('character_arc_id').references(() => characterArcs.id).notNull(),
+  stageName: varchar('stage_name', { length: 100 }).notNull(),
+  title: varchar('title', { length: 255 }).notNull(),
+  description: text('description'),
+  chapterReferences: jsonb('chapter_references'),
+  sceneGoals: jsonb('scene_goals'),
+  arcDevelopment: text('arc_development'),
+  positionX: real('position_x').default(0),
+  positionY: real('position_y').default(0),
+  positionZ: real('position_z').default(0),
+  rotationX: real('rotation_x').default(0),
+  rotationY: real('rotation_y').default(0),
+  rotationZ: real('rotation_z').default(0),
+  scale: real('scale').default(1),
+  color: varchar('color', { length: 7 }).default('#6366f1'),
+  displayOrder: integer('display_order').default(0),
+  isVisible: boolean('is_visible').default(true),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const characterArcRelationships = pgTable('character_arc_relationships', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  sourceCharacterId: uuid('source_character_id').references(() => characters.id).notNull(),
+  targetCharacterId: uuid('target_character_id').references(() => characters.id).notNull(),
+  relationshipType: varchar('relationship_type', { length: 100 }).notNull(),
+  strength: integer('strength').default(1),
+  chaptersActive: jsonb('chapters_active'),
+  description: text('description'),
+  visualStyle: jsonb('visual_style'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const arcVisualizationScenes = pgTable('arc_visualization_scenes', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull(),
+  description: text('description'),
+  cameraPosition: jsonb('camera_position'),
+  cameraTarget: jsonb('camera_target'),
+  lightingConfig: jsonb('lighting_config'),
+  environmentSettings: jsonb('environment_settings'),
+  characterFilters: jsonb('character_filters'),
+  isDefault: boolean('is_default').default(false),
+  createdBy: varchar('created_by', { length: 255 }),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const storyArcGoals = pgTable('story_arc_goals', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  characterArcId: uuid('character_arc_id').references(() => characterArcs.id).notNull(),
+  theme: varchar('theme', { length: 100 }).notNull(),
+  chapterNumber: integer('chapter_number').notNull(),
+  sceneNumber: integer('scene_number'),
+  goalDescription: text('goal_description').notNull(),
+  measurementCriteria: text('measurement_criteria'),
+  arcDevelopmentNote: text('arc_development_note'),
+  isCompleted: boolean('is_completed').default(false),
+  positionIn3d: jsonb('position_in_3d'),
+  visualProperties: jsonb('visual_properties'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });

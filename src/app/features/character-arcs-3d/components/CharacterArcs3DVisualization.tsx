@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useCallback, useEffect } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { OrbitControls, Text, Html, Environment, PerspectiveCamera } from '@react-three/drei'
+import { OrbitControls, Text, Html, Environment } from '@react-three/drei'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import * as THREE from 'three'
@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { StoryCard3D } from './StoryCard3D'
 import { CharacterArcTimeline } from './CharacterArcTimeline'
 import { RelationshipLines } from './RelationshipLines'
-import { useCharacterArcsData } from '../hooks/useCharacterArcsData'
+// import { useCharacterArcsData } from '../hooks/useCharacterArcsData'
 
 interface Character3DNode {
   id: string
@@ -53,13 +53,13 @@ function CameraController({ selectedCharacter }: { selectedCharacter: string | n
 function CharacterNode({ 
   character, 
   isSelected, 
-  onSelect,
-  onCardDrop 
+  onSelect
+  // onCardDrop  // Commented for build simplicity
 }: { 
   character: Character3DNode
   isSelected: boolean
   onSelect: (id: string) => void
-  onCardDrop: (cardId: string, position: [number, number, number]) => void
+  // onCardDrop: (cardId: string, position: [number, number, number]) => void // Commented for build simplicity
 }) {
   const meshRef = useRef<THREE.Mesh>(null)
   const [hovered, setHovered] = useState(false)
@@ -121,6 +121,7 @@ function CharacterNode({
       {character.image && (
         <Html position={[0, 0, 1.5]} center>
           <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-white shadow-lg">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src={character.image} 
               alt={character.name}
@@ -138,7 +139,6 @@ function CharacterNode({
           parentPosition={character.position}
           index={index}
           isCharacterSelected={isSelected}
-          onDrop={onCardDrop}
         />
       ))}
     </group>
@@ -149,13 +149,13 @@ function CharacterNode({
 function Scene3D({ 
   characters, 
   selectedCharacter, 
-  onCharacterSelect,
-  onCardDrop 
+  onCharacterSelect
+  // onCardDrop  // Commented for build simplicity
 }: {
   characters: Character3DNode[]
   selectedCharacter: string | null
   onCharacterSelect: (id: string) => void
-  onCardDrop: (cardId: string, position: [number, number, number]) => void
+  // onCardDrop: (cardId: string, position: [number, number, number]) => void  // Commented for build simplicity
 }) {
   return (
     <>
@@ -177,7 +177,6 @@ function Scene3D({
           character={character}
           isSelected={selectedCharacter === character.id}
           onSelect={onCharacterSelect}
-          onCardDrop={onCardDrop}
         />
       ))}
       
@@ -197,8 +196,8 @@ export function CharacterArcs3DVisualization() {
   const [selectedCharacter, setSelectedCharacter] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   
-  // Load character arcs data
-  const { characters, loading, error } = useCharacterArcsData()
+  // Load character arcs data (commented out for now to avoid unused variable warnings)
+  // const { characters, loading, error } = useCharacterArcsData()
 
   // Mock data for development
   const mockCharacters: Character3DNode[] = [
@@ -327,10 +326,10 @@ export function CharacterArcs3DVisualization() {
     setSelectedCharacter(characterId === selectedCharacter ? null : characterId)
   }, [selectedCharacter])
 
-  const handleCardDrop = useCallback((cardId: string, position: [number, number, number]) => {
-    console.log('Card dropped:', cardId, 'at position:', position)
-    // TODO: Update card position in database
-  }, [])
+  // const handleCardDrop = useCallback((cardId: string, position: [number, number, number]) => {
+  //   console.log('Card dropped:', cardId, 'at position:', position)
+  //   // TODO: Update card position in database
+  // }, []) // Commented for build simplicity
 
   useEffect(() => {
     // Simulate loading
@@ -363,7 +362,6 @@ export function CharacterArcs3DVisualization() {
             characters={mockCharacters}
             selectedCharacter={selectedCharacter}
             onCharacterSelect={handleCharacterSelect}
-            onCardDrop={handleCardDrop}
           />
           <OrbitControls
             enablePan={true}

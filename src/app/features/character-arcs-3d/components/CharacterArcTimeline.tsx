@@ -2,7 +2,7 @@
 
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Text } from '@react-three/drei'
+import { Text, Line } from '@react-three/drei'
 import * as THREE from 'three'
 
 interface Character3DNode {
@@ -11,7 +11,10 @@ interface Character3DNode {
   position: [number, number, number]
   color: string
   arcType: string
-  storyCards?: any[]
+  storyCards?: Array<{
+    id: string
+    chapterRefs: string[]
+  }>
 }
 
 interface CharacterArcTimelineProps {
@@ -202,17 +205,16 @@ export function CharacterArcTimeline({ characters }: CharacterArcTimelineProps) 
 
         const curve = new THREE.CatmullRomCurve3(points)
         const curvePoints = curve.getPoints(100)
-        const geometry = new THREE.BufferGeometry().setFromPoints(curvePoints)
 
         return (
-          <line key={`arc-${character.id}`} geometry={geometry}>
-            <lineBasicMaterial
-              color={character.color}
-              transparent
-              opacity={0.6}
-              linewidth={2}
-            />
-          </line>
+          <Line
+            key={`arc-${character.id}`}
+            points={curvePoints}
+            color={character.color}
+            lineWidth={2}
+            transparent
+            opacity={0.6}
+          />
         )
       })}
     </group>

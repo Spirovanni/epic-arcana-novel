@@ -3,7 +3,7 @@ import { db } from '@/lib/db'
 import { characterArcs, characters, storyCards, storyArcGoals } from '../../../lib/schema'
 import { eq } from 'drizzle-orm'
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     // Fetch character arcs with related data
     const arcsData = await db
@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
             positionX: data.position.x,
             positionY: data.position.y,
             positionZ: data.position.z,
-            updatedAt: new Date().toISOString()
+            updatedAt: new Date()
           })
           .where(eq(storyCards.id, data.cardId))
         break
@@ -127,7 +127,7 @@ export async function POST(request: NextRequest) {
             description: data.description,
             chapterReferences: data.chapterReferences,
             sceneGoals: data.sceneGoals,
-            updatedAt: new Date().toISOString()
+            updatedAt: new Date()
           })
           .where(eq(storyCards.id, data.cardId))
         break

@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import { Line } from '@react-three/drei'
 import * as THREE from 'three'
 
 interface Character3DNode {
@@ -74,7 +75,7 @@ export function RelationshipLines({ characters }: RelationshipLinesProps) {
 
   return (
     <group ref={linesRef}>
-      {relationships.map((relationship, index) => {
+      {relationships.map((relationship, relationshipIndex) => {
         const sourcePos = getCharacterPosition(relationship.source)
         const targetPos = getCharacterPosition(relationship.target)
 
@@ -90,22 +91,21 @@ export function RelationshipLines({ characters }: RelationshipLinesProps) {
         )
 
         const points = curve.getPoints(50)
-        const geometry = new THREE.BufferGeometry().setFromPoints(points)
 
         return (
-          <line key={`${relationship.source}-${relationship.target}`} geometry={geometry}>
-            <lineBasicMaterial
-              color={relationship.color}
-              transparent
-              opacity={0.6}
-              linewidth={relationship.strength / 2}
-            />
-          </line>
+          <Line
+            key={`${relationship.source}-${relationship.target}-${relationshipIndex}`}
+            points={points}
+            color={relationship.color}
+            lineWidth={relationship.strength / 2}
+            transparent
+            opacity={0.6}
+          />
         )
       })}
 
       {/* Relationship type indicators */}
-      {relationships.map((relationship, index) => {
+      {relationships.map((relationship, relationshipIndex) => {
         const sourcePos = getCharacterPosition(relationship.source)
         const targetPos = getCharacterPosition(relationship.target)
         const midpoint: [number, number, number] = [
@@ -113,6 +113,8 @@ export function RelationshipLines({ characters }: RelationshipLinesProps) {
           Math.max(sourcePos[1], targetPos[1]) + 2.5,
           (sourcePos[2] + targetPos[2]) / 2
         ]
+
+        // Use relationshipIndex for unique keys
 
         // Different shapes for different relationship types
         const getRelationshipIcon = (type: string) => {
@@ -131,7 +133,7 @@ export function RelationshipLines({ characters }: RelationshipLinesProps) {
         }
 
         return (
-          <mesh key={`icon-${index}`} position={midpoint}>
+          <mesh key={`icon-${relationshipIndex}`} position={midpoint}>
             {getRelationshipIcon(relationship.type)}
             <meshStandardMaterial
               color={relationship.color}

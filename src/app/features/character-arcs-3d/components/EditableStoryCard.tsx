@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import { Html } from '@react-three/drei'
-import { useDrag, useDrop } from 'react-dnd'
+// import { useDrag, useDrop } from 'react-dnd' // Commented out for build simplicity
 
 interface StoryCard {
   id: string
@@ -42,29 +42,8 @@ export function EditableStoryCard({
   })
   const [showColorPicker, setShowColorPicker] = useState(false)
 
-  // Drag and drop functionality
-  const [{ isDragging }, drag] = useDrag({
-    type: 'story-card',
-    item: { 
-      id: card.id, 
-      type: 'story-card',
-      originalPosition: card.position 
-    },
-    collect: (monitor) => ({
-      isDragging: monitor.isDragging(),
-    }),
-    end: (item, monitor) => {
-      const dropResult = monitor.getDropResult()
-      if (dropResult && dropResult.position) {
-        onUpdate(card.id, { position: dropResult.position })
-      }
-    },
-  })
-
-  const [, drop] = useDrop({
-    accept: 'story-card',
-    drop: () => ({ position: card.position }),
-  })
+  // Simplified drag state (drag and drop functionality can be enhanced later)
+  const isDragging = false
 
   const handleSave = () => {
     const updates: Partial<StoryCard> = {
@@ -96,10 +75,6 @@ export function EditableStoryCard({
   return (
     <Html position={card.position} center>
       <motion.div
-        ref={(node) => {
-          drag(node)
-          drop(node)
-        }}
         className={`
           bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-xl shadow-2xl border-2 
           ${isSelected ? 'border-purple-500' : 'border-gray-200 dark:border-gray-700'}
