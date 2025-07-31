@@ -65,6 +65,14 @@ export function Navbar() {
       category: 'Writing Tools'
     },
     {
+      title: '3D Character Arcs',
+      description: 'Interactive 3D visualization with editable story cards and timeline integration',
+      href: '/features/character-arcs-3d',
+      icon: '🌐',
+      category: 'Core Features',
+      featured: true
+    },
+    {
       title: 'Lore & Narrative Codex',
       description: 'Unified encyclopedia with auto-tagging and linking',
       href: '/features/lore-codex',

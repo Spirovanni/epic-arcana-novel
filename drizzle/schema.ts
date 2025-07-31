@@ -713,3 +713,94 @@ export const chapterWritingGuidance = pgTable("chapter_writing_guidance", {
 			name: "chapter_writing_guidance_book_id_books_id_fk"
 		}),
 ]);
+
+// Character Arc 3D Visualization Tables
+export const storyCards = pgTable("story_cards", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	characterArcId: uuid("character_arc_id").notNull(),
+	stageName: varchar("stage_name", { length: 100 }).notNull(),
+	title: varchar({ length: 255 }).notNull(),
+	description: text(),
+	chapterReferences: jsonb("chapter_references"),
+	sceneGoals: jsonb("scene_goals"),
+	arcDevelopment: text("arc_development"),
+	positionX: real("position_x").default(0),
+	positionY: real("position_y").default(0),
+	positionZ: real("position_z").default(0),
+	rotationX: real("rotation_x").default(0),
+	rotationY: real("rotation_y").default(0),
+	rotationZ: real("rotation_z").default(0),
+	scale: real().default(1),
+	color: varchar({ length: 7 }).default('#6366f1'),
+	displayOrder: integer("display_order").default(0),
+	isVisible: boolean("is_visible").default(true),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.characterArcId],
+		foreignColumns: [characterArcs.id],
+		name: "story_cards_character_arc_id_character_arcs_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const characterArcRelationships = pgTable("character_arc_relationships", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	sourceCharacterId: uuid("source_character_id").notNull(),
+	targetCharacterId: uuid("target_character_id").notNull(),
+	relationshipType: varchar("relationship_type", { length: 100 }).notNull(),
+	strength: integer().default(1),
+	chaptersActive: jsonb("chapters_active"),
+	description: text(),
+	visualStyle: jsonb("visual_style"),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.sourceCharacterId],
+		foreignColumns: [characters.id],
+		name: "character_arc_relationships_source_character_id_characters_id_fk"
+	}).onDelete("cascade"),
+	foreignKey({
+		columns: [table.targetCharacterId],
+		foreignColumns: [characters.id],
+		name: "character_arc_relationships_target_character_id_characters_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const arcVisualizationScenes = pgTable("arc_visualization_scenes", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	name: varchar({ length: 255 }).notNull(),
+	description: text(),
+	cameraPosition: jsonb("camera_position"),
+	cameraTarget: jsonb("camera_target"),
+	lightingConfig: jsonb("lighting_config"),
+	environmentSettings: jsonb("environment_settings"),
+	characterFilters: jsonb("character_filters"),
+	isDefault: boolean("is_default").default(false),
+	createdBy: varchar("created_by", { length: 255 }),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+});
+
+export const storyArcGoals = pgTable("story_arc_goals", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	characterArcId: uuid("character_arc_id").notNull(),
+	theme: varchar({ length: 100 }).notNull(),
+	chapterNumber: integer("chapter_number").notNull(),
+	sceneNumber: integer("scene_number"),
+	goalDescription: text("goal_description").notNull(),
+	measurementCriteria: text("measurement_criteria"),
+	arcDevelopmentNote: text("arc_development_note"),
+	isCompleted: boolean("is_completed").default(false),
+	positionIn3d: jsonb("position_in_3d"),
+	visualProperties: jsonb("visual_properties"),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.characterArcId],
+		foreignColumns: [characterArcs.id],
+		name: "story_arc_goals_character_arc_id_character_arcs_id_fk"
+	}).onDelete("cascade"),
+]);
