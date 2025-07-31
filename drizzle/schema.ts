@@ -1,4 +1,4 @@
-import { pgTable, unique, integer, varchar, timestamp, boolean, uuid, text, jsonb, foreignKey, pgEnum } from "drizzle-orm/pg-core"
+import { pgTable, unique, integer, varchar, timestamp, boolean, uuid, text, jsonb, foreignKey, pgEnum, real } from "drizzle-orm/pg-core"
 import { sql } from "drizzle-orm"
 
 export const affinityType = pgEnum("affinity_type", ['secondary', 'forbidden'])

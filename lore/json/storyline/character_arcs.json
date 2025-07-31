@@ -15,6 +15,21 @@
                         "Father's expectations vs. personal desires",
                         "Academic pressure vs. creative impulses",
                         "Social status vs. true identity"
+                    ],
+                    "chapter_references": ["Chapter 1: Despair"],
+                    "scene_goals": [
+                        {
+                            "chapter": 1,
+                            "scene": 1,
+                            "goal": "Establish Francisco's despair and isolation at university",
+                            "arc_development": "Show his disconnection from peers and family expectations"
+                        },
+                        {
+                            "chapter": 1,
+                            "scene": 2,
+                            "goal": "Introduce Novella encounter and academic setting",
+                            "arc_development": "Demonstrate his romantic idealization and social naivety"
+                        }
                     ]
                 },
                 "inciting_incident": {
@@ -29,6 +44,33 @@
                         "Awakening to greater possibilities",
                         "First steps toward destiny",
                         "Recognition of hidden talents"
+                    ],
+                    "chapter_references": ["Chapter 1: Despair", "Chapter 2: Guileless"],
+                    "scene_goals": [
+                        {
+                            "chapter": 1,
+                            "scene": 3,
+                            "goal": "Francisco questions reality behind the screen and introduces Trionfi cards",
+                            "arc_development": "First hint at his hidden talents and deeper understanding"
+                        },
+                        {
+                            "chapter": 1,
+                            "scene": 4,
+                            "goal": "Discovery of train pathway on card - first supernatural recognition",
+                            "arc_development": "Awakening to greater possibilities through card vision"
+                        },
+                        {
+                            "chapter": 2,
+                            "scene": 1,
+                            "goal": "Zanetti Train manifests in reality matching his card",
+                            "arc_development": "Recognition of cards' power and first conscious awareness of ability"
+                        },
+                        {
+                            "chapter": 2,
+                            "scene": 3,
+                            "goal": "Meeting with Dante reveals cosmic significance",
+                            "arc_development": "Understanding that his destiny is greater than law studies"
+                        }
                     ]
                 },
                 "rising_action": {
@@ -44,6 +86,33 @@
                         "Deepening connection to Trionfi cards",
                         "Expanding worldview",
                         "Strengthening resolve"
+                    ],
+                    "chapter_references": ["Chapter 2: Guileless", "Chapter 3: Vibratile", "Chapter 4: Explosive", "Chapters 5-15"],
+                    "scene_goals": [
+                        {
+                            "chapter": 2,
+                            "scene": 4,
+                            "goal": "Dante convinces Francisco to join the Catalan Company quest",
+                            "arc_development": "Acceptance of call to adventure, beginning transformation from student to hero"
+                        },
+                        {
+                            "chapter": 3,
+                            "scene": 1,
+                            "goal": "Francisco prepares for journey, gathering supplies",
+                            "arc_development": "First active steps toward transformation, choosing adventure over security"
+                        },
+                        {
+                            "chapter": 3,
+                            "scene": 2,
+                            "goal": "Torn between desire for adventure and fear of unknown",
+                            "arc_development": "Internal conflict showing heroic potential beneath academic exterior"
+                        },
+                        {
+                            "chapter": 4,
+                            "scene": 1,
+                            "goal": "Sets off with Catalan Company, encountering challenges",
+                            "arc_development": "Crossing threshold into special world, expanding worldview"
+                        }
                     ]
                 },
                 "midpoint": {
@@ -59,6 +128,27 @@
                         "Acceptance of responsibility",
                         "Understanding of true power",
                         "Commitment to greater cause"
+                    ],
+                    "chapter_references": ["Chapters 16-25"],
+                    "scene_goals": [
+                        {
+                            "chapter": 20,
+                            "scene": 2,
+                            "goal": "Discovery of Cicero's lost manuscript",
+                            "arc_development": "Shift from seeker to keeper of ancient knowledge"
+                        },
+                        {
+                            "chapter": 22,
+                            "scene": 3,
+                            "goal": "Understanding the manuscript's cosmic significance",
+                            "arc_development": "Acceptance of responsibility as guardian of temporal balance"
+                        },
+                        {
+                            "chapter": 24,
+                            "scene": 1,
+                            "goal": "First direct confrontation with Dagon's influence",
+                            "arc_development": "Understanding of true power and commitment to greater cause"
+                        }
                     ]
                 },
                 "falling_action": {
@@ -74,6 +164,21 @@
                         "Leadership skills",
                         "Moral clarity",
                         "Personal sacrifice"
+                    ],
+                    "chapter_references": ["Chapters 26-35"],
+                    "scene_goals": [
+                        {
+                            "chapter": 28,
+                            "scene": 2,
+                            "goal": "Francisco takes leadership role in resistance against Dagon",
+                            "arc_development": "Full emergence of leadership skills and strategic thinking"
+                        },
+                        {
+                            "chapter": 32,
+                            "scene": 4,
+                            "goal": "Building alliances and preparing for final confrontation",
+                            "arc_development": "Demonstration of moral clarity and willingness for personal sacrifice"
+                        }
                     ]
                 },
                 "resolution": {
@@ -89,6 +194,27 @@
                         "Balance of power and wisdom",
                         "Understanding of true legacy",
                         "Integration of past and future"
+                    ],
+                    "chapter_references": ["Chapters 36-40"],
+                    "scene_goals": [
+                        {
+                            "chapter": 38,
+                            "scene": 3,
+                            "goal": "Final confrontation with Dagon - ultimate test of growth",
+                            "arc_development": "Complete transformation from student to cosmic guardian"
+                        },
+                        {
+                            "chapter": 39,
+                            "scene": 2,
+                            "goal": "Restoration of proper timeline balance",
+                            "arc_development": "Balance of power and wisdom, understanding true legacy"
+                        },
+                        {
+                            "chapter": 40,
+                            "scene": 4,
+                            "goal": "Return to Bologna with integrated experiences",
+                            "arc_development": "Integration of past student life with cosmic destiny"
+                        }
                     ]
                 }
             },
@@ -100,6 +226,23 @@
                         "First use of temporal abilities",
                         "Confrontation with Dagon",
                         "Final resolution"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 1,
+                            "goal": "Establish Francisco's unconscious power through card creation",
+                            "measurement": "Francisco creates cards without understanding their true nature"
+                        },
+                        {
+                            "chapter": 20,
+                            "goal": "Francisco consciously uses Trionfi power to find Cicero's manuscript",
+                            "measurement": "Successful manipulation of timeline probability to locate lost work"
+                        },
+                        {
+                            "chapter": 38,
+                            "goal": "Francisco balances power with wisdom in final confrontation",
+                            "measurement": "Defeats Dagon through understanding rather than brute force"
+                        }
                     ]
                 },
                 "knowledge": {
@@ -109,6 +252,23 @@
                         "Discovery of Cicero's work",
                         "Learning from Dante",
                         "Understanding of temporal mechanics"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 1,
+                            "goal": "Show Francisco's academic struggle and disconnection",
+                            "measurement": "Francisco feels isolated despite academic environment"
+                        },
+                        {
+                            "chapter": 2,
+                            "goal": "Dante reveals knowledge beyond academic scope",
+                            "measurement": "Francisco learns Divine Comedy is actual dimensional map"
+                        },
+                        {
+                            "chapter": 22,
+                            "goal": "Francisco understands cosmic significance of Cicero's work",
+                            "measurement": "Recognizes manuscript's role in maintaining timeline balance"
+                        }
                     ]
                 },
                 "love": {
@@ -118,6 +278,23 @@
                         "Meeting La Signora",
                         "Growing connection",
                         "Transcendent love"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 1,
+                            "goal": "Establish Francisco's idealized infatuation with Novella",
+                            "measurement": "Francisco sees Novella as unattainable perfect woman"
+                        },
+                        {
+                            "chapter": 12,
+                            "goal": "Francisco meets La Signora and recognizes true connection",
+                            "measurement": "Mutual recognition of shared cosmic destiny"
+                        },
+                        {
+                            "chapter": 35,
+                            "goal": "Francisco and La Signora achieve transcendent partnership",
+                            "measurement": "Combined power greater than sum of parts in final battle"
+                        }
                     ]
                 }
             }
@@ -137,6 +314,21 @@
                         "Heritage vs. identity",
                         "Power vs. responsibility",
                         "Past vs. future"
+                    ],
+                    "chapter_references": ["Chapters 5-8"],
+                    "scene_goals": [
+                        {
+                            "chapter": 6,
+                            "scene": 2,
+                            "goal": "First introduction as mysterious figure concealing true identity",
+                            "arc_development": "Establish social masking and fear of judgment"
+                        },
+                        {
+                            "chapter": 7,
+                            "scene": 3,
+                            "goal": "Hints at hidden power and De Sade heritage",
+                            "arc_development": "Reveal internal conflict between heritage and desired identity"
+                        }
                     ]
                 },
                 "transformation": {
@@ -152,6 +344,27 @@
                         "Embracing true identity",
                         "Growing confidence",
                         "Strategic thinking"
+                    ],
+                    "chapter_references": ["Chapters 9-18"],
+                    "scene_goals": [
+                        {
+                            "chapter": 10,
+                            "scene": 1,
+                            "goal": "First demonstration of connection to Trionfi cards",
+                            "arc_development": "Discovery and acceptance of true power"
+                        },
+                        {
+                            "chapter": 12,
+                            "scene": 3,
+                            "goal": "Meeting Francisco - recognition of kindred spirit",
+                            "arc_development": "Beginning to embrace true identity through connection"
+                        },
+                        {
+                            "chapter": 15,
+                            "scene": 2,
+                            "goal": "Understanding her role as La Signora del Gioco",
+                            "arc_development": "Growing confidence and strategic thinking emerge"
+                        }
                     ]
                 },
                 "confrontation": {
@@ -167,6 +380,27 @@
                         "Leadership emergence",
                         "Strategic mastery",
                         "Personal transformation"
+                    ],
+                    "chapter_references": ["Chapters 19-32"],
+                    "scene_goals": [
+                        {
+                            "chapter": 21,
+                            "scene": 1,
+                            "goal": "First direct confrontation with Dagon's forces",
+                            "arc_development": "Full power realization and leadership emergence"
+                        },
+                        {
+                            "chapter": 26,
+                            "scene": 4,
+                            "goal": "Building alliances and demonstrating strategic mastery",
+                            "arc_development": "Complete personal transformation into leader"
+                        },
+                        {
+                            "chapter": 30,
+                            "scene": 2,
+                            "goal": "Major power demonstration against Dagon",
+                            "arc_development": "Strategic mastery and preparation for final battle"
+                        }
                     ]
                 },
                 "resolution": {
@@ -182,6 +416,27 @@
                         "Balance of power",
                         "True self-acceptance",
                         "Future vision"
+                    ],
+                    "chapter_references": ["Chapters 33-40"],
+                    "scene_goals": [
+                        {
+                            "chapter": 35,
+                            "scene": 3,
+                            "goal": "Fighting alongside Francisco in final battle",
+                            "arc_development": "Complete transformation and power balance with partner"
+                        },
+                        {
+                            "chapter": 38,
+                            "scene": 1,
+                            "goal": "Full integration of Giovanna and La Signora identities",
+                            "arc_development": "True self-acceptance and unified identity"
+                        },
+                        {
+                            "chapter": 40,
+                            "scene": 3,
+                            "goal": "Establishing new role in restored timeline",
+                            "arc_development": "Future vision and new beginning as cosmic guardian"
+                        }
                     ]
                 }
             },
@@ -193,6 +448,23 @@
                         "Power discovery",
                         "Identity acceptance",
                         "Full integration"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 6,
+                            "goal": "Establish Giovanna's social masking and fear",
+                            "measurement": "Character hides true nature behind acceptable facade"
+                        },
+                        {
+                            "chapter": 15,
+                            "goal": "Giovanna accepts La Signora del Gioco identity",
+                            "measurement": "Consciously embraces role as game master of fate"
+                        },
+                        {
+                            "chapter": 38,
+                            "goal": "Complete integration of all aspects of self",
+                            "measurement": "No conflict between Giovanna and La Signora personas"
+                        }
                     ]
                 },
                 "power": {
@@ -202,6 +474,23 @@
                         "Initial control",
                         "Strategic use",
                         "Mastery"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 10,
+                            "goal": "La Signora discovers connection to Trionfi cards",
+                            "measurement": "First conscious manipulation of probability through cards"
+                        },
+                        {
+                            "chapter": 21,
+                            "goal": "Strategic use of power against Dagon's forces",
+                            "measurement": "Coordinated assault demonstrating tactical mastery"
+                        },
+                        {
+                            "chapter": 35,
+                            "goal": "Complete mastery working in harmony with Francisco",
+                            "measurement": "Seamless power integration in final confrontations"
+                        }
                     ]
                 },
                 "love": {
@@ -211,6 +500,23 @@
                         "Growing connection",
                         "Power sharing",
                         "Complete union"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 12,
+                            "goal": "Initial meeting reveals mutual recognition",
+                            "measurement": "Both characters sense shared cosmic destiny"
+                        },
+                        {
+                            "chapter": 24,
+                            "goal": "La Signora and Francisco begin sharing power",
+                            "measurement": "Combined Trionfi abilities exceed individual capacity"
+                        },
+                        {
+                            "chapter": 40,
+                            "goal": "Complete union as cosmic guardians",
+                            "measurement": "Established as eternal partners maintaining timeline balance"
+                        }
                     ]
                 }
             }
@@ -230,6 +536,21 @@
                         "Order vs. chaos",
                         "Control vs. free will",
                         "Past vs. future"
+                    ],
+                    "chapter_references": ["Chapters 8-12"],
+                    "scene_goals": [
+                        {
+                            "chapter": 9,
+                            "scene": 4,
+                            "goal": "First subtle influence on events and characters",
+                            "arc_development": "Establish divine power and strategic mind working behind scenes"
+                        },
+                        {
+                            "chapter": 11,
+                            "scene": 2,
+                            "goal": "Reveal hidden agenda through manipulation of timeline",
+                            "arc_development": "Show complex motivations beyond simple antagonism"
+                        }
                     ]
                 },
                 "rising_action": {
@@ -245,6 +566,27 @@
                         "Strategic planning",
                         "Power demonstration",
                         "Control expansion"
+                    ],
+                    "chapter_references": ["Chapters 13-25"],
+                    "scene_goals": [
+                        {
+                            "chapter": 14,
+                            "scene": 3,
+                            "goal": "Discovery of Francisco's Trionfi cards and their potential",
+                            "arc_development": "Growing influence through recognition of cards' power"
+                        },
+                        {
+                            "chapter": 18,
+                            "scene": 1,
+                            "goal": "Major timeline manipulation to test protagonists",
+                            "arc_development": "Strategic planning and power demonstration"
+                        },
+                        {
+                            "chapter": 23,
+                            "scene": 4,
+                            "goal": "Building alliances with corrupted historical figures",
+                            "arc_development": "Control expansion through alliance building"
+                        }
                     ]
                 },
                 "confrontation": {
@@ -260,6 +602,27 @@
                         "Strategic mastery",
                         "Control loss",
                         "Transformation"
+                    ],
+                    "chapter_references": ["Chapters 26-38"],
+                    "scene_goals": [
+                        {
+                            "chapter": 28,
+                            "scene": 1,
+                            "goal": "Major power demonstration against resistance forces",
+                            "arc_development": "Power peak and strategic mastery on full display"
+                        },
+                        {
+                            "chapter": 33,
+                            "scene": 3,
+                            "goal": "Strategic moves to counter Francisco and La Signora's alliance",
+                            "arc_development": "Beginning of control loss as protagonists strengthen"
+                        },
+                        {
+                            "chapter": 37,
+                            "scene": 2,
+                            "goal": "Ultimate confrontation setup - all pieces in play",
+                            "arc_development": "Preparation for transformation through final defeat"
+                        }
                     ]
                 },
                 "resolution": {
@@ -275,6 +638,27 @@
                         "Acceptance",
                         "Transformation",
                         "Integration"
+                    ],
+                    "chapter_references": ["Chapters 38-40"],
+                    "scene_goals": [
+                        {
+                            "chapter": 38,
+                            "scene": 4,
+                            "goal": "Final confrontation with Francisco and La Signora",
+                            "arc_development": "Ultimate test leading to understanding of true cosmic balance"
+                        },
+                        {
+                            "chapter": 39,
+                            "scene": 1,
+                            "goal": "Acceptance of defeat and recognition of protagonists' worth",
+                            "arc_development": "Transformation from antagonist to understanding cosmic force"
+                        },
+                        {
+                            "chapter": 40,
+                            "scene": 1,
+                            "goal": "Integration into new cosmic order",
+                            "arc_development": "Complete transformation and acceptance of balanced role"
+                        }
                     ]
                 }
             },
@@ -286,6 +670,23 @@
                         "Power expansion",
                         "Control loss",
                         "Understanding"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 9,
+                            "goal": "Establish Dagon's behind-the-scenes control",
+                            "measurement": "Subtle manipulation of events goes undetected"
+                        },
+                        {
+                            "chapter": 23,
+                            "goal": "Peak power demonstration through alliance building",
+                            "measurement": "Corrupts historical figures and bends them to his will"
+                        },
+                        {
+                            "chapter": 39,
+                            "goal": "Dagon achieves understanding of cosmic balance",
+                            "measurement": "Accepts defeat and recognizes value of free will"
+                        }
                     ]
                 },
                 "order": {
@@ -295,6 +696,23 @@
                         "Control attempts",
                         "Order disruption",
                         "New balance"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 14,
+                            "goal": "Dagon attempts to impose rigid order on timeline",
+                            "measurement": "Systematic elimination of chaotic elements and free choices"
+                        },
+                        {
+                            "chapter": 28,
+                            "goal": "Francisco and La Signora disrupt Dagon's ordered control",
+                            "measurement": "Protagonists introduce unpredictable elements Dagon cannot control"
+                        },
+                        {
+                            "chapter": 40,
+                            "goal": "New balance achieved between order and chaos",
+                            "measurement": "Dagon accepts role in maintaining dynamic equilibrium"
+                        }
                     ]
                 },
                 "transformation": {
@@ -304,6 +722,23 @@
                         "Power peak",
                         "Confrontation",
                         "Transformation"
+                    ],
+                    "story_arc_goals": [
+                        {
+                            "chapter": 9,
+                            "goal": "Establish Dagon as complex antagonist with valid concerns",
+                            "measurement": "Show his desire for order stems from cosmic responsibility"
+                        },
+                        {
+                            "chapter": 33,
+                            "goal": "Dagon reaches peak power but begins to question methods",
+                            "measurement": "Internal conflict emerges as protagonists show alternative path"
+                        },
+                        {
+                            "chapter": 39,
+                            "goal": "Complete transformation from antagonist to cosmic partner",
+                            "measurement": "Accepts new role maintaining balance alongside protagonists"
+                        }
                     ]
                 }
             }
