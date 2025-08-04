@@ -126,11 +126,6 @@ export function CharacterArcsTimeline({ selectedCharacter, onEventSelect }: Char
 
   // Event data has been moved to the hook - using timelineEvents from there
 
-  const filteredEvents = useMemo(() => {
-    if (!selectedCharacter) return timelineEvents
-    return timelineEvents.filter(event => event.characterId === selectedCharacter)
-  }, [selectedCharacter, timelineEvents]);
-
   const visibleCharacters = useMemo(() => {
     if (!selectedCharacter) return characters
     return characters.filter(char => char.id === selectedCharacter)
