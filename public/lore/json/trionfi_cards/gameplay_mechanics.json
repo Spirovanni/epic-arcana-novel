@@ -1,0 +1,21 @@
+{
+    "Basic_Game": {
+        "objective": "Tell a story through card combinations",
+        "players": "2-8",
+        "setup": "Each player draws cards representing their fate",
+        "play": "Players lay cards to alter the narrative",
+        "winning": "Most coherent story that changes all players' fates"
+    },
+    "Temporal_Variant": {
+        "objective": "Navigate timeline challenges",
+        "special_rules": "Cards affect real timeline during play",
+        "dangers": "Can create actual paradoxes",
+        "rewards": "Glimpses of true timeline futures"
+    },
+    "Divine_Gambit": {
+        "objective": "Challenge divine authority",
+        "players": "Mortals vs. divine representative",
+        "stakes": "Actual reality changes based on outcome",
+        "forbidden": "Banned by temporal authorities"
+    }
+} 

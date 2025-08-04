@@ -1,16 +1,18 @@
 'use client'
 
 import React, { useRef, useState, useCallback, useEffect } from 'react'
-import { Canvas, useFrame, useThree } from '@react-three/fiber'
-import { OrbitControls, Text, Html, Environment } from '@react-three/drei'
+import { Canvas, useFrame } from '@react-three/fiber'
+// import { useThree } from '@react-three/fiber' // Temporarily disabled
+import { OrbitControls, Text, Html } from '@react-three/drei'
+// import { Environment } from '@react-three/drei' // Temporarily disabled
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import * as THREE from 'three'
 import { motion, AnimatePresence } from 'framer-motion'
 
-import { StoryCard3D } from './StoryCard3D'
-import { CharacterArcTimeline } from './CharacterArcTimeline'
-import { RelationshipLines } from './RelationshipLines'
+// import { StoryCard3D } from './StoryCard3D' // Temporarily disabled
+// import { CharacterArcTimeline } from './CharacterArcTimeline' // Temporarily disabled
+// import { RelationshipLines } from './RelationshipLines' // Temporarily disabled
 // import { useCharacterArcsData } from '../hooks/useCharacterArcsData'
 
 interface Character3DNode {
@@ -33,21 +35,21 @@ interface StoryCard {
   color: string
 }
 
-// Camera controller component
-function CameraController({ selectedCharacter }: { selectedCharacter: string | null }) {
-  const { camera } = useThree()
-  
-  useFrame(() => {
-    if (selectedCharacter) {
-      // Smoothly move camera to focus on selected character
-      const targetPosition = new THREE.Vector3(0, 0, 10)
-      camera.position.lerp(targetPosition, 0.05)
-      camera.lookAt(0, 0, 0)
-    }
-  })
-  
-  return null
-}
+// Camera controller component - temporarily disabled
+// function CameraController({ selectedCharacter }: { selectedCharacter: string | null }) {
+//   const { camera } = useThree()
+//   
+//   useFrame(() => {
+//     if (selectedCharacter) {
+//       // Smoothly move camera to focus on selected character
+//       const targetPosition = new THREE.Vector3(0, 0, 10)
+//       camera.position.lerp(targetPosition, 0.05)
+//       camera.lookAt(0, 0, 0)
+//     }
+//   })
+//   
+//   return null
+// }
 
 // Character node component
 function CharacterNode({ 
@@ -131,8 +133,8 @@ function CharacterNode({
         </Html>
       )}
 
-      {/* Story cards for this character */}
-      {character.storyCards.map((card, index) => (
+      {/* Story cards for this character - temporarily disabled for debugging */}
+      {/* {character.storyCards.map((card, index) => (
         <StoryCard3D
           key={card.id}
           card={card}
@@ -140,7 +142,7 @@ function CharacterNode({
           index={index}
           isCharacterSelected={isSelected}
         />
-      ))}
+      ))} */}
     </group>
   )
 }
@@ -164,11 +166,8 @@ function Scene3D({
       <pointLight position={[10, 10, 10]} intensity={0.8} />
       <pointLight position={[-10, -10, -10]} intensity={0.3} color="#4f46e5" />
       
-      {/* Environment */}
-      <Environment preset="city" />
-      
-      {/* Camera controller */}
-      <CameraController selectedCharacter={selectedCharacter} />
+      {/* Camera controller - temporarily disabled for debugging */}
+      {/* <CameraController selectedCharacter={selectedCharacter} /> */}
       
       {/* Characters */}
       {characters.map((character) => (
@@ -180,11 +179,11 @@ function Scene3D({
         />
       ))}
       
-      {/* Relationship lines between characters */}
-      <RelationshipLines characters={characters} />
+      {/* Relationship lines between characters - temporarily disabled for debugging */}
+      {/* <RelationshipLines characters={characters} /> */}
       
-      {/* Timeline visualization */}
-      <CharacterArcTimeline characters={characters} />
+      {/* Timeline visualization - temporarily disabled for debugging */}
+      {/* <CharacterArcTimeline characters={characters} /> */}
       
       {/* Grid helper */}
       <gridHelper args={[50, 50]} position={[0, -5, 0]} />

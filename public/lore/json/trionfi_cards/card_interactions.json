@@ -1,0 +1,53 @@
+{
+    "Synergies": {
+        "creative_trinity": {
+            "cards": ["The Magician", "The Empress", "The Star"],
+            "effect": "Amplifies all creative endeavors",
+            "users": "Poets, artists, craftsmen"
+        },
+        "temporal_mastery": {
+            "cards": ["The Wheel of Fortune", "The Hanged Man", "The World"],
+            "effect": "Complete control over personal timeline",
+            "users": "Temporal conductors"
+        },
+        "divine_authority": {
+            "cards": ["The Emperor", "The Hierophant", "The Sun"],
+            "effect": "Command divine respect",
+            "users": "Religious leaders"
+        }
+    },
+    "Conflicts": {
+        "freedom_vs_order": {
+            "cards": ["The Fool", "The Emperor"],
+            "effect": "Cards cancel each other",
+            "resolution": "Requires Temperance to balance"
+        },
+        "love_vs_duty": {
+            "cards": ["The Lovers", "The Hierophant"],
+            "effect": "Creates emotional paradox",
+            "resolution": "Choice must be made"
+        },
+        "creation_vs_destruction": {
+            "cards": ["The Empress", "The Tower"],
+            "effect": "Unstable reality fluctuations",
+            "resolution": "Results in transformation"
+        }
+    },
+    "Forbidden_Combinations": {
+        "timeline_collapse": {
+            "cards": ["The Fool", "The World", "Death"],
+            "effect": "Complete timeline erasure",
+            "warning": "Affects all connected timelines"
+        },
+        "divine_usurpation": {
+            "cards": ["The Magician", "The Devil", "The Sun"],
+            "effect": "Attempt to steal divine power",
+            "warning": "Attracts immediate divine retribution"
+        },
+        "paradox_storm": {
+            "cards": ["The Tower", "The Wheel of Fortune", "The Moon"],
+            "effect": "Uncontrolled paradox cascade",
+            "warning": "Can shatter reality permanently"
+        }
+    }
+} 

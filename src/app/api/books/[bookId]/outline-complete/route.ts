@@ -28,7 +28,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       green: chapters.green,
       blue: chapters.blue,
       tarotFamily: chapters.tarotFamily,
-      tarotCardLink: chapters.tarotCardLink
+      tarotCardLink: chapters.tarotCardLink,
+      terminalLearningObjectives: chapters.terminalLearningObjectives
     }).from(chapters).where(eq(chapters.bookId, bookId)).orderBy(asc(chapters.chapterNumber));
 
     // Get all scenes for all chapters
@@ -77,7 +78,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
           blue: chapter.blue || 0 
         }
       },
-      scenes: scenesByChapter.get(chapter.id) || []
+      scenes: scenesByChapter.get(chapter.id) || [],
+      // Ensure terminalLearningObjectives is properly passed through
+      terminalLearningObjectives: chapter.terminalLearningObjectives
     }));
 
     // Calculate statistics

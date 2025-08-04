@@ -1,0 +1,52 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="overlayGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(0,0,0,0);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(0,0,0,0.4);stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bgGradient)"/>
+  
+  <!-- Overlay for text readability -->
+  <rect width="1200" height="800" fill="url(#overlayGradient)"/>
+  
+  <!-- Mystical pattern -->
+  <g opacity="0.1">
+    <circle cx="200" cy="150" r="80" fill="white"/>
+    <circle cx="1000" cy="200" r="60" fill="white"/>
+    <circle cx="600" cy="400" r="120" fill="white"/>
+    <circle cx="900" cy="600" r="70" fill="white"/>
+    <circle cx="300" cy="650" r="90" fill="white"/>
+  </g>
+  
+  <!-- Central icon -->
+  <g transform="translate(600, 400)">
+    <circle cx="0" cy="0" r="100" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <path d="M -40 -40 L 40 -40 L 40 40 L -40 40 Z M -20 -20 L 20 -20 L 20 20 L -20 20 Z" fill="none" stroke="white" stroke-width="3"/>
+    <circle cx="-25" cy="-25" r="5" fill="white"/>
+    <circle cx="25" cy="-25" r="5" fill="white"/>
+    <circle cx="25" cy="25" r="5" fill="white"/>
+    <circle cx="-25" cy="25" r="5" fill="white"/>
+    <circle cx="0" cy="0" r="8" fill="white"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="580" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="white">
+    Location Image Coming Soon
+  </text>
+  <text x="600" y="620" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="rgba(255,255,255,0.8)">
+    Generate using the AI prompt or upload your own image
+  </text>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.3">
+    <path d="M 100 100 Q 150 80 200 100 T 300 100" stroke="white" stroke-width="2" fill="none"/>
+    <path d="M 900 700 Q 950 680 1000 700 T 1100 700" stroke="white" stroke-width="2" fill="none"/>
+  </g>
+</svg>

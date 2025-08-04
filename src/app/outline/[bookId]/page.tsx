@@ -55,6 +55,9 @@ interface Chapter {
   };
   tarotFamily: string;
   tarotCardLink: string;
+  terminalLearningObjectives?: {
+    [key: string]: string;
+  };
   scenes: Scene[];
 }
 
@@ -218,6 +221,39 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
               <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                 {chapter.description}
               </p>
+            </div>
+          )}
+
+          {/* Learning Objectives */}
+          {chapter.terminalLearningObjectives && Object.keys(chapter.terminalLearningObjectives).length > 0 && (
+            <div>
+              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
+                <CheckCircleIcon className="w-4 h-4" />
+                Learning Objectives
+              </h4>
+              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
+                <div className="space-y-3">
+                  {Object.entries(chapter.terminalLearningObjectives).map(([key, objective], index) => (
+                    <div key={key} className="flex items-start gap-3 group">
+                      <div className="flex-shrink-0 mt-1">
+                        <div className="w-4 h-4 border-2 border-gray-300 dark:border-gray-600 rounded-sm flex items-center justify-center group-hover:border-indigo-500 transition-colors">
+                          <CheckCircleIcon className="w-3 h-3 text-transparent group-hover:text-indigo-500 transition-colors" />
+                        </div>
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                          {objective}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+                  <p className="text-xs text-gray-500 dark:text-gray-400 italic">
+                    Complete these objectives while reading Chapter {chapter.chapterNumber}
+                  </p>
+                </div>
+              </div>
             </div>
           )}
 

@@ -1,0 +1,37 @@
+{
+    "Chronological_Devices": {
+        "temporal_compass": {
+            "function": "Points to nearest stable timeline",
+            "limitations": "Cannot detect artificial timelines",
+            "power_source": "Chronocoal dust"
+        },
+        "paradox_detector": {
+            "function": "Measures timeline stability",
+            "readings": [
+                "Green: Stable timeline",
+                "Yellow: Minor paradox detected",
+                "Red: Major paradox imminent"
+            ]
+        },
+        "temporal_communicator": {
+            "function": "Allows communication across timelines",
+            "limitations": "Messages degrade over temporal distance",
+            "security": "Encrypted with Trionfi card patterns"
+        }
+    },
+    "Protective_Equipment": {
+        "temporal_suits": {
+            "function": "Protect wearers from timeline contamination",
+            "types": [
+                "Standard: Basic timeline protection",
+                "Enhanced: Full paradox resistance",
+                "Divine: Powered by Trionfi cards"
+            ]
+        },
+        "paradox_shields": {
+            "function": "Create temporal isolation fields",
+            "power_requirements": "Chronocoal or divine essence",
+            "limitations": "Cannot block catastrophic paradoxes"
+        }
+    }
+} 

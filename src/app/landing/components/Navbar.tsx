@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ThemeToggleButton } from '@/components/ThemeToggleButton';
@@ -11,8 +11,44 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { isSignedIn } = useUser();
 
+  const [isBooksDropdownOpen, setIsBooksDropdownOpen] = useState(false);
+  const [books, setBooks] = useState<any[]>([]);
+
+  // Fetch books for the dropdown
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch('/api/books');
+        if (response.ok) {
+          const data = await response.json();
+          setBooks(data.books || []);
+        }
+      } catch (error) {
+        console.error('Failed to fetch books:', error);
+      }
+    };
+    
+    fetchBooks();
+  }, []);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isBooksDropdownOpen) {
+        const dropdown = document.getElementById('books-dropdown-landing');
+        if (dropdown && !dropdown.contains(event.target as Node)) {
+          setIsBooksDropdownOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isBooksDropdownOpen]);
+
   const navItems = [
-    { name: 'Books', href: '/books' },
     { name: 'Timeline', href: '/timeline' },
     { name: 'Characters', href: '/characters' },
     { name: 'Documentation', href: '/docs' },
@@ -60,7 +96,7 @@ export function Navbar() {
     {
       title: 'Character Arc Visualizer',
       description: 'Graph-style matrix for character relationships and development',
-      href: '/features/character-arcs',
+      href: '/features/character-arcs-3d',
       icon: '🎭',
       category: 'Writing Tools'
     },
@@ -77,6 +113,13 @@ export function Navbar() {
       description: 'Unified encyclopedia with auto-tagging and linking',
       href: '/features/lore-codex',
       icon: '📚',
+      category: 'Writing Tools'
+    },
+    {
+      title: 'Locations & World Building',
+      description: 'Interactive map and detailed location database for immersive world-building',
+      href: '/features/locations',
+      icon: '🏛️',
       category: 'Writing Tools'
     },
     {
@@ -150,13 +193,140 @@ export function Navbar() {
               />
             </motion.div>
 
+            {/* Books Dropdown */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+              className="relative"
+              id="books-dropdown-landing"
+            >
+              <button
+                onClick={() => setIsBooksDropdownOpen(!isBooksDropdownOpen)}
+                className="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors duration-200 relative group flex items-center"
+              >
+                Books
+                <svg 
+                  className="ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-gradient-to-r from-purple-600 to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-200"></span>
+              </button>
+              
+              {isBooksDropdownOpen && (
+                <div className="absolute left-0 mt-2 w-72 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 z-50 overflow-hidden">
+                  <div className="py-2">
+                    <Link
+                      href="/books"
+                      className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border-b border-gray-100 dark:border-gray-700"
+                      onClick={() => setIsBooksDropdownOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-3"></div>
+                        <span className="font-medium">All Books</span>
+                      </div>
+                    </Link>
+                    <Link
+                      href="/trilogies"
+                      className="block px-4 py-3 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border-b border-gray-100 dark:border-gray-700"
+                      onClick={() => setIsBooksDropdownOpen(false)}
+                    >
+                      <div className="flex items-center">
+                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-3"></div>
+                        <span className="font-medium">Trilogies</span>
+                      </div>
+                    </Link>
+                    
+                    {/* Dynamic book links organized by trilogy */}
+                    {books.length > 0 && (
+                      <>
+                        <div className="px-4 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider bg-gray-50 dark:bg-gray-750">
+                          The Trionfi Genesis
+                        </div>
+                        {books.filter(book => book.bookNumber >= 1 && book.bookNumber <= 3).map(book => (
+                          <Link
+                            key={book.id}
+                            href={`/books/${book.id}`}
+                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            onClick={() => setIsBooksDropdownOpen(false)}
+                          >
+                            <div className="flex items-center">
+                              <div className={`w-2 h-2 rounded-full mr-3 ${
+                                book.bookNumber === 1 ? 'bg-orange-500' :
+                                book.bookNumber === 2 ? 'bg-red-500' :
+                                'bg-pink-500'
+                              }`}></div>
+                              <span className="text-xs">{book.fictionNovelTitle}</span>
+                            </div>
+                          </Link>
+                        ))}
+                        
+                        <div className="px-4 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider bg-gray-50 dark:bg-gray-750">
+                          The Wheel of Realms
+                        </div>
+                        {books.filter(book => book.bookNumber >= 4 && book.bookNumber <= 6).map(book => (
+                          <Link
+                            key={book.id}
+                            href={`/books/${book.id}`}
+                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            onClick={() => setIsBooksDropdownOpen(false)}
+                          >
+                            <div className="flex items-center">
+                              <div className={`w-2 h-2 rounded-full mr-3 ${
+                                book.bookNumber === 4 ? 'bg-purple-500' :
+                                book.bookNumber === 5 ? 'bg-violet-500' :
+                                'bg-teal-500'
+                              }`}></div>
+                              <span className="text-xs">{book.fictionNovelTitle}</span>
+                            </div>
+                          </Link>
+                        ))}
+                        
+                        <div className="px-4 py-2 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider bg-gray-50 dark:bg-gray-750">
+                          The Arcana Ascended
+                        </div>
+                        {books.filter(book => book.bookNumber >= 7 && book.bookNumber <= 9).map(book => (
+                          <Link
+                            key={book.id}
+                            href={`/books/${book.id}`}
+                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                            onClick={() => setIsBooksDropdownOpen(false)}
+                          >
+                            <div className="flex items-center">
+                              <div className={`w-2 h-2 rounded-full mr-3 ${
+                                book.bookNumber === 7 ? 'bg-green-500' :
+                                book.bookNumber === 8 ? 'bg-yellow-500' :
+                                'bg-amber-500'
+                              }`}></div>
+                              <span className="text-xs">{book.fictionNovelTitle}</span>
+                            </div>
+                          </Link>
+                        ))}
+                      </>
+                    )}
+                    
+                    {/* Fallback for when books haven't loaded yet */}
+                    {books.length === 0 && (
+                      <div className="px-4 py-3 text-sm text-gray-500 dark:text-gray-400">
+                        Loading books...
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </motion.div>
+
             {/* Other Nav Items */}
             {navItems.map((item, index) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
+                transition={{ duration: 0.3, delay: 0.7 + index * 0.1 }}
               >
                 <Link
                   href={item.href}
@@ -291,6 +461,51 @@ export function Navbar() {
                   </div>
                 </motion.div>
 
+                {/* Books in Mobile */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ duration: 0.2, delay: 0.1 }}
+                >
+                  <div className="text-gray-700 dark:text-gray-300 font-medium py-2">
+                    Books
+                  </div>
+                  <div className="ml-4 space-y-2">
+                    <Link
+                      href="/books"
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors py-1"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-3"></div>
+                      All Books
+                    </Link>
+                    <Link
+                      href="/trilogies"
+                      className="flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors py-1"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mr-3"></div>
+                      Trilogies
+                    </Link>
+                    {books.length > 0 && books.slice(0, 3).map(book => (
+                      <Link
+                        key={book.id}
+                        href={`/books/${book.id}`}
+                        className="flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors py-1"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className={`w-2 h-2 rounded-full mr-3 ${
+                          book.bookNumber === 1 ? 'bg-orange-500' :
+                          book.bookNumber === 2 ? 'bg-red-500' :
+                          'bg-pink-500'
+                        }`}></div>
+                        {book.fictionNovelTitle}
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+
                 {/* Other Nav Items */}
                 {navItems.map((item, index) => (
                   <motion.div
@@ -298,7 +513,7 @@ export function Navbar() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.2, delay: (index + 1) * 0.1 }}
+                    transition={{ duration: 0.2, delay: (index + 2) * 0.1 }}
                   >
                     <Link
                       href={item.href}
@@ -313,7 +528,7 @@ export function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2, delay: (navItems.length + 1) * 0.1 }}
+                  transition={{ duration: 0.2, delay: (navItems.length + 2) * 0.1 }}
                   className="pt-2"
                 >
                   {isSignedIn ? (

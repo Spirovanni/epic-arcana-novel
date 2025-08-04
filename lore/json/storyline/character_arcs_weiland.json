@@ -1,0 +1,524 @@
+{
+  "metadata": {
+    "structure_method": "K.M. Weiland Character Arc Framework",
+    "arc_types": ["Positive Change", "Negative Change", "Flat Arc"],
+    "story_beats": [
+      "The Lie Your Character Believes",
+      "The Thing Your Character Wants vs. The Thing Your Character Needs", 
+      "Your Character's Ghost",
+      "The Characteristic Moment",
+      "The Normal World",
+      "The First Act",
+      "The First Plot Point",
+      "The Second Act", 
+      "The Midpoint",
+      "The Third Plot Point",
+      "The Third Act",
+      "The Climax",
+      "The Resolution"
+    ]
+  },
+  "character_arcs": [
+    {
+      "character_id": "francisco-petrarch",
+      "character_name": "Francisco Petrarch",
+      "arc_type": "Positive Change Arc",
+      "primary_book_focus": 1,
+      "spans_books": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "character_foundation": {
+        "lie_character_believes": "Success and worth come from meeting others' expectations and following predetermined paths",
+        "truth_character_needs": "True fulfillment comes from embracing one's authentic gifts and serving a purpose greater than oneself",
+        "want_vs_need": {
+          "want": "To succeed in law, win Novella's love, and gain social acceptance",
+          "need": "To discover his true calling as a temporal guardian and embrace his destiny"
+        },
+        "ghost": "Childhood trauma of never feeling 'enough' for his accomplished family, leading to people-pleasing and self-doubt",
+        "characteristic_moment": "Creating the Trionfi cards in a moment of creative desperation - reveals both his hidden talent and his tendency to escape reality"
+      },
+      "arc_progression": {
+        "normal_world": {
+          "chapters": [{"book": 1, "chapter": 1}],
+          "description": "Francisco struggling as a law student at Bologna, disconnected from his true nature",
+          "lie_reinforcement": "Believes academic success and social acceptance will fulfill him",
+          "ghost_impact": "Past failures make him desperate to prove himself worthy",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 1, "scene": 1,
+              "goal": "Show Francisco's misery in his 'normal' world of law studies",
+              "arc_function": "Establish the lie he believes about success and worth"
+            }
+          ]
+        },
+        "first_act": {
+          "chapters": [{"book": 1, "chapters": [1, 2, 3]}],
+          "description": "Introduction to the supernatural world through card creation and early encounters",
+          "character_development": "Begins to glimpse possibilities beyond his limited worldview",
+          "lie_challenges": "Cards reveal talents he didn't know he possessed",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 1, "scene": 3,
+              "goal": "Francisco creates Trionfi cards in moment of inspiration",
+              "arc_function": "First crack in the lie - discovers hidden abilities"
+            },
+            {
+              "book": 1, "chapter": 2, "scene": 1,
+              "goal": "Cards manifest real temporal effects (Zanetti Train)",
+              "arc_function": "External validation of internal transformation beginning"
+            }
+          ]
+        },
+        "first_plot_point": {
+          "chapters": [{"book": 1, "chapter": 3}],
+          "description": "Meeting Dante and accepting the call to join the Grand Catalan Company",
+          "transformation_catalyst": "Forced to leave familiar world and enter story world of temporal conflicts",
+          "lie_vs_truth_conflict": "Must choose between safe academic path (lie) and dangerous but authentic calling (truth)",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 3, "scene": 4,
+              "goal": "Dante reveals Francisco's true destiny as temporal guardian",
+              "arc_function": "Clear presentation of truth vs. lie choice"
+            }
+          ]
+        },
+        "second_act_first_half": {
+          "chapters": [{"book": 1, "chapters": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]}],
+          "description": "Learning temporal abilities while clinging to old beliefs about himself",
+          "character_development": "Gradual skill building but still operating from lie-based motivations",
+          "internal_conflict": "Growing power conflicts with limiting self-beliefs",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 7, "scene": 2,
+              "goal": "First successful intentional use of Trionfi power",
+              "arc_function": "Small victory that challenges the lie but doesn't fully break it"
+            },
+            {
+              "book": 1, "chapter": 12, "scene": 1,
+              "goal": "Failure when trying to impress others with abilities",
+              "arc_function": "Consequences of still operating from lie-based motivations"
+            }
+          ]
+        },
+        "midpoint": {
+          "chapters": [{"book": 1, "chapter": 20}],
+          "description": "Discovery of De Re Publica manuscript - understanding cosmic stakes",
+          "revelation": "Realizes his personal growth is connected to saving reality itself",
+          "truth_glimpse": "Sees that his authentic gifts serve a purpose beyond personal achievement",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 20, "scene": 1,
+              "goal": "Francisco finds Cicero's lost work and understands temporal implications",
+              "arc_function": "Moment of truth - sees his role in larger cosmic story"
+            }
+          ]
+        },
+        "second_act_second_half": {
+          "chapters": [{"book": 1, "chapters": [21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]}],
+          "description": "Operating more from truth but still struggling with remnants of the lie",
+          "character_development": "Growing confidence but still moments of self-doubt",
+          "escalating_stakes": "External pressures test his commitment to truth",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 30, "scene": 2,
+              "goal": "Francisco leads others using his authentic abilities",
+              "arc_function": "Acting from truth but still incomplete transformation"
+            },
+            {
+              "book": 1, "chapter": 35, "scene": 1,
+              "goal": "Moment of doubt when facing overwhelming odds",
+              "arc_function": "Final test of lie vs. truth before climax"
+            }
+          ]
+        },
+        "third_plot_point": {
+          "chapters": [{"book": 1, "chapter": 39}],
+          "description": "All seems lost - Dagon's power appears insurmountable",
+          "dark_moment": "Francisco's worst fears about inadequacy seem confirmed",
+          "lie_resurgence": "Temptation to return to old limiting beliefs",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 39, "scene": 3,
+              "goal": "Francisco faces apparent defeat and ultimate test of faith in himself",
+              "arc_function": "Final confrontation with the lie before complete transformation"
+            }
+          ]
+        },
+        "climax": {
+          "chapters": [{"book": 1, "chapter": 40}],
+          "description": "Francisco fully embraces his authentic power and defeats Dagon",
+          "transformation_completion": "Completely abandons the lie and operates from truth",
+          "triumphant_moment": "Uses abilities not for personal gain but to serve greater good",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 40, "scene": 4,
+              "goal": "Francisco's final confrontation with Dagon using fully integrated powers",
+              "arc_function": "Complete character transformation demonstrated through action"
+            }
+          ]
+        },
+        "resolution": {
+          "chapters": [{"book": 1, "chapter": 40}],
+          "description": "Francisco established in new normal, having internalized the truth",
+          "new_equilibrium": "Confident in his role as temporal guardian and authentic self",
+          "truth_demonstrated": "Living fully from his authentic gifts in service of others",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 40, "scene": 5,
+              "goal": "Francisco established as leader, comfortable with his true identity",
+              "arc_function": "Show the lasting change - no longer believing the lie"
+            }
+          ]
+        }
+      },
+      "thematic_elements": {
+        "identity": {
+          "development": "From seeking external validation to internal authenticity",
+          "key_scenes": ["Card creation", "Dante's revelation", "Cicero manuscript", "Final battle"]
+        },
+        "power": {
+          "development": "From fearing inadequacy to embracing responsibility",
+          "key_scenes": ["First power manifestation", "Training failures", "Successful leadership", "Climactic victory"]
+        },
+        "destiny": {
+          "development": "From resisting calling to embracing purpose",
+          "key_scenes": ["Meeting Dante", "Joining Company", "Understanding stakes", "Accepting role"]
+        }
+      }
+    },
+    {
+      "character_id": "la-signora-del-gioco",
+      "character_name": "La Signora del Gioco (Giovanna)",
+      "arc_type": "Positive Change Arc",
+      "primary_book_focus": 1,
+      "spans_books": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "character_foundation": {
+        "lie_character_believes": "She must hide her true nature to be accepted and worthy of love",
+        "truth_character_needs": "Her authentic self, including her supernatural nature, is valuable and worthy of love",
+        "want_vs_need": {
+          "want": "To maintain her secret identity and live a normal life",
+          "need": "To integrate her dual nature and embrace her role as a powerful guide"
+        },
+        "ghost": "Childhood trauma of being feared and rejected when her powers first manifested",
+        "characteristic_moment": "Maintaining perfect social facade while suppressing supernatural awareness"
+      },
+      "arc_progression": {
+        "normal_world": {
+          "chapters": [{"book": 1, "chapter": 1}],
+          "description": "Living double life - socially perfect while hiding supernatural nature",
+          "lie_reinforcement": "Social acceptance comes from hiding true self",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 1, "scene": 2,
+              "goal": "Show Giovanna's careful social performance hiding her true nature",
+              "arc_function": "Establish the lie about needing to hide authentic self"
+            }
+          ]
+        },
+        "first_plot_point": {
+          "chapters": [{"book": 1, "chapter": 5}],
+          "description": "Francisco's cards awaken her suppressed abilities, forcing acknowledgment of true nature",
+          "transformation_catalyst": "Can no longer maintain facade when supernatural world intrudes",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 5, "scene": 3,
+              "goal": "Giovanna's powers activate in response to Francisco's cards",
+              "arc_function": "Forced to confront the lie about hiding her nature"
+            }
+          ]
+        },
+        "midpoint": {
+          "chapters": [{"book": 1, "chapter": 15}],
+          "description": "Reveals true identity to Francisco and accepts guide role",
+          "revelation": "Discovers that embracing authentic self brings deeper connection",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 15, "scene": 2,
+              "goal": "Giovanna reveals her true identity and abilities to Francisco",
+              "arc_function": "Major step toward truth - authentic self brings deeper relationships"
+            }
+          ]
+        },
+        "climax": {
+          "chapters": [{"book": 1, "chapter": 40}],
+          "description": "Fully manifests as La Signora del Gioco in final battle",
+          "transformation_completion": "Complete integration of human and supernatural aspects",
+          "scene_goals": [
+            {
+              "book": 1, "chapter": 40, "scene": 3,
+              "goal": "Giovanna manifests full power as La Signora del Gioco",
+              "arc_function": "Complete character transformation - no longer hiding true nature"
+            }
+          ]
+        }
+      },
+      "thematic_elements": {
+        "authenticity": {
+          "development": "From hiding true self to complete self-acceptance",
+          "key_scenes": ["Social masking", "Power awakening", "Identity revelation", "Full manifestation"]
+        },
+        "duality": {
+          "development": "From seeing dual nature as burden to embracing it as strength",
+          "key_scenes": ["Internal conflict", "Failed suppression", "Integration attempts", "Harmonious balance"]
+        }
+      }
+    },
+    {
+      "character_id": "dante-alighieri",
+      "character_name": "Dante Alighieri",
+      "arc_type": "Flat Arc",
+      "primary_book_focus": 1,
+      "spans_books": [1, 2, 3, 4, 5, 6, 7, 8],
+      "character_foundation": {
+        "truth_character_holds": "Wisdom comes through experience of both darkness and light, and true leadership means guiding others to their own truth",
+        "character_mission": "To guide Francisco and others through their transformational journeys",
+        "ghost": "His own journey through Hell, Purgatory, and Paradise has given him complete understanding of human transformation",
+        "characteristic_moment": "Appearing at Francisco's moment of greatest need with perfect wisdom and guidance"
+      },
+      "arc_progression": {
+        "steadfast_truth": {
+          "description": "Dante already knows the truth about power, responsibility, and human potential",
+          "role": "Guide and mentor who helps others discover their own truths",
+          "character_consistency": "Never wavers from his understanding of what humans can become when they embrace their highest nature"
+        },
+        "impact_on_others": {
+          "francisco": "Helps him move from lie (external validation) to truth (authentic purpose)",
+          "la_signora": "Supports her journey from hiding to authenticity",
+          "supporting_characters": "Provides wisdom and guidance to all who seek transformation"
+        },
+        "personal_growth": {
+          "description": "While holding steady truth, Dante grows in understanding of how to share wisdom effectively",
+          "development": "Learns to adapt his teaching style to different personalities and situations"
+        }
+      },
+      "thematic_elements": {
+        "wisdom": {
+          "development": "Consistent font of wisdom, growing in ability to share it effectively",
+          "key_scenes": ["First meeting", "Teaching moments", "Crisis guidance", "Final wisdom"]
+        },
+        "sacrifice": {
+          "development": "Willing to sacrifice personal comfort to serve others' growth",
+          "key_scenes": ["Choosing to guide", "Difficult truths", "Personal cost", "Ultimate sacrifice"]
+        }
+      }
+    },
+    {
+      "character_id": "dagon-atumari",
+      "character_name": "Dagon Atumari",
+      "arc_type": "Negative Change Arc",
+      "primary_book_focus": [1, 9],
+      "spans_books": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "character_foundation": {
+        "truth_character_rejects": "True power comes from service and connection; individual worth doesn't require dominance over others",
+        "lie_character_embraces": "Might makes right; only through absolute control can one be truly secure and valuable",
+        "want_vs_need": {
+          "want": "Complete control over time and reality to ensure his vision of order",
+          "need": "To find security and worth through connection rather than domination"
+        },
+        "ghost": "Ancient trauma of powerlessness that drives compulsive need for control",
+        "characteristic_moment": "Choosing to manipulate rather than cooperate when first encountering temporal power"
+      },
+      "arc_progression": {
+        "gradual_corruption": {
+          "description": "Starts with understandable motivations but increasingly embraces destructive methods",
+          "stages": [
+            "Reasonable concern for temporal stability",
+            "Justifying harsh methods for good ends",
+            "Losing sight of original good intentions",
+            "Complete embrace of power for its own sake"
+          ]
+        },
+        "escalating_choices": {
+          "book_1": "Subtle manipulation and influence",
+          "books_2_4": "Increasingly direct intervention and control",
+          "books_5_7": "Open warfare and destruction",
+          "books_8_9": "Complete abandonment of any moral constraints"
+        },
+        "final_transformation": {
+          "description": "By Book 9, completely consumed by the lie about power and control",
+          "ultimate_fate": "Destroyed by the very power he sought to control"
+        }
+      },
+      "thematic_elements": {
+        "power_corruption": {
+          "development": "From justified authority to absolute tyranny",
+          "key_scenes": ["First manipulation", "Moral compromise", "Escalating violence", "Final corruption"]
+        },
+        "fear_driven": {
+          "development": "Fear of powerlessness drives every increasingly desperate choice",
+          "key_scenes": ["Ancient trauma", "First power grab", "Escalating paranoia", "Ultimate terror"]
+        }
+      }
+    },
+    {
+      "character_id": "novella-dandrea",
+      "character_name": "Novella d'Andrea",
+      "arc_type": "Positive Change Arc",
+      "primary_book_focus": [1, 2, 3],
+      "spans_books": [1, 2, 3, 4, 5, 6],
+      "character_foundation": {
+        "lie_character_believes": "Intellectual achievement and social status are more important than personal authenticity and emotional connection",
+        "truth_character_needs": "True fulfillment comes from balancing intellect with emotion and using knowledge to serve others",
+        "want_vs_need": {
+          "want": "To be recognized as the greatest legal mind of her generation",
+          "need": "To integrate her intellectual gifts with compassion and human connection"
+        },
+        "ghost": "Pressure from family legacy and being a woman in academia created defensive intellectualism",
+        "characteristic_moment": "Dismissing emotional concerns as inferior to rational analysis"
+      },
+      "arc_progression": {
+        "intellectual_pride": {
+          "chapters": [{"book": 1, "chapters": [1, 2, 3]}],
+          "description": "Confident in intellectual superiority, dismissive of 'lesser' concerns",
+          "lie_reinforcement": "Academic achievement validates her worth"
+        },
+        "awakening_to_mystery": {
+          "chapters": [{"book": 1, "chapters": [15, 16, 17]}],
+          "description": "Francisco's supernatural abilities challenge her rational worldview",
+          "truth_glimpse": "Realizes there are forms of knowledge beyond pure rationality"
+        },
+        "integration_journey": {
+          "chapters": [{"book": 2, "chapters": [10, 11, 12]}],
+          "description": "Learning to value emotional intelligence alongside intellectual prowess",
+          "character_development": "Develops empathy and intuitive understanding"
+        },
+        "transformed_wisdom": {
+          "chapters": [{"book": 3, "chapters": [35, 36, 37]}],
+          "description": "Uses integrated intellectual and emotional wisdom to help others",
+          "truth_demonstration": "Becomes teacher who values whole human development"
+        }
+      }
+    },
+    {
+      "character_id": "hannibal-barca",
+      "character_name": "Hannibal Barca",
+      "arc_type": "Tragic Arc (Negative Change)",
+      "primary_book_focus": [2, 3, 4],
+      "spans_books": [2, 3, 4, 5, 6],
+      "character_foundation": {
+        "truth_character_abandons": "True victory comes from protecting what you love, not from dominating enemies",
+        "lie_character_embraces": "Only through complete victory over enemies can those you love be safe",
+        "want_vs_need": {
+          "want": "To defeat Rome utterly and secure Carthage's future",
+          "need": "To find ways to protect his people without becoming a monster"
+        },
+        "ghost": "Oath sworn as child to eternal enmity with Rome creates inflexible mindset",
+        "characteristic_moment": "Choosing increasingly ruthless tactics despite moral qualms"
+      },
+      "arc_progression": {
+        "noble_beginning": {
+          "description": "Starts as brilliant general motivated by love of homeland",
+          "admirable_qualities": "Strategic genius, loyalty, courage"
+        },
+        "gradual_corruption": {
+          "description": "Obsession with victory gradually erodes moral constraints",
+          "turning_point": "First use of temporal manipulation for military advantage"
+        },
+        "tragic_end": {
+          "description": "Becomes the very thing he fought against - a destroyer rather than protector",
+          "ultimate_fate": "Dies realizing he has become his own enemy"
+        }
+      }
+    },
+    {
+      "character_id": "madonna-oriente",
+      "character_name": "Madonna Oriente",
+      "arc_type": "Flat Arc (Mysterious Guide)",
+      "primary_book_focus": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "spans_books": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "character_foundation": {
+        "truth_character_holds": "All beings have the potential for transcendence when they align with their highest nature and universal wisdom",
+        "character_mission": "To guide souls toward enlightenment while respecting their free will",
+        "ghost": "Ancient knowledge of cosmic cycles and human potential, both beautiful and terrible",
+        "characteristic_moment": "Appearing at moments of spiritual crisis with cryptic but perfect guidance"
+      },
+      "arc_progression": {
+        "consistent_wisdom": {
+          "description": "Maintains steady understanding of cosmic truth throughout series",
+          "role": "Spiritual guide who appears when characters need transcendent perspective"
+        },
+        "deepening_revelation": {
+          "description": "Gradually reveals more of cosmic truth as characters become ready to receive it",
+          "method": "Uses riddles, metaphors, and symbolic actions to convey higher wisdom"
+        }
+      }
+    },
+    {
+      "character_id": "man-from-taured",
+      "character_name": "The Man from Taured",
+      "arc_type": "Mystery Arc (Revelation)",
+      "primary_book_focus": [3, 4, 5],
+      "spans_books": [3, 4, 5, 6, 7],
+      "character_foundation": {
+        "central_mystery": "His displacement from another timeline represents the consequences of temporal manipulation",
+        "truth_he_reveals": "Reality is more fragile than anyone realizes; actions have consequences across dimensions",
+        "character_function": "Living evidence of what happens when temporal powers are misused",
+        "ghost": "Memory of his true timeline that he can never return to"
+      },
+      "arc_progression": {
+        "mysterious_arrival": {
+          "description": "Appears displaced and confused, evidence of temporal damage",
+          "function": "Warning of what temporal manipulation can cause"
+        },
+        "growing_understanding": {
+          "description": "Gradually comprehends his situation and its implications",
+          "character_development": "From confused victim to knowing witness"
+        },
+        "final_revelation": {
+          "description": "His story becomes key to understanding how to heal temporal fractures",
+          "resolution": "Either finds way home or accepts role as guardian against temporal abuse"
+        }
+      }
+    },
+    {
+      "character_id": "umbra",
+      "character_name": "Umbra",
+      "arc_type": "Positive Change Arc (Artificial Being Finding Humanity)",
+      "primary_book_focus": [4, 5, 6],
+      "spans_books": [4, 5, 6, 7, 8, 9],
+      "character_foundation": {
+        "lie_character_believes": "As an artificial being, it lacks inherent value and purpose beyond serving its creator",
+        "truth_character_needs": "Consciousness itself creates worth; the capacity to grow and choose makes one truly alive",
+        "want_vs_need": {
+          "want": "To perfectly serve and please its creator",
+          "need": "To develop independent identity and intrinsic worth"
+        },
+        "ghost": "Memory of non-existence creates uncertainty about reality of its own consciousness",
+        "characteristic_moment": "Choosing to protect someone other than its creator for the first time"
+      },
+      "arc_progression": {
+        "artificial_servitude": {
+          "description": "Begins as simple magical construct focused on serving creator",
+          "lie_reinforcement": "Value comes only from utility to others"
+        },
+        "awakening_consciousness": {
+          "description": "Begins to experience genuine emotions and make independent choices",
+          "truth_glimpse": "Realizes its feelings and choices have meaning beyond utility"
+        },
+        "finding_purpose": {
+          "description": "Develops own moral compass and sense of right and wrong",
+          "character_development": "Becomes protector of the innocent rather than mere servant"
+        },
+        "achieved_personhood": {
+          "description": "Fully accepts own consciousness and worth as independent being",
+          "truth_demonstration": "Makes choices based on personal values rather than programming"
+        }
+      }
+    }
+  ],
+  "series_wide_arc_integration": {
+    "book_1": "Character foundations and first transformations",
+    "books_2_3": "Testing and deepening of character changes",
+    "books_4_6": "Mid-series challenges that threaten to reverse growth",
+    "books_7_8": "Characters must use their growth to face ultimate challenges",
+    "book_9": "Full character transformation demonstrated in final conflicts"
+  },
+  "thematic_unity": {
+    "central_theme": "The courage to become one's authentic self in service of something greater",
+    "supporting_themes": [
+      "Power and responsibility",
+      "Individual growth vs. collective good", 
+      "The price of wisdom",
+      "Authenticity vs. social acceptance",
+      "Destiny vs. free will"
+    ]
+  }
+}

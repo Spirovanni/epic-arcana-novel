@@ -741,8 +741,8 @@ export default function CharacterProfilePage() {
                       className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-indigo-50 dark:hover:bg-indigo-900/50 transition-all duration-200 hover:shadow-lg"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-200 hover:z-10">
-                          <Image src={placeholderImg} alt={c.name || 'Character'} width={48} height={48} className="w-full h-full object-cover rounded-full" />
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-105">
+                          <Image src={c.imageUrl || placeholderImg} alt={c.name || 'Character'} width={48} height={48} className="w-full h-full object-cover rounded-full" />
                         </div>
                         <div className="flex-1 min-w-0">
                           <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200 truncate">

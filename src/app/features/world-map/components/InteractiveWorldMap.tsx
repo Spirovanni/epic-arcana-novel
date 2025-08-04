@@ -20,15 +20,17 @@ export function InteractiveWorldMap({
   selectedLocation 
 }: InteractiveWorldMapProps) {
   const [hoveredLocation, setHoveredLocation] = useState<Location | null>(null);
-  // Calculate initial Europe/Asia/Africa-focused position
-  const getInitialWorldView = () => {
-    // Center on Europe/Asia/Africa view as shown in the screenshot
-    return { center: { x: -200, y: -100 }, zoom: 1.0 };
-  };
-
-  const initialView = getInitialWorldView();
-  const [mapCenter, setMapCenter] = useState(initialView.center);
-  const [mapZoom, setMapZoom] = useState(initialView.zoom);
+  const [showGrid, setShowGrid] = useState(false);
+  // Coordinates to center on Mediterranean/Europe/North Africa region (target screenshot)
+  // Current view shows Northern Asia/Russia, target shows Mediterranean/Europe/Arabia
+  // Need to move significantly SOUTH and WEST from current position
+  // Based on geographical analysis: move from Northern Asia to Mediterranean
+  const mapOriginX = 1500; // Move WEST from Northern Asia to Europe
+  const mapOriginY = 1600; // Move SOUTH from Northern Asia to Mediterranean
+  
+  // Initial view: Start with 1x zoom, then set to 5x after mount
+  const [mapZoom, setMapZoom] = useState(1.0);
+  const [mapCenter, setMapCenter] = useState({ x: 0, y: 0 }); // Will be calculated after mount
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null); // Start with world view
   const [isPanMode, setIsPanMode] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -65,15 +67,41 @@ export function InteractiveWorldMap({
     console.log('Hovering region:', regionId);
   };
 
-  // Maintain world view when viewport size changes
+  // Set initial view on component mount - direct coordinate approach
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      console.log('Setting initial view to 5x zoom at (0,0)');
+      console.log('Map origin coordinates:', mapOriginX, mapOriginY);
+      
+      // Use direct calculation to center the origin point
+      const mapContainer = document.querySelector('.flex-1.relative');
+      if (mapContainer) {
+        const rect = mapContainer.getBoundingClientRect();
+        const viewport = { width: rect.width, height: rect.height };
+        
+        const zoom = 14.281; // Increased by 1.3x (10.985 × 1.3 = 14.281)
+        
+        // Direct approach: translate map so origin appears at viewport center
+        // Move 11% to the right + 105 pixels by subtracting percentage and adding fixed pixel offset
+        // Move 425% north (470% - 45%) by subtracting 425% of viewport height from centerY
+        const centerX = (viewport.width / 2 - mapOriginX) - (viewport.width * 0.11) + 105;
+        const centerY = (viewport.height / 2 - mapOriginY) - (viewport.height * 4.25);
+        
+        console.log('Initial view - viewport center:', viewport.width / 2, viewport.height / 2);
+        console.log('Initial view - translation:', centerX.toFixed(1), centerY.toFixed(1));
+        
+        setMapZoom(zoom);
+        setMapCenter({ x: centerX, y: centerY });
+      }
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, []); // Remove dependencies to prevent re-renders
+
+  // Simple resize handler - no automatic recalculation to prevent issues
   useEffect(() => {
     const handleResize = () => {
-      if (mapRef.current) {
-        // Maintain the current world-centered view
-        const currentView = getInitialWorldView();
-        setMapCenter(currentView.center);
-        setMapZoom(currentView.zoom);
-      }
+      console.log('Window resized - you may need to manually refocus on origin');
     };
 
     window.addEventListener('resize', handleResize);
@@ -88,8 +116,8 @@ export function InteractiveWorldMap({
   };
 
   const resetView = () => {
-    // Center on Europe/Asia/Africa view as shown in the screenshot
-    setMapCenter({ x: -200, y: -100 });
+    // Reset to default view - center map in viewport
+    setMapCenter({ x: 0, y: 0 });
     setMapZoom(1.0);
   };
 
@@ -111,8 +139,45 @@ export function InteractiveWorldMap({
     setSelectedRegion('_275_-_Naples'); // Highlight Naples region
   };
 
+  const focusOnOrigin = () => {
+    // Get actual viewport dimensions from the map container
+    const mapContainer = document.querySelector('.flex-1.relative');
+    if (mapContainer) {
+      const rect = mapContainer.getBoundingClientRect();
+      const viewport = {
+        width: rect.width,
+        height: rect.height
+      };
+      
+      console.log('=== Focus on Origin Debug ===');
+      console.log('Viewport dimensions:', viewport);
+      console.log('Map origin coordinates:', mapOriginX, mapOriginY);
+      
+      const zoom = 14.281; // Increased by 1.3x (10.985 × 1.3 = 14.281)
+      
+      // Direct calculation: move the map so origin appears at center
+      // Move 11% to the right + 105px by subtracting percentage and adding fixed pixel offset
+      // Move 425% north (470% - 45%) by subtracting 425% of viewport height from centerY
+      const centerX = (viewport.width / 2 - mapOriginX) - (viewport.width * 0.11) + 105;
+      const centerY = (viewport.height / 2 - mapOriginY) - (viewport.height * 4.25);
+      
+      console.log('Centering Europe/Africa region at coordinates:', mapOriginX, mapOriginY);
+      console.log('Viewport center:', viewport.width / 2, viewport.height / 2);
+      console.log('Translation needed:', centerX, centerY);
+      
+      setMapZoom(zoom);
+      setMapCenter({ x: centerX, y: centerY });
+    } else {
+      console.error('Could not find map container');
+    }
+  };
+
   const togglePanMode = () => {
     setIsPanMode(!isPanMode);
+  };
+
+  const toggleGrid = () => {
+    setShowGrid(!showGrid);
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -143,23 +208,60 @@ export function InteractiveWorldMap({
   };
 
   return (
-    <div className="relative w-full h-full overflow-hidden bg-slate-800">
+    <div 
+      className={`relative w-full h-full overflow-hidden bg-slate-800 ${
+        isPanMode ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'
+      }`}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* SVG Map Background */}
-      <div className="absolute inset-0">
+      <div 
+        className="absolute inset-0"
+        style={{
+          transform: `translate(${mapCenter.x}px, ${mapCenter.y}px) scale(${mapZoom})`,
+          transformOrigin: 'center'
+        }}
+      >
         <PangeaMap
           ref={svgRef}
           activeTimeline={activeTimeline}
           selectedRegion={selectedRegion}
           onRegionClick={handleRegionClick}
           onRegionHover={handleRegionHover}
-          zoom={mapZoom}
-          center={mapCenter}
+          zoom={1.0}
+          center={{ x: 0, y: 0 }}
           isPanMode={isPanMode}
+          showGrid={showGrid}
         />
       </div>
 
       {/* Map Controls */}
       <div className="absolute top-4 right-4 z-20 flex flex-col space-y-2">
+        {/* Grid Toggle */}
+        <motion.button
+          onClick={toggleGrid}
+          className={`w-10 h-10 rounded-lg shadow-lg flex items-center justify-center transition-colors ${
+            showGrid 
+              ? 'bg-blue-600 hover:bg-blue-700 text-white' 
+              : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+          }`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title={showGrid ? 'Hide coordinate grid' : 'Show coordinate grid'}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" 
+            />
+          </svg>
+        </motion.button>
+        
         {/* Pan Mode Toggle */}
         <motion.button
           onClick={togglePanMode}
@@ -197,15 +299,13 @@ export function InteractiveWorldMap({
           <span className="text-lg font-bold text-gray-700 dark:text-gray-300">−</span>
         </motion.button>
         <motion.button
-          onClick={autoFocusOnNaples}
-          className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          onClick={focusOnOrigin}
+          className="w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          title="Focus on Naples"
+          title="Focus on (0,0) at 5x zoom"
         >
-          <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
+          <span className="text-xs font-bold">0,0</span>
         </motion.button>
         <motion.button
           onClick={resetView}
@@ -245,20 +345,15 @@ export function InteractiveWorldMap({
         </motion.div>
       </div>
 
+
       {/* Map Container */}
       <div 
         ref={mapRef}
-        className={`w-full h-full relative select-none ${
-          isPanMode ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'
-        }`}
+        className="absolute inset-0 pointer-events-none"
         style={{
           transform: `translate(${mapCenter.x}px, ${mapCenter.y}px) scale(${mapZoom})`,
           transformOrigin: 'center'
         }}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
       >
         {/* Locations */}
         {locations.map((location, index) => {
@@ -268,7 +363,7 @@ export function InteractiveWorldMap({
           return (
             <motion.div
               key={location.id}
-              className="absolute cursor-pointer group"
+              className={`absolute group ${isPanMode ? 'pointer-events-none' : 'cursor-pointer pointer-events-auto'}`}
               style={{
                 left: location.coordinates?.x || 400 + (index * 50),
                 top: location.coordinates?.y || 300 + (index * 50)
@@ -407,6 +502,12 @@ export function InteractiveWorldMap({
             <div className="w-4 h-1 bg-gray-400" style={{ borderStyle: 'dashed' }}></div>
             <span className="text-gray-600 dark:text-gray-400">Timeline connections</span>
           </div>
+          {showGrid && (
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 border border-blue-500 opacity-30" style={{ borderStyle: 'dashed' }}></div>
+              <span className="text-gray-600 dark:text-gray-400">Coordinate grid</span>
+            </div>
+          )}
         </div>
       </div>
     </div>

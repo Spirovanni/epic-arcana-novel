@@ -1,0 +1,40 @@
+{
+    "Chronological_Resources": {
+        "chronocoal": {
+            "value": "Primary temporal fuel",
+            "sources": [
+                "Temporal mines in the Void",
+                "Paradox crystallization",
+                "Divine essence distillation"
+            ],
+            "trading": "Measured in temporal units (TUs)"
+        },
+        "temporal_artifacts": {
+            "value": "Stable across timelines",
+            "types": [
+                "Divine relics",
+                "Trionfi cards",
+                "Paradox-crystallized objects"
+            ],
+            "trading": "Barter system based on temporal stability"
+        }
+    },
+    "Temporal_Services": {
+        "timeline_repair": {
+            "cost": "Variable based on paradox severity",
+            "providers": [
+                "Temporal Custodians",
+                "Trionfi Masters",
+                "Divine entities"
+            ]
+        },
+        "temporal_tourism": {
+            "packages": [
+                "Historical observation",
+                "Timeline exploration",
+                "Paradox hunting"
+            ],
+            "regulations": "Strict temporal non-interference rules"
+        }
+    }
+} 

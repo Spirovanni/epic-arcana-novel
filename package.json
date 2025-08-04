@@ -16,7 +16,8 @@
     "sync-books": "tsx scripts/sync-books-from-outline.ts",
     "sync-task-masters": "tsx scripts/sync-task-masters-from-outline.ts",
     "sync-comprehensive": "tsx scripts/sync-comprehensive-from-outline.ts",
-    "sync-epic-arcana": "tsx scripts/sync-epic-arcana-from-outline.ts"
+    "sync-epic-arcana": "tsx scripts/sync-epic-arcana-from-outline.ts",
+    "seed-character-arcs": "tsx scripts/seed-character-arcs-data.ts"
   },
   "keywords": [],
   "author": "",

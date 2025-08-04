@@ -1,0 +1,130 @@
+{
+    "Francisco_Petrarch": {
+        "primary_affinity": "The Fool",
+        "secondary_affinities": ["The Magician", "The Hermit"],
+        "forbidden_cards": ["The Devil", "The Tower"],
+        "unique_combinations": {
+            "Poet's_Insight": {
+                "cards": ["The Fool", "The Magician", "The Star"],
+                "effect": "Can write reality through poetry",
+                "cost": "Temporary loss of speech"
+            },
+            "Scholar's_Quest": {
+                "cards": ["The Hermit", "The High Priestess", "Judgement"],
+                "effect": "Instantly understand any written work across timelines",
+                "cost": "Forget personal memories temporarily"
+            }
+        },
+        "evolution": {
+            "novice": "Can activate single cards with effort",
+            "adept": "Can combine two cards",
+            "master": "Can channel entire suits",
+            "transcendent": "Becomes living embodiment of The Fool"
+        }
+    },
+    "La_Signora_del_Gioco": {
+        "primary_affinity": "The High Priestess",
+        "secondary_affinities": ["The Moon", "Strength"],
+        "forbidden_cards": ["The Emperor", "The Hierophant"],
+        "unique_combinations": {
+            "Veil_of_Mystery": {
+                "cards": ["The High Priestess", "The Moon", "The Hermit"],
+                "effect": "Become untrackable across timelines",
+                "cost": "Cannot be remembered by loved ones"
+            },
+            "Feminine_Divine": {
+                "cards": ["The High Priestess", "The Empress", "Strength"],
+                "effect": "Channel pure creative force",
+                "cost": "Vulnerability to masculine archetypes"
+            }
+        },
+        "evolution": {
+            "hidden": "Unconscious card activation",
+            "awakening": "Conscious control of individual cards",
+            "empowered": "Can alter card properties",
+            "divine": "Can create new cards"
+        }
+    },
+    "Dante_Alighieri": {
+        "primary_affinity": "The Hermit",
+        "secondary_affinities": ["Death", "The World"],
+        "forbidden_cards": ["The Fool", "The Sun"],
+        "unique_combinations": {
+            "Chronicler's_Sight": {
+                "cards": ["The Hermit", "The Wheel of Fortune", "The World"],
+                "effect": "See and record all timeline variations simultaneously",
+                "cost": "Age rapidly while using"
+            },
+            "Virgil's_Shadow": {
+                "cards": ["The Hermit", "Death", "The Hierophant"],
+                "effect": "Guide others through timeline deaths",
+                "cost": "Take on their temporal wounds"
+            }
+        },
+        "evolution": {
+            "guide": "Can help others use cards",
+            "chronicler": "Can record card effects permanently",
+            "prophet": "Can predict card outcomes",
+            "eternal": "Exists in all timelines simultaneously"
+        }
+    },
+    "Dagon_Atumari": {
+        "primary_affinity": "The Devil",
+        "secondary_affinities": ["The Emperor", "Judgement"],
+        "forbidden_cards": ["The Fool", "The Star"],
+        "unique_combinations": {
+            "Divine_Chains": {
+                "cards": ["The Devil", "The Emperor", "Justice"],
+                "effect": "Bind entire timelines to his will",
+                "cost": "Weakens divine essence"
+            },
+            "Tide_of_Fate": {
+                "cards": ["The Devil", "The Wheel of Fortune", "The Tower"],
+                "effect": "Rewrite fundamental timeline laws",
+                "cost": "Creates unpredictable paradoxes"
+            }
+        },
+        "evolution": {
+            "deity": "Natural command over divine cards",
+            "tyrant": "Can corrupt card meanings",
+            "supreme": "Can destroy cards permanently",
+            "fallen": "Loses control if defeated"
+        }
+    },
+    "Gherardo_Petrarch": {
+        "primary_affinity": "The Hanged Man",
+        "secondary_affinities": ["Justice", "The Tower"],
+        "forbidden_cards": ["The Sun", "The World"],
+        "unique_combinations": {
+            "Brother's_Shadow": {
+                "cards": ["The Hanged Man", "The Moon", "The Devil"],
+                "effect": "Steal another's timeline success",
+                "cost": "Corrupt own timeline permanently"
+            }
+        },
+        "evolution": {
+            "envious": "Cards respond to negative emotions",
+            "conflicted": "Can use cards against will",
+            "redeemed": "Cards transform to positive aspects",
+            "enlightened": "Transcends need for cards"
+        }
+    },
+    "Roger_de_Flor": {
+        "primary_affinity": "The Chariot",
+        "secondary_affinities": ["Death", "Strength"],
+        "forbidden_cards": ["The Hermit", "The Hanged Man"],
+        "unique_combinations": {
+            "Warrior's_Return": {
+                "cards": ["The Chariot", "Death", "Judgement"],
+                "effect": "Return from death in any timeline",
+                "cost": "Lose memory of previous death"
+            }
+        },
+        "evolution": {
+            "warrior": "Cards enhance combat abilities",
+            "leader": "Can share card power with Company",
+            "legend": "Cards respond to reputation",
+            "eternal": "Cannot be permanently killed"
+        }
+    }
+} 

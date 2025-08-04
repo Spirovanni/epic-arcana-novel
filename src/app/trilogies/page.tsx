@@ -127,10 +127,13 @@ export default function TrilogiesPage() {
         if (response.ok) {
           const data = await response.json();
           
+          // Extract books array from the response object
+          const booksArray = data.books || [];
+          
           // Organize books into trilogies
           const updatedTrilogies = TRILOGY_DATA.map(trilogy => ({
             ...trilogy,
-            books: data.filter((book: Book) => {
+            books: booksArray.filter((book: Book) => {
               const bookNumber = book.bookNumber;
               if (trilogy.id === 1) return bookNumber >= 1 && bookNumber <= 3;
               if (trilogy.id === 2) return bookNumber >= 4 && bookNumber <= 6;

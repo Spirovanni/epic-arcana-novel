@@ -68,23 +68,34 @@ export function useCharacterArcsData(): CharacterArcsData {
       try {
         setLoading(true)
         
-        // Fetch character arcs from API
-        const response = await fetch('/api/character-arcs-3d')
+        // First try to fetch from the expanded JSON file
+        const fileResponse = await fetch('/lore/json/storyline/character_arcs.json')
         
-        if (!response.ok) {
-          throw new Error('Failed to fetch character arcs')
+        if (fileResponse.ok) {
+          const rawData = await fileResponse.json()
+          const transformedData = transformCharacterArcsData(rawData)
+          setCharacters(transformedData.characters)
+          setStoryCards(transformedData.storyCards)
+          setError(null)
+        } else {
+          // Fallback to API
+          const response = await fetch('/api/character-arcs-3d')
+          
+          if (!response.ok) {
+            throw new Error('Failed to fetch character arcs')
+          }
+          
+          const data = await response.json()
+          
+          setCharacters(data.characters || [])
+          setStoryCards(data.storyCards || [])
+          setError(null)
         }
-        
-        const data = await response.json()
-        
-        setCharacters(data.characters || [])
-        setStoryCards(data.storyCards || [])
-        setError(null)
       } catch (err) {
         console.error('Error fetching character arcs:', err)
         setError(err instanceof Error ? err.message : 'An error occurred')
         
-        // Fallback to mock data if API fails
+        // Fallback to mock data if everything fails
         setCharacters(getMockCharacters())
         setStoryCards(getMockStoryCards())
       } finally {
@@ -101,6 +112,89 @@ export function useCharacterArcsData(): CharacterArcsData {
     loading,
     error
   }
+}
+
+// Transform function to convert JSON structure to component format
+function transformCharacterArcsData(rawData: any): { characters: CharacterArc[], storyCards: StoryCard[] } {
+  const characters: CharacterArc[] = []
+  const storyCards: StoryCard[] = []
+  
+  if (!rawData.character_arcs) {
+    return { characters, storyCards }
+  }
+  
+  rawData.character_arcs.forEach((arc: any, arcIndex: number) => {
+    // Create character arc
+    const characterArc: CharacterArc = {
+      id: arc.character_id,
+      characterId: arc.character_id,
+      characterName: arc.character_name,
+      arcType: arc.arc_type,
+      stages: {},
+      thematicElements: {}
+    }
+    
+    // Transform stages
+    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, any]) => {
+      characterArc.stages[stageName] = {
+        description: stageData.description,
+        chapterReferences: stageData.chapter_references || [],
+        sceneGoals: stageData.scene_goals || []
+      }
+    })
+    
+    // Transform thematic elements
+    Object.entries(arc.thematic_elements || {}).forEach(([themeName, themeData]: [string, any]) => {
+      characterArc.thematicElements[themeName] = {
+        development: themeData.development,
+        storyArcGoals: themeData.story_arc_goals || []
+      }
+    })
+    
+    characters.push(characterArc)
+    
+    // Create story cards from stages
+    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, any], stageIndex: number) => {
+      const storyCard: StoryCard = {
+        id: `${arc.character_id}-${stageName}`,
+        characterArcId: arc.character_id,
+        stageName: stageName,
+        title: stageName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+        description: stageData.description,
+        chapterReferences: stageData.chapter_references || [],
+        sceneGoals: stageData.scene_goals || [],
+        position: { 
+          x: (stageIndex - 2) * 2, 
+          y: arcIndex * 2, 
+          z: 0 
+        },
+        color: getCharacterColor(arc.character_id),
+        displayOrder: stageIndex + 1,
+        isVisible: true
+      }
+      
+      storyCards.push(storyCard)
+    })
+  })
+  
+  return { characters, storyCards }
+}
+
+// Helper function to get character colors
+function getCharacterColor(characterId: string): string {
+  const colorMap: { [key: string]: string } = {
+    'francisco-petrarch': '#8B5CF6',
+    'la-signora-del-gioco': '#EC4899', 
+    'dante-alighieri': '#10B981',
+    'dagon-atumari': '#DC2626',
+    'novella-dandrea': '#F59E0B',
+    'hannibal-barca': '#6366F1',
+    'madonna-oriente': '#7C3AED',
+    'man-from-taured': '#059669',
+    'umbra': '#374151'
+  }
+  
+  return colorMap[characterId] || '#6B7280'
 }
 
 // Mock data for development

@@ -1546,25 +1546,160 @@ export default function ChapterWritingPage() {
               {chapter.terminalLearningObjectives && typeof chapter.terminalLearningObjectives === 'object' && (
                 <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
                   <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
-                    <AcademicCapIcon className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
+                    <ClipboardDocumentCheckIcon className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
                     Learning Objectives
                   </h2>
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {Object.entries(chapter.terminalLearningObjectives).map(([key, objective]: [string, unknown]) => {
-                      // Handle nested objects safely
-                      const objectiveText = typeof objective === 'object' && objective !== null 
-                        ? JSON.stringify(objective, null, 2)
-                        : String(objective || '');
-                      
-                      return (
-                        <div key={key} className="bg-green-50 dark:bg-green-900/30 rounded-lg p-4">
-                          <h3 className="font-semibold text-green-800 dark:text-green-200 mb-2 capitalize">
-                            {key.replace(/([A-Z])/g, ' $1').trim()}
-                          </h3>
-                          <pre className="text-green-700 dark:text-green-300 text-sm whitespace-pre-wrap">{objectiveText}</pre>
-                        </div>
-                      );
-                    })}
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-6">
+                    <div className="space-y-4">
+                      {(() => {
+                        // Extract and organize learning objectives by book
+                        interface BookObjectives {
+                          title: string;
+                          author?: string;
+                          connectionFocusArea?: string;
+                          objectives: string[];
+                        }
+                        
+                        const bookGroups: BookObjectives[] = [];
+                        
+                        // Helper function to extract book information and objectives
+                        const extractBookData = (obj: any): void => {
+                          if (typeof obj !== 'object' || obj === null) return;
+                          
+                          // Check if this object has book-like structure (title, author, etc.)
+                          if (obj.title && typeof obj.title === 'string') {
+                            const bookData: BookObjectives = {
+                              title: obj.title,
+                              author: obj.author || undefined,
+                              connectionFocusArea: obj.connection_focus_area || obj.connectionFocusArea || undefined,
+                              objectives: []
+                            };
+                            
+                            // Look for objectives in various possible locations
+                            const findObjectivesInBook = (bookObj: any): string[] => {
+                              const objectives: string[] = [];
+                              
+                              // Check direct objectives
+                              if (bookObj.terminal_learning_objectives) {
+                                const terminalObj = bookObj.terminal_learning_objectives;
+                                if (typeof terminalObj === 'object') {
+                                  Object.entries(terminalObj).forEach(([key, value]) => {
+                                    if (key.startsWith('objective') && typeof value === 'string') {
+                                      objectives.push(String(value));
+                                    }
+                                  });
+                                }
+                              }
+                              
+                              // Check connect_points for objectives
+                              if (bookObj.connect_points && typeof bookObj.connect_points === 'object') {
+                                Object.values(bookObj.connect_points).forEach((point: any) => {
+                                  if (typeof point === 'string') {
+                                    objectives.push(point);
+                                  }
+                                });
+                              }
+                              
+                              return objectives;
+                            };
+                            
+                            bookData.objectives = findObjectivesInBook(obj);
+                            
+                            if (bookData.objectives.length > 0 || bookData.connectionFocusArea) {
+                              bookGroups.push(bookData);
+                            }
+                          }
+                          
+                          // Recursively search through all properties
+                          Object.values(obj).forEach(value => {
+                            if (typeof value === 'object' && value !== null) {
+                              extractBookData(value);
+                            }
+                          });
+                        };
+                        
+                        // Start extraction
+                        if (chapter.terminalLearningObjectives) {
+                          extractBookData(chapter.terminalLearningObjectives);
+                        }
+                        
+                        // If no book groups found, fall back to simple objectives
+                        if (bookGroups.length === 0) {
+                          const simpleObjectives: string[] = [];
+                          
+                          const findSimpleObjectives = (obj: any): void => {
+                            if (typeof obj !== 'object' || obj === null) return;
+                            
+                            Object.entries(obj).forEach(([key, value]) => {
+                              if (key.startsWith('objective') && typeof value === 'string') {
+                                simpleObjectives.push(String(value));
+                              } else if (typeof value === 'object' && value !== null) {
+                                findSimpleObjectives(value);
+                              }
+                            });
+                          };
+                          
+                          if (chapter.terminalLearningObjectives) {
+                            findSimpleObjectives(chapter.terminalLearningObjectives);
+                          }
+                          
+                          if (simpleObjectives.length > 0) {
+                            bookGroups.push({
+                              title: `Chapter ${chapter.chapterNumber} Objectives`,
+                              objectives: simpleObjectives
+                            });
+                          }
+                        }
+                        
+                        return bookGroups.map((book, bookIndex) => (
+                          <div key={bookIndex} className="mb-6">
+                            {/* Book Header */}
+                            <div className="mb-4 pb-2 border-b border-green-300 dark:border-green-600">
+                              <h3 className="text-lg font-semibold text-green-800 dark:text-green-200 flex items-center gap-2">
+                                <BookOpenIcon className="w-5 h-5" />
+                                {book.title}
+                              </h3>
+                              {book.author && (
+                                <p className="text-sm text-green-600 dark:text-green-400 mt-1">
+                                  by {book.author}
+                                </p>
+                              )}
+                              {book.connectionFocusArea && (
+                                <div className="mt-2">
+                                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-800 text-green-800 dark:text-green-200">
+                                    Focus: {book.connectionFocusArea}
+                                  </span>
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Book Objectives */}
+                            <div className="space-y-3">
+                              {book.objectives.map((objective, objIndex) => (
+                                <div key={objIndex} className="flex items-start gap-3 group">
+                                  <div className="flex-shrink-0 mt-1">
+                                    <div className="w-4 h-4 border-2 border-green-400 dark:border-green-500 rounded-sm flex items-center justify-center group-hover:border-green-600 dark:group-hover:border-green-300 transition-colors">
+                                      <ClipboardDocumentCheckIcon className="w-2 h-2 text-transparent group-hover:text-green-600 dark:group-hover:text-green-300 transition-colors" />
+                                    </div>
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <p className="text-green-700 dark:text-green-300 text-sm leading-relaxed">
+                                      {objective}
+                                    </p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        ));
+                      })()}
+                    </div>
+                    <div className="mt-6 pt-4 border-t border-green-200 dark:border-green-700">
+                      <p className="text-sm text-green-600 dark:text-green-400 italic flex items-center gap-2">
+                        <LightBulbIcon className="w-4 h-4" />
+                        Complete these objectives while reading Chapter {chapter.chapterNumber}
+                      </p>
+                    </div>
                   </div>
                 </div>
               )}
