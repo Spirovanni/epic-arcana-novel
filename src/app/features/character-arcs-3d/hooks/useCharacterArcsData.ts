@@ -135,34 +135,37 @@ function transformCharacterArcsData(rawData: Record<string, unknown>): { charact
     }
     
     // Transform stages
-    Object.entries((arc.stages as Record<string, unknown>) || {}).forEach(([stageName, stageData]: [string, Record<string, unknown>]) => {
+    Object.entries((arc.stages as Record<string, unknown>) || {}).forEach(([stageName, stageData]) => {
+      const stageRecord = stageData as Record<string, unknown>;
       characterArc.stages[stageName] = {
-        description: stageData.description as string,
-        chapterReferences: (stageData.chapter_references as string[]) || [],
-        sceneGoals: (stageData.scene_goals as string[]) || []
+        description: stageRecord.description as string,
+        chapterReferences: (stageRecord.chapter_references as string[]) || [],
+        sceneGoals: (stageRecord.scene_goals as string[]) || []
       }
     })
     
     // Transform thematic elements
-    Object.entries((arc.thematic_elements as Record<string, unknown>) || {}).forEach(([themeName, themeData]: [string, Record<string, unknown>]) => {
+    Object.entries((arc.thematic_elements as Record<string, unknown>) || {}).forEach(([themeName, themeData]) => {
+      const themeRecord = themeData as Record<string, unknown>;
       characterArc.thematicElements[themeName] = {
-        development: themeData.development as string,
-        storyArcGoals: (themeData.story_arc_goals as string[]) || []
+        development: themeRecord.development as string,
+        storyArcGoals: (themeRecord.story_arc_goals as string[]) || []
       }
     })
     
     characters.push(characterArc)
     
     // Create story cards from stages
-    Object.entries((arc.stages as Record<string, unknown>) || {}).forEach(([stageName, stageData]: [string, Record<string, unknown>], stageIndex: number) => {
+    Object.entries((arc.stages as Record<string, unknown>) || {}).forEach(([stageName, stageData], stageIndex: number) => {
+      const stageRecord = stageData as Record<string, unknown>;
       const storyCard: StoryCard = {
         id: `${arc.character_id as string}-${stageName}`,
         characterArcId: arc.character_id as string,
         stageName: stageName,
         title: stageName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-        description: stageData.description as string,
-        chapterReferences: (stageData.chapter_references as string[]) || [],
-        sceneGoals: (stageData.scene_goals as string[]) || [],
+        description: stageRecord.description as string,
+        chapterReferences: (stageRecord.chapter_references as string[]) || [],
+        sceneGoals: (stageRecord.scene_goals as string[]) || [],
         position: { 
           x: (stageIndex - 2) * 2, 
           y: arcIndex * 2, 
