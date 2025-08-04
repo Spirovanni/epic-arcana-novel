@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Location } from '../page';
 import PangeaMap from './PangeaMap';
-import { CameraSettings } from '../utils/mapNavigation';
 
 interface InteractiveWorldMapProps {
   locations: Location[];
