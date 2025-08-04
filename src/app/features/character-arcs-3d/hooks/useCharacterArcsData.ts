@@ -140,7 +140,12 @@ function transformCharacterArcsData(rawData: Record<string, unknown>): { charact
       characterArc.stages[stageName] = {
         description: stageRecord.description as string,
         chapterReferences: (stageRecord.chapter_references as string[]) || [],
-        sceneGoals: (stageRecord.scene_goals as string[]) || []
+        sceneGoals: (stageRecord.scene_goals as Array<{
+          chapter: number
+          scene: number
+          goal: string
+          arcDevelopment: string
+        }>) || []
       }
     })
     
@@ -149,7 +154,11 @@ function transformCharacterArcsData(rawData: Record<string, unknown>): { charact
       const themeRecord = themeData as Record<string, unknown>;
       characterArc.thematicElements[themeName] = {
         development: themeRecord.development as string,
-        storyArcGoals: (themeRecord.story_arc_goals as string[]) || []
+        storyArcGoals: (themeRecord.story_arc_goals as Array<{
+          chapter: number
+          goal: string
+          measurement: string
+        }>) || []
       }
     })
     
@@ -165,7 +174,12 @@ function transformCharacterArcsData(rawData: Record<string, unknown>): { charact
         title: stageName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
         description: stageRecord.description as string,
         chapterReferences: (stageRecord.chapter_references as string[]) || [],
-        sceneGoals: (stageRecord.scene_goals as string[]) || [],
+        sceneGoals: (stageRecord.scene_goals as Array<{
+          chapter: number
+          scene: number
+          goal: string
+          arcDevelopment: string
+        }>) || [],
         position: { 
           x: (stageIndex - 2) * 2, 
           y: arcIndex * 2, 
