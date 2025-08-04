@@ -1566,12 +1566,14 @@ export default function ChapterWritingPage() {
                         const extractBookData = (obj: unknown): void => {
                           if (typeof obj !== 'object' || obj === null) return;
                           
+                          const objRecord = obj as Record<string, unknown>;
+                          
                           // Check if this object has book-like structure (title, author, etc.)
-                          if (obj.title && typeof obj.title === 'string') {
+                          if (objRecord.title && typeof objRecord.title === 'string') {
                             const bookData: BookObjectives = {
-                              title: obj.title,
-                              author: obj.author || undefined,
-                              connectionFocusArea: obj.connection_focus_area || obj.connectionFocusArea || undefined,
+                              title: objRecord.title as string,
+                              author: objRecord.author as string || undefined,
+                              connectionFocusArea: (objRecord.connection_focus_area || objRecord.connectionFocusArea) as string || undefined,
                               objectives: []
                             };
                             
@@ -1603,7 +1605,7 @@ export default function ChapterWritingPage() {
                               return objectives;
                             };
                             
-                            bookData.objectives = findObjectivesInBook(obj);
+                            bookData.objectives = findObjectivesInBook(objRecord);
                             
                             if (bookData.objectives.length > 0 || bookData.connectionFocusArea) {
                               bookGroups.push(bookData);
@@ -1630,7 +1632,7 @@ export default function ChapterWritingPage() {
                           const findSimpleObjectives = (obj: unknown): void => {
                             if (typeof obj !== 'object' || obj === null) return;
                             
-                            Object.entries(obj).forEach(([key, value]) => {
+                            Object.entries(obj as Record<string, unknown>).forEach(([key, value]) => {
                               if (key.startsWith('objective') && typeof value === 'string') {
                                 simpleObjectives.push(String(value));
                               } else if (typeof value === 'object' && value !== null) {
