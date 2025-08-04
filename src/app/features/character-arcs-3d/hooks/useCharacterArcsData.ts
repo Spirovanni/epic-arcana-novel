@@ -115,7 +115,7 @@ export function useCharacterArcsData(): CharacterArcsData {
 }
 
 // Transform function to convert JSON structure to component format
-function transformCharacterArcsData(rawData: any): { characters: CharacterArc[], storyCards: StoryCard[] } {
+function transformCharacterArcsData(rawData: Record<string, unknown>): { characters: CharacterArc[], storyCards: StoryCard[] } {
   const characters: CharacterArc[] = []
   const storyCards: StoryCard[] = []
   
@@ -123,7 +123,7 @@ function transformCharacterArcsData(rawData: any): { characters: CharacterArc[],
     return { characters, storyCards }
   }
   
-  rawData.character_arcs.forEach((arc: any, arcIndex: number) => {
+  (rawData.character_arcs as Record<string, unknown>[]).forEach((arc: Record<string, unknown>, arcIndex: number) => {
     // Create character arc
     const characterArc: CharacterArc = {
       id: arc.character_id,
@@ -135,7 +135,7 @@ function transformCharacterArcsData(rawData: any): { characters: CharacterArc[],
     }
     
     // Transform stages
-    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, any]) => {
+    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, Record<string, unknown>]) => {
       characterArc.stages[stageName] = {
         description: stageData.description,
         chapterReferences: stageData.chapter_references || [],
@@ -144,7 +144,7 @@ function transformCharacterArcsData(rawData: any): { characters: CharacterArc[],
     })
     
     // Transform thematic elements
-    Object.entries(arc.thematic_elements || {}).forEach(([themeName, themeData]: [string, any]) => {
+    Object.entries(arc.thematic_elements || {}).forEach(([themeName, themeData]: [string, Record<string, unknown>]) => {
       characterArc.thematicElements[themeName] = {
         development: themeData.development,
         storyArcGoals: themeData.story_arc_goals || []
@@ -154,7 +154,7 @@ function transformCharacterArcsData(rawData: any): { characters: CharacterArc[],
     characters.push(characterArc)
     
     // Create story cards from stages
-    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, any], stageIndex: number) => {
+    Object.entries(arc.stages || {}).forEach(([stageName, stageData]: [string, Record<string, unknown>], stageIndex: number) => {
       const storyCard: StoryCard = {
         id: `${arc.character_id}-${stageName}`,
         characterArcId: arc.character_id,

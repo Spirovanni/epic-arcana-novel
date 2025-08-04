@@ -1563,7 +1563,7 @@ export default function ChapterWritingPage() {
                         const bookGroups: BookObjectives[] = [];
                         
                         // Helper function to extract book information and objectives
-                        const extractBookData = (obj: any): void => {
+                        const extractBookData = (obj: unknown): void => {
                           if (typeof obj !== 'object' || obj === null) return;
                           
                           // Check if this object has book-like structure (title, author, etc.)
@@ -1576,7 +1576,7 @@ export default function ChapterWritingPage() {
                             };
                             
                             // Look for objectives in various possible locations
-                            const findObjectivesInBook = (bookObj: any): string[] => {
+                            const findObjectivesInBook = (bookObj: Record<string, unknown>): string[] => {
                               const objectives: string[] = [];
                               
                               // Check direct objectives
@@ -1593,7 +1593,7 @@ export default function ChapterWritingPage() {
                               
                               // Check connect_points for objectives
                               if (bookObj.connect_points && typeof bookObj.connect_points === 'object') {
-                                Object.values(bookObj.connect_points).forEach((point: any) => {
+                                Object.values(bookObj.connect_points).forEach((point: unknown) => {
                                   if (typeof point === 'string') {
                                     objectives.push(point);
                                   }
@@ -1627,7 +1627,7 @@ export default function ChapterWritingPage() {
                         if (bookGroups.length === 0) {
                           const simpleObjectives: string[] = [];
                           
-                          const findSimpleObjectives = (obj: any): void => {
+                          const findSimpleObjectives = (obj: unknown): void => {
                             if (typeof obj !== 'object' || obj === null) return;
                             
                             Object.entries(obj).forEach(([key, value]) => {

@@ -233,7 +233,7 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
               </h4>
               <div className="bg-gray-50 dark:bg-gray-800/50 rounded-lg p-4">
                 <div className="space-y-3">
-                  {Object.entries(chapter.terminalLearningObjectives).map(([key, objective], index) => (
+                  {Object.entries(chapter.terminalLearningObjectives).map(([key, objective]) => (
                     <div key={key} className="flex items-start gap-3 group">
                       <div className="flex-shrink-0 mt-1">
                         <div className="w-4 h-4 border-2 border-gray-300 dark:border-gray-600 rounded-sm flex items-center justify-center group-hover:border-indigo-500 transition-colors">
