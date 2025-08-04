@@ -23,8 +23,6 @@ export function GridOverlay({
 
   // SVG coordinate system: viewBox="0 0 3306.216 3200.83"
   // Set the coordinate system origin to match the map's existing (0,0) point
-  const svgWidth = 3306.216;
-  const svgHeight = 3200.83;
   
   // Based on the screenshot, the map's (0,0) point appears to be located at approximately:
   // The map's (0,0) coordinate (bottom red circle) is in the lower ocean area

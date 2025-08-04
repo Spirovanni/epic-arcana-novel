@@ -10,13 +10,12 @@ interface PangeaMapProps {
   onRegionClick: (regionId: string) => void;
   onRegionHover: (regionId: string | null) => void;
   zoom: number;
-  center: { x: number; y: number };
   isPanMode?: boolean;
   showGrid?: boolean;
 }
 
 const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
-  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, center, isPanMode = false, showGrid = false }, ref) => {
+  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, isPanMode = false, showGrid = false }, ref) => {
     const [svgContent, setSvgContent] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
 
@@ -461,9 +460,6 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       // Vary color based on region type or chapter number
       const chapterNum = extractChapterNumber(regionId);
       if (chapterNum) {
-        const num = parseInt(chapterNum) || 1;
-        // Create color variations based on chapter number
-        const hueShift = (num * 15) % 60; // Shift hue slightly
         return {
           primary: colors.primary,
           secondary: colors.secondary,

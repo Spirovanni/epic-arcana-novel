@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Location } from '../page';
 import PangeaMap from './PangeaMap';
-import { focusOnNaples, CameraSettings } from '../utils/mapNavigation';
+import { CameraSettings } from '../utils/mapNavigation';
 
 interface InteractiveWorldMapProps {
   locations: Location[];
@@ -126,18 +126,6 @@ export function InteractiveWorldMap({
     setMapZoom(cameraSettings.zoom);
   };
 
-  const autoFocusOnNaples = () => {
-    if (!mapRef.current) return;
-    
-    const viewport = {
-      width: mapRef.current.clientWidth,
-      height: mapRef.current.clientHeight
-    };
-    
-    const naplesSettings = focusOnNaples(viewport);
-    focusOnRegion(naplesSettings);
-    setSelectedRegion('_275_-_Naples'); // Highlight Naples region
-  };
 
   const focusOnOrigin = () => {
     // Get actual viewport dimensions from the map container
@@ -232,7 +220,6 @@ export function InteractiveWorldMap({
           onRegionClick={handleRegionClick}
           onRegionHover={handleRegionHover}
           zoom={1.0}
-          center={{ x: 0, y: 0 }}
           isPanMode={isPanMode}
           showGrid={showGrid}
         />
