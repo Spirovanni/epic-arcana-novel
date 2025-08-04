@@ -190,13 +190,13 @@ export default function LocationsPage() {
         // Update locations state to remove image URL
         setLocations(prev => prev.map(loc => 
           loc.id === locationId 
-            ? { ...loc, image_url: null }
+            ? { ...loc, image_url: undefined }
             : loc
         ));
         
         // Update selected location if it's the one being updated
         if (selectedLocation?.id === locationId) {
-          setSelectedLocation(prev => prev ? { ...prev, image_url: null } : null);
+          setSelectedLocation(prev => prev ? { ...prev, image_url: undefined } : null);
         }
       } else {
         setUploadError(result.error || 'Failed to remove image');
