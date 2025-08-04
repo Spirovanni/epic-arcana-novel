@@ -418,37 +418,126 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       }
     }, [svgContent, activeTimeline, selectedRegion, isPanMode, showGrid, applyTimelineStyles, addGridToSVG, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, ref]);
 
-    const formatRegionName = (regionId: string) => {
-      return regionId
-        .replace(/[_-]/g, ' ')
-        .replace(/^\d+\s*-\s*/, '')
-        .replace(/^SMT\s*[\d.]+\s*-\s*/, '')
-        .replace(/^Part\s*[IVX]+:\s*/, '')
-        .replace(/^Book\s*\d+\s*-\s*/, '')
-        .trim();
-    };
 
-    const extractChapterNumber = (regionId: string) => {
+    const extractRegionInfo = (regionId: string, svgElement?: SVGSVGElement) => {
       // Extract chapter/day numbers from different formats
       const patterns = [
-        /^_(\d+)_-_/, // _304_-_Granada format
-        /^SMT\s*([\d.]+)\s*-\s*/, // SMT 8.8 - Pabulum format
-        /^Book\s*(\d+)\s*-\s*/, // Book 8 - Title format
-        /^Part\s*([IVX]+):\s*/, // Part III: Title format
-        /^(\d+)\s*-\s*/ // Simple number format
+        /^_(\d+)_-_(.+)/, // _304_-_Granada format
+        /^(\d+)\s*-\s*(.+)/, // Simple number format like "360 - Panama"
+        /^SMT\s*([\d.]+)\s*-\s*(.+)/, // SMT 8.8 - Pabulum format
+        /^Book\s*(\d+)\s*-\s*(.+)/, // Book 8 - Title format
+        /^Part\s*([IVX]+):\s*(.+)/, // Part III: Title format
       ];
+      
+      let chapterNumber = null;
+      let locationName = regionId;
+      let bookNumber = null;
+      let chapterTitle = null;
       
       for (const pattern of patterns) {
         const match = regionId.match(pattern);
         if (match) {
-          return match[1];
+          chapterNumber = match[1];
+          locationName = match[2] || regionId;
+          break;
         }
       }
+      
+      // Extract book and chapter information from SVG structure if available
+      if (svgElement) {
+        const regionElement = svgElement.querySelector(`#${CSS.escape(regionId)}`);
+        if (regionElement) {
+          // Find parent book group
+          let parent: Element | null = regionElement.parentElement;
+          while (parent && parent !== svgElement) {
+            const parentId = parent.id;
+            if (parentId && parentId.includes('Book_')) {
+              const bookMatch = parentId.match(/Book_(\d+)_-_(.+)/);
+              if (bookMatch) {
+                bookNumber = bookMatch[1];
+                break;
+              }
+            }
+            
+            // Look for SMT chapter title
+            if (parentId && parentId.includes('SMT_')) {
+              const smtMatch = parentId.match(/SMT_([\d.]+)_-_(.+)/);
+              if (smtMatch) {
+                chapterTitle = smtMatch[2].replace(/_/g, ' ');
+              }
+            }
+            
+            parent = parent.parentElement;
+          }
+        }
+      }
+      
+      return {
+        chapterNumber,
+        locationName: locationName.replace(/_/g, ' ').trim(),
+        bookNumber,
+        chapterTitle
+      };
+    };
+
+    const getRegionActualColor = (regionId: string, svgElement?: SVGSVGElement) => {
+      if (!svgElement) return null;
+      
+      try {
+        const regionElement = svgElement.querySelector(`#${CSS.escape(regionId)}`);
+        if (!regionElement) return null;
+        
+        // Look for shapes within the region that have fill colors
+        const shapes = regionElement.querySelectorAll('path, polygon, circle, rect, ellipse');
+        for (const shape of shapes) {
+          const classList = shape.classList;
+          if (classList.length > 0) {
+            // Find the CSS class and get its color from the style element
+            const styleElement = svgElement.querySelector('style');
+            if (styleElement) {
+              const cssText = styleElement.textContent || '';
+              
+              for (const className of classList) {
+                // Look for fill color in CSS
+                const classPattern = new RegExp(`\\.${className}\\s*\\{[^}]*fill:\\s*([^;}]+)`, 'i');
+                const match = cssText.match(classPattern);
+                if (match) {
+                  const color = match[1].trim();
+                  return color;
+                }
+              }
+            }
+          }
+          
+          // Check for direct fill attribute
+          const fillAttr = shape.getAttribute('fill');
+          if (fillAttr && fillAttr !== 'none') {
+            return fillAttr;
+          }
+        }
+      } catch (error) {
+        console.error('Error extracting region color:', error);
+      }
+      
       return null;
     };
 
-    const getRegionColor = (regionId: string, activeTimeline: string) => {
-      // Timeline base colors
+    const getRegionColor = (regionId: string, activeTimeline: string, svgElement?: SVGSVGElement) => {
+      // Get the actual color from SVG
+      const actualColor = getRegionActualColor(regionId, svgElement);
+      
+      if (actualColor) {
+        // Use the actual color from the SVG
+        return {
+          primary: actualColor,
+          secondary: actualColor,
+          accent: actualColor,
+          background: `${actualColor}E6`, // Add transparency
+          border: actualColor
+        };
+      }
+      
+      // Fallback to timeline colors if actual color not found
       const timelineColors = {
         alpha: { primary: '#10b981', secondary: '#047857', accent: '#6ee7b7' },
         beta: { primary: '#f59e0b', secondary: '#d97706', accent: '#fbbf24' },
@@ -456,18 +545,6 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       };
       
       const colors = timelineColors[activeTimeline as keyof typeof timelineColors];
-      
-      // Vary color based on region type or chapter number
-      const chapterNum = extractChapterNumber(regionId);
-      if (chapterNum) {
-        return {
-          primary: colors.primary,
-          secondary: colors.secondary,
-          accent: colors.accent,
-          background: `linear-gradient(135deg, ${colors.primary}20, ${colors.secondary}40)`,
-          border: colors.accent
-        };
-      }
       
       return {
         primary: colors.primary,
@@ -499,18 +576,11 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
         />
         
         {/* Enhanced Centered Tooltip - Rendered via Portal */}
-        {hoveredRegion && tooltipPosition && (() => {
-          console.log('Rendering tooltip for:', hoveredRegion, tooltipPosition);
-          const regionColors = getRegionColor(hoveredRegion, activeTimeline);
-          const chapterNumber = extractChapterNumber(hoveredRegion);
-          const locationName = formatRegionName(hoveredRegion);
-          
-          return { regionColors, chapterNumber, locationName };
-        })() && typeof document !== 'undefined' && createPortal(
+        {hoveredRegion && tooltipPosition && typeof document !== 'undefined' && createPortal(
           (() => {
-            const regionColors = getRegionColor(hoveredRegion, activeTimeline);
-            const chapterNumber = extractChapterNumber(hoveredRegion);
-            const locationName = formatRegionName(hoveredRegion);
+            const svgElement = ref && typeof ref !== 'function' ? ref.current?.querySelector('svg') : null;
+            const regionInfo = extractRegionInfo(hoveredRegion, svgElement || undefined);
+            const regionColors = getRegionColor(hoveredRegion, activeTimeline, svgElement || undefined);
             
             return (
               <div
@@ -531,8 +601,23 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
                   position: 'fixed'
                 }}
               >
+                {/* Book Badge */}
+                {regionInfo.bookNumber && (
+                  <div 
+                    className="text-center mb-2 px-2 py-1 rounded-md text-xs font-bold"
+                    style={{ 
+                      backgroundColor: `${regionColors.primary}40`,
+                      color: 'white',
+                      border: `1px solid ${regionColors.border}`,
+                      display: 'inline-block'
+                    }}
+                  >
+                    Book {regionInfo.bookNumber}
+                  </div>
+                )}
+
                 {/* Header with Chapter/Day Number */}
-                {chapterNumber && (
+                {regionInfo.chapterNumber && (
                   <div 
                     className="text-center mb-3 px-3 py-1 rounded-full font-bold"
                     style={{ 
@@ -543,7 +628,21 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
                       minWidth: '60px'
                     }}
                   >
-                    {chapterNumber.includes('.') ? `Chapter ${chapterNumber}` : `Day ${chapterNumber}`}
+                    {regionInfo.chapterNumber.includes('.') ? `Chapter ${regionInfo.chapterNumber}` : `Day ${regionInfo.chapterNumber}`}
+                  </div>
+                )}
+
+                {/* Chapter Title */}
+                {regionInfo.chapterTitle && (
+                  <div 
+                    className="text-center mb-2 font-medium italic"
+                    style={{ 
+                      fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.01, 12)}px`,
+                      color: regionColors.accent,
+                      opacity: 0.9
+                    }}
+                  >
+&ldquo;{regionInfo.chapterTitle}&rdquo;
                   </div>
                 )}
                 
@@ -552,18 +651,18 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
                   className="font-bold mb-3 text-center"
                   style={{ 
                     fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.018, 20)}px`,
-                    color: regionColors.accent,
+                    color: 'white',
                     textShadow: `0 2px 4px rgba(0,0,0,0.8)`
                   }}
                 >
-                  {locationName || 'Unknown Location'}
+                  {regionInfo.locationName || 'Unknown Location'}
                 </div>
                 
                 {/* Timeline Badge */}
                 <div 
                   className="text-center text-sm font-medium"
                   style={{ 
-                    color: regionColors.secondary,
+                    color: regionColors.accent,
                     fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.01, 12)}px`
                   }}
                 >
