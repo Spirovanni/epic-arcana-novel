@@ -12,7 +12,7 @@ export function Navbar() {
   const { isSignedIn } = useUser();
 
   const [isBooksDropdownOpen, setIsBooksDropdownOpen] = useState(false);
-  const [books, setBooks] = useState<Array<{ id: string; title: string; slug: string }>>([]);
+  const [books, setBooks] = useState<Array<{ id: string; title: string; slug: string; bookNumber: number; fictionNovelTitle: string }>>([]);
 
   // Fetch books for the dropdown
   useEffect(() => {
