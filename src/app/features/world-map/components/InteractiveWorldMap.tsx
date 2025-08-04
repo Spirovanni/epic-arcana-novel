@@ -121,10 +121,6 @@ export function InteractiveWorldMap({
     setMapZoom(1.0);
   };
 
-  const focusOnRegion = (cameraSettings: CameraSettings) => {
-    setMapCenter(cameraSettings.center);
-    setMapZoom(cameraSettings.zoom);
-  };
 
 
   const focusOnOrigin = () => {

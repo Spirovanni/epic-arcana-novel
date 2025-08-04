@@ -72,7 +72,7 @@ export function CharacterArcsTimeline({ selectedCharacter, onEventSelect }: Char
   // Transform story cards into timeline events - ALWAYS call this hook
   const timelineEvents: TimelineEvent[] = useMemo(() => {
     if (!storyCards || storyCards.length === 0) return []
-    return storyCards.map((card, index) => {
+    return storyCards.map((card) => {
       const character = characterArcsData.find(arc => arc.id === card.characterArcId)
       const totalStages = storyCards.filter(sc => sc.characterArcId === card.characterArcId).length
       const stageIndex = storyCards.filter(sc => sc.characterArcId === card.characterArcId && sc.displayOrder <= card.displayOrder).length - 1
@@ -143,7 +143,8 @@ export function CharacterArcsTimeline({ selectedCharacter, onEventSelect }: Char
     setStickyEvent(null)
   }
 
-  // Component for rendering curved arcs between connected events
+  // Component for rendering curved arcs between connected events (currently disabled)
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const ConnectionArc = ({ fromEvent, toEvent, color }: { 
     fromEvent: TimelineEvent, 
     toEvent: TimelineEvent, 
@@ -371,7 +372,7 @@ export function CharacterArcsTimeline({ selectedCharacter, onEventSelect }: Char
                   />
 
                   {/* Character Events */}
-                  {characterEvents.map((event, index) => (
+                  {characterEvents.map((event) => (
                     <motion.div
                       key={event.id}
                       className="absolute cursor-pointer group"
