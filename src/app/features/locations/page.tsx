@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MagnifyingGlassIcon, 
@@ -412,10 +413,12 @@ export default function LocationsPage() {
                 <div>
                   {/* Location Image with Title Overlay - 3:2 Aspect Ratio */}
                   <div className="relative w-full aspect-[3/2] mb-4 rounded-t-xl overflow-hidden group/image">
-                    <img
+                    <Image
                       src={location.image_url || '/images/locations/placeholder.svg'}
                       alt={location.name}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = '/images/locations/placeholder.svg';
@@ -517,10 +520,12 @@ export default function LocationsPage() {
                 <div className="flex items-center p-4 gap-4 w-full">
                   {/* List view image */}
                   <div className="relative w-24 h-16 rounded-lg overflow-hidden flex-shrink-0">
-                    <img
+                    <Image
                       src={location.image_url || '/images/locations/placeholder.svg'}
                       alt={location.name}
-                      className="w-full h-full object-cover"
+                      fill
+                      sizes="100px"
+                      className="object-cover"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = '/images/locations/placeholder.svg';
@@ -587,10 +592,12 @@ export default function LocationsPage() {
               <div className="p-8">
                 {/* Location Image */}
                 <div className="relative w-full aspect-[3/2] rounded-xl overflow-hidden mb-8 group/modal-image">
-                  <img
+                  <Image
                     src={selectedLocation.image_url || '/images/locations/placeholder.svg'}
                     alt={selectedLocation.name}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 800px"
+                    className="object-cover"
                     onError={(e) => {
                       const target = e.target as HTMLImageElement;
                       target.src = '/images/locations/placeholder.svg';

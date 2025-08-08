@@ -20,54 +20,7 @@ export function RegionalOverlay({ svgContainer, config, onRegionClick }: Regiona
   const overlayRef = useRef<SVGGElement | null>(null);
 
   // Generate overlay paths for grouped regions
-  const generateOverlayPaths = useCallback((svg: SVGSVGElement) => {
-    const overlayGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    overlayGroup.setAttribute('id', 'regional-overlay');
-    overlayGroup.setAttribute('opacity', config.opacity.toString());
-    overlayGroup.style.pointerEvents = 'auto';
-
-    // Clear existing overlay
-    const existingOverlay = svg.querySelector('#regional-overlay');
-    if (existingOverlay) {
-      existingOverlay.remove();
-    }
-
-    // Generate book region overlays
-    if (config.showBookBoundaries) {
-      REGIONAL_GROUPINGS.forEach(book => {
-        const bookOverlay = createBookOverlay(svg, book, config);
-        if (bookOverlay) {
-          overlayGroup.appendChild(bookOverlay);
-        }
-      });
-    }
-
-    // Generate chapter region overlays  
-    if (config.showChapterBoundaries) {
-      REGIONAL_GROUPINGS.forEach(book => {
-        book.subRegions.forEach(chapter => {
-          const chapterOverlay = createChapterOverlay(svg, book, chapter, config);
-          if (chapterOverlay) {
-            overlayGroup.appendChild(chapterOverlay);
-          }
-        });
-      });
-    }
-
-    // Add location labels
-    if (config.showLocationLabels) {
-      const labelGroup = createLocationLabels(svg, config);
-      if (labelGroup) {
-        overlayGroup.appendChild(labelGroup);
-      }
-    }
-
-    // Insert overlay as the last child so it appears on top
-    svg.appendChild(overlayGroup);
-    overlayRef.current = overlayGroup;
-
-    return overlayGroup;
-  }, [config, onRegionClick]);
+  
 
   // Create book-level overlay boundary
   const createBookOverlay = useCallback((svg: SVGSVGElement, book: BookRegion, config: OverlayConfig): SVGElement | null => {
@@ -199,6 +152,56 @@ export function RegionalOverlay({ svgContainer, config, onRegionClick }: Regiona
     return labelGroup;
   };
 
+  // Generate overlay paths for grouped regions (declared after helper creators)
+  const generateOverlayPaths = useCallback((svg: SVGSVGElement) => {
+    const overlayGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    overlayGroup.setAttribute('id', 'regional-overlay');
+    overlayGroup.setAttribute('opacity', config.opacity.toString());
+    overlayGroup.style.pointerEvents = 'auto';
+
+    // Clear existing overlay
+    const existingOverlay = svg.querySelector('#regional-overlay');
+    if (existingOverlay) {
+      existingOverlay.remove();
+    }
+
+    // Generate book region overlays
+    if (config.showBookBoundaries) {
+      REGIONAL_GROUPINGS.forEach(book => {
+        const bookOverlay = createBookOverlay(svg, book, config);
+        if (bookOverlay) {
+          overlayGroup.appendChild(bookOverlay);
+        }
+      });
+    }
+
+    // Generate chapter region overlays  
+    if (config.showChapterBoundaries) {
+      REGIONAL_GROUPINGS.forEach(book => {
+        book.subRegions.forEach(chapter => {
+          const chapterOverlay = createChapterOverlay(svg, book, chapter, config);
+          if (chapterOverlay) {
+            overlayGroup.appendChild(chapterOverlay);
+          }
+        });
+      });
+    }
+
+    // Add location labels
+    if (config.showLocationLabels) {
+      const labelGroup = createLocationLabels(svg, config);
+      if (labelGroup) {
+        overlayGroup.appendChild(labelGroup);
+      }
+    }
+
+    // Insert overlay as the last child so it appears on top
+    svg.appendChild(overlayGroup);
+    overlayRef.current = overlayGroup;
+
+    return overlayGroup;
+  }, [config, createBookOverlay, createChapterOverlay, createLocationLabels]);
+
   // Find SVG regions related to a book or chapter
   const findRelatedSVGRegions = (svg: SVGSVGElement, region: BookRegion | ChapterRegion): SVGGElement[] => {
     const allGroups = svg.querySelectorAll('g[id]') as NodeListOf<SVGGElement>;
@@ -290,7 +293,7 @@ export function RegionalOverlay({ svgContainer, config, onRegionClick }: Regiona
     const svg = svgContainer.querySelector('svg');
     if (!svg) return;
 
-    const overlayGroup = generateOverlayPaths(svg);
+    generateOverlayPaths(svg);
 
     return () => {
       // Cleanup overlay when component unmounts

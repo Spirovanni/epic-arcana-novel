@@ -500,37 +500,7 @@ export function InteractiveWorldMap({
     }
   };
 
-  const focusOnRomanEmpire = () => {
-    // The Roman Empire coordinates: Latitude: 69.055, Longitude: -167.174
-    const romanEmpireLat = 69.055;
-    const romanEmpireLng = -167.174;
-    
-    // Convert lat/lng to SVG coordinates
-    const svgCoords = latLngToSvg(romanEmpireLat, romanEmpireLng);
-    
-    // Get viewport dimensions
-    const mapContainer = document.querySelector('.flex-1.relative');
-    if (mapContainer) {
-      const rect = mapContainer.getBoundingClientRect();
-      const viewport = {
-        width: rect.width,
-        height: rect.height
-      };
-      
-      // Calculate center offset to focus on the Roman Empire coordinates
-      const centerX = (viewport.width / 2) - svgCoords.x;
-      const centerY = (viewport.height / 2) - svgCoords.y;
-      
-      console.log('Focusing on Roman Empire at:', { lat: romanEmpireLat, lng: romanEmpireLng });
-      console.log('SVG coordinates:', svgCoords);
-      console.log('Map center offset:', { x: centerX, y: centerY });
-      
-      setMapZoom(2.0); // 2x zoom for Roman Empire
-      setMapCenter({ x: centerX, y: centerY });
-    } else {
-      console.error('Could not find map container');
-    }
-  };
+  // Removed unused focus helper to satisfy no-unused-vars
 
   const togglePanMode = () => {
     setIsPanMode(!isPanMode);
@@ -567,22 +537,7 @@ export function InteractiveWorldMap({
     return { lat: Math.round(lat * 1000) / 1000, lng: Math.round(lng * 1000) / 1000 };
   };
 
-  // Convert lat/lng coordinates to SVG coordinates (inverse of svgToLatLng)
-  const latLngToSvg = (lat: number, lng: number) => {
-    // SVG viewBox is "0 0 3306.216 3200.83"
-    const svgWidth = 3306.216;
-    const svgHeight = 3200.83;
-    
-    // Convert lat/lng to normalized coordinates (0-1)
-    const normalizedX = (lng + 180) / 360;  // longitude: -180 to 180 -> 0 to 1
-    const normalizedY = (85 - lat) / 170;   // latitude: 85 to -85 -> 0 to 1
-    
-    // Convert to SVG coordinates
-    const svgX = normalizedX * svgWidth;
-    const svgY = normalizedY * svgHeight;
-    
-    return { x: svgX, y: svgY };
-  };
+  // Removed inverse lat/lng converter (unused)
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!isPanMode) return;

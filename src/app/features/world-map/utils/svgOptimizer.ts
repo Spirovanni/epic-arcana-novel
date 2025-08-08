@@ -210,10 +210,11 @@ function simplifyPathData(pathData: string, tolerance: number): string {
   // path simplification algorithm like Douglas-Peucker
   
   // Remove very short line segments
-  let simplified = pathData.replace(/L-?\d+\.?\d*,-?\d+\.?\d*(?=L)/g, (match, offset, string) => {
+  const threshold = Math.max(5, Math.min(50, Math.round(tolerance * 10)));
+  const simplified = pathData.replace(/L-?\d+\.?\d*,-?\d+\.?\d*(?=L)/g, (match, offset, string) => {
     // Simple heuristic: if the next L command is very close, skip this one
     const nextL = string.indexOf('L', offset + match.length);
-    if (nextL !== -1 && nextL - offset < 20) {
+    if (nextL !== -1 && nextL - offset < threshold) {
       return '';
     }
     return match;
