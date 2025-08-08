@@ -4,19 +4,33 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Location } from '../page';
 import PangeaMap from './PangeaMap';
+import { RegionalOverlay } from './RegionalOverlay';
+import { OverlayConfig } from '../utils/regionalGrouping';
+
+interface CountryData {
+  id: string;
+  name: string;
+  description: string;
+  population: string;
+  ruler: string;
+  culture: string;
+  economy: string;
+  notes: string;
+  color: string;
+}
 
 interface InteractiveWorldMapProps {
   locations: Location[];
-  activeTimeline: 'alpha' | 'beta' | 'gamma';
   onLocationClick: (location: Location) => void;
   selectedLocation: Location | null;
+  overlayConfig?: OverlayConfig;
 }
 
 export function InteractiveWorldMap({ 
   locations, 
-  activeTimeline, 
   onLocationClick, 
-  selectedLocation 
+  selectedLocation,
+  overlayConfig
 }: InteractiveWorldMapProps) {
   const [hoveredLocation, setHoveredLocation] = useState<Location | null>(null);
   const [showGrid, setShowGrid] = useState(false);
@@ -27,8 +41,8 @@ export function InteractiveWorldMap({
   const mapOriginX = 1500; // Move WEST from Northern Asia to Europe
   const mapOriginY = 1600; // Move SOUTH from Northern Asia to Mediterranean
   
-  // Initial view: Start with 1x zoom, then set to 5x after mount
-  const [mapZoom, setMapZoom] = useState(1.0);
+  // Initial view: Start with same zoom as "0,0" button
+  const [mapZoom, setMapZoom] = useState(14.281);
   const [mapCenter, setMapCenter] = useState({ x: 0, y: 0 }); // Will be calculated after mount
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null); // Start with world view
   const [isPanMode, setIsPanMode] = useState(false);
@@ -37,20 +51,54 @@ export function InteractiveWorldMap({
   const mapRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<HTMLDivElement>(null);
 
-  const timelineColors = {
-    alpha: { primary: '#10b981', secondary: '#047857', bg: 'from-emerald-500/20' },
-    beta: { primary: '#f59e0b', secondary: '#d97706', bg: 'from-amber-500/20' },
-    gamma: { primary: '#8b5cf6', secondary: '#7c3aed', bg: 'from-violet-500/20' }
-  };
-
-  const currentTheme = timelineColors[activeTimeline];
+  const currentTheme = { primary: '#10b981', secondary: '#047857', bg: 'from-emerald-500/20' };
 
   const handleLocationHover = (location: Location | null) => {
     setHoveredLocation(location);
   };
 
   const handleRegionClick = (regionId: string) => {
+    // Filter out non-region elements like grids, backgrounds, etc.
+    if (regionId && (regionId.toLowerCase().includes('grid') || regionId.toLowerCase().includes('_px') || regionId.toLowerCase().includes('background'))) {
+      return;
+    }
+    
     setSelectedRegion(regionId);
+    
+    // Set clicked region and get its color
+    setClickedRegion(regionId);
+    
+    // Extract color for clicked region (same logic as hover)
+    const regionElement = document.getElementById(regionId);
+    if (regionElement) {
+      const pathElements = regionElement.querySelectorAll('path, polygon, rect, circle') as NodeListOf<SVGElement>;
+      let extractedColor = null;
+      
+      for (const pathElement of pathElements) {
+        const classList = Array.from(pathElement.classList);
+        const cssClass = classList.find(cls => cls.startsWith('cls-'));
+        
+        if (cssClass) {
+          const baseColor = getColorFromCSSClass(cssClass);
+          extractedColor = baseColor;
+          break;
+        }
+      }
+      
+      if (!extractedColor && pathElements.length > 0) {
+        const firstPath = pathElements[0];
+        const computedStyle = window.getComputedStyle(firstPath);
+        const fillColor = computedStyle.fill;
+        
+        if (fillColor && fillColor !== 'none' && !fillColor.includes('url(')) {
+          const hexColor = rgbToHex(fillColor);
+          extractedColor = hexColor;
+        }
+      }
+      
+      setClickedRegionColor(extractedColor || currentTheme.primary);
+    }
+    
     // Find location that matches this region
     const matchedLocation = locations.find(loc => 
       loc.name.toLowerCase().includes(regionId.toLowerCase()) ||
@@ -61,46 +109,320 @@ export function InteractiveWorldMap({
     }
   };
 
-  const handleRegionHover = (regionId: string | null) => {
-    // Optional: show region name in tooltip
-    console.log('Hovering region:', regionId);
+  const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
+  const [hoveredRegionColor, setHoveredRegionColor] = useState<string | null>(null);
+  const [clickedRegion, setClickedRegion] = useState<string | null>(null);
+  const [clickedRegionColor, setClickedRegionColor] = useState<string | null>(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [countryData, setCountryData] = useState<Record<string, CountryData>>({});
+  const [editingData, setEditingData] = useState<CountryData | null>(null);
+  const [isTargetMode, setIsTargetMode] = useState(false);
+  const [cursorCoordinates, setCursorCoordinates] = useState<{x: number, y: number, lat: number, lng: number} | null>(null);
+
+  // Use the passed overlay config or create a default one
+  const defaultOverlayConfig: OverlayConfig = {
+    showBookBoundaries: false,
+    showChapterBoundaries: false,
+    showLocationLabels: false,
+    opacity: 0.3,
+    bookBoundaryColor: '#FF6B35',
+    chapterBoundaryColor: '#4ECDC4',
+    labelColor: '#2C3E50'
+  };
+  
+  const currentOverlayConfig = overlayConfig || defaultOverlayConfig;
+
+  // Load data from localStorage on mount
+  useEffect(() => {
+    const savedData = localStorage.getItem('pangea-country-data');
+    if (savedData) {
+      try {
+        setCountryData(JSON.parse(savedData));
+      } catch (error) {
+        console.error('Failed to load country data:', error);
+      }
+    }
+  }, []);
+
+  // Save data to localStorage whenever countryData changes
+  useEffect(() => {
+    if (Object.keys(countryData).length > 0) {
+      localStorage.setItem('pangea-country-data', JSON.stringify(countryData));
+    }
+  }, [countryData]);
+
+  // Extract actual color from SVG element
+  const extractColorFromRegion = (regionId: string): string => {
+    const regionElement = document.getElementById(regionId);
+    if (regionElement) {
+      const pathElements = regionElement.querySelectorAll('path, polygon, rect, circle') as NodeListOf<SVGElement>;
+      
+      for (const pathElement of pathElements) {
+        // First try to get the computed fill color directly from the browser
+        const computedStyle = window.getComputedStyle(pathElement);
+        const fillColor = computedStyle.fill;
+        
+        if (fillColor && fillColor !== 'none' && !fillColor.includes('url(')) {
+          if (fillColor.startsWith('rgb')) {
+            return rgbToHex(fillColor);
+          }
+          return fillColor;
+        }
+        
+        // Fallback to CSS class mapping
+        const classList = Array.from(pathElement.classList);
+        const cssClass = classList.find(cls => cls.startsWith('cls-'));
+        if (cssClass) {
+          return getColorFromCSSClass(cssClass);
+        }
+      }
+    }
+    
+    // Ultimate fallback
+    return currentTheme.primary;
   };
 
-  // Set initial view on component mount - direct coordinate approach
+  // Seed initial country data
+  const getDefaultCountryData = (regionId: string): CountryData => ({
+    id: regionId,
+    name: formatRegionName(regionId) || 'Unknown Location',
+    description: 'A mysterious land waiting to be explored and documented.',
+    population: 'Unknown',
+    ruler: 'To be determined',
+    culture: 'Rich cultural heritage',
+    economy: 'Developing',
+    notes: 'Add your observations and discoveries here.',
+    color: extractColorFromRegion(regionId)
+  });
+
+  const getCurrentCountryData = (regionId: string): CountryData => {
+    if (!countryData[regionId]) {
+      const defaultData = getDefaultCountryData(regionId);
+      setCountryData(prev => ({ ...prev, [regionId]: defaultData }));
+      return defaultData;
+    }
+    return countryData[regionId];
+  };
+
+  const handleCloseCard = () => {
+    setClickedRegion(null);
+    setClickedRegionColor(null);
+    setIsEditing(false);
+    setEditingData(null);
+  };
+
+  const handleEdit = () => {
+    if (clickedRegion) {
+      const currentData = getCurrentCountryData(clickedRegion);
+      setEditingData({ ...currentData });
+      setIsEditing(true);
+    }
+  };
+
+  const handleSave = () => {
+    if (editingData && clickedRegion) {
+      setCountryData(prev => ({ ...prev, [clickedRegion]: editingData }));
+      setIsEditing(false);
+      setEditingData(null);
+      console.log('Saved country data:', editingData);
+    }
+  };
+
+  const handleCancel = () => {
+    setIsEditing(false);
+    setEditingData(null);
+  };
+
+  const handleFieldChange = (field: keyof CountryData, value: string) => {
+    if (editingData) {
+      setEditingData(prev => prev ? { ...prev, [field]: value } : null);
+    }
+  };
+
+  const handleRegionHover = (regionId: string | null) => {
+    // Filter out non-region elements like grids, backgrounds, etc.
+    if (regionId && (regionId.toLowerCase().includes('grid') || regionId.toLowerCase().includes('_px') || regionId.toLowerCase().includes('background'))) {
+      return;
+    }
+    
+    // Don't process if already hovering the same region
+    if (hoveredRegion === regionId) return;
+    
+    setHoveredRegion(regionId);
+    
+    // Simplified - just use default theme color to avoid performance issues
+    if (regionId) {
+      setHoveredRegionColor(currentTheme.primary);
+    } else {
+      setHoveredRegionColor(null);
+    }
+  };
+
+  // Helper function to convert RGB color to hex
+  const rgbToHex = (rgb: string) => {
+    // Handle different RGB formats: rgb(r,g,b), rgba(r,g,b,a), or already hex
+    if (rgb.startsWith('#')) return rgb;
+    
+    const match = rgb.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+    if (match) {
+      const r = parseInt(match[1]);
+      const g = parseInt(match[2]); 
+      const b = parseInt(match[3]);
+      return "#" + [r, g, b].map(x => {
+        const hex = x.toString(16);
+        return hex.length === 1 ? "0" + hex : hex;
+      }).join('');
+    }
+    return rgb; // Return as-is if we can't parse it
+  };
+
+  // Helper function to get base color from CSS class
+  const getColorFromCSSClass = (cssClass: string) => {
+    // Colors extracted from the actual SVG CSS definitions - comprehensive mapping
+    const colorMap: Record<string, string> = {
+      'cls-1': '#336',       // Dark blue
+      'cls-2': '#684400',    // Brown  
+      'cls-3': '#0af279',    // Bright green
+      'cls-4': '#9c3',       // Yellow-green
+      'cls-5': '#ee82ee',    // Violet (convert 'violet' to hex)
+      'cls-6': '#696',       // Green
+      'cls-7': '#630',       // Dark red-brown
+      'cls-8': '#06c',       // Blue
+      'cls-9': '#3e1568',    // Dark purple
+      'cls-10': '#963',      // Brown-red
+      'cls-11': '#9f9',      // Light green
+      'cls-12': '#c0c',      // Magenta
+      'cls-14': '#cf3',      // Yellow-green
+      'cls-15': '#c6f',      // Light magenta
+      'cls-16': '#330',      // Dark brown
+      'cls-17': '#c6f',      // Light magenta
+      'cls-18': '#7dca97',   // Light green
+      'cls-19': '#399',      // Teal
+      'cls-20': '#900',      // Dark red
+      'cls-21': '#300',      // Dark maroon
+      'cls-22': '#03c',      // Dark blue
+      'cls-23': '#4282a3',   // Blue-gray
+      'cls-24': '#ea97d5',   // Pink
+      'cls-25': '#693',      // Green
+      'cls-26': '#003',      // Dark blue
+      'cls-27': '#d85319',   // Orange-red
+      'cls-28': '#f36',      // Pink-red
+      'cls-29': '#309',      // Purple
+      'cls-30': '#fdfffe',   // White
+      'cls-31': '#c90',      // Orange
+      'cls-32': '#393939',   // Gray
+      'cls-33': '#fff',      // White
+      'cls-34': '#cf6',      // Light yellow-green
+      'cls-35': '#cf6',      // Light yellow-green
+      'cls-36': '#4e1a82',   // Purple
+      'cls-37': '#f3c',      // Pink
+      'cls-38': '#356882',   // Blue-gray
+      'cls-39': '#0c9',      // Cyan
+      'cls-40': '#966',      // Brown-red
+      'cls-41': '#9c9',      // Light green
+      'cls-42': '#39f',      // Light blue
+      'cls-43': '#821a1a',   // Dark red
+      'cls-44': '#350035',   // Dark purple
+      'cls-45': '#3f0',      // Bright green
+      'cls-46': '#0c6',      // Green
+      'cls-47': '#681515',   // Dark red
+      'cls-48': '#33f',      // Blue
+      'cls-49': '#390',      // Dark green
+      'cls-50': '#9f0',      // Bright green
+      'cls-51': '#ffd17d',   // Light orange
+      'cls-52': '#c06',      // Purple-red
+      'cls-53': '#f6c',      // Pink
+      'cls-54': '#c63',      // Orange-red
+      // Common duplicates and high-numbered classes
+      'cls-105': '#9c9',     // Light green (same as cls-41)
+      'cls-106': '#696',     // Green (same as cls-6) 
+      'cls-111': '#336',     // Dark blue (same as cls-1)
+      'cls-133': '#393939',  // Gray (same as cls-32)
+      'cls-210': '#4282a3',  // Blue-gray (same as cls-23)
+      'cls-212': '#336',     // Dark blue (same as cls-1)
+      'cls-223': '#4282a3',  // Blue-gray (same as cls-23)
+      'cls-250': '#4282a3',  // Blue-gray (same as cls-23)
+      'cls-292': '#336',     // Dark blue (same as cls-1)
+      'cls-298': '#c0c',     // Magenta (same as cls-12)
+      'cls-312': '#393939',  // Gray (same as cls-32)
+      'cls-327': '#ee82ee',  // Violet (same as cls-5)
+      'cls-333': '#4282a3',  // Blue-gray (same as cls-23)
+    };
+    
+    return colorMap[cssClass] || '#336'; // Default blue color
+  };
+
+
+  const formatRegionName = (regionId: string) => {
+    if (!regionId) return '';
+    return regionId
+      .replace(/[_-]/g, ' ')
+      .replace(/^\d+\s*-\s*/, '')
+      .replace(/^SMT\s*[\d.]+\s*-\s*/, '')
+      .replace(/^Part\s*[IVX]+:\s*/, '')
+      .replace(/^Book\s*\d+\s*-\s*/, '')
+      .trim();
+  };
+
+  const extractChapterNumber = (regionId: string) => {
+    if (!regionId) return null;
+    const patterns = [
+      /^(\d+)\s*-\s*/, // "360 - Panama" format
+      /^_(\d+)_-_/, // "_304_-_Granada" format
+      /^SMT\s*([\d.]+)\s*-\s*/, // "SMT 8.8 - Title" format
+    ];
+    
+    for (const pattern of patterns) {
+      const match = regionId.match(pattern);
+      if (match) return match[1];
+    }
+    return null;
+  };
+
+  // Disable initial positioning to prevent flashing
+  // useEffect(() => {
+  //   setMapZoom(1.0);
+  // }, []);
+
+  // Focus on the same coordinates as the "0,0" button on mount
   useEffect(() => {
-    const timer = setTimeout(() => {
-      console.log('Setting initial view to 5x zoom at (0,0)');
-      console.log('Map origin coordinates:', mapOriginX, mapOriginY);
-      
-      // Use direct calculation to center the origin point
+    const focusOnOriginCoordinates = () => {
+      // Get actual viewport dimensions from the map container
       const mapContainer = document.querySelector('.flex-1.relative');
       if (mapContainer) {
         const rect = mapContainer.getBoundingClientRect();
-        const viewport = { width: rect.width, height: rect.height };
+        const viewport = {
+          width: rect.width,
+          height: rect.height
+        };
         
-        const zoom = 14.281; // Increased by 1.3x (10.985 × 1.3 = 14.281)
+        console.log('=== Initial Focus on Origin Debug ===');
+        console.log('Viewport dimensions:', viewport);
+        console.log('Map origin coordinates:', mapOriginX, mapOriginY);
         
-        // Direct approach: translate map so origin appears at viewport center
-        // Move 11% to the right + 105 pixels by subtracting percentage and adding fixed pixel offset
-        // Move 425% north (470% - 45%) by subtracting 425% of viewport height from centerY
+        const zoom = 14.281; // Same zoom as the "0,0" button
+        
+        // Same calculation as focusOnOrigin function
         const centerX = (viewport.width / 2 - mapOriginX) - (viewport.width * 0.11) + 105;
         const centerY = (viewport.height / 2 - mapOriginY) - (viewport.height * 4.25);
         
-        console.log('Initial view - viewport center:', viewport.width / 2, viewport.height / 2);
-        console.log('Initial view - translation:', centerX.toFixed(1), centerY.toFixed(1));
+        console.log('Initial centering at coordinates:', mapOriginX, mapOriginY);
+        console.log('Initial translation needed:', centerX, centerY);
         
         setMapZoom(zoom);
         setMapCenter({ x: centerX, y: centerY });
       }
-    }, 1000);
+    };
     
+    // Delay focusing to ensure the map container is rendered
+    const timer = setTimeout(focusOnOriginCoordinates, 100);
     return () => clearTimeout(timer);
-  }, []); // Remove dependencies to prevent re-renders
+  }, []);
 
   // Simple resize handler - no automatic recalculation to prevent issues
   useEffect(() => {
     const handleResize = () => {
-      console.log('Window resized - you may need to manually refocus on origin');
+      // Window resized
     };
 
     window.addEventListener('resize', handleResize);
@@ -108,10 +430,33 @@ export function InteractiveWorldMap({
   }, []);
 
   const handleZoom = (direction: 'in' | 'out') => {
-    setMapZoom(prev => {
-      const newZoom = direction === 'in' ? prev * 1.2 : prev / 1.2;
-      return Math.max(0.5, Math.min(10, newZoom));
-    });
+    const mapContainer = document.querySelector('.flex-1.relative');
+    if (!mapContainer) return;
+    
+    const rect = mapContainer.getBoundingClientRect();
+    const viewport = {
+      width: rect.width,
+      height: rect.height
+    };
+    
+    // Get the center point of the viewport
+    const viewportCenterX = viewport.width / 2;
+    const viewportCenterY = viewport.height / 2;
+    
+    // Calculate the world coordinates at the viewport center
+    const worldX = (viewportCenterX - mapCenter.x) / mapZoom;
+    const worldY = (viewportCenterY - mapCenter.y) / mapZoom;
+    
+    // Calculate new zoom level
+    const zoomFactor = direction === 'in' ? 1.2 : 1 / 1.2;
+    const newZoom = Math.max(0.1, Math.min(50, mapZoom * zoomFactor));
+    
+    // Calculate new center to keep the same world point at viewport center
+    const newCenterX = viewportCenterX - worldX * newZoom;
+    const newCenterY = viewportCenterY - worldY * newZoom;
+    
+    setMapZoom(newZoom);
+    setMapCenter({ x: newCenterX, y: newCenterY });
   };
 
   const resetView = () => {
@@ -136,7 +481,7 @@ export function InteractiveWorldMap({
       console.log('Viewport dimensions:', viewport);
       console.log('Map origin coordinates:', mapOriginX, mapOriginY);
       
-      const zoom = 14.281; // Increased by 1.3x (10.985 × 1.3 = 14.281)
+      const zoom = 14.281; // Same zoom as initial view
       
       // Direct calculation: move the map so origin appears at center
       // Move 11% to the right + 105px by subtracting percentage and adding fixed pixel offset
@@ -155,12 +500,88 @@ export function InteractiveWorldMap({
     }
   };
 
+  const focusOnRomanEmpire = () => {
+    // The Roman Empire coordinates: Latitude: 69.055, Longitude: -167.174
+    const romanEmpireLat = 69.055;
+    const romanEmpireLng = -167.174;
+    
+    // Convert lat/lng to SVG coordinates
+    const svgCoords = latLngToSvg(romanEmpireLat, romanEmpireLng);
+    
+    // Get viewport dimensions
+    const mapContainer = document.querySelector('.flex-1.relative');
+    if (mapContainer) {
+      const rect = mapContainer.getBoundingClientRect();
+      const viewport = {
+        width: rect.width,
+        height: rect.height
+      };
+      
+      // Calculate center offset to focus on the Roman Empire coordinates
+      const centerX = (viewport.width / 2) - svgCoords.x;
+      const centerY = (viewport.height / 2) - svgCoords.y;
+      
+      console.log('Focusing on Roman Empire at:', { lat: romanEmpireLat, lng: romanEmpireLng });
+      console.log('SVG coordinates:', svgCoords);
+      console.log('Map center offset:', { x: centerX, y: centerY });
+      
+      setMapZoom(2.0); // 2x zoom for Roman Empire
+      setMapCenter({ x: centerX, y: centerY });
+    } else {
+      console.error('Could not find map container');
+    }
+  };
+
   const togglePanMode = () => {
     setIsPanMode(!isPanMode);
   };
 
   const toggleGrid = () => {
     setShowGrid(!showGrid);
+  };
+
+  const toggleTargetMode = () => {
+    setIsTargetMode(!isTargetMode);
+    setCursorCoordinates(null);
+  };
+
+  // Convert SVG coordinates to approximate lat/lng
+  // This is a simplified conversion for Pangea - you may need to adjust based on your map projection
+  const svgToLatLng = (svgX: number, svgY: number) => {
+    // SVG viewBox is "0 0 3306.216 3200.83"
+    // Map these to approximate world coordinates
+    const svgWidth = 3306.216;
+    const svgHeight = 3200.83;
+    
+    // Convert to normalized coordinates (0-1)
+    const normalizedX = svgX / svgWidth;
+    const normalizedY = svgY / svgHeight;
+    
+    // Convert to lat/lng (approximate for Pangea)
+    // Longitude: -180 to 180 degrees
+    const lng = (normalizedX * 360) - 180;
+    
+    // Latitude: 85 to -85 degrees (Mercator projection limits)
+    const lat = 85 - (normalizedY * 170);
+    
+    return { lat: Math.round(lat * 1000) / 1000, lng: Math.round(lng * 1000) / 1000 };
+  };
+
+  // Convert lat/lng coordinates to SVG coordinates (inverse of svgToLatLng)
+  const latLngToSvg = (lat: number, lng: number) => {
+    // SVG viewBox is "0 0 3306.216 3200.83"
+    const svgWidth = 3306.216;
+    const svgHeight = 3200.83;
+    
+    // Convert lat/lng to normalized coordinates (0-1)
+    const normalizedX = (lng + 180) / 360;  // longitude: -180 to 180 -> 0 to 1
+    const normalizedY = (85 - lat) / 170;   // latitude: 85 to -85 -> 0 to 1
+    
+    // Convert to SVG coordinates
+    const svgX = normalizedX * svgWidth;
+    const svgY = normalizedY * svgHeight;
+    
+    return { x: svgX, y: svgY };
   };
 
   const handleMouseDown = (e: React.MouseEvent) => {
@@ -174,12 +595,39 @@ export function InteractiveWorldMap({
   };
 
   const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !isPanMode) return;
+    // Handle pan mode dragging
+    if (isDragging && isPanMode) {
+      setMapCenter({
+        x: e.clientX - dragStart.x,
+        y: e.clientY - dragStart.y
+      });
+      return;
+    }
     
-    setMapCenter({
-      x: e.clientX - dragStart.x,
-      y: e.clientY - dragStart.y
-    });
+    // Handle target mode coordinate tracking
+    if (isTargetMode) {
+      const mapContainer = e.currentTarget as HTMLElement;
+      const rect = mapContainer.getBoundingClientRect();
+      
+      // Get mouse position relative to the map container
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+      
+      // Convert screen coordinates to SVG coordinates
+      // Account for map transformations (zoom and pan)
+      const svgX = (mouseX - mapCenter.x) / mapZoom;
+      const svgY = (mouseY - mapCenter.y) / mapZoom;
+      
+      // Convert to lat/lng
+      const { lat, lng } = svgToLatLng(svgX, svgY);
+      
+      setCursorCoordinates({
+        x: mouseX,
+        y: mouseY,
+        lat,
+        lng
+      });
+    }
   };
 
   const handleMouseUp = () => {
@@ -192,7 +640,8 @@ export function InteractiveWorldMap({
 
   return (
     <div 
-      className={`relative w-full h-full overflow-hidden bg-slate-800 ${
+      className={`relative w-full h-full overflow-hidden bg-blue-50 dark:bg-slate-700 ${
+        isTargetMode ? 'cursor-crosshair' : 
         isPanMode ? (isDragging ? 'cursor-grabbing' : 'cursor-grab') : 'cursor-default'
       }`}
       onMouseDown={handleMouseDown}
@@ -210,13 +659,25 @@ export function InteractiveWorldMap({
       >
         <PangeaMap
           ref={svgRef}
-          activeTimeline={activeTimeline}
           selectedRegion={selectedRegion}
           onRegionClick={handleRegionClick}
           onRegionHover={handleRegionHover}
           zoom={1.0}
           isPanMode={isPanMode}
           showGrid={showGrid}
+        />
+        
+        {/* Regional Overlay */}
+        <RegionalOverlay
+          svgContainer={svgRef.current}
+          config={currentOverlayConfig}
+          onRegionClick={(regionId, regionType) => {
+            console.log(`Clicked ${regionType} region:`, regionId);
+            // Handle regional overlay clicks
+            if (regionType === 'book' || regionType === 'chapter') {
+              setSelectedRegion(regionId);
+            }
+          }}
         />
       </div>
 
@@ -264,6 +725,24 @@ export function InteractiveWorldMap({
             )}
           </svg>
         </motion.button>
+
+        {/* Target Mode Toggle */}
+        <motion.button
+          onClick={toggleTargetMode}
+          className={`w-10 h-10 rounded-lg shadow-lg flex items-center justify-center transition-colors ${
+            isTargetMode 
+              ? 'bg-orange-600 hover:bg-orange-700 text-white' 
+              : 'bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+          }`}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          title={isTargetMode ? 'Exit coordinate mode' : 'Show coordinates'}
+        >
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.5v15m7.5-7.5h-15" />
+            <circle cx="12" cy="12" r="3" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} />
+          </svg>
+        </motion.button>
         <motion.button
           onClick={() => handleZoom('in')}
           className="w-10 h-10 bg-white dark:bg-gray-800 rounded-lg shadow-lg flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
@@ -285,9 +764,9 @@ export function InteractiveWorldMap({
           className="w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-lg shadow-lg flex items-center justify-center transition-colors"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          title="Focus on (0,0) at 5x zoom"
+          title="Return to initial map view"
         >
-          <span className="text-xs font-bold">0,0</span>
+          <span className="text-xs font-bold">🏠</span>
         </motion.button>
         <motion.button
           onClick={resetView}
@@ -302,31 +781,349 @@ export function InteractiveWorldMap({
         </motion.button>
       </div>
 
-      {/* Timeline Indicator */}
-      <div className="absolute top-4 left-4 z-20">
-        <motion.div
-          className={`px-4 py-2 rounded-lg shadow-lg bg-gradient-to-r ${currentTheme.bg} backdrop-blur-sm border border-white/20`}
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <div className="flex items-center space-x-3">
-            <div 
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: currentTheme.primary }}
-            />
-            <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
-              {activeTimeline.charAt(0).toUpperCase() + activeTimeline.slice(1)} Timeline
-            </span>
-            {selectedRegion && (
-              <span className="text-xs text-gray-600 dark:text-gray-400 ml-2">
-                • {selectedRegion.replace(/[_-]/g, ' ')}
-              </span>
-            )}
-          </div>
-        </motion.div>
-      </div>
 
+      {/* Region Hover Tooltip */}
+      <AnimatePresence>
+        {hoveredRegion && !clickedRegion && (
+          <motion.div
+            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-none"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+          >
+            <div
+              className="text-white rounded-xl shadow-2xl backdrop-blur-md border-2 px-6 py-4"
+              style={{
+                backgroundColor: hoveredRegionColor || currentTheme.primary,
+                borderColor: currentTheme.primary,
+                maxWidth: '400px'
+              }}
+            >
+              {/* Chapter/Day Number */}
+              {extractChapterNumber(hoveredRegion) && (
+                <div 
+                  className="text-center mb-3 px-3 py-1 rounded-full font-bold text-sm"
+                  style={{ 
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    color: 'white',
+                    display: 'inline-block',
+                    minWidth: '60px'
+                  }}
+                >
+                  {extractChapterNumber(hoveredRegion)?.includes('.') 
+                    ? `Chapter ${extractChapterNumber(hoveredRegion)}` 
+                    : `Day ${extractChapterNumber(hoveredRegion)}`}
+                </div>
+              )}
+              
+              {/* Location Name */}
+              <div 
+                className="font-bold text-center text-lg mb-2"
+                style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+              >
+                {formatRegionName(hoveredRegion) || 'Unknown Location'}
+              </div>
+              
+              {/* Instruction */}
+              <div 
+                className="text-center mt-2 text-xs opacity-75"
+                style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+              >
+                Click to explore this location
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Clicked Region Card (Sticky) */}
+      <AnimatePresence>
+        {clickedRegion && (
+          <motion.div
+            className="fixed inset-4 z-50 flex items-center justify-center pointer-events-none"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div
+              className="text-white rounded-xl shadow-2xl backdrop-blur-md border-2 px-6 py-4 relative max-h-full overflow-y-auto pointer-events-auto"
+              style={{
+                backgroundColor: countryData[clickedRegion]?.color || clickedRegionColor || currentTheme.primary,
+                borderColor: currentTheme.primary,
+                maxWidth: '500px',
+                minWidth: '400px',
+                width: '90vw'
+              }}
+            >
+              {/* Close Button */}
+              <button
+                onClick={handleCloseCard}
+                className="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 hover:bg-black/70 text-white flex items-center justify-center text-sm font-bold transition-colors z-10"
+                style={{ lineHeight: 1 }}
+              >
+                ×
+              </button>
+              
+              {/* Edit Button - Only show when not editing */}
+              {!isEditing && (
+                <button
+                  onClick={handleEdit}
+                  className="absolute top-2 right-10 px-3 py-1 rounded-md bg-black/50 hover:bg-black/70 text-white text-xs font-medium transition-colors"
+                >
+                  Edit
+                </button>
+              )}
+              
+              {/* Chapter/Day Number */}
+              {extractChapterNumber(clickedRegion) && (
+                <div 
+                  className="text-center mb-3 px-3 py-1 rounded-full font-bold text-sm"
+                  style={{ 
+                    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                    color: 'white',
+                    display: 'inline-block',
+                    minWidth: '60px'
+                  }}
+                >
+                  {extractChapterNumber(clickedRegion)?.includes('.') 
+                    ? `Chapter ${extractChapterNumber(clickedRegion)}` 
+                    : `Day ${extractChapterNumber(clickedRegion)}`}
+                </div>
+              )}
+              
+              {(() => {
+                const currentData = getCurrentCountryData(clickedRegion);
+                const displayData = isEditing && editingData ? editingData : currentData;
+                
+                if (!displayData) return null;
+
+                return (
+                  <div className="space-y-3">
+                    {/* Location Name */}
+                    {isEditing ? (
+                      <div>
+                        <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          Name
+                        </label>
+                        <input
+                          type="text"
+                          value={displayData.name || ''}
+                          onChange={(e) => handleFieldChange('name', e.target.value)}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                        />
+                      </div>
+                    ) : (
+                      <div 
+                        className="font-bold text-center text-lg mb-2"
+                        style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+                      >
+                        {displayData.name}
+                      </div>
+                    )}
+
+
+                    {/* Description */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Description
+                      </label>
+                      {isEditing ? (
+                        <textarea
+                          value={displayData.description || ''}
+                          onChange={(e) => handleFieldChange('description', e.target.value)}
+                          rows={3}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none resize-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.description}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Population */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Population
+                      </label>
+                      {isEditing ? (
+                        <input
+                          type="text"
+                          value={displayData.population || ''}
+                          onChange={(e) => handleFieldChange('population', e.target.value)}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.population}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Ruler */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Ruler/Leader
+                      </label>
+                      {isEditing ? (
+                        <input
+                          type="text"
+                          value={displayData.ruler || ''}
+                          onChange={(e) => handleFieldChange('ruler', e.target.value)}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.ruler}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Culture */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Culture
+                      </label>
+                      {isEditing ? (
+                        <input
+                          type="text"
+                          value={displayData.culture || ''}
+                          onChange={(e) => handleFieldChange('culture', e.target.value)}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.culture}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Economy */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Economy
+                      </label>
+                      {isEditing ? (
+                        <input
+                          type="text"
+                          value={displayData.economy || ''}
+                          onChange={(e) => handleFieldChange('economy', e.target.value)}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.economy}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Notes */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Notes
+                      </label>
+                      {isEditing ? (
+                        <textarea
+                          value={displayData.notes || ''}
+                          onChange={(e) => handleFieldChange('notes', e.target.value)}
+                          rows={2}
+                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none resize-none"
+                        />
+                      ) : (
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.notes}
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Color */}
+                    <div>
+                      <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                        Country Color
+                      </label>
+                      {isEditing ? (
+                        <div className="flex items-center space-x-3">
+                          <input
+                            type="color"
+                            value={displayData.color || '#000000'}
+                            onChange={(e) => handleFieldChange('color', e.target.value)}
+                            className="w-12 h-10 rounded-md border border-white/20 bg-transparent cursor-pointer"
+                            title="Choose country color"
+                          />
+                          <input
+                            type="text"
+                            value={displayData.color || ''}
+                            onChange={(e) => handleFieldChange('color', e.target.value)}
+                            className="flex-1 px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                            placeholder="#000000"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex items-center space-x-3">
+                          <div 
+                            className="w-8 h-8 rounded-md border-2 border-white/30"
+                            style={{ backgroundColor: displayData.color }}
+                          />
+                          <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                            {displayData.color}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Action Buttons */}
+                    {isEditing && (
+                      <div className="flex space-x-2 pt-3 border-t border-white/30">
+                        <button
+                          onClick={handleSave}
+                          className="flex-1 px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-md transition-colors"
+                        >
+                          Save
+                        </button>
+                        <button
+                          onClick={handleCancel}
+                          className="flex-1 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition-colors"
+                        >
+                          Cancel
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Coordinate Tooltip */}
+      <AnimatePresence>
+        {isTargetMode && cursorCoordinates && (
+          <motion.div
+            className="fixed z-50 pointer-events-none"
+            style={{
+              left: cursorCoordinates.x + 15,
+              top: cursorCoordinates.y - 35
+            }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.1 }}
+          >
+            <div className="bg-black/90 text-white px-3 py-2 rounded-lg shadow-lg border border-orange-500/50 text-xs font-mono">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                <div>
+                  <div>Lat: {cursorCoordinates.lat}°</div>
+                  <div>Lng: {cursorCoordinates.lng}°</div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Map Container */}
       <div 
@@ -474,20 +1271,18 @@ export function InteractiveWorldMap({
             </div>
             <span className="text-gray-600 dark:text-gray-400">Chapter count</span>
           </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white text-xs">
-              🃏
-            </div>
-            <span className="text-gray-600 dark:text-gray-400">Linked Arcana</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <div className="w-4 h-1 bg-gray-400" style={{ borderStyle: 'dashed' }}></div>
-            <span className="text-gray-600 dark:text-gray-400">Timeline connections</span>
-          </div>
           {showGrid && (
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4 border border-blue-500 opacity-30" style={{ borderStyle: 'dashed' }}></div>
               <span className="text-gray-600 dark:text-gray-400">Coordinate grid</span>
+            </div>
+          )}
+          {isTargetMode && (
+            <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 flex items-center justify-center">
+                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+              </div>
+              <span className="text-gray-600 dark:text-gray-400">Coordinate targeting</span>
             </div>
           )}
         </div>

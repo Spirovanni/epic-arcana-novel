@@ -1,11 +1,9 @@
 "use client";
 
-import React, { forwardRef, useEffect, useState, useCallback, useRef } from 'react';
+import React, { forwardRef, useEffect, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
-import { createPortal } from 'react-dom';
 
 interface PangeaMapProps {
-  activeTimeline: 'alpha' | 'beta' | 'gamma';
   selectedRegion: string | null;
   onRegionClick: (regionId: string) => void;
   onRegionHover: (regionId: string | null) => void;
@@ -15,7 +13,7 @@ interface PangeaMapProps {
 }
 
 const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
-  ({ activeTimeline, selectedRegion, onRegionClick, onRegionHover, zoom, isPanMode = false, showGrid = false }, ref) => {
+  ({ selectedRegion, onRegionClick, onRegionHover, zoom, isPanMode = false, showGrid = false }, ref) => {
     const [svgContent, setSvgContent] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
 
@@ -25,11 +23,21 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
 
     const loadSVG = async () => {
       try {
+        console.log('Fetching SVG from /Map_of_Pangea.svg');
         const response = await fetch('/Map_of_Pangea.svg');
+        console.log('SVG fetch response status:', response.status);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const svgText = await response.text();
+        let svgText = await response.text();
+        console.log('SVG loaded successfully, length:', svgText.length, 'first 100 chars:', svgText.substring(0, 100));
+        
+        // Make the problematic black rectangles transparent instead of removing them
+        svgText = svgText.replace(/class="cls-161"/g, 'class="cls-161" fill="none" stroke="none" opacity="0"');
+        
+        console.log('SVG processed, removed cls-161 rectangles');
+        console.log('Final SVG length:', svgText.length);
+        console.log('SVG starts with:', svgText.substring(0, 200));
         setSvgContent(svgText);
         setIsLoading(false);
       } catch (error) {
@@ -38,34 +46,21 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       }
     };
 
-    const applyTimelineStyles = useCallback((svg: SVGSVGElement, timeline: 'alpha' | 'beta' | 'gamma') => {
+    const applyMapStyles = useCallback((svg: SVGSVGElement) => {
       const styleElement = svg.querySelector('style') || document.createElement('style');
       
-      const timelineStyles = {
-        alpha: `
-          .timeline-alpha { filter: sepia(20%) saturate(0.8) hue-rotate(30deg); }
-          .timeline-alpha g:hover { filter: brightness(1.2) saturate(1.2); }
-          .timeline-alpha .selected { filter: brightness(1.4) saturate(1.4) drop-shadow(0 0 10px #10b981); }
-        `,
-        beta: `
-          .timeline-beta { filter: sepia(30%) saturate(1.2) hue-rotate(200deg); }
-          .timeline-beta g:hover { filter: brightness(1.2) saturate(1.4) hue-rotate(210deg); }
-          .timeline-beta .selected { filter: brightness(1.4) saturate(1.6) hue-rotate(210deg) drop-shadow(0 0 10px #f59e0b); }
-        `,
-        gamma: `
-          .timeline-gamma { filter: sepia(40%) saturate(1.5) hue-rotate(270deg); }
-          .timeline-gamma g:hover { filter: brightness(1.3) saturate(1.6) hue-rotate(280deg); }
-          .timeline-gamma .selected { filter: brightness(1.5) saturate(1.8) hue-rotate(280deg) drop-shadow(0 0 15px #8b5cf6); }
-        `
-      };
-
       const cursorStyle = isPanMode ? 'inherit' : 'pointer';
       const pointerEvents = isPanMode ? 'none' : 'auto';
       
-      styleElement.textContent = [
-        styleElement.textContent,
-        timelineStyles[timeline],
-        `
+      styleElement.textContent = `
+        svg {
+          display: block;
+          width: 100%;
+          height: 100%;
+          background: transparent;
+        }
+        
+        
         g[id] {
           cursor: ${cursorStyle};
           pointer-events: ${pointerEvents};
@@ -73,35 +68,19 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
         }
         
         g[id]:hover {
-          /* Disable all hover transformations to prevent jitter */
+          stroke: #10b981;
+          stroke-width: 1px;
         }
         
-        g[id].region-hovered {
-          filter: brightness(1.15) saturate(1.2);
+        g[id].selected {
+          stroke: #10b981;
+          stroke-width: 2px;
         }
-        
-        .region-tooltip {
-          position: absolute;
-          background: rgba(0, 0, 0, 0.8);
-          color: white;
-          padding: 8px 12px;
-          border-radius: 6px;
-          font-size: 14px;
-          font-weight: 500;
-          pointer-events: none;
-          z-index: 1000;
-          transform: translate(-50%, -100%);
-          margin-top: -8px;
-        }
-        `
-      ].join('\n');
+      `;
 
       if (!svg.querySelector('style')) {
         svg.appendChild(styleElement);
       }
-
-      // Apply timeline class to SVG
-      svg.setAttribute('class', `timeline-${timeline}`);
     }, [isPanMode]);
 
     const handleRegionClickEvent = useCallback((event: Event) => {
@@ -114,109 +93,23 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       }
     }, [isPanMode, onRegionClick]);
 
-    const [hoveredRegion, setHoveredRegion] = useState<string | null>(null);
-    const [tooltipPosition, setTooltipPosition] = useState<{x: number, y: number, viewportWidth: number, viewportHeight: number} | null>(null);
-    const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const lastHoverTimeRef = useRef<number>(0);
-    const HOVER_THROTTLE_MS = 150; // Minimum time between hover changes
-
-    const showTooltip = useCallback((event: Event, regionId: string) => {
-      // Prevent multiple simultaneous hovers
-      if (hoveredRegion === regionId) return;
-      
-      // Clear any existing timeout
-      if (hoverTimeoutRef.current) {
-        clearTimeout(hoverTimeoutRef.current);
-      }
-      
-      // Set with slight delay to prevent jittery behavior
-      hoverTimeoutRef.current = setTimeout(() => {
-        // Get viewport dimensions for centering
-        const viewport = {
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-        
-        console.log('Setting hover tooltip for region:', regionId);
-        console.log('Viewport dimensions:', viewport);
-        
-        setHoveredRegion(regionId);
-        setTooltipPosition({
-          x: viewport.width / 2,  // Center horizontally
-          y: viewport.height / 2, // Center vertically
-          viewportWidth: viewport.width,
-          viewportHeight: viewport.height
-        });
-      }, 50);
-    }, [hoveredRegion]);
-
-    const hideTooltip = useCallback(() => {
-      // Clear timeout on leave
-      if (hoverTimeoutRef.current) {
-        clearTimeout(hoverTimeoutRef.current);
-        hoverTimeoutRef.current = null;
-      }
-      
-      // Delay hiding to prevent flicker
-      setTimeout(() => {
-        setHoveredRegion(null);
-        setTooltipPosition(null);
-      }, 100);
-    }, []);
 
     const handleRegionHoverEvent = useCallback((event: Event) => {
-      console.log('Hover event triggered on region:', (event.currentTarget as SVGGElement)?.id);
-      
-      if (isPanMode) {
-        console.log('Pan mode is enabled, ignoring hover');
-        return;
-      }
-      
-      // Stop event propagation to prevent multiple triggers
-      event.stopPropagation();
-      event.preventDefault();
-      
-      const target = event.currentTarget as SVGGElement;
-      const regionId = target.id;
-      
-      // Throttle hover events
-      const now = Date.now();
-      if (now - lastHoverTimeRef.current < HOVER_THROTTLE_MS) {
-        console.log('Hover throttled');
-        return;
-      }
-      
-      // Only process if it's a different region
-      if (regionId && regionId !== hoveredRegion) {
-        console.log('Processing hover for new region:', regionId);
-        lastHoverTimeRef.current = now;
-        
-        // Clear any existing hover timeout
-        if (hoverTimeoutRef.current) {
-          clearTimeout(hoverTimeoutRef.current);
-        }
-        
-        onRegionHover(regionId);
-        showTooltip(event, regionId);
-      }
-    }, [isPanMode, onRegionHover, showTooltip, hoveredRegion, HOVER_THROTTLE_MS]);
-
-    const handleRegionLeaveEvent = useCallback((event: Event) => {
       if (isPanMode) return;
       
-      // Stop event propagation
-      event.stopPropagation();
-      event.preventDefault();
-      
       const target = event.currentTarget as SVGGElement;
       const regionId = target.id;
       
-      // Only hide if we're actually leaving the current hovered region
-      if (regionId === hoveredRegion) {
-        onRegionHover(null);
-        hideTooltip();
+      if (regionId) {
+        onRegionHover(regionId);
       }
-    }, [isPanMode, onRegionHover, hideTooltip, hoveredRegion]);
+    }, [isPanMode, onRegionHover]);
+
+    const handleRegionLeaveEvent = useCallback(() => {
+      if (isPanMode) return;
+      
+      onRegionHover(null);
+    }, [isPanMode, onRegionHover]);
 
     const addGridToSVG = useCallback((svgElement: SVGSVGElement) => {
       if (!showGrid) return;
@@ -237,14 +130,7 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       const mapOriginX = 1500; // Move WEST to Europe/Mediterranean
       const mapOriginY = 1600; // Move SOUTH to Mediterranean from Northern Asia
       
-      // Timeline colors
-      const timelineColors = {
-        alpha: '#10b981',
-        beta: '#f59e0b', 
-        gamma: '#8b5cf6'
-      };
-      
-      const gridColor = timelineColors[activeTimeline];
+      const gridColor = '#10b981';
       
       // Calculate grid spacing based on coordinate density analysis
       // 1 small box = 75 units, 4 small boxes = 300 units
@@ -345,7 +231,7 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
 
       // Insert grid as first child so it appears behind map content
       svgElement.insertBefore(gridGroup, svgElement.firstChild);
-    }, [showGrid, activeTimeline, zoom]);
+    }, [showGrid, zoom]);
 
     const addRegionInteractivity = useCallback((svg: SVGSVGElement) => {
       const regions = svg.querySelectorAll('g[id]');
@@ -359,18 +245,10 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
         region.removeEventListener('mouseenter', handleRegionHoverEvent);
         region.removeEventListener('mouseleave', handleRegionLeaveEvent);
 
-        // Add event handlers with passive option disabled for better control
-        region.addEventListener('click', handleRegionClickEvent, { passive: false });
-        region.addEventListener('mouseenter', handleRegionHoverEvent, { passive: false });
-        region.addEventListener('mouseleave', handleRegionLeaveEvent, { passive: false });
-
-        // Reset all hover classes first
-        region.classList.remove('region-hovered');
-        
-        // Add hover class only for the currently hovered region
-        if (hoveredRegion === regionId) {
-          region.classList.add('region-hovered');
-        }
+        // Add event handlers
+        region.addEventListener('click', handleRegionClickEvent);
+        region.addEventListener('mouseenter', handleRegionHoverEvent);
+        region.addEventListener('mouseleave', handleRegionLeaveEvent);
 
         // Highlight selected region
         if (selectedRegion === regionId) {
@@ -379,20 +257,30 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
           region.classList.remove('selected');
         }
       });
-    }, [handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, selectedRegion, hoveredRegion]);
+    }, [handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, selectedRegion]);
 
     useEffect(() => {
       if (!svgContent || !ref || typeof ref === 'function') return;
       
       try {
         const container = ref.current;
-        if (!container) return;
+        if (!container) {
+          console.log('Container ref not found');
+          return;
+        }
         
         const svgElement = container.querySelector('svg');
-        if (!svgElement) return;
+        if (!svgElement) {
+          console.log('SVG element not found in container');
+          console.log('Container innerHTML length:', container.innerHTML.length);
+          return;
+        }
 
-        // Apply timeline-specific styling
-        applyTimelineStyles(svgElement, activeTimeline);
+        console.log('SVG element found:', svgElement.tagName, 'viewBox:', svgElement.getAttribute('viewBox'));
+        console.log('SVG dimensions:', svgElement.getAttribute('width'), 'x', svgElement.getAttribute('height'));
+
+        // Apply map styling
+        applyMapStyles(svgElement);
 
         // Add grid if enabled
         addGridToSVG(svgElement);
@@ -416,144 +304,8 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       } catch (error) {
         console.error('Error in PangeaMap useEffect:', error);
       }
-    }, [svgContent, activeTimeline, selectedRegion, isPanMode, showGrid, applyTimelineStyles, addGridToSVG, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, ref]);
+    }, [svgContent, selectedRegion, isPanMode, showGrid]);
 
-
-    const extractRegionInfo = (regionId: string, svgElement?: SVGSVGElement) => {
-      // Extract chapter/day numbers from different formats
-      const patterns = [
-        /^_(\d+)_-_(.+)/, // _304_-_Granada format
-        /^(\d+)\s*-\s*(.+)/, // Simple number format like "360 - Panama"
-        /^SMT\s*([\d.]+)\s*-\s*(.+)/, // SMT 8.8 - Pabulum format
-        /^Book\s*(\d+)\s*-\s*(.+)/, // Book 8 - Title format
-        /^Part\s*([IVX]+):\s*(.+)/, // Part III: Title format
-      ];
-      
-      let chapterNumber = null;
-      let locationName = regionId;
-      let bookNumber = null;
-      let chapterTitle = null;
-      
-      for (const pattern of patterns) {
-        const match = regionId.match(pattern);
-        if (match) {
-          chapterNumber = match[1];
-          locationName = match[2] || regionId;
-          break;
-        }
-      }
-      
-      // Extract book and chapter information from SVG structure if available
-      if (svgElement) {
-        const regionElement = svgElement.querySelector(`#${CSS.escape(regionId)}`);
-        if (regionElement) {
-          // Find parent book group
-          let parent: Element | null = regionElement.parentElement;
-          while (parent && parent !== svgElement) {
-            const parentId = parent.id;
-            if (parentId && parentId.includes('Book_')) {
-              const bookMatch = parentId.match(/Book_(\d+)_-_(.+)/);
-              if (bookMatch) {
-                bookNumber = bookMatch[1];
-                break;
-              }
-            }
-            
-            // Look for SMT chapter title
-            if (parentId && parentId.includes('SMT_')) {
-              const smtMatch = parentId.match(/SMT_([\d.]+)_-_(.+)/);
-              if (smtMatch) {
-                chapterTitle = smtMatch[2].replace(/_/g, ' ');
-              }
-            }
-            
-            parent = parent.parentElement;
-          }
-        }
-      }
-      
-      return {
-        chapterNumber,
-        locationName: locationName.replace(/_/g, ' ').trim(),
-        bookNumber,
-        chapterTitle
-      };
-    };
-
-    const getRegionActualColor = (regionId: string, svgElement?: SVGSVGElement) => {
-      if (!svgElement) return null;
-      
-      try {
-        const regionElement = svgElement.querySelector(`#${CSS.escape(regionId)}`);
-        if (!regionElement) return null;
-        
-        // Look for shapes within the region that have fill colors
-        const shapes = regionElement.querySelectorAll('path, polygon, circle, rect, ellipse');
-        for (const shape of shapes) {
-          const classList = shape.classList;
-          if (classList.length > 0) {
-            // Find the CSS class and get its color from the style element
-            const styleElement = svgElement.querySelector('style');
-            if (styleElement) {
-              const cssText = styleElement.textContent || '';
-              
-              for (const className of classList) {
-                // Look for fill color in CSS
-                const classPattern = new RegExp(`\\.${className}\\s*\\{[^}]*fill:\\s*([^;}]+)`, 'i');
-                const match = cssText.match(classPattern);
-                if (match) {
-                  const color = match[1].trim();
-                  return color;
-                }
-              }
-            }
-          }
-          
-          // Check for direct fill attribute
-          const fillAttr = shape.getAttribute('fill');
-          if (fillAttr && fillAttr !== 'none') {
-            return fillAttr;
-          }
-        }
-      } catch (error) {
-        console.error('Error extracting region color:', error);
-      }
-      
-      return null;
-    };
-
-    const getRegionColor = (regionId: string, activeTimeline: string, svgElement?: SVGSVGElement) => {
-      // Get the actual color from SVG
-      const actualColor = getRegionActualColor(regionId, svgElement);
-      
-      if (actualColor) {
-        // Use the actual color from the SVG
-        return {
-          primary: actualColor,
-          secondary: actualColor,
-          accent: actualColor,
-          background: `${actualColor}E6`, // Add transparency
-          border: actualColor
-        };
-      }
-      
-      // Fallback to timeline colors if actual color not found
-      const timelineColors = {
-        alpha: { primary: '#10b981', secondary: '#047857', accent: '#6ee7b7' },
-        beta: { primary: '#f59e0b', secondary: '#d97706', accent: '#fbbf24' },
-        gamma: { primary: '#8b5cf6', secondary: '#7c3aed', accent: '#a78bfa' }
-      };
-      
-      const colors = timelineColors[activeTimeline as keyof typeof timelineColors];
-      
-      return {
-        primary: colors.primary,
-        secondary: colors.secondary, 
-        accent: colors.accent,
-        background: `linear-gradient(135deg, ${colors.primary}20, ${colors.secondary}40)`,
-        border: colors.accent
-      };
-    };
 
     if (isLoading) {
       return (
@@ -569,121 +321,22 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
 
     return (
       <div className="w-full h-full relative">
-        <div 
-          ref={ref}
-          className="w-full h-full"
-          dangerouslySetInnerHTML={{ __html: svgContent }}
-        />
-        
-        {/* Enhanced Centered Tooltip - Rendered via Portal */}
-        {hoveredRegion && tooltipPosition && typeof document !== 'undefined' && createPortal(
-          (() => {
-            const svgElement = ref && typeof ref !== 'function' ? ref.current?.querySelector('svg') : null;
-            const regionInfo = extractRegionInfo(hoveredRegion, svgElement || undefined);
-            const regionColors = getRegionColor(hoveredRegion, activeTimeline, svgElement || undefined);
-            
-            return (
-              <div
-                className="fixed text-white rounded-xl shadow-2xl pointer-events-none"
-                style={{
-                  left: '50%',
-                  top: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  background: regionColors.background,
-                  backdropFilter: 'blur(8px)',
-                  border: `3px solid ${regionColors.border}`,
-                  boxShadow: `0 25px 50px rgba(0, 0, 0, 0.8), 0 0 0 1px ${regionColors.accent}40`,
-                  maxWidth: `${Math.min(tooltipPosition.viewportWidth * 0.35, 450)}px`,
-                  maxHeight: `${Math.min(tooltipPosition.viewportHeight * 0.35, 350)}px`,
-                  padding: `${Math.max(tooltipPosition.viewportWidth * 0.015, 20)}px ${Math.max(tooltipPosition.viewportWidth * 0.02, 24)}px`,
-                  fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.012, 14)}px`,
-                  zIndex: 999999,
-                  position: 'fixed'
-                }}
-              >
-                {/* Book Badge */}
-                {regionInfo.bookNumber && (
-                  <div 
-                    className="text-center mb-2 px-2 py-1 rounded-md text-xs font-bold"
-                    style={{ 
-                      backgroundColor: `${regionColors.primary}40`,
-                      color: 'white',
-                      border: `1px solid ${regionColors.border}`,
-                      display: 'inline-block'
-                    }}
-                  >
-                    Book {regionInfo.bookNumber}
-                  </div>
-                )}
-
-                {/* Header with Chapter/Day Number */}
-                {regionInfo.chapterNumber && (
-                  <div 
-                    className="text-center mb-3 px-3 py-1 rounded-full font-bold"
-                    style={{ 
-                      backgroundColor: regionColors.primary,
-                      color: 'white',
-                      fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.01, 12)}px`,
-                      display: 'inline-block',
-                      minWidth: '60px'
-                    }}
-                  >
-                    {regionInfo.chapterNumber.includes('.') ? `Chapter ${regionInfo.chapterNumber}` : `Day ${regionInfo.chapterNumber}`}
-                  </div>
-                )}
-
-                {/* Chapter Title */}
-                {regionInfo.chapterTitle && (
-                  <div 
-                    className="text-center mb-2 font-medium italic"
-                    style={{ 
-                      fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.01, 12)}px`,
-                      color: regionColors.accent,
-                      opacity: 0.9
-                    }}
-                  >
-&ldquo;{regionInfo.chapterTitle}&rdquo;
-                  </div>
-                )}
-                
-                {/* Location Name */}
-                <div 
-                  className="font-bold mb-3 text-center"
-                  style={{ 
-                    fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.018, 20)}px`,
-                    color: 'white',
-                    textShadow: `0 2px 4px rgba(0,0,0,0.8)`
-                  }}
-                >
-                  {regionInfo.locationName || 'Unknown Location'}
-                </div>
-                
-                {/* Timeline Badge */}
-                <div 
-                  className="text-center text-sm font-medium"
-                  style={{ 
-                    color: regionColors.accent,
-                    fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.01, 12)}px`
-                  }}
-                >
-                  {activeTimeline.charAt(0).toUpperCase() + activeTimeline.slice(1)} Timeline
-                </div>
-                
-                {/* Instruction */}
-                <div 
-                  className="text-center mt-2 opacity-75"
-                  style={{ 
-                    fontSize: `${Math.max(tooltipPosition.viewportWidth * 0.008, 10)}px`,
-                    color: 'rgba(255, 255, 255, 0.8)'
-                  }}
-                >
-                  Click to explore this location
-                </div>
-              </div>
-            );
-          })(),
-          document.body
+        {svgContent ? (
+          <div 
+            ref={ref}
+            className="w-full h-full"
+            style={{ backgroundColor: 'transparent' }}
+            dangerouslySetInnerHTML={{ __html: svgContent }}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center bg-gray-100">
+            <div className="text-center">
+              <div className="text-red-500 mb-2">SVG Content Not Loaded</div>
+              <div className="text-sm text-gray-600">Check console for errors</div>
+            </div>
+          </div>
         )}
+        
       </div>
     );
   }

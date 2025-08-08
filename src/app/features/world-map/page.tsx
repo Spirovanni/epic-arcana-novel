@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { InteractiveWorldMap } from './components/InteractiveWorldMap';
 import { LocationDetailModal } from './components/LocationDetailModal';
 import { MapControls } from './components/MapControls';
-import { ChapterSidebar } from './components/ChapterSidebar';
+import { useRegionalOverlay } from './components/RegionalOverlay';
 import { extractSVGRegions, findMatchingRegion } from './utils/svgRegionExtractor';
 
 export interface Location {
@@ -46,30 +46,18 @@ export interface Timeline {
 export default function WorldMapPage() {
   const [locations, setLocations] = useState<Location[]>([]);
   const [selectedLocation, setSelectedLocation] = useState<Location | null>(null);
-  const [activeTimeline, setActiveTimeline] = useState<'alpha' | 'beta' | 'gamma'>('alpha');
-  const [showChapterSidebar, setShowChapterSidebar] = useState(false);
+  const [showLeftSidebar, setShowLeftSidebar] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
 
-  const timelines: Timeline[] = [
-    {
-      id: 'alpha',
-      name: 'Alpha Timeline',
-      color: '#10b981',
-      description: 'Historical events with minimal fantasy influence'
-    },
-    {
-      id: 'beta',
-      name: 'Beta Timeline',
-      color: '#f59e0b',
-      description: 'Increasing supernatural intrusions'
-    },
-    {
-      id: 'gamma',
-      name: 'Gamma Timeline',
-      color: '#8b5cf6',
-      description: 'Full fantasy timeline with major alterations'
-    }
-  ];
+  // Regional overlay system
+  const {
+    config: overlayConfig,
+    updateConfig: updateOverlayConfig,
+    toggleBookBoundaries,
+    toggleChapterBoundaries,
+    toggleLocationLabels
+  } = useRegionalOverlay();
+
 
   const loadLocations = useCallback(async () => {
     try {
@@ -192,13 +180,7 @@ export default function WorldMapPage() {
     setSelectedLocation(location);
   };
 
-  const handleTimelineChange = (timeline: 'alpha' | 'beta' | 'gamma') => {
-    setActiveTimeline(timeline);
-  };
 
-  const toggleChapterSidebar = () => {
-    setShowChapterSidebar(!showChapterSidebar);
-  };
 
   if (isLoading) {
     return (
@@ -263,60 +245,108 @@ export default function WorldMapPage() {
               </p>
             </motion.div>
             
-            <motion.button
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-              onClick={toggleChapterSidebar}
-              className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              {showChapterSidebar ? 'Hide' : 'Show'} Chapters
-            </motion.button>
+            <div className="flex items-center space-x-4">
+              {/* Chapters Navigation Menu */}
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative"
+              >
+                <select
+                  value={selectedLocation?.name || ''}
+                  onChange={(e) => {
+                    const location = locations.find(loc => loc.name === e.target.value);
+                    if (location) handleLocationClick(location);
+                  }}
+                  className="bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 min-w-[200px]"
+                >
+                  <option value="">Select a Chapter...</option>
+                  {locations
+                    .filter(loc => loc.name && loc.name.trim() !== '')
+                    .sort((a, b) => {
+                      // Extract chapter numbers for sorting
+                      const aNum = a.name.match(/^\d+/)?.[0];
+                      const bNum = b.name.match(/^\d+/)?.[0];
+                      if (aNum && bNum) {
+                        return parseInt(aNum) - parseInt(bNum);
+                      }
+                      return a.name.localeCompare(b.name);
+                    })
+                    .map(location => (
+                      <option key={location.name} value={location.name}>
+                        {location.name}
+                      </option>
+                    ))
+                  }
+                </select>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="text-sm text-gray-500 dark:text-gray-400"
+              >
+                {locations.length} locations
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Content */}
       <div className="flex h-[calc(100vh-140px)]">
-        {/* Map Controls */}
-        <div className="w-80 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto">
-          <MapControls
-            timelines={timelines}
-            activeTimeline={activeTimeline}
-            onTimelineChange={handleTimelineChange}
-            locations={locations}
-            onLocationSelect={handleLocationClick}
-          />
-        </div>
-
-        {/* Interactive Map */}
-        <div className="flex-1 relative">
-          <InteractiveWorldMap
-            locations={locations}
-            activeTimeline={activeTimeline}
-            onLocationClick={handleLocationClick}
-            selectedLocation={selectedLocation}
-          />
-        </div>
-
-        {/* Chapter Sidebar */}
+        {/* Retractable Map Controls */}
         <AnimatePresence>
-          {showChapterSidebar && (
+          {showLeftSidebar && (
             <motion.div
-              initial={{ x: 400, opacity: 0 }}
+              initial={{ x: -320, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 400, opacity: 0 }}
+              exit={{ x: -320, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="w-96 bg-white dark:bg-gray-800 border-l border-gray-200 dark:border-gray-700 overflow-y-auto"
+              className="w-80 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto"
             >
-              <ChapterSidebar
-                selectedLocation={selectedLocation}
-                activeTimeline={activeTimeline}
-                onClose={() => setShowChapterSidebar(false)}
+              <MapControls
+                locations={locations}
+                onLocationSelect={handleLocationClick}
+                overlayConfig={overlayConfig}
+                onOverlayConfigChange={updateOverlayConfig}
+                onToggleBookBoundaries={toggleBookBoundaries}
+                onToggleChapterBoundaries={toggleChapterBoundaries}
+                onToggleLocationLabels={toggleLocationLabels}
               />
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* Interactive Map */}
+        <div className="flex-1 relative">
+          {/* Sidebar Toggle Button */}
+          <motion.button
+            onClick={() => setShowLeftSidebar(!showLeftSidebar)}
+            className="absolute top-4 left-4 z-30 w-10 h-10 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-lg shadow-lg flex items-center justify-center transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            title={showLeftSidebar ? 'Hide sidebar' : 'Show sidebar'}
+          >
+            <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {showLeftSidebar ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 17l-5-5m0 0l5-5m-5 5h12" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              )}
+            </svg>
+          </motion.button>
+
+          <InteractiveWorldMap
+            locations={locations}
+            onLocationClick={handleLocationClick}
+            selectedLocation={selectedLocation}
+            overlayConfig={overlayConfig}
+          />
+        </div>
+
       </div>
 
       {/* Location Detail Modal */}
@@ -324,7 +354,6 @@ export default function WorldMapPage() {
         location={selectedLocation}
         isOpen={!!selectedLocation}
         onClose={() => setSelectedLocation(null)}
-        activeTimeline={activeTimeline}
       />
     </div>
   );

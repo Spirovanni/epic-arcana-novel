@@ -8,24 +8,16 @@ interface LocationDetailModalProps {
   location: Location | null;
   isOpen: boolean;
   onClose: () => void;
-  activeTimeline: 'alpha' | 'beta' | 'gamma';
 }
 
 export function LocationDetailModal({
   location,
   isOpen,
-  onClose,
-  activeTimeline
+  onClose
 }: LocationDetailModalProps) {
   if (!location) return null;
 
-  const timelineColors = {
-    alpha: { primary: '#10b981', secondary: '#047857' },
-    beta: { primary: '#f59e0b', secondary: '#d97706' },
-    gamma: { primary: '#8b5cf6', secondary: '#7c3aed' }
-  };
-
-  const currentTheme = timelineColors[activeTimeline];
+  const currentTheme = { primary: '#10b981', secondary: '#047857' };
 
   return (
     <AnimatePresence>
@@ -115,17 +107,6 @@ export function LocationDetailModal({
                 </motion.button>
               </div>
 
-              {/* Timeline Indicator */}
-              <motion.div
-                className="absolute top-4 right-16 bg-white/20 backdrop-blur-sm rounded-lg px-3 py-1"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-              >
-                <span className="text-xs font-medium">
-                  {activeTimeline.charAt(0).toUpperCase() + activeTimeline.slice(1)} Timeline
-                </span>
-              </motion.div>
             </div>
 
             {/* Content */}
@@ -260,12 +241,6 @@ export function LocationDetailModal({
                               {chapter.description}
                             </p>
                             <div className="flex items-center mt-2 space-x-3 text-xs">
-                              <span 
-                                className="px-2 py-1 rounded-full text-white font-medium"
-                                style={{ backgroundColor: timelineColors[chapter.timeline].primary }}
-                              >
-                                {chapter.timeline.charAt(0).toUpperCase() + chapter.timeline.slice(1)} Timeline
-                              </span>
                               {chapter.tarotCardLink && (
                                 <span className="text-purple-600 dark:text-purple-400">
                                   🃏 {chapter.tarotCardLink}

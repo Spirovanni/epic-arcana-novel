@@ -2,17 +2,21 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Location, Timeline } from '../page';
+import { Location } from '../page';
 import { RegionBrowser } from './RegionBrowser';
+import { OverlayControls } from './OverlayControls';
 import { SVGRegion } from '../utils/svgRegionExtractor';
+import { OverlayConfig } from '../utils/regionalGrouping';
 
 interface MapControlsProps {
-  timelines: Timeline[];
-  activeTimeline: 'alpha' | 'beta' | 'gamma';
-  onTimelineChange: (timeline: 'alpha' | 'beta' | 'gamma') => void;
   locations: Location[];
   onLocationSelect: (location: Location) => void;
   onRegionSelect?: (region: SVGRegion) => void;
+  overlayConfig?: OverlayConfig;
+  onOverlayConfigChange?: (updates: Partial<OverlayConfig>) => void;
+  onToggleBookBoundaries?: () => void;
+  onToggleChapterBoundaries?: () => void;
+  onToggleLocationLabels?: () => void;
 }
 
 const getLocationIcon = (arcana: string): string => {
@@ -33,12 +37,14 @@ const getLocationIcon = (arcana: string): string => {
 };
 
 export function MapControls({
-  timelines,
-  activeTimeline,
-  onTimelineChange,
   locations,
   onLocationSelect,
-  onRegionSelect
+  onRegionSelect,
+  overlayConfig,
+  onOverlayConfigChange,
+  onToggleBookBoundaries,
+  onToggleChapterBoundaries,
+  onToggleLocationLabels
 }: MapControlsProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArcana, setSelectedArcana] = useState<string>('');
@@ -65,51 +71,6 @@ export function MapControls({
           Map Controls
         </motion.h2>
 
-        <div className="space-y-3">
-          <label className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Active Timeline
-          </label>
-          <div className="space-y-2">
-            {timelines.map((timeline) => (
-              <motion.button
-                key={timeline.id}
-                onClick={() => onTimelineChange(timeline.id as 'alpha' | 'beta' | 'gamma')}
-                className={`w-full flex items-center space-x-3 p-3 rounded-lg border transition-all duration-200 ${
-                  activeTimeline === timeline.id
-                    ? 'border-purple-500 bg-purple-50 dark:bg-purple-900/20'
-                    : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
-                }`}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <div
-                  className="w-4 h-4 rounded-full flex-shrink-0"
-                  style={{ backgroundColor: timeline.color }}
-                />
-                <div className="flex-1 text-left">
-                  <div className={`font-medium ${
-                    activeTimeline === timeline.id 
-                      ? 'text-purple-700 dark:text-purple-300' 
-                      : 'text-gray-900 dark:text-white'
-                  }`}>
-                    {timeline.name}
-                  </div>
-                  <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                    {timeline.description}
-                  </div>
-                </div>
-                {activeTimeline === timeline.id && (
-                  <motion.div
-                    className="w-2 h-2 bg-purple-500 rounded-full"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.2 }}
-                  />
-                )}
-              </motion.button>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div className="p-6 border-b border-gray-200 dark:border-gray-700">
@@ -251,6 +212,19 @@ export function MapControls({
           </motion.div>
         </div>
         
+        {/* Regional Overlay Controls */}
+        {overlayConfig && onOverlayConfigChange && onToggleBookBoundaries && onToggleChapterBoundaries && onToggleLocationLabels && (
+          <div className="p-6 border-t border-gray-200 dark:border-gray-700">
+            <OverlayControls
+              config={overlayConfig}
+              onConfigChange={onOverlayConfigChange}
+              onToggleBookBoundaries={onToggleBookBoundaries}
+              onToggleChapterBoundaries={onToggleChapterBoundaries}
+              onToggleLocationLabels={onToggleLocationLabels}
+            />
+          </div>
+        )}
+
         {/* SVG Region Browser */}
         <div className="p-6 border-t border-gray-200 dark:border-gray-700">
           <RegionBrowser
