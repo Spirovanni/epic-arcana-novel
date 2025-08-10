@@ -4,8 +4,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Location } from '../page';
 import PangeaMap from './PangeaMap';
-import { RegionalOverlay } from './RegionalOverlay';
-import { OverlayConfig } from '../utils/regionalGrouping';
+import { RegionalOverlay, useRegionalOverlay } from './RegionalOverlay';
+import { OverlayControls } from './OverlayControls';
 
 interface CountryData {
   id: string;
@@ -23,14 +23,12 @@ interface InteractiveWorldMapProps {
   locations: Location[];
   onLocationClick: (location: Location) => void;
   selectedLocation: Location | null;
-  overlayConfig?: OverlayConfig;
 }
 
 export function InteractiveWorldMap({ 
   locations, 
   onLocationClick, 
-  selectedLocation,
-  overlayConfig
+  selectedLocation
 }: InteractiveWorldMapProps) {
   const [hoveredLocation, setHoveredLocation] = useState<Location | null>(null);
   const [showGrid, setShowGrid] = useState(false);
@@ -41,8 +39,8 @@ export function InteractiveWorldMap({
   const mapOriginX = 1500; // Move WEST from Northern Asia to Europe
   const mapOriginY = 1600; // Move SOUTH from Northern Asia to Mediterranean
   
-  // Initial view: Start with same zoom as "0,0" button
-  const [mapZoom, setMapZoom] = useState(14.281);
+  // Start at a sane default zoom; avoid pushing the map out of view on mount
+  const [mapZoom, setMapZoom] = useState(1.0);
   const [mapCenter, setMapCenter] = useState({ x: 0, y: 0 }); // Will be calculated after mount
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null); // Start with world view
   const [isPanMode, setIsPanMode] = useState(false);
@@ -62,6 +60,8 @@ export function InteractiveWorldMap({
     if (regionId && (regionId.toLowerCase().includes('grid') || regionId.toLowerCase().includes('_px') || regionId.toLowerCase().includes('background'))) {
       return;
     }
+    
+    console.log('Region clicked:', regionId);
     
     setSelectedRegion(regionId);
     
@@ -99,6 +99,16 @@ export function InteractiveWorldMap({
       setClickedRegionColor(extractedColor || currentTheme.primary);
     }
     
+    // Ensure country data exists for this region and set up for editing
+    const currentData = getCurrentCountryData(regionId);
+    console.log('Country data for region:', currentData);
+    
+    // Auto-open in edit mode when clicking on a region
+    setTimeout(() => {
+      setEditingData({ ...currentData });
+      setIsEditing(true);
+    }, 100); // Small delay to ensure the card appears first
+    
     // Find location that matches this region
     const matchedLocation = locations.find(loc => 
       loc.name.toLowerCase().includes(regionId.toLowerCase()) ||
@@ -118,19 +128,10 @@ export function InteractiveWorldMap({
   const [editingData, setEditingData] = useState<CountryData | null>(null);
   const [isTargetMode, setIsTargetMode] = useState(false);
   const [cursorCoordinates, setCursorCoordinates] = useState<{x: number, y: number, lat: number, lng: number} | null>(null);
+  const [isLegendMinimized, setIsLegendMinimized] = useState(false);
 
-  // Use the passed overlay config or create a default one
-  const defaultOverlayConfig: OverlayConfig = {
-    showBookBoundaries: false,
-    showChapterBoundaries: false,
-    showLocationLabels: false,
-    opacity: 0.3,
-    bookBoundaryColor: '#FF6B35',
-    chapterBoundaryColor: '#4ECDC4',
-    labelColor: '#2C3E50'
-  };
-  
-  const currentOverlayConfig = overlayConfig || defaultOverlayConfig;
+  // Use the regional overlay hook for state management
+  const { config: overlayConfig, updateConfig: updateOverlayConfig } = useRegionalOverlay();
 
   // Load data from localStorage on mount
   useEffect(() => {
@@ -183,17 +184,22 @@ export function InteractiveWorldMap({
   };
 
   // Seed initial country data
-  const getDefaultCountryData = (regionId: string): CountryData => ({
-    id: regionId,
-    name: formatRegionName(regionId) || 'Unknown Location',
-    description: 'A mysterious land waiting to be explored and documented.',
-    population: 'Unknown',
-    ruler: 'To be determined',
-    culture: 'Rich cultural heritage',
-    economy: 'Developing',
-    notes: 'Add your observations and discoveries here.',
-    color: extractColorFromRegion(regionId)
-  });
+  const getDefaultCountryData = (regionId: string): CountryData => {
+    const formattedName = formatRegionName(regionId);
+    const displayName = formattedName || regionId.replace(/[_-]/g, ' ') || 'Unknown Location';
+    
+    return {
+      id: regionId,
+      name: displayName,
+      description: 'A mysterious land waiting to be explored and documented.',
+      population: 'Unknown',
+      ruler: 'To be determined',
+      culture: 'Rich cultural heritage',
+      economy: 'Developing',
+      notes: 'Add your observations and discoveries here.',
+      color: extractColorFromRegion(regionId)
+    };
+  };
 
   const getCurrentCountryData = (regionId: string): CountryData => {
     if (!countryData[regionId]) {
@@ -355,13 +361,21 @@ export function InteractiveWorldMap({
 
   const formatRegionName = (regionId: string) => {
     if (!regionId) return '';
-    return regionId
+    
+    let formatted = regionId
       .replace(/[_-]/g, ' ')
       .replace(/^\d+\s*-\s*/, '')
       .replace(/^SMT\s*[\d.]+\s*-\s*/, '')
       .replace(/^Part\s*[IVX]+:\s*/, '')
       .replace(/^Book\s*\d+\s*-\s*/, '')
       .trim();
+    
+    // Capitalize each word for proper country names
+    formatted = formatted.replace(/\b\w+/g, word => {
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    });
+    
+    return formatted || regionId; // Fallback to original if formatting fails
   };
 
   const extractChapterNumber = (regionId: string) => {
@@ -384,40 +398,7 @@ export function InteractiveWorldMap({
   //   setMapZoom(1.0);
   // }, []);
 
-  // Focus on the same coordinates as the "0,0" button on mount
-  useEffect(() => {
-    const focusOnOriginCoordinates = () => {
-      // Get actual viewport dimensions from the map container
-      const mapContainer = document.querySelector('.flex-1.relative');
-      if (mapContainer) {
-        const rect = mapContainer.getBoundingClientRect();
-        const viewport = {
-          width: rect.width,
-          height: rect.height
-        };
-        
-        console.log('=== Initial Focus on Origin Debug ===');
-        console.log('Viewport dimensions:', viewport);
-        console.log('Map origin coordinates:', mapOriginX, mapOriginY);
-        
-        const zoom = 14.281; // Same zoom as the "0,0" button
-        
-        // Same calculation as focusOnOrigin function
-        const centerX = (viewport.width / 2 - mapOriginX) - (viewport.width * 0.11) + 105;
-        const centerY = (viewport.height / 2 - mapOriginY) - (viewport.height * 4.25);
-        
-        console.log('Initial centering at coordinates:', mapOriginX, mapOriginY);
-        console.log('Initial translation needed:', centerX, centerY);
-        
-        setMapZoom(zoom);
-        setMapCenter({ x: centerX, y: centerY });
-      }
-    };
-    
-    // Delay focusing to ensure the map container is rendered
-    const timer = setTimeout(focusOnOriginCoordinates, 100);
-    return () => clearTimeout(timer);
-  }, []);
+  // Avoid auto-centering on mount; use the button to center if desired
 
   // Simple resize handler - no automatic recalculation to prevent issues
   useEffect(() => {
@@ -499,6 +480,15 @@ export function InteractiveWorldMap({
       console.error('Could not find map container');
     }
   };
+
+  // Set initial view to focus on The Roman Empire coordinates when map is ready
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      focusOnOrigin(); // Focus on the Roman Empire location
+    }, 1500); // Wait for SVG to load and render
+    
+    return () => clearTimeout(timer);
+  }, []);
 
   // Removed unused focus helper to satisfy no-unused-vars
 
@@ -620,12 +610,16 @@ export function InteractiveWorldMap({
           zoom={1.0}
           isPanMode={isPanMode}
           showGrid={showGrid}
+          onReady={() => {
+            // Ensure we only center after SVG is ready to avoid flicker
+            // No-op for now; we already center in a delayed effect
+          }}
         />
         
         {/* Regional Overlay */}
         <RegionalOverlay
           svgContainer={svgRef.current}
-          config={currentOverlayConfig}
+          config={overlayConfig}
           onRegionClick={(regionId, regionType) => {
             console.log(`Clicked ${regionType} region:`, regionId);
             // Handle regional overlay clicks
@@ -1216,32 +1210,78 @@ export function InteractiveWorldMap({
         </svg>
       </div>
 
-      {/* Legend */}
-      <div className="absolute bottom-4 left-4 z-20 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-4 max-w-xs">
-        <h3 className="font-medium text-gray-900 dark:text-white mb-3">Map Legend</h3>
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 rounded-full bg-red-500 flex items-center justify-center text-white text-xs">
-              #
-            </div>
-            <span className="text-gray-600 dark:text-gray-400">Chapter count</span>
-          </div>
-          {showGrid && (
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 border border-blue-500 opacity-30" style={{ borderStyle: 'dashed' }}></div>
-              <span className="text-gray-600 dark:text-gray-400">Coordinate grid</span>
-            </div>
-          )}
-          {isTargetMode && (
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 flex items-center justify-center">
-                <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-              </div>
-              <span className="text-gray-600 dark:text-gray-400">Coordinate targeting</span>
-            </div>
-          )}
+      {/* Legend & Controls */}
+      <motion.div 
+        className="absolute bottom-4 left-4 z-20 bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-xs"
+        initial={false}
+        animate={{
+          height: isLegendMinimized ? 'auto' : 'auto'
+        }}
+        transition={{ duration: 0.2 }}
+      >
+        {/* Header with minimize button */}
+        <div className="flex items-center justify-between p-4 pb-2">
+          <h3 className="font-medium text-gray-900 dark:text-white">Map Legend</h3>
+          <motion.button
+            onClick={() => setIsLegendMinimized(!isLegendMinimized)}
+            className="w-6 h-6 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 transition-colors"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            title={isLegendMinimized ? 'Expand legend' : 'Minimize legend'}
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {isLegendMinimized ? (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              ) : (
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
+              )}
+            </svg>
+          </motion.button>
         </div>
-      </div>
+
+        <AnimatePresence>
+          {!isLegendMinimized && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="px-4 pb-4 space-y-4"
+            >
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 rounded-full bg-red-500 flex items-center justify-center text-white text-xs">
+                    #
+                  </div>
+                  <span className="text-gray-600 dark:text-gray-400">Chapter count</span>
+                </div>
+                {showGrid && (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 border border-blue-500 opacity-30" style={{ borderStyle: 'dashed' }}></div>
+                    <span className="text-gray-600 dark:text-gray-400">Coordinate grid</span>
+                  </div>
+                )}
+                {isTargetMode && (
+                  <div className="flex items-center space-x-2">
+                    <div className="w-4 h-4 flex items-center justify-center">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                    </div>
+                    <span className="text-gray-600 dark:text-gray-400">Coordinate targeting</span>
+                  </div>
+                )}
+              </div>
+
+              {/* Overlay Controls */}
+              <div className="border-t border-gray-200 dark:border-gray-600 pt-4">
+                <OverlayControls 
+                  config={overlayConfig} 
+                  onConfigChange={updateOverlayConfig} 
+                />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }

@@ -122,8 +122,8 @@ export function RegionalOverlay({ svgContainer, config, onRegionClick }: Regiona
     
     // Background rectangle
     const background = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    background.setAttribute('fill', 'rgba(255, 255, 255, 0.9)');
-    background.setAttribute('stroke', config.labelColor);
+    background.setAttribute('fill', config.labelBackgroundColor || 'rgba(255, 255, 255, 0.9)');
+    background.setAttribute('stroke', config.labelBackgroundColor || '#2C3E50');
     background.setAttribute('stroke-width', '1');
     background.setAttribute('rx', '3');
     
@@ -131,7 +131,7 @@ export function RegionalOverlay({ svgContainer, config, onRegionClick }: Regiona
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     text.setAttribute('x', center.x.toString());
     text.setAttribute('y', center.y.toString());
-    text.setAttribute('fill', config.labelColor);
+    text.setAttribute('fill', '#2C3E50');
     text.setAttribute('font-size', '12');
     text.setAttribute('font-weight', '600');
     text.setAttribute('text-anchor', 'middle');
@@ -325,7 +325,7 @@ export function useRegionalOverlay() {
     opacity: 0.3,
     bookBoundaryColor: '#FF6B35',
     chapterBoundaryColor: '#4ECDC4',
-    labelColor: '#2C3E50'
+    labelBackgroundColor: '#ffffff'
   });
 
   const updateConfig = (updates: Partial<OverlayConfig>) => {

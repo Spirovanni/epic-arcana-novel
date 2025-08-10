@@ -52,10 +52,7 @@ export default function WorldMapPage() {
   // Regional overlay system
   const {
     config: overlayConfig,
-    updateConfig: updateOverlayConfig,
-    toggleBookBoundaries,
-    toggleChapterBoundaries,
-    toggleLocationLabels
+    updateConfig: updateOverlayConfig
   } = useRegionalOverlay();
 
 
@@ -312,9 +309,6 @@ export default function WorldMapPage() {
                 onLocationSelect={handleLocationClick}
                 overlayConfig={overlayConfig}
                 onOverlayConfigChange={updateOverlayConfig}
-                onToggleBookBoundaries={toggleBookBoundaries}
-                onToggleChapterBoundaries={toggleChapterBoundaries}
-                onToggleLocationLabels={toggleLocationLabels}
               />
             </motion.div>
           )}
@@ -343,7 +337,6 @@ export default function WorldMapPage() {
             locations={locations}
             onLocationClick={handleLocationClick}
             selectedLocation={selectedLocation}
-            overlayConfig={overlayConfig}
           />
         </div>
 

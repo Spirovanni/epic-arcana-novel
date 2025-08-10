@@ -1,6 +1,6 @@
 "use client";
 
-import React, { forwardRef, useEffect, useState, useCallback } from 'react';
+import React, { forwardRef, useEffect, useState, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 interface PangeaMapProps {
@@ -10,14 +10,19 @@ interface PangeaMapProps {
   zoom: number;
   isPanMode?: boolean;
   showGrid?: boolean;
+  onReady?: () => void;
 }
 
 const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
-  ({ selectedRegion, onRegionClick, onRegionHover, zoom, isPanMode = false, showGrid = false }, ref) => {
+  ({ selectedRegion, onRegionClick, onRegionHover, zoom, isPanMode = false, showGrid = false, onReady }, ref) => {
     const [svgContent, setSvgContent] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
+    const [isReady, setIsReady] = useState(false);
+    const hasLoadedRef = useRef(false);
 
     useEffect(() => {
+      if (hasLoadedRef.current) return;
+      hasLoadedRef.current = true;
       loadSVG();
     }, []);
 
@@ -33,7 +38,17 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
         console.log('SVG loaded successfully, length:', svgText.length, 'first 100 chars:', svgText.substring(0, 100));
         
         // Make the problematic black rectangles transparent instead of removing them
-        svgText = svgText.replace(/class="cls-161"/g, 'class="cls-161" fill="none" stroke="none" opacity="0"');
+        svgText = svgText
+          .replace(/class="cls-161"/g, 'class="cls-161" fill="none" stroke="none" opacity="0"')
+          .replace(/class="cls-162"/g, 'class="cls-162" fill="none" stroke="none" opacity="0"')
+          .replace(/class="cls-163"/g, 'class="cls-163" fill="none" stroke="none" opacity="0"');
+        // Guarantee a viewBox so it can size even if width/height are missing
+        if (!/viewBox=/.test(svgText)) {
+          svgText = svgText.replace(
+            /<svg(\s[^>]*)?>/,
+            (m) => m.replace('>', ' viewBox="0 0 3306.216 3200.83">')
+          );
+        }
         
         console.log('SVG processed, removed cls-161 rectangles');
         console.log('Final SVG length:', svgText.length);
@@ -47,40 +62,30 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
     };
 
     const applyMapStyles = useCallback((svg: SVGSVGElement) => {
-      const styleElement = svg.querySelector('style') || document.createElement('style');
-      
+      // Do NOT overwrite the original <style> inside the SVG (it defines colors/classes)
+      // Instead, append or update our own supplemental style block.
+      let supplementalStyle = svg.querySelector('#pangea-supplement-style') as HTMLStyleElement | null;
+      if (!supplementalStyle) {
+        supplementalStyle = document.createElement('style');
+        supplementalStyle.setAttribute('id', 'pangea-supplement-style');
+        svg.appendChild(supplementalStyle);
+      }
+
       const cursorStyle = isPanMode ? 'inherit' : 'pointer';
       const pointerEvents = isPanMode ? 'none' : 'auto';
-      
-      styleElement.textContent = `
-        svg {
-          display: block;
-          width: 100%;
-          height: 100%;
-          background: transparent;
-        }
-        
-        
-        g[id] {
-          cursor: ${cursorStyle};
-          pointer-events: ${pointerEvents};
-          transition: none;
-        }
-        
-        g[id]:hover {
-          stroke: #10b981;
-          stroke-width: 1px;
-        }
-        
-        g[id].selected {
-          stroke: #10b981;
-          stroke-width: 2px;
-        }
+
+      supplementalStyle.textContent = `
+        svg { width: 100%; height: 100%; background: transparent !important; }
+        g[id] { cursor: ${cursorStyle}; pointer-events: ${pointerEvents}; transition: none; }
+        g[id]:hover { stroke: #10b981; stroke-width: 1px; }
+        g[id].selected { stroke: #10b981; stroke-width: 2px; }
       `;
 
-      if (!svg.querySelector('style')) {
-        svg.appendChild(styleElement);
+      // Ensure sensible rendering behavior
+      if (!svg.getAttribute('preserveAspectRatio')) {
+        svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
       }
+      svg.style.background = 'transparent';
     }, [isPanMode]);
 
     const handleRegionClickEvent = useCallback((event: Event) => {
@@ -262,6 +267,9 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
     useEffect(() => {
       if (!svgContent || !ref || typeof ref === 'function') return;
       
+      // Only run once when SVG content is first loaded
+      if (isReady) return;
+      
       try {
         const container = ref.current;
         if (!container) {
@@ -273,10 +281,39 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
         if (!svgElement) {
           console.log('SVG element not found in container');
           console.log('Container innerHTML length:', container.innerHTML.length);
+          // Fallback: parse and append via DOMParser to avoid React sanitization edge cases
+          try {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(svgContent, 'image/svg+xml');
+            const parsedSvg = doc.querySelector('svg');
+            if (parsedSvg) {
+              parsedSvg.setAttribute('width', '100%');
+              parsedSvg.setAttribute('height', '100%');
+              if (!parsedSvg.getAttribute('viewBox')) {
+                parsedSvg.setAttribute('viewBox', '0 0 3306.216 3200.83');
+              }
+              if (!parsedSvg.getAttribute('preserveAspectRatio')) {
+                parsedSvg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+              }
+              container.innerHTML = '';
+              container.appendChild(parsedSvg);
+              // Retry
+              return;
+            }
+          } catch (parseErr) {
+            console.error('SVG DOMParser fallback failed:', parseErr);
+          }
           return;
         }
 
         console.log('SVG element found:', svgElement.tagName, 'viewBox:', svgElement.getAttribute('viewBox'));
+        // If width/height are missing, set them to 100% so it can render
+        if (!svgElement.getAttribute('width')) {
+          svgElement.setAttribute('width', '100%');
+        }
+        if (!svgElement.getAttribute('height')) {
+          svgElement.setAttribute('height', '100%');
+        }
         console.log('SVG dimensions:', svgElement.getAttribute('width'), 'x', svgElement.getAttribute('height'));
 
         // Apply map styling
@@ -287,6 +324,10 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
 
         // Add interactivity to regions
         addRegionInteractivity(svgElement);
+
+        // Now ready to reveal the map without flicker
+        setIsReady(true);
+        onReady?.();
 
         return () => {
           try {
@@ -304,39 +345,62 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       } catch (error) {
         console.error('Error in PangeaMap useEffect:', error);
       }
-    }, [svgContent, selectedRegion, isPanMode, showGrid, applyMapStyles, addGridToSVG, addRegionInteractivity, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, ref]);
+    }, [svgContent, isReady]);
 
+    // Separate effect for updating interactivity when selectedRegion changes
+    useEffect(() => {
+      if (!isReady || !ref || typeof ref === 'function') return;
+      
+      const container = ref.current;
+      const svgElement = container?.querySelector('svg');
+      if (!svgElement) return;
+      
+      addRegionInteractivity(svgElement);
+    }, [selectedRegion, isReady, addRegionInteractivity, ref]);
 
-    if (isLoading) {
-      return (
-        <div className="flex items-center justify-center w-full h-full">
-          <motion.div
-            className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"
-            animate={{ rotate: 360 }}
-            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-          />
-        </div>
-      );
-    }
+    // Separate effect for updating grid when showGrid changes
+    useEffect(() => {
+      if (!isReady || !ref || typeof ref === 'function') return;
+      
+      const container = ref.current;
+      const svgElement = container?.querySelector('svg');
+      if (!svgElement) return;
+      
+      addGridToSVG(svgElement);
+    }, [showGrid, isReady, addGridToSVG, ref]);
+
+    // Separate effect for updating styles when isPanMode changes
+    useEffect(() => {
+      if (!isReady || !ref || typeof ref === 'function') return;
+      
+      const container = ref.current;
+      const svgElement = container?.querySelector('svg');
+      if (!svgElement) return;
+      
+      applyMapStyles(svgElement);
+    }, [isPanMode, isReady, applyMapStyles, ref]);
+
 
     return (
       <div className="w-full h-full relative">
-        {svgContent ? (
-          <div 
-            ref={ref}
-            className="w-full h-full"
-            style={{ backgroundColor: 'transparent' }}
-            dangerouslySetInnerHTML={{ __html: svgContent }}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gray-100">
-            <div className="text-center">
-              <div className="text-red-500 mb-2">SVG Content Not Loaded</div>
-              <div className="text-sm text-gray-600">Check console for errors</div>
-            </div>
+        {/* SVG container is always mounted so refs/effects can run */}
+        <div 
+          ref={ref}
+          className="w-full h-full"
+          style={{ backgroundColor: 'transparent', visibility: isReady ? 'visible' : 'hidden' }}
+          dangerouslySetInnerHTML={{ __html: svgContent || '' }}
+        />
+
+        {/* Overlay loader while not ready */}
+        {(isLoading || !isReady) && (
+          <div className="absolute inset-0 flex items-center justify-center bg-transparent">
+            <motion.div
+              className="w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full animate-spin"
+              animate={{ rotate: 360 }}
+              transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            />
           </div>
         )}
-        
       </div>
     );
   }

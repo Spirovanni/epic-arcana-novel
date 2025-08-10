@@ -14,9 +14,6 @@ interface MapControlsProps {
   onRegionSelect?: (region: SVGRegion) => void;
   overlayConfig?: OverlayConfig;
   onOverlayConfigChange?: (updates: Partial<OverlayConfig>) => void;
-  onToggleBookBoundaries?: () => void;
-  onToggleChapterBoundaries?: () => void;
-  onToggleLocationLabels?: () => void;
 }
 
 const getLocationIcon = (arcana: string): string => {
@@ -41,10 +38,7 @@ export function MapControls({
   onLocationSelect,
   onRegionSelect,
   overlayConfig,
-  onOverlayConfigChange,
-  onToggleBookBoundaries,
-  onToggleChapterBoundaries,
-  onToggleLocationLabels
+  onOverlayConfigChange
 }: MapControlsProps) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedArcana, setSelectedArcana] = useState<string>('');
@@ -213,14 +207,11 @@ export function MapControls({
         </div>
         
         {/* Regional Overlay Controls */}
-        {overlayConfig && onOverlayConfigChange && onToggleBookBoundaries && onToggleChapterBoundaries && onToggleLocationLabels && (
+        {overlayConfig && onOverlayConfigChange && (
           <div className="p-6 border-t border-gray-200 dark:border-gray-700">
             <OverlayControls
               config={overlayConfig}
               onConfigChange={onOverlayConfigChange}
-              onToggleBookBoundaries={onToggleBookBoundaries}
-              onToggleChapterBoundaries={onToggleChapterBoundaries}
-              onToggleLocationLabels={onToggleLocationLabels}
             />
           </div>
         )}

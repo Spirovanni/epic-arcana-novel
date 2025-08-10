@@ -31,7 +31,7 @@ export interface OverlayConfig {
   opacity: number;
   bookBoundaryColor: string;
   chapterBoundaryColor: string;
-  labelColor: string;
+  labelBackgroundColor: string;
 }
 
 // Define regional groupings based on SVG analysis
@@ -248,5 +248,5 @@ export const DEFAULT_OVERLAY_CONFIG: OverlayConfig = {
   opacity: 0.3,
   bookBoundaryColor: '#FF6B35',
   chapterBoundaryColor: '#4ECDC4', 
-  labelColor: '#2C3E50'
+  labelBackgroundColor: '#ffffff'
 };
