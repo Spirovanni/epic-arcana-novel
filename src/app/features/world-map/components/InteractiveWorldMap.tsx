@@ -17,6 +17,8 @@ interface CountryData {
   economy: string;
   notes: string;
   color: string;
+  lastModified: number;
+  isActive: boolean;
 }
 
 interface InteractiveWorldMapProps {
@@ -63,12 +65,12 @@ export function InteractiveWorldMap({
     
     console.log('Region clicked:', regionId);
     
+    // Clear previous selection and set new one
     setSelectedRegion(regionId);
-    
-    // Set clicked region and get its color
     setClickedRegion(regionId);
+    setActiveCountry(regionId);
     
-    // Extract color for clicked region (same logic as hover)
+    // Extract color for clicked region
     const regionElement = document.getElementById(regionId);
     if (regionElement) {
       const pathElements = regionElement.querySelectorAll('path, polygon, rect, circle') as NodeListOf<SVGElement>;
@@ -99,15 +101,18 @@ export function InteractiveWorldMap({
       setClickedRegionColor(extractedColor || currentTheme.primary);
     }
     
-    // Ensure country data exists for this region and set up for editing
+    // Get or create country data for this region
     const currentData = getCurrentCountryData(regionId);
     console.log('Country data for region:', currentData);
     
+    // Mark this country as active and update its data
+    updateCountryData(regionId, { isActive: true });
+    
     // Auto-open in edit mode when clicking on a region
     setTimeout(() => {
-      setEditingData({ ...currentData });
+      setEditingData({ ...currentData, isActive: true });
       setIsEditing(true);
-    }, 100); // Small delay to ensure the card appears first
+    }, 100);
     
     // Find location that matches this region
     const matchedLocation = locations.find(loc => 
@@ -126,6 +131,7 @@ export function InteractiveWorldMap({
   const [isEditing, setIsEditing] = useState(false);
   const [countryData, setCountryData] = useState<Record<string, CountryData>>({});
   const [editingData, setEditingData] = useState<CountryData | null>(null);
+  const [activeCountry, setActiveCountry] = useState<string | null>(null);
   const [isTargetMode, setIsTargetMode] = useState(false);
   const [cursorCoordinates, setCursorCoordinates] = useState<{x: number, y: number, lat: number, lng: number} | null>(null);
   const [isLegendMinimized, setIsLegendMinimized] = useState(false);
@@ -197,7 +203,9 @@ export function InteractiveWorldMap({
       culture: 'Rich cultural heritage',
       economy: 'Developing',
       notes: 'Add your observations and discoveries here.',
-      color: extractColorFromRegion(regionId)
+      color: extractColorFromRegion(regionId),
+      lastModified: Date.now(),
+      isActive: false
     };
   };
 
@@ -210,11 +218,72 @@ export function InteractiveWorldMap({
     return countryData[regionId];
   };
 
+  // Update country data and trigger visual updates
+  const updateCountryData = (regionId: string, newData: Partial<CountryData>) => {
+    setCountryData(prev => ({
+      ...prev,
+      [regionId]: {
+        ...prev[regionId],
+        ...newData,
+        lastModified: Date.now(),
+        isActive: newData.isActive !== undefined ? newData.isActive : true
+      }
+    }));
+    
+    // Update visual representation
+    updateRegionVisuals(regionId, newData);
+  };
+
+  // Update region visual appearance based on data changes
+  const updateRegionVisuals = (regionId: string, data: Partial<CountryData>) => {
+    const regionElement = document.getElementById(regionId);
+    if (regionElement) {
+      const pathElements = regionElement.querySelectorAll('path, polygon, rect, circle') as NodeListOf<SVGElement>;
+      
+      pathElements.forEach(element => {
+        // Update color if provided
+        if (data.color) {
+          element.style.fill = data.color;
+        }
+        
+        // Add visual indicator for active countries
+        if (data.isActive !== undefined) {
+          if (data.isActive) {
+            element.style.stroke = '#ffd700';
+            element.style.strokeWidth = '2';
+            element.style.filter = 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.6))';
+          } else {
+            element.style.stroke = '';
+            element.style.strokeWidth = '';
+            element.style.filter = '';
+          }
+        }
+        
+        element.style.transition = 'all 0.3s ease';
+      });
+    }
+  };
+  
+  // Apply visual updates on load for active countries
+  useEffect(() => {
+    Object.entries(countryData).forEach(([regionId, data]) => {
+      if (data.isActive) {
+        updateRegionVisuals(regionId, { isActive: true, color: data.color });
+      }
+    });
+  }, [countryData]);
+
   const handleCloseCard = () => {
+    // Mark current country as inactive when closing
+    if (clickedRegion) {
+      updateCountryData(clickedRegion, { isActive: false });
+    }
+    
     setClickedRegion(null);
     setClickedRegionColor(null);
     setIsEditing(false);
     setEditingData(null);
+    setActiveCountry(null);
   };
 
   const handleEdit = () => {
@@ -227,10 +296,13 @@ export function InteractiveWorldMap({
 
   const handleSave = () => {
     if (editingData && clickedRegion) {
-      setCountryData(prev => ({ ...prev, [clickedRegion]: editingData }));
+      updateCountryData(clickedRegion, editingData);
       setIsEditing(false);
       setEditingData(null);
       console.log('Saved country data:', editingData);
+      
+      // Keep this country as active
+      setActiveCountry(clickedRegion);
     }
   };
 
@@ -241,7 +313,13 @@ export function InteractiveWorldMap({
 
   const handleFieldChange = (field: keyof CountryData, value: string) => {
     if (editingData) {
-      setEditingData(prev => prev ? { ...prev, [field]: value } : null);
+      const newData = { ...editingData, [field]: value, lastModified: Date.now() };
+      setEditingData(newData);
+      
+      // For color changes, apply immediately for visual feedback
+      if (field === 'color' && clickedRegion && value) {
+        updateRegionVisuals(clickedRegion, { color: value });
+      }
     }
   };
 
@@ -800,10 +878,12 @@ export function InteractiveWorldMap({
               className="text-white rounded-xl shadow-2xl backdrop-blur-md border-2 px-6 py-4 relative max-h-full overflow-y-auto pointer-events-auto"
               style={{
                 backgroundColor: countryData[clickedRegion]?.color || clickedRegionColor || currentTheme.primary,
-                borderColor: currentTheme.primary,
+                borderColor: activeCountry === clickedRegion ? '#ffd700' : currentTheme.primary,
+                borderWidth: activeCountry === clickedRegion ? '3px' : '2px',
                 maxWidth: '500px',
                 minWidth: '400px',
-                width: '90vw'
+                width: '90vw',
+                boxShadow: activeCountry === clickedRegion ? '0 0 20px rgba(255, 215, 0, 0.5)' : undefined
               }}
             >
               {/* Close Button */}
@@ -851,24 +931,54 @@ export function InteractiveWorldMap({
                 return (
                   <div className="space-y-3">
                     {/* Location Name */}
-                    {isEditing ? (
-                      <div>
-                        <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                          Name
-                        </label>
-                        <input
-                          type="text"
-                          value={displayData.name || ''}
-                          onChange={(e) => handleFieldChange('name', e.target.value)}
-                          className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
-                        />
-                      </div>
-                    ) : (
-                      <div 
-                        className="font-bold text-center text-lg mb-2"
-                        style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
-                      >
-                        {displayData.name}
+                    <div className="flex items-center justify-between mb-2">
+                      {isEditing ? (
+                        <div className="flex-1">
+                          <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                            Name
+                          </label>
+                          <input
+                            type="text"
+                            value={displayData.name || ''}
+                            onChange={(e) => handleFieldChange('name', e.target.value)}
+                            className="w-full px-3 py-2 rounded-md bg-black/30 text-white placeholder-white/70 border border-white/20 focus:border-white/50 focus:outline-none"
+                          />
+                        </div>
+                      ) : (
+                        <div 
+                          className="font-bold text-center text-lg flex-1"
+                          style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+                        >
+                          {displayData.name}
+                        </div>
+                      )}
+                      
+                      {/* Active Status Indicator */}
+                      {displayData.isActive && (
+                        <div className="ml-2">
+                          <div 
+                            className="px-2 py-1 rounded-full text-xs font-bold"
+                            style={{ 
+                              backgroundColor: 'rgba(255, 215, 0, 0.9)',
+                              color: '#000',
+                              textShadow: 'none'
+                            }}
+                          >
+                            ACTIVE
+                          </div>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Last Modified Indicator */}
+                    {displayData.lastModified && (
+                      <div className="text-center mb-3">
+                        <div 
+                          className="text-xs opacity-75"
+                          style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}
+                        >
+                          Last updated: {new Date(displayData.lastModified).toLocaleString()}
+                        </div>
                       </div>
                     )}
 
@@ -1209,6 +1319,59 @@ export function InteractiveWorldMap({
           })}
         </svg>
       </div>
+
+      {/* Active Countries Sidebar */}
+      <AnimatePresence>
+        {Object.entries(countryData).some(([, data]) => data.isActive) && (
+          <motion.div
+            className="absolute top-4 left-4 z-20 bg-white dark:bg-gray-800 rounded-lg shadow-lg max-w-sm"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -20 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="p-4">
+              <h3 className="font-medium text-gray-900 dark:text-white mb-3 flex items-center">
+                <div className="w-3 h-3 bg-yellow-500 rounded-full mr-2 animate-pulse"></div>
+                Active Countries
+              </h3>
+              <div className="space-y-2 max-h-40 overflow-y-auto">
+                {Object.entries(countryData)
+                  .filter(([, data]) => data.isActive)
+                  .map(([regionId, data]) => (
+                    <motion.div
+                      key={regionId}
+                      className="flex items-center space-x-2 p-2 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
+                      onClick={() => handleRegionClick(regionId)}
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <div 
+                        className="w-4 h-4 rounded-full border-2 border-white shadow-sm"
+                        style={{ backgroundColor: data.color }}
+                      />
+                      <div className="flex-1 min-w-0">
+                        <div className="text-sm font-medium text-gray-900 dark:text-white truncate">
+                          {data.name}
+                        </div>
+                        <div className="text-xs text-gray-500 dark:text-gray-400">
+                          {data.ruler}
+                        </div>
+                      </div>
+                      {regionId === activeCountry && (
+                        <div className="text-yellow-500">
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                      )}
+                    </motion.div>
+                  ))}
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Legend & Controls */}
       <motion.div 
