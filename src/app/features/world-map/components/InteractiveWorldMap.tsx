@@ -19,6 +19,12 @@ interface CountryData {
   color: string;
   lastModified: number;
   isActive: boolean;
+  // Add location-specific fields
+  type?: string;
+  affiliation?: string;
+  notable_features?: string;
+  lore?: string;
+  linked_arcana?: string;
 }
 
 interface InteractiveWorldMapProps {
@@ -57,13 +63,65 @@ export function InteractiveWorldMap({
     setHoveredLocation(location);
   };
 
+  const shouldIgnoreRegion = (regionId: string): boolean => {
+    if (!regionId) return true;
+    
+    const lowerRegionId = regionId.toLowerCase();
+    
+    // Filter out non-region elements
+    if (lowerRegionId.includes('grid') || 
+        lowerRegionId.includes('_px') || 
+        lowerRegionId.includes('background') ||
+        lowerRegionId.includes('layer') ||
+        lowerRegionId.includes('group')) {
+      return true;
+    }
+    
+    // Check if this is a black shape (which should not have separate popups)
+    const regionElement = document.getElementById(regionId);
+    if (regionElement) {
+      const pathElements = regionElement.querySelectorAll('path, polygon, rect, circle') as NodeListOf<SVGElement>;
+      
+      // Check if this region is primarily black/dark colored
+      for (const pathElement of pathElements) {
+        const computedStyle = window.getComputedStyle(pathElement);
+        const fillColor = computedStyle.fill;
+        
+        if (fillColor && (
+          fillColor === '#000000' || 
+          fillColor === '#000' || 
+          fillColor === 'black' ||
+          fillColor.includes('rgb(0, 0, 0)') ||
+          fillColor.includes('rgba(0, 0, 0')
+        )) {
+          console.log('Ignoring black region:', regionId, 'fill:', fillColor);
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  };
+
   const handleRegionClick = (regionId: string) => {
-    // Filter out non-region elements like grids, backgrounds, etc.
-    if (regionId && (regionId.toLowerCase().includes('grid') || regionId.toLowerCase().includes('_px') || regionId.toLowerCase().includes('background'))) {
+    if (shouldIgnoreRegion(regionId)) {
       return;
     }
     
-    console.log('Region clicked:', regionId);
+    console.log('=== REGION CLICK DEBUG ===');
+    console.log('Region ID clicked:', regionId);
+    console.log('Available locations count:', locations.length);
+    console.log('Location names:', locations.map(loc => loc.name));
+    console.log('Attempting to find matching location...');
+    
+    // FORCE TEST - let's see what happens if we manually match
+    if (regionId === 'Bosnia2') {
+      console.log('BOSNIA2 DETECTED - trying to force match with first location...');
+      const firstLocation = locations[0];
+      if (firstLocation) {
+        console.log('Force matching Bosnia2 to:', firstLocation.name);
+      }
+    }
     
     // Clear previous selection and set new one
     setSelectedRegion(regionId);
@@ -114,13 +172,13 @@ export function InteractiveWorldMap({
       setIsEditing(true);
     }, 100);
     
-    // Find location that matches this region
-    const matchedLocation = locations.find(loc => 
-      loc.name.toLowerCase().includes(regionId.toLowerCase()) ||
-      regionId.toLowerCase().includes(loc.name.toLowerCase())
-    );
+    // Find location that matches this region using enhanced matching
+    const matchedLocation = findBestMatchingLocation(regionId);
     if (matchedLocation) {
+      console.log('Found matching location for click event:', matchedLocation.name);
       onLocationClick(matchedLocation);
+    } else {
+      console.log('No matching location found for click event');
     }
   };
 
@@ -189,19 +247,125 @@ export function InteractiveWorldMap({
     return currentTheme.primary;
   };
 
-  // Seed initial country data
-  const getDefaultCountryData = (regionId: string): CountryData => {
+  // Manual mapping for specific SVG region IDs to database locations
+  const getManualLocationMapping = (): Record<string, string> => {
+    return {
+      // Map actual SVG region IDs to location names in your database
+      'Bosnia2': 'Selene Gate',  // Example: when user clicks Bosnia2, show Selene Gate data
+      'Sicily': 'Hyperborea Library',
+      'Tuscany': 'Citadel of Borealis', 
+      'Croatia': 'Ironroot Mountains',
+      'Serbia': 'Hollow Spire',
+      'Slovenia': 'Aurum Bazaar',
+      'Hungary': 'Rift of Ages',
+      'Romania': 'Mechanikos',
+      'Bulgaria': 'Glass Sea of Zephyria',
+      'Greece': 'Ebon-Heath Sanctuary'
+      // Add more mappings as needed
+    };
+  };
+
+  // Enhanced location matching with multiple strategies
+  const findBestMatchingLocation = (regionId: string): Location | null => {
+    if (!locations || locations.length === 0) return null;
+    
+    console.log('Searching for location matching region ID:', regionId);
+    
+    // Strategy 0: Manual mapping override (SOLVES YOUR PROBLEM!)
+    const manualMapping = getManualLocationMapping();
+    if (manualMapping[regionId]) {
+      const targetLocationName = manualMapping[regionId];
+      const manualMatch = locations.find(location => 
+        location.name === targetLocationName
+      );
+      if (manualMatch) {
+        console.log('🎯 MANUAL MAPPING SUCCESS! Region:', regionId, '→ Location:', manualMatch.name);
+        return manualMatch;
+      }
+    }
+    
+    // Strategy 1: Exact svgRegionId match
+    let match = locations.find(location => location.svgRegionId === regionId);
+    if (match) {
+      console.log('Found exact svgRegionId match:', match.name);
+      return match;
+    }
+    
+    // Strategy 2: Exact name match (case-insensitive)
+    const regionNameFormatted = formatRegionName(regionId);
+    match = locations.find(location => 
+      location.name.toLowerCase() === regionNameFormatted.toLowerCase()
+    );
+    if (match) {
+      console.log('Found exact name match:', match.name);
+      return match;
+    }
+    
+    // Strategy 3: Partial name matching (location name contains region words)
+    const regionWords = regionNameFormatted.toLowerCase().split(/\s+/);
+    match = locations.find(location => {
+      const locationName = location.name.toLowerCase();
+      return regionWords.some(word => word.length > 2 && locationName.includes(word));
+    });
+    if (match) {
+      console.log('Found partial name match:', match.name, 'for words:', regionWords);
+      return match;
+    }
+    
+    // Strategy 4: Reverse partial matching (region contains location words)
+    match = locations.find(location => {
+      const locationWords = location.name.toLowerCase().split(/\s+/);
+      const regionLower = regionId.toLowerCase();
+      return locationWords.some(word => word.length > 2 && regionLower.includes(word));
+    });
+    if (match) {
+      console.log('Found reverse partial match:', match.name);
+      return match;
+    }
+    
+    console.log('No matching location found for region:', regionId);
+    return null;
+  };
+
+  // Get location data from database or create default
+  const getLocationBasedCountryData = (regionId: string): CountryData => {
+    const matchedLocation = findBestMatchingLocation(regionId);
+
+    if (matchedLocation) {
+      console.log('Using database location data for:', matchedLocation.name);
+      return {
+        id: regionId,
+        name: matchedLocation.name,
+        description: matchedLocation.description || 'A mysterious land waiting to be explored.',
+        population: 'Unknown', // Could be added to location schema
+        ruler: matchedLocation.affiliation || 'To be determined',
+        culture: 'Rich cultural heritage', // Could be added to location schema  
+        economy: 'Developing', // Could be added to location schema
+        notes: matchedLocation.lore || 'Add your observations and discoveries here.',
+        color: extractColorFromRegion(regionId),
+        lastModified: Date.now(),
+        isActive: false,
+        type: matchedLocation.type,
+        affiliation: matchedLocation.affiliation,
+        notable_features: matchedLocation.notable_features,
+        lore: matchedLocation.lore,
+        linked_arcana: matchedLocation.linked_arcana
+      };
+    }
+
+    // Fallback for regions not in database
+    console.log('Using fallback data for region:', regionId);
     const formattedName = formatRegionName(regionId);
     const displayName = formattedName || regionId.replace(/[_-]/g, ' ') || 'Unknown Location';
     
     return {
       id: regionId,
       name: displayName,
-      description: 'A mysterious land waiting to be explored and documented.',
+      description: 'This region has not yet been documented in the database. Click Edit to add information about this location.',
       population: 'Unknown',
       ruler: 'To be determined',
       culture: 'Rich cultural heritage',
-      economy: 'Developing',
+      economy: 'Developing', 
       notes: 'Add your observations and discoveries here.',
       color: extractColorFromRegion(regionId),
       lastModified: Date.now(),
@@ -211,7 +375,7 @@ export function InteractiveWorldMap({
 
   const getCurrentCountryData = (regionId: string): CountryData => {
     if (!countryData[regionId]) {
-      const defaultData = getDefaultCountryData(regionId);
+      const defaultData = getLocationBasedCountryData(regionId);
       setCountryData(prev => ({ ...prev, [regionId]: defaultData }));
       return defaultData;
     }
@@ -294,15 +458,55 @@ export function InteractiveWorldMap({
     }
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (editingData && clickedRegion) {
-      updateCountryData(clickedRegion, editingData);
-      setIsEditing(false);
-      setEditingData(null);
-      console.log('Saved country data:', editingData);
-      
-      // Keep this country as active
-      setActiveCountry(clickedRegion);
+      try {
+        // Find the matching location in the database using our enhanced matching
+        const matchedLocation = findBestMatchingLocation(clickedRegion);
+
+        if (matchedLocation) {
+          // Update the database location
+          const response = await fetch(`/api/locations/${matchedLocation.id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              name: editingData.name,
+              description: editingData.description,
+              affiliation: editingData.ruler,
+              lore: editingData.notes,
+              type: editingData.type,
+              notable_features: editingData.notable_features,
+              linked_arcana: editingData.linked_arcana
+            }),
+          });
+
+          const result = await response.json();
+          if (!result.success) {
+            console.error('Failed to update location:', result.error);
+            // Still update local state for user feedback
+          } else {
+            console.log('Location updated in database:', result.location);
+          }
+        }
+
+        // Update local state
+        updateCountryData(clickedRegion, editingData);
+        setIsEditing(false);
+        setEditingData(null);
+        console.log('Saved country data:', editingData);
+        
+        // Keep this country as active
+        setActiveCountry(clickedRegion);
+      } catch (error) {
+        console.error('Error saving location data:', error);
+        // Still update local state for user feedback
+        updateCountryData(clickedRegion, editingData);
+        setIsEditing(false);
+        setEditingData(null);
+        setActiveCountry(clickedRegion);
+      }
     }
   };
 
@@ -324,8 +528,8 @@ export function InteractiveWorldMap({
   };
 
   const handleRegionHover = (regionId: string | null) => {
-    // Filter out non-region elements like grids, backgrounds, etc.
-    if (regionId && (regionId.toLowerCase().includes('grid') || regionId.toLowerCase().includes('_px') || regionId.toLowerCase().includes('background'))) {
+    // Filter out unwanted regions
+    if (regionId && shouldIgnoreRegion(regionId)) {
       return;
     }
     
@@ -1078,10 +1282,47 @@ export function InteractiveWorldMap({
                       )}
                     </div>
 
-                    {/* Notes */}
+                    {/* Notable Features */}
+                    {displayData.notable_features && (
+                      <div>
+                        <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          Notable Features
+                        </label>
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.notable_features}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Type */}
+                    {displayData.type && (
+                      <div>
+                        <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          Location Type
+                        </label>
+                        <div className="text-sm" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          {displayData.type}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Linked Arcana */}
+                    {displayData.linked_arcana && (
+                      <div>
+                        <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          Linked Arcana
+                        </label>
+                        <div className="text-sm flex items-center" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
+                          <span className="mr-2">🃏</span>
+                          {displayData.linked_arcana}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Notes/Lore */}
                     <div>
                       <label className="block text-xs font-medium mb-1" style={{ color: 'white', textShadow: '1px 1px 2px rgba(0,0,0,0.8)' }}>
-                        Notes
+                        {displayData.lore ? 'Lore & Notes' : 'Notes'}
                       </label>
                       {isEditing ? (
                         <textarea

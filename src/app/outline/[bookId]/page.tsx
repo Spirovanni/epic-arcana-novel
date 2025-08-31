@@ -225,7 +225,7 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
           )}
 
           {/* Learning Objectives */}
-          {chapter.terminalLearningObjectives && Object.keys(chapter.terminalLearningObjectives).length > 0 && (
+          {chapter.terminalLearningObjectives && typeof chapter.terminalLearningObjectives === 'object' && Object.keys(chapter.terminalLearningObjectives).length > 0 && (
             <div>
               <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
                 <CheckCircleIcon className="w-4 h-4" />
@@ -242,7 +242,7 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                          {objective}
+                          {typeof objective === 'string' ? objective : typeof objective === 'object' ? JSON.stringify(objective) : String(objective)}
                         </p>
                       </div>
                     </div>
@@ -351,6 +351,9 @@ export default function OutlinePage() {
   const [outlineData, setOutlineData] = useState<OutlineData | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedChapters, setExpandedChapters] = useState<Set<string>>(new Set());
+  const [showTableOfContents, setShowTableOfContents] = useState(false);
+  const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     if (!bookId) return;
@@ -372,6 +375,15 @@ export default function OutlinePage() {
     fetchData();
   }, [bookId]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleChapterExpanded = (chapterId: string) => {
     const newExpanded = new Set(expandedChapters);
     if (newExpanded.has(chapterId)) {
@@ -390,6 +402,23 @@ export default function OutlinePage() {
 
   const collapseAll = () => {
     setExpandedChapters(new Set());
+  };
+
+  const scrollToChapter = (chapterNumber: number) => {
+    const element = document.getElementById(`chapter-${chapterNumber}`);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setSelectedChapter(chapterNumber);
+      setShowTableOfContents(false);
+    }
+  };
+
+  const toggleTableOfContents = () => {
+    setShowTableOfContents(!showTableOfContents);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   if (loading) {
@@ -499,31 +528,90 @@ export default function OutlinePage() {
           </div>
         </div>
 
-        {/* Controls */}
-        <div className="flex items-center justify-between mb-8">
-          <div className="flex items-center gap-4">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
-              Chapter Journey
-            </h2>
-            <span className="text-gray-500 dark:text-gray-400">
-              • {chapters.length} chapters of epic adventure
-            </span>
+        {/* Navigation and Controls */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                Chapter Journey
+              </h2>
+              <span className="text-gray-500 dark:text-gray-400">
+                • {chapters.length} chapters of epic adventure
+              </span>
+            </div>
+            
+            <div className="flex items-center gap-4">
+              <button
+                onClick={toggleTableOfContents}
+                className="flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300 rounded-lg hover:bg-purple-200 dark:hover:bg-purple-900/70 transition-colors text-sm font-medium"
+              >
+                <DocumentTextIcon className="w-4 h-4" />
+                Table of Contents
+              </button>
+              <button
+                onClick={expandAll}
+                className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg hover:bg-indigo-200 dark:hover:bg-indigo-900/70 transition-colors text-sm font-medium"
+              >
+                Expand All
+              </button>
+              <button
+                onClick={collapseAll}
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
+              >
+                Collapse All
+              </button>
+            </div>
           </div>
-          
-          <div className="flex items-center gap-4">
-            <button
-              onClick={expandAll}
-              className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-lg hover:bg-indigo-200 dark:hover:bg-indigo-900/70 transition-colors text-sm font-medium"
-            >
-              Expand All
-            </button>
-            <button
-              onClick={collapseAll}
-              className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium"
-            >
-              Collapse All
-            </button>
-          </div>
+
+          {/* Table of Contents Overlay */}
+          {showTableOfContents && (
+            <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full max-h-[80vh] overflow-hidden">
+                <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">
+                    Table of Contents - {book.title}
+                  </h3>
+                  <button
+                    onClick={toggleTableOfContents}
+                    className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="p-6 overflow-y-auto max-h-[60vh]">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {chapters.map((chapter) => (
+                      <button
+                        key={chapter.id}
+                        onClick={() => scrollToChapter(chapter.chapterNumber)}
+                        className={`p-3 text-left rounded-lg border transition-all duration-200 hover:shadow-md ${
+                          selectedChapter === chapter.chapterNumber
+                            ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/20 text-indigo-900 dark:text-indigo-100'
+                            : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2 mb-1">
+                          <span className="text-xs font-semibold px-2 py-1 rounded bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                            {chapter.chapterNumber}
+                          </span>
+                          <span className="text-sm font-medium truncate">
+                            {chapter.title || `Chapter ${chapter.chapterNumber}`}
+                          </span>
+                        </div>
+                        {chapter.summary && (
+                          <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">
+                            {chapter.summary}
+                          </p>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Progress Bar */}
@@ -543,12 +631,13 @@ export default function OutlinePage() {
         {/* Chapters */}
         <div className="space-y-6">
           {chapters.map((chapter) => (
-            <ChapterCard
-              key={chapter.id}
-              chapter={chapter}
-              isExpanded={expandedChapters.has(chapter.id)}
-              onToggleExpanded={() => toggleChapterExpanded(chapter.id)}
-            />
+            <div key={chapter.id} id={`chapter-${chapter.chapterNumber}`}>
+              <ChapterCard
+                chapter={chapter}
+                isExpanded={expandedChapters.has(chapter.id)}
+                onToggleExpanded={() => toggleChapterExpanded(chapter.id)}
+              />
+            </div>
           ))}
         </div>
 
@@ -563,6 +652,19 @@ export default function OutlinePage() {
             From ambitious law student to Master of Two Worlds in {chapters.length} epic chapters
           </p>
         </div>
+
+        {/* Back to Top Button */}
+        {showBackToTop && (
+          <button
+            onClick={scrollToTop}
+            className="fixed bottom-8 right-8 z-40 p-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+            title="Back to Top"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+          </button>
+        )}
       </div>
     </div>
   );

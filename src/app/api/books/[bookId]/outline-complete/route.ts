@@ -7,13 +7,21 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
   try {
     const { bookId } = await params;
     
-    // Get book information
-    const book = await db.select().from(books).where(eq(books.id, bookId)).limit(1);
+    // Determine if bookId is a number or UUID and query accordingly
+    let book;
+    if (/^\d+$/.test(bookId)) {
+      // If bookId is a number, query by bookNumber
+      book = await db.select().from(books).where(eq(books.bookNumber, parseInt(bookId))).limit(1);
+    } else {
+      // If bookId is a UUID, query by id
+      book = await db.select().from(books).where(eq(books.id, bookId)).limit(1);
+    }
     if (book.length === 0) {
       return new NextResponse('Book Not Found', { status: 404 });
     }
     
-    // Get all chapters for the book
+    // Get all chapters for the book using the actual book UUID
+    const actualBookId = book[0].id;
     const bookChapters = await db.select({
       id: chapters.id,
       title: chapters.title,
@@ -30,7 +38,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       tarotFamily: chapters.tarotFamily,
       tarotCardLink: chapters.tarotCardLink,
       terminalLearningObjectives: chapters.terminalLearningObjectives
-    }).from(chapters).where(eq(chapters.bookId, bookId)).orderBy(asc(chapters.chapterNumber));
+    }).from(chapters).where(eq(chapters.bookId, actualBookId)).orderBy(asc(chapters.chapterNumber));
 
     // Get all scenes for all chapters
     if (bookChapters.length === 0) {

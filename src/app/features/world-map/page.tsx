@@ -61,72 +61,23 @@ export default function WorldMapPage() {
       // Load SVG regions first
       const regions = await extractSVGRegions();
       
-      // Use static data directly since we don't have an API endpoint yet
-      const locationsData = [
-        {
-          name: "Hyperborea Library",
-          other_names: ["The Citadel of the Shining Ones"],
-          sensory_description: "A vast, crystalline fortress that glows with a soft, ethereal light. The air is filled with the sound of distant chimes and the scent of frost.",
-          location: "Located at the northernmost point of Laurasia, surrounded by the icy expanse of the Hyperborean Sea.",
-          type: "Cyclopean Library-City",
-          description: "A tiered citadel of translucent ice-stone that refracts polar sunlight into reading chambers below. Scrolls here are etched on mica leaves that sing when turned.",
-          notable_features: "Contains the only intact copy of the lost 'Cicero Codex Borealis'. Frost-lamps powered by aurora energy keep ink from fading.",
-          lore: "Founded by the Shining Ones before the last axial tilt; scholars claim its vaults shift location whenever the Pole Star realigns.",
-          affiliation: "Neutral—policed by the Varangian Archivists",
-          linked_arcana: "The Hermit"
-        },
-        {
-          name: "Citadel of Borealis",
-          other_names: ["The Chrono-Fortress"],
-          sensory_description: "A towering structure of shimmering ice and stone, surrounded by a swirling aurora. The air is crisp and filled with the scent of pine.",
-          location: "Located in the heart of the Hyperborean Sea, surrounded by a vast expanse of ice and snow.",
-          type: "Fortress-Observatory",
-          description: "A hexagonal bastion perched on a basalt column rising from the Sea of Glass. Its ramparts double as an armillary sphere tracking convergent timelines.",
-          notable_features: "Houses the Chrono-Bell whose toll resets minor paradoxes within a day's march.",
-          lore: "Built by Roger de Flor's engineer-magi during the First Catalan Incursion; now garrisoned by knights of the Order of the Dragon.",
-          affiliation: "Grand Catalan Company",
-          linked_arcana: "The Tower"
-        },
-        {
-          name: "Ironroot Mountains",
-          other_names: ["The Orichalcum Peaks"],
-          sensory_description: "A range of jagged peaks that glint with metallic hues, surrounded by the scent of molten metal and the sound of clanging hammers.",
-          location: "Stretching across the western edge of Laurasia, bordering the Sea of Orichalcum.",
-          type: "Mountain Range",
-          description: "Jagged peaks shot through with metallic trees whose sap smelts into orichalcum.",
-          notable_features: "Canyons echo with 'Smith-songs'—natural harmonics that temper blades left to resonate overnight.",
-          lore: "Legend holds that the Kusanagi was re-forged here after shattering a dragon's scale.",
-          affiliation: "Independent dwarf-clans & Hospitaller prospectors",
-          linked_arcana: "Strength"
-        },
-        {
-          name: "Selene Gate",
-          type: "Moon-Temple & Portal",
-          description: "Marble arch flanked by twin crescent pylons; at syzygy it opens a mirror-path to Gondwana's Shadow Coast.",
-          notable_features: "Central altar floats on a column of lunar gravity, allowing weightless martial training.",
-          lore: "Custodied by Salasa Atumari's tide-priests who levy 'silver tithes' for each crossing.",
-          affiliation: "Salasa's Tide Cult",
-          linked_arcana: "The High Priestess"
-        },
-        {
-          name: "Hollow Spire",
-          type: "Natural/Arcane Monolith",
-          description: "A kilometer-high needle of obsidian with a spiraling cavity down its core; ascending winds produce organ-like drones.",
-          notable_features: "Acoustics translate spoken vows into binding geasa enforced by the land itself.",
-          lore: "Petrarch is prophesied to utter a verse here that will shatter Dagon's deterministic script.",
-          affiliation: "Neutral—pilgrimage site for poets & oath-breakers alike",
-          linked_arcana: "Judgement"
-        }
-      ];
+      // Fetch actual locations from the database
+      const response = await fetch('/api/locations');
+      const data = await response.json();
+      
+      if (!data.success) {
+        throw new Error(data.error || 'Failed to fetch locations');
+      }
+      
+      const locationsData = data.locations || [];
 
-      const processedLocations = locationsData.map((location, index) => {
+      const processedLocations = locationsData.map((location: Location) => {
         // Try to find matching SVG region for this location
         const matchingRegion = findMatchingRegion(location.name, regions);
         
         return {
           ...location,
-          id: `loc-${index}`,
-          coordinates: matchingRegion?.coordinates || generateCoordinates(index, locationsData.length),
+          coordinates: matchingRegion?.coordinates || location.coordinates || generateRandomCoordinates(),
           chapters: generateMockChapters(location.name),
           svgRegionId: matchingRegion?.id
         };
@@ -135,6 +86,8 @@ export default function WorldMapPage() {
       setLocations(processedLocations);
     } catch (error) {
       console.error('Error loading locations:', error);
+      // Fallback to empty array instead of hardcoded data
+      setLocations([]);
     } finally {
       setIsLoading(false);
     }
@@ -144,16 +97,11 @@ export default function WorldMapPage() {
     loadLocations();
   }, [loadLocations]);
 
-  const generateCoordinates = (index: number, total: number) => {
-    // Generate coordinates in a circular pattern for demo
-    const angle = (index / total) * 2 * Math.PI;
-    const radius = 200;
-    const centerX = 400;
-    const centerY = 300;
-    
+  const generateRandomCoordinates = () => {
+    // Generate random coordinates within the map bounds
     return {
-      x: centerX + radius * Math.cos(angle),
-      y: centerY + radius * Math.sin(angle)
+      x: Math.random() * 800 + 100, // Random x between 100-900
+      y: Math.random() * 600 + 100  // Random y between 100-700
     };
   };
 
