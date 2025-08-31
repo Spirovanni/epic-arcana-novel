@@ -241,9 +241,28 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                          {typeof objective === 'string' ? objective : typeof objective === 'object' ? JSON.stringify(objective) : String(objective)}
-                        </p>
+                        <div className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                          {typeof objective === 'string' ? (
+                            <p>{objective}</p>
+                          ) : typeof objective === 'object' && objective !== null ? (
+                            <div className="space-y-2">
+                              {Object.entries(objective as Record<string, unknown>).map(([subKey, subValue]) => (
+                                <div key={subKey}>
+                                  {typeof subValue === 'string' && subValue.trim() && (
+                                    <p className="mb-1">
+                                      <span className="font-medium text-gray-600 dark:text-gray-400 capitalize">
+                                        {subKey.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())}:
+                                      </span>
+                                      {' '}{subValue}
+                                    </p>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          ) : (
+                            <p>{String(objective)}</p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}
