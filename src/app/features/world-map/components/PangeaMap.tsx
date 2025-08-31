@@ -345,7 +345,7 @@ const PangeaMap = forwardRef<HTMLDivElement, PangeaMapProps>(
       } catch (error) {
         console.error('Error in PangeaMap useEffect:', error);
       }
-    }, [svgContent, isReady]);
+    }, [svgContent, isReady, addGridToSVG, addRegionInteractivity, applyMapStyles, handleRegionClickEvent, handleRegionHoverEvent, handleRegionLeaveEvent, onReady, ref]);
 
     // Separate effect for updating interactivity when selectedRegion changes
     useEffect(() => {

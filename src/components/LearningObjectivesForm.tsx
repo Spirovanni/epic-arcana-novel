@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { CheckCircleIcon, PlusIcon, TrashIcon, BookOpenIcon } from '@heroicons/react/24/outline';
+import { CheckCircleIcon, BookOpenIcon } from '@heroicons/react/24/outline';
 
 interface LearningObjectivesData {
   title: string;
