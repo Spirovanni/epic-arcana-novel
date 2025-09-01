@@ -39,7 +39,7 @@ export function MainContent() {
         {...fadeIn}
       >
         <h1 className="text-6xl md:text-8xl font-extrabold bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 dark:from-purple-400 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent leading-tight mb-6 font-narrative">
-          ChronoScriptor
+          Epic Arcana
         </h1>
         <p className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed font-mono">
           Forge intricate narratives, master temporal paradoxes, and weave destiny with the power of the Trionfi Arcana.
@@ -177,7 +177,7 @@ export function MainContent() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Join ChronoScriptor Today
+            Join Epic Arcana Today
           </MotionButton>
         </Link>
       </MotionSection>

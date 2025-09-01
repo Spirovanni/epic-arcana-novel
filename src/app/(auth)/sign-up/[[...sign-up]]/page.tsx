@@ -19,7 +19,7 @@ export default function SignUpPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent mb-2"
           >
-            Join ChronoScriptor
+            Join Epic Arcana
           </motion.h1>
           <motion.p
             initial={{ y: -20, opacity: 0 }}

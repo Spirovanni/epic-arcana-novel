@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useUser, UserButton } from '@clerk/nextjs';
+import Image from 'next/image';
 import { 
   BookOpenIcon, 
   SparklesIcon, 
@@ -93,9 +94,13 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 rounded-xl shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300 flex items-center justify-center">
-                  <SparklesIcon className="w-6 h-6 text-white drop-shadow-lg" />
-                </div>
+                <Image
+                  src="/images/Epic_Arcana_Logo.png"
+                  alt="Epic Arcana Logo"
+                  width={40}
+                  height={40}
+                  className="rounded-xl shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300"
+                />
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
               </div>
               <div className="hidden sm:block">

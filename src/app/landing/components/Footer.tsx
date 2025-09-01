@@ -20,7 +20,7 @@ export function Footer() {
           transition={{ duration: 0.5, delay: 1.0 }}
         >
           <div className="text-sm text-gray-600 dark:text-gray-400">
-            © {currentYear} ChronoScriptor. Crafted for epic storytelling.
+            © {currentYear} Epic Arcana. Crafted for epic storytelling.
           </div>
           <div className="flex gap-6 text-sm">
             <motion.a

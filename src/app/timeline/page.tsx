@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // Mock data structure - will be replaced with real database calls
 interface TimelineEvent {
@@ -125,10 +126,14 @@ export default function TimelinePage() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-600 to-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold text-white">CS</span>
-                </div>
-                <span className="text-xl font-bold">ChronoScriptor</span>
+                <Image
+                  src="/images/Epic_Arcana_Logo.png"
+                  alt="Epic Arcana Logo"
+                  width={32}
+                  height={32}
+                  className="rounded-lg"
+                />
+                <span className="text-xl font-bold">Epic Arcana</span>
               </Link>
               <span className="text-gray-400">•</span>
               <h1 className="text-xl font-semibold">Timeline & Paradox System</h1>

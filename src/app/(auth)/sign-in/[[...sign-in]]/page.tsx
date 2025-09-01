@@ -27,7 +27,7 @@ export default function SignInPage() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-gray-600 dark:text-gray-400"
           >
-            Sign in to ChronoScriptor
+            Sign in to Epic Arcana
           </motion.p>
         </div>
         
