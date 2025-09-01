@@ -10,7 +10,7 @@ export function ColorCycle() {
         <div>
           <h2 className="text-3xl font-extrabold">Your color in the 360‑day cycle</h2>
           <p className="mt-3 text-slate-300/90">
-            Your personality score lights up a unique hue in the Human Framework's living wheel.
+            Your personality score lights up a unique hue in the Human Framework&apos;s living wheel.
             Each day reveals a theme—your personal chapter to explore, reflect, and grow.
           </p>
           <ul className="mt-5 text-sm text-slate-300/90 list-disc list-inside">

@@ -13,7 +13,7 @@ export function WorldLaurasia() {
           <h2 className="text-3xl font-extrabold">A fantasy world where <span className={gradText}>you</span> are the hero</h2>
           <p className="mt-4 text-slate-300/90">
             The saga of <em>Laurasia</em> mirrors your personal development. As characters navigate
-            paradox, honor, and destiny—you'll practice the same virtues and choices in real life.
+            paradox, honor, and destiny—you&apos;ll practice the same virtues and choices in real life.
           </p>
           <ul className="mt-6 space-y-2 text-sm text-slate-300/90 list-disc list-inside">
             <li>Tarot-style Trionfi roles map to your Player Profile</li>

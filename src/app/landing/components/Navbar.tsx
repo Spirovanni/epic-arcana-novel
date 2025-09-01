@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
 
-const gradText = "bg-gradient-to-r from-indigo-300 via-indigo-400 to-blue-300 bg-clip-text text-transparent";
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
 export function Navbar() {

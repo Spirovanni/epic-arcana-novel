@@ -25,7 +25,7 @@ export function Hero() {
               <br />
               Unlock your <span className={gradText}>Role</span>.
               <br />
-              Begin your <span className="text-emerald-300">Hero's Journey</span>.
+              Begin your <span className="text-emerald-300">Hero&apos;s Journey</span>.
             </h1>
             <p className="mt-5 max-w-xl text-slate-300/90">
               Step into <em>The Human Framework</em>: a living world where your personality

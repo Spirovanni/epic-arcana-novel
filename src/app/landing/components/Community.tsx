@@ -22,7 +22,7 @@ export function Community() {
                 </div>
               </div>
               <p className="mt-3 text-xs text-slate-300/90">
-                "I realized I wasn't just reading the story—I was living it."
+                &quot;I realized I wasn&apos;t just reading the story—I was living it.&quot;
               </p>
             </div>
           ))}
