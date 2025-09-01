@@ -28,11 +28,11 @@ export function Navbar() {
         </div>
 
         {/* Center nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300">
-          <a href="#how" className="hover:text-white/90 transition-colors">How it works</a>
-          <a href="#world" className="hover:text-white/90 transition-colors">World</a>
-          <a href="#community" className="hover:text-white/90 transition-colors">Community</a>
-          <a href="#cycle" className="hover:text-white/90 transition-colors">Cycle</a>
+        <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300 font-semibold">
+          <a href="#how" className="hover:text-white/90 transition-colors tracking-wide">How it works</a>
+          <a href="#world" className="hover:text-white/90 transition-colors tracking-wide">World</a>
+          <a href="#community" className="hover:text-white/90 transition-colors tracking-wide">Community</a>
+          <a href="#cycle" className="hover:text-white/90 transition-colors tracking-wide">Cycle</a>
         </nav>
 
         {/* Right auth section */}
@@ -56,13 +56,13 @@ export function Navbar() {
           ) : (
             <>
               <SignInButton mode="modal">
-                <button className="text-sm text-slate-300 hover:text-white/90 transition-colors">
+                <button className="text-sm text-slate-300 hover:text-white/90 transition-colors font-semibold tracking-wide">
                   Sign In
                 </button>
               </SignInButton>
               <SignUpButton mode="modal">
                 <button
-                  className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
+                  className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide`}
                 >
                   Take Assessment
                 </button>
