@@ -89,28 +89,17 @@ export default function Navbar() {
   return (
     <nav className="relative z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-violet-900 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-2xl border-b border-purple-500/20 dark:border-gray-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-12">
           {/* Logo and Brand */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <Image
-                  src="/images/Epic_Arcana_Logo.png"
-                  alt="Epic Arcana Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-xl shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300"
-                />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-              </div>
-              <div className="hidden sm:block">
-                <h1 className="text-xl font-black text-white tracking-tight">
-                  Epic Arcana
-                </h1>
-                <p className="text-xs text-purple-200 -mt-1">
-                  Temporal Chronicles
-                </p>
-              </div>
+            <Link href="/" className="flex items-center group">
+              <Image
+                src="/images/Epic_Arcana_Logo.png"
+                alt="Epic Arcana"
+                width={174}
+                height={58}
+                className="hover:opacity-90 transition-all duration-300"
+              />
             </Link>
           </div>
 

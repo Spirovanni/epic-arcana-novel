@@ -148,7 +148,7 @@ export function Navbar() {
       transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <div className="container mx-auto px-4 lg:px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           {/* Logo */}
           <motion.div 
             className="flex items-center"
@@ -156,25 +156,14 @@ export function Navbar() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <Link href="/landing" className="flex items-center space-x-3 group">
-              <div className="relative">
-                <Image
-                  src="/images/Epic_Arcana_Logo.png"
-                  alt="Epic Arcana Logo"
-                  width={40}
-                  height={40}
-                  className="rounded-xl shadow-lg group-hover:shadow-amber-500/25 transition-all duration-300"
-                />
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-yellow-400 rounded-full animate-pulse"></div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 dark:from-purple-400 dark:to-blue-400 bg-clip-text text-transparent hover:from-purple-700 hover:to-blue-700 dark:hover:from-purple-300 dark:hover:to-blue-300 transition-all duration-300">
-                  Epic Arcana
-                </h1>
-                <p className="text-xs text-gray-500 dark:text-gray-400 -mt-1">
-                  Temporal Chronicles
-                </p>
-              </div>
+            <Link href="/landing" className="flex items-center group">
+              <Image
+                src="/images/Epic_Arcana_Logo.png"
+                alt="Epic Arcana"
+                width={174}
+                height={58}
+                className="hover:opacity-90 transition-all duration-300"
+              />
             </Link>
           </motion.div>
 

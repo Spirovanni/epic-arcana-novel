@@ -122,18 +122,17 @@ export default function TimelinePage() {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-gray-900 dark:to-gray-800 text-black dark:text-white">
       {/* Header */}
       <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
                 <Image
                   src="/images/Epic_Arcana_Logo.png"
-                  alt="Epic Arcana Logo"
-                  width={32}
-                  height={32}
+                  alt="Epic Arcana"
+                  width={145}
+                  height={46}
                   className="rounded-lg"
                 />
-                <span className="text-xl font-bold">Epic Arcana</span>
               </Link>
               <span className="text-gray-400">•</span>
               <h1 className="text-xl font-semibold">Timeline & Paradox System</h1>
