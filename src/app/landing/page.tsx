@@ -1,17 +1,27 @@
-import { Header } from './components/Header';
-import { MainContent } from './components/MainContent';
-import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { Hook } from './components/Hook';
+import { HowItWorks } from './components/HowItWorks';
+import { WorldLaurasia } from './components/WorldLaurasia';
+import { Community } from './components/Community';
+import { ColorCycle } from './components/ColorCycle';
+import { SocialProof } from './components/SocialProof';
+import { FinalCTA } from './components/FinalCTA';
+import { Footer } from './components/Footer';
 
 export default function LandingPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <main className="min-h-screen text-slate-200 bg-[#0b1220]">
       <Navbar />
-      <div className="flex-1">
-        <Header />
-        <MainContent />
-      </div>
+      <Hero />
+      <Hook />
+      <HowItWorks />
+      <WorldLaurasia />
+      <Community />
+      <ColorCycle />
+      <SocialProof />
+      <FinalCTA />
       <Footer />
-    </div>
+    </main>
   );
 }

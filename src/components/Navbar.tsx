@@ -89,7 +89,7 @@ export default function Navbar() {
   return (
     <nav className="relative z-50 bg-gradient-to-r from-indigo-900 via-purple-900 to-violet-900 dark:from-gray-900 dark:via-gray-800 dark:to-black shadow-2xl border-b border-purple-500/20 dark:border-gray-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-12">
+        <div className="flex justify-between items-center h-20">
           {/* Logo and Brand */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center group">

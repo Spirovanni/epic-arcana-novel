@@ -1,52 +1,25 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import React from 'react';
+import Image from 'next/image';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <motion.footer 
-      className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-t border-gray-200 dark:border-gray-700 py-8 px-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.8 }}
-    >
-      <div className="container mx-auto text-center">
-        <motion.div
-          className="flex flex-col sm:flex-row items-center justify-between gap-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 1.0 }}
-        >
-          <div className="text-sm text-gray-600 dark:text-gray-400">
-            © {currentYear} Epic Arcana. Crafted for epic storytelling.
-          </div>
-          <div className="flex gap-6 text-sm">
-            <motion.a
-              href="/privacy"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              Privacy
-            </motion.a>
-            <motion.a
-              href="/terms"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              Terms
-            </motion.a>
-            <motion.a
-              href="/contact"
-              className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
-              whileHover={{ scale: 1.05 }}
-            >
-              Contact
-            </motion.a>
-          </div>
-        </motion.div>
+    <footer className="border-t border-white/5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <div className="flex items-center gap-2 text-slate-400 text-sm">
+          <Image
+            src="/images/Epic_Arcana_Logo.png"
+            alt="Epic Arcana"
+            width={80}
+            height={27}
+            className="opacity-70"
+          />
+        </div>
+        <div className="text-xs text-slate-500">© {currentYear} Epic Arcana • Human Framework</div>
       </div>
-    </motion.footer>
+    </footer>
   );
 }
