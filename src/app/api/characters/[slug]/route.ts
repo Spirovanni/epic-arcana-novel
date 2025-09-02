@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { characters } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
+import { currentUser } from '@clerk/nextjs/server';
+import { getUserPermissions } from '@/lib/auth';
 
 export async function GET(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -91,6 +93,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
 export async function PUT(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
+    // Check authentication and permissions
+    const user = await currentUser();
+    if (!user) {
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 });
+    }
+
+    const permissions = await getUserPermissions();
+    if (!permissions.canWrite) {
+      return NextResponse.json({ error: 'Write permission required' }, { status: 403 });
+    }
+
     const data = await request.json();
     
     // Remove fields that shouldn't be updated directly
