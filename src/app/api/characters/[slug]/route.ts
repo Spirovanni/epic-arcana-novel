@@ -110,7 +110,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ slug
     console.log('Request data keys:', Object.keys(data));
     
     // Remove fields that shouldn't be updated directly and handle date fields
-    const { createdAt, updatedAt, ...updateData } = data;
+    const { createdAt: _, updatedAt: __, ...updateData } = data;
     
     // Convert any string dates to Date objects
     if (updateData.birthYear && typeof updateData.birthYear === 'string') {

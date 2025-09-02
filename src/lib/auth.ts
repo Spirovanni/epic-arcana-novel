@@ -40,7 +40,7 @@ export async function getUserPermissions() {
     const isAdminUser = await isAdmin();
     
     // Future: Add paid membership check here
-    const isPaidMember = user.publicMetadata?.membershipType === 'paid';
+    // const isPaidMember = user.publicMetadata?.membershipType === 'paid';
     
     return {
       canRead: true, // All authenticated users can read
