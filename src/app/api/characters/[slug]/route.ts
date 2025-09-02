@@ -110,7 +110,8 @@ export async function PUT(request: Request, { params }: { params: Promise<{ slug
     console.log('Request data keys:', Object.keys(data));
     
     // Remove fields that shouldn't be updated directly and handle date fields
-    const { createdAt: _, updatedAt: __, ...updateData } = data;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { createdAt, updatedAt, ...updateData } = data;
     
     // Convert any string dates to Date objects
     if (updateData.birthYear && typeof updateData.birthYear === 'string') {
