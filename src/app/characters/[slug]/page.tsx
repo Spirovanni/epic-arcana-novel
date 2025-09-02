@@ -94,19 +94,24 @@ export default function CharacterProfilePage() {
     
     setSaving(true);
     try {
+      console.log('Saving character with data:', editData);
       const response = await fetch(`/api/characters/${slug}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(editData),
       });
 
+      console.log('Response status:', response.status);
+      
       if (response.ok) {
         const updatedCharacter = await response.json();
         setCharacter(updatedCharacter);
         setIsEditing(false);
         setEditData(null);
       } else {
-        setError('Failed to save character changes');
+        const errorData = await response.json().catch(() => ({ error: 'Unknown error' }));
+        console.error('Save failed:', response.status, errorData);
+        setError(`Failed to save character: ${errorData.error || 'Unknown error'}`);
       }
     } catch (error) {
       setError('Failed to save character changes');

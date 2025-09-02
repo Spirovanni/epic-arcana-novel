@@ -93,6 +93,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
 export async function PUT(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
+    console.log('PUT request for character slug:', slug);
+    
     // Check authentication and permissions
     const user = await currentUser();
     if (!user) {
@@ -105,9 +107,18 @@ export async function PUT(request: Request, { params }: { params: Promise<{ slug
     }
 
     const data = await request.json();
+    console.log('Request data keys:', Object.keys(data));
     
-    // Remove fields that shouldn't be updated directly
-    const { ...updateData } = data;
+    // Remove fields that shouldn't be updated directly and handle date fields
+    const { createdAt, updatedAt, ...updateData } = data;
+    
+    // Convert any string dates to Date objects
+    if (updateData.birthYear && typeof updateData.birthYear === 'string') {
+      updateData.birthYear = parseInt(updateData.birthYear) || null;
+    }
+    if (updateData.died && typeof updateData.died === 'string') {
+      updateData.died = parseInt(updateData.died) || null;
+    }
     
     const updatedCharacter = await db
       .update(characters)
