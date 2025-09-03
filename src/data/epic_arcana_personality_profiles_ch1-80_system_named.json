@@ -1,0 +1,5293 @@
+{
+  "meta": {
+    "version": "0.4.0",
+    "generated_at": "2025-09-02T22:23:34.186328Z",
+    "notes": [
+      "First 10 personalities correspond directly to the first 10 Human Framework chapter themes.",
+      "Names are generated using the Archetypal Role + Evocative Qualifier system.",
+      "360 personalities will be built in total, 10 at a time."
+    ]
+  },
+  "profiles": [
+    {
+      "id": "EA-001",
+      "display_name": "Warden of Shadows",
+      "chapter": 1,
+      "theme": "Despair",
+      "family": "Mental Health",
+      "summary": "This personality embodies the theme of Despair, drawn from Chapter 1 of the Human Framework. It reflects the lessons of Mental Health and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Despair"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 0,
+        "name": "Chapter 1 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q3",
+          "Q4"
+        ]
+      },
+      "signals_map": {
+        "Q3": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q4": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody despair today?",
+      "story_hook": "A scene in Laurasia where the theme of Despair becomes a pivotal choice."
+    },
+    {
+      "id": "EA-002",
+      "display_name": "Child of Light",
+      "chapter": 2,
+      "theme": "Guileless",
+      "family": "Honesty",
+      "summary": "This personality embodies the theme of Guileless, drawn from Chapter 2 of the Human Framework. It reflects the lessons of Honesty and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Guileless"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 1,
+        "name": "Chapter 2 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q6",
+          "Q7"
+        ]
+      },
+      "signals_map": {
+        "Q6": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q7": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody guileless today?",
+      "story_hook": "A scene in Laurasia where the theme of Guileless becomes a pivotal choice."
+    },
+    {
+      "id": "EA-003",
+      "display_name": "Pulsebearer of Dawn",
+      "chapter": 3,
+      "theme": "Vibratile",
+      "family": "Vitality / Nature",
+      "summary": "This personality embodies the theme of Vibratile, drawn from Chapter 3 of the Human Framework. It reflects the lessons of Vitality / Nature and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Vibratile"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 2,
+        "name": "Chapter 3 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q9",
+          "Q10"
+        ]
+      },
+      "signals_map": {
+        "Q9": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q10": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody vibratile today?",
+      "story_hook": "A scene in Laurasia where the theme of Vibratile becomes a pivotal choice."
+    },
+    {
+      "id": "EA-004",
+      "display_name": "Ignis Herald",
+      "chapter": 4,
+      "theme": "Explosive",
+      "family": "Energy / Change",
+      "summary": "This personality embodies the theme of Explosive, drawn from Chapter 4 of the Human Framework. It reflects the lessons of Energy / Change and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Explosive"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 3,
+        "name": "Chapter 4 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q12",
+          "Q13"
+        ]
+      },
+      "signals_map": {
+        "Q12": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q13": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody explosive today?",
+      "story_hook": "A scene in Laurasia where the theme of Explosive becomes a pivotal choice."
+    },
+    {
+      "id": "EA-005",
+      "display_name": "Artisan of Deeds",
+      "chapter": 5,
+      "theme": "Implementation",
+      "family": "Action / Execution",
+      "summary": "This personality embodies the theme of Implementation, drawn from Chapter 5 of the Human Framework. It reflects the lessons of Action / Execution and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Implementation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 4,
+        "name": "Chapter 5 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q15",
+          "Q16"
+        ]
+      },
+      "signals_map": {
+        "Q15": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q16": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody implementation today?",
+      "story_hook": "A scene in Laurasia where the theme of Implementation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-006",
+      "display_name": "Keeper of Keys",
+      "chapter": 6,
+      "theme": "Ownership",
+      "family": "Responsibility",
+      "summary": "This personality embodies the theme of Ownership, drawn from Chapter 6 of the Human Framework. It reflects the lessons of Responsibility and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Ownership"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 5,
+        "name": "Chapter 6 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q18",
+          "Q19"
+        ]
+      },
+      "signals_map": {
+        "Q18": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q19": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody ownership today?",
+      "story_hook": "A scene in Laurasia where the theme of Ownership becomes a pivotal choice."
+    },
+    {
+      "id": "EA-007",
+      "display_name": "Crown Sentinel",
+      "chapter": 7,
+      "theme": "Dominion",
+      "family": "Authority / Power",
+      "summary": "This personality embodies the theme of Dominion, drawn from Chapter 7 of the Human Framework. It reflects the lessons of Authority / Power and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Dominion"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 6,
+        "name": "Chapter 7 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q21",
+          "Q22"
+        ]
+      },
+      "signals_map": {
+        "Q21": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q22": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody dominion today?",
+      "story_hook": "A scene in Laurasia where the theme of Dominion becomes a pivotal choice."
+    },
+    {
+      "id": "EA-008",
+      "display_name": "Phoenix Seer",
+      "chapter": 8,
+      "theme": "Transformation",
+      "family": "Metamorphosis",
+      "summary": "This personality embodies the theme of Transformation, drawn from Chapter 8 of the Human Framework. It reflects the lessons of Metamorphosis and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Transformation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 7,
+        "name": "Chapter 8 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q24",
+          "Q25"
+        ]
+      },
+      "signals_map": {
+        "Q24": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q25": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody transformation today?",
+      "story_hook": "A scene in Laurasia where the theme of Transformation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-009",
+      "display_name": "Iron Resolve",
+      "chapter": 9,
+      "theme": "Determination",
+      "family": "Perseverance",
+      "summary": "This personality embodies the theme of Determination, drawn from Chapter 9 of the Human Framework. It reflects the lessons of Perseverance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Determination"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 8,
+        "name": "Chapter 9 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q27",
+          "Q28"
+        ]
+      },
+      "signals_map": {
+        "Q27": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q28": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody determination today?",
+      "story_hook": "A scene in Laurasia where the theme of Determination becomes a pivotal choice."
+    },
+    {
+      "id": "EA-010",
+      "display_name": "Architect of Pillars",
+      "chapter": 10,
+      "theme": "Structure",
+      "family": "Order / Systems",
+      "summary": "This personality embodies the theme of Structure, drawn from Chapter 10 of the Human Framework. It reflects the lessons of Order / Systems and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Structure"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 9,
+        "name": "Chapter 10 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q30",
+          "Q31"
+        ]
+      },
+      "signals_map": {
+        "Q30": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q31": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody structure today?",
+      "story_hook": "A scene in Laurasia where the theme of Structure becomes a pivotal choice."
+    },
+    {
+      "id": "EA-011",
+      "display_name": "Hand of Dawn",
+      "chapter": 11,
+      "theme": "Acceptance",
+      "family": "Honesty",
+      "summary": "This personality embodies the theme of Acceptance, drawn from Chapter 11 of the Human Framework. It reflects the lessons of Honesty and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Acceptance"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 10,
+        "name": "Chapter 11 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q33",
+          "Q34"
+        ]
+      },
+      "signals_map": {
+        "Q33": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q34": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody acceptance today?",
+      "story_hook": "A scene in Laurasia where the theme of Acceptance becomes a pivotal choice."
+    },
+    {
+      "id": "EA-012",
+      "display_name": "Shepherd of Mercy",
+      "chapter": 12,
+      "theme": "Benevolence",
+      "family": "Belonging",
+      "summary": "This personality embodies the theme of Benevolence, drawn from Chapter 12 of the Human Framework. It reflects the lessons of Belonging and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Benevolence"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 11,
+        "name": "Chapter 12 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q36",
+          "Q37"
+        ]
+      },
+      "signals_map": {
+        "Q36": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q37": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody benevolence today?",
+      "story_hook": "A scene in Laurasia where the theme of Benevolence becomes a pivotal choice."
+    },
+    {
+      "id": "EA-013",
+      "display_name": "Weaver of Threads",
+      "chapter": 13,
+      "theme": "Convergence",
+      "family": "Order",
+      "summary": "This personality embodies the theme of Convergence, drawn from Chapter 13 of the Human Framework. It reflects the lessons of Order and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Convergence"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 12,
+        "name": "Chapter 13 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q39",
+          "Q40"
+        ]
+      },
+      "signals_map": {
+        "Q39": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q40": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody convergence today?",
+      "story_hook": "A scene in Laurasia where the theme of Convergence becomes a pivotal choice."
+    },
+    {
+      "id": "EA-014",
+      "display_name": "Sentinel of Iron",
+      "chapter": 14,
+      "theme": "Resistance",
+      "family": "Power",
+      "summary": "This personality embodies the theme of Resistance, drawn from Chapter 14 of the Human Framework. It reflects the lessons of Power and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Resistance"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 13,
+        "name": "Chapter 14 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q42",
+          "Q43"
+        ]
+      },
+      "signals_map": {
+        "Q42": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q43": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody resistance today?",
+      "story_hook": "A scene in Laurasia where the theme of Resistance becomes a pivotal choice."
+    },
+    {
+      "id": "EA-015",
+      "display_name": "Pilgrim of Horizons",
+      "chapter": 15,
+      "theme": "Liberation",
+      "family": "Freedom / Discovery",
+      "summary": "This personality embodies the theme of Liberation, drawn from Chapter 15 of the Human Framework. It reflects the lessons of Freedom / Discovery and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Liberation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 14,
+        "name": "Chapter 15 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q45",
+          "Q46"
+        ]
+      },
+      "signals_map": {
+        "Q45": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q46": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody liberation today?",
+      "story_hook": "A scene in Laurasia where the theme of Liberation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-016",
+      "display_name": "Oracle of Veils",
+      "chapter": 16,
+      "theme": "Revelation",
+      "family": "Insight / Knowledge",
+      "summary": "This personality embodies the theme of Revelation, drawn from Chapter 16 of the Human Framework. It reflects the lessons of Insight / Knowledge and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Revelation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 15,
+        "name": "Chapter 16 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q48",
+          "Q49"
+        ]
+      },
+      "signals_map": {
+        "Q48": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q49": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody revelation today?",
+      "story_hook": "A scene in Laurasia where the theme of Revelation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-017",
+      "display_name": "Bearer of Ashes",
+      "chapter": 17,
+      "theme": "Sacrifice",
+      "family": "Responsibility",
+      "summary": "This personality embodies the theme of Sacrifice, drawn from Chapter 17 of the Human Framework. It reflects the lessons of Responsibility and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Sacrifice"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 16,
+        "name": "Chapter 17 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q51",
+          "Q52"
+        ]
+      },
+      "signals_map": {
+        "Q51": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q52": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody sacrifice today?",
+      "story_hook": "A scene in Laurasia where the theme of Sacrifice becomes a pivotal choice."
+    },
+    {
+      "id": "EA-018",
+      "display_name": "Flamekeeper of Renewal",
+      "chapter": 18,
+      "theme": "Consecration",
+      "family": "Metamorphosis",
+      "summary": "This personality embodies the theme of Consecration, drawn from Chapter 18 of the Human Framework. It reflects the lessons of Metamorphosis and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Consecration"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 17,
+        "name": "Chapter 18 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q54",
+          "Q55"
+        ]
+      },
+      "signals_map": {
+        "Q54": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q55": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody consecration today?",
+      "story_hook": "A scene in Laurasia where the theme of Consecration becomes a pivotal choice."
+    },
+    {
+      "id": "EA-019",
+      "display_name": "Climber of Peaks",
+      "chapter": 19,
+      "theme": "Aspiration",
+      "family": "Perseverance",
+      "summary": "This personality embodies the theme of Aspiration, drawn from Chapter 19 of the Human Framework. It reflects the lessons of Perseverance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Aspiration"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 18,
+        "name": "Chapter 19 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q57",
+          "Q58"
+        ]
+      },
+      "signals_map": {
+        "Q57": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q58": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody aspiration today?",
+      "story_hook": "A scene in Laurasia where the theme of Aspiration becomes a pivotal choice."
+    },
+    {
+      "id": "EA-020",
+      "display_name": "Circle Weaver",
+      "chapter": 20,
+      "theme": "Harmony",
+      "family": "Peace / Unity",
+      "summary": "This personality embodies the theme of Harmony, drawn from Chapter 20 of the Human Framework. It reflects the lessons of Peace / Unity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Harmony"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 19,
+        "name": "Chapter 20 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q60",
+          "Q61"
+        ]
+      },
+      "signals_map": {
+        "Q60": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q61": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody harmony today?",
+      "story_hook": "A scene in Laurasia where the theme of Harmony becomes a pivotal choice."
+    },
+    {
+      "id": "EA-021",
+      "display_name": "Navigator of Stars",
+      "chapter": 21,
+      "theme": "Exploration",
+      "family": "Discovery / Adventure",
+      "summary": "This personality embodies the theme of Exploration, drawn from Chapter 21 of the Human Framework. It reflects the lessons of Discovery / Adventure and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Exploration"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 20,
+        "name": "Chapter 21 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q63",
+          "Q64"
+        ]
+      },
+      "signals_map": {
+        "Q63": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q64": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody exploration today?",
+      "story_hook": "A scene in Laurasia where the theme of Exploration becomes a pivotal choice."
+    },
+    {
+      "id": "EA-022",
+      "display_name": "Keeper of Relics",
+      "chapter": 22,
+      "theme": "Preservation",
+      "family": "Guardianship",
+      "summary": "This personality embodies the theme of Preservation, drawn from Chapter 22 of the Human Framework. It reflects the lessons of Guardianship and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Preservation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 21,
+        "name": "Chapter 22 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q66",
+          "Q67"
+        ]
+      },
+      "signals_map": {
+        "Q66": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q67": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody preservation today?",
+      "story_hook": "A scene in Laurasia where the theme of Preservation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-023",
+      "display_name": "Catalyst of Flames",
+      "chapter": 23,
+      "theme": "Initiation",
+      "family": "Ignition / Beginnings",
+      "summary": "This personality embodies the theme of Initiation, drawn from Chapter 23 of the Human Framework. It reflects the lessons of Ignition / Beginnings and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Initiation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 22,
+        "name": "Chapter 23 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q69",
+          "Q70"
+        ]
+      },
+      "signals_map": {
+        "Q69": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q70": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody initiation today?",
+      "story_hook": "A scene in Laurasia where the theme of Initiation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-024",
+      "display_name": "Listener of Echoes",
+      "chapter": 24,
+      "theme": "Attunement",
+      "family": "Understanding / Harmony",
+      "summary": "This personality embodies the theme of Attunement, drawn from Chapter 24 of the Human Framework. It reflects the lessons of Understanding / Harmony and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Attunement"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 23,
+        "name": "Chapter 24 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q72",
+          "Q73"
+        ]
+      },
+      "signals_map": {
+        "Q72": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q73": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody attunement today?",
+      "story_hook": "A scene in Laurasia where the theme of Attunement becomes a pivotal choice."
+    },
+    {
+      "id": "EA-025",
+      "display_name": "Challenger of Storms",
+      "chapter": 25,
+      "theme": "Confrontation",
+      "family": "Testing / Challenge",
+      "summary": "This personality embodies the theme of Confrontation, drawn from Chapter 25 of the Human Framework. It reflects the lessons of Testing / Challenge and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Confrontation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 24,
+        "name": "Chapter 25 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q75",
+          "Q76"
+        ]
+      },
+      "signals_map": {
+        "Q75": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q76": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody confrontation today?",
+      "story_hook": "A scene in Laurasia where the theme of Confrontation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-026",
+      "display_name": "Weaver of Threads",
+      "chapter": 26,
+      "theme": "Integration",
+      "family": "Connection / Unity",
+      "summary": "This personality embodies the theme of Integration, drawn from Chapter 26 of the Human Framework. It reflects the lessons of Connection / Unity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Integration"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 25,
+        "name": "Chapter 26 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q78",
+          "Q79"
+        ]
+      },
+      "signals_map": {
+        "Q78": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q79": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody integration today?",
+      "story_hook": "A scene in Laurasia where the theme of Integration becomes a pivotal choice."
+    },
+    {
+      "id": "EA-027",
+      "display_name": "Visionary of Horizons",
+      "chapter": 27,
+      "theme": "Imagination",
+      "family": "Vision / Creativity",
+      "summary": "This personality embodies the theme of Imagination, drawn from Chapter 27 of the Human Framework. It reflects the lessons of Vision / Creativity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Imagination"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 26,
+        "name": "Chapter 27 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q81",
+          "Q82"
+        ]
+      },
+      "signals_map": {
+        "Q81": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q82": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody imagination today?",
+      "story_hook": "A scene in Laurasia where the theme of Imagination becomes a pivotal choice."
+    },
+    {
+      "id": "EA-028",
+      "display_name": "Guardian of the Gate",
+      "chapter": 28,
+      "theme": "Protection",
+      "family": "Defense / Safety",
+      "summary": "This personality embodies the theme of Protection, drawn from Chapter 28 of the Human Framework. It reflects the lessons of Defense / Safety and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Protection"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 27,
+        "name": "Chapter 28 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q84",
+          "Q85"
+        ]
+      },
+      "signals_map": {
+        "Q84": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q85": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody protection today?",
+      "story_hook": "A scene in Laurasia where the theme of Protection becomes a pivotal choice."
+    },
+    {
+      "id": "EA-029",
+      "display_name": "Seeker of Truths",
+      "chapter": 29,
+      "theme": "Discovery",
+      "family": "Seeking / Learning",
+      "summary": "This personality embodies the theme of Discovery, drawn from Chapter 29 of the Human Framework. It reflects the lessons of Seeking / Learning and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Discovery"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 28,
+        "name": "Chapter 29 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q87",
+          "Q88"
+        ]
+      },
+      "signals_map": {
+        "Q87": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q88": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody discovery today?",
+      "story_hook": "A scene in Laurasia where the theme of Discovery becomes a pivotal choice."
+    },
+    {
+      "id": "EA-030",
+      "display_name": "Anchor of Stone",
+      "chapter": 30,
+      "theme": "Stability",
+      "family": "Groundedness / Balance",
+      "summary": "This personality embodies the theme of Stability, drawn from Chapter 30 of the Human Framework. It reflects the lessons of Groundedness / Balance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Stability"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 29,
+        "name": "Chapter 30 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q90",
+          "Q91"
+        ]
+      },
+      "signals_map": {
+        "Q90": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q91": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody stability today?",
+      "story_hook": "A scene in Laurasia where the theme of Stability becomes a pivotal choice."
+    },
+    {
+      "id": "EA-031",
+      "display_name": "Pilgrim of Light",
+      "chapter": 31,
+      "theme": "Faith",
+      "family": "Belief / Trust",
+      "summary": "This personality embodies the theme of Faith, drawn from Chapter 31 of the Human Framework. It reflects the lessons of Belief / Trust and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Faith"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 30,
+        "name": "Chapter 31 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q93",
+          "Q94"
+        ]
+      },
+      "signals_map": {
+        "Q93": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q94": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody faith today?",
+      "story_hook": "A scene in Laurasia where the theme of Faith becomes a pivotal choice."
+    },
+    {
+      "id": "EA-032",
+      "display_name": "Arbiter of Scales",
+      "chapter": 32,
+      "theme": "Justice",
+      "family": "Law / Fairness",
+      "summary": "This personality embodies the theme of Justice, drawn from Chapter 32 of the Human Framework. It reflects the lessons of Law / Fairness and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Justice"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 31,
+        "name": "Chapter 32 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q96",
+          "Q97"
+        ]
+      },
+      "signals_map": {
+        "Q96": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q97": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody justice today?",
+      "story_hook": "A scene in Laurasia where the theme of Justice becomes a pivotal choice."
+    },
+    {
+      "id": "EA-033",
+      "display_name": "Sage of Ages",
+      "chapter": 33,
+      "theme": "Wisdom",
+      "family": "Knowledge / Insight",
+      "summary": "This personality embodies the theme of Wisdom, drawn from Chapter 33 of the Human Framework. It reflects the lessons of Knowledge / Insight and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Wisdom"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 32,
+        "name": "Chapter 33 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q99",
+          "Q100"
+        ]
+      },
+      "signals_map": {
+        "Q99": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q100": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody wisdom today?",
+      "story_hook": "A scene in Laurasia where the theme of Wisdom becomes a pivotal choice."
+    },
+    {
+      "id": "EA-034",
+      "display_name": "Rebel of Chains",
+      "chapter": 34,
+      "theme": "Rebellion",
+      "family": "Defiance / Change",
+      "summary": "This personality embodies the theme of Rebellion, drawn from Chapter 34 of the Human Framework. It reflects the lessons of Defiance / Change and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Rebellion"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 33,
+        "name": "Chapter 34 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q102",
+          "Q103"
+        ]
+      },
+      "signals_map": {
+        "Q102": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q103": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody rebellion today?",
+      "story_hook": "A scene in Laurasia where the theme of Rebellion becomes a pivotal choice."
+    },
+    {
+      "id": "EA-035",
+      "display_name": "Priestess of Flame",
+      "chapter": 35,
+      "theme": "Sacredness",
+      "family": "Spirituality / Devotion",
+      "summary": "This personality embodies the theme of Sacredness, drawn from Chapter 35 of the Human Framework. It reflects the lessons of Spirituality / Devotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Sacredness"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 34,
+        "name": "Chapter 35 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q105",
+          "Q106"
+        ]
+      },
+      "signals_map": {
+        "Q105": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q106": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody sacredness today?",
+      "story_hook": "A scene in Laurasia where the theme of Sacredness becomes a pivotal choice."
+    },
+    {
+      "id": "EA-036",
+      "display_name": "Knight of Resolve",
+      "chapter": 36,
+      "theme": "Valor",
+      "family": "Courage / Bravery",
+      "summary": "This personality embodies the theme of Valor, drawn from Chapter 36 of the Human Framework. It reflects the lessons of Courage / Bravery and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Valor"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 35,
+        "name": "Chapter 36 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q108",
+          "Q109"
+        ]
+      },
+      "signals_map": {
+        "Q108": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q109": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody valor today?",
+      "story_hook": "A scene in Laurasia where the theme of Valor becomes a pivotal choice."
+    },
+    {
+      "id": "EA-037",
+      "display_name": "Oracle of Veils",
+      "chapter": 37,
+      "theme": "Mystery",
+      "family": "Secrets / Depth",
+      "summary": "This personality embodies the theme of Mystery, drawn from Chapter 37 of the Human Framework. It reflects the lessons of Secrets / Depth and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Mystery"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 36,
+        "name": "Chapter 37 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q111",
+          "Q112"
+        ]
+      },
+      "signals_map": {
+        "Q111": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q112": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody mystery today?",
+      "story_hook": "A scene in Laurasia where the theme of Mystery becomes a pivotal choice."
+    },
+    {
+      "id": "EA-038",
+      "display_name": "Monk of Stillness",
+      "chapter": 38,
+      "theme": "Patience",
+      "family": "Endurance / Waiting",
+      "summary": "This personality embodies the theme of Patience, drawn from Chapter 38 of the Human Framework. It reflects the lessons of Endurance / Waiting and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Patience"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 37,
+        "name": "Chapter 38 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q114",
+          "Q115"
+        ]
+      },
+      "signals_map": {
+        "Q114": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q115": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody patience today?",
+      "story_hook": "A scene in Laurasia where the theme of Patience becomes a pivotal choice."
+    },
+    {
+      "id": "EA-039",
+      "display_name": "Phoenix of Dawn",
+      "chapter": 39,
+      "theme": "Renewal",
+      "family": "Rebirth / Growth",
+      "summary": "This personality embodies the theme of Renewal, drawn from Chapter 39 of the Human Framework. It reflects the lessons of Rebirth / Growth and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Renewal"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 38,
+        "name": "Chapter 39 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q117",
+          "Q118"
+        ]
+      },
+      "signals_map": {
+        "Q117": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q118": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody renewal today?",
+      "story_hook": "A scene in Laurasia where the theme of Renewal becomes a pivotal choice."
+    },
+    {
+      "id": "EA-040",
+      "display_name": "Herald of Ancients",
+      "chapter": 40,
+      "theme": "Tradition",
+      "family": "Heritage / Custom",
+      "summary": "This personality embodies the theme of Tradition, drawn from Chapter 40 of the Human Framework. It reflects the lessons of Heritage / Custom and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Tradition"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 39,
+        "name": "Chapter 40 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q120",
+          "Q121"
+        ]
+      },
+      "signals_map": {
+        "Q120": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q121": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody tradition today?",
+      "story_hook": "A scene in Laurasia where the theme of Tradition becomes a pivotal choice."
+    },
+    {
+      "id": "EA-041",
+      "display_name": "Binder of Circles",
+      "chapter": 41,
+      "theme": "Unity",
+      "family": "Togetherness / Bonds",
+      "summary": "This personality embodies the theme of Unity, drawn from Chapter 41 of the Human Framework. It reflects the lessons of Togetherness / Bonds and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Unity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 40,
+        "name": "Chapter 41 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q123",
+          "Q124"
+        ]
+      },
+      "signals_map": {
+        "Q123": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q124": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody unity today?",
+      "story_hook": "A scene in Laurasia where the theme of Unity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-042",
+      "display_name": "Spinner of Threads",
+      "chapter": 42,
+      "theme": "Fate",
+      "family": "Destiny / Inevitability",
+      "summary": "This personality embodies the theme of Fate, drawn from Chapter 42 of the Human Framework. It reflects the lessons of Destiny / Inevitability and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Fate"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 41,
+        "name": "Chapter 42 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q126",
+          "Q127"
+        ]
+      },
+      "signals_map": {
+        "Q126": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q127": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody fate today?",
+      "story_hook": "A scene in Laurasia where the theme of Fate becomes a pivotal choice."
+    },
+    {
+      "id": "EA-043",
+      "display_name": "Herald of Paths",
+      "chapter": 43,
+      "theme": "Choice",
+      "family": "Decision / Agency",
+      "summary": "This personality embodies the theme of Choice, drawn from Chapter 43 of the Human Framework. It reflects the lessons of Decision / Agency and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Choice"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 42,
+        "name": "Chapter 43 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q129",
+          "Q130"
+        ]
+      },
+      "signals_map": {
+        "Q129": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q130": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody choice today?",
+      "story_hook": "A scene in Laurasia where the theme of Choice becomes a pivotal choice."
+    },
+    {
+      "id": "EA-044",
+      "display_name": "Striver of Crowns",
+      "chapter": 44,
+      "theme": "Ambition",
+      "family": "Drive / Aspiration",
+      "summary": "This personality embodies the theme of Ambition, drawn from Chapter 44 of the Human Framework. It reflects the lessons of Drive / Aspiration and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Ambition"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 43,
+        "name": "Chapter 44 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q132",
+          "Q133"
+        ]
+      },
+      "signals_map": {
+        "Q132": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q133": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody ambition today?",
+      "story_hook": "A scene in Laurasia where the theme of Ambition becomes a pivotal choice."
+    },
+    {
+      "id": "EA-045",
+      "display_name": "Seer of Mirrors",
+      "chapter": 45,
+      "theme": "Truth",
+      "family": "Clarity / Honesty",
+      "summary": "This personality embodies the theme of Truth, drawn from Chapter 45 of the Human Framework. It reflects the lessons of Clarity / Honesty and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Truth"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 44,
+        "name": "Chapter 45 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q135",
+          "Q136"
+        ]
+      },
+      "signals_map": {
+        "Q135": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q136": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody truth today?",
+      "story_hook": "A scene in Laurasia where the theme of Truth becomes a pivotal choice."
+    },
+    {
+      "id": "EA-046",
+      "display_name": "Warden of Ashes",
+      "chapter": 46,
+      "theme": "Resilience",
+      "family": "Strength / Endurance",
+      "summary": "This personality embodies the theme of Resilience, drawn from Chapter 46 of the Human Framework. It reflects the lessons of Strength / Endurance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Resilience"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 45,
+        "name": "Chapter 46 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q138",
+          "Q139"
+        ]
+      },
+      "signals_map": {
+        "Q138": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q139": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody resilience today?",
+      "story_hook": "A scene in Laurasia where the theme of Resilience becomes a pivotal choice."
+    },
+    {
+      "id": "EA-047",
+      "display_name": "Bearer of Dawn",
+      "chapter": 47,
+      "theme": "Hope",
+      "family": "Inspiration / Light",
+      "summary": "This personality embodies the theme of Hope, drawn from Chapter 47 of the Human Framework. It reflects the lessons of Inspiration / Light and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Hope"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 46,
+        "name": "Chapter 47 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q141",
+          "Q142"
+        ]
+      },
+      "signals_map": {
+        "Q141": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q142": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody hope today?",
+      "story_hook": "A scene in Laurasia where the theme of Hope becomes a pivotal choice."
+    },
+    {
+      "id": "EA-048",
+      "display_name": "Watcher of Still Waters",
+      "chapter": 48,
+      "theme": "Silence",
+      "family": "Calm / Reflection",
+      "summary": "This personality embodies the theme of Silence, drawn from Chapter 48 of the Human Framework. It reflects the lessons of Calm / Reflection and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Silence"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 47,
+        "name": "Chapter 48 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q144",
+          "Q145"
+        ]
+      },
+      "signals_map": {
+        "Q144": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q145": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody silence today?",
+      "story_hook": "A scene in Laurasia where the theme of Silence becomes a pivotal choice."
+    },
+    {
+      "id": "EA-049",
+      "display_name": "Flamebearer of Hearts",
+      "chapter": 49,
+      "theme": "Passion",
+      "family": "Emotion / Fire",
+      "summary": "This personality embodies the theme of Passion, drawn from Chapter 49 of the Human Framework. It reflects the lessons of Emotion / Fire and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Passion"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 48,
+        "name": "Chapter 49 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q147",
+          "Q148"
+        ]
+      },
+      "signals_map": {
+        "Q147": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q148": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody passion today?",
+      "story_hook": "A scene in Laurasia where the theme of Passion becomes a pivotal choice."
+    },
+    {
+      "id": "EA-050",
+      "display_name": "Architect of Memory",
+      "chapter": 50,
+      "theme": "Legacy",
+      "family": "Inheritance / Continuity",
+      "summary": "This personality embodies the theme of Legacy, drawn from Chapter 50 of the Human Framework. It reflects the lessons of Inheritance / Continuity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Legacy"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 49,
+        "name": "Chapter 50 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q150",
+          "Q151"
+        ]
+      },
+      "signals_map": {
+        "Q150": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q151": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody legacy today?",
+      "story_hook": "A scene in Laurasia where the theme of Legacy becomes a pivotal choice."
+    },
+    {
+      "id": "EA-051",
+      "display_name": "Seer of Clear Skies",
+      "chapter": 51,
+      "theme": "Clarity",
+      "family": "Honesty / Insight",
+      "summary": "This personality embodies the theme of Clarity, drawn from Chapter 51 of the Human Framework. It reflects the lessons of Honesty / Insight and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Clarity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 50,
+        "name": "Chapter 51 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q153",
+          "Q154"
+        ]
+      },
+      "signals_map": {
+        "Q153": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q154": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody clarity today?",
+      "story_hook": "A scene in Laurasia where the theme of Clarity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-052",
+      "display_name": "Architect of Lattices",
+      "chapter": 52,
+      "theme": "Order",
+      "family": "Order / Systems",
+      "summary": "This personality embodies the theme of Order, drawn from Chapter 52 of the Human Framework. It reflects the lessons of Order / Systems and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Order"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 51,
+        "name": "Chapter 52 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q156",
+          "Q157"
+        ]
+      },
+      "signals_map": {
+        "Q156": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q157": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody order today?",
+      "story_hook": "A scene in Laurasia where the theme of Order becomes a pivotal choice."
+    },
+    {
+      "id": "EA-053",
+      "display_name": "Hearthkeeper of Grace",
+      "chapter": 53,
+      "theme": "Mercy",
+      "family": "Belonging / Compassion",
+      "summary": "This personality embodies the theme of Mercy, drawn from Chapter 53 of the Human Framework. It reflects the lessons of Belonging / Compassion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Mercy"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 52,
+        "name": "Chapter 53 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q159",
+          "Q160"
+        ]
+      },
+      "signals_map": {
+        "Q159": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q160": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody mercy today?",
+      "story_hook": "A scene in Laurasia where the theme of Mercy becomes a pivotal choice."
+    },
+    {
+      "id": "EA-054",
+      "display_name": "Tactician of Lines",
+      "chapter": 54,
+      "theme": "Strategy",
+      "family": "Planning / Pragmatism",
+      "summary": "This personality embodies the theme of Strategy, drawn from Chapter 54 of the Human Framework. It reflects the lessons of Planning / Pragmatism and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Strategy"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 53,
+        "name": "Chapter 54 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q162",
+          "Q163"
+        ]
+      },
+      "signals_map": {
+        "Q162": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q163": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody strategy today?",
+      "story_hook": "A scene in Laurasia where the theme of Strategy becomes a pivotal choice."
+    },
+    {
+      "id": "EA-055",
+      "display_name": "Herald of Dawnlight",
+      "chapter": 55,
+      "theme": "Awakening",
+      "family": "Awareness / Presence",
+      "summary": "This personality embodies the theme of Awakening, drawn from Chapter 55 of the Human Framework. It reflects the lessons of Awareness / Presence and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Awakening"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 54,
+        "name": "Chapter 55 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q165",
+          "Q166"
+        ]
+      },
+      "signals_map": {
+        "Q165": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q166": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody awakening today?",
+      "story_hook": "A scene in Laurasia where the theme of Awakening becomes a pivotal choice."
+    },
+    {
+      "id": "EA-056",
+      "display_name": "Balancer of Scales",
+      "chapter": 56,
+      "theme": "Balance",
+      "family": "Equilibrium / Harmony",
+      "summary": "This personality embodies the theme of Balance, drawn from Chapter 56 of the Human Framework. It reflects the lessons of Equilibrium / Harmony and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Balance"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 55,
+        "name": "Chapter 56 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q168",
+          "Q169"
+        ]
+      },
+      "signals_map": {
+        "Q168": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q169": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody balance today?",
+      "story_hook": "A scene in Laurasia where the theme of Balance becomes a pivotal choice."
+    },
+    {
+      "id": "EA-057",
+      "display_name": "Smith of Embers",
+      "chapter": 57,
+      "theme": "Forge",
+      "family": "Creation / Craft",
+      "summary": "This personality embodies the theme of Forge, drawn from Chapter 57 of the Human Framework. It reflects the lessons of Creation / Craft and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Forge"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 56,
+        "name": "Chapter 57 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q171",
+          "Q172"
+        ]
+      },
+      "signals_map": {
+        "Q171": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q172": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody forge today?",
+      "story_hook": "A scene in Laurasia where the theme of Forge becomes a pivotal choice."
+    },
+    {
+      "id": "EA-058",
+      "display_name": "Wayfinder of Crosswinds",
+      "chapter": 58,
+      "theme": "Navigation",
+      "family": "Wayfinding / Direction",
+      "summary": "This personality embodies the theme of Navigation, drawn from Chapter 58 of the Human Framework. It reflects the lessons of Wayfinding / Direction and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Navigation"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 57,
+        "name": "Chapter 58 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q174",
+          "Q175"
+        ]
+      },
+      "signals_map": {
+        "Q174": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q175": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody navigation today?",
+      "story_hook": "A scene in Laurasia where the theme of Navigation becomes a pivotal choice."
+    },
+    {
+      "id": "EA-059",
+      "display_name": "Steward of Fields",
+      "chapter": 59,
+      "theme": "Stewardship",
+      "family": "Responsibility / Care",
+      "summary": "This personality embodies the theme of Stewardship, drawn from Chapter 59 of the Human Framework. It reflects the lessons of Responsibility / Care and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Stewardship"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 58,
+        "name": "Chapter 59 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q177",
+          "Q178"
+        ]
+      },
+      "signals_map": {
+        "Q177": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q178": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody stewardship today?",
+      "story_hook": "A scene in Laurasia where the theme of Stewardship becomes a pivotal choice."
+    },
+    {
+      "id": "EA-060",
+      "display_name": "Keeper of Final Rites",
+      "chapter": 60,
+      "theme": "Closure",
+      "family": "Completion / Release",
+      "summary": "This personality embodies the theme of Closure, drawn from Chapter 60 of the Human Framework. It reflects the lessons of Completion / Release and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Closure"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 59,
+        "name": "Chapter 60 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q180",
+          "Q181"
+        ]
+      },
+      "signals_map": {
+        "Q180": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q181": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody closure today?",
+      "story_hook": "A scene in Laurasia where the theme of Closure becomes a pivotal choice."
+    },
+    {
+      "id": "EA-061",
+      "display_name": "Warden of Doorways",
+      "chapter": 61,
+      "theme": "Threshold",
+      "family": "Transition / Liminality",
+      "summary": "This personality embodies the theme of Threshold, drawn from Chapter 61 of the Human Framework. It reflects the lessons of Transition / Liminality and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Threshold"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 60,
+        "name": "Chapter 61 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q183",
+          "Q184"
+        ]
+      },
+      "signals_map": {
+        "Q183": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q184": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody threshold today?",
+      "story_hook": "A scene in Laurasia where the theme of Threshold becomes a pivotal choice."
+    },
+    {
+      "id": "EA-062",
+      "display_name": "Listener of Heartstrings",
+      "chapter": 62,
+      "theme": "Attunement",
+      "family": "Listening / Empathy",
+      "summary": "This personality embodies the theme of Attunement, drawn from Chapter 62 of the Human Framework. It reflects the lessons of Listening / Empathy and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Attunement"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 61,
+        "name": "Chapter 62 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q186",
+          "Q187"
+        ]
+      },
+      "signals_map": {
+        "Q186": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q187": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody attunement today?",
+      "story_hook": "A scene in Laurasia where the theme of Attunement becomes a pivotal choice."
+    },
+    {
+      "id": "EA-063",
+      "display_name": "Bearer of Lionfire",
+      "chapter": 63,
+      "theme": "Courage",
+      "family": "Bravery / Action",
+      "summary": "This personality embodies the theme of Courage, drawn from Chapter 63 of the Human Framework. It reflects the lessons of Bravery / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Courage"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 62,
+        "name": "Chapter 63 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q189",
+          "Q190"
+        ]
+      },
+      "signals_map": {
+        "Q189": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q190": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody courage today?",
+      "story_hook": "A scene in Laurasia where the theme of Courage becomes a pivotal choice."
+    },
+    {
+      "id": "EA-064",
+      "display_name": "Arbiter of Evenhand",
+      "chapter": 64,
+      "theme": "Equity",
+      "family": "Justice / Fairness",
+      "summary": "This personality embodies the theme of Equity, drawn from Chapter 64 of the Human Framework. It reflects the lessons of Justice / Fairness and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Equity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 63,
+        "name": "Chapter 64 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q192",
+          "Q193"
+        ]
+      },
+      "signals_map": {
+        "Q192": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q193": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody equity today?",
+      "story_hook": "A scene in Laurasia where the theme of Equity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-065",
+      "display_name": "Gardener of Seasons",
+      "chapter": 65,
+      "theme": "Patience",
+      "family": "Timing / Endurance",
+      "summary": "This personality embodies the theme of Patience, drawn from Chapter 65 of the Human Framework. It reflects the lessons of Timing / Endurance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Patience"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 64,
+        "name": "Chapter 65 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q195",
+          "Q196"
+        ]
+      },
+      "signals_map": {
+        "Q195": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q196": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody patience today?",
+      "story_hook": "A scene in Laurasia where the theme of Patience becomes a pivotal choice."
+    },
+    {
+      "id": "EA-066",
+      "display_name": "Scholar of Whispers",
+      "chapter": 66,
+      "theme": "Curiosity",
+      "family": "Inquiry / Learning",
+      "summary": "This personality embodies the theme of Curiosity, drawn from Chapter 66 of the Human Framework. It reflects the lessons of Inquiry / Learning and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Curiosity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 65,
+        "name": "Chapter 66 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q198",
+          "Q199"
+        ]
+      },
+      "signals_map": {
+        "Q198": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q199": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody curiosity today?",
+      "story_hook": "A scene in Laurasia where the theme of Curiosity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-067",
+      "display_name": "Keeper of True North",
+      "chapter": 67,
+      "theme": "Alignment",
+      "family": "Integrity / Coherence",
+      "summary": "This personality embodies the theme of Alignment, drawn from Chapter 67 of the Human Framework. It reflects the lessons of Integrity / Coherence and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Alignment"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 66,
+        "name": "Chapter 67 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q201",
+          "Q202"
+        ]
+      },
+      "signals_map": {
+        "Q201": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q202": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody alignment today?",
+      "story_hook": "A scene in Laurasia where the theme of Alignment becomes a pivotal choice."
+    },
+    {
+      "id": "EA-068",
+      "display_name": "Weaver of Unbinding",
+      "chapter": 68,
+      "theme": "Release",
+      "family": "Letting Go / Renewal",
+      "summary": "This personality embodies the theme of Release, drawn from Chapter 68 of the Human Framework. It reflects the lessons of Letting Go / Renewal and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Release"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 67,
+        "name": "Chapter 68 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q204",
+          "Q205"
+        ]
+      },
+      "signals_map": {
+        "Q204": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q205": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody release today?",
+      "story_hook": "A scene in Laurasia where the theme of Release becomes a pivotal choice."
+    },
+    {
+      "id": "EA-069",
+      "display_name": "Sentinel of the Lens",
+      "chapter": 69,
+      "theme": "Focus",
+      "family": "Discipline / Attention",
+      "summary": "This personality embodies the theme of Focus, drawn from Chapter 69 of the Human Framework. It reflects the lessons of Discipline / Attention and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Focus"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 68,
+        "name": "Chapter 69 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q207",
+          "Q208"
+        ]
+      },
+      "signals_map": {
+        "Q207": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q208": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody focus today?",
+      "story_hook": "A scene in Laurasia where the theme of Focus becomes a pivotal choice."
+    },
+    {
+      "id": "EA-070",
+      "display_name": "Giver of Open Hands",
+      "chapter": 70,
+      "theme": "Generosity",
+      "family": "Giving / Abundance",
+      "summary": "This personality embodies the theme of Generosity, drawn from Chapter 70 of the Human Framework. It reflects the lessons of Giving / Abundance and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Generosity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 69,
+        "name": "Chapter 70 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q210",
+          "Q211"
+        ]
+      },
+      "signals_map": {
+        "Q210": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q211": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody generosity today?",
+      "story_hook": "A scene in Laurasia where the theme of Generosity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-071",
+      "display_name": "Monk of Measured Steps",
+      "chapter": 71,
+      "theme": "Temperance",
+      "family": "Moderation / Restraint",
+      "summary": "This personality embodies the theme of Temperance, drawn from Chapter 71 of the Human Framework. It reflects the lessons of Moderation / Restraint and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Temperance"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 70,
+        "name": "Chapter 71 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q213",
+          "Q214"
+        ]
+      },
+      "signals_map": {
+        "Q213": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q214": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody temperance today?",
+      "story_hook": "A scene in Laurasia where the theme of Temperance becomes a pivotal choice."
+    },
+    {
+      "id": "EA-072",
+      "display_name": "Strider of Ascents",
+      "chapter": 72,
+      "theme": "Drive",
+      "family": "Ambition / Momentum",
+      "summary": "This personality embodies the theme of Drive, drawn from Chapter 72 of the Human Framework. It reflects the lessons of Ambition / Momentum and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Drive"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 71,
+        "name": "Chapter 72 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q216",
+          "Q217"
+        ]
+      },
+      "signals_map": {
+        "Q216": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q217": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody drive today?",
+      "story_hook": "A scene in Laurasia where the theme of Drive becomes a pivotal choice."
+    },
+    {
+      "id": "EA-073",
+      "display_name": "Pilgrim of Bare Feet",
+      "chapter": 73,
+      "theme": "Humility",
+      "family": "Egolessness / Service",
+      "summary": "This personality embodies the theme of Humility, drawn from Chapter 73 of the Human Framework. It reflects the lessons of Egolessness / Service and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Humility"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 72,
+        "name": "Chapter 73 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q219",
+          "Q220"
+        ]
+      },
+      "signals_map": {
+        "Q219": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q220": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody humility today?",
+      "story_hook": "A scene in Laurasia where the theme of Humility becomes a pivotal choice."
+    },
+    {
+      "id": "EA-074",
+      "display_name": "Inventor of Gears",
+      "chapter": 74,
+      "theme": "Ingenuity",
+      "family": "Creativity / Solutions",
+      "summary": "This personality embodies the theme of Ingenuity, drawn from Chapter 74 of the Human Framework. It reflects the lessons of Creativity / Solutions and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Ingenuity"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 73,
+        "name": "Chapter 74 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q222",
+          "Q223"
+        ]
+      },
+      "signals_map": {
+        "Q222": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q223": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody ingenuity today?",
+      "story_hook": "A scene in Laurasia where the theme of Ingenuity becomes a pivotal choice."
+    },
+    {
+      "id": "EA-075",
+      "display_name": "Keeper of Quiet Rooms",
+      "chapter": 75,
+      "theme": "Respite",
+      "family": "Rest / Recovery",
+      "summary": "This personality embodies the theme of Respite, drawn from Chapter 75 of the Human Framework. It reflects the lessons of Rest / Recovery and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Respite"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 74,
+        "name": "Chapter 75 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q225",
+          "Q226"
+        ]
+      },
+      "signals_map": {
+        "Q225": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q226": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody respite today?",
+      "story_hook": "A scene in Laurasia where the theme of Respite becomes a pivotal choice."
+    },
+    {
+      "id": "EA-076",
+      "display_name": "Watcher of Nightfall",
+      "chapter": 76,
+      "theme": "Vigilance",
+      "family": "Readiness / Protection",
+      "summary": "This personality embodies the theme of Vigilance, drawn from Chapter 76 of the Human Framework. It reflects the lessons of Readiness / Protection and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Vigilance"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 75,
+        "name": "Chapter 76 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q228",
+          "Q229"
+        ]
+      },
+      "signals_map": {
+        "Q228": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q229": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody vigilance today?",
+      "story_hook": "A scene in Laurasia where the theme of Vigilance becomes a pivotal choice."
+    },
+    {
+      "id": "EA-077",
+      "display_name": "Binder of Hands",
+      "chapter": 77,
+      "theme": "Synergy",
+      "family": "Collaboration / Unity",
+      "summary": "This personality embodies the theme of Synergy, drawn from Chapter 77 of the Human Framework. It reflects the lessons of Collaboration / Unity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Synergy"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 76,
+        "name": "Chapter 77 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q231",
+          "Q232"
+        ]
+      },
+      "signals_map": {
+        "Q231": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q232": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody synergy today?",
+      "story_hook": "A scene in Laurasia where the theme of Synergy becomes a pivotal choice."
+    },
+    {
+      "id": "EA-078",
+      "display_name": "Spinner of Gold Thread",
+      "chapter": 78,
+      "theme": "Destiny",
+      "family": "Calling / Purpose",
+      "summary": "This personality embodies the theme of Destiny, drawn from Chapter 78 of the Human Framework. It reflects the lessons of Calling / Purpose and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Destiny"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 77,
+        "name": "Chapter 78 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q234",
+          "Q235"
+        ]
+      },
+      "signals_map": {
+        "Q234": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q235": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody destiny today?",
+      "story_hook": "A scene in Laurasia where the theme of Destiny becomes a pivotal choice."
+    },
+    {
+      "id": "EA-079",
+      "display_name": "Knight of the Long Road",
+      "chapter": 79,
+      "theme": "Resolve",
+      "family": "Determination / Grit",
+      "summary": "This personality embodies the theme of Resolve, drawn from Chapter 79 of the Human Framework. It reflects the lessons of Determination / Grit and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Resolve"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 78,
+        "name": "Chapter 79 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q237",
+          "Q238"
+        ]
+      },
+      "signals_map": {
+        "Q237": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q238": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody resolve today?",
+      "story_hook": "A scene in Laurasia where the theme of Resolve becomes a pivotal choice."
+    },
+    {
+      "id": "EA-080",
+      "display_name": "Archivist of Echoes",
+      "chapter": 80,
+      "theme": "Legacy",
+      "family": "Continuity / Impact",
+      "summary": "This personality embodies the theme of Legacy, drawn from Chapter 80 of the Human Framework. It reflects the lessons of Continuity / Impact and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [],
+        "shadow": [],
+        "growth_focus": []
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Legacy"
+      },
+      "enneagram_link": {
+        "family_number": null,
+        "note": "To be mapped according to 9 Enneagram-rooted families"
+      },
+      "color_alignment": {
+        "hue_index": 79,
+        "name": "Chapter 80 color placeholder"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.5,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.5,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "agency": 0.5,
+          "stability": 0.5,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.7,
+        "top_signal_items": [
+          "Q240",
+          "Q241"
+        ]
+      },
+      "signals_map": {
+        "Q240": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q241": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody legacy today?",
+      "story_hook": "A scene in Laurasia where the theme of Legacy becomes a pivotal choice."
+    }
+  ]
+}
