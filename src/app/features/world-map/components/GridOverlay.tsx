@@ -148,7 +148,7 @@ export function GridOverlay({
         fontSize={Math.max(12 / zoom, 9)}
         fill={timelineColor}
         textAnchor="start"
-        dominantBaseline="baseline"
+        dominantBaseline="alphabetic"
         fontWeight="600"
       >
         (0,0)
