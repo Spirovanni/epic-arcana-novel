@@ -1,0 +1,4140 @@
+{
+  "meta": {
+    "version": "0.4.1",
+    "generated_at": "2025-09-06T17:59:51.914017+00:00",
+    "source": "HFP X1_summarize.xlsx (Summarize sheet) rows 250-300; tarot family & colors used for families and hues."
+  },
+  "profiles": [
+    {
+      "id": "EA-250",
+      "display_name": "Cupbearer of Emotional Strength",
+      "chapter": 250,
+      "theme": "Emotional Strength",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Emotional Strength, drawn from Chapter 250 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages emotional strength"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses emotional strength under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel emotional strength toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Emotional Strength"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Queen) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 249,
+        "name": "Myrtle"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5900000000000001,
+          "stability": 0.6599999999999999,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q500",
+          "Q501"
+        ]
+      },
+      "signals_map": {
+        "Q500": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q501": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody emotional strength today?",
+      "story_hook": "In Laurasia, a scene where emotional strength forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-251",
+      "display_name": "Cupbearer of Curiosity",
+      "chapter": 251,
+      "theme": "Curiosity",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Curiosity, drawn from Chapter 251 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages curiosity"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses curiosity under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel curiosity toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Curiosity"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Page) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 250,
+        "name": "Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.7,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.6,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q502",
+          "Q503"
+        ]
+      },
+      "signals_map": {
+        "Q502": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q503": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody curiosity today?",
+      "story_hook": "In Laurasia, a scene where curiosity forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-252",
+      "display_name": "Arbiter of Diversion",
+      "chapter": 252,
+      "theme": "Diversion",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Diversion, drawn from Chapter 252 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages diversion"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses diversion under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel diversion toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Diversion"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Four) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 251,
+        "name": "Fun Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q504",
+          "Q505"
+        ]
+      },
+      "signals_map": {
+        "Q504": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q505": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody diversion today?",
+      "story_hook": "In Laurasia, a scene where diversion forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-253",
+      "display_name": "Augur of Reconciliation",
+      "chapter": 253,
+      "theme": "Reconciliation",
+      "family": "Metamorphosis / Destiny",
+      "summary": "This personality embodies the theme of Reconciliation, drawn from Chapter 253 of the Human Framework. It reflects the lessons of Metamorphosis / Destiny and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "symbolic vision",
+          "transformational presence",
+          "meaning-making",
+          "leverages reconciliation"
+        ],
+        "shadow": [
+          "grandiosity",
+          "magical thinking",
+          "detours from action",
+          "overuses reconciliation under stress"
+        ],
+        "growth_focus": [
+          "rituals for integration",
+          "translate vision to plan",
+          "seek grounded feedback",
+          "channel reconciliation toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Reconciliation"
+      },
+      "enneagram_link": {
+        "family_number": 5,
+        "note": "Mapped via Major Arcana (Temperance) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 252,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.58,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.86,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.74,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.6,
+          "conscientiousness": 0.54,
+          "adaptability": 0.64,
+          "imagination": 0.88
+        },
+        "match_weights": {
+          "openness": 0.6,
+          "imagination": 0.55,
+          "abstract_reasoning": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q506",
+          "Q507"
+        ]
+      },
+      "signals_map": {
+        "Q506": {
+          "dimension": "openness",
+          "polarity": 1.0
+        },
+        "Q507": {
+          "dimension": "imagination",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody reconciliation today?",
+      "story_hook": "In Laurasia, a scene where reconciliation forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-254",
+      "display_name": "Heart Warden of Material Success",
+      "chapter": 254,
+      "theme": "Material Success",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Material Success, drawn from Chapter 254 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages material success"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses material success under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel material success toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Material Success"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Nine) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 253,
+        "name": "Vista Blue"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.55,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.6100000000000001,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q508",
+          "Q509"
+        ]
+      },
+      "signals_map": {
+        "Q508": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q509": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody material success today?",
+      "story_hook": "In Laurasia, a scene where material success forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-255",
+      "display_name": "Lyric of Romantic Excursion",
+      "chapter": 255,
+      "theme": "Romantic Excursion",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Romantic Excursion, drawn from Chapter 255 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages romantic excursion"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses romantic excursion under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel romantic excursion toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Romantic Excursion"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Two) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 254,
+        "name": "Padua"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q510",
+          "Q511"
+        ]
+      },
+      "signals_map": {
+        "Q510": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q511": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody romantic excursion today?",
+      "story_hook": "In Laurasia, a scene where romantic excursion forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-256",
+      "display_name": "Sparkbinder of Advantage",
+      "chapter": 256,
+      "theme": "Advantage",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Advantage, drawn from Chapter 256 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages advantage"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses advantage under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel advantage toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Advantage"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Two) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 255,
+        "name": "Emerald"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q512",
+          "Q513"
+        ]
+      },
+      "signals_map": {
+        "Q512": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q513": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody advantage today?",
+      "story_hook": "In Laurasia, a scene where advantage forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-257",
+      "display_name": "Pathbreaker of Imposition",
+      "chapter": 257,
+      "theme": "Imposition",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Imposition, drawn from Chapter 257 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages imposition"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses imposition under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel imposition toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Imposition"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Ten) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 256,
+        "name": "Chateau Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q514",
+          "Q515"
+        ]
+      },
+      "signals_map": {
+        "Q514": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q515": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody imposition today?",
+      "story_hook": "In Laurasia, a scene where imposition forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-258",
+      "display_name": "Warden of Thought of Action Orientation",
+      "chapter": 258,
+      "theme": "Action Orientation",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Action Orientation, drawn from Chapter 258 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages action orientation"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses action orientation under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel action orientation toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Action Orientation"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Knight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 257,
+        "name": "Pigment Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q516",
+          "Q517"
+        ]
+      },
+      "signals_map": {
+        "Q516": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q517": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody action orientation today?",
+      "story_hook": "In Laurasia, a scene where action orientation forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-259",
+      "display_name": "Anchor of Receptivity",
+      "chapter": 259,
+      "theme": "Receptivity",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Receptivity, drawn from Chapter 259 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages receptivity"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses receptivity under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel receptivity toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Receptivity"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Six) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 258,
+        "name": "Camarone"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q518",
+          "Q519"
+        ]
+      },
+      "signals_map": {
+        "Q518": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q519": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody receptivity today?",
+      "story_hook": "In Laurasia, a scene where receptivity forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-260",
+      "display_name": "Forgehand of Prioritization",
+      "chapter": 260,
+      "theme": "Prioritization",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Prioritization, drawn from Chapter 260 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages prioritization"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses prioritization under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel prioritization toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Prioritization"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Two) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 259,
+        "name": "Crusoe"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q520",
+          "Q521"
+        ]
+      },
+      "signals_map": {
+        "Q520": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q521": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody prioritization today?",
+      "story_hook": "In Laurasia, a scene where prioritization forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-261",
+      "display_name": "Vanguard of Inspiration",
+      "chapter": 261,
+      "theme": "Inspiration",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Inspiration, drawn from Chapter 261 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages inspiration"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses inspiration under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel inspiration toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Inspiration"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Page) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 260,
+        "name": "British Racing Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q522",
+          "Q523"
+        ]
+      },
+      "signals_map": {
+        "Q522": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q523": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody inspiration today?",
+      "story_hook": "In Laurasia, a scene where inspiration forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-262",
+      "display_name": "Heart Warden of Tradition of Excellence",
+      "chapter": 262,
+      "theme": "Tradition of Excellence",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Tradition of Excellence, drawn from Chapter 262 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages tradition of excellence"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses tradition of excellence under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel tradition of excellence toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Tradition of Excellence"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Six) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 261,
+        "name": "British Racing Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q524",
+          "Q525"
+        ]
+      },
+      "signals_map": {
+        "Q524": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q525": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody tradition of excellence today?",
+      "story_hook": "In Laurasia, a scene where tradition of excellence forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-263",
+      "display_name": "Augur of Materiality",
+      "chapter": 263,
+      "theme": "Materiality",
+      "family": "Metamorphosis / Destiny",
+      "summary": "This personality embodies the theme of Materiality, drawn from Chapter 263 of the Human Framework. It reflects the lessons of Metamorphosis / Destiny and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "symbolic vision",
+          "transformational presence",
+          "meaning-making",
+          "leverages materiality"
+        ],
+        "shadow": [
+          "grandiosity",
+          "magical thinking",
+          "detours from action",
+          "overuses materiality under stress"
+        ],
+        "growth_focus": [
+          "rituals for integration",
+          "translate vision to plan",
+          "seek grounded feedback",
+          "channel materiality toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Materiality"
+      },
+      "enneagram_link": {
+        "family_number": 8,
+        "note": "Mapped via Major Arcana (The Devil) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 262,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.58,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.86,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.74,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.6,
+          "conscientiousness": 0.54,
+          "adaptability": 0.64,
+          "imagination": 0.88
+        },
+        "match_weights": {
+          "openness": 0.6,
+          "imagination": 0.55,
+          "abstract_reasoning": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q526",
+          "Q527"
+        ]
+      },
+      "signals_map": {
+        "Q526": {
+          "dimension": "openness",
+          "polarity": 1.0
+        },
+        "Q527": {
+          "dimension": "imagination",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody materiality today?",
+      "story_hook": "In Laurasia, a scene where materiality forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-264",
+      "display_name": "Stormrunner of Transition",
+      "chapter": 264,
+      "theme": "Transition",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Transition, drawn from Chapter 264 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages transition"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses transition under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel transition toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Transition"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Four) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 263,
+        "name": "Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q528",
+          "Q529"
+        ]
+      },
+      "signals_map": {
+        "Q528": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q529": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody transition today?",
+      "story_hook": "In Laurasia, a scene where transition forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-265",
+      "display_name": "Arbiter of Avenging Force",
+      "chapter": 265,
+      "theme": "Avenging Force",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Avenging Force, drawn from Chapter 265 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages avenging force"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses avenging force under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel avenging force toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Avenging Force"
+      },
+      "enneagram_link": {
+        "family_number": 8,
+        "note": "Mapped via Swords (Page) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 264,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q530",
+          "Q531"
+        ]
+      },
+      "signals_map": {
+        "Q530": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q531": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody avenging force today?",
+      "story_hook": "In Laurasia, a scene where avenging force forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-266",
+      "display_name": "Sparkbinder of Responsiveness",
+      "chapter": 266,
+      "theme": "Responsiveness",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Responsiveness, drawn from Chapter 266 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages responsiveness"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses responsiveness under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel responsiveness toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Responsiveness"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Eight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 265,
+        "name": "Screamin' Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q532",
+          "Q533"
+        ]
+      },
+      "signals_map": {
+        "Q532": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q533": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody responsiveness today?",
+      "story_hook": "In Laurasia, a scene where responsiveness forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-267",
+      "display_name": "Empath of Fervency",
+      "chapter": 267,
+      "theme": "Fervency",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Fervency, drawn from Chapter 267 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages fervency"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses fervency under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel fervency toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Fervency"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Knight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 266,
+        "name": "Free Speech Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q534",
+          "Q535"
+        ]
+      },
+      "signals_map": {
+        "Q534": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q535": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody fervency today?",
+      "story_hook": "In Laurasia, a scene where fervency forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-268",
+      "display_name": "Edgekeeper of Recharge",
+      "chapter": 268,
+      "theme": "Recharge",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Recharge, drawn from Chapter 268 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages recharge"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses recharge under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel recharge toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Recharge"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Two) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 267,
+        "name": "Spring Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q536",
+          "Q537"
+        ]
+      },
+      "signals_map": {
+        "Q536": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q537": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody recharge today?",
+      "story_hook": "In Laurasia, a scene where recharge forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-269",
+      "display_name": "Ignis Herald of Evolution",
+      "chapter": 269,
+      "theme": "Evolution",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Evolution, drawn from Chapter 269 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages evolution"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses evolution under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel evolution toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Evolution"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Ace) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 268,
+        "name": "Light Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q538",
+          "Q539"
+        ]
+      },
+      "signals_map": {
+        "Q538": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q539": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody evolution today?",
+      "story_hook": "In Laurasia, a scene where evolution forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-270",
+      "display_name": "Steward of Understanding",
+      "chapter": 270,
+      "theme": "Understanding",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Understanding, drawn from Chapter 270 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages understanding"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses understanding under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel understanding toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Understanding"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Queen) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 269,
+        "name": "Aquamarine"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q540",
+          "Q541"
+        ]
+      },
+      "signals_map": {
+        "Q540": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q541": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody understanding today?",
+      "story_hook": "In Laurasia, a scene where understanding forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-271",
+      "display_name": "Stormrunner of Life Force",
+      "chapter": 271,
+      "theme": "Life Force",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Life Force, drawn from Chapter 271 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages life force"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses life force under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel life force toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Life Force"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Queen) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 270,
+        "name": "Medium Spring Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q542",
+          "Q543"
+        ]
+      },
+      "signals_map": {
+        "Q542": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q543": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody life force today?",
+      "story_hook": "In Laurasia, a scene where life force forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-272",
+      "display_name": "Forgehand of Prudence",
+      "chapter": 272,
+      "theme": "Prudence",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Prudence, drawn from Chapter 272 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages prudence"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses prudence under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel prudence toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Prudence"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Eight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 271,
+        "name": "Bright Turquoise"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q544",
+          "Q545"
+        ]
+      },
+      "signals_map": {
+        "Q544": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q545": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody prudence today?",
+      "story_hook": "In Laurasia, a scene where prudence forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-273",
+      "display_name": "Sentinel of Variance",
+      "chapter": 273,
+      "theme": "Variance",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Variance, drawn from Chapter 273 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages variance"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses variance under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel variance toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Variance"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Five) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 272,
+        "name": "Turquoise"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q546",
+          "Q547"
+        ]
+      },
+      "signals_map": {
+        "Q546": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q547": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody variance today?",
+      "story_hook": "In Laurasia, a scene where variance forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-274",
+      "display_name": "Steward of Struggle",
+      "chapter": 274,
+      "theme": "Struggle",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Struggle, drawn from Chapter 274 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages struggle"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses struggle under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel struggle toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Struggle"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Five) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 273,
+        "name": "Caribbean Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q548",
+          "Q549"
+        ]
+      },
+      "signals_map": {
+        "Q548": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q549": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody struggle today?",
+      "story_hook": "In Laurasia, a scene where struggle forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-275",
+      "display_name": "Empath of Emotional Balance",
+      "chapter": 275,
+      "theme": "Emotional Balance",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Emotional Balance, drawn from Chapter 275 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages emotional balance"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses emotional balance under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel emotional balance toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Emotional Balance"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (King) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 274,
+        "name": "Medium Sea Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q550",
+          "Q551"
+        ]
+      },
+      "signals_map": {
+        "Q550": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q551": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody emotional balance today?",
+      "story_hook": "In Laurasia, a scene where emotional balance forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-276",
+      "display_name": "Arbiter of New Habits",
+      "chapter": 276,
+      "theme": "New Habits",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of New Habits, drawn from Chapter 276 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages new habits"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses new habits under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel new habits toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "New Habits"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Three) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 275,
+        "name": "Lime"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q552",
+          "Q553"
+        ]
+      },
+      "signals_map": {
+        "Q552": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q553": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody new habits today?",
+      "story_hook": "In Laurasia, a scene where new habits forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-277",
+      "display_name": "Forgehand of Sustainable Results",
+      "chapter": 277,
+      "theme": "Sustainable Results",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Sustainable Results, drawn from Chapter 277 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages sustainable results"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses sustainable results under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel sustainable results toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Sustainable Results"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Seven) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 276,
+        "name": "Malachite"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q554",
+          "Q555"
+        ]
+      },
+      "signals_map": {
+        "Q554": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q555": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody sustainable results today?",
+      "story_hook": "In Laurasia, a scene where sustainable results forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-278",
+      "display_name": "Weaver of Restructuring",
+      "chapter": 278,
+      "theme": "Restructuring",
+      "family": "Metamorphosis / Destiny",
+      "summary": "This personality embodies the theme of Restructuring, drawn from Chapter 278 of the Human Framework. It reflects the lessons of Metamorphosis / Destiny and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "symbolic vision",
+          "transformational presence",
+          "meaning-making",
+          "leverages restructuring"
+        ],
+        "shadow": [
+          "grandiosity",
+          "magical thinking",
+          "detours from action",
+          "overuses restructuring under stress"
+        ],
+        "growth_focus": [
+          "rituals for integration",
+          "translate vision to plan",
+          "seek grounded feedback",
+          "channel restructuring toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Restructuring"
+      },
+      "enneagram_link": {
+        "family_number": 5,
+        "note": "Mapped via Major Arcana (The Tower) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 277,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.58,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.86,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.74,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.6,
+          "conscientiousness": 0.54,
+          "adaptability": 0.64,
+          "imagination": 0.88
+        },
+        "match_weights": {
+          "openness": 0.6,
+          "imagination": 0.55,
+          "abstract_reasoning": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q556",
+          "Q557"
+        ]
+      },
+      "signals_map": {
+        "Q556": {
+          "dimension": "openness",
+          "polarity": 1.0
+        },
+        "Q557": {
+          "dimension": "imagination",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody restructuring today?",
+      "story_hook": "In Laurasia, a scene where restructuring forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-279",
+      "display_name": "Arbiter of Earned Success",
+      "chapter": 279,
+      "theme": "Earned Success",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Earned Success, drawn from Chapter 279 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages earned success"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses earned success under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel earned success toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Earned Success"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Six) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 278,
+        "name": "Lime"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.8300000000000001,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.77,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q558",
+          "Q559"
+        ]
+      },
+      "signals_map": {
+        "Q558": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q559": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody earned success today?",
+      "story_hook": "In Laurasia, a scene where earned success forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-280",
+      "display_name": "Pillar of Satisfaction",
+      "chapter": 280,
+      "theme": "Satisfaction",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Satisfaction, drawn from Chapter 280 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages satisfaction"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses satisfaction under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel satisfaction toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Satisfaction"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Ace) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 279,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q560",
+          "Q561"
+        ]
+      },
+      "signals_map": {
+        "Q560": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q561": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody satisfaction today?",
+      "story_hook": "In Laurasia, a scene where satisfaction forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-281",
+      "display_name": "Edgekeeper of Wisdom",
+      "chapter": 281,
+      "theme": "Wisdom",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Wisdom, drawn from Chapter 281 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages wisdom"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses wisdom under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel wisdom toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Wisdom"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Queen) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 280,
+        "name": "Mint Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q562",
+          "Q563"
+        ]
+      },
+      "signals_map": {
+        "Q562": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q563": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody wisdom today?",
+      "story_hook": "In Laurasia, a scene where wisdom forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-282",
+      "display_name": "Anchor of Containment",
+      "chapter": 282,
+      "theme": "Containment",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Containment, drawn from Chapter 282 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages containment"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses containment under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel containment toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Containment"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Four) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 281,
+        "name": "Reef"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q564",
+          "Q565"
+        ]
+      },
+      "signals_map": {
+        "Q564": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q565": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody containment today?",
+      "story_hook": "In Laurasia, a scene where containment forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-283",
+      "display_name": "Pathbreaker of Activation",
+      "chapter": 283,
+      "theme": "Activation",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Activation, drawn from Chapter 283 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages activation"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses activation under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel activation toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Activation"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Knight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 282,
+        "name": "Screamin' Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q566",
+          "Q567"
+        ]
+      },
+      "signals_map": {
+        "Q566": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q567": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody activation today?",
+      "story_hook": "In Laurasia, a scene where activation forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-284",
+      "display_name": "Forgehand of Skill Development",
+      "chapter": 284,
+      "theme": "Skill Development",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Skill Development, drawn from Chapter 284 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages skill development"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses skill development under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel skill development toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Skill Development"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Page) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 283,
+        "name": "Lime Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.8999999999999999,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q568",
+          "Q569"
+        ]
+      },
+      "signals_map": {
+        "Q568": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q569": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody skill development today?",
+      "story_hook": "In Laurasia, a scene where skill development forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-285",
+      "display_name": "Lyric of Liberty",
+      "chapter": 285,
+      "theme": "Liberty",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Liberty, drawn from Chapter 285 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages liberty"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses liberty under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel liberty toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Liberty"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Seven) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 284,
+        "name": "Fern"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q570",
+          "Q571"
+        ]
+      },
+      "signals_map": {
+        "Q570": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q571": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody liberty today?",
+      "story_hook": "In Laurasia, a scene where liberty forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-286",
+      "display_name": "Pillar of Abundance",
+      "chapter": 286,
+      "theme": "Abundance",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Abundance, drawn from Chapter 286 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages abundance"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses abundance under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel abundance toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Abundance"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (King) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 285,
+        "name": "Free Speech Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.8300000000000001,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.87,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q572",
+          "Q573"
+        ]
+      },
+      "signals_map": {
+        "Q572": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q573": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody abundance today?",
+      "story_hook": "In Laurasia, a scene where abundance forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-287",
+      "display_name": "Sparkbinder of Tested Faith",
+      "chapter": 287,
+      "theme": "Tested Faith",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Tested Faith, drawn from Chapter 287 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages tested faith"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses tested faith under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel tested faith toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Tested Faith"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Nine) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 286,
+        "name": "Kelly Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.87,
+          "stability": 0.6599999999999999,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.7000000000000001,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q574",
+          "Q575"
+        ]
+      },
+      "signals_map": {
+        "Q574": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q575": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody tested faith today?",
+      "story_hook": "In Laurasia, a scene where tested faith forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-288",
+      "display_name": "Anchor of Contribution",
+      "chapter": 288,
+      "theme": "Contribution",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Contribution, drawn from Chapter 288 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages contribution"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses contribution under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel contribution toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Contribution"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Ten) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 287,
+        "name": "Dark Pastel Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q576",
+          "Q577"
+        ]
+      },
+      "signals_map": {
+        "Q576": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q577": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody contribution today?",
+      "story_hook": "In Laurasia, a scene where contribution forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-289",
+      "display_name": "Blade-Seer of Facing Fears",
+      "chapter": 289,
+      "theme": "Facing Fears",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Facing Fears, drawn from Chapter 289 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages facing fears"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses facing fears under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel facing fears toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Facing Fears"
+      },
+      "enneagram_link": {
+        "family_number": 6,
+        "note": "Mapped via Swords (Nine) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 288,
+        "name": "Olivine"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q578",
+          "Q579"
+        ]
+      },
+      "signals_map": {
+        "Q578": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q579": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody facing fears today?",
+      "story_hook": "In Laurasia, a scene where facing fears forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-290",
+      "display_name": "Empath of Lucidity",
+      "chapter": 290,
+      "theme": "Lucidity",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Lucidity, drawn from Chapter 290 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages lucidity"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses lucidity under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel lucidity toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Lucidity"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Four) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 289,
+        "name": "Verdun Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q580",
+          "Q581"
+        ]
+      },
+      "signals_map": {
+        "Q580": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q581": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody lucidity today?",
+      "story_hook": "In Laurasia, a scene where lucidity forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-291",
+      "display_name": "Cupbearer of Withdrawal",
+      "chapter": 291,
+      "theme": "Withdrawal",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Withdrawal, drawn from Chapter 291 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages withdrawal"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses withdrawal under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel withdrawal toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Withdrawal"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Eight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 290,
+        "name": "Chartreuse"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.56,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q582",
+          "Q583"
+        ]
+      },
+      "signals_map": {
+        "Q582": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q583": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody withdrawal today?",
+      "story_hook": "In Laurasia, a scene where withdrawal forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-292",
+      "display_name": "Lyric of Abundance",
+      "chapter": 292,
+      "theme": "Abundance",
+      "family": "Belonging / Emotion",
+      "summary": "This personality embodies the theme of Abundance, drawn from Chapter 292 of the Human Framework. It reflects the lessons of Belonging / Emotion and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "empathy",
+          "emotional attunement",
+          "supportive presence",
+          "leverages abundance"
+        ],
+        "shadow": [
+          "people-pleasing",
+          "emotional flooding",
+          "porous boundaries",
+          "overuses abundance under stress"
+        ],
+        "growth_focus": [
+          "practice clear boundaries",
+          "self-soothing rituals",
+          "ask directly for support",
+          "channel abundance toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Abundance"
+      },
+      "enneagram_link": {
+        "family_number": 2,
+        "note": "Mapped via Cups (Three) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 291,
+        "name": "Limeade"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.54,
+          "stability": 0.58,
+          "empathy": 0.86,
+          "openness": 0.6,
+          "orderliness": 0.55,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.72,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.8,
+          "risk_tolerance": 0.5,
+          "conscientiousness": 0.6100000000000001,
+          "adaptability": 0.66,
+          "imagination": 0.62
+        },
+        "match_weights": {
+          "empathy": 0.6,
+          "cooperativeness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q584",
+          "Q585"
+        ]
+      },
+      "signals_map": {
+        "Q584": {
+          "dimension": "empathy",
+          "polarity": 1.0
+        },
+        "Q585": {
+          "dimension": "cooperativeness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody abundance today?",
+      "story_hook": "In Laurasia, a scene where abundance forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-293",
+      "display_name": "Axis of Meditation",
+      "chapter": 293,
+      "theme": "Meditation",
+      "family": "Metamorphosis / Destiny",
+      "summary": "This personality embodies the theme of Meditation, drawn from Chapter 293 of the Human Framework. It reflects the lessons of Metamorphosis / Destiny and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "symbolic vision",
+          "transformational presence",
+          "meaning-making",
+          "leverages meditation"
+        ],
+        "shadow": [
+          "grandiosity",
+          "magical thinking",
+          "detours from action",
+          "overuses meditation under stress"
+        ],
+        "growth_focus": [
+          "rituals for integration",
+          "translate vision to plan",
+          "seek grounded feedback",
+          "channel meditation toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Meditation"
+      },
+      "enneagram_link": {
+        "family_number": 5,
+        "note": "Mapped via Major Arcana (The Star) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 292,
+        "name": "Black"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.58,
+          "stability": 0.5,
+          "empathy": 0.5,
+          "openness": 0.86,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.74,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.6,
+          "conscientiousness": 0.54,
+          "adaptability": 0.64,
+          "imagination": 0.88
+        },
+        "match_weights": {
+          "openness": 0.6,
+          "imagination": 0.55,
+          "abstract_reasoning": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q586",
+          "Q587"
+        ]
+      },
+      "signals_map": {
+        "Q586": {
+          "dimension": "openness",
+          "polarity": 1.0
+        },
+        "Q587": {
+          "dimension": "imagination",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody meditation today?",
+      "story_hook": "In Laurasia, a scene where meditation forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-294",
+      "display_name": "Vanguard of Valor",
+      "chapter": 294,
+      "theme": "Valor",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Valor, drawn from Chapter 294 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages valor"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses valor under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel valor toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Valor"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Seven) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 293,
+        "name": "Australian Mint"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q588",
+          "Q589"
+        ]
+      },
+      "signals_map": {
+        "Q588": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q589": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody valor today?",
+      "story_hook": "In Laurasia, a scene where valor forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-295",
+      "display_name": "Sentinel of Authority",
+      "chapter": 295,
+      "theme": "Authority",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Authority, drawn from Chapter 295 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages authority"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses authority under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel authority toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Authority"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (King) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 294,
+        "name": "Tidal"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q590",
+          "Q591"
+        ]
+      },
+      "signals_map": {
+        "Q590": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q591": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody authority today?",
+      "story_hook": "In Laurasia, a scene where authority forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-296",
+      "display_name": "Anchor of Independence",
+      "chapter": 296,
+      "theme": "Independence",
+      "family": "Materiality / Grounding",
+      "summary": "This personality embodies the theme of Independence, drawn from Chapter 296 of the Human Framework. It reflects the lessons of Materiality / Grounding and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "practical wisdom",
+          "resource stewardship",
+          "systems thinking",
+          "leverages independence"
+        ],
+        "shadow": [
+          "over-attachment to status",
+          "caution to a fault",
+          "work-life imbalance",
+          "overuses independence under stress"
+        ],
+        "growth_focus": [
+          "gratitude practice",
+          "simplify commitments",
+          "invest in resilient systems",
+          "channel independence toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Independence"
+      },
+      "enneagram_link": {
+        "family_number": 3,
+        "note": "Mapped via Disks (Nine) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 295,
+        "name": "Mindaro"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.6,
+          "stability": 0.84,
+          "empathy": 0.52,
+          "openness": 0.54,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.62,
+          "emotional_intensity": 0.5,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.42,
+          "conscientiousness": 0.82,
+          "adaptability": 0.5,
+          "imagination": 0.5
+        },
+        "match_weights": {
+          "conscientiousness": 0.6,
+          "stability": 0.55,
+          "orderliness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q592",
+          "Q593"
+        ]
+      },
+      "signals_map": {
+        "Q592": {
+          "dimension": "conscientiousness",
+          "polarity": 1.0
+        },
+        "Q593": {
+          "dimension": "stability",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody independence today?",
+      "story_hook": "In Laurasia, a scene where independence forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-297",
+      "display_name": "Stormrunner of Prescience",
+      "chapter": 297,
+      "theme": "Prescience",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Prescience, drawn from Chapter 297 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages prescience"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses prescience under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel prescience toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Prescience"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Three) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 296,
+        "name": "Mindaro"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q594",
+          "Q595"
+        ]
+      },
+      "signals_map": {
+        "Q594": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q595": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody prescience today?",
+      "story_hook": "In Laurasia, a scene where prescience forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-298",
+      "display_name": "Blade-Seer of Unknown",
+      "chapter": 298,
+      "theme": "Unknown",
+      "family": "Mind / Clarity",
+      "summary": "This personality embodies the theme of Unknown, drawn from Chapter 298 of the Human Framework. It reflects the lessons of Mind / Clarity and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "clear analysis",
+          "decisive communication",
+          "pattern recognition",
+          "leverages unknown"
+        ],
+        "shadow": [
+          "rigidity",
+          "over-critique",
+          "analysis paralysis",
+          "overuses unknown under stress"
+        ],
+        "growth_focus": [
+          "integrate head + heart",
+          "ask open questions",
+          "sleep on hard calls",
+          "channel unknown toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Unknown"
+      },
+      "enneagram_link": {
+        "family_number": 1,
+        "note": "Mapped via Swords (Eight) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 297,
+        "name": "Pear"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.5,
+          "stability": 0.64,
+          "empathy": 0.44,
+          "openness": 0.6,
+          "orderliness": 0.78,
+          "novelty_seeking": 0.5,
+          "abstract_reasoning": 0.84,
+          "emotional_intensity": 0.4,
+          "social_dominance": 0.5,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.53,
+          "conscientiousness": 0.72,
+          "adaptability": 0.5,
+          "imagination": 0.55
+        },
+        "match_weights": {
+          "abstract_reasoning": 0.6,
+          "orderliness": 0.55,
+          "stability": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q596",
+          "Q597"
+        ]
+      },
+      "signals_map": {
+        "Q596": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1.0
+        },
+        "Q597": {
+          "dimension": "orderliness",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody unknown today?",
+      "story_hook": "In Laurasia, a scene where unknown forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-299",
+      "display_name": "Vanguard of Letting Go",
+      "chapter": 299,
+      "theme": "Letting Go",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Letting Go, drawn from Chapter 299 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages letting go"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses letting go under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel letting go toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Letting Go"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Ten) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 298,
+        "name": "Yellow Green"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q598",
+          "Q599"
+        ]
+      },
+      "signals_map": {
+        "Q598": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q599": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody letting go today?",
+      "story_hook": "In Laurasia, a scene where letting go forces a pivotal choice that reshapes an alliance."
+    },
+    {
+      "id": "EA-300",
+      "display_name": "Stormrunner of Inner Alignment",
+      "chapter": 300,
+      "theme": "Inner Alignment",
+      "family": "Energy / Action",
+      "summary": "This personality embodies the theme of Inner Alignment, drawn from Chapter 300 of the Human Framework. It reflects the lessons of Energy / Action and integrates with the Hero\u2019s Journey arc.",
+      "traits": {
+        "strengths": [
+          "initiative",
+          "momentum building",
+          "boldness under pressure",
+          "leverages inner alignment"
+        ],
+        "shadow": [
+          "impulsivity",
+          "burnout risk",
+          "conflict escalation",
+          "overuses inner alignment under stress"
+        ],
+        "growth_focus": [
+          "pace to 70% effort",
+          "align action to core values",
+          "cooling breath before key moves",
+          "channel inner alignment toward service"
+        ]
+      },
+      "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia",
+        "chapter_theme": "Inner Alignment"
+      },
+      "enneagram_link": {
+        "family_number": 7,
+        "note": "Mapped via Wands (Two) emphasis and thematic cues."
+      },
+      "color_alignment": {
+        "hue_index": 299,
+        "name": "Limerick"
+      },
+      "scoring_model": {
+        "dimensions": {
+          "agency": 0.82,
+          "stability": 0.52,
+          "empathy": 0.5,
+          "openness": 0.62,
+          "orderliness": 0.5,
+          "novelty_seeking": 0.76,
+          "abstract_reasoning": 0.5,
+          "emotional_intensity": 0.66,
+          "social_dominance": 0.61,
+          "cooperativeness": 0.5,
+          "risk_tolerance": 0.68,
+          "conscientiousness": 0.58,
+          "adaptability": 0.7,
+          "imagination": 0.58
+        },
+        "match_weights": {
+          "agency": 0.6,
+          "novelty_seeking": 0.55,
+          "conscientiousness": 0.5
+        },
+        "threshold": 0.72,
+        "top_signal_items": [
+          "Q600",
+          "Q601"
+        ]
+      },
+      "signals_map": {
+        "Q600": {
+          "dimension": "agency",
+          "polarity": 1.0
+        },
+        "Q601": {
+          "dimension": "novelty_seeking",
+          "polarity": 0.8
+        }
+      },
+      "daily_prompt": "How did you embody inner alignment today?",
+      "story_hook": "In Laurasia, a scene where inner alignment forces a pivotal choice that reshapes an alliance."
+    }
+  ]
+}
