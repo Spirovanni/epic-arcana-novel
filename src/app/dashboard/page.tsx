@@ -169,7 +169,7 @@ export default function DashboardPage() {
             <div className="grid md:grid-cols-4 gap-4">
               <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-purple-300">{latestResult.dominant_type}</div>
+                  <div className="text-2xl font-bold text-purple-300">{latestResult?.dominant_type || 'N/A'}</div>
                   <div className="text-sm text-gray-400">Dominant Type</div>
                 </CardContent>
               </Card>
@@ -177,8 +177,8 @@ export default function DashboardPage() {
               <Card className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-green-500/30">
                 <CardContent className="p-4 text-center">
                   <div className="text-2xl font-bold text-green-300">
-                    {Object.entries(latestResult.instincts)
-                      .sort(([,a], [,b]) => b - a)[0][0]}
+                    {latestResult ? Object.entries(latestResult.instincts)
+                      .sort(([,a], [,b]) => b - a)[0][0] : 'N/A'}
                   </div>
                   <div className="text-sm text-gray-400">Primary Instinct</div>
                 </CardContent>
@@ -186,14 +186,14 @@ export default function DashboardPage() {
               
               <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-blue-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-300">{latestResult.wing_bin + 1}</div>
+                  <div className="text-2xl font-bold text-blue-300">{latestResult ? latestResult.wing_bin + 1 : 'N/A'}</div>
                   <div className="text-sm text-gray-400">Wing Pattern</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border-amber-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-amber-300">{latestResult.development_bin + 1}</div>
+                  <div className="text-2xl font-bold text-amber-300">{latestResult ? latestResult.development_bin + 1 : 'N/A'}</div>
                   <div className="text-sm text-gray-400">Development Stage</div>
                 </CardContent>
               </Card>
