@@ -288,7 +288,10 @@ async function repairProfiles(): Promise<PersonalityProfile[]> {
     }
     
     // Repair color alignment
-    if (!profile.color_alignment || profile.color_alignment.hue_index !== hue_index) {
+    if (!profile.color_alignment || 
+        profile.color_alignment.hue_index !== hue_index ||
+        !profile.color_alignment.hsl ||
+        !profile.color_alignment.rgb_hex) {
       const lightness = DEVELOPMENT_LIGHTNESS[development_bin as keyof typeof DEVELOPMENT_LIGHTNESS];
       const hsl = `${hue_index},62%,${lightness}%`;
       const rgb_hex = hslToHex(hue_index, 62, lightness);
@@ -345,6 +348,19 @@ async function repairProfiles(): Promise<PersonalityProfile[]> {
       if (!profile.scoring_model.top_signal_items || profile.scoring_model.top_signal_items.length < 2) {
         profile.scoring_model.top_signal_items = [`Q${chapter * 3 - 2}`, `Q${chapter * 3 - 1}`];
         repairs.push('scoring_model.top_signal_items');
+      }
+      
+      // Ensure match_weights has the required schema fields
+      if (!profile.scoring_model.match_weights || 
+          profile.scoring_model.match_weights.agency === undefined ||
+          profile.scoring_model.match_weights.stability === undefined ||
+          profile.scoring_model.match_weights.conscientiousness === undefined) {
+        profile.scoring_model.match_weights = {
+          agency: 0.3,
+          stability: 0.4,
+          conscientiousness: 0.3
+        };
+        repairs.push('scoring_model.match_weights');
       }
     }
     

@@ -1,314 +1,320 @@
-'use client';
+'use client'
 
-import { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import Breadcrumbs from '@/components/Breadcrumbs';
-import SimpleChart from '@/components/SimpleChart';
-import DashboardSidebar from './_components/DashboardSidebar';
-import StatsCard from './_components/StatsCard';
-import ProgressCard from './_components/ProgressCard';
-import ActivityFeed from './_components/ActivityFeed';
-import BookCard from './_components/BookCard';
-import ChapterCard from './_components/ChapterCard';
-import { 
-  ChartBarIcon,
-  BookOpenIcon,
-  DocumentTextIcon,
-  ClockIcon,
-  AcademicCapIcon,
-  SparklesIcon,
-  PencilSquareIcon
-} from '@heroicons/react/24/outline';
+import { useState, useEffect } from 'react'
+import { currentUser } from '@clerk/nextjs/server'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
+import { StrengthsAnalysis } from '@/components/dashboard/StrengthsAnalysis'
+import { GrowthAnalysis } from '@/components/dashboard/GrowthAnalysis'
+import Link from 'next/link'
+import { AssessmentResult } from '@/lib/assessment/types'
 
-interface DashboardStats {
-  totalBooks: number;
-  totalChapters: number;
-  totalPages: number;
-  totalWords: number;
-  totalScenes: number;
-  totalTaskGroups: number;
-  completionRate: number;
-  recentActivity: ActivityItem[];
-}
-
-interface ActivityItem {
-  id: string;
-  type: 'page_created' | 'page_updated' | 'chapter_created';
-  title: string;
-  timestamp: string;
-  bookTitle: string;
-  chapterTitle?: string;
-}
-
-interface BookProgress {
-  id: string;
-  title: string;
-  bookNumber: number;
-  chapters: number;
-  totalPages: number;
-  totalWords: number;
-  completionPercentage: number;
-  lastUpdated: string;
-  colorTheme?: {
-    name: string;
-    hex: string;
-  };
-}
-
-interface ChapterAnalytics {
-  id: string;
-  title: string;
-  chapterNumber: number;
-  bookTitle: string;
-  pages: number;
-  words: number;
-  scenes: number;
-  taskGroups: number;
-  completionRate: number;
-  lastUpdated: string;
+interface AssessmentHistoryItem {
+  id: string
+  chapter: number
+  color: {
+    rgb_hex: string
+  }
+  dominant_type: number
+  completedAt: string
 }
 
 export default function DashboardPage() {
-  const [stats, setStats] = useState<DashboardStats | null>(null);
-  const [bookProgress, setBookProgress] = useState<BookProgress[]>([]);
-  const [topChapters, setTopChapters] = useState<ChapterAnalytics[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [activeView, setActiveView] = useState<'overview' | 'books' | 'chapters'>('overview');
-  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
+  const [latestResult, setLatestResult] = useState<AssessmentResult | null>(null)
+  const [assessmentHistory, setAssessmentHistory] = useState<AssessmentHistoryItem[]>([])
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetchDashboardData();
-  }, []);
-
-  const fetchDashboardData = async () => {
-    try {
-      const response = await fetch('/api/dashboard');
-      if (response.ok) {
-        const data = await response.json();
-        setStats(data.stats);
-        setBookProgress(data.bookProgress);
-        setTopChapters(data.topChapters);
+    // Load assessment data from localStorage
+    const loadAssessmentData = () => {
+      try {
+        const storedResult = localStorage.getItem('lsa-assessment-result')
+        if (storedResult) {
+          const result = JSON.parse(storedResult)
+          setLatestResult(result)
+        }
+        // TODO: Load assessment history from API when available
+        setAssessmentHistory([])
+      } catch (error) {
+        console.error('Error loading assessment data:', error)
+      } finally {
+        setLoading(false)
       }
-    } catch (error) {
-      console.error('Failed to fetch dashboard data:', error);
-    } finally {
-      setLoading(false);
     }
-  };
+
+    loadAssessmentData()
+  }, [])
+
+  const getWelcomeMessage = () => {
+    if (latestResult) {
+      return {
+        title: `Welcome back, ${latestResult.profile.family} Explorer!`,
+        subtitle: `Chapter ${latestResult.chapter} • ${latestResult.profile.display_name}`,
+        hasResult: true
+      }
+    }
+    return {
+      title: "Welcome to Your Epic Arcana Dashboard",
+      subtitle: "Discover your personality and unlock your potential",
+      hasResult: false
+    }
+  }
+
+  const welcome = getWelcomeMessage()
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <Navbar />
-        <DashboardSidebar 
-          isCollapsed={sidebarCollapsed} 
-          onToggle={() => setSidebarCollapsed(!sidebarCollapsed)} 
-        />
-        <div className={`transition-all duration-300 ${sidebarCollapsed ? 'ml-16' : 'ml-64'}`}>
-          <Breadcrumbs items={[{ label: 'Dashboard', current: true }]} />
-          <div className="flex items-center justify-center min-h-[50vh]">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 dark:border-indigo-400 mx-auto mb-4"></div>
-              <p className="text-gray-600 dark:text-gray-400">Loading dashboard...</p>
-            </div>
+      <DashboardLayout title="Dashboard" subtitle="Loading your profile...">
+        <div className="flex items-center justify-center min-h-[50vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
+            <p className="text-gray-400">Loading your dashboard...</p>
           </div>
         </div>
-      </div>
-    );
+      </DashboardLayout>
+    )
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <Navbar />
-      <DashboardSidebar 
-        isCollapsed={sidebarCollapsed} 
-        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)} 
-      />
-      
-      {/* Main Content */}
-      <div className={`transition-all duration-300 ${sidebarCollapsed ? 'ml-16' : 'ml-64'}`}>
-        <Breadcrumbs items={[{ label: 'Dashboard', current: true }]} />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-black text-gray-900 dark:text-gray-100 mb-4">
-            Epic Arcana Dashboard
+    <DashboardLayout>
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Welcome Header */}
+        <div className="text-center space-y-4">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+            {welcome.title}
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            Monitor your writing progress, track analytics, and dive deep into your epic journey.
-          </p>
+          <p className="text-gray-400 text-lg">{welcome.subtitle}</p>
+          
+          {latestResult && (
+            <div className="flex items-center justify-center gap-4">
+              <div
+                className="w-8 h-8 rounded-full border-2 border-white/20"
+                style={{ backgroundColor: latestResult.color.rgb_hex }}
+              />
+              <span className="text-purple-300 font-semibold">{latestResult.ea_id}</span>
+            </div>
+          )}
         </div>
 
-        {/* View Toggle */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-1 shadow-lg">
-            {[
-              { key: 'overview', label: 'Overview', icon: ChartBarIcon },
-              { key: 'books', label: 'Books', icon: BookOpenIcon },
-              { key: 'chapters', label: 'Chapters', icon: DocumentTextIcon },
-            ].map(({ key, label, icon: Icon }) => (
-              <button
-                key={key}
-                onClick={() => setActiveView(key as 'overview' | 'books' | 'chapters')}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all ${
-                  activeView === key
-                    ? 'bg-indigo-600 dark:bg-indigo-500 text-white shadow-lg'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700'
-                }`}
-              >
-                <Icon className="w-5 h-5" />
-                <span>{label}</span>
-              </button>
-            ))}
+        {!welcome.hasResult ? (
+          /* No Assessment State */
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-purple-300 flex items-center gap-2">
+                  🔮 Take Assessment
+                </CardTitle>
+                <CardDescription className="text-gray-400">
+                  Discover your unique Epic Arcana personality profile
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 text-sm mb-4">
+                  Journey through mystical Laurasia with 54 story-driven questions to unlock one of 360 personality archetypes.
+                </p>
+                <Link href="/assessment">
+                  <Button variant="mystical" className="w-full">
+                    Start Assessment
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-slate-800/50 border-blue-500/30 hover:border-blue-400/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-blue-300 flex items-center gap-2">
+                  ⚡ Quick Preview
+                </CardTitle>
+                <CardDescription className="text-gray-400">
+                  Get a taste with just 3 story scenarios
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 text-sm mb-4">
+                  Experience the Epic Arcana assessment style with a shortened version perfect for first-time explorers.
+                </p>
+                <Link href="/assessment?mode=quick">
+                  <Button variant="outline" className="w-full border-blue-500/50 hover:bg-blue-500/10">
+                    Try Quick Preview
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+            
+            <Card className="bg-slate-800/50 border-green-500/30 hover:border-green-400/50 transition-colors">
+              <CardHeader>
+                <CardTitle className="text-green-300 flex items-center gap-2">
+                  📚 Learn More
+                </CardTitle>
+                <CardDescription className="text-gray-400">
+                  Understand the Human Framework
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-300 text-sm mb-4">
+                  Explore the science and methodology behind Epic Arcana personality profiling.
+                </p>
+                <Button variant="outline" className="w-full border-green-500/50 hover:bg-green-500/10">
+                  Explore Framework
+                </Button>
+              </CardContent>
+            </Card>
           </div>
-        </div>
-
-        {/* Overview Tab */}
-        {activeView === 'overview' && stats && (
-          <div className="space-y-8">
-            {/* Key Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
-              <StatsCard
-                title="Books"
-                value={stats.totalBooks}
-                icon={BookOpenIcon}
-                color="indigo"
-              />
-              <StatsCard
-                title="Chapters"
-                value={stats.totalChapters}
-                icon={DocumentTextIcon}
-                color="blue"
-              />
-              <StatsCard
-                title="Pages"
-                value={stats.totalPages}
-                icon={PencilSquareIcon}
-                color="green"
-              />
-              <StatsCard
-                title="Words"
-                value={stats.totalWords}
-                icon={SparklesIcon}
-                color="purple"
-              />
-              <StatsCard
-                title="Scenes"
-                value={stats.totalScenes}
-                icon={ClockIcon}
-                color="amber"
-              />
-              <StatsCard
-                title="Tasks"
-                value={stats.totalTaskGroups}
-                icon={AcademicCapIcon}
-                color="red"
-              />
+        ) : (
+          /* Assessment Complete State */
+          <>
+            {/* Quick Stats */}
+            <div className="grid md:grid-cols-4 gap-4">
+              <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-purple-300">{latestResult.dominant_type}</div>
+                  <div className="text-sm text-gray-400">Dominant Type</div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-green-500/30">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-green-300">
+                    {Object.entries(latestResult.instincts)
+                      .sort(([,a], [,b]) => b - a)[0][0]}
+                  </div>
+                  <div className="text-sm text-gray-400">Primary Instinct</div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-blue-500/30">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-blue-300">{latestResult.wing_bin + 1}</div>
+                  <div className="text-sm text-gray-400">Wing Pattern</div>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border-amber-500/30">
+                <CardContent className="p-4 text-center">
+                  <div className="text-2xl font-bold text-amber-300">{latestResult.development_bin + 1}</div>
+                  <div className="text-sm text-gray-400">Development Stage</div>
+                </CardContent>
+              </Card>
             </div>
 
-            {/* Completion Progress */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div className="lg:col-span-2">
-                <ProgressCard
-                  title="Overall Progress"
-                  percentage={stats.completionRate}
-                  description="Based on chapter completion and content development"
-                  color="green"
-                />
-              </div>
-              <div className="space-y-4">
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Quick Stats</h4>
-                  <div className="space-y-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Avg Pages/Chapter:</span>
-                      <span className="font-medium">{Math.round(stats.totalPages / stats.totalChapters)}</span>
+            {/* Action Cards */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link href="/dashboard/strengths">
+                <Card className="bg-slate-800/50 border-green-500/30 hover:border-green-400/50 transition-colors cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-green-300 flex items-center gap-2">
+                      💪 Strengths Analysis
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Explore your core strengths and talents
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Core Strengths</span>
+                        <span className="text-green-300">Identified</span>
+                      </div>
+                      <Progress value={85} className="h-2" />
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Avg Words/Page:</span>
-                      <span className="font-medium">{Math.round(stats.totalWords / stats.totalPages)}</span>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="/dashboard/growth">
+                <Card className="bg-slate-800/50 border-yellow-500/30 hover:border-yellow-400/50 transition-colors cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-yellow-300 flex items-center gap-2">
+                      🌱 Growth Areas
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Development opportunities and improvement areas
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Development Plan</span>
+                        <span className="text-yellow-300">Ready</span>
+                      </div>
+                      <Progress value={65} className="h-2" />
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600 dark:text-gray-400">Tasks/Chapter:</span>
-                      <span className="font-medium">{Math.round(stats.totalTaskGroups / stats.totalChapters)}</span>
+                  </CardContent>
+                </Card>
+              </Link>
+
+              <Link href="/dashboard/goals">
+                <Card className="bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 transition-colors cursor-pointer">
+                  <CardHeader>
+                    <CardTitle className="text-purple-300 flex items-center gap-2">
+                      🎯 Goals & Plans
+                    </CardTitle>
+                    <CardDescription className="text-gray-400">
+                      Personality-driven goals and action plans
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-2">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-gray-400">Action Plan</span>
+                        <span className="text-purple-300">Generate</span>
+                      </div>
+                      <Progress value={45} className="h-2" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </div>
+
+            {/* Mini Insights */}
+            <div className="grid md:grid-cols-2 gap-6">
+              <Card className="bg-slate-800/50 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-purple-300">Quick Insights</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-green-400">✓</span>
+                    <span className="text-gray-300 text-sm">Strong leadership qualities identified</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-yellow-400">⚡</span>
+                    <span className="text-gray-300 text-sm">Growth opportunity in risk-taking</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-blue-400">🎯</span>
+                    <span className="text-gray-300 text-sm">Optimal for structured environments</span>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-slate-800/50 border-blue-500/30">
+                <CardHeader>
+                  <CardTitle className="text-blue-300">Recent Activity</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3 text-sm">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-300">Assessment completed</span>
+                      <span className="text-gray-500">Today</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400">Profile updated</span>
+                      <span className="text-gray-500">Today</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-400">Goals available</span>
+                      <span className="text-purple-400">New</span>
                     </div>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             </div>
-
-
-            {/* Recent Activity and Charts */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <ActivityFeed 
-                activities={stats.recentActivity} 
-                maxItems={6}
-              />
-              
-              {/* Book Progress Chart */}
-              <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center">
-                  <ChartBarIcon className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
-                  Book Completion Progress
-                </h3>
-                <SimpleChart
-                  type="bar"
-                  data={bookProgress.slice(0, 6).map(book => ({
-                    label: `Book ${book.bookNumber}`,
-                    value: book.completionPercentage,
-                    color: book.colorTheme?.hex || '#6366F1'
-                  }))}
-                  height={250}
-                />
-              </div>
-            </div>
-          </div>
+          </>
         )}
-
-        {/* Books Tab */}
-        {activeView === 'books' && (
-          <div className="space-y-6">
-            <div className="grid gap-6">
-              {bookProgress.length === 0 ? (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
-                  <BookOpenIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-300">No books found</p>
-                </div>
-              ) : (
-                bookProgress.map((book) => (
-                  <BookCard key={book.id} book={book} />
-                ))
-              )}
-            </div>
-          </div>
-        )}
-
-        {/* Chapters Tab */}
-        {activeView === 'chapters' && (
-          <div className="space-y-6">
-            <div className="grid gap-4">
-              {topChapters.length === 0 ? (
-                <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
-                  <DocumentTextIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-300">No chapters found</p>
-                </div>
-              ) : (
-                topChapters.map((chapter) => (
-                  <ChapterCard 
-                    key={chapter.id} 
-                    chapter={{
-                      ...chapter,
-                      bookId: 'temp-id' // This would come from your API
-                    }} 
-                  />
-                ))
-              )}
-            </div>
-          </div>
-        )}
-        </div>
       </div>
-    </div>
-  );
+    </DashboardLayout>
+  )
 }

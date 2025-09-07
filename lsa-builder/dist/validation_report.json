@@ -1,373 +1,6 @@
 {
   "totalProfiles": 360,
-  "validationIssues": [
-    {
-      "chapter": 300,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 301,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 302,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 303,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 304,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 305,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 306,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 307,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 308,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 309,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 310,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 311,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 312,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 313,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 314,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 315,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 316,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 317,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 318,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 319,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 320,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"stability\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 321,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 322,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 323,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 324,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 325,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 326,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 327,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 328,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 329,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 330,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 331,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 332,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 333,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 334,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 335,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 336,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 337,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 338,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 339,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 340,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 341,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 342,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 343,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 344,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 345,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 346,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 347,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 348,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 349,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 350,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 351,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 352,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 353,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 354,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 355,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 356,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 357,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 358,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 359,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    },
-    {
-      "chapter": 360,
-      "field": "general",
-      "message": "[\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"hsl\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"string\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"color_alignment\",\n      \"rgb_hex\"\n    ],\n    \"message\": \"Invalid input: expected string, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"agency\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  },\n  {\n    \"expected\": \"number\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"scoring_model\",\n      \"match_weights\",\n      \"conscientiousness\"\n    ],\n    \"message\": \"Invalid input: expected number, received undefined\"\n  }\n]",
-      "severity": "error"
-    }
-  ],
+  "validationIssues": [],
   "createdProfiles": [
     1,
     2,
@@ -5832,187 +5465,309 @@
       "story_hook"
     ],
     "300": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "301": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "302": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "303": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "304": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "305": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "306": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "307": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "308": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "309": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "310": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "311": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "312": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "313": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "314": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "315": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "316": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "317": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "318": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "319": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "320": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "321": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "322": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "323": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "324": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "325": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "326": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "327": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "328": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "329": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "330": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "331": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "332": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "333": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "334": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "335": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "336": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "337": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "338": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "339": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "340": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "341": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "342": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "343": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "344": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "345": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "346": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "347": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "348": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "349": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "350": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "351": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "352": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "353": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "354": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "355": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "356": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "357": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "358": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "359": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ],
     "360": [
-      "position"
+      "position",
+      "color_alignment",
+      "scoring_model.match_weights"
     ]
   },
   "familyCounts": {
