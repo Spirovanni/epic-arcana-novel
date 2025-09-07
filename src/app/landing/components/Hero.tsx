@@ -33,7 +33,7 @@ export function Hero() {
               Player Profile—then travel through <em>Laurasia</em> while leveling up real-life skills.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link href="#start" className={`${gradCTA} px-6 py-3 rounded-2xl font-semibold`}>🔮 Take the Assessment</Link>
+              <Link href="/assessment" className={`${gradCTA} px-6 py-3 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg`}>🔮 Take the Assessment</Link>
               <a href="#how" className="px-6 py-3 rounded-2xl font-semibold bg-white/5 hover:bg-white/10 transition">How it works</a>
             </div>
             <p className="mt-4 text-xs text-slate-400">No spam. 5–7 minutes. Instant results.</p>

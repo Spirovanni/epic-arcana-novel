@@ -20,7 +20,7 @@ export function FinalCTA() {
           Start your Player Type & Role Assessment now. Instant results and a clear path through
           the Human Framework—mapped to your unique strengths.
         </p>
-        <Link className={`${gradCTA} inline-block mt-8 px-8 py-4 rounded-2xl font-semibold`} href="/sign-up">🔮 Begin Assessment</Link>
+        <Link className={`${gradCTA} inline-block mt-8 px-8 py-4 rounded-2xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg`} href="/assessment">🔮 Begin Assessment</Link>
       </div>
     </section>
   );

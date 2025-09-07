@@ -33,6 +33,7 @@ export function Navbar() {
           <a href="#world" className="hover:text-white/90 transition-colors tracking-wide">World</a>
           <a href="#community" className="hover:text-white/90 transition-colors tracking-wide">Community</a>
           <a href="#cycle" className="hover:text-white/90 transition-colors tracking-wide">Cycle</a>
+          <a href="#dashboard" className="hover:text-white/90 transition-colors tracking-wide">Dashboard</a>
         </nav>
 
         {/* Right auth section */}
@@ -60,13 +61,12 @@ export function Navbar() {
                   Sign In
                 </button>
               </SignInButton>
-              <SignUpButton mode="modal">
-                <button
-                  className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide`}
-                >
-                  Take Assessment
-                </button>
-              </SignUpButton>
+              <Link 
+                href="/assessment"
+                className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}
+              >
+                Take Assessment
+              </Link>
             </>
           )}
           
@@ -91,6 +91,7 @@ export function Navbar() {
               <a href="#world" className="block text-slate-300 hover:text-white/90 transition-colors">World</a>
               <a href="#community" className="block text-slate-300 hover:text-white/90 transition-colors">Community</a>
               <a href="#cycle" className="block text-slate-300 hover:text-white/90 transition-colors">Cycle</a>
+              <a href="#dashboard" className="block text-slate-300 hover:text-white/90 transition-colors">Dashboard</a>
             </nav>
             <div className="pt-2 border-t border-white/5">
               {isSignedIn ? (
@@ -107,11 +108,12 @@ export function Navbar() {
                       Sign In
                     </button>
                   </SignInButton>
-                  <SignUpButton mode="modal">
-                    <button className={`${gradCTA} block w-full text-sm font-semibold px-4 py-2 rounded-xl`}>
-                      Take Assessment
-                    </button>
-                  </SignUpButton>
+                  <Link 
+                    href="/assessment"
+                    className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
+                  >
+                    Take Assessment
+                  </Link>
                 </div>
               )}
             </div>
