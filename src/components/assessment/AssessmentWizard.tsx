@@ -11,6 +11,7 @@ import { ForcedChoiceItem } from '@/components/assessment/ForcedChoiceItem'
 import { LikertItem } from '@/components/assessment/LikertItem'
 import { AssessmentProgress } from '@/components/assessment/AssessmentProgress'
 import { AuthGate } from '@/components/assessment/AuthGate'
+import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
 
 const ITEMS_PER_STEP = {
   1: { forced: 3, likert: 0 }, // 3 forced choice
@@ -146,9 +147,10 @@ export function AssessmentWizard() {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <AssessmentNavbar />
       <div className="container mx-auto px-4 py-8">
         {/* Progress Header - Sticky */}
-        <div className="sticky top-0 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
+        <div className="sticky top-16 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
           <AssessmentProgress 
             currentStep={currentStep} 
             totalSteps={totalSteps}

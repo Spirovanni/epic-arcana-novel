@@ -7,8 +7,8 @@
   "scripts": {
     "test": "vitest run",
     "draft": "node draft_scripts/draftNext.mjs",
-    "dev": "next dev --turbopack",
-    "dev:no-turbo": "next dev",
+    "dev": "next dev",
+    "dev:turbo": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
