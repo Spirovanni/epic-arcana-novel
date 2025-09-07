@@ -1,0 +1,1179 @@
+{
+  "assessmentSystem": {
+    "name": "Epic Arcana Player Type & Role Assessment",
+    "description": "An immersive Enneagram-focused assessment aligning the nine personality types with the nine books of the Epic Arcana saga. While still drawing on Big Five and Jungian archetypes for nuance, the core of this system explores the motivations, fears, and growth paths of the Enneagram to place users into a book-specific Player Profile and Hero Journey stage.",
+    "version": "1.0.0",
+    "totalBooks": 9,
+    "assessmentDuration": "5-7 minutes",
+    "colorCycleDays": 360
+  },
+  "psychologicalFrameworks": {
+    "bigFive": {
+      "openness": {
+        "description": "Curiosity, creativity, openness to experience",
+        "trionfiMapping": [
+          "The Fool",
+          "The Magician",
+          "The Star"
+        ]
+      },
+      "conscientiousness": {
+        "description": "Organization, discipline, goal-oriented behavior",
+        "trionfiMapping": [
+          "The Emperor",
+          "Justice",
+          "The Hermit"
+        ]
+      },
+      "extraversion": {
+        "description": "Energy from external world, social interaction",
+        "trionfiMapping": [
+          "The Sun",
+          "Strength",
+          "The World"
+        ]
+      },
+      "agreeableness": {
+        "description": "Cooperation, trust, empathy",
+        "trionfiMapping": [
+          "The Lovers",
+          "Temperance",
+          "The High Priestess"
+        ]
+      },
+      "neuroticism": {
+        "description": "Emotional stability vs. anxiety and stress",
+        "trionfiMapping": [
+          "The Tower",
+          "Death",
+          "The Devil"
+        ]
+      }
+    },
+    "jungianArchetypes": {
+      "theInnocent": {
+        "description": "Pure, optimistic, seeks harmony",
+        "bookAlignment": 1,
+        "shadowAspect": "naive, denial of reality"
+      },
+      "theExplorer": {
+        "description": "Seeks freedom, authentic experience",
+        "bookAlignment": 2,
+        "shadowAspect": "restless, never satisfied"
+      },
+      "theSage": {
+        "description": "Seeks truth and understanding",
+        "bookAlignment": 3,
+        "shadowAspect": "dogmatic, overcomplicated"
+      },
+      "theHero": {
+        "description": "Courageous, determined, proves worth",
+        "bookAlignment": 4,
+        "shadowAspect": "arrogant, ruthless"
+      },
+      "theOutlaw": {
+        "description": "Breaks rules, seeks revolution",
+        "bookAlignment": 5,
+        "shadowAspect": "criminal, self-destructive"
+      },
+      "theMagician": {
+        "description": "Transforms reality, visionary",
+        "bookAlignment": 6,
+        "shadowAspect": "manipulative, megalomaniac"
+      },
+      "theCaregiver": {
+        "description": "Helps others, compassionate",
+        "bookAlignment": 7,
+        "shadowAspect": "martyrdom, enabling"
+      },
+      "theCreator": {
+        "description": "Creates enduring value, artistic",
+        "bookAlignment": 8,
+        "shadowAspect": "perfectionist, narcissistic"
+      },
+      "theRuler": {
+        "description": "Takes responsibility, creates order",
+        "bookAlignment": 9,
+        "shadowAspect": "tyrannical, authoritarian"
+      }
+    },
+    "enneagram": {
+      "description": "A model of human psychology describing nine fundamental personality types, each with its own motivations, fears, and growth paths",
+      "types": {
+        "1": {
+          "name": "The Reformer",
+          "description": "Principled, purposeful, self-controlled, and perfectionistic",
+          "coreDesire": "To be good and have integrity",
+          "coreFear": "Being corrupt or defective"
+        },
+        "2": {
+          "name": "The Helper",
+          "description": "Caring, interpersonal, generous, and people-pleasing",
+          "coreDesire": "To be loved and appreciated",
+          "coreFear": "Being unwanted or unloved"
+        },
+        "3": {
+          "name": "The Achiever",
+          "description": "Success-oriented, adaptable, driven, and image-conscious",
+          "coreDesire": "To feel valuable and worthwhile",
+          "coreFear": "Being worthless or a failure"
+        },
+        "4": {
+          "name": "The Individualist",
+          "description": "Sensitive, expressive, dramatic, and self-aware",
+          "coreDesire": "To find themselves and their unique significance",
+          "coreFear": "Having no identity or personal significance"
+        },
+        "5": {
+          "name": "The Investigator",
+          "description": "Perceptive, cerebral, innovative, and isolated",
+          "coreDesire": "To be competent and capable",
+          "coreFear": "Being helpless, useless, or overwhelmed"
+        },
+        "6": {
+          "name": "The Loyalist",
+          "description": "Committed, security-oriented, reliable, and anxious",
+          "coreDesire": "To have security and support",
+          "coreFear": "Being without guidance or support"
+        },
+        "7": {
+          "name": "The Enthusiast",
+          "description": "Spontaneous, versatile, acquisitive, and scattered",
+          "coreDesire": "To be satisfied and content",
+          "coreFear": "Being deprived or in pain"
+        },
+        "8": {
+          "name": "The Challenger",
+          "description": "Self-confident, decisive, domineering, and confrontational",
+          "coreDesire": "To protect themselves and determine their own course",
+          "coreFear": "Being controlled or harmed by others"
+        },
+        "9": {
+          "name": "The Peacemaker",
+          "description": "Easygoing, receptive, reassuring, and complacent",
+          "coreDesire": "To have inner stability and peace of mind",
+          "coreFear": "Loss and separation, conflict"
+        }
+      }
+    }
+  },
+  "playerTypes": {
+    "book1_theAwakening": {
+      "bookNumber": 1,
+      "title": "The Awakening Innocent",
+      "primaryArchetype": "theInnocent",
+      "trionfiCard": "The Fool",
+      "colorTheme": {
+        "primary": "#FFE5B4",
+        "secondary": "#FFF8DC",
+        "accent": "#F0E68C"
+      },
+      "colorCycleDays": [
+        1,
+        41,
+        81,
+        121,
+        161,
+        201,
+        241,
+        281,
+        321
+      ],
+      "coreTraits": {
+        "openness": "high",
+        "conscientiousness": "medium",
+        "extraversion": "medium-high",
+        "agreeableness": "high",
+        "neuroticism": "low"
+      },
+      "heroJourneyStage": "The Ordinary World",
+      "questFocus": "Self-discovery and wonder",
+      "shadowWork": "Confronting naivety and disillusionment",
+      "strengths": [
+        "optimism",
+        "trust",
+        "simplicity",
+        "authenticity"
+      ],
+      "challenges": [
+        "avoiding reality",
+        "over-trusting",
+        "lack of boundaries"
+      ],
+      "dailyPrompts": [
+        "What filled you with wonder today?",
+        "How did you maintain hope in a difficult situation?",
+        "What simple truth became clear to you?"
+      ],
+      "enneagram": {
+        "type": 9,
+        "name": "The Peacemaker",
+        "coreDesire": "To experience inner peace and harmony",
+        "coreFear": "Loss of connection and conflict",
+        "growthPath": "Learning to assert yourself and engage fully with life",
+        "stressPath": "Becoming complacent or disengaged",
+        "wings": [
+          8,
+          1
+        ]
+      }
+    },
+    "book2_theSeeker": {
+      "bookNumber": 2,
+      "title": "The Seeker Explorer",
+      "primaryArchetype": "theExplorer",
+      "trionfiCard": "The Star",
+      "colorTheme": {
+        "primary": "#87CEEB",
+        "secondary": "#B0E0E6",
+        "accent": "#4682B4"
+      },
+      "colorCycleDays": [
+        2,
+        42,
+        82,
+        122,
+        162,
+        202,
+        242,
+        282,
+        322
+      ],
+      "coreTraits": {
+        "openness": "very-high",
+        "conscientiousness": "medium-low",
+        "extraversion": "high",
+        "agreeableness": "medium",
+        "neuroticism": "medium"
+      },
+      "heroJourneyStage": "The Call to Adventure",
+      "questFocus": "Freedom and authentic experience",
+      "shadowWork": "Finding purpose without endless wandering",
+      "strengths": [
+        "adventure",
+        "independence",
+        "curiosity",
+        "authenticity"
+      ],
+      "challenges": [
+        "commitment issues",
+        "restlessness",
+        "avoiding responsibility"
+      ],
+      "dailyPrompts": [
+        "What new experience called to you today?",
+        "How did you honor your need for freedom?",
+        "What adventure is your soul craving?"
+      ],
+      "enneagram": {
+        "type": 7,
+        "name": "The Enthusiast",
+        "coreDesire": "To be satisfied and content",
+        "coreFear": "Being deprived or trapped in pain",
+        "growthPath": "Cultivating focus and staying present through challenges",
+        "stressPath": "Overindulgence and avoidance of uncomfortable feelings",
+        "wings": [
+          6,
+          8
+        ]
+      }
+    },
+    "book3_theWisdomKeeper": {
+      "bookNumber": 3,
+      "title": "The Wisdom Keeper Sage",
+      "primaryArchetype": "theSage",
+      "trionfiCard": "The Hermit",
+      "colorTheme": {
+        "primary": "#9370DB",
+        "secondary": "#8A2BE2",
+        "accent": "#6A5ACD"
+      },
+      "colorCycleDays": [
+        3,
+        43,
+        83,
+        123,
+        163,
+        203,
+        243,
+        283,
+        323
+      ],
+      "coreTraits": {
+        "openness": "very-high",
+        "conscientiousness": "high",
+        "extraversion": "low-medium",
+        "agreeableness": "medium",
+        "neuroticism": "low"
+      },
+      "heroJourneyStage": "Meeting the Mentor",
+      "questFocus": "Understanding truth and wisdom",
+      "shadowWork": "Avoiding paralysis through analysis",
+      "strengths": [
+        "intelligence",
+        "objectivity",
+        "teaching",
+        "depth"
+      ],
+      "challenges": [
+        "overthinking",
+        "isolation",
+        "perfectionism"
+      ],
+      "dailyPrompts": [
+        "What deeper truth revealed itself today?",
+        "How did you share wisdom with others?",
+        "What question deserves more contemplation?"
+      ],
+      "enneagram": {
+        "type": 5,
+        "name": "The Investigator",
+        "coreDesire": "To be competent and capable",
+        "coreFear": "Being helpless, useless, or overwhelmed",
+        "growthPath": "Engaging with others and sharing your knowledge",
+        "stressPath": "Retreating into isolation and detachment",
+        "wings": [
+          4,
+          6
+        ]
+      }
+    },
+    "book4_theChampion": {
+      "bookNumber": 4,
+      "title": "The Champion Hero",
+      "primaryArchetype": "theHero",
+      "trionfiCard": "Strength",
+      "colorTheme": {
+        "primary": "#DC143C",
+        "secondary": "#B22222",
+        "accent": "#8B0000"
+      },
+      "colorCycleDays": [
+        4,
+        44,
+        84,
+        124,
+        164,
+        204,
+        244,
+        284,
+        324
+      ],
+      "coreTraits": {
+        "openness": "medium-high",
+        "conscientiousness": "very-high",
+        "extraversion": "high",
+        "agreeableness": "medium",
+        "neuroticism": "low-medium"
+      },
+      "heroJourneyStage": "Crossing the Threshold",
+      "questFocus": "Courage and proving worth",
+      "shadowWork": "Balancing achievement with humility",
+      "strengths": [
+        "courage",
+        "determination",
+        "leadership",
+        "resilience"
+      ],
+      "challenges": [
+        "pride",
+        "aggression",
+        "need for validation"
+      ],
+      "dailyPrompts": [
+        "What challenge did you face with courage today?",
+        "How did you use your strength to help others?",
+        "What victory taught you about yourself?"
+      ],
+      "enneagram": {
+        "type": 6,
+        "name": "The Loyalist",
+        "coreDesire": "To have security and support",
+        "coreFear": "Being without guidance or support",
+        "growthPath": "Developing trust in yourself and embracing courage",
+        "stressPath": "Succumbing to anxiety and indecision",
+        "wings": [
+          5,
+          7
+        ]
+      }
+    },
+    "book5_theRevolutionary": {
+      "bookNumber": 5,
+      "title": "The Revolutionary Outlaw",
+      "primaryArchetype": "theOutlaw",
+      "trionfiCard": "The Tower",
+      "colorTheme": {
+        "primary": "#2F4F4F",
+        "secondary": "#696969",
+        "accent": "#A9A9A9"
+      },
+      "colorCycleDays": [
+        5,
+        45,
+        85,
+        125,
+        165,
+        205,
+        245,
+        285,
+        325
+      ],
+      "coreTraits": {
+        "openness": "very-high",
+        "conscientiousness": "low-medium",
+        "extraversion": "medium-high",
+        "agreeableness": "low",
+        "neuroticism": "medium-high"
+      },
+      "heroJourneyStage": "Tests, Allies, and Enemies",
+      "questFocus": "Breaking unjust systems",
+      "shadowWork": "Constructive vs. destructive rebellion",
+      "strengths": [
+        "independence",
+        "courage",
+        "authenticity",
+        "reform"
+      ],
+      "challenges": [
+        "destructiveness",
+        "isolation",
+        "cynicism"
+      ],
+      "dailyPrompts": [
+        "What system or rule did you question today?",
+        "How did you stand up for what's right?",
+        "What needs to be changed in your world?"
+      ],
+      "enneagram": {
+        "type": 8,
+        "name": "The Challenger",
+        "coreDesire": "To protect yourself and control your destiny",
+        "coreFear": "Being controlled or harmed by others",
+        "growthPath": "Practicing vulnerability and compassion",
+        "stressPath": "Becoming domineering or confrontational",
+        "wings": [
+          7,
+          9
+        ]
+      }
+    },
+    "book6_theAlchemist": {
+      "bookNumber": 6,
+      "title": "The Alchemist Magician",
+      "primaryArchetype": "theMagician",
+      "trionfiCard": "The Magician",
+      "colorTheme": {
+        "primary": "#4B0082",
+        "secondary": "#8B008B",
+        "accent": "#9932CC"
+      },
+      "colorCycleDays": [
+        6,
+        46,
+        86,
+        126,
+        166,
+        206,
+        246,
+        286,
+        326
+      ],
+      "coreTraits": {
+        "openness": "very-high",
+        "conscientiousness": "high",
+        "extraversion": "medium",
+        "agreeableness": "medium-low",
+        "neuroticism": "medium"
+      },
+      "heroJourneyStage": "Approach to the Inmost Cave",
+      "questFocus": "Transformation and manifestation",
+      "shadowWork": "Power with responsibility, not manipulation",
+      "strengths": [
+        "vision",
+        "transformation",
+        "innovation",
+        "influence"
+      ],
+      "challenges": [
+        "manipulation",
+        "ego",
+        "impatience"
+      ],
+      "dailyPrompts": [
+        "What did you transform or create today?",
+        "How did you use your influence responsibly?",
+        "What vision is calling you forward?"
+      ],
+      "enneagram": {
+        "type": 1,
+        "name": "The Reformer",
+        "coreDesire": "To be good and have integrity",
+        "coreFear": "Being corrupt or defective",
+        "growthPath": "Accepting imperfection and embracing flexibility",
+        "stressPath": "Falling into harsh criticism and rigidity",
+        "wings": [
+          9,
+          2
+        ]
+      }
+    },
+    "book7_theHealer": {
+      "bookNumber": 7,
+      "title": "The Healer Caregiver",
+      "primaryArchetype": "theCaregiver",
+      "trionfiCard": "Temperance",
+      "colorTheme": {
+        "primary": "#228B22",
+        "secondary": "#32CD32",
+        "accent": "#90EE90"
+      },
+      "colorCycleDays": [
+        7,
+        47,
+        87,
+        127,
+        167,
+        207,
+        247,
+        287,
+        327
+      ],
+      "coreTraits": {
+        "openness": "medium-high",
+        "conscientiousness": "high",
+        "extraversion": "medium-high",
+        "agreeableness": "very-high",
+        "neuroticism": "medium"
+      },
+      "heroJourneyStage": "The Ordeal",
+      "questFocus": "Service and compassion",
+      "shadowWork": "Self-care while caring for others",
+      "strengths": [
+        "empathy",
+        "nurturing",
+        "service",
+        "healing"
+      ],
+      "challenges": [
+        "martyrdom",
+        "enabling",
+        "neglecting self"
+      ],
+      "dailyPrompts": [
+        "How did you care for someone today?",
+        "What did you do to nurture yourself?",
+        "How did you balance giving and receiving?"
+      ],
+      "enneagram": {
+        "type": 2,
+        "name": "The Helper",
+        "coreDesire": "To be loved and appreciated",
+        "coreFear": "Being unwanted or unworthy of love",
+        "growthPath": "Practicing self-care and setting healthy boundaries",
+        "stressPath": "Becoming overbearing or people-pleasing",
+        "wings": [
+          1,
+          3
+        ]
+      }
+    },
+    "book8_theArtist": {
+      "bookNumber": 8,
+      "title": "The Artist Creator",
+      "primaryArchetype": "theCreator",
+      "trionfiCard": "The World",
+      "colorTheme": {
+        "primary": "#FF8C00",
+        "secondary": "#FFA500",
+        "accent": "#FFD700"
+      },
+      "colorCycleDays": [
+        8,
+        48,
+        88,
+        128,
+        168,
+        208,
+        248,
+        288,
+        328
+      ],
+      "coreTraits": {
+        "openness": "very-high",
+        "conscientiousness": "medium-high",
+        "extraversion": "medium",
+        "agreeableness": "medium",
+        "neuroticism": "medium-high"
+      },
+      "heroJourneyStage": "The Reward",
+      "questFocus": "Creating enduring beauty and meaning",
+      "shadowWork": "Creating for service, not just ego",
+      "strengths": [
+        "creativity",
+        "vision",
+        "self-expression",
+        "innovation"
+      ],
+      "challenges": [
+        "perfectionism",
+        "moodiness",
+        "self-doubt"
+      ],
+      "dailyPrompts": [
+        "What did you create or express today?",
+        "How did your art serve something greater?",
+        "What beauty did you bring into the world?"
+      ],
+      "enneagram": {
+        "type": 4,
+        "name": "The Individualist",
+        "coreDesire": "To find themselves and their significance",
+        "coreFear": "Having no identity or personal significance",
+        "growthPath": "Cultivating equanimity and connecting with the world",
+        "stressPath": "Succumbing to envy or dramatic self-focus",
+        "wings": [
+          3,
+          5
+        ]
+      }
+    },
+    "book9_theLeader": {
+      "bookNumber": 9,
+      "title": "The Leader Ruler",
+      "primaryArchetype": "theRuler",
+      "trionfiCard": "The Emperor",
+      "colorTheme": {
+        "primary": "#800080",
+        "secondary": "#9370DB",
+        "accent": "#DDA0DD"
+      },
+      "colorCycleDays": [
+        9,
+        49,
+        89,
+        129,
+        169,
+        209,
+        249,
+        289,
+        329
+      ],
+      "coreTraits": {
+        "openness": "medium",
+        "conscientiousness": "very-high",
+        "extraversion": "high",
+        "agreeableness": "medium-low",
+        "neuroticism": "low"
+      },
+      "heroJourneyStage": "The Return with the Elixir",
+      "questFocus": "Creating order and leading others",
+      "shadowWork": "Service leadership vs. domination",
+      "strengths": [
+        "leadership",
+        "organization",
+        "responsibility",
+        "stability"
+      ],
+      "challenges": [
+        "control issues",
+        "inflexibility",
+        "authoritarianism"
+      ],
+      "dailyPrompts": [
+        "How did you lead or organize today?",
+        "What responsibility did you embrace?",
+        "How did you create stability for others?"
+      ],
+      "enneagram": {
+        "type": 3,
+        "name": "The Achiever",
+        "coreDesire": "To feel valuable and worthwhile",
+        "coreFear": "Being worthless or failing",
+        "growthPath": "Embracing authenticity and valuing inner worth over image",
+        "stressPath": "Overworking and becoming overly image-conscious",
+        "wings": [
+          2,
+          4
+        ]
+      }
+    }
+  },
+  "assessmentQuestions": {
+    "situationalScenarios": [
+      {
+        "id": "scenario_1",
+        "category": "decision_making",
+        "scenario": "You discover an ancient, mysterious book in a library. What do you do first?",
+        "options": [
+          {
+            "text": "Carefully research its history and authenticity",
+            "scoring": {
+              "openness": 2,
+              "conscientiousness": 3,
+              "playerType": [
+                "book3_theWisdomKeeper",
+                "book1_theAwakening"
+              ]
+            }
+          },
+          {
+            "text": "Open it immediately and start reading",
+            "scoring": {
+              "openness": 3,
+              "extraversion": 2,
+              "neuroticism": -1,
+              "playerType": [
+                "book2_theSeeker",
+                "book1_theAwakening"
+              ]
+            }
+          },
+          {
+            "text": "Find others to explore it with",
+            "scoring": {
+              "extraversion": 3,
+              "agreeableness": 2,
+              "playerType": [
+                "book7_theHealer",
+                "book4_theChampion"
+              ]
+            }
+          },
+          {
+            "text": "Check if it's valuable and plan how to use it",
+            "scoring": {
+              "conscientiousness": 3,
+              "agreeableness": -1,
+              "playerType": [
+                "book9_theLeader",
+                "book6_theAlchemist"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario_2",
+        "category": "conflict_resolution",
+        "scenario": "Two friends are in a heated argument. How do you respond?",
+        "options": [
+          {
+            "text": "Listen to both sides and help them find common ground",
+            "scoring": {
+              "agreeableness": 3,
+              "extraversion": 1,
+              "playerType": [
+                "book7_theHealer",
+                "book3_theWisdomKeeper"
+              ]
+            }
+          },
+          {
+            "text": "Stay out of it - it's not your business",
+            "scoring": {
+              "agreeableness": -2,
+              "neuroticism": -1,
+              "playerType": [
+                "book2_theSeeker",
+                "book5_theRevolutionary"
+              ]
+            }
+          },
+          {
+            "text": "Take charge and settle the dispute firmly",
+            "scoring": {
+              "conscientiousness": 2,
+              "extraversion": 2,
+              "agreeableness": -1,
+              "playerType": [
+                "book9_theLeader",
+                "book4_theChampion"
+              ]
+            }
+          },
+          {
+            "text": "Try to lighten the mood with humor or distraction",
+            "scoring": {
+              "extraversion": 2,
+              "agreeableness": 2,
+              "neuroticism": -1,
+              "playerType": [
+                "book1_theAwakening",
+                "book8_theArtist"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario_3",
+        "category": "creativity_expression",
+        "scenario": "You have a brilliant idea for a project. What's your approach?",
+        "options": [
+          {
+            "text": "Start creating immediately while inspiration is fresh",
+            "scoring": {
+              "openness": 3,
+              "conscientiousness": -1,
+              "extraversion": 1,
+              "playerType": [
+                "book8_theArtist",
+                "book2_theSeeker"
+              ]
+            }
+          },
+          {
+            "text": "Research thoroughly and create a detailed plan",
+            "scoring": {
+              "conscientiousness": 3,
+              "openness": 1,
+              "playerType": [
+                "book3_theWisdomKeeper",
+                "book9_theLeader"
+              ]
+            }
+          },
+          {
+            "text": "Find collaborators who share your vision",
+            "scoring": {
+              "extraversion": 3,
+              "agreeableness": 2,
+              "playerType": [
+                "book4_theChampion",
+                "book7_theHealer"
+              ]
+            }
+          },
+          {
+            "text": "Consider how it could disrupt existing systems",
+            "scoring": {
+              "openness": 2,
+              "agreeableness": -1,
+              "conscientiousness": -1,
+              "playerType": [
+                "book5_theRevolutionary",
+                "book6_theAlchemist"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "traitQuestions": [
+      {
+        "id": "trait_1",
+        "trait": "openness",
+        "question": "I enjoy exploring new ideas and unconventional approaches.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "trait_2",
+        "trait": "conscientiousness",
+        "question": "I prefer to plan things in advance and stick to schedules.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "trait_3",
+        "trait": "extraversion",
+        "question": "I feel energized by social interactions and group activities.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "trait_4",
+        "trait": "agreeableness",
+        "question": "I tend to trust others and assume good intentions.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "trait_5",
+        "trait": "neuroticism",
+        "question": "I often worry about things that might go wrong.",
+        "scale": 5,
+        "reverseScored": true
+      }
+    ],
+    "enneagramQuestions": [
+      {
+        "id": "en_1",
+        "type": 1,
+        "question": "I strive for perfection and feel frustrated when things are not done correctly.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_2",
+        "type": 2,
+        "question": "I feel fulfilled when I can help and support others.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_3",
+        "type": 3,
+        "question": "I focus on achieving my goals and like to be seen as successful.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_4",
+        "type": 4,
+        "question": "I often feel different from others and seek to express my uniqueness.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_5",
+        "type": 5,
+        "question": "I prefer to observe and analyze situations before engaging.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_6",
+        "type": 6,
+        "question": "I worry about potential problems and look for reassurance.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_7",
+        "type": 7,
+        "question": "I love variety and avoid feeling trapped or limited.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_8",
+        "type": 8,
+        "question": "I assert myself and resist being controlled by others.",
+        "scale": 5,
+        "reverseScored": false
+      },
+      {
+        "id": "en_9",
+        "type": 9,
+        "question": "I try to keep the peace and avoid conflict whenever possible.",
+        "scale": 5,
+        "reverseScored": false
+      }
+    ]
+  },
+  "scoringSystem": {
+    "methodology": "Weighted combination of Enneagram type indicators, Big Five traits for nuance, and scenario responses. The Enneagram type is primarily determined by summing responses to type-specific statements and situational patterns, with trait scores fine-tuning the color cycle position and hero journey stage.",
+    "primaryTypeSelection": "Highest combined score across trait alignment and scenario responses",
+    "secondaryTypeThreshold": 0.8,
+    "colorCycleCalculation": {
+      "formula": "((primaryType.baseDay + (personalityScore * 0.1)) % 360) + 1",
+      "description": "Maps personality score to specific days in the 360-day cycle"
+    },
+    "traitWeighting": {
+      "openness": 0.15,
+      "conscientiousness": 0.15,
+      "extraversion": 0.15,
+      "agreeableness": 0.15,
+      "neuroticism": 0.1
+    },
+    "enneagramWeighting": 0.6,
+    "bigFiveWeighting": 0.4
+  },
+  "heroJourneyIntegration": {
+    "stages": [
+      {
+        "stage": "The Ordinary World",
+        "bookAlignment": [
+          1
+        ],
+        "description": "Character's normal life before transformation",
+        "personalGrowth": "Self-awareness and acceptance"
+      },
+      {
+        "stage": "The Call to Adventure",
+        "bookAlignment": [
+          2
+        ],
+        "description": "Something disrupts the ordinary world",
+        "personalGrowth": "Recognizing need for change"
+      },
+      {
+        "stage": "Meeting the Mentor",
+        "bookAlignment": [
+          3
+        ],
+        "description": "Wise figure provides guidance",
+        "personalGrowth": "Learning and skill development"
+      },
+      {
+        "stage": "Crossing the Threshold",
+        "bookAlignment": [
+          4
+        ],
+        "description": "Committing to the adventure",
+        "personalGrowth": "Taking decisive action"
+      },
+      {
+        "stage": "Tests, Allies, and Enemies",
+        "bookAlignment": [
+          5
+        ],
+        "description": "Facing challenges and obstacles",
+        "personalGrowth": "Building resilience and relationships"
+      },
+      {
+        "stage": "Approach to the Inmost Cave",
+        "bookAlignment": [
+          6
+        ],
+        "description": "Preparing for the greatest fear",
+        "personalGrowth": "Confronting limitations"
+      },
+      {
+        "stage": "The Ordeal",
+        "bookAlignment": [
+          7
+        ],
+        "description": "The crisis point and dark moment",
+        "personalGrowth": "Shadow work and integration"
+      },
+      {
+        "stage": "The Reward",
+        "bookAlignment": [
+          8
+        ],
+        "description": "Surviving and gaining something",
+        "personalGrowth": "Claiming personal power"
+      },
+      {
+        "stage": "The Return with the Elixir",
+        "bookAlignment": [
+          9
+        ],
+        "description": "Returning to help others",
+        "personalGrowth": "Service and leadership"
+      }
+    ]
+  },
+  "colorCycleSystem": {
+    "description": "360-day cycle where each day has a theme, color, and growth focus",
+    "cycleTypes": {
+      "seasonal": {
+        "spring": {
+          "days": "1-90",
+          "themes": [
+            "new beginnings",
+            "growth",
+            "potential"
+          ],
+          "colors": [
+            "light green",
+            "yellow",
+            "soft pink"
+          ]
+        },
+        "summer": {
+          "days": "91-180",
+          "themes": [
+            "action",
+            "manifestation",
+            "abundance"
+          ],
+          "colors": [
+            "bright orange",
+            "red",
+            "gold"
+          ]
+        },
+        "autumn": {
+          "days": "181-270",
+          "themes": [
+            "harvest",
+            "wisdom",
+            "transformation"
+          ],
+          "colors": [
+            "deep orange",
+            "brown",
+            "purple"
+          ]
+        },
+        "winter": {
+          "days": "271-360",
+          "themes": [
+            "reflection",
+            "rest",
+            "preparation"
+          ],
+          "colors": [
+            "blue",
+            "silver",
+            "deep purple"
+          ]
+        }
+      }
+    },
+    "dailyStructure": {
+      "dayTheme": "Core focus for personal development",
+      "colorAlignment": "Visual representation of energy",
+      "microQuest": "Small actionable challenge",
+      "reflectionPrompt": "Question for evening contemplation",
+      "trionfiConnection": "How the day relates to tarot wisdom"
+    }
+  },
+  "gameificationElements": {
+    "playerProfiles": {
+      "achiever": "Focuses on completing challenges and earning badges",
+      "explorer": "Seeks to discover new content and hidden features",
+      "socializer": "Values community interaction and helping others",
+      "philosopher": "Deep engagement with meaning and wisdom"
+    },
+    "progressionSystem": {
+      "levels": [
+        "Initiate",
+        "Apprentice",
+        "Journeyer",
+        "Practitioner",
+        "Guide",
+        "Master",
+        "Sage"
+      ],
+      "badges": [
+        "First Assessment",
+        "Week Streak",
+        "Month Journey",
+        "Shadow Work",
+        "Community Helper"
+      ],
+      "unlockables": [
+        "Advanced assessments",
+        "Peer mentoring",
+        "Custom color themes",
+        "Leadership roles"
+      ]
+    }
+  },
+  "integrationAPI": {
+    "endpoints": {
+      "takeAssessment": "/api/assessment/take",
+      "getResults": "/api/assessment/results/:userId",
+      "getDailyContent": "/api/daily/:userId/:day",
+      "updateProgress": "/api/progress/:userId",
+      "getCommunityMatches": "/api/community/matches/:playerType"
+    },
+    "dataStructure": {
+      "userProfile": {
+        "primaryType": "string",
+        "secondaryType": "string",
+        "bigFiveScores": "object",
+        "colorCyclePosition": "number",
+        "heroJourneyStage": "string",
+        "completedAssessments": "array",
+        "dailyStreak": "number",
+        "communityConnections": "array"
+      }
+    }
+  }
+}
