@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
+import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
 import { getChapterIconPath } from '@/lib/icons'
 import { familyFromChapter } from '@/lib/canonical'
 import { Search, ArrowLeft, Users, BookOpen, ChevronRight, Home } from 'lucide-react'
@@ -261,6 +262,8 @@ export default function PersonalitiesPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <DashboardNavbar />
+      
       {/* Header */}
       <div className="border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
         <div className="container mx-auto max-w-7xl px-6 py-8">

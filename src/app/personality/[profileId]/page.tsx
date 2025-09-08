@@ -10,6 +10,7 @@ import { AssessmentButton } from '@/components/ui/AssessmentButton'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
+import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
 import { getChapterIconPath } from '@/lib/icons'
 import { ArrowLeft, BookOpen, Users, Calendar, Star, Heart, Zap, Target } from 'lucide-react'
 
@@ -146,6 +147,8 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <DashboardNavbar />
+      
       {/* Navigation */}
       <div className="border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
         <div className="container mx-auto px-6 py-4">

@@ -72,7 +72,7 @@ function createBaselineContext(profile: ExtendedCanonicalProfile): PersonalityCo
   const devBin = devBinFromIdx40(idx40)
 
   // Default baseline dimensions (moderate values)
-  const baselineDimensions = {
+  const baselineDimensions: Record<string, number> = {
     agency: 0.5,
     stability: 0.5,
     empathy: 0.5,
@@ -91,7 +91,7 @@ function createBaselineContext(profile: ExtendedCanonicalProfile): PersonalityCo
 
   // Apply family-based adjustments to baseline
   const familyAdjustments = getFamilyDimensionAdjustments(familyNumber)
-  const dimensions = { ...baselineDimensions }
+  const dimensions: Record<string, number> = { ...baselineDimensions }
   
   Object.entries(familyAdjustments).forEach(([dim, adjustment]) => {
     dimensions[dim] = Math.max(0, Math.min(1, baselineDimensions[dim] + adjustment))
