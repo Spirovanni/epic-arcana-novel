@@ -98,65 +98,68 @@ export function DashboardSidebar({ isCollapsed, onToggle }: SidebarProps) {
           </Button>
         </div>
 
-        {/* Navigation */}
-        <nav className="mt-4 px-2">
-          <div className="space-y-1">
-            {navItems.map((item) => {
-              const isActive = pathname === item.href
-              
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className={cn(
-                    "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group",
-                    isActive 
-                      ? "bg-purple-600/20 text-purple-300 border border-purple-500/30" 
-                      : "text-gray-400 hover:text-gray-200 hover:bg-slate-800/50"
-                  )}
-                >
-                  <span className="text-lg flex-shrink-0">{item.icon}</span>
-                  {!isCollapsed && (
-                    <div className="flex-1 min-w-0">
-                      <div className="font-medium">{item.label}</div>
-                      {item.description && (
-                        <div className="text-xs text-gray-500 mt-0.5 line-clamp-2">
-                          {item.description}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                  
-                  {/* Tooltip for collapsed state */}
-                  {isCollapsed && (
-                    <div className="absolute left-16 ml-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-50 whitespace-nowrap">
-                      <div className="font-medium">{item.label}</div>
-                      {item.description && (
-                        <div className="text-xs text-gray-400 mt-1">
-                          {item.description}
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </Link>
-              )
-            })}
-          </div>
-        </nav>
-
-        {/* Bottom section */}
-        {!isCollapsed && (
-          <div className="absolute bottom-4 left-4 right-4">
-            <div className="p-3 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg border border-purple-500/20">
-              <div className="text-xs text-gray-400 mb-1">Your Progress</div>
-              <div className="text-sm font-medium text-gray-200">Building Your Epic Arcana</div>
-              <div className="mt-2 h-1.5 bg-slate-700 rounded-full overflow-hidden">
-                <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
-              </div>
-              <div className="text-xs text-gray-500 mt-1">75% Complete</div>
+        {/* Content wrapper with proper spacing */}
+        <div className="flex flex-col" style={{ height: 'calc(100vh - 4rem)' }}>
+          {/* Navigation */}
+          <nav className="flex-1 mt-4 px-2 pb-4 overflow-y-auto">
+            <div className="space-y-1">
+              {navItems.map((item) => {
+                const isActive = pathname === item.href
+                
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className={cn(
+                      "flex items-center gap-3 px-3 py-2.5 rounded-lg transition-colors group",
+                      isActive 
+                        ? "bg-purple-600/20 text-purple-300 border border-purple-500/30" 
+                        : "text-gray-400 hover:text-gray-200 hover:bg-slate-800/50"
+                    )}
+                  >
+                    <span className="text-lg flex-shrink-0">{item.icon}</span>
+                    {!isCollapsed && (
+                      <div className="flex-1 min-w-0">
+                        <div className="font-medium">{item.label}</div>
+                        {item.description && (
+                          <div className="text-xs text-gray-500 mt-0.5 line-clamp-2">
+                            {item.description}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    
+                    {/* Tooltip for collapsed state */}
+                    {isCollapsed && (
+                      <div className="absolute left-16 ml-2 px-3 py-2 bg-slate-800 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-50 whitespace-nowrap">
+                        <div className="font-medium">{item.label}</div>
+                        {item.description && (
+                          <div className="text-xs text-gray-400 mt-1">
+                            {item.description}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </Link>
+                )
+              })}
             </div>
-          </div>
-        )}
+          </nav>
+
+          {/* Bottom section */}
+          {!isCollapsed && (
+            <div className="p-4 border-t border-purple-500/20">
+              <div className="p-3 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-lg border border-purple-500/20">
+                <div className="text-xs text-gray-400 mb-1">Your Progress</div>
+                <div className="text-sm font-medium text-gray-200">Building Your Epic Arcana</div>
+                <div className="mt-2 h-1.5 bg-slate-700 rounded-full overflow-hidden">
+                  <div className="h-full w-3/4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full"></div>
+                </div>
+                <div className="text-xs text-gray-500 mt-1">75% Complete</div>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </>
   )
