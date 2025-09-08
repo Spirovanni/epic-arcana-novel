@@ -63,9 +63,6 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
           </div>
           
           <div className="flex items-center gap-4">
-            <Link href="/assessment" className="text-purple-400 hover:text-purple-300 transition-colors text-sm">
-              Take Assessment
-            </Link>
             <UserButton />
           </div>
         </header>
