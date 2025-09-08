@@ -4,6 +4,46 @@ import { FAMILY_LABELS, eaIdFromChapter } from './canonical'
 import fs from 'fs'
 import path from 'path'
 
+// Extended canonical profile interface for Personal Style system
+export interface ExtendedCanonicalProfile extends CanonicalProfile {
+  position?: {
+    family_number: number
+    idx40: number
+    wing_bin: number
+    development_bin: number
+    global_index: number
+  }
+  summary?: string
+  traits?: {
+    strengths: string[]
+    shadow: string[]
+    growth_focus: string[]
+  }
+  color_alignment?: {
+    rgb_hex: string
+    color_name: string
+    hsl: string
+  }
+  thematic_essence?: {
+    tagline?: string
+    core_theme?: string
+    focus_area?: string
+    archetypal_family?: string
+    connection_to_major_theme?: string
+  }
+  character_development?: {
+    hero_journey_stage?: string
+    narrative_arc?: {
+      pages?: string
+      focus?: string
+      scene_description?: string
+    }
+  }
+  scoring_model?: {
+    dimensions: Record<string, number>
+  }
+}
+
 let canonicalProfiles: CanonicalProfile[] | null = null
 let chapterOutlines: any[] | null = null
 
@@ -11,10 +51,19 @@ export async function loadCanonicalProfiles(): Promise<CanonicalProfile[]> {
   if (canonicalProfiles) return canonicalProfiles
 
   try {
-    const canonicalPath = path.join(process.cwd(), 'data', 'dist', 'epic_arcana_personality_profiles_1-360_canonical.json')
+    // Try the main canonical data path
+    const canonicalPath = path.join(process.cwd(), 'lsa-assessment/data/epic_arcana_personality_profiles_1-360_canonical.json')
     
     if (fs.existsSync(canonicalPath)) {
       const data = JSON.parse(fs.readFileSync(canonicalPath, 'utf-8'))
+      canonicalProfiles = Array.isArray(data) ? data : Object.values(data)
+      return canonicalProfiles
+    }
+    
+    // Fallback path
+    const fallbackPath = path.join(process.cwd(), 'data', 'dist', 'epic_arcana_personality_profiles_1-360_canonical.json')
+    if (fs.existsSync(fallbackPath)) {
+      const data = JSON.parse(fs.readFileSync(fallbackPath, 'utf-8'))
       canonicalProfiles = Array.isArray(data) ? data : Object.values(data)
       return canonicalProfiles
     }
@@ -25,6 +74,11 @@ export async function loadCanonicalProfiles(): Promise<CanonicalProfile[]> {
   // Fallback: generate basic canonical profiles
   canonicalProfiles = generateFallbackProfiles()
   return canonicalProfiles
+}
+
+export async function loadExtendedCanonicalProfiles(): Promise<ExtendedCanonicalProfile[]> {
+  const profiles = await loadCanonicalProfiles()
+  return profiles as ExtendedCanonicalProfile[]
 }
 
 function generateFallbackProfiles(): CanonicalProfile[] {
