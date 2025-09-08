@@ -17,13 +17,26 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
   const { isSignedIn, isLoaded } = useUser()
   const { result } = useAssessmentStore()
   
-  // Save result and redirect
+  // Save result and answers, then redirect
   const handleSaveResult = useCallback(async () => {
     if (!result) return
     
     setIsSaving(true)
     
     try {
+      // Save answers first (if available)
+      const answersData = useAssessmentStore.getState().getAnswersForApi()
+      if (answersData.forcedChoice.length > 0 || answersData.likert.length > 0) {
+        await fetch('/api/assessment/answers', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(answersData),
+        })
+      }
+
+      // Save result
       const response = await fetch('/api/assessment/save', {
         method: 'POST',
         headers: {
@@ -44,7 +57,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
       }
       
     } catch (error) {
-      console.error('Error saving result:', error)
+      console.error('Error saving assessment data:', error)
       // Handle error state
     } finally {
       setIsSaving(false)
