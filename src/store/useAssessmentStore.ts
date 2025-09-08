@@ -126,7 +126,7 @@ export const useAssessmentStore = create<AssessmentState>()(
       getAnswersForApi: (): AssessmentAnswers => {
         const state = get()
         return {
-          forcedChoice: state.forcedChoiceAnswers,
+          forced: state.forcedChoiceAnswers,
           likert: state.likertAnswers,
           meta: {
             startTime: state.startTime || new Date().toISOString(),

@@ -1,5 +1,5 @@
 import { AssessmentAnswers, AssessmentResult, ForcedChoiceItem, LikertItem } from '../assessment/types'
-import { chapterFromAssessment, eaIdFromChapter } from '../assessment/mapping'
+import { chapterFromAssessment, eaIdFromChapter } from '../canonical'
 import { loadCanonicalProfiles } from '../data'
 import { calculateDimensions } from './dimensions'
 import { calculateTypeProbs, calculateWingBin } from './types'
@@ -31,7 +31,7 @@ export async function scoreAssessment(
   const instincts = calculateInstincts(answers, forcedChoiceItems, likertItems)
   
   // Calculate chapter and EA ID
-  const chapter = chapterFromAssessment({ dominant_type, wing_bin, development_bin })
+  const chapter = chapterFromAssessment(dominant_type, wing_bin, development_bin)
   const ea_id = eaIdFromChapter(chapter)
   
   // Calculate color
@@ -45,8 +45,8 @@ export async function scoreAssessment(
   const canonicalProfile = canonicalProfiles.find(p => p.chapter === chapter)
   
   // Calculate duration
-  const startTime = new Date(answers.meta.startTime)
-  const endTime = answers.meta.endTime ? new Date(answers.meta.endTime) : new Date()
+  const startTime = new Date(answers.meta?.startTime || new Date().toISOString())
+  const endTime = answers.meta?.endTime ? new Date(answers.meta.endTime) : new Date()
   const duration_sec = Math.round((endTime.getTime() - startTime.getTime()) / 1000)
   
   const result: AssessmentResult = {
@@ -69,7 +69,8 @@ export async function scoreAssessment(
     },
     meta: {
       duration_sec,
-      version: VERSION
+      version: VERSION,
+      item_pack: "Laurasia-1.0"
     }
   }
   
@@ -86,7 +87,7 @@ function findTopSignalItems(
   const itemContributions: { id: string; contribution: number }[] = []
   
   // Analyze forced choice contributions
-  for (const answer of answers.forcedChoice) {
+  for (const answer of answers.forced) {
     const item = forcedChoiceItems.find(i => i.id === answer.itemId)
     if (!item) continue
     

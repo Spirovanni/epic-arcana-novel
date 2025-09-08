@@ -275,7 +275,7 @@ export function AssessmentBreakdown({ result, answers }: AssessmentBreakdownProp
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-blue-400">
-                        {answers.forcedChoice.length}
+                        {answers.forced.length}
                       </div>
                       <div className="text-sm text-gray-400">Scenario Questions</div>
                     </div>
@@ -287,7 +287,7 @@ export function AssessmentBreakdown({ result, answers }: AssessmentBreakdownProp
                     </div>
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-400">
-                        {answers.forcedChoice.length + answers.likert.length}
+                        {answers.forced.length + answers.likert.length}
                       </div>
                       <div className="text-sm text-gray-400">Total Responses</div>
                     </div>

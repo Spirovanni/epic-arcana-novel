@@ -26,7 +26,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
     try {
       // Save answers first (if available)
       const answersData = useAssessmentStore.getState().getAnswersForApi()
-      if (answersData.forcedChoice.length > 0 || answersData.likert.length > 0) {
+      if (answersData.forced.length > 0 || answersData.likert.length > 0) {
         await fetch('/api/assessment/answers', {
           method: 'POST',
           headers: {

@@ -53,18 +53,26 @@ export const LikertAnswerSchema = z.object({
 })
 
 export const AssessmentAnswersSchema = z.object({
-  forcedChoice: z.array(ForcedChoiceAnswerSchema),
+  forced: z.array(ForcedChoiceAnswerSchema),
   likert: z.array(LikertAnswerSchema),
   meta: z.object({
     startTime: z.string(),
     endTime: z.string().optional(),
     userAgent: z.string().optional(),
-  }),
+    duration_sec: z.number().optional(),
+  }).optional(),
 })
 
 // Result Types
 export const AssessmentResultSchema = z.object({
-  dimensions: z.record(z.string(), z.number().min(0).max(1)),
+  dimensions: z.record(
+    z.enum([
+      'agency', 'stability', 'empathy', 'openness', 'orderliness', 'novelty_seeking',
+      'abstract_reasoning', 'emotional_intensity', 'social_dominance', 'cooperativeness',
+      'risk_tolerance', 'conscientiousness', 'adaptability', 'imagination'
+    ]),
+    z.number().min(0).max(1)
+  ),
   type_probs: z.record(z.enum(['1', '2', '3', '4', '5', '6', '7', '8', '9']), z.number().min(0).max(1)),
   dominant_type: z.number().int().min(1).max(9),
   wing_bin: z.number().int().min(0).max(7),
@@ -81,7 +89,6 @@ export const AssessmentResultSchema = z.object({
     rgb_hex: z.string().regex(/^#[0-9A-Fa-f]{6}$/),
     hue_index: z.number().int().min(0).max(359),
   }),
-  top_signal_items: z.array(z.string()),
   profile: z.object({
     id: z.string(),
     chapter: z.number(),
@@ -89,9 +96,11 @@ export const AssessmentResultSchema = z.object({
     theme: z.string(),
     family: z.string(),
   }),
+  top_signal_items: z.array(z.string()),
   meta: z.object({
     duration_sec: z.number(),
     version: z.string(),
+    item_pack: z.string(),
   }),
 })
 

@@ -1,10 +1,11 @@
 // Server-side only - do not import in client components
 import { CanonicalProfile } from './assessment/types'
-import { FAMILY_LABELS, eaIdFromChapter } from './assessment/mapping'
+import { FAMILY_LABELS, eaIdFromChapter } from './canonical'
 import fs from 'fs'
 import path from 'path'
 
 let canonicalProfiles: CanonicalProfile[] | null = null
+let chapterOutlines: any[] | null = null
 
 export async function loadCanonicalProfiles(): Promise<CanonicalProfile[]> {
   if (canonicalProfiles) return canonicalProfiles
@@ -84,4 +85,55 @@ function getThemeVariation(wing_bin: number, development_bin: number): string {
   ]
   
   return `${wingVariations[wing_bin]} with ${devVariations[development_bin]}`
+}
+
+// Lazy loader for chapter outlines with graceful fallback
+export async function loadChapterOutlines(): Promise<any[]> {
+  if (chapterOutlines) return chapterOutlines
+
+  try {
+    const outlinesPath = path.join(process.cwd(), 'data', 'l_outline.json')
+    
+    if (fs.existsSync(outlinesPath)) {
+      const data = JSON.parse(fs.readFileSync(outlinesPath, 'utf-8'))
+      chapterOutlines = Array.isArray(data) ? data : Object.values(data)
+      return chapterOutlines
+    }
+  } catch (error) {
+    console.warn('Could not load chapter outlines, using fallback:', error)
+  }
+
+  // Fallback: generate basic chapter outlines
+  chapterOutlines = generateFallbackOutlines()
+  return chapterOutlines
+}
+
+// Get a specific canonical profile by chapter
+export async function getCanonicalProfile(chapter: number): Promise<CanonicalProfile | null> {
+  const profiles = await loadCanonicalProfiles()
+  return profiles.find(p => p.chapter === chapter) || null
+}
+
+// Get chapter theme by chapter number
+export async function getChapterTheme(chapter: number): Promise<string> {
+  const outlines = await loadChapterOutlines()
+  const outline = outlines.find(o => o.chapter === chapter)
+  return outline?.theme || `Chapter ${chapter} Theme`
+}
+
+function generateFallbackOutlines(): any[] {
+  const outlines = []
+  
+  for (let chapter = 1; chapter <= 360; chapter++) {
+    const family_number = Math.floor((chapter - 1) / 40) + 1
+    const familyName = FAMILY_LABELS[family_number].split(' / ')[0]
+    
+    outlines.push({
+      chapter,
+      theme: `${familyName} Journey ${((chapter - 1) % 40) + 1}`,
+      description: `A narrative exploration of ${familyName.toLowerCase()} through personality development.`
+    })
+  }
+  
+  return outlines
 }

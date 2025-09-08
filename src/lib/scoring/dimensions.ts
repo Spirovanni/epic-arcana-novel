@@ -14,7 +14,7 @@ export function calculateDimensions(
   })
 
   // Process forced choice answers
-  for (const answer of answers.forcedChoice) {
+  for (const answer of answers.forced) {
     const item = forcedChoiceItems.find(i => i.id === answer.itemId)
     if (!item) continue
 
