@@ -75,14 +75,35 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
         // Await the params promise
         const { profileId } = await params
         
+        if (!profileId) {
+          console.error('No profile ID provided')
+          setLoading(false)
+          return
+        }
+        
         // Load personality profiles and find the specific one
         const response = await fetch('/api/personalities')
         if (response.ok) {
           const profiles = await response.json()
-          const profile = profiles.find((p: PersonalityProfile) => p.id === profileId)
-          if (profile) {
-            setPersonality(profile)
+          if (!Array.isArray(profiles)) {
+            console.error('Invalid personality data format')
+            setLoading(false)
+            return
           }
+          
+          const profile = profiles.find((p: PersonalityProfile) => p?.id === profileId)
+          if (profile) {
+            // Validate that the profile has essential data
+            if (profile.display_name && profile.id && profile.chapter) {
+              setPersonality(profile)
+            } else {
+              console.error('Profile missing essential data:', profile)
+            }
+          } else {
+            console.error('Profile not found:', profileId)
+          }
+        } else {
+          console.error('Failed to load personalities:', response.status, response.statusText)
         }
       } catch (error) {
         console.error('Error loading personality:', error)
@@ -119,7 +140,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
     return 'text-red-400'
   }
 
-  const topDimensions = Object.entries(personality.scoring_model.dimensions)
+  const topDimensions = Object.entries(personality.scoring_model?.dimensions || {})
     .sort(([,a], [,b]) => b - a)
     .slice(0, 6)
 
@@ -150,7 +171,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                     <div className="relative">
                       <div 
                         className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
-                        style={{ backgroundColor: personality.color_alignment.rgb_hex }}
+                        style={{ backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280' }}
                       />
                       <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-16 h-16 relative">
@@ -164,7 +185,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                       </div>
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                      {personality.color_alignment.color_name}
+                      {personality.color_alignment?.color_name || 'Color not available'}
                     </Badge>
                   </div>
 
@@ -178,26 +199,26 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                         {personality.id} • Chapter {personality.chapter}
                       </p>
                       <p className="text-lg text-gray-300">
-                        {personality.family} • {personality.thematic_essence.core_theme}
+                        {personality.family} • {personality.thematic_essence?.core_theme || 'Theme not available'}
                       </p>
                     </div>
                     
                     <p className="text-lg text-gray-300 italic leading-relaxed max-w-2xl">
-                      "{personality.thematic_essence.tagline}"
+                      "{personality.thematic_essence?.tagline || 'Tagline not available'}"
                     </p>
 
                     <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                       <Badge variant="outline" className="border-blue-500/50 text-blue-300">
                         <BookOpen className="h-3 w-3 mr-1" />
-                        {personality.thematic_essence.focus_area}
+                        {personality.thematic_essence?.focus_area || 'Focus area not available'}
                       </Badge>
                       <Badge variant="outline" className="border-green-500/50 text-green-300">
                         <Star className="h-3 w-3 mr-1" />
-                        {personality.thematic_essence.archetypal_family}
+                        {personality.thematic_essence?.archetypal_family || 'Family not available'}
                       </Badge>
                       <Badge variant="outline" className="border-amber-500/50 text-amber-300">
                         <Zap className="h-3 w-3 mr-1" />
-                        {personality.character_development.hero_journey_stage}
+                        {personality.character_development?.hero_journey_stage || 'Journey stage not available'}
                       </Badge>
                     </div>
                   </div>
@@ -231,19 +252,21 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-2">Core Theme</h4>
                     <p className="text-gray-300 text-sm">
-                      {personality.thematic_essence.core_theme} - {personality.thematic_essence.focus_area}
+                      {personality.thematic_essence?.core_theme || 'Theme not available'} - {personality.thematic_essence?.focus_area || 'Focus not available'}
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-2">Summary</h4>
                     <p className="text-gray-400 text-sm leading-relaxed">
-                      {personality.summary}
+                      {personality.summary || 'Summary not available'}
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-2">Deep Connection</h4>
                     <p className="text-gray-400 text-sm leading-relaxed">
-                      {personality.thematic_essence.connection_to_major_theme.slice(0, 200)}...
+                      {personality.thematic_essence?.connection_to_major_theme ? 
+                        `${personality.thematic_essence.connection_to_major_theme.slice(0, 200)}...` : 
+                        'Connection description not available'}
                     </p>
                   </div>
                 </CardContent>
@@ -261,23 +284,23 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                     <h4 className="font-semibold text-gray-200 mb-2">Tarot Family</h4>
                     <div className="flex items-center gap-2">
                       <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                        {personality.book_association.tarot_connection.family}
+                        {personality.book_association?.tarot_connection?.family || 'Tarot family not available'}
                       </Badge>
                       <span className="text-gray-400 text-sm">
-                        {personality.book_association.tarot_connection.card}
+                        {personality.book_association?.tarot_connection?.card || 'Card not available'}
                       </span>
                     </div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-2">Hero's Journey Stage</h4>
                     <p className="text-gray-300 text-sm">
-                      {personality.character_development.hero_journey_stage}
+                      {personality.character_development?.hero_journey_stage || 'Journey stage not available'}
                     </p>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-200 mb-2">Story Context</h4>
                     <p className="text-gray-400 text-sm">
-                      {personality.character_development.narrative_arc.pages} - {personality.character_development.narrative_arc.focus}
+                      {personality.character_development?.narrative_arc?.pages || 'Pages not available'} - {personality.character_development?.narrative_arc?.focus || 'Focus not available'}
                     </p>
                   </div>
                   <div className="pt-4">
@@ -301,7 +324,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {personality.traits.strengths.map((strength, index) => (
+                    {(personality.traits?.strengths || []).map((strength, index) => (
                       <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
                         <span className="text-green-400 mt-1">•</span>
                         {strength}
@@ -319,7 +342,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {personality.traits.shadow.map((shadow, index) => (
+                    {(personality.traits?.shadow || []).map((shadow, index) => (
                       <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
                         <span className="text-amber-400 mt-1">•</span>
                         {shadow}
@@ -337,7 +360,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
-                    {personality.traits.growth_focus.map((focus, index) => (
+                    {(personality.traits?.growth_focus || []).map((focus, index) => (
                       <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
                         <span className="text-blue-400 mt-1">•</span>
                         {focus}
@@ -361,14 +384,14 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 <div>
                   <h3 className="text-lg font-semibold text-gray-200 mb-3">Narrative Arc</h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {personality.character_development.narrative_arc.scene_description}
+                    {personality.character_development?.narrative_arc?.scene_description || 'Scene description not available'}
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-200 mb-3">Character Progression</h3>
                   <div className="grid gap-4">
-                    {Object.entries(personality.character_development.character_arcs).map(([character, arc]) => (
+                    {Object.entries(personality.character_development?.character_arcs || {}).map(([character, arc]) => (
                       <div key={character} className="p-4 bg-slate-700/50 rounded-lg border border-purple-500/20">
                         <h4 className="font-semibold text-purple-300 mb-2">{character}</h4>
                         <p className="text-gray-400 text-sm leading-relaxed">{arc}</p>
@@ -383,25 +406,25 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
           {/* Influences Tab */}
           <TabsContent value="influences" className="space-y-6">
             <div className="grid gap-6">
-              {personality.literary_influences.map((influence, index) => (
+              {(personality.literary_influences || []).map((influence, index) => (
                 <Card key={index} className="bg-slate-800/50 border-purple-500/30">
                   <CardHeader>
                     <CardTitle className="text-purple-300">
-                      "{influence.title}" by {influence.author}
+                      "{influence?.title || 'Title not available'}" by {influence?.author || 'Author not available'}
                     </CardTitle>
-                    <p className="text-gray-400 text-sm">{influence.focus_section}</p>
+                    <p className="text-gray-400 text-sm">{influence?.focus_section || 'Focus section not available'}</p>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <div>
                       <h4 className="font-semibold text-gray-200 mb-2">Connection to Personality</h4>
                       <p className="text-gray-300 text-sm leading-relaxed">
-                        {influence.connection}
+                        {influence?.connection || 'Connection not available'}
                       </p>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-200 mb-2">Key Insights</h4>
                       <ul className="space-y-1">
-                        {influence.key_insights.map((insight, i) => (
+                        {(influence?.key_insights || []).map((insight, i) => (
                           <li key={i} className="text-gray-400 text-sm flex items-start gap-2">
                             <span className="text-purple-400 mt-1">•</span>
                             {insight}
