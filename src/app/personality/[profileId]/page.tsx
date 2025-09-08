@@ -63,7 +63,7 @@ interface PersonalityProfile {
   }
 }
 
-export default function PersonalityPage({ params }: { params: { profileId: string } }) {
+export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
   const [personality, setPersonality] = useState<PersonalityProfile | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('overview')
@@ -71,11 +71,14 @@ export default function PersonalityPage({ params }: { params: { profileId: strin
   useEffect(() => {
     const loadPersonality = async () => {
       try {
+        // Await the params promise
+        const { profileId } = await params
+        
         // Load personality profiles and find the specific one
         const response = await fetch('/api/personalities')
         if (response.ok) {
           const profiles = await response.json()
-          const profile = profiles.find((p: PersonalityProfile) => p.id === params.profileId)
+          const profile = profiles.find((p: PersonalityProfile) => p.id === profileId)
           if (profile) {
             setPersonality(profile)
           }
@@ -88,7 +91,7 @@ export default function PersonalityPage({ params }: { params: { profileId: strin
     }
 
     loadPersonality()
-  }, [params.profileId])
+  }, [params])
 
   if (loading) {
     return (
