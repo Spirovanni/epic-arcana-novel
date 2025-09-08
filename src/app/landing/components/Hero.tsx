@@ -10,11 +10,17 @@ const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hov
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Cosmic Fantasy Background Image */}
+      {/* Hero Background Images - Responsive */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{
-          backgroundImage: "url('/images/hero-cosmic-fantasy.jpg')",
+          backgroundImage: "url('/images/epic-arcana-hero-mobile.png')",
+        }}
+      />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden md:block"
+        style={{
+          backgroundImage: "url('/images/epic-arcana-hero-1920x1080.png')",
         }}
       />
       
