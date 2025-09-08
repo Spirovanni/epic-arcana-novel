@@ -91,25 +91,23 @@ export default function DashboardPage() {
   }
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title={welcome.title} subtitle={welcome.subtitle}>
       <div className="max-w-7xl mx-auto space-y-8">
-        {/* Welcome Header */}
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            {welcome.title}
-          </h1>
-          <p className="text-gray-400 text-lg">{welcome.subtitle}</p>
-          
-          {latestResult && (
+        {/* User Profile Info (only show if has result) */}
+        {latestResult && (
+          <div className="text-center space-y-4 mb-8">
             <div className="flex items-center justify-center gap-4">
               <div
-                className="w-8 h-8 rounded-full border-2 border-white/20"
+                className="w-12 h-12 rounded-full border-2 border-white/20 shadow-lg"
                 style={{ backgroundColor: latestResult.color.rgb_hex }}
               />
-              <span className="text-purple-300 font-semibold">{latestResult.ea_id}</span>
+              <div className="text-left">
+                <div className="text-purple-300 font-semibold text-lg">{latestResult.ea_id}</div>
+                <div className="text-slate-400 text-sm">Chapter {latestResult.chapter} • {latestResult.profile.family}</div>
+              </div>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {!welcome.hasResult ? (
           /* No Assessment State */
