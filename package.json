@@ -20,7 +20,8 @@
     "sync-comprehensive": "tsx scripts/sync-comprehensive-from-outline.ts",
     "sync-epic-arcana": "tsx scripts/sync-epic-arcana-from-outline.ts",
     "seed-character-arcs": "tsx scripts/seed-character-arcs-data.ts",
-    "build:personal-style": "tsx src/scripts/build_personal_style.ts"
+    "build:personal-style": "tsx src/scripts/build_personal_style.ts",
+    "add-style-data": "tsx src/scripts/add_style_data.ts"
   },
   "keywords": [],
   "author": "",
