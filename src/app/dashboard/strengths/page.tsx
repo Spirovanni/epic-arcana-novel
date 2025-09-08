@@ -10,12 +10,20 @@ export default function StrengthsPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const loadResult = () => {
+    const loadResult = async () => {
       try {
-        const storedResult = localStorage.getItem('lsa-assessment-result')
-        if (storedResult) {
-          const parsedResult = JSON.parse(storedResult)
-          setResult(parsedResult)
+        const response = await fetch('/api/assessment/result')
+        if (response.ok) {
+          const result = await response.json()
+          setResult(result)
+        } else if (response.status === 404) {
+          // No assessment result found
+          setResult(null)
+        } else if (response.status === 401) {
+          // Not authenticated
+          setResult(null)
+        } else {
+          console.error('Error loading assessment result')
         }
       } catch (error) {
         console.error('Error loading assessment result:', error)

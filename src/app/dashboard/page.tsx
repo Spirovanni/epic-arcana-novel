@@ -27,14 +27,23 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // Load assessment data from localStorage
-    const loadAssessmentData = () => {
+    // Load assessment data from API
+    const loadAssessmentData = async () => {
       try {
-        const storedResult = localStorage.getItem('lsa-assessment-result')
-        if (storedResult) {
-          const result = JSON.parse(storedResult)
+        const response = await fetch('/api/assessment/result')
+        if (response.ok) {
+          const result = await response.json()
           setLatestResult(result)
+        } else if (response.status === 404) {
+          // No assessment result found - this is fine
+          setLatestResult(null)
+        } else if (response.status === 401) {
+          // Not authenticated - this shouldn't happen in dashboard but handle it
+          setLatestResult(null)
+        } else {
+          console.error('Error loading assessment result')
         }
+        
         // TODO: Load assessment history from API when available
         setAssessmentHistory([])
       } catch (error) {

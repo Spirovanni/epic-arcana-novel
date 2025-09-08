@@ -32,12 +32,16 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
         body: JSON.stringify(result),
       })
       
-      if (!response.ok) {
+      if (response.status === 409) {
+        // User already has an assessment
+        const { resultId } = await response.json()
+        onSuccess(resultId)
+      } else if (!response.ok) {
         throw new Error('Failed to save result')
+      } else {
+        const { resultId } = await response.json()
+        onSuccess(resultId)
       }
-      
-      const { resultId } = await response.json()
-      onSuccess(resultId)
       
     } catch (error) {
       console.error('Error saving result:', error)

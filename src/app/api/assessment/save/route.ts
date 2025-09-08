@@ -15,6 +15,22 @@ export async function POST(request: NextRequest) {
     // Check auth status
     const { userId } = await auth()
     
+    if (!userId) {
+      return NextResponse.json(
+        { error: 'Authentication required to save assessment' },
+        { status: 401 }
+      )
+    }
+    
+    // Check if user already has an assessment
+    const existingResult = await checkExistingResult(userId)
+    if (existingResult) {
+      return NextResponse.json(
+        { error: 'User has already completed the assessment', resultId: existingResult.resultId },
+        { status: 409 }
+      )
+    }
+    
     // Generate a unique result ID
     const resultId = createResultId()
     
@@ -79,4 +95,29 @@ async function saveToLocalFile(resultId: string, result: unknown, userId: string
   
   // Save back to file
   fs.writeFileSync(resultsFile, JSON.stringify(existingResults, null, 2))
+}
+
+async function checkExistingResult(userId: string) {
+  const dataDir = path.join(process.cwd(), 'data')
+  const resultsFile = path.join(dataDir, '_local_results.json')
+  
+  try {
+    if (!fs.existsSync(resultsFile)) {
+      return null
+    }
+    
+    const fileContent = fs.readFileSync(resultsFile, 'utf-8')
+    const existingResults: Record<string, any> = JSON.parse(fileContent)
+    
+    // Find the result for this user
+    const userResult = Object.values(existingResults).find(
+      result => result.userId === userId
+    )
+    
+    return userResult || null
+    
+  } catch (error) {
+    console.error('Error checking existing results:', error)
+    return null
+  }
 }
