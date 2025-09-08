@@ -36,6 +36,7 @@ export default function PersonalitiesPage() {
   const [personalities, setPersonalities] = useState<PersonalityProfile[]>([])
   const [filteredPersonalities, setFilteredPersonalities] = useState<PersonalityProfile[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [familyFilter, setFamilyFilter] = useState('all')
   const [tarotFilter, setTarotFilter] = useState('all')
@@ -46,11 +47,22 @@ export default function PersonalitiesPage() {
         const response = await fetch('/api/personalities')
         if (response.ok) {
           const data = await response.json()
-          setPersonalities(data)
-          setFilteredPersonalities(data)
+          // Ensure data is an array and filter out invalid entries
+          if (Array.isArray(data)) {
+            const validPersonalities = data.filter(p => 
+              p && p.id && p.display_name && p.chapter
+            )
+            setPersonalities(validPersonalities)
+            setFilteredPersonalities(validPersonalities)
+          } else {
+            throw new Error('Invalid data format received')
+          }
+        } else {
+          throw new Error(`Failed to load personalities: ${response.status} ${response.statusText}`)
         }
       } catch (error) {
         console.error('Error loading personalities:', error)
+        setError(error instanceof Error ? error.message : 'Failed to load personalities')
       } finally {
         setLoading(false)
       }
@@ -65,10 +77,10 @@ export default function PersonalitiesPage() {
     // Apply search filter
     if (searchTerm) {
       filtered = filtered.filter(p => 
-        p.display_name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.theme.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.thematic_essence.core_theme.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        p.thematic_essence.focus_area.toLowerCase().includes(searchTerm.toLowerCase())
+        p.display_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.theme?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.thematic_essence?.core_theme?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        p.thematic_essence?.focus_area?.toLowerCase().includes(searchTerm.toLowerCase())
       )
     }
 
@@ -79,14 +91,14 @@ export default function PersonalitiesPage() {
 
     // Apply tarot filter
     if (tarotFilter !== 'all') {
-      filtered = filtered.filter(p => p.thematic_essence.archetypal_family === tarotFilter)
+      filtered = filtered.filter(p => p.thematic_essence?.archetypal_family === tarotFilter)
     }
 
     setFilteredPersonalities(filtered)
   }, [personalities, searchTerm, familyFilter, tarotFilter])
 
-  const uniqueFamilies = [...new Set(personalities.map(p => p.family))]
-  const uniqueTarotFamilies = [...new Set(personalities.map(p => p.thematic_essence.archetypal_family))]
+  const uniqueFamilies = [...new Set(personalities.map(p => p.family).filter(Boolean))]
+  const uniqueTarotFamilies = [...new Set(personalities.map(p => p.thematic_essence?.archetypal_family).filter(Boolean))]
 
   if (loading) {
     return (
@@ -97,6 +109,30 @@ export default function PersonalitiesPage() {
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
               <p className="text-gray-400">Loading personality profiles...</p>
             </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 p-6">
+        <div className="container mx-auto max-w-7xl">
+          <div className="flex items-center justify-center min-h-[50vh]">
+            <Card className="bg-slate-800/50 border-red-500/30">
+              <CardContent className="p-8 text-center">
+                <div className="text-6xl mb-4">⚠️</div>
+                <h3 className="text-xl font-semibold text-red-300 mb-2">Error Loading Personalities</h3>
+                <p className="text-gray-400 mb-4">{error}</p>
+                <Button 
+                  onClick={() => window.location.reload()}
+                  variant="outline"
+                >
+                  Try Again
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
@@ -194,7 +230,7 @@ export default function PersonalitiesPage() {
                   <div className="relative">
                     <div 
                       className="w-16 h-16 rounded-full border-2 border-white/20"
-                      style={{ backgroundColor: personality.color_alignment.rgb_hex }}
+                      style={{ backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280' }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-8 h-8 relative">
@@ -217,10 +253,12 @@ export default function PersonalitiesPage() {
                       {personality.id} • Chapter {personality.chapter}
                     </p>
                     <div className="flex flex-wrap gap-1 justify-center">
-                      <Badge variant="outline" className="text-xs border-blue-500/50 text-blue-300">
-                        {personality.thematic_essence.focus_area}
-                      </Badge>
-                      {personality.thematic_essence.archetypal_family && (
+                      {personality.thematic_essence?.focus_area && (
+                        <Badge variant="outline" className="text-xs border-blue-500/50 text-blue-300">
+                          {personality.thematic_essence.focus_area}
+                        </Badge>
+                      )}
+                      {personality.thematic_essence?.archetypal_family && (
                         <Badge variant="outline" className="text-xs border-purple-500/50 text-purple-300">
                           {personality.thematic_essence.archetypal_family}
                         </Badge>
@@ -230,7 +268,7 @@ export default function PersonalitiesPage() {
 
                   {/* Summary */}
                   <p className="text-gray-400 text-sm text-center line-clamp-3">
-                    {personality.summary.slice(0, 120)}...
+                    {personality.summary ? `${personality.summary.slice(0, 120)}...` : 'No description available.'}
                   </p>
 
                   {/* Action Button */}
