@@ -1,37 +1,40 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { SignInButton, UserButton, useUser } from '@clerk/nextjs'
 
+const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400"
+
 export function AssessmentNavbar() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { isSignedIn } = useUser()
 
   return (
-    <header className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-slate-900/95 border-b border-purple-500/20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex h-16 items-center justify-between">
-        {/* Left - Back button and Logo */}
+    <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/70 border-b border-white/5">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
+        {/* Left brand with back button */}
         <div className="flex items-center gap-4">
           <Link 
             href="/" 
-            className="flex items-center gap-2 text-slate-300 hover:text-white transition-colors group"
+            className="flex items-center gap-2 text-slate-300 hover:text-white/90 transition-colors group"
           >
             <svg className="h-4 w-4 group-hover:translate-x-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="text-sm font-medium">Back</span>
+            <span className="text-sm font-medium tracking-wide">Back</span>
           </Link>
           
-          <div className="w-px h-6 bg-slate-600" />
+          <div className="w-px h-6 bg-white/20" />
           
-          <Link href="/" className="flex items-center">
+          <Link href="/landing" className="flex items-center group">
             <Image
               src="/images/Epic_Arcana_Logo.png"
               alt="Epic Arcana"
-              width={130}
-              height={43}
-              className="hover:opacity-90 transition-opacity"
+              width={174}
+              height={58}
+              className="hover:opacity-90 transition-all duration-300"
             />
           </Link>
         </div>
@@ -43,33 +46,94 @@ export function AssessmentNavbar() {
           </h1>
         </div>
 
-        {/* Right - Auth */}
-        <div className="flex items-center gap-3">
+        {/* Right auth section */}
+        <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>
               <Link
                 href="/dashboard"
-                className="text-sm text-slate-300 hover:text-white transition-colors font-medium"
+                className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 hover:scale-105`}
               >
                 Dashboard
               </Link>
               <UserButton 
                 appearance={{
                   elements: {
-                    avatarBox: "w-8 h-8 rounded-full border border-slate-600 hover:border-slate-400 transition-colors"
+                    avatarBox: "w-8 h-8 rounded-full border border-white/20 hover:border-white/40 transition-colors"
                   }
                 }}
               />
             </>
           ) : (
-            <SignInButton mode="modal">
-              <button className="text-sm text-slate-300 hover:text-white transition-colors font-medium">
-                Sign In
-              </button>
-            </SignInButton>
+            <>
+              <SignInButton mode="modal">
+                <button className="text-sm text-slate-300 hover:text-white/90 transition-colors font-semibold tracking-wide">
+                  Sign In
+                </button>
+              </SignInButton>
+              <Link 
+                href="/assessment"
+                className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}
+              >
+                Take Assessment
+              </Link>
+            </>
           )}
+          
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white/90 transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
+
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden border-t border-white/5 bg-[#0b1220]/95 backdrop-blur">
+          <div className="px-4 py-4 space-y-4">
+            <div className="flex items-center gap-2 text-slate-300 mb-4">
+              <Link 
+                href="/" 
+                className="flex items-center gap-2 hover:text-white/90 transition-colors"
+              >
+                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                <span className="text-sm font-medium">Back to Home</span>
+              </Link>
+            </div>
+            <div className="pt-2 border-t border-white/5">
+              {isSignedIn ? (
+                <Link
+                  href="/dashboard"
+                  className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
+                >
+                  Dashboard
+                </Link>
+              ) : (
+                <div className="space-y-2">
+                  <SignInButton mode="modal">
+                    <button className="block w-full text-slate-300 hover:text-white/90 transition-colors py-2">
+                      Sign In
+                    </button>
+                  </SignInButton>
+                  <Link 
+                    href="/assessment"
+                    className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
+                  >
+                    Take Assessment
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   )
 }

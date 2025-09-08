@@ -150,7 +150,7 @@ export function AssessmentWizard() {
       <AssessmentNavbar />
       <div className="container mx-auto px-4 py-8">
         {/* Progress Header - Sticky */}
-        <div className="sticky top-16 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
+        <div className="sticky top-20 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
           <AssessmentProgress 
             currentStep={currentStep} 
             totalSteps={totalSteps}
