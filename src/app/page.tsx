@@ -1,5 +1,15 @@
-import { Navbar } from '@/components/landing/Navbar'
-import { HeroSection } from '@/components/landing/HeroSection'
+import { Navbar } from './landing/components/Navbar';
+import { Hero } from './landing/components/Hero';
+import { Hook } from './landing/components/Hook';
+import { EpicArcanaIntro } from './landing/components/EpicArcanaIntro';
+import { HowItWorks } from './landing/components/HowItWorks';
+import { WorldLaurasia } from './landing/components/WorldLaurasia';
+import { Community } from './landing/components/Community';
+import { ColorCycle } from './landing/components/ColorCycle';
+import { DashboardPreview } from './landing/components/DashboardPreview';
+import { SocialProof } from './landing/components/SocialProof';
+import { FinalCTA } from './landing/components/FinalCTA';
+import { Footer } from './landing/components/Footer';
 import { QuickStartCard } from '@/components/landing/QuickStartCard'
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection'
 import { PersonalitiesSection } from '@/components/landing/PersonalitiesSection'
@@ -10,14 +20,15 @@ import { FinalCTASection } from '@/components/landing/FinalCTASection'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/10 to-slate-900">
-      {/* Navigation */}
+    <main className="min-h-screen text-slate-200 bg-[#0b1220]">
       <Navbar />
+      <Hero />
+      <Hook />
+      <EpicArcanaIntro />
+      <HowItWorks />
+      <WorldLaurasia />
       
-      {/* Hero Section */}
-      <HeroSection />
-
-      {/* Quick Start Section */}
+      {/* Quick Start Section from original */}
       <section className="px-6 pb-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
@@ -29,23 +40,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Additional sections from original */}
       <HowItWorksSection />
-
-      {/* Personalities Section */}
       <PersonalitiesSection />
-
-      {/* World Section */}
       <WorldSection />
-
-      {/* Community Section */}
+      
+      <Community />
+      <ColorCycle />
+      <DashboardPreview />
+      <SocialProof />
+      
+      {/* Community and other sections from original */}
       <CommunitySection />
-
-      {/* Cycle Section */}
       <CycleSection />
-
-      {/* Final Call to Action */}
+      
+      <FinalCTA />
       <FinalCTASection />
-    </div>
+      <Footer />
+    </main>
   )
 }

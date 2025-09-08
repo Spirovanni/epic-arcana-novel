@@ -38,17 +38,6 @@ export function Hero() {
         <div className="grid gap-10 lg:grid-cols-2 items-center min-h-[80vh]">
           {/* Left side - Content */}
           <div className="text-center lg:text-left">
-            {/* Epic Arcana Logo/Brand */}
-            <div className="mb-8 flex justify-center lg:justify-start">
-              <div className="flex items-center space-x-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                  <span className="text-2xl">👑</span>
-                </div>
-                <h2 className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Epic Arcana
-                </h2>
-              </div>
-            </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
               Discover your <span className={gradText}>Player Type</span>.
