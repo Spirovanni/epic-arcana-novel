@@ -1,33 +1,21 @@
 'use client'
 
-import React, { useState } from 'react'
+import { SignInButton, SignedIn, SignedOut, UserButton, useUser } from '@clerk/nextjs'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SignInButton, UserButton, useUser } from '@clerk/nextjs'
+import { useState } from 'react'
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400"
 
-export function AssessmentNavbar() {
+export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { isSignedIn } = useUser()
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/70 border-b border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
-        {/* Left brand with back button */}
-        <div className="flex items-center gap-4">
-          <Link 
-            href="/" 
-            className="flex items-center gap-2 text-slate-300 hover:text-white/90 transition-colors group"
-          >
-            <svg className="h-4 w-4 group-hover:translate-x-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span className="text-sm font-medium tracking-wide">Back</span>
-          </Link>
-          
-          <div className="w-px h-6 bg-white/20" />
-          
+        {/* Left brand */}
+        <div className="flex items-center">
           <Link href="/" className="flex items-center group">
             <Image
               src="/images/Epic_Arcana_Logo.png"
@@ -39,22 +27,24 @@ export function AssessmentNavbar() {
           </Link>
         </div>
 
-        {/* Center - Assessment Title */}
-        <div className="hidden md:flex items-center">
-          <h1 className="text-lg font-semibold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Player Type & Role Assessment
-          </h1>
-        </div>
+        {/* Center nav */}
+        <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300 font-semibold">
+          <Link href="#how-it-works" className="hover:text-white/90 transition-colors tracking-wide">How it Works</Link>
+          <Link href="#world" className="hover:text-white/90 transition-colors tracking-wide">World</Link>
+          <Link href="#community" className="hover:text-white/90 transition-colors tracking-wide">Community</Link>
+          <Link href="#cycle" className="hover:text-white/90 transition-colors tracking-wide">Cycle</Link>
+          {isSignedIn && <Link href="/dashboard" className="hover:text-white/90 transition-colors tracking-wide">Dashboard</Link>}
+        </nav>
 
         {/* Right auth section */}
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>
               <Link
-                href="/dashboard"
-                className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 hover:scale-105`}
+                href="/assessment"
+                className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
               >
-                Dashboard
+                Take Assessment
               </Link>
               <UserButton 
                 appearance={{
@@ -71,12 +61,11 @@ export function AssessmentNavbar() {
                   Sign In
                 </button>
               </SignInButton>
-              <Link 
-                href="/assessment"
-                className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}
-              >
-                Take Assessment
-              </Link>
+              <SignInButton mode="modal" forceRedirectUrl="/assessment">
+                <button className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}>
+                  Take Assessment
+                </button>
+              </SignInButton>
             </>
           )}
           
@@ -96,24 +85,20 @@ export function AssessmentNavbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-white/5 bg-[#0b1220]/95 backdrop-blur">
           <div className="px-4 py-4 space-y-4">
-            <div className="flex items-center gap-2 text-slate-300 mb-4">
-              <Link 
-                href="/" 
-                className="flex items-center gap-2 hover:text-white/90 transition-colors"
-              >
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                <span className="text-sm font-medium">Back to Home</span>
-              </Link>
-            </div>
+            <nav className="space-y-2">
+              <Link href="#how-it-works" className="block text-slate-300 hover:text-white/90 transition-colors">How it Works</Link>
+              <Link href="#world" className="block text-slate-300 hover:text-white/90 transition-colors">World</Link>
+              <Link href="#community" className="block text-slate-300 hover:text-white/90 transition-colors">Community</Link>
+              <Link href="#cycle" className="block text-slate-300 hover:text-white/90 transition-colors">Cycle</Link>
+              {isSignedIn && <Link href="/dashboard" className="block text-slate-300 hover:text-white/90 transition-colors">Dashboard</Link>}
+            </nav>
             <div className="pt-2 border-t border-white/5">
               {isSignedIn ? (
                 <Link
-                  href="/dashboard"
-                  className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
+                  href="/assessment"
+                  className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl`}
                 >
-                  Dashboard
+                  Take Assessment
                 </Link>
               ) : (
                 <div className="space-y-2">
@@ -122,12 +107,11 @@ export function AssessmentNavbar() {
                       Sign In
                     </button>
                   </SignInButton>
-                  <Link 
-                    href="/assessment"
-                    className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
-                  >
-                    Take Assessment
-                  </Link>
+                  <SignInButton mode="modal" forceRedirectUrl="/assessment">
+                    <button className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}>
+                      Take Assessment
+                    </button>
+                  </SignInButton>
                 </div>
               )}
             </div>

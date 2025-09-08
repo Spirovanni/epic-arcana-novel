@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { getChapterIconPath } from '@/lib/icons'
+import Image from 'next/image'
 
 interface AssessmentBreakdownProps {
   result: AssessmentResult
@@ -67,10 +69,22 @@ export function AssessmentBreakdown({ result, answers }: AssessmentBreakdownProp
         <CardHeader>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-6">
-              <div
-                className="w-20 h-20 rounded-full border-4 border-white/20"
-                style={{ backgroundColor: result.color.rgb_hex }}
-              />
+              <div className="relative">
+                <div
+                  className="w-20 h-20 rounded-full border-4 border-white/20"
+                  style={{ backgroundColor: result.color.rgb_hex }}
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-10 h-10 relative">
+                    <Image
+                      src={getChapterIconPath(result.chapter)}
+                      alt={`Chapter ${result.chapter} Icon`}
+                      fill
+                      className="object-contain filter brightness-0 invert"
+                    />
+                  </div>
+                </div>
+              </div>
               <div>
                 <CardTitle className="text-3xl bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   {result.ea_id}
