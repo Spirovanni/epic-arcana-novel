@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
 import { ClientWrapper } from '@/components/ClientWrapper'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
@@ -29,11 +30,21 @@ const AssessmentWizard = dynamic(
 
 function AssessmentContent() {
   const { resetAssessment } = useAssessmentStore()
+  const searchParams = useSearchParams()
   const [hasExistingResult, setHasExistingResult] = useState(false)
   const [loading, setLoading] = useState(true)
   
+  const isRetake = searchParams.get('retake') === 'true'
+  
   useEffect(() => {
     const checkExistingAssessment = async () => {
+      // If this is a retake, skip the existing result check
+      if (isRetake) {
+        resetAssessment()
+        setLoading(false)
+        return
+      }
+      
       try {
         const response = await fetch('/api/assessment/result')
         if (response.ok) {
@@ -56,7 +67,7 @@ function AssessmentContent() {
     }
     
     checkExistingAssessment()
-  }, [resetAssessment])
+  }, [resetAssessment, isRetake])
   
   if (loading) {
     return (

@@ -40,12 +40,14 @@ export function AssessmentButton({
     if (hasCompletedAssessment) {
       // Reset the assessment state for retake
       resetAssessment()
-    }
-    
-    if (onClick) {
-      onClick()
+      // Navigate with retake parameter to bypass existing result check
+      router.push(`${href || '/assessment'}?retake=true`)
     } else {
-      router.push(href || '/assessment')
+      if (onClick) {
+        onClick()
+      } else {
+        router.push(href || '/assessment')
+      }
     }
   }
 
