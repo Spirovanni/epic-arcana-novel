@@ -66,6 +66,7 @@ interface PersonalityProfile {
 export default function PersonalityPage({ params }: { params: { profileId: string } }) {
   const [personality, setPersonality] = useState<PersonalityProfile | null>(null)
   const [loading, setLoading] = useState(true)
+  const [activeTab, setActiveTab] = useState('overview')
 
   useEffect(() => {
     const loadPersonality = async () => {
@@ -203,7 +204,7 @@ export default function PersonalityPage({ params }: { params: { profileId: strin
         </Card>
 
         {/* Main Content Tabs */}
-        <Tabs defaultValue="overview" className="w-full">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-5 bg-slate-800/50 border-purple-500/30">
             <TabsTrigger value="overview">Overview</TabsTrigger>
             <TabsTrigger value="traits">Traits</TabsTrigger>
