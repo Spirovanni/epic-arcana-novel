@@ -4,12 +4,15 @@ import { SignInButton, SignedIn, SignedOut, UserButton, useUser } from '@clerk/n
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import { AssessmentButton } from '@/components/ui/AssessmentButton'
+import { useAssessmentButtonText } from '@/hooks/useAssessmentButtonText'
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400"
 
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const { isSignedIn } = useUser()
+  const { buttonText } = useAssessmentButtonText()
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/70 border-b border-white/5">
@@ -40,12 +43,9 @@ export function Navbar() {
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>
-              <Link
-                href="/assessment"
+              <AssessmentButton 
                 className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
-              >
-                Take Assessment
-              </Link>
+              />
               <UserButton 
                 appearance={{
                   elements: {
@@ -63,7 +63,7 @@ export function Navbar() {
               </SignInButton>
               <SignInButton mode="modal" forceRedirectUrl="/assessment">
                 <button className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}>
-                  Take Assessment
+                  {buttonText}
                 </button>
               </SignInButton>
             </>
@@ -94,12 +94,9 @@ export function Navbar() {
             </nav>
             <div className="pt-2 border-t border-white/5">
               {isSignedIn ? (
-                <Link
-                  href="/assessment"
+                <AssessmentButton 
                   className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl`}
-                >
-                  Take Assessment
-                </Link>
+                />
               ) : (
                 <div className="space-y-2">
                   <SignInButton mode="modal">
@@ -109,7 +106,7 @@ export function Navbar() {
                   </SignInButton>
                   <SignInButton mode="modal" forceRedirectUrl="/assessment">
                     <button className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}>
-                      Take Assessment
+                      {buttonText}
                     </button>
                   </SignInButton>
                 </div>

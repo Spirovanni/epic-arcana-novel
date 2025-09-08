@@ -3,14 +3,14 @@
 import { useState, useEffect } from 'react'
 import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
 import { GoalsPlanning } from '@/components/dashboard/GoalsPlanning'
+import { useAssessmentDataRefresh } from '@/utils/assessmentEvents'
 import { AssessmentResult } from '@/lib/assessment/types'
 
 export default function GoalsPage() {
   const [result, setResult] = useState<AssessmentResult | null>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    const loadResult = async () => {
+  const loadResult = async () => {
       try {
         const response = await fetch('/api/assessment/result')
         if (response.ok) {
@@ -32,8 +32,12 @@ export default function GoalsPage() {
       }
     }
 
+  useEffect(() => {
     loadResult()
   }, [])
+
+  // Set up refresh listener
+  useAssessmentDataRefresh(loadResult)
 
   if (loading) {
     return (

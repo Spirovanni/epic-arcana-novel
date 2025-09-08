@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
+import { useAssessmentRefresh } from '@/utils/assessmentEvents'
 
 interface AuthGateProps {
   onSuccess: (resultId: string) => void
@@ -16,6 +17,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
   const [isSaving, setIsSaving] = useState(false)
   const { isSignedIn, isLoaded } = useUser()
   const { result } = useAssessmentStore()
+  const { triggerRefresh } = useAssessmentRefresh()
   
   // Save result and answers, then redirect
   const handleSaveResult = useCallback(async () => {
@@ -48,11 +50,13 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
       if (response.status === 409) {
         // User already has an assessment
         const { resultId } = await response.json()
+        triggerRefresh() // Trigger refresh of assessment data across the app
         onSuccess(resultId)
       } else if (!response.ok) {
         throw new Error('Failed to save result')
       } else {
         const { resultId } = await response.json()
+        triggerRefresh() // Trigger refresh of assessment data across the app
         onSuccess(resultId)
       }
       
@@ -62,7 +66,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
     } finally {
       setIsSaving(false)
     }
-  }, [result, onSuccess])
+  }, [result, onSuccess, triggerRefresh])
   
   // Effect to handle successful sign-in
   useEffect(() => {

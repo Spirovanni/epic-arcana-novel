@@ -3,10 +3,12 @@
 import { useState, useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { AssessmentButton } from '@/components/ui/AssessmentButton'
 import { Progress } from '@/components/ui/progress'
 import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
 import { StrengthsAnalysis } from '@/components/dashboard/StrengthsAnalysis'
 import { GrowthAnalysis } from '@/components/dashboard/GrowthAnalysis'
+import { useAssessmentDataRefresh } from '@/utils/assessmentEvents'
 import Link from 'next/link'
 import { AssessmentResult } from '@/lib/assessment/types'
 
@@ -25,35 +27,38 @@ export default function DashboardPage() {
   const [assessmentHistory, setAssessmentHistory] = useState<AssessmentHistoryItem[]>([])
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    // Load assessment data from API
-    const loadAssessmentData = async () => {
-      try {
-        const response = await fetch('/api/assessment/result')
-        if (response.ok) {
-          const result = await response.json()
-          setLatestResult(result)
-        } else if (response.status === 404) {
-          // No assessment result found - this is fine
-          setLatestResult(null)
-        } else if (response.status === 401) {
-          // Not authenticated - this shouldn't happen in dashboard but handle it
-          setLatestResult(null)
-        } else {
-          console.error('Error loading assessment result')
-        }
-        
-        // TODO: Load assessment history from API when available
-        setAssessmentHistory([])
-      } catch (error) {
-        console.error('Error loading assessment data:', error)
-      } finally {
-        setLoading(false)
+  // Load assessment data from API
+  const loadAssessmentData = async () => {
+    try {
+      const response = await fetch('/api/assessment/result')
+      if (response.ok) {
+        const result = await response.json()
+        setLatestResult(result)
+      } else if (response.status === 404) {
+        // No assessment result found - this is fine
+        setLatestResult(null)
+      } else if (response.status === 401) {
+        // Not authenticated - this shouldn't happen in dashboard but handle it
+        setLatestResult(null)
+      } else {
+        console.error('Error loading assessment result')
       }
+      
+      // TODO: Load assessment history from API when available
+      setAssessmentHistory([])
+    } catch (error) {
+      console.error('Error loading assessment data:', error)
+    } finally {
+      setLoading(false)
     }
+  }
 
+  useEffect(() => {
     loadAssessmentData()
   }, [])
+
+  // Set up refresh listener
+  useAssessmentDataRefresh(loadAssessmentData)
 
   const getWelcomeMessage = () => {
     if (latestResult) {
@@ -122,11 +127,7 @@ export default function DashboardPage() {
                 <p className="text-gray-300 text-sm mb-4">
                   Journey through mystical Laurasia with 54 story-driven questions to unlock one of 360 personality archetypes.
                 </p>
-                <Link href="/assessment">
-                  <Button variant="mystical" className="w-full">
-                    Start Assessment
-                  </Button>
-                </Link>
+                <AssessmentButton variant="mystical" className="w-full" />
               </CardContent>
             </Card>
             
@@ -143,11 +144,13 @@ export default function DashboardPage() {
                 <p className="text-gray-300 text-sm mb-4">
                   Experience the Epic Arcana assessment style with a shortened version perfect for first-time explorers.
                 </p>
-                <Link href="/assessment?mode=quick">
-                  <Button variant="outline" className="w-full border-blue-500/50 hover:bg-blue-500/10">
-                    Try Quick Preview
-                  </Button>
-                </Link>
+                <AssessmentButton 
+                  href="/assessment?mode=quick"
+                  variant="outline" 
+                  className="w-full border-blue-500/50 hover:bg-blue-500/10"
+                >
+                  Try Quick Preview
+                </AssessmentButton>
               </CardContent>
             </Card>
             

@@ -6,6 +6,7 @@ import { AssessmentBreakdown } from '@/components/dashboard/AssessmentBreakdown'
 import { AssessmentResult, AssessmentAnswers } from '@/lib/assessment/types'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { useAssessmentDataRefresh } from '@/utils/assessmentEvents'
 import Link from 'next/link'
 
 export default function DashboardAssessmentPage() {
@@ -13,33 +14,40 @@ export default function DashboardAssessmentPage() {
   const [answers, setAnswers] = useState<AssessmentAnswers | null>(null)
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    const loadAssessmentData = async () => {
-      try {
-        // Load assessment result
-        const resultResponse = await fetch('/api/assessment/result')
-        let resultData = null
-        if (resultResponse.ok) {
-          resultData = await resultResponse.json()
-          setResult(resultData)
-        }
-
-        // Load assessment answers
-        const answersResponse = await fetch('/api/assessment/answers')
-        if (answersResponse.ok) {
-          const answersData = await answersResponse.json()
-          setAnswers(answersData)
-        }
-
-        setLoading(false)
-      } catch (error) {
-        console.error('Error loading assessment data:', error)
-        setLoading(false)
+  const loadAssessmentData = async () => {
+    try {
+      // Load assessment result
+      const resultResponse = await fetch('/api/assessment/result')
+      let resultData = null
+      if (resultResponse.ok) {
+        resultData = await resultResponse.json()
+        setResult(resultData)
+      } else {
+        setResult(null)
       }
-    }
 
+      // Load assessment answers
+      const answersResponse = await fetch('/api/assessment/answers')
+      if (answersResponse.ok) {
+        const answersData = await answersResponse.json()
+        setAnswers(answersData)
+      } else {
+        setAnswers(null)
+      }
+
+      setLoading(false)
+    } catch (error) {
+      console.error('Error loading assessment data:', error)
+      setLoading(false)
+    }
+  }
+
+  useEffect(() => {
     loadAssessmentData()
   }, [])
+
+  // Set up refresh listener
+  useAssessmentDataRefresh(loadAssessmentData)
 
   if (loading) {
     return (

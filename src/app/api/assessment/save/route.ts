@@ -22,14 +22,8 @@ export async function POST(request: NextRequest) {
       )
     }
     
-    // Check if user already has an assessment
+    // Check if user already has an assessment - if they do, we'll overwrite it for retake functionality
     const existingResult = await checkExistingResult(userId)
-    if (existingResult) {
-      return NextResponse.json(
-        { error: 'User has already completed the assessment', resultId: existingResult.resultId },
-        { status: 409 }
-      )
-    }
     
     // Generate a unique result ID
     const resultId = createResultId()
@@ -83,6 +77,16 @@ async function saveToLocalFile(resultId: string, result: unknown, userId: string
     }
   } catch {
     console.warn('Could not load existing results, starting fresh')
+  }
+  
+  // Remove any previous result for this user (for retake functionality)
+  if (userId) {
+    const previousResultId = Object.keys(existingResults).find(id => 
+      (existingResults[id] as any)?.userId === userId
+    )
+    if (previousResultId) {
+      delete existingResults[previousResultId]
+    }
   }
   
   // Add the new result

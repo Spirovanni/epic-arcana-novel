@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
+import { AssessmentButton } from '@/components/ui/AssessmentButton'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
@@ -280,11 +281,9 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                     </p>
                   </div>
                   <div className="pt-4">
-                    <Link href="/assessment">
-                      <Button variant="mystical" className="w-full">
-                        Take Assessment to Find Your Type
-                      </Button>
-                    </Link>
+                    <AssessmentButton variant="mystical" className="w-full">
+                      Take Assessment to Find Your Type
+                    </AssessmentButton>
                   </div>
                 </CardContent>
               </Card>
