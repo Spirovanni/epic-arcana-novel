@@ -32,6 +32,12 @@ const navItems: NavItem[] = [
     description: 'Take or retake your Epic Arcana assessment'
   },
   {
+    href: '/personalities',
+    label: 'Personalities',
+    icon: '👥',
+    description: 'Explore all 360 Epic Arcana personality types'
+  },
+  {
     href: '/dashboard/strengths',
     label: 'Strengths',
     icon: '💪',

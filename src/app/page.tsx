@@ -2,6 +2,7 @@ import { Navbar } from '@/components/landing/Navbar'
 import { HeroSection } from '@/components/landing/HeroSection'
 import { QuickStartCard } from '@/components/landing/QuickStartCard'
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection'
+import { PersonalitiesSection } from '@/components/landing/PersonalitiesSection'
 import { WorldSection } from '@/components/landing/WorldSection'
 import { CommunitySection } from '@/components/landing/CommunitySection'
 import { CycleSection } from '@/components/landing/CycleSection'
@@ -30,6 +31,9 @@ export default function Home() {
 
       {/* How It Works */}
       <HowItWorksSection />
+
+      {/* Personalities Section */}
+      <PersonalitiesSection />
 
       {/* World Section */}
       <WorldSection />
