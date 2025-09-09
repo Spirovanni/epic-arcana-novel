@@ -19,16 +19,14 @@ export function AssessmentMockup() {
         <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
       </div>
       <div className="mt-6 space-y-4">
-        {["I'm energized by solving complex problems.", "I lead with empathy.", "Adventure motivates me.", "I prefer structure and clear goals."].map((q, i) => (
-          <label key={i} className="block rounded-xl bg-[#0d172a] p-4 border border-white/10 hover:border-white/20 cursor-pointer">
-            <span className="text-sm text-slate-300 font-medium">{q}</span>
-            <div className="mt-3 flex items-center gap-3">
-              {["No", "Sometimes", "Often", "Always"].map((opt) => (
-                <span key={opt} className="text-xs text-slate-400 bg-white/5 px-3 py-1 rounded-lg font-medium">{opt}</span>
-              ))}
-            </div>
-          </label>
-        ))}
+        <label className="block rounded-xl bg-[#0d172a] p-4 border border-white/10 hover:border-white/20 cursor-pointer">
+          <span className="text-sm text-slate-300 font-medium">I'm energized by solving complex problems.</span>
+          <div className="mt-3 flex items-center gap-3">
+            {["No", "Sometimes", "Often", "Always"].map((opt) => (
+              <span key={opt} className="text-xs text-slate-400 bg-white/5 px-3 py-1 rounded-lg font-medium">{opt}</span>
+            ))}
+          </div>
+        </label>
       </div>
       <button className={`${gradCTA} mt-6 w-full rounded-xl py-3 font-bold tracking-wide`}>Calculate Player Profile</button>
       <p className="mt-3 text-center text-xs text-slate-400 font-medium">Generates color, role, and Hero Energy card</p>
