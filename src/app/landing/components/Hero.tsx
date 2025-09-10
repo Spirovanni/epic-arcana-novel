@@ -35,7 +35,7 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-28 w-full">
-        <div className="grid gap-10 lg:grid-cols-2 items-center min-h-[80vh]">
+        <div className="grid gap-10 lg:grid-cols-2 items-center min-h-[80vh] mt-16">
           {/* Left side - Content */}
           <div className="text-center lg:text-left">
             
