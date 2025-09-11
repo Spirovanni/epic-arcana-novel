@@ -132,8 +132,8 @@ export async function POST(request: Request) {
       } : null,
       bigFiveScores: normalizedBigFive,
       enneagram: {
-        type: enneagramType,
-        ...primaryProfile?.enneagram
+        ...primaryProfile?.enneagram,
+        type: enneagramType
       },
       colorCyclePosition,
       trionfiCard: primaryProfile?.trionfiCard || 'The Fool',

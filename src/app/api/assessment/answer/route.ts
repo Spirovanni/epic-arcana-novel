@@ -68,8 +68,8 @@ export async function POST(request: Request) {
       .set({
         currentQuestionIndex: nextQuestionIndex,
         status: isComplete ? 'completed' : 'in_progress',
-        completedAt: isComplete ? new Date().toISOString() : undefined,
-        updatedAt: new Date().toISOString()
+        completedAt: isComplete ? new Date() : null,
+        updatedAt: new Date()
       })
       .where(eq(assessments.id, assessmentId));
 
