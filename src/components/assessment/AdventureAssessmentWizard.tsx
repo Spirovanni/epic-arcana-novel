@@ -168,7 +168,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                   Personal Reflection
                 </h2>
                 <div className="text-xl text-gray-200 leading-relaxed">
-                  "{(item as LikertItemType).text}"
+                  "{(item as LikertItemType).statement}"
                 </div>
               </div>
               
