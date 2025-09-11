@@ -31,6 +31,19 @@ export default function RootLayout({
         {/* Primary meta tags */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Preload hero images for faster loading */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/epic-arcana-hero-1920x1080.png"
+          media="(min-width: 768px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/epic-arcana-hero-mobile.png"
+          media="(max-width: 767px)"
+        />
         {/* Next.js will inject metadata from the export above */}
       </head>
       <body
