@@ -247,6 +247,35 @@ export function AdventureAssessmentWizard() {
   const likertItems = getLikertItems()
   const allItems = [...forcedChoiceItems, ...likertItems]
   
+  const handleComplete = useCallback(async () => {
+    setIsSubmitting(true)
+    
+    try {
+      const answers = getAnswersForApi()
+      const response = await fetch('/api/assessment/score', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(answers),
+      })
+      
+      if (!response.ok) {
+        throw new Error('Failed to score assessment')
+      }
+      
+      const result = await response.json()
+      setResult(result)
+      completeAssessment()
+      setShowAuthGate(true)
+      
+    } catch (error) {
+      console.error('Error completing assessment:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
+  }, [getAnswersForApi, setResult, completeAssessment])
+  
   const handleAnswer = useCallback((answer: any) => {
     const currentItem = allItems[currentQuestionIndex]
     
@@ -302,35 +331,6 @@ export function AdventureAssessmentWizard() {
       }
     }, 1000)
   }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete])
-  
-  const handleComplete = useCallback(async () => {
-    setIsSubmitting(true)
-    
-    try {
-      const answers = getAnswersForApi()
-      const response = await fetch('/api/assessment/score', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(answers),
-      })
-      
-      if (!response.ok) {
-        throw new Error('Failed to score assessment')
-      }
-      
-      const result = await response.json()
-      setResult(result)
-      completeAssessment()
-      setShowAuthGate(true)
-      
-    } catch (error) {
-      console.error('Error completing assessment:', error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }, [getAnswersForApi, setResult, completeAssessment])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}`)
