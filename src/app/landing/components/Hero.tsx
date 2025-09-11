@@ -11,6 +11,8 @@ const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hov
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Loading skeleton - shows while images load */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-pulse" />
       {/* Hero Background Images - Optimized with Next.js Image */}
       <div className="absolute inset-0 md:hidden">
         <Image
