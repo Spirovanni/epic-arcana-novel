@@ -33,6 +33,9 @@ export function Navbar() {
           <a href="#world" className="hover:text-white/90 transition-colors tracking-wide">World</a>
           <a href="#community" className="hover:text-white/90 transition-colors tracking-wide">Community</a>
           <a href="#cycle" className="hover:text-white/90 transition-colors tracking-wide">Cycle</a>
+          {isSignedIn && (
+            <Link href="/profile" className="hover:text-white/90 transition-colors tracking-wide">Profile</Link>
+          )}
           <a href="#dashboard" className="hover:text-white/90 transition-colors tracking-wide">Dashboard</a>
         </nav>
 

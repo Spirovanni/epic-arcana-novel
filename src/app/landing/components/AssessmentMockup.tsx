@@ -247,10 +247,55 @@ export function AssessmentMockup() {
         </div>
         <div className="mt-6 text-center">
           <h3 className="text-lg font-bold text-white mb-2">Assessment Complete!</h3>
-          <p className="text-sm text-slate-300 mb-4">Your Player Profile is being calculated...</p>
-          <button className={`${gradCTA} w-full rounded-xl py-3 font-bold tracking-wide`}>
-            View Your Results
-          </button>
+          
+          {state.results ? (
+            <div className="space-y-4">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-violet-500/20 to-indigo-500/20 border border-violet-500/30">
+                <h4 className="text-lg font-bold text-violet-300 mb-2">
+                  {state.results.primaryPlayerType.title}
+                </h4>
+                <p className="text-sm text-slate-300 mb-2">
+                  {state.results.primaryPlayerType.heroJourneyStage}
+                </p>
+                <p className="text-xs text-slate-400">
+                  Trionfi Card: {state.results.trionfiCard}
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-2 text-xs">
+                <div className="p-2 rounded-lg bg-slate-800/50">
+                  <div className="text-slate-400">Openness</div>
+                  <div className="text-white font-semibold">{Math.round(state.results.bigFiveScores.openness)}%</div>
+                </div>
+                <div className="p-2 rounded-lg bg-slate-800/50">
+                  <div className="text-slate-400">Conscientiousness</div>
+                  <div className="text-white font-semibold">{Math.round(state.results.bigFiveScores.conscientiousness)}%</div>
+                </div>
+                <div className="p-2 rounded-lg bg-slate-800/50">
+                  <div className="text-slate-400">Extraversion</div>
+                  <div className="text-white font-semibold">{Math.round(state.results.bigFiveScores.extraversion)}%</div>
+                </div>
+                <div className="p-2 rounded-lg bg-slate-800/50">
+                  <div className="text-slate-400">Agreeableness</div>
+                  <div className="text-white font-semibold">{Math.round(state.results.bigFiveScores.agreeableness)}%</div>
+                </div>
+              </div>
+              
+              <a 
+                href="/profile"
+                className={`${gradCTA} w-full rounded-xl py-3 font-bold tracking-wide inline-block text-center`}
+              >
+                View Full Profile
+              </a>
+            </div>
+          ) : (
+            <div>
+              <p className="text-sm text-slate-300 mb-4">Your Player Profile is being calculated...</p>
+              <button className={`${gradCTA} w-full rounded-xl py-3 font-bold tracking-wide`}>
+                View Your Results
+              </button>
+            </div>
+          )}
         </div>
       </div>
     );
