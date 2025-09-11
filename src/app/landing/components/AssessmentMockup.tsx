@@ -25,6 +25,7 @@ interface AssessmentState {
   isLoading: boolean;
   error: string | null;
   isComplete: boolean;
+  results: any | null;
 }
 
 export function AssessmentMockup() {
@@ -34,7 +35,8 @@ export function AssessmentMockup() {
     currentQuestion: null,
     isLoading: false,
     error: null,
-    isComplete: false
+    isComplete: false,
+    results: null
   });
 
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
@@ -131,11 +133,38 @@ export function AssessmentMockup() {
       const data = await response.json();
       
       if (data.isComplete) {
-        setState(prev => ({ 
-          ...prev, 
-          isComplete: true,
-          isLoading: false 
-        }));
+        // Calculate results when assessment is complete
+        try {
+          const resultsResponse = await fetch('/api/assessment/calculate-results', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              assessmentId: state.assessmentId
+            }),
+          });
+
+          if (resultsResponse.ok) {
+            const resultsData = await resultsResponse.json();
+            setState(prev => ({ 
+              ...prev, 
+              isComplete: true,
+              isLoading: false,
+              results: resultsData.personalityProfile
+            }));
+          } else {
+            throw new Error('Failed to calculate results');
+          }
+        } catch (error) {
+          console.error('Error calculating results:', error);
+          setState(prev => ({ 
+            ...prev, 
+            isComplete: true,
+            isLoading: false,
+            error: 'Assessment completed but results calculation failed'
+          }));
+        }
       } else {
         // Load next question
         await loadQuestion(state.assessmentId, data.nextQuestionIndex);
