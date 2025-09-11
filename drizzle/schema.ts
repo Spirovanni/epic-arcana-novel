@@ -7,6 +7,8 @@ export const characterType = pgEnum("character_type", ['historical', 'mythic', '
 export const stationType = pgEnum("station_type", ['major_hub', 'minor_stop'])
 export const suit = pgEnum("suit", ['Temporalis', 'Animae', 'Stellae', 'Materiae'])
 export const trainComponentType = pgEnum("train_component_type", ['locomotive', 'passenger_car', 'observation_car'])
+export const assessmentStatus = pgEnum("assessment_status", ['in_progress', 'completed', 'abandoned'])
+export const questionType = pgEnum("question_type", ['situational', 'preference', 'behavioral', 'personality'])
 
 
 export const users = pgTable("users", {
@@ -803,4 +805,88 @@ export const storyArcGoals = pgTable("story_arc_goals", {
 		foreignColumns: [characterArcs.id],
 		name: "story_arc_goals_character_arc_id_character_arcs_id_fk"
 	}).onDelete("cascade"),
+]);
+
+// Assessment System Tables
+export const assessments = pgTable("assessments", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	userId: integer("user_id").notNull(),
+	status: assessmentStatus().default('in_progress').notNull(),
+	currentQuestionIndex: integer("current_question_index").default(0).notNull(),
+	totalQuestions: integer("total_questions").notNull(),
+	startedAt: timestamp("started_at", { mode: 'string' }).defaultNow().notNull(),
+	completedAt: timestamp("completed_at", { mode: 'string' }),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.userId],
+		foreignColumns: [users.id],
+		name: "assessments_user_id_users_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const assessmentQuestions = pgTable("assessment_questions", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	assessmentId: uuid("assessment_id").notNull(),
+	questionId: varchar("question_id", { length: 100 }).notNull(),
+	questionType: questionType().notNull(),
+	questionText: text("question_text").notNull(),
+	questionData: jsonb("question_data").notNull(), // Contains options, scoring, etc.
+	orderIndex: integer("order_index").notNull(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.assessmentId],
+		foreignColumns: [assessments.id],
+		name: "assessment_questions_assessment_id_assessments_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const assessmentAnswers = pgTable("assessment_answers", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	assessmentId: uuid("assessment_id").notNull(),
+	questionId: varchar("question_id", { length: 100 }).notNull(),
+	selectedOptionIndex: integer("selected_option_index").notNull(),
+	selectedOptionText: text("selected_option_text").notNull(),
+	scoringData: jsonb("scoring_data").notNull(), // Contains Big Five scores, player type scores, etc.
+	answeredAt: timestamp("answered_at", { mode: 'string' }).defaultNow().notNull(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.assessmentId],
+		foreignColumns: [assessments.id],
+		name: "assessment_answers_assessment_id_assessments_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const userAssessmentResults = pgTable("user_assessment_results", {
+	id: uuid().defaultRandom().primaryKey().notNull(),
+	userId: integer("user_id").notNull(),
+	assessmentId: uuid("assessment_id").notNull(),
+	primaryPlayerType: varchar("primary_player_type", { length: 100 }).notNull(),
+	secondaryPlayerType: varchar("secondary_player_type", { length: 100 }),
+	bigFiveScores: jsonb("big_five_scores").notNull(), // {openness: number, conscientiousness: number, etc.}
+	enneagramType: integer("enneagram_type"),
+	heroJourneyStage: varchar("hero_journey_stage", { length: 100 }),
+	colorCyclePosition: integer("color_cycle_position").default(1),
+	trionfiCard: varchar("trionfi_card", { length: 100 }),
+	personalityProfile: jsonb("personality_profile").notNull(), // Full personality data
+	completedAt: timestamp("completed_at", { mode: 'string' }).defaultNow().notNull(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
+}, (table) => [
+	foreignKey({
+		columns: [table.userId],
+		foreignColumns: [users.id],
+		name: "user_assessment_results_user_id_users_id_fk"
+	}).onDelete("cascade"),
+	foreignKey({
+		columns: [table.assessmentId],
+		foreignColumns: [assessments.id],
+		name: "user_assessment_results_assessment_id_assessments_id_fk"
+	}).onDelete("cascade"),
+	unique("user_assessment_results_user_id_assessment_id_unique").on(table.userId, table.assessmentId),
 ]);
