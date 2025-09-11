@@ -9,19 +9,21 @@ import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
 import Link from 'next/link'
 
-// Dynamically import the AssessmentWizard to avoid SSR issues
+// Dynamically import the AssessmentWizard components to avoid SSR issues
 const AssessmentWizard = dynamic(
   () => import('@/components/assessment/AssessmentWizard').then(mod => ({ default: mod.AssessmentWizard })),
+  { ssr: false }
+)
+
+const AdventureAssessmentWizard = dynamic(
+  () => import('@/components/assessment/AdventureAssessmentWizard').then(mod => ({ default: mod.AdventureAssessmentWizard })),
   { 
     ssr: false,
     loading: () => (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
-        <AssessmentNavbar />
-        <div className="flex items-center justify-center h-screen">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-            <p className="text-gray-400">Loading assessment...</p>
-          </div>
+      <div className="min-h-screen bg-black flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-400 mx-auto mb-4"></div>
+          <p className="text-amber-300">Loading your adventure...</p>
         </div>
       </div>
     )
@@ -35,6 +37,7 @@ function AssessmentContent() {
   const [loading, setLoading] = useState(true)
   
   const isRetake = searchParams.get('retake') === 'true'
+  const useAdventure = searchParams.get('style') !== 'classic' // Default to adventure mode
   
   useEffect(() => {
     const checkExistingAssessment = async () => {
@@ -115,7 +118,7 @@ function AssessmentContent() {
     )
   }
   
-  return <AssessmentWizard />
+  return useAdventure ? <AdventureAssessmentWizard /> : <AssessmentWizard />
 }
 
 export default function AssessmentPage() {
