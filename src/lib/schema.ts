@@ -1,4 +1,40 @@
-import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real } from 'drizzle-orm/pg-core';
+import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real, unique } from 'drizzle-orm/pg-core';
+
+export const users = pgTable('users', {
+  id: integer().primaryKey().generatedAlwaysAsIdentity({ name: 'users_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+  name: varchar({ length: 255 }).notNull(),
+  age: integer().notNull(),
+  email: varchar({ length: 255 }).notNull(),
+  createdAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
+  role: varchar({ length: 255 }).default('user').notNull(),
+  status: varchar({ length: 255 }).default('active').notNull(),
+  isVerified: boolean().default(false).notNull(),
+  isActive: boolean().default(true).notNull(),
+  isDeleted: boolean().default(false).notNull(),
+  isSuspended: boolean().default(false).notNull(),
+  isLocked: boolean().default(false).notNull(),
+  isEmailVerified: boolean().default(false).notNull(),
+  isPhoneVerified: boolean().default(false).notNull(),
+  isPremium: boolean().default(false).notNull(),
+  isTrial: boolean().default(false).notNull(),
+  isTrialExpired: boolean().default(false).notNull(),
+  isTrialStarted: boolean().default(false).notNull(),
+  isTrialEnded: boolean().default(false).notNull(),
+  credits: integer().default(0).notNull(),
+  creditsUsed: integer().default(0).notNull(),
+  creditsRemaining: integer().default(0).notNull(),
+  creditsExhausted: boolean().default(false).notNull(),
+  creditsExhaustedAt: timestamp({ mode: 'string' }),
+  creditsExhaustedReason: varchar({ length: 255 }).default('').notNull(),
+  creditsExhaustedReasonDescription: varchar({ length: 255 }).default('').notNull(),
+  clerkId: varchar({ length: 255 }).notNull(),
+  firstName: varchar({ length: 255 }).notNull(),
+  lastName: varchar({ length: 255 }).notNull(),
+}, (table) => [
+  unique('users_email_unique').on(table.email),
+  unique('users_clerkId_unique').on(table.clerkId),
+]);
 
 export const locations = pgTable('locations', {
   id: uuid('id').primaryKey().defaultRandom(),
@@ -605,6 +641,64 @@ export const storyArcGoals = pgTable('story_arc_goals', {
   isCompleted: boolean('is_completed').default(false),
   positionIn3d: jsonb('position_in_3d'),
   visualProperties: jsonb('visual_properties'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+// Assessment System Enums
+export const assessmentStatusEnum = pgEnum('assessment_status', ['in_progress', 'completed', 'abandoned']);
+export const questionTypeEnum = pgEnum('question_type', ['situational', 'preference', 'behavioral', 'personality']);
+
+// Assessment System Tables
+export const assessments = pgTable('assessments', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userId: integer('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  status: assessmentStatusEnum('status').default('in_progress').notNull(),
+  currentQuestionIndex: integer('current_question_index').default(0).notNull(),
+  totalQuestions: integer('total_questions').notNull(),
+  startedAt: timestamp('started_at').defaultNow().notNull(),
+  completedAt: timestamp('completed_at'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const assessmentQuestions = pgTable('assessment_questions', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  assessmentId: uuid('assessment_id').notNull().references(() => assessments.id, { onDelete: 'cascade' }),
+  questionId: varchar('question_id', { length: 100 }).notNull(),
+  questionType: questionTypeEnum('question_type').notNull(),
+  questionText: text('question_text').notNull(),
+  questionData: jsonb('question_data').notNull(), // Contains options, scoring, etc.
+  orderIndex: integer('order_index').notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const assessmentAnswers = pgTable('assessment_answers', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  assessmentId: uuid('assessment_id').notNull().references(() => assessments.id, { onDelete: 'cascade' }),
+  questionId: varchar('question_id', { length: 100 }).notNull(),
+  selectedOptionIndex: integer('selected_option_index').notNull(),
+  selectedOptionText: text('selected_option_text').notNull(),
+  scoringData: jsonb('scoring_data').notNull(), // Contains Big Five scores, player type scores, etc.
+  answeredAt: timestamp('answered_at').defaultNow().notNull(),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const userAssessmentResults = pgTable('user_assessment_results', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userId: integer('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  assessmentId: uuid('assessment_id').notNull().references(() => assessments.id, { onDelete: 'cascade' }),
+  primaryPlayerType: varchar('primary_player_type', { length: 100 }).notNull(),
+  secondaryPlayerType: varchar('secondary_player_type', { length: 100 }),
+  bigFiveScores: jsonb('big_five_scores').notNull(), // {openness: number, conscientiousness: number, etc.}
+  enneagramType: integer('enneagram_type'),
+  heroJourneyStage: varchar('hero_journey_stage', { length: 100 }),
+  colorCyclePosition: integer('color_cycle_position').default(1),
+  trionfiCard: varchar('trionfi_card', { length: 100 }),
+  personalityProfile: jsonb('personality_profile').notNull(), // Full personality data
+  completedAt: timestamp('completed_at').defaultNow().notNull(),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
