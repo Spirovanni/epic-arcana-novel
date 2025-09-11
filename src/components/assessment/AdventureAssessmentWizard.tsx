@@ -270,19 +270,38 @@ export function AdventureAssessmentWizard() {
         const nextIndex = currentQuestionIndex + 1
         setCurrentQuestionIndex(nextIndex)
         
-        // Smooth scroll to next question
+        // Smooth scroll to next question with multiple fallback methods
         setTimeout(() => {
           const nextQuestionElement = document.querySelector(`[data-question="${nextIndex}"]`)
           if (nextQuestionElement) {
-            nextQuestionElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            // Try scrollIntoView first
+            nextQuestionElement.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'start',
+              inline: 'nearest'
+            })
+          } else {
+            // Fallback to calculating position
+            const windowHeight = window.innerHeight
+            const targetPosition = nextIndex * windowHeight
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            })
           }
         }, 100)
       } else {
-        // Assessment complete
+        // Assessment complete - scroll to completion screen
+        setTimeout(() => {
+          const completionElement = document.querySelector('[data-completion]')
+          if (completionElement) {
+            completionElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }
+        }, 100)
         handleComplete()
       }
     }, 1000)
-  }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer])
+  }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete])
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
@@ -365,7 +384,7 @@ export function AdventureAssessmentWizard() {
         
         {/* Completion Screen */}
         {currentQuestionIndex >= allItems.length && (
-          <div className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-900 to-black">
+          <div data-completion className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-900 to-black">
             <div className="text-center max-w-2xl mx-auto">
               <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-12 border border-amber-500/30">
                 <h2 className="text-4xl font-bold text-amber-300 mb-6">

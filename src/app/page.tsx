@@ -10,7 +10,7 @@ import { DashboardPreview } from './landing/components/DashboardPreview';
 import { SocialProof } from './landing/components/SocialProof';
 import { FinalCTA } from './landing/components/FinalCTA';
 import { Footer } from './landing/components/Footer';
-import { QuickStartCard } from '@/components/landing/QuickStartCard'
+import { AdventureQuickStartCard } from '@/components/landing/AdventureQuickStartCard'
 import { HowItWorksSection } from '@/components/landing/HowItWorksSection'
 import { PersonalitiesSection } from '@/components/landing/PersonalitiesSection'
 import { WorldSection } from '@/components/landing/WorldSection'
@@ -35,7 +35,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Experience the Assessment
             </h2>
-            <QuickStartCard />
+            <AdventureQuickStartCard />
           </div>
         </div>
       </section>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { AssessmentMockup } from './AssessmentMockup';
+import { AdventureAssessmentMockup } from './AdventureAssessmentMockup';
 
 const gradText = "bg-gradient-to-r from-indigo-300 via-indigo-400 to-blue-300 bg-clip-text text-transparent";
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
@@ -73,8 +73,8 @@ export function Hero() {
             <div className="relative">
               {/* Glowing backdrop for the mockup */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 rounded-3xl blur-2xl scale-110" />
-              <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-6 border border-white/10 shadow-2xl">
-                <AssessmentMockup />
+              <div className="relative">
+                <AdventureAssessmentMockup />
               </div>
             </div>
           </div>
