@@ -35,34 +35,48 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   const [selectedBest, setSelectedBest] = useState<number | null>(null)
   const [selectedWorst, setSelectedWorst] = useState<number | null>(null)
   const [likertRating, setLikertRating] = useState<number | null>(null)
+  const [canContinue, setCanContinue] = useState(false)
+
+  // Reset selections when question changes (for retake scenarios)
+  useEffect(() => {
+    if (!isAnswered) {
+      setSelectedBest(null)
+      setSelectedWorst(null)
+      setLikertRating(null)
+      setCanContinue(false)
+    }
+  }, [questionNumber, isAnswered])
 
   const handleForcedChoiceClick = (index: number) => {
     if (selectedBest === null) {
       setSelectedBest(index)
     } else if (selectedWorst === null && index !== selectedBest) {
       setSelectedWorst(index)
-      // Auto-submit when both selections are made
-      setTimeout(() => {
-        onAnswer({ best: selectedBest, worst: index })
-      }, 300)
+      setCanContinue(true)
     } else if (selectedBest === index) {
       setSelectedBest(null)
       setSelectedWorst(null)
+      setCanContinue(false)
     } else if (selectedWorst === index) {
       setSelectedWorst(null)
+      setCanContinue(false)
     } else {
       setSelectedWorst(index)
-      setTimeout(() => {
-        onAnswer({ best: selectedBest, worst: index })
-      }, 300)
+      setCanContinue(true)
     }
   }
 
   const handleLikertClick = (rating: number) => {
     setLikertRating(rating)
-    setTimeout(() => {
-      onAnswer({ rating })
-    }, 300)
+    setCanContinue(true)
+  }
+
+  const handleContinue = () => {
+    if (isForcedChoice && selectedBest !== null && selectedWorst !== null) {
+      onAnswer({ best: selectedBest, worst: selectedWorst })
+    } else if (!isForcedChoice && likertRating !== null) {
+      onAnswer({ rating: likertRating })
+    }
   }
 
   const getOptionStatus = (index: number) => {
@@ -89,9 +103,10 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   return (
     <div 
       ref={questionRef}
-      className="min-h-screen flex items-center justify-center p-6 relative"
+      className="h-full w-full flex items-center justify-center p-6 relative pt-24"
       style={{
         background: getBackgroundGradient(questionNumber),
+        minHeight: '100vh'
       }}
     >
       {/* Dark overlay */}
@@ -159,6 +174,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                   )
                 })}
               </div>
+              
+              {/* Continue Button for Forced Choice */}
+              {canContinue && (
+                <div className="mt-8 text-center">
+                  <button
+                    onClick={handleContinue}
+                    className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
+                  >
+                    Continue Journey
+                  </button>
+                </div>
+              )}
             </div>
           ) : (
             <div className="space-y-6">
@@ -201,6 +228,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                   <span className="text-green-400 text-sm font-medium">Strongly Agree</span>
                 </div>
               </div>
+              
+              {/* Continue Button for Likert */}
+              {canContinue && (
+                <div className="mt-8 text-center">
+                  <button
+                    onClick={handleContinue}
+                    className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
+                  >
+                    Continue Journey
+                  </button>
+                </div>
+              )}
             </div>
           )}
           
@@ -222,6 +261,7 @@ export function AdventureAssessmentWizard() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
+  const [isTransitioning, setIsTransitioning] = useState(false)
   
   const {
     currentStep,
@@ -242,6 +282,14 @@ export function AdventureAssessmentWizard() {
       startAssessment()
     }
   }, [currentStep, startAssessment])
+
+  // Prevent body scroll during assessment
+  useEffect(() => {
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [])
   
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
@@ -292,44 +340,17 @@ export function AdventureAssessmentWizard() {
     }
     
     setAnsweredQuestions(prev => new Set([...prev, currentQuestionIndex]))
+    setIsTransitioning(true)
     
-    // Auto-scroll to next question after a short delay
+    // Slide to next question after a short delay
     setTimeout(() => {
       if (currentQuestionIndex < allItems.length - 1) {
-        const nextIndex = currentQuestionIndex + 1
-        setCurrentQuestionIndex(nextIndex)
-        
-        // Smooth scroll to next question with multiple fallback methods
-        setTimeout(() => {
-          const nextQuestionElement = document.querySelector(`[data-question="${nextIndex}"]`)
-          if (nextQuestionElement) {
-            // Try scrollIntoView first
-            nextQuestionElement.scrollIntoView({ 
-              behavior: 'smooth', 
-              block: 'start',
-              inline: 'nearest'
-            })
-          } else {
-            // Fallback to calculating position
-            const windowHeight = window.innerHeight
-            const targetPosition = nextIndex * windowHeight
-            window.scrollTo({
-              top: targetPosition,
-              behavior: 'smooth'
-            })
-          }
-        }, 100)
+        setCurrentQuestionIndex(currentQuestionIndex + 1)
       } else {
-        // Assessment complete - scroll to completion screen
-        setTimeout(() => {
-          const completionElement = document.querySelector('[data-completion]')
-          if (completionElement) {
-            completionElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }
-        }, 100)
         handleComplete()
       }
-    }, 1000)
+      setIsTransitioning(false)
+    }, 800)
   }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
@@ -349,7 +370,7 @@ export function AdventureAssessmentWizard() {
   }
   
   return (
-    <div className="bg-black">
+    <div className="bg-black overflow-hidden">
       {/* Fixed Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
         <AssessmentNavbar />
@@ -357,34 +378,46 @@ export function AdventureAssessmentWizard() {
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-between text-amber-300 text-sm mb-2">
               <span>Your Journey Progress</span>
-              <span>{currentQuestionIndex + 1} of {allItems.length}</span>
+              <span>{Math.min(currentQuestionIndex + 1, allItems.length)} of {allItems.length}</span>
             </div>
             <div className="w-full bg-amber-900/30 rounded-full h-2">
               <div 
                 className="bg-gradient-to-r from-amber-600 to-amber-400 h-2 rounded-full transition-all duration-500"
-                style={{ width: `${((currentQuestionIndex + 1) / allItems.length) * 100}%` }}
+                style={{ width: `${(Math.min(currentQuestionIndex + 1, allItems.length) / allItems.length) * 100}%` }}
               />
             </div>
           </div>
         </div>
       </div>
       
-      {/* Questions Container */}
-      <div className="pt-24">
-        {allItems.map((item, index) => (
-          <div key={item.id} data-question={index}>
-            <AdventureQuestion
-              item={item}
-              onAnswer={handleAnswer}
-              isAnswered={answeredQuestions.has(index)}
-              questionNumber={index + 1}
-            />
-          </div>
-        ))}
-        
-        {/* Completion Screen */}
-        {currentQuestionIndex >= allItems.length && (
-          <div data-completion className="min-h-screen flex items-center justify-center p-6 bg-gradient-to-br from-purple-900 to-black">
+      {/* Single Question Container */}
+      <div className="relative h-screen overflow-hidden">
+        {/* Questions Slider */}
+        <div 
+          className={`flex h-full transition-transform duration-700 ease-in-out ${isTransitioning ? 'opacity-75' : 'opacity-100'}`}
+          style={{ 
+            transform: `translateX(-${currentQuestionIndex * 100}vw)`,
+            width: `${(allItems.length + 1) * 100}vw`
+          }}
+        >
+          {/* Individual Questions */}
+          {allItems.map((item, index) => (
+            <div 
+              key={item.id} 
+              className="w-screen h-full flex-shrink-0"
+              data-question={index}
+            >
+              <AdventureQuestion
+                item={item}
+                onAnswer={handleAnswer}
+                isAnswered={answeredQuestions.has(index)}
+                questionNumber={index + 1}
+              />
+            </div>
+          ))}
+          
+          {/* Completion Screen */}
+          <div className="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 bg-gradient-to-br from-purple-900 to-black">
             <div className="text-center max-w-2xl mx-auto">
               <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-12 border border-amber-500/30">
                 <h2 className="text-4xl font-bold text-amber-300 mb-6">
@@ -403,7 +436,7 @@ export function AdventureAssessmentWizard() {
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   )
