@@ -34,8 +34,8 @@ export function Hero() {
         <div className="absolute top-1/2 right-1/3 h-16 w-16 rounded-full bg-pink-500/10 blur-xl animate-pulse delay-2000" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 sm:py-28 w-full">
-        <div className="grid gap-10 lg:grid-cols-2 items-center min-h-[80vh] mt-16">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 w-full">
+        <div className="grid gap-10 lg:grid-cols-2 items-center min-h-[80vh]">
           {/* Left side - Content */}
           <div className="text-center lg:text-left">
             
@@ -51,21 +51,6 @@ export function Hero() {
               becomes destiny. Take the Player Type & Role Assessment and get your
               Player Profile—then travel through <em>Laurasia</em> while leveling up real-life skills.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link 
-                href="/assessment" 
-                className={`${gradCTA} px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg`}
-              >
-                🔮 Take the Assessment
-              </Link>
-              <a 
-                href="#how" 
-                className="px-8 py-4 rounded-2xl font-semibold bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
-              >
-                How it works
-              </a>
-            </div>
-            <p className="mt-6 text-sm text-slate-300/80">No spam. 5–7 minutes. Instant results.</p>
           </div>
 
           {/* Right side - Assessment Mockup */}
