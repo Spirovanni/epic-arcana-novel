@@ -446,18 +446,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
           <div className="relative">
             {/* Left side - Image - Fixed Position */}
             <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-80 xl:w-96">
+              <div className="relative w-[600px] h-[600px]">
                 {/* Glowing backdrop for the image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
                   <Image
                     src="/images/assessment/ChatGPT Image Sep 11, 2025, 12_24_44 PM.png"
                     alt="The Journey Begins - A mystical crossroads under starlight"
                     width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
+                    height={600}
+                    className="object-cover w-full h-full"
                     priority
-                    sizes="(max-width: 1024px) 50vw, 400px"
+                    sizes="600px"
                   />
                   {/* Subtle overlay for better text contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -500,8 +500,8 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               </div>
             </div>
             
-            {/* Right side - Question - Dynamic Height with left margin for fixed image */}
-            <div className="lg:ml-96 xl:ml-112">
+            {/* Right side - Question - Aligned with fixed image */}
+            <div className="lg:ml-[640px] lg:mt-[80px]">
               <div className="w-full max-w-2xl mx-auto">
                 <FirstQuestionContent 
                   item={item}
@@ -525,18 +525,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
           <div className="relative">
             {/* Left side - Image - Fixed Position */}
             <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-80 xl:w-96">
+              <div className="relative w-[600px] h-[600px]">
                 {/* Glowing backdrop for the image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
                   <Image
                     src="/images/assessment/ChatGPT Image Sep 12, 2025, 06_35_02 AM.png"
                     alt="The merchant's heartfelt plea - A scene of loss and community support"
                     width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
+                    height={600}
+                    className="object-cover w-full h-full"
                     priority
-                    sizes="(max-width: 1024px) 50vw, 400px"
+                    sizes="600px"
                   />
                   {/* Subtle overlay for better text contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -579,8 +579,8 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               </div>
             </div>
             
-            {/* Right side - Question - Dynamic Height with left margin for fixed image */}
-            <div className="lg:ml-96 xl:ml-112">
+            {/* Right side - Question - Aligned with fixed image */}
+            <div className="lg:ml-[640px] lg:mt-[80px]">
               <div className="w-full max-w-2xl mx-auto">
                 <FirstQuestionContent 
                   item={item}
@@ -604,18 +604,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
           <div className="relative">
             {/* Left side - Image - Fixed Position */}
             <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-80 xl:w-96">
+              <div className="relative w-[600px] h-[600px]">
                 {/* Glowing backdrop for the image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
                   <Image
                     src="/images/assessment/ChatGPT Image Sep 12, 2025, 07_53_25 AM.png"
                     alt="Ancient knowledge awaits - Scrolls and tomes in the archive of stars"
                     width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
+                    height={600}
+                    className="object-cover w-full h-full"
                     priority
-                    sizes="(max-width: 1024px) 50vw, 400px"
+                    sizes="600px"
                   />
                   {/* Subtle overlay for better text contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -658,8 +658,8 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               </div>
             </div>
             
-            {/* Right side - Question - Dynamic Height with left margin for fixed image */}
-            <div className="lg:ml-96 xl:ml-112">
+            {/* Right side - Question - Aligned with fixed image */}
+            <div className="lg:ml-[640px] lg:mt-[80px]">
               <div className="w-full max-w-2xl mx-auto">
                 <FirstQuestionContent 
                   item={item}
@@ -683,18 +683,18 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
           <div className="relative">
             {/* Left side - Image - Fixed Position */}
             <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-80 xl:w-96">
+              <div className="relative w-[600px] h-[600px]">
                 {/* Glowing backdrop for the image */}
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
                   <Image
                     src="/images/assessment/ChatGPT Image Sep 12, 2025, 08_23_20 AM.png"
                     alt="The tower of echoing winds - Ancient bells await your courage"
                     width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
+                    height={600}
+                    className="object-cover w-full h-full"
                     priority
-                    sizes="(max-width: 1024px) 50vw, 400px"
+                    sizes="600px"
                   />
                   {/* Subtle overlay for better text contrast */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -737,8 +737,8 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               </div>
             </div>
             
-            {/* Right side - Question - Dynamic Height with left margin for fixed image */}
-            <div className="lg:ml-96 xl:ml-112">
+            {/* Right side - Question - Aligned with fixed image */}
+            <div className="lg:ml-[640px] lg:mt-[80px]">
               <div className="w-full max-w-2xl mx-auto">
                 <FirstQuestionContent 
                   item={item}
