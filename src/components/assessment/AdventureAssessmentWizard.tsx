@@ -417,10 +417,111 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
     return gradients[questionNumber % gradients.length]
   }
 
-  const isFirstQuestion = questionNumber === 1
-  const isSecondQuestion = questionNumber === 2
-  const isThirdQuestion = questionNumber === 3
-  const isFourthQuestion = questionNumber === 4
+  
+  // Questions with image layout (1-18)
+  const hasImageLayout = questionNumber >= 1 && questionNumber <= 18
+
+  // Helper function to get image details for each question
+  const getImageDetails = (questionNumber: number) => {
+    const imageMap: Record<number, { src: string; alt: string; caption: string }> = {
+      1: {
+        src: "/images/assessment/ChatGPT Image Sep 11, 2025, 12_24_44 PM.png",
+        alt: "The Journey Begins - A mystical crossroads under starlight",
+        caption: "The mystical crossroads await your choice..."
+      },
+      2: {
+        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 06_35_02 AM.png", 
+        alt: "The merchant's heartfelt plea - A scene of loss and community support",
+        caption: "Compassion calls in the merchant district..."
+      },
+      3: {
+        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 07_53_25 AM.png",
+        alt: "Ancient knowledge awaits - Scrolls and tomes in the archive of stars", 
+        caption: "Ancient wisdom guides your path..."
+      },
+      4: {
+        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 08_23_20 AM.png",
+        alt: "The tower of echoing winds - Ancient bells await your courage",
+        caption: "The winds carry urgent warning..."
+      },
+      5: {
+        src: "/images/assessment/Question_5.png",
+        alt: "Question 5 - Adventure scenario",
+        caption: "Your journey continues..."
+      },
+      6: {
+        src: "/images/assessment/Question_6.png", 
+        alt: "Question 6 - Adventure scenario",
+        caption: "New challenges await..."
+      },
+      7: {
+        src: "/images/assessment/Question_7.png",
+        alt: "Question 7 - Adventure scenario", 
+        caption: "The path unfolds before you..."
+      },
+      8: {
+        src: "/images/assessment/Question_8.png",
+        alt: "Question 8 - Adventure scenario",
+        caption: "Deeper into the unknown..."
+      },
+      9: {
+        src: "/images/assessment/Question_9..png",
+        alt: "Question 9 - Adventure scenario",
+        caption: "Mysteries reveal themselves..."
+      },
+      10: {
+        src: "/images/assessment/Question_10.png",
+        alt: "Question 10 - Adventure scenario", 
+        caption: "Halfway through your journey..."
+      },
+      11: {
+        src: "/images/assessment/Question_11.png",
+        alt: "Question 11 - Adventure scenario",
+        caption: "The adventure deepens..."
+      },
+      12: {
+        src: "/images/assessment/Question_12.png",
+        alt: "Question 12 - Adventure scenario",
+        caption: "New realms beckon..."
+      },
+      13: {
+        src: "/images/assessment/Question_13.png",
+        alt: "Question 13 - Adventure scenario",
+        caption: "The stakes grow higher..."
+      },
+      14: {
+        src: "/images/assessment/Question_14.png",
+        alt: "Question 14 - Adventure scenario", 
+        caption: "Challenges intensify..."
+      },
+      15: {
+        src: "/images/assessment/Question_15.png",
+        alt: "Question 15 - Adventure scenario",
+        caption: "Nearing the climax..."
+      },
+      16: {
+        src: "/images/assessment/Question_16.png",
+        alt: "Question 16 - Adventure scenario",
+        caption: "The final stretch begins..."
+      },
+      17: {
+        src: "/images/assessment/Question_17.png", 
+        alt: "Question 17 - Adventure scenario",
+        caption: "Almost to the end..."
+      },
+      18: {
+        src: "/images/assessment/Question_18.png",
+        alt: "Question 18 - Adventure scenario",
+        caption: "The journey's culmination..."
+      }
+    }
+    
+    return imageMap[questionNumber] || {
+      src: "/images/assessment/Question_1.png",
+      alt: "Adventure scenario", 
+      caption: "Your journey continues..."
+    }
+  }
 
   return (
     <div 
@@ -439,69 +540,90 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       {/* Question Content */}
       <div className={cn(
         "relative z-10 mx-auto w-full",
-        (isFirstQuestion || isSecondQuestion || isThirdQuestion || isFourthQuestion) ? "max-w-7xl" : "max-w-4xl"
+        hasImageLayout ? "max-w-7xl" : "max-w-4xl"
       )}>
-        {isFirstQuestion ? (
-          // First question with image layout
-          <div className="relative">
-            {/* Left side - Image - Fixed Position */}
-            <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-[600px] h-[600px]">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 11, 2025, 12_24_44 PM.png"
-                    alt="The Journey Begins - A mystical crossroads under starlight"
-                    width={600}
-                    height={600}
-                    className="object-cover w-full h-full"
-                    priority
-                    sizes="600px"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+        {hasImageLayout ? (
+          <>
+            {/* Desktop Layout */}
+            <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
+              {/* Left side - Image Card */}
+              <div className="flex-shrink-0">
+                <div className="relative w-[600px] h-[600px]">
+                  {/* Glowing backdrop for the image */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
+                    <div className="flex-1 relative">
+                      <Image
+                        src={getImageDetails(questionNumber).src}
+                        alt={getImageDetails(questionNumber).alt}
+                        width={600}
+                        height={600}
+                        className="object-cover w-full h-full"
+                        priority
+                        sizes="600px"
+                      />
+                      {/* Subtle overlay for better text contrast */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                    </div>
+                    
+                    {/* Optional floating caption */}
+                    <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
+                      <p className="text-amber-200 text-sm text-center font-medium">
+                        {getImageDetails(questionNumber).caption}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    The mystical crossroads await your choice...
-                  </p>
-                </div>
+              </div>
+              
+              {/* Right side - Question Card */}
+              <div className="flex-1 max-w-2xl">
+                <FirstQuestionContent 
+                  item={item}
+                  isForcedChoice={isForcedChoice}
+                  selectedBest={selectedBest}
+                  selectedWorst={selectedWorst}
+                  likertRating={likertRating}
+                  getOptionStatus={getOptionStatus}
+                  handleForcedChoiceClick={handleForcedChoiceClick}
+                  handleLikertClick={handleLikertClick}
+                  handleContinue={handleContinue}
+                  canContinue={canContinue}
+                  isAnswered={isAnswered}
+                  questionNumber={questionNumber}
+                />
               </div>
             </div>
             
-            {/* Mobile Image - Only shown on smaller screens */}
-            <div className="block lg:hidden flex justify-center mb-6">
-              <div className="relative w-full max-w-sm">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 11, 2025, 12_24_44 PM.png"
-                    alt="The Journey Begins - A mystical crossroads under starlight"
-                    width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
-                    priority
-                    sizes="85vw"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    The mystical crossroads await your choice...
-                  </p>
+            {/* Mobile Layout */}
+            <div className="block lg:hidden">
+              <div className="flex justify-center mb-6">
+                <div className="relative w-full max-w-sm">
+                  {/* Glowing backdrop for the image */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
+                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                    <Image
+                      src={getImageDetails(questionNumber).src}
+                      alt={getImageDetails(questionNumber).alt}
+                      width={600}
+                      height={450}
+                      className="object-cover w-full h-auto"
+                      priority
+                      sizes="85vw"
+                    />
+                    {/* Subtle overlay for better text contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  </div>
+                  
+                  {/* Optional floating caption */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
+                    <p className="text-amber-200 text-sm text-center font-medium">
+                      {getImageDetails(questionNumber).caption}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Right side - Question - Aligned with fixed image */}
-            <div className="lg:ml-[640px] lg:mt-[80px]">
+              
               <div className="w-full max-w-2xl mx-auto">
                 <FirstQuestionContent 
                   item={item}
@@ -519,244 +641,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                 />
               </div>
             </div>
-          </div>
-        ) : isSecondQuestion ? (
-          // Second question with image layout
-          <div className="relative">
-            {/* Left side - Image - Fixed Position */}
-            <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-[600px] h-[600px]">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 06_35_02 AM.png"
-                    alt="The merchant's heartfelt plea - A scene of loss and community support"
-                    width={600}
-                    height={600}
-                    className="object-cover w-full h-full"
-                    priority
-                    sizes="600px"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    Compassion calls in the merchant district...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Mobile Image - Only shown on smaller screens */}
-            <div className="block lg:hidden flex justify-center mb-6">
-              <div className="relative w-full max-w-sm">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 06_35_02 AM.png"
-                    alt="The merchant's heartfelt plea - A scene of loss and community support"
-                    width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
-                    priority
-                    sizes="85vw"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    Compassion calls in the merchant district...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right side - Question - Aligned with fixed image */}
-            <div className="lg:ml-[640px] lg:mt-[80px]">
-              <div className="w-full max-w-2xl mx-auto">
-                <FirstQuestionContent 
-                  item={item}
-                  isForcedChoice={isForcedChoice}
-                  selectedBest={selectedBest}
-                  selectedWorst={selectedWorst}
-                  likertRating={likertRating}
-                  getOptionStatus={getOptionStatus}
-                  handleForcedChoiceClick={handleForcedChoiceClick}
-                  handleLikertClick={handleLikertClick}
-                  handleContinue={handleContinue}
-                  canContinue={canContinue}
-                  isAnswered={isAnswered}
-                  questionNumber={questionNumber}
-                />
-              </div>
-            </div>
-          </div>
-        ) : isThirdQuestion ? (
-          // Third question with image layout
-          <div className="relative">
-            {/* Left side - Image - Fixed Position */}
-            <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-[600px] h-[600px]">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 07_53_25 AM.png"
-                    alt="Ancient knowledge awaits - Scrolls and tomes in the archive of stars"
-                    width={600}
-                    height={600}
-                    className="object-cover w-full h-full"
-                    priority
-                    sizes="600px"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    Ancient wisdom guides your path...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Mobile Image - Only shown on smaller screens */}
-            <div className="block lg:hidden flex justify-center mb-6">
-              <div className="relative w-full max-w-sm">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 07_53_25 AM.png"
-                    alt="Ancient knowledge awaits - Scrolls and tomes in the archive of stars"
-                    width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
-                    priority
-                    sizes="85vw"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    Ancient wisdom guides your path...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right side - Question - Aligned with fixed image */}
-            <div className="lg:ml-[640px] lg:mt-[80px]">
-              <div className="w-full max-w-2xl mx-auto">
-                <FirstQuestionContent 
-                  item={item}
-                  isForcedChoice={isForcedChoice}
-                  selectedBest={selectedBest}
-                  selectedWorst={selectedWorst}
-                  likertRating={likertRating}
-                  getOptionStatus={getOptionStatus}
-                  handleForcedChoiceClick={handleForcedChoiceClick}
-                  handleLikertClick={handleLikertClick}
-                  handleContinue={handleContinue}
-                  canContinue={canContinue}
-                  isAnswered={isAnswered}
-                  questionNumber={questionNumber}
-                />
-              </div>
-            </div>
-          </div>
-        ) : isFourthQuestion ? (
-          // Fourth question with image layout
-          <div className="relative">
-            {/* Left side - Image - Fixed Position */}
-            <div className="hidden lg:block lg:fixed lg:left-8 xl:left-16" style={{ top: '200px' }}>
-              <div className="relative w-[600px] h-[600px]">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 08_23_20 AM.png"
-                    alt="The tower of echoing winds - Ancient bells await your courage"
-                    width={600}
-                    height={600}
-                    className="object-cover w-full h-full"
-                    priority
-                    sizes="600px"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    The winds carry urgent warning...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Mobile Image - Only shown on smaller screens */}
-            <div className="block lg:hidden flex justify-center mb-6">
-              <div className="relative w-full max-w-sm">
-                {/* Glowing backdrop for the image */}
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
-                  <Image
-                    src="/images/assessment/ChatGPT Image Sep 12, 2025, 08_23_20 AM.png"
-                    alt="The tower of echoing winds - Ancient bells await your courage"
-                    width={600}
-                    height={450}
-                    className="object-cover w-full h-auto"
-                    priority
-                    sizes="85vw"
-                  />
-                  {/* Subtle overlay for better text contrast */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                </div>
-                
-                {/* Optional floating caption */}
-                <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                  <p className="text-amber-200 text-sm text-center font-medium">
-                    The winds carry urgent warning...
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            {/* Right side - Question - Aligned with fixed image */}
-            <div className="lg:ml-[640px] lg:mt-[80px]">
-              <div className="w-full max-w-2xl mx-auto">
-                <FirstQuestionContent 
-                  item={item}
-                  isForcedChoice={isForcedChoice}
-                  selectedBest={selectedBest}
-                  selectedWorst={selectedWorst}
-                  likertRating={likertRating}
-                  getOptionStatus={getOptionStatus}
-                  handleForcedChoiceClick={handleForcedChoiceClick}
-                  handleLikertClick={handleLikertClick}
-                  handleContinue={handleContinue}
-                  canContinue={canContinue}
-                  isAnswered={isAnswered}
-                  questionNumber={questionNumber}
-                />
-              </div>
-            </div>
-          </div>
+          </>
         ) : (
           // Regular question layout
           <RegularQuestionContent 
