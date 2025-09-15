@@ -153,9 +153,9 @@ function FirstQuestionContent({
               How much does this resonate with you?
             </div>
             
-            <div className="flex justify-between items-center max-w-2xl mx-auto">
-              <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
-              <div className="flex space-x-2">
+            <div className="flex flex-col items-center max-w-2xl mx-auto">
+              {/* Number buttons with increased spacing */}
+              <div className="flex space-x-4 mb-4">
                 {[1, 2, 3, 4, 5, 6, 7].map((rating) => (
                   <button
                     key={rating}
@@ -173,7 +173,12 @@ function FirstQuestionContent({
                   </button>
                 ))}
               </div>
-              <span className="text-green-400 text-sm font-medium">Strongly Agree</span>
+              
+              {/* Labels below the numbers */}
+              <div className="flex justify-between w-full max-w-md">
+                <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
+                <span className="text-green-400 text-sm font-medium">Strongly Agree</span>
+              </div>
             </div>
           </div>
           
@@ -298,9 +303,9 @@ function RegularQuestionContent({
               How much does this resonate with you?
             </div>
             
-            <div className="flex justify-between items-center max-w-2xl mx-auto">
-              <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
-              <div className="flex space-x-2">
+            <div className="flex flex-col items-center max-w-2xl mx-auto">
+              {/* Number buttons with increased spacing */}
+              <div className="flex space-x-4 mb-4">
                 {[1, 2, 3, 4, 5, 6, 7].map((rating) => (
                   <button
                     key={rating}
@@ -318,7 +323,12 @@ function RegularQuestionContent({
                   </button>
                 ))}
               </div>
-              <span className="text-green-400 text-sm font-medium">Strongly Agree</span>
+              
+              {/* Labels below the numbers */}
+              <div className="flex justify-between w-full max-w-md">
+                <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
+                <span className="text-green-400 text-sm font-medium">Strongly Agree</span>
+              </div>
             </div>
           </div>
           
@@ -418,8 +428,9 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   }
 
   
-  // Questions with image layout (1-18)
-  const hasImageLayout = questionNumber >= 1 && questionNumber <= 18
+  // Questions with image layout (1-19)
+  const hasImageLayout = questionNumber >= 1 && questionNumber <= 19
+  const isQuestion19 = questionNumber === 19
 
   // Helper function to get image details for each question
   const getImageDetails = (questionNumber: number) => {
@@ -513,6 +524,11 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         src: "/images/assessment/Question_18.png",
         alt: "Question 18 - Adventure scenario",
         caption: "The journey's culmination..."
+      },
+      19: {
+        src: "/images/assessment/Question_19.png",
+        alt: "Question 19 - Final adventure scenario",
+        caption: "The final chapter unfolds..."
       }
     }
     
@@ -544,103 +560,230 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       )}>
         {hasImageLayout ? (
           <>
-            {/* Desktop Layout */}
-            <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
-              {/* Left side - Image Card */}
-              <div className="flex-shrink-0">
-                <div className="relative w-[600px] h-[600px]">
-                  {/* Glowing backdrop for the image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
-                    <div className="flex-1 relative">
-                      <Image
-                        src={getImageDetails(questionNumber).src}
-                        alt={getImageDetails(questionNumber).alt}
-                        width={600}
-                        height={600}
-                        className="object-cover w-full h-full"
-                        priority
-                        sizes="600px"
-                      />
-                      {/* Subtle overlay for better text contrast */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+            {isQuestion19 ? (
+              // Question 19 - Epic finale with side-by-side layout
+              <>
+                {/* Desktop Layout */}
+                <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
+                  {/* Left side - Enhanced Image Card for finale */}
+                  <div className="flex-shrink-0">
+                    <div className="relative w-[600px] h-[600px]">
+                      {/* Enhanced glowing backdrop for finale */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-orange-600/40 rounded-2xl blur-3xl scale-110" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-600/20 rounded-2xl blur-2xl scale-105" />
+                      
+                      <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black/20 w-full h-full flex flex-col">
+                        <div className="flex-1 relative">
+                          <Image
+                            src={getImageDetails(questionNumber).src}
+                            alt={getImageDetails(questionNumber).alt}
+                            width={600}
+                            height={600}
+                            className="object-cover w-full h-full"
+                            priority
+                            sizes="600px"
+                          />
+                          {/* Enhanced overlay for finale */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-purple-500/10" />
+                        </div>
+                        
+                        {/* Enhanced floating caption for finale */}
+                        <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-black/90 via-black/80 to-black/90 backdrop-blur-md rounded-lg p-3 border border-amber-400/40 shadow-xl">
+                          <p className="text-amber-200 text-sm text-center font-bold tracking-wide">
+                            {getImageDetails(questionNumber).caption}
+                          </p>
+                          <div className="w-16 h-0.5 bg-gradient-to-r from-amber-400 to-orange-500 mx-auto mt-1"></div>
+                        </div>
+                      </div>
                     </div>
-                    
-                    {/* Optional floating caption */}
-                    <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                      <p className="text-amber-200 text-sm text-center font-medium">
-                        {getImageDetails(questionNumber).caption}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              {/* Right side - Question Card */}
-              <div className="flex-1 max-w-2xl">
-                <FirstQuestionContent 
-                  item={item}
-                  isForcedChoice={isForcedChoice}
-                  selectedBest={selectedBest}
-                  selectedWorst={selectedWorst}
-                  likertRating={likertRating}
-                  getOptionStatus={getOptionStatus}
-                  handleForcedChoiceClick={handleForcedChoiceClick}
-                  handleLikertClick={handleLikertClick}
-                  handleContinue={handleContinue}
-                  canContinue={canContinue}
-                  isAnswered={isAnswered}
-                  questionNumber={questionNumber}
-                />
-              </div>
-            </div>
-            
-            {/* Mobile Layout */}
-            <div className="block lg:hidden">
-              <div className="flex justify-center mb-6">
-                <div className="relative w-full max-w-sm">
-                  {/* Glowing backdrop for the image */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
-                    <Image
-                      src={getImageDetails(questionNumber).src}
-                      alt={getImageDetails(questionNumber).alt}
-                      width={600}
-                      height={450}
-                      className="object-cover w-full h-auto"
-                      priority
-                      sizes="85vw"
-                    />
-                    {/* Subtle overlay for better text contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                   </div>
                   
-                  {/* Optional floating caption */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                    <p className="text-amber-200 text-sm text-center font-medium">
-                      {getImageDetails(questionNumber).caption}
-                    </p>
+                  {/* Right side - Enhanced Question Card for finale */}
+                  <div className="flex-1 max-w-2xl relative">
+                    {/* Decorative corner accents */}
+                    <div className="absolute -top-2 -left-2 w-16 h-16 bg-gradient-to-br from-amber-400/20 to-transparent rounded-br-2xl"></div>
+                    <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-bl from-purple-400/20 to-transparent rounded-bl-2xl"></div>
+                    <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-tr from-orange-400/20 to-transparent rounded-tr-2xl"></div>
+                    <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-tl from-indigo-400/20 to-transparent rounded-tl-2xl"></div>
+                    
+                    {/* Enhanced question content */}
+                    <div className="relative bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-2xl overflow-hidden">
+                      <FirstQuestionContent 
+                        item={item}
+                        isForcedChoice={isForcedChoice}
+                        selectedBest={selectedBest}
+                        selectedWorst={selectedWorst}
+                        likertRating={likertRating}
+                        getOptionStatus={getOptionStatus}
+                        handleForcedChoiceClick={handleForcedChoiceClick}
+                        handleLikertClick={handleLikertClick}
+                        handleContinue={handleContinue}
+                        canContinue={canContinue}
+                        isAnswered={isAnswered}
+                        questionNumber={questionNumber}
+                      />
+                    </div>
+                    
+                    {/* Floating decorative elements */}
+                    <div className="absolute top-1/4 -left-4 w-3 h-3 bg-amber-400/40 rounded-full animate-pulse"></div>
+                    <div className="absolute top-1/2 -right-4 w-3 h-3 bg-purple-400/40 rounded-full animate-pulse" style={{animationDelay: '0.7s'}}></div>
+                    <div className="absolute bottom-1/4 -left-4 w-3 h-3 bg-orange-400/40 rounded-full animate-pulse" style={{animationDelay: '1.4s'}}></div>
                   </div>
                 </div>
-              </div>
-              
-              <div className="w-full max-w-2xl mx-auto">
-                <FirstQuestionContent 
-                  item={item}
-                  isForcedChoice={isForcedChoice}
-                  selectedBest={selectedBest}
-                  selectedWorst={selectedWorst}
-                  likertRating={likertRating}
-                  getOptionStatus={getOptionStatus}
-                  handleForcedChoiceClick={handleForcedChoiceClick}
-                  handleLikertClick={handleLikertClick}
-                  handleContinue={handleContinue}
-                  canContinue={canContinue}
-                  isAnswered={isAnswered}
-                  questionNumber={questionNumber}
-                />
-              </div>
-            </div>
+                
+                {/* Mobile Layout */}
+                <div className="block lg:hidden">
+                  <div className="flex justify-center mb-6">
+                    <div className="relative w-full max-w-sm">
+                      {/* Enhanced glowing backdrop for mobile finale */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-orange-600/40 rounded-2xl blur-2xl scale-105" />
+                      <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black/20">
+                        <Image
+                          src={getImageDetails(questionNumber).src}
+                          alt={getImageDetails(questionNumber).alt}
+                          width={600}
+                          height={450}
+                          className="object-cover w-full h-auto"
+                          priority
+                          sizes="85vw"
+                        />
+                        {/* Enhanced overlay for mobile */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                      </div>
+                      
+                      {/* Enhanced caption for mobile */}
+                      <div className="absolute bottom-4 left-4 right-4 bg-black/90 backdrop-blur-sm rounded-lg p-3 border border-amber-400/40">
+                        <p className="text-amber-200 text-sm text-center font-bold">
+                          {getImageDetails(questionNumber).caption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="w-full max-w-2xl mx-auto relative">
+                    {/* Enhanced mobile question card */}
+                    <div className="bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-xl">
+                      <FirstQuestionContent 
+                        item={item}
+                        isForcedChoice={isForcedChoice}
+                        selectedBest={selectedBest}
+                        selectedWorst={selectedWorst}
+                        likertRating={likertRating}
+                        getOptionStatus={getOptionStatus}
+                        handleForcedChoiceClick={handleForcedChoiceClick}
+                        handleLikertClick={handleLikertClick}
+                        handleContinue={handleContinue}
+                        canContinue={canContinue}
+                        isAnswered={isAnswered}
+                        questionNumber={questionNumber}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </>
+            ) : (
+              // Questions 1-18 - Side by side layout
+              <>
+                {/* Desktop Layout */}
+                <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
+                  {/* Left side - Image Card */}
+                  <div className="flex-shrink-0">
+                    <div className="relative w-[600px] h-[600px]">
+                      {/* Glowing backdrop for the image */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
+                      <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
+                        <div className="flex-1 relative">
+                          <Image
+                            src={getImageDetails(questionNumber).src}
+                            alt={getImageDetails(questionNumber).alt}
+                            width={600}
+                            height={600}
+                            className="object-cover w-full h-full"
+                            priority
+                            sizes="600px"
+                          />
+                          {/* Subtle overlay for better text contrast */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                        </div>
+                        
+                        {/* Optional floating caption */}
+                        <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
+                          <p className="text-amber-200 text-sm text-center font-medium">
+                            {getImageDetails(questionNumber).caption}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Right side - Question Card */}
+                  <div className="flex-1 max-w-2xl">
+                    <FirstQuestionContent 
+                      item={item}
+                      isForcedChoice={isForcedChoice}
+                      selectedBest={selectedBest}
+                      selectedWorst={selectedWorst}
+                      likertRating={likertRating}
+                      getOptionStatus={getOptionStatus}
+                      handleForcedChoiceClick={handleForcedChoiceClick}
+                      handleLikertClick={handleLikertClick}
+                      handleContinue={handleContinue}
+                      canContinue={canContinue}
+                      isAnswered={isAnswered}
+                      questionNumber={questionNumber}
+                    />
+                  </div>
+                </div>
+                
+                {/* Mobile Layout */}
+                <div className="block lg:hidden">
+                  <div className="flex justify-center mb-6">
+                    <div className="relative w-full max-w-sm">
+                      {/* Glowing backdrop for the image */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
+                      <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20">
+                        <Image
+                          src={getImageDetails(questionNumber).src}
+                          alt={getImageDetails(questionNumber).alt}
+                          width={600}
+                          height={450}
+                          className="object-cover w-full h-auto"
+                          priority
+                          sizes="85vw"
+                        />
+                        {/* Subtle overlay for better text contrast */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                      </div>
+                      
+                      {/* Optional floating caption */}
+                      <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
+                        <p className="text-amber-200 text-sm text-center font-medium">
+                          {getImageDetails(questionNumber).caption}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="w-full max-w-2xl mx-auto">
+                    <FirstQuestionContent 
+                      item={item}
+                      isForcedChoice={isForcedChoice}
+                      selectedBest={selectedBest}
+                      selectedWorst={selectedWorst}
+                      likertRating={likertRating}
+                      getOptionStatus={getOptionStatus}
+                      handleForcedChoiceClick={handleForcedChoiceClick}
+                      handleLikertClick={handleLikertClick}
+                      handleContinue={handleContinue}
+                      canContinue={canContinue}
+                      isAnswered={isAnswered}
+                      questionNumber={questionNumber}
+                    />
+                  </div>
+                </div>
+              </>
+            )}
           </>
         ) : (
           // Regular question layout
@@ -761,6 +904,35 @@ export function AdventureAssessmentWizard() {
       setIsTransitioning(false)
     }, 800)
   }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete])
+
+  const handleGoBack = useCallback(() => {
+    if (currentQuestionIndex > 0) {
+      setIsTransitioning(true)
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex - 1)
+        // Remove the current question from answered questions to allow re-answering
+        setAnsweredQuestions(prev => {
+          const newSet = new Set(prev)
+          newSet.delete(currentQuestionIndex)
+          return newSet
+        })
+        setIsTransitioning(false)
+      }, 300)
+    }
+  }, [currentQuestionIndex])
+
+  const handleGoNext = useCallback(() => {
+    if (currentQuestionIndex < allItems.length - 1) {
+      setIsTransitioning(true)
+      setTimeout(() => {
+        setCurrentQuestionIndex(currentQuestionIndex + 1)
+        setIsTransitioning(false)
+      }, 300)
+    } else {
+      // If on last question, complete the assessment
+      handleComplete()
+    }
+  }, [currentQuestionIndex, allItems.length, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}`)
@@ -790,8 +962,59 @@ export function AdventureAssessmentWizard() {
         <div className="px-4 pb-2">
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-between text-amber-300 text-sm mb-2">
-              <span>Your Journey Progress</span>
-              <span>{Math.min(currentQuestionIndex + 1, allItems.length)} of {allItems.length}</span>
+              <div className="flex items-center gap-1">
+                {/* Back Button - Only show after question 1 is answered (question 2+) */}
+                {currentQuestionIndex >= 1 && (
+                  <button
+                    onClick={handleGoBack}
+                    className="inline-flex items-center hover:bg-amber-600/20 rounded-md p-1 transition-all duration-200 text-amber-300 hover:text-amber-200 mr-1"
+                    disabled={isTransitioning}
+                    title="Go back to previous question"
+                  >
+                    <svg 
+                      className="w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2.5} 
+                        d="M15 19l-7-7 7-7" 
+                      />
+                    </svg>
+                  </button>
+                )}
+                <span>Your Journey Progress</span>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span>{Math.min(currentQuestionIndex + 1, allItems.length)} of {allItems.length}</span>
+                {/* Next Button - Show on all questions except the last one */}
+                {currentQuestionIndex < allItems.length - 1 && (
+                  <button
+                    onClick={handleGoNext}
+                    className="inline-flex items-center hover:bg-amber-600/20 rounded-md p-1 transition-all duration-200 text-amber-300 hover:text-amber-200 ml-1"
+                    disabled={isTransitioning}
+                    title="Go to next question"
+                  >
+                    <svg 
+                      className="w-4 h-4" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2.5} 
+                        d="M9 5l7 7-7 7" 
+                      />
+                    </svg>
+                  </button>
+                )}
+              </div>
             </div>
             <div className="w-full bg-amber-900/30 rounded-full h-2">
               <div 
