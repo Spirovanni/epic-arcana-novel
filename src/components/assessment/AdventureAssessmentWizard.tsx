@@ -136,26 +136,26 @@ function FirstQuestionContent({
           </div>
         </>
       ) : (
-        <div className="space-y-8">
-          {/* Likert Question */}
-          <div className="text-center space-y-6">
+        <div className="h-full flex flex-col justify-between py-8">
+          {/* Likert Question - Top section */}
+          <div className="text-center space-y-8">
             <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold text-amber-300">
               Personal Reflection
             </h2>
-            <div className="text-xl text-gray-200 leading-relaxed">
+            <div className="text-xl text-gray-200 leading-relaxed max-w-xl mx-auto">
               "{(item as LikertItemType).statement}"
             </div>
           </div>
           
-          {/* Rating Scale */}
-          <div className="text-center">
-            <div className="text-amber-200/80 text-sm mb-6">
+          {/* Rating Scale - Middle section */}
+          <div className="text-center py-8">
+            <div className="text-amber-200/80 text-sm mb-8">
               How much does this resonate with you?
             </div>
             
             <div className="flex flex-col items-center max-w-2xl mx-auto">
               {/* Number buttons with increased spacing */}
-              <div className="flex space-x-4 mb-4">
+              <div className="flex space-x-4 mb-6">
                 {[1, 2, 3, 4, 5, 6, 7].map((rating) => (
                   <button
                     key={rating}
@@ -182,9 +182,9 @@ function FirstQuestionContent({
             </div>
           </div>
           
-          {/* Continue Button for Likert */}
+          {/* Continue Button for Likert - Bottom section */}
           {canContinue && (
-            <div className="mt-8 text-center">
+            <div className="text-center">
               <button
                 onClick={handleContinue}
                 className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
@@ -436,22 +436,22 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   const getImageDetails = (questionNumber: number) => {
     const imageMap: Record<number, { src: string; alt: string; caption: string }> = {
       1: {
-        src: "/images/assessment/ChatGPT Image Sep 11, 2025, 12_24_44 PM.png",
+        src: "/images/assessment/Question_1.png",
         alt: "The Journey Begins - A mystical crossroads under starlight",
         caption: "The mystical crossroads await your choice..."
       },
       2: {
-        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 06_35_02 AM.png", 
+        src: "/images/assessment/Question_2.png", 
         alt: "The merchant's heartfelt plea - A scene of loss and community support",
         caption: "Compassion calls in the merchant district..."
       },
       3: {
-        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 07_53_25 AM.png",
+        src: "/images/assessment/Question_3.png",
         alt: "Ancient knowledge awaits - Scrolls and tomes in the archive of stars", 
         caption: "Ancient wisdom guides your path..."
       },
       4: {
-        src: "/images/assessment/ChatGPT Image Sep 12, 2025, 08_23_20 AM.png",
+        src: "/images/assessment/Question_4.png",
         alt: "The tower of echoing winds - Ancient bells await your courage",
         caption: "The winds carry urgent warning..."
       },
