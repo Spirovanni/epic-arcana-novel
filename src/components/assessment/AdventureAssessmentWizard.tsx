@@ -476,7 +476,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         caption: "Deeper into the unknown..."
       },
       9: {
-        src: "/images/assessment/Question_9..png",
+        src: "/images/assessment/Question_9.png",
         alt: "Question 9 - Adventure scenario",
         caption: "Mysteries reveal themselves..."
       },
