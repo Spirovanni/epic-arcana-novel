@@ -14,20 +14,8 @@ export function AssessmentNavbar() {
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/70 border-b border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
-        {/* Left brand with back button */}
-        <div className="flex items-center gap-4">
-          <Link 
-            href="/" 
-            className="flex items-center gap-2 text-slate-300 hover:text-white/90 transition-colors group"
-          >
-            <svg className="h-4 w-4 group-hover:translate-x-[-2px] transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span className="text-sm font-medium tracking-wide">Back</span>
-          </Link>
-          
-          <div className="w-px h-6 bg-white/20" />
-          
+        {/* Left brand */}
+        <div className="flex items-center">
           <Link href="/" className="flex items-center group">
             <Image
               src="/images/Epic_Arcana_Logo.png"
@@ -96,17 +84,6 @@ export function AssessmentNavbar() {
       {isMobileMenuOpen && (
         <div className="md:hidden border-t border-white/5 bg-[#0b1220]/95 backdrop-blur">
           <div className="px-4 py-4 space-y-4">
-            <div className="flex items-center gap-2 text-slate-300 mb-4">
-              <Link 
-                href="/" 
-                className="flex items-center gap-2 hover:text-white/90 transition-colors"
-              >
-                <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                <span className="text-sm font-medium">Back to Home</span>
-              </Link>
-            </div>
             <div className="pt-2 border-t border-white/5">
               {isSignedIn ? (
                 <Link
