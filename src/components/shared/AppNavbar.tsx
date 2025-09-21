@@ -7,20 +7,39 @@ import { usePathname } from 'next/navigation';
 import { SignInButton, UserButton, useUser } from '@clerk/nextjs';
 import { AssessmentButton } from '@/components/ui/AssessmentButton';
 import { useAssessmentButtonText } from '@/hooks/useAssessmentButtonText';
-import { Calendar, Book, Users, Clock, BarChart3, Settings, Map } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database } from 'lucide-react';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
 interface NavItem {
-  href: string;
+  href?: string;
   label: string;
   icon?: React.ReactNode;
   requiresAuth?: boolean;
   showOnPaths?: string[];
+  dropdown?: DropdownItem[];
+  isDropdown?: boolean;
+}
+
+interface DropdownItem {
+  href: string;
+  label: string;
+  icon?: React.ReactNode;
+  description?: string;
+}
+
+interface PageAction {
+  label: string;
+  icon?: React.ReactNode;
+  onClick?: () => void;
+  href?: string;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'ghost';
 }
 
 interface AppNavbarProps {
-  variant?: 'landing' | 'app' | 'dashboard' | 'admin';
+  variant?: 'landing' | 'app' | 'dashboard' | 'admin' | 'calendar';
 }
 
 export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
@@ -43,19 +62,56 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
       
       case 'dashboard':
         return [
-          { href: '/dashboard', label: 'Dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+          { 
+            label: 'Dashboard', 
+            icon: <BarChart3 className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/dashboard', label: 'Overview', icon: <BarChart3 className="w-4 h-4" />, description: 'Your personality dashboard' },
+              { href: '/dashboard/strengths', label: 'Strengths', icon: <TrendingUp className="w-4 h-4" />, description: 'Core strengths analysis' },
+              { href: '/dashboard/growth', label: 'Growth Areas', icon: <Target className="w-4 h-4" />, description: 'Development opportunities' },
+              { href: '/dashboard/goals', label: 'Goals & Plans', icon: <Target className="w-4 h-4" />, description: 'Personality-driven goals' },
+            ]
+          },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
           { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
           { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" /> },
           { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" /> },
         ];
+
+      case 'calendar':
+        return [
+          { href: '/dashboard', label: 'Dashboard', icon: <BarChart3 className="w-4 h-4" /> },
+          { 
+            label: 'Calendar', 
+            icon: <Calendar className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/calendar', label: 'Today', icon: <Calendar className="w-4 h-4" />, description: 'Current day view' },
+              { href: '/calendar?view=year', label: 'Year View', icon: <Calendar className="w-4 h-4" />, description: 'Full 365-day calendar' },
+              { href: '/calendar?view=assignments', label: 'My Assignments', icon: <Target className="w-4 h-4" />, description: 'Personal journey tasks' },
+            ]
+          },
+          { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
+          { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
+        ];
       
       case 'admin':
         return [
           { href: '/dashboard', label: 'Dashboard', icon: <BarChart3 className="w-4 h-4" /> },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
-          { href: '/admin/calendar', label: 'Admin', icon: <Settings className="w-4 h-4" /> },
+          { 
+            label: 'Admin', 
+            icon: <Settings className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/admin/calendar', label: 'Calendar Settings', icon: <Settings className="w-4 h-4" />, description: 'HF Calendar configuration' },
+              { href: '/admin/calendar#day-signs', label: 'Day Signs', icon: <Palette className="w-4 h-4" />, description: 'Manage day sign mappings' },
+              { href: '/admin/calendar#overrides', label: 'Overrides', icon: <FileText className="w-4 h-4" />, description: 'Special day configurations' },
+              { href: '/admin/calendar#data', label: 'Data Management', icon: <Database className="w-4 h-4" />, description: 'Import/export and seeding' },
+            ]
+          },
         ];
       
       default: // 'app'
@@ -70,9 +126,56 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
     }
   };
 
+  const getPageActions = (): PageAction[] => {
+    switch (variant) {
+      case 'dashboard':
+        return [
+          {
+            label: 'Retake Assessment',
+            icon: <RefreshCw className="w-4 h-4" />,
+            href: '/assessment',
+            variant: 'outline'
+          }
+        ];
+      
+      case 'calendar':
+        return [
+          {
+            label: 'Settings',
+            icon: <Settings className="w-4 h-4" />,
+            onClick: () => {
+              // Scroll to settings section or open settings modal
+              const settingsSection = document.querySelector('[data-settings]');
+              settingsSection?.scrollIntoView({ behavior: 'smooth' });
+            },
+            variant: 'outline'
+          }
+        ];
+
+      case 'admin':
+        return [
+          {
+            label: 'Seed Database',
+            icon: <Database className="w-4 h-4" />,
+            onClick: () => {
+              // This would trigger the seed database function
+              const seedButton = document.querySelector('[data-seed-database]') as HTMLButtonElement;
+              seedButton?.click();
+            },
+            variant: 'secondary'
+          }
+        ];
+
+      default:
+        return [];
+    }
+  };
+
   const navItems = getNavItems().filter(item => 
     !item.requiresAuth || isSignedIn
   );
+  
+  const pageActions = getPageActions();
 
   const getHomeHref = () => {
     switch (variant) {
@@ -88,6 +191,10 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
   const isActivePath = (href: string) => {
     if (href.startsWith('#')) return false;
     return pathname === href || pathname.startsWith(href + '/');
+  };
+
+  const isDropdownActive = (dropdown: DropdownItem[]) => {
+    return dropdown.some(item => isActivePath(item.href));
   };
 
   return (
@@ -108,17 +215,49 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
 
         {/* Center nav */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300 font-semibold">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
-                isActivePath(item.href) ? 'text-white' : ''
-              }`}
-            >
-              {item.icon}
-              {item.label}
-            </Link>
+          {navItems.map((item, index) => (
+            item.isDropdown ? (
+              <DropdownMenu key={index}>
+                <DropdownMenuTrigger className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
+                  item.dropdown && isDropdownActive(item.dropdown) ? 'text-white' : ''
+                }`}>
+                  {item.icon}
+                  {item.label}
+                  <ChevronDown className="w-3 h-3" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent align="start" className="w-56 bg-[#1a1a2e]/95 backdrop-blur border-white/10">
+                  {item.dropdown?.map((dropdownItem, dropdownIndex) => (
+                    <DropdownMenuItem key={dropdownIndex} asChild>
+                      <Link
+                        href={dropdownItem.href}
+                        className={`flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors ${
+                          isActivePath(dropdownItem.href) ? 'text-white bg-white/5' : 'text-slate-300'
+                        }`}
+                      >
+                        {dropdownItem.icon}
+                        <div className="flex flex-col">
+                          <span className="font-medium">{dropdownItem.label}</span>
+                          {dropdownItem.description && (
+                            <span className="text-xs text-slate-400">{dropdownItem.description}</span>
+                          )}
+                        </div>
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href || '#'}
+                className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
+                  item.href && isActivePath(item.href) ? 'text-white' : ''
+                }`}
+              >
+                {item.icon}
+                {item.label}
+              </Link>
+            )
           ))}
         </nav>
 
@@ -126,19 +265,44 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         <div className="flex items-center gap-4">
           {isSignedIn ? (
             <>
+              {/* Page-specific actions */}
+              {pageActions.map((action, index) => (
+                action.href ? (
+                  <Link key={index} href={action.href}>
+                    <Button variant={action.variant} size="sm" className="flex items-center gap-2">
+                      {action.icon}
+                      {action.label}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button 
+                    key={index}
+                    variant={action.variant} 
+                    size="sm" 
+                    onClick={action.onClick}
+                    className="flex items-center gap-2"
+                  >
+                    {action.icon}
+                    {action.label}
+                  </Button>
+                )
+              ))}
+              
               {variant === 'landing' ? (
                 <AssessmentButton 
                   className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
                 />
               ) : (
-                <Link
-                  href="/dashboard"
-                  className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 hover:scale-105 ${
-                    isActivePath('/dashboard') ? 'ring-2 ring-indigo-400' : ''
-                  }`}
-                >
-                  Dashboard
-                </Link>
+                !pageActions.some(action => action.href === '/dashboard') && (
+                  <Link
+                    href="/dashboard"
+                    className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 hover:scale-105 ${
+                      isActivePath('/dashboard') ? 'ring-2 ring-indigo-400' : ''
+                    }`}
+                  >
+                    Dashboard
+                  </Link>
+                )
               )}
               <UserButton 
                 appearance={{

@@ -34,7 +34,7 @@ export default function CalendarPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <AppNavbar variant="app" />
+      <AppNavbar variant="calendar" />
       
       {/* Page Header */}
       <div className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -150,7 +150,7 @@ export default function CalendarPage() {
 
             {/* Settings Panel */}
             {showSettings && (
-              <Card>
+              <Card data-settings>
                 <CardContent className="p-6 space-y-4">
                   <h3 className="font-semibold">Settings</h3>
                   <div className="space-y-2 text-sm text-muted-foreground">

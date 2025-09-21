@@ -582,6 +582,7 @@ export default function AdminCalendarPage() {
                   <Button
                     onClick={handleSeedDatabase}
                     disabled={saving}
+                    data-seed-database
                     className="w-full flex items-center gap-2"
                   >
                     <Database className="h-4 w-4" />
