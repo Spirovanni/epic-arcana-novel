@@ -133,7 +133,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           {
             label: 'Retake Assessment',
             icon: <RefreshCw className="w-4 h-4" />,
-            href: '/assessment',
+            href: 'https://www.epicarcana.com/assessment?retake=true',
             variant: 'outline'
           }
         ];

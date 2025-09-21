@@ -41,7 +41,7 @@ export function AssessmentButton({
       // Reset the assessment state for retake
       resetAssessment()
       // Navigate with retake parameter to bypass existing result check
-      router.push(`${href || '/assessment'}?retake=true`)
+      router.push('https://www.epicarcana.com/assessment?retake=true')
     } else {
       if (onClick) {
         onClick()
