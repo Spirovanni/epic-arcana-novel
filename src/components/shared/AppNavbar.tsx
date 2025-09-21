@@ -8,7 +8,7 @@ import { SignInButton, UserButton, useUser } from '@clerk/nextjs';
 import { AssessmentButton } from '@/components/ui/AssessmentButton';
 import { useAssessmentButtonText } from '@/hooks/useAssessmentButtonText';
 import { Button } from '@/components/ui/button';
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
+import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database } from 'lucide-react';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
@@ -217,35 +217,40 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300 font-semibold">
           {navItems.map((item, index) => (
             item.isDropdown ? (
-              <DropdownMenu key={index}>
-                <DropdownMenuTrigger className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
+              <DropdownMenuPrimitive.Root key={index}>
+                <DropdownMenuPrimitive.Trigger className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
                   item.dropdown && isDropdownActive(item.dropdown) ? 'text-white' : ''
                 }`}>
                   {item.icon}
                   {item.label}
                   <ChevronDown className="w-3 h-3" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-56 bg-[#1a1a2e]/95 backdrop-blur border-white/10">
-                  {item.dropdown?.map((dropdownItem, dropdownIndex) => (
-                    <DropdownMenuItem key={dropdownIndex} asChild>
-                      <Link
-                        href={dropdownItem.href}
-                        className={`flex items-center gap-3 px-4 py-3 hover:bg-white/5 transition-colors ${
-                          isActivePath(dropdownItem.href) ? 'text-white bg-white/5' : 'text-slate-300'
-                        }`}
-                      >
-                        {dropdownItem.icon}
-                        <div className="flex flex-col">
-                          <span className="font-medium">{dropdownItem.label}</span>
-                          {dropdownItem.description && (
-                            <span className="text-xs text-slate-400">{dropdownItem.description}</span>
-                          )}
-                        </div>
-                      </Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+                </DropdownMenuPrimitive.Trigger>
+                <DropdownMenuPrimitive.Portal>
+                  <DropdownMenuPrimitive.Content 
+                    align="start" 
+                    className="w-56 bg-[#1a1a2e]/95 backdrop-blur border border-white/10 rounded-md shadow-lg z-50 p-1"
+                  >
+                    {item.dropdown?.map((dropdownItem, dropdownIndex) => (
+                      <DropdownMenuPrimitive.Item key={dropdownIndex} asChild>
+                        <Link
+                          href={dropdownItem.href}
+                          className={`flex items-center gap-3 px-4 py-3 rounded-sm hover:bg-white/5 transition-colors cursor-pointer ${
+                            isActivePath(dropdownItem.href) ? 'text-white bg-white/5' : 'text-slate-300'
+                          }`}
+                        >
+                          {dropdownItem.icon}
+                          <div className="flex flex-col">
+                            <span className="font-medium">{dropdownItem.label}</span>
+                            {dropdownItem.description && (
+                              <span className="text-xs text-slate-400">{dropdownItem.description}</span>
+                            )}
+                          </div>
+                        </Link>
+                      </DropdownMenuPrimitive.Item>
+                    ))}
+                  </DropdownMenuPrimitive.Content>
+                </DropdownMenuPrimitive.Portal>
+              </DropdownMenuPrimitive.Root>
             ) : (
               <Link
                 key={item.href}
