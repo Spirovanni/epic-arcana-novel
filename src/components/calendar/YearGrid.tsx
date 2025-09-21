@@ -40,10 +40,12 @@ function GridCell({ day, isSelected, isToday, onClick }: GridCellProps) {
     
     // Active days - use day sign color if available
     const bgColor = day.color || 'hsl(var(--primary))';
-    return cn(baseClasses, "rounded-sm", {
-      'ring-2 ring-primary ring-offset-1': isSelected,
-      'ring-2 ring-orange-400 ring-offset-1': isToday && !isSelected,
-    });
+    return cn(
+      baseClasses, 
+      "rounded-sm",
+      isSelected && 'ring-2 ring-primary ring-offset-1',
+      isToday && !isSelected && 'ring-2 ring-orange-400 ring-offset-1'
+    );
   };
 
   return (

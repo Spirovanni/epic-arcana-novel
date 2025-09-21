@@ -77,7 +77,7 @@ async function saveToDatabase(resultId: string, result: any, userId: string, jou
       lastName: '',
       age: 25, // Default values - you might want to collect this during assessment
       email: `${userId}@temp.email` // Placeholder - get from Clerk
-    }).returning({ id: users.id });
+    }).returning();
     
     user = newUser;
   }

@@ -10,20 +10,24 @@ export async function GET(request: NextRequest) {
     const personalityType = searchParams.get('personalityType');
     const dayOfYear = searchParams.get('dayOfYear');
 
-    let query = db.select().from(assignmentTemplates);
+    let templates;
 
     if (personalityType && dayOfYear) {
-      query = query.where(and(
+      templates = await db.select().from(assignmentTemplates).where(and(
         eq(assignmentTemplates.personalityType, personalityType),
         eq(assignmentTemplates.dayOfYear, parseInt(dayOfYear))
       ));
     } else if (personalityType) {
-      query = query.where(eq(assignmentTemplates.personalityType, personalityType));
+      templates = await db.select().from(assignmentTemplates).where(
+        eq(assignmentTemplates.personalityType, personalityType)
+      );
     } else if (dayOfYear) {
-      query = query.where(eq(assignmentTemplates.dayOfYear, parseInt(dayOfYear)));
+      templates = await db.select().from(assignmentTemplates).where(
+        eq(assignmentTemplates.dayOfYear, parseInt(dayOfYear))
+      );
+    } else {
+      templates = await db.select().from(assignmentTemplates);
     }
-
-    const templates = await query.orderBy(assignmentTemplates.dayOfYear);
 
     return NextResponse.json({
       templates: templates

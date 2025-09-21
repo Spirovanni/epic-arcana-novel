@@ -59,6 +59,7 @@ export default function AdminCalendarPage() {
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  const [activeTab, setActiveTab] = useState('settings');
 
   // Editing states
   const [editingSign, setEditingSign] = useState<number | null>(null);
@@ -286,7 +287,7 @@ export default function AdminCalendarPage() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <Tabs defaultValue="settings" className="space-y-6">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
           <TabsList className="grid w-full grid-cols-5">
             <TabsTrigger value="settings" className="flex items-center gap-2">
               <Settings className="h-4 w-4" />

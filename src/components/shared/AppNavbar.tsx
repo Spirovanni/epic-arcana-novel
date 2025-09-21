@@ -358,12 +358,12 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         <div className="md:hidden border-t border-white/5 bg-[#0b1220]/95 backdrop-blur">
           <div className="px-4 py-4 space-y-4">
             <nav className="space-y-2">
-              {navItems.map((item) => (
+              {navItems.filter(item => !item.isDropdown && item.href).map((item) => (
                 <Link
                   key={item.href}
-                  href={item.href}
+                  href={item.href!}
                   className={`block text-slate-300 hover:text-white/90 transition-colors flex items-center gap-2 py-2 ${
-                    isActivePath(item.href) ? 'text-white' : ''
+                    isActivePath(item.href!) ? 'text-white' : ''
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
@@ -371,6 +371,22 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                   {item.label}
                 </Link>
               ))}
+              {/* Render dropdown items as separate links in mobile */}
+              {navItems.filter(item => item.isDropdown).map((item) => 
+                item.dropdown?.map((dropdownItem) => (
+                  <Link
+                    key={dropdownItem.href}
+                    href={dropdownItem.href}
+                    className={`block text-slate-300 hover:text-white/90 transition-colors flex items-center gap-2 py-2 pl-4 ${
+                      isActivePath(dropdownItem.href) ? 'text-white' : ''
+                    }`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {dropdownItem.icon}
+                    {dropdownItem.label}
+                  </Link>
+                ))
+              )}
             </nav>
             <div className="pt-2 border-t border-white/5">
               {isSignedIn ? (

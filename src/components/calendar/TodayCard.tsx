@@ -35,6 +35,7 @@ export function TodayCard({ className, date = new Date() }: TodayCardProps) {
   const [loading, setLoading] = useState(true);
   const [assignmentLoading, setAssignmentLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [activeTab, setActiveTab] = useState('assignment');
   const { isSignedIn, isLoaded } = useUser();
 
   useEffect(() => {
@@ -242,7 +243,7 @@ export function TodayCard({ className, date = new Date() }: TodayCardProps) {
       
       <CardContent className="space-y-4">
         {isSignedIn && userAssignment ? (
-          <Tabs defaultValue="assignment" className="w-full">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-2">
               <TabsTrigger value="assignment" className="flex items-center gap-1">
                 <User className="h-4 w-4" />

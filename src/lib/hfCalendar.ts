@@ -74,8 +74,8 @@ const SEGMENT_BOUNDARIES = {
 
 // Database connection (we'll use the existing connection)
 const connectionString = process.env.DATABASE_URL!;
-const sql = postgres(connectionString);
-const db = drizzle(sql);
+const connection = postgres(connectionString);
+const db = drizzle(connection);
 
 /**
  * Get calendar configuration from database

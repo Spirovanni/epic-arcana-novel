@@ -43,38 +43,45 @@ export async function GET(request: NextRequest) {
     const journey = activeJourney[0];
 
     // Build query based on parameters
-    let query = db.select()
-      .from(userCalendarAssignments)
-      .where(eq(userCalendarAssignments.userJourneyId, journey.id));
+    let assignments;
 
     if (date) {
       // Get assignment for specific date
       const targetDate = new Date(date);
-      query = query.where(
-        and(
-          eq(userCalendarAssignments.userJourneyId, journey.id),
-          eq(userCalendarAssignments.assignmentDate, targetDate)
+      assignments = await db.select()
+        .from(userCalendarAssignments)
+        .where(
+          and(
+            eq(userCalendarAssignments.userJourneyId, journey.id),
+            eq(userCalendarAssignments.assignmentDate, targetDate)
+          )
         )
-      );
+        .orderBy(userCalendarAssignments.dayOfYear);
     } else if (dayOfYear) {
       // Get assignment for specific day of year
-      query = query.where(
-        and(
-          eq(userCalendarAssignments.userJourneyId, journey.id),
-          eq(userCalendarAssignments.dayOfYear, parseInt(dayOfYear))
+      assignments = await db.select()
+        .from(userCalendarAssignments)
+        .where(
+          and(
+            eq(userCalendarAssignments.userJourneyId, journey.id),
+            eq(userCalendarAssignments.dayOfYear, parseInt(dayOfYear))
+          )
         )
-      );
+        .orderBy(userCalendarAssignments.dayOfYear);
     } else if (startDate && endDate) {
       // Get assignments for date range
       const start = new Date(startDate);
       const end = new Date(endDate);
-      query = query.where(
-        and(
-          eq(userCalendarAssignments.userJourneyId, journey.id),
-          gte(userCalendarAssignments.assignmentDate, start),
-          lte(userCalendarAssignments.assignmentDate, end)
+      assignments = await db.select()
+        .from(userCalendarAssignments)
+        .where(
+          and(
+            eq(userCalendarAssignments.userJourneyId, journey.id),
+            gte(userCalendarAssignments.assignmentDate, start),
+            lte(userCalendarAssignments.assignmentDate, end)
+          )
         )
-      );
+        .orderBy(userCalendarAssignments.dayOfYear);
     } else {
       // Get today's assignment by default
       const today = new Date();
@@ -83,12 +90,15 @@ export async function GET(request: NextRequest) {
       ) + 1;
       
       if (daysSinceStart > 0 && daysSinceStart <= 365) {
-        query = query.where(
-          and(
-            eq(userCalendarAssignments.userJourneyId, journey.id),
-            eq(userCalendarAssignments.dayOfYear, daysSinceStart)
+        assignments = await db.select()
+          .from(userCalendarAssignments)
+          .where(
+            and(
+              eq(userCalendarAssignments.userJourneyId, journey.id),
+              eq(userCalendarAssignments.dayOfYear, daysSinceStart)
+            )
           )
-        );
+          .orderBy(userCalendarAssignments.dayOfYear);
       } else {
         // Return empty if outside valid range
         return NextResponse.json({ 
@@ -98,8 +108,6 @@ export async function GET(request: NextRequest) {
         });
       }
     }
-
-    const assignments = await query.orderBy(userCalendarAssignments.dayOfYear);
 
     return NextResponse.json({
       assignments: assignments,

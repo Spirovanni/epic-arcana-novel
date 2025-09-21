@@ -23,10 +23,11 @@ const MappingSchema = z.object({
  */
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
-    const daySignId = parseInt(params.id);
+    const { id } = await params;
+    const daySignId = parseInt(id);
     
     if (isNaN(daySignId)) {
       return NextResponse.json(
