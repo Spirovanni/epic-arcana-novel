@@ -890,3 +890,56 @@ export const userAssessmentResults = pgTable("user_assessment_results", {
 	}).onDelete("cascade"),
 	unique("user_assessment_results_user_id_assessment_id_unique").on(table.userId, table.assessmentId),
 ]);
+
+// Human Framework Calendar Tables
+export const calendarSettings = pgTable("calendar_settings", {
+	id: integer().primaryKey().generatedAlwaysAsIdentity({ name: "calendar_settings_id_seq", startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+	key: varchar({ length: 255 }).notNull(),
+	value: text().notNull(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+	unique("calendar_settings_key_unique").on(table.key),
+]);
+
+export const daySign = pgTable("day_sign", {
+	id: integer().primaryKey().generatedAlwaysAsIdentity({ name: "day_sign_id_seq", startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+	index0: integer().notNull(), // 0-19
+	name: varchar({ length: 255 }).notNull(),
+	glyph: varchar({ length: 255 }), // asset path if any
+	color: varchar({ length: 7 }), // hex color
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow().notNull(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+	unique("day_sign_index0_unique").on(table.index0),
+]);
+
+export const daySignMapping = pgTable("day_sign_mapping", {
+	id: integer().primaryKey().generatedAlwaysAsIdentity({ name: "day_sign_mapping_id_seq", startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+	daySignId: integer("day_sign_id").notNull(),
+	archetype: varchar({ length: 255 }).notNull(),
+	theme: varchar({ length: 255 }).notNull(),
+	reflection: text().notNull(),
+	ritual: text().notNull(),
+	keywords: text().notNull(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow().notNull(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+	foreignKey({
+		columns: [table.daySignId],
+		foreignColumns: [daySign.id],
+		name: "day_sign_mapping_day_sign_id_day_sign_id_fk"
+	}).onDelete("cascade"),
+]);
+
+export const dayOverride = pgTable("day_override", {
+	id: integer().primaryKey().generatedAlwaysAsIdentity({ name: "day_override_id_seq", startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+	dayOfYear: integer("day_of_year").notNull(), // 1..365
+	title: varchar({ length: 255 }),
+	description: text(),
+	ritual: text(),
+	tags: text(),
+	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow().notNull(),
+	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+	unique("day_override_day_of_year_unique").on(table.dayOfYear),
+]);

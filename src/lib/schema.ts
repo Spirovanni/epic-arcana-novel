@@ -702,3 +702,44 @@ export const userAssessmentResults = pgTable('user_assessment_results', {
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
+
+// Human Framework Calendar Tables
+export const calendarSettings = pgTable('calendar_settings', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity({ name: 'calendar_settings_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+  key: varchar('key', { length: 255 }).notNull().unique(),
+  value: text('value').notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export const daySign = pgTable('day_sign', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity({ name: 'day_sign_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+  index0: integer('index0').notNull().unique(), // 0-19
+  name: varchar('name', { length: 255 }).notNull(),
+  glyph: varchar('glyph', { length: 255 }), // asset path if any
+  color: varchar('color', { length: 7 }), // hex color
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export const daySignMapping = pgTable('day_sign_mapping', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity({ name: 'day_sign_mapping_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+  daySignId: integer('day_sign_id').notNull().references(() => daySign.id, { onDelete: 'cascade' }),
+  archetype: varchar('archetype', { length: 255 }).notNull(),
+  theme: varchar('theme', { length: 255 }).notNull(),
+  reflection: text('reflection').notNull(),
+  ritual: text('ritual').notNull(),
+  keywords: text('keywords').notNull(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+export const dayOverride = pgTable('day_override', {
+  id: integer('id').primaryKey().generatedAlwaysAsIdentity({ name: 'day_override_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
+  dayOfYear: integer('day_of_year').notNull().unique(), // 1..365
+  title: varchar('title', { length: 255 }),
+  description: text('description'),
+  ritual: text('ritual'),
+  tags: text('tags'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
