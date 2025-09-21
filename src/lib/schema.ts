@@ -743,3 +743,84 @@ export const dayOverride = pgTable('day_override', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
+
+// User Calendar Assignments - Personalized daily assignments based on user's assessment results
+export const userJourneys = pgTable('user_journeys', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userId: integer('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  assessmentResultId: uuid('assessment_result_id').notNull().references(() => userAssessmentResults.id, { onDelete: 'cascade' }),
+  journeyStartDate: timestamp('journey_start_date').notNull(), // When user chose to begin their journey
+  calendarYear: integer('calendar_year').notNull(), // Which calendar year this journey represents
+  currentDay: integer('current_day').default(1).notNull(), // Current day in their journey (1-365 max)
+  isActive: boolean('is_active').default(true).notNull(), // Whether this journey is currently active
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  unique('user_journeys_user_year_unique').on(table.userId, table.calendarYear)
+]);
+
+export const userCalendarAssignments = pgTable('user_calendar_assignments', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userJourneyId: uuid('user_journey_id').notNull().references(() => userJourneys.id, { onDelete: 'cascade' }),
+  dayOfYear: integer('day_of_year').notNull(), // 1-365 ONLY - no assignments beyond first year
+  assignmentDate: timestamp('assignment_date').notNull(), // The actual calendar date for this assignment
+  
+  // Assignment content - personalized based on user's assessment results
+  title: varchar('title', { length: 255 }).notNull(),
+  description: text('description').notNull(),
+  dailyTheme: varchar('daily_theme', { length: 255 }).notNull(), // Theme for the day
+  personalityFocus: varchar('personality_focus', { length: 255 }).notNull(), // Which aspect of their personality to focus on
+  
+  // Activities and exercises
+  reflectionPrompt: text('reflection_prompt').notNull(),
+  practiceExercise: text('practice_exercise').notNull(),
+  journalPrompt: text('journal_prompt').notNull(),
+  actionItem: text('action_item').notNull(),
+  
+  // Chapter/Book connection
+  bookChapter: varchar('book_chapter', { length: 100 }), // e.g., "Book 1, Chapter 3"
+  chapterFocus: varchar('chapter_focus', { length: 255 }), // What this day relates to in the Epic Arcana story
+  
+  // Progress tracking
+  isCompleted: boolean('is_completed').default(false).notNull(),
+  completedAt: timestamp('completed_at'),
+  userNotes: text('user_notes'), // User's personal notes for this day
+  userRating: integer('user_rating'), // 1-5 rating of how helpful this day was
+  
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  unique('user_assignments_journey_day_unique').on(table.userJourneyId, table.dayOfYear)
+]);
+
+// Predefined assignment templates based on personality types
+export const assignmentTemplates = pgTable('assignment_templates', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  personalityType: varchar('personality_type', { length: 100 }).notNull(), // e.g., "Gentle Leader", "Wise Mystic"
+  enneagramType: integer('enneagram_type'), // 1-9
+  dayOfYear: integer('day_of_year').notNull(), // 1-365 ONLY - templates for first year only
+  
+  // Template content
+  title: varchar('title', { length: 255 }).notNull(),
+  description: text('description').notNull(),
+  dailyTheme: varchar('daily_theme', { length: 255 }).notNull(),
+  personalityFocus: varchar('personality_focus', { length: 255 }).notNull(),
+  
+  reflectionPrompt: text('reflection_prompt').notNull(),
+  practiceExercise: text('practice_exercise').notNull(),
+  journalPrompt: text('journal_prompt').notNull(),
+  actionItem: text('action_item').notNull(),
+  
+  bookChapter: varchar('book_chapter', { length: 100 }),
+  chapterFocus: varchar('chapter_focus', { length: 255 }),
+  
+  // Metadata
+  tags: jsonb('tags'), // Array of tags for categorization
+  difficulty: varchar('difficulty', { length: 20 }).default('medium'), // easy, medium, hard
+  estimatedTimeMinutes: integer('estimated_time_minutes').default(15), // How long this should take
+  
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  unique('templates_type_day_unique').on(table.personalityType, table.dayOfYear)
+]);
