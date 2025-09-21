@@ -428,8 +428,8 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   }
 
   
-  // Questions with image layout (1-19)
-  const hasImageLayout = questionNumber >= 1 && questionNumber <= 19
+  // Questions with image layout (1-54)
+  const hasImageLayout = questionNumber >= 1 && questionNumber <= 54
   const isQuestion19 = questionNumber === 19
 
   // Helper function to get image details for each question
@@ -529,6 +529,181 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         src: "/images/assessment/Question_19.png",
         alt: "Question 19 - Final adventure scenario",
         caption: "The final chapter unfolds..."
+      },
+      20: {
+        src: "/images/assessment/Question_20.png",
+        alt: "Question 20 - Adventure scenario",
+        caption: "New paths emerge..."
+      },
+      21: {
+        src: "/images/assessment/Question_21.png",
+        alt: "Question 21 - Adventure scenario",
+        caption: "The journey evolves..."
+      },
+      22: {
+        src: "/images/assessment/Question_22.png",
+        alt: "Question 22 - Adventure scenario",
+        caption: "Deeper mysteries await..."
+      },
+      23: {
+        src: "/images/assessment/Question_23.png",
+        alt: "Question 23 - Adventure scenario",
+        caption: "The adventure continues..."
+      },
+      24: {
+        src: "/images/assessment/Question_24.png",
+        alt: "Question 24 - Adventure scenario",
+        caption: "New challenges arise..."
+      },
+      25: {
+        src: "/images/assessment/Question_25.png",
+        alt: "Question 25 - Adventure scenario",
+        caption: "The path winds onward..."
+      },
+      26: {
+        src: "/images/assessment/Question_26.png",
+        alt: "Question 26 - Adventure scenario",
+        caption: "Unexpected discoveries..."
+      },
+      27: {
+        src: "/images/assessment/Question_27.png",
+        alt: "Question 27 - Adventure scenario",
+        caption: "The quest deepens..."
+      },
+      28: {
+        src: "/images/assessment/Question_28.png",
+        alt: "Question 28 - Adventure scenario",
+        caption: "New horizons beckon..."
+      },
+      29: {
+        src: "/images/assessment/Question_29.png",
+        alt: "Question 29 - Adventure scenario",
+        caption: "The story unfolds..."
+      },
+      30: {
+        src: "/images/assessment/Question_30.png",
+        alt: "Question 30 - Adventure scenario",
+        caption: "Midway through the quest..."
+      },
+      31: {
+        src: "/images/assessment/Question_31.png",
+        alt: "Question 31 - Adventure scenario",
+        caption: "The adventure continues..."
+      },
+      32: {
+        src: "/images/assessment/Question_32.png",
+        alt: "Question 32 - Adventure scenario",
+        caption: "New realms await..."
+      },
+      33: {
+        src: "/images/assessment/Question_33.png",
+        alt: "Question 33 - Adventure scenario",
+        caption: "The journey progresses..."
+      },
+      34: {
+        src: "/images/assessment/Question_34.png",
+        alt: "Question 34 - Adventure scenario",
+        caption: "Mysteries deepen..."
+      },
+      35: {
+        src: "/images/assessment/Question_35.png",
+        alt: "Question 35 - Adventure scenario",
+        caption: "The path reveals secrets..."
+      },
+      36: {
+        src: "/images/assessment/Question_36.png",
+        alt: "Question 36 - Adventure scenario",
+        caption: "New adventures begin..."
+      },
+      37: {
+        src: "/images/assessment/Question_37.png",
+        alt: "Question 37 - Adventure scenario",
+        caption: "The quest evolves..."
+      },
+      38: {
+        src: "/images/assessment/Question_38.png",
+        alt: "Question 38 - Adventure scenario",
+        caption: "Deeper into the unknown..."
+      },
+      39: {
+        src: "/images/assessment/Question_39.png",
+        alt: "Question 39 - Adventure scenario",
+        caption: "The adventure unfolds..."
+      },
+      40: {
+        src: "/images/assessment/Question_40.png",
+        alt: "Question 40 - Adventure scenario",
+        caption: "Approaching new heights..."
+      },
+      41: {
+        src: "/images/assessment/Question_41.png",
+        alt: "Question 41 - Adventure scenario",
+        caption: "The journey continues..."
+      },
+      42: {
+        src: "/images/assessment/Question_42.png",
+        alt: "Question 42 - Adventure scenario",
+        caption: "New challenges emerge..."
+      },
+      43: {
+        src: "/images/assessment/Question_43.png",
+        alt: "Question 43 - Adventure scenario",
+        caption: "The path winds forward..."
+      },
+      44: {
+        src: "/images/assessment/Question_44.png",
+        alt: "Question 44 - Adventure scenario",
+        caption: "Mysteries await..."
+      },
+      45: {
+        src: "/images/assessment/Question_45.png",
+        alt: "Question 45 - Adventure scenario",
+        caption: "The quest advances..."
+      },
+      46: {
+        src: "/images/assessment/Question_46.png",
+        alt: "Question 46 - Adventure scenario",
+        caption: "New discoveries..."
+      },
+      47: {
+        src: "/images/assessment/Question_47.png",
+        alt: "Question 47 - Adventure scenario",
+        caption: "The adventure deepens..."
+      },
+      48: {
+        src: "/images/assessment/Question_48.png",
+        alt: "Question 48 - Adventure scenario",
+        caption: "Approaching the climax..."
+      },
+      49: {
+        src: "/images/assessment/Question_49.png",
+        alt: "Question 49 - Adventure scenario",
+        caption: "The journey nears its end..."
+      },
+      50: {
+        src: "/images/assessment/Question_50.png",
+        alt: "Question 50 - Adventure scenario",
+        caption: "The final stretch begins..."
+      },
+      51: {
+        src: "/images/assessment/Question_51.png",
+        alt: "Question 51 - Adventure scenario",
+        caption: "Almost at the destination..."
+      },
+      52: {
+        src: "/images/assessment/Question_52.png",
+        alt: "Question 52 - Adventure scenario",
+        caption: "The end draws near..."
+      },
+      53: {
+        src: "/images/assessment/Question_53.png",
+        alt: "Question 53 - Adventure scenario",
+        caption: "The penultimate moment..."
+      },
+      54: {
+        src: "/images/assessment/Question_54.png",
+        alt: "Question 54 - Final adventure scenario",
+        caption: "The ultimate conclusion..."
       }
     }
     
