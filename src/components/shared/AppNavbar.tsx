@@ -9,7 +9,7 @@ import { AssessmentButton } from '@/components/ui/AssessmentButton';
 import { useAssessmentButtonText } from '@/hooks/useAssessmentButtonText';
 import { Button } from '@/components/ui/button';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database } from 'lucide-react';
+import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database, Sparkles, Zap, Globe } from 'lucide-react';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
@@ -76,8 +76,17 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
           { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
-          { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" /> },
-          { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" /> },
+          { 
+            label: 'Features', 
+            icon: <Sparkles className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" />, description: 'Interactive world exploration' },
+              { href: '/features/character-arcs-3d', label: '3D Character Arcs', icon: <Users className="w-4 h-4" />, description: 'Visual character development' },
+              { href: '/features/locations', label: 'Locations', icon: <Globe className="w-4 h-4" />, description: 'Discover epic locations' },
+              { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" />, description: 'Story timeline explorer' },
+            ]
+          },
         ];
 
       case 'calendar':
@@ -95,6 +104,17 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           },
           { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
+          { 
+            label: 'Features', 
+            icon: <Sparkles className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" />, description: 'Interactive world exploration' },
+              { href: '/features/character-arcs-3d', label: '3D Character Arcs', icon: <Users className="w-4 h-4" />, description: 'Visual character development' },
+              { href: '/features/locations', label: 'Locations', icon: <Globe className="w-4 h-4" />, description: 'Discover epic locations' },
+              { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" />, description: 'Story timeline explorer' },
+            ]
+          },
         ];
       
       case 'admin':
@@ -119,9 +139,18 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
-          { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" /> },
           { href: '/dashboard', label: 'Dashboard', icon: <BarChart3 className="w-4 h-4" />, requiresAuth: true },
-          { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" /> },
+          { 
+            label: 'Features', 
+            icon: <Sparkles className="w-4 h-4" />, 
+            isDropdown: true,
+            dropdown: [
+              { href: '/features/world-map', label: 'World Map', icon: <Map className="w-4 h-4" />, description: 'Interactive world exploration' },
+              { href: '/features/character-arcs-3d', label: '3D Character Arcs', icon: <Users className="w-4 h-4" />, description: 'Visual character development' },
+              { href: '/features/locations', label: 'Locations', icon: <Globe className="w-4 h-4" />, description: 'Discover epic locations' },
+              { href: '/timelines', label: 'Timelines', icon: <Clock className="w-4 h-4" />, description: 'Story timeline explorer' },
+            ]
+          },
         ];
     }
   };
@@ -198,7 +227,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/70 border-b border-white/5">
+    <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/90 border-b border-white/10 shadow-lg shadow-black/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         {/* Left brand */}
         <div className="flex items-center">
@@ -208,41 +237,44 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               alt="Epic Arcana"
               width={174}
               height={58}
-              className="hover:opacity-90 transition-all duration-300"
+              className="hover:opacity-90 transition-all duration-300 hover:scale-[1.02]"
             />
           </Link>
         </div>
 
         {/* Center nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm text-slate-300 font-semibold">
+        <nav className="hidden lg:flex items-center gap-1 text-sm text-slate-300 font-medium">
           {navItems.map((item, index) => (
             item.isDropdown ? (
               <DropdownMenuPrimitive.Root key={index}>
-                <DropdownMenuPrimitive.Trigger className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
-                  item.dropdown && isDropdownActive(item.dropdown) ? 'text-white' : ''
+                <DropdownMenuPrimitive.Trigger className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 group ${
+                  item.dropdown && isDropdownActive(item.dropdown) ? 'text-white bg-white/5' : ''
                 }`}>
                   {item.icon}
                   {item.label}
-                  <ChevronDown className="w-3 h-3" />
+                  <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180 group-data-[state=open]:rotate-180" />
                 </DropdownMenuPrimitive.Trigger>
                 <DropdownMenuPrimitive.Portal>
                   <DropdownMenuPrimitive.Content 
                     align="start" 
-                    className="w-56 bg-[#1a1a2e]/95 backdrop-blur border border-white/10 rounded-md shadow-lg z-50 p-1"
+                    className="w-64 bg-[#1a1a2e]/95 backdrop-blur border border-white/10 rounded-xl shadow-xl shadow-black/30 p-2 animate-in fade-in-0 zoom-in-95 duration-200"
+                    sideOffset={8}
                   >
                     {item.dropdown?.map((dropdownItem, dropdownIndex) => (
                       <DropdownMenuPrimitive.Item key={dropdownIndex} asChild>
                         <Link
                           href={dropdownItem.href}
-                          className={`flex items-center gap-3 px-4 py-3 rounded-sm hover:bg-white/5 transition-colors cursor-pointer ${
-                            isActivePath(dropdownItem.href) ? 'text-white bg-white/5' : 'text-slate-300'
+                          className={`flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 cursor-pointer group/item ${
+                            isActivePath(dropdownItem.href) ? 'text-white bg-white/10 shadow-md' : 'text-slate-300 hover:text-white'
                           }`}
                         >
-                          {dropdownItem.icon}
+                          <div className="flex-shrink-0 text-indigo-400 group-hover/item:text-indigo-300">
+                            {dropdownItem.icon}
+                          </div>
                           <div className="flex flex-col">
-                            <span className="font-medium">{dropdownItem.label}</span>
+                            <span className="font-medium text-sm">{dropdownItem.label}</span>
                             {dropdownItem.description && (
-                              <span className="text-xs text-slate-400">{dropdownItem.description}</span>
+                              <span className="text-xs text-slate-400 group-hover/item:text-slate-300">{dropdownItem.description}</span>
                             )}
                           </div>
                         </Link>
@@ -255,8 +287,8 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               <Link
                 key={item.href}
                 href={item.href || '#'}
-                className={`hover:text-white/90 transition-colors tracking-wide flex items-center gap-2 ${
-                  item.href && isActivePath(item.href) ? 'text-white' : ''
+                className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 ${
+                  item.href && isActivePath(item.href) ? 'text-white bg-white/5' : ''
                 }`}
               >
                 {item.icon}
@@ -267,16 +299,20 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         </nav>
 
         {/* Right auth section */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
           {isSignedIn ? (
             <>
               {/* Page-specific actions */}
               {pageActions.map((action, index) => (
                 action.href ? (
                   <Link key={index} href={action.href}>
-                    <Button variant={action.variant} size="sm" className="flex items-center gap-2">
+                    <Button 
+                      variant={action.variant} 
+                      size="sm" 
+                      className="flex items-center gap-2 hover:scale-105 transition-all duration-200 shadow-md"
+                    >
                       {action.icon}
-                      {action.label}
+                      <span className="hidden sm:inline">{action.label}</span>
                     </Button>
                   </Link>
                 ) : (
@@ -285,17 +321,17 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                     variant={action.variant} 
                     size="sm" 
                     onClick={action.onClick}
-                    className="flex items-center gap-2"
+                    className="flex items-center gap-2 hover:scale-105 transition-all duration-200 shadow-md"
                   >
                     {action.icon}
-                    {action.label}
+                    <span className="hidden sm:inline">{action.label}</span>
                   </Button>
                 )
               ))}
               
               {variant === 'landing' ? (
                 <AssessmentButton 
-                  className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
+                  className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition-all duration-300 hover:scale-105`}
                 />
               ) : (
                 !pageActions.some(action => action.href === '/dashboard') && (
@@ -305,14 +341,15 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                       isActivePath('/dashboard') ? 'ring-2 ring-indigo-400' : ''
                     }`}
                   >
-                    Dashboard
+                    <span className="hidden sm:inline">Dashboard</span>
+                    <BarChart3 className="w-4 h-4 sm:hidden" />
                   </Link>
                 )
               )}
               <UserButton 
                 appearance={{
                   elements: {
-                    avatarBox: "w-8 h-8 rounded-full border border-white/20 hover:border-white/40 transition-colors"
+                    avatarBox: "w-10 h-10 rounded-full border-2 border-white/20 hover:border-indigo-400/60 transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
                   }
                 }}
               />
@@ -320,22 +357,24 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           ) : (
             <>
               <SignInButton mode="modal">
-                <button className="text-sm text-slate-300 hover:text-white/90 transition-colors font-semibold tracking-wide">
+                <button className="hidden sm:block text-sm text-slate-300 hover:text-white/90 transition-colors font-medium tracking-wide px-3 py-2 rounded-lg hover:bg-white/5">
                   Sign In
                 </button>
               </SignInButton>
               {variant === 'landing' ? (
                 <SignInButton mode="modal" forceRedirectUrl="/assessment">
-                  <button className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}>
-                    {buttonText}
+                  <button className={`${gradCTA} text-sm font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-xl`}>
+                    <span className="hidden sm:inline">{buttonText}</span>
+                    <span className="sm:hidden">Start</span>
                   </button>
                 </SignInButton>
               ) : (
                 <Link 
                   href="/assessment"
-                  className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}
+                  className={`${gradCTA} text-sm font-semibold px-6 py-2.5 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-xl`}
                 >
-                  Take Assessment
+                  <span className="hidden sm:inline">Take Assessment</span>
+                  <span className="sm:hidden">Start</span>
                 </Link>
               )}
             </>
@@ -343,11 +382,16 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           
           {/* Mobile menu button */}
           <button
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white/90 transition-colors"
+            className="lg:hidden p-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} 
+              />
             </svg>
           </button>
         </div>
@@ -355,71 +399,119 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden border-t border-white/5 bg-[#0b1220]/95 backdrop-blur">
-          <div className="px-4 py-4 space-y-4">
-            <nav className="space-y-2">
+        <div className="lg:hidden border-t border-white/10 bg-[#0b1220]/95 backdrop-blur shadow-xl">
+          <div className="px-4 py-6 space-y-6">
+            <nav className="space-y-3">
+              {/* Regular nav items */}
               {navItems.filter(item => !item.isDropdown && item.href).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href!}
-                  className={`block text-slate-300 hover:text-white/90 transition-colors flex items-center gap-2 py-2 ${
-                    isActivePath(item.href!) ? 'text-white' : ''
+                  className={`block px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-3 ${
+                    isActivePath(item.href!) 
+                      ? 'text-white bg-white/10 shadow-md' 
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item.icon}
-                  {item.label}
+                  <div className="text-indigo-400">{item.icon}</div>
+                  <span className="font-medium">{item.label}</span>
                 </Link>
               ))}
-              {/* Render dropdown items as separate links in mobile */}
-              {navItems.filter(item => item.isDropdown).map((item) => 
-                item.dropdown?.map((dropdownItem) => (
-                  <Link
-                    key={dropdownItem.href}
-                    href={dropdownItem.href}
-                    className={`block text-slate-300 hover:text-white/90 transition-colors flex items-center gap-2 py-2 pl-4 ${
-                      isActivePath(dropdownItem.href) ? 'text-white' : ''
-                    }`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    {dropdownItem.icon}
-                    {dropdownItem.label}
-                  </Link>
-                ))
-              )}
+              
+              {/* Dropdown sections */}
+              {navItems.filter(item => item.isDropdown).map((item, index) => (
+                <div key={index} className="space-y-2">
+                  <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                    {item.label}
+                  </div>
+                  {item.dropdown?.map((dropdownItem) => (
+                    <Link
+                      key={dropdownItem.href}
+                      href={dropdownItem.href}
+                      className={`block px-4 py-3 ml-4 rounded-lg transition-all duration-200 flex items-center gap-3 ${
+                        isActivePath(dropdownItem.href) 
+                          ? 'text-white bg-white/10 shadow-md' 
+                          : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <div className="text-indigo-400 text-sm">{dropdownItem.icon}</div>
+                      <div className="flex flex-col">
+                        <span className="font-medium text-sm">{dropdownItem.label}</span>
+                        {dropdownItem.description && (
+                          <span className="text-xs text-slate-400">{dropdownItem.description}</span>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ))}
             </nav>
-            <div className="pt-2 border-t border-white/5">
+            
+            <div className="pt-4 border-t border-white/10">
               {isSignedIn ? (
-                variant === 'landing' ? (
-                  <AssessmentButton 
-                    className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl`}
-                  />
-                ) : (
-                  <Link
-                    href="/dashboard"
-                    className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
-                )
+                <div className="space-y-3">
+                  {pageActions.map((action, index) => (
+                    action.href ? (
+                      <Link key={index} href={action.href}>
+                        <Button 
+                          variant={action.variant} 
+                          className="w-full flex items-center justify-center gap-2"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {action.icon}
+                          {action.label}
+                        </Button>
+                      </Link>
+                    ) : (
+                      <Button 
+                        key={index}
+                        variant={action.variant} 
+                        onClick={() => {
+                          action.onClick?.();
+                          setIsMobileMenuOpen(false);
+                        }}
+                        className="w-full flex items-center justify-center gap-2"
+                      >
+                        {action.icon}
+                        {action.label}
+                      </Button>
+                    )
+                  ))}
+                  {variant === 'landing' ? (
+                    <AssessmentButton 
+                      className={`${gradCTA} w-full text-center text-sm font-semibold px-4 py-3 rounded-xl`}
+                    />
+                  ) : (
+                    !pageActions.some(action => action.href === '/dashboard') && (
+                      <Link
+                        href="/dashboard"
+                        className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-300`}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Dashboard
+                      </Link>
+                    )
+                  )}
+                </div>
               ) : (
-                <div className="space-y-2">
+                <div className="space-y-3">
                   <SignInButton mode="modal">
-                    <button className="block w-full text-slate-300 hover:text-white/90 transition-colors py-2">
+                    <button className="w-full text-slate-300 hover:text-white/90 transition-colors py-3 px-4 rounded-lg hover:bg-white/5 font-medium">
                       Sign In
                     </button>
                   </SignInButton>
                   {variant === 'landing' ? (
                     <SignInButton mode="modal" forceRedirectUrl="/assessment">
-                      <button className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}>
+                      <button className={`${gradCTA} w-full text-center text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-300`}>
                         {buttonText}
                       </button>
                     </SignInButton>
                   ) : (
                     <Link 
                       href="/assessment"
-                      className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
+                      className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-3 rounded-xl transition-all duration-300`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       Take Assessment
