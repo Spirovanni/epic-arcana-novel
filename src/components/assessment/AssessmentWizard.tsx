@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import { useUser } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
@@ -22,8 +23,16 @@ const ITEMS_PER_STEP = {
   6: { forced: 3, likert: 12 }, // 3 forced choice + 12 likert
 }
 
+// Configuration for question randomization
+const RANDOMIZATION_CONFIG = {
+  enabled: true, // Set to false to disable randomization
+  useUserSeeding: true, // Different random order per user (but consistent per user)
+  seedLength: 8, // How many characters of user ID to use in seed
+}
+
 export function AssessmentWizard() {
   const router = useRouter()
+  const { user } = useUser()
   const [showAuthGate, setShowAuthGate] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   
@@ -52,7 +61,33 @@ export function AssessmentWizard() {
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
   
-  // Get items for current step
+  // Deterministic shuffle function using seeded random
+  const shuffleArray = function<T>(array: T[], seed: string): T[] {
+    const arr = [...array] // Create a copy
+    let hash = 0
+    for (let i = 0; i < seed.length; i++) {
+      const char = seed.charCodeAt(i)
+      hash = ((hash << 5) - hash) + char
+      hash = hash & hash // Convert to 32-bit integer
+    }
+    
+    // Use the hash as seed for deterministic randomization
+    let randomSeed = Math.abs(hash)
+    const random = () => {
+      randomSeed = (randomSeed * 9301 + 49297) % 233280
+      return randomSeed / 233280
+    }
+    
+    // Fisher-Yates shuffle with seeded random
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1))
+      ;[arr[i], arr[j]] = [arr[j], arr[i]]
+    }
+    
+    return arr
+  }
+  
+  // Get items for current step with randomization
   const getItemsForStep = (step: number) => {
     const stepConfig = ITEMS_PER_STEP[step as keyof typeof ITEMS_PER_STEP]
     if (!stepConfig) return { forced: [], likert: [] }
@@ -60,9 +95,29 @@ export function AssessmentWizard() {
     const forcedStartIndex = (step - 1) * 3
     const likertStartIndex = Math.max(0, (step - 4) * 12)
     
+    // Get the original slices
+    const forcedSlice = forcedChoiceItems.slice(forcedStartIndex, forcedStartIndex + stepConfig.forced)
+    const likertSlice = likertItems.slice(likertStartIndex, likertStartIndex + stepConfig.likert)
+    
+    // Apply randomization if enabled
+    if (RANDOMIZATION_CONFIG.enabled && RANDOMIZATION_CONFIG.useUserSeeding) {
+      // Create deterministic seeds based on step number and user ID
+      // This ensures each user gets a different random order, but consistent across sessions
+      const userSeed = user?.id || 'anonymous'
+      const seedSubstring = userSeed.slice(0, RANDOMIZATION_CONFIG.seedLength)
+      const forcedSeed = `forced-step-${step}-${seedSubstring}`
+      const likertSeed = `likert-step-${step}-${seedSubstring}`
+      
+      return {
+        forced: shuffleArray(forcedSlice, forcedSeed),
+        likert: shuffleArray(likertSlice, likertSeed)
+      }
+    }
+    
+    // Return original order if randomization is disabled
     return {
-      forced: forcedChoiceItems.slice(forcedStartIndex, forcedStartIndex + stepConfig.forced),
-      likert: likertItems.slice(likertStartIndex, likertStartIndex + stepConfig.likert)
+      forced: forcedSlice,
+      likert: likertSlice
     }
   }
   
