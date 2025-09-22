@@ -3,6 +3,24 @@
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
+import { getBookColorForDay, clearChapterColorCache } from '@/lib/bookColors';
+
+// Cache for year data to prevent duplicate API calls
+const yearCache = new Map<number, HfCalendarResult[]>();
+
+// Clear cache in development for hot reload
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  (window as any).__clearYearCache = () => {
+    yearCache.clear();
+    console.log('Year cache cleared');
+  };
+}
+
+// Clear cache on load to show new colors
+if (typeof window !== 'undefined') {
+  yearCache.clear();
+  clearChapterColorCache();
+}
 
 interface YearGridProps {
   year?: number;
@@ -185,23 +203,81 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
   const todayISO = new Date().toISOString().split('T')[0];
 
   useEffect(() => {
+    const generateFallbackYearData = (year: number): HfCalendarResult[] => {
+      const fallbackData: HfCalendarResult[] = [];
+      for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
+        const date = new Date(year, 0, dayOfYear - 1);
+        const segment = dayOfYear <= 81 ? 'Q1' : 
+                      dayOfYear <= 162 ? 'Q2' : 
+                      dayOfYear <= 182 ? 'MID_A' : 
+                      dayOfYear === 183 ? 'MIDPOINT' : 
+                      dayOfYear <= 203 ? 'MID_B' : 
+                      dayOfYear <= 284 ? 'Q3' : 'Q4';
+        
+        const intraSegmentIndex = dayOfYear <= 81 ? dayOfYear : 
+                                 dayOfYear <= 162 ? dayOfYear - 81 : 
+                                 dayOfYear <= 203 ? dayOfYear - 162 : 
+                                 dayOfYear <= 284 ? dayOfYear - 203 : dayOfYear - 284;
+        
+        const isRestDay = segment !== 'MIDPOINT' && (intraSegmentIndex === 81 || (segment.startsWith('MID') && (intraSegmentIndex === 20 || intraSegmentIndex === 41)));
+        const isMidpoint = segment === 'MIDPOINT';
+        const isActiveDay = !isRestDay && !isMidpoint;
+        
+        fallbackData.push({
+          dateISO: date.toISOString().split('T')[0],
+          dayOfYear365: dayOfYear,
+          segment,
+          intraSegmentIndex,
+          isRestDay,
+          isMidpoint,
+          isActiveDay,
+          twentyDayWeekIndex: (dayOfYear - 1) % 20,
+          detoxPhase: segment === 'MID_A' ? 'EXILE_1_20' : segment === 'MIDPOINT' ? 'MIDPOINT' : segment === 'MID_B' ? 'RENEWAL_1_20' : 'NONE',
+          daySignName: isActiveDay ? `Day ${(dayOfYear - 1) % 20 + 1}` : undefined,
+          color: isActiveDay ? getBookColorForDay(dayOfYear) : undefined,
+          theme: isActiveDay ? 'Sacred Calendar Day' : isMidpoint ? 'Sacred Center' : 'Rest Day'
+        });
+      }
+      return fallbackData;
+    };
+
     const fetchYearData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
-        
-        const response = await fetch(`/api/hf-calendar?year=${targetYear}`);
-        const result = await response.json();
-        
-        if (!response.ok) {
-          throw new Error(result.error || 'Failed to fetch calendar data');
-        }
-        
-        setCalendarData(result.data);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error');
-      } finally {
+      // Check cache first
+      const cached = yearCache.get(targetYear);
+      if (cached) {
+        setCalendarData(cached);
         setLoading(false);
+        return;
+      }
+
+      // Load fallback data immediately for fast UI
+      const fallbackData = generateFallbackYearData(targetYear);
+      setCalendarData(fallbackData);
+      setLoading(false);
+
+      // Try to enhance with API data in background
+      try {
+        const response = await fetch(`/api/hf-calendar?year=${targetYear}`);
+        
+        if (response.ok) {
+          const result = await response.json();
+          if (result.success && result.data && Array.isArray(result.data)) {
+            // Cache and use the enhanced API data
+            yearCache.set(targetYear, result.data);
+            setCalendarData(result.data);
+          } else {
+            // Cache the fallback data since API didn't provide better data
+            yearCache.set(targetYear, fallbackData);
+          }
+        } else {
+          // Cache fallback data on API error
+          yearCache.set(targetYear, fallbackData);
+          console.warn(`Calendar API returned ${response.status} for year ${targetYear}, using fallback data`);
+        }
+      } catch (err) {
+        // Cache fallback data on network error
+        yearCache.set(targetYear, fallbackData);
+        console.warn(`Calendar API failed for year ${targetYear}, using fallback data:`, err);
       }
     };
 
@@ -210,8 +286,9 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
 
   if (loading) {
     return (
-      <div className={cn("flex items-center justify-center h-96", className)}>
+      <div className={cn("flex flex-col items-center justify-center h-96 space-y-2", className)}>
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
+        <p className="text-sm text-muted-foreground">Loading {targetYear} calendar...</p>
       </div>
     );
   }

@@ -23,6 +23,7 @@ export function Navbar() {
               width={174}
               height={58}
               className="hover:opacity-90 transition-all duration-300"
+              style={{ width: "auto", height: "auto" }}
             />
           </Link>
         </div>

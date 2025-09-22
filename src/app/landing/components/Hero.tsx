@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Head from 'next/head';
 import { AssessmentMockup } from './AssessmentMockup';
 
 const gradText = "bg-gradient-to-r from-indigo-300 via-indigo-400 to-blue-300 bg-clip-text text-transparent";
@@ -10,7 +11,22 @@ const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hov
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <>
+      <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/epic-arcana-hero-1920x1080.png"
+          media="(min-width: 768px)"
+        />
+        <link
+          rel="preload"
+          as="image"
+          href="/images/epic-arcana-hero-mobile.png"
+          media="(max-width: 767px)"
+        />
+      </Head>
+      <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Loading skeleton - shows while images load */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 animate-pulse" />
       {/* Hero Background Images - Optimized with Next.js Image */}
@@ -22,7 +38,7 @@ export function Hero() {
           priority
           quality={85}
           className="object-cover"
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 0px"
           placeholder="blur"
           blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
         />
@@ -90,5 +106,6 @@ export function Hero() {
         </div>
       </div>
     </section>
+    </>
   );
 }

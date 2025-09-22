@@ -17,7 +17,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Epic Arcana Novel",
   description: "A Next.js 15+ project with App Router and Tailwind CSS",
-  // Add more metadata as needed
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" }
+    ],
+    shortcut: "/favicon.svg",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,19 +38,6 @@ export default function RootLayout({
         {/* Primary meta tags */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Preload hero images for faster loading */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/epic-arcana-hero-1920x1080.png"
-          media="(min-width: 768px)"
-        />
-        <link
-          rel="preload"
-          as="image"
-          href="/images/epic-arcana-hero-mobile.png"
-          media="(max-width: 767px)"
-        />
         {/* Next.js will inject metadata from the export above */}
       </head>
       <body

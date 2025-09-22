@@ -17,7 +17,7 @@ export function DashboardLayout({ children, title, subtitle }: DashboardLayoutPr
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: "url('/images/hero-cosmic-fantasy.jpg')",
+            backgroundImage: "url('/images/hero_castle.png')",
           }}
         />
         

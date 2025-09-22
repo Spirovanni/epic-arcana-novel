@@ -16,6 +16,7 @@ export function Footer() {
             width={80}
             height={27}
             className="opacity-70"
+            style={{ width: "auto", height: "auto" }}
           />
         </div>
         <div className="text-xs text-slate-500">© {currentYear} Epic Arcana • Human Framework</div>

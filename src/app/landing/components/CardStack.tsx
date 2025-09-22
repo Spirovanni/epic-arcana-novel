@@ -22,6 +22,7 @@ export function CardStack() {
               width={40}
               height={13}
               className="opacity-80"
+              style={{ width: "auto", height: "auto" }}
             />
             <div className="text-xs text-slate-200/90">Hero Energy Card</div>
           </div>

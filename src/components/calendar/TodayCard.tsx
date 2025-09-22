@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -8,6 +8,7 @@ import { CheckCircle, Circle, User, Calendar } from 'lucide-react';
 import { useUser } from '@clerk/nextjs';
 import { cn } from '@/lib/utils';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
+import { getBookColorForDay, getChapterColorForDay, clearChapterColorCache, debugDayColors } from '@/lib/bookColors';
 
 interface UserAssignment {
   id: string;
@@ -29,48 +30,165 @@ interface TodayCardProps {
   date?: Date;
 }
 
-export function TodayCard({ className, date = new Date() }: TodayCardProps) {
+// Simple cache to prevent duplicate API calls
+const calendarCache = new Map<string, HfCalendarResult>();
+const assignmentCache = new Map<string, UserAssignment | null>();
+
+// Clear cache in development for hot reload
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  (window as any).__clearCalendarCache = () => {
+    calendarCache.clear();
+    assignmentCache.clear();
+    console.log('Calendar cache cleared');
+  };
+}
+
+// Clear caches on load to show new colors
+if (typeof window !== 'undefined') {
+  calendarCache.clear();
+  assignmentCache.clear();
+  clearChapterColorCache();
+  
+  // Debug the first 20 days to verify colors
+  debugDayColors(1, 20);
+  
+  // Make debug function available globally
+  (window as any).__debugDayColors = debugDayColors;
+}
+
+export function TodayCard({ className, date }: TodayCardProps) {
+  // Memoize the date to prevent infinite re-renders
+  const stableDate = useMemo(() => {
+    return date || new Date();
+  }, [date]);
+  
+  // Memoize the date string to use as a stable dependency
+  const dateString = useMemo(() => {
+    return stableDate.toISOString().split('T')[0];
+  }, [stableDate]);
+
   const [calendarData, setCalendarData] = useState<HfCalendarResult | null>(null);
   const [userAssignment, setUserAssignment] = useState<UserAssignment | null>(null);
   const [loading, setLoading] = useState(true);
+  const [enhancing, setEnhancing] = useState(false);
   const [assignmentLoading, setAssignmentLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('assignment');
   const { isSignedIn, isLoaded } = useUser();
 
   useEffect(() => {
+    const generateFallbackData = (date: Date, dateStr: string): HfCalendarResult => {
+      const dayOfYear = Math.floor((date.getTime() - new Date(date.getFullYear(), 0, 1).getTime()) / (1000 * 60 * 60 * 24)) + 1;
+      return {
+        dateISO: dateStr,
+        dayOfYear365: dayOfYear,
+        segment: dayOfYear <= 81 ? 'Q1' : dayOfYear <= 162 ? 'Q2' : dayOfYear <= 203 ? 'MID_A' : dayOfYear <= 284 ? 'Q3' : 'Q4',
+        intraSegmentIndex: dayOfYear <= 81 ? dayOfYear : dayOfYear <= 162 ? dayOfYear - 81 : dayOfYear - 162,
+        isRestDay: false,
+        isMidpoint: false,
+        isActiveDay: true,
+        twentyDayWeekIndex: (dayOfYear - 1) % 20,
+        detoxPhase: 'NONE',
+        daySignName: `Day ${(dayOfYear - 1) % 20 + 1}`,
+        theme: 'Sacred Calendar Day',
+        reflection: 'Reflect on the energy of this day',
+        color: getBookColorForDay(dayOfYear)
+      };
+    };
+
     const fetchCalendarData = async () => {
+      // Check cache first
+      const cached = calendarCache.get(dateString);
+      if (cached) {
+        setCalendarData(cached);
+        setLoading(false);
+        return;
+      }
+
+      // Load fallback data immediately for fast UI
+      const fallbackData = generateFallbackData(stableDate, dateString);
+      setCalendarData(fallbackData);
+      setLoading(false);
+
+      // Try to enhance with API data in background
       try {
-        setLoading(true);
-        setError(null);
+        setEnhancing(true);
         
-        const dateParam = date.toISOString().split('T')[0];
-        const response = await fetch(`/api/hf-calendar?date=${dateParam}`);
-        const result = await response.json();
-        
-        if (!response.ok) {
-          throw new Error(result.error || 'Failed to fetch calendar data');
+        // First try to get enhanced chapter color
+        const dayOfYear = Math.floor((stableDate.getTime() - new Date(stableDate.getFullYear(), 0, 1).getTime()) / (1000 * 60 * 60 * 24)) + 1;
+        const enhancedColor = await getChapterColorForDay(dayOfYear);
+        if (enhancedColor !== fallbackData.color) {
+          // Update with enhanced color
+          const enhancedFallbackData = { ...fallbackData, color: enhancedColor };
+          calendarCache.set(dateString, enhancedFallbackData);
+          setCalendarData(enhancedFallbackData);
         }
         
-        setCalendarData(result.data);
+        // Then try to get calendar API data
+        const response = await fetch(`/api/hf-calendar?date=${dateString}`);
+        
+        if (response.ok) {
+          const result = await response.json();
+          if (result.success && result.data) {
+            // Ensure the API data has the enhanced color
+            if (enhancedColor) {
+              result.data.color = enhancedColor;
+            }
+            
+            if (result.meta?.source === 'database') {
+              // Only update if we got enhanced database data
+              calendarCache.set(dateString, result.data);
+              setCalendarData(result.data);
+            } else {
+              // Cache the enhanced fallback data
+              calendarCache.set(dateString, result.data);
+            }
+          } else {
+            // Cache the fallback data since API didn't provide better data
+            calendarCache.set(dateString, fallbackData);
+          }
+        } else {
+          // Cache fallback data on API error
+          calendarCache.set(dateString, fallbackData);
+          console.warn(`Calendar API returned ${response.status}, using fallback data`);
+        }
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Unknown error');
+        // Cache fallback data on network error
+        calendarCache.set(dateString, fallbackData);
+        console.warn('Calendar API failed, using fallback data:', err);
       } finally {
-        setLoading(false);
+        setEnhancing(false);
       }
     };
 
     fetchCalendarData();
-  }, [date]);
+  }, [dateString, stableDate]);
 
   useEffect(() => {
     const fetchUserAssignment = async () => {
       if (!isLoaded || !isSignedIn) return;
       
+      // Check cache first
+      const cacheKey = `${dateString}-${isSignedIn}`;
+      const cached = assignmentCache.get(cacheKey);
+      if (cached !== undefined) {
+        setUserAssignment(cached);
+        setAssignmentLoading(false);
+        return;
+      }
+      
       try {
         setAssignmentLoading(true);
-        const dateParam = date.toISOString().split('T')[0];
-        const response = await fetch(`/api/user-assignments?date=${dateParam}`);
+        const response = await fetch(`/api/user-assignments?date=${dateString}`);
+        
+        if (response.status === 500) {
+          // Database tables don't exist yet, stop trying
+          console.warn('User assignments API not available yet (500 error)');
+          assignmentCache.set(cacheKey, null);
+          setUserAssignment(null);
+          return;
+        }
+        
         const result = await response.json();
         
         if (response.ok && result.assignments && result.assignments.length > 0 && result.journey) {
@@ -79,18 +197,22 @@ export function TodayCard({ className, date = new Date() }: TodayCardProps) {
           
           // Ensure we only show assignments within the first 365 days
           const journeyStart = new Date(journey.journeyStartDate);
-          const daysSinceStart = Math.floor((date.getTime() - journeyStart.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+          const daysSinceStart = Math.floor((stableDate.getTime() - journeyStart.getTime()) / (1000 * 60 * 60 * 24)) + 1;
           
           if (daysSinceStart >= 1 && daysSinceStart <= 365) {
+            assignmentCache.set(cacheKey, assignment);
             setUserAssignment(assignment);
           } else {
+            assignmentCache.set(cacheKey, null);
             setUserAssignment(null); // Outside the 365-day window
           }
         } else {
+          assignmentCache.set(cacheKey, null);
           setUserAssignment(null);
         }
       } catch (err) {
-        console.error('Error fetching user assignment:', err);
+        console.warn('Error fetching user assignment (gracefully handling):', err);
+        assignmentCache.set(cacheKey, null);
         setUserAssignment(null);
       } finally {
         setAssignmentLoading(false);
@@ -98,7 +220,7 @@ export function TodayCard({ className, date = new Date() }: TodayCardProps) {
     };
 
     fetchUserAssignment();
-  }, [date, isLoaded, isSignedIn]);
+  }, [dateString, isLoaded, isSignedIn]);
 
   const handleCompleteAssignment = async (completed: boolean) => {
     if (!userAssignment) return;
@@ -124,8 +246,9 @@ export function TodayCard({ className, date = new Date() }: TodayCardProps) {
   if (loading) {
     return (
       <Card className={cn("w-full max-w-md", className)}>
-        <CardContent className="flex items-center justify-center h-48">
+        <CardContent className="flex flex-col items-center justify-center h-48 space-y-2">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+          <p className="text-sm text-muted-foreground">Loading calendar data...</p>
         </CardContent>
       </Card>
     );

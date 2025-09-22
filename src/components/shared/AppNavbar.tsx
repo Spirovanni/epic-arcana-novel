@@ -238,6 +238,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               width={174}
               height={58}
               className="hover:opacity-90 transition-all duration-300 hover:scale-[1.02]"
+              style={{ width: "auto", height: "auto" }}
             />
           </Link>
         </div>

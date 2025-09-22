@@ -132,6 +132,7 @@ export default function TimelinePage() {
                   width={145}
                   height={46}
                   className="rounded-lg"
+                  style={{ width: "auto", height: "auto" }}
                 />
               </Link>
               <span className="text-gray-400">•</span>

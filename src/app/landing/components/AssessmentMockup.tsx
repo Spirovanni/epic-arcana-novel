@@ -193,6 +193,7 @@ export function AssessmentMockup() {
             width={60}
             height={20}
             className="opacity-80"
+            style={{ width: "auto", height: "auto" }}
           />
           <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
         </div>
@@ -215,6 +216,7 @@ export function AssessmentMockup() {
             width={60}
             height={20}
             className="opacity-80"
+            style={{ width: "auto", height: "auto" }}
           />
           <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
         </div>
@@ -242,6 +244,7 @@ export function AssessmentMockup() {
             width={60}
             height={20}
             className="opacity-80"
+            style={{ width: "auto", height: "auto" }}
           />
           <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
         </div>
@@ -312,6 +315,7 @@ export function AssessmentMockup() {
             width={60}
             height={20}
             className="opacity-80"
+            style={{ width: "auto", height: "auto" }}
           />
           <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
         </div>
@@ -336,6 +340,7 @@ export function AssessmentMockup() {
             width={60}
             height={20}
             className="opacity-80"
+            style={{ width: "auto", height: "auto" }}
           />
           <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
         </div>
@@ -355,6 +360,7 @@ export function AssessmentMockup() {
           width={60}
           height={20}
           className="opacity-80"
+          style={{ width: "auto", height: "auto" }}
         />
         <span className="text-sm text-slate-300 font-semibold tracking-wide">Player Type & Role Assessment</span>
       </div>
