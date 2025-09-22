@@ -1,20 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { TodayCard } from '@/components/calendar/TodayCard';
 import { YearGrid } from '@/components/calendar/YearGrid';
 import { DayDrawer } from '@/components/calendar/DayDrawer';
 import { AppNavbar } from '@/components/shared/AppNavbar';
+import { TodayView } from '@/components/calendar/TodayView';
+import { YearView } from '@/components/calendar/YearView';
+import { MyAssignmentsView } from '@/components/calendar/MyAssignmentsView';
 import { Settings, Calendar as CalendarIcon, RotateCcw } from 'lucide-react';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
 import { CalendarSettings } from '@/components/calendar/CalendarSettings';
 
 export default function CalendarPage() {
+  const searchParams = useSearchParams();
   const [selectedDay, setSelectedDay] = useState<HfCalendarResult | null>(null);
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [showSettings, setShowSettings] = useState(false);
+  const [currentView, setCurrentView] = useState<'today' | 'year' | 'assignments'>('today');
+
+  // Handle view changes from URL parameters
+  useEffect(() => {
+    const view = searchParams.get('view');
+    if (view === 'year' || view === 'assignments') {
+      setCurrentView(view);
+    } else {
+      setCurrentView('today');
+    }
+  }, [searchParams]);
 
   const handleDayClick = (day: HfCalendarResult) => {
     setSelectedDay(day);
@@ -32,6 +48,57 @@ export default function CalendarPage() {
     setCurrentYear(new Date().getFullYear());
   };
 
+  const getViewTitle = () => {
+    switch (currentView) {
+      case 'today': return 'Today';
+      case 'year': return 'Year View';
+      case 'assignments': return 'My Assignments';
+      default: return 'Calendar';
+    }
+  };
+
+  const getViewDescription = () => {
+    switch (currentView) {
+      case 'today': return 'Current day sacred calendar view';
+      case 'year': return 'Complete 365-day calendar overview';
+      case 'assignments': return 'Your personalized journey tasks';
+      default: return '365-day Mayan-inspired sacred calendar';
+    }
+  };
+
+  const renderCurrentView = () => {
+    switch (currentView) {
+      case 'today':
+        return (
+          <TodayView 
+            showSettings={showSettings}
+            onToggleSettings={() => setShowSettings(!showSettings)}
+          />
+        );
+      case 'year':
+        return (
+          <YearView 
+            showSettings={showSettings}
+            onToggleSettings={() => setShowSettings(!showSettings)}
+          />
+        );
+      case 'assignments':
+        return (
+          <MyAssignmentsView 
+            showSettings={showSettings}
+            onToggleSettings={() => setShowSettings(!showSettings)}
+          />
+        );
+      default:
+        return (
+          <TodayView 
+            showSettings={showSettings}
+            onToggleSettings={() => setShowSettings(!showSettings)}
+          />
+        );
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
@@ -46,7 +113,7 @@ export default function CalendarPage() {
               <div>
                 <h1 className="text-2xl font-bold">Human Framework Calendar</h1>
                 <p className="text-sm text-muted-foreground">
-                  365-day Mayan-inspired sacred calendar
+                  {getViewDescription()}
                 </p>
               </div>
             </div>
@@ -67,111 +134,8 @@ export default function CalendarPage() {
       </div>
 
       <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
-          {/* Sidebar */}
-          <div className="xl:col-span-1 space-y-6">
-            {/* Today Card */}
-            <TodayCard />
-
-            {/* Year Navigation */}
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-semibold">Year Navigation</h3>
-                
-                <div className="flex items-center justify-between">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleYearChange('prev')}
-                  >
-                    ← {currentYear - 1}
-                  </Button>
-                  
-                  <div className="text-center">
-                    <div className="text-lg font-semibold">{currentYear}</div>
-                    {currentYear !== new Date().getFullYear() && (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={resetToCurrentYear}
-                        className="text-xs flex items-center gap-1"
-                      >
-                        <RotateCcw className="h-3 w-3" />
-                        Today
-                      </Button>
-                    )}
-                  </div>
-                  
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => handleYearChange('next')}
-                  >
-                    {currentYear + 1} →
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Calendar Legend */}
-            <Card>
-              <CardContent className="p-6 space-y-4">
-                <h3 className="font-semibold">Calendar Structure</h3>
-                
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <div className="font-medium">Quarters</div>
-                    <div className="text-muted-foreground">
-                      Q1 & Q2 & Q3 & Q4: 81 days each
-                    </div>
-                    <div className="text-muted-foreground">
-                      (80 active + 1 rest day)
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="font-medium">Mid-Band</div>
-                    <div className="text-muted-foreground">
-                      40-day detox + 1 midpoint = 41 days
-                    </div>
-                    <div className="text-muted-foreground">
-                      20 Exile + Axis Mundi + 20 Renewal
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <div className="font-medium">20-Day Cycles</div>
-                    <div className="text-muted-foreground">
-                      Mayan day signs advance on active days only
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Settings Panel */}
-            {showSettings && (
-              <CalendarSettings />
-            )}
-          </div>
-
-          {/* Main Calendar */}
-          <div className="xl:col-span-3">
-            <YearGrid
-              year={currentYear}
-              onDayClick={handleDayClick}
-              selectedDay={selectedDay?.dateISO}
-            />
-          </div>
-        </div>
+        {renderCurrentView()}
       </div>
-
-      {/* Day Detail Drawer */}
-      <DayDrawer
-        isOpen={!!selectedDay}
-        onClose={handleCloseDrawer}
-        day={selectedDay}
-      />
     </div>
   );
 }
