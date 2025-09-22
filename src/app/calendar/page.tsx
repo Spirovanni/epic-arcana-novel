@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,7 +15,7 @@ import { Settings, Calendar as CalendarIcon, RotateCcw } from 'lucide-react';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
 import { CalendarSettings } from '@/components/calendar/CalendarSettings';
 
-export default function CalendarPage() {
+function CalendarPageContent() {
   const searchParams = useSearchParams();
   const [selectedDay, setSelectedDay] = useState<HfCalendarResult | null>(null);
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -137,5 +137,13 @@ export default function CalendarPage() {
         {renderCurrentView()}
       </div>
     </div>
+  );
+}
+
+export default function CalendarPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CalendarPageContent />
+    </Suspense>
   );
 }

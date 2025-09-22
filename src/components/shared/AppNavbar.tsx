@@ -9,7 +9,9 @@ import { AssessmentButton } from '@/components/ui/AssessmentButton';
 import { useAssessmentButtonText } from '@/hooks/useAssessmentButtonText';
 import { Button } from '@/components/ui/button';
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
-import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database, Sparkles, Zap, Globe } from 'lucide-react';
+import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database, Sparkles, Zap, Globe, User } from 'lucide-react';
+import { BooksDropdown } from './BooksDropdown';
+import { getBooksDropdownItems } from './BooksDropdownData';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
@@ -74,7 +76,6 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
             ]
           },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
-          { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
           { 
             label: 'Features', 
@@ -284,7 +285,22 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                   </DropdownMenuPrimitive.Content>
                 </DropdownMenuPrimitive.Portal>
               </DropdownMenuPrimitive.Root>
-            ) : (
+            ) : item.href === '/calendar' && variant === 'dashboard' ? (
+              // Render Calendar link followed by Books dropdown for dashboard variant
+              <React.Fragment key={index}>
+                <Link
+                  href={item.href}
+                  className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 ${
+                    isActivePath(item.href) ? 'text-white bg-white/5' : ''
+                  }`}
+                >
+                  {item.icon}
+                  {item.label}
+                </Link>
+                <BooksDropdown />
+              </React.Fragment>
+            ) : item.href !== '/books' || variant !== 'dashboard' ? (
+              // Render normal links, but skip /books for dashboard variant since we use BooksDropdown
               <Link
                 key={item.href}
                 href={item.href || '#'}
@@ -295,7 +311,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                 {item.icon}
                 {item.label}
               </Link>
-            )
+            ) : null
           ))}
         </nav>
 
@@ -404,7 +420,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           <div className="px-4 py-6 space-y-6">
             <nav className="space-y-3">
               {/* Regular nav items */}
-              {navItems.filter(item => !item.isDropdown && item.href).map((item) => (
+              {navItems.filter(item => !item.isDropdown && item.href && !(item.href === '/books' && variant === 'dashboard')).map((item) => (
                 <Link
                   key={item.href}
                   href={item.href!}
@@ -419,6 +435,35 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                   <span className="font-medium">{item.label}</span>
                 </Link>
               ))}
+              
+              {/* Books dropdown for dashboard variant */}
+              {variant === 'dashboard' && (
+                <div className="space-y-2">
+                  <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                    Books
+                  </div>
+                  {getBooksDropdownItems().map((bookItem) => (
+                    <Link
+                      key={bookItem.href}
+                      href={bookItem.href}
+                      className={`block px-4 py-3 ml-4 rounded-lg transition-all duration-200 flex items-center gap-3 ${
+                        isActivePath(bookItem.href) 
+                          ? 'text-white bg-white/10 shadow-md' 
+                          : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      }`}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      <div className="text-indigo-400 text-sm">{bookItem.icon}</div>
+                      <div className="flex flex-col">
+                        <span className="font-medium text-sm">
+                          {bookItem.bookNumber ? `Book ${bookItem.bookNumber}: ${bookItem.label}` : bookItem.label}
+                        </span>
+                        <span className="text-xs text-slate-400">{bookItem.description}</span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
               
               {/* Dropdown sections */}
               {navItems.filter(item => item.isDropdown).map((item, index) => (
