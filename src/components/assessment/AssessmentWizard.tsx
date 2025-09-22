@@ -13,6 +13,7 @@ import { LikertItem } from '@/components/assessment/LikertItem'
 import { AssessmentProgress } from '@/components/assessment/AssessmentProgress'
 import { AuthGate } from '@/components/assessment/AuthGate'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
+import { MagicalLoadingScreen } from '@/components/assessment/MagicalLoadingScreen'
 
 const ITEMS_PER_STEP = {
   1: { forced: 3, likert: 0 }, // 3 forced choice
@@ -35,6 +36,7 @@ export function AssessmentWizard() {
   const { user } = useUser()
   const [showAuthGate, setShowAuthGate] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showMagicalLoading, setShowMagicalLoading] = useState(false)
   
   const {
     currentStep,
@@ -144,6 +146,7 @@ export function AssessmentWizard() {
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
+    setShowMagicalLoading(true)
     
     try {
       // Score the assessment
@@ -164,16 +167,18 @@ export function AssessmentWizard() {
       setResult(result)
       completeAssessment()
       
-      // Show auth gate for saving results
-      setShowAuthGate(true)
-      
     } catch (error) {
       console.error('Error completing assessment:', error)
-      // Handle error state
-    } finally {
+      setShowMagicalLoading(false)
       setIsSubmitting(false)
     }
   }, [getAnswersForApi, setResult, completeAssessment])
+
+  const handleMagicalLoadingComplete = useCallback(() => {
+    setShowMagicalLoading(false)
+    setIsSubmitting(false)
+    setShowAuthGate(true)
+  }, [])
   
   const handleNext = useCallback(async () => {
     if (currentStep < totalSteps) {
@@ -185,8 +190,12 @@ export function AssessmentWizard() {
   }, [currentStep, totalSteps, setStep, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
-    router.push(`/results/${resultId}`)
+    router.push(`/dashboard`)
   }, [router])
+  
+  if (showMagicalLoading) {
+    return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />
+  }
   
   if (showAuthGate) {
     return <AuthGate onSuccess={handleAuthSuccess} />
@@ -277,13 +286,17 @@ export function AssessmentWizard() {
               onClick={handleNext}
               disabled={!isStepComplete || isSubmitting}
               variant="mystical"
-              className="min-w-[120px]"
+              className={`min-w-[120px] ${
+                currentStep >= totalSteps 
+                  ? 'bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 animate-pulse' 
+                  : ''
+              }`}
             >
               {isSubmitting 
-                ? 'Processing...'
+                ? 'Channeling Magic...'
                 : currentStep < totalSteps 
                   ? 'Next Step' 
-                  : 'Complete'
+                  : '✨ Complete Assessment ✨'
               }
             </Button>
           </div>
