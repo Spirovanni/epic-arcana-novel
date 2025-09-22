@@ -12,6 +12,10 @@ const db = drizzle(sqlClient);
 const SettingsSchema = z.object({
   anchor: z.string().optional(), // ISO date string
   leapPolicy: z.enum(['duplicate', 'skip', 'insert_after_Q4']).optional(),
+  theme: z.enum(['default', 'rainbow', 'seasons', 'monochrome']).optional(),
+  showDayNumbers: z.string().optional(), // 'true' or 'false'
+  showColorLegend: z.string().optional(), // 'true' or 'false'
+  compactView: z.string().optional(), // 'true' or 'false'
 });
 
 /**
@@ -72,6 +76,22 @@ export async function POST(request: NextRequest) {
 
     if (settings.leapPolicy) {
       updates.push({ key: 'calendar.leapPolicy', value: settings.leapPolicy });
+    }
+
+    if (settings.theme) {
+      updates.push({ key: 'calendar.theme', value: settings.theme });
+    }
+
+    if (settings.showDayNumbers !== undefined) {
+      updates.push({ key: 'calendar.showDayNumbers', value: settings.showDayNumbers });
+    }
+
+    if (settings.showColorLegend !== undefined) {
+      updates.push({ key: 'calendar.showColorLegend', value: settings.showColorLegend });
+    }
+
+    if (settings.compactView !== undefined) {
+      updates.push({ key: 'calendar.compactView', value: settings.compactView });
     }
 
     if (updates.length === 0) {

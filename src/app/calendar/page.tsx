@@ -9,6 +9,7 @@ import { DayDrawer } from '@/components/calendar/DayDrawer';
 import { AppNavbar } from '@/components/shared/AppNavbar';
 import { Settings, Calendar as CalendarIcon, RotateCcw } from 'lucide-react';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
+import { CalendarSettings } from '@/components/calendar/CalendarSettings';
 
 export default function CalendarPage() {
   const [selectedDay, setSelectedDay] = useState<HfCalendarResult | null>(null);
@@ -150,17 +151,7 @@ export default function CalendarPage() {
 
             {/* Settings Panel */}
             {showSettings && (
-              <Card data-settings>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="font-semibold">Settings</h3>
-                  <div className="space-y-2 text-sm text-muted-foreground">
-                    <p>Settings panel coming soon...</p>
-                    <p>• Change year anchor</p>
-                    <p>• Leap year policy</p>
-                    <p>• Custom themes</p>
-                  </div>
-                </CardContent>
-              </Card>
+              <CalendarSettings />
             )}
           </div>
 
