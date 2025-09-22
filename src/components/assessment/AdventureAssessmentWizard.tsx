@@ -10,6 +10,7 @@ import { ForcedChoiceItem as ForcedChoiceItemType, LikertItem as LikertItemType 
 import { AssessmentProgress } from '@/components/assessment/AssessmentProgress'
 import { AuthGate } from '@/components/assessment/AuthGate'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
+import { MagicalLoadingScreen } from '@/components/assessment/MagicalLoadingScreen'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 
@@ -126,9 +127,14 @@ function FirstQuestionContent({
                 <div className="pt-3 lg:pt-4 border-t border-amber-500/20 text-center">
                   <button
                     onClick={handleContinue}
-                    className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-4 sm:px-6 py-2 rounded-lg text-black font-bold text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-md shadow-amber-500/25"
+                    className={cn(
+                      "px-4 sm:px-6 py-2 rounded-lg text-black font-bold text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-md",
+                      questionNumber === 54 
+                        ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
+                        : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
+                    )}
                   >
-                    Continue Journey
+                    {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey"}
                   </button>
                 </div>
               )}
@@ -187,9 +193,14 @@ function FirstQuestionContent({
             <div className="text-center">
               <button
                 onClick={handleContinue}
-                className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
+                className={cn(
+                  "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
+                  questionNumber === 54 
+                    ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
+                    : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
+                )}
               >
-                Continue Journey
+                {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey"}
               </button>
             </div>
           )}
@@ -278,9 +289,14 @@ function RegularQuestionContent({
             <div className="mt-8 text-center">
               <button
                 onClick={handleContinue}
-                className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
+                className={cn(
+                  "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
+                  questionNumber === 54 
+                    ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
+                    : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
+                )}
               >
-                Continue Journey
+                {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey"}
               </button>
             </div>
           )}
@@ -337,9 +353,14 @@ function RegularQuestionContent({
             <div className="mt-8 text-center">
               <button
                 onClick={handleContinue}
-                className="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-amber-500/25"
+                className={cn(
+                  "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
+                  questionNumber === 54 
+                    ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
+                    : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
+                )}
               >
-                Continue Journey
+                {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey"}
               </button>
             </div>
           )}
@@ -986,6 +1007,7 @@ export function AdventureAssessmentWizard() {
   const router = useRouter()
   const [showAuthGate, setShowAuthGate] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [showMagicalLoading, setShowMagicalLoading] = useState(false)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
   const [isTransitioning, setIsTransitioning] = useState(false)
@@ -1024,6 +1046,7 @@ export function AdventureAssessmentWizard() {
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
+    setShowMagicalLoading(true)
     
     try {
       const answers = getAnswersForApi()
@@ -1042,14 +1065,19 @@ export function AdventureAssessmentWizard() {
       const result = await response.json()
       setResult(result)
       completeAssessment()
-      setShowAuthGate(true)
       
     } catch (error) {
       console.error('Error completing assessment:', error)
-    } finally {
+      setShowMagicalLoading(false)
       setIsSubmitting(false)
     }
   }, [getAnswersForApi, setResult, completeAssessment])
+
+  const handleMagicalLoadingComplete = useCallback(() => {
+    setShowMagicalLoading(false)
+    setIsSubmitting(false)
+    setShowAuthGate(true)
+  }, [])
   
   const handleAnswer = useCallback((answer: any) => {
     const currentItem = allItems[currentQuestionIndex]
@@ -1110,8 +1138,12 @@ export function AdventureAssessmentWizard() {
   }, [currentQuestionIndex, allItems.length, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
-    router.push(`/results/${resultId}`)
+    router.push(`/dashboard`)
   }, [router])
+  
+  if (showMagicalLoading) {
+    return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />
+  }
   
   if (showAuthGate) {
     return <AuthGate onSuccess={handleAuthSuccess} />
