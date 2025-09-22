@@ -285,22 +285,11 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                   </DropdownMenuPrimitive.Content>
                 </DropdownMenuPrimitive.Portal>
               </DropdownMenuPrimitive.Root>
-            ) : item.href === '/calendar' && variant === 'dashboard' ? (
-              // Render Calendar link followed by Books dropdown for dashboard variant
-              <React.Fragment key={index}>
-                <Link
-                  href={item.href}
-                  className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 ${
-                    isActivePath(item.href) ? 'text-white bg-white/5' : ''
-                  }`}
-                >
-                  {item.icon}
-                  {item.label}
-                </Link>
-                <BooksDropdown />
-              </React.Fragment>
-            ) : item.href !== '/books' || variant !== 'dashboard' ? (
-              // Render normal links, but skip /books for dashboard variant since we use BooksDropdown
+            ) : item.href === '/books' ? (
+              // Replace any Books link with the robust BooksDropdown component
+              <BooksDropdown key={index} />
+            ) : (
+              // Render normal links
               <Link
                 key={item.href}
                 href={item.href || '#'}
@@ -311,7 +300,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                 {item.icon}
                 {item.label}
               </Link>
-            ) : null
+            )
           ))}
         </nav>
 
@@ -419,8 +408,8 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         <div className="lg:hidden border-t border-white/10 bg-[#0b1220]/95 backdrop-blur shadow-xl">
           <div className="px-4 py-6 space-y-6">
             <nav className="space-y-3">
-              {/* Regular nav items */}
-              {navItems.filter(item => !item.isDropdown && item.href && !(item.href === '/books' && variant === 'dashboard')).map((item) => (
+              {/* Regular nav items - exclude Books links since we handle them separately */}
+              {navItems.filter(item => !item.isDropdown && item.href && item.href !== '/books').map((item) => (
                 <Link
                   key={item.href}
                   href={item.href!}
@@ -436,8 +425,8 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                 </Link>
               ))}
               
-              {/* Books dropdown for dashboard variant */}
-              {variant === 'dashboard' && (
+              {/* Books dropdown - show for any variant that has Books link */}
+              {navItems.some(item => item.href === '/books') && (
                 <div className="space-y-2">
                   <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
                     Books
