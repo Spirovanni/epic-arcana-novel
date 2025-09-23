@@ -127,10 +127,21 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent 
+        className="max-w-2xl max-h-[90vh] overflow-y-auto"
+        style={{
+          backgroundColor: colorStyles.backgroundStyle?.background ? 'transparent' : undefined
+        }}
+      >
         <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <Calendar className="h-5 w-5" />
+          <DialogTitle 
+            className="flex items-center gap-2"
+            style={{ color: colorStyles.textColor }}
+          >
+            <Calendar 
+              className="h-5 w-5" 
+              style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+            />
             {new Date(day.dateISO).toLocaleDateString('en-US', {
               weekday: 'long',
               year: 'numeric',
@@ -138,7 +149,9 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               day: 'numeric'
             })}
           </DialogTitle>
-          <DialogDescription>
+          <DialogDescription
+            style={{ color: colorStyles.textColor, opacity: 0.8 }}
+          >
             {getSegmentDisplay()} • Day {day.dayOfYear365}/365
           </DialogDescription>
         </DialogHeader>
@@ -352,46 +365,116 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
           </Card>
 
           {/* Metadata */}
-          <Card className="bg-muted/50">
+          <Card 
+            className={cn("border", colorStyles.cardClasses)}
+            style={{
+              backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}08` : 'rgba(255, 255, 255, 0.05)',
+              borderColor: colorStyles.accentColor ? `${colorStyles.accentColor}40` : 'rgba(255, 255, 255, 0.2)'
+            }}
+          >
             <CardContent className="pt-6">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <span className="font-medium">Segment:</span> {day.segment}
+                  <span 
+                    className="font-medium"
+                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                  >
+                    Segment:
+                  </span>{' '}
+                  <span style={{ color: colorStyles.textColor }}>
+                    {day.segment}
+                  </span>
                 </div>
                 <div>
-                  <span className="font-medium">Segment Day:</span> {day.intraSegmentIndex}
+                  <span 
+                    className="font-medium"
+                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                  >
+                    Segment Day:
+                  </span>{' '}
+                  <span style={{ color: colorStyles.textColor }}>
+                    {day.intraSegmentIndex}
+                  </span>
                 </div>
                 {day.isActiveDay && (
                   <>
                     <div>
-                      <span className="font-medium">20-Day Cycle:</span> {day.twentyDayWeekIndex + 1}/20
+                      <span 
+                        className="font-medium"
+                        style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                      >
+                        20-Day Cycle:
+                      </span>{' '}
+                      <span style={{ color: colorStyles.textColor }}>
+                        {day.twentyDayWeekIndex + 1}/20
+                      </span>
                     </div>
                     <div>
-                      <span className="font-medium">Day Sign Index:</span> {day.twentyDayWeekIndex}
+                      <span 
+                        className="font-medium"
+                        style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                      >
+                        Day Sign Index:
+                      </span>{' '}
+                      <span style={{ color: colorStyles.textColor }}>
+                        {day.twentyDayWeekIndex}
+                      </span>
                     </div>
                   </>
                 )}
                 <div>
-                  <span className="font-medium">Day Type:</span>{' '}
-                  {day.isMidpoint ? 'Midpoint' :
-                   day.isRestDay ? 'Rest Day' :
-                   day.isActiveDay ? 'Active Day' : 'Special Day'}
+                  <span 
+                    className="font-medium"
+                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                  >
+                    Day Type:
+                  </span>{' '}
+                  <span style={{ color: colorStyles.textColor }}>
+                    {day.isMidpoint ? 'Midpoint' :
+                     day.isRestDay ? 'Rest Day' :
+                     day.isActiveDay ? 'Active Day' : 'Special Day'}
+                  </span>
                 </div>
                 <div>
-                  <span className="font-medium">Detox Phase:</span> {day.detoxPhase.replace('_', ' ')}
+                  <span 
+                    className="font-medium"
+                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                  >
+                    Detox Phase:
+                  </span>{' '}
+                  <span style={{ color: colorStyles.textColor }}>
+                    {day.detoxPhase.replace('_', ' ')}
+                  </span>
                 </div>
               </div>
             </CardContent>
           </Card>
 
           {/* Actions */}
-          <div className="flex gap-2 justify-end">
+          <div className="flex gap-3 justify-end">
             <Button
               variant="outline"
               size="sm"
               onClick={handleCopyToJournal}
               disabled={copied}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
+              style={{
+                borderColor: colorStyles.accentColor || 'hsl(var(--border))',
+                color: colorStyles.accentColor || 'hsl(var(--foreground))',
+                backgroundColor: copied 
+                  ? (colorStyles.accentColor ? `${colorStyles.accentColor}15` : 'hsl(var(--accent))')
+                  : 'transparent'
+              }}
+              onMouseEnter={(e) => {
+                if (colorStyles.accentColor && !copied) {
+                  e.currentTarget.style.backgroundColor = `${colorStyles.accentColor}10`;
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (colorStyles.accentColor && !copied) {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }
+              }}
             >
               {copied ? (
                 <>
@@ -406,9 +489,23 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               )}
             </Button>
             <Button
-              variant="outline"
               size="sm"
-              className="flex items-center gap-2"
+              className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
+              style={{
+                backgroundColor: colorStyles.accentColor || 'hsl(var(--primary))',
+                color: colorStyles.accentColor ? getContrastingTextColor(colorStyles.accentColor) : 'hsl(var(--primary-foreground))',
+                borderColor: colorStyles.accentColor || 'hsl(var(--primary))'
+              }}
+              onMouseEnter={(e) => {
+                if (colorStyles.accentColor) {
+                  e.currentTarget.style.backgroundColor = getDarkerShade(colorStyles.accentColor, 0.1);
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (colorStyles.accentColor) {
+                  e.currentTarget.style.backgroundColor = colorStyles.accentColor;
+                }
+              }}
             >
               <Bookmark className="h-4 w-4" />
               Add to Favorites
