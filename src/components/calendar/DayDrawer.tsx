@@ -102,16 +102,17 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
     if (!day.color) {
       return {
         backgroundStyle: undefined,
-        textColor: isDarkMode ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))',
+        textColor: isDarkMode ? '#f1f5f9' : '#1e293b', // slate-100 / slate-800
         accentColor: isDarkMode ? 'hsl(var(--primary))' : 'hsl(var(--primary))',
         cardClasses: ''
       };
     }
 
     const mainColor = day.color;
-    const textColor = getContrastingTextColor(mainColor, isDarkMode);
-    const themeAwareBg = getThemeAwareBackgroundColor(mainColor, isDarkMode, 0.15);
-    const borderOpacity = isDarkMode ? 0.4 : 0.3;
+    // Use better contrast with the new muted background
+    const textColor = isDarkMode ? '#f1f5f9' : '#1e293b'; // Force good contrast with slate backgrounds
+    const themeAwareBg = getThemeAwareBackgroundColor(mainColor, isDarkMode, 0.12);
+    const borderOpacity = isDarkMode ? 0.5 : 0.4; // Slightly more visible borders
     
     return {
       backgroundStyle: {

@@ -57,7 +57,7 @@ const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
     
     return (
       <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
-        <div className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg sm:rounded-lg">
+        <div className="fixed left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border border-border bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 p-6 shadow-lg sm:rounded-lg">
           <div
             ref={ref}
             className={cn("grid gap-4", className)}
@@ -65,7 +65,7 @@ const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
           >
             {children}
             <button
-              className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100"
+              className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200"
               onClick={() => onOpenChange(false)}
             >
               <span className="h-4 w-4">×</span>
@@ -101,7 +101,7 @@ const DialogDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttri
   ({ className, ...props }, ref) => (
     <p
       ref={ref}
-      className={cn("text-sm text-gray-600", className)}
+      className={cn("text-sm text-muted-foreground", className)}
       {...props}
     />
   )

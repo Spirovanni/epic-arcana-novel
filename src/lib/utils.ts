@@ -129,23 +129,30 @@ export function getContrastingTextColor(backgroundColor: string, isDarkMode?: bo
 // Add theme-aware background color function
 export function getThemeAwareBackgroundColor(baseColor: string, isDarkMode: boolean, opacity: number = 0.1): string {
   if (!baseColor) {
-    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.5})` : `rgba(0, 0, 0, ${opacity})`;
+    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.3})` : `rgba(0, 0, 0, ${opacity})`;
   }
   
   const rgb = hexToRgb(baseColor);
   if (!rgb) {
-    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.5})` : `rgba(0, 0, 0, ${opacity})`;
+    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.3})` : `rgba(0, 0, 0, ${opacity})`;
   }
   
-  // In dark mode, use lighter variations of the color
+  // In dark mode, use more muted, lighter variations of the color
   // In light mode, use the color as-is but with low opacity
   if (isDarkMode) {
+    // Create a more muted, grayed version for dark mode
     const lighterRgb = {
-      r: Math.min(255, rgb.r + 80),
-      g: Math.min(255, rgb.g + 80),
-      b: Math.min(255, rgb.b + 80)
+      r: Math.min(255, rgb.r + 60),
+      g: Math.min(255, rgb.g + 60),
+      b: Math.min(255, rgb.b + 60)
     };
-    return `rgba(${lighterRgb.r}, ${lighterRgb.g}, ${lighterRgb.b}, ${opacity})`;
+    // Blend with gray for more muted appearance
+    const mutedRgb = {
+      r: Math.round(lighterRgb.r * 0.8 + 128 * 0.2),
+      g: Math.round(lighterRgb.g * 0.8 + 128 * 0.2),
+      b: Math.round(lighterRgb.b * 0.8 + 128 * 0.2)
+    };
+    return `rgba(${mutedRgb.r}, ${mutedRgb.g}, ${mutedRgb.b}, ${opacity * 0.8})`;
   } else {
     return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${opacity})`;
   }
