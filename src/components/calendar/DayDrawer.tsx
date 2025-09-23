@@ -131,7 +131,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+      <DialogContent>
         <DialogHeader>
           <DialogTitle 
             className="flex items-center gap-2 text-foreground"
@@ -473,13 +473,13 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
           </Card>
 
           {/* Actions */}
-          <div className="flex gap-3 justify-end">
+          <div className="flex gap-3 justify-end flex-shrink-0">
             <Button
               variant="outline"
               size="sm"
               onClick={handleCopyToJournal}
               disabled={copied}
-              className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-2 transition-colors duration-200"
               style={day.color ? {
                 borderColor: colorStyles.accentColor,
                 color: colorStyles.accentColor,
@@ -512,7 +512,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
             </Button>
             <Button
               size="sm"
-              className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
+              className="flex items-center gap-2 transition-colors duration-200"
               style={day.color ? {
                 backgroundColor: colorStyles.accentColor,
                 color: getContrastingTextColor(colorStyles.accentColor, isDarkMode),
