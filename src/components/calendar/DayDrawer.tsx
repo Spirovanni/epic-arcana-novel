@@ -519,7 +519,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                 borderColor: colorStyles.accentColor
               } : {}}
               onMouseEnter={(e) => {
-                if (colorStyles.accentColor && day.color) {
+                if (colorStyles.accentColor && colorStyles.darkerAccent && day.color) {
                   e.currentTarget.style.backgroundColor = colorStyles.darkerAccent;
                 }
               }}
