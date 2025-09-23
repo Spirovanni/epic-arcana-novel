@@ -3,9 +3,10 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { cn, getContrastingTextColor, getDarkerShade, getLighterShade } from '@/lib/utils';
+import { cn, getContrastingTextColor, getDarkerShade, getLighterShade, getThemeAwareBackgroundColor } from '@/lib/utils';
 import { X, Calendar, Bookmark, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
+import { useTheme } from 'next-themes';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
 
 interface DayDrawerProps {
@@ -16,6 +17,8 @@ interface DayDrawerProps {
 
 export function DayDrawer({ isOpen, onClose, day }: DayDrawerProps) {
   const [copied, setCopied] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const isDarkMode = resolvedTheme === 'dark';
 
   if (!day) return null;
 
@@ -94,31 +97,31 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
     }
   };
 
-  // Enhanced color styling with proper contrast
+  // Enhanced color styling with proper contrast and theme awareness
   const getColorStyles = () => {
     if (!day.color) {
       return {
         backgroundStyle: undefined,
-        textColor: undefined,
-        accentColor: undefined,
+        textColor: isDarkMode ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))',
+        accentColor: isDarkMode ? 'hsl(var(--primary))' : 'hsl(var(--primary))',
         cardClasses: ''
       };
     }
 
     const mainColor = day.color;
-    const textColor = getContrastingTextColor(mainColor);
-    const lighterShade = getLighterShade(mainColor, 0.85);
-    const darkerShade = getDarkerShade(mainColor, 0.1);
+    const textColor = getContrastingTextColor(mainColor, isDarkMode);
+    const themeAwareBg = getThemeAwareBackgroundColor(mainColor, isDarkMode, 0.15);
+    const borderOpacity = isDarkMode ? 0.4 : 0.3;
     
     return {
       backgroundStyle: {
-        background: `linear-gradient(135deg, ${lighterShade}, ${getLighterShade(mainColor, 0.9)})`,
-        borderColor: mainColor,
+        background: themeAwareBg,
+        borderColor: `${mainColor}${Math.round(borderOpacity * 255).toString(16).padStart(2, '0')}`,
         color: textColor
       },
-      textColor,
+      textColor: textColor,
       accentColor: mainColor,
-      darkerAccent: darkerShade,
+      darkerAccent: isDarkMode ? getLighterShade(mainColor, 0.2) : getDarkerShade(mainColor, 0.1),
       cardClasses: 'border-2'
     };
   };
@@ -127,20 +130,15 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent 
-        className="max-w-2xl max-h-[90vh] overflow-y-auto"
-        style={{
-          backgroundColor: colorStyles.backgroundStyle?.background ? 'transparent' : undefined
-        }}
-      >
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle 
-            className="flex items-center gap-2"
-            style={{ color: colorStyles.textColor }}
+            className="flex items-center gap-2 text-foreground"
+            style={{ color: day.color ? colorStyles.textColor : undefined }}
           >
             <Calendar 
               className="h-5 w-5" 
-              style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+              style={{ color: colorStyles.accentColor }}
             />
             {new Date(day.dateISO).toLocaleDateString('en-US', {
               weekday: 'long',
@@ -149,8 +147,11 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               day: 'numeric'
             })}
           </DialogTitle>
-          <DialogDescription
-            style={{ color: colorStyles.textColor, opacity: 0.8 }}
+          <DialogDescription 
+            className="text-muted-foreground"
+            style={{ 
+              color: day.color ? `${colorStyles.textColor}cc` : undefined 
+            }}
           >
             {getSegmentDisplay()} • Day {day.dayOfYear365}/365
           </DialogDescription>
@@ -172,14 +173,14 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                     )}
                     <div>
                       <CardTitle 
-                        className="text-2xl"
-                        style={{ color: colorStyles.textColor }}
+                        className="text-2xl text-foreground"
+                        style={day.color ? { color: colorStyles.textColor } : {}}
                       >
                         {day.daySignName}
                       </CardTitle>
                       <CardDescription 
-                        className="text-base"
-                        style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                        className="text-base text-muted-foreground"
+                        style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                       >
                         Day Sign {day.twentyDayWeekIndex + 1}/20
                       </CardDescription>
@@ -187,8 +188,8 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                   </div>
                   {day.archetype && (
                     <p 
-                      className="text-lg font-medium"
-                      style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                      className="text-lg font-medium text-primary"
+                      style={day.color ? { color: colorStyles.accentColor } : {}}
                     >
                       {day.archetype}
                     </p>
@@ -197,16 +198,16 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               ) : (
                 <div className="space-y-2">
                   <CardTitle 
-                    className="text-2xl"
-                    style={{ color: colorStyles.textColor }}
+                    className="text-2xl text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     {day.isMidpoint ? 'Axis Mundi' : 
                      day.isRestDay ? 'Rest Day' :
                      getDetoxDisplay() || 'Sacred Day'}
                   </CardTitle>
                   <CardDescription 
-                    className="text-base"
-                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                    className="text-base text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                   >
                     {day.isMidpoint ? 'Sacred Center Point' :
                      day.isRestDay ? 'Threshold Ritual' :
@@ -218,8 +219,8 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Detox Phase Display */}
               {getDetoxDisplay() && !day.isMidpoint && (
                 <div 
-                  className="text-lg font-semibold"
-                  style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                  className="text-lg font-semibold text-primary"
+                  style={day.color ? { color: colorStyles.accentColor } : {}}
                 >
                   {getDetoxDisplay()}
                 </div>
@@ -229,11 +230,11 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
             <CardContent className="space-y-4">
               {/* Day Type Description */}
               <div 
-                className="rounded-lg p-4"
-                style={{ 
-                  backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}15` : 'rgba(255, 255, 255, 0.1)',
+                className="rounded-lg p-4 bg-muted/50"
+                style={day.color ? { 
+                  backgroundColor: getThemeAwareBackgroundColor(day.color, isDarkMode, 0.08),
                   color: colorStyles.textColor 
-                }}
+                } : {}}
               >
                 <p className="text-sm leading-relaxed">
                   {getDayTypeDescription()}
@@ -244,13 +245,14 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {day.theme && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Today's Theme
                   </h3>
                   <p 
-                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                   >
                     {day.theme}
                   </p>
@@ -261,14 +263,14 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {(day.reflection || day.overrideDescription) && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Reflection
                   </h3>
                   <p 
-                    className="leading-relaxed"
-                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                    className="leading-relaxed text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                   >
                     {day.reflection || day.overrideDescription}
                   </p>
@@ -279,13 +281,14 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {day.overrideTitle && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Special Focus
                   </h3>
                   <p 
-                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                   >
                     {day.overrideTitle}
                   </p>
@@ -296,14 +299,14 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {(day.ritual || day.overrideRitual) && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Today's Ritual
                   </h3>
                   <p 
-                    className="leading-relaxed"
-                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                    className="leading-relaxed text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor, opacity: 0.8 } : {}}
                   >
                     {day.overrideRitual || day.ritual}
                   </p>
@@ -314,8 +317,8 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {day.keywords && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Keywords
                   </h3>
@@ -323,11 +326,11 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                     {day.keywords.split(',').map((keyword, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 rounded-full text-sm"
-                        style={{ 
-                          backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}20` : 'rgba(255, 255, 255, 0.2)',
+                        className="px-3 py-1 rounded-full text-sm bg-muted text-muted-foreground"
+                        style={day.color ? { 
+                          backgroundColor: getThemeAwareBackgroundColor(day.color, isDarkMode, 0.2),
                           color: colorStyles.textColor
-                        }}
+                        } : {}}
                       >
                         {keyword.trim()}
                       </span>
@@ -340,8 +343,8 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {day.overrideTags && (
                 <div className="space-y-2">
                   <h3 
-                    className="font-semibold"
-                    style={{ color: colorStyles.textColor }}
+                    className="font-semibold text-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
                   >
                     Tags
                   </h3>
@@ -349,11 +352,11 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                     {day.overrideTags.split(',').map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 rounded-full text-sm"
-                        style={{ 
-                          backgroundColor: colorStyles.accentColor ? `${colorStyles.accentColor}30` : 'rgba(255, 255, 255, 0.3)',
-                          color: colorStyles.accentColor || colorStyles.textColor
-                        }}
+                        className="px-3 py-1 rounded-full text-sm bg-primary/10 text-primary"
+                        style={day.color ? { 
+                          backgroundColor: `${colorStyles.accentColor}30`,
+                          color: colorStyles.accentColor
+                        } : {}}
                       >
                         {tag.trim()}
                       </span>
@@ -366,33 +369,39 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
           {/* Metadata */}
           <Card 
-            className={cn("border", colorStyles.cardClasses)}
-            style={{
-              backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}08` : 'rgba(255, 255, 255, 0.05)',
-              borderColor: colorStyles.accentColor ? `${colorStyles.accentColor}40` : 'rgba(255, 255, 255, 0.2)'
-            }}
+            className={cn("border bg-muted/50", day.color ? colorStyles.cardClasses : "")}
+            style={day.color ? {
+              backgroundColor: getThemeAwareBackgroundColor(day.color, isDarkMode, 0.05),
+              borderColor: `${colorStyles.accentColor}40`
+            } : {}}
           >
             <CardContent className="pt-6">
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
                   <span 
-                    className="font-medium"
-                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                    className="font-medium text-foreground"
+                    style={day.color ? { color: colorStyles.accentColor } : {}}
                   >
                     Segment:
                   </span>{' '}
-                  <span style={{ color: colorStyles.textColor }}>
+                  <span 
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
+                  >
                     {day.segment}
                   </span>
                 </div>
                 <div>
                   <span 
-                    className="font-medium"
-                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                    className="font-medium text-foreground"
+                    style={day.color ? { color: colorStyles.accentColor } : {}}
                   >
                     Segment Day:
                   </span>{' '}
-                  <span style={{ color: colorStyles.textColor }}>
+                  <span 
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
+                  >
                     {day.intraSegmentIndex}
                   </span>
                 </div>
@@ -400,23 +409,29 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                   <>
                     <div>
                       <span 
-                        className="font-medium"
-                        style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                        className="font-medium text-foreground"
+                        style={day.color ? { color: colorStyles.accentColor } : {}}
                       >
                         20-Day Cycle:
                       </span>{' '}
-                      <span style={{ color: colorStyles.textColor }}>
+                      <span 
+                        className="text-muted-foreground"
+                        style={day.color ? { color: colorStyles.textColor } : {}}
+                      >
                         {day.twentyDayWeekIndex + 1}/20
                       </span>
                     </div>
                     <div>
                       <span 
-                        className="font-medium"
-                        style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                        className="font-medium text-foreground"
+                        style={day.color ? { color: colorStyles.accentColor } : {}}
                       >
                         Day Sign Index:
                       </span>{' '}
-                      <span style={{ color: colorStyles.textColor }}>
+                      <span 
+                        className="text-muted-foreground"
+                        style={day.color ? { color: colorStyles.textColor } : {}}
+                      >
                         {day.twentyDayWeekIndex}
                       </span>
                     </div>
@@ -424,12 +439,15 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                 )}
                 <div>
                   <span 
-                    className="font-medium"
-                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                    className="font-medium text-foreground"
+                    style={day.color ? { color: colorStyles.accentColor } : {}}
                   >
                     Day Type:
                   </span>{' '}
-                  <span style={{ color: colorStyles.textColor }}>
+                  <span 
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
+                  >
                     {day.isMidpoint ? 'Midpoint' :
                      day.isRestDay ? 'Rest Day' :
                      day.isActiveDay ? 'Active Day' : 'Special Day'}
@@ -437,12 +455,15 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                 </div>
                 <div>
                   <span 
-                    className="font-medium"
-                    style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                    className="font-medium text-foreground"
+                    style={day.color ? { color: colorStyles.accentColor } : {}}
                   >
                     Detox Phase:
                   </span>{' '}
-                  <span style={{ color: colorStyles.textColor }}>
+                  <span 
+                    className="text-muted-foreground"
+                    style={day.color ? { color: colorStyles.textColor } : {}}
+                  >
                     {day.detoxPhase.replace('_', ' ')}
                   </span>
                 </div>
@@ -458,20 +479,20 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               onClick={handleCopyToJournal}
               disabled={copied}
               className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
-              style={{
-                borderColor: colorStyles.accentColor || 'hsl(var(--border))',
-                color: colorStyles.accentColor || 'hsl(var(--foreground))',
+              style={day.color ? {
+                borderColor: colorStyles.accentColor,
+                color: colorStyles.accentColor,
                 backgroundColor: copied 
-                  ? (colorStyles.accentColor ? `${colorStyles.accentColor}15` : 'hsl(var(--accent))')
+                  ? `${colorStyles.accentColor}15`
                   : 'transparent'
-              }}
+              } : {}}
               onMouseEnter={(e) => {
-                if (colorStyles.accentColor && !copied) {
+                if (colorStyles.accentColor && !copied && day.color) {
                   e.currentTarget.style.backgroundColor = `${colorStyles.accentColor}10`;
                 }
               }}
               onMouseLeave={(e) => {
-                if (colorStyles.accentColor && !copied) {
+                if (colorStyles.accentColor && !copied && day.color) {
                   e.currentTarget.style.backgroundColor = 'transparent';
                 }
               }}
@@ -491,18 +512,18 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
             <Button
               size="sm"
               className="flex items-center gap-2 transition-all duration-200 hover:scale-105"
-              style={{
-                backgroundColor: colorStyles.accentColor || 'hsl(var(--primary))',
-                color: colorStyles.accentColor ? getContrastingTextColor(colorStyles.accentColor) : 'hsl(var(--primary-foreground))',
-                borderColor: colorStyles.accentColor || 'hsl(var(--primary))'
-              }}
+              style={day.color ? {
+                backgroundColor: colorStyles.accentColor,
+                color: getContrastingTextColor(colorStyles.accentColor, isDarkMode),
+                borderColor: colorStyles.accentColor
+              } : {}}
               onMouseEnter={(e) => {
-                if (colorStyles.accentColor) {
-                  e.currentTarget.style.backgroundColor = getDarkerShade(colorStyles.accentColor, 0.1);
+                if (colorStyles.accentColor && day.color) {
+                  e.currentTarget.style.backgroundColor = colorStyles.darkerAccent;
                 }
               }}
               onMouseLeave={(e) => {
-                if (colorStyles.accentColor) {
+                if (colorStyles.accentColor && day.color) {
                   e.currentTarget.style.backgroundColor = colorStyles.accentColor;
                 }
               }}

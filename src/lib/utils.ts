@@ -67,7 +67,7 @@ export function getContrastRatio(rgb1: { r: number; g: number; b: number }, rgb2
   return (brightest + 0.05) / (darkest + 0.05);
 }
 
-export function getContrastingTextColor(backgroundColor: string): string {
+export function getContrastingTextColor(backgroundColor: string, isDarkMode?: boolean): string {
   // Handle different color formats
   let rgb: { r: number; g: number; b: number } | null = null;
   
@@ -109,14 +109,46 @@ export function getContrastingTextColor(backgroundColor: string): string {
     }
   }
   
-  if (!rgb) return '#ffffff'; // Default to white if parsing fails
+  if (!rgb) {
+    // Fallback based on theme mode
+    return isDarkMode ? '#e5e5e5' : '#1a1a1a';
+  }
   
   // Calculate luminance
   const luminance = getLuminance(rgb.r, rgb.g, rgb.b);
   
-  // Return white for dark backgrounds, dark for light backgrounds
-  // Using WCAG standards: luminance > 0.5 is considered light
-  return luminance > 0.5 ? '#1a1a1a' : '#ffffff';
+  // More conservative approach for better contrast
+  // For dark mode, prefer lighter text; for light mode, prefer darker text
+  if (isDarkMode) {
+    return luminance > 0.3 ? '#1a1a1a' : '#f5f5f5';
+  } else {
+    return luminance > 0.6 ? '#1a1a1a' : '#ffffff';
+  }
+}
+
+// Add theme-aware background color function
+export function getThemeAwareBackgroundColor(baseColor: string, isDarkMode: boolean, opacity: number = 0.1): string {
+  if (!baseColor) {
+    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.5})` : `rgba(0, 0, 0, ${opacity})`;
+  }
+  
+  const rgb = hexToRgb(baseColor);
+  if (!rgb) {
+    return isDarkMode ? `rgba(255, 255, 255, ${opacity * 0.5})` : `rgba(0, 0, 0, ${opacity})`;
+  }
+  
+  // In dark mode, use lighter variations of the color
+  // In light mode, use the color as-is but with low opacity
+  if (isDarkMode) {
+    const lighterRgb = {
+      r: Math.min(255, rgb.r + 80),
+      g: Math.min(255, rgb.g + 80),
+      b: Math.min(255, rgb.b + 80)
+    };
+    return `rgba(${lighterRgb.r}, ${lighterRgb.g}, ${lighterRgb.b}, ${opacity})`;
+  } else {
+    return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${opacity})`;
+  }
 }
 
 export function getDarkerShade(color: string, amount: number = 0.3): string {
