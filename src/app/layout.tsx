@@ -3,15 +3,18 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeLoadHandler } from "@/components/ThemeLoadHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -50,6 +53,7 @@ export default function RootLayout({
             enableSystem={true}
             disableTransitionOnChange
           >
+            <ThemeLoadHandler />
             {children}
           </ThemeProvider>
         </ClerkProvider>

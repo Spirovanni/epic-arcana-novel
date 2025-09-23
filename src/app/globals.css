@@ -5,18 +5,33 @@
 /* Base styles that work with next-themes */
 html {
   scroll-behavior: smooth;
+  /* Prevent flash of unstyled content */
+  visibility: visible;
+}
+
+/* Reduce flash during initial load */
+html:not(.theme-loaded) * {
+  transition: none !important;
 }
 
 body {
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   font-feature-settings: "rlig" 1, "calt" 1;
+  /* Prevent font swap flash */
+  font-display: swap;
+  /* Ensure consistent text rendering */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth transitions for theme changes */
-* {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+/* Smooth transitions for theme changes - only apply after initial load */
+@media (prefers-reduced-motion: no-preference) {
+  .theme-loaded * {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
 }
 
 /* Focus styles */

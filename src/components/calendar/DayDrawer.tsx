@@ -3,7 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { cn } from '@/lib/utils';
+import { cn, getContrastingTextColor, getDarkerShade, getLighterShade } from '@/lib/utils';
 import { X, Calendar, Bookmark, Copy, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
@@ -94,9 +94,36 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
     }
   };
 
-  const backgroundStyle = day.color ? {
-    background: `linear-gradient(135deg, ${day.color}10, ${day.color}20)`
-  } : undefined;
+  // Enhanced color styling with proper contrast
+  const getColorStyles = () => {
+    if (!day.color) {
+      return {
+        backgroundStyle: undefined,
+        textColor: undefined,
+        accentColor: undefined,
+        cardClasses: ''
+      };
+    }
+
+    const mainColor = day.color;
+    const textColor = getContrastingTextColor(mainColor);
+    const lighterShade = getLighterShade(mainColor, 0.85);
+    const darkerShade = getDarkerShade(mainColor, 0.1);
+    
+    return {
+      backgroundStyle: {
+        background: `linear-gradient(135deg, ${lighterShade}, ${getLighterShade(mainColor, 0.9)})`,
+        borderColor: mainColor,
+        color: textColor
+      },
+      textColor,
+      accentColor: mainColor,
+      darkerAccent: darkerShade,
+      cardClasses: 'border-2'
+    };
+  };
+
+  const colorStyles = getColorStyles();
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -118,7 +145,10 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
         <div className="space-y-6">
           {/* Main Day Info Card */}
-          <Card className="relative overflow-hidden" style={backgroundStyle}>
+          <Card 
+            className={cn("relative overflow-hidden", colorStyles.cardClasses)} 
+            style={colorStyles.backgroundStyle}
+          >
             <CardHeader className="text-center">
               {/* Day Sign or Special Day */}
               {day.isActiveDay && day.daySignName ? (
@@ -128,28 +158,43 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                       <span className="text-4xl">{day.glyph}</span>
                     )}
                     <div>
-                      <CardTitle className="text-2xl">
+                      <CardTitle 
+                        className="text-2xl"
+                        style={{ color: colorStyles.textColor }}
+                      >
                         {day.daySignName}
                       </CardTitle>
-                      <CardDescription className="text-base">
+                      <CardDescription 
+                        className="text-base"
+                        style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                      >
                         Day Sign {day.twentyDayWeekIndex + 1}/20
                       </CardDescription>
                     </div>
                   </div>
                   {day.archetype && (
-                    <p className="text-lg font-medium text-primary">
+                    <p 
+                      className="text-lg font-medium"
+                      style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                    >
                       {day.archetype}
                     </p>
                   )}
                 </div>
               ) : (
                 <div className="space-y-2">
-                  <CardTitle className="text-2xl">
+                  <CardTitle 
+                    className="text-2xl"
+                    style={{ color: colorStyles.textColor }}
+                  >
                     {day.isMidpoint ? 'Axis Mundi' : 
                      day.isRestDay ? 'Rest Day' :
                      getDetoxDisplay() || 'Sacred Day'}
                   </CardTitle>
-                  <CardDescription className="text-base">
+                  <CardDescription 
+                    className="text-base"
+                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                  >
                     {day.isMidpoint ? 'Sacred Center Point' :
                      day.isRestDay ? 'Threshold Ritual' :
                      'Detox Phase'}
@@ -159,7 +204,10 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
               {/* Detox Phase Display */}
               {getDetoxDisplay() && !day.isMidpoint && (
-                <div className="text-lg font-semibold text-primary">
+                <div 
+                  className="text-lg font-semibold"
+                  style={{ color: colorStyles.accentColor || colorStyles.textColor }}
+                >
                   {getDetoxDisplay()}
                 </div>
               )}
@@ -167,7 +215,13 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
             <CardContent className="space-y-4">
               {/* Day Type Description */}
-              <div className="bg-background/50 rounded-lg p-4">
+              <div 
+                className="rounded-lg p-4"
+                style={{ 
+                  backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}15` : 'rgba(255, 255, 255, 0.1)',
+                  color: colorStyles.textColor 
+                }}
+              >
                 <p className="text-sm leading-relaxed">
                   {getDayTypeDescription()}
                 </p>
@@ -176,8 +230,15 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Theme */}
               {day.theme && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Today's Theme</h3>
-                  <p className="text-muted-foreground">
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Today's Theme
+                  </h3>
+                  <p 
+                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                  >
                     {day.theme}
                   </p>
                 </div>
@@ -186,8 +247,16 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Reflection */}
               {(day.reflection || day.overrideDescription) && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Reflection</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Reflection
+                  </h3>
+                  <p 
+                    className="leading-relaxed"
+                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                  >
                     {day.reflection || day.overrideDescription}
                   </p>
                 </div>
@@ -196,8 +265,15 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Special Title for Overrides */}
               {day.overrideTitle && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Special Focus</h3>
-                  <p className="text-muted-foreground">
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Special Focus
+                  </h3>
+                  <p 
+                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                  >
                     {day.overrideTitle}
                   </p>
                 </div>
@@ -206,8 +282,16 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Ritual */}
               {(day.ritual || day.overrideRitual) && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Today's Ritual</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Today's Ritual
+                  </h3>
+                  <p 
+                    className="leading-relaxed"
+                    style={{ color: colorStyles.textColor, opacity: 0.8 }}
+                  >
                     {day.overrideRitual || day.ritual}
                   </p>
                 </div>
@@ -216,12 +300,21 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Keywords */}
               {day.keywords && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Keywords</h3>
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Keywords
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {day.keywords.split(',').map((keyword, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-muted rounded-full text-sm"
+                        className="px-3 py-1 rounded-full text-sm"
+                        style={{ 
+                          backgroundColor: colorStyles.textColor ? `${colorStyles.textColor}20` : 'rgba(255, 255, 255, 0.2)',
+                          color: colorStyles.textColor
+                        }}
                       >
                         {keyword.trim()}
                       </span>
@@ -233,12 +326,21 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
               {/* Tags for overrides */}
               {day.overrideTags && (
                 <div className="space-y-2">
-                  <h3 className="font-semibold">Tags</h3>
+                  <h3 
+                    className="font-semibold"
+                    style={{ color: colorStyles.textColor }}
+                  >
+                    Tags
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {day.overrideTags.split(',').map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                        className="px-3 py-1 rounded-full text-sm"
+                        style={{ 
+                          backgroundColor: colorStyles.accentColor ? `${colorStyles.accentColor}30` : 'rgba(255, 255, 255, 0.3)',
+                          color: colorStyles.accentColor || colorStyles.textColor
+                        }}
                       >
                         {tag.trim()}
                       </span>
