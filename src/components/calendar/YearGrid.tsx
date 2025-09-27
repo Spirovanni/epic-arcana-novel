@@ -22,6 +22,76 @@ if (typeof window !== 'undefined') {
   clearChapterColorCache();
 }
 
+// Client-safe calendar utility functions
+const SEGMENT_BOUNDARIES = {
+  Q1: { start: 1, end: 81 },
+  Q2: { start: 82, end: 162 },
+  MID_A: { start: 163, end: 182 },
+  MIDPOINT: { start: 183, end: 183 },
+  MID_B: { start: 184, end: 203 },
+  Q3: { start: 204, end: 284 },
+  Q4: { start: 285, end: 365 }
+} as const;
+
+function resolveSegmentClient(dayOfYear365: number) {
+  for (const [segment, bounds] of Object.entries(SEGMENT_BOUNDARIES)) {
+    if (dayOfYear365 >= bounds.start && dayOfYear365 <= bounds.end) {
+      return {
+        segment: segment as any,
+        intraSegmentIndex: dayOfYear365 - bounds.start + 1
+      };
+    }
+  }
+  return { segment: 'Q1' as any, intraSegmentIndex: 1 };
+}
+
+function isRestDayClient(segment: string, intraSegmentIndex: number): boolean {
+  return ['Q1', 'Q2', 'Q3', 'Q4'].includes(segment) && intraSegmentIndex === 81;
+}
+
+function isMidpointClient(segment: string): boolean {
+  return segment === 'MIDPOINT';
+}
+
+function isActiveDayClient(segment: string, intraSegmentIndex: number): boolean {
+  if (isMidpointClient(segment) || isRestDayClient(segment, intraSegmentIndex)) {
+    return false;
+  }
+  return true;
+}
+
+function getTwentyDayWeekIndexClient(dayOfYear365: number): number {
+  let activeIndex = 0;
+  
+  for (let day = 1; day < dayOfYear365; day++) {
+    const { segment, intraSegmentIndex } = resolveSegmentClient(day);
+    if (isActiveDayClient(segment, intraSegmentIndex)) {
+      activeIndex++;
+    }
+  }
+  
+  // Add current day if it's active
+  const { segment, intraSegmentIndex } = resolveSegmentClient(dayOfYear365);
+  if (isActiveDayClient(segment, intraSegmentIndex)) {
+    activeIndex++;
+  }
+  
+  return (activeIndex - 1) % 20;
+}
+
+function getDetoxPhaseClient(segment: string) {
+  switch (segment) {
+    case 'MID_A':
+      return 'EXILE_1_20';
+    case 'MIDPOINT':
+      return 'MIDPOINT';
+    case 'MID_B':
+      return 'RENEWAL_1_20';
+    default:
+      return 'NONE';
+  }
+}
+
 interface YearGridProps {
   year?: number;
   className?: string;
@@ -41,7 +111,7 @@ function GridCell({ day, isSelected, isToday, onClick }: GridCellProps) {
     let baseClasses = "relative w-6 h-6 border border-border/20 cursor-pointer transition-all duration-200 hover:scale-110 hover:z-10 focus:scale-110 focus:z-10 focus:outline-none focus:ring-2 focus:ring-primary";
     
     if (day.isMidpoint) {
-      return cn(baseClasses, "bg-gradient-to-br from-purple-500 to-gold-500 rounded-full shadow-md");
+      return cn(baseClasses, "bg-gradient-to-br from-purple-500 via-gold-500 to-emerald-500 rounded-full shadow-md");
     }
     
     if (day.isRestDay) {
@@ -207,35 +277,25 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
       const fallbackData: HfCalendarResult[] = [];
       for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
         const date = new Date(year, 0, dayOfYear - 1);
-        const segment = dayOfYear <= 81 ? 'Q1' : 
-                      dayOfYear <= 162 ? 'Q2' : 
-                      dayOfYear <= 182 ? 'MID_A' : 
-                      dayOfYear === 183 ? 'MIDPOINT' : 
-                      dayOfYear <= 203 ? 'MID_B' : 
-                      dayOfYear <= 284 ? 'Q3' : 'Q4';
+        const { segment, intraSegmentIndex } = resolveSegmentClient(dayOfYear);
         
-        const intraSegmentIndex = dayOfYear <= 81 ? dayOfYear : 
-                                 dayOfYear <= 162 ? dayOfYear - 81 : 
-                                 dayOfYear <= 203 ? dayOfYear - 162 : 
-                                 dayOfYear <= 284 ? dayOfYear - 203 : dayOfYear - 284;
-        
-        const isRestDay = segment !== 'MIDPOINT' && (intraSegmentIndex === 81 || (segment.startsWith('MID') && (intraSegmentIndex === 20 || intraSegmentIndex === 41)));
-        const isMidpoint = segment === 'MIDPOINT';
-        const isActiveDay = !isRestDay && !isMidpoint;
+        const isRest = isRestDayClient(segment, intraSegmentIndex);
+        const isMid = isMidpointClient(segment);
+        const isActive = isActiveDayClient(segment, intraSegmentIndex);
         
         fallbackData.push({
           dateISO: date.toISOString().split('T')[0],
           dayOfYear365: dayOfYear,
-          segment,
+          segment: segment as any,
           intraSegmentIndex,
-          isRestDay,
-          isMidpoint,
-          isActiveDay,
-          twentyDayWeekIndex: (dayOfYear - 1) % 20,
-          detoxPhase: segment === 'MID_A' ? 'EXILE_1_20' : segment === 'MIDPOINT' ? 'MIDPOINT' : segment === 'MID_B' ? 'RENEWAL_1_20' : 'NONE',
-          daySignName: isActiveDay ? `Day ${(dayOfYear - 1) % 20 + 1}` : undefined,
-          color: isActiveDay ? getBookColorForDay(dayOfYear) : undefined,
-          theme: isActiveDay ? 'Sacred Calendar Day' : isMidpoint ? 'Sacred Center' : 'Rest Day'
+          isRestDay: isRest,
+          isMidpoint: isMid,
+          isActiveDay: isActive,
+          twentyDayWeekIndex: getTwentyDayWeekIndexClient(dayOfYear),
+          detoxPhase: getDetoxPhaseClient(segment) as any,
+          daySignName: isActive ? `Day ${getTwentyDayWeekIndexClient(dayOfYear) + 1}` : undefined,
+          color: isActive ? getBookColorForDay(dayOfYear) : undefined,
+          theme: isActive ? 'Sacred Calendar Day' : isMid ? 'Sacred Center' : 'Rest Day'
         });
       }
       return fallbackData;
