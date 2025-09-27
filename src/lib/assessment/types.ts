@@ -5,7 +5,17 @@ export const ForcedChoiceOptionSchema = z.object({
   label: z.string(),
   keys: z.object({
     dimensions: z.record(z.string(), z.number()),
-    types: z.record(z.enum(['1', '2', '3', '4', '5', '6', '7', '8', '9']), z.number()),
+    types: z.object({
+      '1': z.number().optional(),
+      '2': z.number().optional(),
+      '3': z.number().optional(),
+      '4': z.number().optional(),
+      '5': z.number().optional(),
+      '6': z.number().optional(),
+      '7': z.number().optional(),
+      '8': z.number().optional(),
+      '9': z.number().optional(),
+    }),
     instincts: z.object({
       SP: z.number().optional(),
       SO: z.number().optional(),
@@ -31,7 +41,17 @@ export const LikertItemSchema = z.object({
   scale: z.tuple([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
   keys: z.object({
     dimensions: z.record(z.string(), z.number()),
-    types: z.record(z.enum(['1', '2', '3', '4', '5', '6', '7', '8', '9']), z.number()),
+    types: z.object({
+      '1': z.number().optional(),
+      '2': z.number().optional(),
+      '3': z.number().optional(),
+      '4': z.number().optional(),
+      '5': z.number().optional(),
+      '6': z.number().optional(),
+      '7': z.number().optional(),
+      '8': z.number().optional(),
+      '9': z.number().optional(),
+    }),
     instincts: z.object({
       SP: z.number().optional(),
       SO: z.number().optional(),

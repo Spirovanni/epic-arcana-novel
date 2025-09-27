@@ -10,7 +10,7 @@ const sql = postgres(connectionString);
 const db = drizzle(sql);
 
 const ImportDataSchema = z.object({
-  settings: z.record(z.string()).optional(),
+  settings: z.record(z.string(), z.string()).optional(),
   daySigns: z.array(z.object({
     index0: z.number().min(0).max(19),
     name: z.string(),
@@ -216,7 +216,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { 
           error: 'Validation error',
-          details: error.errors
+          details: error.issues
         },
         { status: 400 }
       );
