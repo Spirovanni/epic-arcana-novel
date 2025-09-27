@@ -12,6 +12,7 @@ import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Calendar, Book, Users, Clock, BarChart3, Settings, Map, ChevronDown, RefreshCw, TrendingUp, Target, Brain, Palette, FileText, Database, Sparkles, Zap, Globe, User } from 'lucide-react';
 import { BooksDropdown } from './BooksDropdown';
 import { getBooksDropdownItems } from './BooksDropdownData';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
@@ -228,7 +229,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-[#0b1220]/90 border-b border-white/10 shadow-lg shadow-black/20">
+    <header className="sticky top-0 z-40 w-full backdrop-blur supports-[backdrop-filter]:bg-background/90 border-b border-border/20 shadow-lg shadow-black/20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex h-20 items-center justify-between">
         {/* Left brand */}
         <div className="flex items-center">
@@ -245,12 +246,12 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
         </div>
 
         {/* Center nav */}
-        <nav className="hidden lg:flex items-center gap-1 text-sm text-slate-300 font-medium">
+        <nav className="hidden lg:flex items-center gap-1 text-sm text-muted-foreground font-medium">
           {navItems.map((item, index) => (
             item.isDropdown ? (
               <DropdownMenuPrimitive.Root key={index}>
-                <DropdownMenuPrimitive.Trigger className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 group ${
-                  item.dropdown && isDropdownActive(item.dropdown) ? 'text-white bg-white/5' : ''
+                <DropdownMenuPrimitive.Trigger className={`px-4 py-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 tracking-wide flex items-center gap-2 group ${
+                  item.dropdown && isDropdownActive(item.dropdown) ? 'text-foreground bg-accent' : ''
                 }`}>
                   {item.icon}
                   {item.label}
@@ -259,24 +260,24 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                 <DropdownMenuPrimitive.Portal>
                   <DropdownMenuPrimitive.Content 
                     align="start" 
-                    className="w-64 bg-[#1a1a2e]/95 backdrop-blur border border-white/10 rounded-xl shadow-xl shadow-black/30 p-2 animate-in fade-in-0 zoom-in-95 duration-200"
+                    className="w-64 bg-popover/95 backdrop-blur border border-border rounded-xl shadow-xl p-2 animate-in fade-in-0 zoom-in-95 duration-200"
                     sideOffset={8}
                   >
                     {item.dropdown?.map((dropdownItem, dropdownIndex) => (
                       <DropdownMenuPrimitive.Item key={dropdownIndex} asChild>
                         <Link
                           href={dropdownItem.href}
-                          className={`flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 cursor-pointer group/item ${
-                            isActivePath(dropdownItem.href) ? 'text-white bg-white/10 shadow-md' : 'text-slate-300 hover:text-white'
+                          className={`flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-accent transition-all duration-200 cursor-pointer group/item ${
+                            isActivePath(dropdownItem.href) ? 'text-foreground bg-accent shadow-md' : 'text-muted-foreground hover:text-foreground'
                           }`}
                         >
-                          <div className="flex-shrink-0 text-indigo-400 group-hover/item:text-indigo-300">
+                          <div className="flex-shrink-0 text-primary group-hover/item:text-primary/80">
                             {dropdownItem.icon}
                           </div>
                           <div className="flex flex-col">
                             <span className="font-medium text-sm">{dropdownItem.label}</span>
                             {dropdownItem.description && (
-                              <span className="text-xs text-slate-400 group-hover/item:text-slate-300">{dropdownItem.description}</span>
+                              <span className="text-xs text-muted-foreground group-hover/item:text-muted-foreground/80">{dropdownItem.description}</span>
                             )}
                           </div>
                         </Link>
@@ -293,8 +294,8 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               <Link
                 key={item.href}
                 href={item.href || '#'}
-                className={`px-4 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-all duration-200 tracking-wide flex items-center gap-2 ${
-                  item.href && isActivePath(item.href) ? 'text-white bg-white/5' : ''
+                className={`px-4 py-2 rounded-lg hover:bg-accent hover:text-accent-foreground transition-all duration-200 tracking-wide flex items-center gap-2 ${
+                  item.href && isActivePath(item.href) ? 'text-foreground bg-accent' : ''
                 }`}
               >
                 {item.icon}
@@ -306,6 +307,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
 
         {/* Right auth section */}
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           {isSignedIn ? (
             <>
               {/* Page-specific actions */}
@@ -355,7 +357,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               <UserButton 
                 appearance={{
                   elements: {
-                    avatarBox: "w-10 h-10 rounded-full border-2 border-white/20 hover:border-indigo-400/60 transition-all duration-300 shadow-lg hover:shadow-indigo-500/20"
+                    avatarBox: "w-10 h-10 rounded-full border-2 border-border hover:border-primary/60 transition-all duration-300 shadow-lg hover:shadow-primary/20"
                   }
                 }}
               />
@@ -363,7 +365,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           ) : (
             <>
               <SignInButton mode="modal">
-                <button className="hidden sm:block text-sm text-slate-300 hover:text-white/90 transition-colors font-medium tracking-wide px-3 py-2 rounded-lg hover:bg-white/5">
+                <button className="hidden sm:block text-sm text-muted-foreground hover:text-foreground transition-colors font-medium tracking-wide px-3 py-2 rounded-lg hover:bg-accent">
                   Sign In
                 </button>
               </SignInButton>
@@ -388,7 +390,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2.5 rounded-lg text-slate-300 hover:text-white hover:bg-white/5 transition-all duration-200"
+            className="lg:hidden p-2.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-accent transition-all duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -405,7 +407,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
 
       {/* Mobile menu */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/10 bg-[#0b1220]/95 backdrop-blur shadow-xl">
+        <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur shadow-xl">
           <div className="px-4 py-6 space-y-6">
             <nav className="space-y-3">
               {/* Regular nav items - exclude Books links since we handle them separately */}
@@ -415,12 +417,12 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                   href={item.href!}
                   className={`block px-4 py-3 rounded-lg transition-all duration-200 flex items-center gap-3 ${
                     isActivePath(item.href!) 
-                      ? 'text-white bg-white/10 shadow-md' 
-                      : 'text-slate-300 hover:text-white hover:bg-white/5'
+                      ? 'text-foreground bg-accent shadow-md' 
+                      : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                   }`}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  <div className="text-indigo-400">{item.icon}</div>
+                  <div className="text-primary">{item.icon}</div>
                   <span className="font-medium">{item.label}</span>
                 </Link>
               ))}
@@ -428,7 +430,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               {/* Books dropdown - show for any variant that has Books link */}
               {navItems.some(item => item.href === '/books') && (
                 <div className="space-y-2">
-                  <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                  <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                     Books
                   </div>
                   {getBooksDropdownItems().map((bookItem) => (
@@ -437,17 +439,17 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                       href={bookItem.href}
                       className={`block px-4 py-3 ml-4 rounded-lg transition-all duration-200 flex items-center gap-3 ${
                         isActivePath(bookItem.href) 
-                          ? 'text-white bg-white/10 shadow-md' 
-                          : 'text-slate-300 hover:text-white hover:bg-white/5'
+                          ? 'text-foreground bg-accent shadow-md' 
+                          : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <div className="text-indigo-400 text-sm">{bookItem.icon}</div>
+                      <div className="text-primary text-sm">{bookItem.icon}</div>
                       <div className="flex flex-col">
                         <span className="font-medium text-sm">
                           {bookItem.bookNumber ? `Book ${bookItem.bookNumber}: ${bookItem.label}` : bookItem.label}
                         </span>
-                        <span className="text-xs text-slate-400">{bookItem.description}</span>
+                        <span className="text-xs text-muted-foreground">{bookItem.description}</span>
                       </div>
                     </Link>
                   ))}
@@ -457,7 +459,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               {/* Dropdown sections */}
               {navItems.filter(item => item.isDropdown).map((item, index) => (
                 <div key={index} className="space-y-2">
-                  <div className="px-4 py-2 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                  <div className="px-4 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
                     {item.label}
                   </div>
                   {item.dropdown?.map((dropdownItem) => (
@@ -466,16 +468,16 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
                       href={dropdownItem.href}
                       className={`block px-4 py-3 ml-4 rounded-lg transition-all duration-200 flex items-center gap-3 ${
                         isActivePath(dropdownItem.href) 
-                          ? 'text-white bg-white/10 shadow-md' 
-                          : 'text-slate-300 hover:text-white hover:bg-white/5'
+                          ? 'text-foreground bg-accent shadow-md' 
+                          : 'text-muted-foreground hover:text-foreground hover:bg-accent'
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <div className="text-indigo-400 text-sm">{dropdownItem.icon}</div>
+                      <div className="text-primary text-sm">{dropdownItem.icon}</div>
                       <div className="flex flex-col">
                         <span className="font-medium text-sm">{dropdownItem.label}</span>
                         {dropdownItem.description && (
-                          <span className="text-xs text-slate-400">{dropdownItem.description}</span>
+                          <span className="text-xs text-muted-foreground">{dropdownItem.description}</span>
                         )}
                       </div>
                     </Link>
@@ -484,7 +486,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               ))}
             </nav>
             
-            <div className="pt-4 border-t border-white/10">
+            <div className="pt-4 border-t border-border">
               {isSignedIn ? (
                 <div className="space-y-3">
                   {pageActions.map((action, index) => (
@@ -533,7 +535,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               ) : (
                 <div className="space-y-3">
                   <SignInButton mode="modal">
-                    <button className="w-full text-slate-300 hover:text-white/90 transition-colors py-3 px-4 rounded-lg hover:bg-white/5 font-medium">
+                    <button className="w-full text-muted-foreground hover:text-foreground transition-colors py-3 px-4 rounded-lg hover:bg-accent font-medium">
                       Sign In
                     </button>
                   </SignInButton>
