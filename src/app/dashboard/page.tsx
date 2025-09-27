@@ -82,8 +82,8 @@ export default function DashboardPage() {
       <DashboardLayout title="Dashboard" subtitle="Loading your profile...">
         <div className="flex items-center justify-center min-h-[50vh]">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-            <p className="text-gray-400">Loading your dashboard...</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Loading your dashboard...</p>
           </div>
         </div>
       </DashboardLayout>
@@ -98,12 +98,12 @@ export default function DashboardPage() {
           <div className="text-center space-y-4 mb-8">
             <div className="flex items-center justify-center gap-4">
               <div
-                className="w-12 h-12 rounded-full border-2 border-white/20 shadow-lg"
+                className="w-12 h-12 rounded-full border-2 border-border shadow-lg"
                 style={{ backgroundColor: latestResult.color.rgb_hex }}
               />
               <div className="text-left">
-                <div className="text-purple-300 font-semibold text-lg">{latestResult.ea_id}</div>
-                <div className="text-slate-400 text-sm">Chapter {latestResult.chapter} • {latestResult.profile.family}</div>
+                <div className="text-primary font-semibold text-lg">{latestResult.ea_id}</div>
+                <div className="text-muted-foreground text-sm">Chapter {latestResult.chapter} • {latestResult.profile.family}</div>
               </div>
             </div>
           </div>
@@ -112,34 +112,34 @@ export default function DashboardPage() {
         {!welcome.hasResult ? (
           /* No Assessment State */
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 transition-colors">
+            <Card className="border-primary/30 hover:border-primary/50 transition-colors">
               <CardHeader>
-                <CardTitle className="text-purple-300 flex items-center gap-2">
+                <CardTitle className="text-primary flex items-center gap-2">
                   🔮 Take Assessment
                 </CardTitle>
-                <CardDescription className="text-gray-400">
+                <CardDescription>
                   Discover your unique Epic Arcana personality profile
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4">
                   Journey through mystical Laurasia with 54 story-driven questions to unlock one of 360 personality archetypes.
                 </p>
                 <AssessmentButton variant="mystical" className="w-full" />
               </CardContent>
             </Card>
             
-            <Card className="bg-slate-800/50 border-blue-500/30 hover:border-blue-400/50 transition-colors">
+            <Card className="border-blue-500/30 hover:border-blue-400/50 transition-colors">
               <CardHeader>
-                <CardTitle className="text-blue-300 flex items-center gap-2">
+                <CardTitle className="text-blue-600 dark:text-blue-400 flex items-center gap-2">
                   ⚡ Quick Preview
                 </CardTitle>
-                <CardDescription className="text-gray-400">
+                <CardDescription>
                   Get a taste with just 3 story scenarios
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4">
                   Experience the Epic Arcana assessment style with a shortened version perfect for first-time explorers.
                 </p>
                 <AssessmentButton 
@@ -152,17 +152,17 @@ export default function DashboardPage() {
               </CardContent>
             </Card>
             
-            <Card className="bg-slate-800/50 border-green-500/30 hover:border-green-400/50 transition-colors">
+            <Card className="border-green-500/30 hover:border-green-400/50 transition-colors">
               <CardHeader>
-                <CardTitle className="text-green-300 flex items-center gap-2">
+                <CardTitle className="text-green-600 dark:text-green-400 flex items-center gap-2">
                   📚 Learn More
                 </CardTitle>
-                <CardDescription className="text-gray-400">
+                <CardDescription>
                   Understand the Human Framework
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-300 text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4">
                   Explore the science and methodology behind Epic Arcana personality profiling.
                 </p>
                 <Button variant="outline" className="w-full border-green-500/50 hover:bg-green-500/10">
@@ -176,34 +176,34 @@ export default function DashboardPage() {
           <>
             {/* Quick Stats */}
             <div className="grid md:grid-cols-4 gap-4">
-              <Card className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-purple-500/30">
+              <Card className="bg-gradient-to-r from-primary/20 to-blue-600/20 border-primary/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-purple-300">{latestResult?.dominant_type || 'N/A'}</div>
-                  <div className="text-sm text-gray-400">Dominant Type</div>
+                  <div className="text-2xl font-bold text-primary">{latestResult?.dominant_type || 'N/A'}</div>
+                  <div className="text-sm text-muted-foreground">Dominant Type</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-green-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-green-300">
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">
                     {latestResult ? Object.entries(latestResult.instincts)
                       .sort(([,a], [,b]) => b - a)[0][0] : 'N/A'}
                   </div>
-                  <div className="text-sm text-gray-400">Primary Instinct</div>
+                  <div className="text-sm text-muted-foreground">Primary Instinct</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-blue-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-300">{latestResult ? latestResult.wing_bin + 1 : 'N/A'}</div>
-                  <div className="text-sm text-gray-400">Wing Pattern</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{latestResult ? latestResult.wing_bin + 1 : 'N/A'}</div>
+                  <div className="text-sm text-muted-foreground">Wing Pattern</div>
                 </CardContent>
               </Card>
               
               <Card className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border-amber-500/30">
                 <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-amber-300">{latestResult ? latestResult.development_bin + 1 : 'N/A'}</div>
-                  <div className="text-sm text-gray-400">Development Stage</div>
+                  <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">{latestResult ? latestResult.development_bin + 1 : 'N/A'}</div>
+                  <div className="text-sm text-muted-foreground">Development Stage</div>
                 </CardContent>
               </Card>
             </div>
@@ -211,20 +211,20 @@ export default function DashboardPage() {
             {/* Action Cards */}
             <div className="grid md:grid-cols-3 gap-6">
               <Link href="/dashboard/strengths">
-                <Card className="bg-slate-800/50 border-green-500/30 hover:border-green-400/50 transition-colors cursor-pointer">
+                <Card className="border-green-500/30 hover:border-green-400/50 transition-colors cursor-pointer">
                   <CardHeader>
-                    <CardTitle className="text-green-300 flex items-center gap-2">
+                    <CardTitle className="text-green-600 dark:text-green-400 flex items-center gap-2">
                       💪 Strengths Analysis
                     </CardTitle>
-                    <CardDescription className="text-gray-400">
+                    <CardDescription>
                       Explore your core strengths and talents
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Core Strengths</span>
-                        <span className="text-green-300">Identified</span>
+                        <span className="text-muted-foreground">Core Strengths</span>
+                        <span className="text-green-600 dark:text-green-400">Identified</span>
                       </div>
                       <Progress value={85} className="h-2" />
                     </div>
@@ -233,20 +233,20 @@ export default function DashboardPage() {
               </Link>
 
               <Link href="/dashboard/growth">
-                <Card className="bg-slate-800/50 border-yellow-500/30 hover:border-yellow-400/50 transition-colors cursor-pointer">
+                <Card className="border-yellow-500/30 hover:border-yellow-400/50 transition-colors cursor-pointer">
                   <CardHeader>
-                    <CardTitle className="text-yellow-300 flex items-center gap-2">
+                    <CardTitle className="text-yellow-600 dark:text-yellow-400 flex items-center gap-2">
                       🌱 Growth Areas
                     </CardTitle>
-                    <CardDescription className="text-gray-400">
+                    <CardDescription>
                       Development opportunities and improvement areas
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Development Plan</span>
-                        <span className="text-yellow-300">Ready</span>
+                        <span className="text-muted-foreground">Development Plan</span>
+                        <span className="text-yellow-600 dark:text-yellow-400">Ready</span>
                       </div>
                       <Progress value={65} className="h-2" />
                     </div>
@@ -255,20 +255,20 @@ export default function DashboardPage() {
               </Link>
 
               <Link href="/dashboard/goals">
-                <Card className="bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 transition-colors cursor-pointer">
+                <Card className="border-primary/30 hover:border-primary/50 transition-colors cursor-pointer">
                   <CardHeader>
-                    <CardTitle className="text-purple-300 flex items-center gap-2">
+                    <CardTitle className="text-primary flex items-center gap-2">
                       🎯 Goals & Plans
                     </CardTitle>
-                    <CardDescription className="text-gray-400">
+                    <CardDescription>
                       Personality-driven goals and action plans
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       <div className="flex justify-between text-sm">
-                        <span className="text-gray-400">Action Plan</span>
-                        <span className="text-purple-300">Generate</span>
+                        <span className="text-muted-foreground">Action Plan</span>
+                        <span className="text-primary">Generate</span>
                       </div>
                       <Progress value={45} className="h-2" />
                     </div>
@@ -279,43 +279,43 @@ export default function DashboardPage() {
 
             {/* Mini Insights */}
             <div className="grid md:grid-cols-2 gap-6">
-              <Card className="bg-slate-800/50 border-purple-500/30">
+              <Card className="border-primary/30">
                 <CardHeader>
-                  <CardTitle className="text-purple-300">Quick Insights</CardTitle>
+                  <CardTitle className="text-primary">Quick Insights</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-gray-300 text-sm">Strong leadership qualities identified</span>
+                    <span className="text-green-600 dark:text-green-400">✓</span>
+                    <span className="text-foreground text-sm">Strong leadership qualities identified</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-yellow-400">⚡</span>
-                    <span className="text-gray-300 text-sm">Growth opportunity in risk-taking</span>
+                    <span className="text-yellow-600 dark:text-yellow-400">⚡</span>
+                    <span className="text-foreground text-sm">Growth opportunity in risk-taking</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="text-blue-400">🎯</span>
-                    <span className="text-gray-300 text-sm">Optimal for structured environments</span>
+                    <span className="text-blue-600 dark:text-blue-400">🎯</span>
+                    <span className="text-foreground text-sm">Optimal for structured environments</span>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-slate-800/50 border-blue-500/30">
+              <Card className="border-blue-500/30">
                 <CardHeader>
-                  <CardTitle className="text-blue-300">Recent Activity</CardTitle>
+                  <CardTitle className="text-blue-600 dark:text-blue-400">Recent Activity</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-300">Assessment completed</span>
-                      <span className="text-gray-500">Today</span>
+                      <span className="text-foreground">Assessment completed</span>
+                      <span className="text-muted-foreground">Today</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-400">Profile updated</span>
-                      <span className="text-gray-500">Today</span>
+                      <span className="text-muted-foreground">Profile updated</span>
+                      <span className="text-muted-foreground">Today</span>
                     </div>
                     <div className="flex justify-between items-center">
-                      <span className="text-gray-400">Goals available</span>
-                      <span className="text-purple-400">New</span>
+                      <span className="text-muted-foreground">Goals available</span>
+                      <span className="text-primary">New</span>
                     </div>
                   </div>
                 </CardContent>

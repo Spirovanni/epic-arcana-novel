@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { SignInButton, SignUpButton, UserButton, useUser } from '@clerk/nextjs';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { Menu } from 'lucide-react';
 
 const gradCTA = "bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400";
 
@@ -42,18 +45,18 @@ export function Navbar() {
 
         {/* Right auth section */}
         <div className="flex items-center gap-4">
+          <ThemeToggle />
           {isSignedIn ? (
             <>
-              <Link
-                href="/dashboard"
-                className={`${gradCTA} text-sm font-semibold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400`}
-              >
-                Dashboard
-              </Link>
+              <Button asChild className="bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400">
+                <Link href="/dashboard">
+                  Dashboard
+                </Link>
+              </Button>
               <UserButton 
                 appearance={{
                   elements: {
-                    avatarBox: "w-8 h-8 rounded-full border border-white/20 hover:border-white/40 transition-colors"
+                    avatarBox: "w-8 h-8 rounded-full border border-border hover:border-border/60 transition-colors"
                   }
                 }}
               />
@@ -61,28 +64,28 @@ export function Navbar() {
           ) : (
             <>
               <SignInButton mode="modal">
-                <button className="text-sm text-slate-300 hover:text-white/90 transition-colors font-semibold tracking-wide">
+                <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
                   Sign In
-                </button>
+                </Button>
               </SignInButton>
-              <Link 
-                href="/assessment"
-                className={`${gradCTA} text-sm font-bold px-4 py-2 rounded-xl shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400 tracking-wide transition-all duration-300 hover:scale-105`}
-              >
-                Take Assessment
-              </Link>
+              <Button asChild className="bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400">
+                <Link href="/assessment">
+                  Take Assessment
+                </Link>
+              </Button>
             </>
           )}
           
           {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2 rounded-lg text-slate-300 hover:text-white/90 transition-colors"
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
+            <Menu className="h-5 w-5" />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
         </div>
       </div>
 
@@ -97,27 +100,25 @@ export function Navbar() {
               <a href="#cycle" className="block text-slate-300 hover:text-white/90 transition-colors">Cycle</a>
               <a href="#dashboard" className="block text-slate-300 hover:text-white/90 transition-colors">Dashboard</a>
             </nav>
-            <div className="pt-2 border-t border-white/5">
+            <div className="pt-2 border-t border-border/20">
               {isSignedIn ? (
-                <Link
-                  href="/dashboard"
-                  className={`${gradCTA} block text-center text-sm font-semibold px-4 py-2 rounded-xl`}
-                >
-                  Dashboard
-                </Link>
+                <Button asChild className="w-full bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400">
+                  <Link href="/dashboard">
+                    Dashboard
+                  </Link>
+                </Button>
               ) : (
                 <div className="space-y-2">
                   <SignInButton mode="modal">
-                    <button className="block w-full text-slate-300 hover:text-white/90 transition-colors py-2">
+                    <Button variant="ghost" className="w-full justify-center text-muted-foreground hover:text-foreground">
                       Sign In
-                    </button>
+                    </Button>
                   </SignInButton>
-                  <Link 
-                    href="/assessment"
-                    className={`${gradCTA} block w-full text-center text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105`}
-                  >
-                    Take Assessment
-                  </Link>
+                  <Button asChild className="w-full bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400">
+                    <Link href="/assessment">
+                      Take Assessment
+                    </Link>
+                  </Button>
                 </div>
               )}
             </div>

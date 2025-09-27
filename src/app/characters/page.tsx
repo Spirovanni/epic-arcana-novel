@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { UsersIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.png';
@@ -35,66 +38,61 @@ type Character = {
 
 function CharacterCard({ character }: { character: Character }) {
   return (
-    <Link href={`/characters/${character.slug}`}
-      className="block group focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-xl h-full">
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 flex flex-col items-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 border border-gray-200 dark:border-gray-700 cursor-pointer h-full">
-        {/* Avatar Section - Fixed Height */}
-        <div className="relative mb-4 flex-shrink-0">
-          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden shadow-lg transition-transform duration-300 hover:scale-200 hover:z-10">
-            <Image 
-              src={character.imageUrl || placeholderImg} 
-              alt={character.name} 
-              width={64} 
-              height={64} 
-              className="w-16 h-16 object-cover rounded-full" 
-            />
+    <Link href={`/characters/${character.slug}`} className="block group h-full">
+      <Card className="h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 cursor-pointer border-border">
+        <CardHeader className="text-center pb-4">
+          <div className="flex justify-center mb-4">
+            <Avatar className="w-20 h-20 border-2 border-border transition-transform duration-300 hover:scale-110">
+              <AvatarImage 
+                src={character.imageUrl || placeholderImg} 
+                alt={character.name} 
+                className="object-cover"
+              />
+              <AvatarFallback className="bg-gradient-to-br from-primary/20 to-purple-600/20 text-primary font-semibold text-lg">
+                {character.name.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase()}
+              </AvatarFallback>
+            </Avatar>
           </div>
-          {character.lastSeenChapter && (
-            <div className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full flex items-center justify-center shadow-md">
-              {character.lastSeenChapter}
-            </div>
-          )}
-        </div>
-        
-        {/* Name Section - Fixed Height */}
-        <div className="h-14 flex items-center mb-2 flex-shrink-0">
-          <h2 className="text-lg font-bold text-gray-900 dark:text-white text-center group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+          <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
             {character.name}
-          </h2>
-        </div>
-        
-        {/* Role Section - Fixed Height */}
-        <div className="h-6 mb-2 flex-shrink-0">
+          </CardTitle>
           {character.role && (
-            <div className="text-sm text-gray-500 dark:text-gray-400 text-center font-medium">
+            <CardDescription className="text-sm font-medium">
               {character.role}
-            </div>
+            </CardDescription>
           )}
-        </div>
+          {character.lastSeenChapter && (
+            <Badge variant="secondary" className="absolute -top-2 -right-2 w-6 h-6 bg-yellow-400 text-yellow-900 text-xs font-bold rounded-full flex items-center justify-center">
+              {character.lastSeenChapter}
+            </Badge>
+          )}
+        </CardHeader>
         
-        {/* Description Section - Flexible but constrained */}
-        <div className="flex-1 flex items-start mb-4 min-h-[60px]">
-          {character.description && (
-            <p className="text-xs text-gray-600 dark:text-gray-300 text-center line-clamp-4 leading-relaxed">
-              {character.description}
-            </p>
-          )}
-        </div>
-        
-        {/* Groups Section - Fixed Height at bottom */}
-        <div className="h-8 flex flex-wrap gap-1 justify-center items-center flex-shrink-0">
-          {character.groups?.slice(0, 2).map((group, index) => (
-            <span key={index} className="px-2 py-1 bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 text-xs font-medium rounded-full">
-              {group}
-            </span>
-          ))}
-          {character.groups && character.groups.length > 2 && (
-            <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-medium rounded-full">
-              +{character.groups.length - 2}
-            </span>
-          )}
-        </div>
-      </div>
+        <CardContent className="flex-1 flex flex-col">
+          {/* Description Section */}
+          <div className="flex-1 mb-4">
+            {character.description && (
+              <p className="text-xs text-muted-foreground text-center line-clamp-4 leading-relaxed">
+                {character.description}
+              </p>
+            )}
+          </div>
+          
+          {/* Groups Section */}
+          <div className="flex flex-wrap gap-1 justify-center items-center">
+            {character.groups?.slice(0, 2).map((group, index) => (
+              <Badge key={index} variant="outline" className="text-xs">
+                {group}
+              </Badge>
+            ))}
+            {character.groups && character.groups.length > 2 && (
+              <Badge variant="secondary" className="text-xs">
+                +{character.groups.length - 2}
+              </Badge>
+            )}
+          </div>
+        </CardContent>
+      </Card>
     </Link>
   );
 }
@@ -154,18 +152,18 @@ export default function CharactersPage() {
           { label: 'Characters', current: true }
         ]} 
       />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <main className="min-h-screen bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
                 <UsersIcon className="w-8 h-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
               Novel Characters
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Discover the rich cast of characters that bring the Epic Arcana universe to life
             </p>
           </div>

@@ -14,23 +14,28 @@ import { WorldSection } from '@/components/landing/WorldSection'
 import { CommunitySection } from '@/components/landing/CommunitySection'
 import { CycleSection } from '@/components/landing/CycleSection'
 import { FinalCTASection } from '@/components/landing/FinalCTASection'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-slate-200 bg-[#0b1220]">
+    <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
       <EpicArcanaIntro />
       <HowItWorks />
       
-      {/* Quick Start Section from original */}
+      {/* Quick Start Section with shadcn Card */}
       <section className="px-6 pb-20">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
+            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
               Experience the Assessment
             </h2>
-            <AdventureQuickStartCard />
+            <Card className="shadow-lg">
+              <CardContent className="p-0">
+                <AdventureQuickStartCard />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

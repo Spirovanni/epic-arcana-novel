@@ -7,6 +7,8 @@ import { useAssessmentStore } from '@/store/useAssessmentStore'
 import { ClientWrapper } from '@/components/ClientWrapper'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 
 // Dynamically import the AssessmentWizard components to avoid SSR issues
@@ -20,10 +22,10 @@ const AdventureAssessmentWizard = dynamic(
   { 
     ssr: false,
     loading: () => (
-      <div className="min-h-screen bg-black flex items-center justify-center">
+      <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-400 mx-auto mb-4"></div>
-          <p className="text-amber-300">Loading your adventure...</p>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+          <p className="text-muted-foreground">Loading your adventure...</p>
         </div>
       </div>
     )
@@ -74,12 +76,12 @@ function AssessmentContent() {
   
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <div className="min-h-screen bg-background">
         <AssessmentNavbar />
         <div className="flex items-center justify-center h-screen">
           <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-            <p className="text-gray-400">Checking your profile...</p>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+            <p className="text-muted-foreground">Checking your profile...</p>
           </div>
         </div>
       </div>
@@ -88,30 +90,32 @@ function AssessmentContent() {
   
   if (hasExistingResult) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <div className="min-h-screen bg-background">
         <AssessmentNavbar />
         <div className="flex items-center justify-center h-screen">
           <div className="max-w-md mx-auto text-center px-4">
-            <div className="bg-slate-800/50 rounded-xl p-8 border border-purple-500/30">
-              <h2 className="text-2xl font-bold text-white mb-4">Assessment Complete</h2>
-              <p className="text-gray-300 mb-6">
-                You've already completed your Player Type & Role Assessment. View your results and personalized dashboard below.
-              </p>
-              <div className="flex gap-3 justify-center">
-                <Link 
-                  href="/dashboard"
-                  className="bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400 px-6 py-3 rounded-xl text-white font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  View Dashboard
-                </Link>
-                <Link 
-                  href="/"
-                  className="px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold transition-colors"
-                >
-                  Go Home
-                </Link>
-              </div>
-            </div>
+            <Card className="border-primary/30">
+              <CardHeader>
+                <CardTitle className="text-2xl text-primary">Assessment Complete</CardTitle>
+                <CardDescription className="text-base">
+                  You've already completed your Player Type & Role Assessment. View your results and personalized dashboard below.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex gap-3 justify-center">
+                  <Button asChild className="bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400">
+                    <Link href="/dashboard">
+                      View Dashboard
+                    </Link>
+                  </Button>
+                  <Button variant="outline" asChild>
+                    <Link href="/">
+                      Go Home
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
