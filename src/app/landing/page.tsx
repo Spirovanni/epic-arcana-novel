@@ -10,7 +10,7 @@ import { Footer } from './components/Footer';
 
 export default function LandingPage() {
   return (
-    <main className="min-h-screen text-slate-200 bg-[#0b1220]">
+    <main className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
       <EpicArcanaIntro />

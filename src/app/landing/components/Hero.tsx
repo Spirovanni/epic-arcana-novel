@@ -79,11 +79,27 @@ export function Hero() {
               <br />
               Begin your <span className="text-emerald-300">Hero&apos;s Journey</span>.
             </h1>
-            <p className="mt-6 max-w-xl text-slate-200/90 text-lg leading-relaxed mx-auto lg:mx-0">
+            <p className="mt-6 max-w-xl text-muted-foreground text-lg leading-relaxed mx-auto lg:mx-0">
               Step into <em>The Human Framework</em>: a living world where your personality
               becomes destiny. Take the Player Type & Role Assessment and get your
               Player Profile—then travel through <em>Laurasia</em> while leveling up real-life skills.
             </p>
+            
+            {/* CTA Buttons */}
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link 
+                href="/assessment"
+                className="bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400 text-white font-bold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover:scale-105 shadow-lg shadow-indigo-900/40 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+              >
+                Take Assessment
+              </Link>
+              <Link 
+                href="/dashboard"
+                className="border-2 border-border bg-background/10 backdrop-blur-sm hover:bg-background/20 text-foreground font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 hover:scale-105"
+              >
+                Learn More
+              </Link>
+            </div>
           </div>
 
           {/* Right side - Assessment Mockup */}
@@ -101,8 +117,8 @@ export function Hero() {
       
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+        <div className="w-6 h-10 border-2 border-border/50 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-muted-foreground/70 rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>
