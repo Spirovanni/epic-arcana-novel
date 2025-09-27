@@ -329,14 +329,100 @@ export async function resolveHfCalendarRange(
 }
 
 /**
- * Get full year calendar
+ * Get full year calendar - optimized bulk version
  */
 export async function getFullYearCalendar(year?: number): Promise<HfCalendarResult[]> {
   const targetYear = year || new Date().getFullYear();
-  const startDate = new Date(targetYear, 0, 1); // Jan 1
-  const endDate = new Date(targetYear, 11, 31); // Dec 31
+  const results: HfCalendarResult[] = [];
   
-  return resolveHfCalendarRange(startDate, endDate);
+  try {
+    const config = await getCalendarConfig();
+    
+    // Bulk load all day signs and mappings once
+    const daySignsData = await db
+      .select({
+        index0: daySign.index0,
+        name: daySign.name,
+        color: daySign.color,
+        glyph: daySign.glyph,
+        archetype: daySignMapping.archetype,
+        theme: daySignMapping.theme,
+        reflection: daySignMapping.reflection,
+        ritual: daySignMapping.ritual,
+        keywords: daySignMapping.keywords
+      })
+      .from(daySign)
+      .leftJoin(daySignMapping, eq(daySign.id, daySignMapping.daySignId));
+    
+    // Create a map for quick lookups
+    const daySignMap = new Map();
+    daySignsData.forEach(sign => {
+      daySignMap.set(sign.index0, sign);
+    });
+    
+    // Bulk load all overrides for the year
+    const overridesData = await db
+      .select()
+      .from(dayOverride);
+    
+    const overrideMap = new Map();
+    overridesData.forEach(override => {
+      overrideMap.set(override.dayOfYear, override);
+    });
+    
+    // Generate all days for the year
+    for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
+      const date = new Date(targetYear, 0, dayOfYear - 1);
+      const normalizedDayOfYear = dayOfYear365(date, config.anchor, config.leapPolicy);
+      const { segment, intraSegmentIndex } = resolveSegment(normalizedDayOfYear);
+      
+      const result: HfCalendarResult = {
+        dateISO: date.toISOString().split('T')[0],
+        dayOfYear365: normalizedDayOfYear,
+        segment,
+        intraSegmentIndex,
+        isRestDay: isRestDay(segment, intraSegmentIndex),
+        isMidpoint: isMidpoint(segment),
+        isActiveDay: isActiveDay(segment, intraSegmentIndex),
+        twentyDayWeekIndex: getTwentyDayWeekIndex(normalizedDayOfYear),
+        detoxPhase: getDetoxPhase(segment)
+      };
+      
+      // Add day sign info for active days
+      if (result.isActiveDay) {
+        const daySignData = daySignMap.get(result.twentyDayWeekIndex);
+        if (daySignData) {
+          result.daySignIndex = result.twentyDayWeekIndex;
+          result.daySignName = daySignData.name;
+          result.color = daySignData.color || undefined;
+          result.glyph = daySignData.glyph || undefined;
+          result.archetype = daySignData.archetype || undefined;
+          result.theme = daySignData.theme || undefined;
+          result.reflection = daySignData.reflection || undefined;
+          result.ritual = daySignData.ritual || undefined;
+          result.keywords = daySignData.keywords || undefined;
+        }
+      }
+      
+      // Add override data for rest days and midpoint
+      if (result.isRestDay || result.isMidpoint) {
+        const override = overrideMap.get(normalizedDayOfYear);
+        if (override) {
+          result.overrideTitle = override.title || undefined;
+          result.overrideDescription = override.description || undefined;
+          result.overrideRitual = override.ritual || undefined;
+          result.overrideTags = override.tags || undefined;
+        }
+      }
+      
+      results.push(result);
+    }
+    
+    return results;
+  } catch (error) {
+    console.error('Error generating full year calendar:', error);
+    throw error;
+  }
 }
 
 /**
