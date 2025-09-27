@@ -17,6 +17,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import { eq, sql } from 'drizzle-orm';
 import { calendarSettings, daySign, daySignMapping, dayOverride } from './schema';
 import postgres from 'postgres';
+import { getBookColorForDay } from './bookColors';
 
 // Types
 export type HfSegment = 'Q1' | 'Q2' | 'MID_A' | 'MIDPOINT' | 'MID_B' | 'Q3' | 'Q4';
@@ -274,13 +275,20 @@ export async function resolveHfCalendar(date: Date): Promise<HfCalendarResult> {
         const sign = daySignData[0];
         result.daySignIndex = result.twentyDayWeekIndex;
         result.daySignName = sign.name;
-        result.color = sign.color || undefined;
+        result.color = sign.color || getBookColorForDay(dayOfYear);
         result.glyph = sign.glyph || undefined;
         result.archetype = sign.archetype || undefined;
         result.theme = sign.theme || undefined;
         result.reflection = sign.reflection || undefined;
         result.ritual = sign.ritual || undefined;
         result.keywords = sign.keywords || undefined;
+      } else {
+        // If no day sign data, provide fallback info
+        result.daySignIndex = result.twentyDayWeekIndex;
+        result.daySignName = `Day ${result.twentyDayWeekIndex + 1}`;
+        result.color = getBookColorForDay(dayOfYear);
+        result.theme = 'Sacred Calendar Day';
+        result.reflection = 'Reflect on the energy of this day';
       }
     } catch (error) {
       console.warn('Failed to fetch day sign data:', error);
@@ -394,13 +402,20 @@ export async function getFullYearCalendar(year?: number): Promise<HfCalendarResu
         if (daySignData) {
           result.daySignIndex = result.twentyDayWeekIndex;
           result.daySignName = daySignData.name;
-          result.color = daySignData.color || undefined;
+          result.color = daySignData.color || getBookColorForDay(dayOfYear);
           result.glyph = daySignData.glyph || undefined;
           result.archetype = daySignData.archetype || undefined;
           result.theme = daySignData.theme || undefined;
           result.reflection = daySignData.reflection || undefined;
           result.ritual = daySignData.ritual || undefined;
           result.keywords = daySignData.keywords || undefined;
+        } else {
+          // If no day sign data, provide fallback info
+          result.daySignIndex = result.twentyDayWeekIndex;
+          result.daySignName = `Day ${result.twentyDayWeekIndex + 1}`;
+          result.color = getBookColorForDay(dayOfYear);
+          result.theme = 'Sacred Calendar Day';
+          result.reflection = 'Reflect on the energy of this day';
         }
       }
       

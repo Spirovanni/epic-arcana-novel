@@ -13,14 +13,9 @@ const QuerySchema = z.object({
 // Database health check with timeout
 async function checkDatabaseHealth(): Promise<boolean> {
   try {
-    // Quick timeout check - if we can't connect in 1 second, use fallback
-    const timeoutPromise = new Promise((_, reject) => 
-      setTimeout(() => reject(new Error('Database timeout')), 1000)
-    );
-    
-    // Try a simple query or connection test here
-    // For now, we'll assume database issues and return fallback
-    return false; // Use fallback for faster loading
+    // For development, always use fallback to avoid database timeouts
+    // In production, you could implement actual database connectivity check
+    return false; // Use fallback for faster loading and avoid timeouts
   } catch (error) {
     console.warn('Database health check failed:', error);
     return false;
