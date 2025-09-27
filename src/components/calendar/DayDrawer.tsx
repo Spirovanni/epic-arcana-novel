@@ -102,17 +102,17 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
     if (!day.color) {
       return {
         backgroundStyle: undefined,
-        textColor: isDarkMode ? '#f1f5f9' : '#1e293b', // slate-100 / slate-800
-        accentColor: isDarkMode ? 'hsl(var(--primary))' : 'hsl(var(--primary))',
+        textColor: undefined, // Let CSS variables handle this
+        accentColor: 'hsl(var(--primary))',
         cardClasses: ''
       };
     }
 
     const mainColor = day.color;
-    // Use better contrast with the new muted background
-    const textColor = isDarkMode ? '#f1f5f9' : '#1e293b'; // Force good contrast with slate backgrounds
+    // Use CSS custom properties for text color to ensure proper inheritance
+    const textColor = isDarkMode ? '#f1f5f9' : '#1e293b'; 
     const themeAwareBg = getThemeAwareBackgroundColor(mainColor, isDarkMode, 0.12);
-    const borderOpacity = isDarkMode ? 0.5 : 0.4; // Slightly more visible borders
+    const borderOpacity = isDarkMode ? 0.5 : 0.4;
     
     return {
       backgroundStyle: {
@@ -135,7 +135,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
         <DialogHeader>
           <DialogTitle 
             className="flex items-center gap-2 text-foreground"
-            style={{ color: day.color ? colorStyles.textColor : undefined }}
+            style={colorStyles.textColor ? { color: colorStyles.textColor } : {}}
           >
             <Calendar 
               className="h-5 w-5" 
@@ -151,7 +151,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
           <DialogDescription 
             className="text-muted-foreground"
             style={{ 
-              color: day.color ? `${colorStyles.textColor}cc` : undefined 
+              color: colorStyles.textColor ? `${colorStyles.textColor}cc` : undefined 
             }}
           >
             {getSegmentDisplay()} • Day {day.dayOfYear365}/365
@@ -161,7 +161,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
         <div className="space-y-6">
           {/* Main Day Info Card */}
           <Card 
-            className={cn("relative overflow-hidden", colorStyles.cardClasses)} 
+            className={cn("relative overflow-hidden bg-card text-card-foreground", colorStyles.cardClasses)} 
             style={colorStyles.backgroundStyle}
           >
             <CardHeader className="text-center">
@@ -175,7 +175,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
                     <div>
                       <CardTitle 
                         className="text-2xl text-foreground"
-                        style={day.color ? { color: colorStyles.textColor } : {}}
+                        style={colorStyles.textColor ? { color: colorStyles.textColor } : {}}
                       >
                         {day.daySignName}
                       </CardTitle>
@@ -231,7 +231,7 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
             <CardContent className="space-y-4">
               {/* Day Type Description */}
               <div 
-                className="rounded-lg p-4 bg-muted/50"
+                className="rounded-lg p-4 bg-muted/50 text-card-foreground"
                 style={day.color ? { 
                   backgroundColor: getThemeAwareBackgroundColor(day.color, isDarkMode, 0.08),
                   color: colorStyles.textColor 
@@ -370,10 +370,11 @@ ${day.keywords ? `**Keywords:** ${day.keywords}` : ''}
 
           {/* Metadata */}
           <Card 
-            className={cn("border bg-muted/50", day.color ? colorStyles.cardClasses : "")}
+            className={cn("border bg-card text-card-foreground", day.color ? colorStyles.cardClasses : "")}
             style={day.color ? {
               backgroundColor: getThemeAwareBackgroundColor(day.color, isDarkMode, 0.05),
-              borderColor: `${colorStyles.accentColor}40`
+              borderColor: `${colorStyles.accentColor}40`,
+              color: colorStyles.textColor
             } : {}}
           >
             <CardContent className="pt-6">
