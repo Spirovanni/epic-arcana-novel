@@ -504,7 +504,13 @@ export default function BookDetailPage() {
                               }}
                             >
                               {/* Chapter Icon */}
-                              <div className="absolute top-2 right-2 w-10 h-10 bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                              <div 
+                                className="absolute top-2 right-2 w-10 h-10 rounded-lg border-2 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                                style={{
+                                  backgroundColor: chapterHex,
+                                  borderColor: chapterHex,
+                                }}
+                              >
                                 <Image
                                   src={iconPath}
                                   alt={`Chapter ${chapter.chapterNumber} icon`}
@@ -512,6 +518,11 @@ export default function BookDetailPage() {
                                   height={24}
                                   className="w-6 h-6 object-contain"
                                   onError={handleIconError}
+                                  style={{
+                                    filter: getTextColor(chapterHex) === 'text-white' 
+                                      ? 'brightness(0) invert(1)' // White icons for dark backgrounds
+                                      : 'brightness(0)' // Black icons for light backgrounds
+                                  }}
                                 />
                               </div>
                               
