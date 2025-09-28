@@ -4,9 +4,12 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import Navbar from '@/components/Navbar';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import { AppNavbar } from '@/components/shared/AppNavbar';
 import ResponsiveText from '@/components/ResponsiveText';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { BookOpen, FileText, Copy, Check } from 'lucide-react';
 
 interface Chapter {
   id: string;
@@ -366,16 +369,14 @@ export default function BookDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <Navbar />
-        <Breadcrumbs items={[
-          { label: 'Books', href: '/books' },
-          { label: bookTitle || 'Loading...', current: true }
-        ]} />
-        <div className="flex items-center justify-center min-h-[50vh]">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 mx-auto mb-4" style={{ borderBottomColor: bookPrimaryColor }}></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading chapters...</p>
+      <div className="min-h-screen bg-background">
+        <AppNavbar />
+        <div className="container mx-auto px-6 py-8">
+          <div className="flex items-center justify-center min-h-[60vh]">
+            <div className="text-center space-y-4">
+              <div className="animate-spin rounded-full h-12 w-12 border-2 border-primary border-t-transparent mx-auto"></div>
+              <p className="text-muted-foreground">Loading Epic Arcana Chronicles...</p>
+            </div>
           </div>
         </div>
       </div>
@@ -383,119 +384,67 @@ export default function BookDetailPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-      <Navbar />
-      <Breadcrumbs items={[
-        { label: 'Books', href: '/books' },
-        { label: bookTitle, current: true }
-      ]} />
+    <div className="min-h-screen bg-background">
+      <AppNavbar />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center mb-16">
-          <div 
-            className="inline-flex items-center px-6 py-3 rounded-full backdrop-blur-md border text-sm font-bold mb-6 shadow-lg"
-            style={{
-              background: `linear-gradient(to right, ${bookPrimaryColor}33, ${bookPrimaryColor}40)`,
-              borderColor: `${bookPrimaryColor}50`,
-              color: getTextColor(bookPrimaryColor) === 'text-white' ? '#ffffff' : bookPrimaryColor
-            }}
-          >
-            <span 
-              className="w-2 h-2 rounded-full mr-3 animate-pulse"
-              style={{ backgroundColor: bookPrimaryColor }}
-            ></span>
-            BOOK {bookNumber}
-          </div>
-          <h1 className="text-5xl md:text-6xl font-black mb-6 tracking-tight">
-            <span 
-              className="bg-clip-text text-transparent"
+      <div className="container mx-auto px-6 py-8">
+        {/* Header Section */}
+        <div className="text-center mb-12 space-y-4">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <BookOpen className="h-8 w-8 text-primary" />
+            <Badge 
+              variant="secondary" 
+              className="text-xs font-semibold"
               style={{
-                background: `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, 20)}, ${adjustBrightness(bookPrimaryColor, -10)})`,
-                WebkitBackgroundClip: 'text'
+                backgroundColor: bookPrimaryColor,
+                color: getTextColor(bookPrimaryColor) === 'text-white' ? '#ffffff' : '#000000',
+                border: 'none'
               }}
             >
-              {bookTitle}
-            </span>
+              BOOK {bookNumber}
+            </Badge>
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground">
+            {bookTitle}
           </h1>
-          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed font-light mb-8">
-            Explore the <span className="font-bold" style={{ color: bookPrimaryColor }}>{chapters.length} chapters</span> and <span className="font-bold" style={{ color: bookPrimaryColor }}>{scenes.length} scenes</span> of this transformative journey through time and consciousness.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Explore the <span className="font-bold text-primary">{chapters.length} chapters</span> and <span className="font-bold text-primary">{scenes.length} scenes</span> of this transformative journey through time and consciousness.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href={`/outline/${bookId}`} 
-              className="inline-flex items-center px-8 py-4 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 group"
-              style={{
-                background: `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})`,
-                '--hover-bg': `linear-gradient(to right, ${adjustBrightness(bookPrimaryColor, -20)}, ${adjustBrightness(bookPrimaryColor, -30)})`
-              } as React.CSSProperties}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = `linear-gradient(to right, ${adjustBrightness(bookPrimaryColor, -20)}, ${adjustBrightness(bookPrimaryColor, -30)})`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})`;
-              }}
-            >
-              <svg className="w-5 h-5 mr-3 group-hover:rotate-12 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-              <span className="tracking-wide">VIEW FULL OUTLINE</span>
-            </Link>
-            <Link 
-              href="/books" 
-              className="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 font-semibold rounded-xl transition-all duration-300 shadow-md hover:shadow-lg"
-            >
-              ← Back to Books
-            </Link>
-          </div>
-          <div className="mt-8 flex justify-center">
-            <div 
-              className="w-24 h-1 rounded-full"
-              style={{
-                background: `linear-gradient(to right, transparent, ${bookPrimaryColor}, transparent)`
-              }}
-            ></div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
+            <Button asChild size="lg" className="w-full sm:w-auto">
+              <Link href={`/outline/${bookId}`}>
+                <FileText className="mr-2 h-4 w-4" />
+                VIEW FULL OUTLINE
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="w-full sm:w-auto">
+              <Link href="/books">
+                ← Back to Books
+              </Link>
+            </Button>
           </div>
         </div>
 
         {/* Tabs Navigation */}
-        <div className="flex justify-center mb-12">
-          <div className="flex bg-white/10 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl p-2 border border-gray-200/20 dark:border-gray-700/30">
-            <button
+        <div className="flex justify-center mb-8">
+          <div className="flex bg-muted rounded-lg p-1">
+            <Button
+              variant={activeTab === 'chapters' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('chapters')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2
-                ${activeTab === 'chapters' 
-                  ? 'text-white shadow-lg' 
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
-                }`}
-              style={{
-                background: activeTab === 'chapters' 
-                  ? `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})` 
-                  : 'transparent'
-              }}
+              className="flex items-center gap-2"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
+              <BookOpen className="w-4 h-4" />
               Chapters ({chapters.length})
-            </button>
-            <button
+            </Button>
+            <Button
+              variant={activeTab === 'scenes' ? 'default' : 'ghost'}
               onClick={() => setActiveTab('scenes')}
-              className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center gap-2
-                ${activeTab === 'scenes' 
-                  ? 'text-white shadow-lg' 
-                  : 'text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200'
-                }`}
-              style={{
-                background: activeTab === 'scenes' 
-                  ? `linear-gradient(to right, ${bookPrimaryColor}, ${adjustBrightness(bookPrimaryColor, -15)})` 
-                  : 'transparent'
-              }}
+              className="flex items-center gap-2"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+              <FileText className="w-4 h-4" />
               All Scenes ({scenes.length})
-            </button>
+            </Button>
           </div>
         </div>
 
@@ -514,125 +463,94 @@ export default function BookDetailPage() {
               return (
                 <div key={actIndex} className="space-y-6">
                   {/* Act Header */}
-                  <div className="text-center relative">
-                    <div 
-                      className="inline-flex items-center px-8 py-4 rounded-2xl backdrop-blur-md border shadow-2xl mb-4"
-                      style={{
-                        background: `linear-gradient(135deg, ${actColor}20, ${actColor}30)`,
-                        borderColor: `${actColor}40`,
-                      }}
-                    >
-                      <div 
-                        className="w-3 h-3 rounded-full mr-4 animate-pulse"
-                        style={{ backgroundColor: actColor }}
-                      ></div>
-                      <div className="text-left">
-                        <h2 
-                          className="text-2xl font-black tracking-wide"
-                          style={{ color: actColor }}
-                        >
-                          Act {actIndex + 1}: {act.title}
-                        </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 font-medium italic">
-                          &ldquo;{act.subtitle}&rdquo;
-                        </p>
-                        <p className="text-sm text-gray-500 dark:text-gray-500 mt-1">
-                          Chapters {act.chapters} • {actChapters.length} chapters
-                        </p>
+                  <Card className="mb-6">
+                    <CardHeader className="text-center">
+                      <div className="flex items-center justify-center gap-3 mb-2">
+                        <div 
+                          className="w-3 h-3 rounded-full"
+                          style={{ backgroundColor: actColor }}
+                        />
+                        <Badge variant="outline" style={{ color: actColor, borderColor: actColor }}>
+                          Act {actIndex + 1}
+                        </Badge>
                       </div>
-                    </div>
-                    
-                    {/* Act divider */}
-                    <div 
-                      className="w-32 h-1 rounded-full mx-auto"
-                      style={{
-                        background: `linear-gradient(to right, transparent, ${actColor}, transparent)`
-                      }}
-                    ></div>
-                  </div>
+                      <CardTitle className="text-xl font-bold" style={{ color: actColor }}>
+                        {act.title}
+                      </CardTitle>
+                      <p className="text-muted-foreground italic">
+                        "{act.subtitle}"
+                      </p>
+                      <p className="text-sm text-muted-foreground">
+                        Chapters {act.chapters} • {actChapters.length} chapters
+                      </p>
+                    </CardHeader>
+                  </Card>
 
                   {/* Act Chapters Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-6">
+                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {actChapters.map((chapter) => {
-                      const iconPath = getChapterIconPath(chapter, bookNumber);
-                      const textColor = getTextColor(chapter.colorTheme?.hex);
                       const chapterHex = chapter.colorTheme?.hex || '#6366f1';
-                      const gradientBg = createChapterGradient(chapterHex);
-                      const glowColor = chapterHex + '40';
+                      const contrastColor = getTextColor(chapterHex) === 'text-white' ? '#ffffff' : '#000000';
+                      const iconPath = getChapterIconPath(chapter, bookNumber);
                       
                       return (
-                        <Link 
-                          key={chapter.id}
-                          href={`/chapters/${chapter.id}`}
-                          className="block aspect-square transition-all duration-500 ease-out hover:scale-110 hover:rotate-2 group relative overflow-hidden"
-                          style={{
-                            borderRadius: '20px',
-                            boxShadow: `0 15px 30px -8px ${glowColor}, 0 0 0 1px ${chapterHex}30`,
-                          }}
-                        >
-                          {/* Enhanced gradient background */}
-                          <div 
-                            className="absolute inset-0 opacity-90 group-hover:opacity-100 transition-opacity duration-500"
-                            style={{ background: gradientBg }}
-                          />
-                          
-                          {/* Mystical overlay pattern */}
-                          <div 
-                            className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
-                            style={{
-                              backgroundImage: `radial-gradient(circle at 25% 75%, ${chapterHex}60 0%, transparent 50%), radial-gradient(circle at 75% 25%, ${chapterHex}40 0%, transparent 50%)`
-                            }}
-                          />
-                          
-                          {/* Animated sparkles */}
-                          <div className="absolute top-2 left-2 w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
-                          <div className="absolute top-8 right-3 w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-                          <div className="absolute bottom-4 left-2 w-1 h-1 bg-white/50 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-                          
-                          {/* Top-right icon positioning */}
-                          <div className="w-16 h-16 absolute top-2 right-2 z-30 group-hover:scale-110 transition-transform duration-500">
-                            <Image
-                              src={iconPath}
-                              alt={`Chapter ${chapter.chapterNumber} icon`}
-                              width={64}
-                              height={64}
-                              className="w-full h-full object-contain drop-shadow-2xl filter brightness-110 contrast-110"
-                              onError={handleIconError}
-                              style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
-                            />
-                          </div>
-                          
-                          {/* Enhanced chapter number */}
-                          <div className={`absolute top-2 left-2 font-black text-lg ${textColor} z-20 px-2 py-1 rounded-lg backdrop-blur-md border shadow-xl group-hover:scale-110 transition-all duration-300`}
-                            style={{
-                              background: `linear-gradient(135deg, ${chapterHex}60, ${chapterHex}80)`,
-                              borderColor: `${chapterHex}80`,
-                              textShadow: `0 1px 4px ${chapterHex}80`
-                            }}>
-                            {chapter.chapterNumber}
-                          </div>
-                          
-                          {/* Chapter title at bottom */}
-                          <div className="absolute bottom-2 left-2 right-2 z-20">
-                            <div className={`${textColor} backdrop-blur-xl border rounded-lg px-2 py-1 shadow-xl flex items-center justify-center group-hover:scale-105 transition-all duration-300`}
+                        <Link key={chapter.id} href={`/chapters/${chapter.id}`} className="group block">
+                          <Card className="h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02] border border-border/50 hover:border-border">
+                            <CardHeader 
+                              className="text-center pb-3 relative"
                               style={{
-                                background: `linear-gradient(135deg, ${chapterHex}50, ${chapterHex}70)`,
-                                borderColor: `${chapterHex}80`,
-                              }}>
-                              <ResponsiveText
-                                text={chapter.title}
-                                className={`font-bold tracking-wide text-center w-full ${textColor}`}
-                                style={{ 
-                                  textShadow: `0 1px 3px ${chapterHex}80`
+                                background: `linear-gradient(135deg, ${chapterHex}15, ${chapterHex}25)`,
+                                borderBottom: `1px solid ${chapterHex}30`
+                              }}
+                            >
+                              {/* Chapter Icon */}
+                              <div className="absolute top-2 right-2 w-10 h-10 bg-white dark:bg-gray-800 rounded-lg border-2 border-gray-200 dark:border-gray-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                                <Image
+                                  src={iconPath}
+                                  alt={`Chapter ${chapter.chapterNumber} icon`}
+                                  width={24}
+                                  height={24}
+                                  className="w-6 h-6 object-contain"
+                                  onError={handleIconError}
+                                />
+                              </div>
+                              
+                              <Badge 
+                                variant="secondary" 
+                                className="text-xs font-semibold w-fit mx-auto"
+                                style={{
+                                  backgroundColor: chapterHex,
+                                  color: contrastColor,
+                                  border: 'none'
                                 }}
-                                maxFontSize={12}
-                                minFontSize={8}
-                              />
-                            </div>
-                          </div>
-                          
-                          {/* Enhanced mystical overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-black/5 pointer-events-none group-hover:from-white/10 group-hover:to-black/10 transition-all duration-500"></div>
+                              >
+                                CHAPTER {chapter.chapterNumber}
+                              </Badge>
+                            </CardHeader>
+                            
+                            <CardContent className="pt-4 space-y-2">
+                              <h3 className="font-semibold text-sm text-foreground leading-tight line-clamp-2">
+                                {chapter.title}
+                              </h3>
+                              
+                              {chapter.description && (
+                                <p className="text-xs text-muted-foreground line-clamp-3">
+                                  {chapter.description}
+                                </p>
+                              )}
+                              
+                              {/* Color indicator */}
+                              <div className="flex items-center gap-2 pt-2">
+                                <div 
+                                  className="w-2 h-2 rounded-full border border-border/50" 
+                                  style={{ backgroundColor: chapterHex }}
+                                />
+                                <span className="text-xs text-muted-foreground">
+                                  {chapter.colorTheme?.name || 'Default'}
+                                </span>
+                              </div>
+                            </CardContent>
+                          </Card>
                         </Link>
                       );
                     })}
@@ -645,139 +563,117 @@ export default function BookDetailPage() {
         
         {/* Scenes Tab Content */}
         {activeTab === 'scenes' && (
-          <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {scenes.map((scene) => {
               const chapterHex = scene.chapter?.colorTheme?.hex || bookPrimaryColor;
-              const textColor = getTextColor(chapterHex);
+              const contrastColor = getTextColor(chapterHex) === 'text-white' ? '#ffffff' : '#000000';
               
               return (
-                <Link
-                  key={scene.id}
-                  href={`/scenes/${scene.id}`}
-                  className="group block bg-white/10 dark:bg-gray-800/50 backdrop-blur-md rounded-2xl p-6 border border-gray-200/20 dark:border-gray-700/30 hover:bg-white/20 dark:hover:bg-gray-700/50 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-2xl"
-                >
-                  {/* Scene Header */}
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-3">
-                      <div 
-                        className={`px-3 py-1 rounded-lg font-bold text-sm ${textColor} shadow-lg`}
-                        style={{
-                          background: `linear-gradient(135deg, ${chapterHex}80, ${chapterHex}A0)`,
-                        }}
-                      >
-                        Ch{scene.chapter?.chapterNumber} • S{scene.sceneNumber}
-                      </div>
-                      {scene.primaryTarotCard && (
-                        <div className="text-2xl" title={`Tarot: ${scene.primaryTarotCard}`}>
-                          🔮
+                <Link key={scene.id} href={`/scenes/${scene.id}`} className="group block">
+                  <Card className="h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02] border border-border/50 hover:border-border">
+                    <CardHeader className="pb-3">
+                      <div className="flex items-start justify-between">
+                        <div className="flex items-center gap-2">
+                          <Badge 
+                            variant="secondary" 
+                            className="text-xs font-semibold"
+                            style={{
+                              backgroundColor: chapterHex,
+                              color: contrastColor,
+                              border: 'none'
+                            }}
+                          >
+                            Ch{scene.chapter?.chapterNumber} • S{scene.sceneNumber}
+                          </Badge>
+                          {scene.primaryTarotCard && (
+                            <span className="text-lg" title={`Tarot: ${scene.primaryTarotCard}`}>
+                              🔮
+                            </span>
+                          )}
                         </div>
-                      )}
-                    </div>
-                    <div className="flex items-center gap-2">
-                      {/* Copy Button */}
-                      <button
-                        onClick={(e) => {
-                          e.preventDefault();
-                          e.stopPropagation();
-                          handleCopyScene(scene);
-                        }}
-                        className={`p-2 rounded-lg transition-all duration-200 hover:scale-110 ${
-                          copiedSceneId === scene.id
-                            ? 'bg-green-500 text-white'
-                            : 'bg-white/20 hover:bg-white/30 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100'
-                        }`}
-                        title={copiedSceneId === scene.id ? 'Copied!' : 'Copy scene data for Sudowrite'}
-                      >
-                        {copiedSceneId === scene.id ? (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                        ) : (
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                          </svg>
-                        )}
-                      </button>
+                        
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleCopyScene(scene);
+                          }}
+                          className="h-8 w-8 p-0"
+                          title={copiedSceneId === scene.id ? 'Copied!' : 'Copy scene data'}
+                        >
+                          {copiedSceneId === scene.id ? (
+                            <Check className="h-4 w-4 text-green-600" />
+                          ) : (
+                            <Copy className="h-4 w-4" />
+                          )}
+                        </Button>
+                      </div>
                       
-                      {/* Navigate Arrow */}
-                      <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Scene Title */}
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-opacity-80 transition-colors">
-                    {scene.title}
-                  </h3>
-                  
-                  {/* Chapter Context */}
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-                    {scene.chapter?.title}
-                  </p>
-                  
-                  {/* Scene Details */}
-                  <div className="space-y-2 text-sm">
-                    {scene.description && (
-                      <p className="text-gray-700 dark:text-gray-300 line-clamp-2">
-                        {scene.description}
-                      </p>
-                    )}
+                      <CardTitle className="text-base font-semibold text-left line-clamp-2">
+                        {scene.title}
+                      </CardTitle>
+                    </CardHeader>
                     
-                    {/* Metadata Row */}
-                    <div className="flex flex-wrap gap-2 mt-3">
-                      {scene.pov && (
-                        <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 rounded-md text-xs">
-                          POV: {scene.pov}
-                        </span>
+                    <CardContent className="pt-0 space-y-3">
+                      {/* Chapter Context */}
+                      <p className="text-sm text-muted-foreground">
+                        {scene.chapter?.title}
+                      </p>
+                      
+                      {/* Scene Description */}
+                      {scene.description && (
+                        <p className="text-sm text-foreground line-clamp-2">
+                          {scene.description}
+                        </p>
                       )}
-                      {scene.location && (
-                        <span className="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-md text-xs">
-                          📍 {scene.location}
-                        </span>
-                      )}
-                      {scene.core_emotion && (
-                        <span className="px-2 py-1 bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-300 rounded-md text-xs">
-                          💭 {scene.core_emotion}
-                        </span>
-                      )}
-                      {scene.timeline_date && (
-                        <span className="px-2 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-md text-xs">
-                          📅 {scene.timeline_date}
-                        </span>
-                      )}
-                    </div>
-                  </div>
+                      
+                      {/* Metadata Tags */}
+                      <div className="flex flex-wrap gap-1">
+                        {scene.pov && (
+                          <Badge variant="outline" className="text-xs">
+                            POV: {scene.pov}
+                          </Badge>
+                        )}
+                        {scene.location && (
+                          <Badge variant="outline" className="text-xs">
+                            📍 {scene.location}
+                          </Badge>
+                        )}
+                        {scene.core_emotion && (
+                          <Badge variant="outline" className="text-xs">
+                            💭 {scene.core_emotion}
+                          </Badge>
+                        )}
+                        {scene.timeline_date && (
+                          <Badge variant="outline" className="text-xs">
+                            📅 {scene.timeline_date}
+                          </Badge>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </Link>
               );
             })}
-            </div>
-          </>
+          </div>
         )}
         
         {/* Empty States */}
         {activeTab === 'chapters' && chapters.length === 0 && (
-          <div className="text-center py-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full mb-6">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">No Chapters Yet</h3>
-            <p className="text-gray-600 dark:text-gray-400">This book&apos;s chapters are still being prepared for your journey.</p>
+          <div className="text-center py-12">
+            <BookOpen className="h-16 w-16 text-muted-foreground/50 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-foreground mb-2">No chapters available</h3>
+            <p className="text-muted-foreground">This book's chapters are still being prepared for your journey.</p>
           </div>
         )}
         
         {activeTab === 'scenes' && scenes.length === 0 && (
-          <div className="text-center py-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800 rounded-full mb-6">
-              <svg className="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">No Scenes Yet</h3>
-            <p className="text-gray-600 dark:text-gray-400">This book&apos;s scenes are still being crafted for your adventure.</p>
+          <div className="text-center py-12">
+            <FileText className="h-16 w-16 text-muted-foreground/50 mx-auto mb-4" />
+            <h3 className="text-lg font-semibold text-foreground mb-2">No scenes available</h3>
+            <p className="text-muted-foreground">This book's scenes are still being crafted for your adventure.</p>
           </div>
         )}
       </div>
