@@ -23,23 +23,100 @@ async function checkDatabaseHealth(): Promise<boolean> {
 }
 
 
-// Generate fallback calendar data
+// Segment boundaries (matching client-side logic)
+const SEGMENT_BOUNDARIES = {
+  Q1: { start: 1, end: 81 },
+  Q2: { start: 82, end: 162 },
+  MID_A: { start: 163, end: 182 },
+  MIDPOINT: { start: 183, end: 183 },
+  MID_B: { start: 184, end: 203 },
+  Q3: { start: 204, end: 284 },
+  Q4: { start: 285, end: 365 }
+} as const;
+
+// Server-side calendar utility functions (matching client logic)
+function resolveSegmentServer(dayOfYear365: number) {
+  for (const [segment, bounds] of Object.entries(SEGMENT_BOUNDARIES)) {
+    if (dayOfYear365 >= bounds.start && dayOfYear365 <= bounds.end) {
+      return {
+        segment: segment as any,
+        intraSegmentIndex: dayOfYear365 - bounds.start + 1
+      };
+    }
+  }
+  return { segment: 'Q1' as any, intraSegmentIndex: 1 };
+}
+
+function isRestDayServer(segment: string, intraSegmentIndex: number): boolean {
+  return ['Q1', 'Q2', 'Q3', 'Q4'].includes(segment) && intraSegmentIndex === 81;
+}
+
+function isMidpointServer(segment: string): boolean {
+  return segment === 'MIDPOINT';
+}
+
+function isActiveDayServer(segment: string, intraSegmentIndex: number): boolean {
+  if (isMidpointServer(segment) || isRestDayServer(segment, intraSegmentIndex)) {
+    return false;
+  }
+  return true;
+}
+
+function getTwentyDayWeekIndexServer(dayOfYear365: number): number {
+  let activeIndex = 0;
+  
+  for (let day = 1; day < dayOfYear365; day++) {
+    const { segment, intraSegmentIndex } = resolveSegmentServer(day);
+    if (isActiveDayServer(segment, intraSegmentIndex)) {
+      activeIndex++;
+    }
+  }
+  
+  // Add current day if it's active
+  const { segment, intraSegmentIndex } = resolveSegmentServer(dayOfYear365);
+  if (isActiveDayServer(segment, intraSegmentIndex)) {
+    activeIndex++;
+  }
+  
+  return (activeIndex - 1) % 20;
+}
+
+function getDetoxPhaseServer(segment: string) {
+  switch (segment) {
+    case 'MID_A':
+      return 'EXILE_1_20';
+    case 'MIDPOINT':
+      return 'MIDPOINT';
+    case 'MID_B':
+      return 'RENEWAL_1_20';
+    default:
+      return 'NONE';
+  }
+}
+
+// Generate fallback calendar data with proper rest day logic
 function generateFallbackData(date: Date): HfCalendarResult {
   const dayOfYear = Math.floor((date.getTime() - new Date(date.getFullYear(), 0, 1).getTime()) / (1000 * 60 * 60 * 24)) + 1;
+  const { segment, intraSegmentIndex } = resolveSegmentServer(dayOfYear);
+  
+  const isRest = isRestDayServer(segment, intraSegmentIndex);
+  const isMid = isMidpointServer(segment);
+  const isActive = isActiveDayServer(segment, intraSegmentIndex);
+  
   return {
     dateISO: date.toISOString().split('T')[0],
     dayOfYear365: dayOfYear,
-    segment: dayOfYear <= 81 ? 'Q1' : dayOfYear <= 162 ? 'Q2' : dayOfYear <= 203 ? 'MID_A' : dayOfYear <= 284 ? 'Q3' : 'Q4',
-    intraSegmentIndex: dayOfYear <= 81 ? dayOfYear : dayOfYear <= 162 ? dayOfYear - 81 : dayOfYear - 162,
-    isRestDay: false,
-    isMidpoint: false,
-    isActiveDay: true,
-    twentyDayWeekIndex: (dayOfYear - 1) % 20,
-    detoxPhase: 'NONE',
-    daySignName: `Day ${(dayOfYear - 1) % 20 + 1}`,
-    theme: 'Sacred Calendar Day',
+    segment: segment as any,
+    intraSegmentIndex,
+    isRestDay: isRest,
+    isMidpoint: isMid,
+    isActiveDay: isActive,
+    twentyDayWeekIndex: getTwentyDayWeekIndexServer(dayOfYear),
+    detoxPhase: getDetoxPhaseServer(segment) as any,
+    daySignName: isActive ? `Day ${getTwentyDayWeekIndexServer(dayOfYear) + 1}` : undefined,
+    theme: isActive ? 'Sacred Calendar Day' : isMid ? 'Sacred Center' : 'Rest Day',
     reflection: 'Reflect on the energy of this day',
-    color: getBookColorForDay(dayOfYear)
+    color: isActive ? getBookColorForDay(dayOfYear) : undefined
   };
 }
 

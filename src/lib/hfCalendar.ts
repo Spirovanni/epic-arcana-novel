@@ -381,18 +381,18 @@ export async function getFullYearCalendar(year?: number): Promise<HfCalendarResu
     // Generate all days for the year
     for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
       const date = new Date(targetYear, 0, dayOfYear - 1);
-      const normalizedDayOfYear = dayOfYear365(date, config.anchor, config.leapPolicy);
-      const { segment, intraSegmentIndex } = resolveSegment(normalizedDayOfYear);
+      // Use the loop dayOfYear directly instead of recalculating to avoid duplicates
+      const { segment, intraSegmentIndex } = resolveSegment(dayOfYear);
       
       const result: HfCalendarResult = {
         dateISO: date.toISOString().split('T')[0],
-        dayOfYear365: normalizedDayOfYear,
+        dayOfYear365: dayOfYear,
         segment,
         intraSegmentIndex,
         isRestDay: isRestDay(segment, intraSegmentIndex),
         isMidpoint: isMidpoint(segment),
         isActiveDay: isActiveDay(segment, intraSegmentIndex),
-        twentyDayWeekIndex: getTwentyDayWeekIndex(normalizedDayOfYear),
+        twentyDayWeekIndex: getTwentyDayWeekIndex(dayOfYear),
         detoxPhase: getDetoxPhase(segment)
       };
       
@@ -421,7 +421,7 @@ export async function getFullYearCalendar(year?: number): Promise<HfCalendarResu
       
       // Add override data for rest days and midpoint
       if (result.isRestDay || result.isMidpoint) {
-        const override = overrideMap.get(normalizedDayOfYear);
+        const override = overrideMap.get(dayOfYear);
         if (override) {
           result.overrideTitle = override.title || undefined;
           result.overrideDescription = override.description || undefined;
