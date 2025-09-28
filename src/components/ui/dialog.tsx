@@ -61,9 +61,18 @@ const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
     
     return (
       <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4">
-        <div className={cn("relative w-full max-w-2xl max-h-[90vh] border border-border bg-background text-foreground shadow-lg rounded-lg overflow-hidden", resolvedTheme === 'dark' ? 'dark' : '')}>
-          <div className="overflow-y-auto max-h-full scrollbar-hide">
-            <div className="p-6">
+        <div className={cn("relative w-full max-w-2xl max-h-[90vh] border border-border bg-background text-foreground shadow-lg rounded-lg overflow-hidden flex flex-col", resolvedTheme === 'dark' ? 'dark' : '')}>
+          {/* Close button */}
+          <button
+            className="absolute right-4 top-4 z-10 rounded-sm opacity-70 hover:opacity-100 text-muted-foreground hover:text-foreground transition-colors"
+            onClick={() => onOpenChange(false)}
+          >
+            <span className="h-4 w-4">×</span>
+          </button>
+          
+          {/* Scrollable content area */}
+          <div className="overflow-y-auto flex-1 min-h-0 scrollbar-hide">
+            <div className="p-6 pr-12">
               <div
                 ref={ref}
                 className={cn("grid gap-4", className)}
@@ -73,12 +82,6 @@ const DialogContent = React.forwardRef<HTMLDivElement, DialogContentProps>(
               </div>
             </div>
           </div>
-          <button
-            className="absolute right-4 top-4 rounded-sm opacity-70 hover:opacity-100 text-muted-foreground hover:text-foreground transition-colors"
-            onClick={() => onOpenChange(false)}
-          >
-            <span className="h-4 w-4">×</span>
-          </button>
         </div>
       </div>
     )
