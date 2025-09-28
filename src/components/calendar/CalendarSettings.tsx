@@ -3,12 +3,12 @@
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Separator } from '@/components/ui/separator';
+import { DatePicker } from '@/components/ui/date-picker';
 import { AlertCircle, Calendar, Palette, Settings as SettingsIcon, Save, RotateCcw } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
@@ -185,18 +185,23 @@ export function CalendarSettings({ className }: CalendarSettingsProps) {
       </CardHeader>
       
       <CardContent className="space-y-6">
-        {error && (
-          <Alert variant="destructive">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{error}</AlertDescription>
-          </Alert>
-        )}
+        {/* Status Messages */}
+        {(error || success) && (
+          <div className="space-y-3">
+            {error && (
+              <Alert variant="destructive">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
 
-        {success && (
-          <Alert className="border-green-500 bg-green-50 text-green-700">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{success}</AlertDescription>
-          </Alert>
+            {success && (
+              <Alert className="border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300">
+                <AlertCircle className="h-4 w-4" />
+                <AlertDescription>{success}</AlertDescription>
+              </Alert>
+            )}
+          </div>
         )}
 
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -219,12 +224,13 @@ export function CalendarSettings({ className }: CalendarSettingsProps) {
             {/* Year Anchor */}
             <div className="space-y-2">
               <Label htmlFor="anchor">Year Anchor Date</Label>
-              <Input
-                id="anchor"
-                type="date"
-                value={settings.anchor || ''}
-                onChange={(e) => handleSettingChange('anchor', e.target.value)}
-                placeholder={getDefaultAnchor()}
+              <DatePicker
+                date={settings.anchor ? new Date(settings.anchor) : undefined}
+                onDateChange={(date) => {
+                  const dateStr = date ? date.toISOString().split('T')[0] : '';
+                  handleSettingChange('anchor', dateStr);
+                }}
+                placeholder={`Select anchor date (default: ${getDefaultAnchor()})`}
               />
               <p className="text-xs text-muted-foreground">
                 Starting date for the 365-day calendar. Leave empty to use January 1st of current year.
@@ -350,11 +356,11 @@ export function CalendarSettings({ className }: CalendarSettingsProps) {
         </Tabs>
 
         {/* Action Buttons */}
-        <div className="flex justify-between pt-4 border-t">
+        <div className="flex flex-col sm:flex-row justify-between gap-3 pt-6 border-t">
           <Button
             variant="outline"
             onClick={resetToDefaults}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 justify-center"
             disabled={saving}
           >
             <RotateCcw className="h-4 w-4" />
@@ -364,7 +370,7 @@ export function CalendarSettings({ className }: CalendarSettingsProps) {
           <Button
             onClick={saveSettings}
             disabled={!hasChanges || saving}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 justify-center"
           >
             <Save className="h-4 w-4" />
             {saving ? 'Saving...' : 'Save Settings'}
