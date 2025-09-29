@@ -1092,6 +1092,7 @@ export default function ChapterWritingPage() {
               <div className="animate-spin rounded-full h-12 w-12 border-2 border-primary border-t-transparent mx-auto"></div>
               <p className="text-muted-foreground">Loading chapter...</p>
             </div>
+          </div>
         </div>
       </div>
     );
