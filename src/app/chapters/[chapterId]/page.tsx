@@ -6,8 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
 import { ArrowLeftIcon, BookOpenIcon, SparklesIcon, ClockIcon, AcademicCapIcon, LightBulbIcon, ClipboardDocumentCheckIcon, ChevronDownIcon, ChevronUpIcon, InformationCircleIcon, TrashIcon, ClipboardIcon } from '@heroicons/react/24/outline';
-import Navbar from '@/components/Navbar';
-import Breadcrumbs from '@/components/Breadcrumbs';
+import { AppNavbar } from '@/components/shared/AppNavbar';
 import CharacterArcGuidance from '@/components/CharacterArcGuidance';
 import CharacterToolkitHUD from '@/components/CharacterToolkitHUD';
 import SceneManager from '@/components/SceneManager';
@@ -64,64 +63,64 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
   };
   
   return (
-    <div className="border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-white dark:bg-gray-900">
+    <div className="border border-border rounded-lg overflow-hidden bg-background">
       {/* Toolbar */}
-      <div className="bg-gray-50 dark:bg-gray-700 border-b dark:border-gray-600 p-3 flex flex-wrap items-center gap-3">
+      <div className="bg-muted border-b dark:border-gray-600 p-3 flex flex-wrap items-center gap-3">
         {/* Formatting Buttons */}
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
             onClick={() => insertFormat('h1')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             H1
           </button>
           <button
             type="button"
             onClick={() => insertFormat('h2')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             H2
           </button>
           <button
             type="button"
             onClick={() => insertFormat('h3')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             H3
           </button>
           <button
             type="button"
             onClick={() => insertFormat('p')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             Paragraph
           </button>
           <button
             type="button"
             onClick={() => insertFormat('bold')}
-            className="px-3 py-1.5 text-sm font-bold text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-bold text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             Bold
           </button>
           <button
             type="button"
             onClick={() => insertFormat('italic')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors italic"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors italic"
           >
             Italic
           </button>
           <button
             type="button"
             onClick={() => insertFormat('blockquote')}
-            className="px-3 py-1.5 text-sm font-medium text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+            className="px-3 py-1.5 text-sm font-medium text-secondary-foreground bg-secondary border border-border rounded-md hover:bg-secondary/80 hover:border-border focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
           >
             Quote
           </button>
         </div>
 
         {/* Divider */}
-        <div className="border-l border-gray-300 dark:border-gray-600 h-6"></div>
+        <div className="border-l border-border h-6"></div>
 
         {/* Preview Toggle */}
         <button
@@ -130,7 +129,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
           className={`px-4 py-1.5 text-sm font-medium border rounded-md transition-colors ${
             isPreview 
               ? 'bg-blue-600 text-white border-blue-600 hover:bg-blue-700' 
-              : 'text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600 hover:border-gray-400 dark:hover:border-gray-500'
+              : 'text-secondary-foreground bg-secondary border-border hover:bg-secondary/80 hover:border-border'
           }`}
         >
           {isPreview ? 'Edit Mode' : 'Preview'}
@@ -144,7 +143,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
           className={`px-4 py-1.5 text-sm font-medium border rounded-md transition-colors ${
             hasUnsavedChanges && !isSaving
               ? 'bg-green-600 text-white border-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500'
-              : 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 cursor-not-allowed'
+              : 'bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 border-border cursor-not-allowed'
           }`}
         >
           {isSaving ? 'Saving...' : hasUnsavedChanges ? 'Save Changes' : 'Saved'}
@@ -160,7 +159,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
       <div className="min-h-[350px]">
         {isPreview ? (
           <div 
-            className="p-4 prose prose-sm max-w-none prose-gray dark:prose-invert bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
+            className="p-4 prose prose-sm max-w-none prose-gray dark:prose-invert bg-background text-foreground"
             dangerouslySetInnerHTML={{ __html: value }}
           />
         ) : (
@@ -203,7 +202,7 @@ const SimpleHTMLEditor = ({ value, onChange, onSave }: {
                 }, 3000);
               }
             }}
-            className="w-full h-[350px] p-4 border-0 resize-none focus:outline-none font-mono text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+            className="w-full h-[350px] p-4 border-0 resize-none focus:outline-none font-mono text-sm text-foreground bg-background placeholder:text-gray-500 dark:placeholder:text-gray-400"
             placeholder="Start writing your chapter content here... (Large content will automatically create new pages)"
           />
         )}
@@ -1085,17 +1084,14 @@ export default function ChapterWritingPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <Navbar />
-        <Breadcrumbs items={[
-          { label: 'Books', href: '/books' },
-          { label: 'Loading...', current: true }
-        ]} />
-        <div className="flex items-center justify-center min-h-[50vh]">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600 dark:border-indigo-400 mx-auto mb-4"></div>
-            <p className="text-gray-600 dark:text-gray-400">Loading chapter...</p>
-          </div>
+      <div className="min-h-screen bg-background">
+        <AppNavbar />
+        <div className="container mx-auto px-6 py-8">
+          <div className="flex items-center justify-center min-h-[60vh]">
+            <div className="text-center space-y-4">
+              <div className="animate-spin rounded-full h-12 w-12 border-2 border-primary border-t-transparent mx-auto"></div>
+              <p className="text-muted-foreground">Loading chapter...</p>
+            </div>
         </div>
       </div>
     );
@@ -1103,22 +1099,20 @@ export default function ChapterWritingPage() {
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
-        <Navbar />
-        <Breadcrumbs items={[
-          { label: 'Books', href: '/books' },
-          { label: 'Chapter Not Found', current: true }
-        ]} />
-        <div className="flex items-center justify-center min-h-[50vh]">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4">Chapter Not Found</h1>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">The chapter you&apos;re looking for doesn&apos;t exist or has been moved.</p>
-            <Link 
-              href="/books" 
-              className="inline-flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors duration-200"
-            >
-              Return to Books
-            </Link>
+      <div className="min-h-screen bg-background">
+        <AppNavbar />
+        <div className="container mx-auto px-6 py-8">
+          <div className="flex items-center justify-center min-h-[60vh]">
+            <div className="text-center space-y-4">
+              <h1 className="text-2xl font-bold text-foreground">Chapter Not Found</h1>
+              <p className="text-muted-foreground">The chapter you're looking for doesn't exist or has been moved.</p>
+              <Link 
+                href="/books" 
+                className="inline-flex items-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-200"
+              >
+                Return to Books
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -1144,7 +1138,7 @@ export default function ChapterWritingPage() {
   const currentPageWordCount = currentPageData ? countWords(currentPageData.content) : 0;
 
   return (
-    <div className="min-h-screen relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen relative bg-background">
       {/* Subtle mystical overlay */}
       <div 
         className="absolute inset-0 opacity-5 pointer-events-none"
@@ -1152,12 +1146,7 @@ export default function ChapterWritingPage() {
           backgroundImage: `radial-gradient(circle at 20% 20%, ${chapterHex}40 0%, transparent 50%), radial-gradient(circle at 80% 80%, ${chapterHex}30 0%, transparent 50%)`
         }}
       />
-      <Navbar />
-      <Breadcrumbs items={[
-        { label: 'Books', href: '/books' },
-        { label: book.title, href: `/books/${book.id}` },
-        { label: `Chapter ${chapter.chapterNumber}: ${chapter.title}`, current: true }
-      ]} />
+      <AppNavbar />
       
       {/* Enhanced Hero Header */}
       <div 
@@ -1292,7 +1281,7 @@ export default function ChapterWritingPage() {
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-bold transition-all duration-300 ${
                 activeTab === key
                   ? `text-white shadow-xl transform scale-105`
-                  : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:scale-105'
+                  : 'text-muted-foreground hover:text-foreground hover:scale-105'
               }`}
               style={activeTab === key ? {
                 background: `linear-gradient(135deg, ${chapterHex}, ${adjustBrightness(chapterHex, -20)})`,
@@ -1319,7 +1308,7 @@ export default function ChapterWritingPage() {
                 }}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 flex items-center">
+                  <h2 className="text-2xl font-bold text-foreground flex items-center">
                     <BookOpenIcon className="w-6 h-6 mr-2" style={{ color: chapterHex }} />
                     <span className="bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent">
                       Chapter Overview
@@ -1391,63 +1380,63 @@ export default function ChapterWritingPage() {
                 <div className="grid lg:grid-cols-2 gap-6">
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Tagline</h3>
+                      <h3 className="font-semibold text-secondary-foreground mb-2">Tagline</h3>
                       {isEditingOverview ? (
                         <input
                           type="text"
                           value={editedChapter?.tagline || ''}
                           onChange={(e) => updateEditedChapterField('tagline', e.target.value)}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium italic focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-muted text-foreground font-medium italic focus:outline-none focus:ring-2 focus:ring-blue-500"
                           placeholder="Enter chapter tagline..."
                         />
                       ) : (
-                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 italic font-medium border border-gray-200 dark:border-gray-600">
+                        <p className="text-foreground bg-muted rounded-lg px-4 py-3 italic font-medium border border-border">
                           &quot;{chapter.tagline || 'No tagline set'}&quot;
                         </p>
                       )}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Focus Area</h3>
+                      <h3 className="font-semibold text-secondary-foreground mb-2">Focus Area</h3>
                       {isEditingOverview ? (
                         <input
                           type="text"
                           value={editedChapter?.focusArea || ''}
                           onChange={(e) => updateEditedChapterField('focusArea', e.target.value)}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-muted text-foreground font-medium focus:outline-none focus:ring-2 focus:ring-blue-500"
                           placeholder="Enter focus area..."
                         />
                       ) : (
-                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 font-medium border border-gray-200 dark:border-gray-600">
+                        <p className="text-foreground bg-muted rounded-lg px-4 py-3 font-medium border border-border">
                           {chapter.focusArea || 'No focus area set'}
                         </p>
                       )}
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Connection to Major Task Group</h3>
+                      <h3 className="font-semibold text-secondary-foreground mb-2">Connection to Major Task Group</h3>
                       {isEditingOverview ? (
                         <textarea
                           value={editedChapter?.connectionToMajorTaskGroup || ''}
                           onChange={(e) => updateEditedChapterField('connectionToMajorTaskGroup', e.target.value)}
                           rows={4}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-muted text-foreground font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
                           placeholder="Enter connection to major task group..."
                         />
                       ) : (
-                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
+                        <p className="text-foreground bg-muted rounded-lg px-4 py-3 text-sm font-medium border border-border">
                           {chapter.connectionToMajorTaskGroup || 'No connection specified'}
                         </p>
                       )}
                     </div>
                     {/* Color Theme */}
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Color Theme</h3>
-                      <div className="flex items-center space-x-3 bg-gray-50 dark:bg-gray-700 rounded px-3 py-2">
+                      <h3 className="font-semibold text-secondary-foreground mb-2">Color Theme</h3>
+                      <div className="flex items-center space-x-3 bg-muted rounded px-3 py-2">
                         <div 
-                          className="w-8 h-8 rounded-full border-2 border-gray-300 dark:border-gray-600"
+                          className="w-8 h-8 rounded-full border-2 border-border"
                           style={{ backgroundColor: chapter.colorTheme?.hex }}
                         ></div>
                         <div>
-                          <p className="font-medium text-gray-900 dark:text-gray-100">{chapter.colorTheme?.name}</p>
+                          <p className="font-medium text-foreground">{chapter.colorTheme?.name}</p>
                           <p className="text-sm text-gray-600 dark:text-gray-400">{chapter.colorTheme?.hex}</p>
                         </div>
                       </div>
@@ -1455,17 +1444,17 @@ export default function ChapterWritingPage() {
                   </div>
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-2">Summary</h3>
+                      <h3 className="font-semibold text-secondary-foreground mb-2">Summary</h3>
                       {isEditingOverview ? (
                         <textarea
                           value={editedChapter?.summary || ''}
                           onChange={(e) => updateEditedChapterField('summary', e.target.value)}
                           rows={4}
-                          className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-800/50 text-gray-900 dark:text-gray-100 font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
+                          className="w-full px-4 py-3 rounded-lg border border-border bg-muted text-foreground font-medium text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-vertical"
                           placeholder="Enter chapter summary..."
                         />
                       ) : (
-                        <p className="text-gray-900 dark:text-gray-100 bg-gray-50 dark:bg-gray-800/50 rounded-lg px-4 py-3 text-sm font-medium border border-gray-200 dark:border-gray-600">
+                        <p className="text-foreground bg-muted rounded-lg px-4 py-3 text-sm font-medium border border-border">
                           {chapter.summary || 'No summary available'}
                         </p>
                       )}
@@ -1477,28 +1466,28 @@ export default function ChapterWritingPage() {
               <div className="grid lg:grid-cols-2 gap-6">
                 {/* Tarot Information */}
                 {(chapter.tarotFamily || chapter.tarotCardItem || chapter.tarotCardLink) && (
-                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
-                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
+                  <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
+                    <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center">
                       <SparklesIcon className="w-6 h-6 mr-2 text-purple-600 dark:text-purple-400" />
                       Tarot & Symbolism
                     </h2>
                     <div className="space-y-3">
                       {chapter.tarotFamily && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Family</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2">{chapter.tarotFamily}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Family</h3>
+                          <p className="text-foreground bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2">{chapter.tarotFamily}</p>
                         </div>
                       )}
                       {chapter.tarotCardItem && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Card</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2">{chapter.tarotCardItem}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Card</h3>
+                          <p className="text-foreground bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2">{chapter.tarotCardItem}</p>
                         </div>
                       )}
                       {chapter.tarotCardLink && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Connection</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2 text-sm">{chapter.tarotCardLink}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Connection</h3>
+                          <p className="text-foreground bg-purple-50 dark:bg-purple-900/30 rounded px-3 py-2 text-sm">{chapter.tarotCardLink}</p>
                         </div>
                       )}
                     </div>
@@ -1507,34 +1496,34 @@ export default function ChapterWritingPage() {
 
                 {/* Epic Novel Structure */}
                 {(chapter.epicNovelSectionName || chapter.epicChapterFocus || chapter.epicNovelPages || chapter.epicNovelChapterFocus) && (
-                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
-                    <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
+                  <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
+                    <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center">
                       <BookOpenIcon className="w-6 h-6 mr-2 text-blue-600 dark:text-blue-400" />
                       Epic Structure
                     </h2>
                     <div className="space-y-3">
                       {chapter.epicNovelSectionName && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Section</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2">{chapter.epicNovelSectionName}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Section</h3>
+                          <p className="text-foreground bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2">{chapter.epicNovelSectionName}</p>
                         </div>
                       )}
                       {chapter.epicChapterFocus && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Chapter Focus</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2 text-sm">{chapter.epicChapterFocus}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Chapter Focus</h3>
+                          <p className="text-foreground bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2 text-sm">{chapter.epicChapterFocus}</p>
                         </div>
                       )}
                       {chapter.epicNovelChapterFocus && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Novel Chapter Focus</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2 text-sm">{chapter.epicNovelChapterFocus}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Novel Chapter Focus</h3>
+                          <p className="text-foreground bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2 text-sm">{chapter.epicNovelChapterFocus}</p>
                         </div>
                       )}
                       {chapter.epicNovelPages && (
                         <div>
-                          <h3 className="font-semibold text-gray-700 dark:text-gray-200 mb-1">Pages</h3>
-                          <p className="text-gray-900 dark:text-gray-100 bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2">{chapter.epicNovelPages}</p>
+                          <h3 className="font-semibold text-secondary-foreground mb-1">Pages</h3>
+                          <p className="text-foreground bg-blue-50 dark:bg-blue-900/30 rounded px-3 py-2">{chapter.epicNovelPages}</p>
                         </div>
                       )}
                     </div>
@@ -1544,8 +1533,8 @@ export default function ChapterWritingPage() {
 
               {/* Learning Objectives */}
               {chapter.terminalLearningObjectives && typeof chapter.terminalLearningObjectives === 'object' && (
-                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
+                <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
+                  <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center">
                     <ClipboardDocumentCheckIcon className="w-6 h-6 mr-2 text-green-600 dark:text-green-400" />
                     Learning Objectives
                   </h2>
@@ -1708,8 +1697,8 @@ export default function ChapterWritingPage() {
 
               {/* Task Master and Major Task Group Context */}
               {(data.taskMaster || data.majorTaskGroup) && (
-                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
+                <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
+                  <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center">
                     <AcademicCapIcon className="w-6 h-6 mr-2 text-indigo-600 dark:text-indigo-400" />
                     Hierarchical Context
                   </h2>
@@ -1739,14 +1728,14 @@ export default function ChapterWritingPage() {
               )}
 
               {/* Character Arc Guidance */}
-              <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
+              <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
                 <CharacterArcGuidance characterGuidance={data?.characterGuidance || []} />
               </div>
 
               {/* Books Influenced By */}
               {chapter.booksInfluencedBy && typeof chapter.booksInfluencedBy === 'object' && (
-                <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
-                  <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4 flex items-center">
+                <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
+                  <h2 className="text-2xl font-bold text-foreground mb-4 flex items-center">
                     <BookOpenIcon className="w-6 h-6 mr-2 text-amber-600 dark:text-amber-400" />
                     Literary Influences
                   </h2>
@@ -1802,10 +1791,10 @@ export default function ChapterWritingPage() {
               {permissions.canWrite && (
                 <>
                   {/* Writing Tools */}
-                  <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm rounded-xl shadow-lg p-6 border border-gray-200/50 dark:border-gray-600/50">
+                  <div className="bg-card backdrop-blur-sm rounded-xl shadow-lg p-6 border border-border">
                     <div className="flex flex-wrap items-center justify-between gap-4 mb-4">
                       <div className="flex items-center space-x-2">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">Chapter Writing</h2>
+                        <h2 className="text-2xl font-bold text-foreground">Chapter Writing</h2>
                         <div className="relative group">
                           <InformationCircleIcon className="w-5 h-5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 cursor-help" />
                           <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 w-80 p-4 bg-gray-900 dark:bg-gray-800 text-white text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none z-50">
@@ -1830,7 +1819,7 @@ export default function ChapterWritingPage() {
                           className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                             showToolkit
                               ? 'bg-indigo-600 dark:bg-indigo-500 text-white hover:bg-indigo-700 dark:hover:bg-indigo-600'
-                              : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                              : 'bg-gray-200 dark:bg-gray-700 text-muted-foreground hover:bg-gray-300 dark:hover:bg-gray-600'
                           }`}
                         >
                           <ClipboardDocumentCheckIcon className="w-4 h-4" />
@@ -1881,7 +1870,7 @@ export default function ChapterWritingPage() {
                     {pages.length > 0 && (
                       <div className="mb-6">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">Chapter Progress</h3>
+                          <h3 className="text-lg font-semibold text-foreground">Chapter Progress</h3>
                           <span className="text-sm text-gray-600 dark:text-gray-400">
                             {Math.round(getOverallProgress(pages))}% complete
                           </span>
@@ -1905,7 +1894,7 @@ export default function ChapterWritingPage() {
                     {/* Page Navigation */}
                     {pages.length > 0 && (
                       <div className="mb-6">
-                        <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Pages (15 max)</h3>
+                        <h3 className="text-lg font-semibold text-foreground mb-4">Pages (15 max)</h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
                           {pages.map((page, index) => {
                             const progress = getPageProgress(page.content || '', page.pageNumber, pages, page);
@@ -1945,7 +1934,7 @@ export default function ChapterWritingPage() {
                                       ? 'bg-blue-600 dark:bg-blue-500 text-white'
                                       : isComplete
                                         ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 hover:bg-green-200 dark:hover:bg-green-900/50'
-                                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600'
+                                        : 'bg-gray-200 dark:bg-gray-700 text-secondary-foreground hover:bg-gray-300 dark:hover:bg-gray-600'
                                   }`}
                                 >
                                   Page {page.pageNumber}
@@ -1964,7 +1953,7 @@ export default function ChapterWritingPage() {
                     {currentPageData && (
                       <div className="space-y-4">
                         <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                          <h3 className="text-lg font-semibold text-foreground">
                             Page {currentPageData.pageNumber}
                           </h3>
                           <div className="text-sm text-gray-600 dark:text-gray-300 flex items-center gap-4">
@@ -2018,7 +2007,7 @@ export default function ChapterWritingPage() {
                         </div>
                         
                         {/* Page Goal Information */}
-                        <div className="bg-gray-50/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-lg p-4 border border-gray-200/50 dark:border-gray-600/50">
+                        <div className="bg-muted/90 backdrop-blur-sm rounded-lg p-4 border border-border">
                           <h4 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Page Goal</h4>
                           <div className="text-sm text-gray-600 dark:text-gray-400">
                             {currentPageData.pageNumber === 1 && (
@@ -2077,10 +2066,10 @@ export default function ChapterWritingPage() {
               {/* AI Prompts Modal */}
               {showPrompts && (
                 <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-                  <div className="bg-white/98 dark:bg-gray-800/98 backdrop-blur-sm rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto border border-gray-200/50 dark:border-gray-600/50">
+                  <div className="bg-white/98 dark:bg-gray-800/98 backdrop-blur-sm rounded-xl max-w-4xl max-h-[80vh] overflow-y-auto border border-border">
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-6">
-                        <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">AI Writing Prompts</h2>
+                        <h2 className="text-2xl font-bold text-foreground">AI Writing Prompts</h2>
                         <button
                           onClick={() => setShowPrompts(false)}
                           className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
@@ -2092,10 +2081,10 @@ export default function ChapterWritingPage() {
                         {aiPrompts.map((prompt, index) => (
                           <div key={index} className="border dark:border-gray-700 rounded-lg p-4">
                             <div className="flex items-center justify-between mb-2">
-                              <h3 className="font-semibold text-gray-800 dark:text-gray-100">{prompt.title}</h3>
-                              <span className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded">{prompt.category}</span>
+                              <h3 className="font-semibold text-foreground">{prompt.title}</h3>
+                              <span className="text-xs bg-gray-100 dark:bg-gray-700 text-muted-foreground px-2 py-1 rounded">{prompt.category}</span>
                             </div>
-                            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{prompt.prompt}</p>
+                            <p className="text-muted-foreground text-sm leading-relaxed">{prompt.prompt}</p>
                           </div>
                         ))}
                       </div>
@@ -2130,13 +2119,13 @@ export default function ChapterWritingPage() {
       {/* Delete Confirmation Modal */}
       {showDeleteConfirmation && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl p-6 max-w-md mx-4 border border-gray-200 dark:border-gray-600">
+          <div className="bg-card rounded-xl shadow-2xl p-6 max-w-md mx-4 border border-border">
             <div className="flex items-center space-x-3 mb-4">
               <div className="flex-shrink-0 w-10 h-10 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
                 <TrashIcon className="w-5 h-5 text-red-600 dark:text-red-400" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                <h3 className="text-lg font-semibold text-foreground">
                   Delete All Content
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
@@ -2146,7 +2135,7 @@ export default function ChapterWritingPage() {
             </div>
             
             <div className="mb-6">
-              <p className="text-gray-700 dark:text-gray-300">
+              <p className="text-muted-foreground">
                 Are you sure you want to delete all content from all pages in this chapter? 
                 This will permanently remove all written content and cannot be undone.
               </p>
@@ -2155,7 +2144,7 @@ export default function ChapterWritingPage() {
             <div className="flex space-x-3 justify-end">
               <button
                 onClick={() => setShowDeleteConfirmation(false)}
-                className="px-4 py-2 text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                className="px-4 py-2 text-muted-foreground bg-gray-100 dark:bg-gray-700 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                 disabled={isDeleting}
               >
                 Cancel
