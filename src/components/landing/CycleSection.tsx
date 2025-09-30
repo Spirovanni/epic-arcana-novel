@@ -8,13 +8,6 @@ export function CycleSection() {
     <section id="cycle" className="px-6 py-20">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Your Color in the 360‑Day Cycle
-          </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Your personality score lights up a unique hue in the Human Framework's living wheel. 
-            Each day reveals a theme—your personal chapter to explore, reflect, and grow.
-          </p>
         </div>
 
         <div className="max-w-6xl mx-auto">
