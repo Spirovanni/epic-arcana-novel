@@ -31,10 +31,6 @@ export function CycleSection() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Each of the 360 personality profiles corresponds to a unique color and daily theme, 
-              creating a year-long journey of growth and discovery.
-            </p>
           </div>
 
           {/* Cycle Features */}
