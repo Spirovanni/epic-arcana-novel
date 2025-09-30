@@ -41,11 +41,9 @@ export default function Home() {
       </section>
 
       {/* Additional sections from original */}
-      <HowItWorksSection />
       <PersonalitiesSection />
       <WorldSection />
       
-      <ColorCycle />
       <DashboardPreview />
       <SocialProof />
       
@@ -53,7 +51,6 @@ export default function Home() {
       <CommunitySection />
       <CycleSection />
       
-      <FinalCTA />
       <FinalCTASection />
       <Footer />
     </main>

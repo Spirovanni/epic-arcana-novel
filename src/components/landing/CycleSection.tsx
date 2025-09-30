@@ -7,8 +7,6 @@ export function CycleSection() {
   return (
     <section id="cycle" className="px-6 py-20">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-        </div>
 
         <div className="max-w-6xl mx-auto">
           {/* Color Wheel Visualization */}
@@ -24,6 +22,10 @@ export function CycleSection() {
                 </div>
               </div>
             </div>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Each of the 360 personality profiles corresponds to a unique color and daily theme, 
+              creating a year-long journey of growth and discovery.
+            </p>
           </div>
 
           {/* Cycle Features */}
