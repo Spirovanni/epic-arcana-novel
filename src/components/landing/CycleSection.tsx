@@ -13,7 +13,7 @@ export function CycleSection() {
           <div className="text-center mb-12">
             <div className="relative w-80 h-80 mx-auto mb-8">
               <div className="w-full h-full rounded-full bg-gradient-conic from-red-500 via-yellow-500 via-green-500 via-blue-500 via-purple-500 to-red-500 shadow-2xl"></div>
-              <div className="absolute inset-8 bg-slate-900 rounded-full flex items-center justify-center">
+              <div className="absolute inset-8 bg-gradient-to-br from-amber-500/20 via-orange-500/20 to-yellow-500/20 rounded-full flex items-center justify-center backdrop-blur-sm border border-amber-500/30">
                 <div className="text-center">
                   <Badge className="bg-amber-600/20 text-amber-300 border-amber-500/50 mb-2">
                     Your Alignment
