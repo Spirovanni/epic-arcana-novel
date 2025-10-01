@@ -9,7 +9,7 @@ import { Progress } from '@/components/ui/progress';
 
 interface AssessmentResultsProps {
   results: {
-    primaryPlayerType: {
+    primaryPlayerType?: {
       id: string;
       title: string;
       heroJourneyStage: string;
@@ -26,7 +26,7 @@ interface AssessmentResultsProps {
         growthPath: string;
         stressPath: string;
       };
-      colorTheme: {
+      colorTheme?: {
         primary: string;
         secondary: string;
         accent: string;
@@ -37,14 +37,14 @@ interface AssessmentResultsProps {
       title: string;
       heroJourneyStage: string;
     } | null;
-    bigFiveScores: {
+    bigFiveScores?: {
       openness: number;
       conscientiousness: number;
       extraversion: number;
       agreeableness: number;
       neuroticism: number;
     };
-    enneagram: {
+    enneagram?: {
       type: number;
       name: string;
       coreDesire: string;
@@ -60,6 +60,24 @@ interface AssessmentResultsProps {
 
 export function AssessmentResults({ results }: AssessmentResultsProps) {
   const { primaryPlayerType, secondaryPlayerType, bigFiveScores, enneagram } = results;
+  
+  // Safety check for missing data
+  if (!primaryPlayerType) {
+    return (
+      <div className="text-center py-8">
+        <p className="text-muted-foreground">Assessment results are not available. Please complete the assessment first.</p>
+      </div>
+    );
+  }
+  
+  // Safety check for colorTheme
+  const defaultColorTheme = {
+    primary: '#6366f1',
+    secondary: '#8b5cf6', 
+    accent: '#06b6d4'
+  };
+  
+  const colorTheme = primaryPlayerType?.colorTheme || defaultColorTheme;
 
   return (
     <div className="space-y-8">
@@ -75,7 +93,7 @@ export function AssessmentResults({ results }: AssessmentResultsProps) {
           <div className="flex items-center gap-4">
             <div 
               className="w-16 h-16 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg"
-              style={{ backgroundColor: primaryPlayerType.colorTheme.primary }}
+              style={{ backgroundColor: colorTheme.primary }}
             >
               {primaryPlayerType.title.split(' ')[1]?.charAt(0) || 'A'}
             </div>
@@ -158,39 +176,41 @@ export function AssessmentResults({ results }: AssessmentResultsProps) {
       </Card>
 
       {/* Enneagram */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-3">
-            <Badge variant="secondary" className="text-lg px-3 py-1">Type {enneagram.type}</Badge>
-            <span>Enneagram Profile</span>
-          </CardTitle>
-          <CardDescription>{enneagram.name}</CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg font-semibold text-primary mb-2">Core Motivation</h4>
-                <p className="text-muted-foreground">{enneagram.coreDesire}</p>
+      {enneagram && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex items-center gap-3">
+              <Badge variant="secondary" className="text-lg px-3 py-1">Type {enneagram.type}</Badge>
+              <span>Enneagram Profile</span>
+            </CardTitle>
+            <CardDescription>{enneagram.name}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-primary mb-2">Core Motivation</h4>
+                  <p className="text-muted-foreground">{enneagram.coreDesire}</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-destructive mb-2">Core Fear</h4>
+                  <p className="text-muted-foreground">{enneagram.coreFear}</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-lg font-semibold text-destructive mb-2">Core Fear</h4>
-                <p className="text-muted-foreground">{enneagram.coreFear}</p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-2">Growth Path</h4>
+                  <p className="text-muted-foreground">{enneagram.growthPath}</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-orange-600 dark:text-orange-400 mb-2">Stress Path</h4>
+                  <p className="text-muted-foreground">{enneagram.stressPath}</p>
+                </div>
               </div>
             </div>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-lg font-semibold text-green-600 dark:text-green-400 mb-2">Growth Path</h4>
-                <p className="text-muted-foreground">{enneagram.growthPath}</p>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-orange-600 dark:text-orange-400 mb-2">Stress Path</h4>
-                <p className="text-muted-foreground">{enneagram.stressPath}</p>
-              </div>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
+          </CardContent>
+        </Card>
+      )}
 
       {/* Strengths & Challenges */}
       <div className="grid md:grid-cols-2 gap-6">
