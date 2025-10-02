@@ -164,7 +164,7 @@ export function AssessmentResults({ results }: AssessmentResultsProps) {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {Object.entries(bigFiveScores).map(([trait, score]) => (
+            {bigFiveScores && Object.entries(bigFiveScores).map(([trait, score]) => (
               <div key={trait} className="text-center space-y-2">
                 <Badge variant="outline" className="capitalize">{trait}</Badge>
                 <div className="text-2xl font-bold text-foreground">{Math.round(score)}%</div>
