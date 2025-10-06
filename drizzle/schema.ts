@@ -9,6 +9,7 @@ export const suit = pgEnum("suit", ['Temporalis', 'Animae', 'Stellae', 'Materiae
 export const trainComponentType = pgEnum("train_component_type", ['locomotive', 'passenger_car', 'observation_car'])
 export const assessmentStatus = pgEnum("assessment_status", ['in_progress', 'completed', 'abandoned'])
 export const questionType = pgEnum("question_type", ['situational', 'preference', 'behavioral', 'personality'])
+export const membershipTier = pgEnum("membership_tier", ['free', 'basic', 'premium', 'ultimate'])
 
 
 export const users = pgTable("users", {
@@ -19,6 +20,8 @@ export const users = pgTable("users", {
 	createdAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
 	updatedAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
 	role: varchar({ length: 255 }).default('user').notNull(),
+	membershipTier: membershipTier("membership_tier").default('free').notNull(),
+	membershipExpiresAt: timestamp("membership_expires_at", { mode: 'string' }),
 	status: varchar({ length: 255 }).default('active').notNull(),
 	isVerified: boolean().default(false).notNull(),
 	isActive: boolean().default(true).notNull(),
