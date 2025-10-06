@@ -1,5 +1,23 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Membership System
+
+This project includes a full-featured membership tier system that controls content visibility and feature access based on user subscription levels.
+
+**Quick Links:**
+- 📖 [Full Membership Guide](MEMBERSHIP_GUIDE.md) - Complete documentation
+- 🎨 [Live Example](http://localhost:3000/examples/membership-example) - Interactive demo
+- 💳 4 Tiers: Free, Basic ($9.99), Premium ($19.99), Ultimate ($49.99)
+
+**Key Features:**
+- Chapter-based content gating (3 chapters free, up to unlimited)
+- Feature-based access control (Timeline, 3D Visualization, Analytics, etc.)
+- Easy-to-use React components (`<MembershipGuard>`, `<MembershipPricing>`)
+- API route protection middleware
+- Clerk integration for user metadata
+
+See [MEMBERSHIP_GUIDE.md](MEMBERSHIP_GUIDE.md) for setup instructions and usage examples.
+
 ## Getting Started
 
 First, run the development server:

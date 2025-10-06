@@ -20,7 +20,10 @@ import { type MembershipFeatures } from './membership';
  *   // ... rest of your code
  * }
  */
-export async function requireFeature(feature: keyof MembershipFeatures) {
+export async function requireFeature(feature: keyof MembershipFeatures): Promise<
+  | { allowed: true; permissions: Awaited<ReturnType<typeof getUserPermissions>> }
+  | { allowed: false; response: NextResponse }
+> {
   try {
     const permissions = await getUserPermissions();
 
@@ -80,7 +83,10 @@ export async function requireFeature(feature: keyof MembershipFeatures) {
 /**
  * Middleware to check if user has access to a specific chapter
  */
-export async function requireChapter(chapterNumber: number) {
+export async function requireChapter(chapterNumber: number): Promise<
+  | { allowed: true; permissions: Awaited<ReturnType<typeof getUserPermissions>> }
+  | { allowed: false; response: NextResponse }
+> {
   try {
     const permissions = await getUserPermissions();
 
@@ -223,6 +229,7 @@ export function featureProtectedRoute(
       return access.response;
     }
 
+    // TypeScript now knows permissions exists because allowed is true
     return await handler(req, access.permissions);
   };
 }
