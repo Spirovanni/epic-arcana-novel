@@ -72,3 +72,5 @@ tasks/
 # Ignore seed files
 seed*.mjs
 src/lib/seeds/seed*.mjs 
+# clerk configuration (can include secrets)
+/.clerk/
