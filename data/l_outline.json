@@ -399,7 +399,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-001",
                           "unique_identifier": "STG 1.1.1.1",
+                          "all_chapter": 1,
                           "chapter": "Chapter 1",
                           "chapter_title": "The Awakening Call",
                           "type": "Specific Task Group",
@@ -553,7 +555,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-002",
                           "unique_identifier": "STG 1.1.1.2",
+                          "all_chapter": 2,
                           "chapter": "Chapter 2",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -701,7 +705,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-003",
                           "unique_identifier": "STG 1.1.1.3",
+                          "all_chapter": 3,
                           "chapter": "Chapter 3",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -869,7 +875,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-004",
                           "unique_identifier": "STG 1.1.2.1",
+                          "all_chapter": 4,
                           "chapter": "Chapter 4",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1015,7 +1023,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-005",
                           "unique_identifier": "STG 1.1.2.2",
+                          "all_chapter": 5,
                           "chapter": "Chapter 5",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1166,7 +1176,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-006",
                           "unique_identifier": "STG 1.1.2.3",
+                          "all_chapter": 6,
                           "chapter": "Chapter 6",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1340,7 +1352,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-007",
                           "unique_identifier": "STG 1.1.3.1",
+                          "all_chapter": 7,
                           "chapter": "Chapter 7",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1491,7 +1505,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-008",
                           "unique_identifier": "STG 1.1.3.2",
+                          "all_chapter": 8,
                           "chapter": "Chapter 8",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1642,7 +1658,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-009",
                           "unique_identifier": "STG 1.1.3.3",
+                          "all_chapter": 9,
                           "chapter": "Chapter 9",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1814,7 +1832,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-010",
                           "unique_identifier": "STG 1.1.4.1",
+                          "all_chapter": 10,
                           "chapter": "Chapter 10",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -1967,7 +1987,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-011",
                           "unique_identifier": "STG 1.1.4.2",
+                          "all_chapter": 11,
                           "chapter": "Chapter 11",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -2120,7 +2142,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-012",
                           "unique_identifier": "STG 1.1.4.3",
+                          "all_chapter": 12,
                           "chapter": "Chapter 12",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -2315,7 +2339,9 @@
                       }
                     },
                     "major_activity_theme_1": {
+                      "id": "EA-013",
                       "unique_identifier": "MAT 1.1",
+                      "all_chapter": 13,
                       "chapter": "Chapter 13",
                       "type": "Major Activity Theme",
                       "tarot_card_link": "",
@@ -2557,7 +2583,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-014",
                           "unique_identifier": "STG 1.2.1.1",
+                          "all_chapter": 14,
                           "chapter": "Chapter 14",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -2752,7 +2780,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-015",
                           "unique_identifier": "STG 1.2.1.2",
+                          "all_chapter": 15,
                           "chapter": "Chapter 15",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -2928,7 +2958,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-016",
                           "unique_identifier": "STG 1.2.1.3",
+                          "all_chapter": 16,
                           "chapter": "Chapter 16",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -3130,6 +3162,8 @@
                       "Specific_task_groups": {
                         "specific_task_group_1": {
                           "unique_identifier": "STG 1.2.2.1",
+                          "all_chapter": 17,
+                          "display_name": "Chapter 17 Personality",
                           "chapter": "Chapter 17",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -3307,7 +3341,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-018",
                           "unique_identifier": "STG 1.2.2.2",
+                          "all_chapter": 18,
                           "chapter": "Chapter 18",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -3519,7 +3555,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-019",
                           "unique_identifier": "STG 1.2.2.3",
+                          "all_chapter": 19,
                           "chapter": "Chapter 19",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -3733,6 +3771,8 @@
                       "Specific_task_groups": {
                         "specific_task_group_1": {
                           "unique_identifier": "STG 1.2.3.1",
+                          "all_chapter": 20,
+                          "display_name": "Chapter 20 Personality",
                           "chapter": "Chapter 20",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -3915,7 +3955,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-021",
                           "unique_identifier": "STG 1.2.3.2",
+                          "all_chapter": 21,
                           "chapter": "Chapter 21",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -4098,7 +4140,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-022",
                           "unique_identifier": "STG 1.2.3.3",
+                          "all_chapter": 22,
                           "chapter": "Chapter 22",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -4283,7 +4327,9 @@
                       }
                     },
                     "major_activity_theme_2": {
+                      "id": "EA-023",
                       "unique_identifier": "MAT 1.2",
+                      "all_chapter": 23,
                       "chapter": "Chapter 23",
                       "type": "Major Activity Theme",
                       "tarot_card_link": "",
@@ -4510,7 +4556,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-024",
                           "unique_identifier": "STG 1.3.1.1",
+                          "all_chapter": 24,
                           "chapter": "Chapter 24",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -4698,7 +4746,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-025",
                           "unique_identifier": "STG 1.3.1.2",
+                          "all_chapter": 25,
                           "chapter": "Chapter 25",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -4886,7 +4936,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-026",
                           "unique_identifier": "STG 1.3.1.3",
+                          "all_chapter": 26,
                           "chapter": "Chapter 26",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5095,7 +5147,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-027",
                           "unique_identifier": "STG 1.3.2.1",
+                          "all_chapter": 27,
                           "chapter": "Chapter 27",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5247,7 +5301,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-028",
                           "unique_identifier": "STG 1.3.2.2",
+                          "all_chapter": 28,
                           "chapter": "Chapter 28",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5399,7 +5455,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-029",
                           "unique_identifier": "STG 1.3.2.3",
+                          "all_chapter": 29,
                           "chapter": "Chapter 29",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5574,7 +5632,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-030",
                           "unique_identifier": "STG 1.3.3.1",
+                          "all_chapter": 30,
                           "chapter": "Chapter 30",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5726,7 +5786,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-031",
                           "unique_identifier": "STG 1.3.3.2",
+                          "all_chapter": 31,
                           "chapter": "Chapter 31",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -5878,7 +5940,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-032",
                           "unique_identifier": "STG 1.3.3.3",
+                          "all_chapter": 32,
                           "chapter": "Chapter 32",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6053,7 +6117,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-033",
                           "unique_identifier": "STG 1.3.4.1",
+                          "all_chapter": 33,
                           "chapter": "Chapter 33",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6205,7 +6271,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-034",
                           "unique_identifier": "STG 1.3.4.2",
+                          "all_chapter": 34,
                           "chapter": "Chapter 34",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6357,7 +6425,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-035",
                           "unique_identifier": "STG 1.3.4.3",
+                          "all_chapter": 35,
                           "chapter": "Chapter 35",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6530,7 +6600,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-036",
                           "unique_identifier": "STG 1.3.5.1",
+                          "all_chapter": 36,
                           "chapter": "Chapter 36",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6683,7 +6755,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-037",
                           "unique_identifier": "STG 1.3.5.2",
+                          "all_chapter": 37,
                           "chapter": "Chapter 37",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -6838,7 +6912,9 @@
                       }
                     },
                     "major_activity_theme_3": {
+                      "id": "EA-038",
                       "unique_identifier": "MAT 1.3",
+                      "all_chapter": 38,
                       "chapter": "Chapter 38",
                       "type": "Major Activity Theme",
                       "tarot_card_link": "",
@@ -7012,7 +7088,9 @@
                       },
                       "specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-039",
                           "unique_identifier": "STG 1.3.6.1",
+                          "all_chapter": 39,
                           "chapter": "Chapter 39",
                           "type": "Specific Task Group",
                           "tarot_card_link": "https://sacredtexts.com/tarot/pkt/pktar59.htm",
@@ -7163,7 +7241,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-040",
                           "unique_identifier": "STG 1.3.6.2",
+                          "all_chapter": 40,
                           "chapter": "Chapter 40",
                           "type": "Specific Task Group",
                           "tarot_card_link": "https://sacredtexts.com/tarot/pkt/pktar78.htm",
@@ -7519,7 +7599,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-041",
                           "unique_identifier": "STG 2.1.1.1",
+                          "all_chapter": 41,
                           "chapter": "Chapter 1",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -7791,7 +7873,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-043",
                           "unique_identifier": "STG 2.1.1.3",
+                          "all_chapter": 43,
                           "chapter": "Chapter 3",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -7950,7 +8034,9 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
+                          "id": "EA-044",
                           "unique_identifier": "STG 2.1.2.1",
+                          "all_chapter": 44,
                           "chapter": "Chapter 4",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -8086,7 +8172,9 @@
                           ]
                         },
                         "specific_task_group_2": {
+                          "id": "EA-045",
                           "unique_identifier": "STG 2.1.2.2",
+                          "all_chapter": 45,
                           "chapter": "Chapter 5",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -8222,7 +8310,9 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-046",
                           "unique_identifier": "STG 2.1.2.3",
+                          "all_chapter": 46,
                           "chapter": "Chapter 6",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
