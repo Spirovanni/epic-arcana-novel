@@ -71,4 +71,8 @@ tasks/
 
 # Ignore seed files
 seed*.mjs
-src/lib/seeds/seed*.mjs 
+src/lib/seeds/seed*.mjs
+
+# API keys and secrets
+envy_examples
+.env.example
