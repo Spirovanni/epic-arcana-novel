@@ -1,5 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+settings.local.json
+
 # dependencies
 /node_modules
 /.pnp
@@ -71,6 +73,14 @@ tasks/
 
 # Ignore seed files
 seed*.mjs
+<<<<<<< HEAD
 src/lib/seeds/seed*.mjs 
 # clerk configuration (can include secrets)
 /.clerk/
+=======
+src/lib/seeds/seed*.mjs
+
+# API keys and secrets
+envy_examples
+.env.example
+>>>>>>> 20d3539e16b8ccfe804117ce349a3b1f2ec5a3f0
