@@ -9829,9 +9829,10 @@
                           ]
                         },
                         "specific_task_group_3": {
-                          "id": "EA-055",
+                          "id": "EA-056",
                           "unique_identifier": "STG 2.2.1.3",
-                          "all_chapter": 55,
+                          "all_chapter": 56,
+                          "novel_book": 2,
                           "chapter": "Chapter 16",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -9990,9 +9991,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-056",
+                          "id": "EA-057",
                           "unique_identifier": "STG 2.2.2.1",
-                          "all_chapter": 56,
+                          "all_chapter": 57,
+                          "novel_book":"2",
                           "chapter": "Chapter 17",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10128,9 +10130,9 @@
                           ]
                         },
                         "specific_task_group_2": {
-                          "id": "EA-057",
+                          "id": "EA-058",
                           "unique_identifier": "STG 2.2.2.2",
-                          "all_chapter": 57,
+                          "all_chapter": 58,
                           "chapter": "Chapter 18",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10266,9 +10268,10 @@
                           ]
                         },
                         "specific_task_group_3": {
-                          "id": "EA-058",
+                          "id": "EA-059",
                           "unique_identifier": "STG 2.2.2.3",
-                          "all_chapter": 58,
+                          "all_chapter": 59,
+                          "novel_book": 2,
                           "chapter": "Chapter 19",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10427,9 +10430,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-059",
+                          "id": "EA-060",
                           "unique_identifier": "STG 2.2.3.1",
-                          "all_chapter": 59,
+                          "all_chapter": 60,
+                          "novel_book": 2,
                           "chapter": "Chapter 20",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10565,9 +10569,10 @@
                           ]
                         },
                         "specific_task_group_2": {
-                          "id": "EA-060",
+                          "id": "EA-061",
                           "unique_identifier": "STG 2.2.3.2",
-                          "all_chapter": 60,
+                          "all_chapter": 61,
+                          "novel_book": 2,
                           "chapter": "Chapter 21",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10703,9 +10708,10 @@
                           ]
                         },
                         "specific_task_group_3": {
-                          "id": "EA-061",
+                          "id": "EA-062",
                           "unique_identifier": "STG 2.2.3.3",
-                          "all_chapter": 61,
+                          "all_chapter": 62,
+                          "novel_book": 2,
                           "chapter": "Chapter 22",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10867,6 +10873,7 @@
                           "id": "EA-063",
                           "unique_identifier": "MAT 2.2",
                           "all_chapter": 63,
+                          "novel_book":"2",
                           "chapter": "Chapter 23",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -10995,9 +11002,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-062",
+                          "id": "EA-064",
                           "unique_identifier": "STG 2.2.4.1",
-                          "all_chapter": 62,
+                          "all_chapter": 64,
+                          "novel_book":"2",
                           "chapter": "Chapter 24",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11133,9 +11141,10 @@
                           ]
                         },
                         "specific_task_group_2": {
-                          "id": "EA-064",
+                          "id": "EA-065",
                           "unique_identifier": "STG 2.2.4.2",
-                          "all_chapter": 64,
+                          "all_chapter": 65,
+                          "novel_book":"2",
                           "chapter": "Chapter 25",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11271,9 +11280,10 @@
                           ]
                         },
                         "specific_task_group_3": {
-                          "id": "EA-065",
+                          "id": "EA-066",
                           "unique_identifier": "STG 2.2.4.3",
-                          "all_chapter": 65,
+                          "all_chapter": 66,
+                          "novel_book":"2",
                           "chapter": "Chapter 26",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11432,9 +11442,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-066",
+                          "id": "EA-067",
                           "unique_identifier": "STG 2.2.5.1",
-                          "all_chapter": 66,
+                          "all_chapter": 67,
+                          "novel_book":"2",
                           "chapter": "Chapter 27",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11570,9 +11581,10 @@
                           ]
                         },
                         "specific_task_group_2": {
-                          "id": "EA-067",
+                          "id": "EA-068",
                           "unique_identifier": "STG 2.2.5.2",
-                          "all_chapter": 67,
+                          "all_chapter": 68,
+                          "novel_book":"2",
                           "chapter": "Chapter 28",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11708,9 +11720,10 @@
                           ]
                         },
                         "specific_task_group_3": {
-                          "id": "EA-068",
+                          "id": "EA-069",
                           "unique_identifier": "STG 2.2.5.3",
-                          "all_chapter": 68,
+                          "all_chapter": 69,
+                          "novel_book":"2",
                           "chapter": "Chapter 29",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -11869,9 +11882,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-069",
+                          "id": "EA-070",
                           "unique_identifier": "STG 2.2.6.1",
-                          "all_chapter": 69,
+                          "all_chapter": 70,
+                          "novel_book": 2,
                           "chapter": "Chapter 30",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -12007,9 +12021,10 @@
                           ]
                         },
                         "specific_task_group_2": {
-                          "id": "EA-070",
+                          "id": "EA-071",
                           "unique_identifier": "STG 2.2.6.2",
-                          "all_chapter": 70,
+                          "all_chapter": 71,
+                          "novel_book": 2,
                           "chapter": "Chapter 31",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -12145,7 +12160,10 @@
                           ]
                         },
                         "specific_task_group_3": {
+                          "id": "EA-072",
                           "unique_identifier": "STG 2.2.6.3",
+                          "all_chapter": 72,
+                          "novel_book": 2,
                           "chapter": "Chapter 32",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
@@ -12246,9 +12264,10 @@
                       },
                       "Specific_task_groups": {
                         "specific_task_group_1": {
-                          "id": "EA-071",
+                          "id": "EA-073",
                           "unique_identifier": "STG 2.2.7.1",
-                          "all_chapter": 71,
+                          "all_chapter": 73,
+                          "novel_book": 2,
                           "chapter": "Chapter 33",
                           "type": "Specific Task Group",
                           "tarot_card_link": "",
