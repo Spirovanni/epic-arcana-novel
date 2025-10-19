@@ -4707,10 +4707,238 @@
         }
     },
     "personality_profile_22": {
+        "canonical_id": "EA-022",
+        "unique_identifier": "STG 1.2.3.3",
+        "all_chapter": 22,
+        "novel_book": 1,
+        "chapter": "Chapter 22",
+        "chapter_title": "The Goddess of Mindful Direction - Strategic Resource Cultivation",
+        "type": "Specific Task Group",
+        "display_name": "The Mindful Cultivator",
+        "theme": "Investing - Strategic Resource Cultivation Through Mindful Direction",
+        "family": "Order / Systems - Leadership Foundation",
+        "summary": "This personality embodies the transformative power of mindfully directed resource cultivation, drawn from Chapter 22 of the Human Framework. After learning strategic perseverance (Ch 21), the coalition now encounters divine wisdom about conscious direction—learning that accumulated resources without mindful direction result in wasted potential. Like a craftsperson perfecting their skill in the Eight of Pentacles, this archetype understands that true wealth comes not from hoarding but from mindfully investing each resource with clear purpose and present-moment awareness. True prosperity flows from making conscious choices about where to direct energy, attention, and power.",
+        "tarot_family": "Pentacles/Disks/Stones",
+        "tarot_card_item": "Eight of Pentacles",
+        "tarot_symbolism": "The Eight of Pentacles shows a craftsperson bent over their workbench, mindfully perfecting each pentacle with focused attention and deliberate skill. Not rushing through the work, not hoarding completed pieces, but investing full awareness in each moment of creation. Chapter 22 embodies this completely—the coalition must learn to direct their accumulated resources with the precision and consciousness of master craftspeople, to invest each choice with mindful purpose rather than unconscious habit.",
+        "traits": {
+          "strengths": [
+            "directs resources with clear purpose and mindful awareness",
+            "invests energy consciously rather than unconsciously",
+            "maintains present-moment focus while working toward long-term goals",
+            "balances strategic planning with emotional regulation",
+            "cultivates wealth through deliberate, skilled practice",
+            "transforms accumulated power into purposeful impact",
+            "integrates inner awareness with external resource management"
+          ],
+          "shadow": [
+            "uses 'mindfulness' to avoid making concrete decisions",
+            "perfects process while neglecting tangible results",
+            "becomes so focused on present moment that long-term planning suffers",
+            "judges others as 'unconscious' while claiming enlightened status",
+            "hoards resources under guise of 'waiting for right moment'",
+            "uses spiritual bypassing to avoid practical responsibilities"
+          ],
+          "growth_focus": [
+            "integrate mindful awareness with practical action",
+            "balance present-moment focus with strategic vision",
+            "direct power consciously without attachment to outcomes",
+            "cultivate emotional mastery alongside resource management",
+            "transform awareness into tangible impact",
+            "maintain clarity of purpose amid complexity"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Goddess of Mindful Direction",
+          "fiction_chapter_context": "In Sacred Grove of Mindfulness, coalition encounters La Signora transformed into divine goddess who teaches that power without conscious direction equals wasted potential. Through Temple of Present Moment, Francisco learns emotional regulation essential for cosmic leadership while Zara discovers mindfully directed protection through awareness under pressure. They transform from strategic accumulators to conscious cultivators who understand every resource investment requires present-moment clarity. Pages 316-330. February 20-21, 1320 (divine wisdom received)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that perfectionism requires mindful presence not rigid control. Integration toward Type 7 (The Enthusiast) brings joyful spontaneity. The Eight of Pentacles' focused craftsmanship transforms critical judgment into conscious cultivation."
+        },
+        "color_alignment": {
+          "hue_index": 22,
+          "name": "Burnt Sienna/Clay Orange",
+          "hsl": "33,100%,28%",
+          "rgb_hex": "#8f5a00",
+          "color_symbolism": "Burnt sienna represents fired clay—raw earth transformed through conscious process, material shaped by mindful attention. The color of terracotta, of skilled craftsmanship. Wealth cultivated through present awareness."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.840,
+            "stability": 0.815,
+            "empathy": 0.740,
+            "openness": 0.790,
+            "orderliness": 0.715,
+            "novelty_seeking": 0.615,
+            "abstract_reasoning": 0.815,
+            "emotional_intensity": 0.665,
+            "social_dominance": 0.615,
+            "cooperativeness": 0.815,
+            "risk_tolerance": 0.615,
+            "conscientiousness": 0.840,
+            "adaptability": 0.740,
+            "imagination": 0.715
+          },
+          "match_weights": {
+            "conscientiousness": 0.95,
+            "agency": 0.90,
+            "mindful_awareness": 0.90,
+            "emotional_regulation": 0.85,
+            "stability": 0.80
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q106", "Q107", "Q108"]
+        },
+        "signals_map": {
+          "Q106": {
+            "dimension": "mindful_awareness",
+            "polarity": 1.0,
+            "description": "Present-moment focus during resource allocation",
+            "assessment_question": "I bring full awareness to how I invest my time, energy, and attention in each moment, making conscious choices about where to direct my resources rather than operating on autopilot or unconscious habit"
+          },
+          "Q107": {
+            "dimension": "emotional_regulation",
+            "polarity": 0.95,
+            "description": "Emotional mastery under pressure",
+            "assessment_question": "I can maintain emotional clarity and composure even in high-pressure situations, regulating my internal states to ensure my decisions reflect my values rather than reactive patterns"
+          },
+          "Q108": {
+            "dimension": "agency",
+            "polarity": 0.9,
+            "description": "Conscious direction of accumulated resources",
+            "assessment_question": "I deliberately direct my accumulated resources—knowledge, skills, relationships, power—toward clear purposes aligned with my deepest values, rather than letting them accumulate without intentional use"
+          },
+          "Q109": {
+            "dimension": "conscientiousness",
+            "polarity": 0.85,
+            "description": "Skilled cultivation through deliberate practice",
+            "assessment_question": "I invest focused effort in developing mastery of key skills, understanding that wealth comes from cultivating excellence through mindful, deliberate practice rather than scattered activity"
+          },
+          "Q110": {
+            "dimension": "stability",
+            "polarity": 0.8,
+            "description": "Balance between awareness and action",
+            "assessment_question": "I integrate inner awareness with external effectiveness, neither getting lost in contemplation nor burning out through unconscious activity, maintaining clarity while taking purposeful action"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The Miracle of Mindfulness",
+            "author": "Thich Nhat Hanh",
+            "section_of_focus": "Cultivating Awareness in Daily Life",
+            "core_teaching": "True mindfulness isn't withdrawal from the world but full presence in each moment. Every action—washing dishes, walking, working—becomes an opportunity for conscious awareness. The miracle isn't escaping ordinary life but awakening to its richness through present-moment attention. Mindfulness transforms mundane activities into spiritual practice, revealing that enlightenment lives in conscious engagement with whatever arises.",
+            "connection_to_investing": "In the Sacred Grove, La Signora teaches Thich Nhat Hanh's wisdom viscerally. The goddess shows that cosmic power without mindful direction dissipates wastefully. Francisco learns to invest each moment of study with full awareness. Zara discovers that protective power multiplies when directed with conscious presence rather than reactive fear.",
+            "terminal_learning_objectives": {
+              "objective1": "Practice bringing full awareness to routine activities",
+              "objective2": "Recognize when operating on autopilot versus conscious choice",
+              "objective3": "Integrate mindfulness with strategic goal pursuit"
+            }
+          },
+          "book2": {
+            "title": "Start With Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "The Golden Circle - Purpose Before Action",
+            "core_teaching": "Great leaders and organizations start with 'why'—their core purpose—before determining 'how' and 'what'. Clarity of purpose provides the guiding principle for all decisions. People don't buy what you do; they buy why you do it. Resources invested without clear purpose scatter ineffectively. Those who know their 'why' can direct resources with laser focus toward meaningful impact.",
+            "connection_to_investing": "The Temple of Present Moment literalizes Sinek's teaching: every resource investment begins with clarity of purpose. The coalition learns to ask 'why' before 'how'—connecting each tactical choice to ultimate values. This transforms random activity into purposeful cultivation. La Signora shows them: power multiplies when directed by clear 'why'.",
+            "terminal_learning_objectives": {
+              "objective1": "Articulate personal 'why' that guides resource decisions",
+              "objective2": "Align daily investments with core purpose",
+              "objective3": "Communicate 'why' to inspire collective action"
+            }
+          },
+          "book3": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Self-Regulation and Emotional Mastery",
+            "core_teaching": "Success depends less on IQ than on emotional intelligence—particularly the ability to regulate one's own emotional states. Self-regulation allows leaders to maintain clarity and make wise decisions even under pressure. Those who master their emotions can direct energy productively rather than dissipating it through reactive patterns. Emotional mastery isn't suppression but conscious management.",
+            "connection_to_investing": "La Signora's divine teaching embodies Goleman's wisdom. She shows that cosmic power without emotional regulation creates chaos. Francisco learns to manage his scholarly anxiety and perfectionism. Zara discovers that protective power requires emotional clarity under pressure. Both learn: you can't direct resources wisely when emotions hijack your awareness.",
+            "terminal_learning_objectives": {
+              "objective1": "Recognize emotional states as they arise",
+              "objective2": "Regulate emotions without suppression or explosion",
+              "objective3": "Make decisions from clarity rather than reactivity"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "sacred_grove_of_mindfulness": "The setting itself teaches the lesson—boundary between physical and divine thins, revealing that true wealth exists at intersection of consciousness and matter. Here, mindful awareness becomes tangible, visible, workable.",
+          "la_signora_as_goddess": "The Treasurer's transformation into cosmic goddess embodies divine wisdom—she shows that ultimate power comes not from accumulation but from conscious direction. Her presence expands their awareness beyond strategic thinking to transcendent clarity.",
+          "temple_of_present_moment": "Genius narrative device—crystalline structure where time stands still, allowing practice of pure awareness. Here they learn to direct cosmic power with mindful precision, experiencing what's usually invisible: the power of consciousness itself.",
+          "franciscos_transformation": "From anxious knowledge accumulation (unconscious hoarding) to emotionally regulated scholarship (conscious cultivation). His investing shifts from collecting information to directing wisdom with purpose and awareness.",
+          "zaras_transformation": "From reactive protection (emotional turbulence) to mindfully directed guardianship (centered power). Her investing shifts from crisis response to conscious deployment of protective capacity.",
+          "divine_wisdom_received": "The beat structure is perfect—after learning strategic patience (Ch 21), they receive divine guidance about conscious direction. The Meeting with Goddess provides transcendent wisdom that transforms their relationship with power from accumulation to cultivation.",
+          "integration_of_dimensions": "This chapter uniquely bridges practical resource management with spiritual awareness. It prevents the series from becoming either purely strategic or purely mystical, showing these as integrated dimensions of mastery."
+        },
+        "mental_health_framework": {
+          "focus_area": "Mindful Direction, Emotional Regulation, and Conscious Cultivation",
+          "investing_characteristics": [
+            "Directing resources with clear purpose and present awareness",
+            "Regulating emotional states to maintain decision clarity",
+            "Cultivating mastery through focused, deliberate practice",
+            "Balancing inner awareness with external effectiveness",
+            "Investing each moment with conscious intention",
+            "Transforming accumulated resources into purposeful impact"
+          ],
+          "mindful_cultivation_strategies": [
+            "Bring full awareness to how you spend each moment",
+            "Clarify core 'why' before making resource decisions",
+            "Practice emotional regulation under pressure",
+            "Develop mastery through deliberate, focused practice",
+            "Integrate mindfulness with strategic planning",
+            "Direct power consciously toward clear purposes",
+            "Balance contemplation with purposeful action"
+          ],
+          "integration_indicators": [
+            "Resources allocated with conscious intention and clarity",
+            "Emotional regulation maintained under pressure",
+            "Mastery cultivated through focused deliberate practice",
+            "Present-moment awareness integrated with long-term vision",
+            "Power directed purposefully toward aligned goals",
+            "Inner awareness translated into external impact"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene IX: Meeting with the Goddess",
+          "preliminary_beat": "The Reward - Receiving divine guidance",
+          "save_the_cat_beat": "Meeting with the Goddess - Divine wisdom about conscious direction",
+          "character_state": "Having learned strategic resource management (Ch 21-22), now receiving divine wisdom about conscious direction. Learning that true mastery requires not just strategic thinking but mindful awareness and emotional regulation. Transforming from strategic accumulators to conscious cultivators of cosmic balance.",
+          "structural_significance": "Provides essential spiritual dimension to practical mastery. Without mindful direction, they'd become efficient but soulless technicians. This chapter ensures they approach power with consciousness, wisdom, and emotional clarity—prerequisites for the Supreme Ordeal ahead.",
+          "archetypal_moment": "The craftsperson perfecting each piece. Campbell's Meeting with Goddess where hero receives divine wisdom that transcends tactical knowledge. The Eight of Pentacles' focused cultivation of mastery through conscious attention."
+        },
+        "daily_prompt": "Where are you directing your resources unconsciously versus consciously? What would change if you brought full awareness and emotional clarity to your most important investments of time, energy, and attention?",
+        "story_hook": "In Laurasia's Chapter 22, dawn breaks as Francisco and Zara are mysteriously drawn to the whispered-about Sacred Grove. Beside the crystalline pool, La Signora appears transformed—no longer just Master Treasurer but radiant divine goddess whose presence expands their consciousness across dimensions. 'You've learned to manage resources strategically,' she says, her voice resonating with cosmic authority, 'but strategy without consciousness creates efficient waste. Watch.' She gestures, and two timelines appear. In one, beings accumulate vast power but direct it unconsciously, dissipating energy through reactive patterns. In the other, beings cultivate modest resources but invest each moment with mindful purpose—their impact compounds exponentially. 'The difference isn't the resources available,' the goddess reveals, 'but the consciousness directing them. Come—the Temple of Present Moment awaits.' The Eight of Pentacles, the Trionfi whisper, doesn't show someone hoarding finished pentacles or rushing through the work. It shows the craftsperson bent over the bench, investing this moment, this piece, this action with full awareness and deliberate skill. That presence, that mindful direction, that integration of consciousness with craft—that's what separates accumulation from true wealth.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Direct resources with clear purpose and mindful awareness",
+            "Regulate emotional states to maintain decision clarity",
+            "Cultivate mastery through deliberate focused practice",
+            "Balance present-moment awareness with strategic vision",
+            "Invest energy consciously rather than unconsciously",
+            "Transform accumulated power into purposeful impact"
+          ],
+          "development_pathway": "From unconscious accumulation to mindful cultivation—learning to bring awareness to resource investments, clarify core purpose before action, regulate emotions under pressure, develop mastery through deliberate practice, integrate inner awareness with external effectiveness, and recognize that true wealth flows from conscious direction of resources toward aligned purposes",
+          "ai_integration_notes": "AI can identify patterns distinguishing mindful cultivation (conscious, regulated, purposeful) from shadow patterns (spiritual bypassing, perfectionistic paralysis, awareness without action). Machine learning can track integration of mindfulness practices with resource management outcomes. Ethical considerations include recognizing when 'mindful waiting' becomes avoidance versus wise timing."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 20-21, 1320 (divine wisdom received) - Consciousness Integration Point",
+          "universal_archetype": "The Eight of Pentacles—mindful cultivation of mastery, conscious investment of each moment, focused craftsmanship that transforms resources through awareness, the artisan who understands that wealth flows from presence",
+          "trionfi_connection": "The Eight of Pentacles bends over the workbench with full attention. La Signora's divine cards reveal that power without consciousness equals wasted potential. Every resource investment requires present-moment clarity and emotional mastery.",
+          "series_foundation": "This mindful cultivation—conscious, regulated, purposeful—becomes essential foundation for all higher challenges. Without it, they'd have strategy without soul, power without wisdom. With it, they can direct cosmic forces with divine precision. The difference between technicians and true masters."
+        },
+        "implementation_context": {
+          "execution_focus": "Directing accumulated resources with mindful purpose",
+          "discipline_required": "Maintaining emotional regulation and present awareness",
+          "investing_element": "Cultivating mastery through conscious deliberate practice",
+          "transcendence_necessity": "Integrating strategic planning with spiritual awareness for complete mastery"
+        }
     },
     "personality_profile_23": {
+
     },
     "personality_profile_24": {
+
     },
     "personality_profile_25": {
     },
