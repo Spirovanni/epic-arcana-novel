@@ -4023,6 +4023,232 @@
         }
     },
     "personality_profile_19": {
+        "canonical_id": "EA-019",
+        "unique_identifier": "STG 1.2.2.3",
+        "all_chapter": 19,
+        "novel_book": 1,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Trial of Echoing Temptations - Manifesting Creative Force",
+        "type": "Specific Task Group",
+        "display_name": "The Apprentice of Manifestation",
+        "theme": "Creativity - Transforming Vision Into Reality",
+        "family": "Order / Systems - Harmony",
+        "summary": "This personality embodies the transformative power of creative manifestation, drawn from Chapter 19 of the Human Framework. After achieving holistic wellness (Ch 18), the coalition now faces the crucial challenge of channeling their integrated power into creative force. This is the moment where inner harmony must manifest as outer innovation—where imagination becomes tangible reality through disciplined experimentation and action. Like the Page of Pentacles studying a golden coin with devoted focus, this archetype understands that creativity isn't just inspiration but the methodical process of bringing unseen possibilities into material form through iterative design, strategic experimentation, and persistent refinement.",
+        "tarot_family": "Pentacles/Disks/Stones",
+        "tarot_card_item": "Page of Pentacles",
+        "tarot_symbolism": "The Page of Pentacles represents studious creativity, practical manifestation, and the dedicated apprentice learning to transform ideas into reality. A young figure examines a golden pentacle with complete focus—not dreaming but doing, not imagining but making, bringing visions into tangible form through patient craft. Chapter 19 embodies this completely—the coalition must learn to manifest their training as creative force, discovering their unique abilities to bring new realities into being. The Page teaches that manifestation is discipline, that creativity requires both inspiration and methodical execution.",
+        "traits": {
+          "strengths": [
+            "transforms abstract vision into concrete reality",
+            "channels imagination into practical prototypes",
+            "iterates persistently through creative experimentation",
+            "disciplines creative force through methodical action",
+            "manifests innovative solutions under pressure",
+            "combines artistic inspiration with technical execution",
+            "creates tangible value from intangible ideas"
+          ],
+          "shadow": [
+            "becomes paralyzed by perfectionism in execution",
+            "uses endless planning to avoid actual creation",
+            "judges creative output harshly before completion",
+            "loses inspiration in overly rigid processes",
+            "creates without strategy or sustainable systems",
+            "manifests compulsively without purpose or direction"
+          ],
+          "growth_focus": [
+            "balance vision with practical execution",
+            "iterate without attachment to perfect outcomes",
+            "maintain inspiration while developing craft",
+            "create with strategic purpose not just expression",
+            "discipline imagination without killing spontaneity",
+            "manifest sustainably not compulsively"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Trial of Echoing Temptations",
+          "fiction_chapter_context": "Descending into Academy's Forge of Manifestation, coalition meets Master Artificer Kyros who teaches that approaching Crown of Ancient Ones requires ability to manifest unprecedented solutions. Through escalating creative trials blending innovation with magic, Francisco discovers power to bring stories to life while Zara masters adaptive creation under pressure. They learn creative force will be essential for survival ahead. Pages 271-285. February 17-18, 1320 (manifestation mastery)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that creativity can be disciplined not chaotic. Integration toward Type 7 (The Enthusiast) brings playful experimentation. The Page's studious focus transforms rigid perfection-seeking into joyful, iterative making."
+        },
+        "color_alignment": {
+          "hue_index": 19,
+          "name": "Dark Goldenrod/Rich Amber",
+          "hsl": "30,100%,40%",
+          "rgb_hex": "#CC8400",
+          "color_symbolism": "Dark goldenrod represents the alchemy of creation—raw material transformed into refined work through patient craft. The color of molten metal in the forge, of ideas taking solid form. The apprentice's focused study given golden substance."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.815,
+            "stability": 0.715,
+            "empathy": 0.665,
+            "openness": 0.815,
+            "orderliness": 0.715,
+            "novelty_seeking": 0.765,
+            "abstract_reasoning": 0.765,
+            "emotional_intensity": 0.665,
+            "social_dominance": 0.565,
+            "cooperativeness": 0.715,
+            "risk_tolerance": 0.715,
+            "conscientiousness": 0.765,
+            "adaptability": 0.765,
+            "imagination": 0.915
+          },
+          "match_weights": {
+            "imagination": 0.95,
+            "agency": 0.95,
+            "creative_execution": 0.9,
+            "adaptability": 0.85,
+            "conscientiousness": 0.8
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q091", "Q092", "Q093"]
+        },
+        "signals_map": {
+          "Q091": {
+            "dimension": "creative_execution",
+            "polarity": 1.0,
+            "description": "Transforming vision into tangible reality",
+            "assessment_question": "I regularly take abstract ideas or visions and translate them into concrete prototypes, projects, or solutions through iterative experimentation and refinement"
+          },
+          "Q092": {
+            "dimension": "imagination",
+            "polarity": 0.95,
+            "description": "Generating innovative possibilities",
+            "assessment_question": "I can envision multiple creative solutions to challenges, especially when conventional approaches have failed, drawing on diverse inspirations to synthesize novel approaches"
+          },
+          "Q093": {
+            "dimension": "agency",
+            "polarity": 0.9,
+            "description": "Disciplined creative action",
+            "assessment_question": "I maintain consistent creative practice and output even when I don't feel inspired, understanding that manifestation requires both vision and methodical execution"
+          },
+          "Q094": {
+            "dimension": "adaptability",
+            "polarity": 0.85,
+            "description": "Manifesting under pressure",
+            "assessment_question": "When circumstances change rapidly or demands intensify, I can adapt my creative process to manifest solutions quickly without sacrificing quality or losing strategic direction"
+          },
+          "Q095": {
+            "dimension": "conscientiousness",
+            "polarity": 0.8,
+            "description": "Iterative refinement discipline",
+            "assessment_question": "I approach creative work with patience for iteration, refining prototypes systematically based on feedback rather than expecting perfection in first attempts"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The War of Art: Break Through the Blocks and Win Your Inner Creative Battles",
+            "author": "Steven Pressfield",
+            "section_of_focus": "Resistance and Turning Pro",
+            "core_teaching": "Resistance is the enemy—the force that prevents manifestation. It appears as procrastination, self-doubt, perfectionism, distraction. The amateur waits for inspiration; the professional shows up regardless. Turning pro means treating creative work with discipline, establishing routines, doing the work even when it's hard. Manifestation requires defeating Resistance daily through consistent action, not waiting for perfect conditions or feelings.",
+            "connection_to_manifestation": "The Forge of Manifestation literalizes what Pressfield teaches: creativity is work, craft, discipline. Kyros shows them that manifesting solutions to cosmic challenges requires professional dedication, not amateur inspiration-waiting. Francisco learns to write daily regardless of mood. Zara discovers that her best creations emerge from disciplined practice, not spontaneous genius.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify Resistance in your creative life and name it explicitly",
+              "objective2": "Establish non-negotiable creative practice schedule",
+              "objective3": "Turn pro by treating creative work with professional discipline"
+            }
+          },
+          "book2": {
+            "title": "Big Magic: Creative Living Beyond Fear",
+            "author": "Elizabeth Gilbert",
+            "section_of_focus": "Ideas as Living Entities",
+            "core_teaching": "Ideas are alive, seeking collaborators. They come to you as invitations—if you don't act on them, they move to someone else. Creativity requires partnership between inspiration and execution, magic and craft. Fear will always be present; courage means creating anyway. Perfectionism kills more ideas than any external force. The goal isn't creating masterpieces but staying in conversation with creativity itself.",
+            "connection_to_manifestation": "In the Forge, Francisco discovers his unique gift: stories want to be told through him. Ideas literally materialize as he writes, but only if he honors them through action. Gilbert's teaching becomes literal—ideas are living forces seeking manifestation. The coalition learns that creativity is sacred partnership between inspiration (magic) and execution (craft), that both are necessary for manifestation.",
+            "terminal_learning_objectives": {
+              "objective1": "Notice when ideas arrive and honor them with action",
+              "objective2": "Create despite fear rather than waiting for fearlessness",
+              "objective3": "Release perfectionism by valuing practice over product"
+            }
+          },
+          "book3": {
+            "title": "Steal Like an Artist: 10 Things Nobody Told You About Being Creative",
+            "author": "Austin Kleon",
+            "section_of_focus": "Combinational Creativity",
+            "core_teaching": "Nothing is completely original—all creative work builds on what came before. Creativity is collection plus connection, finding inspiration everywhere and remixing it into something new. Don't wait until you know who you are to start creating; you discover who you are through creating. Share your process publicly to refine your craft. Manifestation is less about divine inspiration, more about strategic combination of influences.",
+            "connection_to_manifestation": "The Forge's trials require combining diverse magical traditions, merging art with science, blending story with spell. Zara learns adaptive creation by remixing techniques in real-time. Kleon's principle: manifestation accelerates when you ethically source inspiration, transform references into novel outputs, and share evolution publicly. The Page studies the pentacle not in isolation but in context of all that came before.",
+            "terminal_learning_objectives": {
+              "objective1": "Build 'swipe file' of creative inspirations to draw from",
+              "objective2": "Practice combinational creativity by merging disparate influences",
+              "objective3": "Document and share your creative process to accelerate learning"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "forge_as_crucible": "The Forge of Manifestation—breathtaking realm where thoughts shimmer as half-formed possibilities—represents creativity as both place and practice. Not studio but temple, not workspace but transformational chamber. Here, manifesting force becomes visible, teachable, refinable.",
+          "master_kyros": "Master Artificer whose very presence bends reality models what they're learning: manifestation as mastery, creativity as discipline perfected through decades of practice. He embodies the Page grown into King—studious focus evolved into sovereign creative power.",
+          "franciscos_gift": "Discovers ability to bring stories to life—narrative manifesting as reality. His creative force flows through words, through meaning-making, through the power of story to reshape possibility. The writer as reality-shaper, pen as wand.",
+          "zaras_gift": "Masters adaptive creation under pressure—manifesting innovative solutions in real-time as conditions shift. Her creative force flows through improvisation, through intuitive synthesis, through warrior-artist fusion. The fighter as maker, action as art.",
+          "escalating_trials": "Each challenge requires more sophisticated manifestation—moving from simple prototypes to complex systems, from individual creation to collaborative building, from planned projects to pressurized improvisation. The Page's study curve made visceral.",
+          "road_of_trials_begins": "This marks true entry into The Road of Trials. They've prepared (wellness, abundance, confidence). Now they're tested. Can they manifest unprecedented solutions? Can creativity become their weapon? The trials will answer.",
+          "approaching_the_crown": "Everything builds toward confronting the Crown of Ancient Ones. Kyros warns: conventional magic won't suffice. They'll need to manifest solutions that have never existed. Creativity as survival tool, innovation as defense against cosmic threats."
+        },
+        "mental_health_framework": {
+          "focus_area": "Creative Practice, Manifestation Discipline, and Productive Iteration",
+          "creativity_characteristics": [
+            "Consistent creative practice regardless of inspiration levels",
+            "Iterative refinement through patient experimentation",
+            "Combining diverse influences into novel synthesis",
+            "Manifesting under pressure without quality sacrifice",
+            "Disciplining imagination into tangible outputs",
+            "Sharing creative process to accelerate learning"
+          ],
+          "manifestation_building_strategies": [
+            "Establish non-negotiable creative practice routines",
+            "Identify and actively resist creative Resistance",
+            "Honor ideas with action rather than endless planning",
+            "Release perfectionism through valuing iteration",
+            "Build inspiration libraries to draw from strategically",
+            "Practice combinational creativity regularly",
+            "Document and share work-in-progress publicly"
+          ],
+          "integration_indicators": [
+            "Ideas regularly transformed into concrete prototypes",
+            "Creative output sustained through disciplined practice",
+            "Perfectionism replaced by iterative refinement",
+            "Fear present but not preventing creation",
+            "Manifestation aligned with strategic purpose",
+            "Creative force accessible even under pressure"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VII: The Road of Trials (Active Testing)",
+          "preliminary_beat": "The Road of Trials - Approach to the Innermost Cave",
+          "save_the_cat_beat": "The Road of Trials - Testing new abilities under pressure",
+          "character_state": "Moving from preparation to active testing. Wellness integrated (Ch 18), now channeling that integration into creative force. Discovering unique manifesting abilities through escalating trials. Learning that creativity will be survival tool for challenges ahead.",
+          "structural_significance": "Marks transition from preparation to active trial. They've built foundations—now they're tested on using them. Establishes creativity as essential skill for cosmic confrontation, not optional flourish. Plants seed: reality-shapers can challenge divine authority.",
+          "archetypal_moment": "The Apprentice in the forge. Campbell's trials where hero tests emerging powers. The Page studying the pentacle before becoming the master of manifestation."
+        },
+        "daily_prompt": "What idea has been seeking your partnership, waiting for you to manifest it into reality? What would happen if you honored that idea with disciplined action today?",
+        "story_hook": "In Laurasia's Chapter 19, Master Kyros materializes in Francisco's chamber at dawn, crystal pendant pulsing urgently. 'Your wellness training prepared the vessel. Now we fill it with creative force.' He leads them through hidden corridors descending into the Academy's heart. The Forge of Manifestation reveals itself—floating islands displaying centuries of materialized dreams, thoughts shimmering in air as half-formed possibilities. 'Approaching the Crown of Ancient Ones,' Kyros explains, his presence bending reality around him, 'requires solutions that have never existed. Conventional magic won't suffice. You must become creators of new realities.' Francisco watches as Kyros manifests a complex magical tool from pure imagination, each detail deliberate. 'But I'm not—I don't know how—' 'You do,' Kyros interrupts. 'You just don't know you do yet. The Page of Pentacles studies the golden coin with complete focus. Not dreaming but doing. Not imagining but making. Manifestation is discipline, Francisco. Inspiration is the spark. Execution is the fire. Both are necessary.' The first trial begins. The Trionfi whisper their teaching: creativity isn't just art—it's survival. When facing impossible challenges, only those who can manifest unprecedented solutions will endure. The Page becomes the master not through talent but through turning pro, through showing up daily, through honoring ideas with persistent, disciplined action.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Transform abstract visions into concrete reality consistently",
+            "Maintain creative practice through discipline not just inspiration",
+            "Iterate persistently through experimentation and refinement",
+            "Manifest innovative solutions under pressure",
+            "Combine diverse influences into novel synthesis",
+            "Channel imagination into strategic, purposeful creation"
+          ],
+          "development_pathway": "From inspiration-waiting to manifestation-making—learning to defeat creative Resistance daily, honor ideas with disciplined action, iterate without perfectionism, combine influences strategically, adapt creative process to pressure, and recognize that manifestation requires both magic (inspiration) and craft (execution) in sustained partnership",
+          "ai_integration_notes": "AI can identify patterns distinguishing productive creativity (disciplined, iterative, purposeful) from shadow patterns (compulsive making, perfectionism paralysis, creation-as-avoidance). Machine learning can track correlations between creative practice consistency and manifestation output quality. Ethical considerations include recognizing when 'manifestation' becomes magical thinking versus grounded action."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 17-18, 1320 (manifestation mastery) - Creative Force Activation Point",
+          "universal_archetype": "The Page of Pentacles—studious creativity, practical manifestation, apprentice learning to transform vision into reality through patient craft, disciplined imagination becoming tangible force, the maker's journey from novice to master",
+          "trionfi_connection": "The Page examines the pentacle with devoted focus—not idle dreaming but active making. Francisco's cards reveal creativity as survival skill. When facing cosmic threats, only reality-shapers will endure. Manifestation is destiny.",
+          "series_foundation": "This creative force—disciplined, iterative, purposeful—becomes essential for all challenges ahead. The series' central claim: storytellers can reshape reality itself. This chapter establishes that power as learnable skill, not mystical gift. Everyone can manifest; few choose the discipline."
+        },
+        "implementation_context": {
+          "execution_focus": "Channeling integrated wellness into tangible creative force",
+          "discipline_required": "Maintaining consistent practice despite Resistance and fear",
+          "perseverance_element": "Iterating through failure toward manifestation without perfectionism",
+          "collaboration_necessity": "Manifesting collaboratively while honoring unique creative gifts"
+        }
     },
     "personality_profile_20": {
     },
