@@ -2823,8 +2823,235 @@
         }
     },
     "personality_profile_13": {
+        "canonical_id": "EA-013",
+        "unique_identifier": "MAT 1.1",
+        "all_chapter": 13,
+        "novel_book": 1,
+        "chapter": "Chapter 13",
+        "chapter_title": "The Guardian's Test - Crossing Into Potentiality",
+        "type": "Major Activity Theme",
+        "display_name": "The Fool at the Threshold",
+        "theme": "Potentiality - Embracing Limitless Growth",
+        "family": "Order / Systems - Expansion",
+        "summary": "This personality embodies the transformative leap from known territory into infinite possibility, drawn from Chapter 13 of the Human Framework. After celebrating progress (Ch 12), the coalition faces The Fool's ultimate test—releasing old constraints and stepping into expansive unknown. This is the Break Into Act 2 moment where everything changes, where dormant capacity transforms into kinetic progress, where imagination converts into daring action. Like The Fool card stepping off the cliff with trust and courage, this archetype welcomes open-ended exploration, calculated risk, and imaginative foresight that converts possibility into momentum.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Fool (0)",
+        "tarot_symbolism": "The Fool represents infinite potential, new beginnings, and the courage to leap into the unknown. Chapter 13 embodies this completely—the coalition stands at the threshold where everything familiar ends and everything possible begins. The Fool teaches that growth requires releasing certainty and embracing the adventure of becoming.",
+        "traits": {
+          "strengths": [
+            "embraces unknown with courage and trust",
+            "sees limitless potential where others see limits",
+            "takes calculated risks into uncharted territory",
+            "maintains growth mindset amid uncertainty",
+            "converts imagination into daring action",
+            "welcomes open-ended exploration",
+            "nurtures adaptive learning through experimentation"
+          ],
+          "shadow": [
+            "recklessness disguised as courage",
+            "naivety about real dangers",
+            "inability to learn from past consequences",
+            "potential without grounding or direction",
+            "endless seeking that never commits",
+            "growth addiction that runs from depth"
+          ],
+          "growth_focus": [
+            "balance openness with wisdom from experience",
+            "ground potentiality in purposeful direction",
+            "take risks while honoring real limitations",
+            "embrace unknown without ignoring known",
+            "convert possibility into concrete progress",
+            "maintain courage while developing competence"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Guardian's Test",
+          "fiction_chapter_context": "Standing at brink of unknown, coalition releases old constraints and steps into expansive possibility. Decisive crossing demands courage, trust, embrace of untapped potential. Moment where imagination converts into daring action. Break Into 2—everything changes. Pages 181-195. February 14-15, 1320 (threshold crossing)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 releasing perfectionism to embrace messy growth. Integration toward Type 7 (The Enthusiast) brings adventurous spirit, joyful exploration, trust in process. The Fool energy transforms rigid Order into dynamic Evolution."
+        },
+        "color_alignment": {
+          "hue_index": 12,
+          "name": "Black",
+          "hsl": "0,0%,0%",
+          "rgb_hex": "#000000",
+          "color_symbolism": "Black represents the void of infinite potential—the darkness before creation, the unknown containing all possibility. Not emptiness but fullness not yet manifested. The fertile chaos from which everything emerges."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.815,
+            "stability": 0.515,
+            "empathy": 0.665,
+            "openness": 0.915,
+            "orderliness": 0.465,
+            "novelty_seeking": 0.915,
+            "abstract_reasoning": 0.815,
+            "emotional_intensity": 0.715,
+            "social_dominance": 0.615,
+            "cooperativeness": 0.765,
+            "risk_tolerance": 0.865,
+            "conscientiousness": 0.615,
+            "adaptability": 0.915,
+            "imagination": 0.915
+          },
+          "match_weights": {
+            "openness": 0.95,
+            "novelty_seeking": 0.9,
+            "adaptability": 0.85,
+            "imagination": 0.85,
+            "risk_tolerance": 0.8
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q061", "Q062", "Q063"]
+        },
+        "signals_map": {
+          "Q061": {
+            "dimension": "openness",
+            "polarity": 1.0,
+            "description": "Embracing unknown with trust and courage",
+            "assessment_question": "When facing major life transitions or opportunities requiring me to step into completely unknown territory, I can embrace the uncertainty with trust and courage rather than clinging to familiar safety"
+          },
+          "Q062": {
+            "dimension": "novelty_seeking",
+            "polarity": 0.95,
+            "description": "Actively pursuing growth beyond current limits",
+            "assessment_question": "I actively seek experiences and opportunities that stretch me beyond my current capabilities and comfort zone, viewing these as essential for growth rather than threats to avoid"
+          },
+          "Q063": {
+            "dimension": "adaptability",
+            "polarity": 0.9,
+            "description": "Flowing with change while converting potential into progress",
+            "assessment_question": "I can adapt fluidly to rapidly changing circumstances while maintaining forward momentum, converting unexpected changes into opportunities for growth and innovation"
+          },
+          "Q064": {
+            "dimension": "imagination",
+            "polarity": 0.85,
+            "description": "Envisioning possibilities beyond current reality",
+            "assessment_question": "I regularly envision possibilities and potentials that don't yet exist in current reality, using imaginative foresight to guide exploration into new territories"
+          },
+          "Q065": {
+            "dimension": "risk_tolerance",
+            "polarity": 0.8,
+            "description": "Taking calculated leaps into uncertainty",
+            "assessment_question": "I'm willing to take calculated risks and make bold moves into uncertain territory when the potential for growth and discovery outweighs the comfort of staying with the known"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Mindset: The New Psychology of Success",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth vs Fixed Mindset",
+            "core_teaching": "Beliefs about intelligence and talent dictate openness to possibility. Growth mindset reframes challenges as springboards not roadblocks. View potentiality as ever-expanding horizon shaped by attitude and effort. Abilities develop through dedication and learning.",
+            "connection_to_potentiality": "The Fool's leap requires growth mindset—believing capacity can expand infinitely through experience. Fixed mindset sees the threshold as limit; growth mindset sees it as beginning. Francisco's coalition embraces unknown because they believe in their ability to learn whatever comes.",
+            "terminal_learning_objectives": {
+              "objective1": "Adopt growth-oriented self-talk that unlocks new abilities",
+              "objective2": "Transform setbacks into data for iterative improvement",
+              "objective3": "Reward perseverance over innate aptitude to sustain momentum"
+            }
+          },
+          "book2": {
+            "title": "Limitless",
+            "author": "Jim Kwik",
+            "section_of_focus": "Breaking Mental Barriers",
+            "core_teaching": "Cognitive ceilings are largely self-imposed and reversible through targeted practice. Brain performance accelerates through deliberate methods. Perceived limits dissolve when we challenge assumptions about our capacity. Learning to learn is ultimate skill.",
+            "connection_to_potentiality": "Standing at threshold, the coalition faces ultimate question: What are we truly capable of? Kwik teaches that most limits are illusions. The Fool's courage comes from recognizing that our potential exceeds our current conception of ourselves.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify and challenge self-imposed mental limitations",
+              "objective2": "Apply accelerated learning techniques to unknown domains",
+              "objective3": "Recognize that learning capacity itself expands through use"
+            }
+          },
+          "book3": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Crossing the First Threshold",
+            "core_teaching": "Hero must pass through gates guarded by threshold guardians, leaving ordinary world for special world of adventure. This crossing is death of old self and birth of new. Requires courage to release certainty and trust the journey into mystery.",
+            "connection_to_potentiality": "Chapter 13 IS Campbell's threshold crossing. Everything before prepared them; everything after transforms them. The Fool doesn't know what awaits but steps forward anyway. This is the archetypal moment separating those who grow from those who stagnate.",
+            "terminal_learning_objectives": {
+              "objective1": "Recognize threshold moments requiring release of old constraints",
+              "objective2": "Develop courage to step into transformative unknown",
+              "objective3": "Trust that adventure beyond threshold serves necessary growth"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "break_into_act_2": "Chapter 13 is the pivotal structural moment—Break Into 2. Everything changes. Ordinary world left behind. Special world of infinite possibility entered. No turning back.",
+          "threshold_guardians": "The Guardian's Test—forces that challenge whether coalition truly ready to cross. Must prove they've integrated lessons from Chapters 1-12 before permitted entry to greater mysteries.",
+          "releasing_constraints": "Must let go of who they were to become who they could be. Old identities, limitations, certainties—all released. The Fool steps off cliff trusting wings will appear.",
+          "infinite_potential": "Beyond threshold lies realm where anything possible. Not chaos but fertile unknown containing all futures. Coalition's potentiality activates.",
+          "imagination_to_action": "This is moment where envisioned possibilities must convert into daring deeds. Planning phase ends. Adventure phase begins. Potential becomes kinetic.",
+          "courage_and_trust": "The Fool's defining qualities. Not fearlessness but acting despite fear. Not certainty but proceeding despite uncertainty. Faith in growth process itself.",
+          "series_transformation": "This crossing fundamentally alters the story. Everything in Act 1 was preparation. Everything in Act 2-3 is transformation. The coalition that crosses threshold is not the coalition that returns."
+        },
+        "mental_health_framework": {
+          "focus_area": "Growth Mindset, Risk-Taking, and Threshold Crossing",
+          "potentiality_characteristics": [
+            "Viewing unknown as opportunity rather than threat",
+            "Maintaining growth mindset amid radical uncertainty",
+            "Converting imagination into courageous action",
+            "Taking calculated risks into uncharted territory",
+            "Releasing old constraints to embrace expansion",
+            "Trusting learning process in face of mystery"
+          ],
+          "threshold_crossing_strategies": [
+            "Develop courage to release certainty and step into unknown",
+            "Challenge self-imposed limitations on potential",
+            "Practice converting possibility into purposeful action",
+            "Build trust in adaptive capacity through experimentation",
+            "Maintain growth orientation during transformation",
+            "Balance boldness with wisdom from preparation phase",
+            "Recognize threshold moments as necessary for evolution"
+          ],
+          "integration_indicators": [
+            "Willingness to cross thresholds despite uncertainty",
+            "Growth mindset replacing fixed beliefs about capacity",
+            "Courage and trust enabling bold exploration",
+            "Imagination activating into concrete adventure",
+            "Old constraints released, new potentials embraced",
+            "Transformation accepted as necessary, not resisted"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene V: Crossing the First Threshold (Break Into 2)",
+          "preliminary_beat": "Break Into 2 / Threshold Crossing",
+          "save_the_cat_beat": "Break Into 2 - Everything changes; special world entered",
+          "character_state": "Standing at brink. Prepared by Chapters 1-12. Must release old world, embrace unknown. The Fool's leap required. Growth or stagnation decided here.",
+          "structural_significance": "Most important plot point after opening. Act 1 ends, Act 2 begins. Ordinary world left behind forever. Special world of transformation entered. No return to old way of being.",
+          "archetypal_moment": "The Hero's threshold crossing described by Campbell. Death of who they were. Birth of who they're becoming. The leap into mystery that defines hero's journey."
+        },
+        "daily_prompt": "What threshold stands before you today, inviting you to release old constraints and step into unknown potential? What would The Fool's courage look like in your life?",
+        "story_hook": "In Laurasia's Chapter 13, the coalition stands at the ultimate threshold. Behind them: ego death, transformation, crisis, acceptance, celebration—all of Act 1. Before them: infinite unknown. The Guardian challenges: 'Are you ready to release everything you think you know about your limits?' The Fool card appears, depicting a figure stepping off a cliff into empty air. 'This is madness,' someone whispers. 'No,' Dante replies, 'this is potentiality. Everything you've learned prepared you for this moment. Now you must trust that your capacity to grow exceeds your current conception of yourselves.' Francisco feels the pull of safety behind, the call of possibility ahead. Then steps forward into the void. Sometimes, the Trionfi whisper, growth requires The Fool's courage—releasing certainty, embracing mystery, trusting that when we leap toward our potential, wings appear not before but during the fall.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Embrace unknown with courage and growth mindset",
+            "Take calculated risks into uncharted territory",
+            "Convert imagination into daring action",
+            "Release old constraints to pursue expansion",
+            "Maintain trust in growth process amid uncertainty",
+            "View thresholds as opportunities not threats"
+          ],
+          "development_pathway": "From certainty to possibility—learning to embrace unknown, challenge self-imposed limits, convert potential into kinetic progress, take courageous leaps, trust adaptive capacity, and recognize that greatest growth lies beyond the threshold where safety ends and infinite possibility begins",
+          "ai_integration_notes": "AI can identify patterns distinguishing healthy threshold crossing (courageous growth) from unhealthy patterns (reckless avoidance of wisdom). Machine learning can track balance between openness and grounding. Ethical considerations include recognizing when 'potentiality' becomes escapism versus genuine expansion."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 14-15, 1320 (threshold crossing) - Transformation Initiation Point",
+          "universal_archetype": "The Fool—infinite potential, new beginnings, courage to leap into unknown, trust in becoming, potentiality embracing its own expansion",
+          "trionfi_connection": "The Fool (0) is both nothing and everything—the void of pure potential. Francisco's cards reveal this is the moment where everything changes. Crossing threshold activates dormant capacities. The journey truly begins.",
+          "series_foundation": "Everything before this prepared them. Everything after transforms them. This crossing is point of no return—coalition that emerges from Act 2 will be fundamentally different from coalition that entered. Potentiality activates."
+        },
+        "implementation_context": {
+          "execution_focus": "Taking the leap—converting preparation into courageous action",
+          "discipline_required": "Courage to release safety and embrace unknown",
+          "perseverance_element": "Trust in growth process despite radical uncertainty",
+          "collaboration_necessity": "Collective leap—coalition crosses together into shared unknown"
+        }
     },
     "personality_profile_14": {
+        
     },
     "personality_profile_15": {
     },
