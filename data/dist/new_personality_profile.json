@@ -3567,7 +3567,232 @@
         }
     },
     "personality_profile_17": {
-        
+        "canonical_id": "EA-017",
+        "unique_identifier": "STG 1.2.2.1",
+        "all_chapter": 17,
+        "novel_book": 1,
+        "chapter": "Chapter 17",
+        "chapter_title": "The Sanctuary of Harmonized Being - Cultivating Prosperity",
+        "type": "Specific Task Group",
+        "display_name": "The Gardener of Plenty",
+        "theme": "Abundance - From Scarcity to Prosperity Consciousness",
+        "family": "Order / Systems - Harmony",
+        "summary": "This personality embodies the transformative shift from scarcity to abundance mindset, drawn from Chapter 17 of the Human Framework. After mastering clear communication (Ch 16), the coalition now confronts the deeper challenge of integrating their newfound capabilities with proper stewardship. This is the moment where external success meets internal harmony—where they must juxtapose prior scarcity with present abundance to understand that true wealth demands responsible cultivation. Like the Nine of Pentacles showing a figure in a flourishing garden, this archetype understands that prosperity isn't just about having resources but about creating regenerative cycles of opportunity that benefit all.",
+        "tarot_family": "Pentacles/Disks/Stones",
+        "tarot_card_item": "Nine of Pentacles",
+        "tarot_symbolism": "The Nine of Pentacles represents self-sufficiency, material abundance, and the fruits of disciplined effort. A figure stands in a lush garden surrounded by ripened grapes—prosperity earned through patience and cultivation, enjoyed with gratitude and grace. Chapter 17 embodies this completely—the coalition must shift from survival mentality to stewardship consciousness, recognizing that their growing resources bring both opportunity and responsibility. The Nine teaches that abundance is a practice, not a destination.",
+        "traits": {
+          "strengths": [
+            "cultivates prosperity through generous collaboration",
+            "shifts from scarcity to abundance consciousness",
+            "practices stewardship over hoarding",
+            "creates regenerative cycles of opportunity",
+            "balances material success with spiritual values",
+            "shares resources strategically for collective growth",
+            "maintains gratitude amid increasing prosperity"
+          ],
+          "shadow": [
+            "confuses abundance mindset with toxic positivity",
+            "uses 'prosperity consciousness' to ignore systemic inequality",
+            "becomes attached to material symbols of success",
+            "hoards resources while preaching generosity",
+            "judges others' scarcity mindset without empathy",
+            "loses connection to values in pursuit of wealth"
+          ],
+          "growth_focus": [
+            "distinguish authentic abundance from spiritual bypassing",
+            "practice generosity without martyrdom",
+            "maintain values as resources increase",
+            "balance gratitude with acknowledgment of real scarcity",
+            "create sustainable prosperity not exploitative extraction",
+            "share abundance without superiority or pity"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Sanctuary of Harmonized Being",
+          "fiction_chapter_context": "Juxtaposing prior scarcity with present abundance, coalition confronts new responsibilities inherent in prosperity. As they prepare to delve deeper into Academy training, they must integrate external success with internal harmony, learning that true wealth demands stewardship. The shift from survival to thriving brings both opportunity and obligation. Pages 241-255. February 15-16, 1320 (abundance integration)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that prosperity can be ethical. Integration toward Type 7 (The Enthusiast) brings joyful appreciation of abundance. The Nine of Pentacles' grace transforms rigid scarcity thinking into generous stewardship."
+        },
+        "color_alignment": {
+          "hue_index": 17,
+          "name": "Supernova/Golden Orange",
+          "hsl": "33,100%,60%",
+          "rgb_hex": "#FFB733",
+          "color_symbolism": "Golden orange represents the autumn harvest—the fruits of disciplined labor, the glow of earned abundance. The color of ripe grain and setting sun, prosperity paired with gratitude. The garden at golden hour."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.765,
+            "stability": 0.765,
+            "empathy": 0.715,
+            "openness": 0.715,
+            "orderliness": 0.715,
+            "novelty_seeking": 0.565,
+            "abstract_reasoning": 0.715,
+            "emotional_intensity": 0.515,
+            "social_dominance": 0.615,
+            "cooperativeness": 0.815,
+            "risk_tolerance": 0.665,
+            "conscientiousness": 0.765,
+            "adaptability": 0.665,
+            "imagination": 0.665
+          },
+          "match_weights": {
+            "cooperativeness": 0.95,
+            "stability": 0.9,
+            "abundance_mindset": 0.9,
+            "conscientiousness": 0.85,
+            "agency": 0.8
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q081", "Q082", "Q083"]
+        },
+        "signals_map": {
+          "Q081": {
+            "dimension": "abundance_mindset",
+            "polarity": 1.0,
+            "description": "Seeing possibility in plenty",
+            "assessment_question": "I naturally see opportunities for growth and expansion rather than focusing on limitations or scarcity, believing there's enough for everyone when resources are stewarded well"
+          },
+          "Q082": {
+            "dimension": "cooperativeness",
+            "polarity": 0.95,
+            "description": "Generosity that creates regenerative cycles",
+            "assessment_question": "I share resources, knowledge, and opportunities freely, understanding that strategic generosity creates sustainable abundance for everyone rather than depleting what I have"
+          },
+          "Q083": {
+            "dimension": "conscientiousness",
+            "polarity": 0.9,
+            "description": "Stewardship over consumption",
+            "assessment_question": "I feel responsible for using resources wisely and sustainably, seeing myself as a steward of abundance rather than just a consumer or accumulator of wealth"
+          },
+          "Q084": {
+            "dimension": "stability",
+            "polarity": 0.85,
+            "description": "Gratitude amid prosperity",
+            "assessment_question": "As my resources and opportunities increase, I maintain perspective through gratitude practices, remembering both the effort that created abundance and the responsibility it brings"
+          },
+          "Q085": {
+            "dimension": "agency",
+            "polarity": 0.8,
+            "description": "Creating value not extracting it",
+            "assessment_question": "I focus on creating new value and opportunities rather than competing for limited resources, believing prosperity comes from expanding the pie not fighting over slices"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Abundance Mentality vs. Scarcity Mentality",
+            "core_teaching": "Scarcity mentality sees life as a finite pie—if someone gets a piece, there's less for you. Abundance mentality flows from deep inner security and self-worth, believing there's plenty for everyone. This paradigm shift transforms competition into collaboration, comparison into celebration, hoarding into generosity. Most importantly: abundance mentality must be authentic, grounded in real value creation, not positive thinking divorced from reality.",
+            "connection_to_abundance": "The coalition's transition from Academy newcomers (scarce resources, fierce competition) to integrated members (collaborative power, shared success) demonstrates Covey's core principle. Their assertive communication (Ch 16) only works because they approach Academy politics with abundance mentality—believing mutual success is possible.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify scarcity thinking patterns in your daily decisions",
+              "objective2": "Practice celebrating others' success without comparison",
+              "objective3": "Create value that expands opportunities for everyone"
+            }
+          },
+          "book2": {
+            "title": "The Soul of Money: Transforming Your Relationship with Money and Life",
+            "author": "Lynne Twist",
+            "section_of_focus": "The Lie of Scarcity",
+            "core_teaching": "Three toxic myths dominate our relationship with resources: there's not enough, more is better, that's just the way it is. These lies create fear, greed, and resignation. The truth: sufficiency is not an amount but an experience of enough-ness. Prosperity consciousness means knowing you have enough, you are enough, you do enough—and from that place, giving freely. True wealth is alignment between your resources and your values.",
+            "connection_to_abundance": "The chapter's title 'The Sanctuary of Harmonized Being' points to Twist's insight: harmony comes when external prosperity aligns with internal values. The coalition must learn that their increasing magical power and Academy resources bring responsibility for stewardship, not just enjoyment. Abundance without values creates hollow success.",
+            "terminal_learning_objectives": {
+              "objective1": "Examine where scarcity myths drive your resource decisions",
+              "objective2": "Define 'enough' for key areas of your life",
+              "objective3": "Align spending and giving with your deepest values"
+            }
+          },
+          "book3": {
+            "title": "Tao Te Ching",
+            "author": "Lao Tzu",
+            "section_of_focus": "The Way of Water and Wu Wei",
+            "core_teaching": "The Tao that can be told is not the eternal Tao. Water nourishes all things without trying, flowing to the lowest places. Wu wei (effortless action) doesn't mean passivity but rather action aligned with natural flow. The sage is generous because holding leads to loss; gives because giving leads to having. True abundance comes not from accumulation but from harmonious circulation with the natural order.",
+            "connection_to_abundance": "Chapter 17 shifts the major task group from Fortitude to Harmony—perfect alignment with Taoist philosophy. The coalition learns that abundance isn't conquered or achieved but cultivated through alignment with natural principles. Like water that nourishes without trying, strategic generosity creates regenerative cycles. The Sanctuary represents this: a space of harmonized being where abundance flows naturally.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify where you're forcing rather than flowing in resource creation",
+              "objective2": "Practice giving without expectation of return",
+              "objective3": "Align actions with natural rhythms rather than constant striving"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "old_world_contrast": "The chapter deliberately contrasts where they were (Chapter 14's devastation, survival mentality) with where they are (Chapter 17's abundance, stewardship consciousness). This juxtaposition isn't triumphalist—it's reflective, teaching that prosperity brings new responsibilities.",
+          "approach_to_innermost_cave": "This is preparation for the next phase. They're about to face deeper trials (The Road of Trials begins). The abundance consciousness they develop now will be tested under pressure. Can they maintain generosity when resources tighten? Can they remember stewardship in crisis?",
+          "sanctuary_symbolism": "The Sanctuary of Harmonized Being isn't just a location—it's a state of being where external abundance aligns with internal values, where material success serves spiritual purpose. This is what they're cultivating: integrated prosperity.",
+          "harmony_as_practice": "Shifting from Fortitude (Chapters 14-16: resilience, confidence, assertiveness) to Harmony (starting Chapter 17) marks a developmental leap. They've built individual strength; now they learn collective flourishing. Harmony isn't passive peace—it's active cultivation of conditions where all can thrive.",
+          "stewardship_responsibility": "The chapter establishes that success brings obligation. Their growing power, knowledge, and resources aren't just rewards—they're tools for serving something larger. This plants seeds for later themes about leadership and legacy.",
+          "nine_of_pentacles_energy": "The figure in the garden didn't manifest abundance through wishful thinking—they cultivated it through patient, disciplined effort. Now they enjoy the fruits with grace and gratitude, understanding that maintaining the garden requires continued care.",
+          "preparation_for_trials": "This chapter's calm, reflective energy prepares them for the intensity ahead. They're building reserves—material, emotional, spiritual—that will sustain them through The Road of Trials. Abundance now enables resilience later."
+        },
+        "mental_health_framework": {
+          "focus_area": "Abundance Mindset, Stewardship, and Value Alignment",
+          "abundance_characteristics": [
+            "Seeing possibility over limitation in resource situations",
+            "Strategic generosity that creates regenerative cycles",
+            "Stewardship consciousness over consumption mentality",
+            "Gratitude practices that maintain perspective amid prosperity",
+            "Value creation focus rather than competitive extraction",
+            "Resource alignment with deepest values and purpose"
+          ],
+          "abundance_building_strategies": [
+            "Practice celebrating others' success without comparison",
+            "Create value that expands the pie for everyone",
+            "Define 'enough' for key life areas and honor those boundaries",
+            "Align resource use with core values consistently",
+            "Give strategically to create sustainable impact",
+            "Maintain gratitude practices especially as prosperity increases",
+            "Act from sufficiency rather than scarcity fear"
+          ],
+          "integration_indicators": [
+            "Collaboration replacing competition as default mode",
+            "Generosity flowing naturally without martyrdom",
+            "Resources creating opportunity for self and others",
+            "Gratitude maintained amid increasing prosperity",
+            "Values guiding resource decisions consistently",
+            "Stewardship replacing both hoarding and reckless consumption"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VII: The Road of Trials (Preparation)",
+          "preliminary_beat": "Approach to the Innermost Cave - Old World Contrast",
+          "save_the_cat_beat": "Approach to the Innermost Cave - Final preparation before major trials",
+          "character_state": "Integrating success with values. Building reserves—material, emotional, spiritual—for trials ahead. Learning that prosperity brings responsibility. Shifting from individual strength to collective flourishing mindset.",
+          "structural_significance": "Marks transition from Fortitude to Harmony as major theme. Prepares coalition for The Road of Trials by establishing abundance consciousness that will be tested under pressure. Plants seeds for later leadership and legacy themes.",
+          "archetypal_moment": "The Harvest. Campbell's preparation phase before the ordeal. The gardener surveying the fruits of patient labor before winter tests come."
+        },
+        "daily_prompt": "What abundance already exists in your life that scarcity thinking might be hiding? How could stewarding your current resources generously create regenerative cycles of opportunity?",
+        "story_hook": "In Laurasia's Chapter 17, Francisco stands in the Academy's meditation garden, watching golden light filter through leaves heavy with fruit. 'Remember three weeks ago?' Zara asks quietly. 'We were homeless, powerless, terrified. Now look.' They gesture at the abundance around them—magical training, powerful allies, resources they couldn't have imagined. 'Easy to forget how we got here,' Francisco murmurs. 'Breakdown. Vulnerability. The willingness to share instead of hoard even when we had nothing.' An older student overhears them. 'That's the test, you know. Can you maintain that generosity now that you have plenty? Most students start competing, accumulating, protecting their advantages once they have something to lose.' Zara meets Francisco's eyes. 'So abundance without stewardship becomes another kind of poverty.' 'Exactly,' the older student nods. 'The Nine of Pentacles stands in a garden they cultivated through patient effort. They enjoy the fruits with gratitude, but they also know—the garden requires continued care. Prosperity isn't a destination. It's a practice.' The Trionfi whisper their wisdom: scarcity sees limited slices of a fixed pie. Abundance sees the possibility of growing more pies together. The first hoards. The second shares. Guess which one actually creates lasting wealth?",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Shift naturally from scarcity to abundance consciousness",
+            "Practice strategic generosity that creates regenerative cycles",
+            "Steward resources responsibly while sharing freely",
+            "Align material success with spiritual values",
+            "Maintain gratitude amid increasing prosperity",
+            "Create value that expands opportunities for all"
+          ],
+          "development_pathway": "From scarcity to sufficiency to abundance—learning to see possibility over limitation, practice strategic generosity, steward resources responsibly, align prosperity with values, create regenerative cycles of opportunity, and recognize that true wealth flows from harmonious circulation rather than fearful accumulation",
+          "ai_integration_notes": "AI can identify patterns distinguishing authentic abundance mindset (value-creating, generous, grounded) from shadow patterns (spiritual bypassing, hoarding, toxic positivity). Machine learning can track alignment between stated values and resource behaviors. Ethical considerations include recognizing when 'abundance consciousness' becomes privilege blindness versus when it enables genuine generosity."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 15-16, 1320 (abundance integration) - Harmony Foundation Point",
+          "universal_archetype": "The Nine of Pentacles—self-sufficiency through discipline, material abundance through patience, prosperity consciousness paired with stewardship, the gardener enjoying fruits while tending future growth",
+          "trionfi_connection": "The Nine of Pentacles stands in earned abundance. Francisco's cards reveal this as transition from Fortitude to Harmony—from building individual strength to cultivating collective flourishing. True wealth creates more wealth.",
+          "series_foundation": "This abundance consciousness—generous, strategic, value-aligned—becomes foundation for all later collaborative work. Every resource decision from here forward reflects this chapter's lesson: prosperity brings responsibility for stewardship."
+        },
+        "implementation_context": {
+          "execution_focus": "Integrating external success with internal values",
+          "discipline_required": "Maintaining generosity and gratitude amid prosperity",
+          "perseverance_element": "Stewardship as ongoing practice not one-time achievement",
+          "collaboration_necessity": "Creating regenerative cycles that enable collective flourishing"
+        }
     },
     "personality_profile_18": {
     },
