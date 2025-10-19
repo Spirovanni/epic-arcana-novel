@@ -5393,8 +5393,237 @@
           "transformation_element": "Navigating three phases: ending, neutral zone, new beginning",
           "sacred_necessity": "Marking transitions with ritual and community witness for completion and integration"
         }
-    },
+    },   
     "personality_profile_25": {
+        "canonical_id": "EA-025",
+        "unique_identifier": "STG 1.3.1.2",
+        "all_chapter": 25,
+        "novel_book": 1,
+        "chapter": "Chapter 25",
+        "chapter_title": "The Trial of Echoing Temptations - Testing Commitment Under Ultimate Pressure",
+        "type": "Specific Task Group",
+        "display_name": "The Temptation Resister",
+        "theme": "Stability - Leadership Tested Through Deepest Temptations",
+        "family": "Order / Systems - Leadership Foundation",
+        "summary": "This personality embodies the resilience to resist ultimate temptations, drawn from Chapter 25 of the Human Framework. After undergoing death-rebirth transformation (Ch 24), the coalition now faces the most profound test—learning that true stability means choosing the difficult path when offered easy escape. Like the figure bound but not imprisoned in the Devil card, this archetype understands that authentic freedom comes from recognizing and resisting the chains of comfortable illusion. True leadership stability flows from consciously choosing cosmic responsibility over personal safety.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Devil (XV)",
+        "tarot_symbolism": "The Devil shows two figures chained before a demon, but their chains are loose—they could escape if they chose. The card represents bondage to material comfort, fear-driven choices, and the illusion that safety is more important than purpose. The inverted pentagram signals divine energy trapped in material attachment. Chapter 25 embodies this completely—Francisco and Zara face perfect simulations of everything they've sacrificed, temptations so powerful they must consciously recognize the chains as illusions and choose to remove them.",
+        "traits": {
+          "strengths": [
+            "resists powerful temptations through clarity of purpose",
+            "chooses difficult paths over comfortable escapes consciously",
+            "maintains commitment when facing deepest fears",
+            "recognizes illusion and manipulation for what they are",
+            "supports others through their temptation trials",
+            "transforms temptation trials into strengthened resolve",
+            "demonstrates unshakeable leadership stability under pressure"
+          ],
+          "shadow": [
+            "becomes self-righteous about resisting temptations",
+            "judges others who struggle with choosing difficult paths",
+            "uses 'higher purpose' to justify harmful self-neglect",
+            "becomes rigid and inflexible in pursuit of ideals",
+            "loses connection to legitimate human needs and desires",
+            "sacrifices unnecessarily to prove commitment",
+            "mistakes suffering for virtue"
+          ],
+          "growth_focus": [
+            "recognize difference between legitimate needs and temptations",
+            "maintain humanity while pursuing cosmic purpose",
+            "support others with compassion through their struggles",
+            "balance commitment with self-care and relationships",
+            "distinguish between necessary sacrifice and martyrdom",
+            "stay grounded in why the difficult path matters"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Trial of Echoing Temptations",
+          "fiction_chapter_context": "In Chamber of Temporal Guardians suspended above Saturn's rings, Council tests Francisco and Zara's ultimate readiness through controlled reality fractures. Francisco confronts temptation to return to peaceful scholarly life—safety over cosmic responsibility. Zara faces clash between protective instincts and cosmic-scale risk-taking. Through three escalating trials with perfect psychological accuracy, they must prove leadership stability by choosing perilous uncertainty over safe certainty. Pages 361-375. February 21, 1320 (temptation trials survived)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 facing ultimate test of principles versus comfort. The Devil card's loose chains reveal that perfectionist rigidity isn't true integrity—conscious choice is. Integration means choosing difficult paths without self-righteous martyrdom."
+        },
+        "color_alignment": {
+          "hue_index": 25,
+          "name": "Charcoal Gray/Shadow Stone",
+          "hsl": "0,0%,35%",
+          "rgb_hex": "#595959",
+          "color_symbolism": "Charcoal gray represents the liminal space between light and shadow—where temptations lurk, where illusions are most powerful, where clarity must be hardest won. The color of testing grounds, of trials by fire. Stability forged in darkness."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.890,
+            "stability": 0.915,
+            "empathy": 0.740,
+            "openness": 0.715,
+            "orderliness": 0.840,
+            "novelty_seeking": 0.565,
+            "abstract_reasoning": 0.815,
+            "emotional_intensity": 0.815,
+            "social_dominance": 0.765,
+            "cooperativeness": 0.740,
+            "risk_tolerance": 0.840,
+            "conscientiousness": 0.890,
+            "adaptability": 0.715,
+            "imagination": 0.715
+          },
+          "match_weights": {
+            "stability": 1.00,
+            "conscientiousness": 0.95,
+            "agency": 0.95,
+            "temptation_resistance": 0.95,
+            "emotional_intensity": 0.80
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q121", "Q122", "Q123"]
+        },
+        "signals_map": {
+          "Q121": {
+            "dimension": "temptation_resistance",
+            "polarity": 1.0,
+            "description": "Choosing difficult paths when offered comfortable escapes",
+            "assessment_question": "When faced with powerful temptations to abandon difficult commitments in favor of comfort, safety, or ease, I can recognize these as tests and consciously choose the harder path that aligns with my deepest values and purpose"
+          },
+          "Q122": {
+            "dimension": "stability",
+            "polarity": 0.95,
+            "description": "Maintaining leadership commitment under extreme pressure",
+            "assessment_question": "I can maintain my commitment to leadership responsibilities even when confronted with my deepest fears, most painful sacrifices, and most seductive alternatives, demonstrating unshakeable stability when others need it most"
+          },
+          "Q123": {
+            "dimension": "agency",
+            "polarity": 0.9,
+            "description": "Recognizing and resisting manipulation and illusion",
+            "assessment_question": "I can recognize when I'm being manipulated through fear, desire, or illusion—whether by external forces or my own psychology—and consciously choose truth and purpose over comfortable delusion"
+          },
+          "Q124": {
+            "dimension": "conscientiousness",
+            "polarity": 0.85,
+            "description": "Honoring commitments despite personal cost",
+            "assessment_question": "I honor my commitments and responsibilities even when they require significant personal sacrifice, understanding that authentic leadership sometimes demands choosing collective good over individual comfort"
+          },
+          "Q125": {
+            "dimension": "emotional_intensity",
+            "polarity": 0.8,
+            "description": "Withstanding emotional manipulation without losing humanity",
+            "assessment_question": "I can withstand intense emotional manipulation and psychological pressure without either succumbing to it or hardening myself so completely that I lose connection to legitimate human needs and feelings"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Man's Search for Meaning",
+            "author": "Viktor Frankl",
+            "section_of_focus": "The Last Human Freedom",
+            "core_teaching": "Between stimulus and response there is a space. In that space is our power to choose our response. In our response lies our growth and our freedom. Even in extreme suffering, humans retain the freedom to choose their attitude. Those who found meaning in their suffering—who connected their present pain to future purpose—survived what broke others. The greatest temptation is to give up on meaning when suffering feels unbearable.",
+            "connection_to_stability": "The Reality Fracture Testing Ground literalizes Frankl's teaching. Francisco and Zara face perfect simulations of unbearable futures—suffering that would result from their mission's success or failure. The space between stimulus (temptation) and response (choice) becomes visible, tangible. They must find meaning strong enough to withstand any manipulation.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify the space between stimulus and response",
+              "objective2": "Connect present suffering to future meaning",
+              "objective3": "Choose attitude consciously even under extreme pressure"
+            }
+          },
+          "book2": {
+            "title": "The Road to Character",
+            "author": "David Brooks",
+            "section_of_focus": "Résumé Virtues vs. Eulogy Virtues",
+            "core_teaching": "Résumé virtues are the skills that contribute to external success. Eulogy virtues are the qualities spoken of at your funeral—depth, kindness, courage, integrity. Our culture emphasizes résumé virtues while eulogy virtues require confronting weakness and choosing the harder path. Character is built through choosing difficult goods over easy pleasures, through resisting temptations that promise success but corrode soul.",
+            "connection_to_stability": "Francisco's temptation offers résumé virtues—scholarly success, safety, recognition. His choice for eulogy virtues—courage, service, cosmic responsibility—builds character. Zara's temptation offers tactical success and immediate protection. Her choice for cosmic guardianship and strategic risk builds depth. The trial distinguishes those who build character from those who seek comfort.",
+            "terminal_learning_objectives": {
+              "objective1": "Distinguish résumé virtues from eulogy virtues",
+              "objective2": "Choose difficult character-building goods over easy pleasures",
+              "objective3": "Build depth through resistance to comfortable temptations"
+            }
+          },
+          "book3": {
+            "title": "The War of Art",
+            "author": "Steven Pressfield",
+            "section_of_focus": "Resistance and Its Forms",
+            "core_teaching": "Resistance is the force that prevents us from doing our work—the insidious voice offering every rational reason to quit, delay, or compromise. It's most powerful when we're close to breakthrough. Resistance uses fear, rationalization, and seductive alternatives to keep us from our calling. The professional recognizes Resistance, names it, and does the work anyway. Resistance never goes away; we just get better at not believing its lies.",
+            "connection_to_stability": "The Temporal Guardians embody Resistance—they manifest every rational reason Francisco and Zara should quit. Not random temptations but precisely calibrated arguments: 'You deserve peace.' 'Someone else can do this.' 'The cost is too high.' The trial teaches them to recognize Resistance, name it as illusion, and choose purpose anyway. This becomes their core operating system.",
+            "terminal_learning_objectives": {
+              "objective1": "Recognize Resistance in all its subtle forms",
+              "objective2": "Name Resistance without believing its arguments",
+              "objective3": "Do the work despite Resistance's perfect logic"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "chamber_of_temporal_guardians": "Perfect setting—suspended above Saturn's rings with walls showing multiple timelines. The environment itself demonstrates that every choice ripples through eternity. Stakes aren't just personal; they're cosmic and temporal.",
+          "council_transformation": "Brilliant arc—Guardians transform from detached observers to deeply invested evaluators. This isn't arbitrary testing but genuine cosmic concern: are these mortals truly ready for what's coming?",
+          "reality_fracture_testing_ground": "Genius mechanism—controlled reality manipulation that manifests perfect psychological simulations. Not abstract philosophical temptations but tangible, experiential alternate realities. Feel the choice viscerally.",
+          "franciscos_scholarly_temptation": "Deeply personal and devastating—return to the study, the books, the safety. His alternate self offers perfect logic: 'Let someone else save the cosmos.' The temptation isn't evil but seductive reasonableness.",
+          "zaras_protective_crisis": "Equally powerful—her instincts scream to protect immediate threats, but cosmic guardianship requires accepting terrible risks to prevent greater catastrophe. Choosing uncertainty over control.",
+          "partnership_trial": "Essential element—they face individual temptations but also test of their bond. Can their partnership withstand not just external pressure but internal doubt amplified to cosmic scale?",
+          "final_judgment": "Perfect climax—after resisting individual temptations, the ultimate choice: proceed knowing they can't predict or control outcomes, or accept limited but safer world. Leadership is choosing between necessary paths, both fraught with consequence.",
+          "guardian_recognition": "Crucial validation—they don't just pass; they earn recognition from cosmic authorities that they possess the stability required. Their choices prove readiness."
+        },
+        "mental_health_framework": {
+          "focus_area": "Temptation Resistance, Leadership Stability, and Conscious Choice Under Pressure",
+          "stability_characteristics": [
+            "Resisting powerful temptations through clarity of purpose",
+            "Choosing difficult paths over comfortable escapes consciously",
+            "Maintaining commitment when facing deepest fears",
+            "Recognizing manipulation and illusion for what they are",
+            "Withstanding emotional pressure without losing humanity",
+            "Demonstrating unshakeable stability when others need it"
+          ],
+          "temptation_resistance_strategies": [
+            "Identify the space between stimulus and response before reacting",
+            "Connect present challenges to future meaning and purpose",
+            "Distinguish résumé virtues from eulogy virtues in choices",
+            "Recognize Resistance and name it without believing arguments",
+            "Evaluate temptations by asking: 'Does this serve my deepest values?'",
+            "Seek support from those who've resisted similar temptations",
+            "Remember that character is built through hard choices",
+            "Maintain humanity while pursuing difficult commitments"
+          },
+          "integration_indicators": [
+            "Temptations recognized and consciously resisted",
+            "Difficult paths chosen despite powerful alternatives",
+            "Leadership stability maintained under extreme pressure",
+            "Manipulation identified and rejected without succumbing",
+            "Commitments honored despite significant personal cost",
+            "Humanity preserved while building character through trials"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VIII: The Supreme Ordeal (Core Test)",
+          "preliminary_beat": "The Ordeal - Crisis of Leadership",
+          "save_the_cat_beat": "The Ordeal - Testing commitment to the difficult path",
+          "character_state": "Having died and been reborn as cosmic agents (Ch 24), now facing the ultimate test of that transformation. The death-rebirth was preparation; this is proof. Will they choose cosmic responsibility when offered every reason to abandon it? This determines whether transformation was real.",
+          "structural_significance": "This is THE test that determines readiness for everything ahead. Without this proven stability under ultimate temptation, they'd eventually break. The Council needs to know: when cosmic forces offer them everything they've sacrificed, will they hold firm? This trial proves they will.",
+          "archetypal_moment": "The Devil's loose chains. Campbell's ultimate test where hero must reject seductive alternatives and choose the difficult path. The moment that separates those who talk about commitment from those who prove it."
+        },
+        "daily_prompt": "What temptation is offering you a comfortable escape from a difficult commitment today? What chains look solid but are actually loose—requiring only your conscious choice to remove them? What difficult path calls you despite easier alternatives?",
+        "story_hook": "In Laurasia's Chapter 25, reality tears open as three figures of impossible power materialize—the Council of Temporal Guardians, beings whose presence makes time itself fragile. 'Your training is complete,' they intone across multiple timelines. 'Now we test whether you possess the stability to lead when the cosmos hangs in balance.' Francisco finds himself in his old study in Bologna—perfect in every detail. His alternate self looks up from ancient manuscripts: 'You can have this back. All of it. Just walk away. Let someone else save the cosmos.' The Academy fades like a distant dream. Zara faces her own trial—protecting those she loves now versus risking everything for cosmic balance. The Reality Fracture Testing Ground makes every temptation visceral, tangible, devastating. The Devil card, the Trionfi whisper, shows figures in chains before a demon. But look closely—the chains are loose. They could escape if they chose. The bondage is illusion, maintained by fear and desire. That recognition, that conscious choice to remove comfortable chains, that courage to choose cosmic responsibility over personal safety—that's what separates those who were transformed from those who merely changed clothes. The Guardians wait for their answer. Remove the chains?",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Resist powerful temptations through clarity of purpose",
+            "Choose difficult paths over comfortable escapes consciously",
+            "Maintain commitment when facing deepest fears",
+            "Recognize manipulation and illusion for what they are",
+            "Demonstrate unshakeable stability under extreme pressure",
+            "Support others through temptation trials with compassion"
+          ],
+          "development_pathway": "From temptation-vulnerable to stability-proven—learning to identify the space between stimulus and response, connect suffering to meaning, distinguish character-building virtues from comfort-seeking, recognize Resistance in all forms, choose difficult paths without martyrdom, maintain humanity while building character, and recognize that true leadership stability comes from consciously resisting chains that only appear solid",
+          "ai_integration_notes": "AI can identify patterns distinguishing conscious resistance (purposeful, grounded, human) from shadow patterns (self-righteous martyrdom, harmful self-neglect, rigid inflexibility). Machine learning can track responses to temptation scenarios over time. Ethical considerations include recognizing when 'resistance' becomes harmful rigidity versus authentic integrity."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 21, 1320 (temptation trials survived) - Leadership Stability Proof Point",
+          "universal_archetype": "The Devil (Trump XV)—temptation through comfort and illusion, bondage to material safety, loose chains requiring only conscious choice to remove, the test that proves whether transformation was real or merely cosmetic",
+          "trionfi_connection": "The Devil shows chains that appear solid but are actually loose. The Temporal Guardians reveal that cosmic service requires resisting perfect temptations—recognizing comfortable illusions and choosing difficult truth. Every leader faces this test.",
+          "series_foundation": "This temptation-resistance capability—choosing cosmic responsibility over personal comfort—becomes essential for all subsequent trials. They'll face many seductive alternatives ahead. This proves they can recognize and resist them. Without this stability, later temptations would break them. With it, they're truly unshakeable."
+        },
+        "implementation_context": {
+          "execution_focus": "Choosing cosmic responsibility when offered comfortable escape",
+          "discipline_required": "Recognizing manipulation without losing humanity",
+          "stability_element": "Maintaining commitment through deepest psychological pressure",
+          "proof_necessity": "Demonstrating transformation was real through ultimate temptation resistance"
+        }
     },
     "personality_profile_26": {
     },
