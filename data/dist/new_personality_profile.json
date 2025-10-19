@@ -3051,7 +3051,64 @@
         }
     },
     "personality_profile_14": {
-        
+        "canonical_id": "EA-014",
+        "unique_identifier": "STG 1.2.1.1",
+        "all_chapter": 14,
+        "novel_book": 1,
+        "chapter": "Chapter 14",
+        "chapter_title": "The Academy of Confidence - Breakdown to Breakthrough",
+        "type": "Specific Task Group",
+        "display_name": "Phoenix Rising from Collapse",
+        "theme": "Breakdown - Resilience Through Devastation",
+        "family": "Order / Systems - Resilience",
+        "summary": "After The Fool's leap into unknown (Ch 13), the coalition faces harsh reality of Act 2: existing structures fail catastrophically. Breakdown exposes raw truth, strips away false confidence. Like Guardians overwhelming the coalition despite their preparation, this archetype learns that collapse precedes breakthrough. Devastation becomes inflection point through conscious resilience—rebuilding with heightened wisdom, adaptability, courage. Discovering that willingness to sacrifice for each other is what Guardians' power cannot touch.",
+        "tarot_family": "Swords (Feathers)",
+        "tarot_card_item": "Ten of Swords",
+        "tarot_symbolism": "Ten of Swords depicts total defeat—but also represents the dark before dawn. Breakdown complete, but cycle ending means new beginning possible. Chapter 14 embodies this: structures collapse, but collapse becomes foundation for deeper strength.",
+        "traits": {
+          "strengths": ["reframes devastation as inflection point", "cultivates resilience through conscious recovery", "discovers strength through vulnerability and sacrifice", "rebuilds with wisdom from collapse", "transforms breakdown into breakthrough", "forges deeper bonds through shared suffering", "accepts help when structures fail"],
+          "shadow": ["glorifying suffering unnecessarily", "breakdown addiction avoiding stability", "learned helplessness from repeated collapse", "using vulnerability to avoid responsibility", "romanticizing devastation", "refusing to rebuild structures"],
+          "growth_focus": ["balance accepting help with maintaining agency", "distinguish necessary from avoidable breakdown", "build resilience without glorifying collapse", "integrate lessons while rebuilding", "maintain hope through devastation", "forge strength without seeking suffering"]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Academy of Confidence",
+          "fiction_chapter_context": "Coalition faces overwhelming Guardians test. Structures collapse despite preparation. Unexpected allies emerge, hidden adversaries revealed. Sanctuary refuge where bonds forge through shared suffering. Pyrrhic victory: survived, learned, grew stronger through breakdown. Pages 196-210."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning structures must sometimes fail. Integration: accepting imperfection of preparation, finding strength in vulnerability."
+        },
+        "color_alignment": {"hue_index": 13, "name": "Caramel", "hsl": "39,100%,80%", "rgb_hex": "#ffda97", "color_symbolism": "Caramel—warm healing sweetness after bitter collapse. The comfort that emerges from devastation, nourishment after starvation."},
+        "scoring_model": {
+          "dimensions": {"agency": 0.515, "stability": 0.415, "empathy": 0.815, "openness": 0.765, "orderliness": 0.515, "novelty_seeking": 0.465, "abstract_reasoning": 0.715, "emotional_intensity": 0.815, "social_dominance": 0.465, "cooperativeness": 0.865, "risk_tolerance": 0.515, "conscientiousness": 0.665, "adaptability": 0.815, "imagination": 0.665},
+          "match_weights": {"adaptability": 0.9, "cooperativeness": 0.85, "emotional_intensity": 0.8, "empathy": 0.75, "openness": 0.7},
+          "threshold": 0.7,
+          "top_signal_items": ["Q066", "Q067", "Q068"]
+        },
+        "signals_map": {
+          "Q066": {"dimension": "adaptability", "polarity": 1.0, "description": "Rebuilding with wisdom after collapse", "assessment_question": "When my existing structures or plans collapse completely, I can adapt and rebuild with greater wisdom rather than clinging to what failed or giving up entirely"},
+          "Q067": {"dimension": "cooperativeness", "polarity": 0.95, "description": "Accepting help when structures fail", "assessment_question": "During my moments of greatest collapse or vulnerability, I can accept help and sacrifice from others rather than insisting on handling devastation alone"},
+          "Q068": {"dimension": "emotional_intensity", "polarity": 0.9, "description": "Processing devastation consciously", "assessment_question": "I can sit with the intense emotions of breakdown and collapse, processing devastation consciously rather than numbing or immediately fleeing to activity"}
+        },
+        "philosophical_influences": {
+          "book1": {"title": "The Obstacle Is the Way", "author": "Ryan Holiday", "core_teaching": "Obstacles aren't blocking the path—they ARE the path. Breakdown becomes the vehicle for breakthrough.", "terminal_learning_objectives": {"objective1": "Reframe collapse as opportunity", "objective2": "Find resilience through adversity", "objective3": "Transform devastation into strength"}},
+          "book2": {"title": "Antifragile", "author": "Nassim Taleb", "core_teaching": "Some things benefit from shocks and disorder. Resilience isn't just withstanding collapse—it's growing stronger from it.", "terminal_learning_objectives": {"objective1": "Build systems that strengthen from stress", "objective2": "Embrace controlled breakdown", "objective3": "Become antifragile through exposure"}},
+          "book3": {"title": "When Things Fall Apart", "author": "Pema Chödrön", "core_teaching": "Groundlessness is opportunity. When structures collapse, we discover unshakeable strength in what remains.", "terminal_learning_objectives": {"objective1": "Sit with collapse without fleeing", "objective2": "Find stability in groundlessness", "objective3": "Discover strength through vulnerability"}}
+        },
+        "hero_journey_position": {
+          "stage": "Scene VI: Guardians and Gatekeepers (Tests, Allies, Enemies)",
+          "preliminary_beat": "Push / Collapse",
+          "character_state": "After threshold crossing, facing harsh reality. Structures fail. Must rebuild through resilience."
+        },
+        "daily_prompt": "What collapsed today, and what wisdom emerged from the wreckage? How did accepting help transform your breakdown into potential breakthrough?",
+        "story_hook": "In Laurasia's Chapter 14, the Fool's leap meets brutal reality. Guardians overwhelm them—all preparation insufficient. Structures collapse. In sanctuary, broken and vulnerable, Francisco discovers the unbreakable: willingness to sacrifice for each other. Sometimes collapse isn't failure but foundation.",
+        "cosmic_significance": {
+            "timeline_position": "Post-threshold testing", 
+            "universal_archetype": "The Phoenix—rising stronger from devastation", 
+            "series_foundation": "Breakdown teaches: resilience forged through collapse surpasses structures that never break."
+        }
     },
     "personality_profile_15": {
     },
