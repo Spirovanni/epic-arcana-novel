@@ -7476,7 +7476,237 @@
         }
     },
     "personality_profile_34": {
-
+        "canonical_id": "EA-034",
+        "unique_identifier": "STG 1.3.4.2",
+        "all_chapter": 34,
+        "novel_book": 1,
+        "chapter": "Chapter 34",
+        "chapter_title": "The Crowned Vision - Inspirational Leadership Through Authentic Purpose",
+        "type": "Specific Task Group",
+        "display_name": "The Visionary Inspirer",
+        "theme": "Inspiration - Mobilizing Others Through Purpose and Vision",
+        "family": "Order / Systems - Leadership Foundation",
+        "summary": "This personality embodies the power of inspirational leadership through authentic purpose, drawn from Chapter 34 of the Human Framework. After achieving mastery through practice (Ch 33), the coalition now inspires others—that lasting impact requires articulating vision that mobilizes hearts and minds toward shared purpose. Like the King of Wands commanding through charismatic vision, this archetype understands that true leadership flows from inspiring others to discover their own calling. True authority emerges from articulating the 'why' that ignites collective passion.",
+        "tarot_family": "Wands/Rings",
+        "tarot_card_item": "King of Wands",
+        "tarot_symbolism": "The King of Wands represents masterful leadership through inspirational vision—commanding through charisma and purpose rather than force or position. The crown symbolizes authority earned through authentic leadership that serves others. The wand blazing with energy represents vision that ignites passion in others. Chapter 34 embodies this completely—Francisco and Zara are crowned as Cosmic Vision Leaders, delivering an address that transforms cosmic service from duty to calling, articulating not just what agents do but why they serve, inspiring the entire Academy community.",
+        "traits": {
+          "strengths": [
+            "articulates compelling vision connecting purpose to action",
+            "inspires others through authentic passion and conviction",
+            "mobilizes teams around shared meaning and higher calling",
+            "communicates the 'why' behind objectives effectively",
+            "leads through charisma and vision rather than authority",
+            "creates environments where people embrace purpose",
+            "transforms duty into calling through inspirational leadership"
+          ],
+          "shadow": [
+            "becomes overly charismatic without substantive execution",
+            "inspires with vision but fails to follow through tactically",
+            "manipulates emotions rather than genuinely serving others",
+            "seeks inspiration as performance instead of authentic sharing",
+            "neglects systems and details in favor of grand speeches",
+            "burns out from constant inspirational energy demands",
+            "confuses motivational rhetoric with real transformation"
+          ],
+          "growth_focus": [
+            "balance inspirational vision with practical execution systems",
+            "ground charisma in authentic service of others' growth",
+            "integrate purpose articulation with tactical follow-through",
+            "distinguish genuine inspiration from performative motivation",
+            "sustain energy through authentic passion rather than forced enthusiasm",
+            "connect grand vision to concrete daily actions and behaviors"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Crowned Vision",
+          "fiction_chapter_context": "Following their mastery intensive (Ch 33), Francisco and Zara are summoned before the Academy High Council for coronation as Cosmic Vision Leaders. They must deliver an inspirational address before the entire Academy community—articulating not just what cosmic agents do, but why they serve. Their challenge: transform personal valor experience into universal message inspiring all agents to embrace cosmic service as sacred calling rather than mere duty. Through authentic vulnerability, purpose articulation, and vision casting, they inspire institutional transformation—the Academy evolving from training institution to purpose-driven community. Their address becomes legendary, reshaping how cosmic leadership is understood. Pages 496-510. March 1, 1320 (coronation day)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning to inspire through vision rather than criticism. The King of Wands teaches that moving others toward excellence requires articulating compelling purpose, not just pointing out flaws. Integration through balancing high standards with inspirational mobilization."
+        },
+        "color_alignment": {
+          "hue_index": 34,
+          "name": "Seal Brown/Royal Crown",
+          "hsl": "0,100%,10%",
+          "rgb_hex": "#330000",
+          "color_symbolism": "Seal brown represents the deep richness of royal authority—the crown earned through authentic leadership. The color of ceremonial robes and earned sovereignty. Authority manifest through inspiration."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.890,
+            "stability": 0.840,
+            "empathy": 0.865,
+            "openness": 0.815,
+            "orderliness": 0.790,
+            "novelty_seeking": 0.740,
+            "abstract_reasoning": 0.840,
+            "emotional_intensity": 0.815,
+            "social_dominance": 0.865,
+            "cooperativeness": 0.840,
+            "risk_tolerance": 0.765,
+            "conscientiousness": 0.815,
+            "adaptability": 0.790,
+            "imagination": 0.840
+          },
+          "match_weights": {
+            "inspirational_leadership": 1.00,
+            "vision_articulation": 0.95,
+            "social_dominance": 0.90,
+            "empathy": 0.85,
+            "emotional_intensity": 0.85
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q166", "Q167", "Q168"]
+        },
+        "signals_map": {
+          "Q166": {
+            "dimension": "inspirational_leadership",
+            "polarity": 1.0,
+            "description": "Inspiring others through authentic vision and purpose articulation",
+            "assessment_question": "I inspire others to embrace higher purpose and deeper meaning by authentically articulating compelling vision that connects individual actions to shared calling, transforming duty into passionate commitment through purpose-driven leadership that mobilizes hearts and minds toward collective impact"
+          },
+          "Q167": {
+            "dimension": "vision_articulation",
+            "polarity": 0.95,
+            "description": "Communicating the 'why' behind objectives effectively",
+            "assessment_question": "I effectively communicate the 'why' behind objectives and initiatives by articulating clear purpose that gives meaning to action, helping others understand not just what we're doing and how we're doing it, but why it matters and how it connects to their own values and aspirations"
+          },
+          "Q168": {
+            "dimension": "empathy",
+            "polarity": 0.9,
+            "description": "Leading through charisma and authentic service of others' growth",
+            "assessment_question": "I lead through charismatic vision that genuinely serves others' growth and development rather than my own ego or status, creating environments where people feel empowered to discover their own calling and contribute their unique strengths toward shared purpose"
+          },
+          "Q169": {
+            "dimension": "social_dominance",
+            "polarity": 0.85,
+            "description": "Mobilizing teams around shared meaning and higher calling",
+            "assessment_question": "I mobilize teams and communities around shared meaning and higher calling by casting compelling vision that unites diverse individuals through common purpose, creating collective energy and momentum that transcends individual motivation or organizational hierarchy"
+          },
+          "Q170": {
+            "dimension": "emotional_intensity",
+            "polarity": 0.8,
+            "description": "Sustaining inspirational energy through authentic passion",
+            "assessment_question": "I sustain inspirational energy and passionate leadership through authentic connection to purpose rather than performative motivation, maintaining genuine enthusiasm that naturally draws others toward shared vision without burning out from forced charisma or emotional manipulation"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "The Golden Circle and Purpose-Driven Leadership",
+            "core_teaching": "Great leaders inspire action by starting with WHY—the purpose, cause, or belief that drives everything they do. Most communicate from outside-in (what we do, how we do it), but inspiring leaders communicate inside-out (why we do it, how we do it, what we do). The Golden Circle: WHY (purpose/belief) at center, HOW (process/values) in middle ring, WHAT (results/products) outer ring. People don't buy what you do—they buy why you do it. Organizations that start with WHY inspire loyalty, innovation, and movement. The goal isn't doing business with everyone who needs what you have—it's doing business with people who believe what you believe. Leaders who inspire give people something to believe in, not just something to buy or follow. Clarity of WHY creates trust and loyalty; it enables people to self-organize around shared purpose.",
+            "connection_to_deployment": "Francisco and Zara's coronation address embodies Sinek's teaching perfectly. They don't describe what cosmic agents do (monitor dimensions, fight threats) or how they do it (using Trionfi cards, working in teams). They articulate WHY—cosmic service as sacred calling protecting life, fostering growth, serving the greater good. Their inside-out communication transforms understanding, inspiring others who share their beliefs. The Academy's transformation shows what happens when people connect to compelling WHY—self-organized commitment transcending duty.",
+            "terminal_learning_objectives": {
+              "objective1": "Articulate clear WHY—purpose and belief—before describing WHAT or HOW",
+              "objective2": "Communicate inside-out inspiring people who share beliefs",
+              "objective3": "Create clarity of purpose enabling self-organized commitment to vision"
+            }
+          },
+          "book2": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety and Trust-Based Leadership",
+            "core_teaching": "Great leaders sacrifice their own comfort for their people—they 'eat last.' This creates Circle of Safety—organizational culture where people feel protected by leadership, enabling them to focus energy on facing external challenges rather than internal politics. When leaders prioritize team well-being over personal gain, they build trust. Trust triggers oxytocin—the 'love hormone'—creating loyalty, collaboration, and innovation. Conversely, fear-based leadership triggers cortisol, causing self-protection, politics, and dysfunction. The most inspiring organizations have leaders who take personal risk to protect their people. Authority without service creates compliance; service creates inspired commitment. The goal isn't to be liked—it's to be trusted. Trust-based leadership requires vulnerability, authenticity, and genuine care for others' success and growth.",
+            "connection_to_deployment": "Francisco and Zara demonstrate 'eating last' through their entire journey—facing danger first, taking responsibility for failures, sharing credit for successes. Their coronation isn't about status—it's about accepting greater responsibility to serve others. Their authentic vulnerability in the address (sharing struggles, growth, doubts) creates trust. The Academy's response shows how service-oriented leadership inspires—not compliance from authority, but passionate commitment from trust. Their willingness to be vulnerable while holding authority exemplifies trust-based inspirational leadership.",
+            "terminal_learning_objectives": {
+              "objective1": "Create Circle of Safety through service-oriented leadership prioritizing others",
+              "objective2": "Build trust through authentic vulnerability and genuine care for growth",
+              "objective3": "Inspire commitment through demonstrated willingness to sacrifice for team"
+            }
+          },
+          "book3": {
+            "title": "Drive: The Surprising Truth About What Motivates Us",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Intrinsic Motivation: Autonomy, Mastery, Purpose",
+            "core_teaching": "Carrots and sticks (external rewards/punishments) don't inspire—they narrow focus and diminish intrinsic motivation. True inspiration comes from three intrinsic drives: (1) Autonomy—desire to direct our own lives, (2) Mastery—urge to get better at meaningful work, (3) Purpose—yearning to serve something larger than ourselves. Purpose maximization (not just profit maximization) inspires sustainable high performance. Inspiring leaders create environments supporting autonomy, facilitate paths to mastery, and connect work to transcendent purpose. The goal isn't motivating people (extrinsic)—it's creating conditions where intrinsic motivation flourishes. When people feel purpose in work, they don't need external motivation—they self-organize around meaningful contribution. Purpose-driven organizations outperform because inspiration is internal, not manufactured.",
+            "connection_to_deployment": "Francisco and Zara's address targets all three intrinsic motivators. Autonomy: redefining cosmic agents as self-directed servants of purpose, not rule-followers. Mastery: connecting skill development to meaningful service (Ch 33's mastery finding purpose). Purpose: articulating transcendent meaning—cosmic service protecting life and fostering growth. They transform external duty (compliance-based) into internal calling (purpose-based). The Academy's response shows intrinsic motivation unleashed—people don't need to be managed when inspired by authentic purpose. Pink's framework explains their transformational impact.",
+            "terminal_learning_objectives": {
+              "objective1": "Support autonomy enabling self-directed alignment with shared purpose",
+              "objective2": "Connect mastery development to meaningful transcendent contribution",
+              "objective3": "Articulate purpose maximization inspiring intrinsic sustainable motivation"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "coronation_ceremony": "Formal recognition validating their journey while imposing greater responsibility—crowns symbolize both honor and service burden. This transforms their role from agents to inspirational leaders shaping institutional culture.",
+          "high_council_summons": "Not just ceremony but crucial need—Academy recognizes that technical training without inspirational purpose creates competent agents, not transformational leaders. They need Francisco and Zara's authentic vision to reshape culture.",
+          "royal_chamber_of_vision": "Specially designed space amplifying inspirational energy and connecting speakers to deepest purpose. Architecture supporting authentic inspiration while exposing false bravado—can't fake vision here.",
+          "inspiration_amphitheater": "Entire Academy community gathered—represents institutional moment, not individual achievement. Their words will shape future generations. Pressure transforms into opportunity for transformational impact.",
+          "address_preparation_struggle": "They must transform personal experience into universal message—challenge of moving from 'this is what we learned' to 'this is what cosmic service means.' Growth from doers to teachers, from individual excellence to inspirational leadership.",
+          "authentic_vulnerability_choice": "Could deliver impressive speech citing achievements, but choose vulnerable sharing—struggles, doubts, growth. This authenticity creates connection and trust, demonstrating courage beyond battlefield valor.",
+          "duty_to_calling_transformation": "Key insight—reframing cosmic service from obligation to sacred purpose. Not 'we must' but 'we're called to.' This transforms compliance into commitment, external duty into internal passion.",
+          "institutional_impact": "Their vision doesn't just inspire individuals—it transforms Academy culture from training facility to purpose-driven community. Shows how inspirational leadership ripples through entire systems, reshaping organizational DNA."
+        },
+        "mental_health_framework": {
+          "focus_area": "Inspirational Leadership, Vision Articulation, and Purpose-Driven Mobilization",
+          "inspiration_mastery_characteristics": [
+            "Articulating compelling vision connecting purpose to action clearly",
+            "Inspiring others through authentic passion and genuine conviction",
+            "Mobilizing teams around shared meaning and transcendent calling",
+            "Communicating the 'why' behind objectives effectively and memorably",
+            "Leading through charisma and vision rather than authority or force",
+            "Creating environments where people discover their own calling"
+          ],
+          "visionary_leadership_strategies": [
+            "Start with WHY—articulate purpose before describing what or how",
+            "Communicate inside-out inspiring people who share core beliefs",
+            "Create clarity of purpose enabling self-organized passionate commitment",
+            "Build Circle of Safety through service-oriented leadership prioritizing others",
+            "Demonstrate authentic vulnerability creating trust and connection",
+            "Show willingness to sacrifice for team inspiring reciprocal commitment",
+            "Support autonomy enabling self-directed alignment with shared purpose",
+            "Connect skill mastery to meaningful transcendent contribution",
+            "Articulate purpose maximization inspiring intrinsic sustainable motivation",
+            "Ground inspirational vision in authentic service of others' growth"
+          ],
+          "integration_indicators": [
+            "Vision articulated compellingly connecting purpose to concrete action",
+            "Others inspired to embrace higher calling beyond compliance or duty",
+            "Trust-based culture created through vulnerable authentic leadership",
+            "Intrinsic motivation flourishing from autonomy, mastery, purpose alignment",
+            "Institutional transformation emerging from inspirational cultural shift",
+            "Sustainable passionate commitment replacing external motivation needs"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VIII: The Supreme Ordeal (Transcending)",
+          "preliminary_beat": "The Reward - Sharing the Gift",
+          "save_the_cat_beat": "Reaction - Transforming Impact",
+          "character_state": "Having achieved mastery (Ch 33), now transcending individual excellence to inspirational leadership. They're moving from being excellent themselves to enabling excellence in others through vision. This is maturation from craftsman to king—from doing to inspiring, from personal capability to collective mobilization.",
+          "structural_significance": "Crucial Book 1 culmination—proving they possess not just courage, patience, execution, or mastery, but inspirational leadership transforming entire communities. The series needs them to eventually inspire cosmic-scale change, and this establishes their capacity to mobilize others through authentic vision and purpose.",
+          "archetypal_moment": "The King of Wands crowned. The leader who inspires through vision. The authority earned through authentic service."
+        },
+        "daily_prompt": "What deeper purpose needs articulation to inspire others? How can you communicate the 'why' behind your work more compellingly? What authentic vulnerability would create trust enabling collective mobilization?",
+        "story_hook": "In Laurasia's Chapter 34, Francisco and Zara stand before the assembled Academy community for coronation as Cosmic Vision Leaders. The Royal Chamber awaits. Entire institution watching. They must articulate vision transforming cosmic service from duty to calling. The King of Wands appears—crowned figure commanding through charisma and purpose. Not authority through position but inspiration through vision. They choose authentic vulnerability over impressive achievement recitation. Share struggles, growth, doubts—real journey. Then articulate the WHY—cosmic service as sacred calling protecting life, fostering growth, serving greater good. Not what agents do or how they do it, but why it matters, why we serve, what we believe. The Chamber resonates. Hearts ignite. The Academy transforms—from training facility to purpose-driven community, from duty-based to calling-based service. The King of Wands, the Trionfi whisper, shows leadership inspiring others to discover their own higher calling. That vision articulation, that purpose communication transforming duty into passion, that authentic inspiration mobilizing collective commitment—that's what separates those who lead from those who inspire transformation.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Articulate compelling vision connecting purpose to action effectively",
+            "Inspire others through authentic passion and genuine conviction",
+            "Mobilize teams around shared meaning and transcendent calling",
+            "Communicate the 'why' behind objectives clearly and memorably",
+            "Lead through charisma and vision rather than authority alone",
+            "Create environments where people embrace higher purpose naturally"
+          ],
+          "development_pathway": "From individual excellence to inspirational leadership—learning to start with WHY articulating purpose before what or how, communicate inside-out inspiring believers, create clarity enabling self-organized commitment, build Circle of Safety through service-oriented leadership, demonstrate authentic vulnerability building trust, show willingness to sacrifice inspiring reciprocal commitment, support autonomy enabling purpose alignment, connect mastery to transcendent contribution, and recognize that transformational leadership requires articulating vision that mobilizes hearts around shared calling",
+          "ai_integration_notes": "AI can identify patterns distinguishing authentic inspirational leadership (purpose-driven, service-oriented, trust-building) from shadow patterns (manipulative charisma, performative motivation, vision without execution). Machine learning can track cultural transformation correlating inspirational communication with sustained behavioral change. Ethical considerations include recognizing when inspiration becomes manipulation versus genuine service."
+        },
+        "cosmic_significance": {
+          "timeline_position": "March 1, 1320 (coronation day) - Inspirational Leadership Point",
+          "universal_archetype": "King of Wands—visionary leader inspiring through purpose and charisma, the crowned authority earned through authentic service, transformation catalyzed through compelling vision articulation, the inspirer who mobilizes others toward shared transcendent calling",
+          "trionfi_connection": "The King of Wands commands through inspirational vision. The Crowned Vision teaches that cosmic leadership requires articulating purpose that mobilizes hearts—connecting individual actions to transcendent meaning, transforming duty into calling. Every transformational movement demands inspirational vision.",
+          "series_foundation": "This inspirational leadership—mobilizing others through authentic purpose articulation and vision—becomes essential for all collective cosmic challenges ahead. They'll need to inspire increasingly large groups toward difficult missions. Without this capacity to articulate compelling vision and mobilize passionate commitment, later cosmic-scale transformations would fail from lack of inspired participation. With it, they can unite entire civilizations around shared purpose."
+        },
+        "implementation_context": {
+          "inspiration_focus": "Mobilizing others through compelling authentic purpose articulation",
+          "vision_required": "Articulating WHY that transforms duty into passionate calling",
+          "trust_element": "Building connection through vulnerable service-oriented leadership",
+          "purpose_necessity": "Creating intrinsic motivation through autonomy, mastery, purpose alignment"
+        }
     },
     "personality_profile_35": {
 
