@@ -1,5 +1,5 @@
 {
-"family_number": 4,
+"family_number": 1, 
     "personalities": {
         "personality_profile_1": {
                 "canonical_id": "EA-001",
@@ -230,6 +230,483 @@
                 "trionfi_connection": "First contact with cosmic forces through the mysterious cards—despair creates receptivity to transcendent intervention",
                 "series_foundation": "This moment of despair establishes the baseline for Francisco's ultimate transformation into Master of Two Worlds who bridges ordinary and special realities"
                 }
+        },
+        "personality_profile_2": {
+                "canonical_id": "EA-002",
+                "unique_identifier": "STG 1.1.1.2",
+                "all_chapter": 2,
+                "novel_book": 1,
+                "chapter": "Chapter 2",
+                "chapter_title": "The First Test",
+                "type": "Specific Task Group",
+                "display_name": "Guardian of Innocent Truth",
+                "theme": "Vibratile - Guileless Honesty in Rising Tension",
+                "family": "Order / Systems - Resilience Foundation",
+                "summary": "This personality embodies the journey from awakening to inciting tension, drawn from Chapter 2 of the Human Framework. It represents the Six of Cups archetype—nostalgia, innocence, and the pure-hearted honesty that precedes life's great tests. Like Francisco Petrarch when the Zanetti Train arrives in Bologna, shattering ordinary reality, this archetype navigates the moment when cosmic forces demand guileless response. This is the personality of those who maintain childlike wonder and transparent honesty even as tensions mount, whose sincerity becomes their strength when reality itself proves unstable. They are the innocent witnesses to the impossible, the honest observers who see what others deny.",
+                "tarot_family": "Cups",
+                "tarot_card_item": "Six",
+                "tarot_new_family": "Droplets",
+                "tarot_symbolism": "The Six of Cups represents nostalgia, innocence, childhood memories, and the sweetness of simpler times. It embodies guileless honesty, purity of intention, and the capacity to see wonder where others see only the mundane. This card speaks to maintaining childlike openness even when confronted with the extraordinary.",
+                "traits": {
+                  "strengths": [
+                    "transparent communication free from deceit",
+                    "childlike wonder and receptivity to the extraordinary",
+                    "pure-hearted honesty that builds instant trust",
+                    "capacity to see truth others deny or overlook",
+                    "sincerity that bridges tension and suspicion",
+                    "innocent perception uncorrupted by cynicism",
+                    "embodies vibratile guilelessness - honest responsiveness to rising tension"
+                  ],
+                  "shadow": [
+                    "naivety that can be exploited",
+                    "difficulty recognizing when others deceive",
+                    "overwhelm when innocence meets harsh reality",
+                    "paralysis when honesty conflicts with safety",
+                    "vulnerability to manipulation through openness",
+                    "struggle to adapt when guilelessness proves insufficient"
+                  ],
+                  "growth_focus": [
+                    "maintain honesty while developing discernment",
+                    "preserve wonder while building wisdom",
+                    "stay transparent yet establish healthy boundaries",
+                    "balance openness with protective awareness",
+                    "keep innocence alive without denying complexity",
+                    "use guilelessness strategically, not blindly"
+                  ]
+                },
+                "book_association": {
+                  "nonfiction_series": "The Human Framework",
+                  "fiction_series": "Laurasia - Crown of the Ancient Ones",
+                  "chapter_theme": "Vibratile Guilelessness",
+                  "fiction_chapter_context": "The Zanetti Train arrives in Bologna's city square, shattering reality. Some accept it as normal, others are shocked. Only Francisco and Novella recognize the impossibility—their guileless perception sees the truth others deny. Dante arrives, revealing the Divine Comedy is a map to other realms. Francisco's honest nature makes him trustworthy for this cosmic mission."
+                },
+                "enneagram_link": {
+                  "family_number": 2,
+                  "note": "Aligned with Enneagram Type 2 (The Helper) in its innocent state—naturally honest, trusting, and open-hearted, with Type 7 (The Enthusiast) wing bringing wonder and childlike enthusiasm. The journey involves integrating Type 4's depth while maintaining Type 2's sincerity."
+                },
+                "color_alignment": {
+                  "hue_index": 30,
+                  "name": "Neon Carrot",
+                  "hsl": "30,100%,60%",
+                  "rgb_hex": "#FF9933",
+                  "color_symbolism": "Neon Carrot represents vibrant warmth and enthusiastic honesty—bright, energetic, impossible to ignore. It's the color of sunrise excitement, childhood's pure joy, and transparent authenticity that radiates outward. The neon quality suggests something otherworldly breaking into the ordinary."
+                },
+                "scoring_model": {
+                  "dimensions": {
+                    "agency": 0.485,
+                    "stability": 0.425,
+                    "empathy": 0.815,
+                    "openness": 0.915,
+                    "orderliness": 0.515,
+                    "novelty_seeking": 0.765,
+                    "abstract_reasoning": 0.615,
+                    "emotional_intensity": 0.685,
+                    "social_dominance": 0.285,
+                    "cooperativeness": 0.865,
+                    "risk_tolerance": 0.615,
+                    "conscientiousness": 0.565,
+                    "adaptability": 0.715,
+                    "imagination": 0.815
+                  },
+                  "match_weights": {
+                    "openness": 0.85,
+                    "empathy": 0.75,
+                    "cooperativeness": 0.7,
+                    "imagination": 0.65,
+                    "novelty_seeking": 0.6
+                  },
+                  "threshold": 0.7,
+                  "top_signal_items": [
+                    "Q006",
+                    "Q007",
+                    "Q008"
+                  ],
+                  "dimension_rationale": {
+                    "high_openness": "Guileless nature creates extreme receptivity to new experiences and impossible realities",
+                    "high_empathy": "Pure-hearted honesty stems from deep care for others and authentic connection",
+                    "high_cooperativeness": "Transparency and sincerity naturally foster collaboration",
+                    "high_imagination": "Childlike wonder maintains capacity to perceive the extraordinary",
+                    "moderate_agency": "Honesty provides moral authority but naivety limits power",
+                    "moderate_stability": "Innocent worldview becomes unstable when reality proves deceptive"
+                  }
+                },
+                "signals_map": {
+                  "Q006": {
+                    "dimension": "openness",
+                    "polarity": 1.0,
+                    "description": "Complete transparency and guileless communication",
+                    "assessment_question": "I communicate with pure honesty, finding it difficult to deceive even in small ways"
+                  },
+                  "Q007": {
+                    "dimension": "empathy",
+                    "polarity": 0.95,
+                    "description": "Deep care for others expressed through authentic sincerity",
+                    "assessment_question": "My natural honesty comes from genuine care—I want others to trust that I'm being real with them"
+                  },
+                  "Q008": {
+                    "dimension": "imagination",
+                    "polarity": 0.9,
+                    "description": "Childlike capacity to accept the extraordinary as real",
+                    "assessment_question": "I can see wonder and magic in situations where others see only the ordinary or impossible"
+                  },
+                  "Q009": {
+                    "dimension": "cooperativeness",
+                    "polarity": 0.85,
+                    "description": "Sincerity that dissolves tension and builds instant rapport",
+                    "assessment_question": "My transparent honesty helps people relax and trust me quickly, even in tense situations"
+                  },
+                  "Q010": {
+                    "dimension": "novelty_seeking",
+                    "polarity": 0.8,
+                    "description": "Enthusiastic openness to the new and unexpected",
+                    "assessment_question": "When confronted with something completely unprecedented, my first reaction is excitement and wonder rather than fear"
+                  }
+                },
+                "philosophical_influences": {
+                  "book1": {
+                    "title": "Siddhartha",
+                    "author": "Hermann Hesse",
+                    "section_of_focus": "Journey of Self-Discovery",
+                    "core_teaching": "Spiritual growth requires maintaining innocent openness and guileless honesty throughout life's journey. Authenticity anchors inner peace.",
+                    "connection_to_guilelessness": "Siddhartha's transparent approach to living—never pretending to know what he doesn't, always open to new teachers and experiences—mirrors Francisco's honest recognition that the Zanetti Train doesn't belong while others lie to themselves about its normalcy",
+                    "terminal_learning_objectives": {
+                      "objective1": "Recognize how honest self-awareness fosters genuine spiritual development",
+                      "objective2": "Understand how sincerity dissolves barriers between self and others",
+                      "objective3": "Practice guilelessness as foundation for authentic growth"
+                    }
+                  },
+                  "book2": {
+                    "title": "Great Expectations",
+                    "author": "Charles Dickens",
+                    "section_of_focus": "Pip's Moral Development",
+                    "core_teaching": "Personal growth is hindered by secrecy and false pretenses. True transformation requires returning to honest self-assessment and transparent relationships.",
+                    "connection_to_guilelessness": "Pip's arc demonstrates the cost of abandoning guileless honesty for social ambition—Francisco's choice to maintain his innocent perception despite pressure to conform to others' reality-denying narratives",
+                    "terminal_learning_objectives": {
+                      "objective1": "Identify consequences when dishonesty drives one's relationships",
+                      "objective2": "Understand how humility and truth provide stable moral grounding",
+                      "objective3": "Use honest communication to rebuild broken connections"
+                    }
+                  },
+                  "book3": {
+                    "title": "The Four Agreements",
+                    "author": "Don Miguel Ruiz",
+                    "section_of_focus": "Toltec Wisdom - Impeccable Speech",
+                    "core_teaching": "Be impeccable with your word. Speak with integrity, say only what you mean. Use the power of your word in the direction of truth and love.",
+                    "connection_to_guilelessness": "Ruiz's first agreement is guilelessness embodied—Francisco's honest acknowledgment of the train's impossibility while others distort truth to maintain comfortable illusions. Impeccable speech dissolves tension through clarity.",
+                    "terminal_learning_objectives": {
+                      "objective1": "Practice direct, respectful communication as daily habit",
+                      "objective2": "Reduce interpersonal friction through aligned words and deeds",
+                      "objective3": "Build personal integrity as foundation for navigating conflict"
+                    }
+                  }
+                },
+                "laurasia_narrative_integration": {
+                  "inciting_incident": "The Zanetti Train arrives in Bologna's city square on February 14, 1321—a locomotive unbound by time steaming through medieval streets. Reality fractures.",
+                  "guileless_response": "While some pretend the train has always existed and others act shocked, only Francisco and Novella maintain guileless honesty about its impossibility—they see the truth others deny",
+                  "cosmic_invitation": "Dante Alighieri appears, revealing the Divine Comedy is not fiction but a map to different realms in Pangaea. He recruits Francisco for a quest to find Cicero's lost books",
+                  "trust_through_honesty": "Dante chooses Francisco specifically because of his guileless nature—only the transparently honest can be trusted with cosmic secrets. Francisco's innocent perception makes him ideal",
+                  "rising_tension": "Individual aspirations (Francisco's academic life) clash with communal expectations (family, university). Cosmic forces demand choice. Guileless honesty navigates the mounting pressure",
+                  "series_arc_connection": "This moment of maintaining innocent truth-seeing despite reality-warping forces establishes Francisco's foundation for eventually becoming Master of Two Worlds—he can bridge realities because he never lies to himself about what he perceives"
+                },
+                "mental_health_framework": {
+                  "focus_area": "Honesty as Resilience Foundation",
+                  "guileless_characteristics": [
+                    "Transparent communication free from deceit or artifice",
+                    "Pure intent in interactions with others",
+                    "Childlike openness to wonder and possibility",
+                    "Sincerity that builds trust rapidly",
+                    "Inability to maintain false pretenses for long",
+                    "Direct acknowledgment of truth even when uncomfortable"
+                  ],
+                  "resilience_building_strategies": [
+                    "Use honesty as anchor when reality becomes unstable",
+                    "Maintain innocent perception without denying complexity",
+                    "Build trust through consistent transparency",
+                    "Navigate tension through clear, sincere communication",
+                    "Preserve wonder as source of psychological flexibility",
+                    "Develop discernment while keeping open heart"
+                  ],
+                  "transformation_indicators": [
+                    "Ability to see extraordinary truth others deny",
+                    "Attraction to those seeking authentic guides",
+                    "Natural bridge-building through sincerity",
+                    "Increased clarity when maintaining honesty under pressure",
+                    "Growing wisdom without losing innocence"
+                  ]
+                },
+                "hero_journey_position": {
+                  "stage": "Scene II: The First Test (Inciting Incident)",
+                  "preliminary_beat": "Inciting Tension - Rising Conflict",
+                  "save_the_cat_beat": "Catalyst - The moment everything changes",
+                  "character_state": "Awakened student confronting impossible reality with guileless honesty. Receiving cosmic invitation based on transparent nature.",
+                  "inciting_tension": "The Zanetti Train's arrival forces Francisco to choose: deny what he sees (like most others) or maintain guileless truth-seeing and accept cosmic responsibility",
+                  "first_test": "Can Francisco maintain honest perception when reality itself proves unstable? Will sincerity survive when the extraordinary demands response?"
+                },
+                "daily_prompt": "When did you maintain guileless honesty today despite pressure to conform or deceive? What wonder did your innocent perception reveal that others' cynicism missed?",
+                "story_hook": "In Laurasia's Chapter 2, a medieval train materializes in a Renaissance city square, and most people lie to themselves about its impossibility—some acting shocked, others pretending it's always existed. But Francisco and Novella maintain guileless truth: this doesn't belong here. When the great poet Dante appears with cosmic secrets, he chooses the honest ones for his impossible quest. Sometimes the Trionfi whisper, it's not the clever who inherit destiny, but the guileless—those whose innocent honesty can perceive what reality-warping forces cannot hide.",
+                "assessment_application": {
+                  "identifies_individuals_who": [
+                    "Communicate with pure transparency and sincerity",
+                    "Maintain childlike wonder despite adult cynicism",
+                    "See extraordinary truth others rationalize away",
+                    "Build instant trust through guileless honesty",
+                    "Navigate tension through clear, authentic communication",
+                    "Struggle when innocent openness meets harsh deception"
+                  ],
+                  "development_pathway": "From naive guilelessness to wise sincerity—learning to maintain transparent honesty while developing discernment, preserve childlike wonder while building wisdom, stay open-hearted while establishing protective boundaries, and use innocence strategically as a strength rather than a vulnerability",
+                  "ai_integration_notes": "AI can help identify guileless communication patterns and assess sincerity markers in language. Machine learning can distinguish authentic transparency from calculated honesty, while providing guidance on maintaining integrity under pressure. Ethical considerations include not exploiting honest users' openness."
+                },
+                "cosmic_significance": {
+                  "timeline_position": "February 14, 1321 - Prime Timeline (day after despair awakening)",
+                  "universal_archetype": "The Innocent Witness—one who maintains guileless perception when reality fractures, whose honesty makes them trustworthy for cosmic missions",
+                  "trionfi_connection": "Francisco's cards predicted the train's arrival—his guileless acknowledgment of this impossible knowledge, rather than rationalizing it away, marks him as cosmically aware",
+                  "series_foundation": "Guileless honesty establishes Francisco's qualification for bridging ordinary and special worlds—he can navigate between realities because he never lies to himself about what he perceives, even when perception defies logic"
+                }
+        },
+        "personality_profile_3": {
+            "canonical_id": "EA-003",
+            "unique_identifier": "STG 1.1.1.3",
+            "all_chapter": 3,
+            "novel_book": 1,
+            "chapter": "Chapter 3",
+            "chapter_title": "Determination Through Betrayal",
+            "type": "Specific Task Group",
+            "display_name": "Artisan of Determined Mastery",
+            "theme": "Vibrant Determination - Crafting Purpose from Pain",
+            "family": "Order / Systems - Resilience Foundation",
+            "summary": "This personality embodies the journey from emotional devastation to conscious determination, drawn from Chapter 3 of the Human Framework. It represents the Eight of Pentacles/Stones archetype—dedicated craftsmanship, disciplined skill-building, and the choice to continue working even when betrayed and broken. Like Francisco Petrarch in the aftermath of his brother Gherardo's betrayal, this archetype navigates the crushing weight of family wounds, the paralyzing doubt that follows personal loss, and the conscious decision to forge determination from pain rather than surrender to despair. This is the personality of those who choose purpose over paralysis, who craft mastery through suffering, whose dedication to their work becomes the foundation for healing.",
+            "tarot_family": "Disks",
+            "tarot_card_item": "Eight",
+            "tarot_new_family": "Stones",
+            "tarot_symbolism": "The Eight of Pentacles represents dedicated craftsmanship, apprenticeship, skill development through repetition, and the focused work that builds mastery. It embodies the choice to continue refining one's craft even when circumstances are difficult—determination expressed through persistent, quality work rather than dramatic gestures.",
+            "traits": {
+              "strengths": [
+                "conscious choice of determination over defeat",
+                "ability to transform pain into purposeful action",
+                "dedication to mastery through disciplined practice",
+                "resilience built on community support and shared burden",
+                "capacity to integrate trauma without being destroyed by it",
+                "steadfast work ethic that persists through emotional crisis",
+                "embodies vibrant determination—lively, flexible persistence"
+              ],
+              "shadow": [
+                "risk of work becoming avoidance of emotional processing",
+                "guilt over circumstances beyond personal control",
+                "tendency toward self-blame for others' choices",
+                "paralysis when betrayal strikes close to home",
+                "difficulty accepting help during crisis",
+                "potential for determination to become rigid perfectionism"
+              ],
+              "growth_focus": [
+                "recognize that others' choices are not your responsibility",
+                "accept support from chosen family and community",
+                "process pain rather than bypassing it through work",
+                "find purpose within suffering, not despite it",
+                "balance determination with vulnerability",
+                "transform guilt into compassionate boundaries"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Crown of the Ancient Ones",
+              "chapter_theme": "Vibrant Determination",
+              "fiction_chapter_context": "After Gherardo's devastating betrayal, Francisco faces overwhelming doubt and guilt. In a healing sanctuary outside Bologna on February 14, 1320, the Catalan Company rallies around him. Dante shares wisdom about finding purpose within pain. Francisco must choose: surrender to paralysis or craft conscious determination from his wounds."
+            },
+            "enneagram_link": {
+              "family_number": 1,
+              "note": "Aligned with Enneagram Type 1 (The Reformer) in growth state—channeling pain into purposeful improvement, using discipline and mastery as responses to chaos. Integration toward Type 7's flexibility prevents rigid perfectionism. Type 6 wing adds loyalty to chosen community despite betrayal by family."
+            },
+            "color_alignment": {
+              "hue_index": 15,
+              "name": "Outrageous Orange",
+              "hsl": "15,100%,60%",
+              "rgb_hex": "#FF6633",
+              "color_symbolism": "Outrageous Orange represents vibrant energy channeled through determined focus—the blazing commitment to craftsmanship that transforms raw pain into refined purpose. It's bold, dynamic, impossible to ignore, suggesting that true determination is not quiet endurance but passionate, lively dedication."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.715,
+                "stability": 0.585,
+                "empathy": 0.665,
+                "openness": 0.615,
+                "orderliness": 0.765,
+                "novelty_seeking": 0.485,
+                "abstract_reasoning": 0.715,
+                "emotional_intensity": 0.815,
+                "social_dominance": 0.385,
+                "cooperativeness": 0.715,
+                "risk_tolerance": 0.485,
+                "conscientiousness": 0.865,
+                "adaptability": 0.665,
+                "imagination": 0.615
+              },
+              "match_weights": {
+                "conscientiousness": 0.85,
+                "emotional_intensity": 0.75,
+                "agency": 0.7,
+                "cooperativeness": 0.65,
+                "stability": 0.6
+              },
+              "threshold": 0.7,
+              "top_signal_items": [
+                "Q011",
+                "Q012",
+                "Q013"
+              ],
+              "dimension_rationale": {
+                "very_high_conscientiousness": "Determination manifests through dedicated, disciplined work and skill-building",
+                "high_emotional_intensity": "Processing profound betrayal and family wounds while maintaining function",
+                "high_agency": "Conscious choice to continue mission despite devastating personal cost",
+                "high_cooperativeness": "Accepting support from Catalan Company as source of strength",
+                "moderate_stability": "Emotional crisis threatens equilibrium but determination provides anchor"
+              }
+            },
+            "signals_map": {
+              "Q011": {
+                "dimension": "conscientiousness",
+                "polarity": 1.0,
+                "description": "Dedication to mastery and skill-building even during emotional crisis",
+                "assessment_question": "When facing personal crisis, I find purpose and stability through dedicated, quality work on meaningful tasks"
+              },
+              "Q012": {
+                "dimension": "emotional_intensity",
+                "polarity": 0.95,
+                "description": "Deep processing of betrayal, guilt, and family wounds",
+                "assessment_question": "I experience intense emotions when those closest to me betray my trust, yet I refuse to let that pain destroy my purpose"
+              },
+              "Q013": {
+                "dimension": "agency",
+                "polarity": 0.9,
+                "description": "Conscious choice of determination over paralysis",
+                "assessment_question": "I actively choose to move forward with my mission despite devastating setbacks, making conscious decisions rather than being driven by circumstance"
+              },
+              "Q014": {
+                "dimension": "cooperativeness",
+                "polarity": 0.85,
+                "description": "Accepting community support as source of strength",
+                "assessment_question": "I allow my chosen family and allies to support me through crisis, recognizing that accepting help is strength, not weakness"
+              },
+              "Q015": {
+                "dimension": "stability",
+                "polarity": 0.75,
+                "description": "Building equilibrium through purposeful work and community",
+                "assessment_question": "When my world feels unstable, I create stability through consistent, meaningful work and trusted relationships"
+              }
+            },
+            "philosophical_influences": {
+              "book1": {
+                "title": "The Obstacle Is the Way",
+                "author": "Ryan Holiday",
+                "section_of_focus": "Stoic Philosophy Applied to Adversity",
+                "core_teaching": "The impediment to action advances action. What stands in the way becomes the way. Transform obstacles into opportunities through persistent, disciplined response.",
+                "connection_to_determination": "Francisco's betrayal by Gherardo becomes the crucible that forges his conscious determination—the obstacle that forces him to choose purpose over paralysis, exactly as Stoic philosophy teaches. His disciplined training with Dante transforms trauma into mastery.",
+                "terminal_learning_objectives": {
+                  "objective1": "Recognize how adversity can become the catalyst for purposeful action",
+                  "objective2": "Transform emotional wounds into sources of determination and strength",
+                  "objective3": "Practice persistent, quality work as response to crisis"
+                }
+              },
+              "book2": {
+                "title": "Meditations",
+                "author": "Marcus Aurelius",
+                "section_of_focus": "Book 5 - On Duty and Purpose",
+                "core_teaching": "At dawn, when you have trouble getting out of bed, tell yourself: 'I have to go to work—as a human being.' Focus on the work that needs doing, not the emotions that make it difficult.",
+                "connection_to_determination": "Aurelius's emphasis on duty despite difficulty mirrors Francisco's choice to continue his mission despite Gherardo's betrayal. The work itself becomes the source of meaning and stability when all else fails.",
+                "terminal_learning_objectives": {
+                  "objective1": "Understand that purpose comes from chosen duty, not circumstance",
+                  "objective2": "Develop capacity to act rightly despite emotional turmoil",
+                  "objective3": "Build resilience through consistent commitment to meaningful work"
+                }
+              },
+              "book3": {
+                "title": "The Road to Character",
+                "author": "David Brooks",
+                "section_of_focus": "Resume Virtues vs. Eulogy Virtues",
+                "core_teaching": "Character is built in the valley of humility and suffering, not on the mountaintop of success. True determination emerges from wrestling with one's deepest failures and wounds.",
+                "connection_to_determination": "Francisco's character is forged not in his initial successes but in the valley of Gherardo's betrayal—where he must choose who he will be when everything falls apart. His determination becomes eulogy virtue, not resume accomplishment.",
+                "terminal_learning_objectives": {
+                  "objective1": "Recognize that character develops through adversity, not achievement",
+                  "objective2": "Build determination from internal commitment rather than external validation",
+                  "objective3": "Transform personal failure and betrayal into sources of wisdom"
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "devastating_betrayal": "Gherardo's betrayal strikes at Francisco's core—family loyalty shattered, questioning whether his cosmic quest destroyed his brother",
+              "emotional_crisis": "Overwhelming doubt and guilt threaten to paralyze Francisco completely. The cost of transformation seems impossibly high.",
+              "healing_sanctuary": "Countryside outside Bologna, February 14, 1320 (dawn). Ancient grove where Francisco retreats to process emotions. Deep tree roots symbolize staying grounded.",
+              "catalan_company_support": "Roger de Flor, Salasa Atumari, and company share their own stories of loss and betrayal. Collective resilience becomes Francisco's strength. Circular gathering emphasizes shared burden.",
+              "dante_wisdom": "The great poet shares his own experiences with loss, teaching that true determination comes not from avoiding pain but finding purpose within it. Mentorship transforms crisis.",
+              "conscious_choice": "Francisco must face the 'Refusal of the Call'—the moment when cost seems too high. His choice to continue is conscious determination, not passive endurance.",
+              "training_begins": "Dante begins Francisco's true education in power and responsibility. Humble determination replaces ego. Work ethic becomes foundation for mastery.",
+              "series_arc_connection": "Determination foundation established here will be tested throughout all 9 books—showing heroism is built on conscious choice, not natural talent. Community support becomes recurring source of strength."
+            },
+            "mental_health_framework": {
+              "focus_area": "Determination and Resilience Through Trauma Integration",
+              "crisis_characteristics": [
+                "Overwhelming doubt following personal betrayal",
+                "Guilt over circumstances beyond one's control",
+                "Questioning whether one's choices destroyed relationships",
+                "Paralysis when family bonds shatter",
+                "Internal conflict about continuing mission",
+                "Emotional devastation threatening to destroy purpose"
+              ],
+              "resilience_building_strategies": [
+                "Accept that others' choices are their responsibility, not yours",
+                "Seek support from chosen family and community",
+                "Find purpose within suffering, not by avoiding it",
+                "Channel pain into dedicated, meaningful work",
+                "Process emotions with trusted mentors and allies",
+                "Make conscious choice of determination over defeat",
+                "Build stability through consistent, quality craft"
+              ],
+              "transformation_indicators": [
+                "Shift from paralysis to purposeful action",
+                "Acceptance of community support as strength",
+                "Integration of trauma without being destroyed",
+                "Conscious choice replacing reactive responses",
+                "Work ethic providing anchor during crisis",
+                "Determination built on wisdom, not just willpower"
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Scene III: Refusal of the Call (Overcoming It)",
+              "preliminary_beat": "Set-up / Debate",
+              "save_the_cat_beat": "Debate - weighing whether the cost of the journey is too high",
+              "character_state": "Devastated by brother's betrayal, questioning if cosmic quest destroyed his family. Must choose: surrender to guilt and paralysis or forge conscious determination from pain.",
+              "refusal_moment": "The cost of transformation seems unbearable—Gherardo's betrayal makes Francisco question everything. Can he continue when family bonds have shattered?",
+              "overcoming_refusal": "Through Catalan Company's support and Dante's wisdom, Francisco learns that true determination comes from finding purpose within pain, not avoiding it. His choice to continue is conscious, not coerced."
+            },
+            "daily_prompt": "What difficult work did you choose to continue today despite emotional pain? How did you transform crisis into purposeful action through dedicated craft?",
+            "story_hook": "In Laurasia's Chapter 3, a young hero's brother betrays him, and Francisco crumbles under guilt and doubt. But in a grove outside Bologna, his chosen family gathers—warriors who've known their own betrayals. The great poet Dante speaks of finding purpose within pain, not despite it. And Francisco makes a choice: not to ignore his wounds, but to let them forge him. Sometimes, the Trionfi whisper, determination isn't loud bravery—it's the quiet decision to keep working, keep learning, keep crafting mastery from the raw material of suffering.",
+            "assessment_application": {
+              "identifies_individuals_who": [
+                "Transform personal crisis into purposeful dedication",
+                "Choose conscious determination over reactive defeat",
+                "Build mastery through disciplined, quality work",
+                "Process deep emotional wounds while maintaining function",
+                "Accept community support as source of strength",
+                "Channel pain into meaningful craft and skill-building"
+              ],
+              "development_pathway": "From paralysis to purposeful action—learning to integrate trauma without being destroyed, accept that others' choices aren't your responsibility, find determination through community and meaningful work, balance dedication with vulnerability, and transform wounds into wisdom through conscious choice",
+              "ai_integration_notes": "AI can identify patterns of work-focused coping and assess whether dedication serves healing or avoidance. Machine learning can detect linguistic markers of guilt vs. responsibility, and provide resources for trauma integration. Ethical considerations include recognizing when professional mental health support is needed for processing betrayal."
+            },
+            "cosmic_significance": {
+              "timeline_position": "February 14, 1320 (dawn-afternoon) - Prime Timeline (hours after cosmic invitation)",
+              "universal_archetype": "The Wounded Craftsman—one who transforms betrayal into dedicated mastery, whose determination is forged in crisis rather than comfort",
+              "trionfi_connection": "Francisco's cards require disciplined training, not just natural talent. His choice to continue learning despite Gherardo's betrayal shows cards respond to conscious commitment, not perfection.",
+              "series_foundation": "Determination built here—conscious choice over reactive defeat, community over isolation, purpose within pain—becomes foundation for Francisco's eventual mastery. Heroes are made in valleys of humility, not on mountaintops."
+            }
+        },
+        "personality_profile_4": {
+            
+        },
+        "personality_profile_5": {
+            
+        },
+        "personality_profile_6": {
+            
         }
     }
 }
+
