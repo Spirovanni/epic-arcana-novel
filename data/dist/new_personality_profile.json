@@ -5626,15 +5626,247 @@
         }
     },
     "personality_profile_26": {
-        
+        "canonical_id": "EA-026",
+        "unique_identifier": "STG 1.3.1.3",
+        "all_chapter": 26,
+        "novel_book": 1,
+        "chapter": "Chapter 26",
+        "chapter_title": "The Seven Paths - Opportunity Discernment Through Balance",
+        "type": "Specific Task Group",
+        "display_name": "The Discerning Chooser",
+        "theme": "Balance - Strategic Wisdom Through Opportunity Evaluation",
+        "family": "Order / Systems - Leadership Foundation",
+        "summary": "This personality embodies the wisdom to discern genuine opportunities from attractive illusions, drawn from Chapter 26 of the Human Framework. After proving temptation resistance (Ch 25), the coalition now faces abundance of choice—learning that stability requires strategic discernment. Like the figure choosing among seven cups in the Seven of Cups, this archetype understands that too many options can scatter focus unless evaluated through wisdom. True balance flows from distinguishing opportunities that serve authentic purpose from those offering empty gratification.",
+        "tarot_family": "Cups/Chalices/Droplets",
+        "tarot_card_item": "Seven of Cups",
+        "tarot_symbolism": "The Seven of Cups shows a figure before seven chalices, each containing different visions—some promising treasure, others revealing illusions. The card represents overwhelming choice, the challenge of discernment, and the danger of being scattered by too many options. Clouds suggest these visions may not be what they seem. Chapter 26 embodies this completely—Francisco and Zara face seven paths offering different cosmic service opportunities, must see through attractive illusions to identify genuine callings, choose wisely rather than being paralyzed or scattered by abundance.",
+        "traits": {
+          "strengths": [
+            "discerns genuine opportunities from attractive illusions",
+            "evaluates multiple options strategically before choosing",
+            "maintains focus despite abundance of possibilities",
+            "sees beyond surface appeal to underlying truth",
+            "balances opportunity evaluation with decisive action",
+            "builds upon chosen paths rather than being scattered",
+            "recognizes when options serve ego versus authentic purpose"
+          ],
+          "shadow": [
+            "becomes paralyzed by too many good options",
+            "uses 'discernment' to avoid commitment entirely",
+            "overanalyzes opportunities until they disappear",
+            "judges others who choose differently as 'unwise'",
+            "becomes so cautious that no option seems safe enough",
+            "loses opportunities through excessive evaluation",
+            "confuses complexity with wisdom"
+          ],
+          "growth_focus": [
+            "balance evaluation with timely decision-making",
+            "trust intuition alongside strategic analysis",
+            "recognize when 'good enough' beats 'perfect'",
+            "support others' choices without imposing judgment",
+            "distinguish between careful wisdom and fearful avoidance",
+            "maintain commitment after choosing despite other options"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Seven Paths",
+          "fiction_chapter_context": "In Chamber of Seven Paths where dimensional pathways converge, Francisco and Zara face seven distinct opportunities for cosmic service—but can only choose one. Three are elaborate illusions offering easy victories and personal glory but leading nowhere. Four genuine paths each have costs and benefits. Through guided evaluation with Seven Path Guardians, they learn opportunity discernment—seeing through deceptive appearances to authentic purpose. They choose Path of Cosmic Restoration, demonstrating evolution from power-seeking to wisdom-guided service. Pages 376-390. February 22, 1320 (strategic choice made)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that perfectionism can be paralyzed by too many options. The Seven of Cups teaches that wisdom isn't finding the perfect choice but discerning genuine from illusory and choosing decisively. Integration toward Type 7 brings trust in possibilities."
+        },
+        "color_alignment": {
+          "hue_index": 26,
+          "name": "Soft Peach/Dawn Amber",
+          "hsl": "39,100%,33%",
+          "rgb_hex": "#a87800",
+          "color_symbolism": "Soft peach represents the gentle dawn light that reveals true forms—the illumination that distinguishes substance from shadow. The color of careful evaluation, of wisdom emerging. Balance forged through discernment."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.840,
+            "stability": 0.840,
+            "empathy": 0.715,
+            "openness": 0.815,
+            "orderliness": 0.790,
+            "novelty_seeking": 0.665,
+            "abstract_reasoning": 0.840,
+            "emotional_intensity": 0.665,
+            "social_dominance": 0.690,
+            "cooperativeness": 0.765,
+            "risk_tolerance": 0.715,
+            "conscientiousness": 0.815,
+            "adaptability": 0.765,
+            "imagination": 0.740
+          },
+          "match_weights": {
+            "discernment": 1.00,
+            "stability": 0.95,
+            "abstract_reasoning": 0.90,
+            "conscientiousness": 0.85,
+            "agency": 0.80
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q126", "Q127", "Q128"]
+        },
+        "signals_map": {
+          "Q126": {
+            "dimension": "discernment",
+            "polarity": 1.0,
+            "description": "Distinguishing genuine opportunities from attractive illusions",
+            "assessment_question": "When faced with multiple attractive opportunities, I can distinguish between those offering genuine value aligned with my purpose and those providing immediate gratification or ego satisfaction but leading nowhere meaningful"
+          },
+          "Q127": {
+            "dimension": "stability",
+            "polarity": 0.95,
+            "description": "Maintaining focus despite abundance of options",
+            "assessment_question": "I can maintain strategic focus and avoid being scattered or paralyzed when presented with abundant options, evaluating possibilities thoughtfully without losing momentum or becoming overwhelmed by choice"
+          },
+          "Q128": {
+            "dimension": "abstract_reasoning",
+            "polarity": 0.9,
+            "description": "Seeing beyond surface appeal to underlying truth",
+            "assessment_question": "I can look beyond the surface appeal of opportunities to evaluate their underlying substance, long-term implications, and alignment with authentic purpose rather than being seduced by attractive presentation"
+          },
+          "Q129": {
+            "dimension": "conscientiousness",
+            "polarity": 0.85,
+            "description": "Balancing evaluation with decisive action",
+            "assessment_question": "I can balance thorough evaluation of options with timely decision-making and action, neither rushing into poor choices nor becoming paralyzed by over-analysis, knowing when 'good enough' information enables wise decisions"
+          },
+          "Q130": {
+            "dimension": "agency",
+            "polarity": 0.8,
+            "description": "Committing to chosen path despite alternatives",
+            "assessment_question": "After choosing strategically among multiple options, I can commit fully to my chosen path without constantly second-guessing or being distracted by roads not taken, building upon my choice rather than being scattered by alternatives"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The Paradox of Choice",
+            "author": "Barry Schwartz",
+            "section_of_focus": "When More Is Less",
+            "core_teaching": "Beyond a certain point, more choice decreases satisfaction rather than increasing it. Excessive options create paralysis, increase regret, and elevate expectations unrealistically. The paradox: abundance of choice creates anxiety. Satisficers (those who choose 'good enough') are happier than maximizers (those seeking optimal choices). The solution isn't eliminating choice but developing criteria for evaluation and accepting that good choices don't require exploring every possibility.",
+            "connection_to_balance": "The Chamber of Seven Paths literalizes Schwartz's paradox. Seven options create evaluation challenge—not too few to make choice obvious, but enough to require discernment. Francisco and Zara must develop criteria (alignment with authentic purpose) and resist becoming paralyzed maximizers. They learn to satisfice wisely—choose well, then commit.",
+            "terminal_learning_objectives": {
+              "objective1": "Develop clear criteria for evaluating opportunities",
+              "objective2": "Distinguish satisficing from settling or maximizing",
+              "objective3": "Accept that good choices don't require exploring all options"
+            }
+          },
+          "book2": {
+            "title": "Essentialism: The Disciplined Pursuit of Less",
+            "author": "Greg McKeown",
+            "section_of_focus": "The Way of the Essentialist",
+            "core_teaching": "Essentialism isn't about how to get more things done; it's about how to get the right things done. It's about making the wisest possible investment of your time and energy in order to operate at your highest point of contribution by doing only what is essential. The essentialist explores many options, then applies selective criteria to eliminate all but the most vital few. 'If it isn't a clear yes, then it's a clear no.'",
+            "connection_to_balance": "The Path of Cosmic Restoration choice embodies McKeown's teaching. Not the flashiest path, not the easiest, but the one most aligned with their essential purpose. They explore all seven (thorough evaluation), apply clear criteria (serves greater good vs. ego), choose the vital option, then commit fully. Essentialism in action.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify your essential intent or purpose",
+              "objective2": "Apply selective criteria: 'If not a clear yes, then no'",
+              "objective3": "Commit fully to chosen essentials rather than dabbling"
+            }
+          },
+          "book3": {
+            "title": "Thinking in Bets",
+            "author": "Annie Duke",
+            "section_of_focus": "Resulting and Decision Quality",
+            "core_teaching": "Good decisions can have bad outcomes; bad decisions can have good outcomes. Judging decision quality by results is 'resulting'—a cognitive error. Instead, evaluate decisions based on the information available when made and the process used. In uncertain situations, think probabilistically: What are the likely outcomes? What's the quality of my information? How confident should I be? Decision quality comes from good process, not guaranteed results.",
+            "connection_to_balance": "The Path evaluation teaches Duke's framework. Francisco and Zara can't know outcomes with certainty—even 'genuine' paths have costs. They must evaluate based on available information (Guardian tests, intuition, strategic analysis), use good process (thorough exploration, clear criteria, wisdom consultation), make probabilistic judgments (likely to serve purpose, risks acceptable), then commit. Outcome uncertainty doesn't invalidate good decisions.",
+            "terminal_learning_objectives": {
+              "objective1": "Separate decision quality from outcome quality",
+              "objective2": "Evaluate decisions based on process and information available",
+              "objective3": "Think probabilistically about uncertain outcomes"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "chamber_of_seven_paths": "Perfect setting—dimensional pathways converging in swirling light creates visual representation of abundant choice. The environment itself embodies the challenge: beauty and possibility that could scatter or illuminate.",
+          "seven_path_guardians": "Brilliant device—each guardian represents different type of opportunity (knowledge, creativity, power, service, etc.). Tests reveal what motivates choices: ego or purpose? The guardians don't judge but reveal.",
+          "three_illusions_four_genuine": "Essential structure—not all options are equal. Some look attractive but are empty. This teaches that discernment requires seeing through surface to substance. The challenge isn't choosing from seven equals but identifying which are real.",
+          "franciscos_illusion_attraction": "Personal vulnerability—he's drawn to paths offering scholarly recognition and easy knowledge-gathering. Must recognize that genuine growth requires harder paths. His temptation toward comfortable learning.",
+          "zaras_strategic_evaluation": "Her strength activated—ability to see interconnections and long-term implications. She perceives how paths relate, what they enable or prevent. Strategic wisdom emerges when given multiple options to evaluate simultaneously.",
+          "path_of_cosmic_restoration": "Perfect choice—not flashiest, not easiest, but most aligned with authentic service. Healing damaged dimensional spaces requires both their skills, serves greater good, builds lasting value. The essentialist choice.",
+          "academy_council_guidance": "Crucial support—they guide without directing, teach discernment rather than providing answers. This models how to help others navigate choices: create space for evaluation, offer frameworks, trust their wisdom.",
+          "commitment_despite_alternatives": "Final test—after choosing, can they commit fully? Or will they constantly wonder about roads not taken? Building upon choice rather than being scattered proves true discernment."
+        },
+        "mental_health_framework": {
+          "focus_area": "Opportunity Discernment, Strategic Choice, and Balanced Evaluation",
+          "balance_characteristics": [
+            "Discerning genuine opportunities from attractive illusions",
+            "Evaluating multiple options without paralysis or overwhelm",
+            "Seeing beyond surface appeal to underlying substance",
+            "Balancing thorough evaluation with timely decisions",
+            "Committing to chosen paths without constant second-guessing",
+            "Building upon choices rather than being scattered by alternatives"
+          ],
+          "strategic_discernment_strategies": [
+            "Develop clear criteria based on essential purpose before evaluating",
+            "Apply 'if not a clear yes, then no' to eliminate non-essentials",
+            "Recognize when 'good enough' information enables wise decisions",
+            "Separate decision quality from outcome quality to reduce regret",
+            "Think probabilistically about uncertain outcomes",
+            "Explore options thoroughly but commit decisively",
+            "Build upon chosen paths rather than constantly revisiting alternatives",
+            "Trust that good choices don't require exploring every possibility"
+          ],
+          "integration_indicators": [
+            "Genuine opportunities distinguished from attractive illusions",
+            "Strategic focus maintained despite abundant options",
+            "Evaluation balanced with timely decisive action",
+            "Underlying truth perceived beyond surface appeal",
+            "Full commitment to chosen paths without constant second-guessing",
+            "Choices built upon rather than abandoned for alternatives"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VIII: The Supreme Ordeal (Transition)",
+          "preliminary_beat": "Approach to the Innermost Cave / Road Back Beginning",
+          "save_the_cat_beat": "Ordeal Completion / Fun and Games Beginning",
+          "character_state": "Having proven temptation resistance (Ch 25), now facing abundance of opportunity. The ordeal tested their stability through deprivation and temptation; this tests wisdom through abundance. Can they choose strategically when offered many good paths? This determines readiness for independent cosmic service.",
+          "structural_significance": "Marks transition from testing to choosing. Previous chapters tested what they'd resist; this tests what they'll pursue. Without strategic discernment, they'd be scattered by opportunities or paralyzed by choice. This proves they can navigate abundance as wisely as scarcity—essential for cosmic agents.",
+          "archetypal_moment": "The Seven of Cups' overwhelming choice. Campbell's Road of Trials where hero must choose wisely among paths. The moment that separates those paralyzed by options from those who discern and decide."
+        },
+        "daily_prompt": "What opportunities are before you today? Which serve your essential purpose versus ego gratification? Can you evaluate options strategically without becoming paralyzed, then commit fully to your chosen path despite alternatives?",
+        "story_hook": "In Laurasia's Chapter 26, Francisco and Zara arrive at the Chamber of Seven Paths—a cosmic nexus where dimensional pathways converge in swirling patterns of light and possibility. Seven glowing archways, each radiating different energies, showing glimpses of potential futures. One promises knowledge easily gathered. Another offers creative expression with cosmic impact. A third shows immediate victories and public recognition. 'Choose wisely,' the Seven Path Guardians intone. 'Only one path can you walk.' As Francisco examines each path closely, three shimmer and fade—elaborate illusions offering empty promises. But even the four genuine paths present challenges. How to choose? The Seven of Cups, the Trionfi whisper, shows a figure before seven chalices, each containing visions—some treasure, some illusion, all attractive. The danger isn't that all choices are bad but that too many good options scatter focus. The Path of Cosmic Restoration catches their attention—not the flashiest, not the easiest, but something resonates. Healing damaged dimensional spaces. Building lasting value. Serving the greater good through their combined skills. That alignment with authentic purpose, that recognition of essential calling, that willingness to commit despite attractive alternatives—that's what separates wisdom from wandering. The guardians await their choice.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Discern genuine opportunities from attractive illusions",
+            "Evaluate multiple options strategically without paralysis",
+            "See beyond surface appeal to underlying truth",
+            "Balance thorough evaluation with decisive action",
+            "Commit fully to chosen paths despite alternatives",
+            "Build upon choices rather than being scattered by options"
+          ],
+          "development_pathway": "From choice-paralyzed to wisdom-discerning—learning to develop clear criteria before evaluating, distinguish essential from attractive, apply 'if not clear yes then no' framework, separate decision quality from outcome quality, think probabilistically about uncertainty, balance evaluation with commitment, and recognize that true balance comes from choosing wisely then building upon choices rather than being scattered by endless options",
+          "ai_integration_notes": "AI can identify patterns distinguishing strategic discernment (purposeful, balanced, committed) from shadow patterns (paralysis, avoidance, scattered dabbling). Machine learning can track decision-making quality independent of outcomes. Ethical considerations include recognizing when 'discernment' becomes excuse for avoiding commitment versus genuine wisdom."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 22, 1320 (strategic choice made) - Opportunity Discernment Point",
+          "universal_archetype": "Seven of Cups—overwhelming choice requiring discernment, abundance that can scatter or focus, illusion mixed with opportunity, the challenge of choosing wisely among many attractive options",
+          "trionfi_connection": "The Seven of Cups offers seven visions—some real, some illusion. The Chamber of Seven Paths teaches that cosmic service requires strategic discernment—seeing through attractive presentation to authentic purpose. Every abundance tests wisdom.",
+          "series_foundation": "This opportunity discernment—choosing strategically among multiple good options—becomes essential for all subsequent decision-making. They'll face many attractive alternatives ahead. This proves they can distinguish genuine from illusory, commit despite options, build upon choices. Without this wisdom, abundance would scatter them. With it, they navigate complexity strategically."
+        },
+        "implementation_context": {
+          "execution_focus": "Choosing strategically among abundant opportunities",
+          "discipline_required": "Evaluating thoroughly without paralysis or overwhelm",
+          "balance_element": "Committing fully to chosen paths despite attractive alternatives",
+          "wisdom_necessity": "Distinguishing opportunities serving authentic purpose from ego-gratifying illusions"
+        }
     },
     "personality_profile_27": {
+
     },
     "personality_profile_28": {
+
     },
     "personality_profile_29": {
+
     },
     "personality_profile_30": {
+        
     },
     "personality_profile_31": {
     },
