@@ -3795,6 +3795,232 @@
         }
     },
     "personality_profile_18": {
+        "canonical_id": "EA-018",
+        "unique_identifier": "STG 1.2.2.2",
+        "all_chapter": 18,
+        "novel_book": 1,
+        "chapter": "Chapter 18",
+        "chapter_title": "The Forge of Manifestation - Cultivating Holistic Vitality",
+        "type": "Specific Task Group",
+        "display_name": "The Master of Integrated Wellness",
+        "theme": "Well-Being - Body, Mind, and Spirit in Harmony",
+        "family": "Order / Systems - Harmony",
+        "summary": "This personality embodies the transformative integration of holistic wellness, drawn from Chapter 18 of the Human Framework. After establishing abundance consciousness (Ch 17), the coalition now confronts the reality that prosperity without health is hollow victory. This is the moment where they recognize that forthcoming trials demand peak vitality in every dimension—physical fitness, mental clarity, emotional balance, and spiritual fulfillment. Like the Ten of Cups showing a harmonious family under a rainbow of divine blessing, this archetype understands that true well-being isn't just absence of illness but the vibrant integration of all life dimensions, creating both shield and fuel for the journey's most perilous stages ahead.",
+        "tarot_family": "Cups/Droplets",
+        "tarot_card_item": "Ten of Cups",
+        "tarot_symbolism": "The Ten of Cups represents emotional fulfillment, harmonious relationships, and the joy of integrated well-being. A family celebrates together under a rainbow—symbol of divine blessing, wholeness achieved, happiness that comes from alignment across all dimensions of life. Chapter 18 embodies this completely—the coalition must fortify body and mind knowing that upcoming trials will test every aspect of their being. The Ten teaches that well-being is holistic, that true vitality flows from integration not compartmentalization.",
+        "traits": {
+          "strengths": [
+            "integrates physical, mental, emotional, and spiritual health",
+            "proactively nurtures all dimensions of well-being",
+            "recognizes health as foundation for sustained performance",
+            "balances striving with rest and recovery",
+            "maintains vitality through holistic practices",
+            "creates sustainable wellness routines not crash programs",
+            "understands well-being as preparation not luxury"
+          ],
+          "shadow": [
+            "becomes obsessed with optimization and perfection",
+            "uses wellness practices to bypass emotional work",
+            "judges others' health choices with superiority",
+            "creates rigid wellness rules that become prisons",
+            "neglects relationships in pursuit of personal health",
+            "treats body as project rather than home"
+          ],
+          "growth_focus": [
+            "balance wellness discipline with self-compassion",
+            "distinguish genuine health from performative optimization",
+            "integrate wellness into life rather than making life about wellness",
+            "maintain connection while prioritizing self-care",
+            "adapt practices to seasons of life not rigid rules",
+            "remember well-being serves life purpose not vice versa"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Forge of Manifestation",
+          "fiction_chapter_context": "At Sanctuary of Harmonized Being above Academy's central spire, coalition undergoes intensive wellness training with Celestial Healers. Francisco transforms from scholarly neglect of body to balanced warrior-scholar discipline. Zara evolves from compartmentalized strength to unified mastery. They learn well-being isn't mere preparation but fundamental aspect of magical mastery—collective vitality becomes both shield and fuel for trials ahead. Pages 256-270. February 16-17, 1320 (holistic fortification)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that wellness can be flexible not rigid. Integration toward Type 7 (The Enthusiast) brings joyful embodiment. The Ten of Cups' wholeness transforms perfectionist health striving into compassionate self-care."
+        },
+        "color_alignment": {
+          "hue_index": 18,
+          "name": "Orange/Vibrant Amber",
+          "hsl": "39,100%,50%",
+          "rgb_hex": "#FFA500",
+          "color_symbolism": "Pure orange represents vital life force—the color of dawn, of ripe fruit, of fire that warms without consuming. The glow of integrated wellness, energy flowing freely through aligned body-mind-spirit. The rainbow's warmest hue."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.765,
+            "stability": 0.815,
+            "empathy": 0.715,
+            "openness": 0.715,
+            "orderliness": 0.765,
+            "novelty_seeking": 0.615,
+            "abstract_reasoning": 0.665,
+            "emotional_intensity": 0.615,
+            "social_dominance": 0.565,
+            "cooperativeness": 0.765,
+            "risk_tolerance": 0.615,
+            "conscientiousness": 0.815,
+            "adaptability": 0.715,
+            "imagination": 0.665
+          },
+          "match_weights": {
+            "stability": 0.95,
+            "conscientiousness": 0.95,
+            "holistic_wellness": 0.9,
+            "agency": 0.85,
+            "cooperativeness": 0.8
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q086", "Q087", "Q088"]
+        },
+        "signals_map": {
+          "Q086": {
+            "dimension": "holistic_wellness",
+            "polarity": 1.0,
+            "description": "Integrated body-mind-spirit care",
+            "assessment_question": "I actively nurture my physical health, mental clarity, emotional balance, and spiritual fulfillment as interconnected aspects of a single whole rather than separate domains to manage independently"
+          },
+          "Q087": {
+            "dimension": "conscientiousness",
+            "polarity": 0.95,
+            "description": "Proactive wellness practices",
+            "assessment_question": "I maintain regular wellness practices (movement, rest, nutrition, meditation, connection) even when I feel fine, understanding that prevention and maintenance create sustainable vitality"
+          },
+          "Q088": {
+            "dimension": "stability",
+            "polarity": 0.9,
+            "description": "Sustainable health routines",
+            "assessment_question": "My approach to health emphasizes sustainable daily practices and rhythms rather than extreme interventions or cycles of neglect followed by crash programs"
+          },
+          "Q089": {
+            "dimension": "agency",
+            "polarity": 0.85,
+            "description": "Health as foundation not destination",
+            "assessment_question": "I recognize that well-being isn't a goal to achieve but a foundation that enables me to pursue what matters most with sustained energy and clarity"
+          },
+          "Q090": {
+            "dimension": "cooperativeness",
+            "polarity": 0.8,
+            "description": "Collective wellness consciousness",
+            "assessment_question": "I understand that my personal health affects those around me, and I support others' wellness journeys while maintaining my own practices"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Why We Sleep: Unlocking the Power of Sleep and Dreams",
+            "author": "Matthew Walker",
+            "section_of_focus": "Sleep as Foundation",
+            "core_teaching": "Sleep is not optional luxury but biological necessity. It restores every system in the body, consolidates memory and learning, regulates emotions, strengthens immunity, and literally clears metabolic waste from the brain. Chronic sleep deprivation creates cognitive impairment equivalent to intoxication, increases disease risk dramatically, and undermines every other wellness practice. You cannot optimize performance by sacrificing sleep—it's the foundation on which everything else builds.",
+            "connection_to_wellness": "The Sanctuary's first lesson: Francisco's scholarly all-nighters must end. The Celestial Healers teach that magical training requires rest as much as practice. Sleep isn't weakness—it's when the body integrates learning, when the mind processes experience, when vitality regenerates. The chapter establishes sleep as non-negotiable foundation.",
+            "terminal_learning_objectives": {
+              "objective1": "Prioritize 7-9 hours of sleep nightly as non-negotiable",
+              "objective2": "Implement sleep hygiene practices consistently",
+              "objective3": "Track the correlation between sleep quality and performance"
+            }
+          },
+          "book2": {
+            "title": "Spark: The Revolutionary New Science of Exercise and the Brain",
+            "author": "John J. Ratey",
+            "section_of_focus": "Exercise and Neuroplasticity",
+            "core_teaching": "Physical exercise is the single most powerful tool for brain optimization. It increases BDNF (brain-derived neurotrophic factor), enhancing learning and memory. It regulates mood better than many medications, reduces anxiety and depression, improves focus and executive function. Movement doesn't just build physical capacity—it literally grows the brain, enhances neuroplasticity, and protects against cognitive decline. The body-mind connection isn't metaphorical; it's biological.",
+            "connection_to_wellness": "In the Chamber of Physical Mastery, Zara learns that her warrior training does more than build strength—it sharpens her mind, regulates her emotions, enhances magical capacity. Movement isn't preparation for magic; it IS magic, alchemizing stress into strength, anxiety into focus. Francisco discovers that his sedentary scholarship limited not just body but mind.",
+            "terminal_learning_objectives": {
+              "objective1": "Integrate movement into daily routine for cognitive benefits",
+              "objective2": "Use exercise strategically to manage stress and enhance focus",
+              "objective3": "Understand physical activity as brain training not just body training"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now: A Guide to Spiritual Enlightenment",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Presence and Inner Body Awareness",
+            "core_teaching": "True wellness requires presence—inhabiting the body fully, not treating it as vehicle for the head. Most suffering comes from mental time travel (anxiety about future, rumination about past) rather than present reality. By bringing awareness into the body, feeling its aliveness from within, we access portal to deeper peace and vitality. The body is always in the now; the mind creates most of our dis-ease by being elsewhere.",
+            "connection_to_wellness": "The Garden of Mental Clarity teaches meditation not as mental discipline but as embodied presence. The coalition learns to feel magical energy not just think about it, to inhabit their physical forms with consciousness. This integration—mind meeting body in present moment—creates the holistic wellness that makes them channels for cosmic power without being consumed by it.",
+            "terminal_learning_objectives": {
+              "objective1": "Practice inner body awareness meditation daily",
+              "objective2": "Notice when consciousness leaves the body and return to presence",
+              "objective3": "Experience physical sensations fully rather than analyzing them"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "sanctuary_transformation": "The Sanctuary of Harmonized Being—floating above Academy, time-dilated, healing energies pulsing—represents what wellness can be: not clinic but temple, not correction but cultivation. The space itself teaches that well-being is sacred work.",
+          "franciscos_evolution": "From scholarly neglect of body (viewing physical form as inconvenient housing for mind) to balanced warrior-scholar discipline. He learns that his magical studies advance faster when supported by physical vitality, mental clarity, rest. Integration, not sacrifice.",
+          "zaras_evolution": "From compartmentalized warrior (strong body, magical ability, spiritual practice as separate domains) to unified mastery where physical, magical, and spiritual flow seamlessly. She discovers that true strength comes from integration not isolation.",
+          "celestial_healers": "Transform from detached cosmic observers to deeply invested mentors—showing that wellness teaching requires genuine care, that healing is relationship. They model what they teach: presence, integration, sustainable practice.",
+          "build_up_preparation": "This is explicit preparation for The Road of Trials. They're building reserves—physical endurance, mental resilience, emotional balance, spiritual depth—that will sustain them through challenges that would destroy unprepared beings. Wellness as armoring.",
+          "ten_of_cups_energy": "The harmonious family under divine blessing represents what they're building: collective well-being that enables shared purpose. Not individual optimization but integrated team vitality. Their health affects everyone; everyone's health affects them.",
+          "foundation_for_mastery": "The chapter establishes core series principle: magical power without holistic wellness destroys the practitioner. Advanced abilities require advanced wellness. You can't channel cosmic energies safely from depleted vessel."
+        },
+        "mental_health_framework": {
+          "focus_area": "Holistic Wellness, Sustainable Health Practices, and Body-Mind-Spirit Integration",
+          "wellness_characteristics": [
+            "Physical fitness supporting mental and magical capacity",
+            "Quality sleep as non-negotiable foundation",
+            "Movement practices enhancing cognition and mood",
+            "Mental clarity through meditation and presence",
+            "Emotional balance through integrated self-care",
+            "Spiritual fulfillment through embodied practice"
+          ],
+          "wellness_building_strategies": [
+            "Prioritize 7-9 hours quality sleep consistently",
+            "Integrate daily movement for brain optimization",
+            "Practice presence through inner body awareness",
+            "Create sustainable wellness routines not crash programs",
+            "Balance challenge with adequate rest and recovery",
+            "Nurture all dimensions (physical, mental, emotional, spiritual) equally",
+            "Support collective wellness while maintaining personal practices"
+          ],
+          "integration_indicators": [
+            "Sustainable energy maintained through balanced practices",
+            "Physical health supporting mental and emotional clarity",
+            "Wellness routines integrated into daily life naturally",
+            "Body-mind-spirit experienced as unified whole",
+            "Performance enhanced through proper rest and recovery",
+            "Collective vitality supporting shared purpose and challenges"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VII: The Road of Trials (Preparation Phase)",
+          "preliminary_beat": "Approach to the Innermost Cave - Build-up and fortification",
+          "save_the_cat_beat": "Approach to the Innermost Cave - Final preparations before ordeal",
+          "character_state": "Fortifying all dimensions of being before trials. Francisco integrating body and mind. Zara unifying compartmentalized strengths. Both learning that well-being isn't luxury but necessity, that holistic health creates capacity for challenges ahead.",
+          "structural_significance": "Establishes wellness as prerequisite for advanced work. Before they can face cosmic trials, they must build sustainable vitality. Plants seed that power without wellness destroys practitioner—theme that echoes through series.",
+          "archetypal_moment": "The Healer's preparation. Campbell's stage where hero must fortify body and spirit before ordeal. The warrior training for battle but knowing strength alone won't suffice."
+        },
+        "daily_prompt": "Which dimension of your well-being—physical, mental, emotional, or spiritual—have you been neglecting? What would integrated vitality look like in your life today?",
+        "story_hook": "In Laurasia's Chapter 18, Francisco collapses during training. Not from magical exhaustion—from simple sleep deprivation. 'You've been pulling all-nighters studying,' the Celestial Healer observes calmly. 'Your magic is advancing. Your body is failing. This ends badly.' 'But there's so much to learn—' 'And you'll learn nothing if you destroy yourself.' She gestures to the Chamber of Physical Mastery where Zara moves through combat forms that flow seamlessly into meditation. 'Watch her. She used to treat body, magic, and spirit as separate domains to master independently. Now she understands: they're one system. Integration, not isolation, creates true strength.' Francisco protests: 'I don't have time for sleep and exercise and meditation—' 'You don't have time NOT to,' the Healer interrupts. 'The trials ahead will test every dimension of your being. Physical endurance. Mental clarity. Emotional resilience. Spiritual depth. Weakness in any dimension becomes fatal vulnerability. Holistic wellness isn't preparation for the journey—it IS the journey.' The Ten of Cups, the Trionfi whisper, shows a family celebrating under divine rainbow. Not because they've achieved perfection but because they've achieved integration. Body, mind, and spirit in harmony. That's the real magic—not compartments but wholeness.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Integrate physical, mental, emotional, and spiritual wellness",
+            "Maintain proactive health practices consistently",
+            "Create sustainable wellness routines not extreme interventions",
+            "Recognize health as foundation for sustained performance",
+            "Balance striving with adequate rest and recovery",
+            "Support collective wellness while maintaining personal practices"
+          ],
+          "development_pathway": "From compartmentalized health to integrated wellness—learning to nurture all dimensions equally, establish sustainable practices, prioritize foundational habits like sleep and movement, inhabit the body with presence, balance challenge with recovery, and recognize that true vitality flows from body-mind-spirit harmony rather than optimization of isolated parts",
+          "ai_integration_notes": "AI can identify patterns distinguishing sustainable wellness (balanced, integrated, compassionate) from shadow patterns (obsessive optimization, performative health, wellness as avoidance). Machine learning can track correlations between wellness practices and performance indicators. Ethical considerations include recognizing when 'holistic health' becomes privilege display versus genuine self-care."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 16-17, 1320 (holistic fortification) - Wellness Foundation Point",
+          "universal_archetype": "The Ten of Cups—emotional fulfillment through integration, harmonious alignment across all dimensions, joy that comes from wholeness, collective vitality supporting shared purpose, divine blessing of balanced living",
+          "trionfi_connection": "The Ten of Cups celebrates under rainbow of wholeness. Francisco's cards reveal that advanced magical work requires advanced wellness. You cannot channel cosmic energies from depleted vessel. Integration precedes power.",
+          "series_foundation": "This wellness consciousness—holistic, sustainable, integrated—becomes non-negotiable foundation for all advanced work. Every subsequent trial tests whether they maintained this integration. Power without wellness destroys; wellness enables sustained power."
+        },
+        "implementation_context": {
+          "execution_focus": "Building holistic vitality across all dimensions",
+          "discipline_required": "Maintaining wellness practices especially when busy or stressed",
+          "perseverance_element": "Sustainable health routines as lifelong practice not temporary program",
+          "collaboration_necessity": "Collective well-being supporting team capacity for shared challenges"
+        }
     },
     "personality_profile_19": {
     },
