@@ -2112,8 +2112,487 @@
         }
     },
     "personality_profile_10": {
+        "canonical_id": "EA-010",
+        "unique_identifier": "STG 1.1.4.1",
+        "all_chapter": 10,
+        "novel_book": 1,
+        "chapter": "Chapter 10",
+        "chapter_title": "The Weight of Truth - Structure Through Organized Unity",
+        "type": "Specific Task Group",
+        "display_name": "Architect of Collaborative Systems",
+        "theme": "Structure - Creating Order Through Organization",
+        "family": "Order / Systems - Organization",
+        "summary": "This personality embodies the transformation from emotional recovery to strategic organization, drawn from Chapter 10 of the Human Framework. It represents the crucial moment when renewed determination must translate into systematic action—when Dagon's increasing threats demand not just individual courage but coordinated response, when collective resolve crystallizes into organizational structure, when Francisco evolves from isolated hero to collaborative leader who orchestrates others' talents. Like Francisco Petrarch convening the first war council as an equal among companions and learning to delegate, trust, and synthesize perspectives into cohesive strategy, this archetype navigates the profound shift from solo performance to conducting the symphony. This is the personality of those who transform group potential into organized force, whose leadership means creating systems that maximize collective strength, whose mastery lies in building frameworks where creativity and accountability thrive together.",
+        "tarot_family": "Swords (Feathers)",
+        "tarot_card_item": "King of Swords",
+        "tarot_symbolism": "The King of Swords represents mastery of mental clarity, strategic organization, and structured authority. Chapter 10 embodies this leadership: Francisco must move from the emotional intensity of Chapter 9 into clear-headed organization, from reactive determination to systematic planning. The King teaches that true power comes from organizing chaos into coherent strategy, from creating structures that enable others to excel.",
+        "traits": {
+          "strengths": [
+            "transforms collective resolve into organized systems",
+            "delegates effectively while maintaining strategic vision",
+            "creates structures that maximize group potential",
+            "synthesizes diverse perspectives into coherent plans",
+            "builds frameworks that balance creativity with accountability",
+            "leads through organization rather than domination",
+            "orchestrates talents to create force greater than sum of parts"
+          ],
+          "shadow": [
+            "over-systematizing that stifles spontaneity and creativity",
+            "using structure as control rather than empowerment",
+            "delegation that abdicates rather than coordinates",
+            "rigid organization that cannot adapt to changing circumstances",
+            "mistaking process for progress, structure for substance",
+            "creating hierarchy that undermines the equality that forged unity"
+          ],
+          "growth_focus": [
+            "balance structure with flexibility and adaptation",
+            "ensure organization empowers rather than constrains",
+            "maintain human connection within systematic frameworks",
+            "recognize when structure serves mission versus serving itself",
+            "preserve equality while creating necessary hierarchy",
+            "build systems that evolve with changing needs"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Weight of Truth",
+          "fiction_chapter_context": "Francisco emerges from Chapter 9's emotional crisis with new understanding of collaborative leadership. Under pressure from Dagon's increasing threats, Catalan Company must organize into cohesive force. War council convenes in circular chamber - Francisco sits as equal, learning to listen, delegate, synthesize perspectives. Alliance pavilion negotiations establish Temporal Resistance Coalition. First coordinated battle tests new organizational structure. Dante teaches that true mastery comes from orchestrating others' talents. Pages 136-150 depict pressure intensifying, forcing articulation of ethical underpinnings. February 14, 1320 (organizational phase)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Aligned with Enneagram Type 1 (The Reformer) in healthy expression—creating ethical systems, organizing for justice, building structures that serve principles. Integration toward Type 7 brings playful creativity within structure. Type 3 influence provides capacity to inspire and motivate through organizational vision."
+        },
+        "color_alignment": {
+          "hue_index": 9,
+          "name": "Scarlet",
+          "hsl": "9,100%,50%",
+          "rgb_hex": "#ff3300",
+          "color_symbolism": "Scarlet represents bold, decisive action transformed into strategic power—the color of authority exercised through clear vision and organized strength. Vibrant and commanding, it embodies leadership that inspires coordinated action, the clarity of well-structured plans, the confidence of systems that work."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.785,
+            "stability": 0.815,
+            "empathy": 0.685,
+            "openness": 0.715,
+            "orderliness": 0.865,
+            "novelty_seeking": 0.485,
+            "abstract_reasoning": 0.765,
+            "emotional_intensity": 0.515,
+            "social_dominance": 0.715,
+            "cooperativeness": 0.815,
+            "risk_tolerance": 0.565,
+            "conscientiousness": 0.835,
+            "adaptability": 0.665,
+            "imagination": 0.685
+          },
+          "match_weights": {
+            "orderliness": 0.95,
+            "stability": 0.85,
+            "cooperativeness": 0.8,
+            "agency": 0.75,
+            "conscientiousness": 0.7
+          },
+          "threshold": 0.7,
+          "top_signal_items": [
+            "Q046",
+            "Q047",
+            "Q048"
+          ],
+          "dimension_rationale": {
+            "very_high_orderliness": "Creating systematic frameworks and organized structures for collective action",
+            "very_high_stability": "Building reliable systems that provide foundation for sustained effort",
+            "very_high_cooperativeness": "Coordinating diverse talents into unified force",
+            "high_conscientiousness": "Maintaining accountability and clear responsibilities within structure",
+            "high_agency": "Taking charge of organization while empowering others",
+            "high_social_dominance": "Leading through strategic vision and organizational mastery",
+            "moderate_emotional_intensity": "Balanced composure enabling clear strategic thinking",
+            "lower_novelty_seeking": "Valuing proven organizational principles over experimental chaos"
+          }
+        },
+        "signals_map": {
+          "Q046": {
+            "dimension": "orderliness",
+            "polarity": 1.0,
+            "description": "Creating systematic structures that maximize collective effectiveness",
+            "assessment_question": "I excel at creating organizational systems, clear processes, and structured frameworks that help teams remain aligned on goals, responsibilities, and timelines while maximizing their collective potential"
+          },
+          "Q047": {
+            "dimension": "stability",
+            "polarity": 0.95,
+            "description": "Building reliable foundations for sustained collaborative effort",
+            "assessment_question": "I establish stable structures and consistent systems that provide the reliable foundation teams need to operate effectively under pressure and over extended periods"
+          },
+          "Q048": {
+            "dimension": "cooperativeness",
+            "polarity": 0.9,
+            "description": "Orchestrating diverse talents into coordinated unified action",
+            "assessment_question": "I can synthesize diverse perspectives and coordinate different people's strengths into cohesive strategies, conducting the group like a symphony where each contribution enhances the whole"
+          },
+          "Q049": {
+            "dimension": "agency",
+            "polarity": 0.85,
+            "description": "Leading organizational efforts while empowering distributed action",
+            "assessment_question": "I take charge of creating organizational structures and strategic direction while empowering team members with clear roles, responsibilities, and authority to execute within the framework"
+          },
+          "Q050": {
+            "dimension": "conscientiousness",
+            "polarity": 0.8,
+            "description": "Maintaining accountability and tracking progress within systems",
+            "assessment_question": "I establish clear accountability mechanisms, track progress toward milestones, and ensure that organizational structures maintain both creativity and responsibility"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "Shared Consciousness and Empowered Execution",
+            "core_teaching": "Traditional hierarchical structures fail in complex, fast-changing environments. Effective organization requires shared consciousness (everyone understands the big picture) combined with empowered execution (teams can act decisively without waiting for top-down approval). Break down silos, create cross-functional teams, establish real-time communication, enable decentralized decision-making.",
+            "connection_to_structure": "Francisco's war council embodies McChrystal's principles: circular table creates shared consciousness, diverse perspectives build complete picture, empowered allies can execute their roles decisively. The Temporal Resistance Coalition operates as network of teams, not rigid hierarchy.",
+            "terminal_learning_objectives": {
+              "objective1": "Create organizational structures that prioritize shared understanding over rigid hierarchy",
+              "objective2": "Establish communication systems enabling real-time coordination across teams",
+              "objective3": "Empower distributed decision-making while maintaining strategic coherence"
+            }
+          },
+          "book2": {
+            "title": "Essentialism: The Disciplined Pursuit of Less",
+            "author": "Greg McKeown",
+            "section_of_focus": "Clarity and Elimination",
+            "core_teaching": "Effective organization requires ruthless clarity about what truly matters and systematic elimination of non-essential activities. Less but better. Structure should clarify priorities, protect essential work, and create boundaries that prevent mission drift. The disciplined pursuit of less creates space for strategic execution.",
+            "connection_to_structure": "Dante teaches Francisco that organization isn't about controlling everything—it's about clarifying essentials and building systems that protect focus. The structured approach eliminates chaos not by managing chaos but by systematically removing it.",
+            "terminal_learning_objectives": {
+              "objective1": "Identify essential priorities and eliminate non-essential commitments",
+              "objective2": "Build organizational systems that protect focus on vital objectives",
+              "objective3": "Create boundaries that maintain strategic clarity amid pressure"
+            }
+          },
+          "book3": {
+            "title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "section_of_focus": "Building Trust and Accountability",
+            "core_teaching": "Effective team structure requires five foundations: vulnerability-based trust, healthy conflict around ideas, commitment to decisions, peer accountability, and attention to collective results. Without these foundations, no organizational system works. Structure must enable rather than replace human connection and mutual accountability.",
+            "connection_to_structure": "The circular war council builds trust through vulnerability (Chapter 9's foundation), enables healthy debate of strategies, creates commitment through participation, establishes peer accountability through clear roles, and focuses all on collective mission rather than individual glory.",
+            "terminal_learning_objectives": {
+              "objective1": "Build organizational structures on foundation of vulnerability-based trust",
+              "objective2": "Create systems that enable healthy conflict and commitment to decisions",
+              "objective3": "Establish peer accountability mechanisms focused on collective results"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "transformation_complete": "Chapter 10 marks Francisco's complete transformation from isolated genius (Chapter 5) through crisis (8-9) to collaborative leader. The emotional journey culminates in systematic organization.",
+          "war_council_significance": "First formal council in circular chamber represents revolutionary shift: Francisco sits as equal, not above. The round table symbolizes shared responsibility and distributed authority. Learning to listen, delegate, synthesize becomes masterclass in collaborative leadership.",
+          "alliance_building": "Alliance pavilion negotiations establish Temporal Resistance Coalition - showing Francisco's growth from personal crisis management to diplomatic coordination. La Signora teaches him that uniting diverse groups requires finding common ground while respecting autonomy.",
+          "coordinated_battle_test": "First test of new organizational structure comes when Dagon attacks with coordinated force. Francisco must conduct the defense—Roger leads military response, Dante provides tactical guidance, allies contribute specialized skills. Success proves systematic unity defeats sophisticated manipulation.",
+          "dante_teaching": "Crucial lesson: true mastery comes from orchestrating others' talents, not dominating through individual power. Francisco's role shifts from solo performer to conductor, from isolated genius to systematic organizer.",
+          "pressure_under_fire": "High stakes intensify struggles, forcing articulation of ethical and thematic underpinnings. Within pressure-cooker, revelations about trust, fear, and potential swirl among emotional confrontations. Structure must hold under stress.",
+          "series_arc_foundation": "Organizational skills developed here become essential for navigating temporal paradoxes and cosmic-scale conflicts in future books. The alliance network proves crucial. Systematic thinking enables complex coordination required for series resolution."
+        },
+        "mental_health_framework": {
+          "focus_area": "Organization, Leadership Development, and System Building",
+          "organizational_characteristics": [
+            "Transforming collective resolve into systematic action",
+            "Creating clarity and structure amid chaos and pressure",
+            "Coordinating diverse talents into unified strategic force",
+            "Building accountability systems that empower rather than constrain",
+            "Maintaining human connection within organizational frameworks",
+            "Adapting structures to changing circumstances while maintaining coherence"
+          ],
+          "leadership_building_strategies": [
+            "Convene collaborative councils where all voices contribute as equals",
+            "Practice synthesis: listening to diverse perspectives and creating coherent strategy",
+            "Delegate with clarity: define roles, responsibilities, authority, and accountability",
+            "Build systems that eliminate ambiguity while preserving creativity",
+            "Establish communication frameworks enabling real-time coordination",
+            "Create structures that measure progress and celebrate milestones",
+            "Organize around essentials: clarify priorities and systematically eliminate non-essentials"
+          ],
+          "mastery_indicators": [
+            "Shift from solo performance to orchestrating collective strength",
+            "Systems created that maximize group potential beyond individual capability",
+            "Clear accountability combined with empowered execution",
+            "Structure providing stability while enabling adaptation",
+            "Leadership through organization rather than domination",
+            "Balance of order with human connection and trust"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene IV: Allies, Mentors, and Helpers (Theme Stated)",
+          "preliminary_beat": "Theme Stated / Organizational Foundation",
+          "save_the_cat_beat": "Theme Stated - The larger truth about how the world works is articulated",
+          "character_state": "Emerging from emotional crisis with renewed determination, now translating collective resolve into systematic organization. Learning to lead through structure and coordination rather than isolated heroism.",
+          "theme_statement": "True strength comes from organized unity and structured collaboration. Individual brilliance means little; orchestrated collective effort creates unstoppable force. Leadership means building systems where others excel.",
+          "allies_integration": "This chapter establishes the network of allies, mentors, and helpers who will support Francisco's journey. The organizational structure creates framework for their coordinated action throughout the series."
+        },
+        "daily_prompt": "What system or structure did you create today that maximized your team's collective effectiveness? How did you orchestrate diverse talents into coordinated action while empowering others to execute?",
+        "story_hook": "In Laurasia's Chapter 10, a recovered hero discovers that determination alone isn't enough—now comes the hard work of organization. Facing increasing pressure from Dagon's coordinated attacks, Francisco convenes the first war council where he sits not above but among his companions. Roger shares military expertise, Dante offers strategic wisdom, La Signora provides diplomatic insights. Francisco learns the profound lesson: 'True mastery,' Dante teaches, 'comes not from solo brilliance but from orchestrating others' talents. You must become the conductor, not the lone virtuoso.' In alliance pavilions and on coordinated battlefields, Francisco transforms collective resolve into organized force. Sometimes, the Trionfi whisper, leadership means building the structure where everyone can excel—where clear systems eliminate chaos, where thoughtful organization unleashes rather than constrains creativity, where the whole becomes infinitely greater than the sum of brilliant parts.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Transform collective potential into organized systems",
+            "Create structures that maximize group effectiveness",
+            "Lead through coordination and strategic organization",
+            "Synthesize diverse perspectives into coherent action plans",
+            "Build accountability frameworks that empower execution",
+            "Orchestrate talents to create force beyond individual capability"
+          ],
+          "development_pathway": "From emotional recovery to systematic leadership—learning to create organizational structures, delegate with clarity, synthesize diverse perspectives, build systems that balance order with creativity, coordinate distributed action, and master the art of conducting collective strength into unified force",
+          "ai_integration_notes": "AI can identify patterns distinguishing healthy organization (empowering structure) from unhealthy bureaucracy (constraining control). Machine learning can track balance between order and flexibility. Ethical considerations include recognizing when structure serves mission versus serving itself, and ensuring organization empowers rather than dominates."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 14, 1320 (organizational phase) - Foundation Building Point",
+          "universal_archetype": "The System Builder—one who transforms collective potential into organized force, whose leadership creates structures enabling others to excel, whose mastery lies in orchestration rather than domination, whose vision manifests through systematic coordination",
+          "trionfi_connection": "King of Swords reveals the mastery of strategic organization and structured authority. Francisco's cards show him that power lies not in solo brilliance but in creating systems where collective strength flourishes. The King teaches: clarity, organization, and systematic coordination create unstoppable force.",
+          "series_foundation": "Organizational skills and alliance networks established here become essential for navigating the complex temporal, political, and cosmic challenges ahead. The systematic thinking developed in Chapter 10 enables the coordination required for series resolution and ultimate sacrifice in Book 9."
+        },
+        "implementation_context": {
+          "execution_focus": "Building systematic structures that maximize collective effectiveness",
+          "discipline_required": "Maintaining organizational clarity and accountability under pressure",
+          "perseverance_element": "Sustaining structure and coordination through escalating challenges",
+          "collaboration_necessity": "Essential—entire purpose is creating frameworks for coordinated collective action"
+        }
     },
     "personality_profile_11": {
+        "canonical_id": "EA-011",
+        "unique_identifier": "STG 1.1.4.2",
+        "all_chapter": 11,
+        "novel_book": 1,
+        "chapter": "Chapter 11",
+        "chapter_title": "Bonds of the Awakened - Acceptance Through Truth",
+        "type": "Specific Task Group",
+        "display_name": "Guardian of Mindful Acceptance",
+        "theme": "Acceptance - Embracing Reality Without Resistance",
+        "family": "Order / Systems - Mindfulness",
+        "summary": "This personality embodies the profound practice of accepting harsh realities while maintaining purpose, drawn from Chapter 11 of the Human Framework. It represents the crucible moment when organized strength meets overwhelming psychological pressure—when Dagon's devastating assault targets deepest fears and insecurities, when the newly unified coalition's ideals face direct challenge, when avoiding truth proves more destructive than embracing it. Like Francisco and the Temporal Resistance Coalition learning that running from weakness makes it more powerful while accepting imperfection creates deeper bonds, this archetype navigates the paradox that vulnerability strengthens while denial weakens. This is the personality of those who discover that genuine acceptance requires courage and wisdom, whose leadership means acknowledging limitations without abandoning hope, whose bonds deepen through shared truth rather than false bravado.",
+        "tarot_family": "Swords (Feathers)",
+        "tarot_card_item": "Six of Swords",
+        "tarot_symbolism": "The Six of Swords depicts a figure being ferried across troubled waters toward calmer shores—representing the journey from resistance to acceptance, from turmoil to peace. Chapter 11 embodies this transition: the coalition must cross from denial of their limitations into acceptance of difficult truths. The card teaches that acceptance doesn't mean surrender but rather conscious passage through pain toward wisdom.",
+        "traits": {
+          "strengths": [
+            "faces harsh realities with courage and wisdom",
+            "accepts limitations without abandoning purpose or hope",
+            "transforms vulnerability into deeper connection and strength",
+            "maintains mindful presence under extreme pressure",
+            "distinguishes between helpful acceptance and harmful denial",
+            "embodies compassionate acknowledgment of self and others",
+            "builds unity through shared honesty about imperfections"
+          ],
+          "shadow": [
+            "passive resignation disguised as acceptance",
+            "using 'acceptance' to avoid necessary action or change",
+            "spiritual bypassing: accepting the unacceptable",
+            "mistaking numbness for equanimity",
+            "weaponizing others' vulnerabilities shared in trust",
+            "accepting defeat when resistance is still needed"
+          ],
+          "growth_focus": [
+            "balance acceptance of reality with determination to act constructively",
+            "distinguish between what must be accepted and what must be changed",
+            "maintain hope while acknowledging harsh truths",
+            "practice vulnerability without weaponizing others' honesty",
+            "cultivate equanimity without falling into resignation",
+            "accept imperfection while maintaining standards and values"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "Bonds of the Awakened",
+          "fiction_chapter_context": "Temporal Resistance Coalition faces first major crisis when Dagon launches devastating psychological assault targeting deepest fears. Pressure chamber with mirrors reflects inner darkness—Francisco sees himself as fraud, Roger sees meaninglessness. Coalition nearly collapses as public confrontation exposes fault lines. Truth sanctuary becomes space for honest self-reflection where Dante guides acceptance. Members gather one by one, offering acceptance of limitations. Renewed unity based on truth rather than illusion. Pages 151-165 depict external pressure pinching group, forcing confrontation with uncomfortable truths. February 14, 1320 (acceptance phase)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Aligned with Enneagram Type 1 integrating toward Type 7—finding peace and acceptance rather than rigid perfectionism, discovering that acknowledging imperfection doesn't destroy ideals. Type 9 influence provides capacity for serene acceptance and non-judgmental presence. Healthy integration recognizes that fighting reality creates more suffering than accepting truth while maintaining constructive action."
+        },
+        "color_alignment": {
+          "hue_index": 10,
+          "name": "Safety Orange",
+          "hsl": "24,100%,50%",
+          "rgb_hex": "#ff6600",
+          "color_symbolism": "Safety Orange represents the bold visibility of truth that cannot be ignored—the color of honest acknowledgment, of warning that saves rather than harms, of clarity that cuts through illusion. Bright and unmissable, it embodies acceptance that sees reality clearly without flinching, the courage to face what is rather than what we wish were true."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.665,
+            "stability": 0.765,
+            "empathy": 0.815,
+            "openness": 0.835,
+            "orderliness": 0.615,
+            "novelty_seeking": 0.465,
+            "abstract_reasoning": 0.715,
+            "emotional_intensity": 0.615,
+            "social_dominance": 0.515,
+            "cooperativeness": 0.815,
+            "risk_tolerance": 0.585,
+            "conscientiousness": 0.765,
+            "adaptability": 0.785,
+            "imagination": 0.615
+          },
+          "match_weights": {
+            "openness": 0.95,
+            "empathy": 0.85,
+            "adaptability": 0.8,
+            "cooperativeness": 0.75,
+            "stability": 0.7
+          },
+          "threshold": 0.7,
+          "top_signal_items": [
+            "Q051",
+            "Q052",
+            "Q053"
+          ],
+          "dimension_rationale": {
+            "very_high_openness": "Willingness to embrace difficult truths without judgment or resistance",
+            "very_high_empathy": "Compassionate acknowledgment of self and others' struggles",
+            "high_adaptability": "Flowing with reality rather than rigidly fighting what is",
+            "high_cooperativeness": "Building deeper unity through shared vulnerability and truth",
+            "high_stability": "Inner peace maintained through mindful acceptance",
+            "moderate_agency": "Acting constructively while accepting what cannot be changed",
+            "moderate_emotional_intensity": "Balanced equanimity without numbness or overwhelm"
+          }
+        },
+        "signals_map": {
+          "Q051": {
+            "dimension": "openness",
+            "polarity": 1.0,
+            "description": "Embracing uncomfortable truths without judgment or resistance",
+            "assessment_question": "When faced with harsh realities about myself, my situation, or my limitations, I can acknowledge and accept these truths without falling into denial, self-criticism, or defensive resistance"
+          },
+          "Q052": {
+            "dimension": "empathy",
+            "polarity": 0.95,
+            "description": "Compassionate acceptance of self and others' imperfections",
+            "assessment_question": "I can hold compassionate space for my own and others' limitations, fears, and weaknesses without judgment, recognizing that acceptance of imperfection creates deeper connection than pretense of perfection"
+          },
+          "Q053": {
+            "dimension": "adaptability",
+            "polarity": 0.9,
+            "description": "Flowing with reality while maintaining purpose and values",
+            "assessment_question": "I can accept circumstances I cannot change while maintaining my ability to act constructively on what I can influence, flowing with reality rather than exhausting myself in futile resistance"
+          },
+          "Q054": {
+            "dimension": "cooperativeness",
+            "polarity": 0.85,
+            "description": "Building unity through shared vulnerability and truth",
+            "assessment_question": "When my team or community shares vulnerabilities and acknowledges limitations collectively, I recognize this honesty as a foundation for deeper trust and stronger bonds than false confidence would provide"
+          },
+          "Q055": {
+            "dimension": "stability",
+            "polarity": 0.8,
+            "description": "Maintaining inner peace through mindful presence",
+            "assessment_question": "I can maintain calm, centered presence even when confronting difficult truths or experiencing external pressure, using mindfulness to meet reality without being overwhelmed by it"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "Radical Acceptance",
+            "author": "Tara Brach",
+            "section_of_focus": "Embracing Truth with Compassion",
+            "core_teaching": "Radical acceptance means clearly recognizing what is happening in the present moment and embracing it with compassion. It's not resignation or defeat—it's the courageous acknowledgment of reality that frees us from the additional suffering caused by resistance. Only through accepting what is can we respond wisely to what needs changing.",
+            "connection_to_acceptance": "Francisco's coalition crisis embodies Brach's teaching: their near-collapse came from resisting their fears and limitations. The truth sanctuary provides space for radical acceptance—acknowledging imperfections with compassion. This honest acceptance paradoxically strengthens rather than weakens their unity.",
+            "terminal_learning_objectives": {
+              "objective1": "Practice acknowledging reality without adding the suffering of resistance",
+              "objective2": "Distinguish between accepting circumstances and accepting harmful behavior",
+              "objective3": "Use compassionate self-reflection to transform denial into honest acknowledgment"
+            }
+          },
+          "book2": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Presence and Non-Resistance",
+            "core_teaching": "The present moment is all we ever have. Resistance to what is creates suffering—accepting the now doesn't mean passive inaction but rather clear-sighted engagement with reality as it actually exists. Most suffering comes from our mental resistance to what is rather than from circumstances themselves.",
+            "connection_to_acceptance": "Dagon's psychological assault worked by pulling the coalition into fearful thoughts about future catastrophes and guilty thoughts about past failures. Dante guides them back to present-moment awareness where they can accept current reality—their limitations exist now, yes, but so does their capacity to choose how to respond.",
+            "terminal_learning_objectives": {
+              "objective1": "Develop present-moment awareness that reduces suffering from mental resistance",
+              "objective2": "Practice distinguishing reality from mental stories about reality",
+              "objective3": "Use mindful presence to meet challenges without adding resistance's burden"
+            }
+          },
+          "book3": {
+            "title": "Falling Upward",
+            "author": "Richard Rohr",
+            "section_of_focus": "Wisdom Through Disillusionment",
+            "core_teaching": "True spiritual maturity often requires the death of our false self and perfect self-image. The 'fall' of encountering our limitations and failures isn't defeat—it's the necessary disillusionment that allows us to build on truth rather than illusion. We must fall to rise stronger, must accept imperfection to achieve genuine wisdom.",
+            "connection_to_acceptance": "The coalition's near-collapse represents Rohr's necessary 'fall'—their illusions of invincibility and flawless unity had to die. Only after accepting their imperfections in the truth sanctuary could they rebuild on honest foundations. The bonds of the awakened are forged through shared acceptance of limitation.",
+            "terminal_learning_objectives": {
+              "objective1": "Recognize disillusionment as gateway to deeper wisdom rather than failure",
+              "objective2": "Build identity and relationships on honest limitation rather than false perfection",
+              "objective3": "Use acceptance of imperfection as foundation for genuine growth"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "first_major_crisis": "Chapter 11 marks the coalition's first serious test. The organizational structure built in Chapter 10 faces overwhelming pressure that reveals internal fault lines. True strength must now prove itself.",
+          "dagon_psychological_evolution": "Dagon's sophisticated tactics adapt to counter their organizational strengths. Rather than direct force, he uses psychological warfare targeting individual insecurities—brilliant strategy against unified group.",
+          "mirror_chamber_symbolism": "Pressure chamber with mirrors reflecting inner darkness represents how external pressure forces confrontation with denied internal realities. Each sees their worst fears about themselves made visible—the fraud, the meaningless warrior, the inadequate ally.",
+          "coalition_near_collapse": "Public confrontation where private doubts become destructive. The fracturing represents realistic consequences when vulnerability is weaponized rather than honored. Nearly destroys everything they've built.",
+          "truth_sanctuary_transformation": "Sacred space free from external judgment where Dante guides acceptance. The gathering—each member offering honest acknowledgment of limitations—demonstrates that shared vulnerability creates deeper bonds than shared strength.",
+          "acceptance_paradox": "The profound lesson: accepting weakness makes them stronger, running from truth makes it more powerful. Unity based on honest imperfection proves more resilient than unity based on false bravado.",
+          "series_arc_foundation": "This acceptance principle becomes essential throughout the series—Francisco will need to accept increasingly overwhelming realities while maintaining purpose. The bonds formed through shared truth rather than illusion sustain the coalition through cosmic challenges ahead."
+        },
+        "mental_health_framework": {
+          "focus_area": "Acceptance, Mindfulness, and Reality Acknowledgment",
+          "acceptance_characteristics": [
+            "Acknowledging difficult truths without judgment or denial",
+            "Maintaining purpose and hope while accepting harsh realities",
+            "Distinguishing between controllable and uncontrollable factors",
+            "Practicing compassionate awareness of limitations and imperfections",
+            "Building connection through shared vulnerability and honesty",
+            "Flowing with circumstances while maintaining values and agency"
+          ],
+          "mindfulness_building_strategies": [
+            "Develop present-moment awareness that reduces mental resistance to reality",
+            "Practice acknowledging what is without adding suffering of denial or fight",
+            "Use mindful self-reflection to distinguish reality from fearful stories",
+            "Create safe spaces for honest acknowledgment free from judgment",
+            "Build communities where vulnerability strengthens rather than weakens bonds",
+            "Accept imperfections compassionately while maintaining constructive action",
+            "Recognize when resistance creates more suffering than circumstances themselves"
+          ],
+          "integration_indicators": [
+            "Shift from denial or resistance to compassionate acknowledgment",
+            "Unity deepened through shared truth rather than false confidence",
+            "Equanimity maintained under pressure through mindful presence",
+            "Wisdom gained from accepting rather than fighting limitations",
+            "Purpose sustained while acknowledging what cannot be controlled",
+            "Peace found through embracing reality rather than resisting it"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene IV: Allies, Mentors, and Helpers (Pinch Point - Theme Stated)",
+          "preliminary_beat": "Pinch / Theme Stated",
+          "save_the_cat_beat": "Theme Stated - Core values tested under pressure, central truths articulated through crisis",
+          "character_state": "Facing first major crisis that tests newly formed unity. External pressure forces confrontation with internal limitations. Must choose between denial that destroys or acceptance that strengthens.",
+          "pinch_moment": "The pressure pinches—Dagon's psychological assault creates crisis that nearly shatters coalition. Their expressed ideals face direct challenge. The crucible of tension reveals whether their bonds are genuine or fragile.",
+          "theme_articulation": "True strength comes from accepting reality rather than fighting it. Vulnerability shared honestly creates deeper bonds than strength performed falsely. Fighting truth creates more suffering than circumstances themselves."
+        },
+        "daily_prompt": "What uncomfortable truth did you accept today without resistance or judgment? How did honest acknowledgment of limitations strengthen rather than weaken your relationships or resolve?",
+        "story_hook": "In Laurasia's Chapter 11, a unified coalition faces its darkest test: Dagon's psychological assault forces each member to confront their deepest fears in mirrors reflecting their inner darkness. Francisco sees himself as a fraud, Roger sees meaningless legend, allies see inadequacy. Public confrontations nearly shatter everything—until Dante guides them to a truth sanctuary. 'Your resistance to these truths,' he teaches, 'causes more pain than the truths themselves. Accept what is, with compassion.' One by one, they gather: Roger admits his terror, La Signora reveals her vulnerability, allies acknowledge doubts. In radical honesty, they discover the paradox—that accepting imperfection makes them stronger than performing perfection. Sometimes, the Trionfi whisper, the bonds that survive truth are deeper than bonds that require illusion—that wisdom comes through the fall, that peace emerges when we stop fighting reality and start embracing it with courageous compassion.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Accept harsh realities without denial or excessive resistance",
+            "Maintain purpose while acknowledging limitations and imperfections",
+            "Build deeper connections through shared vulnerability and truth",
+            "Practice mindful presence under psychological pressure",
+            "Distinguish between what must be accepted and what must be changed",
+            "Transform acknowledgment of weakness into source of strength"
+          ],
+          "development_pathway": "From resistance to acceptance—learning to embrace difficult truths compassionately, acknowledge limitations without abandoning hope, build unity through shared honesty, maintain mindful presence under pressure, distinguish helpful acceptance from harmful resignation, and discover that fighting reality creates more suffering than reality itself",
+          "ai_integration_notes": "AI can identify patterns distinguishing healthy acceptance (compassionate acknowledgment enabling wise action) from unhealthy resignation (passive defeat avoiding necessary change). Machine learning can track balance between acceptance and agency. Ethical considerations include recognizing when 'acceptance' becomes excuse for tolerating the intolerable versus when resistance creates needless suffering."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 14, 1320 (acceptance crisis) - Truth Integration Point",
+          "universal_archetype": "The Truth-Bearer—one who accepts reality with courage, whose vulnerability strengthens bonds, whose acknowledgment of limitation enables wise action, whose peace comes through embracing rather than resisting what is",
+          "trionfi_connection": "Six of Swords reveals the passage from turmoil to peace through acceptance of difficult journey. Francisco's cards show that trying to avoid the crossing prolongs suffering—accepting the passage with presence enables arrival at calmer waters. The cards teach: resistance multiplies pain.",
+          "series_foundation": "This acceptance principle becomes essential as challenges escalate to cosmic scale. Francisco's capacity to accept overwhelming realities while maintaining purpose—learned here through community crisis—will be crucial for the impossible choices and devastating truths ahead. Bonds forged through shared truth prove unbreakable."
+        },
+        "implementation_context": {
+          "execution_focus": "Practicing acceptance of reality while maintaining constructive agency",
+          "discipline_required": "Consistent mindfulness distinguishing reality from mental resistance",
+          "perseverance_element": "Sustaining purpose and hope while accepting harsh limitations",
+          "collaboration_necessity": "Essential—deeper unity forged through shared vulnerability and honest acknowledgment"
+        }
     },
     "personality_profile_12": {
     },
