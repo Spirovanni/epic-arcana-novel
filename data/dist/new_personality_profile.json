@@ -699,13 +699,723 @@
             }
         },
         "personality_profile_4": {
-            
+            "canonical_id": "EA-004",
+            "unique_identifier": "STG 1.1.2.1",
+            "all_chapter": 4,
+            "novel_book": 1,
+            "chapter": "Chapter 4",
+            "chapter_title": "Explosive Awakening",
+            "type": "Specific Task Group",
+            "display_name": "Herald of Explosive Awakening",
+            "theme": "Explosive Creativity - Swift Decisive Action",
+            "family": "Order / Systems - Transformation",
+            "summary": "This personality embodies the journey from innocence to combat-forged awareness, drawn from Chapter 4 of the Human Framework. It represents the Page of Wands/Rings archetype—enthusiastic messenger, explosive creative energy, and swift decisive action under pressure. Like Francisco Petrarch when timeline bandits attack the Zanetti Train, this archetype navigates the shattering of innocence, the adrenaline-fueled first taste of real danger, and the explosive discovery of one's potential when forced to react instantly. This is the personality of those who transform from theory to practice in moments of crisis, whose academic knowledge explodes into intuitive action, whose trembling hands somehow wield cosmic power when circumstances demand it.",
+            "tarot_family": "Wands",
+            "tarot_card_item": "Page",
+            "tarot_new_family": "Rings",
+            "tarot_symbolism": "The Page of Wands represents enthusiastic beginnings, explosive creative energy, adventure-seeking, and the messenger who brings exciting news. It embodies youthful courage, quick intuitive action, and the willingness to leap before looking—explosive transformation through immediate decisive response rather than careful planning.",
+            "traits": {
+              "strengths": [
+                "explosive creative responses under pressure",
+                "swift intuitive decision-making in crisis",
+                "courage that emerges when danger strikes",
+                "ability to transform theory into practice instantly",
+                "resourceful adaptation to unprecedented challenges",
+                "quick thinking that bypasses overthinking",
+                "embodies explosive transformation—sudden, forceful, catalytic change"
+              ],
+              "shadow": [
+                "loss of innocence through violent exposure",
+                "overwhelm when academic worldview shatters",
+                "potential for reckless impulsive action",
+                "terror mixed with determination creates instability",
+                "difficulty processing rapid transformation",
+                "trauma from forced maturation under fire"
+              ],
+              "growth_focus": [
+                "integrate explosive experiences without being destroyed",
+                "balance swift action with strategic thinking",
+                "process loss of innocence with mentor support",
+                "channel adrenaline into focused power",
+                "develop controlled explosiveness rather than chaos",
+                "transform terror into sustainable courage"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Crown of the Ancient Ones",
+              "chapter_theme": "Explosive Creativity",
+              "fiction_chapter_context": "Hours into journey on Zanetti Train, February 14, 1320 (dawn). Timeline bandits attack. Francisco's academic worldview shatters as he witnesses violence, uses Trionfi cards defensively for first time. Trembling hands wield cosmic power. Train weaves between realities. Introduction to Roger de Flor and Catalan Company brotherhood."
+            },
+            "enneagram_link": {
+              "family_number": 7,
+              "note": "Aligned with Enneagram Type 7 (The Enthusiast) in crisis mode—quick thinking, adventure-seeking, reframing danger as exciting challenge. Type 8 (Challenger) wing emerges under attack, providing explosive decisive force. Integration toward Type 5's strategic thinking prevents pure impulsiveness."
+            },
+            "color_alignment": {
+              "hue_index": 45,
+              "name": "Grandis",
+              "hsl": "45,82%,63%",
+              "rgb_hex": "#EECC55",
+              "color_symbolism": "Grandis (golden yellow) represents the explosive dawn—sudden brilliant light that transforms darkness instantly. It's the flash of lightning, the burst of creative fire, the golden moment when potential detonates into kinetic reality. Vibrant, energetic, impossible to ignore."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.765,
+                "stability": 0.485,
+                "empathy": 0.515,
+                "openness": 0.865,
+                "orderliness": 0.385,
+                "novelty_seeking": 0.915,
+                "abstract_reasoning": 0.615,
+                "emotional_intensity": 0.815,
+                "social_dominance": 0.485,
+                "cooperativeness": 0.665,
+                "risk_tolerance": 0.865,
+                "conscientiousness": 0.485,
+                "adaptability": 0.915,
+                "imagination": 0.815
+              },
+              "match_weights": {
+                "novelty_seeking": 0.9,
+                "adaptability": 0.85,
+                "risk_tolerance": 0.8,
+                "openness": 0.75,
+                "emotional_intensity": 0.7
+              },
+              "threshold": 0.7,
+              "top_signal_items": [
+                "Q016",
+                "Q017",
+                "Q018"
+              ],
+              "dimension_rationale": {
+                "very_high_novelty_seeking": "Explosive attraction to adventure, danger, unprecedented experiences",
+                "very_high_adaptability": "Instant transformation from theory to practice under pressure",
+                "very_high_risk_tolerance": "Willing to leap into danger despite terror",
+                "high_openness": "Complete receptivity to shattering worldview and new realities",
+                "high_emotional_intensity": "Adrenaline-fueled terror mixed with desperate determination",
+                "lower_stability": "Academic worldview shattered by violence creates disequilibrium"
+              }
+            },
+            "signals_map": {
+              "Q016": {
+                "dimension": "novelty_seeking",
+                "polarity": 1.0,
+                "description": "Explosive attraction to adventure and unprecedented challenges",
+                "assessment_question": "I'm drawn to situations that shatter my comfortable worldview and force me to discover what I'm capable of under extreme pressure"
+              },
+              "Q017": {
+                "dimension": "adaptability",
+                "polarity": 0.95,
+                "description": "Instant transformation of theoretical knowledge into practical action",
+                "assessment_question": "When crisis strikes, I can instantly transform what I know in theory into explosive decisive action, even if my hands are trembling"
+              },
+              "Q018": {
+                "dimension": "risk_tolerance",
+                "polarity": 0.9,
+                "description": "Courage to act despite terror when danger demands response",
+                "assessment_question": "I find myself capable of explosive courageous action in moments of danger, even when I'm simultaneously terrified"
+              },
+              "Q019": {
+                "dimension": "openness",
+                "polarity": 0.85,
+                "description": "Willingness to have entire worldview shattered by experience",
+                "assessment_question": "I'm open to having my comfortable assumptions violently disrupted if that's what growth and reality demand"
+              },
+              "Q020": {
+                "dimension": "emotional_intensity",
+                "polarity": 0.8,
+                "description": "Powerful adrenaline-fueled emotional states during crisis",
+                "assessment_question": "I experience intense emotional energy during crisis—terror, determination, exhilaration—that fuels my explosive responses"
+              }
+            },
+            "philosophical_influences": {
+              "book1": {
+                "title": "The Art of War",
+                "author": "Sun Tzu",
+                "section_of_focus": "Tactical Dispositions - Speed as Weapon",
+                "core_teaching": "Rapidity is the essence of war. Take advantage of the enemy's unreadiness, make your way by unexpected routes, and attack unguarded spots. Speed, decisiveness, and explosive action win battles.",
+                "connection_to_explosiveness": "Francisco's trembling hands wielding Trionfi cards against timeline bandits embody Sun Tzu's principle—his very inexperience becomes an advantage because his responses are unpredictable, intuitive, explosive rather than calculated. The train weaving between realities mirrors tactical flexibility.",
+                "terminal_learning_objectives": {
+                  "objective1": "Recognize how swift decisive action can overcome superior force",
+                  "objective2": "Understand explosive creativity as strategic advantage",
+                  "objective3": "Practice transforming disadvantage into surprise tactical explosiveness"
+                }
+              },
+              "book2": {
+                "title": "Originals: How Non-Conformists Move the World",
+                "author": "Adam Grant",
+                "section_of_focus": "Speaking Up and Taking Action",
+                "core_teaching": "Original thinkers don't wait for perfect conditions—they take explosive action when opportunity strikes. Creative people seize moments and execute swiftly when conventional thinkers are still planning.",
+                "connection_to_explosiveness": "Grant's research shows breakthrough innovation often comes from explosive decisive moments, not careful planning. Francisco's forced immediate action with Trionfi cards mirrors how unconventional perspectives ignite sudden progress when danger catalyzes transformation.",
+                "terminal_learning_objectives": {
+                  "objective1": "Identify factors enabling explosive unconventional action",
+                  "objective2": "Apply creative risk-taking to catalyze rapid transformation",
+                  "objective3": "Execute bold strategies swiftly when circumstances demand"
+                }
+              },
+              "book3": {
+                "title": "Blink: The Power of Thinking Without Thinking",
+                "author": "Malcolm Gladwell",
+                "section_of_focus": "Thin-Slicing and Rapid Cognition",
+                "core_teaching": "In high-pressure situations, our unconscious mind can make rapid, accurate judgments in split seconds—decisions that are often better than those made through deliberate analysis. Trust the explosive instant.",
+                "connection_to_explosiveness": "Francisco's academic training would suggest careful analysis, but the bandit attack forces thin-slicing—his unconscious expertise with cards manifests as explosive intuitive action. Gladwell validates trusting these rapid insights when danger strikes, exactly what Francisco must do.",
+                "terminal_learning_objectives": {
+                  "objective1": "Trust rapid intuitive responses in crisis situations",
+                  "objective2": "Recognize when explosive action outperforms deliberation",
+                  "objective3": "Develop capacity for accurate thin-slice decision-making"
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "shattering_innocence": "Hours into journey, timeline bandits attack Zanetti Train. Francisco's comfortable academic worldview violently disrupted. Theory must become practice instantly or die.",
+              "explosive_first_combat": "Trembling hands hold Trionfi cards. Train weaves between realities. Adrenaline-fueled terror mixed with desperate determination. Must use cosmic power defensively while hardened mercenaries protect him.",
+              "transition_symbolism": "Attacking bandits = chaos threatening all timelines. Trembling hands = theory to practice transition. Train's reality-acceleration = Francisco's forced rapid maturation under fire.",
+              "roger_de_flor_introduction": "After combat, formal meeting with legendary Catalan Company leader. Wine shared in dining car. Battle-scarred hands on cup = experience guiding innocence. Brotherhood forged in countless battles.",
+              "first_pangaea_glimpse": "Evening—borders of mystical realm. Landscapes shifting between realities. Mountains floating mid-air. Trees growing backward through time. Trionfi cards resonate powerfully with magical energies.",
+              "explosive_transformation": "From isolated academic to combat-tested adventurer in hours. Loss of innocence through violence. Discovery of explosive potential under pressure. First taste of true danger and true power.",
+              "series_arc_connection": "This explosive awakening establishes Francisco's pattern—growth through crisis, intuitive action under pressure, transformation catalyzed by danger. His quick-thinking explosiveness will be tested throughout all 9 books."
+            },
+            "mental_health_framework": {
+              "focus_area": "Explosive Transformation and Rapid Adaptation",
+              "crisis_characteristics": [
+                "Violent shattering of comfortable worldview",
+                "Forced maturation through exposure to real danger",
+                "Adrenaline-fueled responses bypassing rational thought",
+                "Loss of innocence through combat experience",
+                "Terror and determination existing simultaneously",
+                "Rapid transition from safety to life-threatening peril"
+              ],
+              "resilience_building_strategies": [
+                "Channel explosive energy into focused action",
+                "Trust intuitive responses when time prohibits analysis",
+                "Accept mentor protection while discovering own power",
+                "Process traumatic experiences with supportive community",
+                "Integrate loss of innocence without losing core values",
+                "Transform fear into explosive decisive courage",
+                "Balance swift action with strategic learning"
+              ],
+              "transformation_indicators": [
+                "Ability to act decisively despite overwhelming fear",
+                "Swift adaptation from theory to practical application",
+                "Discovery of unexpected capabilities under pressure",
+                "Integration of combat experience without dissociation",
+                "Maintained connection to values despite violence",
+                "Growing confidence in explosive intuitive responses"
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Scene II: The Call to Adventure (Explosive Response)",
+              "preliminary_beat": "Set-up leading to Immediate Reaction",
+              "save_the_cat_beat": "Catalyst - The moment that shatters the ordinary world",
+              "character_state": "Academic innocence violently shattered. First combat forces explosive use of cosmic power. Trembling hands discover they can wield lightning. Meeting legendary warriors who will protect and guide.",
+              "immediate_reaction": "No time for careful thought—timeline bandits attack and Francisco must explosively react or die. Theory becomes practice in seconds. Academic worldview detonates into combat awareness.",
+              "explosive_awakening": "This isn't gentle growth—it's violent transformation. Francisco's comfortable assumptions burned away by necessity. Potential detonates into kinetic power through crisis catalyst."
+            },
+            "daily_prompt": "When did you have to explosively transform theory into practice today? What unexpected capability did crisis reveal in you when there was no time to think, only act?",
+            "story_hook": "In Laurasia's Chapter 4, a young scholar rides a train between realities when bandits attack from fractured timelines. His trembling hands hold cards of cosmic power—he's never used them in combat, only studied them in safe libraries. But violence doesn't wait for preparation. In explosive seconds, his academic knowledge detonates into wild intuitive action. Sometimes, the Trionfi whisper, transformation isn't gentle evolution—it's the violent shattering of who you were, forcing you to discover who you might become when there's no time left for anything but explosive decisive courage.",
+            "assessment_application": {
+              "identifies_individuals_who": [
+                "Transform rapidly under extreme pressure",
+                "Make explosive intuitive decisions in crisis",
+                "Discover unexpected capabilities when danger strikes",
+                "Channel terror into decisive action",
+                "Adapt swiftly from theory to practice",
+                "Seek adventure that shatters comfortable worldviews"
+              ],
+              "development_pathway": "From trembling academic to combat-capable adventurer—learning to trust explosive intuitive responses, channel adrenaline into focus, integrate violent transformation without trauma, balance swift action with strategic wisdom, and transform forced maturation into sustainable growth",
+              "ai_integration_notes": "AI can identify patterns of explosive creativity and rapid adaptation under pressure. Machine learning can distinguish healthy quick-thinking from reckless impulsiveness. Ethical considerations include recognizing when explosive experiences cause trauma requiring professional support, not just encouraging risk-taking."
+            },
+            "cosmic_significance": {
+              "timeline_position": "February 14, 1320 (dawn-evening) - Prime Timeline transitioning to Pangaea",
+              "universal_archetype": "The Explosive Messenger—one whose innocence shatters into power through crisis, whose theoretical knowledge detonates into practical mastery when circumstances demand instant transformation",
+              "trionfi_connection": "Cards respond to explosive necessity, not careful study. Francisco's defensive use during bandit attack shows cosmic power activates through urgent need, not academic understanding. Trembling hands channel lightning.",
+              "series_foundation": "Explosive transformation pattern established—Francisco grows through violent catalysts, not gentle lessons. His quick decisive action under pressure becomes signature strength throughout 9 books. Crisis reveals power."
+            }
         },
         "personality_profile_5": {
-            
+            "canonical_id": "EA-005",
+            "unique_identifier": "STG 1.1.2.2",
+            "all_chapter": 5,
+            "novel_book": 1,
+            "chapter": "Chapter 5",
+            "chapter_title": "Ownership Through Ego Death",
+            "type": "Specific Task Group",
+            "display_name": "Architect of Humbled Ownership",
+            "theme": "Ownership - Taking Responsibility After Manipulation",
+            "family": "Order / Systems - Transformation",
+            "summary": "This personality embodies the journey from intellectual pride to humbled accountability, drawn from Chapter 5 of the Human Framework. It represents the crucible moment when ego must die to birth genuine ownership—when manipulation's consequences force brutal self-reflection, when fragmented identity in mirrors demands integration, when isolation chambers become spaces of necessary catharsis. Like Francisco Petrarch confronting Dagon's complete outmaneuvering and discovering La Signora del Gioco as true partner, this archetype navigates the weight of recognizing one's complicity in disaster, the crushing guilt of far-reaching consequences, and the paradoxical strength found in admitting vulnerability and accepting help. This is the personality of those who must own catastrophic mistakes before moving forward, whose pride becomes the very trap that teaches humility.",
+            "tarot_family": "Major Arcana",
+            "tarot_card_item": "The Tower (implied)",
+            "tarot_symbolism": "Though not explicitly stated, Chapter 5 embodies The Tower moment—sudden upheaval, ego death, structures of pride collapsing. Francisco's intellectual arrogance crashes down, forcing him to confront harsh truths in mirrors that show his manipulated foolishness. Ownership emerges from ruins.",
+            "traits": {
+              "strengths": [
+                "capacity for brutal self-honesty",
+                "willingness to take full responsibility for consequences",
+                "intellectual humility learned through failure",
+                "openness to partnership after isolation",
+                "transformation of pride into accountability",
+                "strategic thinking redirected from ego to mission",
+                "embodies ownership—standing behind decisions despite devastating outcomes"
+              ],
+              "shadow": [
+                "intellectual arrogance as vulnerability to manipulation",
+                "pride that isolates and makes one exploitable",
+                "crushing guilt that paralyzes action",
+                "fragmented identity through self-deception",
+                "tendency to believe own brilliance over allies' warnings",
+                "ego-driven choices with catastrophic ripple effects"
+              ],
+              "growth_focus": [
+                "accept responsibility without self-destruction",
+                "transform guilt into accountable action",
+                "embrace partnership over isolated genius",
+                "recognize manipulation patterns to avoid repetition",
+                "build humility while maintaining competence",
+                "integrate fragmented selves through honest reflection"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Crown of the Ancient Ones",
+              "chapter_theme": "Ownership",
+              "fiction_chapter_context": "Francisco alone in isolation chamber responding to emotions, confronting mirrors showing idealistic past, manipulated present, catastrophic future. Realizes Dagon completely outmaneuvered him. Ego death. Garden outside time where Giovanna reveals herself as La Signora del Gioco. Partnership formed through shared responsibility. February 14, 1320 (dawn-morning)."
+            },
+            "enneagram_link": {
+              "family_number": 3,
+              "note": "Aligned with Enneagram Type 3 (The Achiever) in its unhealthy state—image-conscious, manipulable through pride, devastated when brilliance proves insufficient. Journey toward healthy Type 3 integration: owning failures publicly, accepting partnership, building authentic competence over polished image. Type 6 (Loyalist) growth brings trust in allies."
+            },
+            "color_alignment": {
+              "hue_index": 4,
+              "name": "Deep Red",
+              "hsl": "4,62%,46%",
+              "rgb_hex": "#be362d",
+              "color_symbolism": "Deep Red represents the blood of ego death—the painful necessary wounding of pride that allows true strength to emerge. It's raw, visceral, the color of consequences made visible. Both warning and transformation, destruction and rebirth through responsibility accepted."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.585,
+                "stability": 0.385,
+                "empathy": 0.665,
+                "openness": 0.715,
+                "orderliness": 0.515,
+                "novelty_seeking": 0.485,
+                "abstract_reasoning": 0.815,
+                "emotional_intensity": 0.915,
+                "social_dominance": 0.415,
+                "cooperativeness": 0.565,
+                "risk_tolerance": 0.515,
+                "conscientiousness": 0.715,
+                "adaptability": 0.615,
+                "imagination": 0.665
+              },
+              "match_weights": {
+                "emotional_intensity": 0.9,
+                "abstract_reasoning": 0.8,
+                "conscientiousness": 0.75,
+                "openness": 0.7,
+                "cooperativeness": 0.65
+              },
+              "threshold": 0.7,
+              "top_signal_items": [
+                "Q021",
+                "Q022",
+                "Q023"
+              ],
+              "dimension_rationale": {
+                "very_high_emotional_intensity": "Crushing guilt, ego death, overwhelming self-awareness in crisis",
+                "high_abstract_reasoning": "Intellectual capacity that both enabled pride and enables understanding of manipulation",
+                "high_conscientiousness": "Taking full responsibility for catastrophic consequences",
+                "high_openness": "Willingness to shatter self-image through honest reflection",
+                "moderate_cooperativeness": "Growing from isolated genius to accepting partnership",
+                "lower_agency": "Manipulation stripped away sense of control—rebuilding through ownership",
+                "lower_stability": "Fragmented identity, psychological landscape shifting with emotions"
+              }
+            },
+            "signals_map": {
+              "Q021": {
+                "dimension": "emotional_intensity",
+                "polarity": 1.0,
+                "description": "Overwhelming guilt and self-awareness during ego death",
+                "assessment_question": "I have experienced moments of crushing self-awareness where I had to confront that my pride made me vulnerable to manipulation and my choices had catastrophic consequences"
+              },
+              "Q022": {
+                "dimension": "abstract_reasoning",
+                "polarity": 0.95,
+                "description": "Intellectual capacity to understand complex manipulation patterns",
+                "assessment_question": "I can analyze how my own intelligence and confidence were weaponized against me, understanding the sophisticated psychological strategies that exploited my ego"
+              },
+              "Q023": {
+                "dimension": "conscientiousness",
+                "polarity": 0.9,
+                "description": "Full ownership of actions and consequences despite pain",
+                "assessment_question": "When I realize I've been outmaneuvered and my decisions harmed others, I take complete responsibility rather than making excuses or deflecting blame"
+              },
+              "Q024": {
+                "dimension": "openness",
+                "polarity": 0.85,
+                "description": "Willingness to shatter self-image through brutal honesty",
+                "assessment_question": "I'm willing to look in metaphorical mirrors that show me as the manipulated fool I've been, even when it destroys my self-concept"
+              },
+              "Q025": {
+                "dimension": "cooperativeness",
+                "polarity": 0.75,
+                "description": "Evolution from isolation to partnership through humility",
+                "assessment_question": "After experiencing the limits of isolated brilliance, I've learned to accept help and form genuine partnerships where responsibility is shared"
+              }
+            },
+            "philosophical_influences": {
+              "book1": {
+                "title": "Extreme Ownership",
+                "author": "Jocko Willink and Leif Babin",
+                "section_of_focus": "Leadership and Accountability",
+                "core_teaching": "Accept full responsibility for everything within your domain. Leaders who claim responsibility enable teams to address challenges decisively. No excuses, no blame—only ownership that drives solutions.",
+                "connection_to_ownership": "Francisco's moment in the isolation chamber mirrors extreme ownership's core principle—he must accept that his intellectual arrogance and ego made him vulnerable, his choices unleashed consequences, his pride isolated him from allies' wisdom. Only through complete ownership can he rebuild.",
+                "terminal_learning_objectives": {
+                  "objective1": "Practice unwavering accountability even when manipulated by others",
+                  "objective2": "Transform guilt into solution-focused action through responsibility",
+                  "objective3": "Build trust through transparent ownership of catastrophic mistakes"
+                }
+              },
+              "book2": {
+                "title": "Leaders Eat Last",
+                "author": "Simon Sinek",
+                "section_of_focus": "Leadership and Empathy",
+                "core_teaching": "Leaders prioritize team welfare, creating protective circles through dedication and empathy. True leadership means serving others first, building cultures of mutual respect and accountability through vulnerability.",
+                "connection_to_ownership": "La Signora del Gioco's revelation teaches Francisco that leadership through partnership—not isolated genius—creates sustainable accountability. Sinek's empathetic leadership model shows why Francisco's ego-driven approach failed while shared responsibility succeeds.",
+                "terminal_learning_objectives": {
+                  "objective1": "Understand how empathy strengthens rather than weakens accountability",
+                  "objective2": "Build supportive frameworks where ownership is shared, not isolated",
+                  "objective3": "Lead through vulnerability and partnership, not prideful independence"
+                }
+              },
+              "book3": {
+                "title": "The 7 Habits of Highly Effective People",
+                "author": "Stephen R. Covey",
+                "section_of_focus": "Be Proactive - Personal Responsibility",
+                "core_teaching": "Proactive responsibility means choosing responses to circumstances rather than reacting. Between stimulus and response lies choice. Ownership extends beyond acknowledging error to purposeful strategic action toward improvement.",
+                "connection_to_ownership": "Covey's proactive responsibility transforms Francisco's paralyzing guilt into accountable forward motion. His mirrors show past/present/future—Covey teaches using that awareness to choose constructive response rather than remaining trapped in self-recrimination.",
+                "terminal_learning_objectives": {
+                  "objective1": "Transform awareness of mistakes into proactive strategic action",
+                  "objective2": "Choose accountability-driven responses rather than guilt-paralyzed reactions",
+                  "objective3": "Build habits that reinforce ownership and prevent future manipulation"
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "isolation_chamber_ego_death": "Francisco alone in space responding to emotions. Mirrors showing fragmented identity: idealistic student past, manipulated fool present, catastrophic future. Must face that Dagon completely outmaneuvered him.",
+              "intellectual_pride_collapse": "His greatest strength—brilliant mind—became his vulnerability. Arrogance made him exploitable. Pride isolated him from allies' wisdom. Recognition crushes but also liberates.",
+              "mirror_symbolism": "Fragmented reflections show cost of choices, weight of responsibility, need for honest self-reflection. Isolation chamber as manifestation of how pride traps us in delusion.",
+              "garden_revelation": "Transported to garden outside time where flowers bloom/wither in moments. Giovanna reveals herself as La Signora del Gioco—his true partner and equal who's been watching.",
+              "partnership_through_responsibility": "She shares her own struggles with power and responsibility. Together they formulate plan—not through his isolated genius but shared accountability and combined wisdom.",
+              "ownership_becomes_empowerment": "Francisco admits mistakes, takes full responsibility. Realizes true strength comes from accepting help, working with others. Accountability paradoxically restores rather than diminishes power.",
+              "series_arc_connection": "Ego death here establishes foundation for eventual choice to give up individual greatness for humanity's benefit in Book 9. Partnership with La Signora becomes central to series resolution."
+            },
+            "mental_health_framework": {
+              "focus_area": "Ownership, Accountability, and Ego Death Recovery",
+              "crisis_characteristics": [
+                "Crushing guilt over manipulated choices and consequences",
+                "Fragmented identity requiring integration",
+                "Intellectual arrogance as psychological vulnerability",
+                "Isolation through pride creating exploitable weaknesses",
+                "Paralysis from overwhelming self-awareness",
+                "Reality that brilliance alone proves insufficient"
+              ],
+              "resilience_building_strategies": [
+                "Take full responsibility without self-destruction",
+                "Transform guilt into accountable forward action",
+                "Accept partnership and shared burden as strength",
+                "Recognize manipulation patterns to build immunity",
+                "Integrate fragmented selves through honest mirrors",
+                "Build authentic humility while maintaining competence",
+                "Use catastrophic failures as foundation for wisdom"
+              ],
+              "transformation_indicators": [
+                "Shift from prideful isolation to humble partnership",
+                "Ownership replacing blame or denial",
+                "Proactive accountability-driven choices",
+                "Integration of past/present/future selves",
+                "Empathy and cooperation growing from humility",
+                "Strategic thinking serving mission rather than ego"
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Scene II: The Call to Adventure (Catalyst - Consequence Recognition)",
+              "preliminary_beat": "Catalyst / Ownership Crisis",
+              "save_the_cat_beat": "Catalyst - The event that disrupts the ordinary world and forces change",
+              "character_state": "Rock bottom. Completely outmaneuvered. Ego shattered. Must take ownership of catastrophic consequences before moving forward. Partnership discovered through humility.",
+              "catalyst_moment": "Recognition that intellectual pride made him Dagon's perfect tool. The very brilliance he relied on became his downfall. Only through ego death can genuine ownership emerge.",
+              "ownership_awakening": "This isn't about excuse-making or gentle growth—it's brutal confrontation with personal complicity in disaster. Francisco must own his role completely before La Signora can reveal the path forward through partnership."
+            },
+            "daily_prompt": "What consequence of your choices did you fully own today, even when it hurt your pride? When did you transform guilt into accountable action by accepting help rather than isolating in shame?",
+            "story_hook": "In Laurasia's Chapter 5, a brilliant young hero discovers he's been a fool—completely outmaneuvered by ancient divine intelligence that weaponized his own arrogance. Alone in chambers filled with mirrors showing his manipulated stupidity, Francisco must face the weight of catastrophic consequences. But in a garden outside time, where flowers live and die in moments, a mysterious woman reveals herself as his true equal: 'Your brilliance isolated you,' La Signora whispers. 'But ownership shared is power regained.' Sometimes, the Trionfi murmur, we must lose everything we thought made us strong—our pride, our solo genius, our carefully constructed image—before discovering that responsibility accepted and burden shared create strength our ego never could.",
+            "assessment_application": {
+              "identifies_individuals_who": [
+                "Experience ego death through recognition of manipulation",
+                "Take full responsibility for catastrophic consequences",
+                "Transform intellectual pride into genuine humility",
+                "Discover partnership after isolation proves insufficient",
+                "Own mistakes completely before moving forward",
+                "Use guilt as catalyst for accountability rather than paralysis"
+              ],
+              "development_pathway": "From prideful isolation to humble partnership—learning to own consequences fully, transform guilt into proactive responsibility, accept help as strength not weakness, recognize manipulation patterns, integrate fragmented identity through honesty, and build authentic accountability through shared burden",
+              "ai_integration_notes": "AI can identify patterns of ego-driven decision-making and manipulation vulnerability. Machine learning can distinguish healthy accountability from self-destructive guilt spirals. Ethical considerations include recognizing when professional support is needed for processing traumatic realizations about self-deception."
+            },
+            "cosmic_significance": {
+              "timeline_position": "February 14, 1320 (dawn-morning) - Timeline Fracture/Convergence Point",
+              "universal_archetype": "The Humbled Genius—one whose greatest strength becomes vulnerability, whose isolation through pride must shatter before genuine partnership can form, whose ownership of catastrophic mistakes paradoxically restores power",
+              "trionfi_connection": "Cards reflect consequences honestly, showing Francisco his role in disaster. La Signora del Gioco as Lady of the Game reveals that true mastery requires partnership, not solo brilliance. Ownership transforms cards from tools of ego to instruments of shared purpose.",
+              "series_foundation": "This humility establishes foundation for Book 9's ultimate choice—giving up individual greatness for collective benefit. Partnership with La Signora becomes central to timeline restoration and series resolution."
+            },
+            "implementation_context": {
+              "execution_focus": "Translating acknowledgment of failure into concrete accountable action",
+              "discipline_required": "Consistent responsibility-taking even when pride resists",
+              "perseverance_element": "Continuing forward despite crushing awareness of past mistakes",
+              "collaboration_necessity": "Accepting that genuine ownership often means shared burden through partnership"
+            }
         },
         "personality_profile_6": {
-            
+            "personality_profile_6": {
+                "canonical_id": "EA-006",
+                "unique_identifier": "STG 1.1.2.3",
+                "all_chapter": 6,
+                "novel_book": 1,
+                "chapter": "Chapter 6",
+                "chapter_title": "Dominion Through Decisive Action",
+                "type": "Specific Task Group",
+                "display_name": "Sovereign of Accountable Action",
+                "theme": "Dominion - Taking Command Through Ownership",
+                "family": "Order / Systems - Execution",
+                "summary": "This personality embodies the transition from acknowledging consequences to seizing command through decisive action, drawn from Chapter 6 of the Human Framework. It represents the pivotal moment when ownership transforms into dominion—when the crushing weight of responsibility becomes the foundation for taking charge, when the call to adventure demands not just acceptance but active leadership, when post-ego-death humility must evolve into confident execution. Like Francisco Petrarch emerging from his isolation chamber and confronting the catalyst moment that demands he step forward, this archetype navigates the tension between newfound humility and the urgent need to act decisively. This is the personality of those who transform accountability into authority, whose ownership of past mistakes empowers rather than paralyzes, whose recognition of consequences fuels proactive command.",
+                "tarot_family": "Swords",
+                "tarot_card_item": "Eight of Swords",
+                "tarot_symbolism": "The Eight of Swords depicts a figure bound and blindfolded, surrounded by swords—trapped by self-imposed limitations yet free to escape if they choose. Chapter 6 embodies this moment of breaking free from paralysis through decisive action. Francisco must step beyond the binding guilt of Chapter 5 and claim his power to act. The swords represent both the mental barriers and the cutting clarity needed for dominion.",
+                "traits": {
+                  "strengths": [
+                    "transforms ownership into decisive leadership",
+                    "balances humility with confident action",
+                    "executes with accountability and transparency",
+                    "takes command while acknowledging limitations",
+                    "converts lessons from failure into strategic advantage",
+                    "embodies dominion—standing behind choices while actively shaping outcomes",
+                    "bridges reflection and execution with integrity"
+                  ],
+                  "shadow": [
+                    "overcompensation through excessive control after past manipulation",
+                    "rushing to action without full reflection to avoid guilt",
+                    "dominance masking unresolved vulnerability",
+                    "confusing authority with redemption",
+                    "taking charge without adequate consultation",
+                    "using decisiveness to avoid processing ego wounds"
+                  ],
+                  "growth_focus": [
+                    "balance decisive action with continued humility",
+                    "execute with confidence while remaining open to feedback",
+                    "transform ownership into empowering leadership",
+                    "integrate past mistakes into wise command",
+                    "maintain accountability while exercising authority",
+                    "act boldly without reverting to ego-driven choices"
+                  ]
+                },
+                "book_association": {
+                  "nonfiction_series": "The Human Framework",
+                  "fiction_series": "Laurasia - Crown of the Ancient Ones",
+                  "chapter_theme": "Dominion",
+                  "fiction_chapter_context": "Francisco emerges from isolation chamber post-ego-death, facing the catalyst moment of the Call to Adventure. Must transition from acknowledging manipulation to taking decisive action. Partnership with La Signora established but now requires execution. Pages 76-90 depict urgency beckoning as Francisco recognizes the pivotal moment demanding he step forward into leadership. February 14-15, 1320 (transition period)."
+                },
+                "enneagram_link": {
+                  "family_number": 1,
+                  "note": "Aligned with Enneagram Type 1 (The Reformer) in healthy integration—principled action, responsible leadership, executing with integrity. Growth toward Type 7 integration brings visionary confidence and strategic flexibility. Type 8 influence provides assertive command without losing accountability."
+                },
+                "color_alignment": {
+                  "hue_index": 5,
+                  "name": "Coral Pink",
+                  "hsl": "5,62%,74%",
+                  "rgb_hex": "#e69a94",
+                  "color_symbolism": "Coral Pink represents the dawn of empowered action—the warmth of accountability meeting the clarity of decisive command. It's the color of healed wounds transformed into strength, vulnerability balanced with authority. Both gentle and powerful, it embodies dominion exercised with integrity rather than ego."
+                },
+                "scoring_model": {
+                  "dimensions": {
+                    "agency": 0.775,
+                    "stability": 0.715,
+                    "empathy": 0.585,
+                    "openness": 0.615,
+                    "orderliness": 0.685,
+                    "novelty_seeking": 0.515,
+                    "abstract_reasoning": 0.715,
+                    "emotional_intensity": 0.615,
+                    "social_dominance": 0.715,
+                    "cooperativeness": 0.735,
+                    "risk_tolerance": 0.585,
+                    "conscientiousness": 0.815,
+                    "adaptability": 0.665,
+                    "imagination": 0.615
+                  },
+                  "match_weights": {
+                    "agency": 0.9,
+                    "conscientiousness": 0.85,
+                    "social_dominance": 0.75,
+                    "stability": 0.7,
+                    "cooperativeness": 0.65
+                  },
+                  "threshold": 0.7,
+                  "top_signal_items": [
+                    "Q026",
+                    "Q027",
+                    "Q028"
+                  ],
+                  "dimension_rationale": {
+                    "very_high_agency": "Decisive action-taking, seizing command of situations through responsible leadership",
+                    "very_high_conscientiousness": "Maintaining accountability while executing, standing behind decisions",
+                    "high_social_dominance": "Taking charge appropriately, exerting influence through earned authority",
+                    "high_stability": "Grounded confidence post-ego-death, not paralyzed by past mistakes",
+                    "high_cooperativeness": "Partnership-oriented command, leading without isolation",
+                    "moderate_emotional_intensity": "Balanced emotional engagement—neither overwhelmed nor detached",
+                    "moderate_abstract_reasoning": "Strategic thinking focused on practical execution rather than pure theory"
+                  }
+                },
+                "signals_map": {
+                  "Q026": {
+                    "dimension": "agency",
+                    "polarity": 1.0,
+                    "description": "Taking decisive action after recognizing consequences",
+                    "assessment_question": "When I recognize I've made mistakes that require correction, I immediately take charge of the situation and execute a plan to address the consequences rather than remaining stuck in reflection"
+                  },
+                  "Q027": {
+                    "dimension": "conscientiousness",
+                    "polarity": 0.95,
+                    "description": "Maintaining accountability while exercising authority",
+                    "assessment_question": "I can exercise leadership and make decisive choices while maintaining full transparency about my reasoning and accepting responsibility for outcomes"
+                  },
+                  "Q028": {
+                    "dimension": "social_dominance",
+                    "polarity": 0.9,
+                    "description": "Commanding with earned authority, not ego",
+                    "assessment_question": "I step into leadership roles by taking charge of situations where my experience (including past failures) gives me valuable insight, leading through competence rather than pride"
+                  },
+                  "Q029": {
+                    "dimension": "stability",
+                    "polarity": 0.85,
+                    "description": "Grounded confidence emerging from humility",
+                    "assessment_question": "My past mistakes have made me more confident rather than less, because I understand both my capabilities and limitations and can act decisively within those parameters"
+                  },
+                  "Q030": {
+                    "dimension": "cooperativeness",
+                    "polarity": 0.8,
+                    "description": "Leading through partnership rather than isolation",
+                    "assessment_question": "When I take command of situations, I actively engage partners and allies in execution rather than reverting to isolated decision-making"
+                  }
+                },
+                "philosophical_influences": {
+                  "book1": {
+                    "title": "Extreme Ownership",
+                    "author": "Jocko Willink and Leif Babin",
+                    "section_of_focus": "Decisive Engagement - Leading from the Front",
+                    "core_teaching": "Leaders must not only accept responsibility but actively drive solutions through decisive action. Ownership means taking charge of execution, making tough calls, and leading teams forward through example and clear command.",
+                    "connection_to_dominion": "Francisco's transition from Chapter 5's crushing accountability to Chapter 6's decisive leadership mirrors the Extreme Ownership principle that responsibility must translate into action. Dominion means standing behind choices while actively executing solutions, not just acknowledging mistakes.",
+                    "terminal_learning_objectives": {
+                      "objective1": "Transform ownership into proactive leadership through decisive action",
+                      "objective2": "Execute with clarity while maintaining accountability throughout",
+                      "objective3": "Lead teams forward by taking command of situations requiring resolution"
+                    }
+                  },
+                  "book2": {
+                    "title": "The 48 Laws of Power",
+                    "author": "Robert Greene",
+                    "section_of_focus": "Law 28: Enter Action with Boldness",
+                    "core_teaching": "Hesitation creates doubt and vulnerability. Bold action commands respect and creates momentum. When you have committed to a course, execute decisively and completely. Timidity is dangerous; boldness is empowering.",
+                    "connection_to_dominion": "After ego death and recognition of manipulation, Francisco must act boldly rather than remain paralyzed by caution. Greene teaches that decisive execution—tempered by wisdom rather than recklessness—establishes dominion. The call to adventure demands stepping forward with confidence.",
+                    "terminal_learning_objectives": {
+                      "objective1": "Execute decisions with bold confidence while maintaining strategic wisdom",
+                      "objective2": "Establish command through decisive action rather than hesitant deliberation",
+                      "objective3": "Transform lessons from past manipulation into strategic advantage through bold moves"
+                    }
+                  },
+                  "book3": {
+                    "title": "Leadership and Self-Deception",
+                    "author": "The Arbinger Institute",
+                    "section_of_focus": "Getting Out of the Box - Seeing Others Clearly",
+                    "core_teaching": "Effective leadership requires seeing situations and people accurately, without self-justifying distortions. Getting 'out of the box' of self-deception allows for authentic influence and genuine accountability. True dominion comes from clarity about self and others.",
+                    "connection_to_dominion": "Francisco's ego death in Chapter 5 freed him from self-deception. Chapter 6 requires maintaining that clarity while exercising command. Arbinger teaches that dominion exercised with clear vision—seeing allies as partners, not tools—creates sustainable authority rather than manipulative control.",
+                    "terminal_learning_objectives": {
+                      "objective1": "Exercise authority while maintaining clear vision of self and others",
+                      "objective2": "Lead without reverting to self-justifying distortions or ego-driven choices",
+                      "objective3": "Build genuine influence through authentic accountability rather than manipulation"
+                    }
+                  }
+                },
+                "laurasia_narrative_integration": {
+                  "catalyst_moment": "Francisco emerges from Chapter 5's isolation chamber and ego death into Chapter 6's call to adventure. The urgent catalyst demands he move from reflection to action, from owning mistakes to taking command of his destiny.",
+                  "transition_from_paralysis": "The crushing guilt and fragmented identity of mirrors must now become fuel for decisive leadership. Francisco cannot remain in the garden with La Signora processing consequences—reality demands he step forward.",
+                  "partnership_execution": "La Signora revealed herself as true partner in Chapter 5. Chapter 6 requires translating that partnership into coordinated action. Dominion means leading the partnership, not returning to isolated genius.",
+                  "call_to_adventure_response": "The Hero's Journey catalyst creates urgency—confusion and exhilaration collide. Francisco must recognize the pivotal moment and choose to step forward despite uncertainty, exercising command through accountability.",
+                  "balanced_authority": "Francisco learned humility through manipulation. Now he must wield authority without reverting to pride. This tension—confident command without ego—defines Chapter 6's challenge.",
+                  "from_ownership_to_dominion": "Chapter 5 taught 'I am responsible.' Chapter 6 demands 'Therefore I will act.' Dominion transforms the weight of consequences into empowerment to shape outcomes.",
+                  "series_arc_foundation": "This moment establishes Francisco's pattern for the series—taking decisive action while maintaining accountability, leading without isolation, exercising dominion with integrity."
+                },
+                "mental_health_framework": {
+                  "focus_area": "Dominion, Decisive Action, and Post-Trauma Empowerment",
+                  "transition_characteristics": [
+                    "Moving from reflection to execution without losing lessons learned",
+                    "Balancing vulnerability with confidence in leadership",
+                    "Taking command while maintaining partnership orientation",
+                    "Acting decisively without overcompensating for past manipulation",
+                    "Exercising authority grounded in humility rather than pride",
+                    "Converting acknowledgment of consequences into proactive problem-solving"
+                  ],
+                  "empowerment_building_strategies": [
+                    "Transform ownership into decisive action through strategic planning",
+                    "Exercise command while maintaining transparent accountability",
+                    "Lead partnerships through earned authority and competence",
+                    "Act boldly within clear understanding of capabilities and limitations",
+                    "Maintain ego-death clarity while exercising confident dominion",
+                    "Balance urgency of catalyst with wisdom from past mistakes",
+                    "Build sustainable authority through integrity rather than control"
+                  ],
+                  "integration_indicators": [
+                    "Shift from paralyzed accountability to empowered leadership",
+                    "Dominion exercised with humility and partnership orientation",
+                    "Decisive action replacing guilt-driven hesitation",
+                    "Authority grounded in self-awareness and vulnerability",
+                    "Strategic execution informed by past manipulation lessons",
+                    "Confident command without reversion to ego or pride"
+                  ]
+                },
+                "hero_journey_position": {
+                  "stage": "Scene II: The Call to Adventure (Catalyst - Action Decision)",
+                  "preliminary_beat": "Catalyst / Urgency to Act",
+                  "save_the_cat_beat": "Catalyst - The event that disrupts stability and demands decisive response",
+                  "character_state": "Emerging from ego death with new humility but facing urgent demand to take charge. Must transition from acknowledgment to execution, from owning mistakes to commanding future.",
+                  "catalyst_moment": "Reality refuses to wait for complete processing. The call to adventure creates urgency—confusion and exhilaration collide, demanding Francisco step forward into leadership despite uncertainty.",
+                  "dominion_awakening": "This isn't gentle growth from ownership to confidence—it's the urgent thrust from reflection into action. Francisco must claim his power to lead while maintaining the accountability earned through ego death."
+                },
+                "daily_prompt": "What situation demanded you take charge today, and how did you exercise leadership while maintaining accountability? When did you transform ownership of past mistakes into decisive action for future outcomes?",
+                "story_hook": "In Laurasia's Chapter 6, a humbled hero discovers that acknowledging mistakes is only the beginning—now reality demands he act. Emerging from isolation chambers where ego died, Francisco faces the catalyst moment: urgency beckons, confusion collides with exhilaration, and the pivotal choice can't be delayed. La Signora watches as he must transform crushing responsibility into commanding authority: 'You've learned ownership,' she says. 'Now claim dominion. Lead with the wisdom your mistakes taught you.' Sometimes, the Trionfi whisper, we must move from 'I was responsible for the past' to 'Therefore I will command the future'—not reverting to pride, but stepping boldly forward with earned authority and maintained humility.",
+                "assessment_application": {
+                  "identifies_individuals_who": [
+                    "Transform ownership into decisive leadership",
+                    "Exercise authority while maintaining accountability",
+                    "Act decisively after processing consequences",
+                    "Lead through earned competence rather than ego",
+                    "Balance humility with confident command",
+                    "Execute boldly within clear self-understanding"
+                  ],
+                  "development_pathway": "From paralyzed accountability to empowered dominion—learning to take charge decisively, execute with transparency, lead partnerships through competence, act boldly within limitations, maintain ego-death clarity while commanding, and transform past mistakes into strategic advantages",
+                  "ai_integration_notes": "AI can identify patterns distinguishing healthy dominion (accountability + decisive action) from unhealthy dominance (ego + control). Machine learning can track integration of humility with authority. Ethical considerations include recognizing when individuals are overcompensating through excessive control versus genuinely integrating lessons into empowered leadership."
+                },
+                "cosmic_significance": {
+                  "timeline_position": "February 14-15, 1320 (post-ego-death transition) - Catalyst Point",
+                  "universal_archetype": "The Empowered Leader—one whose ownership transforms into dominion, whose humility grounds authority, whose past mistakes fuel wise command, whose decisive action maintains accountability",
+                  "trionfi_connection": "Cards shift from showing consequences (Chapter 5) to revealing paths of action (Chapter 6). Eight of Swords depicts both the binding limitations and the freedom to act. Francisco must cut through paralysis and claim his power to lead.",
+                  "series_foundation": "This dominion-through-accountability establishes Francisco's leadership pattern throughout series. His ability to command while maintaining humility becomes essential for the ultimate choices in Book 9."
+                },
+                "implementation_context": {
+                  "execution_focus": "Translating reflective ownership into concrete decisive action",
+                  "discipline_required": "Consistent accountability while exercising bold command",
+                  "perseverance_element": "Maintaining integrity through urgency and uncertainty",
+                  "collaboration_necessity": "Leading partnerships rather than reverting to isolated authority"
+                }
+            }
         }
     }
 }
