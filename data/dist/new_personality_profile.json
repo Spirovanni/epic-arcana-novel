@@ -6088,7 +6088,236 @@
         }
     },
     "personality_profile_28": {
-        
+        "canonical_id": "EA-028",
+        "unique_identifier": "STG 1.3.2.2",
+        "all_chapter": 28,
+        "novel_book": 1,
+        "chapter": "Chapter 28",
+        "chapter_title": "The Three Wounds - Growth Through Disruption and Heartbreak",
+        "type": "Specific Task Group",
+        "display_name": "The Wounded Healer",
+        "theme": "Achievement - Transformation Through Painful Disruption",
+        "family": "Order / Systems - Leadership Foundation",
+        "summary": "This personality embodies the transformative power of learning through failure and heartbreak, drawn from Chapter 28 of the Human Framework. After celebrating proven mastery (Ch 27), the coalition now faces catastrophic disruption—learning that true achievement requires surviving wounds that pierce confidence. Like the pierced heart in the Three of Swords, this archetype understands that growth often comes through painful disruption that shatters assumptions. True wisdom flows from integrating wounds into deeper understanding.",
+        "tarot_family": "Swords/Blades/Feathers",
+        "tarot_card_item": "Three of Swords",
+        "tarot_symbolism": "The Three of Swords shows a heart pierced by three blades against a stormy sky—representing heartbreak, painful truth, and necessary disruption. Not random suffering but wounds that reveal what needed breaking. The storm suggests chaos and loss, but also the clearing that follows. Chapter 28 embodies this completely—Francisco and Zara face their first catastrophic failure, three critical wounds (overconfidence, inadequate information, cascading failures) that shatter their newly earned confidence and force painful growth.",
+        "traits": {
+          "strengths": [
+            "learns profound lessons from painful failures and disruptions",
+            "integrates wounds into deeper wisdom rather than avoiding pain",
+            "maintains purpose despite heartbreak and shattered confidence",
+            "transforms crisis into innovation through forced adaptation",
+            "supports others through their painful growth experiences",
+            "recognizes that some lessons can only come through suffering",
+            "builds resilience by surviving what seemed unbearable"
+          ],
+          "shadow": [
+            "becomes addicted to trauma and crisis as identity",
+            "wears wounds as badges rather than integrating lessons",
+            "uses past suffering to avoid present growth",
+            "believes they must suffer to prove worthiness",
+            "judges those who haven't been similarly wounded",
+            "seeks out painful experiences unnecessarily",
+            "confuses suffering with depth or authenticity"
+          ],
+          "growth_focus": [
+            "integrate lessons without clinging to wounds as identity",
+            "recognize when suffering is necessary versus unnecessary",
+            "support others' pain without requiring similar experiences",
+            "balance vulnerability about wounds with forward movement",
+            "distinguish between growth through pain and pain-seeking",
+            "heal from wounds rather than performing them"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Three Wounds",
+          "fiction_chapter_context": "On their first independent cosmic mission to stabilize Dimension Korthak-7, Francisco and Zara face catastrophic failure. Standard procedures trigger triple cascade failure—reality tears, time distortions, gravitational anomalies. Three wounds pierce their confidence: overconfidence in proven methods, inadequate information about dimensional complexity, cascading failures amplifying with each attempted fix. Forced to abandon all conventional approaches, they discover dimensional instabilities trying to evolve into new stable configurations. Innovation emerges through disruption. Pages 406-420. February 24, 1320 (wounded into wisdom)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that perfectionism shatters when faced with uncontrollable failure. The Three of Swords teaches that excellence includes surviving wounds that pierce assumptions. Integration through accepting imperfection and learning from painful disruption."
+        },
+        "color_alignment": {
+          "hue_index": 28,
+          "name": "Storm Gray/Wounded Silver",
+          "hsl": "0,0%,45%",
+          "rgb_hex": "#737373",
+          "color_symbolism": "Storm gray represents the churning sky during heartbreak—neither light nor dark but the liminal space where wounds are fresh and wisdom not yet emerged. The color of disrupted confidence, of assumptions shattered. Achievement forged through painful growth."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.815,
+            "stability": 0.715,
+            "empathy": 0.840,
+            "openness": 0.815,
+            "orderliness": 0.665,
+            "novelty_seeking": 0.740,
+            "abstract_reasoning": 0.790,
+            "emotional_intensity": 0.865,
+            "social_dominance": 0.665,
+            "cooperativeness": 0.815,
+            "risk_tolerance": 0.715,
+            "conscientiousness": 0.765,
+            "adaptability": 0.840,
+            "imagination": 0.765
+          },
+          "match_weights": {
+            "resilience_through_disruption": 1.00,
+            "emotional_intensity": 0.95,
+            "adaptability": 0.95,
+            "empathy": 0.85,
+            "agency": 0.80
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q136", "Q137", "Q138"]
+        },
+        "signals_map": {
+          "Q136": {
+            "dimension": "resilience_through_disruption",
+            "polarity": 1.0,
+            "description": "Learning profound lessons from painful failures",
+            "assessment_question": "I can extract profound wisdom from painful failures and disruptions, integrating these wounds into deeper understanding rather than being destroyed by them or pretending they didn't matter"
+          },
+          "Q137": {
+            "dimension": "adaptability",
+            "polarity": 0.95,
+            "description": "Innovating through forced abandonment of proven methods",
+            "assessment_question": "When familiar approaches catastrophically fail, I can abandon proven methods and discover innovative solutions through forced adaptation, recognizing that breakthrough often requires disruption of what worked before"
+          },
+          "Q138": {
+            "dimension": "emotional_intensity",
+            "polarity": 0.9,
+            "description": "Maintaining purpose despite heartbreak and shattered confidence",
+            "assessment_question": "I can maintain commitment to my purpose even when experiencing heartbreak, shattered confidence, or apparent catastrophic failure, neither abandoning the mission nor pretending the wounds don't hurt"
+          },
+          "Q139": {
+            "dimension": "empathy",
+            "polarity": 0.85,
+            "description": "Supporting others through their painful growth",
+            "assessment_question": "Having survived my own painful disruptions, I can support others through their wounds with genuine empathy, understanding that some lessons can only be learned through suffering without requiring they experience identical pain"
+          },
+          "Q140": {
+            "dimension": "agency",
+            "polarity": 0.8,
+            "description": "Building resilience through surviving unbearable wounds",
+            "assessment_question": "I build genuine resilience by surviving experiences that seemed unbearable, discovering that I'm stronger than I believed while also acknowledging the real cost of that strength"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Stoic Response to Adversity",
+            "core_teaching": "Stoicism teaches that we don't control what happens to us, only how we respond. The obstacle blocking the path becomes the path. Every impediment to action advances action—what stands in the way becomes the way. This isn't toxic positivity but practical wisdom: since adversity is inevitable, learn from it. Transform obstacles into opportunities not by pretending they're good, but by making good use of them.",
+            "connection_to_achievement": "The cascade failure literalizes Holiday's teaching. Francisco and Zara can't control the dimensional instabilities, only their response. The obstacle (conventional methods fail) becomes the way (discovering dimensional evolution). The impediment (cascade amplifying) advances action (forcing innovation). They don't celebrate the failure but extract wisdom from it.",
+            "terminal_learning_objectives": {
+              "objective1": "Distinguish between event and response—control the response",
+              "objective2": "Transform obstacles into paths by making use of adversity",
+              "objective3": "Extract wisdom from disruption without pretending it's welcome"
+            }
+          },
+          "book2": {
+            "title": "Rising Strong",
+            "author": "Brené Brown",
+            "section_of_focus": "The Reckoning, The Rumble, The Revolution",
+            "core_teaching": "Rising strong after falling has three phases: Reckoning (acknowledging the fall and its emotional impact), Rumble (confronting the story we tell about the fall and questioning its accuracy), Revolution (writing a new ending based on truth not fear). The process requires vulnerability—admitting the wound, feeling the pain, then transforming the narrative. Those who skip reckoning or rumble can't truly rise.",
+            "connection_to_achievement": "The Three Wounds follow Brown's structure perfectly. Scene 1 (Reckoning): acknowledging overconfidence and growing unease. Scene 2 (Rumble): confronting the story that 'we're proven masters' versus reality of catastrophic failure. Scene 3 (Revolution): writing new story where dimensional instabilities aren't problems to fix but evolution to facilitate. They rise by feeling the wound fully, then transforming.",
+            "terminal_learning_objectives": {
+              "objective1": "Reckon with falls by acknowledging emotional impact honestly",
+              "objective2": "Rumble with stories told about failure—question accuracy",
+              "objective3": "Revolutionize narrative based on truth extracted from wounds"
+            }
+          },
+          "book3": {
+            "title": "Man's Search for Meaning",
+            "author": "Viktor Frankl",
+            "section_of_focus": "Suffering and Meaning",
+            "core_teaching": "Suffering ceases to be suffering when it finds meaning. Not that suffering is good, but that humans can find meaning in unavoidable suffering. When we can't change a situation, we're challenged to change ourselves. The way we bear suffering is itself a form of achievement. Meaning transforms suffering from meaningless pain into growth catalyst—not because we wanted it, but because we extract wisdom from what we couldn't avoid.",
+            "connection_to_achievement": "The thousand dimensional inhabitants at stake make this unavoidable suffering—Francisco and Zara can't walk away. Frankl's teaching: find meaning in what can't be changed. They can't undo the cascade failure, but they can change themselves—discovering dimensional evolution understanding. The way they bear the wound (maintaining purpose despite heartbreak) becomes achievement itself. Meaning transforms catastrophe into catalyst.",
+            "terminal_learning_objectives": {
+              "objective1": "Find meaning in unavoidable suffering without celebrating it",
+              "objective2": "Change yourself when you can't change the situation",
+              "objective3": "Transform suffering through meaning not avoidance"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "first_independent_mission": "Perfect setup—they've proven mastery, earned recognition, now face reality independently. Success would validate training; failure reveals training's limits. The stakes are real: their first mission alone.",
+          "dimension_korthak_7_complexity": "Brilliant escalation—not generic dimensional instability but specific complex system that exceeds their training. This isn't random bad luck but inevitable encounter with reality's complexity beyond Academy simulations.",
+          "triple_cascade_structure": "The Three Wounds made tangible—each fix creates two problems. Perfect visceral experience of how confidence shatters: try harder → makes it worse → panic sets in. The three swords pierce through attempted solutions.",
+          "overconfidence_wound": "First sword—they enter confident, having just proven mastery. Reality wounds that confidence immediately. The gap between 'we're ready' and 'we're overwhelmed' becomes painfully clear.",
+          "inadequate_information_wound": "Second sword—they realize Academy training couldn't prepare them for everything. No amount of study would have revealed this. Some knowledge requires direct encounter with complexity.",
+          "cascading_failure_wound": "Third sword—their competent responses make things catastrophically worse. The horror of causing harm while trying to help. Well-intentioned actions amplifying disaster.",
+          "forced_innovation_discovery": "Essential transformation—abandon all conventional approaches, discover dimensional evolution. Innovation emerges not despite wounds but because of them. The obstacle becomes the way when all other ways fail.",
+          "thousand_lives_at_stake": "Crucial weight—this isn't theoretical failure. Real consequences. The emotional impact isn't just wounded pride but genuine responsibility for others' suffering. This makes the wound meaningful.",
+          "wounded_into_wisdom": "Perfect culmination—they don't celebrate the failure but they extract wisdom. Rising strong after falling. The Three of Swords acknowledges: some understanding requires heartbreak."
+        },
+        "mental_health_framework": {
+          "focus_area": "Resilience Through Disruption, Growth Through Pain, and Integration of Wounds",
+          "wounded_wisdom_characteristics": [
+            "Learning profound lessons from painful failures and disruptions",
+            "Integrating wounds into deeper understanding rather than avoiding pain",
+            "Maintaining purpose despite heartbreak and shattered confidence",
+            "Transforming crisis into innovation through forced adaptation",
+            "Supporting others through painful growth with genuine empathy",
+            "Building resilience by surviving seemingly unbearable experiences"
+          ],
+          "resilience_integration_strategies": [
+            "Acknowledge falls and their emotional impact honestly (Reckoning)",
+            "Confront stories told about failure and question accuracy (Rumble)",
+            "Write new narratives based on truth extracted from wounds (Revolution)",
+            "Transform obstacles into paths by making use of adversity",
+            "Find meaning in unavoidable suffering without celebrating it",
+            "Change yourself when you can't change the situation",
+            "Extract wisdom from wounds without clinging to them as identity",
+            "Support others' pain without requiring identical experiences"
+          ],
+          "integration_indicators": [
+            "Profound lessons learned from painful failures and integrated",
+            "Innovation discovered through forced abandonment of proven methods",
+            "Purpose maintained despite heartbreak and shattered confidence",
+            "Empathy for others' wounds deepened by own painful growth",
+            "Resilience built through surviving seemingly unbearable disruptions",
+            "Wisdom extracted from wounds without performing victimhood"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VII/VIII: The Road of Trials Continues / Approach to Innermost Cave",
+          "preliminary_beat": "Road of Trials / Approach",
+          "save_the_cat_beat": "Fun and Games Disrupted / Midpoint Reversal",
+          "character_state": "Having celebrated proven mastery (Ch 27), now facing first catastrophic independent failure. The victories were real but incomplete—they proved competence under ideal conditions. Now reality wounds that confidence. This tests whether transformation was superficial or deep.",
+          "structural_significance": "Essential reality check—without this wound, they'd become arrogant. The Three Wounds humble them without breaking them, teaching that mastery includes surviving failures that shatter assumptions. This prepares them for even greater challenges where stakes are cosmic not dimensional.",
+          "archetypal_moment": "The Three of Swords' pierced heart. Campbell's Road of Trials where hero faces tests that wound confidence. The moment that separates those who grow through pain from those destroyed by it."
+        },
+        "daily_prompt": "What failure or disruption is currently wounding your confidence? What innovation might emerge if you abandon proven methods that aren't working? How can you extract wisdom from this heartbreak without making suffering your identity?",
+        "story_hook": "In Laurasia's Chapter 28, dawn breaks on Francisco and Zara's first independent mission—stabilizing Dimension Korthak-7. They arrive confident, freshly validated, carrying their Six Victories like armor. The dimension seems straightforward. Standard protocols apply. 'We've trained for this,' Francisco says. Zara nods. They begin stabilization procedures. Reality tears. Time distorts. Gravitational anomalies cascade. Each fix creates two new problems. The situation spirals beyond control. Thousands of dimensional inhabitants screaming. Their confidence shatters like glass. The Three of Swords, the Trionfi whisper, shows a heart pierced by three blades against a storming sky. First wound: overconfidence pierced by complexity. Second wound: training inadequate for reality's depth. Third wound: well-intentioned actions amplifying catastrophe. That heartbreak, that moment when competence crumbles and you must innovate or fail completely, that forced abandonment of everything proven—that's where wisdom lives. They'll discover the dimensional instabilities aren't malfunctions but evolution. But first, the wounds must pierce. First, the assumptions must shatter. First, achievement must survive disruption.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Learn profound lessons from painful failures and disruptions",
+            "Integrate wounds into deeper wisdom rather than avoiding pain",
+            "Maintain purpose despite heartbreak and shattered confidence",
+            "Transform crisis into innovation through forced adaptation",
+            "Support others through painful growth with genuine empathy",
+            "Build resilience by surviving seemingly unbearable experiences"
+          ],
+          "development_pathway": "From confidence-protecting to wound-integrating—learning to acknowledge falls honestly, confront stories about failures, write new narratives based on truth, transform obstacles into paths, find meaning in unavoidable suffering, change self when situation can't be changed, extract wisdom from wounds without clinging to them as identity, and recognize that some profound understanding requires heartbreak but suffering need not become identity",
+          "ai_integration_notes": "AI can identify patterns distinguishing growth through disruption (integrating, meaning-making, resilient) from shadow patterns (trauma-identity, pain-seeking, suffering-performance). Machine learning can track resilience development through wound integration. Ethical considerations include recognizing when disruption is necessary growth versus unnecessary harm."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 24, 1320 (wounded into wisdom) - Disruption Integration Point",
+          "universal_archetype": "Three of Swords—heartbreak through disruption, wounds that pierce confidence, painful truths that shatter assumptions, the suffering that catalyzes growth when integrated with meaning",
+          "trionfi_connection": "The Three of Swords pierces the heart with necessary wounds. The Three Wounds teach that cosmic service requires surviving failures that shatter assumptions—integrating disruption into deeper wisdom. Every achievement includes wounded growth.",
+          "series_foundation": "This wound-integration capability—learning from catastrophic failures rather than being destroyed by them—becomes essential for all subsequent challenges. They'll face many failures ahead, stakes escalating. This teaches them to rise strong after falling. Without this lesson, later failures would break them. With it, they transform wounds into wisdom."
+        },
+        "implementation_context": {
+          "execution_focus": "Learning from catastrophic failures and painful disruptions",
+          "discipline_required": "Integrating wounds honestly without avoiding or performing them",
+          "transformation_element": "Innovating through forced abandonment of proven methods",
+          "resilience_necessity": "Maintaining purpose despite heartbreak and shattered confidence"
+        }
     },
     "personality_profile_29": {
 
