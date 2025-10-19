@@ -3111,8 +3111,235 @@
         }
     },
     "personality_profile_15": {
+        "canonical_id": "EA-015",
+        "unique_identifier": "STG 1.2.1.2",
+        "all_chapter": 15,
+        "novel_book": 1,
+        "chapter": "Chapter 15",
+        "chapter_title": "The Council of Voices - Rising to Authentic Leadership",
+        "type": "Specific Task Group",
+        "display_name": "The Warrior's Inner Light",
+        "theme": "Confidence - Leading From Within",
+        "family": "Order / Systems - Fortitude",
+        "summary": "This personality embodies the transformative journey from self-doubt to authentic confidence, drawn from Chapter 15 of the Human Framework. After surviving devastating breakdown (Ch 14), the coalition must now project belief in themselves to rally allies and deter foes in a redefined landscape. This is the moment where resilience converts into radiant self-trust—not through bravado but through vulnerability embraced as strength. Like the Knight of Wands who charges forward with courage and conviction, this archetype understands that true confidence stems from internal validation, earned competence, and the courage to show up authentically even after failure.",
+        "tarot_family": "Wands/Rings",
+        "tarot_card_item": "Knight of Wands",
+        "tarot_symbolism": "The Knight of Wands represents passionate confidence, courageous action, and the energy of swift determination. The Knight charges forward with a blazing wand held high—not reckless but assured, ready to face whatever comes. Chapter 15 embodies this completely—the coalition emerges from breakdown transformed, projecting authentic confidence that inspires allies and establishes leadership. The Knight teaches that confidence is active, visible, and contagious.",
+        "traits": {
+          "strengths": [
+            "projects authentic confidence that inspires others",
+            "leads through vulnerable honesty rather than false bravado",
+            "maintains self-trust even after devastating failure",
+            "converts internal validation into visible leadership",
+            "communicates clarity and purpose amid uncertainty",
+            "rallies allies through genuine presence",
+            "demonstrates courage by showing up authentically"
+          ],
+          "shadow": [
+            "confuses confidence with performance or pretense",
+            "seeks external validation while claiming independence",
+            "projects false strength that alienates others",
+            "uses charisma to mask unprocessed insecurity",
+            "becomes arrogant rather than assured",
+            "leads recklessly instead of courageously"
+          ],
+          "growth_focus": [
+            "distinguish genuine confidence from compensatory bravado",
+            "ground self-trust in competence and self-awareness",
+            "lead through authenticity not perfection",
+            "balance visibility with humility",
+            "inspire others without manipulating them",
+            "maintain confidence while staying coachable"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia - Crown of the Ancient Ones",
+          "chapter_theme": "The Council of Voices",
+          "fiction_chapter_context": "Entering redefined landscape after breakdown, coalition must prove their worth to Academy of Eternal Wisdom. Through trials testing confidence and self-worth, they discover authentic leadership emerges from embracing vulnerability. Public demonstration of growth earns them acceptance and establishes foundation for advanced training. Pages 211-225. February 14, 1320 (evening—confidence reclaimed)."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Type 1 learning that confidence doesn't require perfection. Integration toward Type 7 (The Enthusiast) brings spontaneity and self-trust. The Knight's energy transforms rigid self-criticism into authentic self-assurance."
+        },
+        "color_alignment": {
+          "hue_index": 14,
+          "name": "Salomie/Golden Yellow",
+          "hsl": "42,100%,75%",
+          "rgb_hex": "#FFD17D",
+          "color_symbolism": "Golden yellow represents the inner light that shines outward—the sun within that illuminates the path for others. The color of dawn after darkness, confidence that emerges from tested strength. The Knight's banner catching first light."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.815,
+            "stability": 0.665,
+            "empathy": 0.715,
+            "openness": 0.765,
+            "orderliness": 0.615,
+            "novelty_seeking": 0.665,
+            "abstract_reasoning": 0.715,
+            "emotional_intensity": 0.615,
+            "social_dominance": 0.765,
+            "cooperativeness": 0.765,
+            "risk_tolerance": 0.715,
+            "conscientiousness": 0.715,
+            "adaptability": 0.715,
+            "imagination": 0.665
+          },
+          "match_weights": {
+            "agency": 0.95,
+            "social_dominance": 0.9,
+            "authenticity_indicators": 0.85,
+            "cooperativeness": 0.8,
+            "stability": 0.75
+          },
+          "threshold": 0.7,
+          "top_signal_items": ["Q071", "Q072", "Q073"]
+        },
+        "signals_map": {
+          "Q071": {
+            "dimension": "agency",
+            "polarity": 1.0,
+            "description": "Leading through authentic presence",
+            "assessment_question": "I can step into leadership roles and make decisions with confidence even when I don't have all the answers, trusting my judgment and ability to learn as I go"
+          },
+          "Q072": {
+            "dimension": "social_dominance",
+            "polarity": 0.95,
+            "description": "Projecting confidence that inspires followership",
+            "assessment_question": "Others naturally look to me for direction during uncertainty because I project calm assurance and clarity about the path forward, even after setbacks"
+          },
+          "Q073": {
+            "dimension": "authenticity",
+            "polarity": 0.9,
+            "description": "Vulnerability as source of confidence",
+            "assessment_question": "I'm willing to openly share my struggles, failures, and learning process with others, understanding that authentic vulnerability creates deeper trust than performative strength"
+          },
+          "Q074": {
+            "dimension": "risk_tolerance",
+            "polarity": 0.85,
+            "description": "Courageous action despite uncertainty",
+            "assessment_question": "I can take visible, bold action in high-stakes situations where I might fail publicly, because my confidence comes from who I am rather than others' approval"
+          },
+          "Q075": {
+            "dimension": "cooperativeness",
+            "polarity": 0.8,
+            "description": "Collaborative leadership presence",
+            "assessment_question": "I lead in a way that elevates others rather than diminishes them, using my confidence to create space for others to step into their own strength"
+          }
+        },
+        "philosophical_influences": {
+          "book1": {
+            "title": "The Six Pillars of Self-Esteem",
+            "author": "Nathaniel Branden",
+            "section_of_focus": "Living Consciously and Purposefully",
+            "core_teaching": "Self-esteem isn't achieved through affirmations but through six practices: living consciously, self-acceptance, self-responsibility, self-assertiveness, living purposefully, and personal integrity. Real confidence emerges from congruence between values and actions, not from external validation or positive thinking.",
+            "connection_to_confidence": "At the Academy, Francisco and Zara must demonstrate the six pillars in action. Their confidence doesn't come from pretending breakdown didn't happen but from integrating that experience with integrity. They live purposefully, accept themselves fully, and assert their truth—this is what earns the Academy's respect.",
+            "terminal_learning_objectives": {
+              "objective1": "Practice daily behaviors aligned with the six pillars",
+              "objective2": "Audit your actions against your stated values regularly",
+              "objective3": "Build self-trust through consistent follow-through on commitments"
+            }
+          },
+          "book2": {
+            "title": "Presence: Bringing Your Boldest Self to Your Biggest Challenges",
+            "author": "Amy Cuddy",
+            "section_of_focus": "Power Posing and Embodied Confidence",
+            "core_teaching": "Confidence isn't just psychological—it's physiological. How we hold our bodies shapes our hormones, emotions, and presence. Expansive postures increase testosterone and decrease cortisol, creating authentic feelings of power. Presence emerges when beliefs, values, and actions align visibly in the body.",
+            "connection_to_confidence": "In the Academy's trials, the coalition learns that confidence must be embodied to be believed. Their body language speaks before their words. The Knight of Wands doesn't just feel confident—he demonstrates it through his bearing, his voice, his willingness to take space. Confidence is visible.",
+            "terminal_learning_objectives": {
+              "objective1": "Use power poses before high-stakes situations",
+              "objective2": "Align verbal and non-verbal communication consciously",
+              "objective3": "Practice embodying confidence through posture and presence"
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability as Courage",
+            "core_teaching": "Vulnerability isn't weakness—it's the birthplace of courage, innovation, and authentic connection. Daring greatly means showing up and being seen even when there are no guarantees. Shame thrives in secrecy; it dissolves in empathetic connection. True confidence includes the courage to be imperfect.",
+            "connection_to_confidence": "The chapter's turning point: instead of performing false strength, Francisco and Zara choose vulnerable authenticity. They share their struggles openly. This vulnerability becomes their greatest strength, demonstrating that confidence isn't about being invulnerable—it's about being real while moving forward anyway.",
+            "terminal_learning_objectives": {
+              "objective1": "Practice shame resilience by sharing imperfections openly",
+              "objective2": "Lead through vulnerable honesty rather than performative strength",
+              "objective3": "Create cultures where authenticity is valued over perfection"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "post_breakdown_transformation": "Chapter 15 shows what happens after the Tower falls—the coalition doesn't just recover, they transform. They emerge from Chapter 14's rubble with a different kind of strength: earned, tested, authentic.",
+          "academy_as_crucible": "The Academy of Eternal Wisdom serves as the testing ground where breakdown-forged resilience must convert into visible confidence. Can they project strength after being shattered? This is the question.",
+          "vulnerability_as_strength": "The climactic moment: choosing authentic vulnerability over false bravado. They share their journey from self-doubt to self-acceptance. This honesty becomes their demonstration of true confidence.",
+          "authentic_leadership_established": "Their acceptance into the Academy isn't about proving they're perfect—it's about proving they're real. Leadership based on authenticity, not authority. Confidence grounded in self-knowledge, not self-deception.",
+          "knight_energy": "The Knight of Wands doesn't wait to feel ready—he charges forward with whatever strength he has. This chapter teaches that confidence is a practice, not a prerequisite. You build it by acting despite uncertainty.",
+          "theme_stated": "This is where the series explicitly states its central theme: confidence isn't about perfection but about the courage to be authentic and vulnerable in pursuit of what matters most.",
+          "new_world_setup": "Having crossed the threshold (Ch 13) and survived the first test (Ch 14), they now establish themselves as capable players in Act 2's expanded world. Confidence enables exploration."
+        },
+        "mental_health_framework": {
+          "focus_area": "Self-Esteem, Authentic Confidence, and Visible Leadership",
+          "confidence_characteristics": [
+            "Internal validation independent of external approval",
+            "Self-trust maintained through failure and success",
+            "Authentic presence that invites genuine connection",
+            "Embodied confidence visible in posture and voice",
+            "Leadership through vulnerability not performance",
+            "Inspiring others through genuine self-assurance"
+          ],
+          "confidence_building_strategies": [
+            "Practice the six pillars of self-esteem daily",
+            "Use embodiment techniques to shift physiology",
+            "Share struggles and growth openly with others",
+            "Build competence through deliberate practice",
+            "Align actions consistently with stated values",
+            "Take visible action despite fear of judgment",
+            "Lead collaboratively to elevate others' confidence"
+          ],
+          "integration_indicators": [
+            "Confident action independent of others' opinions",
+            "Vulnerability embraced as strength not weakness",
+            "Leadership that inspires rather than dominates",
+            "Self-trust earned through integrity and follow-through",
+            "Presence that attracts authentic connection",
+            "Confidence maintained through setbacks and uncertainty"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Scene VI: Tests, Allies, and Enemies (Establishing New Identity)",
+          "preliminary_beat": "Tests, Allies, and Enemies - New World Setup",
+          "save_the_cat_beat": "Theme Stated - Confidence through authenticity",
+          "character_state": "Transformed by breakdown, now projecting authentic confidence. Must prove themselves to Academy and allies. Discovering that vulnerability is strength, that confidence comes from within, that leadership means showing up real.",
+          "structural_significance": "Establishes the confident identity they'll carry through Act 2. After the Tower's destruction (Ch 14), they rebuild as the Knight—assured, authentic, ready. This confidence enables all subsequent growth.",
+          "archetypal_moment": "The Knight's charge. Campbell's 'Road of Trials' beginning with renewed strength. The hero stepping fully into their emerging identity."
+        },
+        "daily_prompt": "Where in your life are you performing strength instead of embodying it? How might vulnerable authenticity be your greatest source of confidence today?",
+        "story_hook": "In Laurasia's Chapter 15, Francisco and Zara stand before the Academy of Eternal Wisdom, still healing from Chapter 14's devastation. They must demonstrate worthiness to join an ancient order. The temptation: perform invulnerability, project false strength, hide the scars. But when Francisco's turn comes, he makes a different choice. 'Last week, I failed catastrophically,' he tells the gathered Guardians, his voice steady despite the admission. 'My strategies collapsed. My confidence shattered. And in that rubble, I discovered something unbreakable—not power, but presence. Not invulnerability, but the courage to keep showing up imperfectly.' Zara follows with equal honesty about her journey. Their vulnerability electrifies the hall. The Head Guardian smiles: 'Most candidates demonstrate what they can do. You two demonstrated who you are. That's confidence.' The Knight of Wands, the Trionfi whisper, doesn't charge forward because he's fearless. He charges forward because he's integrated his fears, his failures, his humanity—and chosen to act anyway. That's the confidence that changes everything.",
+        "assessment_application": {
+          "identifies_individuals_who": [
+            "Lead through authentic presence rather than performance",
+            "Project confidence that inspires rather than intimidates",
+            "Embrace vulnerability as source of genuine strength",
+            "Maintain self-trust independent of external validation",
+            "Take visible action despite uncertainty or fear",
+            "Build others up through collaborative leadership"
+          ],
+          "development_pathway": "From performance to presence—learning to trust yourself deeply, embody confidence visibly, lead through vulnerable authenticity, inspire through genuine self-assurance, and recognize that the strongest leadership comes not from hiding imperfections but from integrating them into wholehearted action",
+          "ai_integration_notes": "AI can identify patterns distinguishing authentic confidence (grounded self-trust) from shadow patterns (compensatory performance, arrogance, external validation seeking). Machine learning can track development of genuine versus performative confidence markers. Ethical considerations include recognizing when 'authentic vulnerability' becomes manipulation versus genuine courage."
+        },
+        "cosmic_significance": {
+          "timeline_position": "February 14, 1320 (evening—confidence reclaimed) - Leadership Establishment Point",
+          "universal_archetype": "The Knight—confident action, passionate courage, authentic leadership, visible strength earned through trial, the warrior's inner light made manifest",
+          "trionfi_connection": "The Knight of Wands blazes forward with earned confidence. Francisco's cards reveal this as the moment where resilience converts to radiance. They've survived the Tower; now they embody the Knight.",
+          "series_foundation": "This confidence—tested, authentic, visible—becomes the foundation for all leadership challenges ahead. Every time they must inspire others, rally allies, or stand in their truth, they draw on this chapter's lesson."
+        },
+        "implementation_context": {
+          "execution_focus": "Projecting authentic confidence through vulnerable action",
+          "discipline_required": "Maintaining self-trust while showing up imperfectly",
+          "perseverance_element": "Leading visibly despite uncertainty and fear of judgment",
+          "collaboration_necessity": "Inspiring others through genuine presence and collaborative strength"
+        }
     },
     "personality_profile_16": {
+        
     },
     "personality_profile_17": {
     },
