@@ -12058,7 +12058,230 @@
             }
         },
         "personality_profile_54": {
-
+          "canonical_id": "EA-054",
+          "unique_identifier": "STG 2.2.1.1",
+          "all_chapter": 54,
+          "novel_book": 2,
+          "chapter": "Chapter 14",
+          "chapter_title": "Holding the World in Your Hands",
+          "type": "Specific Task Group",
+          "display_name": "Steward of Expanding Horizons",
+          "theme": "Strategic Adaptation Through Vision and Flexibility",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the powerful combination of vision and adaptability that transforms obstacles into opportunities, drawn from Chapter 54 of the Human Framework. It represents the Two of Wands archetype—a figure standing with one foot planted firmly while holding a globe, gazing toward distant horizons with a wand in each hand, symbolizing the balance between stability and exploration, between current position and future possibility. This archetype masters the art of strategic flexibility, learning that resilience requires both clear vision and willingness to adjust the path. Like the Daughter and her unified allies surveying the challenges ahead with fresh perspective and renewed capacity, this personality proves that true adaptability means pivoting strategies while maintaining direction.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Two",
+          "tarot_symbolism": "The Two of Wands represents planning, future vision, and standing at the threshold of expansion. A figure holds the world in one hand and a wand in the other, one foot forward while gazing at distant horizons—symbolizing the balance between secure foundation and bold exploration, between what is and what could be. This card signifies the moment of strategic planning before action, teaching that resilience requires both clear vision of destination and flexible willingness to adjust the route, that holding the world means understanding both its current reality and its future possibilities.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to maintain vision while remaining flexible about methods",
+              "ability to transform obstacles into opportunities through strategic adaptation",
+              "skill in planning multiple pathways toward goals rather than single rigid route",
+              "wisdom to distinguish between core direction (maintain) and tactical approach (adapt)",
+              "mastery of scenario planning that prepares for various futures without paralysis",
+              "leadership through modeling resilient flexibility that inspires confident adaptation",
+              "capacity to help others develop strategic adaptability rather than reactive scrambling"
+            ],
+            "shadow": [
+              "potential for endless planning that postpones necessary action",
+              "tendency toward over-adaptation that loses sight of core purpose",
+              "risk of treating all methods as equally valid, losing strategic focus",
+              "difficulty committing to specific path when keeping all options open",
+              "possible development of analysis paralysis when facing multiple possibilities",
+              "challenge balancing visionary thinking with present-moment engagement"
+            ],
+            "growth_focus": [
+              "balance strategic planning with timely decisive action",
+              "recognize when to commit to path versus when to remain flexible",
+              "integrate long-term vision with responsive adaptation to present conditions",
+              "develop capacity to pivot strategically rather than abandoning direction",
+              "maintain core purpose while experimenting with diverse approaches",
+              "transform adaptability from reactive scrambling into proactive strategic flexibility"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "Holding the World in Your Hands",
+            "fiction_chapter_context": "Book 2, Chapter 14 - With unity forged and strength restored, the Daughter and her allies stand at a threshold. They survey the challenges ahead with fresh perspective, recognizing that their path forward requires both clear vision of destination and willingness to adapt methods. She discovers that resilience means pivoting strategies while maintaining core purpose—holding the world while planning the journey."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) learning that effective helping requires strategic flexibility—that rigid approaches fail when contexts change, that maintaining purpose while adapting methods serves better than clinging to familiar patterns. This integrates Type 2's care with Type 5's strategic thinking and Type 7's flexibility."
+          },
+          "color_alignment": {
+            "hue_index": 53,
+            "name": "Sunrise Gold",
+            "hsl": "53,100%,45%",
+            "rgb_hex": "#E6C100",
+            "color_symbolism": "Sunrise gold represents the dawn of possibility—the color of new horizons becoming visible, of light revealing paths forward. It embodies both the warmth of vision and the clarity of strategic planning, showing that adaptability illuminated by purpose creates resilient excellence."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.789,
+              "stability": 0.645,
+              "empathy": 0.723,
+              "openness": 0.867,
+              "orderliness": 0.698,
+              "novelty_seeking": 0.734,
+              "abstract_reasoning": 0.845,
+              "emotional_intensity": 0.623,
+              "social_dominance": 0.512,
+              "cooperativeness": 0.756,
+              "risk_tolerance": 0.689,
+              "conscientiousness": 0.812,
+              "adaptability": 0.923,
+              "imagination": 0.834
+            },
+            "match_weights": {
+              "adaptability": 0.95,
+              "abstract_reasoning": 0.9,
+              "openness": 0.85,
+              "imagination": 0.8,
+              "conscientiousness": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q168", "Q169", "Q170"],
+            "dimension_rationale": {
+              "very_high_adaptability": "Exceptional capacity for strategic flexibility and pivoting",
+              "high_abstract_reasoning": "Ability to envision multiple future scenarios and pathways",
+              "high_openness": "Receptivity to new approaches while maintaining direction",
+              "high_imagination": "Capacity to envision possibilities beyond current constraints",
+              "high_conscientiousness": "Disciplined approach to strategic planning and adaptation"
+            }
+          },
+          "signals_map": {
+            "Q168": {
+              "dimension": "adaptability",
+              "polarity": 1.0,
+              "description": "Exceptional capacity to pivot strategies while maintaining direction",
+              "assessment_question": "I can change my approach and methods flexibly when circumstances shift, while maintaining clear focus on my ultimate destination and purpose"
+            },
+            "Q169": {
+              "dimension": "abstract_reasoning",
+              "polarity": 0.95,
+              "description": "Ability to envision and plan for multiple future scenarios",
+              "assessment_question": "I regularly engage in scenario planning, envisioning various possible futures and preparing flexible strategies for different contingencies"
+            },
+            "Q170": {
+              "dimension": "openness",
+              "polarity": 0.9,
+              "description": "Receptivity to new approaches while keeping core vision",
+              "assessment_question": "I'm open to experimenting with diverse methods and approaches, recognizing that obstacles often reveal better paths forward"
+            },
+            "Q171": {
+              "dimension": "imagination",
+              "polarity": 0.85,
+              "description": "Capacity to envision possibilities beyond current reality",
+              "assessment_question": "I can vividly imagine future possibilities and opportunities that aren't yet visible in current circumstances"
+            },
+            "Q172": {
+              "dimension": "conscientiousness",
+              "polarity": 0.8,
+              "description": "Disciplined strategic planning balanced with action",
+              "assessment_question": "I maintain structured planning practices that prepare me for adaptation without preventing timely decisive action"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Good Strategy/Bad Strategy: The Difference and Why It Matters",
+              "author": "Richard P. Rumelt",
+              "section_of_focus": "The Kernel of Good Strategy",
+              "core_teaching": "Good strategy has three elements: diagnosis (understanding the challenge's nature), guiding policy (approach to dealing with situation), and coherent actions (coordinated steps). Bad strategy substitutes fluff and wishful thinking for these elements. The essence of strategy is choosing what NOT to do—focus creates power. But good strategy also builds in adaptive capacity by understanding the terrain and having coherent actions that can flex while maintaining the guiding policy",
+              "connection_to_adaptability": "Rumelt reveals that the Daughter's challenge requires both clear strategic direction and flexible execution. By diagnosing her true situation accurately, articulating guiding policy (core purpose), and planning coherent actions that can adapt while serving that policy, she builds resilient strategy. He teaches that adaptability without strategic focus is mere chaos, while rigid plans without adaptation capacity shatter on contact with reality. Strategic resilience requires both.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice diagnosis—clearly name the critical challenge rather than listing goals",
+                "objective2": "Articulate guiding policy—the approach to the challenge that creates adaptive focus",
+                "objective3": "Design coherent actions—coordinated steps that flex in execution while serving policy"
+              }
+            },
+            "book2": {
+              "title": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts",
+              "author": "Annie Duke",
+              "section_of_focus": "Outcome vs. Process and Probabilistic Thinking",
+              "core_teaching": "Life is more like poker than chess—decisions involve hidden information and luck. Quality of decision differs from quality of outcome. Good decisions can have bad outcomes; bad decisions can have good outcomes. The solution is thinking in bets—considering multiple possible futures, assigning rough probabilities, making decisions that are good bets given uncertainty. This requires intellectual humility, updating beliefs as new information emerges, and learning from both success and failure without resulting",
+              "connection_to_adaptability": "Duke provides framework for the Daughter's strategic flexibility. By thinking in probabilities rather than certainties, planning for multiple scenarios rather than single predicted future, and updating strategy as new information emerges without self-recrimination, she builds adaptive resilience. She learns that commitment to process (good strategic thinking) matters more than attachment to specific outcome, that flexibility in methods serves constancy in purpose",
+              "terminal_learning_objectives": {
+                "objective1": "Practice probabilistic planning—assign rough likelihood to various future scenarios",
+                "objective2": "Separate decision quality from outcome quality in retrospective analysis",
+                "objective3": "Update strategies based on new information without defensiveness or regret"
+              }
+            },
+            "book3": {
+              "title": "Blue Ocean Strategy: How to Create Uncontested Market Space and Make the Competition Irrelevant",
+              "author": "W. Chan Kim and Renée Mauborgne",
+              "section_of_focus": "Value Innovation and Strategic Canvas",
+              "core_teaching": "Most strategies compete in existing markets ('red oceans' bloodied by competition) by outperforming rivals on accepted dimensions. Blue ocean strategy creates new market space by innovating value—eliminating, reducing, raising, and creating factors that industry takes for granted. The 'strategy canvas' visualizes current offerings and identifies opportunities to break trade-offs. This requires looking across alternatives, user groups, complementary offerings, and time—systematic exploration of possibilities beyond conventional boundaries",
+              "connection_to_adaptability": "Kim and Mauborgne teach the Daughter to adapt by reframing rather than merely adjusting—that sometimes resilience requires creating entirely new approaches rather than optimizing current ones. By systematically exploring possibilities beyond conventional constraints, challenging assumptions about what trade-offs are necessary, and innovating value in unexpected ways, she discovers that obstacles often exist only within accepted frameworks. Strategic adaptability sometimes means changing the game, not just playing current game better",
+              "terminal_learning_objectives": {
+                "objective1": "Map current 'strategy canvas'—what factors are you competing or optimizing on",
+                "objective2": "Apply 'eliminate-reduce-raise-create' grid to challenge assumptions and find new approaches",
+                "objective3": "Look systematically across alternatives, user groups, and complementary offerings for reframing opportunities"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 14 - With unity forged and recovery complete, the Daughter and allies stand at a threshold. Fresh perspective reveals that the path ahead requires both clear vision and strategic flexibility—they must know their destination while remaining willing to adapt their route",
+            "symbolic_moment": "Standing with one foot planted and one foot forward, holding the world in one hand while gazing at distant horizons—the recognition that resilience requires both foundation and flexibility, that she can maintain purpose while pivoting methods, that adaptability serves rather than abandons vision",
+            "emotional_landscape": "Confidence mixed with humility—the assurance of clear direction alongside recognition that the path will require adjustment, discovering that strategic flexibility creates strength rather than weakness, that planning for multiple possibilities builds rather than undermines resolve",
+            "threshold_vision": "Understanding that endurance requires strategic adaptability—that rigid plans shatter while flexible strategies endure, that she can pivot approaches while maintaining destination, that holding the world means understanding both current reality and future possibility, that resilience is both steadfast and flexible",
+            "transformation_promise": "This chapter establishes that authentic endurance includes strategic flexibility—that learning to adapt while maintaining vision now builds capacity for navigating unprecedented challenges ahead where rigid strategies would fail but resilient flexibility will find ways forward",
+            "series_arc_connection": "The strategic adaptability developed here becomes essential for reality-scale challenges later—by mastering flexible planning at personal scale now, she develops capacity to pivot cosmic strategies when universal conditions shift in ways no rigid plan could anticipate but adaptive vision can navigate"
+          },
+          "mental_health_framework": {
+            "focus_area": "Strategic Adaptability and Resilient Flexibility Through Vision",
+            "adaptability_characteristics": [
+              "Clear vision of destination combined with flexible approaches to path",
+              "Strategic planning for multiple scenarios rather than single predicted future",
+              "Capacity to pivot methods while maintaining core purpose and direction",
+              "Balance between decisive action and willingness to adjust course",
+              "Transformation of obstacles into opportunities through reframing",
+              "Integration of long-term vision with responsive adaptation to present"
+            ],
+            "resilience_building_strategies": [
+              "Practice three-part strategy: diagnosis, guiding policy, coherent flexible actions",
+              "Implement probabilistic thinking—plan for multiple scenarios with rough likelihoods",
+              "Create 'strategy canvas' and apply eliminate-reduce-raise-create grid regularly",
+              "Distinguish decision quality from outcome quality in learning from experience",
+              "Build scenario planning practices that prepare without paralyzing",
+              "Develop comfort with updating strategies based on new information without regret"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to maintain vision while flexibly adjusting methods",
+              "Greater skill in transforming obstacles into opportunities through strategic adaptation",
+              "Stronger ability to plan for uncertainty without analysis paralysis",
+              "Wisdom to know when to pivot approach versus when to persist",
+              "Resilience emerging from strategic flexibility rather than rigid adherence"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IV: Allies, Mentors, and Helpers (at threshold of expansion)",
+            "preliminary_beat": "Theme Stated - Strategic Vision",
+            "save_the_cat_beat": "Theme Stated - Adaptive Planning",
+            "character_state": "The Daughter and allies, unified and recovered, stand at threshold. They survey challenges ahead with fresh perspective, recognizing that resilience requires both clear destination and flexible path—strategic adaptability becomes their next essential capacity",
+            "ordinary_world_baseline": "They had vision and they had perseverance, but sustainable excellence requires strategic flexibility—ability to adapt methods while maintaining purpose, to pivot approaches without abandoning direction",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who holds the world while planning the journey, who maintains vision while remaining flexible, who transforms obstacles into opportunities through strategic adaptation rather than rigid persistence"
+          },
+          "daily_prompt": "What strategy did you adapt today while maintaining your core purpose? How did flexibility in methods serve constancy in direction?",
+          "story_hook": "In Laurasia's Book 2, Chapter 14, the Daughter learns what every resilient leader discovers: that the strongest strategies combine clear vision with flexible execution, that holding the world means understanding both what is and what could be. Standing at the threshold with her allies, she embodies the Two of Wands—one foot planted, one foot forward, gazing at horizons while planning the journey. She discovers that true adaptability isn't abandoning direction but pivoting methods in service of unchanging purpose, that resilience emerges not from rigid plans that shatter but from strategic flexibility that bends without breaking. In learning to be both steadfast and flexible, she becomes truly adaptive—ready for a path that will require every ounce of strategic resilience she's building.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Maintain clear vision while remaining flexible about methods",
+              "Transform obstacles into opportunities through strategic adaptation",
+              "Plan for multiple scenarios without paralysis or indecision",
+              "Pivot approaches strategically while maintaining core purpose",
+              "Lead through modeling resilient flexibility and adaptive planning",
+              "Build strategies that bend without breaking under pressure"
+            ],
+            "development_pathway": "From rigid plans to strategic adaptability—learning to practice diagnosis-policy-action framework, implement probabilistic thinking and scenario planning, create strategy canvas and innovation frameworks, separate decision quality from outcome quality, and build resilient flexibility that serves rather than abandons vision",
+            "ai_integration_notes": "AI can help model multiple future scenarios and assess probability distributions. Machine learning can track which strategic pivots served well versus which were reactive scrambling, building wisdom about adaptation. Systems can provide scenario planning support and identify when strategic reframing may serve better than tactical adjustment."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 14 'Chief Among the Mighty' - Prime Timeline where endurance meets strategic adaptability",
+            "universal_archetype": "The Strategic Visionary—who knows that resilience requires both destination clarity and path flexibility, that holding the world means seeing both current reality and future possibility",
+            "trionfi_connection": "The Two of Wands teaches that standing at threshold of expansion requires both planted foundation and forward step, that vision without adaptability fails as surely as flexibility without direction, that strategic resilience emerges from their marriage",
+            "series_foundation": "This strategic adaptability becomes essential for reality-scale challenges later—by mastering flexible planning at personal scale now, she develops capacity to navigate cosmic shifts where rigid strategies would shatter but adaptive vision finds ways forward through unprecedented conditions"
+          }
         },
         "personality_profile_55": {
           "canonical_id": "EA-055",
