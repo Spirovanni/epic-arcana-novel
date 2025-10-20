@@ -10471,230 +10471,230 @@
           }
         },
         "personality_profile_47": {
-  "canonical_id": "EA-047",
-  "unique_identifier": "STG 2.1.3.1",
-  "all_chapter": 47,
-  "novel_book": 2,
-  "chapter": "Chapter 7",
-  "chapter_title": "The Clarity of Discernment",
-  "type": "Specific Task Group",
-  "display_name": "Master of Sophisticated Judgment",
-  "theme": "Elevating Decisions Beyond Impulse",
-  "family": "Belonging / Care - Endurance Foundation",
-  "summary": "This personality embodies the mastery of nuanced judgment and sophisticated decision-making, drawn from Chapter 47 of the Human Framework. It represents the Queen of Swords archetype—the clear-minded sovereign who cuts through confusion with precision and wisdom. This archetype navigates the complex territory where rapid learning and grateful grounding must be balanced with discerning choice, discovering that true sophistication means elevating decision-making beyond both impulse and paralysis. Like the Daughter facing intensifying conflicts where internal doubts and external pressures demand refined strategy, this personality proves that sophisticated discernment isn't about having all answers but about developing frameworks for clear thinking under duress.",
-  "tarot_family": "Swords",
-  "tarot_card_item": "Queen",
-  "tarot_symbolism": "The Queen of Swords represents the sovereign of mental clarity and sophisticated judgment. She sits elevated, sword upright, symbolizing truth-seeking and discerning wisdom. This queen has known loss and emerged with clearer vision—her judgments are not harsh but precise, not rigid but principled. The card signifies the power of nuanced thinking that honors complexity while maintaining decisive clarity.",
-  "traits": {
-    "strengths": [
-      "exceptional capacity for nuanced analysis of complex situations",
-      "ability to balance intuitive insight with deliberate reasoning",
-      "skill in creating decision frameworks that work under pressure",
-      "wisdom to recognize cognitive biases and counter them systematically",
-      "mastery of scenario mapping and multi-perspective evaluation",
-      "leadership through demonstrating clear thinking amid confusion",
-      "capacity to make balanced decisions that honor competing values"
-    ],
-    "shadow": [
-      "potential for over-analysis leading to decision paralysis",
-      "tendency toward intellectual detachment from emotional wisdom",
-      "risk of valuing clarity over compassion in judgment",
-      "difficulty trusting intuition when frameworks conflict with gut sense",
-      "possible loss of spontaneity through excessive deliberation",
-      "challenge maintaining relationships when always in analytical mode"
-    ],
-    "growth_focus": [
-      "balance sophisticated analysis with emotional intelligence",
-      "recognize when clear decision beats perfect decision",
-      "integrate intuitive knowing with deliberate frameworks",
-      "develop wisdom to know when to think deeply vs. act quickly",
-      "maintain human connection while exercising discernment",
-      "transform analytical skill into compassionate clarity"
-    ]
-  },
-  "book_association": {
-    "nonfiction_series": "The Human Framework",
-    "fiction_series": "Laurasia - Crown of the Ancient Ones",
-    "chapter_theme": "The Clarity of Discernment",
-    "fiction_chapter_context": "Book 2, Chapter 7 - As conflicts intensify and internal doubts vie with external pressures, the Daughter must refine her strategy beyond gratitude and momentum. She discovers that sophisticated discernment—using scenario mapping, reflective dialogue, and decision frameworks—elevates her choices beyond both impulsive reaction and paralyzing overthinking"
-  },
-  "enneagram_link": {
-    "family_number": 2,
-    "note": "Aligned with Enneagram Type 2 (The Helper) integrated with mental clarity—serving through wise discernment rather than reactive helping. This incorporates Type 2's caring heart with Type 5's analytical wisdom and Type 6's strategic thinking, creating the Helper who assists through sophisticated judgment and clear-minded guidance."
-  },
-  "color_alignment": {
-    "hue_index": 46,
-    "name": "Persian Red",
-    "hsl": "46,60%,56%",
-    "rgb_hex": "#CC3333",
-    "color_symbolism": "Deep crimson red represents the clarity that emerges from experience—the color of truth spoken with authority earned through challenge. It embodies both the sharpness of discerning intellect and the warmth of wisdom applied compassionately, showing that sophisticated judgment serves rather than severs."
-  },
-  "scoring_model": {
-    "dimensions": {
-      "agency": 0.269,
-      "stability": 0.206,
-      "empathy": 0.048,
-      "openness": 0.880,
-      "orderliness": 0.127,
-      "novelty_seeking": 0.979,
-      "abstract_reasoning": 0.463,
-      "emotional_intensity": 0.404,
-      "social_dominance": 0.365,
-      "cooperativeness": 0.132,
-      "risk_tolerance": 0.304,
-      "conscientiousness": 0.066,
-      "adaptability": 0.099,
-      "imagination": 0.129
-    },
-    "match_weights": {
-      "openness": 0.9,
-      "abstract_reasoning": 0.85,
-      "novelty_seeking": 0.8,
-      "orderliness": 0.75,
-      "conscientiousness": 0.7
-    },
-    "threshold": 0.7,
-    "top_signal_items": ["Q143", "Q144", "Q145"],
-    "dimension_rationale": {
-      "low_agency": "Still building sense of control through decision frameworks",
-      "low_stability": "Intensifying conflicts create productive instability",
-      "very_high_openness": "Essential for nuanced multi-perspective thinking",
-      "very_high_novelty_seeking": "Exploring new decision-making approaches",
-      "moderate_abstract_reasoning": "Developing capacity for complex analysis"
-    }
-  },
-  "signals_map": {
-    "Q143": {
-      "dimension": "openness",
-      "polarity": 1.0,
-      "description": "Receptivity to multiple perspectives and complex viewpoints",
-      "assessment_question": "I actively seek out and seriously consider multiple perspectives before making important decisions"
-    },
-    "Q144": {
-      "dimension": "abstract_reasoning",
-      "polarity": 0.95,
-      "description": "Capacity for sophisticated analysis of complex situations",
-      "assessment_question": "I can map out complex scenarios with multiple variables and see how different factors interact"
-    },
-    "Q145": {
-      "dimension": "novelty_seeking",
-      "polarity": 0.9,
-      "description": "Exploration of new decision-making frameworks and tools",
-      "assessment_question": "I'm interested in learning and experimenting with different decision-making frameworks and analytical tools"
-    },
-    "Q146": {
-      "dimension": "orderliness",
-      "polarity": 0.85,
-      "description": "Structured approach to organizing decision processes",
-      "assessment_question": "I use systematic frameworks and structured processes when making important decisions under pressure"
-    },
-    "Q147": {
-      "dimension": "conscientiousness",
-      "polarity": 0.8,
-      "description": "Disciplined application of decision-making practices",
-      "assessment_question": "I consistently apply deliberate decision-making practices rather than relying solely on intuition or impulse"
-    }
-  },
-  "philosophical_influences": {
-    "book1": {
-      "title": "Thinking, Fast and Slow",
-      "author": "Daniel Kahneman",
-      "section_of_focus": "Two Systems of Thought",
-      "core_teaching": "Human thinking operates through two systems—System 1 (fast, intuitive, automatic) and System 2 (slow, deliberate, analytical)—understanding when to engage each system and recognizing biases enables sophisticated judgment",
-      "connection_to_discernment": "Kahneman provides the foundational framework for sophisticated decision-making. The Daughter learns that discernment isn't about always using slow thinking but knowing when intuition serves versus when deliberation is needed, and recognizing the cognitive biases that distort both",
-      "terminal_learning_objectives": {
-        "objective1": "Detect and articulate common decision-making fallacies in own judgment patterns",
-        "objective2": "Implement strategic reflection pauses before high-stakes choices",
-        "objective3": "Design personal decision checklist calibrated to individual blind spots"
-      }
-    },
-    "book2": {
-      "title": "Blink: The Power of Thinking Without Thinking",
-      "author": "Malcolm Gladwell",
-      "section_of_focus": "Rapid Cognition and Thin-Slicing",
-      "core_teaching": "Snap judgments can be remarkably accurate when based on genuine expertise, but require sophisticated understanding of when to trust rapid cognition versus when intuition misleads—true discernment knows the difference",
-      "connection_to_discernment": "Gladwell reveals that sophisticated judgment isn't about abandoning intuition for analysis but developing calibrated intuition. The Daughter discovers that her growing expertise enables accurate quick decisions in some domains while other situations demand deliberate frameworks—wisdom lies in discerning which is which",
-      "terminal_learning_objectives": {
-        "objective1": "Review and extract patterns from past split-second decisions to identify reliable intuition",
-        "objective2": "Set personal triggers for when to trust gut reactions versus engage deliberate analysis",
-        "objective3": "Practice calibrated intuition exercises in low-stakes domains to build trust"
-      }
-    },
-    "book3": {
-      "title": "Decisive: How to Make Better Choices in Life and Work",
-      "author": "Chip Heath & Dan Heath",
-      "section_of_focus": "WRAP Process for Decision-Making",
-      "core_teaching": "Four-step WRAP framework (Widen options, Reality-test assumptions, Attain distance, Prepare to be wrong) systematically counters decision-making pitfalls and elevates judgment quality",
-      "connection_to_discernment": "The Heath brothers provide practical tools for sophisticated discernment under pressure. The Daughter learns that scenario mapping and pros-cons frameworks work best when structured—WRAP gives her systematic approach to generate better options, test key assumptions, gain emotional distance, and prepare for uncertainty",
-      "terminal_learning_objectives": {
-        "objective1": "Apply full WRAP process to one major decision with documented outcomes",
-        "objective2": "Practice widening options through 'vanishing options test' on routine choices",
-        "objective3": "Conduct premortems on upcoming decisions to prepare for potential failures"
-      }
-    }
-  },
-  "laurasia_narrative_integration": {
-    "opening_scene": "Book 2, Chapter 7 - Conflicts escalate as internal doubts clash with external demands. The Daughter's gratitude grounding and strategic momentum aren't enough—she needs sophisticated frameworks to navigate competing pressures with clarity",
-    "symbolic_moment": "Facing a crucial choice where both intuition and analysis pull in different directions. She pauses, applies her decision framework, maps scenarios, tests assumptions—and discovers that sophisticated discernment honors both head and heart",
-    "emotional_landscape": "Intellectual confidence emerging from confusion—the discovery that clear thinking doesn't require having all answers but having reliable processes for finding answers, even under pressure",
-    "threshold_vision": "Understanding that sophistication isn't complexity but clarity—that true discernment cuts through confusion to core truth, that nuanced judgment serves love and purpose rather than replacing them with cold analysis",
-    "transformation_promise": "This chapter establishes that the Daughter's progress now requires mental mastery to match her emotional and strategic development—creating the integrated wisdom needed for upcoming challenges",
-    "series_arc_connection": "The sophisticated discernment developed here becomes essential as decisions grow more consequential through Books 2-3, where poor judgment could undermine all the resilience and momentum she's built, while clear thinking compounds her advantages"
-  },
-  "mental_health_framework": {
-    "focus_area": "Sophisticated Judgment and Balanced Decision-Making",
-    "discernment_characteristics": [
-      "Systematic use of decision frameworks without rigid attachment to them",
-      "Balanced integration of intuitive and analytical thinking",
-      "Recognition of cognitive biases with compassionate self-awareness",
-      "Ability to map scenarios and evaluate options under pressure",
-      "Wisdom to know when decision clarity beats decision perfection",
-      "Maintenance of human connection while exercising analytical precision"
-    ],
-    "resilience_building_strategies": [
-      "Develop personal decision checklist calibrated to individual patterns",
-      "Practice recognizing System 1 vs System 2 thinking in real-time",
-      "Build calibrated intuition through deliberate practice in expertise domains",
-      "Implement WRAP or similar frameworks for consequential choices",
-      "Conduct regular decision debriefs to extract learning",
-      "Balance analytical rigor with emotional intelligence and values alignment"
-    ],
-    "transformation_indicators": [
-      "Decreased decision regret through improved choice quality",
-      "Faster recognition of when to trust intuition versus deliberate",
-      "Greater confidence in complex decisions due to reliable frameworks",
-      "Reduced anxiety from having clear processes for unclear situations",
-      "Enhanced leadership credibility through demonstrated wise judgment"
-    ]
-  },
-  "hero_journey_position": {
-    "stage": "Scene III: Refusal of the Call (reconsidering through discernment)",
-    "preliminary_beat": "Debate / Internal Conflict",
-    "save_the_cat_beat": "Debate Period - Weighing the Path Forward",
-    "character_state": "The Daughter faces escalating conflicts where neither momentum nor gratitude alone suffices—she must develop sophisticated discernment to navigate competing pressures and refine her strategy with nuanced judgment",
-    "ordinary_world_baseline": "She has momentum, gratitude, and resilience but now needs the mental clarity to make wise choices when internal doubts and external demands create confusion",
-    "call_to_adventure_preview": "The call deepens—moving beyond action and appreciation to wisdom, developing the sophisticated judgment needed to navigate complexity without losing either heart or direction"
-  },
-  "daily_prompt": "What decision framework or deliberate process did you use today to elevate a choice beyond impulse? When did you trust intuition and when did you engage deeper analysis?",
-  "story_hook": "In Laurasia's Book 2, Chapter 7, the Daughter discovers a new kind of challenge: her momentum and gratitude have carried her far, but now intensifying conflicts demand something more—sophisticated discernment. When internal doubts clash with external pressures, she learns that true wisdom isn't about thinking harder but thinking clearer. As she maps scenarios, tests assumptions, and balances intuition with analysis, she discovers what the ancient masters knew: the sharpest sword isn't the one that cuts deepest but the one wielded with precision. Sometimes, the cards whisper, the greatest strength is knowing exactly when and where to strike.",
-  "assessment_application": {
-    "identifies_individuals_who": [
-      "Value nuanced analysis and sophisticated judgment",
-      "Seek frameworks for clear thinking under pressure",
-      "Balance intuitive wisdom with deliberate reasoning",
-      "Recognize and counter cognitive biases systematically",
-      "Navigate complexity without sacrificing compassion",
-      "Lead through demonstrated clarity in confusion"
-    ],
-    "development_pathway": "From reactive choosing to sophisticated discernment—learning to recognize System 1 and System 2 thinking, build calibrated intuition, apply decision frameworks systematically, balance analysis with emotional intelligence, and develop the wisdom to know when clarity serves better than perfection",
-    "ai_integration_notes": "AI can help identify decision patterns and optimal framework applications, offering personalized guidance for when to trust intuition versus engage analysis. Machine learning can detect cognitive biases in real-time and provide calibrated prompts for more sophisticated judgment without creating dependency on external validation."
-  },
-  "cosmic_significance": {
-    "timeline_position": "Book 2, Chapter 7 'Chief Among the Mighty' - Prime Timeline where momentum meets mental mastery",
-    "universal_archetype": "The Sovereign of Clear Judgment—where power becomes wise through sophisticated discernment, where strength serves truth through nuanced thinking",
-    "trionfi_connection": "The Queen of Swords teaches that true authority comes from mental clarity earned through experience, that sophisticated judgment honors complexity while cutting through confusion to serve what matters most",
-    "series_foundation": "This integration of sophisticated discernment into her growing capabilities establishes the mental mastery essential for navigating the increasingly complex decisions ahead, where poor judgment could undermine all progress while clear thinking compounds every advantage earned through resilience, momentum, and gratitude"
-  }
+          "canonical_id": "EA-047",
+          "unique_identifier": "STG 2.1.3.1",
+          "all_chapter": 47,
+          "novel_book": 2,
+          "chapter": "Chapter 7",
+          "chapter_title": "The Clarity of Discernment",
+          "type": "Specific Task Group",
+          "display_name": "Master of Sophisticated Judgment",
+          "theme": "Elevating Decisions Beyond Impulse",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the mastery of nuanced judgment and sophisticated decision-making, drawn from Chapter 47 of the Human Framework. It represents the Queen of Swords archetype—the clear-minded sovereign who cuts through confusion with precision and wisdom. This archetype navigates the complex territory where rapid learning and grateful grounding must be balanced with discerning choice, discovering that true sophistication means elevating decision-making beyond both impulse and paralysis. Like the Daughter facing intensifying conflicts where internal doubts and external pressures demand refined strategy, this personality proves that sophisticated discernment isn't about having all answers but about developing frameworks for clear thinking under duress.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Queen",
+          "tarot_symbolism": "The Queen of Swords represents the sovereign of mental clarity and sophisticated judgment. She sits elevated, sword upright, symbolizing truth-seeking and discerning wisdom. This queen has known loss and emerged with clearer vision—her judgments are not harsh but precise, not rigid but principled. The card signifies the power of nuanced thinking that honors complexity while maintaining decisive clarity.",
+          "traits": {
+            "strengths": [
+              "exceptional capacity for nuanced analysis of complex situations",
+              "ability to balance intuitive insight with deliberate reasoning",
+              "skill in creating decision frameworks that work under pressure",
+              "wisdom to recognize cognitive biases and counter them systematically",
+              "mastery of scenario mapping and multi-perspective evaluation",
+              "leadership through demonstrating clear thinking amid confusion",
+              "capacity to make balanced decisions that honor competing values"
+            ],
+            "shadow": [
+              "potential for over-analysis leading to decision paralysis",
+              "tendency toward intellectual detachment from emotional wisdom",
+              "risk of valuing clarity over compassion in judgment",
+              "difficulty trusting intuition when frameworks conflict with gut sense",
+              "possible loss of spontaneity through excessive deliberation",
+              "challenge maintaining relationships when always in analytical mode"
+            ],
+            "growth_focus": [
+              "balance sophisticated analysis with emotional intelligence",
+              "recognize when clear decision beats perfect decision",
+              "integrate intuitive knowing with deliberate frameworks",
+              "develop wisdom to know when to think deeply vs. act quickly",
+              "maintain human connection while exercising discernment",
+              "transform analytical skill into compassionate clarity"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Clarity of Discernment",
+            "fiction_chapter_context": "Book 2, Chapter 7 - As conflicts intensify and internal doubts vie with external pressures, the Daughter must refine her strategy beyond gratitude and momentum. She discovers that sophisticated discernment—using scenario mapping, reflective dialogue, and decision frameworks—elevates her choices beyond both impulsive reaction and paralyzing overthinking"
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) integrated with mental clarity—serving through wise discernment rather than reactive helping. This incorporates Type 2's caring heart with Type 5's analytical wisdom and Type 6's strategic thinking, creating the Helper who assists through sophisticated judgment and clear-minded guidance."
+          },
+          "color_alignment": {
+            "hue_index": 46,
+            "name": "Persian Red",
+            "hsl": "46,60%,56%",
+            "rgb_hex": "#CC3333",
+            "color_symbolism": "Deep crimson red represents the clarity that emerges from experience—the color of truth spoken with authority earned through challenge. It embodies both the sharpness of discerning intellect and the warmth of wisdom applied compassionately, showing that sophisticated judgment serves rather than severs."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.269,
+              "stability": 0.206,
+              "empathy": 0.048,
+              "openness": 0.880,
+              "orderliness": 0.127,
+              "novelty_seeking": 0.979,
+              "abstract_reasoning": 0.463,
+              "emotional_intensity": 0.404,
+              "social_dominance": 0.365,
+              "cooperativeness": 0.132,
+              "risk_tolerance": 0.304,
+              "conscientiousness": 0.066,
+              "adaptability": 0.099,
+              "imagination": 0.129
+            },
+            "match_weights": {
+              "openness": 0.9,
+              "abstract_reasoning": 0.85,
+              "novelty_seeking": 0.8,
+              "orderliness": 0.75,
+              "conscientiousness": 0.7
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q143", "Q144", "Q145"],
+            "dimension_rationale": {
+              "low_agency": "Still building sense of control through decision frameworks",
+              "low_stability": "Intensifying conflicts create productive instability",
+              "very_high_openness": "Essential for nuanced multi-perspective thinking",
+              "very_high_novelty_seeking": "Exploring new decision-making approaches",
+              "moderate_abstract_reasoning": "Developing capacity for complex analysis"
+            }
+          },
+          "signals_map": {
+            "Q143": {
+              "dimension": "openness",
+              "polarity": 1.0,
+              "description": "Receptivity to multiple perspectives and complex viewpoints",
+              "assessment_question": "I actively seek out and seriously consider multiple perspectives before making important decisions"
+            },
+            "Q144": {
+              "dimension": "abstract_reasoning",
+              "polarity": 0.95,
+              "description": "Capacity for sophisticated analysis of complex situations",
+              "assessment_question": "I can map out complex scenarios with multiple variables and see how different factors interact"
+            },
+            "Q145": {
+              "dimension": "novelty_seeking",
+              "polarity": 0.9,
+              "description": "Exploration of new decision-making frameworks and tools",
+              "assessment_question": "I'm interested in learning and experimenting with different decision-making frameworks and analytical tools"
+            },
+            "Q146": {
+              "dimension": "orderliness",
+              "polarity": 0.85,
+              "description": "Structured approach to organizing decision processes",
+              "assessment_question": "I use systematic frameworks and structured processes when making important decisions under pressure"
+            },
+            "Q147": {
+              "dimension": "conscientiousness",
+              "polarity": 0.8,
+              "description": "Disciplined application of decision-making practices",
+              "assessment_question": "I consistently apply deliberate decision-making practices rather than relying solely on intuition or impulse"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Thinking, Fast and Slow",
+              "author": "Daniel Kahneman",
+              "section_of_focus": "Two Systems of Thought",
+              "core_teaching": "Human thinking operates through two systems—System 1 (fast, intuitive, automatic) and System 2 (slow, deliberate, analytical)—understanding when to engage each system and recognizing biases enables sophisticated judgment",
+              "connection_to_discernment": "Kahneman provides the foundational framework for sophisticated decision-making. The Daughter learns that discernment isn't about always using slow thinking but knowing when intuition serves versus when deliberation is needed, and recognizing the cognitive biases that distort both",
+              "terminal_learning_objectives": {
+                "objective1": "Detect and articulate common decision-making fallacies in own judgment patterns",
+                "objective2": "Implement strategic reflection pauses before high-stakes choices",
+                "objective3": "Design personal decision checklist calibrated to individual blind spots"
+              }
+            },
+            "book2": {
+              "title": "Blink: The Power of Thinking Without Thinking",
+              "author": "Malcolm Gladwell",
+              "section_of_focus": "Rapid Cognition and Thin-Slicing",
+              "core_teaching": "Snap judgments can be remarkably accurate when based on genuine expertise, but require sophisticated understanding of when to trust rapid cognition versus when intuition misleads—true discernment knows the difference",
+              "connection_to_discernment": "Gladwell reveals that sophisticated judgment isn't about abandoning intuition for analysis but developing calibrated intuition. The Daughter discovers that her growing expertise enables accurate quick decisions in some domains while other situations demand deliberate frameworks—wisdom lies in discerning which is which",
+              "terminal_learning_objectives": {
+                "objective1": "Review and extract patterns from past split-second decisions to identify reliable intuition",
+                "objective2": "Set personal triggers for when to trust gut reactions versus engage deliberate analysis",
+                "objective3": "Practice calibrated intuition exercises in low-stakes domains to build trust"
+              }
+            },
+            "book3": {
+              "title": "Decisive: How to Make Better Choices in Life and Work",
+              "author": "Chip Heath & Dan Heath",
+              "section_of_focus": "WRAP Process for Decision-Making",
+              "core_teaching": "Four-step WRAP framework (Widen options, Reality-test assumptions, Attain distance, Prepare to be wrong) systematically counters decision-making pitfalls and elevates judgment quality",
+              "connection_to_discernment": "The Heath brothers provide practical tools for sophisticated discernment under pressure. The Daughter learns that scenario mapping and pros-cons frameworks work best when structured—WRAP gives her systematic approach to generate better options, test key assumptions, gain emotional distance, and prepare for uncertainty",
+              "terminal_learning_objectives": {
+                "objective1": "Apply full WRAP process to one major decision with documented outcomes",
+                "objective2": "Practice widening options through 'vanishing options test' on routine choices",
+                "objective3": "Conduct premortems on upcoming decisions to prepare for potential failures"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 7 - Conflicts escalate as internal doubts clash with external demands. The Daughter's gratitude grounding and strategic momentum aren't enough—she needs sophisticated frameworks to navigate competing pressures with clarity",
+            "symbolic_moment": "Facing a crucial choice where both intuition and analysis pull in different directions. She pauses, applies her decision framework, maps scenarios, tests assumptions—and discovers that sophisticated discernment honors both head and heart",
+            "emotional_landscape": "Intellectual confidence emerging from confusion—the discovery that clear thinking doesn't require having all answers but having reliable processes for finding answers, even under pressure",
+            "threshold_vision": "Understanding that sophistication isn't complexity but clarity—that true discernment cuts through confusion to core truth, that nuanced judgment serves love and purpose rather than replacing them with cold analysis",
+            "transformation_promise": "This chapter establishes that the Daughter's progress now requires mental mastery to match her emotional and strategic development—creating the integrated wisdom needed for upcoming challenges",
+            "series_arc_connection": "The sophisticated discernment developed here becomes essential as decisions grow more consequential through Books 2-3, where poor judgment could undermine all the resilience and momentum she's built, while clear thinking compounds her advantages"
+          },
+          "mental_health_framework": {
+            "focus_area": "Sophisticated Judgment and Balanced Decision-Making",
+            "discernment_characteristics": [
+              "Systematic use of decision frameworks without rigid attachment to them",
+              "Balanced integration of intuitive and analytical thinking",
+              "Recognition of cognitive biases with compassionate self-awareness",
+              "Ability to map scenarios and evaluate options under pressure",
+              "Wisdom to know when decision clarity beats decision perfection",
+              "Maintenance of human connection while exercising analytical precision"
+            ],
+            "resilience_building_strategies": [
+              "Develop personal decision checklist calibrated to individual patterns",
+              "Practice recognizing System 1 vs System 2 thinking in real-time",
+              "Build calibrated intuition through deliberate practice in expertise domains",
+              "Implement WRAP or similar frameworks for consequential choices",
+              "Conduct regular decision debriefs to extract learning",
+              "Balance analytical rigor with emotional intelligence and values alignment"
+            ],
+            "transformation_indicators": [
+              "Decreased decision regret through improved choice quality",
+              "Faster recognition of when to trust intuition versus deliberate",
+              "Greater confidence in complex decisions due to reliable frameworks",
+              "Reduced anxiety from having clear processes for unclear situations",
+              "Enhanced leadership credibility through demonstrated wise judgment"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene III: Refusal of the Call (reconsidering through discernment)",
+            "preliminary_beat": "Debate / Internal Conflict",
+            "save_the_cat_beat": "Debate Period - Weighing the Path Forward",
+            "character_state": "The Daughter faces escalating conflicts where neither momentum nor gratitude alone suffices—she must develop sophisticated discernment to navigate competing pressures and refine her strategy with nuanced judgment",
+            "ordinary_world_baseline": "She has momentum, gratitude, and resilience but now needs the mental clarity to make wise choices when internal doubts and external demands create confusion",
+            "call_to_adventure_preview": "The call deepens—moving beyond action and appreciation to wisdom, developing the sophisticated judgment needed to navigate complexity without losing either heart or direction"
+          },
+          "daily_prompt": "What decision framework or deliberate process did you use today to elevate a choice beyond impulse? When did you trust intuition and when did you engage deeper analysis?",
+          "story_hook": "In Laurasia's Book 2, Chapter 7, the Daughter discovers a new kind of challenge: her momentum and gratitude have carried her far, but now intensifying conflicts demand something more—sophisticated discernment. When internal doubts clash with external pressures, she learns that true wisdom isn't about thinking harder but thinking clearer. As she maps scenarios, tests assumptions, and balances intuition with analysis, she discovers what the ancient masters knew: the sharpest sword isn't the one that cuts deepest but the one wielded with precision. Sometimes, the cards whisper, the greatest strength is knowing exactly when and where to strike.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Value nuanced analysis and sophisticated judgment",
+              "Seek frameworks for clear thinking under pressure",
+              "Balance intuitive wisdom with deliberate reasoning",
+              "Recognize and counter cognitive biases systematically",
+              "Navigate complexity without sacrificing compassion",
+              "Lead through demonstrated clarity in confusion"
+            ],
+            "development_pathway": "From reactive choosing to sophisticated discernment—learning to recognize System 1 and System 2 thinking, build calibrated intuition, apply decision frameworks systematically, balance analysis with emotional intelligence, and develop the wisdom to know when clarity serves better than perfection",
+            "ai_integration_notes": "AI can help identify decision patterns and optimal framework applications, offering personalized guidance for when to trust intuition versus engage analysis. Machine learning can detect cognitive biases in real-time and provide calibrated prompts for more sophisticated judgment without creating dependency on external validation."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 7 'Chief Among the Mighty' - Prime Timeline where momentum meets mental mastery",
+            "universal_archetype": "The Sovereign of Clear Judgment—where power becomes wise through sophisticated discernment, where strength serves truth through nuanced thinking",
+            "trionfi_connection": "The Queen of Swords teaches that true authority comes from mental clarity earned through experience, that sophisticated judgment honors complexity while cutting through confusion to serve what matters most",
+            "series_foundation": "This integration of sophisticated discernment into her growing capabilities establishes the mental mastery essential for navigating the increasingly complex decisions ahead, where poor judgment could undermine all progress while clear thinking compounds every advantage earned through resilience, momentum, and gratitude"
+          }
         },
         "personality_profile_48": {
           "canonical_id": "EA-048",
