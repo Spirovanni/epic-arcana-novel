@@ -11149,7 +11149,230 @@
           }
         },
         "personality_profile_50": {
-
+          "canonical_id": "EA-050",
+          "unique_identifier": "STG 2.1.4.1",
+          "all_chapter": 50,
+          "novel_book": 2,
+          "chapter": "Chapter 10",
+          "chapter_title": "Dancing in the Whirlwind",
+          "type": "Specific Task Group",
+          "display_name": "Master of Fluid Foundations",
+          "theme": "Thriving Through Instability and Adaptive Resilience",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the profound capacity to remain centered and effective when the ground shifts constantly beneath them, drawn from Chapter 50 of the Human Framework. It represents the Six of Swords archetype—the figure moving through turbulent waters toward calmer shores, discovering that transition itself can be navigated with grace. This archetype masters the art of adaptation without losing core integrity, learning that flexibility and groundedness aren't opposites but partners. Like the Daughter facing mounting pressure where every strategy requires adjustment and nothing remains stable, this personality proves that true strength lies not in resisting change but in dancing with it skillfully.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Six",
+          "tarot_symbolism": "The Six of Swords represents transition, movement through difficulty, and passage to calmer waters. A figure guides a boat carrying passengers across rough seas toward distant shores, six swords standing upright in the vessel—symbolizing the mental clarity and tools carried forward even through turbulent transition. This card signifies necessary movement through instability, the journey from chaos toward order, teaching that we can navigate uncertainty with skill and emerge on firmer ground.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to remain effective amid constant change and uncertainty",
+              "ability to pivot strategies quickly without losing sight of core objectives",
+              "skill in finding temporary stability points within ongoing instability",
+              "wisdom to distinguish between adaptation that serves vs. reactivity that harms",
+              "mastery of scenario planning and rapid prototyping under pressure",
+              "leadership through modeling calm navigation of chaos for others",
+              "capacity to help others develop resilience when ground keeps shifting"
+            ],
+            "shadow": [
+              "potential for becoming addicted to chaos, unable to rest in stability",
+              "tendency toward over-adaptation that loses core identity or values",
+              "risk of treating necessary consistency as rigidity to be escaped",
+              "difficulty maintaining commitments when everything feels provisional",
+              "possible development of hypervigilance that prevents genuine rest",
+              "challenge distinguishing between healthy flexibility and unhealthy instability"
+            ],
+            "growth_focus": [
+              "balance adaptive flexibility with maintaining non-negotiable core values",
+              "recognize when stability would serve better than continued adaptation",
+              "integrate capacity for change with capacity for meaningful consistency",
+              "develop discernment about which elements require flexibility vs. firmness",
+              "maintain grounded center even while circumstances swirl and shift",
+              "transform reactive adaptation into conscious, strategic responsiveness"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "Dancing in the Whirlwind",
+            "fiction_chapter_context": "Book 2, Chapter 10 - As mounting pressure intensifies, the Daughter discovers that nothing stays stable—strategies that worked yesterday fail today, allies shift positions, circumstances change hourly. She must learn to adapt her approach continuously without losing her core purpose, discovering that resilience isn't about standing firm against change but about dancing skillfully with it."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) facing their greatest challenge—helping effectively when the ground keeps shifting and needs constantly change. This integrates Type 2's care with Type 7's flexibility and Type 8's resilience under pressure, creating the Helper who serves through adaptive presence rather than fixed solutions."
+          },
+          "color_alignment": {
+            "hue_index": 49,
+            "name": "Storm Blue",
+            "hsl": "49,100%,30%",
+            "rgb_hex": "#336699",
+            "color_symbolism": "Deep storm blue represents the turbulent waters that must be crossed—the color of seas in motion, of skies that shift between clarity and chaos. It embodies both the challenge of instability and the skill of navigation, showing that mastery comes through movement with, not against, changing currents."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.678,
+              "stability": 0.234,
+              "empathy": 0.712,
+              "openness": 0.834,
+              "orderliness": 0.189,
+              "novelty_seeking": 0.723,
+              "abstract_reasoning": 0.789,
+              "emotional_intensity": 0.645,
+              "social_dominance": 0.312,
+              "cooperativeness": 0.689,
+              "risk_tolerance": 0.756,
+              "conscientiousness": 0.567,
+              "adaptability": 0.923,
+              "imagination": 0.801
+            },
+            "match_weights": {
+              "adaptability": 0.95,
+              "openness": 0.85,
+              "abstract_reasoning": 0.8,
+              "risk_tolerance": 0.75,
+              "agency": 0.7
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q150", "Q151", "Q152"],
+            "dimension_rationale": {
+              "very_low_stability": "Constant change and instability are the defining conditions",
+              "very_high_adaptability": "Exceptional capacity to pivot and adjust strategies continuously",
+              "high_openness": "Receptivity to new approaches when old ones stop working",
+              "high_abstract_reasoning": "Ability to see patterns and possibilities amid chaos",
+              "moderate_agency": "Maintains effectiveness despite lacking stable ground"
+            }
+          },
+          "signals_map": {
+            "Q150": {
+              "dimension": "adaptability",
+              "polarity": 1.0,
+              "description": "Exceptional capacity to pivot strategies when circumstances shift",
+              "assessment_question": "When my plans stop working due to changing circumstances, I quickly develop and implement new approaches without becoming paralyzed"
+            },
+            "Q151": {
+              "dimension": "openness",
+              "polarity": 0.95,
+              "description": "Receptivity to changing methods while maintaining core purpose",
+              "assessment_question": "I'm open to completely changing my approach when the situation demands it, as long as the core purpose remains intact"
+            },
+            "Q152": {
+              "dimension": "abstract_reasoning",
+              "polarity": 0.9,
+              "description": "Skill in pattern recognition and scenario planning amid uncertainty",
+              "assessment_question": "I can rapidly assess changing situations, identify patterns in the chaos, and generate multiple contingency plans"
+            },
+            "Q153": {
+              "dimension": "risk_tolerance",
+              "polarity": 0.85,
+              "description": "Willingness to make decisions and take action despite uncertainty",
+              "assessment_question": "I'm comfortable making important decisions and taking action even when circumstances remain unstable and uncertain"
+            },
+            "Q154": {
+              "dimension": "agency",
+              "polarity": 0.8,
+              "description": "Maintained effectiveness and initiative despite lack of stable ground",
+              "assessment_question": "Even when everything around me is shifting and changing, I maintain my ability to take effective action toward my goals"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Antifragile: Things That Gain from Disorder",
+              "author": "Nassim Nicholas Taleb",
+              "section_of_focus": "Beyond Resilience to Antifragility",
+              "core_teaching": "Resilience withstands shocks; antifragility actually gains from them. Systems, organizations, and individuals that embrace volatility and disorder rather than trying to eliminate them become stronger through stress. The key is building optionality—multiple ways forward—rather than optimization for a single predicted future, creating structures that benefit from uncertainty rather than being destroyed by it",
+              "connection_to_instability": "Taleb reveals that the Daughter's mounting pressure isn't just challenge to endure but opportunity to grow stronger. By building flexibility into every strategy, maintaining multiple options, and viewing each disruption as information rather than setback, she can become antifragile—someone who thrives precisely because circumstances are unstable, using each change to adapt and improve",
+              "terminal_learning_objectives": {
+                "objective1": "Identify three areas where building optionality (multiple pathways) would serve better than optimization (single best path)",
+                "objective2": "Practice 'barbell strategy'—combining extreme safety in some areas with aggressive experimentation in others",
+                "objective3": "Develop protocol for extracting learning and advantage from each disruption or setback"
+              }
+            },
+            "book2": {
+              "title": "Managing Transitions: Making the Most of Change",
+              "author": "William Bridges",
+              "section_of_focus": "The Three Phases of Transition",
+              "core_teaching": "Change is external (new circumstance), but transition is internal (psychological process). Every transition has three phases: ending what was, navigating the neutral zone of uncertainty, and beginning the new. The neutral zone, though uncomfortable, is where transformation actually happens. Most people try to rush through it, but mastering this in-between space is key to successful adaptation",
+              "connection_to_instability": "Bridges provides framework for the Daughter's continuous adaptation—recognizing that mounting pressure creates ongoing transition, not single change. She learns to inhabit the neutral zone skillfully, honoring what's ending while remaining open to what's emerging, understanding that instability itself is the transition space where growth occurs if navigated with awareness rather than panic",
+              "terminal_learning_objectives": {
+                "objective1": "Identify what's ending, what's in neutral zone, and what's beginning in current situation",
+                "objective2": "Create ritual for honoring endings even as new beginnings emerge",
+                "objective3": "Develop practices for staying present in neutral zone without rushing to premature closure"
+              }
+            },
+            "book3": {
+              "title": "Switch: How to Change Things When Change Is Hard",
+              "author": "Chip Heath and Dan Heath",
+              "section_of_focus": "Direct the Rider, Motivate the Elephant, Shape the Path",
+              "core_teaching": "Change is hard because our rational mind (the Rider) and emotional mind (the Elephant) often want different things. Successful change requires: clear direction for the Rider so analysis paralysis doesn't set in, motivation for the Elephant so it has energy to move, and shaping the Path so the environment makes change easier. Small wins early create momentum that cascades into larger transformation",
+              "connection_to_instability": "Heath and Heath offer practical tools for the Daughter's continuous adaptation under pressure. When everything shifts constantly, she needs simple clarity (direct the Rider), emotional resilience (motivate the Elephant), and environmental supports (shape the Path). By focusing on small, clear wins amid chaos, she builds momentum and confidence even when larger strategy must keep evolving",
+              "terminal_learning_objectives": {
+                "objective1": "Identify one bright spot—something working amid instability—and script the critical moves to replicate it",
+                "objective2": "Find the feeling—connect emotionally with why adaptation matters to maintain motivation",
+                "objective3": "Shrink the change—break overwhelming adaptation into small, immediate wins that build confidence"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 10 - Mounting pressure reveals that nothing remains stable. Strategies that worked yesterday fail today. Allies shift. Circumstances change hourly. The Daughter stands in the whirlwind, needing to adapt continuously without losing herself in the chaos",
+            "symbolic_moment": "Standing in a boat crossing turbulent waters, six swords upright—the tools of clarity carried forward even through transition. The choice: resist the instability and capsize, or learn to navigate the changing currents with skill, discovering that movement through chaos is itself a form of mastery",
+            "emotional_landscape": "Vertigo mixed with fierce focus—the disorientation of ground constantly shifting beneath her feet alongside growing confidence that she can dance with change rather than being destroyed by it, discovering unexpected freedom in letting go of the illusion of stable ground",
+            "threshold_vision": "Understanding that true resilience isn't about standing firm but about fluid strength—that she can remain centered in her purpose while everything else shifts, that adaptation and integrity aren't opposites but partners, that the ability to change skillfully is itself a stable core to build upon",
+            "transformation_promise": "This chapter establishes that authentic endurance requires adaptive capacity—that rigid strength shatters under pressure while flexible strength bends and survives, that learning to thrive in instability now prepares her for cosmic-scale chaos later where adaptation becomes survival",
+            "series_arc_connection": "The adaptive skills built here become essential for navigating reality-level instability later—by mastering transition through personal and strategic chaos now, she develops capacity to guide others through cosmic-scale transformations when the very fabric of existence becomes unstable"
+          },
+          "mental_health_framework": {
+            "focus_area": "Adaptive Resilience and Navigation of Ongoing Instability",
+            "instability_characteristics": [
+              "Continuous environmental and circumstantial changes requiring adaptation",
+              "Lack of stable ground or predictable patterns to rely upon",
+              "Necessity for rapid strategic pivoting without losing core direction",
+              "Pressure to remain effective while everything remains in flux",
+              "Challenge of maintaining identity and values through constant transition",
+              "Need for centered presence amid external whirlwind conditions"
+            ],
+            "resilience_building_strategies": [
+              "Practice building optionality—multiple pathways forward—rather than single optimized plans",
+              "Implement 'transition phases' framework to navigate neutral zones skillfully",
+              "Create small wins amid chaos to build momentum and confidence",
+              "Develop scenario planning and rapid prototyping as regular practices",
+              "Maintain non-negotiable core values while flexing on methods and strategies",
+              "Balance adaptive capacity with intentional periods of rest and stability"
+            ],
+            "transformation_indicators": [
+              "Increased comfort with uncertainty and ongoing change",
+              "Greater capacity to pivot strategies without losing purpose or identity",
+              "Stronger ability to find temporary stability points within instability",
+              "Wisdom to distinguish healthy adaptation from unhealthy reactivity",
+              "Resilience that gains strength from disorder rather than merely enduring it"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IV: Allies, Mentors, and Helpers (through lens of pressure)",
+            "preliminary_beat": "Theme Stated - Pressure",
+            "save_the_cat_beat": "Theme Stated - Mounting Demands",
+            "character_state": "The Daughter faces mounting pressure where nothing remains stable—strategies fail, circumstances shift constantly, and she must adapt continuously without losing her core purpose, discovering that resilience means dancing with change rather than resisting it",
+            "ordinary_world_baseline": "She had developed strategies and approaches that worked, but mounting pressure reveals that static solutions fail when circumstances keep changing—she needs adaptive capacity, not just clever plans",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who thrives in instability rather than merely enduring it, to master transition itself as a skill, to remain centered in purpose while everything else shifts and changes"
+          },
+          "daily_prompt": "What shifted or changed today that required you to adapt your approach? How did you maintain your core purpose while flexibly adjusting your methods?",
+          "story_hook": "In Laurasia's Book 2, Chapter 10, the Daughter faces a truth that every leader must eventually confront: the ground won't stay stable. Mounting pressure reveals that yesterday's solutions don't work today, that strategies require constant adjustment, that adaptation isn't occasional but continuous. Standing in the whirlwind with six swords upright—her tools of clarity and purpose—she discovers what the ancient navigators knew: that mastery comes not from resisting change but from dancing skillfully with it, that true strength is fluid rather than rigid, that those who can bend without breaking inherit the future. The Six of Swords whispers its eternal teaching—that we can cross turbulent waters with grace, that transition itself can be navigated with skill, that the capacity to adapt while maintaining core integrity is the ultimate resilience, preparing us for whatever storms lie ahead.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Thrive in unstable, rapidly changing environments",
+              "Pivot strategies quickly without losing sight of objectives",
+              "Navigate ongoing transition with skill and centered presence",
+              "Build optionality and flexibility into all plans and approaches",
+              "Guide others through chaos with calm adaptive leadership",
+              "Gain strength from disorder rather than being diminished by it"
+            ],
+            "development_pathway": "From rigid resistance to fluid resilience—learning to build antifragility through optionality, navigate transition phases with awareness, create small wins amid chaos, develop scenario planning as practice, maintain core values while flexing methods, and transform instability from threat into opportunity for growth",
+            "ai_integration_notes": "AI can help track patterns in changing circumstances, suggesting when strategic pivots may be needed. Machine learning can identify which adaptations served well versus which were reactive scrambling, helping develop wisdom about healthy versus unhealthy flexibility. Systems can model multiple scenarios and suggest contingency plans when instability increases."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 10 'Chief Among the Mighty' - Prime Timeline where endurance meets adaptive mastery",
+            "universal_archetype": "The Skilled Navigator—who knows that crossing turbulent waters requires not resistance but skillful movement with changing currents, maintaining purpose while adapting methods",
+            "trionfi_connection": "The Six of Swords teaches that transition itself can be navigated with grace, that we carry our clarity and purpose (the upright swords) even through turbulent passage, that the capacity for skilled adaptation is itself a form of stable strength that serves us through any chaos",
+            "series_foundation": "This adaptive capacity becomes essential for reality-level instability later—by mastering navigation of personal and strategic chaos now, she develops ability to guide others through cosmic transformations when existence itself becomes unstable and everything that seemed solid shifts beneath everyone's feet"
+          }
         },
         "personality_profile_51": {
 
