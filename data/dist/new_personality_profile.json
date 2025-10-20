@@ -9567,18 +9567,245 @@
           }
         },
         "personality_profile_43": {
-
+          "canonical_id": "EA-043",
+          "unique_identifier": "STG 2.1.1.3",
+          "all_chapter": 43,
+          "novel_book": 2,
+          "chapter": "Chapter 3",
+          "chapter_title": "The Sustainability of Resolve",
+          "type": "Specific Task Group",
+          "display_name": "Architect of Enduring Force",
+          "theme": "The Transformation from Surge to System",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the crucial transition from explosive willpower to sustainable determination, drawn from Chapter 43 of the Human Framework. It represents the Knight of Cups archetype in its maturing phase—the passionate warrior learning that true power lies not in the intensity of a single charge but in the capacity to maintain resolve across time. This archetype navigates the challenging terrain after crisis passes, discovering that building systems and habits transforms momentary heroism into lasting strength. Like the Daughter learning to sustain the force she discovered in emergency, this personality proves that channeling intense energy into sustainable practices reshapes not just moments but destiny itself.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Knight",
+          "tarot_symbolism": "The Knight of Cups in its sustained expression represents the evolution from romantic idealism to practical devotion—the warrior who learns to channel passion into consistent action. This card signifies the critical transition point where emotional intensity must transform into renewable energy, where the sprint becomes a marathon, and where willpower evolves from crisis response to lifestyle foundation.",
+          "traits": {
+            "strengths": [
+              "capacity to transform intense experiences into sustainable practices",
+              "wisdom to recognize that willpower requires renewal and strategy",
+              "ability to build systems that support ongoing determination",
+              "discipline to maintain resolve when initial passion fades",
+              "integration of emotional intensity with practical sustainability",
+              "understanding that small consistent actions compound into power",
+              "resilience through habit formation rather than constant heroics"
+            ],
+            "shadow": [
+              "struggle when crisis energy depletes and routine feels mundane",
+              "resistance to systematic approaches after experiencing raw power",
+              "tendency to chase the 'high' of intense moments over steady progress",
+              "impatience with gradual improvement after rapid transformation",
+              "vulnerability to burnout without proper recovery practices",
+              "difficulty accepting that sustainable power feels different than surge power"
+            ],
+            "growth_focus": [
+              "embrace the power of incremental progress and habit formation",
+              "develop recovery practices to prevent willpower depletion",
+              "build identity around consistent action rather than dramatic moments",
+              "recognize that sustainable determination enables greater long-term impact",
+              "integrate emotional passion with systematic discipline",
+              "transform crisis-born insights into daily practices that compound"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Sustainability of Resolve",
+            "fiction_chapter_context": "Book 2, Chapter 3 - In the aftermath of the temporal crisis, the Daughter must learn that the intense force that saved her family cannot be sustained through pure willpower alone. She discovers that true mastery requires building habits and systems that support ongoing determination, transforming her crisis response into a renewable foundation of strength"
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) in its integrating state—moving beyond reactive caregiving toward sustainable service. The journey incorporates Type 2's heart-centered motivation with Type 4's authentic expression and Type 1's disciplined systems."
+          },
+          "color_alignment": {
+            "hue_index": 42,
+            "name": "Warm Mauve",
+            "hsl": "42,62%,60%",
+            "rgb_hex": "#D8B25A",
+            "color_symbolism": "Warm golden-mauve represents the mellowing of intense passion into sustainable warmth—the color of dawn light that promises consistent illumination rather than a lightning flash. It embodies both the emotional depth that motivated initial action and the steady, renewable energy that maintains it across time."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.703,
+              "stability": 0.457,
+              "empathy": 0.857,
+              "openness": 0.185,
+              "orderliness": 0.231,
+              "novelty_seeking": 0.572,
+              "abstract_reasoning": 0.001,
+              "emotional_intensity": 0.891,
+              "social_dominance": 0.561,
+              "cooperativeness": 0.830,
+              "risk_tolerance": 0.895,
+              "conscientiousness": 0.631,
+              "adaptability": 0.516,
+              "imagination": 0.107
+            },
+            "match_weights": {
+              "conscientiousness": 0.85,
+              "agency": 0.8,
+              "stability": 0.75,
+              "cooperativeness": 0.7,
+              "emotional_intensity": 0.65
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q127", "Q128", "Q129"],
+            "dimension_rationale": {
+              "high_agency": "Building sustainable systems increases sense of long-term control",
+              "moderate_stability": "Still building the foundation but more stable than crisis phase",
+              "very_high_empathy": "Care for others continues to motivate sustainable action",
+              "high_emotional_intensity": "Passion remains but channeled into consistent practices",
+              "high_conscientiousness": "Development of systematic habits and disciplined routines"
+            }
+          },
+          "signals_map": {
+            "Q127": {
+              "dimension": "conscientiousness",
+              "polarity": 1.0,
+              "description": "Commitment to building sustainable systems and habits",
+              "assessment_question": "I understand that maintaining my determination requires building consistent habits and routines, not just willpower"
+            },
+            "Q128": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Sense of control through systematic approach to willpower",
+              "assessment_question": "I feel more empowered when I build sustainable practices than when I rely on crisis-driven bursts of energy"
+            },
+            "Q129": {
+              "dimension": "stability",
+              "polarity": 0.85,
+              "description": "Grounding effect of routine and system-building",
+              "assessment_question": "Creating reliable habits and systems gives me a stable foundation even when circumstances change"
+            },
+            "Q130": {
+              "dimension": "cooperativeness",
+              "polarity": 0.8,
+              "description": "Recognition that sustainable force enables better service to others",
+              "assessment_question": "I'm more effective at helping others when I maintain sustainable energy rather than burning out in dramatic efforts"
+            },
+            "Q131": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.75,
+              "description": "Channeling passion into consistent rather than explosive action",
+              "assessment_question": "I can transform my intense feelings into steady, consistent action that compounds over time"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones",
+              "author": "James Clear",
+              "section_of_focus": "Building Keystone Routines",
+              "core_teaching": "Small, incremental habit changes compound into remarkable willpower gains—designing systems that automatically reinforce perseverance creates sustainable transformation without constant heroic effort",
+              "connection_to_intense_force": "Clear demonstrates that the intense force discovered in crisis must be transformed into tiny, consistent habits. The power isn't in maintaining crisis-level intensity but in building systems where small actions compound into extraordinary capability over time",
+              "terminal_learning_objectives": {
+                "objective1": "Design a simple habit loop that builds willpower capacity automatically",
+                "objective2": "Track habit consistency to maintain momentum and celebrate incremental progress",
+                "objective3": "Adjust cues and rewards to optimize persistence without depleting resources"
+              }
+            },
+            "book2": {
+              "title": "The Power of Habit: Why We Do What We Do in Life and Business",
+              "author": "Charles Duhigg",
+              "section_of_focus": "Keystone Habits",
+              "core_teaching": "Certain habits have the power to start a chain reaction, changing other habits as they move through an organization or life—understanding the habit loop enables transformation of willpower from effort to automaticity",
+              "connection_to_intense_force": "Duhigg reveals that sustained intense force comes not from constant exertion but from strategic habit formation. Keystone habits—like the Daughter's daily practice with the Trionfi cards—automatically strengthen determination in multiple life areas",
+              "terminal_learning_objectives": {
+                "objective1": "Identify one keystone habit that will automatically reinforce determination",
+                "objective2": "Map the habit loop (cue, routine, reward) for sustainable willpower",
+                "objective3": "Implement and refine the keystone habit until it becomes automatic"
+              }
+            },
+            "book3": {
+              "title": "Deep Work: Rules for Focused Success in a Distracted World",
+              "author": "Cal Newport",
+              "section_of_focus": "Work Rituals and Routines",
+              "core_teaching": "Structured, distraction-free intervals maximize cognitive output and build capacity for sustained intense focus—rituals reduce the willpower cost of initiating difficult work",
+              "connection_to_intense_force": "Newport demonstrates that ritualizing intense work preserves willpower by removing decision fatigue. The Daughter learns that having set times and structured approaches for practicing determination makes it sustainable rather than depleting",
+              "terminal_learning_objectives": {
+                "objective1": "Design a ritual that reliably initiates focused determination without willpower drain",
+                "objective2": "Create distraction-free intervals for practicing willpower in sustainable doses",
+                "objective3": "Track deep work consistency and adjust rituals for optimal sustainability"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 3 - Days after the temporal crisis, the Daughter feels her willpower wavering. The intense force that saved her family cannot be sustained through pure determination alone—she must learn new approaches",
+            "symbolic_moment": "She discovers that practicing with the Trionfi cards at the same time each morning, using the same ritual, requires far less willpower than her previous crisis-driven approach—the habit begins to carry her",
+            "emotional_landscape": "The bittersweet recognition that sustainable power feels different than surge power—less dramatic but more reliable, less exciting but more trustworthy",
+            "threshold_vision": "Understanding that the intense force she discovered in crisis can become her daily foundation, not through constant heroism but through strategic habit formation that compounds over time",
+            "transformation_promise": "This shift from surge to system establishes the renewable foundation of strength that will carry the Daughter through the long trials ahead, proving more valuable than any single moment of heroism",
+            "series_arc_connection": "The sustainable practices developed here enable the Daughter to maintain her power across Books 2-3's extended challenges, ultimately providing the endurance needed for her crucial role in cosmic reconciliation"
+          },
+          "mental_health_framework": {
+            "focus_area": "Sustainable Endurance Through System Building",
+            "sustainability_characteristics": [
+              "Recognition that crisis-level intensity cannot be maintained indefinitely",
+              "Willingness to trade dramatic moments for consistent progress",
+              "Capacity to build habits that reduce willpower requirements over time",
+              "Understanding that recovery is essential, not weakness",
+              "Ability to find meaning in incremental improvement",
+              "Wisdom to recognize that sustainable power enables greater impact"
+            ],
+            "resilience_building_strategies": [
+              "Design keystone habits that automatically strengthen determination",
+              "Build rituals that reduce decision fatigue and preserve willpower",
+              "Track small wins to maintain motivation during gradual progress",
+              "Schedule recovery periods as essential rather than optional",
+              "Transform intense insights from crisis into daily micro-practices",
+              "Create identity around consistency rather than dramatic achievements"
+            ],
+            "transformation_indicators": [
+              "Decreased reliance on crisis energy to take action",
+              "Increased confidence in ability to sustain effort over time",
+              "Better balance between intensity and recovery",
+              "Recognition that small consistent actions compound into power",
+              "Ability to maintain determination even when circumstances are mundane"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene I: The Ordinary World (building sustainable foundation)",
+            "preliminary_beat": "Inciting Incident / Catalyst (aftermath)",
+            "save_the_cat_beat": "Debate - How to Maintain What Crisis Revealed",
+            "character_state": "The Daughter grapples with how to sustain the power she discovered in crisis, learning that transformation requires building systems not just experiencing breakthroughs",
+            "ordinary_world_baseline": "The crisis has passed, revealing both her capacity and the challenge of making that capacity renewable rather than fleeting",
+            "call_to_adventure_preview": "The true adventure isn't repeating crisis heroics but building the sustainable strength that enables long-term transformation—a harder but more important journey"
+          },
+          "daily_prompt": "What small, consistent practice did you maintain today that builds your long-term determination? How are you transforming intense insights into sustainable habits?",
+          "story_hook": "In Laurasia's Book 2, Chapter 3, the Daughter faces an unexpected challenge: the intense force that saved her family during crisis now feels impossible to summon in ordinary circumstances. But as she works with a mentor, she discovers something profound—true mastery isn't about maintaining crisis-level intensity but about building habits so powerful they make determination feel effortless. Sometimes, the cards whisper, the greatest strength comes not from the lightning bolt but from the steady flame that burns for years.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Struggle to maintain crisis-discovered capabilities in normal life",
+              "Recognize need for systematic approaches to sustain willpower",
+              "Value consistency over dramatic achievements",
+              "Understand that recovery and sustainability are strengths not weaknesses",
+              "Seek to build identity around reliable practices rather than heroic moments",
+              "Possess both passion and discipline for long-term transformation"
+            ],
+            "development_pathway": "From surge to system—learning to transform crisis insights into daily habits, build rituals that preserve willpower, embrace incremental progress, recognize sustainable power as superior to dramatic intensity, and develop the discipline that enables lasting transformation",
+            "ai_integration_notes": "AI can help identify patterns in habit formation and willpower sustainability, offering personalized strategies for system building. Machine learning can detect linguistic markers of burnout risk vs. sustainable practice, providing guidance for optimal balance between intensity and recovery."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 3 'Chief Among the Mighty' - Prime Timeline post-crisis",
+            "universal_archetype": "The Sustainability Threshold—where temporary power becomes permanent capacity through systematic cultivation",
+            "trionfi_connection": "The Knight of Cups teaches that passionate determination sustained through disciplined practice becomes more powerful than any single surge—the compound interest of willpower",
+            "series_foundation": "This transition from crisis response to sustainable practice establishes the endurance foundation that will enable the Daughter to maintain cosmic-level efforts across multiple books, proving essential for the long-term universal transformation"
+          }
         },
         "personality_profile_44": {
-          
+
         },
         "personality_profile_45": {
+
         },
         "personality_profile_46": {
+
         },
         "personality_profile_47": {
+
         },
         "personality_profile_48": {
+          
         },
         "personality_profile_49": {
         },
