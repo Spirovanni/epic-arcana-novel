@@ -10923,7 +10923,230 @@
           }
         },
         "personality_profile_49": {
-
+          "canonical_id": "EA-049",
+          "unique_identifier": "STG 2.1.3.3",
+          "all_chapter": 49,
+          "novel_book": 2,
+          "chapter": "Chapter 9",
+          "chapter_title": "The Grace of Grieving Forward",
+          "type": "Specific Task Group",
+          "display_name": "Guardian of Sacred Mourning",
+          "theme": "Honoring Loss While Moving Toward Life",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the profound journey through grief that honors loss without becoming trapped in it, drawn from Chapter 49 of the Human Framework. It represents the Five of Cups archetype—the figure who stands with three spilled cups before them yet turns toward two remaining cups, recognizing that grief and hope can coexist. This archetype navigates the delicate balance between honoring what's lost and remaining open to what remains, discovering that true resilience isn't about moving past pain but about carrying it forward with grace. Like the Daughter learning to grieve without abandoning her journey, this personality proves that the deepest strength lies in feeling fully while continuing forward.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Five",
+          "tarot_symbolism": "The Five of Cups represents loss, grief, and the challenge of moving forward after disappointment. A cloaked figure stands before three spilled cups, mourning what's lost, while two cups remain upright behind them—symbolizing hope and possibility that exist alongside sorrow. A bridge in the distance suggests a path forward. This card signifies the necessary work of grief while reminding us that loss and possibility can coexist, that mourning is sacred but need not become permanent dwelling.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to feel grief fully without being consumed by it",
+              "ability to honor loss while remaining open to continuing life",
+              "skill in creating space for mourning that respects both pain and resilience",
+              "wisdom to recognize that carrying forward differs from moving on",
+              "mastery of patient presence with sorrow without rushing toward resolution",
+              "leadership through modeling authentic grief that doesn't abandon hope",
+              "capacity to help others navigate loss with compassion and gentle persistence"
+            ],
+            "shadow": [
+              "potential for dwelling in grief as identity rather than sacred passage",
+              "tendency toward martyrdom through suffering or endless mourning",
+              "risk of using loss as excuse to avoid engaging with remaining life",
+              "difficulty balancing grief's depth with forward momentum",
+              "possible attachment to sorrow that prevents genuine healing",
+              "challenge accepting that honoring loss includes eventually turning toward what remains"
+            ],
+            "growth_focus": [
+              "balance sacred mourning with gradual engagement with continuing life",
+              "recognize when grief serves healing vs. when it becomes avoidance",
+              "integrate profound loss with capacity for new connection and meaning",
+              "develop patience for grief's timeline while staying open to emergence",
+              "maintain honoring of what's lost while building on what remains",
+              "transform mourning from frozen state to living memorial through action"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Grace of Grieving Forward",
+            "fiction_chapter_context": "Book 2, Chapter 9 - As the Daughter faces mounting pressure and continued setbacks, she must learn to grieve losses—of time, of perfect outcomes, of who she thought she'd be—without letting that grief paralyze her forward motion. She discovers the sacred art of carrying sorrow while continuing the journey, finding that authentic resilience includes, rather than excludes, the full depth of feeling."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) facing its deepest wound—loss of connection, abandonment, or failure to help. This integrates Type 2's capacity for care with Type 4's emotional depth and Type 9's patient acceptance, creating the Helper who serves through sacred presence with grief rather than premature comfort."
+          },
+          "color_alignment": {
+            "hue_index": 48,
+            "name": "Deep Rose",
+            "hsl": "48,100%,35%",
+            "rgb_hex": "#990033",
+            "color_symbolism": "Deep rose represents the beauty and pain of an open heart—the color of love that has known loss, of petals that remain soft despite thorns. It embodies both the wound of grief and the courage to stay tender, showing that vulnerability in sorrow is strength, not weakness."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.389,
+              "stability": 0.267,
+              "empathy": 0.823,
+              "openness": 0.712,
+              "orderliness": 0.198,
+              "novelty_seeking": 0.334,
+              "abstract_reasoning": 0.589,
+              "emotional_intensity": 0.892,
+              "social_dominance": 0.156,
+              "cooperativeness": 0.678,
+              "risk_tolerance": 0.423,
+              "conscientiousness": 0.612,
+              "adaptability": 0.456,
+              "imagination": 0.534
+            },
+            "match_weights": {
+              "emotional_intensity": 0.9,
+              "empathy": 0.85,
+              "openness": 0.75,
+              "conscientiousness": 0.7,
+              "adaptability": 0.65
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q145", "Q146", "Q147"],
+            "dimension_rationale": {
+              "low_agency": "Grief temporarily undermines sense of control over outcomes",
+              "very_low_stability": "Loss creates profound disruption and instability",
+              "very_high_empathy": "Deep capacity to feel with self and others in pain",
+              "very_high_emotional_intensity": "Profound emotional engagement with loss and mourning",
+              "high_openness": "Receptivity to grief's lessons and transformation through sorrow"
+            }
+          },
+          "signals_map": {
+            "Q145": {
+              "dimension": "emotional_intensity",
+              "polarity": 1.0,
+              "description": "Profound capacity to feel grief's full depth without collapsing",
+              "assessment_question": "When I experience loss, I allow myself to feel the full depth of grief without rushing to 'get over it' or 'move on'"
+            },
+            "Q146": {
+              "dimension": "empathy",
+              "polarity": 0.95,
+              "description": "Compassionate presence with own and others' mourning",
+              "assessment_question": "I can hold space for deep sorrow—my own and others'—with patience and without trying to fix or minimize the pain"
+            },
+            "Q147": {
+              "dimension": "openness",
+              "polarity": 0.9,
+              "description": "Receptivity to grief as teacher rather than enemy",
+              "assessment_question": "I'm open to what grief has to teach me, recognizing that loss can transform without requiring that I 'move past' what's lost"
+            },
+            "Q148": {
+              "dimension": "conscientiousness",
+              "polarity": 0.85,
+              "description": "Disciplined presence with grief's process",
+              "assessment_question": "I maintain patient, structured practices for processing grief rather than avoiding it or drowning in it"
+            },
+            "Q149": {
+              "dimension": "adaptability",
+              "polarity": 0.8,
+              "description": "Capacity to carry grief while engaging with continuing life",
+              "assessment_question": "Even while grieving, I can gradually turn toward what remains and what's possible without betraying what's lost"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "On Grief and Grieving: Finding the Meaning of Grief Through the Five Stages of Loss",
+              "author": "Elisabeth Kübler-Ross and David Kessler",
+              "section_of_focus": "The Five Stages as Non-Linear Process",
+              "core_teaching": "Grief doesn't follow neat stages but cycles through denial, anger, bargaining, depression, and acceptance in personal, non-linear ways. The goal isn't to 'complete' grief but to integrate loss into continuing life—honoring what's lost while remaining open to what remains and what may come",
+              "connection_to_grieving_forward": "Kübler-Ross provides framework for understanding that grief is sacred work, not weakness. The Daughter learns that her various responses to loss—anger at delays, bargaining for more time, depression over failure—are all valid parts of the journey. Moving forward doesn't mean abandoning grief but carrying it with greater wisdom",
+              "terminal_learning_objectives": {
+                "objective1": "Identify which 'stage' of grief is currently active without judgment about 'should be'",
+                "objective2": "Practice honoring each grief response as valid rather than obstacle to overcome",
+                "objective3": "Create ritual for carrying loss forward rather than trying to leave it behind"
+              }
+            },
+            "book2": {
+              "title": "The Wild Edge of Sorrow: Rituals of Renewal and the Sacred Work of Grief",
+              "author": "Francis Weller",
+              "section_of_focus": "The Five Gates of Grief",
+              "core_teaching": "Grief isn't only about death but includes loss of wholeness, the places that haven't known love, the sorrows of the world, and what we expected but didn't receive. Communal grieving rituals transform private pain into sacred healing. Sorrow tended becomes medicine; sorrow denied becomes suffering",
+              "connection_to_grieving_forward": "Weller reveals that the Daughter's grief includes layers beyond obvious losses—grief for who she thought she'd be, for perfect outcomes, for innocence lost. He teaches that grief is meant to be witnessed and ritualized, not solved. The Daughter discovers that sacred mourning in community prevents isolation and honors loss's transformative power",
+              "terminal_learning_objectives": {
+                "objective1": "Identify the multiple 'gates' of grief present in current experience beyond obvious loss",
+                "objective2": "Create or participate in ritual that honors grief rather than trying to solve it",
+                "objective3": "Build community practice for witnessing and holding space for sacred mourning"
+              }
+            },
+            "book3": {
+              "title": "Option B: Facing Adversity, Building Resilience, and Finding Joy",
+              "author": "Sheryl Sandberg and Adam Grant",
+              "section_of_focus": "Building Resilience After Loss",
+              "core_teaching": "When 'Option A'—the life we planned—is no longer available, we must learn to embrace 'Option B' with full commitment. This doesn't dishonor what's lost but honors it by living fully with what remains. Resilience after loss involves both feeling grief deeply and gradually finding meaning, connection, and even joy again",
+              "connection_to_grieving_forward": "Sandberg provides practical framework for the Daughter's challenge: how to grieve the perfect journey she imagined while fully committing to the imperfect journey that is. She learns that turning toward remaining cups doesn't betray spilled ones—that resilience includes grief rather than replaces it, that moving forward means carrying loss with grace, not leaving it behind",
+              "terminal_learning_objectives": {
+                "objective1": "Articulate what 'Option A' was and practice acceptance that it's no longer available",
+                "objective2": "Identify concrete aspects of 'Option B'—what actually remains—worth full commitment",
+                "objective3": "Develop practice of honoring loss while engaging with present reality and possibility"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 9 - Under mounting pressure with time slipping away, the Daughter faces accumulated losses that can no longer be ignored. Not catastrophic losses, but the slow grief of missed timelines, imperfect progress, the gap between who she hoped to be and who she actually is",
+            "symbolic_moment": "Standing before three spilled cups—representing lost time, failed attempts, and shattered expectations—while two cups remain upright behind her. The choice: dwell in what's gone or turn toward what remains, recognizing that honoring loss doesn't require abandoning forward motion",
+            "emotional_landscape": "Deep sorrow mixed with fierce determination—the ache of grief that demands acknowledgment alongside the pull of continuing purpose, the tension between honoring what's lost and engaging what remains, discovering that both can coexist",
+            "threshold_vision": "Understanding that true resilience isn't about transcending grief but about carrying it forward with grace—that she can mourn delays and failures while continuing the journey, that tears don't disqualify forward steps, that sorrow tended becomes strength",
+            "transformation_promise": "This chapter establishes that authentic endurance requires sacred space for grief—that momentum built on denied loss is fragile, while momentum that honors sorrow while moving forward proves unbreakable when facing even greater trials ahead",
+            "series_arc_connection": "The grief work here builds emotional resilience for catastrophic losses later—by learning to mourn imperfect progress now, she develops capacity to grieve cosmic-scale tragedies while continuing necessary action when the fate of worlds depends on her ability to feel and act simultaneously"
+          },
+          "mental_health_framework": {
+            "focus_area": "Healthy Grief Processing and Resilient Forward Motion",
+            "grief_characteristics": [
+              "Deep acknowledgment of loss without permanent dwelling in sorrow",
+              "Sacred mourning that honors what's gone while engaging what remains",
+              "Integration of grief into continuing journey rather than barrier to it",
+              "Recognition that carrying forward differs from moving on or getting over",
+              "Balance between feeling grief's full depth and maintaining life engagement",
+              "Transformation of private pain through ritual, witness, and community"
+            ],
+            "resilience_building_strategies": [
+              "Practice non-linear grief work honoring all emotional responses without judgment",
+              "Create rituals that acknowledge loss while affirming continued life and purpose",
+              "Build community for witnessing and holding space for sacred mourning",
+              "Implement practices for carrying grief forward rather than leaving it behind",
+              "Identify multiple 'gates' of grief beyond obvious losses for fuller processing",
+              "Balance deep feeling with gradual engagement with remaining possibility and connection"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to feel grief fully without being consumed or paralyzed",
+              "Greater integration of loss into life narrative rather than rupture from it",
+              "Stronger ability to honor what's lost while turning toward what remains",
+              "Wisdom to recognize grief as sacred passage not permanent dwelling",
+              "Resilience rooted in emotional depth rather than emotional avoidance"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IV: Allies, Mentors, and Helpers (through eyes of loss)",
+            "preliminary_beat": "Theme Stated - Pressure",
+            "save_the_cat_beat": "Pressure - Facing Accumulated Loss",
+            "character_state": "The Daughter faces mounting pressure revealing accumulated losses she can no longer ignore. She must learn the sacred art of grieving while continuing forward, discovering that authentic resilience includes rather than excludes the full depth of feeling",
+            "ordinary_world_baseline": "She had been pushing forward without fully acknowledging the costs and losses accumulating along the journey—grief denied was beginning to undermine her foundation",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who can feel grief's full depth while maintaining forward motion, to honor loss without being imprisoned by it, to carry sorrow as sacred companion rather than enemy of progress"
+          },
+          "daily_prompt": "What loss did you acknowledge today, and how did you honor it while still engaging with what remains and what's possible?",
+          "story_hook": "In Laurasia's Book 2, Chapter 9, the Daughter stands at a crossroads of grief. Behind her, three cups lie spilled—lost time, failed attempts, shattered expectations—demanding acknowledgment. Before her, pressure mounts and the path continues. She discovers what the ancient wisdom keepers knew: that the deepest strength isn't in transcending sorrow but in carrying it forward with grace, that tears and determination can coexist, that honoring what's lost includes turning toward what remains. The Five of Cups whispers its eternal teaching—that sacred mourning and forward motion aren't enemies but partners in the dance of genuine resilience, that the heart strong enough to grieve fully is the heart strong enough to continue.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Process grief deeply without being paralyzed by loss",
+              "Honor sorrow while maintaining forward engagement with life",
+              "Create sacred space for mourning that respects both pain and resilience",
+              "Balance emotional depth with practical persistence",
+              "Guide others through loss with compassionate presence and gentle hope",
+              "Transform grief into source of wisdom and deeper connection"
+            ],
+            "development_pathway": "From denied or overwhelming grief to sacred mourning—learning to honor the five stages as non-linear process, recognize multiple gates of grief, create rituals for carrying loss forward, embrace 'Option B' without betraying 'Option A', and integrate sorrow into continuing life with grace and wisdom",
+            "ai_integration_notes": "AI can help track grief cycles and patterns, identifying when mourning serves healing versus when it becomes avoidance. Machine learning can detect signs of healthy versus complicated grief, offering prompts for ritual, community connection, and balanced engagement with both loss and continuing life without pushing premature resolution."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 9 'Chief Among the Mighty' - Prime Timeline where endurance meets sacred mourning",
+            "universal_archetype": "The Sacred Griever—who knows that honoring loss while moving forward isn't betrayal but the deepest form of respect for both what's lost and what remains",
+            "trionfi_connection": "The Five of Cups teaches that grief acknowledged and carried forward transforms into wisdom, that the figure who can stand with spilled cups while turning toward remaining ones embodies the ultimate resilience—not transcendence of sorrow but integration of loss into continuing sacred journey",
+            "series_foundation": "This grief work builds emotional capacity for cosmic losses ahead—by learning to mourn imperfect progress while continuing now, she develops ability to grieve world-ending catastrophes while taking world-saving action when she can least afford emotional paralysis or emotional denial"
+          }
         },
         "personality_profile_50": {
 
