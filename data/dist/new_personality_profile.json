@@ -13866,6 +13866,230 @@
           }
         },
         "personality_profile_62": {
+          "canonical_id": "EA-062",
+          "unique_identifier": "STG 2.2.3.3",
+          "all_chapter": 62,
+          "novel_book": 2,
+          "chapter": "Chapter 22",
+          "chapter_title": "The Passionate Charge",
+          "type": "Specific Task Group",
+          "display_name": "Adventurous Spirit",
+          "theme": "Charging Forward With Passionate Action and Bold Momentum",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the dynamic capacity to charge forward with passionate action and adventurous spirit following hard-won victories, drawn from Chapter 62 of the Human Framework. It represents the Knight of Wands archetype—an armored figure on rearing horse, staff held high like torch, surging forward with passionate momentum, symbolizing bold action following vision, adventurous charge toward new horizons, enthusiastic energy transforming inspiration into movement. This archetype masters the art of translating renewed confidence into decisive action, discovering that clarity gained through trials demands immediate passionate pursuit. Like the Daughter having emerged from supreme ordeal with renewed clarity and now charging forward to capitalize on hard-won wisdom, refusing to let momentum dissipate, this personality proves that The Reward must be immediately invested in bold forward action or inspiration stagnates into mere memory.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Knight",
+          "tarot_symbolism": "The Knight of Wands represents passionate action, adventurous pursuit, bold momentum, and enthusiastic charge toward goals. An armored knight on rearing horse holds staff high like torch—symbolizing vision transformed into movement, inspiration channeled into action, renewed confidence deployed in immediate bold pursuit. This card signifies that clarity demands action, that hard-won wisdom must be immediately invested in forward momentum, teaching that the gap between inspiration and execution determines whether breakthroughs become lasting transformation or fade into might-have-beens.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to translate inspiration into immediate passionate action",
+              "ability to maintain bold forward momentum capitalizing on hard-won clarity",
+              "skill in channeling renewed confidence into adventurous pursuit of new horizons",
+              "wisdom to act decisively when window of opportunity opens rather than overthinking",
+              "mastery of enthusiastic energy that mobilizes self and others toward compelling vision",
+              "leadership through modeling swift transition from planning to execution",
+              "capacity to transform breakthrough moments into sustained forward movement"
+            ],
+            "shadow": [
+              "potential for impulsive action charging forward without adequate preparation",
+              "tendency toward restless pursuit of next adventure before completing current mission",
+              "risk of scattered energy pursuing too many passionate interests simultaneously",
+              "difficulty sustaining effort when initial enthusiasm wanes and work becomes routine",
+              "possible development of adrenaline addiction requiring constant new challenges",
+              "challenge distinguishing between passionate pursuit and reckless abandonment of wisdom"
+            ],
+            "growth_focus": [
+              "balance passionate action with strategic preparation ensuring sustainability",
+              "recognize difference between decisive momentum and impulsive rushing",
+              "integrate adventurous spirit with commitment to complete what's started",
+              "develop capacity to sustain effort through routine phases following exciting launches",
+              "maintain bold energy without requiring constant novelty to stay engaged",
+              "transform passion from reactive enthusiasm into disciplined sustained pursuit"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Passionate Charge",
+            "fiction_chapter_context": "Book 2, Chapter 22 - Having gained The Reward of clarity and renewed confidence from surviving supreme ordeal, the Daughter and allies face critical choice: capitalize on momentum by charging forward immediately with passionate action, or let hard-won breakthroughs fade through hesitation. They discover that inspiration has expiration date—that window between gaining clarity and deploying it determines whether wisdom transforms reality or becomes mere memory."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that passionate action toward meaningful goals is ultimate service—that charging forward with renewed energy mobilizes entire movements. This integrates Type 2's devotion with Type 7's enthusiastic pursuit and Type 8's decisive boldness."
+          },
+          "color_alignment": {
+            "hue_index": 61,
+            "name": "Adventure Flame",
+            "hsl": "61,100%,50%",
+            "rgb_hex": "#FFD600",
+            "color_symbolism": "Adventure flame represents the torch held high while charging forward—the color of passionate action following clarity, of momentum that refuses to let inspiration fade. It embodies both the heat of enthusiastic pursuit and the light illuminating new horizons, showing that passionate action transforms breakthroughs into lasting change."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.923,
+              "stability": 0.634,
+              "empathy": 0.778,
+              "openness": 0.856,
+              "orderliness": 0.612,
+              "novelty_seeking": 0.889,
+              "abstract_reasoning": 0.723,
+              "emotional_intensity": 0.867,
+              "social_dominance": 0.789,
+              "cooperativeness": 0.756,
+              "risk_tolerance": 0.845,
+              "conscientiousness": 0.734,
+              "adaptability": 0.812,
+              "imagination": 0.801
+            },
+            "match_weights": {
+              "agency": 0.95,
+              "novelty_seeking": 0.9,
+              "emotional_intensity": 0.85,
+              "risk_tolerance": 0.8,
+              "adaptability": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q208", "Q209", "Q210"],
+            "dimension_rationale": {
+              "very_high_agency": "Proactive bold action translating inspiration into immediate movement",
+              "very_high_novelty_seeking": "Adventurous pursuit of new horizons and challenges",
+              "high_emotional_intensity": "Passionate enthusiasm fueling forward momentum",
+              "high_risk_tolerance": "Bold charging forward despite uncertain outcomes",
+              "moderate_stability": "Dynamic energy creating movement rather than static foundation"
+            }
+          },
+          "signals_map": {
+            "Q208": {
+              "dimension": "agency",
+              "polarity": 1.0,
+              "description": "Translating inspiration into immediate bold action",
+              "assessment_question": "I immediately translate insights and inspiration into decisive action, charging forward to capitalize on breakthroughs rather than letting momentum fade through hesitation"
+            },
+            "Q209": {
+              "dimension": "novelty_seeking",
+              "polarity": 0.95,
+              "description": "Adventurous pursuit of new horizons",
+              "assessment_question": "I enthusiastically pursue new adventures and challenges with passionate energy, excited by opportunities to explore uncharted territory and test myself in novel situations"
+            },
+            "Q210": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.9,
+              "description": "Passionate enthusiasm fueling momentum",
+              "assessment_question": "I experience and express passionate enthusiasm about my pursuits that fuels sustained forward momentum and inspires others to join the charge"
+            },
+            "Q211": {
+              "dimension": "risk_tolerance",
+              "polarity": 0.85,
+              "description": "Bold action despite uncertain outcomes",
+              "assessment_question": "I'm willing to charge forward boldly toward compelling goals even when outcomes uncertain, trusting momentum and adaptability over perfect planning"
+            },
+            "Q212": {
+              "dimension": "adaptability",
+              "polarity": 0.8,
+              "description": "Flexible adjustment while maintaining forward momentum",
+              "assessment_question": "I adapt my approach flexibly as circumstances change while maintaining passionate forward momentum toward my vision and goals"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "The War of Art: Break Through the Blocks and Win Your Inner Creative Battles",
+              "author": "Steven Pressfield",
+              "section_of_focus": "Turning Pro and Defeating Resistance",
+              "core_teaching": "Resistance is the enemy—internal force opposing any act moving us from lower to higher self. It manifests as procrastination, self-doubt, fear, rationalization. Resistance is most powerful at finish line and during the gap between inspiration and action. The amateur waits for inspiration; the professional acts regardless. Turning pro means: showing up every day regardless of feeling, committing for long haul not just when passionate, accepting no excuses, playing hurt when necessary, not taking failure or success personally, acting in face of fear. The most important thing is: start before ready. The moment between inspiration and action is where most dreams die. Close that gap immediately—harness enthusiasm to launch, then let professionalism sustain.",
+              "connection_to_adversity": "Pressfield teaches the Daughter that the gap between her hard-won clarity (The Reward) and charging forward is where Resistance attacks most viciously. By acting immediately while passion burns hot, by turning pro and committing to show up daily even when initial enthusiasm fades, by starting before feeling perfectly ready, she defeats Resistance at its strongest point. Her passionate charge now—while momentum fresh—creates flywheel effect where action generates more energy. Hesitation lets Resistance kill breakthrough. Immediate bold action sustains it.",
+              "terminal_learning_objectives": {
+                "objective1": "Identify your personal Resistance patterns—track how you delay between inspiration and action, noting specific rationalizational excuses preventing immediate bold pursuit",
+                "objective2": "Implement 'start before ready' practice—when insight arrives, take one immediate concrete action within 24 hours before Resistance can marshal forces",
+                "objective3": "Turn pro on current breakthrough—commit to showing up daily for your new pursuit regardless of enthusiasm level, building professional discipline sustaining initial passion"
+              }
+            },
+            "book2": {
+              "title": "The 5 Second Rule: Transform Your Life, Work, and Confidence with Everyday Courage",
+              "author": "Mel Robbins",
+              "section_of_focus": "Closing the Gap Between Knowing and Doing",
+              "core_teaching": "There's 5-second window between impulse to act and brain's kill switch engaging. When inspiration strikes, count backwards 5-4-3-2-1 then physically move—the countdown interrupts habitual procrastination patterns while movement activates prefrontal cortex overriding limbic system's fear response. The rule works because: it's simple enough to use in moment of decision, creates activation energy breaking inertia, interrupts default pattern of overthinking, physically moves you before doubt paralyzes. Use it for: waking at alarm (5-4-3-2-1-get up), initiating difficult conversations, launching projects, maintaining workout routines, any moment requiring courage to act despite feeling. Feelings follow action, not vice versa—don't wait to feel motivated, motivated feeling follows courageous action.",
+              "connection_to_adversity": "Robbins provides the Daughter specific mechanism for translating renewed confidence into immediate action. By using 5-second rule when inspiration from ordeal strikes (5-4-3-2-1-launch), by physically moving before doubt can paralyze, by creating activation energy that breaks inertia of overthinking, she capitalizes on hard-won clarity before it fades. The rule bridges gap between knowing (The Reward's wisdom) and doing (passionate charge forward). Her willingness to act within 5-second window before fear engages determines whether breakthrough transforms reality or dies in hesitation.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice 5-second rule for one week—every time inspiration or commitment impulse arises, count 5-4-3-2-1 then immediately take physical action before overthinking can intervene",
+                "objective2": "Identify your personal kill switch—notice the moment (usually under 5 seconds) when doubt/fear/rationalization typically defeats impulse to act, intervening before that point",
+                "objective3": "Track feeling-follows-action pattern—document times you acted despite not feeling motivated, noting how motivation emerged after action began, not before"
+              }
+            },
+            "book3": {
+              "title": "Bold: How to Go Big, Create Wealth and Impact the World",
+              "author": "Peter H. Diamandis and Steven Kotler",
+              "section_of_focus": "Exponential Mindset and Moonshot Thinking",
+              "core_teaching": "Exponential technologies enable moonshot thinking—pursuing goals 10x bigger rather than 10% improvements. Bold entrepreneurship requires: exponential mindset seeing accelerating change curves, moonshot thinking that's easier than incremental (10x goals attract best talent and eliminate competition), rapid iteration failing fast and learning, leverage through exponentials (computation, communication, 3D printing, AI, robotics), passion driving through inevitable challenges. Process: get clear on compelling moonshot vision, assemble extraordinary team attracted by audacious goal, leverage exponential technologies making impossible possible, iterate rapidly learning from failures, maintain passionate enthusiasm sustaining through obstacles. Bold action beats perfect planning—launch and adjust rather than waiting for certainty.",
+              "connection_to_adversity": "Diamandis and Kotler teach the Daughter that her hard-won clarity should fuel moonshot thinking not incremental improvement. By setting 10x goals that attract extraordinary allies and eliminate competition, by leveraging exponential progress making yesterday's impossible today's achievable, by iterating rapidly rather than planning perfectly, she capitalizes on renewed confidence with genuinely bold vision. Her passionate charge forward should aim for transformation not optimization. The trials proving her capability now justify pursuing goals that would have seemed ridiculous before ordeal. Bold vision honors her breakthrough.",
+              "terminal_learning_objectives": {
+                "objective1": "Transform current goal from incremental to exponential—if pursuing 10% improvement, redesign for 10x transformation that attracts extraordinary talent and resources",
+                "objective2": "Identify exponential leverage—research which accelerating technologies or trends could make your moonshot feasible that wasn't possible even recently",
+                "objective3": "Launch imperfectly and iterate—start your bold pursuit within one week with minimum viable product/action, committing to rapid learning cycles over perfect planning"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 22 - The Reward gained, clarity earned. The Daughter and allies face critical window: charge forward immediately capitalizing on renewed confidence and hard-won wisdom, or let breakthrough fade through hesitation and overthinking",
+            "symbolic_moment": "An armored knight on rearing horse, staff raised like torch, surging forward with passionate momentum—the recognition that inspiration has expiration date, that gap between breakthrough and action determines whether wisdom transforms reality or becomes mere memory, that passionate immediate pursuit honors hard-won clarity",
+            "emotional_landscape": "Enthusiasm and urgency intertwined—the passionate energy of renewed confidence alongside recognition that window for action is narrow, discovering that momentum from breakthrough must be immediately invested in bold forward movement or it dissipates",
+            "threshold_vision": "Understanding that The Reward demands immediate passionate deployment—that clarity without action becomes stagnant theory, that hard-won wisdom invested immediately in bold pursuit transforms reality while hesitation lets breakthrough fade, that charging forward now capitalizes on momentum before Resistance can regroup",
+            "transformation_promise": "This chapter establishes that breakthroughs require bold immediate action—that learning to charge forward passionately while clarity burns hot now builds capacity to capitalize on insights through escalating challenges ahead where those who hesitate lose momentum but those who act decisively create unstoppable forward movement",
+            "series_arc_connection": "The passionate action developed here becomes essential for cosmic-scale transformation later—by learning to translate personal breakthroughs into immediate bold movement now, she develops capacity to mobilize entire populations through reality-level revelations where those who deliberate endlessly accomplish nothing but those who charge forward passionately transform worlds"
+          },
+          "mental_health_framework": {
+            "focus_area": "Translating Inspiration Into Immediate Passionate Action",
+            "momentum_characteristics": [
+              "Immediate translation of insights into decisive bold action",
+              "Adventurous pursuit of new horizons with passionate enthusiasm",
+              "Maintaining forward momentum capitalizing on hard-won clarity",
+              "Swift action when opportunity window opens rather than endless deliberation",
+              "Mobilization of self and others through enthusiastic energy",
+              "Balance between bold charging forward and sustainable pacing"
+            ],
+            "action_acceleration_strategies": [
+              "Close inspiration-to-action gap using 5-second rule before doubt paralyzes",
+              "Turn pro by committing to daily action regardless of enthusiasm fluctuation",
+              "Start before ready—take immediate concrete step within 24 hours of insight",
+              "Transform incremental goals into exponential moonshots attracting extraordinary energy",
+              "Launch imperfectly and iterate rapidly rather than planning endlessly",
+              "Track feeling-follows-action pattern building evidence that motivation emerges after starting"
+            ],
+            "transformation_indicators": [
+              "Decreased gap between inspiration and concrete action taken",
+              "Greater capacity to maintain passionate forward momentum despite obstacles",
+              "Stronger ability to inspire others through enthusiastic modeling of bold pursuit",
+              "Wisdom distinguishing passionate decisive action from impulsive recklessness",
+              "Sustainable enthusiasm becoming characteristic rather than fleeting bursts"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IX: The Meeting with a Goddess (post-Reward action)",
+            "preliminary_beat": "The Reward - Passionate Deployment",
+            "save_the_cat_beat": "Break into Three - Bold Forward Movement",
+            "character_state": "The Daughter has gained The Reward—clarity and renewed confidence from surviving ordeal. She now faces critical window: charge forward immediately with passionate action deploying hard-won wisdom, or let breakthrough fade through hesitation",
+            "ordinary_world_baseline": "She had insights before but now possesses battle-tested wisdom demanding immediate passionate deployment—not theoretical understanding but hard-won clarity requiring bold action before momentum dissipates and Resistance regroups",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who capitalizes on breakthroughs through immediate passionate action, who charges forward boldly while clarity burns hot, who transforms insights into sustained forward movement rather than letting wisdom fade into might-have-beens"
+          },
+          "daily_prompt": "What inspiration did you translate into immediate action today? How did charging forward passionately capitalize on your clarity before it could fade?",
+          "story_hook": "In Laurasia's Book 2, Chapter 22, the Daughter learns what every successful transformational leader discovers: that The Reward demands immediate passionate deployment, that gap between breakthrough and action determines whether wisdom transforms reality or fades into memory, that charging forward boldly while clarity burns hot capitalizes on hard-won momentum before Resistance can regroup. Like the Knight of Wands teaching through passionate charge on rearing horse with torch raised high, she discovers that inspiration has expiration date—that starting before feeling perfectly ready defeats Resistance at its strongest point, that 5-second rule bridges knowing and doing, that exponential moonshot goals honor breakthrough more than incremental improvements. In learning to defeat Resistance through Pressfield's professional discipline, to close action gap through Robbins' 5-second rule, to pursue exponential vision through Diamandis' bold thinking, she becomes adventurous spirit—someone whose passionate immediate action transforms breakthroughs into unstoppable forward movement. The clarity that could have faded instead ignites passionate charge transforming worlds.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Translate inspiration into immediate passionate decisive action",
+              "Maintain bold forward momentum capitalizing on hard-won clarity",
+              "Pursue new horizons with adventurous enthusiastic energy",
+              "Act decisively when opportunity windows open rather than overthinking",
+              "Mobilize self and others through passionate modeling of pursuit",
+              "Lead through swift transition from breakthrough to execution"
+            ],
+            "development_pathway": "From inspiration to action—learning to identify Resistance patterns preventing movement, implement 5-second rule closing knowing-doing gap, turn pro through daily commitment regardless of enthusiasm, transform goals from incremental to exponential, launch imperfectly and iterate, and track how motivation follows courageous action rather than preceding it",
+            "ai_integration_notes": "AI can help track inspiration-to-action gaps, measuring time between insights and concrete steps taken. Machine learning can identify personal Resistance patterns, suggesting optimal intervention moments. Natural language processing can analyze goal statements distinguishing incremental from exponential thinking, helping reframe objectives for maximum bold impact and momentum generation."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 22 'Chief Among the Mighty' - Prime Timeline where endurance meets passionate action",
+            "universal_archetype": "The Adventurous Spirit—who knows that inspiration demands immediate passionate deployment, that gap between breakthrough and action determines transformation versus stagnation, that charging forward boldly while clarity burns hot creates unstoppable momentum",
+            "trionfi_connection": "The Knight of Wands teaches that passionate action following vision creates transformation, that bold charging forward capitalizes on hard-won clarity, that enthusiasm deployed immediately sustains momentum while hesitation lets breakthroughs fade",
+            "series_foundation": "This passionate action becomes essential for cosmic-scale mobilization later—by learning to translate personal breakthroughs into immediate bold movement now, she develops capacity to mobilize entire populations through reality-level revelations where those who deliberate endlessly accomplish nothing but those who charge forward passionately transform worlds"
+          }
         },
         "personality_profile_63": {
         },
