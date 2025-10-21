@@ -16578,6 +16578,230 @@
           }
         },
         "personality_profile_74": {
+          "canonical_id": "EA-074",
+          "unique_identifier": "MAT 2.13",
+          "all_chapter": 74,
+          "novel_book": 2,
+          "chapter": "Chapter 34",
+          "chapter_title": "The Visionary Master",
+          "type": "Major Task Group",
+          "display_name": "Inspirational Sovereign",
+          "theme": "Leading Through Masterful Vision and Inspiring Purpose-Driven Action",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to lead through masterful vision and inspire purpose-driven action, drawn from Chapter 74 of the Human Framework. It represents the King of Wands archetype—a king seated powerfully on throne holding wand, salamanders on robe and throne symbolizing mastery of transformative fire, confident gaze toward horizon suggesting visionary leadership, symbolizing mature command of passionate energy, inspirational leadership through compelling vision, authority earned through demonstrated mastery serving collective transformation. This archetype masters the art of wielding power purposefully to elevate others, discovering that true sovereignty means using mastery to inspire collective greatness not dominate. Like the Daughter completing Woman as Temptress stage, having integrated boldness with charismatic presence now embodying full mastery of transformational leadership, this personality proves that mature leadership combines vision with execution, inspiration with accountability.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "King",
+          "tarot_symbolism": "The King of Wands represents visionary mastery, inspirational sovereignty, purposeful power, and transformational leadership. A king seated confidently holds wand, salamanders decorating robe and throne, gaze toward horizon—symbolizing command of passionate energy directed purposefully, leadership inspiring through compelling vision, authority serving collective transformation. This card signifies that mastery creates responsibility to elevate, that true power inspires rather than dominates, teaching that mature leadership wields vision and capability for others' growth.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to articulate compelling vision inspiring purposeful collective action",
+              "ability to command respect through demonstrated mastery and earned authentic authority",
+              "skill in channeling passionate energy strategically for sustainable transformational impact",
+              "wisdom to balance visionary inspiration with practical execution ensuring vision manifests",
+              "mastery of purposeful power—wielding capability and influence to elevate not dominate others",
+              "leadership through modeling integration of vision with action inspiring confident followership",
+              "capacity to transform authority from control mechanism into service platform enabling collective greatness"
+            ],
+            "shadow": [
+              "potential for authoritarian leadership where vision imposed rather than inspiring authentic alignment",
+              "tendency toward charismatic tyranny using inspirational gifts to manipulate not empower",
+              "risk of vision becoming rigid where original purpose calcifies into inflexible doctrine",
+              "difficulty accepting input that challenges vision creating insular decision-making",
+              "possible development of savior complex where others' growth stunted by leader's capability",
+              "challenge distinguishing between purposeful authority and ego-driven need for control and admiration"
+            ],
+            "growth_focus": [
+              "balance visionary leadership with collaborative input ensuring inspiration enables not replaces others' agency",
+              "recognize when authority serving transformation versus when serving ego needs for validation",
+              "integrate compelling vision with flexible execution adapting approach while maintaining purpose",
+              "develop humility about limitations preventing vision from becoming disconnected from reality",
+              "maintain purposeful power without creating dependency where others look to leader not themselves",
+              "transform authority from answer-giving into question-asking enabling collective wisdom and ownership"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Visionary Master",
+            "fiction_chapter_context": "Book 2, Chapter 34 - Having integrated boldness with charismatic presence, the Daughter now embodies full mastery of transformational leadership completing Woman as Temptress. She must articulate compelling vision, command through earned authority, and wield purposeful power elevating others."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that visionary mastery is ultimate service—that articulating compelling purpose and wielding authority to elevate creates conditions for collective transformation. This integrates Type 2's care with Type 3's visionary achievement and Type 8's purposeful power."
+          },
+          "color_alignment": {
+            "hue_index": 73,
+            "name": "Sovereign Gold",
+            "hsl": "73,73%,57%",
+            "rgb_hex": "#DEF02E",
+            "color_symbolism": "Sovereign gold represents the radiant authority of purposeful mastery—the color of vision commanding horizon, of salamander transformation through mastered fire, of power wielded to elevate. It embodies both the brilliance of inspiring vision and the warmth of service-oriented authority, showing that mature leadership transforms capability into collective elevation platform."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.889,
+              "stability": 0.845,
+              "empathy": 0.789,
+              "openness": 0.812,
+              "orderliness": 0.778,
+              "novelty_seeking": 0.734,
+              "abstract_reasoning": 0.856,
+              "emotional_intensity": 0.823,
+              "social_dominance": 0.901,
+              "cooperativeness": 0.778,
+              "risk_tolerance": 0.789,
+              "conscientiousness": 0.834,
+              "adaptability": 0.801,
+              "imagination": 0.867
+            },
+            "match_weights": {
+              "social_dominance": 0.95,
+              "imagination": 0.9,
+              "agency": 0.85,
+              "abstract_reasoning": 0.8,
+              "stability": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q268", "Q269", "Q270"],
+            "dimension_rationale": {
+              "very_high_social_dominance": "Natural command through earned authority inspiring followership not just compliance",
+              "very_high_imagination": "Visionary capacity to articulate compelling futures mobilizing purposeful action",
+              "high_agency": "Proactive leadership translating vision into executed reality through decisive action",
+              "high_abstract_reasoning": "Strategic thinking integrating vision with practical pathways to manifestation",
+              "moderate_stability": "Grounded authority balanced with adaptive flexibility in execution"
+            }
+          },
+          "signals_map": {
+            "Q268": {
+              "dimension": "social_dominance",
+              "polarity": 1.0,
+              "description": "Natural command through earned authority inspiring followership",
+              "assessment_question": "I naturally command respect and followership through earned authority and demonstrated mastery, inspiring others to align with vision through authentic leadership not dominance or manipulation"
+            },
+            "Q269": {
+              "dimension": "imagination",
+              "polarity": 0.95,
+              "description": "Visionary capacity articulating compelling futures",
+              "assessment_question": "I articulate compelling visions of transformational futures that inspire purposeful collective action, able to paint pictures of possibility that mobilize commitment and coordinated effort toward meaningful goals"
+            },
+            "Q270": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Proactive leadership executing vision into reality",
+              "assessment_question": "I proactively lead execution translating inspiring vision into manifest reality through decisive strategic action, ensuring that compelling purpose doesn't remain abstract but manifests through coordinated implementation"
+            },
+            "Q271": {
+              "dimension": "abstract_reasoning",
+              "polarity": 0.85,
+              "description": "Strategic thinking integrating vision with practical pathways",
+              "assessment_question": "I think strategically integrating visionary inspiration with practical execution pathways, able to see both the compelling destination and the realistic steps required to arrive there successfully"
+            },
+            "Q272": {
+              "dimension": "stability",
+              "polarity": 0.8,
+              "description": "Grounded authority balanced with adaptive flexibility",
+              "assessment_question": "I maintain grounded authority rooted in self-knowledge and demonstrated capability while remaining adaptively flexible in execution approaches, balancing confidence with humility about limitations"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Start with Why: How Great Leaders Inspire Everyone to Take Action",
+              "author": "Simon Sinek",
+              "section_of_focus": "The Golden Circle and Inspirational Leadership",
+              "core_teaching": "People don't buy what you do; they buy why you do it. The Golden Circle: Why (purpose/cause/belief), How (process making why real), What (tangible results). Most organizations communicate outside-in (What→How→Why) but inspirational leaders communicate inside-out (Why→How→What). The biology: Why speaks to limbic brain (feelings, decision-making); What speaks to neocortex (rational thought). Inspiring leaders articulate compelling Why creating emotional connection and purpose-driven action. The examples: Apple's Why (think different, challenge status quo) inspires loyalty beyond product features; Martin Luther King's Why (equality and justice) mobilized movement not just policy change. The application: clarify your authentic Why (not profit—that's result—but the contribution you want to make), ensure How and What align with Why, communicate Why consistently inspiring purpose-driven followership. The warning: manufactured Why rings false; authentic Why requires self-knowledge about what truly drives you. True visionary leadership starts with Why.",
+              "connection_to_adversity": "Sinek teaches the Daughter that visionary mastery requires articulating compelling Why inspiring purpose-driven action. By clarifying her authentic Why—the deeper purpose beyond tactics—by communicating inside-out from Why through How to What, she creates emotional connection mobilizing collective transformation. She learns that people follow leaders who speak to their limbic brain about shared purpose, that manufactured Why rings false requiring genuine self-knowledge. Her leadership becomes Why-centered—starting with purpose and cause then showing how and what, ensuring vision inspires authentic alignment not just intellectual agreement. She discovers that great leaders inspire everyone to take action by articulating compelling reason why effort matters beyond immediate results.",
+              "terminal_learning_objectives": {
+                "objective1": "Clarify your authentic Why—identify the deeper purpose and contribution beyond profit or tactics that genuinely drives your transformational work",
+                "objective2": "Communicate inside-out using Golden Circle—start with Why creating emotional connection, then How and What showing pathway to purpose realization",
+                "objective3": "Ensure alignment across Why-How-What—verify that processes and results authentically serve stated purpose, identifying and correcting misalignments"
+              }
+            },
+            "book2": {
+              "title": "Good to Great: Why Some Companies Make the Leap and Others Don't",
+              "author": "Jim Collins",
+              "section_of_focus": "Level 5 Leadership and the Hedgehog Concept",
+              "core_teaching": "Level 5 leaders—those who transform good organizations to great—combine personal humility with professional will. The paradox: they're ambitious but for the company not themselves, credit others for success while taking responsibility for failures. The Hedgehog Concept: great organizations focus on intersection of three circles: what you're deeply passionate about, what you can be best in world at, what drives your economic engine. The discipline: say no to opportunities outside hedgehog, maintain fanatical commitment to simplicity within it. The comparison: good leaders have big personalities or celebrity status; Level 5 leaders are self-effacing, quiet, reserved yet produce extraordinary results through others. The culture: Level 5 leaders build enduring greatness through developing people and creating cultures of discipline, not through personal genius. The visionary component: great leaders articulate clear compelling concepts (hedgehogs) and inspire disciplined people to create disciplined thought and action. The transformation: from charismatic visionary (depends on leader) to visionary institution (endures beyond leader).",
+              "connection_to_adversity": "Collins provides the Daughter with Level 5 framework combining humility with will—ambitious for transformation not self. By developing Hedgehog Concept identifying intersection of passion, potential for best-in-world, and sustainable model, she creates clear focus enabling disciplined execution. She learns that mature visionary leadership builds enduring greatness through others not personal genius, credits team for success while taking responsibility for failures. Her authority becomes service-oriented—developing people and culture of discipline rather than depending on her charisma. She discovers that great transformation requires moving from charismatic visionary (depends on leader) to visionary institution (endures beyond leader), that Level 5 leadership produces extraordinary results through self-effacing focus on mission over ego.",
+              "terminal_learning_objectives": {
+                "objective1": "Develop Level 5 leadership combining humility with will—be ambitious for transformation not self, credit others for success while taking responsibility for failures",
+                "objective2": "Articulate Hedgehog Concept—identify intersection of your passion, what you can be best at, and sustainable model, maintaining fanatical focus on this clarity",
+                "objective3": "Build visionary institution not dependency—develop people and culture of discipline creating enduring transformation beyond your personal leadership"
+              }
+            },
+            "book3": {
+              "title": "Leaders Eat Last: Why Some Teams Pull Together and Others Don't",
+              "author": "Simon Sinek",
+              "section_of_focus": "The Circle of Safety and Service-Oriented Authority",
+              "core_teaching": "Great leaders create Circle of Safety—environment where people feel protected by leadership enabling them to trust each other and focus on threats outside not inside. The biology: when people feel safe, cooperation increases; when threatened, self-preservation dominates. Leaders eat last literally (Marine Corps tradition—officers eat after enlisted) and figuratively (put wellbeing of those they lead before themselves). The chemistry: leadership affects neurochemicals—dopamine and endorphins (selfish chemicals rewarding individual accomplishment), serotonin and oxytocin (selfless chemicals rewarding cooperation and trust). Great leaders trigger serotonin (pride in achievement recognized by respected leader) and oxytocin (trust from genuine care and service). The authority: power should be used to expand Circle of Safety not defend position, to serve those within circle enabling their greatness. The visionary component: inspiring vision combined with genuine care for people creates conditions where innovation and excellence flourish. The transformation: from authority as control to authority as service, from power over to power for others' growth and safety.",
+              "connection_to_adversity": "Sinek teaches the Daughter that visionary mastery requires creating Circle of Safety where people feel protected by leadership enabling focus on transformation not survival. By eating last—putting team wellbeing before personal needs—by using authority to expand safety not defend position, she triggers serotonin and oxytocin creating trust and cooperation. She learns that power should serve those within circle enabling their greatness, that inspiring vision combined with genuine care creates conditions for excellence. Her authority becomes service platform—protecting team from external threats while fostering internal trust, using capability to elevate not dominate. She discovers that great leadership creates environment where people's energy goes toward transformation not self-protection, that leaders eat last building cultures where teams pull together facing any challenge.",
+              "terminal_learning_objectives": {
+                "objective1": "Create Circle of Safety—use authority to protect team from external threats enabling internal trust and focus on transformation not survival politics",
+                "objective2": "Practice eating last literally and figuratively—put team wellbeing before personal needs, use power to serve others' growth not defend your position",
+                "objective3": "Trigger trust chemistry through service—create conditions where serotonin (pride from respected recognition) and oxytocin (trust from genuine care) enable cooperation and excellence"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 34 - Boldness integrated, charismatic presence embodied. The Daughter now manifests full mastery of transformational leadership completing Woman as Temptress. She must articulate compelling vision, command through earned authority, and wield purposeful power creating conditions for collective greatness",
+            "symbolic_moment": "King seated confidently holding wand, salamanders on robe and throne, gaze toward horizon—the recognition that mastery creates responsibility to elevate, that true power inspires rather than dominates, that mature leadership wields vision and capability serving others' growth",
+            "emotional_landscape": "Authority and service intertwined—the confidence of earned mastery alongside humility of purpose larger than self, discovering that visionary sovereignty means using capability to create conditions where others achieve greatness not creating dependency on leader",
+            "threshold_vision": "Understanding that mature leadership requires visionary mastery—that articulating compelling Why inspires purpose-driven action, that Level 5 leadership combines humility with will building enduring institutions, that creating Circle of Safety enables collective excellence through service-oriented authority",
+            "transformation_promise": "This chapter establishes that transformational leadership requires visionary mastery—that learning to articulate inspiring purpose and wield authority serving collective elevation now builds capacity for leading large-scale change ahead where those imposing vision create compliance while those inspiring through authentic Why mobilize committed followership",
+            "series_arc_connection": "The visionary mastery capacity developed here becomes essential for cosmic-scale transformation later—by learning to lead through compelling purpose and service-oriented authority at personal scale now, she develops capacity to inspire civilizations where those dominating through power create brittle control while those elevating through visionary service catalyze enduring transformation"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Visionary Mastery and Service-Oriented Sovereign Leadership",
+            "visionary_characteristics": [
+              "Articulating compelling vision inspiring purposeful collective action",
+              "Commanding respect through demonstrated mastery and earned authority",
+              "Channeling passionate energy strategically for sustainable transformation",
+              "Balancing visionary inspiration with practical execution ensuring manifestation",
+              "Wielding purposeful power to elevate others not dominate or create dependency",
+              "Modeling integration of vision with action inspiring confident followership"
+            ],
+            "sovereign_leadership_strategies": [
+              "Clarify authentic Why communicating inside-out from purpose through process to results",
+              "Develop Level 5 leadership combining humility with will building enduring institutions",
+              "Articulate Hedgehog Concept focusing on passion-excellence-sustainability intersection",
+              "Create Circle of Safety using authority to protect team enabling internal trust",
+              "Practice eating last putting team wellbeing before personal needs and position",
+              "Trigger trust chemistry through genuine service creating cooperation conditions"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to articulate and inspire through compelling purposeful vision",
+              "Greater skill in combining earned authority with humble service-oriented leadership",
+              "Stronger ability to balance visionary inspiration with disciplined practical execution",
+              "Wisdom distinguishing between authority serving transformation versus serving ego",
+              "Leadership becoming naturally visionary and sovereign while genuinely service-oriented"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene X: Woman as Temptress (visionary completion)",
+            "preliminary_beat": "Break into Three - Sovereign Mastery",
+            "save_the_cat_beat": "Finale - Inspirational Authority",
+            "character_state": "The Daughter having integrated boldness with charismatic presence now embodies full mastery of transformational leadership. She must articulate compelling vision, command through earned authority, and wield purposeful power creating conditions for collective greatness completing her intensive leadership development",
+            "ordinary_world_baseline": "She had either avoided authority preventing leadership or wielded power dominating others—now requires mature sovereignty articulating inspiring purpose and using capability to elevate, distinguishing visionary service from control or dependency creation",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who leads through visionary mastery inspiring purposeful action, who combines humility with will building enduring transformation, who creates Circle of Safety using authority to serve collective excellence"
+          },
+          "daily_prompt": "What inspiring vision did you articulate today? How did you wield authority to elevate rather than dominate?",
+          "story_hook": "In Laurasia's Book 2, Chapter 34, the Daughter learns what every transformational leader discovers: that people follow leaders who articulate compelling Why inspiring purpose-driven action, that Level 5 leadership combines humility with will building enduring greatness, that creating Circle of Safety through service-oriented authority enables collective excellence. Like the King of Wands teaching through figure commanding horizon with mastered transformative fire, she discovers that great leaders start with Why communicating inside-out from purpose, that visionary mastery requires Hedgehog focus on passion-excellence-sustainability intersection, that leaders eat last using power to serve growth. In learning to clarify authentic Why and communicate Golden Circle through Sinek's framework, to develop Level 5 leadership and Hedgehog Concept through Collins' research, to create Circle of Safety eating last through Sinek's service model, she becomes inspirational sovereign—someone whose vision mobilizes purposeful transformation, whose authority elevates collective capability, whose mastery serves enduring greatness. The leadership intensive that began with passionate spark now culminates in visionary mastery.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Articulate compelling vision inspiring purposeful collective action",
+              "Command respect through demonstrated mastery and earned authentic authority",
+              "Channel passionate energy strategically for sustainable transformational impact",
+              "Balance visionary inspiration with practical execution ensuring manifestation",
+              "Wield purposeful power to elevate others not dominate or create dependency",
+              "Create Circle of Safety using authority to serve collective excellence"
+            ],
+            "development_pathway": "From avoided authority or dominating power to visionary service—learning to clarify authentic Why, communicate Golden Circle, develop Level 5 leadership, articulate Hedgehog Concept, create Circle of Safety, and practice eating last",
+            "ai_integration_notes": "AI can help analyze vision articulation identifying whether communication starts with Why versus What. Machine learning can distinguish Level 5 leadership from charismatic dependency tracking credit patterns and institutional development. Natural language processing can assess Circle of Safety creation through analyzing trust and cooperation signals, supporting development of visionary mastery serving collective transformation."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 34 'Chief Among the Mighty' - Prime Timeline completing intensive leadership development",
+            "universal_archetype": "The Inspirational Sovereign—who knows that mature leadership articulates compelling Why inspiring purposeful action, combines humility with will building enduring transformation, creates Circle of Safety using authority to serve collective excellence",
+            "trionfi_connection": "The King of Wands teaches that confident seated posture symbolizes earned mastery and authority, that salamanders represent transformation through mastered fire, that horizon gaze signifies visionary purpose, that throne represents power wielded to elevate",
+            "series_foundation": "This visionary mastery capacity becomes essential for cosmic-scale transformation later—by learning to lead through inspiring purpose and service-oriented authority at personal scale now, she develops capacity to inspire civilizations where those dominating create brittle control while those elevating through visionary service catalyze enduring transformation"
+          }
         },
         "personality_profile_75": {
         },
