@@ -15448,6 +15448,230 @@
           }
         },
         "personality_profile_69": {
+          "canonical_id": "EA-069",
+          "unique_identifier": "MAT 2.8",
+          "all_chapter": 69,
+          "novel_book": 2,
+          "chapter": "Chapter 29",
+          "chapter_title": "The Weary Perseverance",
+          "type": "Major Task Group",
+          "display_name": "Enduring Guardian",
+          "theme": "Maintaining Vigilance and Pushing Through Exhaustion Toward Completion",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to maintain vigilance and push through exhaustion toward completion, drawn from Chapter 69 of the Human Framework. It represents the Nine of Wands archetype—a figure standing weary but resolute, bandaged from previous battles, leaning on staff for support, eight wands planted defensively behind creating fortification, symbolizing near-completion requiring final push, battle-tested resilience maintaining vigilance despite exhaustion, courage to persist when most tired. This archetype masters the art of enduring through final challenges, discovering that the last stretch before breakthrough often demands most from depleted reserves. Like the Daughter at Meeting with a Goddess, having accelerated momentum now facing the exhausting reality that transformation requires sustained effort through final obstacles, this personality proves that leadership includes persevering through weariness when finish line approaches.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Nine",
+          "tarot_symbolism": "The Nine of Wands represents perseverance despite exhaustion, vigilant endurance, battle-tested resilience, and the final push toward completion. A weary figure leans on staff, bandaged from battles, eight wands planted behind creating defensive position—symbolizing near-completion requiring continued effort, vigilance maintained despite fatigue, courage to persist through final challenges. This card signifies that success often requires enduring when most exhausted, that final obstacles test commitment most severely, teaching that leadership demands pushing through weariness toward breakthrough.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to maintain commitment and vigilance despite exhaustion and setbacks",
+              "ability to draw on deep reserves when surface energy depleted, persisting through final obstacles",
+              "skill in managing fatigue while maintaining standards and protective vigilance",
+              "wisdom to recognize when near completion versus when to pause for essential recovery",
+              "mastery of pacing energy for final push—knowing what reserves remain and how to access them",
+              "leadership through modeling resilient endurance inspiring others to persist through weariness",
+              "capacity to transform exhaustion from defeat signal into proof of commitment and proximity to breakthrough"
+            ],
+            "shadow": [
+              "potential for stubborn persistence where pushing through becomes harmful ignoring genuine limits",
+              "tendency toward martyrdom where exhaustion displayed as badge proving superior commitment",
+              "risk of burnout where depleted reserves never properly restored creating long-term damage",
+              "difficulty distinguishing between resilient endurance and destructive self-sacrifice",
+              "possible development of defensive vigilance that never relaxes even when threat passes",
+              "challenge recognizing when persistence serves mission versus when it reflects inability to let go"
+            ],
+            "growth_focus": [
+              "balance perseverance with wisdom about genuine limits requiring recovery not just pushing through",
+              "recognize difference between battle-tested resilience and harmful martyrdom or burnout patterns",
+              "integrate endurance with strategic rest ensuring final push draws on reserves not destroying them",
+              "develop discernment about when near completion warrants pushing versus when withdrawal needed",
+              "maintain protective vigilance without creating rigid defensive posture that never softens",
+              "transform exhaustion from weakness to acknowledged reality requiring wise management not denial"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Weary Perseverance",
+            "fiction_chapter_context": "Book 2, Chapter 29 - Having accelerated momentum, the Daughter now faces the exhausting reality that transformation requires sustained effort through final obstacles. She must manage fatigue while maintaining standards, draw on depleted reserves for final push, and distinguish resilient endurance from destructive burnout."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that perseverance through exhaustion is ultimate service—that modeling resilient endurance through weariness inspires collective capacity to complete transformation. This integrates Type 2's care with Type 1's commitment to completion and Type 6's loyal persistence."
+          },
+          "color_alignment": {
+            "hue_index": 68,
+            "name": "Endurance Sage",
+            "hsl": "68,68%,52%",
+            "rgb_hex": "#C8DC2E",
+            "color_symbolism": "Endurance sage represents the grounded strength of weary perseverance—the color of battle-tested resilience maintaining vigilance, of drawing on deep reserves when exhausted, of courage demonstrated through persistence near completion. It embodies both the vitality of commitment and the earthiness of sustainable endurance, showing that leadership perseveres through final challenges when most depleted."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.845,
+              "stability": 0.889,
+              "empathy": 0.756,
+              "openness": 0.712,
+              "orderliness": 0.812,
+              "novelty_seeking": 0.623,
+              "abstract_reasoning": 0.767,
+              "emotional_intensity": 0.778,
+              "social_dominance": 0.789,
+              "cooperativeness": 0.745,
+              "risk_tolerance": 0.734,
+              "conscientiousness": 0.878,
+              "adaptability": 0.712,
+              "imagination": 0.701
+            },
+            "match_weights": {
+              "conscientiousness": 0.95,
+              "stability": 0.9,
+              "agency": 0.85,
+              "orderliness": 0.8,
+              "emotional_intensity": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q243", "Q244", "Q245"],
+            "dimension_rationale": {
+              "very_high_conscientiousness": "Unwavering commitment to completing what's been started despite exhaustion",
+              "very_high_stability": "Grounded resilience enabling sustained effort through depletion and setbacks",
+              "high_agency": "Proactive persistence drawing on deep reserves when surface energy depleted",
+              "high_orderliness": "Maintaining standards and protective vigilance despite fatigue",
+              "moderate_emotional_intensity": "Steady determination balanced with awareness of genuine limits"
+            }
+          },
+          "signals_map": {
+            "Q243": {
+              "dimension": "conscientiousness",
+              "polarity": 1.0,
+              "description": "Commitment to completion despite exhaustion and setbacks",
+              "assessment_question": "I maintain unwavering commitment to completing important work despite exhaustion and setbacks, able to draw on deep reserves and persist through final obstacles when others might abandon effort"
+            },
+            "Q244": {
+              "dimension": "stability",
+              "polarity": 0.95,
+              "description": "Grounded resilience enabling sustained effort through depletion",
+              "assessment_question": "I demonstrate grounded resilience that enables sustained effort even when depleted, maintaining effectiveness and vigilance through weariness rather than collapsing or becoming reactive under fatigue"
+            },
+            "Q245": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Proactive persistence accessing deep reserves when exhausted",
+              "assessment_question": "I proactively manage my energy and access deep reserves when surface resources depleted, knowing how to pace myself for final push and when to draw on commitment beyond immediate capacity"
+            },
+            "Q246": {
+              "dimension": "orderliness",
+              "polarity": 0.85,
+              "description": "Maintaining standards and protective vigilance despite fatigue",
+              "assessment_question": "I maintain important standards and protective vigilance even when exhausted, not allowing fatigue to compromise quality or attentiveness to threats, sustaining discipline through weariness"
+            },
+            "Q247": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.8,
+              "description": "Steady determination balanced with awareness of limits",
+              "assessment_question": "I bring steady determination to persevering through exhaustion while maintaining awareness of genuine limits, knowing difference between resilient endurance and harmful pushing beyond capacity"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Peak Performance: Elevate Your Game, Avoid Burnout, and Thrive with the New Science of Success",
+              "author": "Brad Stulberg and Steve Magness",
+              "section_of_focus": "The Growth Equation and Strategic Recovery",
+              "core_teaching": "Peak performance follows equation: stress + rest = growth. Elite performers don't just push harder—they master the oscillation between intense effort and strategic recovery. Key principles: progressive overload (gradually increase challenge), stress specificity (match training to performance demands), recovery as productive (rest isn't laziness but essential adaptation phase). The challenge near completion: recognizing when to push through fatigue (building capacity) versus when fatigue signals genuine damage requiring recovery. Warning signs: decreased performance despite increased effort, persistent muscle soreness, elevated resting heart rate, mood disturbances, immune suppression. The wise approach: monitor biomarkers of recovery, periodize intensity creating micro-recoveries within demanding periods, distinguish between productive discomfort and destructive pain. Near finish line, elite performers strategically deploy deep reserves—knowing they've built capacity for final push but will need substantial recovery after. The key: exhaustion near completion differs from exhaustion far from it—proximity to breakthrough justifies drawing on reserves that would be unwise earlier.",
+              "connection_to_adversity": "Stulberg and Magness teach the Daughter to distinguish between productive perseverance and destructive burnout through stress + rest equation. By monitoring recovery biomarkers—recognizing signs like persistent fatigue, mood disturbance, declining performance despite increased effort—she knows when pushing through serves growth versus when it causes damage. She learns that near completion justifies drawing on deep reserves that would be unwise earlier, that final push can access capacity built through previous training. Her weary perseverance becomes strategic—understanding that exhaustion near breakthrough differs from exhaustion far from it, that periodizing intensity with micro-recoveries enables sustained effort without collapse. She discovers that post-completion recovery is non-negotiable, that pushing through final obstacles requires planning for substantial restoration after.",
+              "terminal_learning_objectives": {
+                "objective1": "Monitor recovery biomarkers distinguishing productive fatigue from destructive burnout—track performance trends, mood, resting heart rate, immune function, muscle soreness patterns",
+                "objective2": "Apply stress + rest equation near completion—recognize that final push justifies drawing on reserves built through previous training, but requires planning substantial recovery after",
+                "objective3": "Create micro-recoveries within demanding periods—use strategic rest enabling sustained effort without collapse, periodizing intensity to maintain effectiveness through exhaustion"
+              }
+            },
+            "book2": {
+              "title": "The Resilience Factor: 7 Keys to Finding Your Inner Strength and Overcoming Life's Hurdles",
+              "author": "Karen Reivich and Andrew Shatté",
+              "section_of_focus": "Resilience and Reaching Deep",
+              "core_teaching": "Resilience isn't avoiding adversity but bouncing back from it through seven factors: emotional regulation, impulse control, optimism, causal analysis, empathy, self-efficacy, reaching out. The critical skill for exhausted endurance: reaching deep—accessing resources beyond conscious awareness when depleted. Research shows resilient people have: realistic optimism (honest about challenges but confident in capacity), causal accuracy (understand what's in control versus not), connection orientation (draw on relationships for support). Near completion when exhausted, resilience requires: reframing fatigue as temporary and surmountable not permanent and overwhelming, identifying small wins proving progress despite weariness, leveraging social support requesting specific help. The key distinction: resilient perseverance versus brittle persistence. Resilient: flexible about methods while committed to outcome, draws on multiple resources including others, maintains perspective about what matters. Brittle: rigid about approach, isolates under pressure, catastrophizes setbacks. Building resilience: practice adversity navigation skills before crisis, develop diverse coping strategies, maintain relationships as energy reserves.",
+              "connection_to_adversity": "Reivich and Shatté provide the Daughter with framework for resilient perseverance versus brittle persistence through seven resilience factors. By developing realistic optimism—honest about exhaustion but confident in capacity for final push—she avoids both denial and despair. She learns to reach deep accessing resources beyond conscious awareness when depleted, to reframe fatigue as temporary challenge surmountable through strategic effort rather than permanent limitation. Her reaching out—requesting specific help from allies rather than isolating—transforms individual endurance into collective resilience. She discovers that identifying small wins during exhaustion proves progress despite weariness, that flexibility about methods while maintaining commitment to outcome enables sustained effectiveness. Her resilience becomes diverse resource mobilization rather than solitary grit, preventing brittle collapse.",
+              "terminal_learning_objectives": {
+                "objective1": "Develop realistic optimism near completion—honest assessment of exhaustion and challenges balanced with confidence in capacity for final push and proximity to breakthrough",
+                "objective2": "Practice reaching deep accessing hidden reserves—identify resources beyond conscious awareness including relationships, past victories, and untapped commitment when depleted",
+                "objective3": "Distinguish resilient perseverance from brittle persistence—maintain flexibility about methods while committed to outcome, draw on diverse supports, avoid catastrophizing fatigue"
+              }
+            },
+            "book3": {
+              "title": "Grit: The Power of Passion and Perseverance",
+              "author": "Angela Duckworth",
+              "section_of_focus": "Passion, Perseverance, and the Importance of Hope",
+              "core_teaching": "Grit—combination of passion and perseverance toward long-term goals—predicts achievement better than talent. Key components: interest (intrinsic enjoyment of work), practice (deliberate effort improving performance), purpose (work serves something beyond self), hope (belief effort leads to improvement). The critical distinction: grit isn't blind persistence but sustainable commitment fueled by deeper purpose. Near completion when exhausted, grit draws on: remembered purpose reconnecting to why effort matters, growth mindset viewing obstacles as challenges not threats, deliberate practice focus on specific improvements not just grinding. Warning: grit without wisdom becomes destructive—persevering on wrong goals, ignoring genuine constraints, sacrificing wellbeing for achievement. The solution: grit with perspective—passionate about outcomes but flexible about methods, persistent but willing to pivot when evidence clear. Building grit: clarify purpose beyond external validation, develop identity as someone who finishes, surround yourself with gritty culture. The exhaustion near completion test: does remembering purpose renew energy or does it feel hollow? If hollow, may be wrong goal; if renewing, access deep commitment for final push.",
+              "connection_to_adversity": "Duckworth teaches the Daughter that perseverance through exhaustion requires remembering purpose—reconnecting to why transformation matters beyond personal achievement. By developing grit as passion plus perseverance fueled by hope, she accesses deep commitment when surface energy depleted. She learns to view exhaustion near completion as challenge not threat, to focus on specific next steps rather than grinding generically. Her grit includes wisdom—persistent about outcome but flexible about methods, committed but willing to recognize if purpose still resonates. She discovers the exhaustion test: remembering why effort matters either renews energy (right goal worth final push) or feels hollow (wrong goal requiring pivot). Her identity as someone who finishes becomes resource when tired, her growth mindset reframes obstacles as surmountable.",
+              "terminal_learning_objectives": {
+                "objective1": "Reconnect to purpose when exhausted—clarify why transformation matters beyond achievement, use remembered purpose as energy source for final push through weariness",
+                "objective2": "Develop identity as finisher—see yourself as someone who completes important work despite obstacles, draw on that identity as resource when depleted",
+                "objective3": "Apply grit with wisdom—maintain passionate persistence about outcomes while flexible about methods, recognize difference between committed endurance and destructive stubbornness"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 29 - Momentum accelerated, rapid action taken. The Daughter now faces the exhausting reality that transformation requires sustained effort through final obstacles. She must manage fatigue while maintaining vigilance, draw on depleted reserves for final push, and distinguish resilient endurance from destructive burnout",
+            "symbolic_moment": "Weary figure leaning on staff, bandaged from battles, eight wands planted defensively behind—the recognition that near-completion requires final push, that battle-tested resilience must persist through exhaustion, that leadership endures through weariness when breakthrough approaches",
+            "emotional_landscape": "Exhaustion and determination intertwined—the weariness from sustained effort alongside resolve to complete transformation, discovering that final stretch often demands most from depleted reserves, that perseverance through fatigue proves commitment when most tested",
+            "threshold_vision": "Understanding that breakthrough requires enduring exhaustion—that final obstacles test commitment most severely, that accessing deep reserves when depleted enables completion, that distinguishing resilient perseverance from destructive burnout protects wellbeing while enabling finishing",
+            "transformation_promise": "This chapter establishes that completion requires weary perseverance—that learning to manage exhaustion wisely while maintaining vigilance now builds capacity for sustained effort through escalating challenges ahead where those collapsing under fatigue abandon transformation while those enduring strategically achieve breakthrough",
+            "series_arc_connection": "The resilient endurance capacity developed here becomes essential for cosmic-scale persistence later—by learning to access deep reserves and persist through exhaustion at personal scale now, she develops capacity to sustain transformation across civilizations where those unable to endure weariness lose all progress but those persevering wisely complete breakthrough despite depletion"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Resilient Endurance and Strategic Fatigue Management",
+            "perseverance_characteristics": [
+              "Maintaining commitment and vigilance despite exhaustion and setbacks",
+              "Drawing on deep reserves when surface energy depleted for final push",
+              "Managing fatigue while maintaining standards and protective awareness",
+              "Recognizing proximity to completion warranting drawing on reserves",
+              "Pacing energy strategically knowing what remains and how to access it",
+              "Modeling resilient endurance inspiring others to persist through weariness"
+            ],
+            "fatigue_management_strategies": [
+              "Monitor recovery biomarkers distinguishing productive from destructive fatigue",
+              "Apply stress + rest equation recognizing final push justifies deep reserves with recovery after",
+              "Create micro-recoveries within demanding periods enabling sustained effort",
+              "Develop realistic optimism honest about challenges confident in capacity",
+              "Practice reaching deep accessing hidden reserves including relationships and commitment",
+              "Reconnect to purpose using remembered why as energy source when depleted"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to persist through exhaustion without burnout or collapse",
+              "Greater skill in distinguishing resilient endurance from destructive martyrdom",
+              "Stronger ability to access deep reserves strategically for completion",
+              "Wisdom recognizing when near finish warrants pushing versus when recovery needed",
+              "Leadership becoming naturally enduring through weariness while maintaining wisdom"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IX: The Meeting with a Goddess (weary perseverance)",
+            "preliminary_beat": "The Reward - Enduring Push",
+            "save_the_cat_beat": "Break into Three - Final Stretch",
+            "character_state": "The Daughter having accelerated momentum now faces exhausting final obstacles. She must persist through weariness accessing deep reserves, manage fatigue maintaining vigilance, and distinguish resilient endurance from harmful burnout as completion approaches",
+            "ordinary_world_baseline": "She had either collapsed under exhaustion abandoning effort or pushed destructively ignoring genuine limits—now requires sophisticated endurance balancing perseverance with wise fatigue management, accessing reserves for final push while protecting wellbeing",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who perseveres through exhaustion wisely, who accesses deep reserves strategically for completion, who models resilient endurance distinguishing commitment from destructive martyrdom, who finishes transformation despite weariness"
+          },
+          "daily_prompt": "How did you persist through exhaustion today? Did you distinguish resilient endurance from pushing beyond genuine limits?",
+          "story_hook": "In Laurasia's Book 2, Chapter 29, the Daughter learns what every transformational leader discovers: that final stretch often demands most from depleted reserves, that near-completion tests commitment most severely, that distinguishing resilient endurance from destructive burnout enables finishing wisely. Like the Nine of Wands teaching through weary figure leaning on staff maintaining vigilance despite exhaustion, she discovers that stress + rest equation guides wise perseverance, that resilience factors enable reaching deep when depleted, that grit fueled by purpose accesses commitment beyond conscious awareness. In learning to monitor recovery and create micro-recoveries through Stulberg and Magness's framework, to develop realistic optimism and reach deep through Reivich and Shatté's resilience factors, to reconnect to purpose and develop finisher identity through Duckworth's grit research, she becomes enduring guardian—someone whose weary perseverance completes transformation, whose exhaustion acknowledged and managed wisely, whose final push draws strategically on reserves built through preparation. The breakthrough that could have been abandoned instead manifests through resilient endurance.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Maintain commitment and vigilance despite exhaustion and setbacks",
+              "Draw on deep reserves when depleted persisting through final obstacles",
+              "Manage fatigue while maintaining standards and protective awareness",
+              "Recognize when near completion warrants accessing deeper commitment",
+              "Distinguish resilient endurance from destructive burnout or martyrdom",
+              "Model weary perseverance inspiring others to complete despite weariness"
+            ],
+            "development_pathway": "From exhaustion-induced collapse or burnout to strategic endurance—learning to monitor recovery biomarkers, apply stress + rest equation, create micro-recoveries, develop realistic optimism, practice reaching deep, and reconnect to purpose when depleted",
+            "ai_integration_notes": "AI can help monitor recovery biomarkers tracking patterns distinguishing productive fatigue from burnout risk. Machine learning can identify when individuals near completion versus far from it adjusting recommendations about pushing versus resting. Natural language processing can detect exhaustion signals in communication suggesting need for support or recovery, enabling strategic endurance completing transformation without destructive depletion."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 29 'Chief Among the Mighty' - Prime Timeline where acceleration meets exhausting final push",
+            "universal_archetype": "The Enduring Guardian—who knows that final stretch demands most from depleted reserves, that near-completion tests commitment severely, that resilient perseverance distinguishing wise endurance from destructive burnout enables finishing transformation despite weariness",
+            "trionfi_connection": "The Nine of Wands teaches that weary figure leaning on staff symbolizes battle-tested resilience, that defensive wands behind represent protective vigilance maintained through exhaustion, that bandages prove proximity to completion through obstacles endured",
+            "series_foundation": "This resilient endurance capacity becomes essential for cosmic-scale persistence later—by learning to access deep reserves and persist through exhaustion at personal scale now, she develops capacity to sustain transformation across civilizations where those collapsing under fatigue abandon progress but those enduring strategically complete breakthrough despite depletion"
+          }
         },
         "personality_profile_70": {
         },
