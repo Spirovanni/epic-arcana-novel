@@ -14092,6 +14092,230 @@
           }
         },
         "personality_profile_63": {
+          "canonical_id": "EA-063",
+          "unique_identifier": "MAT 2.2",
+          "all_chapter": 63,
+          "novel_book": 2,
+          "chapter": "Chapter 23",
+          "chapter_title": "The Strategic Horizon",
+          "type": "Major Task Group",
+          "display_name": "Visionary Strategist",
+          "theme": "Leading Through Expanded Vision and Strategic Foresight",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to expand vision beyond immediate circumstances and lead through strategic foresight, drawn from Chapter 63 of the Human Framework. It represents the Three of Wands archetype—a figure standing on cliff overlooking vast horizon, three staffs planted firmly, ships sailing toward distant shores, symbolizing expanded perspective following initial success, strategic planning for larger endeavors, foresight that positions current action within broader vision. This archetype masters the art of translating tactical victories into strategic campaigns, discovering that passionate action must be guided by far-seeing vision. Like the Daughter at Meeting with a Goddess, having charged forward now harnessing collective strength to assert strategic vision galvanizing allies for challenges ahead, this personality proves that strong leadership requires expanding beyond immediate wins to chart course toward transformational horizons.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Three",
+          "tarot_symbolism": "The Three of Wands represents expanded vision, strategic planning, foresight, and leadership through horizon-gazing wisdom. A figure stands elevated surveying vast territory, three wands planted firmly establishing position, ships sailing toward distant opportunities—symbolizing perspective beyond immediate, plans that position present within future context, leadership that sees where momentum should flow. This card signifies that initial success creates platform for larger vision, that tactical wins demand strategic direction, teaching that true leadership requires expanding perspective from battle to campaign, from movement to legacy.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to expand vision beyond immediate circumstances toward transformational horizons",
+              "ability to translate tactical victories into strategic campaigns and coherent larger vision",
+              "skill in positioning current actions within broader context and future trajectory",
+              "wisdom to balance bold action with strategic foresight and long-term planning",
+              "mastery of scenario planning—envisioning multiple futures and positioning for success",
+              "leadership through articulating compelling vision that aligns diverse efforts toward shared destination",
+              "capacity to inspire strategic confidence that current path leads toward meaningful destination"
+            ],
+            "shadow": [
+              "potential for analysis paralysis where strategic planning prevents decisive action",
+              "tendency toward distant vision that loses connection with present reality and constraints",
+              "risk of over-planning that creates rigidity unable to adapt when circumstances shift",
+              "difficulty engaging fully with immediate tasks when mind focused on distant horizons",
+              "possible development of detachment from tactical execution viewing it as beneath strategic thinking",
+              "challenge distinguishing visionary leadership from escapist fantasy avoiding present difficulty"
+            ],
+            "growth_focus": [
+              "balance strategic foresight with tactical engagement ensuring vision serves action",
+              "recognize difference between expansive planning and avoidance of present challenges",
+              "integrate horizon-gazing with present-moment execution maintaining both perspectives",
+              "develop capacity to inspire without overwhelming others with distant complexity",
+              "maintain strategic vision without creating rigidity that prevents adaptive response",
+              "transform foresight from theoretical exercise into actionable strategic guidance"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Strategic Horizon",
+            "fiction_chapter_context": "Book 2, Chapter 23 - Having charged forward passionately, the Daughter now faces Meeting with a Goddess moment requiring expanded vision. Initial victories create platform for larger strategic thinking. She must harness collective strength to assert vision beyond immediate battles, galvanizing allies for final confrontation by showing how present struggles serve transformational future."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that strategic vision is ultimate service—that showing others how their efforts contribute to meaningful destination mobilizes sustained commitment. This integrates Type 2's care with Type 1's principled planning and Type 5's strategic thinking."
+          },
+          "color_alignment": {
+            "hue_index": 62,
+            "name": "Horizon Gold",
+            "hsl": "62,62%,46%",
+            "rgb_hex": "#CD514F",
+            "color_symbolism": "Horizon gold represents the dawn of expanded vision—the color of strategic foresight seeing beyond immediate, of leadership that charts course toward transformational destinations. It embodies both the clarity of far-seeing wisdom and the warmth of vision that inspires, showing that true leadership expands perspective from battle to campaign."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.867,
+              "stability": 0.789,
+              "empathy": 0.801,
+              "openness": 0.845,
+              "orderliness": 0.778,
+              "novelty_seeking": 0.723,
+              "abstract_reasoning": 0.889,
+              "emotional_intensity": 0.756,
+              "social_dominance": 0.834,
+              "cooperativeness": 0.812,
+              "risk_tolerance": 0.734,
+              "conscientiousness": 0.823,
+              "adaptability": 0.767,
+              "imagination": 0.856
+            },
+            "match_weights": {
+              "abstract_reasoning": 0.95,
+              "imagination": 0.9,
+              "agency": 0.85,
+              "social_dominance": 0.8,
+              "openness": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q213", "Q214", "Q215"],
+            "dimension_rationale": {
+              "very_high_abstract_reasoning": "Strategic thinking positioning present within larger systemic context",
+              "very_high_imagination": "Visionary capacity to envision transformational futures",
+              "high_agency": "Proactive leadership translating vision into coordinated action",
+              "high_social_dominance": "Natural authority in articulating compelling shared direction",
+              "moderate_openness": "Receptive to multiple scenarios while maintaining strategic coherence"
+            }
+          },
+          "signals_map": {
+            "Q213": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1.0,
+              "description": "Strategic thinking positioning actions within broader context",
+              "assessment_question": "I naturally think strategically, positioning current actions and decisions within broader context of long-term vision and multiple possible futures"
+            },
+            "Q214": {
+              "dimension": "imagination",
+              "polarity": 0.95,
+              "description": "Visionary capacity to envision transformational horizons",
+              "assessment_question": "I can vividly envision transformational futures and compelling destinations that inspire others to align their efforts toward shared strategic vision"
+            },
+            "Q215": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Proactive leadership translating vision into action",
+              "assessment_question": "I proactively lead strategic initiatives that translate expanded vision into coordinated action, ensuring present efforts serve larger transformational goals"
+            },
+            "Q216": {
+              "dimension": "social_dominance",
+              "polarity": 0.85,
+              "description": "Authority in articulating compelling strategic direction",
+              "assessment_question": "I naturally assume leadership in articulating strategic vision and direction, with others looking to me to chart course toward meaningful destinations"
+            },
+            "Q217": {
+              "dimension": "openness",
+              "polarity": 0.8,
+              "description": "Receptivity to multiple scenarios and possibilities",
+              "assessment_question": "I remain open to multiple possible futures and scenarios while maintaining strategic coherence, adapting vision as new information emerges"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "The Art of the Long View: Planning for the Future in an Uncertain World",
+              "author": "Peter Schwartz",
+              "section_of_focus": "Scenario Planning and Strategic Foresight",
+              "core_teaching": "Scenario planning creates multiple plausible futures helping organizations prepare for uncertainty. The process: identify focal issue/decision, key forces driving change, critical uncertainties, develop 2-4 distinct scenario narratives, explore implications, identify early warning indicators, develop strategies robust across scenarios. Scenarios aren't predictions but coherent, challenging stories about possible futures that expand strategic thinking beyond single expected outcome. Good scenarios: plausible (could happen), internally consistent, challenging (push boundaries), relevant to strategic decisions. The goal isn't predicting which scenario will occur but developing strategic agility to thrive in multiple possible futures. Organizations making decisions based on single expected future are dangerously brittle; those planning for multiple scenarios develop strategic resilience.",
+              "connection_to_adversity": "Schwartz teaches the Daughter that having charged forward passionately, she now needs strategic foresight positioning present within multiple possible futures. By developing 2-4 distinct scenarios for how challenges ahead might unfold, by identifying early warning indicators signaling which future emerging, by creating strategies robust across scenarios rather than optimized for single expected outcome, she leads with strategic resilience. Her expanded vision shows allies how their efforts serve transformational goals regardless which specific future manifests. Scenario planning transforms anxiety about uncertainty into strategic advantage.",
+              "terminal_learning_objectives": {
+                "objective1": "Develop 2-4 distinct scenario narratives for how your strategic challenge might unfold over 2-5 years, ensuring each is plausible, internally consistent, and challenging",
+                "objective2": "Identify early warning indicators for each scenario—specific observable signals that would indicate which future is emerging, creating monitoring system",
+                "objective3": "Design strategies robust across multiple scenarios rather than optimized for single expected future, building strategic resilience through scenario-based planning"
+              }
+            },
+            "book2": {
+              "title": "Good Strategy/Bad Strategy: The Difference and Why It Matters",
+              "author": "Richard Rumelt",
+              "section_of_focus": "The Kernel of Good Strategy",
+              "core_teaching": "Good strategy has kernel with three elements: Diagnosis (simplified understanding of challenge), Guiding Policy (approach for dealing with situation), Coherent Action (coordinated actions carrying out guiding policy). Bad strategy: fluff (gibberish masquerading as concepts), failure to face challenge, mistaking goals for strategy, bad strategic objectives (impractical or simply unrealistic). Good strategy: focuses energy and resources on one or few pivotal objectives whose accomplishment will lead to cascade of favorable outcomes, anticipates opponent's/rival's actions and reactions, creates advantage by coherently orchestrating actions across domains. The heart of strategy is identifying critical factors in situation and designing way to coordinate and focus actions to deal with those factors. Strategic leaders create new strengths through subtle shifts in viewpoint—seeing possibility where others see problems.",
+              "connection_to_adversity": "Rumelt provides the Daughter framework for transforming passionate action into coherent strategy. By diagnosing core challenge clearly (not listing every problem but identifying critical factor), by articulating guiding policy showing her approach (not just goals but method), by ensuring actions coherently support each other (not scatter-shot initiatives), she creates good strategy. Her visionary leadership identifies pivotal objectives whose accomplishment cascades into broader success. She shows allies how their diverse efforts coordinate into coherent campaign. Her strategic horizon transforms collection of battles into winning war through identifying where focused energy creates breakthrough.",
+              "terminal_learning_objectives": {
+                "objective1": "Diagnose your core strategic challenge by identifying the critical factor—the pivotal issue that if addressed creates cascade of favorable outcomes",
+                "objective2": "Articulate clear guiding policy explaining your approach to the challenge—not just goals but the method/principle guiding how you'll address it",
+                "objective3": "Design coherent actions that coordinate across domains, ensuring diverse initiatives support each other rather than working at cross-purposes"
+              }
+            },
+            "book3": {
+              "title": "Thinking in Systems: A Primer",
+              "author": "Donella H. Meadows",
+              "section_of_focus": "Leverage Points and System Intervention",
+              "core_teaching": "Systems thinking reveals leverage points—places within system where small shift produces big changes. Twelve leverage points (from least to most effective): numbers (subsidies, taxes), buffers (stabilizing stocks), stock-and-flow structures, delays, balancing feedback loops, reinforcing feedback loops, information flows, rules, self-organization, goals, paradigms (mindset from which system arises), transcending paradigms. Most people intervene at weak leverage points (numbers) while systems thinkers find powerful ones (changing information flows, rules, or paradigms). Systems have their own goals; unless you change the goal, the system will resist your interventions. The highest leverage is changing mindsets—the paradigms out of which goals, rules, and system structures arise. Strategic leaders see systems not just parts, identify high-leverage intervention points, understand feedback loops and delays.",
+              "connection_to_adversity": "Meadows teaches the Daughter that strategic vision requires systems thinking—seeing not just immediate actions but feedback loops, delays, and leverage points. By identifying high-leverage interventions (changing information flows, rules, paradigms) rather than low-leverage ones (just adding resources), by understanding how system goals resist surface changes without deeper transformation, by targeting paradigm shifts changing how allies see the challenge, she creates cascading transformation from focused strategic intervention. Her expanded vision shows not just destination but the systemic path getting there—which leverage points to target for maximum transformational impact.",
+              "terminal_learning_objectives": {
+                "objective1": "Map your strategic challenge as system—identify key stocks, flows, feedback loops, and delays, visualizing how elements interconnect",
+                "objective2": "Identify high-leverage intervention points—where can you change information flows, rules, or paradigms to create cascading positive change beyond just adding resources",
+                "objective3": "Target paradigm shift—what mindset change in yourself and allies would transform how the entire system functions, focusing strategic communication there"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 23 - Passionate action launched, initial momentum gained. The Daughter now faces Meeting with a Goddess requiring expanded strategic vision beyond immediate battles. She must position present within transformational horizon, galvanizing allies through showing how their efforts serve larger coherent campaign",
+            "symbolic_moment": "A figure on cliff overlooking vast horizon, three staffs planted firmly, ships sailing toward distant shores—the recognition that tactical wins create platform for strategic vision, that present action demands positioning within transformational future, that strong leadership expands perspective from battle to campaign",
+            "emotional_landscape": "Clarity and expansiveness intertwined—the confidence of momentum gained alongside recognition that vision must expand beyond immediate to encompass transformational horizons, discovering that strategic foresight transforms collection of actions into coherent campaign",
+            "threshold_vision": "Understanding that strong leadership requires strategic foresight—that passionate action without expanded vision dissipates into disconnected battles, that positioning present within compelling future mobilizes sustained commitment, that scenario planning creates strategic resilience navigating uncertainty toward transformational destination",
+            "transformation_promise": "This chapter establishes that enduring leadership requires strategic horizon-gazing—that learning to expand vision from tactical to strategic now builds capacity to guide through escalating complexity ahead where those focused only on immediate lose coherence but those seeing broader patterns chart course through any storm",
+            "series_arc_connection": "The strategic foresight developed here becomes essential for cosmic-scale coordination later—by learning to position present within multiple possible futures at personal scale now, she develops capacity to guide civilizations through reality-level uncertainties where those planning for single outcome collapse but those building robust strategies across scenarios navigate transformation successfully"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Strategic Foresight and Visionary Leadership",
+            "strategic_characteristics": [
+              "Expanding vision beyond immediate circumstances toward transformational horizons",
+              "Translating tactical victories into coherent strategic campaigns",
+              "Positioning current actions within broader context and future trajectory",
+              "Balancing bold action with strategic foresight and long-term planning",
+              "Inspiring confidence that present path leads toward meaningful destination",
+              "Creating strategic resilience through scenario-based planning"
+            ],
+            "foresight_building_strategies": [
+              "Develop 2-4 distinct scenario narratives for how challenges might unfold",
+              "Identify early warning indicators signaling which scenarios emerging",
+              "Diagnose core challenge identifying critical factor creating cascade",
+              "Articulate guiding policy explaining approach not just goals",
+              "Design coherent actions coordinating across domains",
+              "Map challenges as systems identifying high-leverage intervention points"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to envision and articulate transformational futures",
+              "Greater skill in positioning present actions within strategic context",
+              "Stronger ability to inspire others through compelling horizon-gazing vision",
+              "Wisdom distinguishing strategic foresight from escapist fantasy",
+              "Leadership becoming naturally visionary while maintaining tactical effectiveness"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IX: The Meeting with a Goddess (strategic expansion)",
+            "preliminary_beat": "The Reward - Strategic Vision",
+            "save_the_cat_beat": "Break into Three - Expanded Horizon",
+            "character_state": "The Daughter having charged forward passionately now faces requirement for expanded strategic vision. She must harness collective strength to assert vision positioning present within transformational future, galvanizing allies for challenges ahead through showing broader coherent campaign",
+            "ordinary_world_baseline": "She had tactical clarity but now requires strategic foresight—not just winning immediate battles but charting course through larger campaign, positioning diverse efforts within coherent vision creating sustained commitment to transformational horizons",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who expands vision from tactical to strategic, who charts course through uncertainty via scenario planning, who positions present within multiple possible futures building strategic resilience guiding others through any complexity toward meaningful transformation"
+          },
+          "daily_prompt": "How did you expand vision beyond immediate today? What strategic foresight positioned your actions within broader transformational context?",
+          "story_hook": "In Laurasia's Book 2, Chapter 23, the Daughter learns what every transformational leader discovers: that passionate action requires strategic foresight, that tactical wins create platform for expanded vision, that strong leadership positions present within transformational horizons showing allies how their efforts serve coherent campaigns. Like the Three of Wands teaching through horizon-gazing from planted position with ships sailing toward distant shores, she discovers that scenario planning creates strategic resilience, that good strategy has kernel of diagnosis-policy-action, that systems thinking identifies high-leverage interventions cascading transformation. In learning to develop robust scenarios through Schwartz's foresight, to create coherent strategy through Rumelt's kernel, to identify leverage points through Meadows' systems thinking, she becomes visionary strategist—someone whose expanded vision transforms collections of battles into campaigns, whose strategic foresight navigates uncertainty toward transformation. The momentum that could have scattered instead converges toward horizon.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Expand vision beyond immediate toward transformational horizons",
+              "Translate tactical victories into coherent strategic campaigns",
+              "Position present actions within broader future trajectory",
+              "Inspire through articulating compelling destinations and paths",
+              "Create strategic resilience through scenario-based planning",
+              "Lead through systems thinking identifying high-leverage interventions"
+            ],
+            "development_pathway": "From tactical to strategic—learning to develop distinct scenario narratives, identify early warning indicators, diagnose core challenges identifying critical factors, articulate guiding policies explaining approaches, design coherent coordinated actions, and map challenges as systems targeting paradigm-shifting leverage points",
+            "ai_integration_notes": "AI can help analyze trends identifying forces driving change for scenario development. Machine learning can monitor early warning indicators across scenarios signaling which futures emerging. Natural language processing can analyze strategic communications distinguishing good strategy (diagnosis-policy-action) from bad (fluff and goal-lists), helping leaders articulate compelling coherent visions positioning present within transformational futures."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 23 'Chief Among the Mighty' - Prime Timeline where passionate action meets strategic foresight",
+            "universal_archetype": "The Visionary Strategist—who knows that tactical wins create platform for expanded vision, that strong leadership positions present within transformational futures, that strategic foresight navigates uncertainty toward meaningful destinations through robust scenario-based planning",
+            "trionfi_connection": "The Three of Wands teaches that elevated perspective surveying horizons transforms action into campaigns, that planted position with ships sailing symbolizes strategic confidence positioning present within compelling futures, that expanded vision inspires sustained commitment showing how efforts serve transformation",
+            "series_foundation": "This strategic foresight becomes essential for cosmic-scale coordination later—by learning to position present within multiple possible futures at personal scale now, she develops capacity to guide civilizations through reality-level uncertainties where those planning for single outcome collapse but those building robust strategies across scenarios successfully navigate any transformation toward meaningful horizons"
+          }
         },
         "personality_profile_64": {
         },
