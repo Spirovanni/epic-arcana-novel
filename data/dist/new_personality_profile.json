@@ -16126,6 +16126,230 @@
           }
         },
         "personality_profile_72": {
+          "canonical_id": "EA-072",
+          "unique_identifier": "MAT 2.11",
+          "all_chapter": 72,
+          "novel_book": 2,
+          "chapter": "Chapter 32",
+          "chapter_title": "The Passionate Adventurer",
+          "type": "Major Task Group",
+          "display_name": "Bold Pioneer",
+          "theme": "Pursuing Goals with Passionate Energy and Adventurous Spirit",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to pursue goals with passionate energy and adventurous spirit, drawn from Chapter 72 of the Human Framework. It represents the Knight of Wands archetype—a knight on rearing horse holding wand upright, ready to charge forward with intensity, armor decorated with salamanders symbolizing transformation through fire, symbolizing passionate pursuit of vision, adventurous energy taking bold action, confidence combined with restless momentum. This archetype masters the art of channeling enthusiasm into purposeful action while managing impulsivity, discovering that passionate pursuit requires direction to be transformative rather than merely chaotic. Like the Daughter in Woman as Temptress stage, having recovered beginner's mind now channeling renewed curiosity into bold adventurous action, this personality proves that transformation requires passionate forward movement balanced with strategic awareness.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Knight",
+          "tarot_symbolism": "The Knight of Wands represents passionate action, adventurous pursuit, bold movement, and transformative momentum. A knight on rearing horse holds wand upright, ready to charge with intensity, salamanders decorating armor—symbolizing enthusiasm channeled into action, adventure embraced with confidence, transformation through fire of passionate engagement. This card signifies that vision requires action to manifest, that passionate energy creates momentum, teaching that leadership combines boldness with awareness preventing recklessness.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to channel passionate energy into purposeful bold action",
+              "ability to pursue goals with adventurous spirit embracing uncertainty and challenge",
+              "skill in creating momentum through confident forward movement inspiring others",
+              "wisdom to balance passionate intensity with strategic awareness preventing recklessness",
+              "mastery of transformative action—using passionate engagement as catalyst for change",
+              "leadership through modeling bold pursuit demonstrating courage in face of unknown",
+              "capacity to transform enthusiasm from scattered energy into directed powerful force"
+            ],
+            "shadow": [
+              "potential for impulsive action where passion overrides wisdom creating preventable damage",
+              "tendency toward restlessness where constant motion prevents depth or consolidation",
+              "risk of burning out self and others through unsustainable intensity and pace",
+              "difficulty maintaining relationships when adventurous pursuit creates instability",
+              "possible development of thrill-seeking where excitement itself becomes goal over purpose",
+              "challenge distinguishing between bold action serving mission versus ego-driven dramatics"
+            ],
+            "growth_focus": [
+              "balance passionate action with strategic pause ensuring boldness serves effectiveness",
+              "recognize when forward momentum advances mission versus when it's reactive restlessness",
+              "integrate adventurous energy with sustainable pace preventing burnout in self and others",
+              "develop discernment about when to charge versus when to observe and prepare",
+              "maintain passionate intensity without sacrificing relationships or creating unnecessary chaos",
+              "transform enthusiasm from impulsive reactivity into channeled purposeful transformative force"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Passionate Adventurer",
+            "fiction_chapter_context": "Book 2, Chapter 32 - Having recovered beginner's mind, the Daughter now channels renewed curiosity into bold adventurous action in Woman as Temptress stage. She must pursue transformation with passionate energy, embrace uncertainty with confidence, and balance intensity with strategic awareness preventing recklessness."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that passionate action is service—that bold pursuit of transformation creates momentum inspiring collective courage, that adventurous energy shows others what's possible. This integrates Type 2's care with Type 7's adventurous enthusiasm and Type 8's bold assertiveness."
+          },
+          "color_alignment": {
+            "hue_index": 71,
+            "name": "Adventure Chartreuse",
+            "hsl": "71,71%,55%",
+            "rgb_hex": "#D6E82E",
+            "color_symbolism": "Adventure chartreuse represents the vibrant energy of passionate pursuit—the color of knight charging forward on rearing horse, of enthusiasm channeled into transformative action, of boldness embracing unknown with confidence. It embodies both the intensity of passionate engagement and the vitality of adventurous spirit, showing that leadership takes bold action serving transformation."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.878,
+              "stability": 0.712,
+              "empathy": 0.756,
+              "openness": 0.845,
+              "orderliness": 0.656,
+              "novelty_seeking": 0.889,
+              "abstract_reasoning": 0.778,
+              "emotional_intensity": 0.867,
+              "social_dominance": 0.823,
+              "cooperativeness": 0.767,
+              "risk_tolerance": 0.856,
+              "conscientiousness": 0.723,
+              "adaptability": 0.834,
+              "imagination": 0.812
+            },
+            "match_weights": {
+              "novelty_seeking": 0.95,
+              "emotional_intensity": 0.9,
+              "agency": 0.85,
+              "risk_tolerance": 0.8,
+              "openness": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q258", "Q259", "Q260"],
+            "dimension_rationale": {
+              "very_high_novelty_seeking": "Enthusiastic pursuit of adventure and new experiences with bold energy",
+              "very_high_emotional_intensity": "Passionate engagement bringing intense energy to action and pursuit",
+              "high_agency": "Proactive forward movement taking bold action toward goals",
+              "high_risk_tolerance": "Willingness to embrace uncertainty and charge into unknown",
+              "moderate_openness": "Receptivity to adventure balanced with purposeful direction"
+            }
+          },
+          "signals_map": {
+            "Q258": {
+              "dimension": "novelty_seeking",
+              "polarity": 1.0,
+              "description": "Enthusiastic pursuit of adventure and bold new experiences",
+              "assessment_question": "I enthusiastically pursue adventure and bold new experiences with energetic forward movement, drawn to unexplored territory and challenges requiring courage and confident action"
+            },
+            "Q259": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.95,
+              "description": "Passionate engagement bringing intense energy to action",
+              "assessment_question": "I bring passionate intensity and energetic engagement to pursuing goals and taking action, channeling enthusiasm into powerful forward momentum that inspires and energizes others"
+            },
+            "Q260": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Proactive bold action taking forward movement toward goals",
+              "assessment_question": "I take proactive bold action moving decisively toward goals, willing to charge forward with confidence even when path unclear, believing that action creates clarity and momentum"
+            },
+            "Q261": {
+              "dimension": "risk_tolerance",
+              "polarity": 0.85,
+              "description": "Willingness to embrace uncertainty charging into unknown",
+              "assessment_question": "I embrace uncertainty and willingly charge into unknown territory with confidence, comfortable with risk and challenge inherent in bold adventurous pursuit, trusting my ability to adapt and overcome"
+            },
+            "Q262": {
+              "dimension": "openness",
+              "polarity": 0.8,
+              "description": "Receptivity to adventure balanced with purposeful direction",
+              "assessment_question": "I remain open to adventurous possibilities and unexpected paths while maintaining purposeful direction, balancing receptivity to opportunity with focused pursuit of meaningful transformation"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Shoe Dog: A Memoir by the Creator of Nike",
+              "author": "Phil Knight",
+              "section_of_focus": "Bold Action and Entrepreneurial Adventure",
+              "core_teaching": "Building Nike required constant bold action despite uncertainty—every stage involved charging forward without clear path. The entrepreneurial pattern: see opportunity, take bold action with limited resources, adapt when things go wrong (they always do), keep moving forward despite setbacks. Key principles from Knight's journey: cowards never start, the weak never finish, winners never quit. But also: bold doesn't mean reckless—preparation matters, learning from mistakes crucial, relationships sustain through chaos. The balance: passionate pursuit with strategic awareness. Knight's approach: make bold moves based on best information available, commit fully once decided, adjust rapidly when reality differs from expectation, never lose momentum. The adventure mindset: treat business as quest not just job, embrace uncertainty as exciting not just scary, view obstacles as challenges to overcome not reasons to quit. The lesson: transformative achievement requires passionate bold action—safe cautious approaches yield safe mediocre results. But passion needs direction—blind enthusiasm without learning creates repeated failure not breakthrough.",
+              "connection_to_adversity": "Knight teaches the Daughter that transformation requires bold action despite uncertainty—safe cautious approaches yield mediocre results. By adopting entrepreneurial adventure mindset treating transformation as quest, by making bold moves based on best available information then committing fully, by adjusting rapidly when reality differs from expectation while maintaining momentum, she channels passionate energy purposefully. She learns that cowards never start but recklessness fails too—boldness requires preparation and learning from mistakes. Her passionate pursuit becomes strategic—charging forward with confidence while adapting intelligently. She discovers that transformative achievement demands adventurous spirit combined with strategic awareness, that viewing obstacles as challenges to overcome rather than reasons to quit sustains momentum through any difficulty.",
+              "terminal_learning_objectives": {
+                "objective1": "Adopt adventure mindset treating transformation as quest—embrace uncertainty as exciting challenge, view obstacles as opportunities to overcome, maintain passionate forward momentum",
+                "objective2": "Make bold moves based on best available information—act decisively despite incomplete data, commit fully once decided, charge forward with confidence",
+                "objective3": "Adjust rapidly while maintaining momentum—learn from mistakes and adapt approach intelligently without losing forward energy or abandoning adventurous pursuit"
+              }
+            },
+            "book2": {
+              "title": "Flow: The Psychology of Optimal Experience",
+              "author": "Mihaly Csikszentmihalyi",
+              "section_of_focus": "Flow States and Optimal Challenge",
+              "core_teaching": "Flow—state of complete absorption where challenge perfectly matches skill—creates optimal experience and peak performance. The flow channel exists between anxiety (challenge exceeds skill) and boredom (skill exceeds challenge). To enter and maintain flow: clear goals provide direction, immediate feedback enables adjustment, challenge-skill balance keeps engagement optimal. The passionate adventurer naturally seeks flow through bold action but risks two errors: taking challenges beyond current skill creating anxiety/failure, or pursuing thrills for excitement rather than growth creating empty dramatics. Sustainable passionate pursuit requires: progressively increasing challenge as skill develops, focusing attention fully on task rather than outcome, maintaining intrinsic motivation where activity itself rewarding. The transformation through flow: when passionate action enters flow channel, intensity becomes focused not scattered, boldness serves purpose not ego, adventure creates mastery not just excitement. Organizations and individuals benefit from flow by: structuring challenges to match developing capabilities, providing clear feedback enabling real-time adjustment, creating conditions where passionate engagement becomes sustainable.",
+              "connection_to_adversity": "Csikszentmihalyi provides the Daughter with framework for channeling passionate energy into sustainable flow rather than burnout or empty dramatics. By balancing challenge with skill—pursuing bold action that stretches capacity without overwhelming—she enters flow channel creating optimal experience and transformation. She learns that passionate adventure risks two errors: anxiety from challenges exceeding skill, boredom from thrills pursued for excitement alone. Her sustainable bold action maintains flow through: clear goals providing direction, immediate feedback enabling adjustment, progressive challenge matching developing capability. She discovers that when passionate intensity enters flow, boldness serves mastery not ego, adventure creates transformation not just excitement. Her leadership structures challenges creating flow conditions enabling collective passionate engagement.",
+              "terminal_learning_objectives": {
+                "objective1": "Balance challenge with skill entering flow channel—pursue bold action stretching capacity without overwhelming, avoiding both anxiety (challenge too high) and boredom (challenge too low)",
+                "objective2": "Create flow conditions for passionate pursuit—establish clear goals providing direction, build feedback systems enabling real-time adjustment, maintain intrinsic motivation",
+                "objective3": "Progressive challenge matching development—systematically increase boldness and complexity as capabilities grow, sustaining flow through expanding adventure"
+              }
+            },
+            "book3": {
+              "title": "The Last Lecture",
+              "author": "Randy Pausch",
+              "section_of_focus": "Brick Walls and Childhood Dreams",
+              "core_teaching": "Brick walls appear for a reason—they're not there to keep us out but to show how badly we want something, to give us chance to prove ourselves. The passionate pursuit of dreams requires: identifying what truly matters (childhood dreams reveal authentic desires), taking bold action despite obstacles, viewing setbacks as teachers not stoppers. Pausch's approach to adventure: enabled other people's dreams (creating opportunities for others), had fun along the way (maintained joy not just grim determination), showed gratitude always (acknowledged help received). The balance between passion and wisdom: be ambitious about goals but flexible about methods, charge forward boldly but adapt intelligently when approach isn't working, maintain intensity but don't become so focused on destination that journey loses meaning. The brick wall principle: obstacles test commitment—those who truly want transformation find ways around/through/over, those who don't use walls as excuses. But wisdom recognizes: some walls actually should stop you (wrong direction), some walls require different approach not just more force, some walls test endurance not just intensity.",
+              "connection_to_adversity": "Pausch teaches the Daughter that brick walls testing passionate pursuit appear not to stop but to prove commitment and provide growth opportunity. By viewing obstacles as teachers showing how to grow stronger rather than reasons to quit, by maintaining joy and gratitude alongside intensity, by being ambitious about transformation but flexible about methods, she sustains adventurous spirit through any difficulty. She learns to enable others' dreams through her bold action, to adapt approach intelligently when brick walls don't yield to force, to recognize which walls test commitment versus which signal wrong direction. Her passionate pursuit becomes wise—charging forward boldly while learning from obstacles, maintaining intensity without losing meaning in journey, showing gratitude for help received. She discovers that true adventure includes both bold action and intelligent adaptation.",
+              "terminal_learning_objectives": {
+                "objective1": "Apply brick wall principle—view obstacles as tests of commitment and growth opportunities, find ways around/through/over rather than using walls as excuses to quit",
+                "objective2": "Balance ambition with flexibility—be bold about transformation goals while remaining adaptive about methods, charge forward while adjusting approach intelligently",
+                "objective3": "Maintain joy and enable others—sustain passionate pursuit with gratitude and meaning, create opportunities for others' adventurous growth through your bold action"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 32 - Beginner's mind recovered, curiosity renewed. The Daughter now channels exploratory energy into bold adventurous action in Woman as Temptress stage. She must pursue transformation with passionate intensity, embrace uncertainty with confidence, and balance forward momentum with strategic awareness",
+            "symbolic_moment": "Knight on rearing horse holding wand upright, ready to charge with intensity, salamanders decorating armor—the recognition that vision requires action to manifest, that passionate energy creates momentum, that leadership combines boldness with awareness preventing recklessness",
+            "emotional_landscape": "Intensity and adventure intertwined—the passionate energy of bold pursuit alongside excitement about unknown territory, discovering that transformation requires charging forward with confidence while maintaining strategic awareness preventing destructive impulsivity",
+            "threshold_vision": "Understanding that transformation requires passionate action—that safe cautious approaches yield mediocre results, that bold adventure creates momentum when channeled purposefully, that balancing challenge with skill creates sustainable flow rather than burnout or empty dramatics",
+            "transformation_promise": "This chapter establishes that breakthrough requires adventurous spirit—that learning to channel passionate energy into purposeful bold action now builds capacity for transformative momentum ahead where those paralyzed by caution stagnate while those pursuing adventure with strategic awareness create breakthrough",
+            "series_arc_connection": "The bold action capacity developed here becomes essential for cosmic-scale transformation later—by learning to pursue goals with passionate adventurous energy at personal scale now, she develops capacity to lead breakthrough initiatives across civilizations where those cautiously avoiding risk miss opportunities while those channeling enthusiasm purposefully create transformation"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Bold Action Capacity and Passionate Purposeful Pursuit",
+            "adventurous_characteristics": [
+              "Channeling passionate energy into purposeful bold action toward goals",
+              "Pursuing transformation with adventurous spirit embracing uncertainty",
+              "Creating momentum through confident forward movement inspiring others",
+              "Balancing passionate intensity with strategic awareness preventing recklessness",
+              "Using passionate engagement as catalyst for transformative change",
+              "Modeling bold pursuit demonstrating courage facing unknown territory"
+            ],
+            "passionate_action_strategies": [
+              "Adopt adventure mindset treating transformation as quest embracing obstacles",
+              "Make bold moves based on best information committing fully then adjusting",
+              "Balance challenge with skill entering flow channel avoiding anxiety or boredom",
+              "Create flow conditions through clear goals feedback and intrinsic motivation",
+              "Apply brick wall principle viewing obstacles as commitment tests and growth opportunities",
+              "Maintain joy and gratitude alongside intensity enabling others through bold action"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to take bold action purposefully without reckless impulsivity",
+              "Greater skill in channeling passionate energy creating sustainable momentum",
+              "Stronger ability to balance adventurous intensity with strategic awareness",
+              "Wisdom distinguishing between purposeful boldness and ego-driven dramatics",
+              "Leadership becoming naturally adventurous inspiring collective courage through example"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene X: Woman as Temptress (passionate action)",
+            "preliminary_beat": "Break into Three - Bold Pursuit",
+            "save_the_cat_beat": "Finale - Adventurous Momentum",
+            "character_state": "The Daughter having recovered beginner's mind now channels exploratory energy into bold adventurous action. She must pursue transformation with passionate intensity, embrace uncertainty with confidence, and balance forward momentum with strategic awareness preventing recklessness",
+            "ordinary_world_baseline": "She had either acted cautiously avoiding bold moves or charged recklessly creating preventable damage—now requires sophisticated balance channeling passionate energy purposefully, distinguishing bold action serving mission from impulsive dramatics",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who pursues goals with passionate adventurous energy, who charges forward boldly while maintaining strategic awareness, who creates sustainable flow through challenge-skill balance, who enables others through courageous example"
+          },
+          "daily_prompt": "What bold action did you take today? Did passionate pursuit serve purposeful transformation or reactive dramatics?",
+          "story_hook": "In Laurasia's Book 2, Chapter 32, the Daughter learns what every transformational leader discovers: that safe cautious approaches yield mediocre results, that bold adventure creates momentum when channeled purposefully, that balancing challenge with skill creates sustainable flow. Like the Knight of Wands teaching through figure charging forward on rearing horse, she discovers that entrepreneurial adventure treats transformation as quest embracing uncertainty, that flow states emerge when passionate intensity balances challenge with capability, that brick walls test commitment providing growth not stoppage. In learning to adopt adventure mindset charging forward intelligently through Knight's entrepreneurial spirit, to create flow conditions balancing challenge with skill through Csikszentmihalyi's research, to apply brick wall principle maintaining joy alongside intensity through Pausch's wisdom, she becomes bold pioneer—someone whose passionate action serves transformation, whose adventurous energy creates sustainable momentum, whose courage inspires collective breakthrough. The transformation that could have stagnated instead manifests through purposeful bold pursuit.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Channel passionate energy into purposeful bold action toward goals",
+              "Pursue transformation with adventurous spirit embracing uncertainty confidently",
+              "Create momentum through forward movement inspiring others by example",
+              "Balance passionate intensity with strategic awareness preventing recklessness",
+              "Enter flow states through challenge-skill balance creating sustainable engagement",
+              "View obstacles as commitment tests and growth opportunities not reasons to quit"
+            ],
+            "development_pathway": "From cautious paralysis or reckless impulsivity to purposeful boldness—learning to adopt adventure mindset, make bold moves adjusting intelligently, balance challenge with skill creating flow, establish clear goals and feedback, apply brick wall principle, and maintain joy enabling others",
+            "ai_integration_notes": "AI can help identify optimal challenge-skill balance for flow states tracking performance and engagement patterns. Machine learning can distinguish purposeful bold action from reckless impulsivity analyzing outcomes and learning trajectories. Natural language processing can detect adventurous mindset versus cautious paralysis in communication, supporting development of passionate purposeful pursuit creating sustainable transformation."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 32 'Chief Among the Mighty' - Prime Timeline where curiosity meets bold action",
+            "universal_archetype": "The Bold Pioneer—who knows that transformation requires passionate adventurous pursuit, that safe approaches yield mediocre results, that channeling enthusiasm purposefully while balancing challenge with skill creates sustainable breakthrough momentum",
+            "trionfi_connection": "The Knight of Wands teaches that figure on rearing horse symbolizes passionate forward movement, that upright wand represents purposeful direction, that salamander armor signifies transformation through fire of bold passionate engagement",
+            "series_foundation": "This bold action capacity becomes essential for cosmic-scale transformation later—by learning to pursue goals with passionate adventurous energy at personal scale now, she develops capacity to lead breakthrough initiatives across civilizations where those cautiously avoiding risk miss opportunities while those channeling enthusiasm purposefully create transformation"
+          }
         },
         "personality_profile_73": {
         },
