@@ -13414,6 +13414,230 @@
           }
         },
         "personality_profile_60": {
+          "canonical_id": "EA-060",
+          "unique_identifier": "STG 2.2.3.1",
+          "all_chapter": 60,
+          "novel_book": 2,
+          "chapter": "Chapter 20",
+          "chapter_title": "The Wounded Defender's Stand",
+          "type": "Specific Task Group",
+          "display_name": "Wounded Defender",
+          "theme": "Standing Firm When the Storm Hits Through Battle-Tested Backbone",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the profound resilience to endure overwhelming trials and maintain position despite exhaustion and wounds, drawn from Chapter 60 of the Human Framework. It represents the Nine of Wands archetype—a battle-scarred figure standing guard with bandaged head, eight wands behind creating a wall while ninth is held ready, symbolizing vigilance despite exhaustion, determination despite wounds, readiness to defend despite previous trials taking heavy toll. This archetype masters the art of enduring when others would collapse, discovering that true backbone emerges not from being unbreakable but from standing despite breaking, that resilience is proven through continuing forward despite scars. Like the Daughter at the story's midpoint facing the supreme ordeal that threatens to break her resolve completely, learning she must summon inner strength from places deeper than comfort or ease could ever reach, this personality proves that endurance foundation built through adversity becomes unshakeable backbone sustaining through any storm.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Nine",
+          "tarot_symbolism": "The Nine of Wands represents resilient perseverance, battle-tested strength, vigilant endurance despite wounds. A figure stands guard—bandaged, battle-worn, wary yet determined—with eight wands forming defensive wall behind while ninth remains ready in hand, symbolizing courage that continues despite exhaustion, defense maintained despite previous trials, vigilance that refuses to yield. This card signifies that true resilience emerges from enduring multiple challenges rather than avoiding them, that backbone strengthens through repeated trials, teaching that standing despite wounds proves greater strength than standing unwounded.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to endure overwhelming trials and maintain position despite exhaustion",
+              "ability to draw on deep reserves of strength when all surface resources depleted",
+              "skill in maintaining vigilance and readiness despite accumulated wounds and weariness",
+              "wisdom to recognize that resilience is standing despite breaking not being unbreakable",
+              "mastery of fortitude—unwavering perseverance through sustained moral and physical pressure",
+              "leadership through modeling endurance that anchors hope when others would collapse",
+              "capacity to transform wounds into wisdom rather than allowing damage to create defeat"
+            ],
+            "shadow": [
+              "potential for stubborn endurance past point where strategic retreat would serve better",
+              "tendency toward martyr complex that wears wounds as badges rather than healing",
+              "risk of confusing healthy boundaries with weakness, enduring what should be released",
+              "difficulty asking for help or admitting limits, seeing vulnerability as failure",
+              "possible development of siege mentality that normalizes constant crisis mode",
+              "challenge distinguishing between necessary endurance and self-destructive persistence"
+            ],
+            "growth_focus": [
+              "balance resilient endurance with wisdom about when continuation serves versus harms",
+              "recognize difference between backbone and brittleness, strength and stubbornness",
+              "integrate fortitude with self-compassion that allows rest without shame",
+              "develop capacity to ask for support while maintaining leadership presence",
+              "maintain vigilance without requiring constant crisis to feel purposeful",
+              "transform resilience from reactive endurance into proactive sustainable strength"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Wounded Defender's Stand",
+            "fiction_chapter_context": "Book 2, Chapter 20 - At the story's midpoint, the Daughter confronts the supreme ordeal threatening to break her resolve completely. Previous trials have accumulated wounds—physical, emotional, spiritual—yet this trial requires standing firm despite exhaustion, maintaining position despite every instinct screaming retreat. She must summon inner strength from depths she didn't know existed, discovering that true backbone emerges not from being unbreakable but from choosing to stand despite breaking."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that enduring care requires backbone—that sustainable helping demands resilience to maintain strength through repeated demands. This integrates Type 2's care with Type 8's fortitude and Type 6's loyal persistence."
+          },
+          "color_alignment": {
+            "hue_index": 59,
+            "name": "Battle-Scarred Bronze",
+            "hsl": "59,62%,46%",
+            "rgb_hex": "#A32121",
+            "color_symbolism": "Battle-scarred bronze represents the metal tested in fire—the color of resilience proven through trials, of strength earned through endurance. It embodies both the wounds that mark real struggle and the unbroken core that continues standing, showing that true backbone bears scars while refusing to break."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.823,
+              "stability": 0.789,
+              "empathy": 0.756,
+              "openness": 0.623,
+              "orderliness": 0.712,
+              "novelty_seeking": 0.512,
+              "abstract_reasoning": 0.678,
+              "emotional_intensity": 0.801,
+              "social_dominance": 0.667,
+              "cooperativeness": 0.734,
+              "risk_tolerance": 0.645,
+              "conscientiousness": 0.889,
+              "adaptability": 0.598,
+              "imagination": 0.612
+            },
+            "match_weights": {
+              "conscientiousness": 0.95,
+              "agency": 0.9,
+              "stability": 0.85,
+              "emotional_intensity": 0.8,
+              "empathy": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q198", "Q199", "Q200"],
+            "dimension_rationale": {
+              "very_high_conscientiousness": "Unwavering commitment to persevere despite overwhelming difficulty",
+              "very_high_agency": "Proactive endurance choosing to stand rather than passive suffering",
+              "high_stability": "Steady foundation others depend on through sustained crisis",
+              "high_emotional_intensity": "Deep reserves accessed when surface strength depleted",
+              "moderate_adaptability": "Flexible strategies within committed defensive stance"
+            }
+          },
+          "signals_map": {
+            "Q198": {
+              "dimension": "conscientiousness",
+              "polarity": 1.0,
+              "description": "Unwavering perseverance through sustained adversity",
+              "assessment_question": "I maintain my commitments and responsibilities even when exhausted, wounded, or facing overwhelming pressure that makes others withdraw"
+            },
+            "Q199": {
+              "dimension": "agency",
+              "polarity": 0.95,
+              "description": "Proactive choice to endure rather than passive suffering",
+              "assessment_question": "I actively choose to stand firm and continue forward despite difficulties rather than passively enduring or collapsing under pressure"
+            },
+            "Q200": {
+              "dimension": "stability",
+              "polarity": 0.9,
+              "description": "Providing steady foundation through crisis",
+              "assessment_question": "Others depend on my steady presence as anchor when circumstances threaten to destabilize everyone, knowing I'll hold position when they need stability"
+            },
+            "Q201": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.85,
+              "description": "Deep reserves accessed in extremis",
+              "assessment_question": "I can access profound inner reserves of strength when all surface resources are depleted, drawing on depths I didn't know I possessed"
+            },
+            "Q202": {
+              "dimension": "empathy",
+              "polarity": 0.8,
+              "description": "Protective endurance for others' sake",
+              "assessment_question": "My resilience emerges largely from commitment to protect and support others who depend on me maintaining my position despite difficulty"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Grit: The Power of Passion and Perseverance",
+              "author": "Angela Duckworth",
+              "section_of_focus": "Grit as Predictor of Success and Cultivation of Perseverance",
+              "core_teaching": "Success depends less on talent than on grit—the combination of passion (sustained interest over time) and perseverance (capacity to overcome setbacks and maintain effort). Grit can be developed from the inside out through: cultivating deep interest in meaningful work, practicing deliberately with focus on improvement, connecting to purpose larger than self, and adopting growth mindset that sees setbacks as learning. Grit from the outside in develops through: wise parenting that balances support with demand, extracurricular activities teaching follow-through, and culture of grit where high standards and support coexist. The Grit Scale measures sustained commitment over years, revealing that those who maintain passion and perseverance through difficulty ultimately achieve more than talented individuals who lack resilience.",
+              "connection_to_adversity": "Duckworth teaches the Daughter that her capacity to endure the supreme ordeal isn't fixed trait but cultivable skill. By mapping personal passion to long-term purpose making current suffering meaningful, by developing resilience routines for sustaining effort through stressful periods, by reflecting on past failures as preparation rather than defeat, she builds grit systematically. Her backbone emerges not from natural toughness but from consciously cultivated combination of sustained interest in her mission (passion) and capacity to maintain effort despite wounds (perseverance). The trials scarring her also strengthen her.",
+              "terminal_learning_objectives": {
+                "objective1": "Map your personal passion projects to long-term goals, identifying purpose compelling enough to justify enduring significant difficulty",
+                "objective2": "Develop explicit resilience routines for sustaining effort during stressful periods—specific practices activating when exhaustion threatens collapse",
+                "objective3": "Reflect systematically on past failures and setbacks, reframing them as training that prepared you for current endurance rather than evidence of inadequacy"
+              }
+            },
+            "book2": {
+              "title": "Antifragile: Things That Gain from Disorder",
+              "author": "Nassim Nicholas Taleb",
+              "section_of_focus": "Antifragility as System Property and Stressors Enabling Growth",
+              "core_teaching": "Beyond resilience (ability to recover from stress) lies antifragility—the property of gaining strength from volatility, stressors, and disorder. Antifragile systems need stressors to improve—muscles need tearing to grow stronger, immune systems need exposure to strengthen, skills need challenge to develop. Overprotection creates fragility while controlled exposure to difficulty creates antifragility. To become antifragile: introduce small challenges building adaptive capacity, design feedback loops rewarding recovery, identify stressors catalyzing growth rather than just breaking, avoid 'mediocristan' sameness requiring constant conditions, embrace barbell strategy protecting against catastrophic loss while exposing to beneficial volatility. Wounds that don't kill you make the system stronger.",
+              "connection_to_adversity": "Taleb provides the Daughter framework understanding that her wounds aren't merely damage to endure but strengthening mechanism if approached correctly. By introducing small challenges systematically building adaptive capacity before supreme ordeal, by designing feedback loops that reward recovery rather than just punishing failure, by identifying which stressors catalyze growth versus which merely break, she transforms from fragile (broken by stress) through resilient (recovering from stress) to antifragile (strengthened by stress). Her battle scars become evidence not of weakness but of antifragile system proven through trials. The ordeal attempting to break her instead forges unbreakable backbone.",
+              "terminal_learning_objectives": {
+                "objective1": "Introduce controlled challenges systematically—small stressors building adaptive capacity before facing overwhelming trials",
+                "objective2": "Design feedback loops rewarding recovery—celebrate bouncing back as achievement equal to initial success, reinforcing resilience as valued skill",
+                "objective3": "Identify and categorize your stressors—which catalyze growth (embrace these), which merely damage (minimize these), which risk catastrophic harm (protect against these)"
+              }
+            },
+            "book3": {
+              "title": "Resilience: Hard-Won Wisdom for Living a Better Life",
+              "author": "Eric Greitens",
+              "section_of_focus": "Philosophy of Resilience and Practical Exercises for Fortitude",
+              "core_teaching": "Resilience is virtue built through practice, not trait you're born with. Drawing from philosophy (Stoicism, Buddhism, warrior traditions) and practical experience (Navy SEAL training, humanitarian work), resilience develops through: confronting rather than avoiding pain, finding meaning in suffering, maintaining agency even when circumstances unchangeable, building practical routines sustaining effort through difficulty, cultivating gratitude amid hardship, serving purposes larger than self. Resilience isn't bouncing back to original state but growing forward into stronger version forged by trials. Practice specific exercises: cold exposure training mental toughness, physical challenges building confidence transferring to other domains, service to others providing purpose transcending personal difficulty, philosophical study offering frameworks for endurance.",
+              "connection_to_adversity": "Greitens teaches the Daughter that resilience isn't innate quality but skill built through deliberate practice. By confronting rather than avoiding pain inherent in supreme ordeal, by finding meaning in suffering through connecting trials to larger purpose, by maintaining agency through choosing her attitude even when circumstances unchangeable, she builds practical backbone. Through specific resilience exercises—endurance challenges building physical fortitude that transfers psychologically, service maintaining focus beyond self, philosophical frameworks reframing suffering as strengthening—she transforms from someone enduring trials to someone strengthened by them. Her wounds become proof of resilience practiced.",
+              "terminal_learning_objectives": {
+                "objective1": "Confront one avoided difficulty weekly—practice facing rather than fleeing pain in controlled contexts, building mental toughness through voluntary challenge",
+                "objective2": "Find and articulate meaning in current suffering—connect your trials explicitly to larger purpose justifying endurance, explaining why this difficulty matters beyond personal cost",
+                "objective3": "Build practical resilience routines—specific daily practices sustaining effort through difficulty (morning ritual, physical challenge, gratitude practice, service action)"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 20 - The supreme ordeal arrives at story's midpoint. Previous trials have accumulated wounds—the Daughter stands battle-scarred, exhausted, every reserve depleted. Yet this moment demands standing despite breaking, maintaining position despite overwhelming pressure to collapse",
+            "symbolic_moment": "A battle-worn figure standing guard, bandaged yet vigilant, eight wands forming wall behind while ninth remains ready—the recognition that true backbone emerges not from being unbreakable but from choosing to stand despite wounds, that resilience is proven through continuing when others collapse",
+            "emotional_landscape": "Exhaustion and determination intertwined—the bone-deep weariness of accumulated trials alongside fierce refusal to yield, discovering that deepest strength emerges not from fresh reserves but from choosing to stand despite having nothing left",
+            "threshold_vision": "Understanding that authentic resilience requires enduring despite wounds rather than avoiding injury—that battle-tested backbone bearing scars proves stronger than untested strength, that choosing to stand despite breaking creates unshakeable foundation for all challenges ahead",
+            "transformation_promise": "This chapter establishes that enduring leadership requires backbone forged through trials—that learning to stand despite wounds at this critical midpoint builds fortitude essential for escalating challenges ahead where those protected from difficulty break but those proven through adversity endure",
+            "series_arc_connection": "The battle-tested resilience developed here becomes essential for reality-scale ordeals later—by learning to stand despite wounds at personal scale now, she develops capacity to endure through cosmic-level trials where those untested by difficulty collapse but those forged through adversity maintain position sustaining worlds"
+          },
+          "mental_health_framework": {
+            "focus_area": "Building Battle-Tested Resilience and Sustainable Fortitude",
+            "resilience_characteristics": [
+              "Capacity to endure overwhelming trials and maintain position despite exhaustion",
+              "Ability to access deep reserves when all surface resources depleted",
+              "Maintaining vigilance and readiness despite accumulated wounds",
+              "Wisdom distinguishing necessary endurance from destructive persistence",
+              "Transformation of wounds into wisdom rather than defeat",
+              "Balance between fortitude and self-compassion allowing sustainable strength"
+            ],
+            "fortitude_building_strategies": [
+              "Map passion to long-term purpose making current suffering meaningful",
+              "Develop explicit resilience routines activating when exhaustion threatens",
+              "Introduce controlled challenges systematically building adaptive capacity",
+              "Design feedback loops rewarding recovery as achievement",
+              "Confront rather than avoid pain in controlled contexts building mental toughness",
+              "Build practical daily practices sustaining effort through sustained difficulty"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to endure overwhelming trials without collapse",
+              "Greater skill in accessing deep reserves when surface strength depleted",
+              "Stronger ability to model endurance that anchors others through crisis",
+              "Wisdom to recognize when standing serves versus when it becomes destructive",
+              "Resilience becoming sustainable characteristic rather than emergency-only capacity"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene VIII: The Supreme Ordeal (story midpoint)",
+            "preliminary_beat": "The Ordeal - The Wounded Defender's Stand",
+            "save_the_cat_beat": "Midpoint - All Is Lost",
+            "character_state": "The Daughter confronts supreme trial threatening to break resolve completely. Accumulated wounds from previous trials have depleted all easy reserves. She must stand despite exhaustion, maintain position despite overwhelming pressure, summon strength from depths beyond comfort",
+            "ordinary_world_baseline": "She had faced challenges with natural resilience but now must consciously choose endurance despite wounds—not depending on fresh energy but deliberately accessing reserves deeper than she knew existed, standing despite breaking",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone whose backbone is proven through trials not preserved from them, who stands despite wounds rather than waiting for healing, who transforms accumulated damage into unshakeable fortitude sustaining all meaningful work"
+          },
+          "daily_prompt": "What reserves did you access today when surface strength was depleted? How did standing despite difficulty strengthen your backbone?",
+          "story_hook": "In Laurasia's Book 2, Chapter 20, the Daughter learns what every enduring leader discovers: that true backbone emerges not from being unbreakable but from choosing to stand despite wounds, that battle-tested resilience bearing scars proves stronger than untested strength, that deepest fortitude emerges from continuing forward despite exhaustion when others would collapse. Like the Nine of Wands teaching through wounded defender's vigilant stand, she discovers that resilience isn't avoiding damage but enduring despite it—that accumulated trials testing her to breaking point forge unbreakable core if she chooses to stand rather than yield. In learning to cultivate grit through Duckworth's passion-plus-perseverance, to become antifragile through Taleb's controlled stressor exposure, to build practical fortitude through Greitens' deliberate resilience exercises, she becomes wounded defender—someone whose scars prove strength rather than weakness, whose battle-tested backbone anchors hope when others collapse. The ordeal threatening to break her instead forges her unbreakable.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Endure overwhelming trials maintaining position despite exhaustion",
+              "Access deep reserves of strength when all surface resources depleted",
+              "Maintain vigilance and readiness despite accumulated wounds",
+              "Model fortitude that anchors others through sustained crisis",
+              "Transform wounds into wisdom rather than allowing damage to create defeat",
+              "Lead through battle-tested resilience proven rather than proclaimed"
+            ],
+            "development_pathway": "From untested to battle-proven—learning to map passion to purpose making suffering meaningful, develop explicit resilience routines, introduce controlled challenges building adaptive capacity, design feedback loops rewarding recovery, confront rather than avoid pain systematically, and build practical daily practices sustaining effort through sustained difficulty",
+            "ai_integration_notes": "AI can help track patterns in resilience under pressure, identifying what enables continued function despite depletion versus what triggers collapse. Machine learning can suggest when endurance serves growth versus when it becomes destructive persistence, supporting wisdom about sustainable fortitude. Biometric tracking can identify deep reserves activation patterns, helping recognize and strengthen access to strength beyond surface capacity."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 20 'Chief Among the Mighty' - Prime Timeline where endurance meets supreme ordeal",
+            "universal_archetype": "The Wounded Defender—who knows that true backbone emerges not from avoiding wounds but from standing despite them, that battle-tested resilience bearing scars proves stronger than untested strength, that choosing to stand despite breaking creates unshakeable foundation",
+            "trionfi_connection": "The Nine of Wands teaches that vigilant endurance despite exhaustion proves resilience, that battle-scarred standing demonstrates greater strength than unwounded ease, that accumulated trials forge unbreakable core when chosen as forge rather than endured as punishment",
+            "series_foundation": "This battle-tested resilience becomes essential for cosmic-scale ordeals later—by learning to stand despite wounds at personal scale now, she develops capacity to endure through reality-level trials where those protected from difficulty break but those proven through adversity maintain position sustaining entire worlds through any storm"
+          }
         },
         "personality_profile_61": {
         },
