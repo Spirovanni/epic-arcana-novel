@@ -13640,6 +13640,230 @@
           }
         },
         "personality_profile_61": {
+          "canonical_id": "EA-061",
+          "unique_identifier": "STG 2.2.3.2",
+          "all_chapter": 61,
+          "novel_book": 2,
+          "chapter": "Chapter 21",
+          "chapter_title": "The Crowned Vision",
+          "type": "Specific Task Group",
+          "display_name": "Inspirational Sovereign",
+          "theme": "Leading Through Magnetic Vision and Passionate Purpose",
+          "family": "Belonging / Care - Endurance Foundation",
+          "summary": "This personality embodies the magnetic capacity to inspire others through passionate vision and confident leadership, drawn from Chapter 61 of the Human Framework. It represents the Queen of Wands archetype—a regal figure seated confidently on throne adorned with lions and sunflowers, holding staff with both authority and warmth, symbolizing leadership through inspiration rather than domination, confidence earned through trials transformed into vision, passionate purpose that attracts and mobilizes others. This archetype masters the art of leading from authenticity, discovering that true authority emerges from embodied wisdom tested through adversity. Like the Daughter having endured the supreme ordeal and now gaining clarity and renewed confidence in The Reward, learning that surviving trials earns right to inspire others forward, this personality proves that magnetic leadership flows from battle-tested wisdom transformed into compelling vision.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Queen",
+          "tarot_symbolism": "The Queen of Wands represents confident leadership, magnetic charisma, passionate vision, and inspiring authority. A regal figure sits enthroned, staff in hand, lions symbolizing courage, sunflowers representing warmth—embodying leadership that commands through inspiration not domination, authority earned through trials transformed into wisdom, magnetic presence that attracts followers through authentic passion. This card signifies that true queens lead by example, that confidence inspiring others emerges from self-knowledge tested by adversity, teaching that magnetic leadership requires both fierce determination (lions) and warm approachability (sunflowers).",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to inspire and mobilize others through passionate articulated vision",
+              "ability to lead with confident presence earned through adversity overcome",
+              "skill in communicating purpose that transforms obligation into calling",
+              "wisdom to balance fierce determination with warm authentic approachability",
+              "mastery of magnetic charisma—attracting followers through embodied rather than proclaimed values",
+              "leadership through modeling passionate commitment that ignites similar fire in others",
+              "capacity to transform personal trials into universal wisdom inspiring collective action"
+            ],
+            "shadow": [
+              "potential for charismatic manipulation using inspiring vision to serve ego",
+              "tendency toward performative leadership prioritizing appearance over substance",
+              "risk of burning so brightly that followers feel diminished rather than elevated",
+              "difficulty sharing spotlight or acknowledging when others' visions deserve prominence",
+              "possible development of dependency on admiration to maintain sense of worth",
+              "challenge distinguishing authentic inspiration from charismatic seduction"
+            ],
+            "growth_focus": [
+              "balance magnetic charisma with genuine service prioritizing others' growth over own glory",
+              "recognize difference between inspiring leadership and attention-seeking performance",
+              "integrate passionate vision with humility that elevates rather than diminishes others",
+              "develop capacity to share authority and celebrate when others' visions shine",
+              "maintain magnetic presence without requiring constant admiration for validation",
+              "transform leadership from charismatic attraction into sustained empowerment of others"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Crowned Vision",
+            "fiction_chapter_context": "Book 2, Chapter 21 - Having endured the supreme ordeal at midpoint, the Daughter and allies emerge transformed. The Reward arrives—not material treasure but clarity and renewed confidence earned through trials. They discover that surviving adversity creates authority to inspire, that hard-won wisdom becomes magnetic vision others follow, that trials overcome transform into passionate purpose mobilizing collective action."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that inspiring leadership is ultimate care—that mobilizing others toward meaningful purpose serves better than direct helping. This integrates Type 2's warmth with Type 3's achievement-oriented vision and Type 8's confident authority."
+          },
+          "color_alignment": {
+            "hue_index": 60,
+            "name": "Sovereign Crimson",
+            "hsl": "60,62%,46%",
+            "rgb_hex": "#821A1A",
+            "color_symbolism": "Sovereign crimson represents the crowned leader's passionate authority—the color of confidence earned through fire, of vision forged in trials. It embodies both the fierce determination of lions and the warm magnetism that draws followers, showing that true sovereignty inspires through authentic passion."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.89,
+              "stability": 0.756,
+              "empathy": 0.823,
+              "openness": 0.778,
+              "orderliness": 0.689,
+              "novelty_seeking": 0.712,
+              "abstract_reasoning": 0.745,
+              "emotional_intensity": 0.856,
+              "social_dominance": 0.867,
+              "cooperativeness": 0.734,
+              "risk_tolerance": 0.789,
+              "conscientiousness": 0.801,
+              "adaptability": 0.812,
+              "imagination": 0.778
+            },
+            "match_weights": {
+              "social_dominance": 0.95,
+              "emotional_intensity": 0.9,
+              "agency": 0.85,
+              "empathy": 0.8,
+              "adaptability": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q203", "Q204", "Q205"],
+            "dimension_rationale": {
+              "very_high_social_dominance": "Natural leadership presence that inspires and mobilizes others",
+              "very_high_emotional_intensity": "Passionate vision and magnetic charisma",
+              "high_agency": "Confident proactive leadership transforming vision into action",
+              "high_empathy": "Warm approachability balancing fierce determination",
+              "moderate_adaptability": "Flexible strategies within committed passionate vision"
+            }
+          },
+          "signals_map": {
+            "Q203": {
+              "dimension": "social_dominance",
+              "polarity": 1.0,
+              "description": "Natural magnetic leadership presence",
+              "assessment_question": "I naturally inspire and mobilize others through confident leadership presence, with people naturally looking to me for vision and direction"
+            },
+            "Q204": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.95,
+              "description": "Passionate vision igniting others",
+              "assessment_question": "I lead with passionate intensity about my vision and purpose that ignites similar fire and commitment in others who follow"
+            },
+            "Q205": {
+              "dimension": "agency",
+              "polarity": 0.9,
+              "description": "Confident proactive transformation of vision into action",
+              "assessment_question": "I confidently transform inspiring vision into concrete action, proactively leading others forward rather than waiting for permission or perfect conditions"
+            },
+            "Q206": {
+              "dimension": "empathy",
+              "polarity": 0.85,
+              "description": "Warm approachability balancing authority",
+              "assessment_question": "My leadership balances confident authority with genuine warmth and care for those I lead, making people feel valued while being inspired"
+            },
+            "Q207": {
+              "dimension": "adaptability",
+              "polarity": 0.8,
+              "description": "Flexible methods serving passionate vision",
+              "assessment_question": "I adapt my leadership approach to serve my vision and the needs of those I lead, flexible in tactics while unwavering in passionate purpose"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Start with Why: How Great Leaders Inspire Everyone to Take Action",
+              "author": "Simon Sinek",
+              "section_of_focus": "The Golden Circle and Inspiring Leadership",
+              "core_teaching": "Great leaders inspire action by starting with WHY—the purpose, cause, or belief driving everything they do—before moving to HOW and WHAT. The Golden Circle works from inside out: Why (purpose/belief), How (process/values), What (results/products). Most communicate outside-in (What, How, Why) but inspiring leaders reverse this. People don't buy what you do, they buy why you do it. Those who start with why attract followers who believe what they believe, creating movements not just transactions. Inspiring leadership requires: clearly articulating compelling why, embodying this purpose authentically, communicating it consistently, attracting those who share the belief. The goal isn't to do business with everybody who needs what you have—it's to do business with people who believe what you believe.",
+              "connection_to_adversity": "Sinek teaches the Daughter that The Reward of surviving supreme ordeal isn't just personal victory but earned authority to articulate compelling WHY inspiring others. By clearly articulating the purpose/belief driving her mission (why this matters beyond personal gain), by embodying this purpose authentically through how she survived trials, by communicating it consistently showing alignment between values and actions, she transforms from someone who overcame adversity into someone whose hard-won wisdom inspires collective movement. Her trials give credibility to her why—she's not theorizing but testifying.",
+              "terminal_learning_objectives": {
+                "objective1": "Articulate your compelling WHY—the purpose/cause/belief driving your actions—in clear terms connecting to universal human values",
+                "objective2": "Demonstrate alignment between your stated why and how you actually behave, ensuring authentic embodiment rather than mere proclamation",
+                "objective3": "Communicate your why consistently across all contexts, practicing starting every pitch/speech/conversation from purpose before process or results"
+              }
+            },
+            "book2": {
+              "title": "Presence: Bringing Your Boldest Self to Your Biggest Challenges",
+              "author": "Amy Cuddy",
+              "section_of_focus": "Power Posing and Authentic Confidence",
+              "core_teaching": "Presence is state of being attuned to and able to express our authentic best selves. It emerges when we feel personally powerful, allowing us to be captivating without trying to captivate. Power poses (expansive physical stances) don't just reflect confidence—they create it through embodied cognition, changing hormone levels (increasing testosterone/decreasing cortisol) that produce genuine confidence. Authentic presence requires: self-trust developed through small wins building efficacy, body-mind connection using posture to access inner strength, vulnerability allowing imperfection rather than performance, synchrony between inner feelings and outer expression. Fake it till you become it (not just fake it)—acting confident in body eventually creates genuine psychological confidence. Presence attracts others because it's self-focused (being your best self) not other-focused (impressing others).",
+              "connection_to_adversity": "Cuddy provides the Daughter framework for understanding how surviving ordeal creates presence—not through performing confidence but through embodying hard-won self-trust. By practicing power poses before leadership moments accessing physiological confidence, by building on small wins during trials that proved efficacy, by allowing vulnerability about her struggles rather than projecting invincibility, by achieving synchrony between inner wisdom earned through adversity and outer expression, she develops authentic magnetic presence. Her confidence attracts because it's real—forged in fire, not performed for effect.",
+              "terminal_learning_objectives": {
+                "objective1": "Implement pre-leadership power pose routine—practice expansive physical stances for 2 minutes before important interactions accessing embodied confidence",
+                "objective2": "Build efficacy through small wins tracking—document daily successes proving capability, creating foundation of self-trust supporting bold action",
+                "objective3": "Practice vulnerability in leadership—share authentic struggles and learning rather than projecting invincibility, creating genuine connection through realness"
+              }
+            },
+            "book3": {
+              "title": "The Charisma Myth: How Anyone Can Master the Art and Science of Personal Magnetism",
+              "author": "Olivia Fox Cabane",
+              "section_of_focus": "The Three Core Elements of Charisma",
+              "core_teaching": "Charisma isn't innate magic but learnable skill comprising three elements: Presence (fully focused attention on current moment/person), Power (perception that you can affect the world), and Warmth (perception of goodwill toward others). Different charisma styles emphasize different balances: Focus charisma (presence), Visionary charisma (belief in vision), Kindness charisma (warmth), Authority charisma (status/power). Magnetic charisma specifically combines high power with high warmth—the challenging sweet spot of fierce and kind. To develop charisma: remove internal obstacles (discomfort, self-criticism), practice presence through mindfulness, develop power through competence and confidence, cultivate warmth through goodwill and empathy. Body language matters critically—people read your mental state through micro-expressions before conscious awareness. Charisma is fundamentally about making others feel good about themselves in your presence.",
+              "connection_to_adversity": "Cabane teaches the Daughter that magnetic leadership requires mastering all three charisma elements. By practicing presence during interactions (full attention), by accessing power earned through trials proving competence and building confidence, by cultivating authentic warmth/goodwill toward those she leads, she develops the rare combination of high power with high warmth defining magnetic charisma. Her ordeal-forged authority (power) balanced with genuine care for others (warmth) creates the compelling presence attracting followers. The trials didn't just build confidence—they proved competence others recognize instinctively.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice presence drills—during every conversation, focus completely on the person speaking, catching when mind wanders and gently returning attention",
+                "objective2": "Develop power through competence demonstration—systematically build and showcase skills that prove capability, creating justified confidence others perceive",
+                "objective3": "Cultivate warmth through goodwill exercises—practice genuinely wishing well for others including competitors, developing authentic benevolence radiating in micro-expressions"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 21 - The supreme ordeal survived. The Daughter and allies emerge transformed, wounded but wiser. The Reward arrives—not treasure but something more valuable: clarity about purpose, renewed confidence earned through survival, authority to inspire others forward",
+            "symbolic_moment": "A regal figure enthroned, staff held with authority and warmth, lions symbolizing fierce courage, sunflowers representing magnetic warmth—the recognition that trials overcome create authority to lead, that hard-won wisdom inspires more than theoretical knowledge, that magnetic presence attracts through authentic passion tested by fire",
+            "emotional_landscape": "Confidence and renewed purpose—the quiet authority of having survived when easier to collapse, the clarity about what matters earned through trials stripping away superficial concerns, discovering that wisdom proven through adversity inspires others more than untested theory",
+            "threshold_vision": "Understanding that authentic leadership requires trials providing credibility—that inspiring others demands wisdom earned not proclaimed, that magnetic presence flows from confidence tested by adversity, that The Reward of surviving ordeal is authority to articulate vision mobilizing collective action",
+            "transformation_promise": "This chapter establishes that inspiring leadership requires battle-tested wisdom—that learning to articulate compelling vision from hard-won clarity now builds capacity to mobilize others through escalating challenges ahead where theoretical leaders collapse but those proven through fire inspire movements",
+            "series_arc_connection": "The magnetic leadership developed here becomes essential for cosmic-scale mobilization later—by learning to inspire through vision earned via personal trials now, she develops capacity to mobilize entire populations through reality-level challenges where untested charisma fails but wisdom forged in adversity creates unstoppable movements"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Magnetic Leadership Through Authentic Charisma",
+            "charisma_characteristics": [
+              "Inspiring others through passionate articulated vision connecting to universal purpose",
+              "Leading with confident presence earned through adversity overcome",
+              "Balancing fierce determination with warm authentic approachability",
+              "Mobilizing followers through embodied values rather than proclaimed theory",
+              "Transforming personal trials into universal wisdom inspiring collective action",
+              "Creating movements through starting with why before how or what"
+            ],
+            "leadership_building_strategies": [
+              "Articulate compelling WHY clearly—purpose/cause/belief driving actions beyond self-interest",
+              "Practice power poses accessing embodied confidence before leadership moments",
+              "Develop presence through mindfulness—full attention during every interaction",
+              "Build power through competence demonstration proving capability justifying confidence",
+              "Cultivate authentic warmth through genuine goodwill toward those you lead",
+              "Ensure synchrony between inner wisdom and outer expression avoiding performance"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to inspire and mobilize others through articulated vision",
+              "Greater skill in leading with confident presence attracting rather than demanding followers",
+              "Stronger ability to balance authority with warmth creating magnetic charisma",
+              "Wisdom to recognize when inspiring vision serves collective versus serves ego",
+              "Leadership becoming authentic expression of tested wisdom rather than performed charisma"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene VIII: The Supreme Ordeal - The Reward (post-ordeal transformation)",
+            "preliminary_beat": "The Reward - Crowned Vision",
+            "save_the_cat_beat": "Break into Three - Renewed Confidence",
+            "character_state": "The Daughter has survived supreme ordeal. She emerges wounded but wiser, gaining The Reward—clarity about purpose, renewed confidence, authority to inspire others. Her trials earn right to articulate vision mobilizing collective action forward",
+            "ordinary_world_baseline": "She had capabilities but now possesses battle-tested wisdom and earned authority—not depending on theory or position but speaking from proven experience of surviving what breaks others, inspiring through testimony not speculation",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone whose trials transform into universal wisdom inspiring movements, who leads through magnetic presence earned via adversity, who mobilizes others through vision connecting personal purpose to collective meaning"
+          },
+          "daily_prompt": "How did you inspire others today through vision connecting to deeper purpose? How did your past trials give credibility to your leadership?",
+          "story_hook": "In Laurasia's Book 2, Chapter 21, the Daughter learns what every magnetic leader discovers: that The Reward of surviving supreme ordeal isn't personal victory but earned authority to inspire, that hard-won wisdom attracts followers more than untested theory, that trials overcome transform into compelling vision mobilizing collective action. Like the Queen of Wands teaching through confident throne and passionate staff, she discovers that magnetic leadership flows from authentic presence proven by fire—that starting with WHY articulates purpose making struggles meaningful, that embodied confidence accessed through power poses radiates genuine authority, that balancing fierce determination (lions) with warm approachability (sunflowers) creates irresistible magnetic charisma. In learning to articulate compelling vision through Sinek's Golden Circle, to develop authentic presence through Cuddy's embodied confidence, to master magnetic charisma through Cabane's presence-power-warmth, she becomes inspirational sovereign—someone whose battle-tested wisdom inspires movements rather than just leading teams. The ordeal that could have broken her instead crowned her with authority inspiring worlds.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Inspire and mobilize others through passionate articulated vision",
+              "Lead with confident presence earned through adversity overcome",
+              "Balance fierce determination with warm authentic approachability",
+              "Transform personal trials into universal wisdom inspiring collective action",
+              "Attract followers through embodied values rather than proclaimed theory",
+              "Create movements by starting with compelling why before how or what"
+            ],
+            "development_pathway": "From capable individual to magnetic leader—learning to articulate compelling WHY clearly, practice power poses accessing embodied confidence, develop presence through full attention, build power through competence demonstration, cultivate authentic warmth through goodwill, and ensure synchrony between inner wisdom and outer expression",
+            "ai_integration_notes": "AI can help analyze communication patterns identifying when leaders start with why versus what, measuring alignment between stated values and actual behaviors. Machine learning can suggest optimal charisma balance for different contexts, identifying when more presence, power, or warmth needed. Natural language processing can track how vision articulation evolves, helping leaders refine compelling purpose statements connecting personal mission to universal meaning."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 21 'Chief Among the Mighty' - Prime Timeline where endurance meets magnetic leadership",
+            "universal_archetype": "The Inspirational Sovereign—who knows that trials overcome earn authority to inspire, that magnetic leadership flows from wisdom tested by fire, that compelling vision transforms personal purpose into collective movements mobilizing worlds",
+            "trionfi_connection": "The Queen of Wands teaches that confident leadership inspires through passionate vision, that magnetic presence balances fierce determination with warm approachability, that authority earned through trials attracts followers through authentic embodied wisdom",
+            "series_foundation": "This magnetic leadership becomes essential for cosmic-scale mobilization later—by learning to inspire through vision earned via personal trials now, she develops capacity to mobilize entire populations through reality-level challenges where untested charisma collapses but wisdom proven through fire creates unstoppable movements transforming worlds"
+          }
         },
         "personality_profile_62": {
         },
