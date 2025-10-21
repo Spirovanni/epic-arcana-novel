@@ -16352,6 +16352,230 @@
           }
         },
         "personality_profile_73": {
+          "canonical_id": "EA-073",
+          "unique_identifier": "MAT 2.12",
+          "all_chapter": 73,
+          "novel_book": 2,
+          "chapter": "Chapter 33",
+          "chapter_title": "The Charismatic Presence",
+          "type": "Major Task Group",
+          "display_name": "Magnetic Leader",
+          "theme": "Leading Through Confident Presence and Authentic Charismatic Influence",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to lead through confident presence and authentic charismatic influence, drawn from Chapter 73 of the Human Framework. It represents the Queen of Wands archetype—a queen seated confidently on throne holding wand and sunflower, black cat at feet, leonine energy radiating warmth and authority, symbolizing charismatic leadership through authentic self-possession, magnetic influence drawing others naturally, confidence rooted in self-knowledge creating inspiring presence. This archetype masters the art of leading through being rather than doing, discovering that authentic presence often influences more powerfully than strategic manipulation. Like the Daughter in Woman as Temptress stage, having channeled passionate action now integrating boldness with mature confident presence, this personality proves that transformational leadership requires developing charismatic authenticity not just tactical skill.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Queen",
+          "tarot_symbolism": "The Queen of Wands represents charismatic leadership, confident presence, magnetic influence, and authentic self-possession. A queen seated confidently holds wand and sunflower, black cat at feet, radiating warmth and authority—symbolizing leadership through being not just doing, influence arising from authentic confidence, presence that naturally draws others. This card signifies that charisma flows from self-knowledge, that magnetic leadership combines warmth with authority, teaching that transformational influence requires authentic presence.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to lead through confident authentic presence naturally drawing others",
+              "ability to combine warmth with authority creating approachable yet respected leadership",
+              "skill in authentic self-expression inspiring others through genuine rather than manufactured charisma",
+              "wisdom to balance magnetic influence with service ensuring charisma serves transformation",
+              "mastery of presence—being fully engaged creating powerful influence through attention quality",
+              "leadership through modeling confident authenticity showing others their own potential",
+              "capacity to transform charisma from performance into authentic self-possession inspiring collective confidence"
+            ],
+            "shadow": [
+              "potential for charisma becoming performance where manufactured persona replaces authentic self",
+              "tendency toward attention-seeking where influence pursued for ego validation not service",
+              "risk of charm manipulation where magnetic presence used to control rather than empower",
+              "difficulty maintaining authenticity when charismatic persona becomes identity requiring defense",
+              "possible development of dependency on admiration requiring constant external validation",
+              "challenge distinguishing between authentic presence and carefully curated image management"
+            ],
+            "growth_focus": [
+              "balance magnetic presence with authentic vulnerability ensuring charisma serves connection",
+              "recognize when influence flowing from genuine self-possession versus manufactured persona",
+              "integrate confident authority with warmth preventing charisma from becoming cold dominance",
+              "develop awareness of when seeking influence for service versus personal validation",
+              "maintain authentic presence under pressure preventing defensive retreat into performance",
+              "transform charisma from attention-seeking into presence-based leadership inspiring collective growth"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Charismatic Presence",
+            "fiction_chapter_context": "Book 2, Chapter 33 - Having channeled passionate action boldly, the Daughter now integrates intensity with mature confident presence in Woman as Temptress stage. She must develop charismatic authenticity, combine warmth with authority, and lead through being not just doing."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that charismatic presence is ultimate service—that authentic magnetic leadership inspires collective confidence, that presence-based influence empowers rather than controls. This integrates Type 2's care with Type 3's confident presentation and Type 8's natural authority."
+          },
+          "color_alignment": {
+            "hue_index": 72,
+            "name": "Charisma Gold",
+            "hsl": "72,72%,56%",
+            "rgb_hex": "#DAEC2E",
+            "color_symbolism": "Charisma gold represents the radiant energy of confident presence—the color of queen radiating warmth and authority, of sunflower symbolizing life-giving influence, of authentic self-possession creating magnetic field. It embodies both the brightness of confident leadership and the warmth of approachable authenticity, showing that charismatic influence flows from integrated self-knowledge."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.845,
+              "stability": 0.823,
+              "empathy": 0.812,
+              "openness": 0.789,
+              "orderliness": 0.734,
+              "novelty_seeking": 0.756,
+              "abstract_reasoning": 0.778,
+              "emotional_intensity": 0.834,
+              "social_dominance": 0.889,
+              "cooperativeness": 0.801,
+              "risk_tolerance": 0.767,
+              "conscientiousness": 0.778,
+              "adaptability": 0.812,
+              "imagination": 0.823
+            },
+            "match_weights": {
+              "social_dominance": 0.95,
+              "emotional_intensity": 0.9,
+              "empathy": 0.85,
+              "stability": 0.8,
+              "agency": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q263", "Q264", "Q265"],
+            "dimension_rationale": {
+              "very_high_social_dominance": "Natural confident presence commanding attention and respect without force",
+              "very_high_emotional_intensity": "Passionate energy radiating warmth and enthusiasm inspiring others",
+              "high_empathy": "Attunement to others creating warmth balancing authority in charismatic presence",
+              "high_stability": "Grounded self-possession enabling authentic confidence under pressure",
+              "moderate_agency": "Proactive leadership through being and presence not just strategic action"
+            }
+          },
+          "signals_map": {
+            "Q263": {
+              "dimension": "social_dominance",
+              "polarity": 1.0,
+              "description": "Natural confident presence commanding attention without force",
+              "assessment_question": "I naturally command attention and respect through confident authentic presence rather than force or manipulation, creating magnetic field that draws others while maintaining approachable warmth"
+            },
+            "Q264": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.95,
+              "description": "Passionate energy radiating warmth inspiring others",
+              "assessment_question": "I radiate passionate energy and genuine warmth that inspires and energizes others, bringing emotional intensity that creates enthusiasm and confidence in collective possibility"
+            },
+            "Q265": {
+              "dimension": "empathy",
+              "polarity": 0.9,
+              "description": "Attunement creating warmth balancing authority in presence",
+              "assessment_question": "I remain deeply attuned to others' feelings and needs creating genuine warmth that balances my natural authority, ensuring charismatic presence empowers rather than intimidates or controls"
+            },
+            "Q266": {
+              "dimension": "stability",
+              "polarity": 0.85,
+              "description": "Grounded self-possession enabling authentic confidence",
+              "assessment_question": "I maintain grounded self-possession and authentic confidence rooted in self-knowledge rather than external validation, enabling stable presence even under pressure or challenge"
+            },
+            "Q267": {
+              "dimension": "agency",
+              "polarity": 0.8,
+              "description": "Proactive leadership through being and presence quality",
+              "assessment_question": "I lead proactively through quality of my presence and being—the attention, energy, and authenticity I bring—not just through strategic actions or tactical decisions"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Presence: Bringing Your Boldest Self to Your Biggest Challenges",
+              "author": "Amy Cuddy",
+              "section_of_focus": "Power Posing and Authentic Confidence",
+              "core_teaching": "Presence is state of being attuned to and able to express true thoughts, feelings, values, potential. It arises when we feel personally powerful—believing we can express real selves. Research shows: body shapes mind as much as mind shapes body. Power posing (expansive postures) for two minutes increases testosterone (dominance hormone) and decreases cortisol (stress hormone) creating authentic confidence. The mechanism: adopting confident posture sends feedback to brain creating genuine feelings of power. But presence isn't performance—it's alignment between inner state and outer expression. Fake it till you become it (not just till you make it)—practicing presence shapes identity not just appearance. The applications: before high-stakes situations, use power poses creating authentic confidence; focus on being present not impressive reducing self-consciousness; remember your story and values connecting to authentic self. The distinction: charisma rooted in genuine self-possession inspires; charisma as performance manipulates. True presence makes others feel powerful too not just admiring of you.",
+              "connection_to_adversity": "Cuddy teaches the Daughter that charismatic presence flows from body-mind alignment—power posing creates genuine confidence, not just appearance of it. By practicing expansive postures before leadership moments, by focusing on being present rather than impressive, by remembering her story and values connecting to authentic self, she develops real not manufactured charisma. She learns that fake it till you become it means practicing presence shapes identity, that true charisma makes others feel powerful not just admiring. Her magnetic leadership becomes authentic self-expression not performance, her confidence rooted in self-possession not external validation. She discovers that presence is being attuned to and able to express true self, that this authentic alignment creates more powerful influence than strategic manipulation.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice power posing before high-stakes situations—adopt expansive postures for two minutes creating physiological confidence through body-mind feedback",
+                "objective2": "Focus on being present not impressive—reduce self-consciousness about how you're perceived, increase attention quality and authentic expression",
+                "objective3": "Connect to authentic self through story and values—remember your 'why' and genuine identity before leadership moments, ensuring presence flows from self-possession"
+              }
+            },
+            "book2": {
+              "title": "The Charisma Myth: How Anyone Can Master the Art and Science of Personal Magnetism",
+              "author": "Olivia Fox Cabane",
+              "section_of_focus": "Presence, Power, and Warmth",
+              "core_teaching": "Charisma isn't inborn but learnable through three core elements: presence (being fully in moment with people), power (perception of ability to affect world), warmth (perception of goodwill toward others). The foundation is presence—without genuine attention, power and warmth ring false. Charismatic presence requires: getting out of your head (stop internal commentary), focusing completely on other person, using techniques like deep breathing and body awareness to anchor attention. The three charisma styles: focus (intense presence and listening—Elon Musk), visionary (inspiring future-oriented warmth—MLK), kindness (genuine caring and compassion—Dalai Lama). Most powerful: combine all three varying by context. The practice: for presence do mindfulness exercises, for power adopt confident body language and visualize success, for warmth practice goodwill visualization toward others. The warning: charisma without ethical grounding becomes manipulation; authentic charisma serves others not just self. The key: internal state creates external charisma—changing how you feel changes how others perceive you.",
+              "connection_to_adversity": "Cabane provides the Daughter with framework for building authentic charisma through presence-power-warmth combination. By practicing presence through getting out of head and focusing completely on others, by cultivating power through confident body language and internal state management, by developing warmth through genuine goodwill visualization, she creates magnetic influence. She learns to vary charisma styles—focus, visionary, kindness—based on context, to recognize that internal state creates external perception. Her charismatic leadership becomes ethical—serving others not just self, empowering not manipulating. She discovers that presence is foundation—without genuine attention, power and warmth become hollow performance. Her practice of presence through mindfulness, power through embodiment, warmth through compassion creates integrated authentic charisma.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice charismatic presence—get out of your head through mindfulness, focus completely on others using deep breathing and body awareness anchoring attention",
+                "objective2": "Develop power through embodiment—adopt confident posture and movement, visualize success and capability, manage internal state creating genuine feelings of effectiveness",
+                "objective3": "Cultivate authentic warmth—practice goodwill visualization toward others, develop genuine caring and compassion, ensure charisma serves and empowers not just impresses"
+              }
+            },
+            "book3": {
+              "title": "Daring Greatly: How the Courage to Be Vulnerable Transforms the Way We Live, Love, Parent, and Lead",
+              "author": "Brené Brown",
+              "section_of_focus": "Vulnerability and Authentic Leadership",
+              "core_teaching": "True leadership requires vulnerability—courage to show up and be seen when you can't control outcome. The research finding: leaders perceived as most charismatic and inspiring are those willing to be vulnerable, authentic, and real. The cultural myth: vulnerability is weakness; charisma requires appearing invincible. The reality: vulnerability is birthplace of innovation, creativity, change; showing authentic humanity creates connection and trust. The distinction: vulnerability isn't oversharing or using authenticity as excuse for lack of boundaries—it's conscious choice to be genuine about struggles while maintaining appropriate professional boundaries. Authentic charisma combines: confidence without arrogance (knowing strengths while acknowledging growth areas), authority without dominance (leading through service not control), presence without performance (being real not curated). The practice: share appropriate struggles and learning processes, ask for help when needed, admit mistakes openly, maintain curious stance rather than knowing-everything pose. The transformation: when leaders dare to be vulnerable and authentic, they create cultures where others feel safe to be real, innovative, and fully engaged.",
+              "connection_to_adversity": "Brown teaches the Daughter that authentic charisma requires vulnerability—courage to be seen without controlling how. By sharing appropriate struggles and learning processes, by asking for help rather than appearing invincible, by admitting mistakes openly, she creates magnetic leadership through authenticity not performance. She learns that vulnerability isn't weakness but birthplace of innovation and connection, that being real creates trust enabling transformation. Her charismatic presence combines confidence without arrogance, authority without dominance, genuineness without oversharing. She discovers that when leaders dare to be vulnerable, they create cultures of authentic engagement. Her magnetic influence flows from willingness to be imperfectly human while maintaining competence, from showing growth edges while demonstrating capability.",
+              "terminal_learning_objectives": {
+                "objective1": "Practice appropriate vulnerability—share struggles and learning processes maintaining professional boundaries, show authentic humanity without oversharing",
+                "objective2": "Lead through service not control—combine authority with genuine care for others' growth, use power to empower not dominate",
+                "objective3": "Create culture of authenticity—model being real encouraging others to show up genuinely, admit mistakes fostering innovation through psychological safety"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 33 - Passionate action channeled, bold pursuit initiated. The Daughter now integrates intensity with mature confident presence in Woman as Temptress stage. She must develop charismatic authenticity, combine warmth with authority, and lead through being not just doing",
+            "symbolic_moment": "Queen seated confidently holding wand and sunflower, black cat at feet, radiating warmth and authority—the recognition that charisma flows from self-knowledge, that magnetic leadership combines warmth with power, that transformational influence requires authentic presence",
+            "emotional_landscape": "Confidence and authenticity intertwined—the self-possession of genuine presence alongside vulnerability of being seen without control, discovering that charismatic influence flows from integrated self-knowledge creating magnetic field naturally drawing others",
+            "threshold_vision": "Understanding that leadership requires presence-based influence—that authentic charisma inspires more powerfully than strategic manipulation, that combining warmth with authority creates approachable yet respected leadership, that being attuned to and expressing true self creates transformational magnetic field",
+            "transformation_promise": "This chapter establishes that sustainable influence requires authentic charisma—that learning to lead through confident genuine presence now builds capacity for inspiring transformation ahead where those performing charisma exhaust themselves while those emanating authentic self-possession create lasting collective confidence",
+            "series_arc_connection": "The charismatic presence capacity developed here becomes essential for cosmic-scale inspiration later—by learning to lead through authentic confident being at personal scale now, she develops capacity to inspire civilizations where those manipulating through performance create brittle followership while those radiating genuine self-possession catalyze collective awakening"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Authentic Charismatic Presence and Magnetic Leadership",
+            "charismatic_characteristics": [
+              "Leading through confident authentic presence naturally drawing others",
+              "Combining warmth with authority creating approachable respected leadership",
+              "Expressing authentic self inspiring others through genuine not manufactured charisma",
+              "Balancing magnetic influence with service ensuring charisma serves transformation",
+              "Maintaining presence—being fully engaged creating influence through attention quality",
+              "Modeling confident authenticity showing others their potential through example"
+            ],
+            "presence_development_strategies": [
+              "Practice power posing before high-stakes situations creating physiological confidence",
+              "Focus on being present not impressive reducing self-consciousness increasing authenticity",
+              "Develop presence-power-warmth combination through mindfulness embodiment and goodwill",
+              "Practice appropriate vulnerability sharing struggles while maintaining boundaries",
+              "Lead through service not control combining authority with genuine care",
+              "Create culture of authenticity modeling being real encouraging collective engagement"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to lead through authentic presence not just strategic action",
+              "Greater skill in combining warmth with authority creating magnetic approachable leadership",
+              "Stronger ability to maintain genuine self-expression under pressure",
+              "Wisdom distinguishing authentic charisma from manufactured performance",
+              "Leadership becoming naturally magnetic through confident vulnerable authenticity"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene X: Woman as Temptress (charismatic integration)",
+            "preliminary_beat": "Break into Three - Presence Leadership",
+            "save_the_cat_beat": "Finale - Magnetic Influence",
+            "character_state": "The Daughter having channeled passionate action now integrates intensity with mature confident presence. She must develop charismatic authenticity, combine warmth with authority, and lead through being not just doing",
+            "ordinary_world_baseline": "She had either performed charisma exhaustingly or avoided visibility preventing influence—now requires authentic presence leading through confident genuine self-expression, distinguishing magnetic leadership from attention-seeking",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who leads through authentic charismatic presence, who combines warmth with authority naturally, who inspires through being not just doing, who creates magnetic field through integrated self-knowledge"
+          },
+          "daily_prompt": "How did you lead through presence today? Was your charisma authentic self-expression or manufactured performance?",
+          "story_hook": "In Laurasia's Book 2, Chapter 33, the Daughter learns what every transformational leader discovers: that authentic charisma flows from self-knowledge, that magnetic influence combines warmth with authority, that leading through presence inspires more powerfully than strategic manipulation. Like the Queen of Wands teaching through figure radiating confident warmth, she discovers that power posing creates genuine confidence through body-mind alignment, that charismatic presence requires presence-power-warmth combination, that vulnerability is birthplace of authentic connection and innovation. In learning to practice power posing and authentic confidence through Cuddy's research, to develop presence-power-warmth through Cabane's charisma framework, to dare being vulnerable creating cultures of authenticity through Brown's courage work, she becomes magnetic leader—someone whose presence naturally draws others, whose warmth balances authority creating approachable respect, whose authentic self-expression inspires collective confidence. The leadership that could have exhausted through performance instead emanates from integrated self-possession.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Lead through confident authentic presence naturally drawing others",
+              "Combine warmth with authority creating approachable yet respected leadership",
+              "Express authentic self inspiring through genuine not manufactured charisma",
+              "Balance magnetic influence with service ensuring charisma empowers others",
+              "Maintain full presence creating influence through attention and energy quality",
+              "Practice appropriate vulnerability modeling authenticity encouraging collective engagement"
+            ],
+            "development_pathway": "From performed charisma or avoided visibility to authentic presence—learning to practice power posing, focus on being present not impressive, develop presence-power-warmth combination, practice appropriate vulnerability, lead through service, and create cultures of authenticity",
+            "ai_integration_notes": "AI can help detect presence quality through analyzing attention patterns and engagement metrics in communication. Machine learning can distinguish authentic charisma from manufactured performance tracking consistency between stated values and behaviors. Natural language processing can identify warmth-authority balance in leadership communication, supporting development of magnetic authentic presence inspiring sustainable transformation."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 33 'Chief Among the Mighty' - Prime Timeline where boldness meets charismatic integration",
+            "universal_archetype": "The Magnetic Leader—who knows that authentic charisma flows from self-knowledge, that combining warmth with authority creates transformational influence, that leading through presence inspires more powerfully than strategic manipulation creating collective confidence",
+            "trionfi_connection": "The Queen of Wands teaches that confident seated posture symbolizes grounded self-possession, that sunflower represents life-giving influence, that black cat signifies intuitive authentic knowing, that radiating warmth combined with authority creates magnetic presence",
+            "series_foundation": "This charismatic presence capacity becomes essential for cosmic-scale inspiration later—by learning to lead through authentic confident being at personal scale now, she develops capacity to inspire civilizations where those performing exhaust themselves while those radiating genuine self-possession catalyze collective awakening"
+          }
         },
         "personality_profile_74": {
         },
