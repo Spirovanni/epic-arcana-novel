@@ -15222,6 +15222,230 @@
           }
         },
         "personality_profile_68": {
+          "canonical_id": "EA-068",
+          "unique_identifier": "MAT 2.7",
+          "all_chapter": 68,
+          "novel_book": 2,
+          "chapter": "Chapter 28",
+          "chapter_title": "The Accelerated Momentum",
+          "type": "Major Task Group",
+          "display_name": "Swift Executor",
+          "theme": "Seizing Opportunities and Accelerating Progress Through Rapid Action",
+          "family": "Belonging / Care - Leadership",
+          "summary": "This personality embodies the capacity to seize opportunities and accelerate progress through rapid action, drawn from Chapter 68 of the Human Framework. It represents the Eight of Wands archetype—eight wands flying through air in swift trajectory toward destination, clear sky indicating unobstructed path, momentum carrying messages or energy forward rapidly, symbolizing swift movement after preparation complete, acceleration of plans into action, rapid communication and decision-making. This archetype masters the art of decisive execution when moment arrives, discovering that windows of opportunity close quickly requiring immediate action. Like the Daughter at Meeting with a Goddess, having defended position now recognizing the brief window for breakthrough requiring swift coordinated action, this personality proves that leadership includes knowing when to move with velocity converting strategy into reality.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Eight",
+          "tarot_symbolism": "The Eight of Wands represents swift action, rapid progress, acceleration, and momentum carrying plans forward. Eight wands fly through clear sky toward destination, trajectory unobstructed—symbolizing plans launching into execution, communication flowing quickly, decisions translating into coordinated action. This card signifies that preparation creates readiness for rapid movement, that opportunities require swift response, teaching that leadership includes recognizing windows for acceleration and moving decisively when they open.",
+          "traits": {
+            "strengths": [
+              "extraordinary capacity to recognize windows of opportunity requiring swift action",
+              "ability to move decisively from planning to execution when moment arrives",
+              "skill in coordinating rapid action across multiple fronts maintaining coherence",
+              "wisdom to distinguish between productive velocity and reckless rushing",
+              "mastery of rapid communication—conveying critical information quickly and clearly",
+              "leadership through modeling decisive execution inspiring others to move with purpose",
+              "capacity to create and capitalize on momentum accelerating transformation"
+            ],
+            "shadow": [
+              "potential for speed addiction where constant motion becomes compulsive avoiding reflection",
+              "tendency toward recklessness where velocity prioritized over wisdom or preparation",
+              "risk of overwhelming others with pace they cannot sustain creating burnout",
+              "difficulty maintaining quality when emphasis on speed sacrifices thoroughness",
+              "possible development of impatience where thoughtful deliberation seen as obstacle",
+              "challenge distinguishing between seizing opportunity versus impulsive reaction"
+            ],
+            "growth_focus": [
+              "balance swift action with adequate preparation ensuring velocity serves effectiveness",
+              "recognize when speed advances mission versus when it creates chaos or errors",
+              "integrate rapid execution with sustained capacity preventing burnout in self and others",
+              "develop discernment about when to accelerate versus when to maintain steady pace",
+              "maintain relationships and thoroughness while moving quickly preventing damage from haste",
+              "transform swift action from reactive scrambling into strategic acceleration"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Crown of the Ancient Ones",
+            "chapter_theme": "The Accelerated Momentum",
+            "fiction_chapter_context": "Book 2, Chapter 28 - Having defended position, the Daughter now recognizes the brief window for breakthrough requiring swift coordinated action. She must accelerate transformation work, coordinate rapid execution across multiple fronts, and seize fleeting opportunities before they close."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that swift action is service—that seizing opportunities to accelerate transformation serves collective good, while endless deliberation allows windows to close. This integrates Type 2's care with Type 3's achievement drive and Type 7's energetic momentum."
+          },
+          "color_alignment": {
+            "hue_index": 67,
+            "name": "Velocity Lime",
+            "hsl": "67,67%,51%",
+            "rgb_hex": "#C4D82E",
+            "color_symbolism": "Velocity lime represents the vibrant energy of swift action—the color of wands flying through clear sky, of momentum carrying plans forward, of decisive execution when windows open. It embodies both the brightness of unobstructed trajectory and the vitality of acceleration, showing that leadership recognizes and seizes opportunities for rapid progress."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.889,
+              "stability": 0.756,
+              "empathy": 0.734,
+              "openness": 0.778,
+              "orderliness": 0.745,
+              "novelty_seeking": 0.812,
+              "abstract_reasoning": 0.789,
+              "emotional_intensity": 0.823,
+              "social_dominance": 0.801,
+              "cooperativeness": 0.756,
+              "risk_tolerance": 0.845,
+              "conscientiousness": 0.778,
+              "adaptability": 0.867,
+              "imagination": 0.745
+            },
+            "match_weights": {
+              "agency": 0.95,
+              "adaptability": 0.9,
+              "risk_tolerance": 0.85,
+              "novelty_seeking": 0.8,
+              "emotional_intensity": 0.75
+            },
+            "threshold": 0.7,
+            "top_signal_items": ["Q238", "Q239", "Q240"],
+            "dimension_rationale": {
+              "very_high_agency": "Proactive seizing of opportunities and initiation of rapid action",
+              "very_high_adaptability": "Flexibility to respond quickly as situations evolve rapidly",
+              "high_risk_tolerance": "Willingness to act decisively despite uncertainty inherent in speed",
+              "high_novelty_seeking": "Energetic pursuit of emerging opportunities and acceleration",
+              "moderate_emotional_intensity": "Passionate engagement with momentum balanced by strategic focus"
+            }
+          },
+          "signals_map": {
+            "Q238": {
+              "dimension": "agency",
+              "polarity": 1.0,
+              "description": "Proactive recognition and seizure of opportunity windows",
+              "assessment_question": "I proactively recognize windows of opportunity that require swift action and move decisively to seize them before they close, understanding that timing is often as critical as strategy"
+            },
+            "Q239": {
+              "dimension": "adaptability",
+              "polarity": 0.95,
+              "description": "Flexible rapid response as situations evolve quickly",
+              "assessment_question": "I adapt fluidly as situations evolve rapidly, maintaining effectiveness while coordinating swift action across multiple fronts simultaneously, adjusting approach in real-time as conditions shift"
+            },
+            "Q240": {
+              "dimension": "risk_tolerance",
+              "polarity": 0.9,
+              "description": "Willingness to act decisively despite velocity-induced uncertainty",
+              "assessment_question": "I am willing to act decisively even when speed creates uncertainty or incomplete information, trusting that swift action on good-enough data often beats perfect action too late"
+            },
+            "Q241": {
+              "dimension": "novelty_seeking",
+              "polarity": 0.85,
+              "description": "Energetic pursuit of emerging opportunities and acceleration",
+              "assessment_question": "I energetically pursue emerging opportunities and actively create momentum for acceleration, finding fulfillment in the dynamic energy of rapid progress and coordinated execution"
+            },
+            "Q242": {
+              "dimension": "emotional_intensity",
+              "polarity": 0.8,
+              "description": "Passionate engagement with momentum balanced by strategic focus",
+              "assessment_question": "I bring passionate energy to seizing opportunities and accelerating progress while maintaining strategic focus, ensuring velocity serves mission rather than becoming compulsive motion"
+            }
+          },
+          "philosophical_influences": {
+            "book1": {
+              "title": "Sprint: How to Solve Big Problems and Test New Ideas in Just Five Days",
+              "author": "Jake Knapp, John Zeratsky, Braden Kowitz",
+              "section_of_focus": "The Five-Day Sprint Process",
+              "core_teaching": "Innovation doesn't require months—structured five-day sprints can solve big problems and test new ideas rapidly. The process: Monday (map the problem and pick target), Tuesday (sketch competing solutions individually), Wednesday (decide on best approach and storyboard), Thursday (build realistic prototype), Friday (test with target users and learn). Key principles: work alone together (individual thinking then group decisions reduces groupthink), time constraints force prioritization, tangible over abstract (build prototypes not presentations), fail fast and learn (better to discover problems in days not months). The sprint works because: time boxing creates urgency, structure prevents endless discussion, prototyping makes ideas concrete, user testing provides reality check. The broader lesson: many initiatives suffer not from lack of ideas but from inability to move decisively from discussion to action. Structured rapid execution beats leisurely perfection.",
+              "connection_to_adversity": "Knapp et al. teach the Daughter that breakthrough requires structured rapid execution—not endless planning but time-boxed decisive action. By adopting sprint methodology—mapping challenge Monday, sketching solutions Tuesday, deciding Wednesday, prototyping Thursday, testing Friday—she moves from strategy to reality in days not months. She learns that time constraints force healthy prioritization, that building tangible prototypes beats discussing abstractions, that testing with real users provides crucial feedback quickly. Her swift action follows structure preventing recklessness while enabling velocity. She discovers that most transformation initiatives fail not from insufficient planning but from inability to execute decisively, that five focused days of action often accomplishes more than months of deliberation.",
+              "terminal_learning_objectives": {
+                "objective1": "Adopt sprint methodology for critical challenges—time-box problem-solving into structured five-day process moving from mapping to testing rapidly",
+                "objective2": "Use time constraints strategically—let urgency force prioritization and prevent endless discussion, creating focus that enables swift execution",
+                "objective3": "Build tangible prototypes quickly—move from abstract discussion to concrete testing, learning from reality in days rather than theorizing for months"
+              }
+            },
+            "book2": {
+              "title": "Blink: The Power of Thinking Without Thinking",
+              "author": "Malcolm Gladwell",
+              "section_of_focus": "Thin-Slicing and Rapid Cognition",
+              "core_teaching": "Humans can make excellent decisions in blink of eye through thin-slicing—finding patterns in narrow windows of experience. Research shows experts make accurate rapid judgments using unconscious information processing. The key: when to trust quick decisions versus when to deliberate. Quick decisions work when: you have expertise in domain, environment is stable enough for pattern recognition, stress isn't overwhelming your system. They fail when: dealing with unfamiliar situations, unconscious biases distort judgment, snap judgments reinforced without reflection. Improving rapid cognition: develop genuine expertise (pattern recognition requires experience), create conditions for good snap judgments (reduce overwhelming stimuli), recognize when deliberation needed (unfamiliar high-stakes decisions). The broader application: speed doesn't require thoughtlessness—rapid action based on deep experience often surpasses slow deliberation based on conscious analysis. Trust your preparation.",
+              "connection_to_adversity": "Gladwell provides the Daughter with framework for when swift action is wise versus reckless. By understanding thin-slicing—how expertise enables rapid accurate judgment—she learns to trust quick decisions in her domains of competence while slowing down in unfamiliar territory. She develops conditions for good snap judgments by reducing overwhelming stimuli and recognizing her expertise boundaries. Her rapid execution isn't thoughtless but draws on deep pattern recognition from previous experience. She discovers that speed often comes from preparation enabling instinctive response, that trusting expertise-based intuition frequently beats endless conscious deliberation, that swift action and wisdom aren't opposites when velocity flows from mastery.",
+              "terminal_learning_objectives": {
+                "objective1": "Develop genuine expertise in critical domains—deep experience creates pattern recognition enabling rapid accurate judgments",
+                "objective2": "Create conditions for good snap judgments—reduce overwhelming stimuli, recognize your expertise boundaries, trust intuition within competence zones",
+                "objective3": "Distinguish when to trust rapid cognition versus deliberate—swift decisions work in familiar domains with stable patterns, slow down in unfamiliar high-stakes situations"
+              }
+            },
+            "book3": {
+              "title": "Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts",
+              "author": "Annie Duke",
+              "section_of_focus": "Resulting and Decision Quality vs Outcome Quality",
+              "core_teaching": "We judge decisions by results (resulting) when we should judge by quality of decision process given information available at time. Key insight: good decisions can have bad outcomes, bad decisions can have lucky outcomes. To improve decision-making under uncertainty: think in bets (acknowledge uncertainty, assign probabilities), separate decision quality from outcome quality (judge process not just results), update beliefs based on new information (Bayesian thinking). The speed principle: perfect information never arrives—waiting for certainty means missing opportunities. Make best decision with available data, act, then update based on results. Strategies: time-box decision-making (don't deliberate endlessly), use probabilistic thinking (this has 70% chance of working), create feedback loops (learn from outcomes quickly), form truthseeking groups (challenge your thinking). The goal: maximize expected value of decisions recognizing we operate under incomplete information, not achieve perfect outcomes through impossible certainty.",
+              "connection_to_adversity": "Duke teaches the Daughter to act swiftly despite uncertainty by thinking in bets—acknowledging that perfect information never arrives, that waiting for certainty means missing windows. By separating decision quality from outcome quality, she judges her rapid actions by process given available information not just results, preventing paralysis from fear of bad outcomes. She learns to time-box decisions preventing endless deliberation, to think probabilistically accepting 70% confidence often sufficient, to create feedback loops learning quickly from results. Her swift execution becomes strategic bet-making—maximizing expected value under uncertainty rather than seeking impossible certainty. She discovers that speed and wisdom coexist when velocity flows from good-enough data and feedback loops enable rapid learning.",
+              "terminal_learning_objectives": {
+                "objective1": "Think in bets acknowledging uncertainty—assign probabilities to outcomes, recognize perfect information never arrives, make best decisions with available data",
+                "objective2": "Separate decision quality from outcome quality—judge rapid actions by process given information at time not just results, preventing outcome-based paralysis",
+                "objective3": "Create feedback loops for rapid learning—act quickly on good-enough data, update beliefs based on results, iterate decisions rather than seeking initial perfection"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Book 2, Chapter 28 - Position defended, foundations secure. The Daughter now recognizes the brief window for breakthrough requiring swift coordinated action. She must accelerate transformation, coordinate rapid execution across multiple fronts, and seize fleeting opportunities before they close",
+            "symbolic_moment": "Eight wands flying through clear sky toward destination, trajectory unobstructed, momentum carrying forward—the recognition that preparation creates readiness for rapid movement, that opportunities require swift response, that leadership recognizes and seizes windows for acceleration",
+            "emotional_landscape": "Urgency and confidence intertwined—the pressure of fleeting opportunities alongside trust in preparation enabling decisive action, discovering that velocity serves transformation when rapid execution flows from strategic foundation rather than reckless scrambling",
+            "threshold_vision": "Understanding that transformation requires swift action—that windows of opportunity close quickly, that endless deliberation allows moments to pass, that structured rapid execution combining speed with wisdom accelerates breakthrough when preparation meets opportunity",
+            "transformation_promise": "This chapter establishes that breakthrough requires velocity—that learning to execute swiftly while maintaining quality now builds capacity for seizing critical windows ahead where those paralyzed by perfectionism miss opportunities while those combining speed with structure catalyze transformation",
+            "series_arc_connection": "The rapid execution capacity developed here becomes essential for cosmic-scale coordination later—by learning to seize opportunity windows requiring swift action at personal scale now, she develops capacity to coordinate acceleration across civilizations where those unable to move decisively miss transformation windows but those executing rapidly while maintaining coherence catalyze breakthrough"
+          },
+          "mental_health_framework": {
+            "focus_area": "Developing Swift Execution and Strategic Acceleration",
+            "rapid_action_characteristics": [
+              "Recognizing windows of opportunity requiring swift decisive action",
+              "Moving decisively from planning to execution when moment arrives",
+              "Coordinating rapid action across multiple fronts maintaining coherence",
+              "Distinguishing productive velocity from reckless rushing or compulsive motion",
+              "Communicating rapidly and clearly conveying critical information quickly",
+              "Creating and capitalizing on momentum accelerating transformation"
+            ],
+            "velocity_management_strategies": [
+              "Adopt sprint methodology time-boxing problem-solving into rapid structured action",
+              "Use time constraints strategically forcing prioritization and preventing endless discussion",
+              "Build tangible prototypes quickly moving from abstract to concrete testing",
+              "Develop genuine expertise enabling thin-slicing and rapid accurate judgment",
+              "Think in bets acknowledging uncertainty and acting on good-enough data",
+              "Create feedback loops enabling rapid learning and iteration from swift action"
+            ],
+            "transformation_indicators": [
+              "Increased capacity to act swiftly without sacrificing quality or wisdom",
+              "Greater skill in recognizing and seizing opportunity windows before they close",
+              "Stronger ability to coordinate rapid execution maintaining team coherence",
+              "Wisdom distinguishing strategic acceleration from reckless rushing",
+              "Leadership becoming naturally decisive converting preparation into swift action"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Scene IX: The Meeting with a Goddess (swift acceleration)",
+            "preliminary_beat": "The Reward - Rapid Execution",
+            "save_the_cat_beat": "Break into Three - Accelerated Momentum",
+            "character_state": "The Daughter having defended position now recognizes brief window for breakthrough. She must accelerate transformation through swift coordinated action, seize fleeting opportunities, and convert preparation into rapid execution before window closes",
+            "ordinary_world_baseline": "She had either deliberated endlessly missing opportunities or rushed recklessly creating chaos—now requires sophisticated velocity combining swift action with strategic structure, distinguishing decisive execution from impulsive reaction",
+            "call_to_adventure_preview": "The deeper call emerges—to become someone who seizes opportunities decisively, who coordinates rapid action maintaining coherence, who combines velocity with wisdom through structured execution, who creates momentum accelerating transformation when windows open"
+          },
+          "daily_prompt": "What opportunity did you seize swiftly today? How did rapid action serve mission rather than create chaos?",
+          "story_hook": "In Laurasia's Book 2, Chapter 28, the Daughter learns what every transformational leader discovers: that windows of opportunity close quickly, that endless deliberation allows moments to pass, that structured rapid execution combining speed with wisdom accelerates breakthrough. Like the Eight of Wands teaching through wands flying swiftly through clear sky, she discovers that time-boxed sprints force healthy prioritization, that expertise enables thin-slicing and rapid accurate judgment, that thinking in bets allows action despite uncertainty. In learning to adopt sprint methodology creating structured velocity through Knapp's framework, to develop expertise enabling rapid cognition through Gladwell's research, to act swiftly on good-enough data creating feedback loops through Duke's probabilistic thinking, she becomes swift executor—someone whose rapid action flows from preparation, whose velocity serves transformation, whose decisive execution seizes opportunities converting strategy into reality. The breakthrough that could have been missed instead manifests through coordinated acceleration.",
+          "assessment_application": {
+            "identifies_individuals_who": [
+              "Recognize and seize windows of opportunity requiring swift action",
+              "Move decisively from planning to execution when moment arrives",
+              "Coordinate rapid action across multiple fronts maintaining coherence",
+              "Distinguish productive velocity from reckless rushing or compulsion",
+              "Act swiftly on good-enough data creating feedback loops for learning",
+              "Convert preparation into rapid execution when opportunities open"
+            ],
+            "development_pathway": "From analysis paralysis or reckless rushing to strategic velocity—learning to adopt sprint methodology, use time constraints strategically, develop expertise enabling rapid judgment, think in bets acknowledging uncertainty, create feedback loops, and coordinate swift action maintaining quality",
+            "ai_integration_notes": "AI can help identify opportunity windows requiring swift action through pattern recognition. Machine learning can optimize sprint processes suggesting when to accelerate versus maintain pace. Natural language processing can facilitate rapid communication coordinating swift action across distributed teams, supporting development of velocity that serves transformation rather than creating chaos."
+          },
+          "cosmic_significance": {
+            "timeline_position": "Book 2, Chapter 28 'Chief Among the Mighty' - Prime Timeline where preparation meets decisive execution",
+            "universal_archetype": "The Swift Executor—who knows that windows close quickly requiring decisive action, that structured rapid execution combines velocity with wisdom, that thinking in bets enables moving on good-enough data, that swift action flows from preparation meeting opportunity",
+            "trionfi_connection": "The Eight of Wands teaches that wands flying through clear sky symbolize unobstructed acceleration, that rapid trajectory represents momentum carrying plans into reality, that swift movement follows preparation creating readiness for decisive execution",
+            "series_foundation": "This rapid execution capacity becomes essential for cosmic-scale coordination later—by learning to seize opportunity windows at personal scale now, she develops capacity to coordinate acceleration across civilizations where those unable to move decisively miss transformation windows but those executing swiftly while maintaining coherence catalyze breakthrough"
+          }
         },
         "personality_profile_69": {
         },
