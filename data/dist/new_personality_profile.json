@@ -20869,7 +20869,226 @@
              "transformation_promise": "The hero learns that bravery is quiet alignment with purpose, even when the world demands retreat."
           }
         },
-        "personality_profile_92": {},
+        "personality_profile_92": {
+          "canonical_id": "EA-092",
+          "unique_identifier": "STG 3.1.4.3",
+          "specific_task_group_title": "Abundance",
+          "all_chapter": 92,
+          "novel_book": 3,
+          "chapter": "Chapter 12",
+          "chapter_title": "Allies, Mentors, and Helpers — Abundance",
+          "type": "Specific Task Group",
+          "display_name": "Abundance Weaver",
+          "theme": "Multiplying good by sharing it—transforming scarcity reflex into generous flow that strengthens community and sustains power.",
+          "family": "Emotion / Communion — Generosity & Shared Wealth",
+          "summary": "Guided by the Three of Cups, this archetype celebrates the alchemy of shared resources. After hard-won victories, Francisco discovers that distributing knowledge, time, and protection multiplies their impact. Abundance is not hoarding; it is circulation. The Abundance Weaver creates rituals, systems, and cultures of giving that convert individual gains into collective resilience—proof that what we share, grows.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Three",
+          "tarot_symbolism": "The Three of Cups signifies joyful collaboration, mutual uplift, and the regenerative power of celebration. Its wisdom: generosity creates networks; networks create safety; safety unlocks creativity and courageous purpose.",
+          "traits": {
+             "strengths": [
+                "cultivates communities of mutual aid and shared learning",
+                "redirects surplus time, talent, and tools to where they matter most",
+                "designs repeatable rituals of gratitude, celebration, and giving",
+                "amplifies individual wins into collective momentum",
+                "creates transparent resource flows that build trust",
+                "teaches others to contribute without depleting themselves",
+                "balances warmth and structure so generosity endures"
+             ],
+             "shadow": [
+                "over-giving that depletes core capacity",
+                "confusing generosity with lack of boundaries",
+                "performative giving to win approval or avoid conflict",
+                "uneven distribution that fosters dependence or resentment",
+                "neglecting replenishment rituals after large contributions",
+                "avoiding hard tradeoffs by masking them with positivity"
+             ],
+             "growth_focus": [
+                "pair each act of giving with a replenishment plan",
+                "set clear contribution boundaries and roles",
+                "measure the impact of shared resources to refine flows",
+                "invite co-ownership to avoid central bottlenecks",
+                "schedule celebrations that honor both givers and receivers",
+                "practice transparent accounting to deepen trust"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Chief Among the Mighty",
+             "chapter_theme": "Allies, Mentors, and Helpers",
+             "fiction_chapter_context": "Book 3, Chapter 12 — In celebration with allies, Francisco sees that teaching and sharing power multiplies it, turning a circle of supporters into a resilient community."
+          },
+          "enneagram_link": {
+             "family_number": 2,
+             "note": "The Helper’s generosity integrated with 3’s stewardship and 9’s harmonizing presence—care scaled through clarity, not martyrdom."
+          },
+          "color_alignment": {
+             "name": "Vivid Violet",
+             "hsl": "300,50%,40%",
+             "rgb_hex": "#993399",
+             "color_symbolism": "Radiant communion—creative warmth meeting spiritual depth, the hue of shared celebration and multiplying gifts."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.62,
+                "stability": 0.72,
+                "empathy": 0.86,
+                "openness": 0.78,
+                "orderliness": 0.63,
+                "novelty_seeking": 0.55,
+                "abstract_reasoning": 0.62,
+                "emotional_intensity": 0.59,
+                "social_dominance": 0.48,
+                "cooperativeness": 0.88,
+                "risk_tolerance": 0.47,
+                "conscientiousness": 0.74,
+                "adaptability": 0.71,
+                "imagination": 0.66
+             },
+             "match_weights": {
+                "empathy": 0.35,
+                "cooperativeness": 0.35,
+                "stability": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q589",
+                "Q590",
+                "Q591",
+                "Q592",
+                "Q593",
+                "Q594",
+                "Q595",
+                "Q596"
+             ],
+             "signals_map": {
+                "Q589": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I turn personal wins into shared benefits for my group."
+                },
+                "Q590": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I notice where resources are needed and direct support there."
+                },
+                "Q591": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I maintain steady generosity without burning out."
+                },
+                "Q592": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I track contributions and outcomes to improve our giving."
+                },
+                "Q593": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I welcome new forms of exchange (time, knowledge, tools)."
+                },
+                "Q594": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I initiate collaborations that multiply impact."
+                },
+                "Q595": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I design simple systems so generosity is consistent."
+                },
+                "Q596": {
+                   "dimension": "emotional_intensity",
+                   "polarity": -1,
+                   "content": "I avoid overextending to prove I care."
+                }
+             },
+             "daily_prompt": "What did I share today—and how did I also replenish the well that made sharing possible?",
+             "practices": [
+                "Gratitude triad: name one giver, one gift, one ripple effect.",
+                "Set a weekly contribution cap and a matching replenishment ritual.",
+                "Host a 20-minute resource circle to surface needs and offers.",
+                "Document a ‘how-to’ after every win to enable reuse by others.",
+                "Adopt a 70/20/10 flow: 70% sustain core, 20% seed new, 10% joy-give.",
+                "Celebrate one quiet contributor publicly each week."
+             ],
+             "transformation_indicators": [
+                "More peer-to-peer support with less central bottlenecking.",
+                "Visible growth of shared assets (SOPs, tools, funds, knowledge).",
+                "Stable giver energy due to replenishment practices.",
+                "Higher collaboration quality and trust scores.",
+                "Faster mobilization during crises due to strong networks."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Allies, Mentors, and Helpers",
+             "preliminary_beat": "Theme Stated",
+             "save_the_cat_beat": "Allies, Mentors, and Helpers",
+             "character_state": "From isolated strength to communal abundance—the hero learns that what is shared becomes stronger.",
+             "ordinary_world_baseline": "Scarcity reflex narrows options and keeps power siloed.",
+             "call_to_adventure_preview": "There is more than enough—circulate gifts to multiply impact."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "The Abundance Book",
+                "author": "John Randolph Price",
+                "section_of_focus": "The Visualization Exercise",
+                "section_description": "Guides readers through daily affirmations of abundance.",
+                "connection_focus_area": "Builds confidence in resource availability.",
+                "connect_points": {
+                   "point1": "Practice a daily prosperity visualization.",
+                   "point2": "Note new opportunities appearing each day.",
+                   "point3": "Share abundance journal entries with a peer."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Lead a group visualization of abundance.",
+                   "objective2": "Document three synchronicities post-practice.",
+                   "objective3": "Maintain an abundance journal for two weeks."
+                }
+             },
+             "book2": {
+                "title": "The Miracle Morning",
+                "author": "Hal Elrod",
+                "section_of_focus": "SAVERS Ritual",
+                "section_description": "Provides morning practices that set tone for positivity.",
+                "connection_focus_area": "Generative routines cultivate an affirmative mindset.",
+                "connect_points": {
+                   "point1": "Implement a morning gratitude practice.",
+                   "point2": "Record three things you’re thankful for daily.",
+                   "point3": "Incorporate affirmations into your start-of-day ritual."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design a personalized SAVERS sequence.",
+                   "objective2": "Measure mood shift over one week.",
+                   "objective3": "Teach the ritual to a peer."
+                }
+             },
+             "book3": {
+                "title": "The 7 Habits of Highly Effective People",
+                "author": "Stephen R. Covey",
+                "section_of_focus": "Think Win-Win",
+                "section_description": "Encourages collaborative solutions that benefit all parties.",
+                "connection_focus_area": "Win-win thinking expands perception of available resources.",
+                "connect_points": {
+                   "point1": "Identify current zero-sum assumptions.",
+                   "point2": "Reframe one scenario to a win-win outcome.",
+                   "point3": "Practice mutual-benefit negotiation in role-play."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Conduct a win-win negotiation exercise.",
+                   "objective2": "List three shared-value scenarios.",
+                   "objective3": "Document improvements in collaboration outcomes."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Lanterns glow as allies gather—refugees, scholars, mystics—sharing food, stories, and small miracles of timing and care.",
+             "symbolic_moment": "Three cups raised; a fourth set at the table for the next friend to arrive—room made for more.",
+             "emotional_landscape": "Warm, celebratory, interwoven; gratitude humming beneath purposeful joy.",
+             "threshold_vision": "Power grows in the open hand; what we circulate returns multiplied.",
+             "transformation_promise": "By teaching and sharing, the hero turns personal power into a commons—resilience woven from many hands."
+          }
+        },
         "personality_profile_93": {},
         "personality_profile_94": {},
         "personality_profile_95": {},
