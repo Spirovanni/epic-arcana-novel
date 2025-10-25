@@ -21747,7 +21747,226 @@
               "transformation_promise": "The hero learns to alchemize pain into precise action, leading with honest steadiness in a world that demands both."
             }
         },
-        "personality_profile_96": {},
+        "personality_profile_96": {
+          "canonical_id": "EA-096",
+          "unique_identifier": "STG 3.2.1.3",
+          "specific_task_group_title": "Mental Agility",
+          "all_chapter": 96,
+          "novel_book": 3,
+          "chapter": "Chapter 16",
+          "chapter_title": "Fun and Games (Event/Conflict) — Mental Agility",
+          "type": "Specific Task Group",
+          "display_name": "Adaptive Tactician",
+          "theme": "Training the mind to pivot—reframing obstacles, shifting strategies in real time, and staying lucid under evolving pressure.",
+          "family": "Mind / Flexibility — Cognitive Adaptation",
+          "summary": "Keyed to the Page of Swords, this profile embodies alert curiosity, nimble analysis, and swift reorientation. In Chapter 16, Francisco faces opponents who adapt as quickly as he does; victory depends less on raw power than on mental plasticity. Mental Agility cultivates the habits that break ruts—questioning assumptions, toggling perspectives, and updating models mid-stride—so the field remains playable even as it changes beneath your feet.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Page",
+          "tarot_symbolism": "The Page of Swords represents quick wits, fresh perspectives, and vigilant readiness. Its lesson: stay curious, cut through bias, and pivot with precision—clarity moves faster than chaos.",
+          "traits": {
+             "strengths": [
+                "rapidly reframes problems to reveal new solution paths",
+                "spots cognitive bias and switches to deliberate reasoning",
+                "prototypes options quickly and iterates from feedback",
+                "keeps attention fluid—zooms from detail to big picture",
+                "stays calm and cognitively flexible under time pressure",
+                "uses visualization and rehearsal to accelerate learning",
+                "blends creative insight with analytic rigor"
+             ],
+             "shadow": [
+                "shifts too often—chasing novelty over depth",
+                "analysis spirals that delay decisive action",
+                "dismisses slow thinkers, weakening team cohesion",
+                "overconfidence in cleverness, underinvesting in basics",
+                "mental fatigue from constant context-switching",
+                "reframing used to avoid hard truths instead of meeting them"
+             ],
+             "growth_focus": [
+                "time-box exploration, then commit to a path",
+                "pair quick pivots with simple post-mortems to lock learning",
+                "build bias checklists for high-stakes calls",
+                "alternate sprints of creativity with recovery and focus",
+                "teach your reframing method to allies to distribute agility",
+                "ground fast thinking with clear success criteria"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Fun and Games (Event/Conflict)",
+             "fiction_chapter_context": "Book 3, Chapter 16 — In adaptive battlefields and shifting trials, Francisco learns to treat change as signal, not setback—thinking faster by thinking cleaner."
+          },
+          "enneagram_link": {
+             "family_number": 7,
+             "note": "Type 7’s agile ideation refined by 5’s analysis and 1’s precision—curiosity in service of disciplined adaptation rather than frenetic escape."
+          },
+          "color_alignment": {
+             "name": "Free Speech Magenta",
+             "hsl": "315,64%,61%",
+             "rgb_hex": "#DE5CBD",
+             "color_symbolism": "Vibrant, articulate clarity—ideas voiced quickly and shaped cleanly into action."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.76,
+                "stability": 0.67,
+                "empathy": 0.58,
+                "openness": 0.82,
+                "orderliness": 0.61,
+                "novelty_seeking": 0.72,
+                "abstract_reasoning": 0.79,
+                "emotional_intensity": 0.48,
+                "social_dominance": 0.55,
+                "cooperativeness": 0.66,
+                "risk_tolerance": 0.63,
+                "conscientiousness": 0.72,
+                "adaptability": 0.88,
+                "imagination": 0.77
+             },
+             "match_weights": {
+                "adaptability": 0.4,
+                "abstract_reasoning": 0.3,
+                "openness": 0.3
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q621",
+                "Q622",
+                "Q623",
+                "Q624",
+                "Q625",
+                "Q626",
+                "Q627",
+                "Q628"
+             ],
+             "signals_map": {
+                "Q621": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I can switch strategies quickly without losing clarity."
+                },
+                "Q622": {
+                   "dimension": "abstract_reasoning",
+                   "polarity": 1,
+                   "content": "I reframe problems to generate alternative solutions."
+                },
+                "Q623": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I explore multiple perspectives before deciding."
+                },
+                "Q624": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I use simple checklists to counter cognitive biases."
+                },
+                "Q625": {
+                   "dimension": "novelty_seeking",
+                   "polarity": 1,
+                   "content": "I enjoy experimenting with unconventional approaches."
+                },
+                "Q626": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I time-box exploration and commit once criteria are met."
+                },
+                "Q627": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I stay mentally flexible even when pressure spikes."
+                },
+                "Q628": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I turn new information into immediate, directional action."
+                }
+             },
+             "daily_prompt": "What assumption did I test or reframe today—and how did that pivot improve my next step?",
+             "practices": [
+                "Bias breaker: list the top 2 biases likely at play and counter them.",
+                "Perspective toggle: argue the opposite case for three minutes.",
+                "Option triad: generate at least three distinct solution paths.",
+                "Pre-mortem & mini-prototype: find one failure point, test a fix fast.",
+                "Visualization sprint: rehearse the pivot and the first 90 seconds.",
+                "Tempo discipline: 15 min explore → decide → 30 min execute."
+             ],
+             "transformation_indicators": [
+                "Faster recovery from dead-ends with higher-quality alternatives.",
+                "Reduced decision latency under uncertainty.",
+                "Clearer learning loops after experiments.",
+                "Improved team adaptability through shared reframing habits.",
+                "Consistent performance on rapidly changing problems."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Fun and Games (Event/Conflict)",
+             "preliminary_beat": "Tests, Allies and Enemies",
+             "save_the_cat_beat": "Fun and Games (Event/Conflict)",
+             "character_state": "The field keeps changing; the hero thrives by updating mental models in motion.",
+             "ordinary_world_baseline": "Fixed plans collapse when the terrain shifts.",
+             "call_to_adventure_preview": "Train your mind to pivot—clarity beats speed when it moves first."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Thinking, Fast and Slow",
+                "author": "Daniel Kahneman",
+                "section_of_focus": "Heuristics and Biases",
+                "section_description": "Examines mental shortcuts and how to override them for better judgments.",
+                "connection_focus_area": "Highlights awareness-based strategies to improve decision-making.",
+                "connect_points": {
+                   "point1": "Recognize common cognitive biases.",
+                   "point2": "Implement a “slow thinking” pause.",
+                   "point3": "Apply statistical reasoning in daily choices."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "List five personal cognitive biases.",
+                   "objective2": "Practice deliberate reflection on key decisions.",
+                   "objective3": "Use probabilistic thinking in planning."
+                }
+             },
+             "book2": {
+                "title": "Mind Gym",
+                "author": "Gary Mack",
+                "section_of_focus": "Mental Workouts",
+                "section_description": "Offers short exercises to build mental toughness and flexibility.",
+                "connection_focus_area": "Provides practical drills to enhance cognitive adaptability.",
+                "connect_points": {
+                   "point1": "Perform daily visualization routines.",
+                   "point2": "Use mental rehearsal before challenging tasks.",
+                   "point3": "Set cognitive “stretch” goals each week."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Complete three mental workout drills weekly.",
+                   "objective2": "Track improvements in problem-solving speed.",
+                   "objective3": "Incorporate visualization into performance routines."
+                }
+             },
+             "book3": {
+                "title": "The Obstacle Is the Way",
+                "author": "Ryan Holiday",
+                "section_of_focus": "Perception",
+                "section_description": "Introduces Stoic techniques to reframe obstacles as opportunities.",
+                "connection_focus_area": "Demonstrates mindset shifts that turn setbacks into advantages.",
+                "connect_points": {
+                   "point1": "Reframe a current challenge as a learning opportunity.",
+                   "point2": "Apply stoic reflection to daily setbacks.",
+                   "point3": "Identify three hidden benefits in adversity."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Write a reframing journal entry each day.",
+                   "objective2": "Practice stoic reflection during stress.",
+                   "objective3": "Share reframed narratives with peers."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Within the tactical laboratory, walls of shifting diagrams morph as Francisco iterates—each failed route spawning two sharper options.",
+             "symbolic_moment": "A blade reflected in a rotating prism—one edge, many angles; precision through perspective.",
+             "emotional_landscape": "Alert, playful, determined—light feet on volatile ground.",
+             "threshold_vision": "The obstacle is a lever when seen from the right angle.",
+             "transformation_promise": "By training cognition to pivot cleanly, the hero turns evolving conflict into a canvas for intelligent action."
+          }
+        },
         "personality_profile_97": {},
         "personality_profile_98": {},
         "personality_profile_99": {},
