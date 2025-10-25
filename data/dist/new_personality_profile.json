@@ -20649,7 +20649,226 @@
              "transformation_promise": "The hero learns that mastery is not found in doing more, but in daring to do only what matters most."
           }
         },
-        "personality_profile_91": {},
+        "personality_profile_91": {
+          "canonical_id": "EA-091",
+          "unique_identifier": "STG 3.1.4.2",
+          "specific_task_group_title": "Courage",
+          "all_chapter": 91,
+          "novel_book": 3,
+          "chapter": "Chapter 11",
+          "chapter_title": "Pinch — Courage",
+          "type": "Specific Task Group",
+          "display_name": "Valiant Catalyst",
+          "theme": "Facing fear as initiation—transforming paralysis into momentum through deliberate risk and faith in purpose.",
+          "family": "Spirit / Valor — Bravery & Integrity",
+          "summary": "Aligned with the Seven of Swords, the Valiant Catalyst embodies courageous authenticity amid conflict and doubt. In Chapter 11, Francisco faces both inner and external assault—his fears personified through the Vatican’s advance. Courage, here, is not bluster but clarity in the face of dread: the conscious act of stepping forward while trembling. The Valiant Catalyst reminds us that bravery begins where certainty ends.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Seven",
+          "tarot_symbolism": "The Seven of Swords reflects strategic courage—the will to act wisely under threat. It teaches discernment in risk, courage without recklessness, and faith anchored in purpose, not pride.",
+          "traits": {
+             "strengths": [
+                "acts decisively even amid uncertainty",
+                "reframes fear as fuel for meaningful action",
+                "balances caution with bold initiative",
+                "encourages others to face their own fears through example",
+                "maintains integrity under pressure",
+                "uses vulnerability as a bridge to authentic connection",
+                "demonstrates moral bravery against authority or convention"
+             ],
+             "shadow": [
+                "mistaking recklessness for courage",
+                "seeking validation through danger",
+                "ignoring intuition in pursuit of appearing fearless",
+                "failing to prepare before leaping",
+                "resisting support out of pride",
+                "self-criticism when courage wavers"
+             ],
+             "growth_focus": [
+                "cultivate courage through preparation, not impulse",
+                "share fears openly to diffuse their power",
+                "anchor bravery in values, not ego",
+                "develop rituals that strengthen resolve",
+                "seek support without shame during moments of fear",
+                "reflect on victories earned through vulnerability, not dominance"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Chief Among the Mighty",
+             "chapter_theme": "Pinch",
+             "fiction_chapter_context": "Book 3, Chapter 11 — Attacked by the Vatican’s agents, Francisco must rise above crippling self-doubt and embody true courage through clarity, conviction, and self-trust."
+          },
+          "enneagram_link": {
+             "family_number": 6,
+             "note": "The loyal skeptic’s courage—faith beyond fear—tempered by 8’s defiance and 3’s purposeful drive: bravery rooted in alignment, not approval."
+          },
+          "color_alignment": {
+             "name": "Magenta",
+             "hsl": "300,100%,50%",
+             "rgb_hex": "#FF00FF",
+             "color_symbolism": "A color of transmutation—where fear meets faith and becomes action. Magenta symbolizes the bridge between heart and will."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.83,
+                "stability": 0.68,
+                "empathy": 0.72,
+                "openness": 0.74,
+                "orderliness": 0.58,
+                "novelty_seeking": 0.62,
+                "abstract_reasoning": 0.65,
+                "emotional_intensity": 0.67,
+                "social_dominance": 0.71,
+                "cooperativeness": 0.69,
+                "risk_tolerance": 0.77,
+                "conscientiousness": 0.66,
+                "adaptability": 0.73,
+                "imagination": 0.70
+             },
+             "match_weights": {
+                "agency": 0.35,
+                "risk_tolerance": 0.35,
+                "stability": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q581",
+                "Q582",
+                "Q583",
+                "Q584",
+                "Q585",
+                "Q586",
+                "Q587",
+                "Q588"
+             ],
+             "signals_map": {
+                "Q581": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I act even when fear is present."
+                },
+                "Q582": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I see uncertainty as a signpost toward growth."
+                },
+                "Q583": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I regulate fear through deliberate breathing and grounding."
+                },
+                "Q584": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I support others in acting bravely by sharing my own doubts."
+                },
+                "Q585": {
+                   "dimension": "novelty_seeking",
+                   "polarity": 1,
+                   "content": "I willingly step into new or unknown environments."
+                },
+                "Q586": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I prepare before taking courageous risks."
+                },
+                "Q587": {
+                   "dimension": "social_dominance",
+                   "polarity": 1,
+                   "content": "I stand firm against authority when my principles are challenged."
+                },
+                "Q588": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adjust strategy mid-fear without losing momentum."
+                }
+             },
+             "daily_prompt": "Where did I choose action over avoidance today—and what value guided that choice?",
+             "practices": [
+                "List three fears currently limiting growth; choose one to face incrementally.",
+                "Reframe fear as an energy signal—write its message before acting.",
+                "Perform a daily courage ritual: one deliberate act outside comfort zone.",
+                "Anchor bravery with breath—4-count inhale, 6-count exhale during doubt.",
+                "Share a vulnerability story with a trusted ally.",
+                "Reflect nightly on how courage reshaped the day’s outcome."
+             ],
+             "transformation_indicators": [
+                "Quicker recovery from hesitation or self-doubt.",
+                "Greater comfort with uncertainty and adaptive risk.",
+                "Visible moral integrity under public pressure.",
+                "Increased empathy toward others’ fears.",
+                "Consistent follow-through despite internal resistance."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Pinch",
+             "preliminary_beat": "Theme Stated",
+             "save_the_cat_beat": "Pinch",
+             "character_state": "Fear surfaces in full, demanding choice; courage must arise not from confidence but commitment.",
+             "ordinary_world_baseline": "Avoidance masked as prudence; self-doubt disguised as humility.",
+             "call_to_adventure_preview": "Act despite fear—the sword of courage cuts through illusion and restores forward motion."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Feel the Fear and Do It Anyway",
+                "author": "Susan Jeffers",
+                "section_of_focus": "Pathways Through Fear",
+                "section_description": "Provides practical steps to reframe and move beyond fear.",
+                "connection_focus_area": "Transforms fear into a driver for action.",
+                "connect_points": {
+                   "point1": "Identify personal fear scripts.",
+                   "point2": "Practice positive reframing statements.",
+                   "point3": "Take one small deliberate risk daily."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Complete a fear-reframe worksheet.",
+                   "objective2": "Document outcomes of daily risk attempts.",
+                   "objective3": "Lead a peer discussion on fear strategies."
+                }
+             },
+             "book2": {
+                "title": "Daring Greatly",
+                "author": "Brené Brown",
+                "section_of_focus": "Scarcity vs. Worthiness",
+                "section_description": "Explores overcoming self-doubt through vulnerability.",
+                "connection_focus_area": "Highlights courage born from self-acceptance.",
+                "connect_points": {
+                   "point1": "Journal limiting beliefs about worthiness.",
+                   "point2": "Share a vulnerability story with a trusted ally.",
+                   "point3": "Practice one brave act in a low-stakes setting."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Identify three scarcity mindsets to challenge.",
+                   "objective2": "Demonstrate a vulnerability exercise.",
+                   "objective3": "Build a courage-support network."
+                }
+             },
+             "book3": {
+                "title": "Braving the Wilderness",
+                "author": "Brené Brown",
+                "section_of_focus": "True Belonging",
+                "section_description": "Discusses the courage to stand alone and uphold integrity.",
+                "connection_focus_area": "Encourages authenticity in the face of isolation.",
+                "connect_points": {
+                   "point1": "Reflect on a time you stood alone for your values.",
+                   "point2": "Define personal integrity guidelines.",
+                   "point3": "Engage in a community with shared purpose."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Articulate your integrity statement.",
+                   "objective2": "Complete a belonging-cue exercise.",
+                   "objective3": "Facilitate a dialogue on authentic leadership."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "In a storm-lashed courtyard, Francisco faces his shadow self, the voice of his deepest fear whispering that he is unworthy of destiny.",
+             "symbolic_moment": "A shattered mirror reforms into a sword—fear reforged into will.",
+             "emotional_landscape": "Charged, defiant, trembling but unbroken; the still flame in the hurricane’s heart.",
+             "threshold_vision": "Courage is not the absence of fear but the mastery of its motion—directing it toward truth.",
+             "transformation_promise": "The hero learns that bravery is quiet alignment with purpose, even when the world demands retreat."
+          }
+        },
         "personality_profile_92": {},
         "personality_profile_93": {},
         "personality_profile_94": {},
