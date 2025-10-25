@@ -22187,7 +22187,226 @@
              "transformation_promise": "By celebrating resilience and integrating awareness, the hero moves from seeking mastery to embodying it."
           }
         },
-        "personality_profile_98": {},
+        "personality_profile_98": {
+          "canonical_id": "EA-098",
+          "unique_identifier": "STG 3.2.2.2",
+          "specific_task_group_title": "Focus",
+          "all_chapter": 98,
+          "novel_book": 3,
+          "chapter": "Chapter 18",
+          "chapter_title": "Build-up (Set-up) — Focus",
+          "type": "Specific Task Group",
+          "display_name": "Clarity Warden",
+          "theme": "Guarding attention as sacred fuel—eliminating distraction to enter deep concentration and execute with precision.",
+          "family": "Mind / Discipline — Attention & Concentration",
+          "summary": "Keyed to the Ace of Swords, the Clarity Warden embodies the clean edge of awareness that cuts through noise. In Chapter 18, Francisco’s breakthrough teeters into obsession; Focus reframes this intensity into disciplined concentration. By protecting attention, setting clear challenges, and designing feedback loops, Focus transforms scattered brilliance into sustained mastery—zeroing in so the larger pattern can emerge.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Ace",
+          "tarot_symbolism": "The Ace of Swords signifies lucid inception—one true line of thought that clarifies the path ahead. It is a blade of insight that separates the essential from the extraneous, initiating decisive action.",
+          "traits": {
+             "strengths": [
+                "creates distraction-free environments on demand",
+                "sustains deep work through clear goals and time boxing",
+                "prioritizes the ‘one thing’ amid rising complexity",
+                "uses immediate feedback to maintain immersion",
+                "designs rituals that protect cognitive energy",
+                "translates focus bursts into tangible outcomes",
+                "models calm, steady presence under pressure"
+             ],
+             "shadow": [
+                "slides from focus into isolating obsession",
+                "neglects relationships during prolonged immersion",
+                "confuses rigidity with discipline",
+                "over-optimizes systems instead of doing the work",
+                "treats interruptions as threats rather than signals",
+                "equates worth with productivity alone"
+             ],
+             "growth_focus": [
+                "pair deep-work blocks with deliberate recovery",
+                "set social guardrails to prevent isolation drift",
+                "review focus systems monthly to remove bloat",
+                "replace ‘always on’ with scheduled intensity",
+                "use compassionate boundaries in place of walls",
+                "re-anchor effort to values to avoid hollow grind"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Build-up (set-up)",
+             "fiction_chapter_context": "Book 3, Chapter 18 — As the pursuit of knowledge risks consuming him, Francisco learns to channel fixation into designed focus that serves his mission rather than devours it."
+          },
+          "enneagram_link": {
+             "family_number": 1,
+             "note": "Principled focus (1) tempered by 5’s cognitive depth and 3’s execution—discipline that protects clarity without collapsing into obsession."
+          },
+          "color_alignment": {
+             "name": "Medium Violet Red",
+             "hsl": "322,100%,40%",
+             "rgb_hex": "#CC0099",
+             "color_symbolism": "A vivid blade of magenta—decisive, intentional, and alert; the hue of concentrated will cutting through noise."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.82,
+                "stability": 0.86,
+                "empathy": 0.58,
+                "openness": 0.62,
+                "orderliness": 0.88,
+                "novelty_seeking": 0.38,
+                "abstract_reasoning": 0.74,
+                "emotional_intensity": 0.41,
+                "social_dominance": 0.52,
+                "cooperativeness": 0.67,
+                "risk_tolerance": 0.46,
+                "conscientiousness": 0.93,
+                "adaptability": 0.64,
+                "imagination": 0.57
+             },
+             "match_weights": {
+                "conscientiousness": 0.45,
+                "orderliness": 0.35,
+                "stability": 0.20
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q637",
+                "Q638",
+                "Q639",
+                "Q640",
+                "Q641",
+                "Q642",
+                "Q643",
+                "Q644"
+             ],
+             "signals_map": {
+                "Q637": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I protect uninterrupted focus blocks in my schedule."
+                },
+                "Q638": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I eliminate low-value tasks that dilute attention."
+                },
+                "Q639": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I remain steady and composed when distractions arise."
+                },
+                "Q640": {
+                   "dimension": "abstract_reasoning",
+                   "polarity": 1,
+                   "content": "I define clear goals and feedback to enter deep concentration."
+                },
+                "Q641": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take proactive steps to guard my most valuable attention."
+                },
+                "Q642": {
+                   "dimension": "novelty_seeking",
+                   "polarity": -1,
+                   "content": "I resist chasing new stimuli during focus windows."
+                },
+                "Q643": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I set and communicate boundaries that respect others and my work."
+                },
+                "Q644": {
+                   "dimension": "emotional_intensity",
+                   "polarity": -1,
+                   "content": "I do not let mood swings dictate my focus routine."
+                }
+             },
+             "daily_prompt": "What single task most deserves my best attention today—and how will I protect it?",
+             "practices": [
+                "90–120 minute deep-work block with device isolation and a clear exit ritual.",
+                "Focusing Question: identify the one task that makes other tasks easier or unnecessary.",
+                "Task design for flow: clear goal, right challenge, immediate feedback.",
+                "Interrupt protocol: write the next action before any pause; resume within 60 seconds.",
+                "Environment reset: end-of-day five-minute tidy and tomorrow’s top three.",
+                "Weekly audit: prune commitments that siphon attention without value."
+             ],
+             "transformation_indicators": [
+                "Increased hours of deep work and fewer context switches.",
+                "Higher completion rate on high-leverage tasks.",
+                "Reduced subjective distraction load and calmer affect.",
+                "Improved team clarity around boundaries and availability.",
+                "Sustained performance without burnout cues."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Build-up (set-up)",
+             "preliminary_beat": "Approach to the Innermost Cave",
+             "save_the_cat_beat": "Build-up (set-up)",
+             "character_state": "Focus becomes a chosen edge—attention is gathered, guarded, and directed toward the work that matters most.",
+             "ordinary_world_baseline": "Energy scattered across interruptions and impulses.",
+             "call_to_adventure_preview": "Zero in to zoom out—depth first, breadth after."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Deep Work",
+                "author": "Cal Newport",
+                "section_of_focus": "Rules for Focused Success",
+                "section_description": "Outlines habits and rituals to enable uninterrupted, high-value work sessions.",
+                "connection_focus_area": "Provides a blueprint for structuring focus blocks.",
+                "connect_points": {
+                   "point1": "Schedule regular deep-work intervals.",
+                   "point2": "Eliminate shallow tasks during focus time.",
+                   "point3": "Create a dedicated work environment."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Implement a weekly deep-work plan.",
+                   "objective2": "Measure productivity gains.",
+                   "objective3": "Adjust environment to reduce distractions."
+                }
+             },
+             "book2": {
+                "title": "Flow",
+                "author": "Mihaly Csikszentmihalyi",
+                "section_of_focus": "The Conditions of Flow",
+                "section_description": "Describes how clear goals and immediate feedback foster deep engagement.",
+                "connection_focus_area": "Shows how to structure tasks for optimal immersion.",
+                "connect_points": {
+                   "point1": "Define clear, challenging tasks.",
+                   "point2": "Seek immediate feedback loops.",
+                   "point3": "Balance skill level with task difficulty."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design a flow-inducing task plan.",
+                   "objective2": "Implement feedback checkpoints.",
+                   "objective3": "Reflect on flow experiences."
+                }
+             },
+             "book3": {
+                "title": "The One Thing",
+                "author": "Gary Keller",
+                "section_of_focus": "The Focusing Question",
+                "section_description": "Introduces a method to identify the single most impactful task at any moment.",
+                "connection_focus_area": "Helps prioritize efforts for maximum return.",
+                "connect_points": {
+                   "point1": "Ask the focusing question daily.",
+                   "point2": "Block time for your “one thing.”",
+                   "point3": "Protect that time from interruptions."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Identify your daily “one thing.”",
+                   "objective2": "Create a protected time block.",
+                   "objective3": "Evaluate outcomes against priorities."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Amid a storm of notes and sigils, Francisco lowers the noise—one candle, one card, one line of thought until the air sharpens.",
+             "symbolic_moment": "A single blade suspended over a coil of thread—one cut frees the path.",
+             "emotional_landscape": "Intent, austere, composed—attention as sanctuary.",
+             "threshold_vision": "What is essential becomes visible when noise falls away.",
+             "transformation_promise": "By mastering focus, the hero learns to aim power precisely—clarity first, then everything else."
+          }
+        },
         "personality_profile_99": {},
         "personality_profile_100": {},
         "personality_profile_101": {},
