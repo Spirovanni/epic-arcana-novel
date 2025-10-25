@@ -21967,7 +21967,226 @@
              "transformation_promise": "By training cognition to pivot cleanly, the hero turns evolving conflict into a canvas for intelligent action."
           }
         },
-        "personality_profile_97": {},
+        "personality_profile_97": {
+          "canonical_id": "EA-097",
+          "unique_identifier": "STG 3.2.2.1",
+          "specific_task_group_title": "Triumph",
+          "all_chapter": 97,
+          "novel_book": 3,
+          "chapter": "Chapter 17",
+          "chapter_title": "Old World Contrast (Resolution) — Triumph",
+          "type": "Specific Task Group",
+          "display_name": "Conscious Victor",
+          "theme": "The disciplined celebration of growth—transforming small victories into sustainable confidence and renewed purpose.",
+          "family": "Spirit / Resilience — Purpose & Mastery",
+          "summary": "Aligned with the Nine of Cups, the Conscious Victor symbolizes fulfillment through persistence and meaning. In Chapter 17, Francisco’s breakthrough reveals that mastery over time begins with mastery over self. Triumph teaches the art of consolidating progress: recognizing wins not as endpoints, but as launchpads. The celebration becomes sacred ritual—a rhythm that turns perseverance into peace.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Nine",
+          "tarot_symbolism": "The Nine of Cups—often called the 'Wish Card'—embodies satisfaction earned through endurance. Its wisdom: true triumph is measured not by applause, but by the alignment of inner meaning with outer accomplishment.",
+          "traits": {
+             "strengths": [
+                "recognizes incremental progress as foundation for mastery",
+                "maintains optimism through disciplined reflection",
+                "anchors purpose in perseverance rather than outcomes",
+                "transforms adversity into a narrative of meaning",
+                "sustains motivation through ritualized acknowledgment of success",
+                "mentors others to recognize their growth cycles",
+                "balances ambition with gratitude"
+             ],
+             "shadow": [
+                "rests on laurels instead of evolving",
+                "uses success as avoidance of deeper transformation",
+                "ties self-worth solely to achievements",
+                "underplays effort by minimizing personal growth",
+                "avoids risk after victory to protect comfort",
+                "turns reflection into self-indulgence instead of fuel for progress"
+             ],
+             "growth_focus": [
+                "redefine success as a living process, not a fixed outcome",
+                "schedule gratitude reflections at every milestone",
+                "connect effort metrics to inner development",
+                "document 'lesson harvests' from both wins and setbacks",
+                "mentor peers in celebrating process-based victories",
+                "transform routine review into renewal ritual"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Old World Contrast (Resolution)",
+             "fiction_chapter_context": "Book 3, Chapter 17 — Following his discovery of consciousness-based manipulation, Francisco rediscovers joy in mastery itself, realizing that triumph is not domination but harmony."
+          },
+          "enneagram_link": {
+             "family_number": 3,
+             "note": "The Achiever transcended—3’s drive blended with 9’s serenity and 4’s meaning, producing confidence tempered by purpose."
+          },
+          "color_alignment": {
+             "name": "Deep Cerise",
+             "hsl": "315,67%,52%",
+             "rgb_hex": "#D633AD",
+             "color_symbolism": "The hue of celebratory awakening—passion refined by wisdom, representing victory through understanding."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.83,
+                "stability": 0.84,
+                "empathy": 0.72,
+                "openness": 0.74,
+                "orderliness": 0.69,
+                "novelty_seeking": 0.55,
+                "abstract_reasoning": 0.70,
+                "emotional_intensity": 0.58,
+                "social_dominance": 0.66,
+                "cooperativeness": 0.79,
+                "risk_tolerance": 0.62,
+                "conscientiousness": 0.87,
+                "adaptability": 0.77,
+                "imagination": 0.69
+             },
+             "match_weights": {
+                "stability": 0.35,
+                "conscientiousness": 0.35,
+                "agency": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q629",
+                "Q630",
+                "Q631",
+                "Q632",
+                "Q633",
+                "Q634",
+                "Q635",
+                "Q636"
+             ],
+             "signals_map": {
+                "Q629": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I celebrate small victories as signs of meaningful progress."
+                },
+                "Q630": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I stay grounded after success and plan the next step calmly."
+                },
+                "Q631": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I evaluate what worked to refine my methods for future goals."
+                },
+                "Q632": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I connect achievements to a deeper sense of purpose."
+                },
+                "Q633": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I share credit and joy with those who supported my journey."
+                },
+                "Q634": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I use my successes to uplift and mentor others."
+                },
+                "Q635": {
+                   "dimension": "emotional_intensity",
+                   "polarity": -1,
+                   "content": "I avoid letting triumph become overconfidence."
+                },
+                "Q636": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I use the energy of success to take on new challenges."
+                }
+             },
+             "daily_prompt": "What victory—no matter how small—did I honor today, and how will it fuel my next ascent?",
+             "practices": [
+                "End each day by identifying one success and one lesson.",
+                "Write a short gratitude statement linking progress to purpose.",
+                "Review weekly achievements and extract one refined insight.",
+                "Celebrate process milestones with symbolic rituals or reflection.",
+                "Teach a peer how you overcame a recent challenge.",
+                "Visualize future triumph grounded in humility and service."
+             ],
+             "transformation_indicators": [
+                "Improved resilience after setbacks.",
+                "Stable motivation sustained beyond major goals.",
+                "Visible gratitude practices and balanced confidence.",
+                "Recognition used as inspiration rather than validation.",
+                "Mentorship behavior emerging naturally from success."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Old World Contrast (Resolution)",
+             "preliminary_beat": "Approach to the Innermost Cave",
+             "save_the_cat_beat": "Old World Contrast (Resolution)",
+             "character_state": "After darkness and doubt, the hero finds strength in the rhythm of small triumphs—resilience reborn through purpose.",
+             "ordinary_world_baseline": "Striving without reflection leads to exhaustion and loss of meaning.",
+             "call_to_adventure_preview": "Every win paves the way—each moment of success builds courage for the greater trials to come."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Grit",
+                "author": "Angela Duckworth",
+                "section_of_focus": "Persistence",
+                "section_description": "Explains how sustained effort and passion overcome obstacles.",
+                "connection_focus_area": "Shows the power of perseverance in achieving long-term goals.",
+                "connect_points": {
+                   "point1": "Identify a personal long-term goal.",
+                   "point2": "Break it into daily 'gritty' tasks.",
+                   "point3": "Track consistency over time."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Create a 30-day consistency plan.",
+                   "objective2": "Reflect on progress weekly.",
+                   "objective3": "Adjust strategies to maintain grit."
+                }
+             },
+             "book2": {
+                "title": "Man’s Search for Meaning",
+                "author": "Viktor E. Frankl",
+                "section_of_focus": "Will to Meaning",
+                "section_description": "Describes finding purpose under extreme adversity.",
+                "connection_focus_area": "Demonstrates how meaning anchors resilience.",
+                "connect_points": {
+                   "point1": "Define core purpose statements.",
+                   "point2": "Journal moments of meaning in adversity.",
+                   "point3": "Leverage purpose to sustain effort."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Articulate your personal why.",
+                   "objective2": "Identify meaning in recent challenges.",
+                   "objective3": "Use meaning statements to motivate action."
+                }
+             },
+             "book3": {
+                "title": "Peak",
+                "author": "Anders Ericsson",
+                "section_of_focus": "Deliberate Practice",
+                "section_description": "Details how focused, structured practice leads to mastery.",
+                "connection_focus_area": "Link small wins to iterative skill improvement.",
+                "connect_points": {
+                   "point1": "Design a deliberate practice session.",
+                   "point2": "Solicit immediate feedback.",
+                   "point3": "Adjust practice based on performance data."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Plan daily deliberate practice.",
+                   "objective2": "Implement feedback loops.",
+                   "objective3": "Measure improvement objectively."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "In the quiet of the discovery space, light bends around Francisco as consciousness and time merge—the Trionfi cards hum with awakened structure.",
+             "symbolic_moment": "A circle completes within his palm, nine radiant points aligning; each represents a victory once dismissed, now understood as sacred.",
+             "emotional_landscape": "Gratitude, clarity, and serene confidence—triumph as transcendence, not conquest.",
+             "threshold_vision": "Every breakthrough is both end and beginning; triumph is motion sustained through meaning.",
+             "transformation_promise": "By celebrating resilience and integrating awareness, the hero moves from seeking mastery to embodying it."
+          }
+        },
         "personality_profile_98": {},
         "personality_profile_99": {},
         "personality_profile_100": {},
