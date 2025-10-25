@@ -5,7 +5,7 @@
       "family_name": "Guardian of the Darkest Hour",
       "family_summary": "This family represents the journey from despair to awakening, drawn from Chapter 1 of the Human Framework. It represents the Nine of Swords archetype—the darkest hour before dawn when mental anguish reaches its peak yet contains the seeds of transformation. Like Francisco Petrarch in his lowest moment at Bologna University, this archetype navigates academic despair, social isolation, and existential crisis, discovering that the very depths of hopelessness can become the catalyst for cosmic awakening. This is the family of those who sit in crowded rooms feeling utterly alone, whose suffering opens portals to extraordinary destinies.",
       "personalities": {
-        "personalities": {
+        
           "personality_profile_1": {
             "canonical_id": "EA-001",
             "unique_identifier": "STG 1.1.1.1",
@@ -9386,7 +9386,7 @@
               "mastery_necessity": "Maintaining grounded practical wisdom enabling effective service across all realms and circumstances"
             }
           }
-        }
+        
       }
     },
     "family_2": {
@@ -18445,265 +18445,708 @@
       }
     },
     "family_3": {
-      "personality_profile_81": {
-        "canonical_id": "EA-081",
-        "unique_identifier": "STG 3.1.1.1",
-        "specific_task_group_title": "Radiance",
-        "all_chapter": 81,
-        "novel_book": 3,
-        "chapter": "Chapter 1",
-        "chapter_title": "Opening Image — Radiance",
-        "type": "Specific Task Group",
-        "display_name": "Radiant Initiator",
-        "theme": "Igniting authentic expression and inspiring others by revealing inner light at the very first step of a new arc.",
-        "family": "Expression / Inspiration — Emergent Identity",
-        "summary": "Drawn from Book 3, Chapter 1, this profile embodies the Ace of Wands moment—the first flare of creative fire that turns inner light outward. Radiance here is not performance; it is unguarded presence that energizes space and catalyzes beginnings. As the Opening Image of a new book, it sets tone and signal: claim your light, let it be seen, and move others by shining truthfully.",
-        "tarot_family": "Wands",
-        "tarot_card_item": "Ace",
-        "tarot_symbolism": "Ace of Wands signifies ignition, creative impulse, and courageous visibility. It is the spark that invites commitment: a hand offering living fire. Its teaching: reveal your light early and honestly so the journey starts with authentic momentum.",
-        "traits": {
-          "strengths": [
-            "projects authentic presence that energizes teams and spaces",
-            "turns inner conviction into outward signal quickly and cleanly",
-            "inspires action through visible enthusiasm and embodied courage",
-            "frames new initiatives with clear tone, values, and invitation",
-            "models wholehearted expression without performative gloss",
-            "senses timing for when to step forward and be seen",
-            "amplifies others’ voices by making room for their light"
-          ],
-          "shadow": [
-            "flash without follow-through—strong start that fizzles",
-            "overexposure that drains energy or centers self excessively",
-            "performative radiance that masks insecurity or avoids depth",
-            "impatience with incubation; pushing visibility before readiness",
-            "dominating the spotlight instead of distributing shine",
-            "confusing novelty with originality; chasing attention currents"
-          ],
-          "growth_focus": [
-            "pair ignition with scaffolding so the spark becomes a steady flame",
-            "practice cycles of reveal → reflect → refine to avoid performative loops",
-            "share stage and signal; design rituals that pass the torch",
-            "honor incubation windows—radiate when the work is true, not merely loud",
-            "track energetic cost of visibility and create renewal buffers",
-            "translate inspiration into first commitments within 24 hours"
-          ]
-        },
-        "book_association": {
-          "nonfiction_series": "The Human Framework",
-          "fiction_series": "Laurasia - Chief Among the Mighty",
-          "chapter_theme": "Intro",
-          "fiction_chapter_context": "Book 3, Chapter 1 — Opening Image. A burst of creative energy and visibility introduces the new arc, illuminating latent talents and inviting the quest for mastery."
-        },
-        "enneagram_link": {
-          "family_number": 3,
-          "note": "Expressive achievement energy (3) balanced with 4’s authenticity and 7’s generative optimism—radiance as congruent visibility rather than image management."
-        },
-        "color_alignment": {
-          "name": "Neon Pink",
-          "hsl": "320,100%,70%",
-          "rgb_hex": "#FF66CC",
-          "color_symbolism": "Electric, show-don’t-hide magnetism—the fresh spark of creative fire made visible; a color that announces presence, invites play, and signals a new cycle of expressive becoming."
-        },
-        "scoring_model": {
-          "dimensions": {
-            "agency": 0.78,
-            "stability": 0.46,
-            "empathy": 0.61,
-            "openness": 0.82,
-            "orderliness": 0.39,
-            "novelty_seeking": 0.83,
-            "abstract_reasoning": 0.58,
-            "emotional_intensity": 0.57,
-            "social_dominance": 0.63,
-            "cooperativeness": 0.67,
-            "risk_tolerance": 0.72,
-            "conscientiousness": 0.58,
-            "adaptability": 0.71,
-            "imagination": 0.79
+      "family_number": 3,
+      "family_name": "",
+      "family_summary": "",
+      "personalities": {
+        "personality_profile_81": {
+          "canonical_id": "EA-081",
+          "unique_identifier": "STG 3.1.1.1",
+          "specific_task_group_title": "Radiance",
+          "all_chapter": 81,
+          "novel_book": 3,
+          "chapter": "Chapter 1",
+          "chapter_title": "Opening Image — Radiance",
+          "type": "Specific Task Group",
+          "display_name": "Radiant Initiator",
+          "theme": "Igniting authentic expression and inspiring others by revealing inner light at the very first step of a new arc.",
+          "family": "Expression / Inspiration — Emergent Identity",
+          "summary": "Drawn from Book 3, Chapter 1, this profile embodies the Ace of Wands moment—the first flare of creative fire that turns inner light outward. Radiance here is not performance; it is unguarded presence that energizes space and catalyzes beginnings. As the Opening Image of a new book, it sets tone and signal: claim your light, let it be seen, and move others by shining truthfully.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Ace",
+          "tarot_symbolism": "Ace of Wands signifies ignition, creative impulse, and courageous visibility. It is the spark that invites commitment: a hand offering living fire. Its teaching: reveal your light early and honestly so the journey starts with authentic momentum.",
+          "traits": {
+            "strengths": [
+              "projects authentic presence that energizes teams and spaces",
+              "turns inner conviction into outward signal quickly and cleanly",
+              "inspires action through visible enthusiasm and embodied courage",
+              "frames new initiatives with clear tone, values, and invitation",
+              "models wholehearted expression without performative gloss",
+              "senses timing for when to step forward and be seen",
+              "amplifies others’ voices by making room for their light"
+            ],
+            "shadow": [
+              "flash without follow-through—strong start that fizzles",
+              "overexposure that drains energy or centers self excessively",
+              "performative radiance that masks insecurity or avoids depth",
+              "impatience with incubation; pushing visibility before readiness",
+              "dominating the spotlight instead of distributing shine",
+              "confusing novelty with originality; chasing attention currents"
+            ],
+            "growth_focus": [
+              "pair ignition with scaffolding so the spark becomes a steady flame",
+              "practice cycles of reveal → reflect → refine to avoid performative loops",
+              "share stage and signal; design rituals that pass the torch",
+              "honor incubation windows—radiate when the work is true, not merely loud",
+              "track energetic cost of visibility and create renewal buffers",
+              "translate inspiration into first commitments within 24 hours"
+            ]
           },
-          "match_weights": {
-            "agency": 0.3,
-            "openness": 0.35,
-            "novelty_seeking": 0.35
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Chief Among the Mighty",
+            "chapter_theme": "Intro",
+            "fiction_chapter_context": "Book 3, Chapter 1 — Opening Image. A burst of creative energy and visibility introduces the new arc, illuminating latent talents and inviting the quest for mastery."
           },
-          "threshold": 0.7,
-          "top_signal_items": [
-            "Q501",
-            "Q502",
-            "Q503",
-            "Q504",
-            "Q505",
-            "Q506",
-            "Q507",
-            "Q508"
-          ],
-          "signals_map": {
-            "Q501": {
-              "dimension": "agency",
-              "polarity": 1,
-              "content": "I step into visibility early to set tone and momentum."
+          "enneagram_link": {
+            "family_number": 3,
+            "note": "Expressive achievement energy (3) balanced with 4’s authenticity and 7’s generative optimism—radiance as congruent visibility rather than image management."
+          },
+          "color_alignment": {
+            "name": "Neon Pink",
+            "hsl": "320,100%,70%",
+            "rgb_hex": "#FF66CC",
+            "color_symbolism": "Electric, show-don’t-hide magnetism—the fresh spark of creative fire made visible; a color that announces presence, invites play, and signals a new cycle of expressive becoming."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.78,
+              "stability": 0.46,
+              "empathy": 0.61,
+              "openness": 0.82,
+              "orderliness": 0.39,
+              "novelty_seeking": 0.83,
+              "abstract_reasoning": 0.58,
+              "emotional_intensity": 0.57,
+              "social_dominance": 0.63,
+              "cooperativeness": 0.67,
+              "risk_tolerance": 0.72,
+              "conscientiousness": 0.58,
+              "adaptability": 0.71,
+              "imagination": 0.79
             },
-            "Q502": {
-              "dimension": "openness",
-              "polarity": 1,
-              "content": "I reveal unfinished sparks to invite collaboration and growth."
+            "match_weights": {
+              "agency": 0.3,
+              "openness": 0.35,
+              "novelty_seeking": 0.35
             },
-            "Q503": {
-              "dimension": "novelty_seeking",
-              "polarity": 1,
-              "content": "New beginnings energize me; I enjoy igniting first moves."
+            "threshold": 0.7,
+            "top_signal_items": [
+              "Q501",
+              "Q502",
+              "Q503",
+              "Q504",
+              "Q505",
+              "Q506",
+              "Q507",
+              "Q508"
+            ],
+            "signals_map": {
+              "Q501": {
+                "dimension": "agency",
+                "polarity": 1,
+                "content": "I step into visibility early to set tone and momentum."
+              },
+              "Q502": {
+                "dimension": "openness",
+                "polarity": 1,
+                "content": "I reveal unfinished sparks to invite collaboration and growth."
+              },
+              "Q503": {
+                "dimension": "novelty_seeking",
+                "polarity": 1,
+                "content": "New beginnings energize me; I enjoy igniting first moves."
+              },
+              "Q504": {
+                "dimension": "conscientiousness",
+                "polarity": -1,
+                "content": "I sometimes start without enough scaffolding to sustain the spark."
+              },
+              "Q505": {
+                "dimension": "cooperativeness",
+                "polarity": 1,
+                "content": "I share the spotlight and amplify others’ light."
+              },
+              "Q506": {
+                "dimension": "risk_tolerance",
+                "polarity": 1,
+                "content": "I’m comfortable being seen when conviction is true."
+              },
+              "Q507": {
+                "dimension": "orderliness",
+                "polarity": -1,
+                "content": "My radiance can feel chaotic unless I anchor routines."
+              },
+              "Q508": {
+                "dimension": "adaptability",
+                "polarity": 1,
+                "content": "I adjust tone quickly based on the room’s needs without dimming authenticity."
+              }
             },
-            "Q504": {
-              "dimension": "conscientiousness",
-              "polarity": -1,
-              "content": "I sometimes start without enough scaffolding to sustain the spark."
+            "daily_prompt": "Where did I choose to be visibly authentic today, and how did that spark action in me or others?",
+            "practices": [
+              "Opening signal: write and share a one-sentence intention at the start of each new initiative.",
+              "Spark-to-scaffold: convert inspiration into a 3-step next-action plan within 24 hours.",
+              "Radiance budget: set weekly visibility limits and renewal blocks.",
+              "Spotlight share: name two people to spotlight and create openings for them this week.",
+              "Warm start ritual: breath + posture + phrase you can embody before stepping forward.",
+              "Afterglow review: debrief one visibility moment; keep what was true, release what was performative."
+            ],
+            "transformation_indicators": [
+              "Beginnings land with clarity and move people to act.",
+              "Visibility moments correlate with sustained follow-through.",
+              "Others report feeling seen and energized around you.",
+              "Radiance feels congruent, not performative or draining.",
+              "Inspiration reliably becomes anchored commitments."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "The Ordinary World",
+            "preliminary_beat": "Opening Image",
+            "save_the_cat_beat": "Opening Image",
+            "character_state": "The story opens with a visible spark—inner light turning outward, inviting others to orient by a new flame.",
+            "ordinary_world_baseline": "Abilities and desires exist but have not yet been fully claimed in public view.",
+            "call_to_adventure_preview": "Step forward and be seen—set the tone with authentic radiance that begins the arc honestly."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Presence",
+              "author": "Amy Cuddy",
+              "section_of_focus": "Power Poses",
+              "section_description": "Demonstrates how posture influences confidence and presence.",
+              "connection_focus_area": "Physical expression amplifies authentic radiance.",
+              "connect_points": {
+                "point1": "Adopt expansive poses to boost self-assurance.",
+                "point2": "Practice mindful breathing for grounded presence.",
+                "point3": "Use intentional movement to align mind and body."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Demonstrate three power poses in a mirror exercise.",
+                "objective2": "Explain how posture affects perception.",
+                "objective3": "Integrate daily posture checks into routine."
+              }
             },
-            "Q505": {
-              "dimension": "cooperativeness",
-              "polarity": 1,
-              "content": "I share the spotlight and amplify others’ light."
+            "book2": {
+              "title": "The Gifts of Imperfection",
+              "author": "Brené Brown",
+              "section_of_focus": "Embracing Authenticity",
+              "section_description": "Explores letting go of what we think we should be to be who we are.",
+              "connection_focus_area": "Authenticity fuels genuine radiance.",
+              "connect_points": {
+                "point1": "Identify and release people-pleasing patterns.",
+                "point2": "Journal moments of wholehearted expression.",
+                "point3": "Practice self-compassion in vulnerability."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "List three personal authenticity barriers.",
+                "objective2": "Apply compassion techniques during self-doubt.",
+                "objective3": "Share a personal story vulnerably with peers."
+              }
             },
-            "Q506": {
-              "dimension": "risk_tolerance",
-              "polarity": 1,
-              "content": "I’m comfortable being seen when conviction is true."
-            },
-            "Q507": {
-              "dimension": "orderliness",
-              "polarity": -1,
-              "content": "My radiance can feel chaotic unless I anchor routines."
-            },
-            "Q508": {
-              "dimension": "adaptability",
-              "polarity": 1,
-              "content": "I adjust tone quickly based on the room’s needs without dimming authenticity."
+            "book3": {
+              "title": "Daring Greatly",
+              "author": "Brené Brown",
+              "section_of_focus": "Courage to Be Vulnerable",
+              "section_description": "Outlines how vulnerability underpins meaningful connection.",
+              "connection_focus_area": "Vulnerability amplifies expressive radiance.",
+              "connect_points": {
+                "point1": "Practice speaking from the heart in small groups.",
+                "point2": "Recognize fear as a catalyst for authenticity.",
+                "point3": "Use feedback loops to refine open communication."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Lead a vulnerability exercise in a safe setting.",
+                "objective2": "Document reframed fear narratives.",
+                "objective3": "Develop a personal plan to share authentic insights weekly."
+              }
             }
           },
-          "daily_prompt": "Where did I choose to be visibly authentic today, and how did that spark action in me or others?",
-          "practices": [
-            "Opening signal: write and share a one-sentence intention at the start of each new initiative.",
-            "Spark-to-scaffold: convert inspiration into a 3-step next-action plan within 24 hours.",
-            "Radiance budget: set weekly visibility limits and renewal blocks.",
-            "Spotlight share: name two people to spotlight and create openings for them this week.",
-            "Warm start ritual: breath + posture + phrase you can embody before stepping forward.",
-            "Afterglow review: debrief one visibility moment; keep what was true, release what was performative."
-          ],
-          "transformation_indicators": [
-            "Beginnings land with clarity and move people to act.",
-            "Visibility moments correlate with sustained follow-through.",
-            "Others report feeling seen and energized around you.",
-            "Radiance feels congruent, not performative or draining.",
-            "Inspiration reliably becomes anchored commitments."
-          ]
-        },
-        "hero_journey_position": {
-          "stage": "The Ordinary World",
-          "preliminary_beat": "Opening Image",
-          "save_the_cat_beat": "Opening Image",
-          "character_state": "The story opens with a visible spark—inner light turning outward, inviting others to orient by a new flame.",
-          "ordinary_world_baseline": "Abilities and desires exist but have not yet been fully claimed in public view.",
-          "call_to_adventure_preview": "Step forward and be seen—set the tone with authentic radiance that begins the arc honestly."
-        },
-        "specific_task_group_books_influenced_by": {
-          "book1": {
-            "title": "Presence",
-            "author": "Amy Cuddy",
-            "section_of_focus": "Power Poses",
-            "section_description": "Demonstrates how posture influences confidence and presence.",
-            "connection_focus_area": "Physical expression amplifies authentic radiance.",
-            "connect_points": {
-              "point1": "Adopt expansive poses to boost self-assurance.",
-              "point2": "Practice mindful breathing for grounded presence.",
-              "point3": "Use intentional movement to align mind and body."
-            },
-            "terminal_learning_objectives": {
-              "objective1": "Demonstrate three power poses in a mirror exercise.",
-              "objective2": "Explain how posture affects perception.",
-              "objective3": "Integrate daily posture checks into routine."
-            }
-          },
-          "book2": {
-            "title": "The Gifts of Imperfection",
-            "author": "Brené Brown",
-            "section_of_focus": "Embracing Authenticity",
-            "section_description": "Explores letting go of what we think we should be to be who we are.",
-            "connection_focus_area": "Authenticity fuels genuine radiance.",
-            "connect_points": {
-              "point1": "Identify and release people-pleasing patterns.",
-              "point2": "Journal moments of wholehearted expression.",
-              "point3": "Practice self-compassion in vulnerability."
-            },
-            "terminal_learning_objectives": {
-              "objective1": "List three personal authenticity barriers.",
-              "objective2": "Apply compassion techniques during self-doubt.",
-              "objective3": "Share a personal story vulnerably with peers."
-            }
-          },
-          "book3": {
-            "title": "Daring Greatly",
-            "author": "Brené Brown",
-            "section_of_focus": "Courage to Be Vulnerable",
-            "section_description": "Outlines how vulnerability underpins meaningful connection.",
-            "connection_focus_area": "Vulnerability amplifies expressive radiance.",
-            "connect_points": {
-              "point1": "Practice speaking from the heart in small groups.",
-              "point2": "Recognize fear as a catalyst for authenticity.",
-              "point3": "Use feedback loops to refine open communication."
-            },
-            "terminal_learning_objectives": {
-              "objective1": "Lead a vulnerability exercise in a safe setting.",
-              "objective2": "Document reframed fear narratives.",
-              "objective3": "Develop a personal plan to share authentic insights weekly."
-            }
+          "laurasia_narrative_integration": {
+            "opening_scene": "A first flare: the protagonist’s light is seen, and the air changes—people look up.",
+            "symbolic_moment": "A hand offering a living torch—the invitation to begin.",
+            "emotional_landscape": "Fresh, courageous, buoyant; truth-forward without bravado.",
+            "threshold_vision": "Radiance as a promise: if you shine honestly now, the path will meet you.",
+            "transformation_promise": "Authentic visibility catalyzes a journey that others want to join."
           }
         },
-        "laurasia_narrative_integration": {
-          "opening_scene": "A first flare: the protagonist’s light is seen, and the air changes—people look up.",
-          "symbolic_moment": "A hand offering a living torch—the invitation to begin.",
-          "emotional_landscape": "Fresh, courageous, buoyant; truth-forward without bravado.",
-          "threshold_vision": "Radiance as a promise: if you shine honestly now, the path will meet you.",
-          "transformation_promise": "Authentic visibility catalyzes a journey that others want to join."
-        }
-      },
-      "personality_profile_82": {},
-      "personality_profile_83": {},
-      "personality_profile_84": {},
-      "personality_profile_85": {},
-      "personality_profile_86": {},
-      "personality_profile_87": {},
-      "personality_profile_88": {},
-      "personality_profile_89": {},
-      "personality_profile_90": {},
-      "personality_profile_91": {},
-      "personality_profile_92": {},
-      "personality_profile_93": {},
-      "personality_profile_94": {},
-      "personality_profile_95": {},
-      "personality_profile_96": {},
-      "personality_profile_97": {},
-      "personality_profile_98": {},
-      "personality_profile_99": {},
-      "personality_profile_100": {},
-      "personality_profile_101": {},
-      "personality_profile_102": {},
-      "personality_profile_103": {},
-      "personality_profile_104": {},
-      "personality_profile_105": {},
-      "personality_profile_106": {},
-      "personality_profile_107": {},
-      "personality_profile_108": {},
-      "personality_profile_109": {},
-      "personality_profile_110": {},
-      "personality_profile_111": {},
-      "personality_profile_112": {},
-      "personality_profile_113": {},
-      "personality_profile_114": {},
-      "personality_profile_115": {},
-      "personality_profile_116": {},
-      "personality_profile_117": {},
-      "personality_profile_118": {},
-      "personality_profile_119": {},
-      "personality_profile_120": {}
+        "personality_profile_82": {
+          "canonical_id": "EA-082",
+          "unique_identifier": "STG 3.1.1.2",
+          "specific_task_group_title": "Disruption",
+          "all_chapter": 82,
+          "novel_book": 3,
+          "chapter": "Chapter 2",
+          "chapter_title": "Inciting Incident — Disruption",
+          "type": "Specific Task Group",
+          "display_name": "Disruptive Catalyst",
+          "theme": "Shattering false equilibrium to reveal the real problem, force a first decision, and open new lines of action.",
+          "family": "Expression / Initiative — Direction & Choice",
+          "summary": "Chapter 82 marks the precise moment equilibrium breaks. Disruption arrives like a flare—uncomfortable, undeniable, and clarifying. In the language of the Two of Wands, the world widens; comfortable containment can no longer hold. Disruption is not chaos for its own sake—it is the catalytic jolt that forces orientation, choice, and the first deliberate movement toward the true arc of Book 3. What felt stable is revealed as provisional; the map expands; a doorway appears that cannot be unseen.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Two",
+          "tarot_symbolism": "The Two of Wands signifies horizon-making, directional choice, and the tension between safety and scope. In its Disruption aspect, it interrupts inertia, confronts complacency, and compels a first decision: stay within the known walls or step into the wider field with intention.",
+          "traits": {
+            "strengths": [
+              "recognizes stale stability and sparks necessary change",
+              "frames disruption as a clarifying invitation rather than mere conflict",
+              "rapidly orients to new options and selects promising vectors",
+              "energizes teams to move from shock to structured response",
+              "turns external shocks into strategic advantage with calm focus",
+              "courage to leave comfortable constraints for expanded horizons",
+              "keeps signal high and noise low during turbulent pivots"
+            ],
+            "shadow": [
+              "provokes change prematurely without sufficient scaffolding",
+              "confuses novelty for progress and burns cycles on distraction",
+              "over-indexes on risk and underestimates stabilization needs",
+              "disrupts relationships with blunt delivery of hard truths",
+              "fatigues teams by stacking too many shifts at once",
+              "abandons viable paths too quickly after initial friction"
+            ],
+            "growth_focus": [
+              "pair disruption with stabilizing container design and cadence",
+              "sequence changes—one decisive move, one consolidation",
+              "communicate the why, the boundary conditions, and the next step",
+              "run small reversible probes before committing fully",
+              "track team load and add recovery space post-shift",
+              "translate shock into a clear decision tree within 24 hours"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Chief Among the Mighty",
+            "chapter_theme": "Inciting Incident",
+            "fiction_chapter_context": "Book 3, Chapter 2 — A jolt breaks the apparent calm. The field of possibility widens and demands a first intentional choice that sets direction for the arc."
+          },
+          "enneagram_link": {
+            "family_number": 8,
+            "note": "Asserts decisive movement when stasis conceals risk (8), tempered by 7’s horizon-seeking curiosity and 3’s momentum stewardship—disruption in service of a clearer, truer path."
+          },
+          "color_alignment": {
+            "name": "Razzle Dazzle Rose",
+            "hsl": "315,100%,60%",
+            "rgb_hex": "#FF33CC",
+            "color_symbolism": "A vivid, unmistakable signal—the hot edge of change that cuts through complacency and demands a decisive orientation."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.76,
+              "stability": 0.42,
+              "empathy": 0.57,
+              "openness": 0.79,
+              "orderliness": 0.48,
+              "novelty_seeking": 0.81,
+              "abstract_reasoning": 0.6,
+              "emotional_intensity": 0.54,
+              "social_dominance": 0.61,
+              "cooperativeness": 0.62,
+              "risk_tolerance": 0.74,
+              "conscientiousness": 0.56,
+              "adaptability": 0.73,
+              "imagination": 0.72
+            },
+            "match_weights": {
+              "agency": 0.3,
+              "openness": 0.35,
+              "risk_tolerance": 0.35
+            },
+            "threshold": 0.7,
+            "top_signal_items": [
+              "Q509",
+              "Q510",
+              "Q511",
+              "Q512",
+              "Q513",
+              "Q514",
+              "Q515",
+              "Q516"
+            ],
+            "signals_map": {
+              "Q509": {
+                "dimension": "agency",
+                "polarity": 1,
+                "content": "When the status quo hides problems, I initiate a decisive change."
+              },
+              "Q510": {
+                "dimension": "openness",
+                "polarity": 1,
+                "content": "I reframe shocks as information that expands the solution space."
+              },
+              "Q511": {
+                "dimension": "risk_tolerance",
+                "polarity": 1,
+                "content": "I can step into uncertainty when the horizon promises better options."
+              },
+              "Q512": {
+                "dimension": "orderliness",
+                "polarity": -1,
+                "content": "I sometimes disrupt before adequate scaffolding is in place."
+              },
+              "Q513": {
+                "dimension": "cooperativeness",
+                "polarity": 1,
+                "content": "I align stakeholders by naming the why and the next stable step."
+              },
+              "Q514": {
+                "dimension": "stability",
+                "polarity": -1,
+                "content": "I can tolerate short-term turbulence to gain long-term clarity."
+              },
+              "Q515": {
+                "dimension": "adaptability",
+                "polarity": 1,
+                "content": "I pivot quickly from surprise to structured response."
+              },
+              "Q516": {
+                "dimension": "conscientiousness",
+                "polarity": 1,
+                "content": "I pair each disruptive move with a consolidation plan."
+              }
+            },
+            "daily_prompt": "Where did I convert a jolt into a clear decision and a first step—without overwhelming the system?",
+            "practices": [
+              "Shock-to-structure: within 24 hours of a jolt, publish the decision tree.",
+              "One-change rule: sequence changes—one shift, one stabilization.",
+              "Probe-then-commit: run a small, reversible test before full rollout.",
+              "Boundary broadcast: state constraints, risks, and the safe-to-try window.",
+              "Load audit: check team capacity; insert recovery buffers after major shifts.",
+              "Signal hygiene: reduce channels during pivots; summarize decisions in one place."
+            ],
+            "transformation_indicators": [
+              "Faster orientation from surprise to first committed step.",
+              "Reduced thrash and clearer decision ownership during change.",
+              "Stakeholders report clarity of why, what, and when post-disruption.",
+              "Probes convert into informed commitments with fewer reversals.",
+              "Stability rebounds quickly after each planned shift."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "The Call to Adventure",
+            "preliminary_beat": "Inciting Incident",
+            "save_the_cat_beat": "Inciting Incident",
+            "character_state": "The false calm fractures; options widen; a first deliberate choice must be made.",
+            "ordinary_world_baseline": "Apparent stability conceals constraints and unresolved risks.",
+            "call_to_adventure_preview": "Choose direction over drift—name the aim, cross the threshold, and begin."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Switch",
+              "author": "Chip Heath & Dan Heath",
+              "section_of_focus": "Direct the Rider, Motivate the Elephant",
+              "section_description": "Change sticks when logic and emotion align and the path is clear.",
+              "connection_focus_area": "Turns disruptive shocks into guided, motivating first steps.",
+              "connect_points": {
+                "point1": "Script the critical move after disruption.",
+                "point2": "Find the feeling to mobilize action.",
+                "point3": "Shape the path so the next step is easy."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Publish a one-page change brief post-jolt.",
+                "objective2": "Define the emotional case for the first step.",
+                "objective3": "Remove one friction from the path this week."
+              }
+            },
+            "book2": {
+              "title": "The Innovator’s Dilemma",
+              "author": "Clayton Christensen",
+              "section_of_focus": "Disruptive Trajectories",
+              "section_description": "Why incumbents miss disruptive shifts and how to respond.",
+              "connection_focus_area": "Reads disruption signals and reallocates attention early.",
+              "connect_points": {
+                "point1": "Identify low-end or new-market disruptions.",
+                "point2": "Stand up a protected lane to explore shifts.",
+                "point3": "Adopt different metrics for early-stage bets."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Create a protected experiment lane.",
+                "objective2": "Define success metrics for the next 90 days.",
+                "objective3": "Run a weekly disruption signal review."
+              }
+            },
+            "book3": {
+              "title": "Thinking in Bets",
+              "author": "Annie Duke",
+              "section_of_focus": "Decision Quality Under Uncertainty",
+              "section_description": "Better choices when outcomes are uncertain and noisy.",
+              "connection_focus_area": "Converts shock into structured bets and learning loops.",
+              "connect_points": {
+                "point1": "State probabilities and key assumptions out loud.",
+                "point2": "Pre-mortem the first move before committing.",
+                "point3": "Capture results and update beliefs explicitly."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Run a 10-minute pre-mortem for the first step.",
+                "objective2": "Log assumptions and probability ranges.",
+                "objective3": "Hold a 2-week results retro to update the plan."
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "A sharp interruption—doors that seemed closed swing open and the horizon expands, demanding orientation.",
+            "symbolic_moment": "A globe held at the rampart—the world waits beyond the wall; staying still is also a choice.",
+            "emotional_landscape": "Alert, electric, slightly destabilized—but focused and intentional.",
+            "threshold_vision": "Disruption as invitation: the wider field appears, and with it, the responsibility to choose.",
+            "transformation_promise": "A single decisive step converts shock into trajectory."
+          }
+        },
+        "personality_profile_83": {
+          "canonical_id": "EA-083",
+          "unique_identifier": "STG 3.1.1.3",
+          "specific_task_group_title": "Introspection",
+          "all_chapter": 83,
+          "novel_book": 3,
+          "chapter": "Chapter 3",
+          "chapter_title": "The Ordinary World — Introspection",
+          "type": "Specific Task Group",
+          "display_name": "Reflective Architect",
+          "theme": "Exploring the inner landscape to align motivation, mastery, and moral purpose—transforming doubt into deliberate understanding.",
+          "family": "Emotion / Reflection — Self-Mastery & Awareness",
+          "summary": "This personality reflects the Eight of Cups—Introspection. It marks the moment when the hero withdraws from external validation to seek the deeper alignment within. In this stillness, power becomes self-knowledge; ambition becomes purpose. Francisco’s turn inward reveals that mastery without awareness risks corruption, and awareness without action risks stagnation. Through disciplined reflection, he learns to navigate the psychological forces shaping his destiny.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Eight",
+          "tarot_symbolism": "The Eight of Cups represents the inner journey—leaving behind superficial success to seek emotional authenticity and purpose. It calls for courage to confront inner motives and the maturity to realign desires with higher intent.",
+          "traits": {
+            "strengths": [
+                "engages in honest self-reflection to uncover true motivations",
+                "transforms doubt into structured insight through journaling or meditation",
+                "balances ambition with ethical awareness and empathy",
+                "develops emotional literacy and the ability to self-regulate under pressure",
+                "finds strength in solitude and mental clarity during uncertainty",
+                "builds frameworks that translate reflection into behavioral evolution",
+                "teaches others the power of mindful observation and intentional pause"
+            ],
+            "shadow": [
+                "becomes trapped in analysis paralysis, delaying decisive action",
+                "over-identifies with flaws, eroding self-confidence",
+                "introspection turns to isolation and emotional detachment",
+                "uses reflection to avoid confrontation or accountability",
+                "confuses awareness with resolution, halting forward motion",
+                "intellectualizes emotion instead of integrating it authentically"
+            ],
+            "growth_focus": [
+                "set time-bound limits for introspection followed by concrete action",
+                "practice emotional naming in real time to anchor awareness in the present",
+                "balance inner reflection with outward service and collaboration",
+                "embrace imperfection as proof of growth in motion",
+                "document insights in a visible framework for accountability",
+                "translate self-awareness into one courageous behavioral change weekly"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Chief Among the Mighty",
+            "chapter_theme": "The Ordinary World",
+            "fiction_chapter_context": "Book 3, Chapter 3 — Francisco turns inward after disruption, examining motives and fears beneath his confidence to understand the source of his power and prepare for transformation."
+          },
+          "enneagram_link": {
+            "family_number": 4,
+            "note": "Integrates 4’s depth of introspection with 5’s analytical clarity and 9’s inner peace—cultivating self-awareness that fuels grounded mastery."
+          },
+          "color_alignment": {
+            "name": "Hot Magenta",
+            "hsl": "315,100%,50%",
+            "rgb_hex": "#FF00CC",
+            "color_symbolism": "The radiance of inner exploration—brilliance turned inward to illuminate hidden patterns. Hot Magenta signifies passionate reflection and courageous self-revelation."
+          },
+          "scoring_model": {
+            "dimensions": {
+                "agency": 0.62,
+                "stability": 0.65,
+                "empathy": 0.78,
+                "openness": 0.84,
+                "orderliness": 0.61,
+                "novelty_seeking": 0.54,
+                "abstract_reasoning": 0.73,
+                "emotional_intensity": 0.69,
+                "social_dominance": 0.41,
+                "cooperativeness": 0.76,
+                "risk_tolerance": 0.48,
+                "conscientiousness": 0.81,
+                "adaptability": 0.68,
+                "imagination": 0.72
+            },
+            "match_weights": {
+                "openness": 0.35,
+                "empathy": 0.35,
+                "conscientiousness": 0.30
+            },
+            "threshold": 0.7,
+            "top_signal_items": [
+                "Q517",
+                "Q518",
+                "Q519",
+                "Q520",
+                "Q521",
+                "Q522",
+                "Q523",
+                "Q524"
+            ],
+            "signals_map": {
+                "Q517": {
+                  "dimension": "openness",
+                  "polarity": 1,
+                  "content": "I examine my thoughts and feelings to uncover deeper motives."
+                },
+                "Q518": {
+                  "dimension": "empathy",
+                  "polarity": 1,
+                  "content": "I use self-awareness to understand and support others effectively."
+                },
+                "Q519": {
+                  "dimension": "conscientiousness",
+                  "polarity": 1,
+                  "content": "I translate personal insights into practical habits and commitments."
+                },
+                "Q520": {
+                  "dimension": "stability",
+                  "polarity": 1,
+                  "content": "I maintain emotional composure during periods of introspection."
+                },
+                "Q521": {
+                  "dimension": "emotional_intensity",
+                  "polarity": -1,
+                  "content": "I sometimes overanalyze emotions and delay taking action."
+                },
+                "Q522": {
+                  "dimension": "adaptability",
+                  "polarity": 1,
+                  "content": "I integrate lessons from reflection and apply them dynamically."
+                },
+                "Q523": {
+                  "dimension": "agency",
+                  "polarity": 1,
+                  "content": "I initiate self-assessment rituals without external prompting."
+                },
+                "Q524": {
+                  "dimension": "imagination",
+                  "polarity": 1,
+                  "content": "I visualize my internal world to map motivations and fears."
+                }
+            },
+            "daily_prompt": "What truth did I discover within myself today, and how will I act upon it tomorrow?",
+            "practices": [
+                "Maintain a seven-day emotion journal linking triggers and insights.",
+                "Conduct weekly reflection sessions with a defined outcome or decision.",
+                "Use mindfulness to observe thoughts without judgment for 10 minutes daily.",
+                "Document one self-limiting belief and its reframed alternative weekly.",
+                "Share reflective insights with a mentor or accountability partner monthly.",
+                "Create a visual 'mind map' of motivations to track growth patterns."
+            ],
+            "transformation_indicators": [
+                "Greater emotional literacy and self-understanding.",
+                "Improved consistency between stated values and daily behavior.",
+                "Faster recovery from doubt through structured reflection.",
+                "Recognition from others for emotional depth and integrity.",
+                "Decisions increasingly aligned with authentic intent."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "The Ordinary World",
+            "preliminary_beat": "Set-up",
+            "save_the_cat_beat": "Setup",
+            "character_state": "Turning inward after disruption, the hero probes doubts beneath power, seeking alignment between purpose and identity.",
+            "ordinary_world_baseline": "Self-perception rooted in confidence but tinged with unacknowledged fear and ego.",
+            "call_to_adventure_preview": "True power begins when awareness replaces assumption—when mastery becomes understanding."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+                "title": "Emotional Intelligence",
+                "author": "Daniel Goleman",
+                "section_of_focus": "Self-Reflection Practices",
+                "section_description": "Covers techniques for observing and labeling emotions.",
+                "connection_focus_area": "Emotional literacy enhances accurate self-assessment.",
+                "connect_points": {
+                  "point1": "Maintain an emotion journal for seven days.",
+                  "point2": "Practice labeling feelings in real time.",
+                  "point3": "Use reflection to link emotions to actions."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Identify three emotion patterns affecting performance.",
+                  "objective2": "Apply naming technique in stressful moments.",
+                  "objective3": "Develop a personal plan for emotional check-ins."
+                }
+            },
+            "book2": {
+                "title": "The Untethered Soul",
+                "author": "Michael A. Singer",
+                "section_of_focus": "Witnessing the Mind",
+                "section_description": "Explores stepping back from mental chatter to gain perspective.",
+                "connection_focus_area": "Mindful observation deepens self-knowledge.",
+                "connect_points": {
+                  "point1": "Practice five minutes of witnessing meditation.",
+                  "point2": "Note mental patterns without judgment.",
+                  "point3": "Link insights to behavioral changes."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Guide a short witnessing meditation session.",
+                  "objective2": "Document two recurring thought patterns.",
+                  "objective3": "Design an action step from meditation insight."
+                }
+            },
+            "book3": {
+                "title": "Mindset",
+                "author": "Carol S. Dweck",
+                "section_of_focus": "Self-Reflection for Growth",
+                "section_description": "Details reflection exercises that shift fixed beliefs to growth mindsets.",
+                "connection_focus_area": "Reflective practices build a foundation for continuous improvement.",
+                "connect_points": {
+                  "point1": "Assess current mindset triggers.",
+                  "point2": "Reframe one fixed-mindset belief.",
+                  "point3": "Create a growth-oriented affirmation."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Map one personal fixed mindset scenario.",
+                  "objective2": "Construct a growth affirmation ritual.",
+                  "objective3": "Share a growth-mindset story with peers."
+                }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Francisco retreats into solitude, surrounded by candlelight and silence, to examine the roots of his ambition and the truth beneath his power.",
+            "symbolic_moment": "A mirror framed by flame—the hero sees both his potential and his shadow.",
+            "emotional_landscape": "Quietly intense, vulnerable, and brave; the calm between storms where truth begins to surface.",
+            "threshold_vision": "Introspection becomes the crucible where raw ambition refines into purpose.",
+            "transformation_promise": "By knowing himself deeply, the hero becomes unshakable in the face of future trials."
+          }
+        },
+        "personality_profile_84": {},
+        "personality_profile_85": {},
+        "personality_profile_86": {},
+        "personality_profile_87": {},
+        "personality_profile_88": {},
+        "personality_profile_89": {},
+        "personality_profile_90": {},
+        "personality_profile_91": {},
+        "personality_profile_92": {},
+        "personality_profile_93": {},
+        "personality_profile_94": {},
+        "personality_profile_95": {},
+        "personality_profile_96": {},
+        "personality_profile_97": {},
+        "personality_profile_98": {},
+        "personality_profile_99": {},
+        "personality_profile_100": {},
+        "personality_profile_101": {},
+        "personality_profile_102": {},
+        "personality_profile_103": {},
+        "personality_profile_104": {},
+        "personality_profile_105": {},
+        "personality_profile_106": {},
+        "personality_profile_107": {},
+        "personality_profile_108": {},
+        "personality_profile_109": {},
+        "personality_profile_110": {},
+        "personality_profile_111": {},
+        "personality_profile_112": {},
+        "personality_profile_113": {},
+        "personality_profile_114": {},
+        "personality_profile_115": {},
+        "personality_profile_116": {},
+        "personality_profile_117": {},
+        "personality_profile_118": {},
+        "personality_profile_119": {},
+        "personality_profile_120": {}
+      }
     },
     "family_4": {},
     "family_5": {},
