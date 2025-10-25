@@ -18116,234 +18116,337 @@
           }
         },
         "personality_profile_79": {
-          "canonical_id": "EA-079",
+          "id": "EA-079",
           "unique_identifier": "STG 2.2.9.1",
-          "specific_task_group_title": "Emotional Fulfillment",
           "all_chapter": 79,
           "novel_book": 2,
           "chapter": "Chapter 39",
-          "chapter_title": "The Nurturing Sovereign",
           "type": "Specific Task Group",
-          "display_name": "Compassionate Mastery Guide",
-          "theme": "Achieving Emotional Wholeness Through Mature Nurturing Under Complete Integration",
-          "family": "Belonging / Care - Emotional Mastery",
-          "summary": "This personality embodies the capacity to achieve emotional wholeness and nurturing mastery through mature compassion under complete integration, drawn from Chapter 79 of the Human Framework. It represents the Queen of Cups archetype—a sovereign seated beside still waters, embodying emotional wisdom and compassionate authority through deep feeling mastery. This archetype masters the art of nurturing others while maintaining emotional wholeness, discovering that true fulfillment means channeling care sustainably through integrated wisdom. Like the Daughter in resolution who channels communal emotional healing while maintaining her own wholeness, this personality proves that mature nurturing requires emotional completeness rather than self-sacrifice or depletion.",
-          "tarot_family": "Cups",
-          "tarot_card_item": "Queen",
-          "tarot_symbolism": "The Queen of Cups represents emotional mastery, compassionate authority, intuitive wisdom, and sustainable nurturing. A sovereign who rules through empathy maintains emotional wholeness while caring for others. This card signifies the power of mature compassion through integration, that lasting emotional healing emerges through balanced care, teaching that mature nurturing sustains others through emotional wisdom rather than martyrdom or codependency.",
+          "display_name": "Chapter 79 Personality",
+          "specific_task_group_title": "Quicken",
+          "focus_area": "Momentum",
+          "connection_to_the_major_task_group": "Speed amplifies impact when aligned with strategy and vision.",
+          "specific_task_group_description": "Quicken provides techniques for rapid execution—eliminating friction and ensuring swift follow‑through on critical objectives.",
+          "specific_task_group_tagline": "Move at the pace of possibility.",
+          "theme": "Chapter 79 Theme",
+          "family": "Belonging / Care",
+          "summary": "This personality embodies the essence of Chapter 79, reflecting the core themes and lessons from The Human Framework. It integrates seamlessly with the Hero's Journey arc and provides guidance for personal development.",
           "traits": {
             "strengths": [
-              "extraordinary capacity to achieve emotional wholeness and nurturing mastery through mature compassion under complete integration",
-              "ability to channel deep empathy sustainably ensuring caregiving serves without depleting emotional reserves",
-              "skill in maintaining emotional boundaries that protect wholeness while enabling authentic connection with others",
-              "wisdom to recognize when nurturing serves growth versus when it enables dependency or dysfunction",
-              "mastery of compassionate authority—maintaining caring presence without sacrificing self-worth through over-giving",
-              "leadership through modeling emotional integration inspiring others to develop sustainable care capacity",
-              "capacity to transform emotional wounds into healing wisdom discovering that wholeness enables authentic service"
+              "Core strength related to chapter 79",
+              "Secondary strength for this personality",
+              "Tertiary strength characteristic"
             ],
             "shadow": [
-              "potential for emotional manipulation where compassion becomes control disguised as caring concern",
-              "tendency toward martyrdom complex needing others' dependence to validate self-worth through caregiving",
-              "risk of boundary dissolution where empathy becomes enmeshment preventing healthy separation from others",
-              "difficulty accepting when emotional distance serves better than intimate engagement with certain situations",
-              "possible development of savior identity needing broken people to rescue to maintain purpose",
-              "challenge maintaining relationships when emotional wholeness removes codependent dynamics others expect"
+              "Primary shadow aspect for chapter 79",
+              "Secondary shadow tendency",
+              "Tertiary shadow pattern"
             ],
             "growth_focus": [
-              "balance compassionate care with healthy boundaries ensuring nurturing serves rather than depletes",
-              "recognize when operating from authentic wholeness versus when compensating for unworthiness through over-giving",
-              "integrate emotional wisdom with discerning detachment giving care appropriately without losing self",
-              "develop practices for sustainable compassion maintaining emotional reserves through strategic renewal",
-              "maintain nurturing capacity without creating artificial crises justifying rescue behaviors",
-              "transform leadership from solo healing into collective emotional stewardship building organizational care capacity"
+              "Primary growth area for development",
+              "Secondary development focus",
+              "Tertiary growth opportunity"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia",
+            "chapter_theme": "Chapter 79 Theme"
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "Mapped to Enneagram Type 2 via canonical 9×40 grid."
+          },
+          "tarot_card_link": "",
+          "tarot_family": "Wands",
+          "new_tarot_family": "",
+          "tarot_card_item": "Eight",
+          "color_name": "Red",
+          "hex_code": "#FF0000",
+          "color_alignment": {
+            "hue_index": 78,
+            "name": "Red",
+            "hsl": "78,62%,52%",
+            "rgb_hex": "#a3d039",
+            "red": 255,
+            "green": 0,
+            "blue": 0
+          },
+          "epic_novel_pages": "Pages 571 - 585",
+          "epic_chapter_focus": "Resolution",
+          "epic_preliminary_scene_focus": "Finale",
+          "epic_preliminary_scene_description": "With every resource in play, the Daughter accelerates her initiatives—propelling the finale with unstoppable momentum.",
+          "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+          "epic_novel_section_name": "Part II: Chief Among the Mighty",
+          "scoring_model": {
+            "dimensions": {
+              "agency": 7.42125217297132,
+              "stability": 0.8030163962992454,
+              "empathy": 5.3048970491219904,
+              "openness": 4.886391080648589,
+              "orderliness": 0.2344071718305707,
+              "novelty_seeking": 4.100295397816575,
+              "abstract_reasoning": 6.257052192695989,
+              "emotional_intensity": 7.894567264015107,
+              "social_dominance": 0.8495634772480032,
+              "cooperativeness": 1.3992929293531242,
+              "risk_tolerance": 1.4566458163523133,
+              "conscientiousness": 1.8882992435654655,
+              "adaptability": 6.768484974028704,
+              "imagination": 0.8175808656334493
+            },
+            "match_weights": {
+              "agency": 0.3,
+              "stability": 0.4,
+              "conscientiousness": 0.3
+            },
+            "threshold": 0.7,
+            "top_signal_items": [
+              "Q235",
+              "Q236"
+            ]
+          },
+          "signals_map": {
+            "Q235": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": 
+            },
+            "Q236": {
+              "dimension": "stability",
+              "polarity": 1
+            }
+          },
+          "daily_prompt": "How did you embody the essence of Chapter 79 today?",
+          "story_hook": "A scene in Laurasia where the themes of Chapter 79 become a pivotal choice.",
+          "hero_journey_beat": "Master of Two Worlds",
+          "hero_journey_beat_objective": "The goal of the hero journey beat is to master of two worlds.",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "save_the_cat_beat_goal": "",
+          "plot": "Master of Two Worlds",
+          "character_arcs": {
+            "Francisco": "Achieves integration of all aspects of his identity and mission, ready for cosmic responsibility.",
+            "Bridge_Figure": "Francisco's role as connector between different worlds and levels of existence.",
+            "Harmonic_Integration": "The balance of all opposing forces within Francisco's character and mission.",
+            "Evolution_Guide": "His preparation for guiding humanity's next stage of development."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "The Power of Habit",
+              "author": "Charles Duhigg",
+              "section_of_focus": "The Habit Loop",
+              "section_description": "Shows how habits accelerate behavior change through cue‑routine‑reward cycles.",
+              "connection_focus_area": "Leverages habit design for swift, consistent action.",
+              "connect_points": {
+                "point1": "Identify cue and reward triggers.",
+                "point2": "Reengineer routines for speed.",
+                "point3": "Reinforce wins with immediate feedback."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Map an existing habit loop for a key task.",
+                "objective2": "Redesign the routine for efficiency.",
+                "objective3": "Implement and track new habit performance."
+              }
+            },
+            "book2": {
+              "title": "Atomic Habits",
+              "author": "James Clear",
+              "section_of_focus": "Make It Obvious",
+              "section_description": "Details cue stacking and environment design for rapid habit formation.",
+              "connection_focus_area": "Demonstrates environment tweaks that speed up execution.",
+              "connect_points": {
+                "point1": "Stack quick‑win tasks into daily routines.",
+                "point2": "Optimize workspace for seamless flow.",
+                "point3": "Use immediate mini‑rewards to reinforce speed."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Implement two cue‑stacked micro‑habits.",
+                "objective2": "Measure reduction in task completion time.",
+                "objective3": "Adjust triggers based on performance data."
+              }
+            },
+            "book3": {
+              "title": "The Willpower Instinct",
+              "author": "Kelly McGonigal",
+              "section_of_focus": "Self‐Control Strategies",
+              "section_description": "Combines neuroscience and psychology to teach self‐regulation techniques.",
+              "connection_focus_area": "Equips practitioners with tools to sustain willpower during challenges.",
+              "connect_points": {
+                "point1": "Practice pause‐and‐plan for urge management.",
+                "point2": "Use commitment devices to lock in decisions.",
+                "point3": "Journal willpower wins and lessons."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Conduct an impulse tracking exercise.",
+                "objective2": "Set up a commitment device for a key task.",
+                "objective3": "Debrief willpower practice outcomes."
+              }
+            }
+          },
+          "major_task_group": {
+            "unique_identifier": "MTG 2.2.9",
+            "major_task_group_title": "Self-Mastery",
+            "major_task_group_description": "Self-Mastery involves taking ownership of one's thoughts, emotions, and behaviors to achieve greater personal growth and well-being. By developing discipline, emotional intelligence, and a clear sense of purpose, individuals cultivate the resilience and confidence necessary to navigate life's challenges. Emphasizing consistent self-awareness, Self-Mastery fosters a sense of integrity, adaptability, and balanced self-leadership.",
+            "major_task_group_tagline": "Harnessing inner discipline for sustained personal growth and purposeful living."
+          }
+        },
+        "personality_profile_80": {
+          "canonical_id": "EA-080",
+          "unique_identifier": "STG 2.13.2",
+          "specific_task_group_title": "Isolation",
+          "all_chapter": 80,
+          "novel_book": 2,
+          "chapter": "Chapter 40",
+          "chapter_title": "Master of Two Worlds — Isolation",
+          "type": "Specific Task Group",
+          "display_name": "The Solitary Steward",
+          "theme": "Consolidating mastery through intentional solitude—protecting gains, clarifying purpose, and preparing steady re-entry to the world",
+          "family": "Order / Systems — Stewardship & Integration",
+          "summary": "This personality channels the Four of Disks (Pentacles) as healthy Isolation: the chosen pause that protects and integrates hard-won growth. In the Final Image of Book 2, the Daughter stands alone not in exile but in stewardship—creating containers, setting boundaries, and preparing reliable re-entry. Isolation here means deliberate sanctuary: the stillness where mastery settles into structure, resources are safeguarded, and what was gained can endure.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "Four",
+          "tarot_symbolism": "Four of Disks symbolizes consolidation, boundaries, resource guardianship, and the calm authority of containment. Its shadow clutches from fear; its wisdom builds containers that preserve value while keeping channels open for future flow.",
+          "traits": {
+            "strengths": [
+              "creates protective containers that stabilize gains without smothering growth",
+              "uses solitude to refine priorities, ethics, and systems",
+              "guards resources and attention from leakage and distraction",
+              "translates peak learning into dependable routines and SOPs",
+              "models calm closure at cycle endings and prepares clean re-entry",
+              "builds redundancy so stewardship is shared, not hoarded",
+              "maintains focus through intentional disconnection when needed"
+            ],
+            "shadow": [
+              "withdrawing too long and missing timely opportunities to circulate value",
+              "rigidity that confuses containment with control",
+              "scarcity reflex—over-protecting resources and stalling momentum",
+              "over-personalizing stewardship instead of distributing roles",
+              "using isolation to avoid relational repair or hard conversations",
+              "mistaking quiet for clarity—silence without reflection becomes stagnation"
+            ],
+            "growth_focus": [
+              "time-box isolation and plan explicit re-entry bridges",
+              "balance safeguarding the core with purposeful circulation",
+              "convert personal custody into shared stewardship and training",
+              "review containers quarterly so they stay alive and adaptive",
+              "practice boundary communications that are kind, clear, and firm",
+              "design rituals that transform endings into clean handoffs"
             ]
           },
           "book_association": {
             "nonfiction_series": "The Human Framework",
             "fiction_series": "Laurasia - Chief Among the Mighty",
-            "chapter_theme": "The Nurturing Sovereign",
-            "fiction_chapter_context": "Book 2, Chapter 39 - In resolution, the Daughter channels communal emotional healing while maintaining her own wholeness, demonstrating mature nurturing capacity through integrated wisdom, completing Resolution fulfillment."
+            "chapter_theme": "Master of Two Worlds",
+            "fiction_chapter_context": "Scene XV: Master of Two Worlds — Final Image. Standing alone at journey’s end, the Daughter reflects on her transformations—poised to rejoin the world with newfound wisdom."
           },
           "enneagram_link": {
-            "family_number": 2,
-            "note": "Aligned with Enneagram Type 2 (The Helper) discovering that mature service requires emotional wholeness—that maintaining inner completeness and caring from fullness enables serving others without martyrdom or depletion. This integrates Type 2's compassionate nature with Type 4's emotional depth and Type 9's peaceful boundaries."
+            "family_number": 1,
+            "note": "Ethical stewardship (1) anchored by 8’s containment and 5’s reflective solitude—principled structure that protects what matters while preparing its wise release."
           },
           "color_alignment": {
-            "hue_index": 78,
-            "name": "Lime Green",
-            "hsl": "78,62%,52%",
-            "rgb_hex": "#a3d039",
-            "color_symbolism": "Fresh lime green represents the vitality of emotional wholeness—the color of sustainable compassion, of nurturing that flows from fullness, of care that heals rather than depletes. It embodies both the depth of feeling and the wisdom of integration, showing that mature nurturing sustains life through emotional completeness rather than self-sacrifice."
+            "name": "Old Rose",
+            "hsl": "352,51%,49%",
+            "rgb_hex": "#BB3D4E",
+            "color_symbolism": "A mature, tempered red that speaks to guarded warmth and measured devotion—power held in reserve, ready to serve when re-entry begins."
           },
           "scoring_model": {
             "dimensions": {
-              "agency": 0.742,
-              "stability": 0.080,
-              "empathy": 0.530,
-              "openness": 0.489,
-              "orderliness": 0.023,
-              "novelty_seeking": 0.410,
-              "abstract_reasoning": 0.626,
-              "emotional_intensity": 0.789,
-              "social_dominance": 0.085,
-              "cooperativeness": 0.140,
-              "risk_tolerance": 0.146,
-              "conscientiousness": 0.189,
-              "adaptability": 0.677,
-              "imagination": 0.082
+              "agency": 0.58,
+              "stability": 0.86,
+              "empathy": 0.53,
+              "openness": 0.44,
+              "orderliness": 0.87,
+              "novelty_seeking": 0.28,
+              "abstract_reasoning": 0.57,
+              "emotional_intensity": 0.38,
+              "social_dominance": 0.49,
+              "cooperativeness": 0.62,
+              "risk_tolerance": 0.33,
+              "conscientiousness": 0.89,
+              "adaptability": 0.54,
+              "imagination": 0.48
             },
-            "match_weights": {
-              "agency": 0.3,
-              "stability": 0.4,
-              "empathy": 0.3
-            },
+            "match_weights": { "stability": 0.35, "conscientiousness": 0.35, "orderliness": 0.30 },
             "threshold": 0.7,
-            "top_signal_items": [
-              "Q235",
-              "Q236",
-              "Q237",
-              "Q238",
-              "Q239",
-              "Q240",
-              "Q241",
-              "Q242"
-            ],
+            "top_signal_items": ["Q441","Q442","Q443","Q444","Q445","Q446","Q447","Q448"],
             "signals_map": {
-              "Q235": {
-                "dimension": "empathy",
-                "polarity": 1,
-                "content": "I nurture others while maintaining my own emotional wholeness"
-              },
-              "Q236": {
-                "dimension": "agency",
-                "polarity": 1,
-                "content": "I channel compassion sustainably without depleting my reserves"
-              },
-              "Q237": {
-                "dimension": "emotional_intensity",
-                "polarity": 1,
-                "content": "I feel deeply while maintaining healthy emotional boundaries"
-              },
-              "Q238": {
-                "dimension": "empathy",
-                "polarity": 1,
-                "content": "I discern when care serves growth versus when it enables dysfunction"
-              },
-              "Q239": {
-                "dimension": "cooperativeness",
-                "polarity": 1,
-                "content": "I lead through compassionate authority that serves without sacrificing self"
-              },
-              "Q240": {
-                "dimension": "agency",
-                "polarity": 1,
-                "content": "I model emotional integration inspiring others to develop sustainable care"
-              },
-              "Q241": {
-                "dimension": "adaptability",
-                "polarity": 1,
-                "content": "I transform wounds into wisdom enabling authentic service from wholeness"
-              },
-              "Q242": {
-                "dimension": "stability",
-                "polarity": -1,
-                "content": "I balance intimate connection with healthy detachment as situations require"
-              }
+              "Q441": { "dimension": "stability", "polarity": 1, "content": "I use intentional solitude to consolidate progress and reset attention." },
+              "Q442": { "dimension": "conscientiousness", "polarity": 1, "content": "I codify lessons into routines, SOPs, and checklists after big pushes." },
+              "Q443": { "dimension": "orderliness", "polarity": 1, "content": "I build containers and boundaries that prevent leakage of time and energy." },
+              "Q444": { "dimension": "openness", "polarity": -1, "content": "I notice when isolation turns into stagnation and schedule re-entry." },
+              "Q445": { "dimension": "agency", "polarity": 1, "content": "I deliberately disconnect from noise to protect focus and values." },
+              "Q446": { "dimension": "cooperativeness", "polarity": 1, "content": "I distribute stewardship so the system doesn’t rely on me alone." },
+              "Q447": { "dimension": "risk_tolerance", "polarity": -1, "content": "I resist impulsive changes that would destabilize what we’ve secured." },
+              "Q448": { "dimension": "adaptability", "polarity": 1, "content": "I periodically refactor containers to keep them living and useful." }
             },
-            "daily_prompt": "Where did I nurture from wholeness rather than depletion today? How did emotional integration strengthen my capacity to care authentically?",
+            "daily_prompt": "Where did I choose healthy isolation today—and how did it strengthen the container for tomorrow’s work?",
             "practices": [
-              "Establish morning emotional wholeness check evaluating inner state before extending care to others",
-              "Practice compassionate boundary-setting protecting emotional reserves while remaining genuinely present",
-              "Develop self-nurturing rituals ensuring personal emotional needs receive attention equal to others' needs",
-              "Implement care-giving sustainability protocols identifying when nurturing approaches depletion thresholds",
-              "Create emotional renewal practices maintaining fullness from which sustainable compassion flows naturally",
-              "Cultivate organizational care culture modeling sustainable nurturing that builds collective emotional capacity",
-              "Transform codependency patterns into mature interdependence discovering wholeness enables authentic service"
+              "Quiet close: 15-minute end-of-day consolidation (wins, lessons, next safeties).",
+              "Boundary audit: list what is core to protect vs. what should circulate.",
+              "Re-entry plan: for any isolation block > 3 days, write the bridge back.",
+              "Stewardship calendar: monthly review of containers, roles, and backups.",
+              "Redundancy build: train one new steward each week on a critical SOP.",
+              "Signal hygiene: mute one distracting channel; replace with a reflection ritual.",
+              "Sunset one artifact: retire or archive something that no longer serves."
             ],
             "transformation_indicators": [
-              "Increased capacity to nurture others deeply without emotional exhaustion or resentment",
-              "Greater skill in maintaining emotional wholeness while remaining genuinely present to others' pain",
-              "Stronger ability to set loving boundaries that serve both self and others appropriately",
-              "Wisdom discerning when engagement serves versus when detachment protects necessary boundaries",
-              "Nurturing becoming naturally sustainable and wholeness-based rather than depleting or martyring"
+              "Quarter-over-quarter retention of gains without heroic exertion.",
+              "Clearer attention with fewer leaks and rework cycles.",
+              "More shared stewardship and lower bus-factor risk.",
+              "Faster, calmer transitions between cycles and roles.",
+              "Containers evolve as needed without losing mission integrity."
             ]
           },
           "hero_journey_position": {
-            "stage": "Scene XV: Resolution - Final Image",
-            "preliminary_beat": "Resolution - Emotional Mastery",
-            "save_the_cat_beat": "Resolution - Integrated Wholeness",
-            "character_state": "The Daughter in resolution must channel communal emotional healing while maintaining wholeness—nurturing from fullness through integrated wisdom. She must care sustainably, maintain healthy boundaries, and demonstrate compassionate authority creating conditions where emotional healing flows from completeness rather than depletion or martyrdom",
-            "ordinary_world_baseline": "She had either depleted herself through martyring care lacking boundaries or withheld compassion protecting self from emotional overwhelm—now requires nurturing sovereign capacity combining emotional depth with sustainable boundaries, distinguishing mature care from either codependency or detachment",
-            "call_to_adventure_preview": "The deeper call emerges—to become someone who nurtures from emotional wholeness, who cares sustainably when others deplete recklessly, who leads through compassionate integration transforming care capacity into collective emotional wisdom"
+            "stage": "Scene XV: Master of Two Worlds",
+            "preliminary_beat": "Final Image",
+            "save_the_cat_beat": "Final Image",
+            "character_state": "Alone by choice—consolidating wisdom, protecting the core, preparing to cross back with steadiness.",
+            "ordinary_world_baseline": "Past cycles scattered energy or overexposed the core; now the container is built.",
+            "call_to_adventure_preview": "Teach others the art of chosen solitude—so mastery circulates safely when you return."
           },
           "specific_task_group_books_influenced_by": {
             "book1": {
-              "title": "Emotional Intelligence",
-              "author": "Daniel Goleman",
-              "section_of_focus": "Empathy and Social Skills",
-              "section_description": "Explores how emotional awareness and empathy enable effective relationship-building while maintaining personal boundaries.",
-              "connection_focus_area": "Teaches sustainable empathy ensuring compassionate engagement without emotional depletion or enmeshment.",
-              "connect_points": {
-                "point1": "Develop emotional self-awareness recognizing own feelings before attending to others' emotional states.",
-                "point2": "Practice empathic accuracy reading emotions correctly while maintaining healthy psychological boundaries.",
-                "point3": "Build social competence using emotional understanding to navigate relationships effectively and sustainably."
-              },
-              "terminal_learning_objectives": {
-                "objective1": "Conduct daily emotional inventory identifying personal feelings before engaging in caregiving activities",
-                "objective2": "Practice boundary-setting exercises maintaining empathic connection while protecting emotional reserves",
-                "objective3": "Develop empathy sustainability plan ensuring care capacity remains renewable through self-nurturing"
-              }
+              "title": "Solitude",
+              "author": "Michael Harris",
+              "section_of_focus": "The Value of Being Alone",
+              "section_description": "Explores how intentional solitude deepens creativity and insight.",
+              "connection_focus_area": "Highlights retreat as a catalyst for breakthroughs.",
+              "connect_points": { "point1": "Schedule daily silent blocks.", "point2": "Journal insights upon return.", "point3": "Use solitude to test new ideas." },
+              "terminal_learning_objectives": { "objective1": "Complete a 7-day solitude experiment.", "objective2": "Document creative outputs.", "objective3": "Reflect on personal changes post-experiment." }
             },
             "book2": {
-              "title": "Daring Greatly",
-              "author": "Brené Brown",
-              "section_of_focus": "Vulnerability and Wholeness",
-              "section_description": "Details how embracing vulnerability from wholeness enables authentic connection without losing self in others' emotions.",
-              "connection_focus_area": "Empowers authentic caring preventing martyrdom while maintaining genuine emotional presence with others.",
-              "connect_points": {
-                "point1": "Embrace vulnerability as strength recognizing that authentic care requires emotional honesty not perfection.",
-                "point2": "Distinguish shame from guilt developing self-compassion that enables compassion for others without enmeshment.",
-                "point3": "Cultivate worthiness independent of caregiving knowing value exists beyond serving others' needs."
-              },
-              "terminal_learning_objectives": {
-                "objective1": "Practice vulnerability sharing emotional truth while maintaining appropriate boundaries in caregiving contexts",
-                "objective2": "Develop shame resilience techniques separating self-worth from others' approval or dependence",
-                "objective3": "Create worthiness affirmations reinforcing value beyond caregiving role or rescue behaviors"
-              }
+              "title": "Deep Work",
+              "author": "Cal Newport",
+              "section_of_focus": "Focused Execution",
+              "section_description": "Practical frameworks for distraction-free concentration.",
+              "connection_focus_area": "Builds high-value output through isolation and depth.",
+              "connect_points": { "point1": "Design distraction-free sessions.", "point2": "Eliminate all digital distractions.", "point3": "Track output quality over time." },
+              "terminal_learning_objectives": { "objective1": "Design a deep-work schedule.", "objective2": "Measure quality gains per session.", "objective3": "Iterate environment for peak focus." }
             },
             "book3": {
-              "title": "Nonviolent Communication",
-              "author": "Marshall B. Rosenberg",
-              "section_of_focus": "Empathic Connection",
-              "section_description": "Identifies how compassionate communication enables deep understanding while maintaining clear boundaries and meeting all parties' needs.",
-              "connection_focus_area": "Structured approach to empathy enabling sustainable care through mutual needs awareness and respect.",
-              "connect_points": {
-                "point1": "Observe without evaluating separating facts from interpretations enabling clarity in emotional situations.",
-                "point2": "Identify feelings and needs accurately for both self and others enabling mutual understanding.",
-                "point3": "Make requests rather than demands empowering others while respecting own needs equally."
-              },
-              "terminal_learning_objectives": {
-                "objective1": "Practice observation skills describing situations factually without judgment or interpretation",
-                "objective2": "Develop feelings/needs vocabulary accurately naming emotional states and underlying needs for self and others",
-                "objective3": "Create request protocols formulating clear asks that respect both parties' autonomy and needs"
-              }
+              "title": "The Gifts of Solitude",
+              "author": "Sheila Ostrander",
+              "section_of_focus": "Inner Transformation",
+              "section_description": "Discusses how solitude can unlock spiritual and psychological growth.",
+              "connection_focus_area": "Links retreat to profound personal insights.",
+              "connect_points": { "point1": "Practice guided solitude meditation.", "point2": "Map emotional shifts during retreat.", "point3": "Integrate learnings into daily life." },
+              "terminal_learning_objectives": { "objective1": "Lead a guided solitude session.", "objective2": "Chart emotional progress over time.", "objective3": "Apply insights to current challenges." }
             }
           },
           "laurasia_narrative_integration": {
-            "opening_scene": "Book 2, Chapter 39 - Resolution. The Daughter now manifests capacity for emotional wholeness completing Resolution fulfillment. She must channel communal healing, maintain emotional boundaries, and demonstrate sustainable compassion creating conditions where nurturing flows from completeness rather than depletion through integrated wisdom and mature care",
-            "symbolic_moment": "Queen beside still waters reflecting emotional depth—the recognition that wholeness enables authentic service, that sustainable compassion flows from fullness, that mature nurturing maintains boundaries precisely when care demands are greatest",
-            "emotional_landscape": "Depth and wholeness intertwined—the compassion to feel deeply alongside the wisdom to care sustainably, discovering that emotional mastery means nurturing powerfully without depletion through integrated self-knowledge and boundary clarity",
-            "threshold_vision": "Understanding that transformational care requires emotional wholeness capacity—that maintaining inner completeness through integrated wisdom enables enduring compassion, that sustainable nurturing creates lasting healing, that caring from fullness when others martyr recklessly determines resilience or collapse",
-            "transformation_promise": "This chapter establishes that resolution leadership requires emotional wholeness capacity—that learning to nurture from fullness through integrated wisdom and maintain sustainable compassion now builds capacity for large-scale healing ahead where those depleting through martyrdom create caregiver burnout and systemic dysfunction while those caring from wholeness catalyze collective flourishing and enduring wellness",
-            "series_arc_connection": "The emotional wholeness capacity developed here becomes essential for civilization-scale healing later—by learning to nurture from completeness through integrated wisdom at personal scale now, she develops capacity to lead through planetary transformation where those martyring through reckless over-giving create caregiver collapse and collective dysfunction while those channeling compassion through sustainable fullness catalyze lasting wellness and evolutionary healing"
+            "opening_scene": "Standing alone at journey’s end, the Daughter reflects on her transformations—poised to rejoin the world with newfound wisdom.",
+            "symbolic_moment": "Four towers holding a heart of ember—the structure protects the flame without smothering it.",
+            "emotional_landscape": "Quiet, held, unhurried—dignity in the pause.",
+            "threshold_vision": "Re-entry is secured by stewardship, not spectacle; by containers that keep the good intact.",
+            "transformation_promise": "What was won will endure—and can now be shared without loss."
           }
-        },
-        "personality_profile_80": {
-          
         }
       }
     },
-    "family_3": {},
+    "family_3": {
+      
+    },
     "family_4": {},
     "family_5": {},
     "family_6": {},
