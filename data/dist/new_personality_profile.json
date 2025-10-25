@@ -20429,7 +20429,226 @@
              "transformation_promise": "By becoming a harbor in the storm, the hero learns to guide others safely through the passage ahead."
           }
         },
-        "personality_profile_90": {},
+        "personality_profile_90": {
+          "canonical_id": "EA-090",
+          "unique_identifier": "STG 3.1.4.1",
+          "specific_task_group_title": "Removal",
+          "all_chapter": 90,
+          "novel_book": 3,
+          "chapter": "Chapter 10",
+          "chapter_title": "Pressure — Removal",
+          "type": "Specific Task Group",
+          "display_name": "Essentialist Commander",
+          "theme": "Cutting through chaos to restore clarity—leadership through simplicity, focus, and disciplined elimination of the nonessential.",
+          "family": "Mind / Precision — Focus & Simplification",
+          "summary": "Guided by the Three of Swords, this archetype transforms pain and pressure into precision. Under relentless demands, the Essentialist Commander recognizes that every distraction drains vital force. By stripping away the unnecessary—tasks, attachments, noise—Francisco reclaims mastery over time and purpose. Removal is not loss but liberation; a disciplined act of focus that clarifies vision and amplifies power.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Three",
+          "tarot_symbolism": "The Three of Swords embodies the truth that clarity often cuts. In accepting the pain of separation from the inessential, the seeker gains vision sharp enough to pierce illusion and lead with purpose.",
+          "traits": {
+             "strengths": [
+                "filters tasks and commitments with precision and resolve",
+                "recognizes distraction as the enemy of depth",
+                "executes difficult cuts without emotional reactivity",
+                "prioritizes essentials and delegates the rest effectively",
+                "maintains mental clarity under mounting pressure",
+                "values quality of focus over quantity of effort",
+                "transforms constraint into concentrated power"
+             ],
+             "shadow": [
+                "detaches too quickly, risking emotional distance",
+                "perfectionism disguised as selectivity",
+                "over-pruning leading to isolation or rigidity",
+                "inability to rest after decisive elimination",
+                "frustration toward those who can’t match focus",
+                "confusing control with clarity"
+             ],
+             "growth_focus": [
+                "balance removal with renewal—space invites creation",
+                "leave room for spontaneity amid structure",
+                "delegate with empathy, not dismissal",
+                "reflect on the emotional cost of necessary cuts",
+                "practice gratitude for what remains essential",
+                "celebrate subtraction as an act of refinement, not rejection"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Chief Among the Mighty",
+             "chapter_theme": "Pressure",
+             "fiction_chapter_context": "Book 3, Chapter 10 — With competing demands pressing in, Francisco wields discernment like a blade, removing noise to protect focus and integrity."
+          },
+          "enneagram_link": {
+             "family_number": 1,
+             "note": "The reformer’s clarity fused with 3’s efficiency and 8’s decisive action—discipline in the service of purpose."
+          },
+          "color_alignment": {
+             "name": "Mardi Gras",
+             "hsl": "300,100%,10%",
+             "rgb_hex": "#330033",
+             "color_symbolism": "A dark violet of inward precision—discipline and devotion to the essential amid pressure and complexity."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.75,
+                "stability": 0.79,
+                "empathy": 0.58,
+                "openness": 0.67,
+                "orderliness": 0.85,
+                "novelty_seeking": 0.43,
+                "abstract_reasoning": 0.72,
+                "emotional_intensity": 0.49,
+                "social_dominance": 0.62,
+                "cooperativeness": 0.61,
+                "risk_tolerance": 0.56,
+                "conscientiousness": 0.88,
+                "adaptability": 0.65,
+                "imagination": 0.54
+             },
+             "match_weights": {
+                "conscientiousness": 0.4,
+                "orderliness": 0.35,
+                "stability": 0.25
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q573",
+                "Q574",
+                "Q575",
+                "Q576",
+                "Q577",
+                "Q578",
+                "Q579",
+                "Q580"
+             ],
+             "signals_map": {
+                "Q573": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I remove distractions to focus on what truly matters."
+                },
+                "Q574": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I define and protect time blocks for deep, uninterrupted work."
+                },
+                "Q575": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I can stay centered when cutting away nonessentials."
+                },
+                "Q576": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take deliberate action to simplify complex situations."
+                },
+                "Q577": {
+                   "dimension": "empathy",
+                   "polarity": -1,
+                   "content": "I sometimes neglect how my focus affects others’ feelings."
+                },
+                "Q578": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I am willing to make unpopular decisions for clarity’s sake."
+                },
+                "Q579": {
+                   "dimension": "abstract_reasoning",
+                   "polarity": 1,
+                   "content": "I visualize how systems perform better after simplification."
+                },
+                "Q580": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I refine priorities as conditions change without losing focus."
+                }
+             },
+             "daily_prompt": "What did I remove today that restored my energy or sharpened my focus?",
+             "practices": [
+                "List top three priorities for the week—eliminate one daily distraction.",
+                "Perform a 10-minute digital declutter before deep work sessions.",
+                "Run a weekly ‘stop doing’ reflection.",
+                "Block 90-minute focus sessions free of all notifications.",
+                "Delegate one recurring task this week to reclaim mental bandwidth.",
+                "Journal on how each subtraction served your mission."
+             ],
+             "transformation_indicators": [
+                "Noticeably reduced overwhelm and clearer strategic thinking.",
+                "Consistent alignment between daily actions and mission priorities.",
+                "Shorter task lists with greater impact results.",
+                "Greater composure under multiple external pressures.",
+                "Improved delegation and empowered teammates."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Pressure",
+             "preliminary_beat": "Theme Stated",
+             "save_the_cat_beat": "Pressure",
+             "character_state": "Under mounting external demands, the hero must clarify what truly matters and act with disciplined precision.",
+             "ordinary_world_baseline": "Distraction and obligation threaten to fragment purpose and dilute focus.",
+             "call_to_adventure_preview": "Clear the way forward—focus sharpens power, and power requires clarity."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Essentialism",
+                "author": "Greg McKeown",
+                "section_of_focus": "Explore and Edit",
+                "section_description": "Charts a process to discern vital priorities and eliminate the rest.",
+                "connection_focus_area": "Offers a framework to prune distractions.",
+                "connect_points": {
+                   "point1": "Conduct a quarterly priority audit.",
+                   "point2": "Practice saying no to non-essentials.",
+                   "point3": "Design a 'stop doing' list."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Complete an essential vs. non-essential matrix.",
+                   "objective2": "Refuse one non-aligned request per week.",
+                   "objective3": "Implement a monthly commitment review."
+                }
+             },
+             "book2": {
+                "title": "Deep Work",
+                "author": "Cal Newport",
+                "section_of_focus": "Work Rules",
+                "section_description": "Prescribes strategies to eliminate interruptions and maximize focus.",
+                "connection_focus_area": "Teaches structuring time for undisturbed productivity.",
+                "connect_points": {
+                   "point1": "Schedule two uninterrupted work blocks daily.",
+                   "point2": "Log and minimize digital distractions.",
+                   "point3": "Apply a shutdown ritual at day’s end."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design a deep-work schedule.",
+                   "objective2": "Track deep-work hours for two weeks.",
+                   "objective3": "Evaluate productivity gains from focus blocks."
+                }
+             },
+             "book3": {
+                "title": "The Life-Changing Magic of Tidying Up",
+                "author": "Marie Kondo",
+                "section_of_focus": "Discarding Clutter",
+                "section_description": "Details how removing physical clutter sparks mental clarity.",
+                "connection_focus_area": "Demonstrates the power of environment on focus.",
+                "connect_points": {
+                   "point1": "Conduct a workspace declutter exercise.",
+                   "point2": "Reflect on mental clarity post-tidy.",
+                   "point3": "Adopt a one-in, one-out rule for items."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Complete a desk decluttering session.",
+                   "objective2": "Measure perceived focus improvement.",
+                   "objective3": "Establish a daily 5-minute tidy habit."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "In his focus chamber, surrounded by scattered maps and missives, Francisco extinguishes every candle but one, vowing to act only on what burns brightest.",
+             "symbolic_moment": "A sword sheathed in silence—the cut complete, purpose revealed.",
+             "emotional_landscape": "Stoic, resolved, and sharply aware; the serenity of decisive elimination.",
+             "threshold_vision": "When pressure builds, simplify—the sword of clarity slices through confusion.",
+             "transformation_promise": "The hero learns that mastery is not found in doing more, but in daring to do only what matters most."
+          }
+        },
         "personality_profile_91": {},
         "personality_profile_92": {},
         "personality_profile_93": {},
