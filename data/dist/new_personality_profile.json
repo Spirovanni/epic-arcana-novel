@@ -18446,8 +18446,8 @@
     },
     "family_3": {
       "family_number": 3,
-      "family_name": "",
-      "family_summary": "",
+      "family_name": " ",
+      "family_summary": " ",
       "personalities": {
         "personality_profile_81": {
           "canonical_id": "EA-081",
@@ -21307,7 +21307,226 @@
               "transformation_promise": "The seeker’s journey becomes a path for many—what was personal revelation now becomes collective guidance for generations ahead."
             }
         },
-        "personality_profile_94": {},
+        "personality_profile_94": {
+            "canonical_id": "EA-094",
+            "unique_identifier": "STG 3.2.1.1",
+            "specific_task_group_title": "Goal Setting",
+            "all_chapter": 94,
+            "novel_book": 3,
+            "chapter": "Chapter 14",
+            "chapter_title": "Push — Goal Setting",
+            "type": "Specific Task Group",
+            "display_name": "Strategic Pathfinder",
+            "theme": "Turning intention into architecture—directing purpose through defined objectives, milestones, and disciplined pursuit.",
+            "family": "Mind / Structure — Strategy & Purpose",
+            "summary": "Aligned with the Page of Disks, the Strategic Pathfinder transforms vision into tangible direction. In Chapter 14, Francisco stands at the threshold of new wars and alliances, realizing that unchanneled power invites chaos. Goal Setting, here, becomes an act of survival: defining the mission, aligning allies, and sequencing effort. Each objective becomes a point of light through the fog of growing conflict.",
+            "tarot_family": "Disks",
+            "tarot_card_item": "Page",
+            "tarot_symbolism": "The Page of Disks symbolizes youthful diligence, steady planning, and the grounding of dreams into pragmatic form. It teaches that disciplined design brings purpose to power, transforming vision into structure.",
+            "traits": {
+              "strengths": [
+                  "crafts clear, achievable goals anchored in long-term vision",
+                  "translates ambition into measurable objectives",
+                  "synchronizes effort across allies and systems",
+                  "maintains focus amid external complexity and internal doubt",
+                  "balances optimism with tactical realism",
+                  "prioritizes effectively under pressure",
+                  "instills strategic discipline in followers"
+              ],
+              "shadow": [
+                  "obsessing over perfection before acting",
+                  "confusing planning with progress",
+                  "micromanaging collaborators",
+                  "rigidity when adaptation is required",
+                  "fear of delegation undermining leadership flow",
+                  "fixation on metrics over meaning"
+              ],
+              "growth_focus": [
+                  "create flexible frameworks that invite iteration",
+                  "integrate emotion and intuition into strategy",
+                  "measure not only outputs but learning and growth",
+                  "delegate planning to empower others’ ownership",
+                  "review goals regularly and prune outdated ones",
+                  "celebrate small wins to sustain motivation"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "Push",
+              "fiction_chapter_context": "Book 3, Chapter 14 — Surrounded by deception and escalating threats, Francisco and his council craft a long-term strategy to ensure the survival and advancement of their temporal order."
+            },
+            "enneagram_link": {
+              "family_number": 3,
+              "note": "The Achiever’s focus fused with 1’s order and 5’s analysis—clarity through disciplined progress and sustainable ambition."
+            },
+            "color_alignment": {
+              "name": "Lavender Rose",
+              "hsl": "315,70%,75%",
+              "rgb_hex": "#EA97D5",
+              "color_symbolism": "A serene pink-violet hue representing clarity through calm purpose—the mind’s design guided by heart’s vision."
+            },
+            "scoring_model": {
+              "dimensions": {
+                  "agency": 0.79,
+                  "stability": 0.81,
+                  "empathy": 0.63,
+                  "openness": 0.68,
+                  "orderliness": 0.88,
+                  "novelty_seeking": 0.46,
+                  "abstract_reasoning": 0.77,
+                  "emotional_intensity": 0.52,
+                  "social_dominance": 0.64,
+                  "cooperativeness": 0.72,
+                  "risk_tolerance": 0.58,
+                  "conscientiousness": 0.91,
+                  "adaptability": 0.66,
+                  "imagination": 0.61
+              },
+              "match_weights": {
+                  "conscientiousness": 0.4,
+                  "orderliness": 0.35,
+                  "stability": 0.25
+              },
+              "threshold": 0.7,
+              "top_signal_items": [
+                  "Q605",
+                  "Q606",
+                  "Q607",
+                  "Q608",
+                  "Q609",
+                  "Q610",
+                  "Q611",
+                  "Q612"
+              ],
+              "signals_map": {
+                  "Q605": {
+                    "dimension": "conscientiousness",
+                    "polarity": 1,
+                    "content": "I set clear, structured goals and follow through consistently."
+                  },
+                  "Q606": {
+                    "dimension": "orderliness",
+                    "polarity": 1,
+                    "content": "I organize objectives into sequential, achievable steps."
+                  },
+                  "Q607": {
+                    "dimension": "abstract_reasoning",
+                    "polarity": 1,
+                    "content": "I align short-term milestones with a long-term vision."
+                  },
+                  "Q608": {
+                    "dimension": "agency",
+                    "polarity": 1,
+                    "content": "I take proactive steps to define and pursue my mission."
+                  },
+                  "Q609": {
+                    "dimension": "stability",
+                    "polarity": 1,
+                    "content": "I maintain focus even when obstacles or distractions arise."
+                  },
+                  "Q610": {
+                    "dimension": "risk_tolerance",
+                    "polarity": 1,
+                    "content": "I accept uncertainty as part of strategic advancement."
+                  },
+                  "Q611": {
+                    "dimension": "cooperativeness",
+                    "polarity": 1,
+                    "content": "I include allies in my planning to ensure shared commitment."
+                  },
+                  "Q612": {
+                    "dimension": "emotional_intensity",
+                    "polarity": -1,
+                    "content": "I avoid impulsive goal changes driven by temporary emotions."
+                  }
+              },
+              "daily_prompt": "Which step today moved me measurably closer to my most essential goal?",
+              "practices": [
+                  "Write a weekly goal statement using SMART structure.",
+                  "Conduct a 15-minute review every Friday to assess milestones.",
+                  "Map goals visually to clarify interdependencies.",
+                  "Apply the ‘3-task rule’—focus only on three priorities per day.",
+                  "Establish OKRs with measurable key results.",
+                  "Audit goals quarterly, releasing what no longer aligns with purpose."
+              ],
+              "transformation_indicators": [
+                  "Reduced decision fatigue through structured clarity.",
+                  "Higher completion rate of key objectives.",
+                  "Stronger collaboration through transparent alignment.",
+                  "Increased momentum and reduced burnout.",
+                  "Consistent link between values, goals, and actions."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Push",
+              "preliminary_beat": "Tests, Allies and Enemies",
+              "save_the_cat_beat": "Push",
+              "character_state": "Facing escalating threats, the hero learns that power without direction is chaos—planning becomes both shield and compass.",
+              "ordinary_world_baseline": "Reactive survival; undefined objectives leading to wasted effort.",
+              "call_to_adventure_preview": "Define the destination to chart your course—clarity transforms resistance into trajectory."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                  "title": "Atomic Habits",
+                  "author": "James Clear",
+                  "section_of_focus": "How to Design Your Environment",
+                  "section_description": "Explores how environmental cues support habit formation and goal pursuit.",
+                  "connection_focus_area": "Demonstrates the role of structure in achieving objectives.",
+                  "connect_points": {
+                    "point1": "Identify key behaviors that support your goal.",
+                    "point2": "Stack new habits onto existing routines.",
+                    "point3": "Create reminders to track progress."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Design an environment optimized for goal achievement.",
+                    "objective2": "Implement a habit-stacking plan.",
+                    "objective3": "Use simple tracking tools to monitor milestones."
+                  }
+              },
+              "book2": {
+                  "title": "Measure What Matters",
+                  "author": "John Doerr",
+                  "section_of_focus": "Introduction to OKRs",
+                  "section_description": "Outlines how Objectives and Key Results provide a framework for setting and measuring ambitious goals.",
+                  "connection_focus_area": "Offers a structured approach to define and quantify success.",
+                  "connect_points": {
+                    "point1": "Draft clear Objectives tied to organizational vision.",
+                    "point2": "Identify 2–5 measurable Key Results per Objective.",
+                    "point3": "Review and adjust OKRs quarterly."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Create an OKR plan for a personal or team goal.",
+                    "objective2": "Set meaningful Key Results with clear metrics.",
+                    "objective3": "Establish a review cadence to drive accountability."
+                  }
+              },
+              "book3": {
+                  "title": "The 7 Habits of Highly Effective People",
+                  "author": "Stephen R. Covey",
+                  "section_of_focus": "Begin with the End in Mind",
+                  "section_description": "Encourages envisioning desired outcomes before taking action.",
+                  "connection_focus_area": "Emphasizes purpose-driven goal formulation.",
+                  "connect_points": {
+                    "point1": "Write a personal mission statement.",
+                    "point2": "Visualize long-term results daily.",
+                    "point3": "Align daily tasks with overarching goals."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Develop a written vision for success.",
+                    "objective2": "Create alignment between daily habits and long-term goals.",
+                    "objective3": "Evaluate decisions against your mission statement."
+                  }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "In a candlelit chamber of strategy maps and coded missives, Francisco and his council define the first structured campaign of their order.",
+              "symbolic_moment": "A compass placed atop a parchment map—the moment purpose gains direction.",
+              "emotional_landscape": "Focused, resolute, collaborative—intellect in service of destiny.",
+              "threshold_vision": "Planning transforms uncertainty into navigation; defined direction steadies both heart and hand.",
+              "transformation_promise": "The hero learns that foresight is strength—that even amid betrayal and chaos, a clear goal becomes the axis of endurance."
+            }
+        },
         "personality_profile_95": {},
         "personality_profile_96": {},
         "personality_profile_97": {},
