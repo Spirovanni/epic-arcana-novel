@@ -21527,7 +21527,226 @@
               "transformation_promise": "The hero learns that foresight is strength—that even amid betrayal and chaos, a clear goal becomes the axis of endurance."
             }
         },
-        "personality_profile_95": {},
+        "personality_profile_95": {
+            "canonical_id": "EA-095",
+            "unique_identifier": "STG 3.2.1.2",
+            "specific_task_group_title": "Focused Anguish",
+            "all_chapter": 95,
+            "novel_book": 3,
+            "chapter": "Chapter 15",
+            "chapter_title": "New World (Set-up) — Focused Anguish",
+            "type": "Specific Task Group",
+            "display_name": "Anguish Alchemist",
+            "theme": "Transmuting pain into precision—acknowledging, regulating, and channeling intense emotion into deliberate, values-led action.",
+            "family": "Emotion / Fortitude — Regulation & Resolve",
+            "summary": "Rooted in the Nine of Swords, this archetype faces the weight of leadership: sleepless doubt, invisible burdens, and the isolation that power invites. In Chapter 15, Francisco learns to meet anguish without denial—naming it, breathing through it, and shaping it into purposeful motion. Focused Anguish reframes distress as energy to be harnessed, not a fate to be feared, forging clarity and action when it would be easiest to withdraw.",
+            "tarot_family": "Swords",
+            "tarot_card_item": "Nine",
+            "tarot_symbolism": "The Nine of Swords represents anxiety, rumination, and the long night of the soul. Its teaching: illumination begins when fear is acknowledged; through mindful presence and disciplined reframing, anguish becomes resolve.",
+            "traits": {
+              "strengths": [
+                  "names difficult emotions clearly and without shame",
+                  "uses breath, pacing, and reframing to reduce overwhelm",
+                  "translates distress signals into prioritized action",
+                  "models vulnerability that strengthens collective trust",
+                  "sustains duty under pressure without hardening the heart",
+                  "tracks emotional triggers to anticipate and prepare",
+                  "creates rituals that convert rumination into decisive steps"
+              ],
+              "shadow": [
+                  "self-isolates to hide struggle, compounding stress",
+                  "confuses suppression with regulation",
+                  "catastrophizes setbacks into identity judgments",
+                  "overfunctions for others while neglecting self-care",
+                  "lets perfectionism stall needed movement",
+                  "uses work intensity to avoid grief or fear"
+              ],
+              "growth_focus": [
+                  "schedule recovery with the same rigor as responsibilities",
+                  "replace global self-judgments with precise observations",
+                  "ask for co-regulation and share realistic bandwidth",
+                  "practice stress reappraisal to harness arousal as fuel",
+                  "limit rumination windows; close with one concrete action",
+                  "align each step to a stated value to restore meaning"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "New world (set-up)",
+              "fiction_chapter_context": "Book 3, Chapter 15 — As guardians and gatekeepers close in, Francisco confronts the psychological toll of leadership, learning to transmute anguish into steady, purposeful motion."
+            },
+            "enneagram_link": {
+              "family_number": 4,
+              "note": "The depth of 4’s emotional honesty refined by 1’s discipline and 6’s resilient loyalty—feeling fully, choosing wisely, acting steadily."
+            },
+            "color_alignment": {
+              "name": "Tea Rose",
+              "hsl": "316,67%,69%",
+              "rgb_hex": "#E57DCA",
+              "color_symbolism": "A tender, resilient rose—sorrow acknowledged, strength reclaimed; the hue of soft courage under heavy skies."
+            },
+            "scoring_model": {
+              "dimensions": {
+                  "agency": 0.68,
+                  "stability": 0.81,
+                  "empathy": 0.82,
+                  "openness": 0.66,
+                  "orderliness": 0.69,
+                  "novelty_seeking": 0.41,
+                  "abstract_reasoning": 0.62,
+                  "emotional_intensity": 0.63,
+                  "social_dominance": 0.47,
+                  "cooperativeness": 0.76,
+                  "risk_tolerance": 0.52,
+                  "conscientiousness": 0.79,
+                  "adaptability": 0.72,
+                  "imagination": 0.64
+              },
+              "match_weights": {
+                  "stability": 0.35,
+                  "conscientiousness": 0.35,
+                  "empathy": 0.30
+              },
+              "threshold": 0.7,
+              "top_signal_items": [
+                  "Q613",
+                  "Q614",
+                  "Q615",
+                  "Q616",
+                  "Q617",
+                  "Q618",
+                  "Q619",
+                  "Q620"
+              ],
+              "signals_map": {
+                  "Q613": {
+                    "dimension": "empathy",
+                    "polarity": 1,
+                    "content": "I acknowledge my emotions openly and without shame."
+                  },
+                  "Q614": {
+                    "dimension": "stability",
+                    "polarity": 1,
+                    "content": "I use breathing and pacing to steady myself under stress."
+                  },
+                  "Q615": {
+                    "dimension": "conscientiousness",
+                    "polarity": 1,
+                    "content": "I convert distress into a short, actionable next step."
+                  },
+                  "Q616": {
+                    "dimension": "adaptability",
+                    "polarity": 1,
+                    "content": "I reframe setbacks as information rather than identity."
+                  },
+                  "Q617": {
+                    "dimension": "orderliness",
+                    "polarity": 1,
+                    "content": "I track triggers and patterns to prepare for hard moments."
+                  },
+                  "Q618": {
+                    "dimension": "emotional_intensity",
+                    "polarity": -1,
+                    "content": "I limit rumination and return to the present deliberately."
+                  },
+                  "Q619": {
+                    "dimension": "cooperativeness",
+                    "polarity": 1,
+                    "content": "I seek support or co-regulation when burdens grow heavy."
+                  },
+                  "Q620": {
+                    "dimension": "agency",
+                    "polarity": 1,
+                    "content": "I act in alignment with my values even when I feel afraid."
+                  }
+              },
+              "daily_prompt": "What emotion visited me today, and how did I turn it into one purposeful action?",
+              "practices": [
+                  "ABC loop: Assess sensation, Bear with breath (60–120s), Choose one aligned action.",
+                  "Two-column journal: ‘Story I’m telling’ vs. ‘Facts I can act on.’",
+                  "Stress reappraisal: rename heart-rate rise as ‘readiness’ before challenges.",
+                  "Time-bound rumination (5 minutes), then commit to a single step.",
+                  "Co-regulation call: share one feeling and one next action with an ally.",
+                  "Evening closure ritual: gratitude, lesson, micro-plan for the morning."
+              ],
+              "transformation_indicators": [
+                  "Shorter duration and lower intensity of overwhelm episodes.",
+                  "Increased frequency of values-aligned actions after emotional spikes.",
+                  "Greater willingness to disclose struggle appropriately.",
+                  "More consistent recovery practices and steadier sleep.",
+                  "Community perception of calm, honest leadership under strain."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "New world (set-up)",
+              "preliminary_beat": "Tests, Allies and Enemies",
+              "save_the_cat_beat": "New world (set-up)",
+              "character_state": "Under new burdens and scrutiny, the hero learns to face inner storms directly—feeling fully, acting deliberately.",
+              "ordinary_world_baseline": "Anxiety unmanaged becomes avoidance and isolation.",
+              "call_to_adventure_preview": "Turn pain into purpose—let emotion inform action, not dictate it."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                  "title": "Emotional Agility",
+                  "author": "Susan David",
+                  "section_of_focus": "Navigating Emotions",
+                  "section_description": "Presents a four-step method for facing, accepting, and using emotions constructively.",
+                  "connection_focus_area": "Offers a roadmap to work with, rather than against, our inner experiences.",
+                  "connect_points": {
+                    "point1": "Label and accept difficult emotions.",
+                    "point2": "Detach from unhelpful thoughts.",
+                    "point3": "Choose values-aligned responses."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Practice the ABC (Assess, Bear, Choose) framework daily.",
+                    "objective2": "Document emotional triggers and outcomes.",
+                    "objective3": "Develop a personal plan for emotion-based decision making."
+                  }
+              },
+              "book2": {
+                  "title": "Rising Strong",
+                  "author": "Brené Brown",
+                  "section_of_focus": "The Reckoning",
+                  "section_description": "Explores recognizing emotions after a fall and owning our stories to rise again.",
+                  "connection_focus_area": "Demonstrates the courage needed to walk through vulnerability.",
+                  "connect_points": {
+                    "point1": "Record the facts of an emotional setback.",
+                    "point2": "Identify the stories we tell ourselves.",
+                    "point3": "Rewrite narratives that empower growth."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Journal a recent failure and analyze emotional response.",
+                    "objective2": "Practice vulnerability in sharing your story.",
+                    "objective3": "Create a rebound action plan after setbacks."
+                  }
+              },
+              "book3": {
+                  "title": "The Upside of Stress",
+                  "author": "Kelly McGonigal",
+                  "section_of_focus": "How to Love Stress",
+                  "section_description": "Reframes stress as a catalyst for growth and enhanced performance.",
+                  "connection_focus_area": "Shows how embracing distress can increase resilience.",
+                  "connect_points": {
+                    "point1": "Reinterpret physical stress signals as helpful.",
+                    "point2": "Use stress-induced focus to tackle challenges.",
+                    "point3": "Leverage community support under pressure."
+                  },
+                  "terminal_learning_objectives": {
+                    "objective1": "Practice the “stress‐is‐your‐friend” mindset daily.",
+                    "objective2": "Apply stress reappraisal techniques in real scenarios.",
+                    "objective3": "Measure performance changes under controlled stress."
+                  }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "Alone in the isolation chamber, shadows lengthen as Francisco’s pulse hammers; he places a hand to his chest and counts the breath back to center.",
+              "symbolic_moment": "Nine etched lines on stone—one erased with each steady exhale until only a path remains.",
+              "emotional_landscape": "Heavy, intimate, unflinching—sorrow seen and steadied into motion.",
+              "threshold_vision": "What is faced can be shaped; anguish, once named, becomes energy for the work.",
+              "transformation_promise": "The hero learns to alchemize pain into precise action, leading with honest steadiness in a world that demands both."
+            }
+        },
         "personality_profile_96": {},
         "personality_profile_97": {},
         "personality_profile_98": {},
