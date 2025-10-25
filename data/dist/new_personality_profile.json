@@ -19109,7 +19109,226 @@
             "transformation_promise": "By knowing himself deeply, the hero becomes unshakable in the face of future trials."
           }
         },
-        "personality_profile_84": {},
+        "personality_profile_84": {
+          "canonical_id": "EA-084",
+          "unique_identifier": "STG 3.1.2.1",
+          "specific_task_group_title": "Trauma",
+          "all_chapter": 84,
+          "novel_book": 3,
+          "chapter": "Chapter 4",
+          "chapter_title": "Immediate Reaction — Trauma",
+          "type": "Specific Task Group",
+          "display_name": "Wounded Healer",
+          "theme": "Facing sudden harm and old scars to begin true healing—transforming pain into resilient strength and relational repair.",
+          "family": "Emotion / Healing — Resilience & Repair",
+          "summary": "The Five of Cups anchors this profile: a rupture that exposes loss, regret, and what cannot be undone—yet quietly points to what still remains. In Book 3, Chapter 4, a sudden wound tests the Magus’s resolve and surfaces old family scars. Trauma here is not a narrative detour; it is the honest consequence of power on relationships. By acknowledging pain in body and heart, the path of resilient mastery begins: grounding, tending, integrating, and choosing connection over collapse.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Five",
+          "tarot_symbolism": "Five of Cups embodies acute sorrow, shock, and the first waves of grief after a rupture. Its medicine is orientation: notice what has spilled, then turn—however slowly—toward the vessels still upright. Healing starts when we name the hurt, regulate the body, and rebuild trust.",
+          "traits": {
+             "strengths": [
+                "acknowledges pain without bypassing or dramatizing it",
+                "uses grounding and co-regulation to restore safety after shock",
+                "translates trauma literacy into compassionate boundaries",
+                "repairs relationships through accountability and paced dialogue",
+                "converts setbacks into structured healing plans and routines",
+                "models courage by seeking help and naming needs",
+                "tracks progress gently while honoring limits and pace"
+             ],
+             "shadow": [
+                "numbing, avoidance, or spiritual bypass to dodge difficult feelings",
+                "catastrophizing setbacks and over-identifying with the wound",
+                "reopening conflict before safety and skills are in place",
+                "misusing power to control outcomes instead of co-creating repair",
+                "rushing healing to reclaim normalcy, causing re-injury",
+                "isolating rather than leaning on trusted community"
+             ],
+             "growth_focus": [
+                "prioritize body-first safety (breath, grounding, environment) before meaning-making",
+                "separate acute stabilization from deeper processing; pace the work",
+                "practice repair scripts: name impact, own behavior, invite needs",
+                "build a personal regulation kit (2 grounding, 2 soothing, 1 support reach-out)",
+                "map triggers to sensations and create pre-commitments for care",
+                "schedule small joys and connection rituals to counter withdrawal"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Chief Among the Mighty",
+             "chapter_theme": "Immediate Reaction",
+             "fiction_chapter_context": "Book 3, Chapter 4 — A jealous attack shatters the fragile calm. Francisco suffers a literal and relational wound; family bonds strain under the cost of power. The first work is safety, honesty, and choosing repair."
+          },
+          "enneagram_link": {
+             "family_number": 6,
+             "note": "Stabilizing courage under threat (6) supported by 2’s compassionate tending and 9’s nervous-system calming—safety, connection, and paced repair over reactivity."
+          },
+          "color_alignment": {
+             "name": "Hollywood Cerise",
+             "hsl": "324,100%,50%",
+             "rgb_hex": "#FF0099",
+             "color_symbolism": "A vivid ache turned vow: grief acknowledged, love defended, and the will to heal made bright and unmistakable."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.55,
+                "stability": 0.58,
+                "empathy": 0.82,
+                "openness": 0.66,
+                "orderliness": 0.57,
+                "novelty_seeking": 0.36,
+                "abstract_reasoning": 0.61,
+                "emotional_intensity": 0.72,
+                "social_dominance": 0.38,
+                "cooperativeness": 0.79,
+                "risk_tolerance": 0.41,
+                "conscientiousness": 0.77,
+                "adaptability": 0.63,
+                "imagination": 0.58
+             },
+             "match_weights": {
+                "empathy": 0.35,
+                "conscientiousness": 0.35,
+                "stability": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q525",
+                "Q526",
+                "Q527",
+                "Q528",
+                "Q529",
+                "Q530",
+                "Q531",
+                "Q532"
+             ],
+             "signals_map": {
+                "Q525": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I acknowledge hurt (mine or others’) without minimizing or exaggerating it."
+                },
+                "Q526": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I use grounding skills to regain safety after shocks."
+                },
+                "Q527": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I translate healing intentions into a practical, paced plan."
+                },
+                "Q528": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I invite support and practice repair rather than going it alone."
+                },
+                "Q529": {
+                   "dimension": "emotional_intensity",
+                   "polarity": -1,
+                   "content": "I resist rehashing or catastrophizing when I’m dysregulated."
+                },
+                "Q530": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take responsibility for my impact and initiate repair."
+                },
+                "Q531": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I keep simple routines that support recovery (sleep, movement, food, connection)."
+                },
+                "Q532": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adjust my pace when signals show I’m nearing re-injury."
+                }
+             },
+             "daily_prompt": "What pain did I honor today—and how did I support safety, connection, or repair in response?",
+             "practices": [
+                "Five-by-five grounding: 5 breaths, 5 senses check, 5 body points contacting support.",
+                "Create a regulation kit: two grounding, two soothing, one reach-out action written and ready.",
+                "Write a repair note using the formula: observation → impact → ownership → needs/request.",
+                "Track a trigger map for one week (situation → sensation → meaning → response).",
+                "Schedule two micro-joys and one connection ritual this week.",
+                "Aftercare protocol: plan gentle activity within 24 hours of any hard conversation."
+             ],
+             "transformation_indicators": [
+                "Shorter time from shock to basic regulation and clarity.",
+                "Greater use of co-regulation and community support.",
+                "Repairs attempted sooner with better outcomes.",
+                "Reduction in avoidance/numbing patterns.",
+                "Healing routines maintained through stressful periods."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Refusal of the Call",
+             "preliminary_beat": "Set-up",
+             "save_the_cat_beat": "Catalyst",
+             "character_state": "Reeling from sudden harm, the hero confronts loss and fear; the body asks for safety while the heart longs for repair.",
+             "ordinary_world_baseline": "Family bonds already strained; power has costs not yet fully faced.",
+             "call_to_adventure_preview": "Choose healing as mastery: regulate, reckon, repair—then rise."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "The Body Keeps the Score",
+                "author": "Bessel van der Kolk",
+                "section_of_focus": "Neurobiology of Trauma",
+                "section_description": "Examines how trauma reshapes brain and body responses.",
+                "connection_focus_area": "Understanding trauma physiology informs healing practices.",
+                "connect_points": {
+                   "point1": "Identify bodily signs of trauma activation.",
+                   "point2": "Practice a grounding technique for regulation.",
+                   "point3": "Map trauma triggers to bodily sensations."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Explain the fight-flight-freeze response in trauma.",
+                   "objective2": "Demonstrate two grounding exercises.",
+                   "objective3": "Create a personal trauma regulation plan."
+                }
+             },
+             "book2": {
+                "title": "Rising Strong",
+                "author": "Brené Brown",
+                "section_of_focus": "The Reckoning",
+                "section_description": "Guides through acknowledging and owning painful emotions.",
+                "connection_focus_area": "Facing discomfort accelerates emotional resilience.",
+                "connect_points": {
+                   "point1": "Journal a recent emotional fall.",
+                   "point2": "Name the feelings without judgment.",
+                   "point3": "Craft a narrative that honors vulnerability."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Complete a reckoning journal entry.",
+                   "objective2": "Identify coping strategies for emotional upset.",
+                   "objective3": "Share a personal resilience story."
+                }
+             },
+             "book3": {
+                "title": "Option B",
+                "author": "Sheryl Sandberg & Adam Grant",
+                "section_of_focus": "Building Resilience",
+                "section_description": "Explores how setbacks can catalyze growth and new purpose.",
+                "connection_focus_area": "Resilience emerges when we integrate adversity into our story.",
+                "connect_points": {
+                   "point1": "Reframe a past setback as a growth opportunity.",
+                   "point2": "Seek support from community networks.",
+                   "point3": "Define next steps after a major challenge."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Rebuild a personal narrative post-adversity.",
+                   "objective2": "Map a resilience support plan.",
+                   "objective3": "Outline growth goals rooted in past lessons."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "In the wreckage of the family home, Francisco steadies his breath as grief and adrenaline surge; he chooses safety first, then truth.",
+             "symbolic_moment": "Shattered glass beside two unbroken cups—loss acknowledged, love still standing.",
+             "emotional_landscape": "Raw, tender, and courageous; pain named and held with care.",
+             "threshold_vision": "Healing is the courageous turn from what spilled to what remains and can be rebuilt.",
+             "transformation_promise": "Trauma becomes the forge where compassion, boundaries, and resilient mastery are formed."
+          }
+        },
         "personality_profile_85": {},
         "personality_profile_86": {},
         "personality_profile_87": {},
