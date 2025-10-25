@@ -19549,7 +19549,226 @@
              "transformation_promise": "By cutting ties with the past, the hero forges unencumbered strength—the clarity to serve without compromise and to lead without regret."
           }
         },
-        "personality_profile_86": {},
+        "personality_profile_86": {
+          "canonical_id": "EA-086",
+          "unique_identifier": "STG 3.1.2.3",
+          "specific_task_group_title": "Apathy",
+          "all_chapter": 86,
+          "novel_book": 3,
+          "chapter": "Chapter 6",
+          "chapter_title": "The Call to Adventure — Apathy",
+          "type": "Specific Task Group",
+          "display_name": "Rekindled Seeker",
+          "theme": "Reigniting purpose through conscious reengagement—transforming numbness and doubt into renewed curiosity, vitality, and drive.",
+          "family": "Emotion / Motivation — Renewal & Passion",
+          "summary": "The Four of Cups defines this archetype: the pause of emotional withdrawal that tests desire’s authenticity. In Chapter 6, Francisco faces the shadow of power—apathy born of exhaustion and grief. Detached from feeling, he risks losing connection to the force that fuels his magic. The Rekindled Seeker represents the moment when inner spark must be reignited—not through force, but through rediscovery of meaning, curiosity, and joy. This archetype bridges the chasm between disengagement and devotion, showing that passion is not found but rebuilt through presence and purpose.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Four",
+          "tarot_symbolism": "The Four of Cups symbolizes disconnection, introspective fatigue, and the quiet yearning for renewal. Its wisdom: disengagement signals not the end of feeling but the threshold of rediscovery. From the stillness of apathy, authentic desire reawakens.",
+          "traits": {
+             "strengths": [
+                "recognizes emotional stagnation as a signal for reconnection",
+                "rebuilds motivation through small, meaningful engagements",
+                "practices gratitude and curiosity to reignite purpose",
+                "balances rest with gradual reactivation",
+                "transforms detachment into clarity about true priorities",
+                "models emotional honesty and self-compassion during low periods",
+                "teaches sustainable reengagement instead of reactive overdrive"
+             ],
+             "shadow": [
+                "denies or numbs feelings of emptiness, prolonging disengagement",
+                "waits for inspiration instead of cultivating it intentionally",
+                "confuses rest with avoidance and self-protection with indifference",
+                "projects stagnation outward as blame or cynicism",
+                "neglects supportive relationships during withdrawal",
+                "uses isolation as comfort rather than restoration"
+             ],
+             "growth_focus": [
+                "establish a gentle activation routine combining motion, music, and meaning",
+                "practice micro-curiosity: find one new interest each week",
+                "connect daily actions to long-term purpose through reflective journaling",
+                "share your struggle with a trusted ally to dissolve isolation",
+                "revisit core values and update goals that feel outdated",
+                "create rituals of gratitude to rekindle emotional resonance"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Chief Among the Mighty",
+             "chapter_theme": "The Call to Adventure",
+             "fiction_chapter_context": "Book 3, Chapter 6 — Numb and withdrawn, Francisco teeters on the edge of despair until guidance and self-reflection reignite his passion and reconnect him with his purpose."
+          },
+          "enneagram_link": {
+             "family_number": 9,
+             "note": "Integrates 9’s tendency toward disengagement with 3’s drive and 4’s emotional authenticity—renewal arises when peace meets purpose."
+          },
+          "color_alignment": {
+             "name": "Razzmatazz",
+             "hsl": "340,100%,50%",
+             "rgb_hex": "#FF0066",
+             "color_symbolism": "A vivid pink-red symbolizing revived enthusiasm—the return of heartbeat and purpose after emotional dormancy."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.58,
+                "stability": 0.62,
+                "empathy": 0.75,
+                "openness": 0.79,
+                "orderliness": 0.53,
+                "novelty_seeking": 0.64,
+                "abstract_reasoning": 0.67,
+                "emotional_intensity": 0.57,
+                "social_dominance": 0.44,
+                "cooperativeness": 0.69,
+                "risk_tolerance": 0.56,
+                "conscientiousness": 0.74,
+                "adaptability": 0.71,
+                "imagination": 0.76
+             },
+             "match_weights": {
+                "openness": 0.35,
+                "empathy": 0.35,
+                "adaptability": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q541",
+                "Q542",
+                "Q543",
+                "Q544",
+                "Q545",
+                "Q546",
+                "Q547",
+                "Q548"
+             ],
+             "signals_map": {
+                "Q541": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I seek new perspectives to rekindle motivation when I feel disengaged."
+                },
+                "Q542": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I reconnect with others to restore my sense of shared purpose."
+                },
+                "Q543": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adjust routines when my enthusiasm fades to invite novelty and play."
+                },
+                "Q544": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I reengage gradually through simple, meaningful actions."
+                },
+                "Q545": {
+                   "dimension": "emotional_intensity",
+                   "polarity": -1,
+                   "content": "I notice when numbness is masking deeper feelings rather than avoiding them."
+                },
+                "Q546": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take small, deliberate steps to rebuild passion and direction."
+                },
+                "Q547": {
+                   "dimension": "novelty_seeking",
+                   "polarity": 1,
+                   "content": "I introduce new experiences to awaken curiosity and joy."
+                },
+                "Q548": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I maintain grounding habits that sustain energy during emotional recovery."
+                }
+             },
+             "daily_prompt": "What renewed my sense of purpose today—and how can I nurture that spark tomorrow?",
+             "practices": [
+                "List three moments of interest or joy from the past 24 hours.",
+                "Pair a difficult task with a rewarding sensory ritual (music, aroma, light).",
+                "Revisit a childhood fascination for ten minutes daily.",
+                "Design a 'motivation map' linking habits to core values.",
+                "Create a playlist or visual board symbolizing your current why.",
+                "Connect with one supportive peer who embodies purposeful energy."
+             ],
+             "transformation_indicators": [
+                "Renewed enthusiasm and curiosity replacing apathy.",
+                "Consistent engagement in creative or meaningful tasks.",
+                "Reduced emotional numbness and improved mood stability.",
+                "Increased alignment between goals and personal values.",
+                "Observable momentum after periods of stagnation."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "The Call to Adventure",
+             "preliminary_beat": "Catalyst",
+             "save_the_cat_beat": "The Call to Adventure",
+             "character_state": "Emotionally exhausted, Francisco faces apathy—the dull ache of disconnect from purpose and power alike.",
+             "ordinary_world_baseline": "Having sacrificed much, he stands hollow; mastery feels meaningless without connection.",
+             "call_to_adventure_preview": "Rediscover feeling, reawaken curiosity, and remember why the path began—light the spark again."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Drive",
+                "author": "Daniel H. Pink",
+                "section_of_focus": "The Puzzle of Motivation",
+                "section_description": "Examines autonomy, mastery, and purpose as keys to sustaining drive.",
+                "connection_focus_area": "Highlights which internal factors reignite engagement.",
+                "connect_points": {
+                   "point1": "Map tasks to intrinsic goals.",
+                   "point2": "Set autonomy-based challenges.",
+                   "point3": "Align daily habits with meaningful outcomes."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design one self-directed mini-project.",
+                   "objective2": "Demonstrate mastery through incremental feedback.",
+                   "objective3": "Articulate personal purpose statement."
+                }
+             },
+             "book2": {
+                "title": "Atomic Habits",
+                "author": "James Clear",
+                "section_of_focus": "Make It Attractive",
+                "section_description": "Shows how to bundle habits with pleasure triggers to build motivation.",
+                "connection_focus_area": "Provides habit-based strategies to overcome inertia.",
+                "connect_points": {
+                   "point1": "Pair a tedious task with an enjoyable ritual.",
+                   "point2": "Visualize the next habit cue.",
+                   "point3": "Track progress to reinforce momentum."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Implement a two-step habit stacking exercise.",
+                   "objective2": "Monitor habit streaks over one week.",
+                   "objective3": "Adjust cues to optimize engagement."
+                }
+             },
+             "book3": {
+                "title": "Grit",
+                "author": "Angela Duckworth",
+                "section_of_focus": "Interest",
+                "section_description": "Explores how deep interest fuels sustained effort over time.",
+                "connection_focus_area": "Demonstrates rekindling curiosity as an antidote to apathy.",
+                "connect_points": {
+                   "point1": "Identify three emerging curiosities.",
+                   "point2": "Devote ten minutes daily to exploration.",
+                   "point3": "Share newfound interests with a peer group."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Create a weekly curiosity journal.",
+                   "objective2": "Apply a micro-learning ritual to a new topic.",
+                   "objective3": "Reflect on engagement spikes and troughs."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Francisco sits in silence before the dying flame of his lamp, the air heavy with stillness. His power feels distant—his heart, unreachable.",
+             "symbolic_moment": "A single cup untouched beside him begins to shimmer; unseen, a new hand offers water—the return of inspiration.",
+             "emotional_landscape": "Muted tones, suspended breath, the slow return of warmth and color to a grey world.",
+             "threshold_vision": "Apathy cracks when one remembers what once mattered and chooses to feel again.",
+             "transformation_promise": "The hero learns that purpose is not lost but must be rekindled through deliberate reengagement with life itself."
+          }
+        },
         "personality_profile_87": {},
         "personality_profile_88": {},
         "personality_profile_89": {},
