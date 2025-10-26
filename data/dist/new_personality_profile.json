@@ -22408,7 +22408,223 @@
           }
         },
         "personality_profile_99": {},
-        "personality_profile_100": {},
+        "personality_profile_100": {
+          "canonical_id": "EA-100",
+          "unique_identifier": "STG 3.2.3.1",
+          "specific_task_group_title": "Home Advantage",
+          "all_chapter": 100,
+          "novel_book": 3,
+          "chapter": "Chapter 20",
+          "chapter_title": "Midpoint — Home Advantage",
+          "type": "Specific Task Group",
+          "display_name": "Rooted Champion",
+          "theme": "Staying grounded in one’s core strengths while navigating temptation and transformation—stability as power.",
+          "family": "Will / Integrity — Core Strengths & Centeredness",
+          "summary": "Linked to the Four of Wands, the Rooted Champion stands for equilibrium, loyalty, and celebration of core identity. In Chapter 20, Francisco confronts the supreme temptation—a promise of absolute power. Through his grounding relationships and internal compass, he realizes that enduring strength comes not from new power but from refined purpose. Home Advantage transforms self-knowledge into a fortress: play to your strengths, not your illusions.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Four",
+          "tarot_symbolism": "The Four of Wands represents harmony, stability, and earned celebration. It anchors the fire of ambition in the structure of gratitude—your home base is both shield and launchpad.",
+          "traits": {
+             "strengths": [
+                "recognizes and cultivates innate abilities",
+                "anchors identity in purpose and relationships",
+                "draws stability from consistent rituals and values",
+                "resists temptation through loyalty to one’s foundation",
+                "translates personal strength into communal resilience",
+                "adapts old strengths to new challenges without losing balance"
+             ],
+             "shadow": [
+                "clings to comfort zones instead of evolving",
+                "confuses loyalty with stagnation",
+                "rejects necessary change due to fear of instability",
+                "relies too heavily on external validation from allies",
+                "mistakes rigidity for integrity"
+             ],
+             "growth_focus": [
+                "audit which strengths stabilize versus which limit growth",
+                "translate comfort into creative confidence, not resistance",
+                "revisit origin stories to find fresh lessons",
+                "share foundations openly—strength multiplies through connection",
+                "celebrate progress without clinging to form"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Midpoint",
+             "fiction_chapter_context": "Book 3, Chapter 20 — Francisco faces Dagon’s ultimate offer. Rooted in loyalty and principle, he resists corruption by trusting his home-ground strengths and relationships."
+          },
+          "enneagram_link": {
+             "family_number": 6,
+             "note": "Courage through faith and reliability—Type 6’s loyalty fused with 8’s steadfast conviction; steadfastness over seduction."
+          },
+          "color_alignment": {
+             "name": "Eggplant",
+             "hsl": "312,100%,25%",
+             "rgb_hex": "#820062",
+             "color_symbolism": "The deep violet of moral gravity—anchored power that tempers fire with devotion."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.78,
+                "stability": 0.91,
+                "empathy": 0.74,
+                "openness": 0.63,
+                "orderliness": 0.81,
+                "novelty_seeking": 0.44,
+                "abstract_reasoning": 0.69,
+                "emotional_intensity": 0.55,
+                "social_dominance": 0.68,
+                "cooperativeness": 0.83,
+                "risk_tolerance": 0.49,
+                "conscientiousness": 0.89,
+                "adaptability": 0.72,
+                "imagination": 0.61
+             },
+             "match_weights": {
+                "stability": 0.4,
+                "conscientiousness": 0.35,
+                "agency": 0.25
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q653",
+                "Q654",
+                "Q655",
+                "Q656",
+                "Q657",
+                "Q658",
+                "Q659",
+                "Q660"
+             ],
+             "signals_map": {
+                "Q653": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I rely on core values to stay steady under pressure."
+                },
+                "Q654": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I regularly apply my strongest skills to new challenges."
+                },
+                "Q655": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I draw confidence from what I know I do well."
+                },
+                "Q656": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "My relationships reinforce my resilience."
+                },
+                "Q657": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I maintain simple routines that restore my balance."
+                },
+                "Q658": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adapt my strengths to meet unfamiliar demands."
+                },
+                "Q659": {
+                   "dimension": "risk_tolerance",
+                   "polarity": -1,
+                   "content": "I avoid abandoning proven methods without good reason."
+                },
+                "Q660": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I share my experience to help others build their own stability."
+                }
+             },
+             "daily_prompt": "Which core strength supported me most today—and how can I adapt it to tomorrow’s challenge?",
+             "practices": [
+                "Complete a weekly strengths reflection to track consistent wins.",
+                "Identify one old skill that can serve a new purpose.",
+                "Set ‘anchor rituals’ to restore balance after difficult days.",
+                "List allies whose support reinforces your best qualities.",
+                "Translate comfort into mentorship—teach what you’ve mastered.",
+                "Reaffirm your guiding principles before major decisions."
+             ],
+             "transformation_indicators": [
+                "Greater resilience during periods of temptation or doubt.",
+                "Improved ability to repurpose known skills in new contexts.",
+                "Deeper relationships through shared stability.",
+                "Reduced stress responses under moral or emotional strain.",
+                "Increased humility paired with quiet confidence."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Midpoint",
+             "preliminary_beat": "The Ordeal (Temptation)",
+             "save_the_cat_beat": "Midpoint",
+             "character_state": "Grounded strength and loyalty allow resistance to temptation and renewal of conviction.",
+             "ordinary_world_baseline": "Temptation offers shortcuts; strength resides in endurance.",
+             "call_to_adventure_preview": "Play to your strengths—your foundation is your fortress."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Now, Discover Your Strengths",
+                "author": "Marcus Buckingham & Donald O. Clifton",
+                "section_of_focus": "The Strengths Philosophy",
+                "section_description": "Introduces the concept of focusing on strengths rather than fixing weaknesses.",
+                "connection_focus_area": "Frames strengths as the foundation for peak performance.",
+                "connect_points": {
+                   "point1": "Complete a strengths assessment.",
+                   "point2": "Map strengths to key roles and tasks.",
+                   "point3": "Develop a strengths development plan."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Identify top five strengths.",
+                   "objective2": "Apply strengths in a new project.",
+                   "objective3": "Coach others to leverage their strengths."
+                }
+             },
+             "book2": {
+                "title": "Strengths Based Leadership",
+                "author": "Tom Rath",
+                "section_of_focus": "Strengths of Effective Leaders",
+                "section_description": "Explores how leaders can use their unique strengths to inspire and guide teams.",
+                "connection_focus_area": "Demonstrates how personal strengths shape leadership style.",
+                "connect_points": {
+                   "point1": "Assess your leadership strengths.",
+                   "point2": "Align team roles around individual talents.",
+                   "point3": "Foster a strengths-based culture."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design a strengths-aligned team structure.",
+                   "objective2": "Facilitate strengths workshops.",
+                   "objective3": "Measure team performance by strengths impact."
+                }
+             },
+             "book3": {
+                "title": "Built to Last",
+                "author": "Jim Collins & Jerry I. Porras",
+                "section_of_focus": "Preserve the Core／Stimulate Progress",
+                "section_description": "Shows how visionary companies balance core values with innovation.",
+                "connection_focus_area": "Parallels how individuals can honor core skills while exploring new frontiers.",
+                "connect_points": {
+                   "point1": "Define your core values and skills.",
+                   "point2": "Set innovation goals around those cores.",
+                   "point3": "Review progress against core principles."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Articulate your personal core values.",
+                   "objective2": "Initiate a new venture that leverages core skills.",
+                   "objective3": "Evaluate progress in light of core principles."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Dagon’s realm unfolds as a mirrored paradise, every wish offered—but Francisco feels the pull of his own hearthfire, the quiet truth calling him home.",
+             "symbolic_moment": "A glowing ember cupped in his hands refuses to extinguish—the flame of integrity over illusion.",
+             "emotional_landscape": "Resolute, humble, faithful—an equilibrium between fire and root.",
+             "threshold_vision": "Temptation is loud, but loyalty is steady; the true home stands unburned.",
+             "transformation_promise": "By drawing from core strengths and trusted bonds, the hero proves that stability itself can be transcendent power."
+          }
+        },
         "personality_profile_101": {},
         "personality_profile_102": {},
         "personality_profile_103": {},
