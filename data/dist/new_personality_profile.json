@@ -24162,7 +24162,220 @@
              "transformation_promise": "Through conception, Francisco transcends mortality—becoming the bridge between divine imagination and human evolution."
           }
         },
-        "personality_profile_107": {},
+        "personality_profile_107": {
+          "canonical_id": "EA-107",
+          "unique_identifier": "STG 3.2.5.1",
+          "specific_task_group_title": "Domestic Bliss",
+          "all_chapter": 107,
+          "novel_book": 3,
+          "chapter": "Chapter 27",
+          "chapter_title": "Trials (Set-Up) — Domestic Bliss",
+          "type": "Specific Task Group",
+          "display_name": "The Hearthkeeper",
+          "theme": "Peace born of simplicity—finding sacred renewal in the warmth of everyday life.",
+          "family": "Healing / Restoration — Sanctuary & Stillness",
+          "summary": "The Hearthkeeper archetype, inspired by the Ten of Cups, represents the serenity that arises from nurturing the small, sustaining joys of home, community, and inner stillness. In Chapter 27, Francisco discovers that strength does not only come from conquest or innovation but from the quiet rituals that bind the human spirit. Domestic Bliss is the art of creating sanctuary amid the storm, turning ordinary acts into sacred restoration.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Ten",
+          "tarot_symbolism": "The Ten of Cups signifies emotional fulfillment, harmony, and peace found through unity, gratitude, and shared love—it is the ultimate card of soulful contentment.",
+          "traits": {
+             "strengths": [
+                "creates emotional and physical sanctuary for self and others",
+                "values gratitude and shared joy as sources of renewal",
+                "finds peace through simplicity and presence",
+                "brings healing energy to collective spaces",
+                "balances productivity with rest and restoration"
+             ],
+             "shadow": [
+                "avoidance of discomfort through retreat",
+                "dependence on routine to avoid growth",
+                "confusing comfort with stagnation",
+                "difficulty adapting when peace is disturbed",
+                "resistance to necessary conflict for change"
+             ],
+             "growth_focus": [
+                "balance inner peace with outward engagement",
+                "reconnect comfort with purpose-driven action",
+                "practice mindful gratitude as a grounding force",
+                "embrace disruption as part of healing",
+                "share sanctuary rather than hide within it"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Trials (Set-Up)",
+             "fiction_chapter_context": "Book 3, Chapter 27 — Amid loss and exhaustion, Francisco builds havens of safety and warmth. Through small rituals of community, he restores courage to his people and himself."
+          },
+          "enneagram_link": {
+             "family_number": 2,
+             "note": "The Nurturer in balance—compassionate and generous, yet learning to replenish the self as deeply as others."
+          },
+          "color_alignment": {
+             "name": "Violet",
+             "hsl": "300,100%,80%",
+             "rgb_hex": "#FF99FF",
+             "color_symbolism": "The color of gentle joy and healing—Violet embodies tenderness, gratitude, and emotional rebirth through rest."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.61,
+                "stability": 0.91,
+                "empathy": 0.94,
+                "openness": 0.79,
+                "orderliness": 0.82,
+                "novelty_seeking": 0.43,
+                "abstract_reasoning": 0.71,
+                "emotional_intensity": 0.88,
+                "social_dominance": 0.56,
+                "cooperativeness": 0.95,
+                "risk_tolerance": 0.48,
+                "conscientiousness": 0.84,
+                "adaptability": 0.76,
+                "imagination": 0.68
+             },
+             "match_weights": {
+                "empathy": 0.4,
+                "stability": 0.35,
+                "cooperativeness": 0.25
+             },
+             "threshold": 0.83,
+             "top_signal_items": [
+                "Q709",
+                "Q710",
+                "Q711",
+                "Q712",
+                "Q713",
+                "Q714",
+                "Q715",
+                "Q716"
+             ],
+             "signals_map": {
+                "Q709": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I find deep fulfillment in creating comfort for those I care about."
+                },
+                "Q710": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I stay grounded by maintaining small daily rituals."
+                },
+                "Q711": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I value shared experiences and collective restoration."
+                },
+                "Q712": {
+                   "dimension": "emotional_intensity",
+                   "polarity": 1,
+                   "content": "I experience strong emotional renewal through gratitude and connection."
+                },
+                "Q713": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I maintain organized, peaceful environments to support mental clarity."
+                },
+                "Q714": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I can rebuild a sense of home even when circumstances change."
+                },
+                "Q715": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I see ordinary routines as opportunities for mindfulness and meaning."
+                },
+                "Q716": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I find comfort in arranging spaces that nurture emotional balance."
+                }
+             },
+             "daily_prompt": "What simple act today could restore your sense of peace and connection?",
+             "practices": [
+                "Start a morning gratitude ritual for three small joys.",
+                "Share a meal mindfully, focusing on taste, warmth, and presence.",
+                "Declutter one space in your environment to restore mental clarity.",
+                "Take an evening walk and reflect on what stillness feels like.",
+                "Create a nightly reflection on one comfort that renewed your strength."
+             ],
+             "transformation_indicators": [
+                "Improved emotional regulation and calmness.",
+                "Increased sense of gratitude and daily contentment.",
+                "Greater emotional connection in relationships.",
+                "Enhanced ability to find beauty amid adversity."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Trials (Set-Up)",
+             "preliminary_beat": "All Is Lost — Restoration Through Sanctuary",
+             "save_the_cat_beat": "Trials (Set-Up)",
+             "character_state": "Strength through stillness—Francisco learns that the simplest acts of care sustain the courage to endure.",
+             "ordinary_world_baseline": "Chaos balanced by calm; the heart’s hearth rekindled in a world of ash.",
+             "call_to_adventure_preview": "Find strength in simplicity—the hearthfire you tend becomes the light that leads you home."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "The Book of Joy",
+                "author": "Dalai Lama & Desmond Tutu",
+                "section_of_focus": "Finding Joy in Adversity",
+                "section_description": "Demonstrates that gratitude transforms hardship into grace.",
+                "connection_focus_area": "Promotes joy and presence as antidotes to despair.",
+                "connect_points": {
+                   "point1": "List three daily gratitudes upon waking.",
+                   "point2": "Pause to savor joyful sensations during stressful moments.",
+                   "point3": "Express gratitude to someone each evening."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Build a daily gratitude rhythm.",
+                   "objective2": "Record emotional shifts from daily appreciation.",
+                   "objective3": "Host a group discussion on shared joy."
+                }
+             },
+             "book2": {
+                "title": "Wherever You Go, There You Are",
+                "author": "Jon Kabat-Zinn",
+                "section_of_focus": "Mindful Living",
+                "section_description": "Teaches mindfulness as a practice of returning to presence.",
+                "connection_focus_area": "Reinforces stillness as the anchor of resilience.",
+                "connect_points": {
+                   "point1": "Inhale deeply for five cycles each morning.",
+                   "point2": "Practice mindful eating for one meal daily.",
+                   "point3": "Perform a nightly body-scan meditation."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Integrate short mindfulness sessions into routine.",
+                   "objective2": "Measure stress reduction over a week.",
+                   "objective3": "Increase ability to remain present under strain."
+                }
+             },
+             "book3": {
+                "title": "The Little Book of Hygge",
+                "author": "Meik Wiking",
+                "section_of_focus": "Creating Cozy Spaces",
+                "section_description": "Explains how comfort, light, and shared rituals restore well-being.",
+                "connection_focus_area": "Encourages creating physical spaces that reflect inner peace.",
+                "connect_points": {
+                   "point1": "Redesign a home corner for warmth and comfort.",
+                   "point2": "Host a small shared comfort ritual weekly.",
+                   "point3": "Use candlelight, scent, or texture to enhance calm."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Create and maintain a personal sanctuary space.",
+                   "objective2": "Cultivate social comfort through shared routine.",
+                   "objective3": "Assess emotional restoration from environmental changes."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "As winter settles over the war-torn landscape, Francisco kindles a small fire in the ruins, gathering survivors around it in quiet companionship.",
+             "symbolic_moment": "A single cup of shared tea becomes a symbol of rebirth—the warmth of human connection enduring amid the cold.",
+             "emotional_landscape": "Tender, intimate, and bittersweet—a sanctuary carved from sorrow.",
+             "threshold_vision": "Through stillness, humanity remembers itself; healing begins not with triumph, but with tenderness.",
+             "transformation_promise": "In the heart of ruin, Francisco rediscovers the sacred rhythm of care—the flame that turns endurance into renewal."
+          }
+        },
         "personality_profile_108": {},
         "personality_profile_109": {},
         "personality_profile_110": {},
