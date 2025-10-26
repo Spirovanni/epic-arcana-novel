@@ -24590,7 +24590,220 @@
              "transformation_promise": "By rallying his supporters, Francisco becomes not just a leader but a living symbol of perseverance—proof that one flame can light a thousand more."
           }
         },
-        "personality_profile_109": {},
+        "personality_profile_109": {
+          "canonical_id": "EA-109",
+          "unique_identifier": "STG 3.2.5.3",
+          "specific_task_group_title": "Distribute Load",
+          "all_chapter": 109,
+          "novel_book": 3,
+          "chapter": "Chapter 29",
+          "chapter_title": "The Abyss — Distribute Load",
+          "type": "Specific Task Group",
+          "display_name": "The Burden Weaver",
+          "theme": "Strength through sharing—true power emerges when leadership becomes collective.",
+          "family": "Leadership / Empowerment — Trust & Distribution",
+          "summary": "The Burden Weaver archetype, inspired by the Ten of Wands, represents the leader who learns that greatness lies not in carrying all weight alone, but in the wisdom to empower others. In Chapter 29, Francisco faces exhaustion and overwhelm, realizing that his mission demands collaboration rather than control. By distributing the load, he transforms his followers into co-creators, binding them together in shared responsibility and renewed purpose.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Ten",
+          "tarot_symbolism": "The Ten of Wands symbolizes the heavy burden of responsibility and the moment when carrying too much alone forces one to learn the strength of delegation and trust.",
+          "traits": {
+             "strengths": [
+                "empowers others through trust and clear delegation",
+                "balances leadership authority with shared ownership",
+                "builds resilient systems that prevent burnout",
+                "values structure and shared accountability",
+                "fosters autonomy in others through support and guidance"
+             ],
+             "shadow": [
+                "tendency to overcommit or micromanage",
+                "difficulty releasing control or perfectionism",
+                "fear that delegation diminishes value",
+                "inconsistent follow-up on distributed tasks",
+                "emotional fatigue from unresolved over-responsibility"
+             ],
+             "growth_focus": [
+                "delegate with clarity and confidence",
+                "trust others to grow through responsibility",
+                "balance accountability with compassion",
+                "celebrate others’ successes as shared victories",
+                "reframe leadership as a circle, not a hierarchy"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "The Abyss",
+             "fiction_chapter_context": "Book 3, Chapter 29 — Overburdened by duty and responsibility, Francisco learns to share power with his allies, transforming his leadership into a movement sustained by collective strength."
+          },
+          "enneagram_link": {
+             "family_number": 8,
+             "note": "The Challenger integrated into the Mentor—learning to release control and empower others as equals in strength."
+          },
+          "color_alignment": {
+             "name": "Pink Flamingo",
+             "hsl": "300,100%,80%",
+             "rgb_hex": "#FF66FF",
+             "color_symbolism": "Radiant pink evokes vitality, connection, and shared energy—the hue of collective empowerment and trust."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.84,
+                "stability": 0.72,
+                "empathy": 0.81,
+                "openness": 0.76,
+                "orderliness": 0.83,
+                "novelty_seeking": 0.64,
+                "abstract_reasoning": 0.71,
+                "emotional_intensity": 0.79,
+                "social_dominance": 0.86,
+                "cooperativeness": 0.88,
+                "risk_tolerance": 0.68,
+                "conscientiousness": 0.89,
+                "adaptability": 0.82,
+                "imagination": 0.77
+             },
+             "match_weights": {
+                "cooperativeness": 0.4,
+                "conscientiousness": 0.35,
+                "agency": 0.25
+             },
+             "threshold": 0.82,
+             "top_signal_items": [
+                "Q725",
+                "Q726",
+                "Q727",
+                "Q728",
+                "Q729",
+                "Q730",
+                "Q731",
+                "Q732"
+             ],
+             "signals_map": {
+                "Q725": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I find strength in working alongside others to achieve shared goals."
+                },
+                "Q726": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I clarify expectations when assigning tasks to ensure mutual accountability."
+                },
+                "Q727": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take responsibility for ensuring others have what they need to succeed."
+                },
+                "Q728": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I understand when others are overwhelmed and redistribute tasks accordingly."
+                },
+                "Q729": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I remain calm and strategic even under heavy workloads."
+                },
+                "Q730": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I prefer structured systems for shared responsibility."
+                },
+                "Q731": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I modify my leadership approach to suit each collaborator’s strengths."
+                },
+                "Q732": {
+                   "dimension": "social_dominance",
+                   "polarity": 1,
+                   "content": "I inspire others by demonstrating trust in their abilities."
+                }
+             },
+             "daily_prompt": "Who can you empower today by sharing responsibility and faith in their capability?",
+             "practices": [
+                "Delegate one key responsibility this week with clear success criteria.",
+                "Hold a reflection circle to celebrate team strengths.",
+                "Create a visual task map showing distributed ownership.",
+                "Practice saying 'I trust you to handle this' without micromanaging.",
+                "Recognize someone publicly for stepping into new responsibility."
+             ],
+             "transformation_indicators": [
+                "Reduced personal stress and burnout.",
+                "Increased empowerment and skill growth among collaborators.",
+                "Improved project efficiency through shared accountability.",
+                "Emergence of new leaders within the team or community."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "The Abyss",
+             "preliminary_beat": "Dark Night of the Soul — Strength Through Trust",
+             "save_the_cat_beat": "The Abyss",
+             "character_state": "Francisco releases the illusion of solitary strength, discovering true power in shared leadership.",
+             "ordinary_world_baseline": "Isolation dissolves into unity—leadership becomes a living network of trust.",
+             "call_to_adventure_preview": "Share the weight; in trusting others, you lighten the world."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Multipliers",
+                "author": "Liz Wiseman",
+                "section_of_focus": "The Multiplier Effect",
+                "section_description": "Shows how great leaders expand others’ capacity through trust.",
+                "connection_focus_area": "Demonstrates empowerment as exponential influence.",
+                "connect_points": {
+                   "point1": "Identify and activate each team member’s strength.",
+                   "point2": "Establish clear ownership of goals.",
+                   "point3": "Provide autonomy balanced with feedback."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Conduct a leadership audit on delegation patterns.",
+                   "objective2": "Reassign three key roles to maximize potential.",
+                   "objective3": "Evaluate increased output through shared leadership."
+                }
+             },
+             "book2": {
+                "title": "The 4-Hour Workweek",
+                "author": "Tim Ferriss",
+                "section_of_focus": "Outsourcing",
+                "section_description": "Teaches how to offload routine work to focus on high-impact creation.",
+                "connection_focus_area": "Encourages automation and trust-based offloading.",
+                "connect_points": {
+                   "point1": "List repetitive tasks suitable for delegation.",
+                   "point2": "Outsource one non-core function.",
+                   "point3": "Create feedback loops for continuous improvement."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Implement a delegation system for recurring work.",
+                   "objective2": "Track efficiency changes post-delegation.",
+                   "objective3": "Train new leads to manage key systems independently."
+                }
+             },
+             "book3": {
+                "title": "Drive",
+                "author": "Daniel Pink",
+                "section_of_focus": "Autonomy",
+                "section_description": "Explores intrinsic motivation driven by autonomy and mastery.",
+                "connection_focus_area": "Shows how to align tasks with personal motivation.",
+                "connect_points": {
+                   "point1": "Empower choice in execution methods.",
+                   "point2": "Define role autonomy boundaries clearly.",
+                   "point3": "Set periodic check-ins for feedback and learning."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Develop a self-governing team charter.",
+                   "objective2": "Integrate autonomy-based performance metrics.",
+                   "objective3": "Foster a trust-based leadership culture."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Francisco, exhausted and encumbered, drops his burden before the gathered council and invites others to take part in carrying it forward.",
+             "symbolic_moment": "Each ally lifts a fragment of his burden; the light in their eyes rekindles as shared purpose takes root.",
+             "emotional_landscape": "Relief, humility, and rediscovered strength through trust.",
+             "threshold_vision": "By dispersing weight, the group becomes stronger—each taking ownership of the path ahead.",
+             "transformation_promise": "Francisco’s surrender of control becomes the foundation of a movement—leadership reborn as shared stewardship."
+          }
+        },
         "personality_profile_110": {},
         "personality_profile_111": {},
         "personality_profile_112": {},
