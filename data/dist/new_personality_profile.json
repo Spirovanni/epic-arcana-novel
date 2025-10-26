@@ -24804,9 +24804,552 @@
              "transformation_promise": "Francisco’s surrender of control becomes the foundation of a movement—leadership reborn as shared stewardship."
           }
         },
-        "personality_profile_110": {},
-        "personality_profile_111": {},
-        "personality_profile_112": {},
+        "personality_profile_110": {
+            "canonical_id": "EA-110",
+            "unique_identifier": "STG 3.2.6.1",
+            "specific_task_group_title": "Resiliency",
+            "all_chapter": 110,
+            "novel_book": 3,
+            "chapter": "Chapter 30",
+            "chapter_title": "The Ultimate Boon — Resiliency",
+            "type": "Specific Task Group",
+            "display_name": "The Unbroken Sentinel",
+            "theme": "Endure, adapt, and rise—where suffering becomes the forge of strength.",
+            "family": "Endurance / Grit — Resilience & Recovery",
+            "summary": "At his lowest ebb, when all seems lost and his allies are scatt...d or captured, Francisco's spirit steels itself against despair. He discovers the inner wellspring of endurance that will carry him forward no matter what obstacles arise. This endurance becomes not just personal strength but a model for others facing their own dark nights.",
+            "tarot_family": "Disks",
+            "tarot_card_item": "Five",
+            "tarot_symbolism": "Five of Disks/Pentacles signifies hardship, scarcity, and the crucible in which true resilience is tempered.",
+            "traits": {
+              "strengths": [
+                "reframes adversity into growth fuel",
+                "models steadiness under sustained pressure",
+                "anchors groups with calm resolve",
+                "maintains purpose through disciplined routines",
+                "draws strength from meaning and community"
+              ],
+              "shadow": [
+                "stoic overfunctioning that hides real needs",
+                "risk of isolation when carrying pain alone",
+                "rigidity around coping rituals",
+                "tendency to equate rest with weakness",
+                "difficulty asking for help at low points"
+              ],
+              "growth_focus": [
+                "practice restorative rest without guilt",
+                "name needs and invite support",
+                "trade rigid habits for adaptive practices",
+                "celebrate small rebounds as wins",
+                "teach resilience skills to others"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "The Ultimate Boon",
+              "fiction_chapter_context": "Book 3, Chapter 30 — At his lowest ebb, when all seems lost and his allies are scatt...d or captured, Francisco's spirit steels itself against despair. He discovers the inner wellspring of endurance that will carry him forward no matter what obstacles arise. This endurance becomes not just personal strength but a model for others facing their own dark nights."
+            },
+            "enneagram_link": {
+              "family_number": 6,
+              "note": "The Loyal Guardian integrating toward equanimity—courage through commitment and calm."
+            },
+            "color_alignment": {
+              "name": "Medium Violet Red",
+              "hsl": "315,100%,40%",
+              "rgb_hex": "#CC0099",
+              "color_symbolism": "Deep magenta evokes fierce resolve and hard-won hope—the glow of strength rediscovered in darkness."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.78,
+                "stability": 0.9,
+                "empathy": 0.82,
+                "openness": 0.66,
+                "orderliness": 0.8,
+                "novelty_seeking": 0.52,
+                "abstract_reasoning": 0.68,
+                "emotional_intensity": 0.62,
+                "social_dominance": 0.7,
+                "cooperativeness": 0.83,
+                "risk_tolerance": 0.69,
+                "conscientiousness": 0.88,
+                "adaptability": 0.79,
+                "imagination": 0.6
+              },
+              "match_weights": {
+                "stability": 0.4,
+                "conscientiousness": 0.35,
+                "agency": 0.25
+              },
+              "threshold": 0.82,
+              "top_signal_items": [
+                "Q733",
+                "Q734",
+                "Q735",
+                "Q736",
+                "Q737",
+                "Q738",
+                "Q739",
+                "Q740"
+              ],
+              "signals_map": {
+                "Q733": { "dimension": "stability", "polarity": 1, "content": "I recover quickly after stressful setbacks." },
+                "Q734": { "dimension": "agency", "polarity": 1, "content": "I take action even when conditions are harsh or uncertain." },
+                "Q735": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain routines that keep me steady under pressure." },
+                "Q736": { "dimension": "empathy", "polarity": 1, "content": "I make space for others’ emotions during crises." },
+                "Q737": { "dimension": "orderliness", "polarity": 1, "content": "I organize work to avoid overload and chaos." },
+                "Q738": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan without losing momentum." },
+                "Q739": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can endure discomfort to achieve a higher goal." },
+                "Q740": { "dimension": "social_dominance", "polarity": 1, "content": "My calm presence steadies groups in difficult times." }
+              },
+              "daily_prompt": "What small act of steadiness will you practice today when conditions get rough?",
+              "practices": [
+                "Adopt a 10-minute daily resilience drill (breath + reframing).",
+                "Schedule one micro-challenge that safely stretches your capacity.",
+                "Name and contact two support allies before you need them.",
+                "Protect one weekly recovery block as sacred time.",
+                "Debrief a setback: extract three learnings and one next step."
+              ],
+              "transformation_indicators": [
+                "Faster recovery time after stressors.",
+                "Greater use of support systems before crisis points.",
+                "Consistent restoration rituals maintained for 4+ weeks.",
+                "Observable steadiness that calms peers during adversity."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "The Ultimate Boon",
+              "preliminary_beat": "Dark Night of the Soul — At her lowest ebb",
+              "save_the_cat_beat": "Darkest moment (resolution)",
+              "character_state": "Francisco's endurance shows his deep commitment to his mission regardless of personal cost.",
+              "ordinary_world_baseline": "Cultivating grit in the crucible of suffering empowers the spirit to rebound and thrive.",
+              "call_to_adventure_preview": "Stand unbroken in the storm."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                "title": "Option B",
+                "author": "Sheryl Sandberg & Adam Grant",
+                "section_of_focus": "Building Resilience",
+                "section_description": "Explores how facing loss and adversity catalyzes new meaning and strength.",
+                "connection_focus_area": "Demonstrates resilience as a muscle strengthened by challenge.",
+                "connect_points": {
+                  "point1": "Reframe setbacks as growth opportunities.",
+                  "point2": "Leverage social support to rebuild hope.",
+                  "point3": "Develop a personal resilience action plan."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Apply cognitive reframing to a recent setback.",
+                  "objective2": "Identify and engage three sources of support.",
+                  "objective3": "Draft a five-step resilience toolkit."
+                }
+              },
+              "book2": {
+                "title": "Antifragile",
+                "author": "Nassim Nicholas Taleb",
+                "section_of_focus": "Stress and Growth",
+                "section_description": "Introduces the concept of systems that grow stronger when exposed to volatility.",
+                "connection_focus_area": "Frames adversity as a catalyst for increased capacity.",
+                "connect_points": {
+                  "point1": "Differentiate fragile vs. antifragile mindsets.",
+                  "point2": "Design small stress-tests to build robustness.",
+                  "point3": "Iterate learning from each challenge."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Assess personal vulnerabilities to stress.",
+                  "objective2": "Implement a micro-challenge regimen.",
+                  "objective3": "Reflect on antifragile gains."
+                }
+              },
+              "book3": {
+                "title": "The Upside of Stress",
+                "author": "Kelly McGonigal",
+                "section_of_focus": "Leveraging Stress for Growth",
+                "section_description": "Reframes stress as a positive force when harnessed correctly.",
+                "connection_focus_area": "Transforms stress response into a performance enhancer.",
+                "connect_points": {
+                  "point1": "Adopt stress-positive self-talk.",
+                  "point2": "Use brief stress exercises to build confidence.",
+                  "point3": "Measure growth after stress exposure."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Convert one stress trigger into a growth experiment.",
+                  "objective2": "Journal performance improvements post-stress.",
+                  "objective3": "Facilitate a peer debrief on stress learnings."
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "At his lowest ebb, when all seems lost and his allies are scatt...d or captured, Francisco's spirit steels itself against despair",
+              "symbolic_moment": "Symbolic elements to be developed",
+              "emotional_landscape": "Varies by scene context",
+              "threshold_vision": "At her lowest ebb, the Daughter’s spirit steels itself against despair, discovering the inner wellspring of endurance that will carry her forward.",
+              "transformation_promise": "Francisco's ability to persist will be crucial for the long journey through Books 4-9."
+            }
+        },      
+        "personality_profile_111": {
+            "canonical_id": "EA-111",
+            "unique_identifier": "STG 3.2.6.2",
+            "specific_task_group_title": "Magnetic Charisma",
+            "all_chapter": 111,
+            "novel_book": 3,
+            "chapter": "Chapter 31",
+            "chapter_title": "The Ultimate Boon — Magnetic Charisma",
+            "type": "Specific Task Group",
+            "display_name": "The Radiant Beacon",
+            "theme": "Presence that awakens purpose—voice, body, and story aligned to serve.",
+            "family": "Influence / Presence — Charisma & Communication",
+            "summary": "Emerging from his trial by fire, Francisco's presence begins to radiate a renewed authority and spiritual magnetism that draws allies to his cause. His endurance through the dark night has transformed him into a beacon of hope that attracts others seeking meaning and purpose. This magnetic quality marks his emergence as a true spiritual leader.",
+            "tarot_family": "Wands",
+            "tarot_card_item": "King",
+            "tarot_symbolism": "King of Wands embodies visionary leadership, persuasive fire, and the courage to inspire action.",
+            "traits": {
+              "strengths": [
+                "radiates calm confidence that attracts allies",
+                "communicates with clarity, warmth, and purpose",
+                "amplifies others’ voices alongside his own",
+                "sets inspiring vision and invites participation",
+                "embodies values through consistent presence"
+              ],
+              "shadow": [
+                "risk of over-identifying with approval",
+                "performative warmth without depth",
+                "burnout from constant visibility",
+                "over-reliance on personal magnetism",
+                "neglect of quieter contributors"
+              ],
+              "growth_focus": [
+                "balance stage time with shared spotlight",
+                "root persuasion in truth and service",
+                "schedule recovery to protect authenticity",
+                "translate charisma into durable structures",
+                "actively seek dissent and integrate it"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "The Ultimate Boon",
+              "fiction_chapter_context": "Book 3, Chapter 31 — Emerging from his trial by fire, Francisco's presence begins to radiate a renewed authority and spiritual magnetism that draws allies to his cause. His endurance through the dark night has transformed him into a beacon of hope that attracts others seeking meaning and purpose. This magnetic quality marks his emergence as a true spiritual leader."
+            },
+            "enneagram_link": {
+              "family_number": 3,
+              "note": "The Achiever tempered by the Helper—impact rooted in empathy, not image."
+            },
+            "color_alignment": {
+              "name": "Orchid",
+              "hsl": "300,50%,60%",
+              "rgb_hex": "#CC66CC",
+              "color_symbolism": "Orchid suggests gracious power and inviting warmth—the hue of compelling, compassionate leadership."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.85,
+                "stability": 0.74,
+                "empathy": 0.84,
+                "openness": 0.78,
+                "orderliness": 0.71,
+                "novelty_seeking": 0.66,
+                "abstract_reasoning": 0.7,
+                "emotional_intensity": 0.76,
+                "social_dominance": 0.88,
+                "cooperativeness": 0.86,
+                "risk_tolerance": 0.7,
+                "conscientiousness": 0.8,
+                "adaptability": 0.81,
+                "imagination": 0.75
+              },
+              "match_weights": {
+                "social_dominance": 0.4,
+                "empathy": 0.35,
+                "agency": 0.25
+              },
+              "threshold": 0.83,
+              "top_signal_items": [
+                "Q733",
+                "Q734",
+                "Q735",
+                "Q736",
+                "Q737",
+                "Q738",
+                "Q739",
+                "Q740"
+              ],
+              "signals_map": {
+                "Q733": { "dimension": "stability", "polarity": 1, "content": "I recover quickly after stressful setbacks." },
+                "Q734": { "dimension": "agency", "polarity": 1, "content": "I take action even when conditions are harsh or uncertain." },
+                "Q735": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain routines that keep me steady under pressure." },
+                "Q736": { "dimension": "empathy", "polarity": 1, "content": "I make space for others’ emotions during crises." },
+                "Q737": { "dimension": "orderliness", "polarity": 1, "content": "I organize work to avoid overload and chaos." },
+                "Q738": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan without losing momentum." },
+                "Q739": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can endure discomfort to achieve a higher goal." },
+                "Q740": { "dimension": "social_dominance", "polarity": 1, "content": "My calm presence steadies groups in difficult times." }
+              },
+              "daily_prompt": "How will you use your presence today to spotlight someone else’s brilliance?",
+              "practices": [
+                "Before key interactions, run a 2-minute presence routine (posture, breath, intention).",
+                "Host a story circle that elevates three other voices.",
+                "Record a short message of purpose; refine for clarity and warmth.",
+                "Design one ritual that signals belonging for newcomers.",
+                "Invite a trusted critic to stress-test your message."
+              ],
+              "transformation_indicators": [
+                "Increased volunteer engagement and initiative.",
+                "Feedback cites clarity, warmth, and trustworthiness.",
+                "More distributed spokespersons emerge in the community.",
+                "Sustained energy despite increased public demands."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "The Ultimate Boon",
+              "preliminary_beat": "Dark Night of the Soul — Emerging from her trial by fire",
+              "save_the_cat_beat": "Power within (set-up)",
+              "character_state": "Francisco's magnetic quality shows his transformation from seeker to guide.",
+              "ordinary_world_baseline": "Authentic presence and confident communication inspire and mobilize others.",
+              "call_to_adventure_preview": "Lead with presence."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                "title": "Presence",
+                "author": "Amy Cuddy",
+                "section_of_focus": "Own Your Body",
+                "section_description": "Demonstrates how posture and mindset shape confidence and influence.",
+                "connection_focus_area": "Links physical stance with psychological authority.",
+                "connect_points": {
+                  "point1": "Practice power poses before key interactions.",
+                  "point2": "Shift internal dialogue to ‘I can’ affirmations.",
+                  "point3": "Record and refine vocal tone for impact."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Demonstrate a pre-meeting power pose routine.",
+                  "objective2": "Deliver a 2-minute persuasive pitch.",
+                  "objective3": "Self-evaluate posture and tone in video playback."
+                }
+              },
+              "book2": {
+                "title": "The Charisma Myth",
+                "author": "Olivia Fox Cabane",
+                "section_of_focus": "The Foundations of Charisma",
+                "section_description": "Breaks down charisma into learnable behaviors like presence, warmth, and power.",
+                "connection_focus_area": "Provides actionable exercises to build magnetic appeal.",
+                "connect_points": {
+                  "point1": "Conduct ‘presence drills’ in daily conversation.",
+                  "point2": "Cultivate active listening to convey warmth.",
+                  "point3": "Practice concise, powerful speech patterns."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Lead a conversation using learned charisma drills.",
+                  "objective2": "Gather feedback on perceived warmth and presence.",
+                  "objective3": "Adjust techniques based on feedback."
+                }
+              },
+              "book3": {
+                "title": "How to Win Friends and Influence People",
+                "author": "Dale Carnegie",
+                "section_of_focus": "First Impressions",
+                "section_description": "Outlines principles for making genuine, lasting connections.",
+                "connection_focus_area": "Emphasizes empathy and respect as cornerstones of influence.",
+                "connect_points": {
+                  "point1": "Use a person’s name repeatedly in conversation.",
+                  "point2": "Express sincere appreciation to build rapport.",
+                  "point3": "Mirror body language to foster trust."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Apply Carnegie’s techniques in three new encounters.",
+                  "objective2": "Document outcomes and relationship shifts.",
+                  "objective3": "Refine approach based on observational data."
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "Emerging from his trial by fire, Francisco's presence begins to radiate a renewed authority and spiritual magnetism that draws allies to his cause",
+              "symbolic_moment": "Symbolic elements to be developed",
+              "emotional_landscape": "Varies by scene context",
+              "threshold_vision": "Emerging from her trial by fire, the Daughter’s presence radiates renewed authority, drawing allies to her cause.",
+              "transformation_promise": "Francisco's magnetic authority will be crucial for inspiring the collective transformation ahead."
+            }
+        },
+        "personality_profile_112": {
+            "canonical_id": "EA-112",
+            "unique_identifier": "STG 3.2.6.3",
+            "specific_task_group_title": "Unified Loyalty",
+            "all_chapter": 112,
+            "novel_book": 3,
+            "chapter": "Chapter 32",
+            "chapter_title": "The Ultimate Boon — Unified Loyalty",
+            "type": "Specific Task Group",
+            "display_name": "The Covenant Binder",
+            "theme": "We become strong together—loyalty forged through shared purpose and trust.",
+            "family": "Team Cohesion — Unity & Shared Accountability",
+            "summary": "Armed with his spiritual transformation and renewed authority, Francisco begins entrusting critical tasks to his most loyal allies. He learns to weave unity through shared purpose by giving others meaningful roles in the mission. This delegation represents his growing trust in others and his evolution from individual hero to collective leader.",
+            "tarot_family": "Swords",
+            "tarot_card_item": "Two",
+            "tarot_symbolism": "Two of Swords reflects poised balance and deliberate accord—choosing alignment over division.",
+            "traits": {
+              "strengths": [
+                "weaves shared purpose across diverse strengths",
+                "builds psychological safety and reciprocal trust",
+                "aligns autonomy with collective accountability",
+                "celebrates contributions to reinforce cohesion",
+                "translates vision into coordinated ownership"
+              ],
+              "shadow": [
+                "conflict avoidance that buries real tensions",
+                "overemphasis on harmony at the expense of candor",
+                "loyalty tests that alienate dissenters",
+                "slow decisions in pursuit of consensus",
+                "insufficient boundaries with underperformers"
+              ],
+              "growth_focus": [
+                "normalize healthy conflict with clear norms",
+                "pair candor with care in feedback loops",
+                "codify roles, autonomy, and decision rights",
+                "reward principled dissent that improves outcomes",
+                "refresh the shared purpose through rituals"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "The Ultimate Boon",
+              "fiction_chapter_context": "Book 3, Chapter 32 — Armed with his spiritual transformation and renewed authority, Francisco begins entrusting critical tasks to his most loyal allies. He learns to weave unity through shared purpose by giving others meaningful roles in the mission. This delegation represents his growing trust in others and his evolution from individual hero to collective leader."
+            },
+            "enneagram_link": {
+              "family_number": 2,
+              "note": "The Helper fortified by healthy boundaries—loyalty that empowers, not encloses."
+            },
+            "color_alignment": {
+              "name": "Violet Blue",
+              "hsl": "300,20%,50%",
+              "rgb_hex": "#996699",
+              "color_symbolism": "Violet-blue carries the calm of trust and the steadiness of pact—color of durable bonds."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.8,
+                "stability": 0.76,
+                "empathy": 0.86,
+                "openness": 0.77,
+                "orderliness": 0.79,
+                "novelty_seeking": 0.62,
+                "abstract_reasoning": 0.72,
+                "emotional_intensity": 0.68,
+                "social_dominance": 0.75,
+                "cooperativeness": 0.9,
+                "risk_tolerance": 0.64,
+                "conscientiousness": 0.84,
+                "adaptability": 0.8,
+                "imagination": 0.7
+              },
+              "match_weights": {
+                "cooperativeness": 0.4,
+                "conscientiousness": 0.35,
+                "empathy": 0.25
+              },
+              "threshold": 0.84,
+              "top_signal_items": [
+                "Q733",
+                "Q734",
+                "Q735",
+                "Q736",
+                "Q737",
+                "Q738",
+                "Q739",
+                "Q740"
+              ],
+              "signals_map": {
+                "Q733": { "dimension": "stability", "polarity": 1, "content": "I recover quickly after stressful setbacks." },
+                "Q734": { "dimension": "agency", "polarity": 1, "content": "I take action even when conditions are harsh or uncertain." },
+                "Q735": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain routines that keep me steady under pressure." },
+                "Q736": { "dimension": "empathy", "polarity": 1, "content": "I make space for others’ emotions during crises." },
+                "Q737": { "dimension": "orderliness", "polarity": 1, "content": "I organize work to avoid overload and chaos." },
+                "Q738": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan without losing momentum." },
+                "Q739": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can endure discomfort to achieve a higher goal." },
+                "Q740": { "dimension": "social_dominance", "polarity": 1, "content": "My calm presence steadies groups in difficult times." }
+              },
+              "daily_prompt": "What specific act will strengthen trust and clarity on your team today?",
+              "practices": [
+                "Co-author a purpose manifesto with your core team.",
+                "Run a belonging-cue audit and add two new rituals.",
+                "Define decision rights and autonomy bounds per role.",
+                "Establish a monthly ‘candor + care’ retrospective.",
+                "Publicly celebrate one mastery milestone per member."
+              ],
+              "transformation_indicators": [
+                "Higher psychological safety and participation rates.",
+                "Clearer ownership and faster cross-team coordination.",
+                "Fewer unproductive conflicts; healthier debates.",
+                "Consistent progress toward shared purpose milestones."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "The Ultimate Boon",
+              "preliminary_beat": "Break into 3 — Armed with her triumph",
+              "save_the_cat_beat": "The Ultimate Boon",
+              "character_state": "Francisco's willingness to delegate shows his trust in others and commitment to collective action.",
+              "ordinary_world_baseline": "Shared commitment aligns individual strengths toward a common vision.",
+              "call_to_adventure_preview": "Strength in unity."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                "title": "Leaders Eat Last",
+                "author": "Simon Sinek",
+                "section_of_focus": "Circle of Safety",
+                "section_description": "Shows how leaders build environments of trust where teams thrive.",
+                "connection_focus_area": "Highlights trust as the bedrock of loyalty.",
+                "connect_points": {
+                  "point1": "Establish clear team norms and protections.",
+                  "point2": "Demonstrate servant leadership in daily acts.",
+                  "point3": "Hold regular ‘circle’ meetings to surface concerns."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Design a ‘Circle of Safety’ charter.",
+                  "objective2": "Lead a servant-leadership demonstration.",
+                  "objective3": "Evaluate trust levels through anonymous surveys."
+                }
+              },
+              "book2": {
+                "title": "The Culture Code",
+                "author": "Daniel Coyle",
+                "section_of_focus": "Belonging Cues",
+                "section_description": "Explores small signals that create psychological safety and belonging.",
+                "connection_focus_area": "Teaches actionable steps to cement group unity.",
+                "connect_points": {
+                  "point1": "Practice inclusive language in all meetings.",
+                  "point2": "Recognize and celebrate contributions publicly.",
+                  "point3": "Model vulnerability to invite openness."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Implement a ‘celebration ritual’ for wins.",
+                  "objective2": "Train members on belonging-cue recognition.",
+                  "objective3": "Track belonging metrics over time."
+                }
+              },
+              "book3": {
+                "title": "Drive",
+                "author": "Daniel H. Pink",
+                "section_of_focus": "Autonomy, Mastery, Purpose",
+                "section_description": "Examines the trifecta that motivates sustained engagement.",
+                "connection_focus_area": "Aligns team loyalty with intrinsic drives of autonomy and purpose.",
+                "connect_points": {
+                  "point1": "Co-define team purpose statements.",
+                  "point2": "Delegate ownership of meaningful tasks.",
+                  "point3": "Create mastery opportunities through stretch projects."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Craft a shared purpose manifesto.",
+                  "objective2": "Assign one stretch goal per member.",
+                  "objective3": "Monitor progress and celebrate mastery milestones."
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "Armed with his spiritual transformation and renewed authority, Francisco begins entrusting critical tasks to his most loyal allies",
+              "symbolic_moment": "Symbolic elements to be developed",
+              "emotional_landscape": "Varies by scene context",
+              "threshold_vision": "Armed with her triumph, the Daughter entrusts critical tasks to her most loyal allies, weaving unity through shared purpose.",
+              "transformation_promise": "Francisco's delegation skills will be essential for the collective action required in Books 7-9."
+            }
+        },           
         "personality_profile_113": {},
         "personality_profile_114": {},
         "personality_profile_115": {},
