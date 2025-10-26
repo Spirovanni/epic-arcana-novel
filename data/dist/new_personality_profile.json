@@ -23519,8 +23519,435 @@
           "personality_profile_119": {},
           "personality_profile_120": {}
         },
-        "personality_profile_104": {},
-        "personality_profile_105": {},
+        "personality_profile_104": {
+          "canonical_id": "EA-104",
+          "unique_identifier": "STG 3.2.4.1",
+          "specific_task_group_title": "Empire",
+          "all_chapter": 104,
+          "novel_book": 3,
+          "chapter": "Chapter 24",
+          "chapter_title": "Action (Conflict) — Empire",
+          "type": "Specific Task Group",
+          "display_name": "The Architect King",
+          "theme": "Leadership through stewardship—expanding power by empowering others.",
+          "family": "Authority / Structure — Leadership & Legacy",
+          "summary": "Rooted in the King of Disks, the Architect King symbolizes the culmination of wisdom through responsible power. In Chapter 24, Francisco learns that empire is not domination but devotion—the art of building structures that outlast oneself. This archetype represents the synthesis of mastery and humility, showing that true leadership multiplies rather than commands. Empire is legacy in motion, grounded in service.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "King",
+          "tarot_symbolism": "The King of Disks embodies pragmatic mastery, stewardship of material and spiritual resources, and the ethical use of power for creation and protection.",
+          "traits": {
+             "strengths": [
+                "strategic and long-term thinker",
+                "creates systems that sustain others’ success",
+                "balances vision with practicality",
+                "influences without domination",
+                "leads through service and example",
+                "turns chaos into organized growth"
+             ],
+             "shadow": [
+                "tendency toward control and rigidity",
+                "fear of delegation or loss of authority",
+                "overemphasis on achievement over empathy",
+                "burnout through over-responsibility",
+                "attachment to legacy at the expense of innovation"
+             ],
+             "growth_focus": [
+                "cultivate humility in leadership roles",
+                "prioritize trust-building over control",
+                "delegate effectively to empower others",
+                "evaluate decisions through ethical and communal lenses",
+                "maintain alignment between power and purpose"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Action (Conflict)",
+             "fiction_chapter_context": "Book 3, Chapter 24 — Francisco’s empire faces destruction. His strength is tested not in battle, but in his ability to rally and inspire others to rebuild. He transforms from commander to steward."
+          },
+          "enneagram_link": {
+             "family_number": 8,
+             "note": "The Challenger tempered by 2’s compassion—assertive authority guided by service and protection."
+          },
+          "color_alignment": {
+             "name": "Magenta",
+             "hsl": "300,100%,50%",
+             "rgb_hex": "#FF00FF",
+             "color_symbolism": "The unification of red’s passion and blue’s vision—magenta radiates transformative power balanced by empathy."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.88,
+                "stability": 0.86,
+                "empathy": 0.74,
+                "openness": 0.67,
+                "orderliness": 0.91,
+                "novelty_seeking": 0.52,
+                "abstract_reasoning": 0.82,
+                "emotional_intensity": 0.63,
+                "social_dominance": 0.91,
+                "cooperativeness": 0.78,
+                "risk_tolerance": 0.69,
+                "conscientiousness": 0.94,
+                "adaptability": 0.73,
+                "imagination": 0.65
+             },
+             "match_weights": {
+                "orderliness": 0.35,
+                "agency": 0.35,
+                "conscientiousness": 0.3
+             },
+             "threshold": 0.82,
+             "top_signal_items": [
+                "Q685",
+                "Q686",
+                "Q687",
+                "Q688",
+                "Q689",
+                "Q690",
+                "Q691",
+                "Q692"
+             ],
+             "signals_map": {
+                "Q685": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take initiative in leading others during difficult times."
+                },
+                "Q686": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I create systems that allow projects and people to thrive long-term."
+                },
+                "Q687": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I hold myself accountable for both success and failure of my team."
+                },
+                "Q688": {
+                   "dimension": "social_dominance",
+                   "polarity": 1,
+                   "content": "I naturally command respect through calm decisiveness."
+                },
+                "Q689": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I lead by elevating others rather than overshadowing them."
+                },
+                "Q690": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I remain composed and inspiring even in times of crisis."
+                },
+                "Q691": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I take calculated risks to secure long-term vision."
+                },
+                "Q692": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I listen deeply to understand the needs of those I lead."
+                }
+             },
+             "daily_prompt": "Where can your influence build others’ capacity instead of asserting your control?",
+             "practices": [
+                "Conduct weekly reflection on how your leadership empowered others.",
+                "Delegate one responsibility you’ve been holding onto unnecessarily.",
+                "Model humility by admitting one mistake publicly each month.",
+                "Establish a ‘circle of safety’ ritual within your team.",
+                "Revisit long-term goals and assess if they still serve the collective good."
+             ],
+             "transformation_indicators": [
+                "Greater team trust and initiative without direct oversight.",
+                "Sustained performance through distributed leadership.",
+                "Improved morale during periods of high stress.",
+                "Clear alignment between values, mission, and impact."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Action (Conflict)",
+             "preliminary_beat": "All Is Lost — Revival Through Purpose",
+             "save_the_cat_beat": "Action (Conflict)",
+             "character_state": "Power reborn through humility—Francisco becomes the architect of renewal rather than ruler of ruins.",
+             "ordinary_world_baseline": "Leadership redefined through loss; empire is rebuilt not through command but through compassion.",
+             "call_to_adventure_preview": "Lead beyond borders—the true empire is the heart of those you’ve inspired."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Leaders Eat Last",
+                "author": "Simon Sinek",
+                "section_of_focus": "Circle of Safety",
+                "section_description": "Explores how trust-centered environments empower collective resilience.",
+                "connection_focus_area": "Demonstrates leadership that multiplies rather than controls.",
+                "connect_points": {
+                   "point1": "Map your organization’s safety needs.",
+                   "point2": "Implement trust-building rituals.",
+                   "point3": "Measure team well-being metrics."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design a team safety protocol.",
+                   "objective2": "Conduct trust surveys quarterly.",
+                   "objective3": "Facilitate resilience debriefs after crises."
+                }
+             },
+             "book2": {
+                "title": "Good to Great",
+                "author": "Jim Collins",
+                "section_of_focus": "Level 5 Leadership",
+                "section_description": "Balances humility and determination to sustain enduring impact.",
+                "connection_focus_area": "Defines leadership as service to purpose over ego.",
+                "connect_points": {
+                   "point1": "Assess personal leadership traits.",
+                   "point2": "Develop ego-free decision frameworks.",
+                   "point3": "Plan long-term growth through stewardship."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Create a Level 5 leadership journal.",
+                   "objective2": "Implement humility rituals in leadership practice.",
+                   "objective3": "Review and revise strategy quarterly."
+                }
+             },
+             "book3": {
+                "title": "The Power of Habit",
+                "author": "Charles Duhigg",
+                "section_of_focus": "Keystone Habits",
+                "section_description": "Reveals how focused habits drive sustainable transformation.",
+                "connection_focus_area": "Shows how keystone actions can scale an empire of positive culture.",
+                "connect_points": {
+                   "point1": "Identify a high-impact cultural habit.",
+                   "point2": "Reinforce through routine and accountability.",
+                   "point3": "Track the ripple effects on morale and outcomes."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Launch a keystone habit pilot.",
+                   "objective2": "Evaluate organizational behavior changes.",
+                   "objective3": "Refine based on feedback data."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Francisco stands amid the ashes of his shattered empire, surrounded by survivors who look to him for direction.",
+             "symbolic_moment": "A single flame reignites in the ruins—representing hope reborn through shared will.",
+             "emotional_landscape": "Somber yet resolute; grief transformed into resolve.",
+             "threshold_vision": "Empire redefined—not as dominion, but as devotion to the endurance of meaning.",
+             "transformation_promise": "Through the crucible of loss, Francisco ascends to his truest form of mastery—the leader who builds worlds not for himself, but for the generations to come."
+          }
+        },
+        "personality_profile_105": {
+          "canonical_id": "EA-105",
+          "unique_identifier": "STG 3.2.4.2",
+          "specific_task_group_title": "Surrender",
+          "all_chapter": 105,
+          "novel_book": 3,
+          "chapter": "Chapter 25",
+          "chapter_title": "Dedication (Resolution) — Surrender",
+          "type": "Specific Task Group",
+          "display_name": "The Tranquil Warrior",
+          "theme": "Power through release—mastery in letting go of control and trusting the flow of divine purpose.",
+          "family": "Spirit / Trust — Surrender & Transformation",
+          "summary": "Rooted in the Five of Swords, the Tranquil Warrior embodies paradoxical strength—the realization that surrender is not defeat but transcendence. In Chapter 25, Francisco faces the futility of control amid overwhelming chaos. His surrender to higher will becomes his greatest act of courage, granting him access to unseen allies and cosmic harmony. This archetype teaches the freedom of letting go and the strength in yielding to life’s greater orchestration.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Five",
+          "tarot_symbolism": "The Five of Swords reveals the tension between egoic victory and spiritual humility. Its lesson: surrender what was never yours to control and gain peace beyond conquest.",
+          "traits": {
+             "strengths": [
+                "embraces acceptance and equanimity under stress",
+                "lets go of the need to control outcomes",
+                "trusts intuitive and divine timing",
+                "sees opportunity in perceived loss",
+                "channels calm presence that inspires others"
+             ],
+             "shadow": [
+                "passive resignation mistaken for acceptance",
+                "fear of asserting boundaries",
+                "avoidance of necessary conflict",
+                "suppressed emotion disguised as peace",
+                "overreliance on fate without participation"
+             ],
+             "growth_focus": [
+                "learn to discern surrender from avoidance",
+                "cultivate mindful awareness in uncertainty",
+                "release expectations while remaining engaged",
+                "develop healthy detachment from results",
+                "find spiritual strength through impermanence"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Dedication (Resolution)",
+             "fiction_chapter_context": "Book 3, Chapter 25 — As Francisco faces annihilation, he releases his attachment to control and opens to a higher orchestration. Through surrender, he finds unshakable peace and alignment with the greater will."
+          },
+          "enneagram_link": {
+             "family_number": 9,
+             "note": "The Peacemaker elevated—accepting life as it is, embodying serenity through trust in universal intelligence."
+          },
+          "color_alignment": {
+             "name": "Violet Blue",
+             "hsl": "300,40%,50%",
+             "rgb_hex": "#AA44AA",
+             "color_symbolism": "The union of insight and surrender—violet for spiritual attunement and blue for tranquil acceptance."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.58,
+                "stability": 0.92,
+                "empathy": 0.88,
+                "openness": 0.76,
+                "orderliness": 0.61,
+                "novelty_seeking": 0.45,
+                "abstract_reasoning": 0.73,
+                "emotional_intensity": 0.84,
+                "social_dominance": 0.46,
+                "cooperativeness": 0.86,
+                "risk_tolerance": 0.51,
+                "conscientiousness": 0.69,
+                "adaptability": 0.91,
+                "imagination": 0.79
+             },
+             "match_weights": {
+                "stability": 0.4,
+                "empathy": 0.35,
+                "adaptability": 0.25
+             },
+             "threshold": 0.78,
+             "top_signal_items": [
+                "Q693",
+                "Q694",
+                "Q695",
+                "Q696",
+                "Q697",
+                "Q698",
+                "Q699",
+                "Q700"
+             ],
+             "signals_map": {
+                "Q693": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I maintain inner calm even when outcomes are uncertain."
+                },
+                "Q694": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I find strength in compassion and acceptance rather than control."
+                },
+                "Q695": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I trust life’s process and adjust gracefully to what arises."
+                },
+                "Q696": {
+                   "dimension": "emotional_intensity",
+                   "polarity": 1,
+                   "content": "I experience peace most deeply after letting go of struggle."
+                },
+                "Q697": {
+                   "dimension": "agency",
+                   "polarity": -1,
+                   "content": "I release the need to force my way through resistance."
+                },
+                "Q698": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I open myself to guidance and collaboration from unexpected sources."
+                },
+                "Q699": {
+                   "dimension": "abstract_reasoning",
+                   "polarity": 1,
+                   "content": "I perceive meaning in loss or failure as transformative lessons."
+                },
+                "Q700": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I embrace surrender as an act of faith rather than defeat."
+                }
+             },
+             "daily_prompt": "Where are you still trying to control what is meant to unfold on its own?",
+             "practices": [
+                "Practice the RAIN meditation (Recognize, Allow, Investigate, Nurture).",
+                "Write down three things you’re ready to release today.",
+                "Pause before reacting; observe what arises when you let go.",
+                "Transform expectations into intentions.",
+                "Reframe uncertainty as sacred space for transformation."
+             ],
+             "transformation_indicators": [
+                "Reduced anxiety when facing uncertainty.",
+                "Enhanced intuitive decision-making.",
+                "Ability to remain calm and centered during change.",
+                "Increased trust in life’s timing and flow."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Dedication (Resolution)",
+             "preliminary_beat": "All Is Lost — Transcendence Through Trust",
+             "save_the_cat_beat": "Dedication (Resolution)",
+             "character_state": "Through surrender, Francisco discovers liberation from fear—his strength now sourced from the divine, not the self.",
+             "ordinary_world_baseline": "The illusion of control dissolves, revealing that faith is the ultimate form of mastery.",
+             "call_to_adventure_preview": "Release to receive—what you let go of returns transformed."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Radical Acceptance",
+                "author": "Tara Brach",
+                "section_of_focus": "The Trance of Unworthiness",
+                "section_description": "Teaches compassion as the gateway to peace and surrender.",
+                "connection_focus_area": "Encourages releasing judgment to embrace wholeness.",
+                "connect_points": {
+                   "point1": "Practice RAIN daily.",
+                   "point2": "Note moments of resistance and self-criticism.",
+                   "point3": "Offer nurturing attention to inner discomfort."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Develop emotional literacy through RAIN.",
+                   "objective2": "Lead self-compassion meditations.",
+                   "objective3": "Reduce inner conflict by 30% within one month."
+                }
+             },
+             "book2": {
+                "title": "Letting Go",
+                "author": "David R. Hawkins",
+                "section_of_focus": "Mechanism of Surrender",
+                "section_description": "Explains emotional release as a practice of transcendence.",
+                "connection_focus_area": "Provides a systematic framework for letting go of resistance.",
+                "connect_points": {
+                   "point1": "Identify emotions ready for release.",
+                   "point2": "Track emotional energy shifts.",
+                   "point3": "Use daily reflection to measure lightness."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Build a daily release ritual.",
+                   "objective2": "Assess progress through emotional energy tracking.",
+                   "objective3": "Journal breakthroughs in acceptance."
+                }
+             },
+             "book3": {
+                "title": "The Art of Possibility",
+                "author": "Rosamund Stone Zander & Benjamin Zander",
+                "section_of_focus": "Giving an A",
+                "section_description": "Reveals how releasing judgment fosters innovation and connection.",
+                "connection_focus_area": "Transforms surrender into fertile ground for creativity.",
+                "connect_points": {
+                   "point1": "Give yourself and others an A before performance.",
+                   "point2": "Reinterpret obstacles as invitations.",
+                   "point3": "Lead from a place of possibility rather than control."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Implement the 'A' exercise in team settings.",
+                   "objective2": "Reframe three conflicts as co-creative opportunities.",
+                   "objective3": "Design a surrender-based collaboration process."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Kneeling amidst the storm, Francisco drops his sword and raises his open palms to the heavens, surrendering all will to the higher order of creation.",
+             "symbolic_moment": "The sword dissolves into light, signifying that through surrender, strength transforms from domination into illumination.",
+             "emotional_landscape": "Stillness after chaos, grief melting into serenity, and acceptance becoming devotion.",
+             "threshold_vision": "In releasing control, Francisco attunes to the rhythm of the cosmos—his individuality merging with divine harmony.",
+             "transformation_promise": "By surrendering his will, Francisco transcends mortality—becoming a vessel of higher wisdom and universal purpose."
+          }
+        },
         "personality_profile_106": {},
         "personality_profile_107": {},
         "personality_profile_108": {},
