@@ -24376,7 +24376,220 @@
              "transformation_promise": "In the heart of ruin, Francisco rediscovers the sacred rhythm of care—the flame that turns endurance into renewal."
           }
         },
-        "personality_profile_108": {},
+        "personality_profile_108": {
+          "canonical_id": "EA-108",
+          "unique_identifier": "STG 3.2.5.2",
+          "specific_task_group_title": "Rally Supporters",
+          "all_chapter": 108,
+          "novel_book": 3,
+          "chapter": "Chapter 28",
+          "chapter_title": "Pinch (Event/Conflict) — Rally Supporters",
+          "type": "Specific Task Group",
+          "display_name": "The Flamebearer",
+          "theme": "Unity through passion—igniting collective will in times of despair.",
+          "family": "Leadership / Inspiration — Mobilization & Momentum",
+          "summary": "The Flamebearer, drawn from the Six of Wands, embodies the power of rekindling hope through shared purpose. In Chapter 28, Francisco gathers his weary allies, reminding them of their collective mission and reigniting the spark of unity in the shadow of loss. This archetype celebrates the courage to inspire others when one’s own flame burns low, demonstrating that leadership at its purest is a shared act of light.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Six",
+          "tarot_symbolism": "The Six of Wands represents triumph through community effort—victory not as individual conquest, but as collective rising through encouragement and shared belief.",
+          "traits": {
+             "strengths": [
+                "inspires enthusiasm and confidence in others",
+                "mobilizes groups toward shared goals",
+                "maintains optimism under pressure",
+                "values recognition and celebration of progress",
+                "uses narrative and ritual to unify diverse voices"
+             ],
+             "shadow": [
+                "reliance on external validation",
+                "risk of burnout from over-giving energy",
+                "difficulty accepting personal vulnerability",
+                "idealism that overlooks dissent",
+                "tendency to lead by charisma rather than structure"
+             ],
+             "growth_focus": [
+                "learn to balance inspiration with transparency",
+                "delegate leadership to empower others",
+                "sustain energy through authentic connection",
+                "value quiet influence as much as visible success",
+                "transform morale into enduring commitment"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Pinch (Event/Conflict)",
+             "fiction_chapter_context": "Book 3, Chapter 28 — With spirits fading, Francisco becomes the rallying force that reignites hope, transforming despair into unity. His leadership shifts from command to communion."
+          },
+          "enneagram_link": {
+             "family_number": 3,
+             "note": "The Achiever matured into the Inspirer—no longer driven by recognition but by the need to awaken others’ inner fire."
+          },
+          "color_alignment": {
+             "name": "Lilac",
+             "hsl": "300,30%,80%",
+             "rgb_hex": "#CC99CC",
+             "color_symbolism": "Lilac carries the energy of renewal and unity—soft yet radiant, representing collective inspiration rising from shared vulnerability."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.82,
+                "stability": 0.68,
+                "empathy": 0.87,
+                "openness": 0.83,
+                "orderliness": 0.66,
+                "novelty_seeking": 0.71,
+                "abstract_reasoning": 0.75,
+                "emotional_intensity": 0.91,
+                "social_dominance": 0.88,
+                "cooperativeness": 0.89,
+                "risk_tolerance": 0.76,
+                "conscientiousness": 0.72,
+                "adaptability": 0.78,
+                "imagination": 0.84
+             },
+             "match_weights": {
+                "empathy": 0.35,
+                "social_dominance": 0.35,
+                "emotional_intensity": 0.3
+             },
+             "threshold": 0.8,
+             "top_signal_items": [
+                "Q717",
+                "Q718",
+                "Q719",
+                "Q720",
+                "Q721",
+                "Q722",
+                "Q723",
+                "Q724"
+             ],
+             "signals_map": {
+                "Q717": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I feel energized by uniting people toward a shared purpose."
+                },
+                "Q718": {
+                   "dimension": "social_dominance",
+                   "polarity": 1,
+                   "content": "I naturally step forward to lead when morale is low."
+                },
+                "Q719": {
+                   "dimension": "emotional_intensity",
+                   "polarity": 1,
+                   "content": "I speak from passion, using emotion to inspire hope in others."
+                },
+                "Q720": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I thrive when working with others toward a unified vision."
+                },
+                "Q721": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take decisive action to rally people during uncertainty."
+                },
+                "Q722": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I welcome diverse perspectives when shaping group direction."
+                },
+                "Q723": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adjust my message and tone to meet the emotional needs of the group."
+                },
+                "Q724": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I am willing to put myself on the line for the sake of collective belief."
+                }
+             },
+             "daily_prompt": "Who in your circle needs their spark rekindled—and how can you be the light that inspires it?",
+             "practices": [
+                "Gather a small group and revisit your shared mission aloud.",
+                "Celebrate a recent collective win, however small.",
+                "Write a motivational message to someone who has lost faith.",
+                "Facilitate an open forum for people to express needs and gratitude.",
+                "Light a candle to symbolize shared strength and vision."
+             ],
+             "transformation_indicators": [
+                "Increased group cohesion and morale.",
+                "Greater emotional resonance in communication.",
+                "Expanded influence through authenticity.",
+                "Ability to turn setbacks into rallying opportunities."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Pinch (Event/Conflict)",
+             "preliminary_beat": "Dark Night of the Soul — Collective Awakening",
+             "save_the_cat_beat": "Pinch (Event/Conflict)",
+             "character_state": "Through exhaustion, Francisco learns to lead not by command, but by igniting belief.",
+             "ordinary_world_baseline": "From silence rises song—where isolation once reigned, unity now gathers momentum.",
+             "call_to_adventure_preview": "Together we rise—your courage becomes the spark that awakens the world."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Tribes",
+                "author": "Seth Godin",
+                "section_of_focus": "Leading Movements",
+                "section_description": "Explains how purpose-driven leaders cultivate belonging.",
+                "connection_focus_area": "Shows how identity and vision galvanize collective energy.",
+                "connect_points": {
+                   "point1": "Define your community’s shared ethos.",
+                   "point2": "Create a visual or symbolic representation of unity.",
+                   "point3": "Host an inaugural gathering to reinforce commitment."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Craft a purpose manifesto.",
+                   "objective2": "Measure early indicators of engagement.",
+                   "objective3": "Facilitate a unity-building ritual."
+                }
+             },
+             "book2": {
+                "title": "Influence",
+                "author": "Robert Cialdini",
+                "section_of_focus": "Social Proof",
+                "section_description": "Breaks down how shared belief drives action.",
+                "connection_focus_area": "Teaches the psychology of persuasion and trust-building.",
+                "connect_points": {
+                   "point1": "Gather stories that illustrate early successes.",
+                   "point2": "Encourage reciprocal acts of support.",
+                   "point3": "Publicly acknowledge contributors."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Develop a recognition system for supporters.",
+                   "objective2": "Integrate reciprocity into group culture.",
+                   "objective3": "Track participation growth over time."
+                }
+             },
+             "book3": {
+                "title": "Community",
+                "author": "Peter Block",
+                "section_of_focus": "Invitation",
+                "section_description": "Highlights the role of invitation in authentic engagement.",
+                "connection_focus_area": "Positions openness as a tool for empowerment.",
+                "connect_points": {
+                   "point1": "Send a heartfelt invitation to participate.",
+                   "point2": "Facilitate shared goal-setting.",
+                   "point3": "Create a safe space for vulnerability in dialogue."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Design inclusive invitations for collaboration.",
+                   "objective2": "Lead a participatory group-building session.",
+                   "objective3": "Assess emotional safety in group settings."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "Exhausted warriors gather in the twilight as Francisco, his voice trembling yet clear, calls them to remember why they began.",
+             "symbolic_moment": "A circle of torches flares to life—each ally’s flame reignited by another’s courage.",
+             "emotional_landscape": "Rising warmth in the midst of despair; passion rekindled through shared purpose.",
+             "threshold_vision": "Hope spreads like wildfire, transforming isolation into unity and fatigue into momentum.",
+             "transformation_promise": "By rallying his supporters, Francisco becomes not just a leader but a living symbol of perseverance—proof that one flame can light a thousand more."
+          }
+        },
         "personality_profile_109": {},
         "personality_profile_110": {},
         "personality_profile_111": {},
