@@ -22844,7 +22844,224 @@
              "transformation_promise": "By drawing from core strengths and trusted bonds, the hero proves that stability itself can be transcendent power."
           }
         },
-        "personality_profile_101": {},
+        "personality_profile_101": {
+          "canonical_id": "EA-101",
+          "unique_identifier": "STG 3.2.3.2",
+          "specific_task_group_title": "Mutual Respect",
+          "all_chapter": 101,
+          "novel_book": 3,
+          "chapter": "Chapter 21",
+          "chapter_title": "Reversal (Resolution) — Mutual Respect",
+          "type": "Specific Task Group",
+          "display_name": "Bridgekeeper",
+          "theme": "Mutual trust and empathic communication forge alliances stronger than individual will—unity through understanding.",
+          "family": "Heart / Connection — Empathy & Trust",
+          "summary": "Rooted in the Two of Cups, the Bridgekeeper symbolizes the alchemy of respect, where differences blend into strength. In Chapter 21, Francisco emerges from his trial not as a solitary victor but as a leader renewed by collaboration. Mutual Respect teaches the discipline of listening deeply, honoring boundaries, and weaving trust into shared purpose. It transforms vulnerability into the architecture of enduring alliances.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Two",
+          "tarot_symbolism": "The Two of Cups embodies balance, reciprocity, and emotional integrity. It is the sacred meeting of equals—a vessel where empathy becomes power.",
+          "traits": {
+             "strengths": [
+                "builds trust through authenticity and empathy",
+                "listens deeply before responding or judging",
+                "values differing perspectives as complementary truths",
+                "creates inclusive environments of mutual safety",
+                "resolves conflict through understanding, not dominance",
+                "communicates needs clearly and compassionately"
+             ],
+             "shadow": [
+                "avoids confrontation to preserve harmony",
+                "internalizes others’ emotions, losing boundaries",
+                "mistakes compliance for cooperation",
+                "over-apologizes to diffuse tension",
+                "relies on emotional validation for self-worth"
+             ],
+             "growth_focus": [
+                "practice boundary-setting as a form of respect",
+                "balance empathy with self-expression",
+                "translate emotion into constructive dialogue",
+                "invite disagreement as a path to truth",
+                "turn vulnerability into grounded trust",
+                "measure harmony by authenticity, not absence of tension"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "Reversal (Resolution)",
+             "fiction_chapter_context": "Book 3, Chapter 21 — After resisting Dagon, Francisco’s greatest reward is renewed trust and unity within his circle—the harmony that follows the storm."
+          },
+          "enneagram_link": {
+             "family_number": 9,
+             "note": "Peacemaker energy harmonized with 2’s compassion and 6’s loyalty—embodying calm authority that holds the center."
+          },
+          "color_alignment": {
+             "name": "Tyrian Purple",
+             "hsl": "312,100%,20%",
+             "rgb_hex": "#68004E",
+             "color_symbolism": "The royal purple of shared dignity—depth, patience, and trust refined through trial."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.63,
+                "stability": 0.84,
+                "empathy": 0.91,
+                "openness": 0.76,
+                "orderliness": 0.69,
+                "novelty_seeking": 0.54,
+                "abstract_reasoning": 0.67,
+                "emotional_intensity": 0.79,
+                "social_dominance": 0.58,
+                "cooperativeness": 0.93,
+                "risk_tolerance": 0.48,
+                "conscientiousness": 0.77,
+                "adaptability": 0.82,
+                "imagination": 0.74
+             },
+             "match_weights": {
+                "empathy": 0.45,
+                "cooperativeness": 0.35,
+                "stability": 0.20
+             },
+             "threshold": 0.72,
+             "top_signal_items": [
+                "Q661",
+                "Q662",
+                "Q663",
+                "Q664",
+                "Q665",
+                "Q666",
+                "Q667",
+                "Q668"
+             ],
+             "signals_map": {
+                "Q661": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I listen to understand, not to respond."
+                },
+                "Q662": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I approach disagreements with curiosity, not defense."
+                },
+                "Q663": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I stay grounded even when emotions run high."
+                },
+                "Q664": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I value perspectives that challenge my own."
+                },
+                "Q665": {
+                   "dimension": "emotional_intensity",
+                   "polarity": 1,
+                   "content": "I share my feelings authentically to build connection."
+                },
+                "Q666": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I adjust communication style based on others’ needs."
+                },
+                "Q667": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I celebrate shared victories rather than personal wins."
+                },
+                "Q668": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take responsibility for maintaining mutual respect."
+                }
+             },
+             "daily_prompt": "Who helped you see more clearly today, and how can you return that trust tomorrow?",
+             "practices": [
+                "Use the STATE method: Share your facts, Tell your story, Ask for others’ paths.",
+                "Hold 90 seconds of silence before responding in conflict.",
+                "Practice Nonviolent Communication in daily interactions.",
+                "End each day by naming one person you trusted more deeply.",
+                "Set a weekly intention for empathic dialogue within your team.",
+                "Reframe disagreements as opportunities to build understanding."
+             ],
+             "transformation_indicators": [
+                "More constructive conflict resolutions.",
+                "Increased emotional transparency and trust within groups.",
+                "Enhanced sense of belonging and mutual accountability.",
+                "Lower relational reactivity and higher compassion under stress.",
+                "Visible transformation of tension into collaboration."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "Reversal (Resolution)",
+             "preliminary_beat": "The Reward",
+             "save_the_cat_beat": "Reversal (Resolution)",
+             "character_state": "Respect and empathy anchor unity—Francisco’s triumph is shared strength, not solitary victory.",
+             "ordinary_world_baseline": "Fragmented loyalties and mistrust among allies.",
+             "call_to_adventure_preview": "Honor every voice—the bridge is built when each stone is seen."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Crucial Conversations",
+                "author": "Kerry Patterson et al.",
+                "section_of_focus": "Dialogue Skills",
+                "section_description": "Teaches tools for speaking and listening when stakes are high.",
+                "connection_focus_area": "Equips readers to maintain respect under pressure.",
+                "connect_points": {
+                   "point1": "Use STATE (Share, Tell, Ask) to structure feedback.",
+                   "point2": "Practice contrasting to clarify intent.",
+                   "point3": "Master active listening techniques."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Facilitate a high-stakes discussion with respect.",
+                   "objective2": "Apply contrasting statements in conflict.",
+                   "objective3": "Debrief dialogue outcomes to improve future exchanges."
+                }
+             },
+             "book2": {
+                "title": "Dare to Lead",
+                "author": "Brené Brown",
+                "section_of_focus": "Braving Trust",
+                "section_description": "Outlines the components of trust and how to cultivate them in teams.",
+                "connection_focus_area": "Highlights vulnerability as a path to authentic respect.",
+                "connect_points": {
+                   "point1": "Assess team’s trust inventory.",
+                   "point2": "Identify behaviors that build or erode trust.",
+                   "point3": "Design rituals to reinforce mutual accountability."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Conduct a trust-building exercise.",
+                   "objective2": "Implement check-ins on courageous leadership behaviors.",
+                   "objective3": "Measure shifts in team trust over time."
+                }
+             },
+             "book3": {
+                "title": "Nonviolent Communication",
+                "author": "Marshall B. Rosenberg",
+                "section_of_focus": "Empathy",
+                "section_description": "Explores how expressing needs and feelings without judgment fosters understanding.",
+                "connection_focus_area": "Provides a framework for respectful connection.",
+                "connect_points": {
+                   "point1": "Practice observation–feeling–need–request format.",
+                   "point2": "Distinguish between judgments and observations.",
+                   "point3": "Use empathic listening to validate others."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Translate a conflict scenario into NVC format.",
+                   "objective2": "Role-play empathic listening exercises.",
+                   "objective3": "Design a needs-based meeting check-in."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "In the aftermath of fire and temptation, Francisco stands among his people—not above them. Their shared gaze holds no hierarchy, only trust.",
+             "symbolic_moment": "Two cups overflow into a single basin—the union of purpose and compassion.",
+             "emotional_landscape": "Open-hearted, serene, humble; strength expressed through harmony.",
+             "threshold_vision": "Respect is the bridge between souls; only together can the path endure.",
+             "transformation_promise": "By choosing empathy over ego, the hero transforms survival into belonging, creating a circle that no darkness can divide."
+          }
+        },
         "personality_profile_102": {},
         "personality_profile_103": {},
         "personality_profile_104": {},
