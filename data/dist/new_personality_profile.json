@@ -23279,7 +23279,161 @@
              "transformation_promise": "By mastering choice, the hero begins to master destiny itself—shaping rather than reacting to the unfolding pattern."
           }
         },
-        "personality_profile_103": {},
+        "personality_profile_103": {
+          "canonical_id": "EA-103",
+          "unique_identifier": "MAT 3.2",
+          "specific_task_group_title": "Imagination",
+          "all_chapter": 103,
+          "novel_book": 3,
+          "chapter": "Chapter 23",
+          "chapter_title": "The Supreme Ordeal — Imagination",
+          "type": "Specific Task Group",
+          "display_name": "The Visionary Knight",
+          "theme": "The creative mind as a divine tool—imagination bridges mortal limits with infinite potential.",
+          "family": "Vision / Creation — Dream & Manifestation",
+          "summary": "Rooted in the Knight of Cups, the Visionary Knight embodies the power of imagination as both sword and sanctuary. In Chapter 23, Francisco transcends intellect, entering a visionary state where he perceives the threads of all possible futures. This archetype symbolizes the union of intuition and innovation—seeing beyond the known and shaping possibility through courage and wonder. Imagination becomes revelation; the dreamer becomes creator.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "Knight",
+          "tarot_symbolism": "The Knight of Cups rides toward the horizon of dreams, bearing messages from the unseen. He moves between the emotional and the divine, where inspiration becomes action.",
+          "traits": {
+             "strengths": [
+                "highly creative and visionary thinker",
+                "translates abstract ideas into vivid imagery",
+                "comfortable navigating the unknown",
+                "uses intuition as a guide to innovation",
+                "inspires others through imaginative storytelling",
+                "connects seemingly unrelated concepts into coherence"
+             ],
+             "shadow": [
+                "escapes into fantasy when faced with discomfort",
+                "overidealizes outcomes, ignoring practical constraints",
+                "loses focus chasing multiple ideas at once",
+                "neglects details in pursuit of vision",
+                "resists feedback that challenges imagination"
+             ],
+             "growth_focus": [
+                "anchor imagination in structured planning",
+                "transform inspiration into actionable prototypes",
+                "embrace collaboration to refine big ideas",
+                "balance idealism with pragmatic pacing",
+                "use creative visualization to clarify goals",
+                "view feedback as fuel for better creation"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "The Supreme Ordeal",
+             "fiction_chapter_context": "Book 3, Chapter 23 — Francisco’s prophetic vision becomes both a gift and a burden, revealing the infinite futures he might shape. The act of imagining becomes a test of will, faith, and courage."
+          },
+          "enneagram_link": {
+             "family_number": 4,
+             "note": "The Individualist in motion—imbued with 7’s curiosity and 1’s discipline, transforming emotion into artful creation."
+          },
+          "color_alignment": {
+             "name": "Medium Red Violet",
+             "hsl": "314,57%,44%",
+             "rgb_hex": "#B02F8F",
+             "color_symbolism": "The hue of cosmic imagination—royal passion blended with creative transcendence, where love meets creation."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.79,
+                "stability": 0.68,
+                "empathy": 0.81,
+                "openness": 0.93,
+                "orderliness": 0.54,
+                "novelty_seeking": 0.89,
+                "abstract_reasoning": 0.91,
+                "emotional_intensity": 0.85,
+                "social_dominance": 0.63,
+                "cooperativeness": 0.74,
+                "risk_tolerance": 0.77,
+                "conscientiousness": 0.58,
+                "adaptability": 0.82,
+                "imagination": 0.97
+             },
+             "match_weights": {
+                "openness": 0.4,
+                "imagination": 0.4,
+                "novelty_seeking": 0.2
+             },
+             "threshold": 0.8,
+             "top_signal_items": [
+                "Q677",
+                "Q678",
+                "Q679",
+                "Q680",
+                "Q681",
+                "Q682",
+                "Q683",
+                "Q684"
+             ],
+             "signals_map": {
+                "Q677": {
+                   "dimension": "imagination",
+                   "polarity": 1,
+                   "content": "I often see vivid mental imagery when thinking about new ideas."
+                },
+                "Q678": {
+                   "dimension": "openness",
+                   "polarity": 1,
+                   "content": "I draw inspiration from diverse and unexpected sources."
+                },
+                "Q679": {
+                   "dimension": "novelty_seeking",
+                   "polarity": 1,
+                   "content": "I thrive when exploring uncharted creative territory."
+                },
+                "Q680": {
+                   "dimension": "emotional_intensity",
+                   "polarity": 1,
+                   "content": "I channel deep emotion into artistic or visionary expression."
+                },
+                "Q681": {
+                   "dimension": "abstract_reasoning",
+                   "polarity": 1,
+                   "content": "I connect symbolic and conceptual layers when solving problems."
+                },
+                "Q682": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I experiment boldly even when success is uncertain."
+                },
+                "Q683": {
+                   "dimension": "adaptability",
+                   "polarity": 1,
+                   "content": "I shift perspectives easily when inspiration strikes."
+                },
+                "Q684": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I take proactive steps to turn my ideas into tangible results."
+                }
+             },
+             "daily_prompt": "What new possibility could be born if you gave your imagination permission to lead today?",
+             "practices": [
+                "Engage in 5-minute free-writing or sketching daily.",
+                "Design one small experiment that tests a wild idea.",
+                "Curate an inspiration board reflecting future possibilities.",
+                "Practice visualization of your desired outcome each morning.",
+                "Document every 'aha' moment and its emotional context.",
+                "Collaborate with someone outside your field for creative cross-pollination."
+             ],
+             "transformation_indicators": [
+                "Increased frequency of creative breakthroughs.",
+                "Greater comfort with ambiguity and experimentation.",
+                "Ideas more easily translated into tangible prototypes.",
+                "Heightened emotional engagement with work and purpose."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "The Supreme Ordeal",
+             "preliminary_beat": "The Reward — Vision Beyond the Known",
+             "save_the_cat_beat": "The Supreme Ordeal",
+             "character_state": "Imagination transforms from refuge to revelation—Francisco’s mind becomes the mirror of creation.",
+             "ordinary_world_baseline": "Rational mastery gives way to visionary surrender."
+          },
         "personality_profile_104": {},
         "personality_profile_105": {},
         "personality_profile_106": {},
@@ -23297,7 +23451,8 @@
         "personality_profile_118": {},
         "personality_profile_119": {},
         "personality_profile_120": {}
-      }
+        },
+        
     },
     "family_4": {},
     "family_5": {},
