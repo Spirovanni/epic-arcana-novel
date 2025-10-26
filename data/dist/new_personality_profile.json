@@ -22407,7 +22407,226 @@
              "transformation_promise": "By mastering focus, the hero learns to aim power precisely—clarity first, then everything else."
           }
         },
-        "personality_profile_99": {},
+        "personality_profile_99": {
+          "canonical_id": "EA-099",
+          "unique_identifier": "STG 3.2.2.3",
+          "specific_task_group_title": "Ambition",
+          "all_chapter": 99,
+          "novel_book": 3,
+          "chapter": "Chapter 19",
+          "chapter_title": "The Road of Trials — Ambition",
+          "type": "Specific Task Group",
+          "display_name": "Purposeful Builder",
+          "theme": "Harnessing intrinsic drive to pursue a long arc of service—clarifying devotion, setting stretch aims, and sustaining momentum through trials.",
+          "family": "Will / Drive — Motivation & Devotion",
+          "summary": "Rooted in the Eight of Disks, this profile honors ambition as patient mastery. In Chapter 19, Francisco’s loyalty is tested: research brilliance versus responsibility to people. Ambition becomes a vow—aligning desire to a higher purpose, converting aspiration into disciplined practice, and choosing service when the path forks. The Purposeful Builder channels steady motivation into visible care for the world.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "Eight",
+          "tarot_symbolism": "The Eight of Disks embodies diligent craft, iterative improvement, and devotion to meaningful work. Its wisdom: true ambition refines the self as it builds the world—precision over spectacle, purpose over vanity.",
+          "traits": {
+             "strengths": [
+                "sustains long-term effort through purpose clarity",
+                "sets stretch goals tied to values and service",
+                "balances personal advancement with communal welfare",
+                "translates inspiration into consistent, craftlike practice",
+                "recovers quickly from setbacks with lesson-focused reviews",
+                "models self-advocacy without losing humility",
+                "builds systems that compound motivation over time"
+             ],
+             "shadow": [
+                "confuses output with worth, drifting into work-addiction",
+                "chooses status milestones over service impact",
+                "neglects relationships while chasing goals",
+                "overengineers plans instead of taking courageous action",
+                "dismisses rest, dulling creativity and care",
+                "anchors identity to achievement, fearing necessary course-corrections"
+             ],
+             "growth_focus": [
+                "restate ambition as service: who benefits and how",
+                "time-box ambition sprints with renewal rituals",
+                "measure progress with impact and integrity, not volume",
+                "invite mentorship and sponsorship to temper blind spots",
+                "protect relational commitments alongside deliverables",
+                "rehearse values-based choices before trials arise"
+             ]
+          },
+          "book_association": {
+             "nonfiction_series": "The Human Framework",
+             "fiction_series": "Laurasia - Children of the Voice",
+             "chapter_theme": "The Road of Trials",
+             "fiction_chapter_context": "Book 3, Chapter 19 — Through loyalty tests that force choice between research and people, Francisco refines ambition into devotion."
+          },
+          "enneagram_link": {
+             "family_number": 3,
+             "note": "Achievement (3) anchored by 1’s ethics and 2’s service—ambition purified by conscience and care."
+          },
+          "color_alignment": {
+             "name": "Eggplant",
+             "hsl": "318,100%,32%",
+             "rgb_hex": "#A3007A",
+             "color_symbolism": "A deep, resolute magenta-violet—drive tempered by depth; the hue of vow-bound aspiration."
+          },
+          "scoring_model": {
+             "dimensions": {
+                "agency": 0.81,
+                "stability": 0.78,
+                "empathy": 0.67,
+                "openness": 0.66,
+                "orderliness": 0.76,
+                "novelty_seeking": 0.52,
+                "abstract_reasoning": 0.71,
+                "emotional_intensity": 0.57,
+                "social_dominance": 0.64,
+                "cooperativeness": 0.77,
+                "risk_tolerance": 0.58,
+                "conscientiousness": 0.88,
+                "adaptability": 0.69,
+                "imagination": 0.64
+             },
+             "match_weights": {
+                "conscientiousness": 0.35,
+                "agency": 0.35,
+                "stability": 0.30
+             },
+             "threshold": 0.7,
+             "top_signal_items": [
+                "Q645",
+                "Q646",
+                "Q647",
+                "Q648",
+                "Q649",
+                "Q650",
+                "Q651",
+                "Q652"
+             ],
+             "signals_map": {
+                "Q645": {
+                   "dimension": "agency",
+                   "polarity": 1,
+                   "content": "I set stretch aims that pull me beyond comfort."
+                },
+                "Q646": {
+                   "dimension": "conscientiousness",
+                   "polarity": 1,
+                   "content": "I convert big goals into consistent craftlike routines."
+                },
+                "Q647": {
+                   "dimension": "stability",
+                   "polarity": 1,
+                   "content": "I stay steady through trials by returning to purpose."
+                },
+                "Q648": {
+                   "dimension": "cooperativeness",
+                   "polarity": 1,
+                   "content": "I align my ambition with tangible benefits for others."
+                },
+                "Q649": {
+                   "dimension": "orderliness",
+                   "polarity": 1,
+                   "content": "I track progress with clear, values-based metrics."
+                },
+                "Q650": {
+                   "dimension": "risk_tolerance",
+                   "polarity": 1,
+                   "content": "I take principled risks when service requires it."
+                },
+                "Q651": {
+                   "dimension": "empathy",
+                   "polarity": 1,
+                   "content": "I choose people over prestige when trade-offs arise."
+                },
+                "Q652": {
+                   "dimension": "novelty_seeking",
+                   "polarity": -1,
+                   "content": "I resist chasing status signals that dilute mission."
+                }
+             },
+             "daily_prompt": "How did my ambition serve someone beyond myself today—and what one practice will sustain that tomorrow?",
+             "practices": [
+                "Why-to-What bridge: write today’s ‘why,’ then one concrete ‘what.’",
+                "Stretch + steady: pair one bold goal with a daily craft routine.",
+                "Service metric: define a people-centered indicator of success.",
+                "Mentor moment: request one piece of corrective feedback weekly.",
+                "Renewal slot: schedule recovery to protect long-arc motivation.",
+                "Choice rehearsal: pre-decide values-based responses to likely trials."
+             ],
+             "transformation_indicators": [
+                "Greater alignment between goals and service impact.",
+                "Sustained effort without spikes of burnout or drift.",
+                "Improved decisions at value–prestige crossroads.",
+                "Richer mentorship networks supporting ambition.",
+                "Visible craftsmanship gains in key domains."
+             ]
+          },
+          "hero_journey_position": {
+             "stage": "The Road of Trials",
+             "preliminary_beat": "Approach to the Innermost Cave",
+             "save_the_cat_beat": "The Road of Trials",
+             "character_state": "Ambition clarified into devotion—desire yoked to duty, progress yoked to people.",
+             "ordinary_world_baseline": "Unmoored drive fractures focus and relationships.",
+             "call_to_adventure_preview": "Dream boldly, act purposefully—let purpose steer the climb."
+          },
+          "specific_task_group_books_influenced_by": {
+             "book1": {
+                "title": "Drive",
+                "author": "Daniel H. Pink",
+                "section_of_focus": "Type I and Type X Behavior",
+                "section_description": "Differentiates extrinsic and intrinsic motivation and how to cultivate autonomous drive.",
+                "connection_focus_area": "Emphasizes purpose and autonomy as drivers of ambition.",
+                "connect_points": {
+                   "point1": "Identify personal motivators.",
+                   "point2": "Align tasks with core purpose.",
+                   "point3": "Design autonomy-supportive routines."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Map intrinsic motivators.",
+                   "objective2": "Create autonomy in daily tasks.",
+                   "objective3": "Measure motivation levels over time."
+                }
+             },
+             "book2": {
+                "title": "Lean In",
+                "author": "Sheryl Sandberg",
+                "section_of_focus": "Sit at the Table",
+                "section_description": "Encourages taking risks and asserting yourself to achieve career ambition.",
+                "connection_focus_area": "Demonstrates the importance of self-advocacy in reaching goals.",
+                "connect_points": {
+                   "point1": "Practice confidence in meetings.",
+                   "point2": "Seek sponsorship and mentorship.",
+                   "point3": "Take calculated risks."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Lead a challenging project.",
+                   "objective2": "Secure a mentor relationship.",
+                   "objective3": "Reflect on outcomes and iterate."
+                }
+             },
+             "book3": {
+                "title": "Start with Why",
+                "author": "Simon Sinek",
+                "section_of_focus": "The Golden Circle",
+                "section_description": "Explains how clarifying your “why” inspires action and ambition.",
+                "connection_focus_area": "Links purpose clarity to sustained drive.",
+                "connect_points": {
+                   "point1": "Define your personal why statement.",
+                   "point2": "Communicate it to your team or peers.",
+                   "point3": "Use your why to guide decisions."
+                },
+                "terminal_learning_objectives": {
+                   "objective1": "Craft a concise why statement.",
+                   "objective2": "Present your why to an audience.",
+                   "objective3": "Apply your why in a key decision."
+                }
+             }
+          },
+          "laurasia_narrative_integration": {
+             "opening_scene": "On the trial grounds, two paths shimmer—one lined with accolades, the other with outstretched hands. Francisco steps toward the reaching palms.",
+             "symbolic_moment": "A chisel meets stone: each precise strike trades haste for meaning; the sculpture reveals a servant’s stance.",
+             "emotional_landscape": "Resolute, service-centered, quietly ardent—ambition warmed by devotion.",
+             "threshold_vision": "The work is worthy when the world is better for it.",
+             "transformation_promise": "By binding desire to duty, the hero forges ambition into a reliable engine of care and craft."
+          }
+        },
         "personality_profile_100": {
           "canonical_id": "EA-100",
           "unique_identifier": "STG 3.2.3.1",
