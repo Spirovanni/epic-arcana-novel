@@ -25875,11 +25875,365 @@
             "transformation_promise": "Insight becomes foresight—decisions honoring people and purpose."
           }
         },
-        "personality_profile_116": {},
-        "personality_profile_117": {},
+        "personality_profile_116": {
+            "canonical_id": "EA-116",
+            "unique_identifier": "STG 3.2.8.1",
+            "specific_task_group_title": "Inner-Child",
+            "all_chapter": 116,
+            "novel_book": 3,
+            "chapter": "Chapter 36",
+            "chapter_title": "Battle — Inner-Child",
+            "type": "Specific Task Group",
+            "display_name": "The Wonder-Keeper",
+            "theme": "Play restores courage—reclaiming innocence rekindles hope in the heat of battle.",
+            "family": "Emotional Reclamation / Joy — Play, Curiosity, Creative Courage",
+            "summary": "The Wonder-Keeper embodies resilient playfulness in dire times. As war looms, Francisco reconnects with his inner child—the original spark that set him on the path. By choosing levity, art, and small rituals of delight, he counters despair and models a humane form of resistance that lifts those around him.",
+            "tarot_family": "Cups",
+            "tarot_card_item": "Page",
+            "tarot_symbolism": "The Page of Cups heralds fresh feeling and creative innocence—an invitation to meet darkness with curiosity, softness, and imaginative grace.",
+            "traits": {
+              "strengths": [
+                "restores group morale through play and creative ritual",
+                "transforms fear into curiosity and experimentation",
+                "models vulnerability that invites authentic connection",
+                "reframes adversity as a canvas for expression",
+                "protects hope as a strategic resource"
+              ],
+              "shadow": [
+                "escapism via play to avoid difficult realities",
+                "inconsistent focus when stakes feel overwhelming",
+                "romanticizing the past instead of acting now",
+                "overreliance on mood to begin important work",
+                "people-pleasing to keep the peace"
+              ],
+              "growth_focus": [
+                "anchor play with purpose (joy in service of mission)",
+                "pair wonder with clear next actions",
+                "set time-boxed creative sprints under pressure",
+                "share playful practices that others can repeat",
+                "treat hope as discipline, not accident"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "Battle (set-up)",
+              "fiction_chapter_context": "Book 3, Chapter 36 — On the brink of conflict, Francisco chooses wonder as defiance, re-humanizing his allies and restoring courage."
+            },
+            "enneagram_link": {
+              "family_number": 7,
+              "note": "The Enthusiast in integration—joy disciplined by purpose, balancing spontaneity (7) with grounded follow-through (1)."
+            },
+            "color_alignment": {
+              "name": "Magenta",
+              "hsl": "300,100%,50%",
+              "rgb_hex": "#FF00FF",
+              "color_symbolism": "Vivid creative energy; childlike joy reclaimed; a beacon of playful resilience."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.78,
+                "stability": 0.69,
+                "empathy": 0.85,
+                "openness": 0.9,
+                "orderliness": 0.62,
+                "novelty_seeking": 0.88,
+                "abstract_reasoning": 0.72,
+                "emotional_intensity": 0.83,
+                "social_dominance": 0.67,
+                "cooperativeness": 0.82,
+                "risk_tolerance": 0.74,
+                "conscientiousness": 0.68,
+                "adaptability": 0.87,
+                "imagination": 0.93
+              },
+              "match_weights": {
+                "imagination": 0.35,
+                "openness": 0.35,
+                "adaptability": 0.3
+              },
+              "threshold": 0.8,
+              "top_signal_items": [
+                "Q801",
+                "Q802",
+                "Q803",
+                "Q804",
+                "Q805",
+                "Q806",
+                "Q807",
+                "Q808"
+              ],
+              "signals_map": {
+                "Q801": { "dimension": "imagination", "polarity": 1, "content": "I use playful experiments to break through tense situations." },
+                "Q802": { "dimension": "openness", "polarity": 1, "content": "I welcome unusual ideas, especially under pressure." },
+                "Q803": { "dimension": "adaptability", "polarity": 1, "content": "I pivot quickly from fear to curiosity when plans shift." },
+                "Q804": { "dimension": "empathy", "polarity": 1, "content": "I invite others into restorative, light-hearted rituals." },
+                "Q805": { "dimension": "stability", "polarity": 1, "content": "Small moments of joy help me remain steady in chaos." },
+                "Q806": { "dimension": "conscientiousness", "polarity": 1, "content": "I channel creative bursts into clear next actions." },
+                "Q807": { "dimension": "novelty_seeking", "polarity": 1, "content": "I seek fresh approaches when the team feels stuck." },
+                "Q808": { "dimension": "orderliness", "polarity": 1, "content": "I time-box play so it energizes the mission, not distracts." }
+              },
+              "daily_prompt": "What small act of play could restore courage for you—and for one other person—today?",
+              "practices": [
+                "Design a 10-minute ‘joy warm-up’ before hard work.",
+                "Pair an artist date with a concrete deliverable (sketch → task).",
+                "Create a team ‘micro-celebration’ ritual after setbacks.",
+                "Run a curiosity walk: list five wonders you notice.",
+                "Close the day by naming one moment of awe."
+              ],
+              "transformation_indicators": [
+                "Higher morale and readiness before difficult tasks.",
+                "Faster recovery from stress events.",
+                "Increased creative options proposed under pressure.",
+                "Replication of playful rituals by peers without prompting."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Battle (set-up)",
+              "preliminary_beat": "Finale — Courage via Wonder",
+              "save_the_cat_beat": "Battle (set-up)",
+              "character_state": "Francisco chooses wonder over cynicism, broadcasting calm, humane bravery.",
+              "ordinary_world_baseline": "Tension and fatigue; joy is scarce and strategic.",
+              "call_to_adventure_preview": "Protect hope: make play a practice, not a luxury."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                "title": "Play",
+                "author": "Stuart Brown",
+                "section_of_focus": "Rediscovering Playfulness",
+                "section_description": "How play builds resilience and creativity.",
+                "connection_focus_area": "Joy as a neural and social catalyst.",
+                "connect_points": {
+                  "point1": "Name three joyful activities from childhood.",
+                  "point2": "Schedule a daily 10-minute play ritual.",
+                  "point3": "Debrief mood shifts after play."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Document a personal play protocol.",
+                  "objective2": "Track stress reduction pre/post play.",
+                  "objective3": "Teach a peer a 5-minute play reset."
+                }
+              },
+              "book2": {
+                "title": "The Artist’s Way",
+                "author": "Julia Cameron",
+                "section_of_focus": "Recovering a Sense of Play",
+                "section_description": "Prompts for creative unblocking via ritual.",
+                "connection_focus_area": "Reclaiming wonder with structure.",
+                "connect_points": {
+                  "point1": "Weekly artist date for delight.",
+                  "point2": "Morning pages for creative flow.",
+                  "point3": "Share one playful output."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Produce a piece born from an artist date.",
+                  "objective2": "Chart creative blocks vs. breakthroughs.",
+                  "objective3": "Host a group morning-pages demo."
+                }
+              },
+              "book3": {
+                "title": "The Whole-Brain Child",
+                "author": "Daniel J. Siegel & Tina Payne Bryson",
+                "section_of_focus": "Integrating Play and Mindfulness",
+                "section_description": "Uniting curiosity with regulation.",
+                "connection_focus_area": "Name-it-to-tame-it after play.",
+                "connect_points": {
+                  "point1": "Pair imaginative play with grounding.",
+                  "point2": "Name emotions that surfaced.",
+                  "point3": "Reflect on integration over a week."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Lead a play-mindfulness exercise.",
+                  "objective2": "Capture integration outcomes.",
+                  "objective3": "Coach a creative calming activity."
+                }
+              }
+            },
+            "laurasia_narrative_integration": {
+              "opening_scene": "Before dawn, Francisco chalks a looping star on the courtyard stones, inviting comrades to ‘step through’ with him—laughter breaks the gloom.",
+              "symbolic_moment": "A paper crane, folded mid-march, passes hand to hand; the column’s pace steadies.",
+              "emotional_landscape": "Tenderness beneath tension; warmth flickering in cold air.",
+              "threshold_vision": "Joy spreads virally—each spark becomes a lantern against the night.",
+              "transformation_promise": "Play teaches the army to breathe; hope becomes a repeatable drill."
+            }
+        },
+        "personality_profile_117": {
+            "canonical_id": "EA-117",
+            "unique_identifier": "STG 3.2.8.2",
+            "specific_task_group_title": "Iron Sharpens Iron",
+            "all_chapter": 117,
+            "novel_book": 3,
+            "chapter": "Chapter 37",
+            "chapter_title": "Climax — Iron Sharpens Iron",
+            "type": "Specific Task Group",
+            "display_name": "The Forge-Binder",
+            "theme": "Excellence through friction—mutual challenge hardens resolve and hones mastery.",
+            "family": "Peer Mastery / Accountability — Deliberate Practice in Community",
+            "summary": "The Forge-Binder thrives where pressure refines character. In the decisive trial, Francisco and his core allies sharpen one another through candid critique, tactical sparring, and shared standards. Their bonds and skills solidify, proving readiness for responsibilities beyond any one person.",
+            "tarot_family": "Wands",
+            "tarot_card_item": "Five",
+            "tarot_symbolism": "The Five of Wands depicts competitive testing—structured struggle that, when guided by respect, elevates everyone involved.",
+            "traits": {
+              "strengths": [
+                "creates brave-but-safe arenas for hard feedback",
+                "turns competition into collaborative improvement",
+                "tracks progress with objective skill metrics",
+                "normalizes iterative failure as data",
+                "rotates roles to grow leadership breadth"
+              ],
+              "shadow": [
+                "pushing intensity beyond teammates’ capacity",
+                "confusing harshness with honesty",
+                "over-indexing on performance at empathy’s expense",
+                "treating winning as proof of worth",
+                "resisting rest/recovery phases"
+              ],
+              "growth_focus": [
+                "pair rigor with care (challenge + containment)",
+                "agree on rules, metrics, and recovery windows",
+                "coach the person, not just the output",
+                "celebrate learning deltas, not only results",
+                "institutionalize peer review as a ritual"
+              ]
+            },
+            "book_association": {
+              "nonfiction_series": "The Human Framework",
+              "fiction_series": "Laurasia - Children of the Voice",
+              "chapter_theme": "Climax",
+              "fiction_chapter_context": "Book 3, Chapter 37 — In a crucible of tests, Francisco and his cadre cross-train, critique, and prove their readiness for the larger arc."
+            },
+            "enneagram_link": {
+              "family_number": 8,
+              "note": "The Challenger tempered by 2/9 lines—strong boundaries and drive, guided by care and collective calm."
+            },
+            "color_alignment": {
+              "name": "Electric Purple",
+              "hsl": "270,100%,50%",
+              "rgb_hex": "#9900FF",
+              "color_symbolism": "Electric resolve; disciplined fire channeled toward shared ascent."
+            },
+            "scoring_model": {
+              "dimensions": {
+                "agency": 0.86,
+                "stability": 0.76,
+                "empathy": 0.74,
+                "openness": 0.71,
+                "orderliness": 0.84,
+                "novelty_seeking": 0.7,
+                "abstract_reasoning": 0.79,
+                "emotional_intensity": 0.77,
+                "social_dominance": 0.82,
+                "cooperativeness": 0.8,
+                "risk_tolerance": 0.73,
+                "conscientiousness": 0.91,
+                "adaptability": 0.78,
+                "imagination": 0.75
+              },
+              "match_weights": {
+                "conscientiousness": 0.34,
+                "agency": 0.33,
+                "cooperativeness": 0.33
+              },
+              "threshold": 0.83,
+              "top_signal_items": [
+                "Q841",
+                "Q842",
+                "Q843",
+                "Q844",
+                "Q845",
+                "Q846",
+                "Q847",
+                "Q848"
+              ],
+              "signals_map": {
+                "Q841": { "dimension": "conscientiousness", "polarity": 1, "content": "I welcome structured critique with clear improvement targets." },
+                "Q842": { "dimension": "agency", "polarity": 1, "content": "I seek peers who challenge me to raise my standard." },
+                "Q843": { "dimension": "cooperativeness", "polarity": 1, "content": "I invest in my partners’ growth as much as my own." },
+                "Q844": { "dimension": "orderliness", "polarity": 1, "content": "We define rules of engagement before we spar." },
+                "Q845": { "dimension": "stability", "polarity": 1, "content": "I stay composed while receiving tough feedback." },
+                "Q846": { "dimension": "empathy", "polarity": 1, "content": "I calibrate intensity to protect trust and safety." },
+                "Q847": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I translate feedback into testable practice drills." },
+                "Q848": { "dimension": "adaptability", "polarity": 1, "content": "I pivot quickly when a drill isn’t producing gains." }
+              },
+              "daily_prompt": "Which peer could sharpen you today—and how will you return the gift without eroding trust?",
+              "practices": [
+                "Run a 20-minute peer skill sprint with pre-agreed metrics.",
+                "Exchange ‘two strengths / one edge’ feedback in writing.",
+                "Rotate facilitator/challenger roles each session.",
+                "Track deltas on one skill across three iterations.",
+                "End with a recovery checkpoint (what restores you?)."
+              ],
+              "transformation_indicators": [
+                "Higher signal-to-noise in feedback (specific, actionable).",
+                "Measured skill deltas over short cycles.",
+                "Increased psychological safety despite intensity.",
+                "More teammates stepping into coach/lead roles."
+              ]
+            },
+            "hero_journey_position": {
+              "stage": "Climax",
+              "preliminary_beat": "Finale — Mutual Trial",
+              "save_the_cat_beat": "Break into Three → Climax",
+              "character_state": "Francisco proves readiness via disciplined, collective rigor.",
+              "ordinary_world_baseline": "Unrefined potential; uneven standards.",
+              "call_to_adventure_preview": "Make the forge: rules, metrics, recovery. Then enter together."
+            },
+            "specific_task_group_books_influenced_by": {
+              "book1": {
+                "title": "Mastermind",
+                "author": "Maria Konnikova",
+                "section_of_focus": "Companionable Thinking",
+                "section_description": "Collaborative cognition elevates insight.",
+                "connection_focus_area": "Design co-thinking sprints.",
+                "connect_points": {
+                  "point1": "Pair for daily problem sprints.",
+                  "point2": "Critique reasoning, not people.",
+                  "point3": "Swap roles to expand perspective."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Document idea evolution via dialogue.",
+                  "objective2": "Assess clarity gains post-sprint.",
+                  "objective3": "Refine prompts for deeper analysis."
+                }
+              },
+              "book2": {
+                "title": "Peak",
+                "author": "Anders Ericsson & Robert Pool",
+                "section_of_focus": "Deliberate Practice",
+                "section_description": "Specific feedback + repetition = mastery.",
+                "connection_focus_area": "Tight loops + measurable targets.",
+                "connect_points": {
+                  "point1": "Set one precise skill target.",
+                  "point2": "Solicit real-time corrections.",
+                  "point3": "Adjust drills to hit the mark."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Design a peer review regimen.",
+                  "objective2": "Quantify gains across sessions.",
+                  "objective3": "Debrief adaptation decisions."
+                }
+              },
+              "book3": {
+                "title": "Team of Teams",
+                "author": "General Stanley McChrystal",
+                "section_of_focus": "Empowered Execution",
+                "section_description": "Small, trusted cells move fast.",
+                "connection_focus_area": "Decentralized accountability.",
+                "connect_points": {
+                  "point1": "Form agile squads with autonomy.",
+                  "point2": "Daily peer stand-ups on blockers.",
+                  "point3": "Rotate leadership weekly."
+                },
+                "terminal_learning_objectives": {
+                  "objective1": "Launch a peer-led sprint team.",
+                  "objective2": "Measure decision speed."
+                }
+              }
+            },
         "personality_profile_118": {},
         "personality_profile_119": {},
         "personality_profile_120": {}
+        }
       },
       "family_4": {},
       "family_5": {},
