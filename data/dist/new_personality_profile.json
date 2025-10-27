@@ -26302,7 +26302,220 @@
             "transformation_promise": "Play teaches the army to breathe; hope becomes a repeatable drill."
           }
         },
-        "personality_profile_117": {},
+        "personality_profile_117": {
+          "canonical_id": "EA-117",
+          "unique_identifier": "STG 3.2.8.2",
+          "specific_task_group_title": "Iron Sharpens Iron",
+          "all_chapter": 117,
+          "novel_book": 3,
+          "chapter": "Chapter 37",
+          "chapter_title": "Climax — Iron Sharpens Iron",
+          "type": "Specific Task Group",
+          "display_name": "The Forge-Binder",
+          "theme": "Excellence through friction—mutual challenge hardens resolve and hones mastery.",
+          "family": "Peer Mastery / Accountability — Deliberate Practice in Community",
+          "summary": "The Forge-Binder thrives where pressure refines character. In the decisive trial, Francisco and his core allies sharpen one another through candid critique, tactical sparring, and shared standards. Their bonds and skills solidify, proving readiness for responsibilities beyond any one person.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Five",
+          "tarot_symbolism": "The Five of Wands depicts competitive testing—structured struggle that, when guided by respect, elevates everyone involved.",
+          "traits": {
+            "strengths": [
+              "creates brave-but-safe arenas for hard feedback",
+              "turns competition into collaborative improvement",
+              "tracks progress with objective skill metrics",
+              "normalizes iterative failure as data",
+              "rotates roles to grow leadership breadth"
+            ],
+            "shadow": [
+              "pushing intensity beyond teammates’ capacity",
+              "confusing harshness with honesty",
+              "over-indexing on performance at empathy’s expense",
+              "treating winning as proof of worth",
+              "resisting rest/recovery phases"
+            ],
+            "growth_focus": [
+              "pair rigor with care (challenge + containment)",
+              "agree on rules, metrics, and recovery windows",
+              "coach the person, not just the output",
+              "celebrate learning deltas, not only results",
+              "institutionalize peer review as a ritual"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Climax",
+            "fiction_chapter_context": "Book 3, Chapter 37 — In a crucible of tests, Francisco and his cadre cross-train, critique, and prove their readiness for the larger arc."
+          },
+          "enneagram_link": {
+            "family_number": 8,
+            "note": "The Challenger tempered by 2/9 lines—strong boundaries and drive, guided by care and collective calm."
+          },
+          "color_alignment": {
+            "name": "Electric Purple",
+            "hsl": "270,100%,50%",
+            "rgb_hex": "#9900FF",
+            "color_symbolism": "Electric resolve; disciplined fire channeled toward shared ascent."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.86,
+              "stability": 0.76,
+              "empathy": 0.74,
+              "openness": 0.71,
+              "orderliness": 0.84,
+              "novelty_seeking": 0.7,
+              "abstract_reasoning": 0.79,
+              "emotional_intensity": 0.77,
+              "social_dominance": 0.82,
+              "cooperativeness": 0.8,
+              "risk_tolerance": 0.73,
+              "conscientiousness": 0.91,
+              "adaptability": 0.78,
+              "imagination": 0.75
+            },
+            "match_weights": {
+              "conscientiousness": 0.34,
+              "agency": 0.33,
+              "cooperativeness": 0.33
+            },
+            "threshold": 0.83,
+            "top_signal_items": [
+              "Q841",
+              "Q842",
+              "Q843",
+              "Q844",
+              "Q845",
+              "Q846",
+              "Q847",
+              "Q848"
+            ],
+            "signals_map": {
+              "Q841": {
+                "dimension": "conscientiousness",
+                "polarity": 1,
+                "content": "I welcome structured critique with clear improvement targets."
+              },
+              "Q842": {
+                "dimension": "agency",
+                "polarity": 1,
+                "content": "I seek peers who challenge me to raise my standard."
+              },
+              "Q843": {
+                "dimension": "cooperativeness",
+                "polarity": 1,
+                "content": "I invest in my partners’ growth as much as my own."
+              },
+              "Q844": {
+                "dimension": "orderliness",
+                "polarity": 1,
+                "content": "We define rules of engagement before we spar."
+              },
+              "Q845": {
+                "dimension": "stability",
+                "polarity": 1,
+                "content": "I stay composed while receiving tough feedback."
+              },
+              "Q846": {
+                "dimension": "empathy",
+                "polarity": 1,
+                "content": "I calibrate intensity to protect trust and safety."
+              },
+              "Q847": {
+                "dimension": "abstract_reasoning",
+                "polarity": 1,
+                "content": "I translate feedback into testable practice drills."
+              },
+              "Q848": {
+                "dimension": "adaptability",
+                "polarity": 1,
+                "content": "I pivot quickly when a drill isn’t producing gains."
+              }
+            },
+            "daily_prompt": "Which peer could sharpen you today—and how will you return the gift without eroding trust?",
+            "practices": [
+              "Run a 20-minute peer skill sprint with pre-agreed metrics.",
+              "Exchange ‘two strengths / one edge’ feedback in writing.",
+              "Rotate facilitator/challenger roles each session.",
+              "Track deltas on one skill across three iterations.",
+              "End with a recovery checkpoint (what restores you?)."
+            ],
+            "transformation_indicators": [
+              "Higher signal-to-noise in feedback (specific, actionable).",
+              "Measured skill deltas over short cycles.",
+              "Increased psychological safety despite intensity.",
+              "More teammates stepping into coach/lead roles."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Climax",
+            "preliminary_beat": "Finale — Mutual Trial",
+            "save_the_cat_beat": "Break into Three → Climax",
+            "character_state": "Francisco proves readiness via disciplined, collective rigor.",
+            "ordinary_world_baseline": "Unrefined potential; uneven standards.",
+            "call_to_adventure_preview": "Make the forge: rules, metrics, recovery. Then enter together."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Mastermind: How to Think Like Sherlock Holmes",
+              "author": "Maria Konnikova",
+              "section_of_focus": "The Power of Companionable Thinking",
+              "section_description": "Analyzes how collaboration amplifies critical thinking and insight.",
+              "connection_focus_area": "Co-thinking structures that deepen analysis.",
+              "connect_points": {
+                "point1": "Pair up for daily problem-solving sprints.",
+                "point2": "Share and critique each other’s reasoning.",
+                "point3": "Rotate roles of facilitator and challenger."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Run a collaborative puzzle session.",
+                "objective2": "Record the evolution of ideas through dialogue.",
+                "objective3": "Assess improvements in collective insight."
+              }
+            },
+            "book2": {
+              "title": "Peak: Secrets from the New Science of Expertise",
+              "author": "Anders Ericsson & Robert Pool",
+              "section_of_focus": "Deliberate Practice",
+              "section_description": "Targeted feedback and repetition drive mastery.",
+              "connection_focus_area": "Peer critique as an accelerator for skill growth.",
+              "connect_points": {
+                "point1": "Set a clear skill target with a partner.",
+                "point2": "Solicit real-time corrective feedback.",
+                "point3": "Adjust practice drills based on peer input."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Design a peer-review practice regimen.",
+                "objective2": "Quantify progress over three sessions.",
+                "objective3": "Reflect on feedback integration."
+              }
+            },
+            "book3": {
+              "title": "Team of Teams",
+              "author": "General Stanley McChrystal",
+              "section_of_focus": "Empowered Execution",
+              "section_description": "Small empowered groups adapt rapidly with shared accountability.",
+              "connection_focus_area": "Decentralized peer support structures.",
+              "connect_points": {
+                "point1": "Form agile squads for tasks.",
+                "point2": "Conduct daily peer stand-ups.",
+                "point3": "Rotate leadership roles weekly."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Launch a peer-led project team.",
+                "objective2": "Measure decision-making speed.",
+                "objective3": "Iterate team structure based on feedback."
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "On slate ground ringed by torchlight, Francisco chalks the rules. Helmets touch, palms clasp—then the trials begin.",
+            "symbolic_moment": "After a brutal exchange, an ally lifts Francisco before he can rise alone; they bow to each other, equals.",
+            "emotional_landscape": "Intensity, respect, and rising confidence; heat that tempers rather than burns.",
+            "threshold_vision": "Measured drills become music—precision, breath, and trust interlocking like gears.",
+            "transformation_promise": "The cadre exits the arena not just stronger, but synchronized—ready for responsibilities no single hero could hold."
+          }
+        },
         "personality_profile_118": {},
         "personality_profile_119": {},
         "personality_profile_120": {}
