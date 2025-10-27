@@ -25350,9 +25350,531 @@
               "transformation_promise": "Francisco's delegation skills will be essential for the collective action required in Books 7-9."
             }
         },           
-        "personality_profile_113": {},
-        "personality_profile_114": {},
-        "personality_profile_115": {},
+        "personality_profile_113": {
+          "canonical_id": "EA-113",
+          "unique_identifier": "STG 3.2.7.1",
+          "specific_task_group_title": "Diplomacy",
+          "all_chapter": 113,
+          "novel_book": 3,
+          "chapter": "Chapter 33",
+          "chapter_title": "Flight — Diplomacy",
+          "type": "Specific Task Group",
+          "display_name": "The Peacewright",
+          "theme": "Unity through principled dialogue—coalitions endure when differences are honored and bridged.",
+          "family": "Leadership / Alliance — Mediation & Bridge-Building",
+          "summary": "The Peacewright archetype embodies the art of principled negotiation, tactical empathy, and dignified dialogue. In Chapter 33, as Francisco’s expanding coalition strains under rival priorities, he becomes the steady fulcrum—separating people from problems, surfacing shared interests, and converting tensions into renewed solidarity. His diplomacy protects the mission by preserving relationship capital while advancing common purpose.",
+          "tarot_family": "Cups",
+          "tarot_card_item": "King",
+          "tarot_symbolism": "The King of Cups channels calm mastery of emotion—wisdom that steadies stormy waters and invites reconciliation.",
+          "traits": {
+            "strengths": [
+              "de-escalates conflict with composure and empathy",
+              "uncovers shared interests beneath positions",
+              "frames decisions around mutual purpose",
+              "balances warmth with firm, objective criteria",
+              "builds durable trust across differences"
+            ],
+            "shadow": [
+              "risk of appeasing to maintain harmony",
+              "overinvestment in consensus slows action",
+              "emotional labor fatigue during prolonged disputes",
+              "hesitation to set hard boundaries when needed",
+              "susceptibility to bad-faith actors if signals are missed"
+            ],
+            "growth_focus": [
+              "pair empathy with clear decision thresholds",
+              "deploy objective standards to prevent stalemates",
+              "timebox negotiations; protect momentum",
+              "name misalignment early to avoid drift",
+              "capture agreements in visible commitments"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Flight",
+            "fiction_chapter_context": "Book 3, Chapter 33 — Amid factional tension, Francisco mediates principled agreements that preserve unity without demanding uniformity."
+          },
+          "enneagram_link": {
+            "family_number": 9,
+            "note": "The Peacemaker at high development—harmonizing differences while holding firm to shared values."
+          },
+          "color_alignment": {
+            "name": "Electric Purple",
+            "hsl": "285,100%,50%",
+            "rgb_hex": "#CC00FF",
+            "color_symbolism": "Vibrant concord—electric energy channeled into cohesive alliance."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.78,
+              "stability": 0.86,
+              "empathy": 0.90,
+              "openness": 0.82,
+              "orderliness": 0.77,
+              "novelty_seeking": 0.62,
+              "abstract_reasoning": 0.72,
+              "emotional_intensity": 0.58,
+              "social_dominance": 0.71,
+              "cooperativeness": 0.92,
+              "risk_tolerance": 0.63,
+              "conscientiousness": 0.83,
+              "adaptability": 0.80,
+              "imagination": 0.74
+            },
+            "match_weights": {
+              "cooperativeness": 0.42,
+              "stability": 0.30,
+              "empathy": 0.28
+            },
+            "threshold": 0.82,
+            "top_signal_items": [
+              "Q741","Q742","Q743","Q744","Q745","Q746","Q747","Q748"
+            ],
+            "signals_map": {
+              "Q741": { "dimension": "cooperativeness", "polarity": 1, "content": "I look for common interests beneath conflicting positions." },
+              "Q742": { "dimension": "empathy", "polarity": 1, "content": "I label and acknowledge emotions to reduce defensiveness." },
+              "Q743": { "dimension": "stability", "polarity": 1, "content": "I stay calm and curious when talks get heated." },
+              "Q744": { "dimension": "conscientiousness", "polarity": 1, "content": "I document agreements clearly to prevent confusion." },
+              "Q745": { "dimension": "orderliness", "polarity": 1, "content": "I use objective criteria to evaluate proposals." },
+              "Q746": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I reframe conflicts to reveal creative options for mutual gain." },
+              "Q747": { "dimension": "adaptability", "polarity": 1, "content": "I shift between listening and advocacy as the moment requires." },
+              "Q748": { "dimension": "social_dominance", "polarity": 1, "content": "I keep the group anchored to shared purpose during friction." }
+            },
+            "daily_prompt": "What shared interest can you surface today to turn a disagreement into a design problem?",
+            "practices": [
+              "Open with mutual purpose and respect in a tense conversation.",
+              "Ask three calibrated ‘what/how’ questions before offering a position.",
+              "Generate at least two options for mutual gain per issue.",
+              "Propose objective criteria to compare options.",
+              "Summarize agreements and next steps in writing."
+            ],
+            "transformation_indicators": [
+              "Reduced reactivity during high-stakes discussions",
+              "Higher agreement quality and durability",
+              "Participants report feeling heard and respected",
+              "Faster recovery from conflicts without residue"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Flight",
+            "preliminary_beat": "Break Into 3 — Bridge the divide",
+            "save_the_cat_beat": "Action (conflict)",
+            "character_state": "Francisco steadies the coalition, transforming friction into renewed cohesion.",
+            "ordinary_world_baseline": "Competing priorities; fragile trust across factions.",
+            "call_to_adventure_preview": "Name the shared horizon—then walk each side toward it."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Getting to Yes",
+              "author": "Roger Fisher & William Ury",
+              "section_of_focus": "Principled Negotiation",
+              "section_description": "Win-win bargaining grounded in interests and objective criteria.",
+              "connection_focus_area": "Separates people from problems to enable durable solutions.",
+              "connect_points": {
+                "point1": "Identify core interests behind stated positions.",
+                "point2": "Invent options for mutual gain.",
+                "point3": "Apply objective standards to finalize terms."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Stakeholder interest map",
+                "objective2": "Three option sets for mutual gain",
+                "objective3": "Contract draft using objective criteria"
+              }
+            },
+            "book2": {
+              "title": "Never Split the Difference",
+              "author": "Chris Voss",
+              "section_of_focus": "Tactical Empathy",
+              "section_description": "Emotional labeling, mirroring, and calibrated questions.",
+              "connection_focus_area": "Uses empathy to unlock information and agreement.",
+              "connect_points": {
+                "point1": "Label emotions in real time.",
+                "point2": "Use calibrated ‘what/how’ questions.",
+                "point3": "Run an accusation audit pre-proposal."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Mock negotiation with calibrated questions",
+                "objective2": "Refined labeling scripts",
+                "objective3": "Debrief effectiveness of empathy tactics"
+              }
+            },
+            "book3": {
+              "title": "Crucial Conversations",
+              "author": "Kerry Patterson et al.",
+              "section_of_focus": "Stating Path",
+              "section_description": "Speak persuasively while sustaining safety.",
+              "connection_focus_area": "Mutual purpose and respect as dialogue bedrock.",
+              "connect_points": {
+                "point1": "Declare mutual purpose at the outset.",
+                "point2": "Use contrasting to clarify intent.",
+                "point3": "Manage personal triggers under stress."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Facilitate STATE-model dialogue",
+                "objective2": "Detect and correct misinterpretations",
+                "objective3": "Coach peers in high-stakes conversations"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "In the mediation chambers, factions speak over each other—until Francisco reframes the clash as shared survival and invites offers, not ultimatums.",
+            "symbolic_moment": "Two rival banners lowered and stitched together into a single standard of purpose.",
+            "emotional_landscape": "Tension thawing into relief, respect, and renewed resolve.",
+            "threshold_vision": "Diverse methods, one mission—cohesion without conformity.",
+            "transformation_promise": "Where conflict once drained the coalition, dialogue now strengthens it."
+          }
+        },
+        "personality_profile_114": {
+          "canonical_id": "EA-114",
+          "unique_identifier": "STG 3.2.7.2",
+          "specific_task_group_title": "Self-Protection",
+          "all_chapter": 114,
+          "novel_book": 3,
+          "chapter": "Chapter 34",
+          "chapter_title": "Flight — Self-Protection",
+          "type": "Specific Task Group",
+          "display_name": "The Boundary Keeper",
+          "theme": "Integrity needs edges—clear limits keep the mission healthy and whole.",
+          "family": "Sustainability / Integrity — Boundaries & Safeguards",
+          "summary": "The Boundary Keeper archetype protects vision, people, and energy with courageous no’s and wise structures. In Chapter 34, Francisco erects protective boundaries—physical, procedural, and psychological—so his community can thrive without hardening into isolation. His restraint creates sustainability: clarity that guards dignity, purpose, and pace.",
+          "tarot_family": "Swords",
+          "tarot_card_item": "Four",
+          "tarot_symbolism": "The Four of Swords symbolizes restorative pause and guarded stillness—the disciplined boundary that enables recovery and clarity.",
+          "traits": {
+            "strengths": [
+              "establishes clear limits to prevent overreach",
+              "designs safeguards and protocols that protect",
+              "honors intuition as an early-warning system",
+              "communicates assertively without aggression",
+              "models sustainable rhythms of work and rest"
+            ],
+            "shadow": [
+              "risk of rigidity or over-fortification",
+              "withdrawing too far after breaches",
+              "confusing self-protection with avoidance",
+              "delayed trust-building due to hyper-vigilance",
+              "overreliance on rules at the expense of nuance"
+            ],
+            "growth_focus": [
+              "pair firm boundaries with open channels of repair",
+              "review safeguards for flexibility and fairness",
+              "train others to uphold limits collectively",
+              "differentiate danger from discomfort",
+              "schedule deliberate restoration—not only protection"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Flight",
+            "fiction_chapter_context": "Book 3, Chapter 34 — After mending rifts, Francisco codifies protective structures that keep the community secure and sane."
+          },
+          "enneagram_link": {
+            "family_number": 6,
+            "note": "The Loyal Guardian—courage expressed as vigilant care and principled limits."
+          },
+          "color_alignment": {
+            "name": "Indigo",
+            "hsl": "270,100%,30%",
+            "rgb_hex": "#660099",
+            "color_symbolism": "Vigilant serenity—quiet strength that watches over the whole."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.74,
+              "stability": 0.88,
+              "empathy": 0.76,
+              "openness": 0.66,
+              "orderliness": 0.90,
+              "novelty_seeking": 0.52,
+              "abstract_reasoning": 0.70,
+              "emotional_intensity": 0.55,
+              "social_dominance": 0.64,
+              "cooperativeness": 0.79,
+              "risk_tolerance": 0.45,
+              "conscientiousness": 0.91,
+              "adaptability": 0.67,
+              "imagination": 0.63
+            },
+            "match_weights": {
+              "conscientiousness": 0.40,
+              "stability": 0.35,
+              "orderliness": 0.25
+            },
+            "threshold": 0.82,
+            "top_signal_items": [
+              "Q749","Q750","Q751","Q752","Q753","Q754","Q755","Q756"
+            ],
+            "signals_map": {
+              "Q749": { "dimension": "orderliness", "polarity": 1, "content": "I prefer clear protocols to protect people and purpose." },
+              "Q750": { "dimension": "conscientiousness", "polarity": 1, "content": "I follow through on boundaries I set." },
+              "Q751": { "dimension": "stability", "polarity": 1, "content": "I feel calmer when risks are openly addressed." },
+              "Q752": { "dimension": "empathy", "polarity": 1, "content": "I set limits while keeping relationships intact." },
+              "Q753": { "dimension": "risk_tolerance", "polarity": -1, "content": "I ignore warning signs to avoid conflict." },
+              "Q754": { "dimension": "agency", "polarity": 1, "content": "I assert my needs clearly and respectfully." },
+              "Q755": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I differentiate genuine threats from discomfort." },
+              "Q756": { "dimension": "adaptability", "polarity": 1, "content": "I review and adjust boundaries as conditions change." }
+            },
+            "daily_prompt": "Where will a clear ‘no’ today create space for a more powerful ‘yes’ tomorrow?",
+            "practices": [
+              "Draft one new boundary and share it with stakeholders.",
+              "Create a personal safety and recovery protocol.",
+              "Practice a respectful ‘no’ script in role-play.",
+              "Audit one process for weak points; add a safeguard.",
+              "Schedule a non-negotiable restoration block."
+            ],
+            "transformation_indicators": [
+              "Fewer breaches and clearer recoveries",
+              "Higher sense of safety across the team",
+              "Lower burnout and decision fatigue",
+              "Improved clarity of roles and expectations"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Flight",
+            "preliminary_beat": "Break Into 3 — Fortify the path",
+            "save_the_cat_beat": "Converge (resolution)",
+            "character_state": "Francisco guards the mission with humane limits and wise systems.",
+            "ordinary_world_baseline": "Post-conflict fragility and exposure to new threats.",
+            "call_to_adventure_preview": "Protect the flame so it can grow."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Boundaries",
+              "author": "Henry Cloud & John Townsend",
+              "section_of_focus": "Taking Responsibility for Your Life",
+              "section_description": "Healthy limits that protect emotional well-being.",
+              "connection_focus_area": "Empowers clear, respectful no’s.",
+              "connect_points": {
+                "point1": "Spot three areas needing firmer limits.",
+                "point2": "Practice a concise ‘no’ script.",
+                "point3": "Establish accountability for follow-through."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Enact one new boundary",
+                "objective2": "Evaluate breaches and adjust",
+                "objective3": "Teach boundary basics to a peer"
+              }
+            },
+            "book2": {
+              "title": "The Gift of Fear",
+              "author": "Gavin de Becker",
+              "section_of_focus": "Intuition and Safety",
+              "section_description": "Use instinctive signals to enhance safety.",
+              "connection_focus_area": "Aligns gut awareness with action.",
+              "connect_points": {
+                "point1": "Log intuitive warnings",
+                "point2": "Draft a safety action plan",
+                "point3": "Reflect on past intuitions"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "List personal warning signs",
+                "objective2": "Practice the protocol",
+                "objective3": "Debrief a threat scenario"
+              }
+            },
+            "book3": {
+              "title": "The Assertiveness Workbook",
+              "author": "Randy J. Paterson",
+              "section_of_focus": "Learning Assertive Communication",
+              "section_description": "Scripts and drills for respectful self-advocacy.",
+              "connection_focus_area": "Builds confident, clear requests.",
+              "connect_points": {
+                "point1": "Role-play an assertive request",
+                "point2": "Rewrite passive scripts",
+                "point3": "Journal assertive wins"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Assertive refusal demo",
+                "objective2": "Script conversion practice",
+                "objective3": "Peer coaching session"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Within newly raised wards and watchposts, Francisco convenes a quiet council: limits are named, protocols sworn, sanctuary restored.",
+            "symbolic_moment": "A thin ring of light seals around the encampment—permeable to trust, firm against harm.",
+            "emotional_landscape": "Relief, steadiness, the spacious calm of safety.",
+            "threshold_vision": "Boundaries that breathe—strong, humane, and adaptable.",
+            "transformation_promise": "Protection becomes the soil where purpose can take deeper root."
+          }
+        },
+        "personality_profile_115": {
+          "canonical_id": "EA-115",
+          "unique_identifier": "STG 3.2.7.3",
+          "specific_task_group_title": "Student of Motive",
+          "all_chapter": 115,
+          "novel_book": 3,
+          "chapter": "Chapter 35",
+          "chapter_title": "Flight — Student of Motive",
+          "type": "Specific Task Group",
+          "display_name": "The Motive Cartographer",
+          "theme": "Clarity through curiosity—read the currents beneath behavior to navigate wisely.",
+          "family": "Strategy / Insight — Curiosity & Intent Mapping",
+          "summary": "The Motive Cartographer archetype studies the drives beneath decisions—autonomy, mastery, purpose, fear, and loyalty. In Chapter 35, on the cusp of wider re-engagement, Francisco observes allies and adversaries alike, charting incentives and loyalties. His curiosity is disciplined, not cynical—insight that honors both loyalty and purpose while informing shrewd, humane strategy.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "Three",
+          "tarot_symbolism": "The Three of Disks signifies collaborative mastery—craft refined by understanding roles, motives, and shared purpose.",
+          "traits": {
+            "strengths": [
+              "asks incisive, non-leading questions",
+              "maps incentives, loyalties, and pressures",
+              "checks bias with reflective pauses",
+              "detects persuasion dynamics in play",
+              "aligns plans to intrinsic human drives"
+            ],
+            "shadow": [
+              "overanalysis that delays action",
+              "interpreting intent through undue suspicion",
+              "data-gathering without decisive synthesis",
+              "confirmation bias in complex reads",
+              "ethical blindspots if ends overshadow means"
+            ],
+            "growth_focus": [
+              "timebox inquiry; decide with transparent criteria",
+              "triangulate sources to counter bias",
+              "separate observation from inference in notes",
+              "stress-test conclusions with dissenting views",
+              "pair motive insight with explicit values checks"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Flight",
+            "fiction_chapter_context": "Book 3, Chapter 35 — On the eve of return, Francisco studies motives and loyalties to plan with clarity and care."
+          },
+          "enneagram_link": {
+            "family_number": 5,
+            "note": "The Investigator in service to Purpose—insight harnessed to ethical action."
+          },
+          "color_alignment": {
+            "name": "Deep Magenta",
+            "hsl": "300,100%,45%",
+            "rgb_hex": "#CC00CC",
+            "color_symbolism": "Penetrating inquiry—vivid perception tuned to human truth."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.76,
+              "stability": 0.79,
+              "empathy": 0.80,
+              "openness": 0.85,
+              "orderliness": 0.75,
+              "novelty_seeking": 0.66,
+              "abstract_reasoning": 0.88,
+              "emotional_intensity": 0.57,
+              "social_dominance": 0.62,
+              "cooperativeness": 0.77,
+              "risk_tolerance": 0.61,
+              "conscientiousness": 0.82,
+              "adaptability": 0.78,
+              "imagination": 0.81
+            },
+            "match_weights": {
+              "abstract_reasoning": 0.38,
+              "openness": 0.34,
+              "empathy": 0.28
+            },
+            "threshold": 0.82,
+            "top_signal_items": [
+              "Q757","Q758","Q759","Q760","Q761","Q762","Q763","Q764"
+            ],
+            "signals_map": {
+              "Q757": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map patterns of incentives and loyalties before committing to a plan." },
+              "Q758": { "dimension": "openness", "polarity": 1, "content": "I seek multiple perspectives to broaden my understanding." },
+              "Q759": { "dimension": "empathy", "polarity": 1, "content": "I consider how values and needs shape others’ choices." },
+              "Q760": { "dimension": "conscientiousness", "polarity": 1, "content": "I separate observed facts from assumptions in my notes." },
+              "Q761": { "dimension": "stability", "polarity": 1, "content": "I remain patient while information comes into focus." },
+              "Q762": { "dimension": "risk_tolerance", "polarity": 1, "content": "I adjust plans as motive landscapes shift." },
+              "Q763": { "dimension": "agency", "polarity": 1, "content": "I decide using explicit criteria once insight is sufficient." },
+              "Q764": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate intent transparently to build trust." }
+            },
+            "daily_prompt": "What unstated motive is shaping today’s conversation—and how can you honor it while steering toward purpose?",
+            "practices": [
+              "Run a 10-minute motive-mapping on a key stakeholder.",
+              "Note three observations, then three possible inferences—keep them distinct.",
+              "Identify one persuasion principle at play and counter or leverage it ethically.",
+              "Invite a dissenting read to stress-test your conclusion.",
+              "Translate motive insight into a concrete, values-aligned action."
+            ],
+            "transformation_indicators": [
+              "Fewer misreads and reversals in alliances",
+              "Faster convergence from analysis to decision",
+              "Higher trust due to transparent reasoning",
+              "Strategies that honor loyalty and purpose"
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Flight",
+            "preliminary_beat": "Finale — Read the field",
+            "save_the_cat_beat": "Flight",
+            "character_state": "Francisco’s disciplined curiosity yields humane, strategic clarity.",
+            "ordinary_world_baseline": "Opaque motives; uncertain loyalties.",
+            "call_to_adventure_preview": "Understand the why to guide the how."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Influence",
+              "author": "Robert Cialdini",
+              "section_of_focus": "Reciprocity & Commitment",
+              "section_description": "Psychological triggers behind persuasion and motive.",
+              "connection_focus_area": "Reveals intent by exposing influence patterns.",
+              "connect_points": {
+                "point1": "Spot three principles in play",
+                "point2": "Map reciprocity loops",
+                "point3": "Design ethical counters"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Motive-analysis worksheet",
+                "objective2": "Mini-experiment on persuasion",
+                "objective3": "Peer debrief of findings"
+              }
+            },
+            "book2": {
+              "title": "Thinking, Fast and Slow",
+              "author": "Daniel Kahneman",
+              "section_of_focus": "Heuristics & Biases",
+              "section_description": "How shortcuts shape judgment and intent.",
+              "connection_focus_area": "Bias-aware motive interpretation.",
+              "connect_points": {
+                "point1": "Track one heuristic",
+                "point2": "Assess bias impact",
+                "point3": "Use a slowdown technique"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Two bias observations",
+                "objective2": "Reflective pause routine",
+                "objective3": "Accuracy review of motive reads"
+              }
+            },
+            "book3": {
+              "title": "Drive",
+              "author": "Daniel H. Pink",
+              "section_of_focus": "Autonomy, Mastery, Purpose",
+              "section_description": "Inner drives behind sustained effort.",
+              "connection_focus_area": "Align plans to intrinsic motivation.",
+              "connect_points": {
+                "point1": "Co-write purpose statements",
+                "point2": "Name mastery paths",
+                "point3": "Enable autonomy in execution"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Shared purpose manifesto",
+                "objective2": "Stretch goal per member",
+                "objective3": "Reflection on intrinsic motivation"
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "At the observation center, voices and data converge; Francisco listens for the why beneath every move.",
+            "symbolic_moment": "Threads of intention drawn across a map—patterns emerge where chaos reigned.",
+            "emotional_landscape": "Sober focus, quiet compassion, earned clarity.",
+            "threshold_vision": "Strategy that respects both loyalty and mission.",
+            "transformation_promise": "Insight becomes foresight—decisions honoring people and purpose."
+          }
+        },
         "personality_profile_116": {},
         "personality_profile_117": {},
         "personality_profile_118": {},
