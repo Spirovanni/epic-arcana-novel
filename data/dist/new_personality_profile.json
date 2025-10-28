@@ -26880,7 +26880,188 @@
             "transformation_promise": "Francisco emerges as the Restorer—master of cycles, proving that endurance is divine when guided by renewal."
           }
         },
-        "personality_profile_120": {}
+        "personality_profile_120": {
+          "canonical_id": "EA-120",
+          "unique_identifier": "STG 3.2.9.2",
+          "specific_task_group_title": "Resolute Force",
+          "all_chapter": 120,
+          "novel_book": 3,
+          "chapter": "Chapter 40",
+          "chapter_title": "Master of Two Worlds — Resolute Force",
+          "type": "Specific Task Group",
+          "display_name": "The Bridgekeeper",
+          "theme": "Resolution through unity—true mastery is balance between power and peace.",
+          "family": "Determination / Integration — Willpower, Harmony, and Completion",
+          "summary": "The Bridgekeeper represents the culmination of purpose. In Chapter 40, Francisco stands as the embodiment of harmony—resolute, balanced, and whole. Through steadfast determination and unwavering clarity, he unites the physical and metaphysical worlds, guiding the next evolution of humanity.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "Knight",
+          "tarot_symbolism": "The Knight of Disks symbolizes disciplined motion and steadfast focus—the practical champion who carries vision into reality through endurance and consistency.",
+          "traits": {
+            "strengths": [
+              "possesses unshakable focus and resilience",
+              "transforms vision into tangible progress",
+              "balances patience with strategic action",
+              "embodies reliability and grounded determination",
+              "leads through example with measured strength"
+            ],
+            "shadow": [
+              "risk of rigidity or overcontrol",
+              "tendency to suppress emotion in pursuit of order",
+              "difficulty releasing control after completion",
+              "overemphasis on discipline at expense of intuition",
+              "fatigue from unrelenting perseverance"
+            ],
+            "growth_focus": [
+              "cultivate flexibility within consistency",
+              "allow rest as part of mastery",
+              "trust allies to share leadership weight",
+              "balance drive with inner stillness",
+              "focus on purpose, not perfection"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Master of Two Worlds",
+            "fiction_chapter_context": "Book 3, Chapter 40 — Francisco attains full integration of self and purpose, bridging the human and divine, ready to guide evolution into new consciousness."
+          },
+          "enneagram_link": {
+            "family_number": 1,
+            "note": "The Reformer balanced through 9 and 7 lines—purposeful, serene, and capable of sustaining long-term order without rigidity."
+          },
+          "color_alignment": {
+            "name": "Medium Red Violet",
+            "hsl": "310,63%,43%",
+            "rgb_hex": "#B328A0",
+            "color_symbolism": "Medium Red Violet represents the synthesis of courage and calm—a hue of determination guided by wisdom."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.9,
+              "stability": 0.88,
+              "empathy": 0.77,
+              "openness": 0.73,
+              "orderliness": 0.92,
+              "novelty_seeking": 0.65,
+              "abstract_reasoning": 0.84,
+              "emotional_intensity": 0.75,
+              "social_dominance": 0.82,
+              "cooperativeness": 0.8,
+              "risk_tolerance": 0.7,
+              "conscientiousness": 0.93,
+              "adaptability": 0.79,
+              "imagination": 0.76
+            },
+            "match_weights": {
+              "agency": 0.35,
+              "conscientiousness": 0.35,
+              "stability": 0.3
+            },
+            "threshold": 0.84,
+            "top_signal_items": [
+              "Q901",
+              "Q902",
+              "Q903",
+              "Q904",
+              "Q905",
+              "Q906",
+              "Q907",
+              "Q908"
+            ],
+            "signals_map": {
+              "Q901": { "dimension": "agency", "polarity": 1, "content": "I remain steady and decisive under pressure." },
+              "Q902": { "dimension": "conscientiousness", "polarity": 1, "content": "I honor my commitments, even when challenges arise." },
+              "Q903": { "dimension": "stability", "polarity": 1, "content": "I can center myself in chaos without losing clarity." },
+              "Q904": { "dimension": "orderliness", "polarity": 1, "content": "I maintain structure to support consistent results." },
+              "Q905": { "dimension": "adaptability", "polarity": 1, "content": "I adjust strategies without losing sight of the goal." },
+              "Q906": { "dimension": "emotional_intensity", "polarity": 1, "content": "My passion fuels disciplined action, not impulse." },
+              "Q907": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I link immediate tasks to long-term vision." },
+              "Q908": { "dimension": "risk_tolerance", "polarity": 1, "content": "I face uncertainty with calm persistence." }
+            },
+            "daily_prompt": "Where can your resolve become graceful today—steadfast yet open, like a bridge that bears weight and breath?",
+            "practices": [
+              "Define one enduring mission and its next achievable milestone.",
+              "Review your habit loops for alignment with purpose.",
+              "Use the ‘pause-and-plan’ technique before every key decision.",
+              "Visualize balance: effort as exhale, stillness as inhale.",
+              "Commit to one act today that fortifies both body and will."
+            ],
+            "transformation_indicators": [
+              "Increased calm during high-pressure situations.",
+              "Completion of long-term goals with reduced burnout.",
+              "Improved decision consistency under uncertainty.",
+              "Integration of emotional and logical decision-making."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Master of Two Worlds",
+            "preliminary_beat": "Final Image — Embodied Integration",
+            "save_the_cat_beat": "Master of Two Worlds",
+            "character_state": "Francisco achieves inner and outer harmony, balancing mastery with humility.",
+            "ordinary_world_baseline": "Fragmented power without balance.",
+            "call_to_adventure_preview": "Hold your center—true mastery begins where duality ends."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Grit",
+              "author": "Angela Duckworth",
+              "section_of_focus": "Passion and Perseverance",
+              "section_description": "Sustained effort and long-term vision yield excellence.",
+              "connection_focus_area": "Determination grounded in purpose fuels transformation.",
+              "connect_points": {
+                "point1": "Define a passion-driven long-term objective.",
+                "point2": "Set milestone checkpoints.",
+                "point3": "Reassess failures as refinements."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Map your long-term purpose arc.",
+                "objective2": "Create milestone accountability logs.",
+                "objective3": "Develop resilience strategies from past challenges."
+              }
+            },
+            "book2": {
+              "title": "Atomic Habits",
+              "author": "James Clear",
+              "section_of_focus": "Make It Obvious",
+              "section_description": "Tiny changes accumulate into enduring results.",
+              "connection_focus_area": "Habit formation sustains determination and clarity.",
+              "connect_points": {
+                "point1": "Design a habit loop tied to your main goal.",
+                "point2": "Introduce immediate reinforcement rewards.",
+                "point3": "Record daily consistency metrics."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Implement habit stacking for daily rituals.",
+                "objective2": "Track consistency trends over 30 days.",
+                "objective3": "Optimize reinforcement timing."
+              }
+            },
+            "book3": {
+              "title": "The Willpower Instinct",
+              "author": "Kelly McGonigal",
+              "section_of_focus": "Self-Control Strategies",
+              "section_description": "Neuroscience-based tools strengthen self-regulation.",
+              "connection_focus_area": "Willpower becomes sustainable when rooted in mindful awareness.",
+              "connect_points": {
+                "point1": "Practice ‘pause and plan’ when faced with impulses.",
+                "point2": "Set up commitment contracts for focus.",
+                "point3": "Reflect on weekly willpower wins."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Build a personal willpower log.",
+                "objective2": "Apply commitment devices to recurring goals.",
+                "objective3": "Analyze progress with mindfulness metrics."
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "On the high plateau between worlds, Francisco stands calm amid converging lights—the cosmic bridge alive beneath his feet.",
+            "symbolic_moment": "He spreads his hands, and currents of energy flow through him, harmonizing time, matter, and consciousness.",
+            "emotional_landscape": "Serene mastery, sacred resolve, and transcendence without ego.",
+            "threshold_vision": "Unity achieved: no separation between self and world, effort and peace, matter and spirit.",
+            "transformation_promise": "Francisco becomes the living bridge—proof that determination tempered by wisdom can sustain creation itself."
+          }
+        }
       }
     },
     "family_4": {},
