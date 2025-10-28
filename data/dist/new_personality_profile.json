@@ -26516,7 +26516,188 @@
             "transformation_promise": "The cadre exits the arena not just stronger, but synchronized—ready for responsibilities no single hero could hold."
           }
         },
-        "personality_profile_118": {},
+        "personality_profile_118": {
+          "canonical_id": "EA-118",
+          "unique_identifier": "MAT 3.3",
+          "specific_task_group_title": "Kindred Spirits",
+          "all_chapter": 118,
+          "novel_book": 3,
+          "chapter": "Chapter 38",
+          "chapter_title": "Rescue from Without — Kindred Spirits",
+          "type": "Specific Task Group",
+          "display_name": "The Harmonizer",
+          "theme": "Partnership as alchemy—two integrated souls amplify creation and restore balance.",
+          "family": "Partnership / Integration — Trust, Union, and Shared Purpose",
+          "summary": "The Harmonizer represents sacred partnership born of mutual growth. In Chapter 38, Francisco and La Signora reunite through a profound spiritual bond, combining insight and compassion to heal fractures across realms. Their connection demonstrates how aligned hearts magnify healing, creativity, and peace.",
+          "tarot_family": "Major Arcana",
+          "tarot_card_item": "The Lovers",
+          "tarot_symbolism": "The Lovers signify divine union and conscious choice—the harmonizing of dualities through love, truth, and shared destiny.",
+          "traits": {
+            "strengths": [
+              "fosters authentic, trust-based collaboration",
+              "balances intuition and intellect in partnership",
+              "builds harmony through empathy and shared goals",
+              "nurtures emotional safety and mutual inspiration",
+              "transforms tension into creative synthesis"
+            ],
+            "shadow": [
+              "dependency masked as devotion",
+              "conflict avoidance that stifles truth",
+              "idealizing partners or projecting unmet needs",
+              "losing individuality in unity",
+              "fear of separation leading to control"
+            ],
+            "growth_focus": [
+              "cultivate interdependence, not codependence",
+              "practice honest dialogue even when uncomfortable",
+              "balance giving and receiving energy",
+              "design rituals that reinforce mutual purpose",
+              "honor individuality within unity"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Rescue from Without",
+            "fiction_chapter_context": "Book 3, Chapter 38 — Reunited with La Signora, Francisco learns the sacred art of partnership, channeling unity into healing and cosmic restoration."
+          },
+          "enneagram_link": {
+            "family_number": 2,
+            "note": "The Helper in integration with 4—balancing devotion with authentic self-expression and emotional depth."
+          },
+          "color_alignment": {
+            "name": "Dark Magenta",
+            "hsl": "290,60%,45%",
+            "rgb_hex": "#8800AA",
+            "color_symbolism": "Dark Magenta represents the sacred blend of passion and wisdom—the color of spiritual love and creative partnership."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.75,
+              "stability": 0.81,
+              "empathy": 0.92,
+              "openness": 0.86,
+              "orderliness": 0.74,
+              "novelty_seeking": 0.68,
+              "abstract_reasoning": 0.83,
+              "emotional_intensity": 0.88,
+              "social_dominance": 0.7,
+              "cooperativeness": 0.93,
+              "risk_tolerance": 0.67,
+              "conscientiousness": 0.85,
+              "adaptability": 0.84,
+              "imagination": 0.82
+            },
+            "match_weights": {
+              "cooperativeness": 0.4,
+              "empathy": 0.35,
+              "adaptability": 0.25
+            },
+            "threshold": 0.85,
+            "top_signal_items": [
+              "Q861",
+              "Q862",
+              "Q863",
+              "Q864",
+              "Q865",
+              "Q866",
+              "Q867",
+              "Q868"
+            ],
+            "signals_map": {
+              "Q861": { "dimension": "cooperativeness", "polarity": 1, "content": "I value shared vision over personal recognition." },
+              "Q862": { "dimension": "empathy", "polarity": 1, "content": "I sense when partners need reassurance and respond with care." },
+              "Q863": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my approach to complement my partner’s strengths." },
+              "Q864": { "dimension": "conscientiousness", "polarity": 1, "content": "I uphold commitments that sustain mutual trust." },
+              "Q865": { "dimension": "emotional_intensity", "polarity": 1, "content": "Deep connections energize my creative and spiritual life." },
+              "Q866": { "dimension": "openness", "polarity": 1, "content": "I explore new ideas and rituals to strengthen bonds." },
+              "Q867": { "dimension": "stability", "polarity": 1, "content": "I ground emotional connections in consistency and calm." },
+              "Q868": { "dimension": "imagination", "polarity": 1, "content": "I co-create symbolic moments that keep love and purpose alive." }
+            },
+            "daily_prompt": "What act of partnership today could turn simple cooperation into sacred connection?",
+            "practices": [
+              "Write a shared mission statement with a close ally or partner.",
+              "Create a small ritual that celebrates mutual victories.",
+              "Exchange one truth you’ve hesitated to share.",
+              "Designate time weekly for gratitude and reflection together.",
+              "Celebrate how individuality strengthens unity."
+            ],
+            "transformation_indicators": [
+              "Heightened sense of trust and interconnection.",
+              "Increased emotional stability in high-stakes collaboration.",
+              "Greater synchronicity in decision-making.",
+              "Reduction in misunderstandings or communication breakdowns."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Rescue from Without",
+            "preliminary_beat": "Finale — Healing Through Union",
+            "save_the_cat_beat": "Rescue from Without",
+            "character_state": "Francisco reunites with La Signora, merging compassion and wisdom into unified purpose.",
+            "ordinary_world_baseline": "Fragmented alliances and internal divisions strain his mission.",
+            "call_to_adventure_preview": "Union restores harmony—true strength lies in shared heart and mind."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "The Art of Gathering",
+              "author": "Priya Parker",
+              "section_of_focus": "Purpose-Driven Connections",
+              "section_description": "Intentional design deepens belonging and shared meaning.",
+              "connection_focus_area": "Translates gathering rituals into partnership alignment.",
+              "connect_points": {
+                "point1": "Define a joint purpose statement.",
+                "point2": "Design a symbolic ritual reinforcing unity.",
+                "point3": "Evaluate the emotional depth of connection post-ritual."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Host a purpose-based gathering.",
+                "objective2": "Record trust shifts post-activity.",
+                "objective3": "Iterate rituals for resonance."
+              }
+            },
+            "book2": {
+              "title": "Attached",
+              "author": "Amir Levine & Rachel Heller",
+              "section_of_focus": "Secure Attachment",
+              "section_description": "Explores emotional security as foundation for growth.",
+              "connection_focus_area": "Fosters mutual support and emotional resilience.",
+              "connect_points": {
+                "point1": "Identify attachment tendencies in yourself and your partner.",
+                "point2": "Create safe emotional check-in practices.",
+                "point3": "Apply secure-base language during stress."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Map attachment needs.",
+                "objective2": "Implement weekly emotional safety rituals.",
+                "objective3": "Reflect on emotional resilience outcomes."
+              }
+            },
+            "book3": {
+              "title": "The Power of Moments",
+              "author": "Chip Heath & Dan Heath",
+              "section_of_focus": "Defining Moments",
+              "section_description": "How small moments forge deep emotional connection.",
+              "connection_focus_area": "Turns daily interactions into bonding milestones.",
+              "connect_points": {
+                "point1": "Plan a symbolic partnership milestone.",
+                "point2": "Capture shared memories creatively.",
+                "point3": "Infuse meaning into ordinary routines."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Create a signature bonding event.",
+                "objective2": "Gather reflections from your partner.",
+                "objective3": "Refine future shared rituals for depth."
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "In a crystalline chamber between realms, Francisco and La Signora’s hands meet—fractures of light merge into one current.",
+            "symbolic_moment": "Their voices entwine in harmonic resonance; shattered time streams bend and fuse into coherence.",
+            "emotional_landscape": "Love beyond possession—grace, surrender, and radiant unity.",
+            "threshold_vision": "The union restores balance between creation and destruction; polarity becomes harmony.",
+            "transformation_promise": "Their partnership births renewal—proof that the union of opposites heals the world itself."
+          }
+        },
         "personality_profile_119": {},
         "personality_profile_120": {}
       }
