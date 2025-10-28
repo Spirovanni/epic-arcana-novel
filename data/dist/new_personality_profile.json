@@ -26698,7 +26698,188 @@
             "transformation_promise": "Their partnership births renewal—proof that the union of opposites heals the world itself."
           }
         },
-        "personality_profile_119": {},
+        "personality_profile_119": {
+          "canonical_id": "EA-119",
+          "unique_identifier": "STG 3.2.9.1",
+          "specific_task_group_title": "Regenerative Force",
+          "all_chapter": 119,
+          "novel_book": 3,
+          "chapter": "Chapter 39",
+          "chapter_title": "Resolution — Regenerative Force",
+          "type": "Specific Task Group",
+          "display_name": "The Restorer",
+          "theme": "Healing through renewal—true power lies in restoration, not domination.",
+          "family": "Renewal / Restoration — Sustainability, Healing, Integration",
+          "summary": "The Restorer embodies the sacred duty of regeneration. In the aftermath of conflict, Francisco gathers the strength of his community to mend fractures across realms. Through compassion and structure, he transforms collective pain into fertile ground for new life and unity.",
+          "tarot_family": "Disks",
+          "tarot_card_item": "Queen",
+          "tarot_symbolism": "The Queen of Disks represents mature stewardship and fertile renewal—leadership that restores by nurturing and harmonizing the whole ecosystem.",
+          "traits": {
+            "strengths": [
+              "creates systems of renewal and balance",
+              "leads with compassion and restorative wisdom",
+              "nurtures sustainable energy cycles",
+              "models holistic leadership grounded in empathy",
+              "turns endings into beginnings"
+            ],
+            "shadow": [
+              "over-nurturing or enabling dependency",
+              "difficulty setting limits when helping others",
+              "fear of scarcity leading to exhaustion",
+              "resistance to letting old systems dissolve",
+              "romanticizing recovery without reform"
+            ],
+            "growth_focus": [
+              "prioritize self-renewal before service",
+              "set clear limits to sustain energy",
+              "embrace pruning as part of regeneration",
+              "measure cycles of rest and productivity",
+              "channel compassion through structure"
+            ]
+          },
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia - Children of the Voice",
+            "chapter_theme": "Resolution",
+            "fiction_chapter_context": "Book 3, Chapter 39 — Francisco restores fractured realms by transforming collective wounds into living energy, closing the arc of Part II with grace and renewal."
+          },
+          "enneagram_link": {
+            "family_number": 9,
+            "note": "The Peacemaker integrated with 3 and 1 — embodying calm, effective restoration and purposeful stewardship."
+          },
+          "color_alignment": {
+            "name": "Magenta",
+            "hsl": "300,100%,50%",
+            "rgb_hex": "#FF00FF",
+            "color_symbolism": "Pure regenerative energy—balance between love, creation, and transcendence."
+          },
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.78,
+              "stability": 0.88,
+              "empathy": 0.9,
+              "openness": 0.81,
+              "orderliness": 0.83,
+              "novelty_seeking": 0.68,
+              "abstract_reasoning": 0.82,
+              "emotional_intensity": 0.8,
+              "social_dominance": 0.7,
+              "cooperativeness": 0.92,
+              "risk_tolerance": 0.63,
+              "conscientiousness": 0.87,
+              "adaptability": 0.86,
+              "imagination": 0.77
+            },
+            "match_weights": {
+              "stability": 0.35,
+              "empathy": 0.35,
+              "conscientiousness": 0.3
+            },
+            "threshold": 0.82,
+            "top_signal_items": [
+              "Q881",
+              "Q882",
+              "Q883",
+              "Q884",
+              "Q885",
+              "Q886",
+              "Q887",
+              "Q888"
+            ],
+            "signals_map": {
+              "Q881": { "dimension": "stability", "polarity": 1, "content": "I stay calm and grounded when rebuilding after disruption." },
+              "Q882": { "dimension": "empathy", "polarity": 1, "content": "I sense when a group or project needs renewal energy." },
+              "Q883": { "dimension": "conscientiousness", "polarity": 1, "content": "I create structured systems that prevent burnout." },
+              "Q884": { "dimension": "cooperativeness", "polarity": 1, "content": "I inspire others to participate in collective healing." },
+              "Q885": { "dimension": "adaptability", "polarity": 1, "content": "I adjust rhythms of work and rest to sustain growth." },
+              "Q886": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I see patterns where old endings seed new beginnings." },
+              "Q887": { "dimension": "imagination", "polarity": 1, "content": "I envision renewal through beauty and design." },
+              "Q888": { "dimension": "orderliness", "polarity": 1, "content": "I schedule rest with the same importance as work." }
+            },
+            "daily_prompt": "Where could you pause today to let regeneration—not willpower—restore your strength?",
+            "practices": [
+              "Schedule deliberate rest and renewal cycles in your calendar.",
+              "Conduct a weekly reflection on what needs pruning or restoration.",
+              "Build a team ritual for gratitude and energy recovery.",
+              "Map waste patterns in your work and turn them into regenerative processes.",
+              "Celebrate visible signs of renewal and shared healing."
+            ],
+            "transformation_indicators": [
+              "Sustained creative productivity without burnout.",
+              "Improved emotional resilience after rest cycles.",
+              "Visible ecosystem improvements in personal or team environments.",
+              "Restoration becomes a recurring cultural practice."
+            ]
+          },
+          "hero_journey_position": {
+            "stage": "Return with the Elixir",
+            "preliminary_beat": "Finale — Restoration & Renewal",
+            "save_the_cat_beat": "Finale",
+            "character_state": "Francisco embodies restorative mastery, channeling communal healing into the rebirth of his realm.",
+            "ordinary_world_baseline": "Exhaustion and fragmentation across the community.",
+            "call_to_adventure_preview": "Healing is the final creation—renewal as revolution."
+          },
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Rest: Why You Get More Done When You Work Less",
+              "author": "Alex Soojung-Kim Pang",
+              "section_of_focus": "The Revival Phase",
+              "section_description": "Intentional rest cycles enhance performance and well-being.",
+              "connection_focus_area": "Structured rest as the foundation of regeneration.",
+              "connect_points": {
+                "point1": "Plan weekly restorative breaks.",
+                "point2": "Track output before and after rest.",
+                "point3": "Integrate micro-rest rituals daily."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Develop a personal rest protocol.",
+                "objective2": "Measure post-rest creativity spikes.",
+                "objective3": "Adjust rest rhythms for optimal energy."
+              }
+            },
+            "book2": {
+              "title": "The Upcycle",
+              "author": "William McDonough & Michael Braungart",
+              "section_of_focus": "Regenerative Design",
+              "section_description": "Sustainable design principles that turn waste into renewal.",
+              "connection_focus_area": "Transform personal and organizational patterns into regenerative systems.",
+              "connect_points": {
+                "point1": "Audit waste in time or energy systems.",
+                "point2": "Create circular feedback for improvement.",
+                "point3": "Prototype small regenerative practices."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Map regenerative workflows.",
+                "objective2": "Close the loop on one waste system.",
+                "objective3": "Quantify restored resources."
+              }
+            },
+            "book3": {
+              "title": "The Power of Ritual",
+              "author": "Casper ter Kuile",
+              "section_of_focus": "Rituals for Renewal",
+              "section_description": "Ceremonies that restore meaning and vitality.",
+              "connection_focus_area": "Transform shared rituals into regenerative acts.",
+              "connect_points": {
+                "point1": "Design renewal ceremonies for team or self.",
+                "point2": "Document emotional impact post-ritual.",
+                "point3": "Refine structure for deeper rejuvenation."
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Host a renewal gathering.",
+                "objective2": "Gather qualitative feedback on healing effects.",
+                "objective3": "Iterate rituals to sustain long-term energy."
+              }
+            }
+          },
+          "laurasia_narrative_integration": {
+            "opening_scene": "Beneath the golden light of dawn, Francisco kneels in the garden ruins. From the broken soil, new shoots rise at his touch.",
+            "symbolic_moment": "As the land heals, ancestral voices hum through the roots—each fracture now a conduit of living energy.",
+            "emotional_landscape": "Peaceful strength, closure, and the profound stillness of renewal.",
+            "threshold_vision": "A world reborn not by conquest, but by care—each scar a testament to growth.",
+            "transformation_promise": "Francisco emerges as the Restorer—master of cycles, proving that endurance is divine when guided by renewal."
+          }
+        },
         "personality_profile_120": {}
       }
     },
