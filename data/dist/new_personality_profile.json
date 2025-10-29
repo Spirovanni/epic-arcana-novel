@@ -27064,7 +27064,261 @@
         }
       }
     },
-    "family_4": {},
+    "family_4": {
+      "personality_profile_121": {
+        "canonical_id": "EA-121",
+        "unique_identifier": "STG 4.1.1.1",
+        "specific_task_group_title": "Breakthroughs",
+        "all_chapter": 121,
+        "novel_book": 4,
+        "chapter": "Chapter 1",
+        "chapter_title": "Intro — Breakthroughs",
+        "type": "Specific Task Group",
+        "display_name": "The Veil-Cutter",
+        "theme": "Cut through illusion—clarity creates new paths and ignites decisive action.",
+        "family": "Insight / Innovation — Truth & Clarity",
+        "summary": "The Veil-Cutter archetype, aligned with the Ace of Swords, embodies first-light clarity: the moment a piercing insight shatters stale assumptions and unlocks a radically new approach. In Chapter 1 of Book 4, Francisco confronts the cosmic shock of the Akashic Records and the specter of predetermination. Instead of collapsing into despair, he treats the revelation as a blade—using truth to carve out possibility. Breakthroughs arise as he reframes fate, identifies hidden constraints, and prototypes bold alternatives to restore freedom of choice.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ace",
+        "tarot_symbolism": "Ace of Swords signifies a pristine surge of truth, mental focus, and the power to sever limiting beliefs; it is the sword that parts fog and names the path.",
+        "traits": {
+          "strengths": [
+            "rapid pattern recognition and conceptual reframing",
+            "courage to face uncomfortable truths directly",
+            "decisive problem-solving under ambiguity",
+            "ability to distill complex systems into simple levers",
+            "relentless curiosity that hunts first principles"
+          ],
+          "shadow": [
+            "over-intellectualizing at the expense of empathy",
+            "impatience with slower collaborators",
+            "cutting communication style that can alienate allies",
+            "binary thinking when nuance is required",
+            "risk of fixation on being ‘right’ over being effective"
+          ],
+          "growth_focus": [
+            "temper clarity with compassion and listening",
+            "prototype ideas with feedback instead of lone hypothesis",
+            "define success by outcomes, not arguments won",
+            "translate insights into simple, teachable steps",
+            "pair decisive cuts with bridges for stakeholder buy-in"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Intro",
+          "fiction_chapter_context": "Book 4, Chapter 1 — In the Akashic Library, Francisco witnesses scripts of fate. The shock births a vow: turn revelation into liberation by breaking the illusion that choice is impossible."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "The Investigator tempered by the Challenger—clarity wielded with courage to confront systems larger than self."
+        },
+        "color_alignment": {
+          "name": "Heliotrope",
+          "hsl": "280,100%,70%",
+          "rgb_hex": "#CC66FF",
+          "color_symbolism": "Electric violet of insight and disclosure—mind fire that reveals patterns and lights the way forward."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.63,
+            "empathy": 0.71,
+            "openness": 0.91,
+            "orderliness": 0.78,
+            "novelty_seeking": 0.88,
+            "abstract_reasoning": 0.92,
+            "emotional_intensity": 0.69,
+            "social_dominance": 0.74,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.72,
+            "conscientiousness": 0.81,
+            "adaptability": 0.84,
+            "imagination": 0.89
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.4,
+            "openness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q801",
+            "Q802",
+            "Q803",
+            "Q804",
+            "Q805",
+            "Q806",
+            "Q807",
+            "Q808"
+          ],
+          "signals_map": {
+            "Q801": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I quickly spot underlying structures that others miss."
+            },
+            "Q802": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I enjoy challenging assumptions—even my own."
+            },
+            "Q803": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When a truth emerges, I act on it decisively."
+            },
+            "Q804": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I translate insights into clear next steps and owners."
+            },
+            "Q805": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I invite critique to strengthen a promising idea."
+            },
+            "Q806": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I prefer simple, elegant systems over complex workarounds."
+            },
+            "Q807": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "I’m willing to test bold hypotheses with small, reversible bets."
+            },
+            "Q808": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I aim to make hard truths easier to hear through respectful framing."
+            }
+          },
+          "daily_prompt": "What assumption, if disproven today, would unlock a radically better path—and how will you test it?",
+          "practices": [
+            "Run a 30-minute ‘assumption audit’ and pick one to test.",
+            "Draft a one-page zero-to-one experiment with success criteria.",
+            "Host a ‘sharp edges, soft hands’ feedback session on your idea.",
+            "Reduce a complex problem into three levers and one pilot.",
+            "Create a decision log capturing hypothesis → test → outcome → next step."
+          ],
+          "transformation_indicators": [
+            "Time-to-first-experiment decreases across initiatives.",
+            "Stakeholder alignment improves via simpler artifacts and clearer choices.",
+            "Idea quality rises after structured critique loops.",
+            "Breakthroughs propagate into repeatable playbooks."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — First Light of Truth",
+          "save_the_cat_beat": "Opening Image",
+          "character_state": "Stunned by predetermination, Francisco chooses clarity over collapse, wielding insight as a blade.",
+          "ordinary_world_baseline": "From inherited scripts to authored paths—freedom pursued through disciplined truth-seeking.",
+          "call_to_adventure_preview": "Name the script. Break the script. Write the next line."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Zero to One",
+            "author": "Peter Thiel",
+            "section_of_focus": "The Mechanics of Mafia",
+            "section_description": "Tight-knit teams challenge consensus to birth non-obvious value.",
+            "connection_focus_area": "Contrarian clarity as a catalyst for novel creation.",
+            "connect_points": {
+              "point1": "Identify overlooked gaps in an assumed-efficient system.",
+              "point2": "Assemble a small ‘breakthrough cell’ with explicit norms.",
+              "point3": "State a differentiated, testable mission."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Author a one-page zero-to-one blueprint.",
+              "objective2": "Formulate three contrarian theses about your domain.",
+              "objective3": "Ship a minimal experiment to validate advantage."
+            }
+          },
+          "book2": {
+            "title": "Creative Confidence",
+            "author": "Tom Kelley & David Kelley",
+            "section_of_focus": "Unlocking Creativity",
+            "section_description": "Hands-on methods for brave, iterative ideation.",
+            "connection_focus_area": "Courage + cycles: fast sketches, faster learning.",
+            "connect_points": {
+              "point1": "Time-box a divergent ideation sprint.",
+              "point2": "Prototype lo-fi to reveal friction early.",
+              "point3": "Seek rapid feedback for pivot/keep/kill choices."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a 30-minute design sprint.",
+              "objective2": "Test three concept sketches with users.",
+              "objective3": "Run a pivot cycle informed by feedback."
+            }
+          },
+          "book3": {
+            "title": "The Innovator’s DNA",
+            "author": "Jeff Dyer, Hal Gregersen & Clayton Christensen",
+            "section_of_focus": "Associating",
+            "section_description": "Insight via unlikely connections.",
+            "connection_focus_area": "Cross-domain analogies to unlock leaps.",
+            "connect_points": {
+              "point1": "List five unrelated trends and find intersections.",
+              "point2": "Form a novel hypothesis from two trends.",
+              "point3": "Design an experiment to pressure-test the combo."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map cross-industry analogies for a key challenge.",
+              "objective2": "Generate ten associative ‘what if’ prompts.",
+              "objective3": "Execute one experiment based on the strongest analogy."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within the Akashic Library’s star-latticed aisles, Francisco glimpses lifelines like etched lightning—his choices, prewritten.",
+          "symbolic_moment": "He grips a blade of light—the Sword of Naming—and slices a thread of fate just enough to prove it can be moved.",
+          "emotional_landscape": "Awe, dread, and fierce resolve coalesce into focused calm.",
+          "threshold_vision": "If a script can be read, it can be revised; if revised, it can be freed.",
+          "transformation_promise": "Clarity becomes praxis: insights turn into pilots, pilots into pathways, pathways into new freedoms."
+        }
+      },
+      "personality_profile_122": {},
+      "personality_profile_123": {},
+      "personality_profile_124": {},
+      "personality_profile_125": {},
+      "personality_profile_126": {},
+      "personality_profile_127": {},
+      "personality_profile_128": {},
+      "personality_profile_129": {},
+      "personality_profile_130": {},
+      "personality_profile_131": {},
+      "personality_profile_132": {},
+      "personality_profile_133": {},
+      "personality_profile_134": {},
+      "personality_profile_135": {},
+      "personality_profile_136": {},
+      "personality_profile_137": {},
+      "personality_profile_138": {},
+      "personality_profile_139": {},
+      "personality_profile_140": {},
+      "personality_profile_141": {},
+      "personality_profile_142": {},
+      "personality_profile_143": {},
+      "personality_profile_144": {},
+      "personality_profile_145": {},
+      "personality_profile_146": {},
+      "personality_profile_147": {},
+      "personality_profile_148": {},
+      "personality_profile_149": {},
+      "personality_profile_150": {},
+      "personality_profile_151": {},
+      "personality_profile_152": {},
+      "personality_profile_153": {},
+      "personality_profile_154": {},
+      "personality_profile_155": {},
+      "personality_profile_156": {},
+      "personality_profile_157": {},
+      "personality_profile_158": {},
+      "personality_profile_159": {},
+      "personality_profile_160": {}
+    },
     "family_5": {},
     "family_6": {},
     "family_7": {},
