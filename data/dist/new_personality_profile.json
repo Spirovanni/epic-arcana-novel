@@ -27921,7 +27921,220 @@
           "transformation_promise": "By honoring victory without illusion, Francisco matures into a seeker who balances joy with discernment."
         }
       },
-      "personality_profile_125": {},
+      "personality_profile_125": {
+        "canonical_id": "EA-125",
+        "unique_identifier": "STG 4.1.2.2",
+        "specific_task_group_title": "Advocacy",
+        "all_chapter": 125,
+        "novel_book": 4,
+        "chapter": "Chapter 5",
+        "chapter_title": "Reaction — Advocacy",
+        "type": "Specific Task Group",
+        "display_name": "The Firebrand Advocate",
+        "theme": "Voice creates velocity—when a clear, ethical story meets the right ears, movements ignite.",
+        "family": "Influence / Collaboration — Persuasion & Coalition",
+        "summary": "The Firebrand Advocate, resonant with the Ace of Cups, represents the fresh surge of conviction that pours into a cause and carries it beyond the originator. In Chapter 5, Francisco gains an unexpected champion—Cicero—whose rhetorical mastery channels the rebellion’s purpose into words that travel. Advocacy here is not manipulation; it is the disciplined craft of framing truth so others can choose it freely.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Ace",
+        "tarot_symbolism": "The Ace of Cups signals a new current of heartfelt expression—pure motive meeting clear message, inviting genuine connection.",
+        "traits": {
+          "strengths": [
+            "crafts compelling narratives rooted in values",
+            "builds alliances through empathy and clarity",
+            "frames complex ideas for broad audiences",
+            "calibrates tone to context and culture",
+            "sustains momentum with visible wins"
+          ],
+          "shadow": [
+            "overreliance on charisma over substance",
+            "message drift to please audiences",
+            "fatigue from constant visibility",
+            "polarization through ‘us vs. them’ framing",
+            "impatience with slower consensus-building"
+          ],
+          "growth_focus": [
+            "anchor persuasion in verifiable truth",
+            "balance pathos with transparent evidence",
+            "build bench-strength advocates, not a solo stage",
+            "measure impact beyond applause",
+            "practice strategic pauses to avoid burnout"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Reaction",
+          "fiction_chapter_context": "Book 4, Chapter 5 — Cicero joins the cause, elevating Francisco’s bid for free will from private revelation to public case."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "The Achiever integrated toward 2—ambition tempered by service, using visibility to lift the whole."
+        },
+        "color_alignment": {
+          "name": "Light Slate Blue",
+          "hsl": "260,100%,70%",
+          "rgb_hex": "#9966FF",
+          "color_symbolism": "A luminous violet-blue for lucid speech and inspired unity—cool head, warm heart."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.74,
+            "empathy": 0.88,
+            "openness": 0.83,
+            "orderliness": 0.71,
+            "novelty_seeking": 0.69,
+            "abstract_reasoning": 0.78,
+            "emotional_intensity": 0.81,
+            "social_dominance": 0.87,
+            "cooperativeness": 0.84,
+            "risk_tolerance": 0.72,
+            "conscientiousness": 0.82,
+            "adaptability": 0.79,
+            "imagination": 0.80
+          },
+          "match_weights": {
+            "empathy": 0.3,
+            "social_dominance": 0.35,
+            "agency": 0.35
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q845",
+            "Q846",
+            "Q847",
+            "Q848",
+            "Q849",
+            "Q850",
+            "Q851",
+            "Q852"
+          ],
+          "signals_map": {
+            "Q845": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I tailor my message to the listener’s values without distorting the truth."
+            },
+            "Q846": {
+              "dimension": "social_dominance",
+              "polarity": 1,
+              "content": "I’m comfortable speaking for the group when clarity is needed."
+            },
+            "Q847": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I mobilize support by turning ideas into concrete calls to action."
+            },
+            "Q848": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I connect philosophy to practice so people see why it matters now."
+            },
+            "Q849": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I fact-check claims I intend to promote publicly."
+            },
+            "Q850": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I elevate other voices rather than centralizing attention on myself."
+            },
+            "Q851": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I shift formats (story, stats, demo) based on audience needs."
+            },
+            "Q852": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Criticism helps me refine the message without losing center."
+            }
+          },
+          "daily_prompt": "Which single story best conveys your cause—and who needs to hear it today?",
+          "practices": [
+            "Draft a 90-second story with problem → turning point → possibility.",
+            "Collect two testimonials that illustrate real outcomes.",
+            "Create a priming cue (image/phrase) to set shared values before your ask.",
+            "Schedule a peer review to stress-test your framing for accuracy and fairness.",
+            "Invite a new co-advocate to deliver the message in their own voice."
+          ],
+          "transformation_indicators": [
+            "Higher quality engagement (questions, commitments) over raw views.",
+            "Diverse messengers repeating the core narrative accurately.",
+            "Reduced message drift under pressure.",
+            "Documented policy, practice, or behavior shifts attributable to advocacy."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Reaction — A Champion Steps Forward",
+          "save_the_cat_beat": "Reaction",
+          "character_state": "The cause acquires a voice large enough to be heard—and tested.",
+          "ordinary_world_baseline": "Private conviction begins its public trial by audience.",
+          "call_to_adventure_preview": "Speak with integrity; let truth scale through many mouths."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Influence",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Reciprocation & Social Proof",
+            "section_description": "Ethical levers that encourage consensus without coercion.",
+            "connection_focus_area": "Designs credible asks grounded in community norms.",
+            "connect_points": {
+              "point1": "Offer value first to earn attention.",
+              "point2": "Feature peer outcomes to build trust.",
+              "point3": "Frame commitments as identity-consistent."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a reciprocity pilot in outreach.",
+              "objective2": "Produce a testimonial mini-campaign.",
+              "objective3": "Track conversion changes tied to social proof."
+            }
+          },
+          "book2": {
+            "title": "Pre-Suasion",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Channeling Attention",
+            "section_description": "Prime context to align attention with message intent.",
+            "connection_focus_area": "Places values and stakes before the pitch.",
+            "connect_points": {
+              "point1": "Set a shared-values preface before key asks.",
+              "point2": "Use visual anchors that cue desired norms.",
+              "point3": "Sequence data after narrative priming."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a pre-message priming script.",
+              "objective2": "A/B test two context cues in outreach.",
+              "objective3": "Evaluate response-rate deltas post-priming."
+            }
+          },
+          "book3": {
+            "title": "Talk Like TED",
+            "author": "Carmine Gallo",
+            "section_of_focus": "Emotional Storytelling",
+            "section_description": "Narrative structure that sticks and spreads.",
+            "connection_focus_area": "Turns cause into memorable arcs with clear stakes.",
+            "connect_points": {
+              "point1": "Open with an emotional hook within 20 seconds.",
+              "point2": "Use vivid examples to show impact, not just tell.",
+              "point3": "Close with a specific, doable next step."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a 3-minute advocacy talk.",
+              "objective2": "Collect feedback on clarity and resonance.",
+              "objective3": "Revise delivery based on listener notes."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a dim symposium chamber, a voice from antiquity—Cicero—steps from the threshold of memory and addresses the gathered rebels, saluting Francisco’s cause.",
+          "symbolic_moment": "A silver libation bowl overflows, reflecting a sky of written stars—each a choice waiting to be spoken aloud.",
+          "emotional_landscape": "Awe, relief, and the uneasy question: if even this ally was foretold, can persuasion still be free?",
+          "threshold_vision": "A chorus of advocates, not a single herald, will carry freedom’s case across worlds.",
+          "transformation_promise": "By sharing the lectern, Francisco converts conviction into movement—ideas made audible, portable, and durable."
+        }
+      },
       "personality_profile_126": {},
       "personality_profile_127": {},
       "personality_profile_128": {},
