@@ -28349,7 +28349,220 @@
           "transformation_promise": "By mastering habit, Francisco ceases to react—he endures, directing fate through consistency itself."
         }
       },
-      "personality_profile_127": {},
+      "personality_profile_127": {
+        "canonical_id": "EA-127",
+        "unique_identifier": "STG 4.1.3.1",
+        "specific_task_group_title": "Shared Values",
+        "all_chapter": 127,
+        "novel_book": 4,
+        "chapter": "Chapter 7",
+        "chapter_title": "Action — Shared Values",
+        "type": "Specific Task Group",
+        "display_name": "The Bondwright",
+        "theme": "When convictions align, many voices move as one.",
+        "family": "Cohesion / Alignment — Purpose & Ethos",
+        "summary": "The Bondwright archetype (Six of Disks) forges unity by naming and living shared principles. In Chapter 7, amid doubt and competing counsel, Francisco convenes diverse rebels to surface the values that truly bind them—dignity, choice, and authentic existence. This common compass transforms uncertainty into solidarity and prepares the rebellion to act with moral clarity.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Six",
+        "tarot_symbolism": "The Six of Disks signifies reciprocity, balance, and right exchange—shared resources and shared responsibility that sustain a just cause.",
+        "traits": {
+          "strengths": [
+            "creates psychological safety through clarity of purpose",
+            "aligns decisions to shared principles under pressure",
+            "facilitates trust across differences",
+            "models humility and fair credit-sharing",
+            "translates values into operating norms"
+          ],
+          "shadow": [
+            "over-indexing on consensus slows action",
+            "values-policing that stifles dissent",
+            "confusing harmony with alignment",
+            "performative unity without accountability",
+            "avoidance of necessary conflict"
+          ],
+          "growth_focus": [
+            "separate alignment (why) from unanimity (how)",
+            "welcome principled dissent to strengthen cohesion",
+            "turn values into clear behaviors and rituals",
+            "measure trust and adjust practices accordingly",
+            "revisit the compass when stakes escalate"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Action",
+          "fiction_chapter_context": "Book 4, Chapter 7 — Francisco hosts a values council that unites culturally diverse rebels around a shared moral core to face cosmic authority."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "The Peacemaker integrated with Type 1—harmonizing groups through principled alignment rather than mere peacekeeping."
+        },
+        "color_alignment": {
+          "name": "Persian Indigo",
+          "hsl": "260,50%,31%",
+          "rgb_hex": "#330099",
+          "color_symbolism": "A deep indigo of solemn resolve and ethical gravity—steadfast unity under shared purpose."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.83,
+            "empathy": 0.88,
+            "openness": 0.79,
+            "orderliness": 0.81,
+            "novelty_seeking": 0.61,
+            "abstract_reasoning": 0.74,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.66,
+            "cooperativeness": 0.93,
+            "risk_tolerance": 0.64,
+            "conscientiousness": 0.86,
+            "adaptability": 0.82,
+            "imagination": 0.73
+          },
+          "match_weights": {
+            "cooperativeness": 0.4,
+            "empathy": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q901",
+            "Q902",
+            "Q903",
+            "Q904",
+            "Q905",
+            "Q906",
+            "Q907",
+            "Q908"
+          ],
+          "signals_map": {
+            "Q901": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I work to name the principles that keep us together when pressure mounts."
+            },
+            "Q902": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I can honor different perspectives while guiding us to shared ground."
+            },
+            "Q903": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I translate values into specific behaviors and norms."
+            },
+            "Q904": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I remain calm when disagreement threatens cohesion."
+            },
+            "Q905": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I invite principled dissent to refine our shared purpose."
+            },
+            "Q906": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I prefer rituals and check-ins that keep alignment visible."
+            },
+            "Q907": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When values are clear, I move decisively on behalf of the group."
+            },
+            "Q908": {
+              "dimension": "social_dominance",
+              "polarity": -1,
+              "content": "I avoid imposing my view; I facilitate the group’s authentic ‘why’ instead."
+            }
+          },
+          "daily_prompt": "What value will you make visible in action today—and how will others feel it?",
+          "practices": [
+            "Host a 20-minute ‘why’ circle; capture three shared principles.",
+            "Create a one-page values-to-behaviors charter.",
+            "Run a weekly ‘wins from values’ reflection.",
+            "Establish a conflict-normalizing ritual (facts, feelings, forward).",
+            "Measure trust with a brief pulse and adjust norms accordingly."
+          ],
+          "transformation_indicators": [
+            "Reduced intra-team friction during high stakes decisions.",
+            "Faster decisions with fewer reversals.",
+            "Higher psychological safety scores.",
+            "Consistent behaviors matching the stated values."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call (debate under fire)",
+          "preliminary_beat": "Debate — Find the Common Compass",
+          "save_the_cat_beat": "Action",
+          "character_state": "Francisco channels tension into alignment, turning doubt into shared resolve.",
+          "ordinary_world_baseline": "Scattered motives and mixed loyalties threaten cohesion.",
+          "call_to_adventure_preview": "Name the why; the how will follow."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety",
+            "section_description": "Shared purpose creates trust and resilience.",
+            "connection_focus_area": "Common ethos as protection against fear and division.",
+            "connect_points": {
+              "point1": "Define the team’s ‘why’.",
+              "point2": "Map risks and protections.",
+              "point3": "Communicate transparently to sustain safety."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a ‘why’ discovery workshop.",
+              "objective2": "Publish a Circle of Safety charter.",
+              "objective3": "Track conflict reduction metrics."
+            }
+          },
+          "book2": {
+            "title": "Start With Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "The Golden Circle",
+            "section_description": "Purpose aligns action and inspires commitment.",
+            "connection_focus_area": "Shared beliefs as drivers of collective action.",
+            "connect_points": {
+              "point1": "Draft a concise purpose statement.",
+              "point2": "Align roles and tasks to purpose.",
+              "point3": "Reinforce the ‘why’ through story."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Present the team’s purpose statement.",
+              "objective2": "Map objectives to the ‘why’.",
+              "objective3": "Collect feedback on alignment clarity."
+            }
+          },
+          "book3": {
+            "title": "Good to Great",
+            "author": "Jim Collins",
+            "section_of_focus": "Level 5 Leadership",
+            "section_description": "Humility and fierce resolve under a unifying vision.",
+            "connection_focus_area": "Personal commitment to shared values fuels greatness.",
+            "connect_points": {
+              "point1": "Credit team wins publicly.",
+              "point2": "Set audacious, values-anchored goals.",
+              "point3": "Hold quarterly ‘values check’ reviews."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a humility practice session.",
+              "objective2": "Publish a values alignment scorecard.",
+              "objective3": "Monitor morale and cohesion indicators."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Value Council, rebels from distant eras place tokens on a shared altar—each token a story of dignity and choice.",
+          "symbolic_moment": "Three candles—Dignity, Choice, Authentic Existence—are lit and carried to the four corners of the hall.",
+          "emotional_landscape": "From suspicion to softening, from discord to pledged resolve.",
+          "threshold_vision": "A chorus replaces the soloist; unity becomes the rebellion’s greatest weapon.",
+          "transformation_promise": "With a living compass, the coalition moves as one through uncertainty without losing its soul."
+        }
+      },
       "personality_profile_128": {},
       "personality_profile_129": {},
       "personality_profile_130": {},
