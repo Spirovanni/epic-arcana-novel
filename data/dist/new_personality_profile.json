@@ -31351,7 +31351,168 @@
           "transformation_promise": "Rituals of review turn victory into velocity."
         }
       },
-      "personality_profile_143": {},
+      "personality_profile_143": {
+        "canonical_id": "EA-143",
+        "unique_identifier": "MAT 4.2",
+        "specific_task_group_title": "Controlled Power",
+        "all_chapter": 143,
+        "novel_book": 4,
+        "chapter": "Chapter 23",
+        "chapter_title": "The Supreme Ordeal — Controlled Power",
+        "type": "Major Activity Theme",
+        "display_name": "The Lion’s Hand (Strength)",
+        "theme": "True strength is grace under fire—power governed by values, not appetite.",
+        "family": "Self-Mastery / Temperance — Emotional Regulation & Disciplined Will",
+        "summary": "The Lion’s Hand embodies the Major Arcana principle of Strength: courage married to compassion, force refined into gentle dominion. In Chapter 23, after enduring the utmost trial, Francisco emerges tempered—able to harness fierce inner drives without being ruled by them. His leadership becomes quietly formidable: responsive instead of reactive, principled instead of performative. Controlled Power turns volatility into vocation.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "Strength",
+        "tarot_symbolism": "A calm figure closing a lion’s jaws with ease—passion befriended, instincts aligned to purpose, courage expressed as steadiness.",
+        "traits": {
+          "strengths": [
+            "regulates emotion under extreme pressure",
+            "channels intensity into purposeful action",
+            "models grounded courage and restraint",
+            "leads with empathy without losing edge",
+            "builds trust through consistent self-command"
+          ],
+          "shadow": [
+            "suppresses feeling instead of integrating it",
+            "over-controls people or outcomes",
+            "confuses stoicism with strength",
+            "burns out by white-knuckling discipline",
+            "uses competence to avoid vulnerability"
+          ],
+          "growth_focus": [
+            "practice recovery, not just endurance",
+            "name emotions before choosing responses",
+            "replace control with clear agreements",
+            "align habits to values, not ego",
+            "welcome counsel when intensity narrows vision"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 4, Chapter 23 — From ordeal to poise: Francisco’s tempered resolve becomes a stabilizing force that uplifts allies and disarms cosmic adversaries."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—protective strength softened by service and compassion."
+        },
+        "color_alignment": {
+          "name": "Séance",
+          "hsl": "300,42%,32%",
+          "rgb_hex": "#732F73",
+          "color_symbolism": "Royal restraint—violet fire held in a steady chalice."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.88,
+            "empathy": 0.80,
+            "openness": 0.73,
+            "orderliness": 0.84,
+            "conscientiousness": 0.89,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.82,
+            "cooperativeness": 0.81,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.72,
+            "novelty_seeking": 0.58
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.35,
+            "agency": 0.30
+          },
+          "threshold": 0.88,
+          "daily_prompt": "Where will you trade reaction for response today—and what value will you use as your governor?",
+          "practices": [
+            "Box breath (4-4-4-4) before every high-stakes decision.",
+            "Run a ‘pause-and-plan’ drill: name the trigger, state the value, choose the act.",
+            "Design a 21-day habit loop that replaces one unhelpful reflex with a values-aligned routine.",
+            "Schedule weekly recovery blocks (sleep, movement, solitude) as non-negotiables.",
+            "Invite a truth-telling partner to flag overcontrol and prompt delegation."
+          ],
+          "transformation_indicators": [
+            "Reduced escalation time from trigger to response",
+            "Consistent adherence to values under stress",
+            "Team reports increased psychological safety",
+            "Fewer rework cycles caused by impulsive calls",
+            "Visible delegation and trust in capable others"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal — Meeting with the Goddess",
+          "preliminary_beat": "The Reward — Tempered Resolve",
+          "save_the_cat_beat": "The Ordeal",
+          "character_state": "Power yoked to purpose; courage expressed as calm authority.",
+          "ordinary_world_baseline": "Raw intensity risks collateral harm and mistrust.",
+          "call_to_adventure_preview": "Master yourself to magnify others."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Self-Regulation",
+            "section_description": "Understanding and managing emotions to enhance effectiveness.",
+            "connection_focus_area": "Self-regulation underwrites trustworthy leadership.",
+            "connect_points": {
+              "point1": "Mindfulness to identify triggers.",
+              "point2": "Pause-and-plan before reacting.",
+              "point3": "Codify personal regulation rituals."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead an emotional self-awareness workshop.",
+              "objective2": "Publish a team regulation toolkit.",
+              "objective3": "Track resilience metrics monthly."
+            }
+          },
+          "book2": {
+            "title": "The Power of Habit",
+            "author": "Charles Duhigg",
+            "section_of_focus": "Habit Loop",
+            "section_description": "Cue-routine-reward as levers for behavioral change.",
+            "connection_focus_area": "Habits make self-mastery reliable.",
+            "connect_points": {
+              "point1": "Map leadership habit loops.",
+              "point2": "Substitute new routines for old cues.",
+              "point3": "Use rewards that reinforce values."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a habit-mapping exercise.",
+              "objective2": "Complete a 21-day habit challenge.",
+              "objective3": "Evaluate substitution success rates."
+            }
+          },
+          "book3": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Living Into Our Values",
+            "section_description": "Courage grounded in clear, practiced values.",
+            "connection_focus_area": "Values govern power with integrity.",
+            "connect_points": {
+              "point1": "Facilitate values identification.",
+              "point2": "Pair leaders as accountability partners.",
+              "point3": "Embed value checks in critical decisions."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a team values roadmap.",
+              "objective2": "Simulate courageous conversations.",
+              "objective3": "Audit decisions for value alignment."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a shattered heaven, Francisco lowers his blade and lifts a trembling foe to standing; the army grows silent at the sight of strength clothed in mercy.",
+          "symbolic_moment": "An infinity loop etched on a gauntlet—force and compassion flowing in balanced return.",
+          "emotional_landscape": "Fierce calm; tenderness without weakness; unwavering center.",
+          "threshold_vision": "When power bows to purpose, empires listen.",
+          "transformation_promise": "From heat to hearth: his fire becomes warmth that others gather around, and follow."
+        }
+      },
       "personality_profile_144": {},
       "personality_profile_145": {},
       "personality_profile_146": {},
