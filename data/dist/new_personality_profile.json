@@ -31513,9 +31513,492 @@
           "transformation_promise": "From heat to hearth: his fire becomes warmth that others gather around, and follow."
         }
       },
-      "personality_profile_144": {},
-      "personality_profile_145": {},
-      "personality_profile_146": {},
+      "personality_profile_144": {
+        "canonical_id": "EA-144",
+        "unique_identifier": "STG 4.3.1.1",
+        "specific_task_group_title": "Staying Grounded",
+        "all_chapter": 144,
+        "novel_book": 4,
+        "chapter": "Chapter 24",
+        "chapter_title": "Action (Conflict) — Staying Grounded",
+        "type": "Specific Task Group",
+        "display_name": "The Grounded Queen (Disks)",
+        "theme": "When the world tilts, roots matter more than wings.",
+        "family": "Resilience / Presence — Values, Focus & Poise",
+        "summary": "The Grounded Queen channels steadiness amid upheaval. In Chapter 24, as crisis crests and systems fray, Francisco steadies the rebellion by anchoring himself and his people in core values, focus rituals, and a sober reading of reality. Grounding becomes the fulcrum that turns panic into purpose.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Queen",
+        "tarot_symbolism": "A sovereign seated on fertile earth—abundance, composure, and practical care under pressure.",
+        "traits": {
+          "strengths": [
+            "keeps calm in cascading crises",
+            "reframes obstacles into training",
+            "holds teams to focus rituals",
+            "embodies value-centered decisions",
+            "radiates psychological safety"
+          ],
+          "shadow": [
+            "can appear unmovable or aloof",
+            "over-indexes on routine during novelty",
+            "downplays needed urgency",
+            "substitutes comfort for courage",
+            "overprotects at cost of bold action"
+          ],
+          "growth_focus": [
+            "pair grounding with decisive action",
+            "signal urgency without panic",
+            "invite challenge to entrenched habits",
+            "revisit values when tradeoffs bite",
+            "practice flexible focus (tight/loose)"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Action (Conflict)",
+          "fiction_chapter_context": "Book 4, Chapter 24 — At the crisis command, Francisco stabilizes the rebellion through reframing, grit, and deep-focus cadence."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm presence that becomes purposeful execution."
+        },
+        "color_alignment": {
+          "name": "Purple",
+          "hsl": "300,100%,25%",
+          "rgb_hex": "#800080",
+          "color_symbolism": "Regal composure—intuition rooted in earth."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.90,
+            "empathy": 0.78,
+            "openness": 0.69,
+            "orderliness": 0.86,
+            "conscientiousness": 0.88,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.77,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.63,
+            "novelty_seeking": 0.52
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "orderliness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.86,
+          "daily_prompt": "What value will you stand on before you act today—and what ritual will help you hold it under stress?",
+          "practices": [
+            "Three-part reframing: fact → meaning → move.",
+            "90-minute deep-work block at crisis onset.",
+            "Grit check-in: one micro-win before noon.",
+            "End-of-day values audit (keep/compromise/repair).",
+            "Create a distraction-free zone and guard it."
+          ],
+          "transformation_indicators": [
+            "Reduced reactivity in crisis windows",
+            "Consistent ritual adherence during chaos",
+            "Team reports elevated clarity and calm",
+            "Shorter recovery time after setbacks",
+            "Higher signal-to-noise in decisions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement With the Father — All Is Lost",
+          "preliminary_beat": "Action (Conflict) — Poise Under Fire",
+          "save_the_cat_beat": "All Is Lost",
+          "character_state": "Rooted leader stabilizing a faltering arc.",
+          "ordinary_world_baseline": "Fragmentation and panic loops.",
+          "call_to_adventure_preview": "Grounded vision becomes a lighthouse in storm."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Perception",
+            "section_description": "Reframe setbacks into training for strength.",
+            "connection_focus_area": "Clear seeing births composure.",
+            "connect_points": {
+              "point1": "Objective self-talk scripts",
+              "point2": "Obstacle-to-opportunity logs",
+              "point3": "Daily reframing roundups"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a reframing lab",
+              "objective2": "Publish a weekly wins ledger",
+              "objective3": "Track resilience delta"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Perseverance and passion for long goals.",
+            "connection_focus_area": "Steadiness sustains purpose.",
+            "connect_points": {
+              "point1": "Weekly perseverance stand-ups",
+              "point2": "Long-arc story shares",
+              "point3": "Micro-goal ladders"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a grit program",
+              "objective2": "Instrument progress trackers",
+              "objective3": "Survey perseverance gains"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Focus Rituals",
+            "section_description": "Cadence for undistracted output.",
+            "connection_focus_area": "Focus stabilizes teams.",
+            "connect_points": {
+              "point1": "Daily deep-work blocks",
+              "point2": "No-interrupt zones",
+              "point3": "Focus norms & cues"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Kickoff focus training",
+              "objective2": "Reduce context switches",
+              "objective3": "Improve focus scores"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At crisis command, sand clocks freeze mid-fall as Francisco steadies breath and the room follows suit.",
+          "symbolic_moment": "He plants a sigil-staff—its roots shimmer through stone, anchoring the hall.",
+          "emotional_landscape": "Hot panic cools to lucid resolve.",
+          "threshold_vision": "Ground first, then move many.",
+          "transformation_promise": "From chaos to cadence—the rebellion finds its feet."
+        }
+      },
+      "personality_profile_145": {
+        "canonical_id": "EA-145",
+        "unique_identifier": "STG 4.3.1.2",
+        "specific_task_group_title": "Organizing Your Life",
+        "all_chapter": 145,
+        "novel_book": 4,
+        "chapter": "Chapter 25",
+        "chapter_title": "Dedication (Resolution) — Organizing Your Life",
+        "type": "Specific Task Group",
+        "display_name": "The Architect Queen (Wands)",
+        "theme": "Order is not rigidity—it is the scaffolding that lets genius climb.",
+        "family": "Productivity / Systems — Priorities, Routines & Execution",
+        "summary": "The Architect Queen converts resolve into reliable systems. In Chapter 25, Francisco rebuilds his inner and outer architecture—trusted capture, essential priorities, and habit stacks—so vision can scale without fray. Structure becomes a creative multiplier.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Queen",
+        "tarot_symbolism": "A poised ruler mapping lines of force—fire disciplined by design.",
+        "traits": {
+          "strengths": [
+            "translates vision into next actions",
+            "prioritizes essentials over noise",
+            "designs habits that sustain output",
+            "balances planning with momentum",
+            "creates clarity others can follow"
+          ],
+          "shadow": [
+            "over-systems at cost of spontaneity",
+            "collects tools instead of doing",
+            "perfection delays shipping",
+            "confuses busyness with progress",
+            "rigid calendars ignore energy"
+          ],
+          "growth_focus": [
+            "ship v1 before optimizing",
+            "tie systems to purpose metrics",
+            "leave space for serendipity",
+            "calibrate plan to current energy",
+            "review & prune tools quarterly"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Dedication (Resolution)",
+          "fiction_chapter_context": "Book 4, Chapter 25 — From overwhelm to orchestration: Francisco wires the rebellion for reliable throughput."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—disciplined joy, not dour duty."
+        },
+        "color_alignment": {
+          "name": "Black",
+          "hsl": "0,0%,0%",
+          "rgb_hex": "#000000",
+          "color_symbolism": "Void as canvas—every line matters."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.83,
+            "empathy": 0.71,
+            "openness": 0.68,
+            "orderliness": 0.92,
+            "conscientiousness": 0.91,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.77,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.61,
+            "novelty_seeking": 0.55
+          },
+          "match_weights": {
+            "orderliness": 0.40,
+            "conscientiousness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.87,
+          "daily_prompt": "What is the one essential outcome today—and what is the very next physical action to advance it?",
+          "practices": [
+            "GTD sweep: capture, clarify, organize, reflect, engage.",
+            "Weekly review with ruthless essentialism filter.",
+            "Habit stack a 10-minute reset to existing anchors.",
+            "Block time by energy type (deep/coordination/admin).",
+            "Close the day by writing tomorrow’s first action."
+          ],
+          "transformation_indicators": [
+            "Fewer open loops & renegotiations",
+            "Higher completion rate on essentials",
+            "Reduced time-to-first-action on tasks",
+            "Consistent weekly reviews logged",
+            "Increased team clarity & handoff quality"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement With the Father — Dedication",
+          "preliminary_beat": "Resolution — Systems Over Scatter",
+          "save_the_cat_beat": "Resolution",
+          "character_state": "Resolved builder wiring purpose into practice.",
+          "ordinary_world_baseline": "Diffuse effort, hidden bottlenecks.",
+          "call_to_adventure_preview": "Order births velocity without burnout."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Getting Things Done",
+            "author": "David Allen",
+            "section_of_focus": "Next Actions",
+            "section_description": "Clarity through concrete next steps.",
+            "connection_focus_area": "Actionable granularity reduces friction.",
+            "connect_points": {
+              "point1": "Trusted capture everywhere",
+              "point2": "Define true next actions",
+              "point3": "Weekly review cadence"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Team GTD rollout",
+              "objective2": "Open-loop reduction metric",
+              "objective3": "Completion-rate uplift"
+            }
+          },
+          "book2": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Discernment",
+            "section_description": "The vital few vs. the trivial many.",
+            "connection_focus_area": "Focus fortifies throughput.",
+            "connect_points": {
+              "point1": "Essential vs. nice-to-have filter",
+              "point2": "Weekly de-commit ritual",
+              "point3": "Priority manifesto"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map essential lanes",
+              "objective2": "Track task pruning",
+              "objective3": "Focus score improvements"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Habit Stacking",
+            "section_description": "Small steps, compounding gains.",
+            "connection_focus_area": "Rituals make order stick.",
+            "connect_points": {
+              "point1": "Identify keystone habits",
+              "point2": "Stack organizing micro-rituals",
+              "point3": "Track with habit ledger"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "30-day stack plan",
+              "objective2": "Habit consistency metric",
+              "objective3": "Ops efficiency delta"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "A black slate table; Francisco lays tokens—time, talent, terrain—into precise lanes.",
+          "symbolic_moment": "A celestial grid aligns; chaos threads find channels.",
+          "emotional_landscape": "From scattered to scored.",
+          "threshold_vision": "Every purpose deserves a pathway.",
+          "transformation_promise": "Systems that serve souls, not the other way around."
+        }
+      },
+      "personality_profile_146": {
+        "canonical_id": "EA-146",
+        "unique_identifier": "STG 4.3.1.3",
+        "specific_task_group_title": "Throttle Control",
+        "all_chapter": 146,
+        "novel_book": 4,
+        "chapter": "Chapter 26",
+        "chapter_title": "Atonement with the Father — Throttle Control",
+        "type": "Specific Task Group",
+        "display_name": "The Pacing Five (Wands)",
+        "theme": "Power lasts when pace is wise.",
+        "family": "Self-Regulation / Energy — Pacing, Renewal & Discernment",
+        "summary": "The Pacing Five embodies measured intensity. In Chapter 26, after confronting ultimate authority, Francisco learns to modulate drive—naming emotions, respecting recovery, and orchestrating energy across domains—so purpose can endure beyond any single push.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Five",
+        "tarot_symbolism": "Sparring without destruction—conflict harnessed for craft and calibration.",
+        "traits": {
+          "strengths": [
+            "reads and regulates emotional load",
+            "balances stress with intentional rest",
+            "manages energy across body/mind/heart/spirit",
+            "avoids overdrive traps and crashes",
+            "models sustainable excellence"
+          ],
+          "shadow": [
+            "confuses rest with retreat",
+            "over-schedules recovery as control",
+            "underestimates urgent surges",
+            "uses pacing to dodge hard calls",
+            "optimizes self, neglects team cadence"
+          ],
+          "growth_focus": [
+            "treat recovery as strategic, not optional",
+            "share pacing norms with the team",
+            "pre-commit to pause before big decisions",
+            "add communal renewal rituals",
+            "tune pace to mission phase, not habit"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 4, Chapter 26 — In the quiet after revelation, Francisco re-learns power through pace and presence."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—steadfast pacing, collective care."
+        },
+        "color_alignment": {
+          "name": "Lavender Blue",
+          "hsl": "240,100%,90%",
+          "rgb_hex": "#CCCCFF",
+          "color_symbolism": "Cool clarity—a gentle governor on fierce engines."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.87,
+            "empathy": 0.76,
+            "openness": 0.72,
+            "orderliness": 0.81,
+            "conscientiousness": 0.86,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.59,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.57
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.35,
+            "adaptability": 0.30
+          },
+          "threshold": 0.86,
+          "daily_prompt": "Where will you add a deliberate pause today—and what form of renewal will you schedule before your next hard push?",
+          "practices": [
+            "Name–Claim–Choose: label emotion, accept presence, pick response.",
+            "Stress–Rest cycles: 90 on / 15 off; weekly deload block.",
+            "Four-Quadrant energy audit (physical, emotional, mental, spiritual).",
+            "Pre-decision breathing + values check.",
+            "Team cadence review: sync, surge, settle."
+          ],
+          "transformation_indicators": [
+            "Lower variance in performance across weeks",
+            "Reduced post-surge crashes and errors",
+            "Higher team energy and engagement scores",
+            "On-time recovery blocks honored",
+            "Improved decision quality under time pressure"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement With the Father",
+          "preliminary_beat": "Acceptance & Recalibration",
+          "save_the_cat_beat": "Atonement",
+          "character_state": "Ambition governed by wisdom; drive matched to distance.",
+          "ordinary_world_baseline": "Boom-bust execution cycles.",
+          "call_to_adventure_preview": "Sustainable pace makes legacies possible."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Agility",
+            "author": "Susan David",
+            "section_of_focus": "Emotional Regulation",
+            "section_description": "Flexible response to inner weather.",
+            "connection_focus_area": "Name and navigate before you accelerate.",
+            "connect_points": {
+              "point1": "Name-and-claim scripts",
+              "point2": "Acceptance micro-rituals",
+              "point3": "Pre-decision pause"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead agility drills",
+              "objective2": "Track emotion-response logs",
+              "objective3": "Assess decision calmness"
+            }
+          },
+          "book2": {
+            "title": "Peak Performance",
+            "author": "Brad Stulberg & Steve Magness",
+            "section_of_focus": "Stress–Rest Balance",
+            "section_description": "Performance via oscillation.",
+            "connection_focus_area": "Recovery fuels repeatable excellence.",
+            "connect_points": {
+              "point1": "Schedule deload weeks",
+              "point2": "Integrate micro-breaks",
+              "point3": "Monitor fatigue metrics"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design team rhythms",
+              "objective2": "Measure cycle variance",
+              "objective3": "Optimize surge timing"
+            }
+          },
+          "book3": {
+            "title": "The Power of Full Engagement",
+            "author": "Jim Loehr & Tony Schwartz",
+            "section_of_focus": "Energy Management",
+            "section_description": "Manage four energies for sustained output.",
+            "connection_focus_area": "Whole-self renewal prevents burnout.",
+            "connect_points": {
+              "point1": "Daily energy map",
+              "point2": "Renewal rituals",
+              "point3": "Team energy checkpoints"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run engagement audit",
+              "objective2": "Launch renewal workshops",
+              "objective3": "Track energy–output correlation"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the atonement space, the roar fades; Francisco hears his own heartbeat set a steadier tempo.",
+          "symbolic_moment": "He turns a hidden dial inset in his bracer—the throttle hum softens to a sustainable purr.",
+          "emotional_landscape": "Relief, humility, durable resolve.",
+          "threshold_vision": "Distance demands discipline more than speed.",
+          "transformation_promise": "A rebellion that breathes will be a rebellion that lasts."
+        }
+      },
       "personality_profile_147": {},
       "personality_profile_148": {},
       "personality_profile_149": {},
