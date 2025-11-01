@@ -30885,9 +30885,472 @@
           "transformation_promise": "From inner cage to open ground—leadership worn without fear."
         }
       },
-      "personality_profile_140": {},
-      "personality_profile_141": {},
-      "personality_profile_142": {},
+      "personality_profile_140": {
+        "canonical_id": "EA-140",
+        "unique_identifier": "STG 4.2.3.1",
+        "specific_task_group_title": "Conflict Resolution",
+        "all_chapter": 140,
+        "novel_book": 4,
+        "chapter": "Chapter 20",
+        "chapter_title": "Midpoint — Conflict Resolution",
+        "type": "Specific Task Group",
+        "display_name": "The Mediator’s Blade (Two of Swords)",
+        "theme": "Tension becomes transformation when clarity meets compassion.",
+        "family": "Negotiation / Diplomacy — Emotional Intelligence & Fairness",
+        "summary": "The Mediator’s Blade (Two of Swords) wields calm precision in chaos. In Chapter 20, Francisco faces opposing cosmic forces, navigating perilous diplomacy between divine order and mortal rebellion. Through principled negotiation and emotional mastery, he transforms standoffs into structured dialogue, proving that restraint can be a weapon of power.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Two",
+        "tarot_symbolism": "Balance of intellect and empathy; poised decision under uncertainty; truth revealed through dialogue.",
+        "traits": {
+          "strengths": [
+            "balances logic and emotion in dialogue",
+            "creates psychological safety during conflict",
+            "separates people from problems",
+            "mediates with clear structure and fairness",
+            "anchors decisions in shared principles"
+          ],
+          "shadow": [
+            "avoids confrontation until stakes rise",
+            "appeases to maintain peace temporarily",
+            "intellectualizes emotion away",
+            "over-controls process to dodge vulnerability",
+            "delays resolution seeking the ‘perfect’ compromise"
+          ],
+          "growth_focus": [
+            "address conflict early, not elegantly late",
+            "pair logic with transparent emotion",
+            "define win conditions for all sides",
+            "measure peace by trust, not silence",
+            "practice principled firmness under pressure"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Midpoint",
+          "fiction_chapter_context": "Book 4, Chapter 20 — Francisco mediates the rebellion’s existential dispute with cosmic law, resolving tension through intellect, integrity, and empathy."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—harmonizer who channels drive into purposeful resolution."
+        },
+        "color_alignment": {
+          "name": "Mardi Gras",
+          "hsl": "300,100%,13%",
+          "rgb_hex": "#420042",
+          "color_symbolism": "Regal restraint — diplomacy forged in inner stillness."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.75,
+            "stability": 0.83,
+            "empathy": 0.81,
+            "openness": 0.74,
+            "orderliness": 0.79,
+            "abstract_reasoning": 0.86,
+            "conscientiousness": 0.88,
+            "cooperativeness": 0.89
+          },
+          "match_weights": {
+            "cooperativeness": 0.4,
+            "abstract_reasoning": 0.35,
+            "empathy": 0.25
+          },
+          "threshold": 0.87,
+          "daily_prompt": "What conflict today can you transform by listening for what’s true beneath what’s said?",
+          "practices": [
+            "Prepare by listing shared interests before negotiation.",
+            "Use third-story framing to depersonalize blame.",
+            "Pause and breathe before replying to emotional escalation.",
+            "Anchor every solution in mutual purpose.",
+            "End each meeting with clear next steps and ownership."
+          ],
+          "transformation_indicators": [
+            "Conflicts resolved with increased trust post-dialogue",
+            "Reduced re-escalation of issues",
+            "Improved decision satisfaction among stakeholders",
+            "Visible increase in cross-faction cooperation"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal — The Ordeal (Temptation)",
+          "preliminary_beat": "Midpoint — Balance Through Dialogue",
+          "save_the_cat_beat": "The Ordeal",
+          "character_state": "Francisco channels intellect into empathy, restoring order through mediation.",
+          "ordinary_world_baseline": "Polarized factions and inflamed emotions threaten collapse.",
+          "call_to_adventure_preview": "True power is the courage to listen under fire."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Getting to Yes",
+            "author": "Roger Fisher & William Ury",
+            "section_of_focus": "Principled Negotiation",
+            "section_description": "Interest-based negotiation for mutual gain.",
+            "connection_focus_area": "Clarifies core needs to build durable peace.",
+            "connect_points": {
+              "point1": "Identify shared interests.",
+              "point2": "Brainstorm mutual gains.",
+              "point3": "Apply objective standards."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create negotiation blueprints.",
+              "objective2": "Run principled mediation exercises.",
+              "objective3": "Measure agreement sustainability."
+            }
+          },
+          "book2": {
+            "title": "Difficult Conversations",
+            "author": "Douglas Stone, Bruce Patton & Sheila Heen",
+            "section_of_focus": "Managing Emotions",
+            "section_description": "Separates emotion from content.",
+            "connection_focus_area": "Emotional mastery maintains productive tone.",
+            "connect_points": {
+              "point1": "Use third-story framing.",
+              "point2": "Separate intent from impact.",
+              "point3": "Perform emotional temperature checks."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Coach emotion-regulation sessions.",
+              "objective2": "Guide reframing drills.",
+              "objective3": "Track emotional heat-reduction metrics."
+            }
+          },
+          "book3": {
+            "title": "Crucial Conversations",
+            "author": "Kerry Patterson, Joseph Grenny, Ron McMillan & Al Switzler",
+            "section_of_focus": "Speak and Listen",
+            "section_description": "High-stakes dialogue management.",
+            "connection_focus_area": "Facilitates safety in volatile interactions.",
+            "connect_points": {
+              "point1": "Set shared intent at start.",
+              "point2": "Listen, mirror, clarify.",
+              "point3": "Deliver difficult truths using STATE."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a dialogue simulation.",
+              "objective2": "Evaluate listening performance.",
+              "objective3": "Implement STATE debrief practice."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a throne hall split by light and shadow, Francisco mediates between gods and rebels, each word a blade edge.",
+          "symbolic_moment": "Two swords crossing in calm equilibrium—truth balanced against fear.",
+          "emotional_landscape": "Measured composure amid storming egos.",
+          "threshold_vision": "Resolution is forged, not found.",
+          "transformation_promise": "Conflict becomes covenant through disciplined empathy."
+        }
+      },
+      "personality_profile_141": {
+        "canonical_id": "EA-141",
+        "unique_identifier": "STG 4.2.3.2",
+        "specific_task_group_title": "Legacy",
+        "all_chapter": 141,
+        "novel_book": 4,
+        "chapter": "Chapter 21",
+        "chapter_title": "Reversal (Resolution) — Legacy",
+        "type": "Specific Task Group",
+        "display_name": "The Builder of Dawn (Ten of Disks)",
+        "theme": "What you build beyond yourself is what was truly yours all along.",
+        "family": "Sustainability / Stewardship — Purpose & Continuity",
+        "summary": "The Builder of Dawn (Ten of Disks) represents the architecture of endurance. In Chapter 21, after surviving the supreme ordeal, Francisco codifies rituals, institutions, and teachings that ensure his rebellion’s principles live beyond him. Legacy becomes the proof of purpose—leadership maturing into stewardship.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Ten",
+        "tarot_symbolism": "Culmination and inheritance—wealth of wisdom passed forward.",
+        "traits": {
+          "strengths": [
+            "designs systems that outlast personal control",
+            "mentors successors with clarity and humility",
+            "anchors culture in purpose and values",
+            "aligns vision to structural reinforcement",
+            "plans for generational continuity"
+          ],
+          "shadow": [
+            "clings to control fearing dilution",
+            "sacrifices innovation for tradition",
+            "fixates on perfection in succession",
+            "over-identifies with legacy image",
+            "neglects self-restoration in stewardship"
+          ],
+          "growth_focus": [
+            "delegate power before departure",
+            "document rituals over rhetoric",
+            "invite evolution of tradition",
+            "mentor successors as co-authors",
+            "measure endurance by adaptability"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Reversal (resolution)",
+          "fiction_chapter_context": "Book 4, Chapter 21 — Francisco designs lasting systems for free will, ensuring the rebellion’s spark becomes civilization’s torch."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—structure animated by optimism and renewal."
+        },
+        "color_alignment": {
+          "name": "Mardi Gras",
+          "hsl": "300,100%,10%",
+          "rgb_hex": "#350035",
+          "color_symbolism": "Ancestral ink—continuity through discipline and imagination."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.8,
+            "stability": 0.88,
+            "empathy": 0.75,
+            "openness": 0.73,
+            "orderliness": 0.91,
+            "conscientiousness": 0.93,
+            "adaptability": 0.79
+          },
+          "match_weights": {
+            "conscientiousness": 0.4,
+            "orderliness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.88,
+          "daily_prompt": "What structure can you create today that will serve others when you’re gone?",
+          "practices": [
+            "Map systems for succession and sustainability.",
+            "Create rituals that transmit core values.",
+            "Mentor an heir to your mission.",
+            "Archive knowledge in living formats.",
+            "Plan a yearly legacy review."
+          ],
+          "transformation_indicators": [
+            "Institutionalized mentorship programs",
+            "Clear alignment between purpose and systems",
+            "Cultural rituals sustained without founder presence",
+            "Adaptive succession plans in motion"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal — The Reward",
+          "preliminary_beat": "Reversal — From Victory to Vision",
+          "save_the_cat_beat": "The Reward",
+          "character_state": "Francisco becomes an architect of endurance—victory transforms into stewardship.",
+          "ordinary_world_baseline": "Triumph without continuity risks decay.",
+          "call_to_adventure_preview": "Legacy is built daily through shared purpose."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Start With Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "Building Vision",
+            "section_description": "Purpose alignment drives cultural resilience.",
+            "connection_focus_area": "Why sustains continuity.",
+            "connect_points": {
+              "point1": "Define purpose clearly.",
+              "point2": "Align every action to purpose.",
+              "point3": "Revisit the why regularly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a purpose manifesto.",
+              "objective2": "Facilitate a team vision summit.",
+              "objective3": "Evaluate purpose alignment quarterly."
+            }
+          },
+          "book2": {
+            "title": "Legacy",
+            "author": "James Kerr",
+            "section_of_focus": "Cultural Foundations",
+            "section_description": "Core rituals as vessels for values.",
+            "connection_focus_area": "Culture preserves enduring strength.",
+            "connect_points": {
+              "point1": "Identify key rituals.",
+              "point2": "Train onboarding rituals.",
+              "point3": "Honor symbolic milestones."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document team rituals.",
+              "objective2": "Create a legacy culture guide.",
+              "objective3": "Track cultural engagement."
+            }
+          },
+          "book3": {
+            "title": "Good to Great",
+            "author": "Jim Collins",
+            "section_of_focus": "Level 5 Leadership",
+            "section_description": "Humble stewardship ensures longevity.",
+            "connection_focus_area": "Discipline fused with humility shapes legacies.",
+            "connect_points": {
+              "point1": "Model servant leadership.",
+              "point2": "Set clear performance principles.",
+              "point3": "Mentor with measured expectation."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a leadership humility seminar.",
+              "objective2": "Establish successorship metrics.",
+              "objective3": "Build mentorship pipelines."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "By dawnlight, Francisco and his council inscribe a new covenant on obsidian tablets, binding law to freedom.",
+          "symbolic_moment": "A seed encased in amber—wisdom preserved for those yet unborn.",
+          "emotional_landscape": "Solemn fulfillment and quiet resolve.",
+          "threshold_vision": "Legacy is the architecture of faith made visible.",
+          "transformation_promise": "From rebellion to renaissance—Francisco’s ideals become the bones of a new world."
+        }
+      },
+      "personality_profile_142": {
+        "canonical_id": "EA-142",
+        "unique_identifier": "STG 4.2.3.3",
+        "specific_task_group_title": "Performance",
+        "all_chapter": 142,
+        "novel_book": 4,
+        "chapter": "Chapter 22",
+        "chapter_title": "Reaction (Set-Up) — Performance",
+        "type": "Specific Task Group",
+        "display_name": "The Measurer of Stars (Three of Cups)",
+        "theme": "Celebration without reflection fades; measurement gives joy its direction.",
+        "family": "Measurement / Growth — Accountability & Mastery",
+        "summary": "The Measurer of Stars (Three of Cups) unites celebration and calibration. In Chapter 22, Francisco establishes systems of feedback and metrics—aligning emotion, data, and purpose—to ensure the rebellion’s achievements mature into sustainable excellence. Performance becomes gratitude in motion.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Three",
+        "tarot_symbolism": "Communal success; joy structured through reflection and accountability.",
+        "traits": {
+          "strengths": [
+            "defines measurable outcomes for shared goals",
+            "aligns motivation with intrinsic purpose",
+            "facilitates feedback with empathy",
+            "translates celebration into iteration",
+            "links micro-actions to macro-impact"
+          ],
+          "shadow": [
+            "over-reliance on metrics over meaning",
+            "celebrating output without reflection",
+            "avoiding tough data that challenge ego",
+            "inconsistent follow-through on reviews",
+            "measuring effort instead of effect"
+          ],
+          "growth_focus": [
+            "balance emotion and evaluation",
+            "measure progress by relevance, not vanity",
+            "keep reflection rituals post-achievement",
+            "connect feedback to future design",
+            "use joy as fuel for disciplined mastery"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Reaction (set-up)",
+          "fiction_chapter_context": "Book 4, Chapter 22 — Francisco builds accountability systems that merge human joy with quantifiable growth, ensuring that purpose never drifts into complacency."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—measured ambition rooted in loyalty to purpose."
+        },
+        "color_alignment": {
+          "name": "Mardi Gras",
+          "hsl": "300,100%,8%",
+          "rgb_hex": "#2A002A",
+          "color_symbolism": "Discipline within delight—metrics guiding the dance of purpose."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.8,
+            "openness": 0.75,
+            "orderliness": 0.89,
+            "conscientiousness": 0.91,
+            "adaptability": 0.78,
+            "cooperativeness": 0.83
+          },
+          "match_weights": {
+            "conscientiousness": 0.4,
+            "orderliness": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.87,
+          "daily_prompt": "How will you measure what truly matters—and celebrate progress, not perfection?",
+          "practices": [
+            "Set quarterly OKRs tied to personal purpose.",
+            "Hold biweekly reflection circles to review data with gratitude.",
+            "Translate metrics into visual dashboards for clarity.",
+            "Celebrate one measurable win weekly.",
+            "Balance analytics with qualitative storytelling."
+          ],
+          "transformation_indicators": [
+            "Improved clarity between effort and impact",
+            "Higher accountability satisfaction across teams",
+            "Increased motivation through transparent metrics",
+            "Joyful discipline in execution cycles"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal — The Reward",
+          "preliminary_beat": "Reaction — Integration Through Measurement",
+          "save_the_cat_beat": "The Reward",
+          "character_state": "Francisco measures triumph not by applause but by continued alignment to purpose.",
+          "ordinary_world_baseline": "Success without structure risks drift.",
+          "call_to_adventure_preview": "Reflection makes victory repeatable."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Measure What Matters",
+            "author": "John Doerr",
+            "section_of_focus": "OKRs",
+            "section_description": "Objectives and Key Results to align and measure progress.",
+            "connection_focus_area": "OKRs connect daily effort to strategic outcomes.",
+            "connect_points": {
+              "point1": "Define outcome-based objectives.",
+              "point2": "Select 2–3 key results per objective.",
+              "point3": "Review cadence: weekly, monthly, quarterly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan a phased OKR rollout.",
+              "objective2": "Facilitate team OKR workshops.",
+              "objective3": "Analyze OKR retrospectives for learning."
+            }
+          },
+          "book2": {
+            "title": "High Output Management",
+            "author": "Andrew S. Grove",
+            "section_of_focus": "Task-Relevant Maturity",
+            "section_description": "Tailor metrics and management to competence.",
+            "connection_focus_area": "Adaptive measurement improves output quality.",
+            "connect_points": {
+              "point1": "Assess maturity per role/task.",
+              "point2": "Match indicators to readiness.",
+              "point3": "Adjust oversight with growth."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map TRM to responsibilities.",
+              "objective2": "Design a tailored metric dashboard.",
+              "objective3": "Conduct calibration reviews."
+            }
+          },
+          "book3": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Autonomy, Mastery, Purpose",
+            "section_description": "Intrinsic motivation for sustained high performance.",
+            "connection_focus_area": "Align metrics to intrinsic drivers for durable excellence.",
+            "connect_points": {
+              "point1": "Offer autonomy in goal selection.",
+              "point2": "Build mastery through deliberate practice.",
+              "point3": "Link each metric to meaningful purpose."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Launch an autonomy pilot.",
+              "objective2": "Implement mastery sprints.",
+              "objective3": "Embed purpose statements in OKRs."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a lantern-lit hall, rebels chart constellations of progress on glass tablets as music swells—celebration braided with review.",
+          "symbolic_moment": "Three cups arranged around a compass—joy oriented by true north.",
+          "emotional_landscape": "Thankful, focused, forward-leaning.",
+          "threshold_vision": "What gets celebrated and measured, endures.",
+          "transformation_promise": "Rituals of review turn victory into velocity."
+        }
+      },
       "personality_profile_143": {},
       "personality_profile_144": {},
       "personality_profile_145": {},
