@@ -29847,9 +29847,525 @@
           "transformation_promise": "By celebrating every hard-won inch, the rebellion converts memory into motion, stepping beyond fear into disciplined advance."
         }
       },
-      "personality_profile_134": {},
-      "personality_profile_135": {},
-      "personality_profile_136": {},
+      "personality_profile_134": {
+        "canonical_id": "EA-134",
+        "unique_identifier": "STG 4.2.1.1",
+        "specific_task_group_title": "Gain Advantage",
+        "all_chapter": 134,
+        "novel_book": 4,
+        "chapter": "Chapter 14",
+        "chapter_title": "Tests, Allies, and Enemies — Gain Advantage",
+        "type": "Specific Task Group",
+        "display_name": "The Laurel Strategist (Six of Wands)",
+        "theme": "Advantage is engineered: clarify the end, sharpen your edge, and maneuver with purpose.",
+        "family": "Competitive Edge / Strategy — Advantage & Positioning",
+        "summary": "The Laurel Strategist (Six of Wands) turns lessons from trial into tactical leverage. In Chapter 14, Francisco refines his approach amid shifting alliances, converting growth-mindset discipline, end-in-mind clarity, and purpose-driven autonomy into a durable edge against cosmic opponents. His victories are not luck—they are designed.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Six",
+        "tarot_symbolism": "Public victory earned through preparation, alignment, and decisive execution; a standard raised to rally allies.",
+        "traits": {
+          "strengths": [
+            "spots leverage points quickly",
+            "aligns actions to long-horizon outcomes",
+            "uses feedback loops to iterate advantage",
+            "rallies allies around clear wins",
+            "keeps initiative under pressure"
+          ],
+          "shadow": [
+            "over-indexes on optics over substance",
+            "treats partners as means to an end",
+            "neglects recovery in perpetual push cycles",
+            "confirmation bias around a chosen plan",
+            "risk of telegraphing moves through spectacle"
+          ],
+          "growth_focus": [
+            "balance visible wins with invisible groundwork",
+            "pair ambition with safety margins",
+            "use dissent to stress-test strategy",
+            "codify recovery and refit intervals",
+            "share credit to deepen coalition strength"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Push",
+          "fiction_chapter_context": "Book 4, Chapter 14 — Amid trials and fluid alliances, Francisco clarifies mission, tunes tactics, and claims positional advantages in the struggle for free will."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever with 8-wing influence—results-oriented drive tempered by strategic restraint."
+        },
+        "color_alignment": {
+          "name": "Lilac",
+          "hsl": "300,20%,68%",
+          "rgb_hex": "#C197C1",
+          "color_symbolism": "Composed confidence—quiet triumph that favors precision over bravado."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.74,
+            "empathy": 0.62,
+            "openness": 0.71,
+            "orderliness": 0.82,
+            "novelty_seeking": 0.66,
+            "abstract_reasoning": 0.83,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.68,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.64,
+            "conscientiousness": 0.88,
+            "adaptability": 0.77,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "abstract_reasoning": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1341", "Q1342", "Q1343", "Q1344", "Q1345", "Q1346", "Q1347", "Q1348"],
+          "signals_map": {
+            "Q1341": { "dimension": "agency", "polarity": 1, "content": "I look for leverage, not merely effort." },
+            "Q1342": { "dimension": "conscientiousness", "polarity": 1, "content": "My plan ties daily tasks to a clear end state." },
+            "Q1343": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model scenarios before I commit resources." },
+            "Q1344": { "dimension": "adaptability", "polarity": 1, "content": "I pivot quickly when new information changes odds." },
+            "Q1345": { "dimension": "orderliness", "polarity": 1, "content": "I maintain cadence: brief, execute, debrief, adjust." },
+            "Q1346": { "dimension": "cooperativeness", "polarity": 1, "content": "I amplify allies’ strengths for mutual gain." },
+            "Q1347": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept calculated exposure to secure initiative." },
+            "Q1348": { "dimension": "empathy", "polarity": 1, "content": "I read stakeholders’ motives to shape strategy." }
+          },
+          "daily_prompt": "Where is the smallest move today that shifts the largest piece on the board?",
+          "practices": [
+            "Write a one-page mission and ROE for the week.",
+            "Run a 15-min leverage scan: bottlenecks, allies, timing.",
+            "Schedule a micro-experiment to test an assumption.",
+            "Close with a three-bullet after-action: keep, change, stop.",
+            "Publicly credit an ally whose strength created advantage."
+          ],
+          "transformation_indicators": [
+            "Shorter decision cycles with higher win rate",
+            "Clearer through-line from mission to tasking",
+            "Higher ally engagement and initiative",
+            "Fewer unforced errors from overreach"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians & Gatekeepers — Tests, Allies, and Enemies",
+          "preliminary_beat": "Push — Strategic Advantage",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco engineers momentum, turning trials into designed victories.",
+          "ordinary_world_baseline": "Volatile alliances; uncertain rules of engagement.",
+          "call_to_adventure_preview": "Advantage compounds when vision, feedback, and autonomy align."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth vs. Fixed Mindset",
+            "section_description": "Beliefs shape performance trajectories.",
+            "connection_focus_area": "Transforms setbacks into fuel for advantage.",
+            "connect_points": {
+              "point1": "Identify limiting beliefs.",
+              "point2": "Frame setbacks as learning opportunities.",
+              "point3": "Set incremental growth goals."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document fixed-mindset triggers.",
+              "objective2": "Turn one setback into a learning plan.",
+              "objective3": "Share growth wins with peers."
+            }
+          },
+          "book2": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Begin with the End in Mind",
+            "section_description": "Vision anchors execution.",
+            "connection_focus_area": "Clarifies objectives that shape advantage.",
+            "connect_points": {
+              "point1": "Draft a personal mission statement.",
+              "point2": "Align tasks with long-term goals.",
+              "point3": "Review priorities weekly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a one-page strategic plan.",
+              "objective2": "Evaluate weekly actions vs. mission.",
+              "objective3": "Adjust goals based on metrics."
+            }
+          },
+          "book3": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Autonomy, Mastery, Purpose",
+            "section_description": "Intrinsic motives sustain excellence.",
+            "connection_focus_area": "Motivation architecture for durable edge.",
+            "connect_points": {
+              "point1": "Set self-directed mastery challenges.",
+              "point2": "Identify purpose-aligned tasks.",
+              "point3": "Grant autonomy in project design."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a self-driven sprint.",
+              "objective2": "Map purpose to daily work.",
+              "objective3": "Review autonomy outcomes quarterly."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a balcony above the war-market, Francisco traces convoy routes across starlit maps, aligning supply, rumor, and timing into one clean strike.",
+          "symbolic_moment": "A laurel standard lifts—not as parade, but as signal: the plan is live.",
+          "emotional_landscape": "Calm focus, taut resolve, momentum without haste.",
+          "threshold_vision": "Edge is a system—clarity + cadence + coalition.",
+          "transformation_promise": "Designed victories seed a campaign that can outthink and outlast the cosmic order."
+        }
+      },
+      "personality_profile_135": {
+        "canonical_id": "EA-135",
+        "unique_identifier": "STG 4.2.1.2",
+        "specific_task_group_title": "Strength",
+        "all_chapter": 135,
+        "novel_book": 4,
+        "chapter": "Chapter 15",
+        "chapter_title": "New World (Set-Up) — Strength",
+        "type": "Specific Task Group",
+        "display_name": "The Enduring Eight (Cups)",
+        "theme": "Resilience is choosing values under pressure—again and again—until storms change their shape.",
+        "family": "Resilience / Fortitude — Emotional Strength",
+        "summary": "The Enduring Eight of Cups embodies steadfast inner power. In Chapter 15, as Francisco enters unfamiliar realms of divine politics, he cultivates grit, emotional agility, and Option-B resilience, keeping humanity intact while navigating cosmic stakes. Strength is not hardness; it is values held gently and firmly through turmoil.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Eight",
+        "tarot_symbolism": "A deliberate turning toward higher purpose; leaving comfort to pursue a truer call; disciplined emotional courage.",
+        "traits": {
+          "strengths": [
+            "persists through long arcs of uncertainty",
+            "names emotions without being ruled by them",
+            "chooses values-aligned actions under stress",
+            "recovers quickly via supportive rituals",
+            "models calm, steady presence for others"
+          ],
+          "shadow": [
+            "stoicism that suppresses needed grief",
+            "burnout masked as duty",
+            "isolation during hardship",
+            "rigidity around self-expectations",
+            "over-identification with ‘toughness’"
+          ],
+          "growth_focus": [
+            "pair stamina with restoration practices",
+            "seek co-regulation not isolation",
+            "update expectations with reality checks",
+            "ritualize grief and meaning-making",
+            "let support in before crisis peaks"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "New world (set-up)",
+          "fiction_chapter_context": "Book 4, Chapter 15 — In uncharted terrain, Francisco anchors to values, processes emotion skillfully, and sustains momentum despite cosmic turbulence."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker in growth toward 3—calm endurance channeled into purposeful action."
+        },
+        "color_alignment": {
+          "name": "London Hue",
+          "hsl": "300,23%,59%",
+          "rgb_hex": "#B17DB1",
+          "color_symbolism": "Weathered amethyst—soft strength, quiet recovery, dignity in adversity."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.90,
+            "empathy": 0.82,
+            "openness": 0.70,
+            "orderliness": 0.75,
+            "novelty_seeking": 0.55,
+            "abstract_reasoning": 0.68,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.57,
+            "cooperativeness": 0.84,
+            "risk_tolerance": 0.53,
+            "conscientiousness": 0.81,
+            "adaptability": 0.78,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "stability": 0.45,
+            "empathy": 0.30,
+            "adaptability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1351", "Q1352", "Q1353", "Q1354", "Q1355", "Q1356", "Q1357", "Q1358"],
+          "signals_map": {
+            "Q1351": { "dimension": "stability", "polarity": 1, "content": "When stressed, I return to grounding rituals." },
+            "Q1352": { "dimension": "empathy", "polarity": 1, "content": "I can name what I feel without letting it drive the wheel." },
+            "Q1353": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep cadence—small steps, every day, especially when hard." },
+            "Q1354": { "dimension": "cooperativeness", "polarity": 1, "content": "I lean on trusted people before I’m at a breaking point." },
+            "Q1355": { "dimension": "adaptability", "polarity": 1, "content": "I adjust plans while holding to core values." },
+            "Q1356": { "dimension": "orderliness", "polarity": 1, "content": "I log setbacks and the lessons they offered." },
+            "Q1357": { "dimension": "agency", "polarity": 1, "content": "I re-enter the arena after rest with intention." },
+            "Q1358": { "dimension": "openness", "polarity": 1, "content": "I welcome feedback about my coping strategies." }
+          },
+          "daily_prompt": "What value will you choose to honor today when difficulty arrives—and how will you prepare to make that choice?",
+          "practices": [
+            "3x5 resilience: three breaths, five senses check-in before decisions.",
+            "Daily grit ledger: effort over outcome, one line per day.",
+            "Weekly ‘name it to tame it’ emotion review.",
+            "Peer check-in: 10 minutes to give/receive support.",
+            "Gratitude during hardship: write one sentence of meaning each night."
+          ],
+          "transformation_indicators": [
+            "Faster recovery curve after setbacks",
+            "More values-consistent decisions under load",
+            "Increased help-seeking before crisis",
+            "Sustained cadence through turbulent periods"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians & Gatekeepers — Tests, Allies, and Enemies",
+          "preliminary_beat": "New World (Set-Up) — Emotional Fortitude",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco holds steady in unfamiliar terrain by aligning emotion with values.",
+          "ordinary_world_baseline": "Unclear rules; high social and political risk.",
+          "call_to_adventure_preview": "Strength is a practiced choice, not a mood."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Passion and Perseverance",
+            "section_description": "Long-term commitment sustains excellence.",
+            "connection_focus_area": "Persistence as backbone of strength.",
+            "connect_points": {
+              "point1": "Set long-range passion projects.",
+              "point2": "Track daily effort regardless of outcome.",
+              "point3": "Reflect monthly on perseverance milestones."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a year-long resilience challenge.",
+              "objective2": "Log daily perseverance actions.",
+              "objective3": "Share grit reflections with a mentor."
+            }
+          },
+          "book2": {
+            "title": "Emotional Agility",
+            "author": "Susan David",
+            "section_of_focus": "Facing Emotions",
+            "section_description": "Skillful emotion navigation.",
+            "connection_focus_area": "From turbulence to adaptive choice.",
+            "connect_points": {
+              "point1": "Identify recurring emotional patterns.",
+              "point2": "Practice name-it-to-tame-it labeling.",
+              "point3": "Adopt values-aligned actions under stress."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map personal triggers.",
+              "objective2": "Weekly labeling exercises.",
+              "objective3": "Evaluate choices vs. values."
+            }
+          },
+          "book3": {
+            "title": "Option B",
+            "author": "Sheryl Sandberg & Adam Grant",
+            "section_of_focus": "Building Resilience",
+            "section_description": "Recovering meaning after loss.",
+            "connection_focus_area": "Rituals and community for bounce-back.",
+            "connect_points": {
+              "point1": "Write a resilience action plan.",
+              "point2": "Seek supportive peer groups.",
+              "point3": "Develop daily gratitude checkpoints."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft and enact a resilience plan.",
+              "objective2": "Facilitate a peer support session.",
+              "objective3": "Journal gratitude during hardship."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a sky of slow thunder, Francisco steps into the Hall of Echoes, palms open, breath steady, carrying his values like a lantern.",
+          "symbolic_moment": "Eight cups arranged as a spiral path—each a vow to choose humanity over expedience.",
+          "emotional_landscape": "Sober calm, quiet courage, compassionate resolve.",
+          "threshold_vision": "Strength is cadence—feel, name, choose, act, repair.",
+          "transformation_promise": "Storms reshape around a center that does not break."
+        }
+      },
+      "personality_profile_136": {
+        "canonical_id": "EA-136",
+        "unique_identifier": "STG 4.2.1.3",
+        "specific_task_group_title": "Professional",
+        "all_chapter": 136,
+        "novel_book": 4,
+        "chapter": "Chapter 16",
+        "chapter_title": "Fun and Games (Event/Conflict) — Professional",
+        "type": "Specific Task Group",
+        "display_name": "The Sovereign of Craft (King of Wands)",
+        "theme": "Authority flows from excellence practiced in silence and proven in the arena.",
+        "family": "Expertise / Professionalism — Mastery & Standards",
+        "summary": "The Sovereign of Craft (King of Wands) represents principled mastery. In Chapter 16, high-stakes encounters force Francisco to elevate domain skill, deep work discipline, and ethical standards. He becomes credible not by title but by craft—commanding alliances and avoiding divine snares through professional rigor.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "King",
+        "tarot_symbolism": "Vision directed through seasoned mastery; charismatic leadership grounded in practiced competence and integrity.",
+        "traits": {
+          "strengths": [
+            "structures deep work for complex problems",
+            "invests in deliberate practice of high-leverage skills",
+            "upholds ethical standards under pressure",
+            "mentors others to raise the bar",
+            "communicates with crisp intent and follow-through"
+          ],
+          "shadow": [
+            "impatience with novices",
+            "overwork disguised as dedication",
+            "prestige chasing vs. service",
+            "rigidity in preferred methods",
+            "blind spots around role-model influence"
+          ],
+          "growth_focus": [
+            "pair mastery with humility and teachability",
+            "time-box recovery to sustain excellence",
+            "invite peer review on ethical tradeoffs",
+            "update methods with new evidence",
+            "codify mentorship as a core duty"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Fun and games (event/conflict)",
+          "fiction_chapter_context": "Book 4, Chapter 16 — Francisco’s practiced competence in cosmic diplomacy and operations earns authority and shields the rebellion from traps."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled mastery enlivened by creative flexibility."
+        },
+        "color_alignment": {
+          "name": "Violet Blue",
+          "hsl": "300,25%,49%",
+          "rgb_hex": "#9D5C9D",
+          "color_symbolism": "Royal craft—measured flame that lights standards, not egos."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.80,
+            "stability": 0.81,
+            "empathy": 0.67,
+            "openness": 0.72,
+            "orderliness": 0.86,
+            "novelty_seeking": 0.58,
+            "abstract_reasoning": 0.82,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.71,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.60,
+            "conscientiousness": 0.92,
+            "adaptability": 0.75,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.30,
+            "abstract_reasoning": 0.30
+          },
+          "threshold": 0.88,
+          "top_signal_items": ["Q1361", "Q1362", "Q1363", "Q1364", "Q1365", "Q1366", "Q1367", "Q1368"],
+          "signals_map": {
+            "Q1361": { "dimension": "conscientiousness", "polarity": 1, "content": "I set and meet explicit standards of practice." },
+            "Q1362": { "dimension": "orderliness", "polarity": 1, "content": "I schedule deep work for the hardest problems." },
+            "Q1363": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model second- and third-order effects before acting." },
+            "Q1364": { "dimension": "cooperativeness", "polarity": 1, "content": "I give and request structured feedback cycles." },
+            "Q1365": { "dimension": "social_dominance", "polarity": 1, "content": "I communicate mission intent crisply and early." },
+            "Q1366": { "dimension": "empathy", "polarity": 1, "content": "I mentor others to compound team capability." },
+            "Q1367": { "dimension": "risk_tolerance", "polarity": 1, "content": "I take principled risks where my competence is strongest." },
+            "Q1368": { "dimension": "openness", "polarity": 1, "content": "I update methods when better evidence appears." }
+          },
+          "daily_prompt": "Which skill, practiced deeply today, would most improve your credibility tomorrow?",
+          "practices": [
+            "Block a 90-minute daily deep work session.",
+            "Define 3 core skills; drill one with deliberate practice.",
+            "End each day with a one-page professional log (wins, gaps, next drills).",
+            "Host a weekly ethics & standards review with a peer.",
+            "Mentor one person on a specific craft behavior."
+          ],
+          "transformation_indicators": [
+            "Higher quality outputs with fewer revisions",
+            "Peer recognition for reliability and clarity",
+            "Improved time-to-decision in complex tasks",
+            "Observed uplift in mentees’ performance"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians & Gatekeepers — Tests, Allies, and Enemies",
+          "preliminary_beat": "Fun and Games — Mastery on Display",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco’s authority derives from practiced competence and ethical clarity.",
+          "ordinary_world_baseline": "High-stakes diplomacy and traps from divine intelligence.",
+          "call_to_adventure_preview": "Standards become shields; craft becomes command."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "So Good They Can't Ignore You",
+            "author": "Cal Newport",
+            "section_of_focus": "Craftsman Mindset",
+            "section_description": "Skill before passion; deliberate practice builds rare value.",
+            "connection_focus_area": "Focus on high-leverage competence.",
+            "connect_points": {
+              "point1": "Identify high-leverage skills.",
+              "point2": "Schedule deep practice blocks.",
+              "point3": "Seek expert feedback cycles."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define three core skills.",
+              "objective2": "Execute weekly deliberate practice.",
+              "objective3": "Incorporate mentor feedback loops."
+            }
+          },
+          "book2": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "The Rules",
+            "section_description": "Intense focus for complex outcomes.",
+            "connection_focus_area": "Operationalizes mastery through attention.",
+            "connect_points": {
+              "point1": "Block 90-minute deep work periods.",
+              "point2": "Minimize digital distractions.",
+              "point3": "Review deep work outcomes weekly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement daily deep work.",
+              "objective2": "Log focus metrics.",
+              "objective3": "Optimize workspace for flow."
+            }
+          },
+          "book3": {
+            "title": "The Professional",
+            "author": "Subroto Bagchi",
+            "section_of_focus": "Professional Identity",
+            "section_description": "Character and competence in action.",
+            "connection_focus_area": "Ethical excellence as the core of authority.",
+            "connect_points": {
+              "point1": "Articulate professional values.",
+              "point2": "Demonstrate integrity in decisions.",
+              "point3": "Mentor others in professional conduct."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a professional code of ethics.",
+              "objective2": "Lead a values-based decision workshop.",
+              "objective3": "Assess team adherence to standards."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the jade-lit tribunal, Francisco presents a flawless brief—facts sequenced, risks mapped, contingencies pre-approved—silencing a hostile chamber.",
+          "symbolic_moment": "A wand set upon an architect’s square—fire married to standard.",
+          "emotional_landscape": "Alert composure, earned confidence, principled resolve.",
+          "threshold_vision": "Competence is persuasion; standards are armor.",
+          "transformation_promise": "By mastering craft and codifying ethics, Francisco secures influence that resists divine manipulation."
+        }
+      },
       "personality_profile_137": {},
       "personality_profile_138": {},
       "personality_profile_139": {},
