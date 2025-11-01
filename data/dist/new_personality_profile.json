@@ -31999,9 +31999,461 @@
           "transformation_promise": "A rebellion that breathes will be a rebellion that lasts."
         }
       },
-      "personality_profile_147": {},
-      "personality_profile_148": {},
-      "personality_profile_149": {},
+      "personality_profile_147": {
+        "canonical_id": "EA-147",
+        "unique_identifier": "STG 4.3.2.1",
+        "specific_task_group_title": "Logical",
+        "all_chapter": 147,
+        "novel_book": 4,
+        "chapter": "Chapter 27",
+        "chapter_title": "Scene XI: The Abyss — Logical",
+        "type": "Specific Task Group",
+        "display_name": "The Logical King (Swords)",
+        "theme": "Clarity over chaos; reason guides the way through the Abyss.",
+        "family": "Economic Realism — Rational Strategy",
+        "summary": "Logical equips leaders to confront the darkest moment with structured analysis, bias-aware decisions, and disciplined thinking—turning uncertainty into navigable signal.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "King",
+        "tarot_symbolism": "Sovereign intellect—decisive judgment tempered by ethics.",
+        "color_alignment": {
+          "name": "Portage",
+          "hsl": "240,100%,80%",
+          "rgb_hex": "#9999FF",
+          "color_symbolism": "Cool reason, steady focus."
+        },
+        "traits": {
+          "strengths": [
+            "bias-aware decision-making under pressure",
+            "structures ambiguity into options",
+            "ethics-forward judgment",
+            "calm, data-driven communication",
+            "models cognitive discipline"
+          ],
+          "shadow": [
+            "over-indexes on analysis paralysis",
+            "detaches from emotions of the team",
+            "discounts tacit knowledge",
+            "can appear rigid with new info",
+            "prefers certainty over momentum"
+          ],
+          "growth_focus": [
+            "pair logic with brief sense-checks from allies",
+            "time-box analysis to protect execution",
+            "surface assumptions in writing",
+            "invite dissent and red-team feedback",
+            "practice ‘decide–review–adapt’ loops"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Abyss (All is Lost)",
+          "fiction_chapter_context": "Book 4, Chapter 27 — Scene XI: The Abyss; preliminary beat: All is Lost."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity with courageous action."
+        },
+        "color_alignment_source": "data/l_outline.json",
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.81,
+            "empathy": 0.55,
+            "openness": 0.69,
+            "orderliness": 0.88,
+            "conscientiousness": 0.86,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.91,
+            "cooperativeness": 0.66,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.42,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.53
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "orderliness": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "daily_prompt": "Which bias could distort your next decision—and how will you neutralize it?",
+          "practices": [
+            "Write the decision in ‘options–evidence–risk–mitigation’ format.",
+            "Schedule a 10-minute red-team challenge before committing.",
+            "Pre-mortem: list 3 ways this choice could fail.",
+            "Define a reversible checkpoint (metrics + date).",
+            "Run a values check: ‘Is this wise, not just clever?’"
+          ],
+          "transformation_indicators": [
+            "Fewer decision reversals after go-live",
+            "Higher signal-to-noise in briefs",
+            "Improved cross-team trust in judgments",
+            "Bias checks documented pre-decision",
+            "Cycle time from analysis to action decreases"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "All is Lost",
+          "save_the_cat_beat": "All is Lost",
+          "character_state": "Calm cognition in crisis; logic restores pathway.",
+          "ordinary_world_baseline": "Unstructured urgency, mixed signals.",
+          "call_to_adventure_preview": "Disciplined thought becomes the bridge out of the Abyss."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Thinking in Bets",
+            "author": "Annie Duke",
+            "section_of_focus": "Decision-Making Under Uncertainty",
+            "section_description": "Probabilistic thinking for imperfect information.",
+            "connection_focus_area": "Separates quality of decision from outcome; embraces pre-mortems/odds.",
+            "connect_points": {
+              "point1": "Write base-rate and confidence level.",
+              "point2": "List top 3 uncertainties and how to monitor.",
+              "point3": "Record decision as a reversible bet."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a pre-mortem for a live decision",
+              "objective2": "Establish base-rates for recurring calls",
+              "objective3": "Set a review checkpoint with metrics"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the hush of the Abyss, a lattice of choices replaces panic.",
+          "symbolic_moment": "Francisco sets a ‘decision dial’: evidence, ethics, effect.",
+          "emotional_landscape": "Cool focus, moral steadiness.",
+          "threshold_vision": "Clarity is courage’s compass.",
+          "transformation_promise": "Reasoned action turns defeat into design."
+        }
+      },
+      "personality_profile_148": {
+        "canonical_id": "EA-148",
+        "unique_identifier": "STG 4.3.2.2",
+        "specific_task_group_title": "Investment Advice",
+        "all_chapter": 148,
+        "novel_book": 4,
+        "chapter": "Chapter 28",
+        "chapter_title": "Scene XI: The Abyss — Investment Advice",
+        "type": "Specific Task Group",
+        "display_name": "The Investment Ace (Disks)",
+        "theme": "Calibrate risk and value; invest energy where compounding is real.",
+        "family": "Economic Realism — Market Calibration",
+        "summary": "Investment Advice reframes resources—capital, time, attention—as portfolios. It trains disciplined allocation, compounding habits, and risk calibration in volatile conditions.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Ace",
+        "tarot_symbolism": "Seed of value—potential for material renewal through prudent starts.",
+        "color_alignment": {
+          "name": "Mauve",
+          "hsl": "270,100%,80%",
+          "rgb_hex": "#CC99FF",
+          "color_symbolism": "Composed optimism; steady compounding."
+        },
+        "traits": {
+          "strengths": [
+            "allocates resources to highest-leverage work",
+            "thinks in compounding horizons",
+            "balances risk with downside protection",
+            "tracks inputs → outcomes with discipline",
+            "educates others on financial/effort literacy"
+          ],
+          "shadow": [
+            "over-conservative in urgent pivots",
+            "anchoring on past returns",
+            "analysis cost outweighs opportunity",
+            "confuses price with value",
+            "under-communicates rationale"
+          ],
+          "growth_focus": [
+            "define minimum viable stake for experiments",
+            "pre-set exit rules for losing bets",
+            "publish portfolio (time/energy/capital) allocations",
+            "add qualitative ‘moat’ checks to numbers",
+            "run quarterly compounding reviews"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Abyss (Dark Night of the Soul)",
+          "fiction_chapter_context": "Book 4, Chapter 28 — Scene XI: The Abyss; preliminary beat: Dark Night of the Soul."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled prudence with optimistic experimentation."
+        },
+        "color_alignment_source": "data/l_outline.json",
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.83,
+            "empathy": 0.58,
+            "openness": 0.67,
+            "orderliness": 0.86,
+            "conscientiousness": 0.89,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.46,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.52
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.30,
+            "risk_tolerance": 0.30
+          },
+          "threshold": 0.82,
+          "daily_prompt": "Where will you place a small, smart bet today—and what’s your pre-set exit rule?",
+          "practices": [
+            "Adopt a ‘barbell’ approach: 80% safe, 20% experimental.",
+            "Monthly portfolio retro of time/attention/capital.",
+            "Use checklists for entry/exit criteria.",
+            "Track compounding inputs weekly.",
+            "Publish a one-page ‘owner’s thesis’ for major bets."
+          ],
+          "transformation_indicators": [
+            "Higher ROI on time allocations",
+            "Reduced sunk-cost persistence",
+            "Clearer risk logs with pre-committed exits",
+            "Better hit-rate on small experiments",
+            "Compounding metrics trend up QoQ"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul",
+          "save_the_cat_beat": "Dark Night of the Soul",
+          "character_state": "Prudence without paralysis; conviction sized to uncertainty.",
+          "ordinary_world_baseline": "Scattered bets; unclear theses.",
+          "call_to_adventure_preview": "Compounding requires courage, clarity, and caps on risk."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Cognitive Biases in Risk Perception",
+            "section_description": "System 1 vs. System 2; common investing biases.",
+            "connection_focus_area": "Debias risk estimates and choice architecture.",
+            "connect_points": {
+              "point1": "Name the bias most likely to distort today’s bet.",
+              "point2": "Slow down to run the System-2 checklist.",
+              "point3": "Log outcomes vs. thesis monthly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Detect anchoring and overconfidence patterns",
+              "objective2": "Adopt a debiasing checklist",
+              "objective3": "Improve risk calibration accuracy"
+            }
+          },
+          "book2": {
+            "title": "The Little Book of Common Sense Investing",
+            "author": "John C. Bogle",
+            "section_of_focus": "Indexing & Costs",
+            "section_description": "Keep costs low; own the market.",
+            "connection_focus_area": "Prefer simple, low-fee core allocations.",
+            "connect_points": {
+              "point1": "Map fee drag on long-horizon returns.",
+              "point2": "Define core vs. satellite strategy.",
+              "point3": "Automate contributions."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Quantify compounding impact of fees",
+              "objective2": "Design a core index allocation",
+              "objective3": "Establish auto-invest rules"
+            }
+          },
+          "book3": {
+            "title": "A Random Walk Down Wall Street",
+            "author": "Burton Malkiel",
+            "section_of_focus": "Market Efficiency & Diversification",
+            "section_description": "Why broad diversification wins often.",
+            "connection_focus_area": "Favor diversified exposure over stock picking.",
+            "connect_points": {
+              "point1": "Test concentration risk limits.",
+              "point2": "Stress-test portfolio scenarios.",
+              "point3": "Rebalance on rules, not moods."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Set diversification guardrails",
+              "objective2": "Run annual scenario stress tests",
+              "objective3": "Implement rule-based rebalancing"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the dark, Francisco traces where value still compounds.",
+          "symbolic_moment": "He plants a single ‘ace-seed’—a focused bet with clear exit.",
+          "emotional_landscape": "Sober hope; steady hands.",
+          "threshold_vision": "Conservation that enables courage.",
+          "transformation_promise": "Measured stakes, enduring gains."
+        }
+      },
+      "personality_profile_149": {
+        "canonical_id": "EA-149",
+        "unique_identifier": "STG 4.3.2.3",
+        "specific_task_group_title": "Appreciate",
+        "all_chapter": 149,
+        "novel_book": 4,
+        "chapter": "Chapter 29",
+        "chapter_title": "Scene XI: The Abyss — Appreciate",
+        "type": "Specific Task Group",
+        "display_name": "The Appreciative Six (Cups)",
+        "theme": "Gratitude renews strength; remembering the good lightens the dark.",
+        "family": "Economic Realism — Gratitude Practice",
+        "summary": "Appreciate cultivates daily, shared gratitude to restore morale, coherence, and perspective—especially when external hope is thin.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Six",
+        "tarot_symbolism": "Remembrance and kindness—past joys fueling present courage.",
+        "color_alignment": {
+          "name": "Fresh Eggplant",
+          "hsl": "300,100%,30%",
+          "rgb_hex": "#990099",
+          "color_symbolism": "Deep devotion; resilient warmth."
+        },
+        "traits": {
+          "strengths": [
+            "creates shared rituals of thanks",
+            "turns memories into fuel for hope",
+            "raises team morale and cohesion",
+            "sees resources amid scarcity",
+            "expresses precise, timely appreciation"
+          ],
+          "shadow": [
+            "sentimentality stalls forward motion",
+            "gratitude used to avoid hard feedback",
+            "performative positivity",
+            "over-reliance on past achievements",
+            "hesitation to confront real risks"
+          ],
+          "growth_focus": [
+            "pair appreciation with clear next steps",
+            "separate gratitude from conflict avoidance",
+            "track gratitude’s measurable impacts",
+            "rotate who leads appreciation rituals",
+            "anchor thanks to specific behaviors"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Abyss (Dark Night of the Soul)",
+          "fiction_chapter_context": "Book 4, Chapter 29 — Scene XI: The Abyss; preliminary beat: Dark Night of the Soul."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—warmth with authentic depth."
+        },
+        "color_alignment_source": "data/l_outline.json",
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.87,
+            "empathy": 0.92,
+            "openness": 0.73,
+            "orderliness": 0.71,
+            "conscientiousness": 0.78,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.60
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "stability": 0.35,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.80,
+          "daily_prompt": "Who will you thank today—and what exactly did they do that mattered?",
+          "practices": [
+            "3-gratitudes journal (daily, specific, shared weekly).",
+            "Weekly appreciation circle with named contributions.",
+            "Gratitude letter delivered monthly.",
+            "‘Thanks + next step’ habit in retros.",
+            "Measure morale/energy shifts after rituals."
+          ],
+          "transformation_indicators": [
+            "Higher team energy and cohesion",
+            "Lower stress/rumination scores",
+            "Increased peer-to-peer appreciations",
+            "Faster recovery after setbacks",
+            "Clear linkage of gratitude → action"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Hope rekindled via remembrance and thanks.",
+          "ordinary_world_baseline": "Fatigue and disconnection.",
+          "call_to_adventure_preview": "Gratitude becomes strategy, not garnish."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Gratitude Diaries",
+            "author": "Janice Kaplan",
+            "section_of_focus": "Daily Gratitude",
+            "section_description": "Transforming outlook through consistent appreciation habits.",
+            "connection_focus_area": "Daily rituals of thanks anchor leaders in positive perspective.",
+            "connect_points": {
+              "point1": "Keep a team gratitude journal.",
+              "point2": "Share weekly appreciation circles.",
+              "point3": "Celebrate small wins publicly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement a gratitude board.",
+              "objective2": "Measure changes in team optimism.",
+              "objective3": "Facilitate peer-to-peer appreciations."
+            }
+          },
+          "book2": {
+            "title": "Thanks! How Practicing Gratitude Can Make You Happier",
+            "author": "Robert Emmons",
+            "section_of_focus": "Scientific Benefits",
+            "section_description": "Empirical evidence linking gratitude to well-being and performance.",
+            "connection_focus_area": "Building a gratitude culture improves collective resilience.",
+            "connect_points": {
+              "point1": "Share research findings with the team.",
+              "point2": "Design gratitude challenges.",
+              "point3": "Track emotional well-being metrics."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a gratitude challenge.",
+              "objective2": "Monitor well-being survey scores.",
+              "objective3": "Appraise impact on team cohesion."
+            }
+          },
+          "book3": {
+            "title": "Gratitude Works!",
+            "author": "Robert Emmons",
+            "section_of_focus": "Five-Minute Exercises",
+            "section_description": "Short practices to boost positivity and focus.",
+            "connection_focus_area": "Brief, regular gratitude exercises sustain morale.",
+            "connect_points": {
+              "point1": "Introduce a daily gratitude pause.",
+              "point2": "Use quick prompts at stand-ups.",
+              "point3": "Collect anonymous appreciations."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead five-minute gratitude breaks.",
+              "objective2": "Measure participation rates.",
+              "objective3": "Assess improvements in team engagement."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the lowest ebb, names of those who helped become lanterns.",
+          "symbolic_moment": "A simple thank-you turns a corridor of shadows into a hall of memory.",
+          "emotional_landscape": "Warmth, humility, courage reborn.",
+          "threshold_vision": "What we honor strengthens.",
+          "transformation_promise": "Gratitude becomes fuel, not finale."
+        }
+      },
       "personality_profile_150": {},
       "personality_profile_151": {},
       "personality_profile_152": {},
