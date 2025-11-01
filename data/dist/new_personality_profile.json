@@ -28991,9 +28991,648 @@
           "transformation_promise": "Through unwavering dependability, Francisco transforms followers’ doubt into faith, setting the rebellion’s foundation for enduring trust."
         }
       },
-      "personality_profile_130": {},
-      "personality_profile_131": {},
-      "personality_profile_132": {},
+      "personality_profile_130": {
+        "canonical_id": "EA-130",
+        "unique_identifier": "STG 4.1.4.1",
+        "specific_task_group_title": "Regrouping",
+        "all_chapter": 130,
+        "novel_book": 4,
+        "chapter": "Chapter 10",
+        "chapter_title": "Pressure — Regrouping",
+        "type": "Specific Task Group",
+        "display_name": "The Strategic Reformer",
+        "theme": "Step back to see farther—reflection and reorganization turn losses into leverage.",
+        "family": "Recalibration / Adaptation — Learning & Strategy",
+        "summary": "The Strategic Reformer (Four of Swords) embodies disciplined pause: the wisdom to withdraw, study the field, and return with sharpened unity. In Chapter 10, after a costly setback, Francisco consolidates his people, clarifies the mission, and upgrades the plan. The lesson is not retreat but reset—pressure becomes a forge for smarter campaigns.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Four",
+        "tarot_symbolism": "The Four of Swords signifies restorative stillness, assessment, and rebuilding clarity before the next strike.",
+        "traits": {
+          "strengths": [
+            "turns setbacks into structured learning",
+            "realigns roles to restore momentum",
+            "designs clear feedback and iteration loops",
+            "communicates calmly under pressure",
+            "balances caution with future readiness"
+          ],
+          "shadow": [
+            "over-indexes on analysis and delay",
+            "hesitates to re-enter the fray",
+            "micromanages in the name of precision",
+            "avoids risk after failure",
+            "creates process fatigue"
+          ],
+          "growth_focus": [
+            "time-box reflection to prevent stalling",
+            "pair analysis with small rapid tests",
+            "delegate recalibration tasks",
+            "celebrate partial wins to rebuild morale",
+            "reframe failure as data"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Pressure",
+          "fiction_chapter_context": "Book 4, Chapter 10 — After losses, Francisco institutes disciplined regrouping, transforming pain points into a clearer, stronger operational plan."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "The Investigator integrated with Type 1—precision guided by principled purpose."
+        },
+        "color_alignment": {
+          "name": "Medium Blue",
+          "hsl": "250,100%,40%",
+          "rgb_hex": "#3300CC",
+          "color_symbolism": "Cool vigilance and mental clarity—calm strategy under pressure."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.88,
+            "empathy": 0.66,
+            "openness": 0.75,
+            "orderliness": 0.92,
+            "novelty_seeking": 0.58,
+            "abstract_reasoning": 0.84,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.60,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.50,
+            "conscientiousness": 0.93,
+            "adaptability": 0.82,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "adaptability": 0.30,
+            "orderliness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1301",
+            "Q1302",
+            "Q1303",
+            "Q1304",
+            "Q1305",
+            "Q1306",
+            "Q1307",
+            "Q1308"
+          ],
+          "signals_map": {
+            "Q1301": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I convert setbacks into structured plans for improvement."
+            },
+            "Q1302": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "Clear processes help my team regain momentum."
+            },
+            "Q1303": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I change tactics quickly when new data appears."
+            },
+            "Q1304": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I map causes and effects before acting again."
+            },
+            "Q1305": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I stay calm and objective after a failure."
+            },
+            "Q1306": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I initiate regrouping rituals without waiting."
+            },
+            "Q1307": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I realign roles transparently to reduce friction."
+            },
+            "Q1308": {
+              "dimension": "risk_tolerance",
+              "polarity": 0,
+              "content": "I avoid re-engagement until every variable is controlled."
+            }
+          },
+          "daily_prompt": "What process can you refine today so the next attempt is lighter, faster, and clearer?",
+          "practices": [
+            "Run a 15-minute after-action review within 24 hours of any miss.",
+            "Establish a one-week build–measure–learn sprint.",
+            "Create a live dashboard of top three metrics.",
+            "Time-box decisions with reversible risk.",
+            "Celebrate one ‘micro-win’ per team, per week."
+          ],
+          "transformation_indicators": [
+            "Shorter decision and iteration cycles.",
+            "Higher post-failure morale and clarity.",
+            "Reduced repeated errors on root causes.",
+            "Faster cross-team alignment after pivots."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Pressure — The Strategic Pause",
+          "preliminary_beat": "Theme Stated — Discipline before momentum",
+          "save_the_cat_beat": "Pressure",
+          "character_state": "Francisco reframes defeat as data, orchestrating a smarter second act.",
+          "ordinary_world_baseline": "Unclear lines, scattered roles, frayed morale.",
+          "call_to_adventure_preview": "Clarity returns; the plan hardens; momentum rebuilds."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "Shared Consciousness",
+            "section_description": "Real-time information sharing accelerates adaptation.",
+            "connection_focus_area": "Create unified situational awareness during regroup.",
+            "connect_points": {
+              "point1": "Daily cross-team check-ins.",
+              "point2": "Live intel dashboards.",
+              "point3": "Decentralized adjustments."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a shared-ops rhythm.",
+              "objective2": "Launch an intel portal.",
+              "objective3": "Measure decision-cycle speed."
+            }
+          },
+          "book2": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Build–Measure–Learn",
+            "section_description": "Validate assumptions through tight, fast loops.",
+            "connection_focus_area": "Turn reflection into rapid testing.",
+            "connect_points": {
+              "point1": "Define MVP experiments.",
+              "point2": "Capture actionable metrics.",
+              "point3": "Pivot or persevere explicitly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a 1-week validation loop.",
+              "objective2": "Document pivot logic.",
+              "objective3": "Quantify iteration impact."
+            }
+          },
+          "book3": {
+            "title": "Switch",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "Direct the Rider",
+            "section_description": "Small wins and clarity drive change.",
+            "connection_focus_area": "Refocus energy with bright spots.",
+            "connect_points": {
+              "point1": "Set a bright-spot goal.",
+              "point2": "Remove top friction points.",
+              "point3": "Celebrate early gains."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a bright-spot session.",
+              "objective2": "Eliminate three blockers.",
+              "objective3": "Track confidence shifts."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a vaulted war-room, maps are redrawn as rain rattles the casements; Francisco quietly reassigns roles and resets timelines.",
+          "symbolic_moment": "A sword laid flat upon a map—edge resting—signaling restraint before renewed advance.",
+          "emotional_landscape": "Sober, focused, determined renewal.",
+          "threshold_vision": "From scattered efforts to synchronized cadence.",
+          "transformation_promise": "Regrouping becomes the hinge that turns loss into leverage."
+        }
+      },
+      "personality_profile_131": {
+        "canonical_id": "EA-131",
+        "unique_identifier": "STG 4.1.4.2",
+        "specific_task_group_title": "Sudden Action",
+        "all_chapter": 131,
+        "novel_book": 4,
+        "chapter": "Chapter 11",
+        "chapter_title": "Pinch — Sudden Action",
+        "type": "Specific Task Group",
+        "display_name": "The Lightning Vanguard",
+        "theme": "When the window opens, move—speed is a strategy, not an accident.",
+        "family": "Agility / Initiative — Decisive Momentum",
+        "summary": "The Lightning Vanguard (Eight of Wands) channels clean velocity: compressed decision cycles, crisp intent, and trust in frontline execution. In Chapter 11, a rare cosmic opening appears; Francisco strikes fast. Success here favors the prepared—intuition trained by practice, autonomy guided by clear mission.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Eight",
+        "tarot_symbolism": "The Eight of Wands heralds swift movement, clarity of aim, and unblocked momentum.",
+        "traits": {
+          "strengths": [
+            "acts decisively under time pressure",
+            "communicates clear mission intent",
+            "delegates autonomy for speed",
+            "trusts trained intuition",
+            "keeps focus tight on the objective"
+          ],
+          "shadow": [
+            "overlooks second-order effects",
+            "frames choices too narrowly",
+            "confuses urgency with importance",
+            "under-briefs supporting teams",
+            "burns out pace-setters"
+          ],
+          "growth_focus": [
+            "pre-approve contingency branches",
+            "embed fast feedback after action",
+            "run ‘red team’ 5-minute checks",
+            "define abort criteria up front",
+            "rotate sprinters to preserve stamina"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Pinch",
+          "fiction_chapter_context": "Book 4, Chapter 11 — A fleeting weakness in the cosmic order demands immediate, coordinated action; Francisco commits with controlled ferocity."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "The Challenger integrated with Type 3—the decisive executor who channels drive into crisp outcomes."
+        },
+        "color_alignment": {
+          "name": "Purple",
+          "hsl": "300,100%,20%",
+          "rgb_hex": "#660066",
+          "color_symbolism": "Concentrated power and intent—purpose condensed into motion."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.90,
+            "stability": 0.68,
+            "empathy": 0.62,
+            "openness": 0.73,
+            "orderliness": 0.70,
+            "novelty_seeking": 0.82,
+            "abstract_reasoning": 0.72,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.86,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.83,
+            "conscientiousness": 0.78,
+            "adaptability": 0.81,
+            "imagination": 0.67
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "risk_tolerance": 0.35,
+            "adaptability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1311",
+            "Q1312",
+            "Q1313",
+            "Q1314",
+            "Q1315",
+            "Q1316",
+            "Q1317",
+            "Q1318"
+          ],
+          "signals_map": {
+            "Q1311": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I act quickly when opportunity appears."
+            },
+            "Q1312": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "Calculated risk is essential to progress."
+            },
+            "Q1313": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I pivot mid-execution without losing aim."
+            },
+            "Q1314": {
+              "dimension": "orderliness",
+              "polarity": 0,
+              "content": "I skip pre-briefs to move faster."
+            },
+            "Q1315": {
+              "dimension": "social_dominance",
+              "polarity": 1,
+              "content": "I set a fast operational tempo others match."
+            },
+            "Q1316": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I define success and abort criteria beforehand."
+            },
+            "Q1317": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I empower teammates to make local calls."
+            },
+            "Q1318": {
+              "dimension": "novelty_seeking",
+              "polarity": 1,
+              "content": "I’m energized by fast-moving, ambiguous situations."
+            }
+          },
+          "daily_prompt": "What single decisive action—taken in the next 15 minutes—moves the mission forward?",
+          "practices": [
+            "Write a one-sentence commander’s intent.",
+            "Run a 2-option rapid decision drill.",
+            "Pre-commit to an abort threshold.",
+            "Hold a 5-minute red-team check.",
+            "Conduct a 10-minute hotwash immediately after."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-decision and time-to-action.",
+            "Higher success rate in time-sensitive windows.",
+            "Improved autonomy without misalignment.",
+            "Reduced rework from snap decisions."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Pinch — The Window",
+          "preliminary_beat": "Theme Stated — Speed favors the prepared",
+          "save_the_cat_beat": "Pinch",
+          "character_state": "Francisco compresses deliberation into disciplined instinct, striking at the opening.",
+          "ordinary_world_baseline": "Caution risks paralysis.",
+          "call_to_adventure_preview": "Velocity with vision—momentum as a force multiplier."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Blink",
+            "author": "Malcolm Gladwell",
+            "section_of_focus": "Thin-slicing",
+            "section_description": "Train intuition to read patterns fast.",
+            "connection_focus_area": "Refine instinct for high-velocity calls.",
+            "connect_points": {
+              "point1": "Pattern drills.",
+              "point2": "Split-second retros.",
+              "point3": "Instinct calibration."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a thin-slice exercise.",
+              "objective2": "Document intuition wins.",
+              "objective3": "Rate decision quality under time."
+            }
+          },
+          "book2": {
+            "title": "Decisive",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "Widen Your Options",
+            "section_description": "Avoid narrow frames; expand choices.",
+            "connection_focus_area": "Generate options without delay.",
+            "connect_points": {
+              "point1": "Multi-track choices.",
+              "point2": "Flip the frame.",
+              "point3": "Time-box commitments."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a rapid options drill.",
+              "objective2": "Reframe a live decision.",
+              "objective3": "Assess clarity gains."
+            }
+          },
+          "book3": {
+            "title": "Extreme Ownership",
+            "author": "Jocko Willink & Leif Babin",
+            "section_of_focus": "Decentralized Command",
+            "section_description": "Empower edges for speed.",
+            "connection_focus_area": "Push authority to the front line.",
+            "connect_points": {
+              "point1": "State intent not steps.",
+              "point2": "Empower local pivots.",
+              "point3": "Hotwash candidly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a decentralized drill.",
+              "objective2": "Measure decision latency.",
+              "objective3": "Track pivot accuracy."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Starlit sigils flicker—an opening in the lattice of fate. Francisco’s orders cut clean: ‘Move.’",
+          "symbolic_moment": "Eight comet-lines streak across a dark sky—targeted, unstoppable.",
+          "emotional_landscape": "Tense, electric, fiercely purposeful.",
+          "threshold_vision": "A force that accelerates as it aligns.",
+          "transformation_promise": "Action timed to opportunity becomes destiny rewritten."
+        }
+      },
+      "personality_profile_132": {
+        "canonical_id": "EA-132",
+        "unique_identifier": "STG 4.1.4.3",
+        "specific_task_group_title": "Rushing into Things",
+        "all_chapter": 132,
+        "novel_book": 4,
+        "chapter": "Chapter 12",
+        "chapter_title": "Allies, Mentors, and Helpers — Rushing into Things",
+        "type": "Specific Task Group",
+        "display_name": "The Bold Pathfinder",
+        "theme": "Courage accelerates progress—wisdom keeps it from breaking.",
+        "family": "Balanced Boldness — Daring & Foresight",
+        "summary": "The Bold Pathfinder (Page of Wands) is kinetic courage tempered by counsel. In Chapter 12, Francisco’s urgency outpaces guidance and nearly meets a divine snare. The maturation arc is balance: retain the spark, add systems of foresight, and convert impetuous leaps into intelligent surges.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Page",
+        "tarot_symbolism": "The Page of Wands is youthful fire—initiative, exploration, and the first brave steps into unknown terrain.",
+        "traits": {
+          "strengths": [
+            "ignites momentum when others stall",
+            "frames obstacles as invitations",
+            "learns rapidly by doing",
+            "attracts allies through visible courage",
+            "keeps energy high in adversity"
+          ],
+          "shadow": [
+            "leaps before scanning for traps",
+            "underestimates complex opposition",
+            "overrides counsel in the rush",
+            "confuses motion with progress",
+            "creates avoidable collateral risk"
+          ],
+          "growth_focus": [
+            "install quick risk scans (2–3 checks)",
+            "seek a 60-second mentor readout",
+            "define stop-loss points in advance",
+            "pair bold moves with redundancy",
+            "schedule post-leap debriefs"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 4, Chapter 12 — Francisco’s premature strike triggers hidden countermeasures; counsel and foresight re-enter the loop."
+        },
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "The Enthusiast integrating to Type 5—the explorer who tempers zeal with prudent analysis."
+        },
+        "color_alignment": {
+          "name": "Han Purple",
+          "hsl": "255,100%,65%",
+          "rgb_hex": "#6633FF",
+          "color_symbolism": "Vivid curiosity seeking form—energy guided into intelligent vectors."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.55,
+            "empathy": 0.64,
+            "openness": 0.84,
+            "orderliness": 0.62,
+            "novelty_seeking": 0.88,
+            "abstract_reasoning": 0.71,
+            "emotional_intensity": 0.69,
+            "social_dominance": 0.72,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.79,
+            "conscientiousness": 0.74,
+            "adaptability": 0.83,
+            "imagination": 0.82
+          },
+          "match_weights": {
+            "novelty_seeking": 0.35,
+            "agency": 0.30,
+            "conscientiousness": 0.35
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1321",
+            "Q1322",
+            "Q1323",
+            "Q1324",
+            "Q1325",
+            "Q1326",
+            "Q1327",
+            "Q1328"
+          ],
+          "signals_map": {
+            "Q1321": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I initiate bold moves when momentum lags."
+            },
+            "Q1322": {
+              "dimension": "novelty_seeking",
+              "polarity": 1,
+              "content": "I’m energized by untested paths."
+            },
+            "Q1323": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I add quick risk checks before acting."
+            },
+            "Q1324": {
+              "dimension": "orderliness",
+              "polarity": 0,
+              "content": "I skip briefings to move faster."
+            },
+            "Q1325": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I scan for second-order effects."
+            },
+            "Q1326": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I can course-correct mid-flight."
+            },
+            "Q1327": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I invite quick counsel before leaps."
+            },
+            "Q1328": {
+              "dimension": "stability",
+              "polarity": 0,
+              "content": "I get rattled when early risks surface."
+            }
+          },
+          "daily_prompt": "What swift action deserves a 90-second foresight check before you launch?",
+          "practices": [
+            "Adopt a 3-question risk scan (trap? counter? backup?).",
+            "Secure a one-minute mentor counsel before go.",
+            "Pre-define a stop-loss and a regroup signal.",
+            "Bundle redundancy into fast plans.",
+            "Hold a 10-minute debrief within an hour."
+          ],
+          "transformation_indicators": [
+            "Fewer avoidable setbacks from haste.",
+            "Improved success rate on bold initiatives.",
+            "Higher team confidence in rapid moves.",
+            "Better trap-detection before execution."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers — Counsel Before Charge",
+          "preliminary_beat": "Theme Stated — Bold yet mindful",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Francisco splices foresight into fire, preserving courage while avoiding snares.",
+          "ordinary_world_baseline": "Urgency eclipses wisdom.",
+          "call_to_adventure_preview": "Courage + counsel = survivable audacity."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 1 vs. System 2",
+            "section_description": "Match speed with the right mode of thinking.",
+            "connection_focus_area": "Know when to sprint, when to slow read.",
+            "connect_points": {
+              "point1": "Classify decisions by mode.",
+              "point2": "Practice deliberate pauses.",
+              "point3": "Log outcomes by speed."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map decision modes on a project.",
+              "objective2": "Practice switch cues.",
+              "objective3": "Analyze mode–outcome links."
+            }
+          },
+          "book2": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Via Negativa",
+            "section_description": "Remove fragility; add redundancy.",
+            "connection_focus_area": "Prune risks before charging.",
+            "connect_points": {
+              "point1": "List avoidable risks.",
+              "point2": "Run stress mini-tests.",
+              "point3": "Build backups."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a risk-prune session.",
+              "objective2": "Pilot a stress-test.",
+              "objective3": "Track fragility metrics."
+            }
+          },
+          "book3": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Perception",
+            "section_description": "Use obstacles to gain advantage.",
+            "connection_focus_area": "Reframe barriers into plans.",
+            "connect_points": {
+              "point1": "Reframe one barrier today.",
+              "point2": "Extract three insights.",
+              "point3": "Plan around the roadblock."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a reframe clinic.",
+              "objective2": "Document barrier-to-benefit.",
+              "objective3": "Measure resilience shifts."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Torchlight on marble—Francisco surges ahead; wards spring; a whispering sigil nearly closes on him before counsel yanks him back.",
+          "symbolic_moment": "A page’s wand bound with a braided cord—courage tethered to wisdom.",
+          "emotional_landscape": "Hot impulse cooling into lucid resolve.",
+          "threshold_vision": "Leaps that learn, not burn.",
+          "transformation_promise": "Boldness becomes survivable when foresight rides with it."
+        }
+      },
       "personality_profile_133": {},
       "personality_profile_134": {},
       "personality_profile_135": {},
