@@ -30366,9 +30366,525 @@
           "transformation_promise": "By mastering craft and codifying ethics, Francisco secures influence that resists divine manipulation."
         }
       },
-      "personality_profile_137": {},
-      "personality_profile_138": {},
-      "personality_profile_139": {},
+      "personality_profile_137": {
+        "canonical_id": "EA-137",
+        "unique_identifier": "STG 4.2.2.1",
+        "specific_task_group_title": "Equitable Partnerships",
+        "all_chapter": 137,
+        "novel_book": 4,
+        "chapter": "Chapter 17",
+        "chapter_title": "Old World Contrast (Resolution) — Equitable Partnerships",
+        "type": "Specific Task Group",
+        "display_name": "The Pact Bearer (Two of Wands)",
+        "theme": "Power shared is power multiplied—equity turns influence into momentum.",
+        "family": "Collaboration / Reciprocity — Trust & Shared Accountability",
+        "summary": "The Pact Bearer (Two of Wands) converts individual initiative into mutual strength. In Chapter 17, as old alliances prove insufficient, Francisco forges reciprocal compacts—anchored in trust, horizontal collaboration, and belonging cues—to balance give-and-take at cosmic scale. Leadership shifts from center-stage heroics to co-ownership.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Two",
+        "tarot_symbolism": "Vision poised to expand through partnership; a horizon mapped by more than one hand.",
+        "traits": {
+          "strengths": [
+            "designs clear partnership compacts",
+            "shares credit and responsibility",
+            "maps dependencies across teams",
+            "maintains open feedback loops",
+            "creates cultures of psychological safety"
+          ],
+          "shadow": [
+            "overcompromises to keep peace",
+            "consensus paralysis in urgency",
+            "ambiguity around decision rights",
+            "undervaluing asymmetric contributions",
+            "hidden scorekeeping under strain"
+          ],
+          "growth_focus": [
+            "clarify authority and decision paths",
+            "price tradeoffs openly and early",
+            "balance equity with effectiveness",
+            "surface conflicts before they calcify",
+            "measure partnership health routinely"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Old world contrast (resolution)",
+          "fiction_chapter_context": "Book 4, Chapter 17 — Francisco retires the lone-hero pattern to establish equitable alliances with cosmic actors, distributing influence and risk."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—generosity with boundaries and shared power."
+        },
+        "color_alignment": {
+          "name": "Vivid Violet",
+          "hsl": "300,45%,36%",
+          "rgb_hex": "#853385",
+          "color_symbolism": "Reciprocal voltage—balanced exchange illuminating the path forward."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.78,
+            "empathy": 0.76,
+            "openness": 0.80,
+            "orderliness": 0.72,
+            "novelty_seeking": 0.60,
+            "abstract_reasoning": 0.77,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.64,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.57,
+            "conscientiousness": 0.83,
+            "adaptability": 0.82,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "adaptability": 0.30,
+            "agency": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1371", "Q1372", "Q1373", "Q1374", "Q1375", "Q1376", "Q1377", "Q1378"],
+          "signals_map": {
+            "Q1371": { "dimension": "cooperativeness", "polarity": 1, "content": "I state expectations and reciprocities explicitly." },
+            "Q1372": { "dimension": "adaptability", "polarity": 1, "content": "I adjust roles as conditions change." },
+            "Q1373": { "dimension": "empathy", "polarity": 1, "content": "I invite every voice before decisions bind us." },
+            "Q1374": { "dimension": "orderliness", "polarity": 1, "content": "I map dependencies and handoffs in writing." },
+            "Q1375": { "dimension": "agency", "polarity": 1, "content": "I own my side of the compact without excuses." },
+            "Q1376": { "dimension": "stability", "polarity": 1, "content": "I keep cadence on shared check-ins." },
+            "Q1377": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I design incentives that align behaviors." },
+            "Q1378": { "dimension": "social_dominance", "polarity": 1, "content": "I escalate decisively when consensus stalls." }
+          },
+          "daily_prompt": "What expectation or reciprocity needs to be made explicit today to strengthen a partnership?",
+          "practices": [
+            "Write a one-page partnership charter (purpose, roles, decision rights, cadence).",
+            "Run a 15-minute alignment stand-up with shared blockers.",
+            "Publish a visible commitments ledger for both parties.",
+            "Schedule a monthly trust & health retrospective.",
+            "Celebrate a joint win with public credit to all contributors."
+          ],
+          "transformation_indicators": [
+            "Faster cross-team decision cycles",
+            "Higher mutual satisfaction scores",
+            "Reduction in handoff failures",
+            "Shared ownership of outcomes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials — Approach to the Innermost Cave",
+          "preliminary_beat": "Old World Contrast (Resolution) — From Solo to Shared Power",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco reframes leadership as co-creation with peers and cosmic equals.",
+          "ordinary_world_baseline": "Legacy alliances centered on him alone.",
+          "call_to_adventure_preview": "Equity unlocks scale; partnership unlocks endurance."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "section_of_focus": "Building Trust",
+            "section_description": "Vulnerability-based trust as team bedrock.",
+            "connection_focus_area": "Trust enables balanced, sustainable partnerships.",
+            "connect_points": {
+              "point1": "Conduct vulnerability exercises.",
+              "point2": "Encourage open feedback loops.",
+              "point3": "Establish shared accountability."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a trust workshop.",
+              "objective2": "Implement peer feedback cadence.",
+              "objective3": "Measure partnership satisfaction."
+            }
+          },
+          "book2": {
+            "title": "Collaboration",
+            "author": "Morten T. Hansen",
+            "section_of_focus": "Horizontal Collaboration",
+            "section_description": "Cross-functional collaboration for performance.",
+            "connection_focus_area": "Multiplying strengths into collective power.",
+            "connect_points": {
+              "point1": "Map inter-team dependencies.",
+              "point2": "Create joint problem forums.",
+              "point3": "Rotate liaisons among teams."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a cross-team pilot.",
+              "objective2": "Track joint outcomes.",
+              "objective3": "Refine workflows."
+            }
+          },
+          "book3": {
+            "title": "The Culture Code",
+            "author": "Daniel Coyle",
+            "section_of_focus": "Belonging Cues",
+            "section_description": "Micro-behaviors for psychological safety.",
+            "connection_focus_area": "Belonging fuels equitable partnership.",
+            "connect_points": {
+              "point1": "Model inclusive body language.",
+              "point2": "Invite every voice.",
+              "point3": "Celebrate joint wins."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Train leaders on belonging cues.",
+              "objective2": "Install inclusive rituals.",
+              "objective3": "Measure psychological safety."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a citadel causeway, two banners are interlaced—neither above the other—as Francisco signs a compact under a violet sky.",
+          "symbolic_moment": "A shared compass passed hand to hand—bearing not one name, but many.",
+          "emotional_landscape": "Respectful candor, measured hope, co-owned resolve.",
+          "threshold_vision": "From ‘my mission’ to ‘our mandate.’",
+          "transformation_promise": "Reciprocal power creates a network the cosmic order cannot isolate."
+        }
+      },
+      "personality_profile_138": {
+        "canonical_id": "EA-138",
+        "unique_identifier": "STG 4.2.2.2",
+        "specific_task_group_title": "Loving Feeling",
+        "all_chapter": 138,
+        "novel_book": 4,
+        "chapter": "Chapter 18",
+        "chapter_title": "Build-Up (Set-Up) — Loving Feeling",
+        "type": "Specific Task Group",
+        "display_name": "The Heartbridge (Two of Cups)",
+        "theme": "Connection turns courage into a chorus; love sustains what strategy begins.",
+        "family": "Empathy / Compassion — Trust & Unity",
+        "summary": "The Heartbridge (Two of Cups) embodies empathic alliance. In Chapter 18, as the road of trials steepens, Francisco invests in emotional presence—active listening, needs-based dialogue, and strategic empathy—to deepen trust across a diverse coalition. The revolt is held together not only by plans, but by care.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Two",
+        "tarot_symbolism": "Mutual recognition and exchange; a vow of presence that steadies the hand.",
+        "traits": {
+          "strengths": [
+            "listens for needs beneath positions",
+            "mirrors emotions to defuse tension",
+            "responds with concrete supportive acts",
+            "builds rituals of care and cohesion",
+            "extends compassion without losing clarity"
+          ],
+          "shadow": [
+            "overfunctioning as caretaker",
+            "conflict avoidance masked as empathy",
+            "blurred boundaries under pressure",
+            "decision latency to preserve harmony",
+            "emotional exhaustion from over-attunement"
+          ],
+          "growth_focus": [
+            "pair empathy with crisp asks and limits",
+            "schedule restoration to avoid depletion",
+            "name conflicts kindly but directly",
+            "separate understanding from agreement",
+            "practice shared load-bearing"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Build-up (set-up)",
+          "fiction_chapter_context": "Book 4, Chapter 18 — Francisco unites beings across cosmic lines through practiced empathy, preparing the fellowship for the ordeals ahead."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 2—deep feeling redirected into service and connection."
+        },
+        "color_alignment": {
+          "name": "Purple",
+          "hsl": "300,100%,25%",
+          "rgb_hex": "#800080",
+          "color_symbolism": "Royal warmth—steady bond that holds under trial."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.82,
+            "empathy": 0.94,
+            "openness": 0.78,
+            "orderliness": 0.67,
+            "novelty_seeking": 0.54,
+            "abstract_reasoning": 0.71,
+            "emotional_intensity": 0.73,
+            "social_dominance": 0.55,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.52,
+            "conscientiousness": 0.76,
+            "adaptability": 0.79,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "empathy": 0.45,
+            "cooperativeness": 0.30,
+            "stability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1381", "Q1382", "Q1383", "Q1384", "Q1385", "Q1386", "Q1387", "Q1388"],
+          "signals_map": {
+            "Q1381": { "dimension": "empathy", "polarity": 1, "content": "I reflect feelings to ensure others feel understood." },
+            "Q1382": { "dimension": "cooperativeness", "polarity": 1, "content": "I turn understanding into supportive action." },
+            "Q1383": { "dimension": "stability", "polarity": 1, "content": "I remain steady when emotions surge." },
+            "Q1384": { "dimension": "adaptability", "polarity": 1, "content": "I flex my approach to meet needs without losing boundaries." },
+            "Q1385": { "dimension": "agency", "polarity": 1, "content": "I make clear requests after listening fully." },
+            "Q1386": { "dimension": "orderliness", "polarity": 1, "content": "I ritualize check-ins to keep bonds strong." },
+            "Q1387": { "dimension": "openness", "polarity": 1, "content": "I welcome feedback on my impact." },
+            "Q1388": { "dimension": "emotional_intensity", "polarity": 1, "content": "I channel strong feeling into constructive care." }
+          },
+          "daily_prompt": "Who needs to feel felt by you today—and what specific supportive act will you offer?",
+          "practices": [
+            "Run a 10-minute empathy map before key conversations.",
+            "Use NVC: observation, feeling, need, request.",
+            "Schedule weekly ‘pulse of the team’ check-ins.",
+            "Close meetings with one appreciation and one clear ask.",
+            "Reserve personal recovery blocks to prevent compassion fatigue."
+          ],
+          "transformation_indicators": [
+            "Fewer conflicts escalating from misunderstanding",
+            "Higher perceived psychological safety",
+            "Faster trust formation across differences",
+            "Sustained morale through difficult phases"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials — Approach to the Innermost Cave",
+          "preliminary_beat": "Build-Up (Set-Up) — Empathy as Glue",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco anchors unity through practiced compassion.",
+          "ordinary_world_baseline": "Fragmented motives and fragile bonds.",
+          "call_to_adventure_preview": "Care is infrastructure; empathy is logistics for the heart."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Empathy",
+            "section_description": "Attuned empathy improves leadership.",
+            "connection_focus_area": "Empathy as cornerstone of connection.",
+            "connect_points": {
+              "point1": "Practice active listening.",
+              "point2": "Reflect emotions verbally.",
+              "point3": "Respond with supportive actions."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct empathy mapping.",
+              "objective2": "Implement check-ins.",
+              "objective3": "Evaluate emotional climate."
+            }
+          },
+          "book2": {
+            "title": "Nonviolent Communication",
+            "author": "Marshall B. Rosenberg",
+            "section_of_focus": "Compassionate Connection",
+            "section_description": "Needs-based dialogue for understanding.",
+            "connection_focus_area": "Dialogue that builds bridges.",
+            "connect_points": {
+              "point1": "Use observational language.",
+              "point2": "Articulate feelings and needs.",
+              "point3": "Formulate empathetic requests."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead an NVC workshop.",
+              "objective2": "Practice needs-based sessions.",
+              "objective3": "Improve conflict resolution."
+            }
+          },
+          "book3": {
+            "title": "The Empathy Edge",
+            "author": "Maria Ross",
+            "section_of_focus": "Empathy as Strategy",
+            "section_description": "Empathy drives loyalty and innovation.",
+            "connection_focus_area": "Strategic empathy for influence.",
+            "connect_points": {
+              "point1": "Map empathy journeys.",
+              "point2": "Embed empathy in design.",
+              "point3": "Train empathy-driven processes."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design an empathy survey.",
+              "objective2": "Add empathy checkpoints.",
+              "objective3": "Assess engagement impact."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Around a dim fire, rebels from rival pantheons speak their losses; Francisco listens until silence becomes trust.",
+          "symbolic_moment": "Two cups filled and exchanged—pledges poured before plans.",
+          "emotional_landscape": "Warm gravity, shared ache, steady solace.",
+          "threshold_vision": "If we feel together, we stand together.",
+          "transformation_promise": "A coalition woven by care withstands ordeals that strategy alone cannot."
+        }
+      },
+      "personality_profile_139": {
+        "canonical_id": "EA-139",
+        "unique_identifier": "STG 4.2.2.3",
+        "specific_task_group_title": "Social Anxiety",
+        "all_chapter": 139,
+        "novel_book": 4,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Road of Trials — Social Anxiety",
+        "type": "Specific Task Group",
+        "display_name": "The Untethered Eight (Eight of Swords)",
+        "theme": "The cage is mostly story—presence loosens every bar.",
+        "family": "Confidence / Self-Mastery — Poise & Courage",
+        "summary": "The Untethered Eight (Eight of Swords) confronts the inner bind. In Chapter 19, Francisco meets hesitation and worthiness doubt; through body-led presence, vulnerable truth, and reframed narratives, he converts social fear into poised leadership. Constraint becomes a practice ground for freedom.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Eight",
+        "tarot_symbolism": "Bindings of thought that dissolve when awareness, breath, and choice align.",
+        "traits": {
+          "strengths": [
+            "uses somatic cues to steady nerves",
+            "speaks plainly about fears to defang them",
+            "prepares structures that reduce uncertainty",
+            "listens first, then leads with clarity",
+            "models courage through small public acts"
+          ],
+          "shadow": [
+            "over-preparation as avoidance",
+            "self-critique after speaking",
+            "reading neutral signals as threat",
+            "withdrawing under scrutiny",
+            "outsourcing voice to louder allies"
+          ],
+          "growth_focus": [
+            "tolerate short silences without rescuing",
+            "practice graduated exposure to visibility",
+            "separate self-worth from reception",
+            "replace mind-reading with check-ins",
+            "celebrate attempts, not perfection"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 4, Chapter 19 — Under the gaze of gods and skeptics, Francisco disarms social fear and inhabits leadership with composed presence."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—anxious vigilance settling into grounded calm."
+        },
+        "color_alignment": {
+          "name": "Tyrian Purple",
+          "hsl": "300,100%,16%",
+          "rgb_hex": "#520052",
+          "color_symbolism": "Ancient courage—quiet majesty found once the inner knot is untied."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.71,
+            "stability": 0.88,
+            "empathy": 0.69,
+            "openness": 0.67,
+            "orderliness": 0.79,
+            "novelty_seeking": 0.47,
+            "abstract_reasoning": 0.73,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.50,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.48,
+            "conscientiousness": 0.84,
+            "adaptability": 0.74,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.30,
+            "agency": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q1391", "Q1392", "Q1393", "Q1394", "Q1395", "Q1396", "Q1397", "Q1398"],
+          "signals_map": {
+            "Q1391": { "dimension": "stability", "polarity": 1, "content": "I regulate nerves with breath and posture before I speak." },
+            "Q1392": { "dimension": "agency", "polarity": 1, "content": "I choose to speak even when imperfect." },
+            "Q1393": { "dimension": "orderliness", "polarity": 1, "content": "I plan structures that make visibility safer." },
+            "Q1394": { "dimension": "conscientiousness", "polarity": 1, "content": "I review, not ruminate—one lesson, then release." },
+            "Q1395": { "dimension": "social_dominance", "polarity": 1, "content": "I tolerate silence to keep presence steady." },
+            "Q1396": { "dimension": "empathy", "polarity": 1, "content": "I check perceptions rather than mind-reading." },
+            "Q1397": { "dimension": "adaptability", "polarity": 1, "content": "I adjust delivery to audience without self-erasure." },
+            "Q1398": { "dimension": "openness", "polarity": 1, "content": "I share a small vulnerable truth to connect." }
+          },
+          "daily_prompt": "What small, brave visibility move will you make today—and how will you support yourself before and after it?",
+          "practices": [
+            "Two-minute posture+breath reset before interactions.",
+            "Write a three-line intent for key conversations.",
+            "Graduate exposure: speak first in small rooms, then larger.",
+            "Post-talk ‘one lesson only’ journal—no spirals.",
+            "Name one vulnerable truth in a safe forum weekly."
+          ],
+          "transformation_indicators": [
+            "Reduced avoidance of visible moments",
+            "Shorter recovery time after speaking",
+            "Clearer, calmer delivery under scrutiny",
+            "More frequent proactive contributions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials — Approach to the Innermost Cave",
+          "preliminary_beat": "Approach — Poise Under Gaze",
+          "save_the_cat_beat": "Tests, Allies and Enemies",
+          "character_state": "Francisco meets the inner bind and leads anyway.",
+          "ordinary_world_baseline": "Anxiety-driven hesitation and self-editing.",
+          "call_to_adventure_preview": "Confidence is a behavior first—the feeling follows your feet."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Quiet",
+            "author": "Susan Cain",
+            "section_of_focus": "The Power of Introverts",
+            "section_description": "Quiet strengths in loud rooms.",
+            "connection_focus_area": "Calm authority as influence.",
+            "connect_points": {
+              "point1": "Identify personal social strengths.",
+              "point2": "Develop reflective speaking techniques.",
+              "point3": "Leverage listening as influence."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a strengths profile.",
+              "objective2": "Practice reflective communication.",
+              "objective3": "Facilitate listening sessions."
+            }
+          },
+          "book2": {
+            "title": "Presence",
+            "author": "Amy Cuddy",
+            "section_of_focus": "Power Posing",
+            "section_description": "Body shapes mind and outcome.",
+            "connection_focus_area": "Somatic priming for poise.",
+            "connect_points": {
+              "point1": "Practice power poses daily.",
+              "point2": "Record confidence shifts.",
+              "point3": "Coach posture exercises."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Integrate poses into routines.",
+              "objective2": "Measure confidence changes.",
+              "objective3": "Teach posture techniques."
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "The Power of Vulnerability",
+            "section_description": "Courage through honest exposure.",
+            "connection_focus_area": "Vulnerability as connective leadership.",
+            "connect_points": {
+              "point1": "Share a safe personal story.",
+              "point2": "Practice vulnerability in forums.",
+              "point3": "Reflect on emotional risks taken."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a vulnerability circle.",
+              "objective2": "Document lessons learned.",
+              "objective3": "Build a team roadmap for brave talk."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Before the obsidian dais, a thousand eyes fall silent; Francisco meets them, breath steady, hands open—speaks anyway.",
+          "symbolic_moment": "Swords loosen into ribbons—thoughts unbound as presence settles.",
+          "emotional_landscape": "Nerve-heat cooling to clarity, quiet self-trust rising.",
+          "threshold_vision": "The voice you give yourself becomes the room you stand in.",
+          "transformation_promise": "From inner cage to open ground—leadership worn without fear."
+        }
+      },
       "personality_profile_140": {},
       "personality_profile_141": {},
       "personality_profile_142": {},
