@@ -28563,7 +28563,220 @@
           "transformation_promise": "With a living compass, the coalition moves as one through uncertainty without losing its soul."
         }
       },
-      "personality_profile_128": {},
+      "personality_profile_128": {
+        "canonical_id": "EA-128",
+        "unique_identifier": "STG 4.1.3.2",
+        "specific_task_group_title": "Compassion",
+        "all_chapter": 128,
+        "novel_book": 4,
+        "chapter": "Chapter 8",
+        "chapter_title": "Consequence — Compassion",
+        "type": "Specific Task Group",
+        "display_name": "The Empath King",
+        "theme": "True strength is measured by how gently one can hold another’s pain.",
+        "family": "Empathy / Healing — Compassion & Emotional Wisdom",
+        "summary": "The Empath King archetype (King of Cups) embodies emotional mastery, calm strength, and healing leadership. In Chapter 8, Francisco discovers that rebellion fueled by anger burns too fast, while rebellion sustained by compassion endures. When his followers falter under loss and cosmic despair, his empathy bridges divisions and rekindles unity. The lesson: compassion is not weakness but the sustaining fire of leadership.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "King",
+        "tarot_symbolism": "The King of Cups represents emotional balance, mature empathy, and benevolent authority—ruling with both heart and wisdom.",
+        "traits": {
+          "strengths": [
+            "leads with emotional intelligence and empathy",
+            "balances authority with kindness",
+            "creates spaces for healing and open expression",
+            "transforms conflict through understanding",
+            "grounds others in calm amid chaos"
+          ],
+          "shadow": [
+            "absorbs others’ pain to self-detriment",
+            "hesitates to enforce boundaries",
+            "confuses empathy with enabling",
+            "retreats from hard decisions to avoid hurting others",
+            "burdens self with collective emotion"
+          ],
+          "growth_focus": [
+            "practice compassion with boundaries",
+            "differentiate empathy from self-sacrifice",
+            "channel emotion into healing structure",
+            "sustain caring leadership through self-renewal",
+            "model calm under emotional storms"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Consequence",
+          "fiction_chapter_context": "Book 4, Chapter 8 — Francisco learns that compassion and emotional wisdom are essential for uniting his wounded rebellion and preventing despair from fracturing their cause."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "The Helper integrated with Type 8—strength through service, compassion with power, love with leadership."
+        },
+        "color_alignment": {
+          "name": "Electric Indigo",
+          "hsl": "260,100%,50%",
+          "rgb_hex": "#6600FF",
+          "color_symbolism": "A radiant violet-blue of empathy and insight—representing the healing force of emotion guided by wisdom."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.82,
+            "empathy": 0.96,
+            "openness": 0.84,
+            "orderliness": 0.71,
+            "novelty_seeking": 0.62,
+            "abstract_reasoning": 0.76,
+            "emotional_intensity": 0.89,
+            "social_dominance": 0.68,
+            "cooperativeness": 0.91,
+            "risk_tolerance": 0.63,
+            "conscientiousness": 0.79,
+            "adaptability": 0.83,
+            "imagination": 0.86
+          },
+          "match_weights": {
+            "empathy": 0.45,
+            "cooperativeness": 0.35,
+            "stability": 0.20
+          },
+          "threshold": 0.88,
+          "top_signal_items": [
+            "Q961",
+            "Q962",
+            "Q963",
+            "Q964",
+            "Q965",
+            "Q966",
+            "Q967",
+            "Q968"
+          ],
+          "signals_map": {
+            "Q961": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I sense emotional currents in others and respond with understanding."
+            },
+            "Q962": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I bring conflicting voices together through patience and care."
+            },
+            "Q963": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I remain calm even when others’ emotions run high."
+            },
+            "Q964": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "I feel deeply yet can channel emotion into grounded action."
+            },
+            "Q965": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I shift tone or approach depending on what others need emotionally."
+            },
+            "Q966": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I understand the logic within emotion—why pain speaks as it does."
+            },
+            "Q967": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I act decisively once empathy reveals the true need."
+            },
+            "Q968": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I view compassion not as weakness but as strategic strength."
+            }
+          },
+          "daily_prompt": "Whose pain needs to be seen today—and how can you meet it without losing yourself?",
+          "practices": [
+            "Hold a 10-minute empathy check-in before major decisions.",
+            "Use NVC (Nonviolent Communication) phrasing in feedback conversations.",
+            "Journal a recent emotional exchange and identify unspoken needs.",
+            "Facilitate a team compassion circle focused on shared humanity.",
+            "Schedule time to decompress after emotional leadership moments."
+          ],
+          "transformation_indicators": [
+            "Fewer unresolved conflicts after difficult discussions.",
+            "Increased trust and openness among team members.",
+            "Faster emotional recovery after collective setbacks.",
+            "Visible modeling of calm, compassionate authority."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call — Emotional Consequences",
+          "preliminary_beat": "Debate — Compassion as Bridge",
+          "save_the_cat_beat": "Consequence",
+          "character_state": "Francisco transitions from intellectual rebellion to emotional leadership.",
+          "ordinary_world_baseline": "Followers struggle with loss and disillusionment.",
+          "call_to_adventure_preview": "Through empathy, rebellion evolves from reaction to redemption."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Empathy and Connection",
+            "section_description": "Vulnerability as a gateway to true compassion.",
+            "connection_focus_area": "Encourages courageous empathy in leadership.",
+            "connect_points": {
+              "point1": "Listen actively and nonjudgmentally.",
+              "point2": "Share personal stories to humanize leadership.",
+              "point3": "Acknowledge emotions before solving problems."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host an empathy circle.",
+              "objective2": "Journal leadership insights from deep listening.",
+              "objective3": "Measure changes in team trust levels."
+            }
+          },
+          "book2": {
+            "title": "Nonviolent Communication",
+            "author": "Marshall B. Rosenberg",
+            "section_of_focus": "Observations vs. Evaluations",
+            "section_description": "Differentiating facts from judgments to create understanding.",
+            "connection_focus_area": "Provides tools for compassionate dialogue.",
+            "connect_points": {
+              "point1": "Reframe feedback as neutral observation.",
+              "point2": "Identify unmet needs beneath emotions.",
+              "point3": "Make respectful, autonomy-supporting requests."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a role-play using NVC techniques.",
+              "objective2": "Document emotional triggers and resolutions.",
+              "objective3": "Implement a needs-based resolution practice."
+            }
+          },
+          "book3": {
+            "title": "The Empathy Edge",
+            "author": "Maria Ross",
+            "section_of_focus": "Empathy as Strategy",
+            "section_description": "Empathy as a driver of sustainable performance.",
+            "connection_focus_area": "Links compassion to organizational resilience.",
+            "connect_points": {
+              "point1": "Map stakeholder emotions in recurring situations.",
+              "point2": "Design empathy-driven service experiences.",
+              "point3": "Integrate empathy metrics into performance systems."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create an empathy mapping template.",
+              "objective2": "Pilot an empathy-based initiative.",
+              "objective3": "Track satisfaction and retention improvements."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the healing chambers, Francisco kneels beside a fallen ally, his hands glowing faintly as shared memories of pain and purpose pass between them.",
+          "symbolic_moment": "A single tear crystallizes into light—proof that compassion reshapes reality itself.",
+          "emotional_landscape": "Grief transmuted into grace, sorrow woven into strength.",
+          "threshold_vision": "A rebellion tempered by empathy becomes unbreakable, not through might but through mutual care.",
+          "transformation_promise": "Through compassion, Francisco evolves from warrior to healer, proving that love—not rage—will free creation."
+        }
+      },
       "personality_profile_129": {},
       "personality_profile_130": {},
       "personality_profile_131": {},
