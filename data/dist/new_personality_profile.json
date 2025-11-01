@@ -28135,7 +28135,220 @@
           "transformation_promise": "By sharing the lectern, Francisco converts conviction into movement—ideas made audible, portable, and durable."
         }
       },
-      "personality_profile_126": {},
+      "personality_profile_126": {
+        "canonical_id": "EA-126",
+        "unique_identifier": "STG 4.1.2.3",
+        "specific_task_group_title": "Discipline",
+        "all_chapter": 126,
+        "novel_book": 4,
+        "chapter": "Chapter 6",
+        "chapter_title": "The Call to Adventure — Discipline",
+        "type": "Specific Task Group",
+        "display_name": "The Forgekeeper",
+        "theme": "Consistency is freedom—discipline transforms rebellion into endurance.",
+        "family": "Resilience / Mastery — Discipline & Persistence",
+        "summary": "The Forgekeeper archetype, aligned with the Seven of Wands, represents the warrior of routine—undaunted, consistent, and focused. In Chapter 6, Francisco commits to the disciplined training needed to resist cosmic predetermination. Every repetition becomes resistance; every habit a declaration of autonomy. This chapter portrays discipline not as rigidity but as deliberate freedom—the forging of unbreakable will.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Seven",
+        "tarot_symbolism": "The Seven of Wands symbolizes courage under pressure—standing firm against opposing forces and mastering endurance through repetition.",
+        "traits": {
+          "strengths": [
+            "sustains effort through adversity",
+            "builds habits that anchor resilience",
+            "balances ambition with structure",
+            "finds freedom within disciplined focus",
+            "derives strength from consistent progress"
+          ],
+          "shadow": [
+            "rigidity that resists spontaneity",
+            "burnout from overexertion",
+            "perfectionism disguised as diligence",
+            "impatience with slower learners",
+            "self-criticism when rest is needed"
+          ],
+          "growth_focus": [
+            "balance discipline with recovery",
+            "create systems that support creativity",
+            "track consistency, not intensity",
+            "honor slow growth as sustainable mastery",
+            "align discipline with purpose, not punishment"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 4, Chapter 6 — Francisco undergoes rigorous mental and spiritual training, forging unbreakable habits that strengthen his resistance to cosmic control."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "The Reformer integrated with Type 5—the disciplined strategist who refines energy through structure and purpose."
+        },
+        "color_alignment": {
+          "name": "Dark Slate Blue",
+          "hsl": "240,50%,40%",
+          "rgb_hex": "#333399",
+          "color_symbolism": "A deep indigo hue representing mental fortitude, structure, and determination—the color of steadfast will."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.84,
+            "stability": 0.91,
+            "empathy": 0.67,
+            "openness": 0.72,
+            "orderliness": 0.93,
+            "novelty_seeking": 0.58,
+            "abstract_reasoning": 0.75,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.61,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.55,
+            "conscientiousness": 0.94,
+            "adaptability": 0.79,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "conscientiousness": 0.4,
+            "orderliness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q853",
+            "Q854",
+            "Q855",
+            "Q856",
+            "Q857",
+            "Q858",
+            "Q859",
+            "Q860"
+          ],
+          "signals_map": {
+            "Q853": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I keep commitments to myself even when no one is watching."
+            },
+            "Q854": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I thrive with structured routines that support consistency."
+            },
+            "Q855": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I remain composed under long-term pressure."
+            },
+            "Q856": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I take daily action even when motivation fades."
+            },
+            "Q857": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I adjust routines when circumstances change without losing rhythm."
+            },
+            "Q858": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I see discipline as a long-term system, not a short-term push."
+            },
+            "Q859": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I measure progress by consistency, not perfection."
+            },
+            "Q860": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I schedule recovery with the same respect as effort."
+            }
+          },
+          "daily_prompt": "What single habit today strengthens the person you want to become tomorrow?",
+          "practices": [
+            "Implement a two-minute starter habit before major tasks.",
+            "Block out one deep-work session daily.",
+            "Use habit tracking with visual progress markers.",
+            "Create a weekly reflection on consistency and rest balance.",
+            "Refine one routine for simplicity and sustainability."
+          ],
+          "transformation_indicators": [
+            "Steady progress without burnout.",
+            "Reduced procrastination through environmental design.",
+            "Improved emotional regulation under pressure.",
+            "Visible long-term growth from incremental effort."
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst — The Discipline to Defy Destiny",
+          "save_the_cat_beat": "The Call to Adventure",
+          "character_state": "Francisco learns that true resistance begins with self-mastery and sustained focus.",
+          "ordinary_world_baseline": "A structured training regimen replaces chaos with intent.",
+          "call_to_adventure_preview": "Endurance, not impulse, reshapes the fabric of fate."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "The Habit Loop",
+            "section_description": "Small changes lead to profound transformation over time.",
+            "connection_focus_area": "Frameworks for building resilient daily systems.",
+            "connect_points": {
+              "point1": "Identify triggers that start useful habits.",
+              "point2": "Reward consistency immediately.",
+              "point3": "Record small wins for compounding growth."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Establish one micro-habit per week.",
+              "objective2": "Track streaks for 30 days.",
+              "objective3": "Analyze cumulative progress monthly."
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Passion and Perseverance",
+            "section_description": "Long-term effort over raw talent as the key to mastery.",
+            "connection_focus_area": "Integrates emotional drive with structured consistency.",
+            "connect_points": {
+              "point1": "Define your North Star goal.",
+              "point2": "Break it into daily minimum commitments.",
+              "point3": "Create a feedback system for sustained motivation."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Develop a grit tracking template.",
+              "objective2": "Host accountability check-ins biweekly.",
+              "objective3": "Reflect on emotional alignment with purpose."
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Work Rituals",
+            "section_description": "Concentration as a competitive advantage.",
+            "connection_focus_area": "Builds focus discipline through environment and ritual.",
+            "connect_points": {
+              "point1": "Schedule distraction-free time blocks.",
+              "point2": "Engineer rituals for entering deep focus states.",
+              "point3": "Measure output quality against time invested."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a personal deep-work system.",
+              "objective2": "Evaluate productivity pre- and post-ritual.",
+              "objective3": "Refine the setup for maximum cognitive stamina."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Francisco kneels before a circle of discipline masters, sweat beading under the torchlight as he begins his daily trial.",
+          "symbolic_moment": "A single drop of water hits stone—patient, repetitive, unstoppable—mirroring Francisco’s path toward unyielding will.",
+          "emotional_landscape": "Strain, repetition, and awakening—the quiet power of perseverance.",
+          "threshold_vision": "Discipline transforms rebellion into rhythm; through repetition, the impossible becomes routine.",
+          "transformation_promise": "By mastering habit, Francisco ceases to react—he endures, directing fate through consistency itself."
+        }
+      },
       "personality_profile_127": {},
       "personality_profile_128": {},
       "personality_profile_129": {},
