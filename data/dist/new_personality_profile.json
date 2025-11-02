@@ -34194,7 +34194,180 @@
           "transformation_promise": "What is counted with care becomes wisdom in motion."
         }
       },
-      "personality_profile_160": {}
+      "personality_profile_160": {
+        "canonical_id": "EA-160",
+        "unique_identifier": "STG 4.3.6.2",
+        "specific_task_group_title": "Foresight",
+        "all_chapter": 160,
+        "novel_book": 4,
+        "chapter": "Chapter 40",
+        "chapter_title": "Master of Two Worlds — Foresight",
+        "type": "Specific Task Group",
+        "display_name": "Foresight",
+        "theme": "Anticipating future conditions ensures the Prophet’s guidance remains relevant across eras.",
+        "family": "Foresight / Planning — Scenarios & Signals",
+        "summary": "Having integrated all lessons, Francisco projects vision forward, anticipating challenges and opportunities on the next journey. Foresight equips him (and the teams he leads) to scan horizons, counter bias, design optionality, and stand ready across multiple futures.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Three",
+        "tarot_symbolism": "High vantage point—scanning horizons and preparing passages ahead.",
+        "color_alignment": {
+          "name": "Persian Indigo",
+          "hsl": "270,100%,20%",
+          "rgb_hex": "#330066",
+          "color_symbolism": "Deep-range vision—calm, long-horizon judgment."
+        },
+        "traits": {
+          "strengths": [
+            "constructs divergent scenarios and integrates signals",
+            "designs early-warning indicators with clear triggers",
+            "builds optionality and reversible moves into plans",
+            "surfaces and mitigates forecasting biases",
+            "communicates futures simply for timely decisions"
+          ],
+          "shadow": [
+            "over-indexes distant possibilities over present priorities",
+            "analysis drag from too many scenarios",
+            "false precision from weak data",
+            "confirmation bias toward preferred futures",
+            "under-communicates limits and residual risks"
+          ],
+          "growth_focus": [
+            "time-box scenario work; ship a near-term hedge",
+            "pair each forecast with trigger, owner, first action",
+            "run red-team checks on base assumptions",
+            "track indicator false-positives/negatives",
+            "write plain-language caveats with every outlook"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 4, Chapter 40 — Scene XV: Master of Two Worlds; preliminary beat: Final Image. Having integrated all lessons, the Prophet projects vision forward, anticipating challenges on the next journey."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clear seeing translated into decisive preparedness."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.87,
+            "empathy": 0.66,
+            "openness": 0.86,
+            "orderliness": 0.82,
+            "conscientiousness": 0.86,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.92,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.56,
+            "novelty_seeking": 0.63,
+            "imagination": 0.84
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "openness": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1601","Q1602","Q1603","Q1604","Q1605","Q1606","Q1607","Q1608"],
+          "signals_map": {
+            "Q1601": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I build divergent scenarios and trace second-order effects." },
+            "Q1602": { "dimension": "openness", "polarity": 1, "content": "I welcome signals that challenge my base case." },
+            "Q1603": { "dimension": "conscientiousness", "polarity": 1, "content": "Every forecast includes triggers, owners, and first actions." },
+            "Q1604": { "dimension": "orderliness", "polarity": 1, "content": "I maintain an indicators dashboard with review cadences." },
+            "Q1605": { "dimension": "adaptability", "polarity": 1, "content": "I pivot when indicators fire instead of waiting for certainty." },
+            "Q1606": { "dimension": "risk_tolerance", "polarity": 1, "content": "I design reversible moves and small bets under uncertainty." },
+            "Q1607": { "dimension": "imagination", "polarity": 1, "content": "I can envision futures others don’t yet see." },
+            "Q1608": { "dimension": "stability", "polarity": 1, "content": "I stay calm when probabilities shift rapidly." }
+          },
+          "daily_prompt": "Which early signal deserves your attention today—and what reversible move will you make if it spikes?",
+          "practices": [
+            "Draft three divergent scenarios (optimistic/base/pessimistic) with triggers.",
+            "Run a monthly black-swan tabletop on one extreme event.",
+            "Publish an indicators dashboard and review it weekly.",
+            "Use a debiasing checklist before major forecasts.",
+            "Pair every plan with an options/backstop section."
+          ],
+          "transformation_indicators": [
+            "Faster pivot time from signal to action",
+            "Higher forecast calibration (Brier scores/accuracy)",
+            "Clear audit trail from assumption → evidence → update",
+            "Reduced impact of tail-risk events",
+            "Greater team confidence in navigating uncertainty"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Final Image",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Integrated vision—practical readiness across possible futures.",
+          "ordinary_world_baseline": "Short-range plans and reactive shifts.",
+          "call_to_adventure_preview": "See farther. Prepare smarter. Move sooner."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Black Swan",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Unpredictability",
+            "section_description": "Discusses the impact of rare, high-impact events and how to prepare for them.",
+            "connection_focus_area": "Recognizing extreme uncertainty sharpens strategic foresight.",
+            "connect_points": {
+              "point1": "Map potential black swan scenarios.",
+              "point2": "Build optionality into plans.",
+              "point3": "Stress-test strategies against extreme events."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a black swan tabletop exercise.",
+              "objective2": "Design optionality frameworks for key decisions.",
+              "objective3": "Document plans for low-probability/high-impact risks."
+            }
+          },
+          "book2": {
+            "title": "Strategic Foresight",
+            "author": "Jean‐Paul Kelly",
+            "section_of_focus": "Scenario Planning",
+            "section_description": "Outlines methods to construct and analyze multiple future scenarios.",
+            "connection_focus_area": "Scenario planning structures foresight activities.",
+            "connect_points": {
+              "point1": "Develop three divergent future scenarios.",
+              "point2": "Facilitate cross-impact analysis workshops.",
+              "point3": "Integrate scenario insights into strategy reviews."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a scenario development session.",
+              "objective2": "Run a cross-impact analysis exercise.",
+              "objective3": "Embed scenarios into the annual strategy cycle."
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Cognitive Biases",
+            "section_description": "Explores how mental shortcuts can derail accurate forecasting.",
+            "connection_focus_area": "Mitigating bias improves the quality of foresight.",
+            "connect_points": {
+              "point1": "Train teams on common forecasting biases.",
+              "point2": "Implement debiasing checklists in planning.",
+              "point3": "Use structured analytic techniques to counteract shortcuts."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Deliver a workshop on forecasting biases.",
+              "objective2": "Develop and apply debiasing checklists.",
+              "objective3": "Evaluate planning outcomes for bias impact."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "From the prophetic sanctum, constellations of futures align and diverge as Francisco traces the safest corridors.",
+          "symbolic_moment": "Three indigo beacons triangulate a path through the unknown.",
+          "emotional_landscape": "Composed breadth, purposeful calm, long-range resolve.",
+          "threshold_vision": "Tomorrow is shaped by the options we keep alive today.",
+          "transformation_promise": "With horizons mapped and options readied, the next journey begins in strength."
+        }
+      }
     },
     "family_5": {},
     "family_6": {},
