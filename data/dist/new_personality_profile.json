@@ -34020,7 +34020,180 @@
           "transformation_promise": "He returns not with answers, but with practices that make answers possible."
         }
       },
-      "personality_profile_159": {},
+      "personality_profile_159": {
+        "canonical_id": "EA-159",
+        "unique_identifier": "STG 4.3.6.1",
+        "specific_task_group_title": "Stack Wins/Losses",
+        "all_chapter": 159,
+        "novel_book": 4,
+        "chapter": "Chapter 39",
+        "chapter_title": "Master of Two Worlds — Stack Wins/Losses",
+        "type": "Specific Task Group",
+        "display_name": "Stack Wins/Losses",
+        "theme": "Measuring outcomes reveals patterns to replicate success and address failure.",
+        "family": "Measurement / Learning — Review & Improvement",
+        "summary": "As Francisco consolidates wisdom, he tallies victories and defeats to guide future strategy. A disciplined review of outcomes converts experience into repeatable playbooks and corrective action for the final transformation ahead.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Eight",
+        "tarot_symbolism": "Patient craftsmanship; disciplined cycles of build–measure–learn.",
+        "color_alignment": {
+          "name": "Purple Heart",
+          "hsl": "270,100%,40%",
+          "rgb_hex": "#6600CC",
+          "color_symbolism": "Steadfast rigor—calm, data-grounded assessment."
+        },
+        "traits": {
+          "strengths": [
+            "defines clear objectives and key results",
+            "separates signal from noise in metrics",
+            "runs blameless postmortems with concrete actions",
+            "tracks learning debt and closes it",
+            "turns insights into updated standards and playbooks"
+          ],
+          "shadow": [
+            "metric myopia—optimizing what’s easy to count",
+            "analysis paralysis delaying iteration",
+            "retro fatigue without behavior change",
+            "survivorship bias in win stories",
+            "underreporting near-misses and weak signals"
+          ],
+          "growth_focus": [
+            "pair quantitative metrics with qualitative narratives",
+            "time-box analysis and ship a next-step experiment",
+            "log near-misses with equal weight to incidents",
+            "publish ‘insight → action → owner → due date’",
+            "review stopped/changed metrics quarterly"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Resolution",
+          "fiction_chapter_context": "Book 4, Chapter 39 — Scene XV: Master of Two Worlds; preliminary beat: Finale. As the Prophet consolidates wisdom, they tally victories and defeats to guide future strategy."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled rigor enlivened by iterative experimentation."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.73,
+            "stability": 0.88,
+            "empathy": 0.66,
+            "openness": 0.78,
+            "orderliness": 0.87,
+            "conscientiousness": 0.91,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.86,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.49,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.58,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "abstract_reasoning": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1591","Q1592","Q1593","Q1594","Q1595","Q1596","Q1597","Q1598"],
+          "signals_map": {
+            "Q1591": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert every review into specific actions with owners and dates." },
+            "Q1592": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a clear OKR/metric map linked to goals." },
+            "Q1593": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I examine causes with counterfactuals and guard against bias." },
+            "Q1594": { "dimension": "stability", "polarity": 1, "content": "I discuss failures calmly and focus on learning, not blame." },
+            "Q1595": { "dimension": "adaptability", "polarity": 1, "content": "I change course quickly when the data says we should." },
+            "Q1596": { "dimension": "openness", "polarity": 1, "content": "I invite outside perspectives to challenge our reads." },
+            "Q1597": { "dimension": "agency", "polarity": 1, "content": "I ship a next experiment within one week of a review." },
+            "Q1598": { "dimension": "cooperativeness", "polarity": 1, "content": "I share results transparently so everyone can learn." }
+          },
+          "daily_prompt": "What did we learn today—and what is the one next action, owner, and due date that proves it?",
+          "practices": [
+            "Run monthly OKR review: outcomes, surprises, decisions.",
+            "Blameless postmortem template: facts → factors → fixes → follow-ups.",
+            "Maintain a ‘wins/losses’ ledger with near-misses and weak signals.",
+            "Pair each metric with a qualitative story and a decision.",
+            "Quarterly metric pruning: stop what no longer informs action."
+          ],
+          "transformation_indicators": [
+            "Higher ratio of insights that lead to shipped changes",
+            "Reduced recurrence of root-cause categories",
+            "Improved forecast accuracy on key results",
+            "Shorter cycle from review → decision → action",
+            "Greater transparency and engagement in reviews"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Return with the Elixir",
+          "preliminary_beat": "Finale → Resolution",
+          "save_the_cat_beat": "Finale",
+          "character_state": "Wise practitioner—lessons codified, shared, and used.",
+          "ordinary_world_baseline": "Uncaptured wins and unexamined failures.",
+          "call_to_adventure_preview": "What we measure becomes the map we move by."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Measure What Matters",
+            "author": "John Doerr",
+            "section_of_focus": "Objectives and Key Results",
+            "section_description": "Defines how to set and measure ambitious goals with clear metrics.",
+            "connection_focus_area": "OKRs provide the structure for tracking wins and losses.",
+            "connect_points": {
+              "point1": "Establish quarterly OKRs for key initiatives.",
+              "point2": "Review KR achievement in monthly check-ins.",
+              "point3": "Adjust objectives based on outcome analysis."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate an OKR-setting workshop.",
+              "objective2": "Lead a KR progress review session.",
+              "objective3": "Document and act on key outcome learnings."
+            }
+          },
+          "book2": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Build-Measure-Learn",
+            "section_description": "Outlines rapid experimentation loops to validate hypotheses.",
+            "connection_focus_area": "Iterative measurement underpins continuous improvement.",
+            "connect_points": {
+              "point1": "Design minimum-viable experiments.",
+              "point2": "Collect and analyze customer feedback metrics.",
+              "point3": "Iterate product features based on data."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run an MVP experiment cycle.",
+              "objective2": "Analyze feedback metrics in a sprint review.",
+              "objective3": "Plan next iteration using validated learning."
+            }
+          },
+          "book3": {
+            "title": "How to Measure Anything",
+            "author": "Douglas Hubbard",
+            "section_of_focus": "Probability and Statistics",
+            "section_description": "Techniques to quantify intangibles and assess uncertainty.",
+            "connection_focus_area": "Statistical rigor strengthens interpretation of results.",
+            "connect_points": {
+              "point1": "Apply confidence intervals to performance data.",
+              "point2": "Use probabilistic forecasting for goal setting.",
+              "point3": "Run sensitivity analyses on key metrics."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Compute confidence intervals for team KPIs.",
+              "objective2": "Build a probabilistic model of project outcomes.",
+              "objective3": "Present data-driven recommendations with quantified uncertainty."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Ledgers open beneath violet light; each mark—win, loss, near-miss—becomes a path forward.",
+          "symbolic_moment": "Eight quiet beats on the table as patterns emerge from the noise.",
+          "emotional_landscape": "Sober pride, humility, resolved focus.",
+          "threshold_vision": "The work improves because we choose to learn.",
+          "transformation_promise": "What is counted with care becomes wisdom in motion."
+        }
+      },
       "personality_profile_160": {}
     },
     "family_5": {},
