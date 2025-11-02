@@ -32454,7 +32454,180 @@
           "transformation_promise": "Gratitude becomes fuel, not finale."
         }
       },
-      "personality_profile_150": {},
+      "personality_profile_150": {
+        "canonical_id": "EA-150",
+        "unique_identifier": "STG 4.3.3.1",
+        "specific_task_group_title": "Feeling Left Out",
+        "all_chapter": 150,
+        "novel_book": 4,
+        "chapter": "Chapter 30",
+        "chapter_title": "The Ultimate Boon — Feeling Left Out",
+        "type": "Specific Task Group",
+        "display_name": "Feeling Left Out",
+        "theme": "Acknowledging isolation is the first step toward reconnection and collective resilience.",
+        "family": "Belonging / Inclusion — Emotional Awareness",
+        "summary": "Confronted by overwhelming cosmic isolation and the sense that he has become too transformed to connect with ordinary beings, Francisco must address his feelings of disconnection and find ways to reconnect with his community and purpose. This confrontation with cosmic loneliness becomes crucial for his continued effectiveness as a leader.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Five",
+        "tarot_symbolism": "Isolation and scarcity transformed into compassionate reconnection and shared support.",
+        "traits": {
+          "strengths": [
+            "names isolation without shame",
+            "builds brave spaces for sharing",
+            "invites quieter voices into the circle",
+            "sets inclusive norms and rituals",
+            "links vulnerability to action"
+          ],
+          "shadow": [
+            "ruminates on exclusion",
+            "over-personalizes group dynamics",
+            "token gestures without follow-through",
+            "avoids hard boundary-setting",
+            "confuses belonging with unanimity"
+          ],
+          "growth_focus": [
+            "pair vulnerability with clear next steps",
+            "map who is missing and why",
+            "rotate facilitation to distribute voice",
+            "separate feedback from identity",
+            "measure inclusion outcomes, not vibes"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 4, Chapter 30 — Scene XII: The Ultimate Boon; preliminary focus: Dark Night of the Soul. Confronted by overwhelming doubts and solitude, the Prophet must name and process feelings of isolation to rally her community."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—care with courageous boundary-setting."
+        },
+        "color_alignment": {
+          "name": "Neon Blue",
+          "hsl": "240,100%,60%",
+          "rgb_hex": "#3333FF",
+          "color_symbolism": "A bright beacon cutting through the dark—an unmistakable signal of welcome."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.80,
+            "empathy": 0.93,
+            "openness": 0.76,
+            "orderliness": 0.69,
+            "novelty_seeking": 0.50,
+            "abstract_reasoning": 0.70,
+            "emotional_intensity": 0.64,
+            "social_dominance": 0.48,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.50,
+            "conscientiousness": 0.77,
+            "adaptability": 0.78,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "empathy": 0.40,
+            "cooperativeness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": ["Q1501", "Q1502", "Q1503", "Q1504", "Q1505", "Q1506", "Q1507", "Q1508"],
+          "signals_map": {
+            "Q1501": { "dimension": "empathy", "polarity": 1, "content": "I notice when someone is on the edges and invite them in." },
+            "Q1502": { "dimension": "cooperativeness", "polarity": 1, "content": "I create structures that help every voice be heard." },
+            "Q1503": { "dimension": "stability", "polarity": 1, "content": "I stay steady when others share painful experiences." },
+            "Q1504": { "dimension": "agency", "polarity": 1, "content": "I turn feelings of exclusion into specific actions." },
+            "Q1505": { "dimension": "orderliness", "polarity": 1, "content": "I use regular rituals to reinforce belonging." },
+            "Q1506": { "dimension": "openness", "polarity": 1, "content": "I welcome feedback when my actions affect inclusion." },
+            "Q1507": { "dimension": "emotional_intensity", "polarity": 1, "content": "I channel strong feelings into constructive outreach." },
+            "Q1508": { "dimension": "risk_tolerance", "polarity": 1, "content": "I’m willing to be vulnerable first to set the tone." }
+          },
+          "daily_prompt": "Who feels on the outside today—and what concrete invitation will you make?",
+          "practices": [
+            "Run a belonging scan: who spoke, who didn’t, who was referenced?",
+            "Open every meeting with a check-in and end with a clear ask.",
+            "Host rotating ‘story rounds’ with time-boxed shares.",
+            "Pair new or quiet members with a peer for support.",
+            "Publish inclusion metrics (voice share, participation, follow-ups)."
+          ],
+          "transformation_indicators": [
+            "Increased participation from quiet members",
+            "Reduced reports of exclusion",
+            "Higher psychological safety scores",
+            "More peer invitations and mentorships",
+            "Faster conflict recovery without ostracizing"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Dark Night of the Soul — Resolution",
+          "save_the_cat_beat": "Darkest moment (resolution)",
+          "character_state": "Isolation acknowledged; belonging rebuilt through brave connection.",
+          "ordinary_world_baseline": "Unspoken separations and quiet withdrawal.",
+          "call_to_adventure_preview": "Naming loneliness becomes the doorway back to the circle."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability and Belonging",
+            "section_description": "Explores how embracing vulnerability fosters deep connections and inclusion.",
+            "connection_focus_area": "Inviting vulnerability dissolves isolation and strengthens bonds.",
+            "connect_points": {
+              "point1": "Share personal stories of challenge in team meetings.",
+              "point2": "Host belonging-focused retrospectives.",
+              "point3": "Establish safe feedback rituals."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a vulnerability circle.",
+              "objective2": "Measure increases in team belonging scores.",
+              "objective3": "Document shifts in psychological safety."
+            }
+          },
+          "book2": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety",
+            "section_description": "Defines how leaders create environments where everyone feels secure and valued.",
+            "connection_focus_area": "A secure team culture prevents feelings of exclusion.",
+            "connect_points": {
+              "point1": "Map threats to team safety.",
+              "point2": "Implement peer support pairing.",
+              "point3": "Celebrate acts of mutual care."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a Circle of Safety charter.",
+              "objective2": "Track team stress metrics.",
+              "objective3": "Evaluate conflict resolution outcomes."
+            }
+          },
+          "book3": {
+            "title": "The Art of Gathering",
+            "author": "Priya Parker",
+            "section_of_focus": "Purposeful Connection",
+            "section_description": "Techniques for designing gatherings that forge genuine belonging.",
+            "connection_focus_area": "Well-crafted interactions combat isolation.",
+            "connect_points": {
+              "point1": "Set clear emotional goals for meetings.",
+              "point2": "Use structured vulnerability prompts.",
+              "point3": "Debrief relational takeaways."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan an inclusive offsite with belonging exercises.",
+              "objective2": "Collect feedback on connection quality.",
+              "objective3": "Iterate gathering formats for deeper engagement."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Alone at cosmic scale, Francisco senses the ache of distance and chooses to speak it aloud.",
+          "symbolic_moment": "A single light flares in the hall—others answer, one by one.",
+          "emotional_landscape": "Tenderness, courage, relief.",
+          "threshold_vision": "Belonging is built, not bestowed.",
+          "transformation_promise": "When one voice risks honesty, the whole circle strengthens."
+        }
+      },
       "personality_profile_151": {},
       "personality_profile_152": {},
       "personality_profile_153": {},
