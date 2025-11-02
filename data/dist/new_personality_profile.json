@@ -37178,7 +37178,228 @@
         "specific_task_group_description": "Embrace accountability for group outcomes and step up to lead in uncharted territory.",
         "specific_task_group_tagline": "Own your role"
       },
-      "personality_profile_176": {},
+      "personality_profile_176": {
+        "canonical_id": "EA-176",
+        "unique_identifier": "STG 5.2.1.3",
+        "specific_task_group_title": "Elusive Intent",
+        "all_chapter": 176,
+        "novel_book": 5,
+        "chapter": "Chapter 16",
+        "chapter_title": "Fun and Games — Elusive Intent",
+        "type": "Specific Task Group",
+        "display_name": "The Unreadable",
+        "theme": "Strategic unpredictability preserves initiative without sacrificing ethics.",
+        "family": "Strategy / Maneuvering — Unpredictability, Deception & Initiative",
+        "summary": "When cosmic gatekeepers restrict access to critical realms, Francisco learns to stay unpredictable—masking pathways, rotating tactics, and shaping perceptions—so he can keep the initiative while remaining aligned to balance. Elusive Intent turns strategy into an ethical art: misdirect the opposition, never the mission.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Seven",
+        "traits": {
+        "strengths": [
+          "anticipates and subverts opponent expectations",
+          "mixes intuition with rigorous pre-planning",
+          "creates optionality and multiple winning lines",
+          "shifts tempo to seize windows of advantage",
+          "keeps intent concealed while values remain clear"
+        ],
+        "shadow": [
+          "overuse of secrecy that erodes trust",
+          "analysis spirals that delay decisive moves",
+          "cleverness prioritized over mission clarity",
+          "ethical lines blurred under pressure",
+          "team confusion from excessive feints"
+        ],
+        "growth_focus": [
+          "state red-line ethics before maneuvers begin",
+          "separate deception against adversaries from communication with allies",
+          "time-box analysis and commit to a line",
+          "pre-brief contingency trees to reduce team whiplash",
+          "measure outcomes, not just outsmarting"
+        ]
+        },
+        "book_association": {
+        "nonfiction_series": "The Human Framework",
+        "fiction_series": "Laurasia — Holder of the Life Force",
+        "chapter_theme": "Tests, Allies and Enemies",
+        "fiction_chapter_context": "Book 5, Chapter 16 — In the Guardians and Gatekeepers arc, Francisco learns to stay unreadable to pass defenses without breaking alignment."
+        },
+        "enneagram_link": {
+        "family_number": 5,
+        "note": "Investigator integrating to 8—decisiveness and principled force supporting sharp analysis."
+        },
+        "color_alignment": {
+        "name": "Heliotrope",
+        "hsl": "270,100%,75%",
+        "rgb_hex": "#BD7DFF",
+        "color_symbolism": "Veiled lightning—soft glow hiding decisive voltage."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.64,
+            "empathy": 0.62,
+            "openness": 0.84,
+            "orderliness": 0.49,
+            "conscientiousness": 0.72,
+            "adaptability": 0.91,
+            "abstract_reasoning": 0.92,
+            "cooperativeness": 0.67,
+            "risk_tolerance": 0.73,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.76,
+            "imagination": 0.88
+          },
+          "match_weights": {
+          "abstract_reasoning": 0.4,
+          "adaptability": 0.35,
+          "risk_tolerance": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1761",
+            "Q1762",
+            "Q1763",
+            "Q1764",
+            "Q1765",
+            "Q1766",
+            "Q1767",
+            "Q1768"
+          ],
+          "signals_map": {
+          "Q1761": {
+          "dimension": "abstract_reasoning",
+          "polarity": 1,
+          "content": "I map multiple paths to advantage and choose based on live signals."
+          },
+          "Q1762": {
+          "dimension": "adaptability",
+          "polarity": 1,
+          "content": "I pivot tactics quickly when the situation refracts unexpectedly."
+          },
+          "Q1763": {
+          "dimension": "risk_tolerance",
+          "polarity": 1,
+          "content": "I’m comfortable using misdirection when the mission is ethical and time is critical."
+          },
+          "Q1764": {
+          "dimension": "orderliness",
+          "polarity": -1,
+          "content": "I avoid rigid playbooks that make me predictable."
+          },
+          "Q1765": {
+          "dimension": "conscientiousness",
+          "polarity": 1,
+          "content": "Before maneuvering, I codify non-negotiable ethical red lines."
+          },
+          "Q1766": {
+          "dimension": "agency",
+          "polarity": 1,
+          "content": "I seize tempo and force opponents to react to me."
+          },
+          "Q1767": {
+          "dimension": "cooperativeness",
+          "polarity": 1,
+          "content": "I brief allies clearly while obscuring plans from adversaries."
+          },
+          "Q1768": {
+          "dimension": "imagination",
+          "polarity": 1,
+          "content": "I invent unexpected approaches that create new options mid-stream."
+          }
+          },
+          "daily_prompt": "Which expectation will you subvert today—and how will you make your ethical red lines visible to your team first?",
+          "practices": [
+            "Feint & Pivot Canvas: outline primary, feint, and fallback; define ethics and exit signals.",
+            "10–10 Red/Blue: 10-minute plan by you, 10-minute counter-plan by a peer; reconcile gaps.",
+            "Tempo Ladder: pre-set tempo shifts (slow/fast/freeze) tied to live triggers.",
+            "Pattern Breaker Timer: every 30 minutes, ask “What am I doing that an adversary expects?” then alter one variable.",
+            "Clean Hands Log: record where deception targets only adversaries, not stakeholders."
+          ],
+          "transformation_indicators": [
+            "Higher first-contact advantage rate against gatekeepers",
+            "Decrease in adversary correct-prediction accuracy",
+            "Faster cycle time from contact to breakthrough",
+            "Zero breaches of stated ethical red lines",
+            "Stable or rising ally trust scores during complex maneuvers"
+          ]
+        },
+        "hero_journey_position": {
+        "stage": "Tests, Allies and Enemies",
+        "preliminary_beat": "Debate — Elusive Intent",
+        "save_the_cat_beat": "Fun and Games (event/conflict)",
+        "character_state": "Tactically inventive; ethics declared; initiative held.",
+        "ordinary_world_baseline": "Linear plays telegraphed to opponents.",
+        "call_to_adventure_preview": "Staying unreadable protects the mission and the people it serves."
+        },
+        "specific_task_group_books_influenced_by": {
+        "book1": {
+        "title": "The Hero with a Thousand Faces",
+        "author": "Joseph Campbell",
+        "section_of_focus": "Tests, Allies and Enemies",
+        "section_description": "The hero uses cunning to navigate challenges.",
+        "connection_focus_area": "Strategic adaptation",
+        "connect_points": {
+        "point1": "Identify one clever maneuver from your past",
+        "point2": "Plan a misdirection tactic for your next challenge",
+        "point3": "Anticipate how opponents will react"
+        },
+        "terminal_learning_objectives": {
+        "objective1": "Describe three strategic options",
+        "objective2": "Select one tactic to implement",
+        "objective3": "Evaluate its effectiveness post-action"
+        }
+        },
+        "book2": {
+        "title": "The Art of War",
+        "author": "Sun Tzu",
+        "section_of_focus": "Deception",
+        "section_description": "All warfare is based on deception and surprise.",
+        "connection_focus_area": "Applying misdirection",
+        "connect_points": {
+        "point1": "Recognize enemy expectations",
+        "point2": "Craft a feint to exploit vulnerabilities",
+        "point3": "Secure an unforeseen advantage"
+        },
+        "terminal_learning_objectives": {
+        "objective1": "Draft one feint scenario",
+        "objective2": "Identify target vulnerability",
+        "objective3": "Execute a mock exercise"
+        }
+        },
+        "book3": {
+        "title": "Thinking, Fast and Slow",
+        "author": "Daniel Kahneman",
+        "section_of_focus": "System 1 vs System 2",
+        "section_description": "Balancing instinctive and deliberate thought in strategy.",
+        "connection_focus_area": "Leveraging intuition and analysis",
+        "connect_points": {
+        "point1": "Note one intuitive insight you trust",
+        "point2": "Perform a deliberate analysis of that insight",
+        "point3": "Integrate both into your plan"
+        },
+        "terminal_learning_objectives": {
+          "objective1": "Record one gut reaction to a scenario",
+          "objective2": "Analyze it step by step",
+          "objective3": "Merge findings into a cohesive strategy"
+        }
+        }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Before a sealed astral gate, Francisco drifts off-axis, broadcasting a decoy signature while a quiet corridor opens where no one is looking.",
+          "symbolic_moment": "He palms a mirrored token; what it shows the gatekeepers is not where he truly is.",
+          "emotional_landscape": "Coiled focus, calm audacity, steady conscience.",
+          "threshold_vision": "Initiative belongs to the one who shapes perception without betraying purpose.",
+          "transformation_promise": "A rebellion that cannot be read cannot be cornered."
+        },
+        "epic_novel_pages": "Page 226 - 240",
+        "epic_chapter_focus": "Fun and games (event/conflict)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "focus_area": "Strategy",
+        "specific_task_group_description": "Develop tactics to stay unpredictable and maintain the initiative when confronted by gatekeepers.",
+        "specific_task_group_tagline": "Keep them guessing"
+        
+      },
       "personality_profile_177": {},
       "personality_profile_178": {},
       "personality_profile_179": {},
