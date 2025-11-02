@@ -34369,7 +34369,221 @@
         }
       }
     },
-    "family_5": {},
+    "family_5": {
+      "personality_profile_161": {
+        "canonical_id": "EA-161",
+        "unique_identifier": "STG 5.1.1.1",
+        "specific_task_group_title": "Readiness",
+        "all_chapter": 161,
+        "novel_book": 5,
+        "chapter": "Chapter 1",
+        "chapter_title": "The Ordinary World — Readiness",
+        "type": "Specific Task Group",
+        "display_name": "Readiness",
+        "theme": "Assess your current state of mind and resources to prepare for the journey ahead.",
+        "family": "Preparation / Baseline — Assessment & Priming",
+        "summary": "Francisco emerges as the Lord of the Forces of Life and pauses to assess his mindset, capabilities, and resources. This readiness phase establishes baselines, habits, and criteria for action so he can perceive the life force clearly and begin disciplined observation and intelligence gathering.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Four",
+        "tarot_symbolism": "From distraction to intention—attention reclaimed for deliberate preparation.",
+        "color_alignment": {
+          "name": "Amethyst",
+          "hsl": "270,50%,60%",
+          "rgb_hex": "#9966CC",
+          "color_symbolism": "Centered composure—quiet focus before first movement."
+        },
+        "traits": {
+          "strengths": [
+            "establishes clear baselines for mind, energy, and resources",
+            "breaks ambitions into small, trackable habits",
+            "constructs simple systems for early wins",
+            "runs objective self-assessments without ego",
+            "frames constraints as design inputs"
+          ],
+          "shadow": [
+            "lingers in planning over action",
+            "over-isolates during preparation",
+            "perfectionism before launch",
+            "neglects emotional check-ins",
+            "confuses readiness with certainty"
+          ],
+          "growth_focus": [
+            "time-box prep; ship a day-one action",
+            "pair solo prep with a trusted spotter",
+            "define ‘good enough to begin’ criteria",
+            "log mood/energy alongside metrics",
+            "treat uncertainty as a signal to prototype"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Forces of Life",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 5, Chapter 1 — Scene I: The Ordinary World; Opening Image. The new arc begins with assessment and mental priming for cosmic observation."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity and preparation converted into decisive starts."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.86,
+            "empathy": 0.69,
+            "openness": 0.82,
+            "orderliness": 0.80,
+            "conscientiousness": 0.88,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.85,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.58,
+            "imagination": 0.77
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "stability": 0.35,
+            "abstract_reasoning": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1611","Q1612","Q1613","Q1614","Q1615","Q1616","Q1617","Q1618"],
+          "signals_map": {
+            "Q1611": { "dimension": "conscientiousness", "polarity": 1, "content": "I define readiness criteria before I begin." },
+            "Q1612": { "dimension": "orderliness", "polarity": 1, "content": "I set up simple trackers for early wins." },
+            "Q1613": { "dimension": "stability", "polarity": 1, "content": "I can assess myself honestly without spiraling." },
+            "Q1614": { "dimension": "agency", "polarity": 1, "content": "I commit to one concrete day-one action." },
+            "Q1615": { "dimension": "openness", "polarity": 1, "content": "I invite feedback on my baseline assumptions." },
+            "Q1616": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I translate big objectives into small, testable habits." },
+            "Q1617": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan as new signals appear." },
+            "Q1618": { "dimension": "empathy", "polarity": 1, "content": "I track emotional state alongside performance metrics." }
+          },
+          "daily_prompt": "What’s your single ‘ready-to-begin’ action today—and what baseline metric will prove you did it?",
+          "practices": [
+            "Baseline triad: mind/energy/resources snapshot each morning.",
+            "Atomic Habits setup: 3 tiny habits + cues + tracker.",
+            "Opening Image journal: 10 lines on current reality vs. intent.",
+            "Readiness review: define ‘good enough to start’ for each goal.",
+            "Accountability ping: share day-one action with a spotter."
+          ],
+          "transformation_indicators": [
+            "Higher day-one and week-one action completion",
+            "Reduced prep time to first shipped behavior",
+            "Consistency in baseline logging vs. plan",
+            "Improved habit streaks over 14 and 28 days",
+            "Fewer perfection-related delays"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image",
+          "save_the_cat_beat": "Opening Image",
+          "character_state": "Calm, deliberate, preparing to perceive the life force.",
+          "ordinary_world_baseline": "Unstructured intentions and diffuse attention.",
+          "call_to_adventure_preview": "Readiness invites the first true signal."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ordinary World",
+            "section_description": "Introduction to the hero’s normal life before the adventure",
+            "connection_focus_area": "Understanding the baseline",
+            "connect_points": {
+              "point1": "Identify what constitutes the hero’s comfort zone",
+              "point2": "Note the contrasts with the impending journey",
+              "point3": "Recognize the call to adventure lurking beneath the surface"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your current status quo",
+              "objective2": "Articulate what you hope to change",
+              "objective3": "Define personal readiness criteria"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Building Better Habits",
+            "section_description": "How tiny changes lead to remarkable results",
+            "connection_focus_area": "Preparing mindset for incremental progress",
+            "connect_points": {
+              "point1": "Break down the journey into manageable habits",
+              "point2": "Establish environmental cues",
+              "point3": "Plan a system to track early wins"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three small habits to start",
+              "objective2": "Set up a habit tracker",
+              "objective3": "Commit to one daily action"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "The Growth Mindset",
+            "section_description": "Beliefs that enable learning and resilience",
+            "connection_focus_area": "Cultivating openness to challenge",
+            "connect_points": {
+              "point1": "Distinguish fixed vs. growth mindset",
+              "point2": "Practice reframing setbacks",
+              "point3": "Adopt language of improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one fixed-mindset belief",
+              "objective2": "Reframe it into a growth statement",
+              "objective3": "Apply the reframe in a small task"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the life-force observatory, instruments hum as Francisco calibrates his senses to the quiet currents of being.",
+          "symbolic_moment": "Four amethyst markers fix a clean baseline—mind, energy, resources, intent.",
+          "emotional_landscape": "Composed focus, measured curiosity, grounded resolve.",
+          "threshold_vision": "Preparation is perception—what you ready, you can read.",
+          "transformation_promise": "From a clear baseline, the first true signal will guide the first right move."
+        }
+      },
+      "personality_profile_162": {},
+      "personality_profile_163": {},
+      "personality_profile_164": {},
+      "personality_profile_165": {},
+      "personality_profile_166": {},
+      "personality_profile_167": {},
+      "personality_profile_168": {},
+      "personality_profile_169": {},
+      "personality_profile_170": {},
+      "personality_profile_171": {},
+      "personality_profile_172": {},
+      "personality_profile_173": {},
+      "personality_profile_174": {},
+      "personality_profile_175": {},
+      "personality_profile_176": {},
+      "personality_profile_177": {},
+      "personality_profile_178": {},
+      "personality_profile_179": {},
+      "personality_profile_180": {},
+      "personality_profile_181": {},
+      "personality_profile_182": {},
+      "personality_profile_183": {},
+      "personality_profile_184": {},
+      "personality_profile_185": {},
+      "personality_profile_186": {},
+      "personality_profile_187": {},
+      "personality_profile_188": {},
+      "personality_profile_189": {},
+      "personality_profile_190": {},
+      "personality_profile_191": {},
+      "personality_profile_192": {},
+      "personality_profile_193": {},
+      "personality_profile_194": {},
+      "personality_profile_195": {},
+      "personality_profile_196": {},
+      "personality_profile_197": {},
+      "personality_profile_198": {},
+      "personality_profile_199": {},
+      "personality_profile_200": {}
+    },
     "family_6": {},
     "family_7": {},
     "family_8": {},
