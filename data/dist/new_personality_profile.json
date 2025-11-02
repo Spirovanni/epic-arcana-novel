@@ -38616,7 +38616,205 @@
         "specific_task_group_description": "Cultivate inner discipline to maintain composure and clarity when success arrives.",
         "specific_task_group_tagline": "Lead yourself before leading others"
       },
-      "personality_profile_183": {},
+      "personality_profile_183": {
+        "canonical_id": "EA-183",
+        "unique_identifier": "MAT 5.2",
+        "specific_task_group_title": "Inventive Intent",
+        "all_chapter": 183,
+        "novel_book": 5,
+        "chapter": "Chapter 23",
+        "chapter_title": "The Supreme Ordeal — Inventive Intent",
+        "type": "Major Activity Theme",
+        "display_name": "The Breakthrough Architect",
+        "theme": "Revelation fuels invention—turn insight into systems that reframe the whole journey.",
+        "family": "Creative Innovation — Breakthroughs, Daring Ideas & Cross-Domain Synthesis",
+    
+        "summary": "Through the supreme ordeal, Francisco channels a moment of revelation into inventive intent—conceiving novel solutions that transcend precedent. He operationalizes creativity: harvesting insight, prototyping boldly, and synthesizing across domains to redefine the outcome of the quest.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Eight",
+    
+        "traits": {
+          "strengths": [
+            "rapid ideation with disciplined selection",
+            "cross-domain pattern recognition",
+            "builds prototypes that clarify vision",
+            "balances imagination with evidence",
+            "invites diverse inputs without losing coherence"
+          ],
+          "shadow": [
+            "idea churn without shipping",
+            "novelty bias over proven paths",
+            "scope creep during exploration",
+            "impatience with constraints",
+            "underestimating downstream complexity"
+          ],
+          "growth_focus": [
+            "time-box exploration and commit to a test",
+            "pair wild ideas with falsifiable metrics",
+            "sequence prototypes from smallest viable risk",
+            "document assumptions explicitly",
+            "design kill-criteria to prevent sunk-cost drift"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 5, Chapter 23 — A revelation (Meeting with the Goddess) unlocks a creative leap that reshapes the path forward."
+        },
+    
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Visionary enthusiast integrating to 5—depth, focus, and disciplined inquiry temper exuberance."
+        },
+    
+        "color_alignment": {
+          "name": "Amethyst",
+          "hsl": "270,58%,56%",
+          "rgb_hex": "#8F4FD0",
+          "color_symbolism": "Electric insight—clarity cutting through the unknown with imaginative power."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.73,
+            "stability": 0.62,
+            "empathy": 0.71,
+            "openness": 0.92,
+            "orderliness": 0.55,
+            "conscientiousness": 0.66,
+            "adaptability": 0.85,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.64,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.86,
+            "imagination": 0.94
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "imagination": 0.35,
+            "abstract_reasoning": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1831",
+            "Q1832",
+            "Q1833",
+            "Q1834",
+            "Q1835",
+            "Q1836",
+            "Q1837",
+            "Q1838"
+          ],
+          "signals_map": {
+            "Q1831": { "dimension": "imagination", "polarity": 1, "content": "I generate many unconventional options before selecting a path." },
+            "Q1832": { "dimension": "openness", "polarity": 1, "content": "I seek perspectives outside my field to spark ideas." },
+            "Q1833": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect patterns across unrelated domains to form new models." },
+            "Q1834": { "dimension": "orderliness", "polarity": -1, "content": "I resist over-structuring early exploration to keep ideas fluid." },
+            "Q1835": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate concepts into testable prototypes quickly." },
+            "Q1836": { "dimension": "risk_tolerance", "polarity": 1, "content": "I run small, reversible experiments to learn fast." },
+            "Q1837": { "dimension": "adaptability", "polarity": 1, "content": "I pivot readily when data contradicts the initial vision." },
+            "Q1838": { "dimension": "novelty_seeking", "polarity": 1, "content": "I am energized by redesigning constraints into opportunities." }
+          },
+          "daily_prompt": "Which assumption will you test today with the smallest, boldest prototype you can ship before dusk?",
+          "practices": [
+            "10×10 Idea Sprint: ten ideas in ten minutes; pick one to prototype in one hour.",
+            "Analogy Jam: map a solution from a different domain onto today’s problem.",
+            "Crazy 8s with Kill-Criteria: eight sketches in eight minutes; define stop rules.",
+            "Red-Team Review: invite a skeptic to break your concept and log fixes.",
+            "Prototype Parade: weekly demo of micro-prototypes to harvest cross-feedback."
+          ],
+          "transformation_indicators": [
+            "Higher prototype-to-proposal ratio",
+            "Cycle time from idea to test under 48 hours",
+            "Increase in cross-domain references within designs",
+            "Measured learning captured per experiment",
+            "Adoption rate of novel solutions by allied teams"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Reward — Inventive Intent",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "Revelation crystallized into a buildable vision.",
+          "ordinary_world_baseline": "Linear fixes, incremental tweaks, narrow constraints.",
+          "call_to_adventure_preview": "Insight becomes architecture; invention reframes the stakes."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Meeting with the Goddess",
+            "section_description": "The moment of revelation and empowerment.",
+            "connection_focus_area": "Channeling newfound insights",
+            "connect_points": {
+              "point1": "Identify your moment of revelation",
+              "point2": "Pinpoint the gift gained",
+              "point3": "Translate that gift into creative action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your personal revelation",
+              "objective2": "List two ways to apply its power",
+              "objective3": "Prototype a new approach"
+            }
+          },
+          "book2": {
+            "title": "Creative Confidence",
+            "author": "Tom Kelley & David Kelley",
+            "section_of_focus": "Unlocking Creativity",
+            "section_description": "Techniques for generating breakthrough ideas.",
+            "connection_focus_area": "Building creative muscle",
+            "connect_points": {
+              "point1": "Brainstorm ten wild ideas",
+              "point2": "Select the top two",
+              "point3": "Rapidly prototype one"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Generate a list of ten concepts",
+              "objective2": "Refine two concepts",
+              "objective3": "Create a quick prototype"
+            }
+          },
+          "book3": {
+            "title": "Range",
+            "author": "David Epstein",
+            "section_of_focus": "Analogical Thinking",
+            "section_description": "Using diverse experiences to fuel innovation.",
+            "connection_focus_area": "Cross-domain insight",
+            "connect_points": {
+              "point1": "Map unrelated experiences",
+              "point2": "Find common patterns",
+              "point3": "Apply an analogy to your challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three past experiences",
+              "objective2": "Identify one analogous lesson",
+              "objective3": "Implement that lesson in a prototype"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Karmic Luminarium, a figure of living starlight (the Goddess) touches Francisco’s brow—threads of forgotten methods unfurl into a new design.",
+          "symbolic_moment": "He sketches a spiral lattice in midair; each ring binds chaos into pattern without killing its vitality.",
+          "emotional_landscape": "Awe, relief, fierce resolve.",
+          "threshold_vision": "Invention isn’t escape—it is a bridge that lets the future cross into the present.",
+          "transformation_promise": "When creativity is systematized, hope becomes infrastructure."
+        },
+    
+        "epic_novel_pages": "Page 331 - 345",
+        "epic_chapter_focus": "The Supreme Ordeal",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene IX: The Meeting with the Goddess",
+        "focus_area": "Creative Innovation",
+        "specific_task_group_description": "Leverage breakthrough insights to conceive novel solutions that redefine the journey’s outcome.",
+        "specific_task_group_tagline": "Think beyond the possible"
+      },
       "personality_profile_184": {},
       "personality_profile_185": {},
       "personality_profile_186": {},
