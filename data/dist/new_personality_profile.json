@@ -37820,7 +37820,205 @@
         "specific_task_group_description": "Cultivate the ability to spot and seize hidden opportunities even in daunting circumstances.",
         "specific_task_group_tagline": "Turn challenges into openings"
       },
-      "personality_profile_179": {},
+      "personality_profile_179": {
+        "canonical_id": "EA-179",
+        "unique_identifier": "STG 5.2.2.3",
+        "specific_task_group_title": "Transformational Leadership",
+        "all_chapter": 179,
+        "novel_book": 5,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Road of Trials — Transformational Leadership",
+        "type": "Specific Task Group",
+        "display_name": "The Transformation Architect",
+        "theme": "Vision, sequenced change, and coalition-building turn intent into irreversible momentum.",
+        "family": "Vision & Change / Leadership — Purpose, Systems & Orchestration",
+    
+        "summary": "On the Road of Trials, Francisco learns to lead radical transformation by articulating a compelling vision, forming a guiding coalition, and pacing change through visible early wins. He practices systems thinking to align interdependencies and converts resistance into engagement without losing sight of universal balance.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "King",
+    
+        "traits": {
+          "strengths": [
+            "crafts vivid, testable visions",
+            "rallies diverse allies into a true coalition",
+            "turns purpose into staged milestones",
+            "communicates calmly under pressure",
+            "links local wins to system-level change"
+          ],
+          "shadow": [
+            "grand visions without delivery rhythm",
+            "over-centralization that stifles ownership",
+            "underestimating change fatigue",
+            "mission creep from trying to fix everything",
+            "confusing charisma for alignment"
+          ],
+          "growth_focus": [
+            "anchor vision to measurable early wins",
+            "decentralize authority with clear intent",
+            "schedule recovery to prevent burnout",
+            "map dependencies before committing",
+            "close the loop with feedback and iteration"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Approach to the Innermost Cave",
+          "fiction_chapter_context": "Book 5, Chapter 19 — On the Road of Trials, Francisco orchestrates a coalition and operationalizes a systems-change vision."
+        },
+    
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—strength guided by service and relational care."
+        },
+    
+        "color_alignment": {
+          "name": "Purple Heart",
+          "hsl": "270,67%,48%",
+          "rgb_hex": "#7A29CC",
+          "color_symbolism": "Royal stewardship—authoritative care that channels change."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.72,
+            "empathy": 0.78,
+            "openness": 0.84,
+            "orderliness": 0.66,
+            "conscientiousness": 0.79,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.81,
+            "risk_tolerance": 0.63,
+            "emotional_intensity": 0.71,
+            "social_dominance": 0.69,
+            "novelty_seeking": 0.77,
+            "imagination": 0.86
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "abstract_reasoning": 0.35,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1791",
+            "Q1792",
+            "Q1793",
+            "Q1794",
+            "Q1795",
+            "Q1796",
+            "Q1797",
+            "Q1798"
+          ],
+          "signals_map": {
+            "Q1791": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can map complex systems and spot the few levers that matter." },
+            "Q1792": { "dimension": "agency", "polarity": 1, "content": "I move from vision to a concrete first win within days." },
+            "Q1793": { "dimension": "cooperativeness", "polarity": 1, "content": "I form coalitions where many leaders share ownership." },
+            "Q1794": { "dimension": "openness", "polarity": 1, "content": "I revise my plan quickly when new information appears." },
+            "Q1795": { "dimension": "stability", "polarity": 1, "content": "I stay steady and reassuring during turbulence." },
+            "Q1796": { "dimension": "social_dominance", "polarity": 1, "content": "I speak with conviction while inviting dissenting views." },
+            "Q1797": { "dimension": "adaptability", "polarity": 1, "content": "I sequence change to match team capacity." },
+            "Q1798": { "dimension": "conscientiousness", "polarity": 1, "content": "I define crisp milestones and inspect progress visibly." }
+          },
+          "daily_prompt": "What single visible win can you ship today that makes your vision feel inevitable—and who will co-own it with you?",
+          "practices": [
+            "One-Page Vision: purpose, principles, first 3 milestones.",
+            "Guiding Coalition Map: roles, influence lines, communication rhythm.",
+            "Early-Win Sprint: 7–14 days to deliver a proof of concept.",
+            "Dependency Diagram: surface bottlenecks; add buffers and owners.",
+            "Pulse & Retros: weekly morale + progress check with rapid course correction."
+          ],
+          "transformation_indicators": [
+            "Vision clarity scores trend upward",
+            "Guiding coalition participation rate rises",
+            "Cadence of early wins sustained for 6–8 weeks",
+            "Cross-team dependency lead time shrinks",
+            "Resistance incidents decrease after feedback loops"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Approach to the Innermost Cave",
+          "preliminary_beat": "Approach — Transformational Leadership",
+          "save_the_cat_beat": "Build-up (set-up)",
+          "character_state": "Coalition aligned; vision translated into executable moves.",
+          "ordinary_world_baseline": "Fragmented efforts and change fatigue.",
+          "call_to_adventure_preview": "Change earns trust through small, undeniable wins."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Leading Change",
+            "author": "John P. Kotter",
+            "section_of_focus": "Eight-Step Process",
+            "section_description": "A structured approach to change management.",
+            "connection_focus_area": "Orchestrating transformation",
+            "connect_points": {
+              "point1": "Establish a sense of urgency",
+              "point2": "Form a guiding coalition",
+              "point3": "Develop and communicate the vision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a vision statement",
+              "objective2": "Identify three coalition members",
+              "objective3": "Plan a first communication event"
+            }
+          },
+          "book2": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "The Golden Circle",
+            "section_description": "How purpose drives leadership and change.",
+            "connection_focus_area": "Clarifying purpose",
+            "connect_points": {
+              "point1": "Articulate your ‘why’",
+              "point2": "Link it to team goals",
+              "point3": "Design a purpose-driven activity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write your personal why",
+              "objective2": "Align one team project with that why",
+              "objective3": "Gather feedback on its impact"
+            }
+          },
+          "book3": {
+            "title": "The Fifth Discipline",
+            "author": "Peter Senge",
+            "section_of_focus": "Systems Thinking",
+            "section_description": "Seeing interconnections to drive sustainable change.",
+            "connection_focus_area": "Holistic leadership",
+            "connect_points": {
+              "point1": "Map key system relationships",
+              "point2": "Identify leverage points",
+              "point3": "Design an intervention"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a system map for your team",
+              "objective2": "Pinpoint one leverage opportunity",
+              "objective3": "Propose a small-scale intervention"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a star-spanning atrium, Francisco sketches a luminous systems map; nodes brighten as allies accept roles.",
+          "symbolic_moment": "A single lantern ignites a ring of beacons—each one an early win lighting the next corridor.",
+          "emotional_landscape": "Gravitas, calm resolve, contagious possibility.",
+          "threshold_vision": "Transformation scales when purpose is plain, roles are shared, and the first win is close at hand.",
+          "transformation_promise": "Coalitions that learn fast outlast chaos."
+        },
+    
+        "epic_novel_pages": "Page 271 - 285",
+        "epic_chapter_focus": "The Road of Trials",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "focus_area": "Vision & Change",
+        "specific_task_group_description": "Learn to lead radical transformation by articulating a compelling vision and guiding others through change.",
+        "specific_task_group_tagline": "Lead the charge"
+      },
       "personality_profile_180": {},
       "personality_profile_181": {},
       "personality_profile_182": {},
