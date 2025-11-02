@@ -33672,7 +33672,180 @@
           "transformation_promise": "Initiative stays ours when foresight meets action."
         }
       },
-      "personality_profile_157": {},
+      "personality_profile_157": {
+        "canonical_id": "EA-157",
+        "unique_identifier": "STG 4.3.5.2",
+        "specific_task_group_title": "Inspirational Empathy",
+        "all_chapter": 157,
+        "novel_book": 4,
+        "chapter": "Chapter 37",
+        "chapter_title": "Rescue from Without — Inspirational Empathy",
+        "type": "Specific Task Group",
+        "display_name": "Inspirational Empathy",
+        "theme": "Compassionate leadership unites hearts when stakes are highest.",
+        "family": "Empathy / Connection — Emotional Intelligence",
+        "summary": "Through genuine empathy and emotional connection, Francisco forges unbreakable bonds with allies across cosmic barriers, rallying diverse beings in the climactic struggle for transformation. His inspirational empathy becomes the key to uniting all conscious beings in the fight for free will and authentic existence.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Queen",
+        "tarot_symbolism": "Care that steadies courage; deep attunement guiding collective resolve.",
+        "color_alignment": {
+          "name": "Persian Indigo",
+          "hsl": "270,100%,20%",
+          "rgb_hex": "#330066",
+          "color_symbolism": "Deep resonance—quiet power that binds the circle together."
+        },
+        "traits": {
+          "strengths": [
+            "reads emotional currents and unmet needs",
+            "models courageous vulnerability that invites trust",
+            "translates care into clear, supportive action",
+            "elevates quieter voices and distributes attention",
+            "sustains cohesion under extreme pressure"
+          ],
+          "shadow": [
+            "over-functioning as the emotional anchor",
+            "boundary blur in the name of harmony",
+            "decision latency to avoid hurting feelings",
+            "compassion fatigue from constant holding",
+            "indirectness when firm feedback is needed"
+          ],
+          "growth_focus": [
+            "pair empathy with explicit boundaries and asks",
+            "schedule recovery to prevent depletion",
+            "use ‘kind + clear’ feedback frameworks",
+            "share emotional labor across the team",
+            "measure belonging with behavioral indicators"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Climax",
+          "fiction_chapter_context": "Book 4, Chapter 37 — Scene XIV: Rescue from Without; preliminary beat: Finale. Through genuine empathy, the Prophet forges unbreakable bonds, rallying allies in the heat of battle."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—compassion backed by courageous clarity."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.86,
+            "empathy": 0.95,
+            "openness": 0.80,
+            "orderliness": 0.68,
+            "conscientiousness": 0.78,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.56,
+            "novelty_seeking": 0.54,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "empathy": 0.45,
+            "cooperativeness": 0.30,
+            "stability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1571","Q1572","Q1573","Q1574","Q1575","Q1576","Q1577","Q1578"],
+          "signals_map": {
+            "Q1571": { "dimension": "empathy", "polarity": 1, "content": "I can name the feeling beneath the words and respond to it." },
+            "Q1572": { "dimension": "cooperativeness", "polarity": 1, "content": "I turn understanding into specific acts of support." },
+            "Q1573": { "dimension": "stability", "polarity": 1, "content": "I remain calm and present when emotions surge around me." },
+            "Q1574": { "dimension": "agency", "polarity": 1, "content": "I make clear requests after listening fully." },
+            "Q1575": { "dimension": "orderliness", "polarity": 1, "content": "I ritualize check-ins that keep bonds strong under stress." },
+            "Q1576": { "dimension": "openness", "polarity": 1, "content": "I welcome candid feedback on my impact." },
+            "Q1577": { "dimension": "emotional_intensity", "polarity": 1, "content": "I channel strong feeling into constructive care, not escalation." },
+            "Q1578": { "dimension": "adaptability", "polarity": 1, "content": "I flex my style to meet needs without losing boundaries." }
+          },
+          "daily_prompt": "Who needs to feel felt today—and what concrete act of care will you offer within a clear boundary?",
+          "practices": [
+            "10-minute empathy map before high-stakes conversations.",
+            "NVC frame: observation → feeling → need → request.",
+            "Rotate ‘guardian of belonging’ role each week.",
+            "Close meetings with one appreciation and one clear ask.",
+            "Schedule personal restoration blocks to prevent compassion fatigue."
+          ],
+          "transformation_indicators": [
+            "Higher psychological safety and trust scores",
+            "Reduced conflict escalation from misunderstanding",
+            "Broader participation from quiet members",
+            "Faster repair cycles after tense moments",
+            "Sustained morale through climactic phases"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Resurrection",
+          "preliminary_beat": "Finale → Climax",
+          "save_the_cat_beat": "Break into Three",
+          "character_state": "Empathy operationalized—care becomes collective courage.",
+          "ordinary_world_baseline": "Fragmented motives and guarded hearts.",
+          "call_to_adventure_preview": "When people feel seen, they stand together."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Empathy",
+            "section_description": "How attuned leaders sense and respond to emotional currents.",
+            "connection_focus_area": "Reading feelings improves influence.",
+            "connect_points": {
+              "point1": "Practice active listening sessions.",
+              "point2": "Use emotional mapping tools.",
+              "point3": "Debrief on team mood shifts."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead an empathy-building workshop.",
+              "objective2": "Measure team psychological safety.",
+              "objective3": "Adjust communication to emotional feedback."
+            }
+          },
+          "book2": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Empathy and Vulnerability",
+            "section_description": "Why showing vulnerability builds deeper connections.",
+            "connection_focus_area": "Courageous vulnerability fosters trust.",
+            "connect_points": {
+              "point1": "Share personal reflections publicly.",
+              "point2": "Facilitate vulnerability-based trust exercises.",
+              "point3": "Encourage storytelling circles."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a vulnerability workshop.",
+              "objective2": "Track increases in open feedback.",
+              "objective3": "Cultivate leader vulnerability norms."
+            }
+          },
+          "book3": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety",
+            "section_description": "Creating environments where people feel secure and valued.",
+            "connection_focus_area": "Safe teams accelerate collective performance.",
+            "connect_points": {
+              "point1": "Establish empathy check-ins.",
+              "point2": "Rotate leadership support roles.",
+              "point3": "Celebrate acts of caring publicly."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a Circle of Safety charter.",
+              "objective2": "Monitor team trust metrics.",
+              "objective3": "Foster peer-to-peer support rituals."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath the roar of battle, Francisco hears what is unspoken—and answers it.",
+          "symbolic_moment": "A deep indigo flare bridges rival banners; hands unclench, shoulders lower.",
+          "emotional_landscape": "Steady warmth, brave tenderness, contagious resolve.",
+          "threshold_vision": "Unity is engineered through care as much as strategy.",
+          "transformation_promise": "When empathy leads, courage multiplies."
+        }
+      },
       "personality_profile_158": {},
       "personality_profile_159": {},
       "personality_profile_160": {}
