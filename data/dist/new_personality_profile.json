@@ -33150,7 +33150,180 @@
           "transformation_promise": "Imagination, guided by practice, remakes the world."
         }
       },
-      "personality_profile_154": {},
+      "personality_profile_154": {
+        "canonical_id": "EA-154",
+        "unique_identifier": "STG 4.3.4.2",
+        "specific_task_group_title": "Op-For Planning",
+        "all_chapter": 154,
+        "novel_book": 4,
+        "chapter": "Chapter 34",
+        "chapter_title": "Flight — Op-For Planning",
+        "type": "Specific Task Group",
+        "display_name": "Op-For Planning",
+        "theme": "Understanding opponents sharpens resilient strategies.",
+        "family": "Strategy / Foresight — Adversary Simulation",
+        "summary": "With his mind sharpened by visionary creativity, Francisco turns his attention to anticipating and outmaneuvering the cosmic authorities who will oppose his plans for transformation. He develops sophisticated strategies that can outthink every challenge and prepare for every possible form of cosmic resistance.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Nine",
+        "tarot_symbolism": "Clear-eyed vigilance; naming threats to design paths through them.",
+        "color_alignment": {
+          "name": "Persian Blue",
+          "hsl": "225,100%,40%",
+          "rgb_hex": "#0033CC",
+          "color_symbolism": "Disciplined intelligence; deep-focus planning under pressure."
+        },
+        "traits": {
+          "strengths": [
+            "builds realistic adversary models",
+            "stress-tests plans against multiple futures",
+            "designs early-warning indicators and triggers",
+            "documents assumptions and updates them as evidence changes",
+            "communicates clear countermeasures and fallback paths"
+          ],
+          "shadow": [
+            "catastrophizing rare risks",
+            "overengineering plans that slow action",
+            "confirmation bias toward familiar threats",
+            "insufficient sunset of obsolete contingencies",
+            "under-communicating residual risk"
+          ],
+          "growth_focus": [
+            "time-box analysis and name ‘good enough to act’",
+            "pair red-team critique with decision deadlines",
+            "retire stale playbooks on a fixed cadence",
+            "track indicator false-positives/negatives",
+            "practice ‘assumption → evidence’ updates in writing"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Converge (resolution)",
+          "fiction_chapter_context": "Book 4, Chapter 34 — Scene XIII: Flight; preliminary beat: Break into 3. Mind sharpened by new vision, the Prophet anticipates adversaries, crafting strategies that outthink every challenge."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyal Skeptic integrating to 9—vigilance with composed judgment."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.86,
+            "empathy": 0.62,
+            "openness": 0.74,
+            "orderliness": 0.84,
+            "conscientiousness": 0.88,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.90,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.61,
+            "novelty_seeking": 0.66,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "conscientiousness": 0.35,
+            "orderliness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1541","Q1542","Q1543","Q1544","Q1545","Q1546","Q1547","Q1548"],
+          "signals_map": {
+            "Q1541": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map how an opponent could exploit our plan." },
+            "Q1542": { "dimension": "conscientiousness", "polarity": 1, "content": "I write assumptions and update them as evidence changes." },
+            "Q1543": { "dimension": "orderliness", "polarity": 1, "content": "I define lead and lag indicators with clear triggers." },
+            "Q1544": { "dimension": "adaptability", "polarity": 1, "content": "I pivot when indicators fire, without waiting for perfect data." },
+            "Q1545": { "dimension": "agency", "polarity": 1, "content": "I convert red-team findings into concrete countermeasures." },
+            "Q1546": { "dimension": "stability", "polarity": 1, "content": "I stay composed while evaluating worst-case scenarios." },
+            "Q1547": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite dissenting views to pressure-test strategies." },
+            "Q1548": { "dimension": "risk_tolerance", "polarity": 1, "content": "I take calculated risks after stress-testing alternatives." }
+          },
+          "daily_prompt": "List the top three ways your plan could fail today. What’s the earliest indicator—and your preplanned response—for each?",
+          "practices": [
+            "Run a 30-minute pre-mortem with red-team roles assigned.",
+            "Draft three scenarios (optimistic/base/pessimistic) with triggers.",
+            "Create a one-page decision tree with fallback paths.",
+            "Set and publish early-warning indicators; review weekly.",
+            "Close the loop: capture lessons learned and retire outdated plays."
+          ],
+          "transformation_indicators": [
+            "Fewer strategic surprises versus baseline",
+            "Faster pivot time when indicators fire",
+            "Higher win rate in competitive tests/exercises",
+            "Clear audit trail from assumption → evidence → update",
+            "Team reports increased confidence in readiness"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Break into 3",
+          "save_the_cat_beat": "Converge (resolution)",
+          "character_state": "Composed strategist—opponent models inform decisive action.",
+          "ordinary_world_baseline": "Reactive planning and blind spots.",
+          "call_to_adventure_preview": "When we study resistance, resilience becomes design—not luck."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Blue Ocean Strategy",
+            "author": "W. Chan Kim & Renée Mauborgne",
+            "section_of_focus": "Creating Uncontested Space",
+            "section_description": "Framework for outthinking competition by redefining market boundaries.",
+            "connection_focus_area": "Strategic divergence mitigates direct threats.",
+            "connect_points": {
+              "point1": "Map current competitive landscape.",
+              "point2": "Identify blue ocean opportunities.",
+              "point3": "Prototype new value propositions."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a strategy canvas exercise.",
+              "objective2": "Measure shifts in competitive metrics.",
+              "objective3": "Implement pilot blue ocean initiatives."
+            }
+          },
+          "book2": {
+            "title": "Playing to Win",
+            "author": "A.G. Lafley & Roger L. Martin",
+            "section_of_focus": "Where to Play & How to Win",
+            "section_description": "Practical guide to choosing battles and winning them decisively.",
+            "connection_focus_area": "Focused competition planning builds advantage.",
+            "connect_points": {
+              "point1": "Define winning aspirations.",
+              "point2": "Select target arenas.",
+              "point3": "Craft distinctive capabilities."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a clear strategic plan.",
+              "objective2": "Evaluate capability gaps.",
+              "objective3": "Monitor win/loss ratios."
+            }
+          },
+          "book3": {
+            "title": "Scenario Planning",
+            "author": "Courtney, Kirkland & Viguerie",
+            "section_of_focus": "Leading Strategic Conversations",
+            "section_description": "Tools for co-creating multiple future scenarios and plans.",
+            "connection_focus_area": "Anticipating alternate futures strengthens readiness.",
+            "connect_points": {
+              "point1": "Facilitate scenario-building workshops.",
+              "point2": "Stress-test plans against each scenario.",
+              "point3": "Establish early-warning indicators."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead a scenario-planning session.",
+              "objective2": "Track scenario trigger metrics.",
+              "objective3": "Revise strategies based on indicator alerts."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Charts and threat trees fan across the table; Francisco traces how opposition will move—and how the circle will counter.",
+          "symbolic_moment": "A lattice of blue lines locks into a resilient weave as early-warning lights pulse alive.",
+          "emotional_landscape": "Sober focus, steady nerve, quiet confidence.",
+          "threshold_vision": "Prepared minds make fate flexible.",
+          "transformation_promise": "When resistance is mapped, momentum endures."
+        }
+      },
       "personality_profile_155": {},
       "personality_profile_156": {},
       "personality_profile_157": {},
