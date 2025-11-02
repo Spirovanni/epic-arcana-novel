@@ -35258,33 +35258,118 @@
         "specific_task_group_description": "Ignite fresh optimism and harness new energy to press on.",
         "specific_task_group_tagline": "Spark a new beginning"
       },
-      "specific_task_group_3": {
-        "id": "EA-166",
+      "personality_profile_166": {
+        "canonical_id": "EA-166",
         "unique_identifier": "STG 5.1.2.3",
+        "specific_task_group_title": "Blind Beneficence",
         "all_chapter": 166,
         "novel_book": 5,
         "chapter": "Chapter 6",
+        "chapter_title": "The Call to Adventure — Blind Beneficence",
         "type": "Specific Task Group",
-        "tarot_card_link": "",
+        "display_name": "Blind Beneficence",
+        "theme": "Give first, give freely, and let outcomes unfold.",
+        "family": "Generosity / Service — Gift, Trust & Flow",
+        "summary": "Francisco learns to extend aid without strings attached. By routing life-force support where it’s needed—often invisibly—he practices service that strengthens systems and spirits alike, while guarding against martyrdom and expectation.",
         "tarot_family": "Disks",
-        "new_tarot_family": "",
         "tarot_card_item": "Four",
-        "color_name": "Persian Blue",
-        "hex_code": "#3333CC",
-        "red": 51,
-        "green": 51,
-        "blue": 204,
-        "epic_novel_pages": "Page 76 - 90",
-        "epic_chapter_focus": "The Call to Adventure",
-        "epic_preliminary_scene_focus": "Catalyst",
-        "epic_preliminary_scene_description": "",
-        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
-        "epic_novel_section_name": "Part I: Lord of the Forces of Life",
-        "specific_task_group_title": "Blind Beneficence",
-        "focus_area": "Generosity",
-        "connection_to_the_major_task_group": "The Call to Adventure",
-        "specific_task_group_description": "Extend kindness and support even before you see the full impact.",
-        "specific_task_group_tagline": "Give without expectation",
+        "color_alignment": {
+          "name": "Persian Blue",
+          "hsl": "240,60%,50%",
+          "rgb_hex": "#3333CC",
+          "color_symbolism": "Quiet strength—stable supply without spectacle."
+        },
+        "traits": {
+          "strengths": [
+            "offers timely aid without seeking credit",
+            "designs systems that deliver help at scale",
+            "reads unspoken needs and fills gaps",
+            "builds trust through consistent generosity",
+            "keeps records clean to avoid reciprocation debt"
+          ],
+          "shadow": [
+            "overgiving that masks boundary issues",
+            "enabling dependence by solving too fast",
+            "resentment when unseen effort goes unnoticed",
+            "virtue signaling disguised as service",
+            "resource drain from unfocused kindness"
+          ],
+          "growth_focus": [
+            "pair generosity with clear criteria and limits",
+            "favor capacity-building over one-off rescues",
+            "separate identity from outcomes and thanks",
+            "track impact to refine where help matters most",
+            "teach recipients to become future givers"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Forces of Life",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 5, Chapter 6 — Francisco routes unseen aid through new service networks, learning to give without attachment."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—generous action with authentic motive and healthy boundaries."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.82,
+            "empathy": 0.91,
+            "openness": 0.76,
+            "orderliness": 0.72,
+            "conscientiousness": 0.77,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.56,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.55,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "empathy": 0.40,
+            "cooperativeness": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1661","Q1662","Q1663","Q1664","Q1665","Q1666","Q1667","Q1668"],
+          "signals_map": {
+            "Q1661": { "dimension": "empathy", "polarity": 1, "content": "I notice needs even when they are not voiced." },
+            "Q1662": { "dimension": "cooperativeness", "polarity": 1, "content": "I coordinate discreet help that lets others shine." },
+            "Q1663": { "dimension": "conscientiousness", "polarity": 1, "content": "I set clear criteria for when and how to give." },
+            "Q1664": { "dimension": "stability", "polarity": 1, "content": "I give without expecting gratitude or control of outcomes." },
+            "Q1665": { "dimension": "agency", "polarity": 1, "content": "I take initiative to route resources where they matter most." },
+            "Q1666": { "dimension": "orderliness", "polarity": 1, "content": "I track impact to avoid waste and enable scale." },
+            "Q1667": { "dimension": "adaptability", "polarity": 1, "content": "I tailor assistance to build capability, not dependency." },
+            "Q1668": { "dimension": "emotional_intensity", "polarity": -1, "content": "I do not tie my worth to being needed." }
+          },
+          "daily_prompt": "Where can you offer quiet help today—and what boundary will keep the gift sustainable?",
+          "practices": [
+            "Give–Guard Rule: define aid scope (what/when/limits) before acting.",
+            "Capacity First: design every assist to transfer skill or access.",
+            "Anonymous Assist: one weekly contribution with zero attribution.",
+            "Impact Ledger: simple metric for outcome vs. effort ratio.",
+            "Cascade Ritual: invite recipients to ‘pay it forward’ concretely."
+          ],
+          "transformation_indicators": [
+            "More capacity-building assists vs. one-time rescues",
+            "Stable giver energy (reduced burnout markers)",
+            "Increased peer-to-peer ‘pay it forward’ actions",
+            "Higher outcome/effort ratios in aid projects",
+            "Lower dependency recurrence rates"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst",
+          "save_the_cat_beat": "The Call to Adventure",
+          "character_state": "Open-handed service without attachment.",
+          "ordinary_world_baseline": "Help given ad hoc; boundaries unclear.",
+          "call_to_adventure_preview": "Invisible generosity becomes infrastructure."
+        },
         "specific_task_group_books_influenced_by": {
           "book1": {
             "title": "The Hero with a Thousand Faces",
@@ -35338,67 +35423,224 @@
             }
           }
         },
-        "hero_journey_beat": "The Call to Adventure",
-        "hero_journey_beat_objective": "The goal of the hero journey beat is to the call to adventure.",
-        "save_the_cat_beat": "The Call to Adventure",
-        "save_the_cat_beat_goal": "",
-        "plot": "The Call to Adventure",
-        "character_arcs": {
-          "Francisco": "Develops the ability to give cosmic aid without expectation, learning that true cosmic guardianship requires selfless service.",
-          "Beneficence_Teachers": "Cosmic entities who have mastered the art of giving without expectation or attachment to outcomes.",
-          "Recipients_Unknown": "Countless beings across timelines who benefit from Francisco's actions without his knowledge.",
-          "Service_Network": "A cosmic system dedicated to providing aid and support across all realities."
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a quiet service hub, anonymous relays pulse with blue light as aid flows to distant worlds—no signatures, only relief.",
+          "symbolic_moment": "Francisco turns away from the console before the acknowledgments arrive; the work is the witness.",
+          "emotional_landscape": "Soft resolve, humble joy, steady clarity.",
+          "threshold_vision": "When generosity is structured, help becomes a system not a stunt.",
+          "transformation_promise": "Service that asks nothing returns balance to everything."
         },
-        "story_gaps_addressed": {
-          "selfless_service": "Francisco learns that cosmic balance requires giving without attachment to personal gain or recognition.",
-          "character_motivation": "His growing understanding that cosmic guardianship is about service rather than power or glory.",
-          "cosmic_economics": "Introduction of how life force flows through acts of giving and receiving across cosmic scales."
-        },
-        "location_details": {
-          "beneficence_distribution_centers": "Cosmic facilities that channel aid and support to where it's needed across timelines.",
-          "service_coordination_hubs": "Spaces where cosmic guardians organize their efforts to help others without expectation."
-        },
-        "series_connections": {
-          "selfless_leadership": "Francisco's development of selfless service prepares him for the ultimate sacrifice required in Book 9.",
-          "cosmic_generosity": "His mastery of giving without expectation will be crucial for inspiring others in the finale."
-        },
-        "summary": "Francisco learns the art of extending kindness and support across cosmic scales, even before seeing the full impact of his actions. He discovers that true cosmic balance requires acts of blind beneficence - giving life force energy to beings and systems without expectation of return. This lesson teaches him that cosmic guardianship is fundamentally about service rather than control.",
-        "pov": "3rd Person Limited",
-        "tense": "Past Tense",
-        "core_emotion": "Shock and awakening",
-        "scene_tone": "Chaotic with emerging purpose",
-        "scenes": [
-          {
-            "scene_number": 1,
-            "title": "Scene 1",
-            "setup": "Francisco learns the art of extending kindness and support across cosmic scales, even before seeing the full impact of his actions.",
-            "symbolism": "Symbolic elements of scene 1",
-            "beat_goal": "Advance the narrative through scene 1"
-          },
-          {
-            "scene_number": 2,
-            "title": "Scene 2",
-            "setup": "Francisco discovers that true cosmic balance requires acts of blind beneficence - giving life force energy to beings and systems without expectation of return.",
-            "symbolism": "Symbolic elements of scene 2",
-            "beat_goal": "Advance the narrative through scene 2"
-          },
-          {
-            "scene_number": 3,
-            "title": "Scene 3",
-            "setup": "Francisco learns that cosmic guardianship is fundamentally about service rather than control, shifting his perspective on his role.",
-            "symbolism": "Symbolic elements of scene 3",
-            "beat_goal": "Advance the narrative through scene 3"
-          },
-          {
-            "scene_number": 4,
-            "title": "Scene 4",
-            "setup": "This lesson teaches Francisco the true nature of cosmic service, establishing his commitment to selfless guardianship.",
-            "symbolism": "Symbolic elements of scene 4",
-            "beat_goal": "Advance the narrative through scene 4"
-          }
-        ]
+    
+        "epic_novel_pages": "Page 76 - 90",
+        "epic_chapter_focus": "The Call to Adventure",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Lord of the Forces of Life",
+        "focus_area": "Generosity",
+        "specific_task_group_description": "Extend kindness and support even before you see the full impact.",
+        "specific_task_group_tagline": "Give without expectation",
+        "color_name": "Persian Blue",
+        "hex_code": "#3333CC",
+        "red": 51,
+        "green": 51,
+        "blue": 204
       },
-      "personality_profile_167": {},
+      "personality_profile_167": {
+        "canonical_id": "EA-167",
+        "unique_identifier": "STG 5.1.3.1",
+        "specific_task_group_title": "Responsive Grace",
+        "all_chapter": 167,
+        "novel_book": 5,
+        "chapter": "Chapter 7",
+        "chapter_title": "Refusal of the Call — Responsive Grace",
+        "type": "Specific Task Group",
+        "display_name": "Responsive Grace",
+        "theme": "Meet doubt with empathy and clarity; composure is a form of power.",
+        "family": "Emotional Intelligence / Compassion — Composure, Self-Kindness & De-escalation",
+        "summary": "Facing inner hesitancy and external tests, Francisco learns to regulate emotion, attune to others, and choose language that calms rather than inflames. Grace becomes an active strategy: name feelings, set kind boundaries, and redirect conflict toward understanding.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Nine",
+    
+        "traits": {
+          "strengths": [
+            "stays steady under emotional pressure",
+            "listens for needs beneath reactions",
+            "de-escalates with precise, compassionate language",
+            "sets clear, kind boundaries",
+            "models repair after missteps"
+          ],
+          "shadow": [
+            "appeases to avoid necessary conflict",
+            "over-empathizes and loses the ask",
+            "delays decisions for perfect harmony",
+            "internalizes others’ distress",
+            "confuses softness with clarity"
+          ],
+          "growth_focus": [
+            "pair empathy with a specific request",
+            "time-box deliberation before deciding",
+            "separate containment (now) from resolution (later)",
+            "track triggers and pre-plan responses",
+            "practice boundary statements that invite collaboration"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Forces of Life",
+          "chapter_theme": "Refusal of the Call",
+          "fiction_chapter_context": "Book 5, Chapter 7 — In moments of doubt, Francisco trains composure and compassionate response to turn inner conflict into forward motion."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm presence moving into clear, effective action."
+        },
+    
+        "color_alignment": {
+          "name": "New Midnight Blue",
+          "hsl": "240,100%,30%",
+          "rgb_hex": "#000099",
+          "color_symbolism": "Deep poise—quiet strength that steadies the room."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.84,
+            "empathy": 0.92,
+            "openness": 0.74,
+            "orderliness": 0.70,
+            "conscientiousness": 0.78,
+            "adaptability": 0.80,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.87,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.57,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "empathy": 0.40,
+            "stability": 0.30,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1671","Q1672","Q1673","Q1674","Q1675","Q1676","Q1677","Q1678"],
+          "signals_map": {
+            "Q1671": { "dimension": "stability", "polarity": 1, "content": "I pause and breathe before responding under stress." },
+            "Q1672": { "dimension": "empathy", "polarity": 1, "content": "I seek to understand feelings before addressing facts." },
+            "Q1673": { "dimension": "cooperativeness", "polarity": 1, "content": "I choose language that de-escalates tension." },
+            "Q1674": { "dimension": "conscientiousness", "polarity": 1, "content": "I prepare scripts for difficult conversations." },
+            "Q1675": { "dimension": "adaptability", "polarity": 1, "content": "I adjust tone and approach to the other person’s state." },
+            "Q1676": { "dimension": "agency", "polarity": 1, "content": "I set compassionate boundaries when needed." },
+            "Q1677": { "dimension": "orderliness", "polarity": 1, "content": "I review outcomes to improve future responses." },
+            "Q1678": { "dimension": "emotional_intensity", "polarity": -1, "content": "I do not mirror others’ panic." }
+          },
+          "daily_prompt": "Where will a graceful response change the trajectory today—and what boundary keeps it kind and clear?",
+          "practices": [
+            "4-7-8 breath before reply; then speak in two sentences max.",
+            "Name–Normalize–Next: label feeling, validate it, propose next step.",
+            "Feelings→Needs translation drill before hard meetings.",
+            "Both/And reframing for polarized viewpoints.",
+            "24-hour rule for hot topics; respond only after a cooling period."
+          ],
+          "transformation_indicators": [
+            "Lower conflict-escalation rates",
+            "Higher ‘felt-understood’ scores post-conversation",
+            "Faster recovery from tense exchanges",
+            "Clearer boundary adherence by all parties",
+            "Increase in collaborative solutions over positional standoffs"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Debate",
+          "save_the_cat_beat": "Debate",
+          "character_state": "Calm compassion facing inner doubt.",
+          "ordinary_world_baseline": "Reactive speech and delayed decisions.",
+          "call_to_adventure_preview": "Grace under pressure becomes operational doctrine."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Refusal of the Call",
+            "section_description": "The hero’s initial hesitation and inner conflict",
+            "connection_focus_area": "Overcoming fear",
+            "connect_points": {
+              "point1": "Identify your core hesitation",
+              "point2": "Understand its root cause",
+              "point3": "Frame it as part of growth"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one personal fear",
+              "objective2": "Map its origin",
+              "objective3": "Reframe it as a learning opportunity"
+            }
+          },
+          "book2": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Managing Emotions",
+            "section_description": "Techniques to stay composed under stress",
+            "connection_focus_area": "Self-regulation",
+            "connect_points": {
+              "point1": "Practice mindful breathing",
+              "point2": "Label your emotions",
+              "point3": "Choose a constructive response"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal an emotional trigger",
+              "objective2": "Apply a calming technique",
+              "objective3": "Evaluate the outcome"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenges",
+            "section_description": "Turning setbacks into opportunities",
+            "connection_focus_area": "Adaptive resilience",
+            "connect_points": {
+              "point1": "Reframe a recent setback",
+              "point2": "Identify learning points",
+              "point3": "Plan next steps"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Transform one failure into a lesson",
+              "objective2": "Extract two insights",
+              "objective3": "Set a new growth goal"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Inside an empathy amplification chamber, distant voices soften as Francisco slows his breath and listens for the need beneath the noise.",
+          "symbolic_moment": "He draws a thin line of blue light between two adversaries— a boundary that calms, not divides.",
+          "emotional_landscape": "Centering, receptivity, quiet courage.",
+          "threshold_vision": "Clarity plus kindness turns refusal into readiness.",
+          "transformation_promise": "Calm leadership becomes the fuse for collective grace."
+        },
+    
+        "epic_novel_pages": "Page 91 - 105",
+        "epic_chapter_focus": "Action",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: Lord of the Forces of Life",
+        "focus_area": "Emotional Intelligence",
+        "connection_to_the_major_task_group": "Refusal of the Call",
+        "specific_task_group_description": "Cultivate empathy and kindness even when faced with inner doubt.",
+        "specific_task_group_tagline": "Respond with grace under pressure",
+        "color_name": "New Midnight Blue",
+        "hex_code": "#000099",
+        "red": 0,
+        "green": 0,
+        "blue": 153
+      },
       "personality_profile_168": {},
       "personality_profile_169": {},
       "personality_profile_170": {},
