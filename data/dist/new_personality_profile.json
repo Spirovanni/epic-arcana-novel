@@ -35066,7 +35066,198 @@
           "transformation_promise": "With mentors near and routines set, resilience will outlast the storm."
         }
       },
-      "personality_profile_165": {},
+      "personality_profile_165": {
+        "canonical_id": "EA-165",
+        "unique_identifier": "STG 5.1.2.2",
+        "specific_task_group_title": "Revitalized Hope",
+        "all_chapter": 165,
+        "novel_book": 5,
+        "chapter": "Chapter 5",
+        "chapter_title": "Reaction — Revitalized Hope",
+        "type": "Specific Task Group",
+        "display_name": "The Reignition",
+        "theme": "Hope, made operational, becomes renewable energy for teams.",
+        "family": "Renewal / Motivation — Optimism, Energy & Momentum",
+
+        "summary": "As Francisco fully comprehends the magnitude of cosmic life-force imbalances, he reignites optimism by discovering new energy sources and allies. He learns to harness hope as a practical form of life-force—measuring it, cultivating it, and distributing it—so that people press forward despite uncertainty and fatigue.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ten",
+
+        "traits": {
+          "strengths": [
+            "reframes setbacks into learning fuel",
+            "spots and amplifies early signs of progress",
+            "models visible optimism without denial",
+            "creates rituals that restore morale",
+            "links small wins to long-arc purpose"
+          ],
+          "shadow": [
+            "toxic positivity that ignores pain",
+            "premature celebration that kills focus",
+            "overreliance on vibes over evidence",
+            "burnout from carrying others’ morale",
+            "avoidance of necessary hard truths"
+          ],
+          "growth_focus": [
+            "pair hope with metrics and milestones",
+            "name losses before you lift spirits",
+            "protect your own renewal blocks",
+            "separate morale rituals from outcome claims",
+            "teach others to self-generate optimism"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 5, Chapter 5 — In the Call to Adventure phase, Francisco rekindles collective will by operationalizing hope."
+        },
+
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—authentic feeling, clean boundaries, and realistic care."
+        },
+
+        "color_alignment": {
+          "name": "Medium Blue",
+          "hsl": "240,100%,40%",
+          "rgb_hex": "#0000CC",
+          "color_symbolism": "Clear sky after storm—confidence to begin again."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.83,
+            "empathy": 0.90,
+            "openness": 0.81,
+            "orderliness": 0.66,
+            "conscientiousness": 0.75,
+            "adaptability": 0.80,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.86,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.69,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.58,
+            "imagination": 0.78
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "openness": 0.35,
+            "stability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1651","Q1652","Q1653","Q1654","Q1655","Q1656","Q1657","Q1658"
+          ],
+          "signals_map": {
+            "Q1651": { "dimension": "agency", "polarity": 1, "content": "I initiate hopeful action even when outcomes are uncertain." },
+            "Q1652": { "dimension": "empathy", "polarity": 1, "content": "I speak to discouragement in a way that helps people feel seen." },
+            "Q1653": { "dimension": "openness", "polarity": 1, "content": "I explore new sources of renewal when energy is low." },
+            "Q1654": { "dimension": "stability", "polarity": 1, "content": "I stay steady through downturns without minimizing reality." },
+            "Q1655": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect small wins to the long arc of change." },
+            "Q1656": { "dimension": "emotional_intensity", "polarity": 1, "content": "I transmute strong emotion into constructive momentum." },
+            "Q1657": { "dimension": "cooperativeness", "polarity": 1, "content": "I co-create team rituals that reliably restore morale." },
+            "Q1658": { "dimension": "orderliness", "polarity": 1, "content": "I track leading indicators of team energy and intervene early." }
+          },
+          "daily_prompt": "Where will you introduce one spark of hope today—and which concrete small win will you celebrate to make it real?",
+          "practices": [
+            "Two-Column Reality Check: list hard facts, then list viable next moves.",
+            "3 Wins Ritual: open/close the day by naming three micro-victories.",
+            "Renewal Block: 25–45 minutes of recovery habit scheduled like a meeting.",
+            "Visible Progress Board: track leading indicators of momentum, not just lagging results.",
+            "Hope Hand-off: every leader nominates one person to uplift with a specific assist."
+          ],
+          "transformation_indicators": [
+            "Rise in team energy/morale pulse scores",
+            "Shorter recovery time after setbacks",
+            "Increased initiation of peer-to-peer support",
+            "Higher rate of small-win completions per week",
+            "Reduced voluntary churn during difficult phases"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst — Revitalized Hope",
+          "save_the_cat_beat": "Reaction",
+          "character_state": "Purpose reignited; courage to begin despite uncertainty.",
+          "ordinary_world_baseline": "Cynicism and fatigue lingering from prior trials.",
+          "call_to_adventure_preview": "Hope is logistics for the heart; it powers the first steps."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Crossing the First Threshold",
+            "section_description": "The hero leaves the known world fully behind",
+            "connection_focus_area": "Embracing the unknown",
+            "connect_points": {
+              "point1": "Acknowledge the leap of faith",
+              "point2": "Clarify your mission",
+              "point3": "Embrace the promise of growth"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State your core mission",
+              "objective2": "List three expected gains",
+              "objective3": "Commit to a small actionable step"
+            }
+          },
+          "book2": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "Finding Your Why",
+            "section_description": "Clarifying purpose to inspire action",
+            "connection_focus_area": "Reigniting passion",
+            "connect_points": {
+              "point1": "Identify your core why",
+              "point2": "Connect actions to purpose",
+              "point3": "Share your why with others"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write down your personal why",
+              "objective2": "Explain it in one sentence",
+              "objective3": "Use it to motivate one action"
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "The Arena",
+            "section_description": "Showing up and being seen even when outcome is uncertain",
+            "connection_focus_area": "Courage to begin",
+            "connect_points": {
+              "point1": "Visualize stepping into the arena",
+              "point2": "Name your fears",
+              "point3": "Declare your intention publicly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three fears you’ll face",
+              "objective2": "Set one bold intention",
+              "objective3": "Take the first courageous action"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a dimming station where whole sectors feel spent, Francisco points to a faint uptick on the renewal gauges—proof that effort still matters.",
+          "symbolic_moment": "He lifts a lantern seeded with new life-force; its glow spreads as others light their own.",
+          "emotional_landscape": "Sober honesty, cautious optimism, shared resolve.",
+          "threshold_vision": "Hope compounds when it is measured, shared, and practiced.",
+          "transformation_promise": "A rebellion that learns to renew itself cannot be exhausted."
+        },
+
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "focus_area": "Renewal",
+        "specific_task_group_description": "Ignite fresh optimism and harness new energy to press on.",
+        "specific_task_group_tagline": "Spark a new beginning"
+      },
       "personality_profile_166": {},
       "personality_profile_167": {},
       "personality_profile_168": {},
