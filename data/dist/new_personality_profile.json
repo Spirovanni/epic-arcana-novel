@@ -38019,7 +38019,205 @@
         "specific_task_group_description": "Learn to lead radical transformation by articulating a compelling vision and guiding others through change.",
         "specific_task_group_tagline": "Lead the charge"
       },
-      "personality_profile_180": {},
+      "personality_profile_180": {
+        "canonical_id": "EA-180",
+        "unique_identifier": "STG 5.2.3.1",
+        "specific_task_group_title": "Flow Through Alignment",
+        "all_chapter": 180,
+        "novel_book": 5,
+        "chapter": "Chapter 20",
+        "chapter_title": "Midpoint — Flow Through Alignment",
+        "type": "Specific Task Group",
+        "display_name": "The Flowwright",
+        "theme": "Peak performance emerges when purpose, preparation, and presence lock into alignment—especially under supreme pressure.",
+        "family": "Peak Performance — Flow, Resilience & Integration",
+    
+        "summary": "At the midpoint and brink of the Supreme Ordeal, Francisco harnesses inner equilibrium to integrate every prior lesson into a unified, graceful effectiveness. He learns to enter flow on command—balancing discipline and intuition—so he can navigate the greatest challenge yet without fragmentation or panic.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Queen",
+    
+        "traits": {
+          "strengths": [
+            "centers quickly in chaos; keeps the signal clear",
+            "synchronizes team cadence and priorities",
+            "balances intuition with measured checks",
+            "sustains deep focus without tunnel vision",
+            "converts stress into rhythmic execution"
+          ],
+          "shadow": [
+            "overoptimization that resists improvisation",
+            "detachment mistaken for indifference",
+            "rigidity about routines and rituals",
+            "under-sharing inner strain with teammates",
+            "pushing past healthy limits to ‘stay in flow’"
+          ],
+          "growth_focus": [
+            "treat flow as renewable, not infinite",
+            "schedule micro-recovery between sprints",
+            "invite dissent to prevent blind spots",
+            "separate identity from performance peaks",
+            "document repeatable flow triggers for the team"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 5, Chapter 20 — In the Supreme Ordeal, Francisco integrates discipline, intuition, and purpose to act in seamless harmony."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm presence channeled into effective, visible action."
+        },
+    
+        "color_alignment": {
+          "name": "Royal Purple",
+          "hsl": "270,66%,38%",
+          "rgb_hex": "#6221A3",
+          "color_symbolism": "Regal poise and focused intensity during decisive trials."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.91,
+            "empathy": 0.70,
+            "openness": 0.82,
+            "orderliness": 0.84,
+            "conscientiousness": 0.88,
+            "adaptability": 0.81,
+            "abstract_reasoning": 0.80,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.63,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.59,
+            "imagination": 0.77
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.30,
+            "adaptability": 0.35
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1801",
+            "Q1802",
+            "Q1803",
+            "Q1804",
+            "Q1805",
+            "Q1806",
+            "Q1807",
+            "Q1808"
+          ],
+          "signals_map": {
+            "Q1801": { "dimension": "stability", "polarity": 1, "content": "I can settle my mind and body quickly when pressure spikes." },
+            "Q1802": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain essential checklists without breaking execution rhythm." },
+            "Q1803": { "dimension": "adaptability", "polarity": 1, "content": "I adjust tactics midstream without losing overall intent." },
+            "Q1804": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I integrate diverse inputs into one coherent course of action." },
+            "Q1805": { "dimension": "openness", "polarity": 1, "content": "I welcome last-minute insights if they improve the outcome." },
+            "Q1806": { "dimension": "orderliness", "polarity": 1, "content": "I use simple rituals to trigger focus and flow." },
+            "Q1807": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can take calculated risks without emotional flooding." },
+            "Q1808": { "dimension": "cooperativeness", "polarity": 1, "content": "I align my tempo with the team so the whole system performs better." }
+          },
+          "daily_prompt": "What small ritual will you use to trigger flow today—and what boundary will protect your recovery after?",
+          "practices": [
+            "90/15 Cadence: 90 minutes deep work, 15 minutes active recovery.",
+            "Three-Signal Alignment: purpose → priority → next action (state each aloud).",
+            "Breath-Box Reset (4×4×4×4) before high-stakes moves.",
+            "Flow Triggers Log: capture context, cues, music, space, and time that worked.",
+            "Red Team Ping: invite one quick dissenting view before committing."
+          ],
+          "transformation_indicators": [
+            "Faster switch time from chaos to clarity",
+            "Higher completion rates during peak windows",
+            "Fewer avoidable errors under time pressure",
+            "Consistent recovery adherence post-sprints",
+            "Peer reports of steadier team rhythm"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "Midpoint — Flow Through Alignment",
+          "save_the_cat_beat": "Midpoint",
+          "character_state": "Integrated and poised; disciplined calm fueling decisive action.",
+          "ordinary_world_baseline": "Fragmented effort; oscillation between overcontrol and overreach.",
+          "call_to_adventure_preview": "Alignment turns strain into strength; flow is disciplined freedom."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Supreme Ordeal",
+            "section_description": "The hero's darkest moment and greatest test.",
+            "connection_focus_area": "Enduring the decisive trial",
+            "connect_points": {
+              "point1": "Identify your core temptation",
+              "point2": "Recall past triumphs for strength",
+              "point3": "Commit to the path through adversity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name the greatest challenge you face",
+              "objective2": "List two strategies to overcome it",
+              "objective3": "Execute one strategy under simulated stress"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Perseverance",
+            "section_description": "Sustaining effort and interest over long periods.",
+            "connection_focus_area": "Maintaining resolve",
+            "connect_points": {
+              "point1": "Set a long-term hard goal",
+              "point2": "Map interim milestones",
+              "point3": "Develop a daily persistence habit"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one long-term objective",
+              "objective2": "Break it into three milestones",
+              "objective3": "Practice persistence in one task"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Resilience",
+            "section_description": "Cultivating a growth mindset to bounce back.",
+            "connection_focus_area": "Recovering from setbacks",
+            "connect_points": {
+              "point1": "Reframe a recent failure",
+              "point2": "Identify learning from it",
+              "point3": "Plan a next-step improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reframe one setback positively",
+              "objective2": "List two lessons learned",
+              "objective3": "Apply a lesson to a new challenge"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the axis of a collapsing corridor of timelines, instruments flicker erratic—until Francisco steadies his breath and the readings fall into a clear, steady cadence.",
+          "symbolic_moment": "He aligns three sigils—Purpose, People, Practice—and a laminar current of life-force forms, cutting cleanly through turbulence.",
+          "emotional_landscape": "Grave focus, quiet confidence, elastic composure.",
+          "threshold_vision": "Flow is the harmony of opposites—discipline with freedom, calm with power.",
+          "transformation_promise": "When alignment spreads, chaos organizes itself around shared intent."
+        },
+    
+        "epic_novel_pages": "Page 286 - 300",
+        "epic_chapter_focus": "Midpoint",
+        "epic_preliminary_scene_focus": "The Ordeal (Temptation)",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "focus_area": "Peak Performance",
+        "specific_task_group_description": "Harness inner equilibrium to navigate the greatest challenge yet, integrating all prior lessons.",
+        "specific_task_group_tagline": "Master the flow under pressure"
+      },
       "personality_profile_181": {},
       "personality_profile_182": {},
       "personality_profile_183": {},
