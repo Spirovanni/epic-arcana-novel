@@ -32976,7 +32976,180 @@
           "transformation_promise": "Integrity becomes a force multiplier—hearts align, courage compounds."
         }
       },
-      "personality_profile_153": {},
+      "personality_profile_153": {
+        "canonical_id": "EA-153",
+        "unique_identifier": "STG 4.3.4.1",
+        "specific_task_group_title": "Creative Idealism",
+        "all_chapter": 153,
+        "novel_book": 4,
+        "chapter": "Chapter 33",
+        "chapter_title": "Flight — Creative Idealism",
+        "type": "Specific Task Group",
+        "display_name": "Creative Idealism",
+        "theme": "Innovation in crisis propels collective transformation.",
+        "family": "Creativity / Vision — Innovation & Possibility",
+        "summary": "In the wake of his inner triumph and authentic awakening, Francisco dares to dream again and sketch bold new visions for cosmic transformation. His creative idealism allows him to imagine possibilities beyond the current cosmic order and begin planning for a future where free will and cosmic harmony can coexist.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Page",
+        "tarot_symbolism": "First light of a new feeling turned into possibility; curiosity becoming compassionate design.",
+        "color_alignment": {
+          "name": "Blue",
+          "hsl": "228,100%,50%",
+          "rgb_hex": "#0033FF",
+          "color_symbolism": "Open sky thinking—clarity, courage, and horizon-seeking imagination."
+        },
+        "traits": {
+          "strengths": [
+            "generates bold options under pressure",
+            "converts intuition into testable concepts",
+            "energizes teams with inspiring visions",
+            "prototypes rapidly and learns in public",
+            "frames constraints as creative fuel"
+          ],
+          "shadow": [
+            "idea volume outpaces execution capacity",
+            "romanticizes solutions without evidence",
+            "scope creep via endless ideation",
+            "aversion to pruning good ideas",
+            "neglects operational guardrails"
+          ],
+          "growth_focus": [
+            "pair each vision with a 1-page feasibility brief",
+            "time-box sprints and set kill criteria",
+            "balance ‘wild’ with ‘workable’ concepts",
+            "prototype with real users early",
+            "institutionalize retros to refine the vision loop"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 4, Chapter 33 — Scene XIII: Flight; preliminary beat: Break into 3. In the wake of triumph, the Prophet dares to dream again, sketching bold new visions to guide her people forward."
+        },
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—playful ideation deepened by disciplined inquiry."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.76,
+            "empathy": 0.80,
+            "openness": 0.92,
+            "orderliness": 0.62,
+            "novelty_seeking": 0.88,
+            "abstract_reasoning": 0.79,
+            "emotional_intensity": 0.56,
+            "social_dominance": 0.57,
+            "cooperativeness": 0.77,
+            "risk_tolerance": 0.64,
+            "conscientiousness": 0.72,
+            "adaptability": 0.83,
+            "imagination": 0.94
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "imagination": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1531","Q1532","Q1533","Q1534","Q1535","Q1536","Q1537","Q1538"],
+          "signals_map": {
+            "Q1531": { "dimension": "imagination", "polarity": 1, "content": "I can envision radically different futures under pressure." },
+            "Q1532": { "dimension": "openness", "polarity": 1, "content": "Unusual ideas excite me and I explore them quickly." },
+            "Q1533": { "dimension": "adaptability", "polarity": 1, "content": "I pivot gracefully when prototypes reveal new data." },
+            "Q1534": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate big ideas into concrete first steps." },
+            "Q1535": { "dimension": "novelty_seeking", "polarity": 1, "content": "I actively seek perspectives outside our domain." },
+            "Q1536": { "dimension": "risk_tolerance", "polarity": 1, "content": "I run small, reversible bets to test bold concepts." },
+            "Q1537": { "dimension": "empathy", "polarity": 1, "content": "I design with real people’s needs and limits in mind." },
+            "Q1538": { "dimension": "orderliness", "polarity": 1, "content": "I set criteria to prune even good ideas when they don’t fit." }
+          },
+          "daily_prompt": "What future do you dare to sketch today—and what is the smallest test that makes it real?",
+          "practices": [
+            "Run a 45-minute idea sprint: 10 wild, 3 workable, 1 to test.",
+            "Prototype the top idea within 24 hours; show it to 3 users.",
+            "Define kill/keep criteria before testing.",
+            "Hold weekly ‘show the messy middle’ reviews.",
+            "End each sprint with a vision-to-roadmap translation."
+          ],
+          "transformation_indicators": [
+            "Increased prototype-to-ship ratio",
+            "Faster cycle time from idea to validated learning",
+            "Higher cross-team engagement in ideation",
+            "Clearer pruning decisions against criteria",
+            "Momentum sustained through visible progress"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Break into 3",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Vision ignited; imagination moves into practical testing.",
+          "ordinary_world_baseline": "Narrow options and reactive planning.",
+          "call_to_adventure_preview": "Sketch boldly, test quickly, keep what works."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Creative Confidence",
+            "author": "Tom Kelley & David Kelley",
+            "section_of_focus": "Building Creative Muscle",
+            "section_description": "Methods to unlock and practice creativity in any context.",
+            "connection_focus_area": "Structured creativity fuels visionary breakthroughs.",
+            "connect_points": {
+              "point1": "Run rapid idea–generation workshops.",
+              "point2": "Prototype wild concepts quickly.",
+              "point3": "Normalize failure as learning."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a design sprint.",
+              "objective2": "Assess team creativity metrics.",
+              "objective3": "Iterate prototypes with user feedback."
+            }
+          },
+          "book2": {
+            "title": "The Artist's Way",
+            "author": "Julia Cameron",
+            "section_of_focus": "Morning Pages & Visioning",
+            "section_description": "Tools for tapping into creative intuition and vision.",
+            "connection_focus_area": "Daily creative practice sustains innovation.",
+            "connect_points": {
+              "point1": "Introduce morning journaling sessions.",
+              "point2": "Practice visualization exercises.",
+              "point3": "Share creative prompts in stand-ups."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement a team journaling ritual.",
+              "objective2": "Measure increases in creative output.",
+              "objective3": "Facilitate a shared vision board exercise."
+            }
+          },
+          "book3": {
+            "title": "Show Your Work!",
+            "author": "Austin Kleon",
+            "section_of_focus": "Process Transparency",
+            "section_description": "Principles for sharing creative process to build momentum.",
+            "connection_focus_area": "Visible process inspires collective engagement.",
+            "connect_points": {
+              "point1": "Post work-in-progress updates publicly.",
+              "point2": "Host open-studio review sessions.",
+              "point3": "Encourage peer feedback on early drafts."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a process-sharing workshop.",
+              "objective2": "Track engagement on shared updates.",
+              "objective3": "Document iterative improvements."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "With the first clear breaths of Flight, Francisco spreads sketches across the table—maps of what could be.",
+          "symbolic_moment": "A blue arc cuts the night, tracing a corridor to an unimagined dawn.",
+          "emotional_landscape": "Buoyant resolve, playful courage, disciplined hope.",
+          "threshold_vision": "Possibility becomes plan when it’s tested.",
+          "transformation_promise": "Imagination, guided by practice, remakes the world."
+        }
+      },
       "personality_profile_154": {},
       "personality_profile_155": {},
       "personality_profile_156": {},
