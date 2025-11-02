@@ -39014,7 +39014,205 @@
         "specific_task_group_description": "Embrace and learn from failures frequently to uncover hidden opportunities.",
         "specific_task_group_tagline": "Fail forward to succeed"
       },
-      "personality_profile_185": {},
+      "personality_profile_185": {
+        "canonical_id": "EA-185",
+        "unique_identifier": "STG 5.2.4.2",
+        "specific_task_group_title": "Fail Fast",
+        "all_chapter": 185,
+        "novel_book": 5,
+        "chapter": "Chapter 25",
+        "chapter_title": "Dedication (resolution) — Fail Fast",
+        "type": "Specific Task Group",
+        "display_name": "The Sprintwright",
+        "theme": "Rapid experiments turn confusion into clarity—speed plus learning beats perfection.",
+        "family": "Iteration — Experiments, Feedback & Optionality",
+    
+        "summary": "Building on hard-won failure wisdom, Francisco compresses his learning loops. He forms clear hypotheses, runs safe-to-fail tests, and discards what doesn’t work—freeing resources for what does. By prioritizing cycle time and evidence over ego, he accelerates progress through the most punishing stretch of the journey.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Two",
+    
+        "traits": {
+          "strengths": [
+            "forms crisp hypotheses tied to outcomes",
+            "ships lightweight prototypes quickly",
+            "measures leading indicators, not just lagging results",
+            "kills bad ideas without drama or delay",
+            "shares results transparently to multiply learning"
+          ],
+          "shadow": [
+            "confuses activity with validated learning",
+            "iterates endlessly without a decision gate",
+            "cuts discovery time too short for nuance",
+            "burns team with constant switches",
+            "optimizes locally and misses system effects"
+          ],
+          "growth_focus": [
+            "time-box tests and schedule decision points",
+            "define success criteria before starting",
+            "protect recovery space between sprints",
+            "pair rapid tests with system-mapping reviews",
+            "publish learnings in a repeatable template"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Dedication (resolution)",
+          "fiction_chapter_context": "Book 5, Chapter 25 — In Atonement with the Father, speed of learning becomes devotion in action."
+        },
+    
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—disciplined inquiry, data-first testing, steadier focus."
+        },
+    
+        "color_alignment": {
+          "name": "Deluge",
+          "hsl": "262,23%,54%",
+          "rgb_hex": "#826FA4",
+          "color_symbolism": "Storm turned to signal—clarity emerging from rapid cycles."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.68,
+            "empathy": 0.61,
+            "openness": 0.77,
+            "orderliness": 0.71,
+            "conscientiousness": 0.80,
+            "adaptability": 0.89,
+            "abstract_reasoning": 0.75,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.74,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "adaptability": 0.40,
+            "agency": 0.35,
+            "orderliness": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q1851",
+            "Q1852",
+            "Q1853",
+            "Q1854",
+            "Q1855",
+            "Q1856",
+            "Q1857",
+            "Q1858"
+          ],
+          "signals_map": {
+            "Q1851": { "dimension": "agency", "polarity": 1, "content": "I turn ideas into tests within 24 hours." },
+            "Q1852": { "dimension": "adaptability", "polarity": 1, "content": "I pivot immediately when data disproves my hypothesis." },
+            "Q1853": { "dimension": "orderliness", "polarity": 1, "content": "I predefine success metrics before any experiment." },
+            "Q1854": { "dimension": "conscientiousness", "polarity": 1, "content": "I document results in a standard format others can reuse." },
+            "Q1855": { "dimension": "risk_tolerance", "polarity": 1, "content": "I design safe-to-fail tests that expose truth quickly." },
+            "Q1856": { "dimension": "openness", "polarity": 1, "content": "I welcome evidence that contradicts my assumptions." },
+            "Q1857": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I extract generalizable principles from each test." },
+            "Q1858": { "dimension": "cooperativeness", "polarity": 1, "content": "I circulate learnings so others can skip redundant failures." }
+          },
+          "daily_prompt": "What hypothesis can you test today in one sprint—and what metric will tell you to continue, pivot, or kill it?",
+          "practices": [
+            "Hypothesis Card: If we do X, we expect Y metric to change by Z within N days.",
+            "One-Day MVP: prototype the smallest version that can falsify your idea.",
+            "Kill Switch: predefine the stop condition to prevent sunk-cost drift.",
+            "Sprint Debrief 10–10–10: 10 facts, 10 interpretations, 10 next tests.",
+            "Learning Ledger: a living log of experiments, metrics, and decisions."
+          ],
+          "transformation_indicators": [
+            "Shorter cycle time from idea to decision",
+            "Higher weekly count of completed experiments",
+            "Improved ratio of tested-to-rolled-out changes",
+            "Increased cross-team reuse of experiment learnings",
+            "Reduced spend on low-yield initiatives"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — Fail Fast",
+          "save_the_cat_beat": "Dedication (resolution)",
+          "character_state": "Ego-light, evidence-led; devoted to learning velocity.",
+          "ordinary_world_baseline": "Perfectionism, long cycles, low feedback.",
+          "call_to_adventure_preview": "Speed converts uncertainty into data and data into momentum."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Validated Learning",
+            "section_description": "Learning through rapid experiments",
+            "connection_focus_area": "Measure what matters",
+            "connect_points": {
+              "point1": "Formulate a clear hypothesis",
+              "point2": "Run a lean experiment",
+              "point3": "Analyze the outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a testable hypothesis",
+              "objective2": "Design and run one experiment",
+              "objective3": "Interpret experiment results"
+            }
+          },
+          "book2": {
+            "title": "Sprint",
+            "author": "Jake Knapp",
+            "section_of_focus": "Decide and Prototype",
+            "section_description": "Five-day process for rapid problem solving",
+            "connection_focus_area": "Rapid iteration",
+            "connect_points": {
+              "point1": "Map the critical challenge",
+              "point2": "Sketch solution ideas",
+              "point3": "Build a quick prototype"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Outline a sprint map",
+              "objective2": "Produce two solution sketches",
+              "objective3": "Create a functional prototype"
+            }
+          },
+          "book3": {
+            "title": "Fail Fast, Fail Often",
+            "author": "Ryan Babineaux & John Krumboltz",
+            "section_of_focus": "Designing Failure Into Your Plan",
+            "section_description": "Purposeful experimentation to minimize risk",
+            "connection_focus_area": "Safe-to-fail mindset",
+            "connect_points": {
+              "point1": "Plan a safe-to-fail experiment",
+              "point2": "Set quick reflection checkpoints",
+              "point3": "Iterate based on feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design one safe experiment",
+              "objective2": "Schedule two reflection points",
+              "objective3": "Adjust your plan post-experiment"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the edge of the Balance Wells, Francisco pins a crisis map to the bulkhead—five micro-tests queued, each with a pre-set kill switch.",
+          "symbolic_moment": "He snaps a chalk line across the deck: before this line—ideas; past it—evidence.",
+          "emotional_landscape": "Tight focus, clean urgency, calm conviction.",
+          "threshold_vision": "Speed to truth is the kindest path for everyone involved.",
+          "transformation_promise": "An alliance that learns faster than chaos can spread."
+        },
+    
+        "epic_novel_pages": "Page 361 - 375",
+        "epic_chapter_focus": "Dedication (resolution)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "focus_area": "Iteration",
+        "specific_task_group_description": "Rapidly test ideas and discard what doesn’t work to accelerate learning.",
+        "specific_task_group_tagline": "Speed up your failure cycle"
+      },
       "personality_profile_186": {},
       "personality_profile_187": {},
       "personality_profile_188": {},
