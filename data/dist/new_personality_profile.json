@@ -38218,7 +38218,205 @@
         "specific_task_group_description": "Harness inner equilibrium to navigate the greatest challenge yet, integrating all prior lessons.",
         "specific_task_group_tagline": "Master the flow under pressure"
       },
-      "personality_profile_181": {},
+      "personality_profile_181": {
+        "canonical_id": "EA-181",
+        "unique_identifier": "STG 5.2.3.2",
+        "specific_task_group_title": "Resolute Persuasion",
+        "all_chapter": 181,
+        "novel_book": 5,
+        "chapter": "Chapter 21",
+        "chapter_title": "Reversal (resolution) — Resolute Persuasion",
+        "type": "Specific Task Group",
+        "display_name": "The Conviction Courier",
+        "theme": "Turn hard-won insight into movement by speaking with clarity, care, and courage.",
+        "family": "Influence & Impact — Persuasion, Messaging & Trust",
+    
+        "summary": "Having earned cosmic insight through trial, Francisco learns to translate truth into change. He develops resolute persuasion—communication grounded in evidence, empathy, and unmistakable conviction—so even skeptical audiences feel safe enough to shift toward universal balance.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Five",
+    
+        "traits": {
+          "strengths": [
+            "frames complex truth simply and memorably",
+            "blends data with story to move hearts and minds",
+            "signals ethical intent and psychological safety",
+            "anticipates objections and addresses them directly",
+            "calls for commitment with calm authority"
+          ],
+          "shadow": [
+            "over-indexing on rhetoric over substance",
+            "pressuring agreement before trust is built",
+            "dismissing quiet dissent or fatigue signals",
+            "message drift when chasing consensus",
+            "performative conviction masking uncertainty"
+          ],
+          "growth_focus": [
+            "pair every claim with a checkable proof point",
+            "invite and summarize dissent before closing",
+            "use clear asks with optional on-ramps",
+            "separate persuasion session from decision moment",
+            "measure impact: changed behavior, not applause"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Reward",
+          "fiction_chapter_context": "Book 5, Chapter 21 — After the Supreme Ordeal, Francisco shares distilled truths that catalyze allies across systems."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—credible, principled commitment that builds collective trust."
+        },
+    
+        "color_alignment": {
+          "name": "Blue Diamond",
+          "hsl": "270,67%,31%",
+          "rgb_hex": "#4E1A82",
+          "color_symbolism": "Faceted clarity under pressure; depth that refracts light into guidance."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.74,
+            "empathy": 0.78,
+            "openness": 0.76,
+            "orderliness": 0.68,
+            "conscientiousness": 0.72,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.66,
+            "novelty_seeking": 0.61,
+            "imagination": 0.73
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "empathy": 0.30,
+            "cooperativeness": 0.35
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1811",
+            "Q1812",
+            "Q1813",
+            "Q1814",
+            "Q1815",
+            "Q1816",
+            "Q1817",
+            "Q1818"
+          ],
+          "signals_map": {
+            "Q1811": { "dimension": "agency", "polarity": 1, "content": "I make clear asks that translate belief into action." },
+            "Q1812": { "dimension": "empathy", "polarity": 1, "content": "I reflect skeptics’ concerns back before offering solutions." },
+            "Q1813": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect evidence to narrative so meaning is obvious." },
+            "Q1814": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite participation and give people dignified ways to opt in." },
+            "Q1815": { "dimension": "conscientiousness", "polarity": 1, "content": "I verify claims and cite sources when persuading." },
+            "Q1816": { "dimension": "stability", "polarity": 1, "content": "I keep tone steady and warm even under pushback." },
+            "Q1817": { "dimension": "openness", "polarity": 1, "content": "I adjust framing when feedback reveals a better path." },
+            "Q1818": { "dimension": "social_dominance", "polarity": 1, "content": "I hold the frame without steamrolling the room." }
+          },
+          "daily_prompt": "Which single belief shift would most unlock momentum today—and what clear, ethical ask will you make to spark it?",
+          "practices": [
+            "SUCCESs Pass: rewrite your message to be Simple, Unexpected, Concrete, Credible, Emotional, Story-driven.",
+            "Proof-Point Pairing: attach one checkable evidence item to each claim.",
+            "Objection Map: list top 5 objections; pre-answer each in one sentence.",
+            "Public Commitment: invite a small, visible next step (sign-up, pilot, pledge).",
+            "Echo Log: track phrasing others repeat—keep what sticks, refine what doesn’t."
+          ],
+          "transformation_indicators": [
+            "Increase in voluntary commitments post-briefing",
+            "Higher message recall at 48–72 hours",
+            "Rise in cross-group endorsements of the vision",
+            "Reduction in repeated objections over time",
+            "Measured behavior change aligned to the ask"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Reward — Resolute Persuasion",
+          "save_the_cat_beat": "Reversal (resolution)",
+          "character_state": "Conviction tempered by humility; truth communicated as service.",
+          "ordinary_world_baseline": "Insight held privately; change dependent on force or authority.",
+          "call_to_adventure_preview": "When truth is offered with care, resistance becomes curiosity."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Influence",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Reciprocity & Commitment",
+            "section_description": "Principles that drive persuasion.",
+            "connection_focus_area": "Ethical influence",
+            "connect_points": {
+              "point1": "Craft a clear ask",
+              "point2": "Offer genuine value first",
+              "point3": "Reinforce commitment publicly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a persuasive request",
+              "objective2": "Identify value you can offer",
+              "objective3": "Practice delivery in role-play"
+            }
+          },
+          "book2": {
+            "title": "Made to Stick",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "SUCCESs Framework",
+            "section_description": "How to make ideas stick: Simple, Unexpected, Concrete...",
+            "connection_focus_area": "Crafting memorable messages",
+            "connect_points": {
+              "point1": "Simplify your core message",
+              "point2": "Add an unexpected twist",
+              "point3": "Use concrete examples"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a one-sentence pitch",
+              "objective2": "Insert one surprise element",
+              "objective3": "Develop a vivid example"
+            }
+          },
+          "book3": {
+            "title": "Pitch Anything",
+            "author": "Oren Klaff",
+            "section_of_focus": "Frame Control",
+            "section_description": "Managing context to engage audiences.",
+            "connection_focus_area": "Shaping perceptions",
+            "connect_points": {
+              "point1": "Identify your dominant frame",
+              "point2": "Counter potential resistance frames",
+              "point3": "Maintain control throughout"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your pitch frame",
+              "objective2": "List two resistance frames",
+              "objective3": "Rehearse frame transitions"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Before a ring of doubtful envoys, Francisco lays out the cost of inaction and the grace of a shared path forward—no thunder, just undeniable clarity.",
+          "symbolic_moment": "He places a resonant shard on the table; when he speaks truth plainly, it hums—amplifying voices that align with balance.",
+          "emotional_landscape": "Earned humility, steady conviction, invitational warmth.",
+          "threshold_vision": "Truth voiced with care travels farther than force.",
+          "transformation_promise": "A chorus of allied worlds begins with one clear note sung sincerely."
+        },
+    
+        "epic_novel_pages": "Page 301 - 315",
+        "epic_chapter_focus": "Reversal (resolution)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "focus_area": "Influence & Impact",
+        "specific_task_group_description": "Convert hard-won insights into persuasive communication that inspires others.",
+        "specific_task_group_tagline": "Lead with conviction"
+      },
       "personality_profile_182": {},
       "personality_profile_183": {},
       "personality_profile_184": {},
