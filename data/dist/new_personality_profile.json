@@ -37400,7 +37400,227 @@
         "specific_task_group_tagline": "Keep them guessing"
         
       },
-      "personality_profile_177": {},
+      "personality_profile_177": {
+        "canonical_id": "EA-177",
+        "unique_identifier": "STG 5.2.2.1",
+        "specific_task_group_title": "Inspire Others’ Potential",
+        "all_chapter": 177,
+        "novel_book": 5,
+        "chapter": "Chapter 17",
+        "chapter_title": "Old World Contrast (Resolution) — Inspire Others’ Potential",
+        "type": "Specific Task Group",
+        "display_name": "The Spark-Bringer",
+        "theme": "Great leaders multiply capacity by spotting strengths, creating safety, and giving talent oxygen to burn brighter.",
+        "family": "Influence & Motivation — Intrinsic Drive & Talent Uplift",
+        "summary": "As Francisco approaches the most challenging corridors of guardianship, he shifts from lone actor to strength-finder. By reading intrinsic motives, building a Circle of Safety, and designing stretch moments, he turns allies into engines—transforming potential into reliable performance and culture into a multiplier.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "notices latent strengths others overlook",
+            "matches missions to intrinsic motives",
+            "creates psychological safety for stretch attempts",
+            "designs clear, energizing growth paths",
+            "celebrates learning signals, not just outcomes"
+          ],
+          "shadow": [
+            "overcoaches and removes healthy struggle",
+            "plays favorites with visibly high performers",
+            "sets stretch without scaffolding",
+            "confuses charisma with true empowerment",
+            "burns out from being everyone’s battery"
+          ],
+          "growth_focus": [
+            "balance support with accountability",
+            "diagnose motive before assigning work",
+            "protect quiet talent from being overshadowed",
+            "codify rituals so inspiration scales",
+            "train peers to multiply, not just admire"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Approach to the Innermost Cave",
+          "fiction_chapter_context": "Book 5, Chapter 17 — On the Road of Trials, Francisco learns to unlock the gifts of those around him."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 2—service, attunement, and sustainable pacing over image."
+        },
+        "color_alignment": {
+          "name": "Medium Purple",
+          "hsl": "270,100%,68%",
+          "rgb_hex": "#AD5CFF",
+          "color_symbolism": "First spark—ignition of purpose and shared momentum."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.72,
+            "empathy": 0.91,
+            "openness": 0.83,
+            "orderliness": 0.67,
+            "conscientiousness": 0.78,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.71,
+            "social_dominance": 0.64,
+            "novelty_seeking": 0.66,
+            "imagination": 0.81
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "cooperativeness": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1771",
+            "Q1772",
+            "Q1773",
+            "Q1774",
+            "Q1775",
+            "Q1776",
+            "Q1777",
+            "Q1778"
+          ],
+          "signals_map": {
+            "Q1771": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I can quickly sense what intrinsically motivates each teammate."
+            },
+            "Q1772": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I design roles so strengths complement rather than compete."
+            },
+            "Q1773": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I invite experiments that let hidden talent surface."
+            },
+            "Q1774": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I turn inspiration into clear stretch goals and support."
+            },
+            "Q1775": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I remain steady while others learn in public."
+            },
+            "Q1776": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I transfer ownership so growth belongs to the person, not me."
+            },
+            "Q1777": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I map potential to opportunities that advance the mission."
+            },
+            "Q1778": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I codify simple rituals so inspiration scales across teams."
+            }
+          },
+          "daily_prompt": "Whose quiet strength will you surface today—and what small, specific stage will you build so it can shine?",
+          "practices": [
+            "Motive Interview: 10 minutes to ask what energizes/drains and why.",
+            "Strengths Map: chart talents → matching missions with time boxes.",
+            "Two-Step Stretch: assign a 1st safe rep, then a 2nd public rep.",
+            "Spotlight Ladder: rotate praise to protect quiet contributors.",
+            "Ownership Transfer: write the goal as the teammate’s statement of intent."
+          ],
+          "transformation_indicators": [
+            "Rise in self-reported role fit and energy",
+            "Higher rate of successful stretch assignments",
+            "Broader distribution of recognition across the team",
+            "More peer-initiated mentoring moments",
+            "Reduced dependency on the leader for momentum"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Approach to the Innermost Cave",
+          "preliminary_beat": "Old World Contrast (Resolution) — Inspire Others’ Potential",
+          "save_the_cat_beat": "Old world contrast (resolution)",
+          "character_state": "From solo power to multiplier mindset; safety and stretch coexist.",
+          "ordinary_world_baseline": "Talent underused; wins depend on the few.",
+          "call_to_adventure_preview": "Multiplying others expands the force more than maximizing self."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Intrinsic Motivation",
+            "section_description": "What truly motivates people beyond external rewards.",
+            "connection_focus_area": "Tapping intrinsic drives",
+            "connect_points": {
+              "point1": "Identify one intrinsic motivator for each team member",
+              "point2": "Match tasks to those motivators",
+              "point3": "Create an environment that supports autonomy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three intrinsic motivators on your team",
+              "objective2": "Redesign one task to align with those motivators",
+              "objective3": "Measure engagement before and after"
+            }
+          },
+          "book2": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety",
+            "section_description": "Building trust to empower others.",
+            "connection_focus_area": "Fostering secure teams",
+            "connect_points": {
+              "point1": "Identify one fear your team holds",
+              "point2": "Design a ritual to reduce that fear",
+              "point3": "Observe changes in collaboration"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement one trust-building exercise",
+              "objective2": "Gather feedback on team morale",
+              "objective3": "Adjust practice based on feedback"
+            }
+          },
+          "book3": {
+            "title": "Multipliers",
+            "author": "Liz Wiseman",
+            "section_of_focus": "The Multiplier Effect",
+            "section_description": "How great leaders amplify the intelligence of those around them.",
+            "connection_focus_area": "Amplifying talent",
+            "connect_points": {
+              "point1": "Spot one hidden talent in your team",
+              "point2": "Create a project to showcase it",
+              "point3": "Reflect on the outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify two hidden talents",
+              "objective2": "Design a mini-project for one",
+              "objective3": "Debrief lessons learned"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a dim chamber of the Trials Road, Francisco reads the life-force signatures of his companions and quietly rearranges roles so each person’s spark meets its best fuel.",
+          "symbolic_moment": "He plants a single violet ember in a cold brazier; it flares only when others cup their hands around it.",
+          "emotional_landscape": "Attentive calm, earned confidence, contagious belief.",
+          "threshold_vision": "Potential turns kinetic when safety, stretch, and stewardship align.",
+          "transformation_promise": "A team that learns to multiply itself cannot be outlasted."
+        },
+        "epic_novel_pages": "Page 241 - 255",
+        "epic_chapter_focus": "Old world contrast (resolution)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "focus_area": "Influence & Motivation",
+        "specific_task_group_description": "Learn to galvanize your allies by recognizing and nurturing their unique strengths.",
+        "specific_task_group_tagline": "Ignite the spark in your team"
+      },
       "personality_profile_178": {},
       "personality_profile_179": {},
       "personality_profile_180": {},
