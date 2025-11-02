@@ -38417,7 +38417,205 @@
         "specific_task_group_description": "Convert hard-won insights into persuasive communication that inspires others.",
         "specific_task_group_tagline": "Lead with conviction"
       },
-      "personality_profile_182": {},
+      "personality_profile_182": {
+        "canonical_id": "EA-182",
+        "unique_identifier": "STG 5.2.3.3",
+        "specific_task_group_title": "Self-Control",
+        "all_chapter": 182,
+        "novel_book": 5,
+        "chapter": "Chapter 22",
+        "chapter_title": "Reaction (set-up) — Self-Control",
+        "type": "Specific Task Group",
+        "display_name": "The Inner Helm",
+        "theme": "When success arrives, the true test begins: govern your impulses so wisdom can steer the win.",
+        "family": "Emotional Mastery — Self-Regulation, Discipline & Calm",
+    
+        "summary": "As recognition and momentum build, Francisco practices ruling himself before ruling outcomes. Self-control—steady breath, clear boundaries, disciplined habits—keeps power from bending purpose. By mastering his inner state, he preserves clarity, resists tempting shortcuts, and holds space for wiser leadership.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "King",
+    
+        "traits": {
+          "strengths": [
+            "keeps composure under praise or pressure",
+            "sets clean boundaries that protect focus",
+            "translates emotion into deliberate action",
+            "designs routines that conserve willpower",
+            "recovers quickly after internal spikes"
+          ],
+          "shadow": [
+            "overcontrol that stifles spontaneity",
+            "emotional suppression masquerading as calm",
+            "rigidity when plans need adaptation",
+            "fatigue from constant self-monitoring",
+            "withholding needs until burnout"
+          ],
+          "growth_focus": [
+            "name the feeling before you choose the action",
+            "pair discipline with recovery windows",
+            "replace suppression with skillful expression",
+            "use pre-commitments for known weak spots",
+            "track energy, not just output"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Reward",
+          "fiction_chapter_context": "Book 5, Chapter 22 — In the wake of achievement, Francisco steadies himself through practiced self-regulation so success does not unseat purpose."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—disciplined joy: structure that makes room for healthy spontaneity."
+        },
+    
+        "color_alignment": {
+          "name": "Christalle",
+          "hsl": "270,66%,25%",
+          "rgb_hex": "#3E1568",
+          "color_symbolism": "Royal composure in shadow—inner sovereignty that keeps power aligned."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.88,
+            "empathy": 0.70,
+            "openness": 0.68,
+            "orderliness": 0.82,
+            "conscientiousness": 0.86,
+            "adaptability": 0.73,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.55,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1821",
+            "Q1822",
+            "Q1823",
+            "Q1824",
+            "Q1825",
+            "Q1826",
+            "Q1827",
+            "Q1828"
+          ],
+          "signals_map": {
+            "Q1821": { "dimension": "stability", "polarity": 1, "content": "I can stay composed when praise or pressure spikes." },
+            "Q1822": { "dimension": "conscientiousness", "polarity": 1, "content": "I use routines that protect focus and energy." },
+            "Q1823": { "dimension": "agency", "polarity": 1, "content": "I choose responses instead of reacting to feelings." },
+            "Q1824": { "dimension": "orderliness", "polarity": 1, "content": "I set clear boundaries and honor them consistently." },
+            "Q1825": { "dimension": "adaptability", "polarity": 1, "content": "I adjust plans without abandoning principles." },
+            "Q1826": { "dimension": "empathy", "polarity": 1, "content": "I express needs cleanly rather than bottling them up." },
+            "Q1827": { "dimension": "emotional_intensity", "polarity": -1, "content": "I rarely let spikes of emotion steer the day." },
+            "Q1828": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid tempting shortcuts that compromise long-term aims." }
+          },
+          "daily_prompt": "Where will you trade impulse for intention today—and what tiny ritual will make the intentional choice easier?",
+          "practices": [
+            "90-Second Name & Breathe: label the feeling; exhale twice; then act.",
+            "Keystone Habit Anchor: tie one stabilizing habit to a fixed cue (wake, lunch, shutdown).",
+            "Temptation Pre-Plan: write the ‘if-then’ for your top trigger before it appears.",
+            "Energy Ledger: log one energizer and one drainer daily; adjust tomorrow’s plan.",
+            "Boundary Rehearsal: script and practice one sentence that protects your focus."
+          ],
+          "transformation_indicators": [
+            "Shorter emotional recovery time after spikes",
+            "Higher adherence to pre-committed routines",
+            "Decline in impulse-driven reversals",
+            "Improved energy stability across the week",
+            "Peer reports of steadier presence under stress"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Reward — Self-Control",
+          "save_the_cat_beat": "Reaction (set-up)",
+          "character_state": "Composed, intentional, untempted by shortcuts.",
+          "ordinary_world_baseline": "Success easily tips into ego, impulse, or drift.",
+          "call_to_adventure_preview": "Rule yourself and success becomes safe to scale."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Self-Regulation",
+            "section_description": "Managing one’s internal states and impulses.",
+            "connection_focus_area": "Sustaining calm under success",
+            "connect_points": {
+              "point1": "Identify emotional triggers",
+              "point2": "Practice breathing techniques",
+              "point3": "Set daily regulation routines"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your top three triggers",
+              "objective2": "Demonstrate one breathing technique",
+              "objective3": "Log daily emotional check-ins"
+            }
+          },
+          "book2": {
+            "title": "Willpower",
+            "author": "Roy F. Baumeister & John Tierney",
+            "section_of_focus": "Strength Model",
+            "section_description": "Understanding willpower as a finite resource.",
+            "connection_focus_area": "Preserving willpower",
+            "connect_points": {
+              "point1": "Plan for high-willpower tasks early",
+              "point2": "Use routines to conserve energy",
+              "point3": "Monitor depletion signals"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Schedule one tough task pre-lunch",
+              "objective2": "Define two conserving routines",
+              "objective3": "Track willpower over a week"
+            }
+          },
+          "book3": {
+            "title": "The Power of Habit",
+            "author": "Charles Duhigg",
+            "section_of_focus": "Keystone Habits",
+            "section_description": "How habits shape self-control.",
+            "connection_focus_area": "Building supportive routines",
+            "connect_points": {
+              "point1": "Identify one keystone habit",
+              "point2": "Implement habit cue and reward",
+              "point3": "Measure habit consistency"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one keystone habit",
+              "objective2": "Design cue–routine–reward loop",
+              "objective3": "Evaluate habit after five days"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Applause ripples through the star-hall. Francisco inhales once, lets it pass through him, and returns his attention to the quiet readouts no one else is watching.",
+          "symbolic_moment": "He sets a silver ring—etched with a single line—on the console. The line is a boundary; the hum underneath it is choice.",
+          "emotional_landscape": "Sober gratitude, poised restraint, lucid care.",
+          "threshold_vision": "Power without self-command dissolves the mission; power with self-command deepens trust.",
+          "transformation_promise": "Because he governs himself, others can relax into the work that matters."
+        },
+    
+        "epic_novel_pages": "Page 316 - 330",
+        "epic_chapter_focus": "Reaction (set-up)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "focus_area": "Emotional Mastery",
+        "specific_task_group_description": "Cultivate inner discipline to maintain composure and clarity when success arrives.",
+        "specific_task_group_tagline": "Lead yourself before leading others"
+      },
       "personality_profile_183": {},
       "personality_profile_184": {},
       "personality_profile_185": {},
