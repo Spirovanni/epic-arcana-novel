@@ -34544,7 +34544,180 @@
           "transformation_promise": "From a clear baseline, the first true signal will guide the first right move."
         }
       },
-      "personality_profile_162": {},
+      "personality_profile_162": {
+        "canonical_id": "EA-162",
+        "unique_identifier": "STG 5.1.1.2",
+        "specific_task_group_title": "Confirmation",
+        "all_chapter": 162,
+        "novel_book": 5,
+        "chapter": "Chapter 2",
+        "chapter_title": "The Call to Adventure — Confirmation",
+        "type": "Specific Task Group",
+        "display_name": "Confirmation",
+        "theme": "Solidify your decision to embark and gather initial support.",
+        "family": "Commitment / Courage — Decision & Momentum",
+        "summary": "Francisco receives confirmation of his new cosmic role when the Universal Life Force Council approaches him with an urgent mission. Reality's life force networks are becoming unstable, threatening all living beings across timelines. Francisco must commit to his journey as Lord of the Forces of Life and gather initial support from cosmic entities who understand the gravity of the situation.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Queen",
+        "tarot_symbolism": "Clear-eyed resolve—naming the task and committing to act.",
+        "color_alignment": {
+          "name": "Scampi",
+          "hsl": "240,20%,50%",
+          "rgb_hex": "#666699",
+          "color_symbolism": "Steady courage—cool focus at the moment of choice."
+        },
+        "traits": {
+          "strengths": [
+            "recognizes the catalytic moment and commits",
+            "states stakes and desired outcomes clearly",
+            "rallies initial allies and resources fast",
+            "converts fear into structured next steps",
+            "signals intent publicly to build momentum"
+          ],
+          "shadow": [
+            "hesitation masked as ‘more info needed’",
+            "seeking universal buy-in before moving",
+            "over-reliance on external validation",
+            "premature commitments without boundaries",
+            "underestimating support systems required"
+          ],
+          "growth_focus": [
+            "define a clear go/no-go criterion and decide",
+            "name one fear and one counter-action",
+            "secure two allies and one mentor",
+            "publish a 30–60–90 day intent outline",
+            "set ‘review & recommit’ checkpoints"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Forces of Life",
+          "chapter_theme": "Inciting Incident",
+          "fiction_chapter_context": "Book 5, Chapter 2 — Scene I: The Ordinary World; Opening Image → Inciting Incident. The Life Force Council arrives, and Francisco chooses to step forward."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 3—courageous commitment expressed as decisive movement and coalition-building."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.80,
+            "empathy": 0.70,
+            "openness": 0.78,
+            "orderliness": 0.74,
+            "conscientiousness": 0.83,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.81,
+            "risk_tolerance": 0.64,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.61,
+            "imagination": 0.73
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "stability": 0.30,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1621","Q1622","Q1623","Q1624","Q1625","Q1626","Q1627","Q1628"],
+          "signals_map": {
+            "Q1621": { "dimension": "agency", "polarity": 1, "content": "I commit in writing when the stakes are clear." },
+            "Q1622": { "dimension": "stability", "polarity": 1, "content": "I stay steady after deciding, even as uncertainty rises." },
+            "Q1623": { "dimension": "cooperativeness", "polarity": 1, "content": "I enlist two allies immediately and define roles." },
+            "Q1624": { "dimension": "risk_tolerance", "polarity": 1, "content": "I will take one visible risk to signal intent." },
+            "Q1625": { "dimension": "conscientiousness", "polarity": 1, "content": "I map first steps with owners and timelines." },
+            "Q1626": { "dimension": "openness", "polarity": 1, "content": "I invite dissent before finalizing my decision." },
+            "Q1627": { "dimension": "adaptability", "polarity": 1, "content": "I adjust the plan without abandoning the commitment." },
+            "Q1628": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I articulate the why, the stakes, and the success criteria." }
+          },
+          "daily_prompt": "What public commitment will you make today—and which two allies will you enroll to keep it real?",
+          "practices": [
+            "Decision memo: why, stakes, first moves, review date.",
+            "Ally triad: mentor + peer + implementer with clear asks.",
+            "Fear-to-step mapping: fear → counter-behavior → trigger.",
+            "30–60–90 intent outline with success signals.",
+            "Weekly recommit ritual: refine plan, reaffirm purpose."
+          ],
+          "transformation_indicators": [
+            "Reduced time from clarity → commitment",
+            "Higher follow-through on first 30-day actions",
+            "Documented ally engagements and role clarity",
+            "Fewer post-decision reversals",
+            "Clear external signals of progress and buy-in"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Opening Image → Inciting Incident",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Choice embraced; intention declared.",
+          "ordinary_world_baseline": "Potential without pledge; hesitation at the edge.",
+          "call_to_adventure_preview": "Commitment converts possibility into path."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero’s first step beyond the familiar world",
+            "connection_focus_area": "Making the leap",
+            "connect_points": {
+              "point1": "Recognize the moment of choice",
+              "point2": "Understand the stakes",
+              "point3": "Decide to move forward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe what prompted the decision",
+              "objective2": "List potential allies",
+              "objective3": "State your personal call to adventure"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Taking Risks",
+            "section_description": "How to push past hesitation in leadership",
+            "connection_focus_area": "Overcoming self-doubt",
+            "connect_points": {
+              "point1": "Identify a fear holding you back",
+              "point2": "Outline steps to confront it",
+              "point3": "Enlist a mentor or peer support"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one risk you will take",
+              "objective2": "Plan a support system",
+              "objective3": "Share intention publicly"
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "The power of showing up and being seen",
+            "connection_focus_area": "Building courage",
+            "connect_points": {
+              "point1": "Acknowledge vulnerability",
+              "point2": "Set boundaries",
+              "point3": "Practice courageous conversations"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal a vulnerability you’ll face",
+              "objective2": "Set one boundary",
+              "objective3": "Have one honest dialogue"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Life Force Council chambers, constellations bend toward Francisco as a summons crystallizes into charge.",
+          "symbolic_moment": "A cool violet seal marks his acceptance; allies step from the periphery.",
+          "emotional_landscape": "Shock resolving into courage; clarity cutting through noise.",
+          "threshold_vision": "Commitment draws resources and reshapes reality.",
+          "transformation_promise": "From this pledge, a network of guardians will rise."
+        }
+      },
       "personality_profile_163": {},
       "personality_profile_164": {},
       "personality_profile_165": {},
