@@ -32802,7 +32802,180 @@
           "transformation_promise": "Calm does not slow the mission—it sharpens it."
         }
       },
-      "personality_profile_152": {},
+      "personality_profile_152": {
+        "canonical_id": "EA-152",
+        "unique_identifier": "STG 4.3.3.3",
+        "specific_task_group_title": "Follow Your Heart",
+        "all_chapter": 152,
+        "novel_book": 4,
+        "chapter": "Chapter 32",
+        "chapter_title": "The Ultimate Boon — Follow Your Heart",
+        "type": "Specific Task Group",
+        "display_name": "Follow Your Heart",
+        "theme": "Leading with authenticity inspires trust and galvanizes collective purpose.",
+        "family": "Authenticity / Purpose — Values & Vision",
+        "summary": "Renewed by his cultivation of inner calm and clarity, Francisco learns to make decisions aligned with his deepest values and authentic vision rather than external pressures or expectations. This practice of following his heart becomes the ultimate boon that allows him to act with integrity even in cosmic-scale situations.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Knight",
+        "tarot_symbolism": "Devotion in motion—values carried forward as courageous service.",
+        "color_alignment": {
+          "name": "Royal Blue",
+          "hsl": "225,100%,60%",
+          "rgb_hex": "#3366FF",
+          "color_symbolism": "Nobility of purpose; a clarion hue that rallies conviction."
+        },
+        "traits": {
+          "strengths": [
+            "clarifies personal and team values",
+            "chooses integrity over convenience",
+            "communicates purpose that energizes others",
+            "aligns projects and incentives to the why",
+            "models courage with compassionate transparency"
+          ],
+          "shadow": [
+            "idealism that ignores constraints",
+            "confuses impulse with intuition",
+            "over-personalizes disagreement",
+            "purpose talk without measurable alignment",
+            "fatigue from constant value-guardianship"
+          ],
+          "growth_focus": [
+            "pair intuition with evidence and peer checks",
+            "define ‘non-negotiables’ and trade-space explicitly",
+            "translate values into 3 concrete behaviors per quarter",
+            "publish alignment metrics and review monthly",
+            "practice small courageous acts daily"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 4, Chapter 32 — Scene XII: The Ultimate Boon; preliminary beat: Break into 3. Renewed by calm and connection, the Prophet chooses actions aligned with her deepest values and vision."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—authentic feeling crystallized into principled action."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.84,
+            "empathy": 0.88,
+            "openness": 0.82,
+            "orderliness": 0.71,
+            "conscientiousness": 0.80,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.83,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.66,
+            "imagination": 0.77
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "agency": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1521","Q1522","Q1523","Q1524","Q1525","Q1526","Q1527","Q1528"],
+          "signals_map": {
+            "Q1521": { "dimension": "agency", "polarity": 1, "content": "I choose the values-aligned path even when it is harder." },
+            "Q1522": { "dimension": "empathy", "polarity": 1, "content": "I consider how my purpose impacts others’ needs and dignity." },
+            "Q1523": { "dimension": "openness", "polarity": 1, "content": "I invite critique of my purpose and adapt without losing integrity." },
+            "Q1524": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate values into specific, trackable behaviors." },
+            "Q1525": { "dimension": "orderliness", "polarity": 1, "content": "I align incentives and rituals to reinforce our why." },
+            "Q1526": { "dimension": "risk_tolerance", "polarity": 1, "content": "I take principled risks when they serve our mission." },
+            "Q1527": { "dimension": "cooperativeness", "polarity": 1, "content": "I co-create purpose statements and decisions with the team." },
+            "Q1528": { "dimension": "stability", "polarity": 1, "content": "I stay steady when purpose-led choices face resistance." }
+          },
+          "daily_prompt": "Where will you act on your values today—specifically, what will you say or build that proves it?",
+          "practices": [
+            "Write a one-page ‘why → behaviors → metrics’ sheet; review weekly.",
+            "Run a 30-minute purpose alignment audit on one active project.",
+            "Establish two integrity guardrails (what we won’t do) for the quarter.",
+            "Host a ‘story of purpose’ round in the next team meeting.",
+            "End each day by logging one values-aligned action taken."
+          ],
+          "transformation_indicators": [
+            "Higher trust and engagement scores",
+            "Greater alignment of projects to stated purpose",
+            "Reduced value-incongruent decisions",
+            "Increase in principled risk-taking that pays off",
+            "Improved retention among purpose-motivated members"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Break into 3",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Values clarified; heart-led action begins.",
+          "ordinary_world_baseline": "Externally driven choices and diffuse conviction.",
+          "call_to_adventure_preview": "When heart and role align, leadership becomes invitation, not imposition."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "Clarifying Purpose",
+            "section_description": "Techniques to discover and communicate your core why.",
+            "connection_focus_area": "A clear why energizes authentic leadership.",
+            "connect_points": {
+              "point1": "Run a purpose-discovery workshop.",
+              "point2": "Draft personal and team mission statements.",
+              "point3": "Align projects to stated why."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a why-statement session.",
+              "objective2": "Measure alignment of projects to purpose.",
+              "objective3": "Track engagement metrics post-clarification."
+            }
+          },
+          "book2": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Autonomy, Mastery, Purpose",
+            "section_description": "Explores what truly motivates people and how to lead accordingly.",
+            "connection_focus_area": "Purpose-driven motivation fuels authentic followership.",
+            "connect_points": {
+              "point1": "Design autonomy-supportive tasks.",
+              "point2": "Create mastery-building learning paths.",
+              "point3": "Integrate purpose reminders into daily rituals."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Set up autonomy pilots.",
+              "objective2": "Track skill mastery progress.",
+              "objective3": "Survey sense-of-purpose ratings."
+            }
+          },
+          "book3": {
+            "title": "True North",
+            "author": "Bill George",
+            "section_of_focus": "Authentic Leadership Development",
+            "section_description": "Framework for building trust and purpose through self-awareness.",
+            "connection_focus_area": "Self-awareness and integrity anchor authenticity.",
+            "connect_points": {
+              "point1": "Lead a values inventory exercise.",
+              "point2": "Practice integrity-based decision scenarios.",
+              "point3": "Mentor others in authentic leadership practices."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a values-clarification workshop.",
+              "objective2": "Evaluate integrity in team decisions.",
+              "objective3": "Track trust-index improvements."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "With calm restored and the circle rejoined, Francisco turns toward the one act only he can choose.",
+          "symbolic_moment": "He etches his true north into the bracer; the sigil warms as the path brightens.",
+          "emotional_landscape": "Conviction, tenderness, fearless clarity.",
+          "threshold_vision": "When purpose leads, power serves.",
+          "transformation_promise": "Integrity becomes a force multiplier—hearts align, courage compounds."
+        }
+      },
       "personality_profile_153": {},
       "personality_profile_154": {},
       "personality_profile_155": {},
