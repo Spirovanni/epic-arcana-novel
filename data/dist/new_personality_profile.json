@@ -35834,7 +35834,198 @@
         "specific_task_group_description": "Learn to assess obstacles flexibly and adjust your strategy.",
         "specific_task_group_tagline": "Think on your feet"
       },
-      "personality_profile_169": {},
+      "personality_profile_169": {
+        "canonical_id": "EA-169",
+        "unique_identifier": "STG 5.1.3.3",
+        "specific_task_group_title": "Collective Competence",
+        "all_chapter": 169,
+        "novel_book": 5,
+        "chapter": "Chapter 9",
+        "chapter_title": "Refusal of the Call — Collective Competence",
+        "type": "Specific Task Group",
+        "display_name": "The Ensemble Engine",
+        "theme": "Trust, shared context, and explicit ownership convert hesitant individuals into a confident unit.",
+        "family": "Teamwork — Trust, Role Clarity & Cross-Functional Execution",
+    
+        "summary": "When doubt tempts the lone hero model, Francisco learns to harness the power of the ensemble. By building trust, sharing context, and making ownership explicit, he orchestrates a team that moves as one—turning hesitation into coordinated momentum that no single guardian could sustain alone.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "establishes psychological safety and candid norms",
+            "clarifies roles, DRIs, and handoff criteria",
+            "runs crisp huddles and transparent status loops",
+            "invites dissent and integrates diverse inputs",
+            "maps interdependencies and removes blockers fast"
+          ],
+          "shadow": [
+            "consensus paralysis when decisions need a decider",
+            "overmeeting that drains execution energy",
+            "diffusion of responsibility at critical handoffs",
+            "conflict avoidance that hides real issues",
+            "groupthink that suppresses novel solutions"
+          ],
+          "growth_focus": [
+            "name a clear decider (DACI/RACI) for each decision",
+            "timebox alignment; bias to action after the window closes",
+            "institutionalize productive dissent before commitment",
+            "audit handoffs; add checklists to failure points",
+            "cross-train to reduce single-point-of-failure risk"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Refusal of the Call",
+          "fiction_chapter_context": "Book 5, Chapter 9 — In the Refusal debate, Francisco replaces solo strain with coordinated strength."
+        },
+    
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—steadiness, trust-building, and calming cohesion under pressure."
+        },
+    
+        "color_alignment": {
+          "name": "Navy",
+          "hsl": "240,100%,20%",
+          "rgb_hex": "#000066",
+          "color_symbolism": "Deep reliability—quiet strength that holds a formation together."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.65,
+            "stability": 0.77,
+            "empathy": 0.82,
+            "openness": 0.78,
+            "orderliness": 0.73,
+            "conscientiousness": 0.79,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.76,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.60,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "conscientiousness": 0.30,
+            "stability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1691","Q1692","Q1693","Q1694","Q1695","Q1696","Q1697","Q1698"
+          ],
+          "signals_map": {
+            "Q1691": { "dimension": "cooperativeness", "polarity": 1, "content": "I share context early so others can act without waiting on me." },
+            "Q1692": { "dimension": "conscientiousness", "polarity": 1, "content": "I document clear owners (DRIs) and deadlines for every deliverable." },
+            "Q1693": { "dimension": "stability", "polarity": 1, "content": "I keep discussions calm and focused when tensions rise." },
+            "Q1694": { "dimension": "orderliness", "polarity": 1, "content": "Our handoffs follow a checklist to prevent drop-offs." },
+            "Q1695": { "dimension": "openness", "polarity": 1, "content": "I solicit dissenting views before we commit." },
+            "Q1696": { "dimension": "agency", "polarity": 1, "content": "When timebox ends, I make or escalate the decision." },
+            "Q1697": { "dimension": "adaptability", "polarity": 1, "content": "We reassign work quickly when priorities shift." },
+            "Q1698": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map interdependencies so we can sequence work correctly." }
+          },
+          "daily_prompt": "Which interdependency needs coordination today—and who is the explicit owner to move it now?",
+          "practices": [
+            "5-Minute Huddle: priorities, blockers, ownership—nothing more.",
+            "RACI/DACI Card: name decider, approvers, contributors, informed.",
+            "Handoff Checklist: define 'ready' criteria and acceptance tests.",
+            "Open Context Note: living doc with risks, decisions, and why.",
+            "Dissent First: one round where the team must surface disagreements before commit."
+          ],
+          "transformation_indicators": [
+            "Fewer handoff defects and rework loops",
+            "Blockers resolved within 24 hours of surfacing",
+            "Higher trust and psychological safety pulse scores",
+            "On-time delivery rate trending upward",
+            "Increase in cross-team assists per week"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Debate — Collective Competence",
+          "save_the_cat_beat": "Debate",
+          "character_state": "From solitary doubt to shared load and explicit roles.",
+          "ordinary_world_baseline": "Isolated effort; unclear ownership; slow handoffs.",
+          "call_to_adventure_preview": "Unity with clarity outperforms heroics without it."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "section_of_focus": "Building Trust",
+            "section_description": "Foundations of effective teamwork",
+            "connection_focus_area": "Establishing trust",
+            "connect_points": {
+              "point1": "Share personal vulnerabilities",
+              "point2": "Clarify team norms",
+              "point3": "Commit to mutual support"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a brief trust exercise",
+              "objective2": "Document agreed behaviors",
+              "objective3": "Practice one supportive act"
+            }
+          },
+          "book2": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "Shared Consciousness",
+            "section_description": "Aligning teams through transparency",
+            "connection_focus_area": "Information sharing",
+            "connect_points": {
+              "point1": "Set up a daily check-in",
+              "point2": "Share key insights openly",
+              "point3": "Encourage cross-team feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a 5-minute huddle",
+              "objective2": "Circulate a summary note",
+              "objective3": "Solicit two suggestions"
+            }
+          },
+          "book3": {
+            "title": "Collective Genius",
+            "author": "Linda Hill",
+            "section_of_focus": "Leading Innovation",
+            "section_description": "Creating cultures of collaborative creativity",
+            "connection_focus_area": "Fostering innovation",
+            "connect_points": {
+              "point1": "Brainstorm without judgment",
+              "point2": "Prototype one idea quickly",
+              "point3": "Gather diverse feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a 10-minute ideation session",
+              "objective2": "Build a rapid prototype",
+              "objective3": "Incorporate at least one outside view"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Inside a starlit coordination hub, Francisco links scattered guardians into a single rhythm—shared maps, shared intents, shared tempo.",
+          "symbolic_moment": "He passes a luminous baton—ownership—across the circle; each guardian’s sigil ignites when they accept the role.",
+          "emotional_landscape": "Calm cohesion, earned trust, quiet confidence.",
+          "threshold_vision": "When roles are clear and voices are safe, many minds become one will.",
+          "transformation_promise": "A rebellion that coordinates faster than chaos expands cannot be broken apart."
+        },
+    
+        "epic_novel_pages": "Page 121 - 135",
+        "epic_chapter_focus": "Refusal of the Call",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "focus_area": "Teamwork",
+        "specific_task_group_description": "Harness group strengths and collaborate to push past self-doubt.",
+        "specific_task_group_tagline": "Strength in unity"
+      },
       "personality_profile_170": {},
       "personality_profile_171": {},
       "personality_profile_172": {},
