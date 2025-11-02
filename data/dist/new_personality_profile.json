@@ -36794,7 +36794,198 @@
         "specific_task_group_description": "Recognize and harness the pivotal moment when your journey shifts direction under the influence of fate.",
         "specific_task_group_tagline": "Embrace the wheel turning"
       },
-      "personality_profile_174": {},
+      "personality_profile_174": {
+        "canonical_id": "EA-174",
+        "unique_identifier": "STG 5.2.1.1",
+        "specific_task_group_title": "Balanced Decisions",
+        "all_chapter": 174,
+        "novel_book": 5,
+        "chapter": "Chapter 14",
+        "chapter_title": "Push — Balanced Decisions",
+        "type": "Specific Task Group",
+        "display_name": "The Judicious Pivot",
+        "theme": "Clarity under pressure—structured choices that honor tradeoffs and consequences.",
+        "family": "Decision-Making / Equilibrium — Tradeoffs, Clarity & Consequence",
+
+        "summary": "Now functioning as the Holder of the Balances, Francisco learns to weigh multiple influences and choose optimal paths under pressure. He builds transparent decision criteria, seeks disconfirming input, and prepares fallbacks—transforming uncertainty into deliberate momentum while respecting long-range effects across timelines.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Two",
+
+        "traits": {
+          "strengths": [
+            "builds clear decision criteria before choosing",
+            "invites disconfirming evidence and opposing views",
+            "keeps composure in high-stakes moments",
+            "documents rationale to align stakeholders",
+            "designs fallbacks and exit ramps in advance"
+          ],
+          "shadow": [
+            "analysis paralysis under excessive options",
+            "overweighting consensus at the cost of speed",
+            "rigidity from clinging to initial frames",
+            "false precision—numbers that outpace reality",
+            "deferring hard calls to avoid friction"
+          ],
+          "growth_focus": [
+            "time-box analysis and define a ‘good-enough’ threshold",
+            "pair quantitative scoring with lived context",
+            "seek a strong counter-argument for every favorite option",
+            "separate decision quality from outcome luck",
+            "track post-decision learning in a journal"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Tests, Allies and Enemies",
+          "fiction_chapter_context": "Book 5, Chapter 14 — In Guardians & Gatekeepers, Francisco adjudicates pressure by weighing multi-party claims and consequences."
+        },
+
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 1—principled analysis, fair process, measured judgment."
+        },
+
+        "color_alignment": {
+          "name": "Mauve",
+          "hsl": "270,100%,84%",
+          "rgb_hex": "#D5ACFF",
+          "color_symbolism": "Even-handed calm—soft light that reveals nuance without heat."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.88,
+            "empathy": 0.68,
+            "openness": 0.74,
+            "orderliness": 0.82,
+            "conscientiousness": 0.86,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.89,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.52,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "stability": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1741","Q1742","Q1743","Q1744","Q1745","Q1746","Q1747","Q1748"
+          ],
+          "signals_map": {
+            "Q1741": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map second- and third-order effects before choosing." },
+            "Q1742": { "dimension": "stability", "polarity": 1, "content": "I keep a steady head when a decision is high-stakes." },
+            "Q1743": { "dimension": "conscientiousness", "polarity": 1, "content": "I define decision criteria before comparing options." },
+            "Q1744": { "dimension": "orderliness", "polarity": 1, "content": "I document the rationale so others can follow the logic." },
+            "Q1745": { "dimension": "openness", "polarity": 1, "content": "I invite a serious counter-argument to my preferred path." },
+            "Q1746": { "dimension": "risk_tolerance", "polarity": 1, "content": "I quantify downside risk and set guardrails up front." },
+            "Q1747": { "dimension": "cooperativeness", "polarity": 1, "content": "I align key stakeholders early to surface hidden constraints." },
+            "Q1748": { "dimension": "adaptability", "polarity": 1, "content": "I pre-plan pivots if new data contradicts assumptions." }
+          },
+          "daily_prompt": "Which decision today deserves a pause to define criteria—and what counter-evidence will you seek before you choose?",
+          "practices": [
+            "WRAP Sprint: widen options, reality-test, attain distance, prepare to be wrong in 20 minutes.",
+            "10/10/10 Test: how will this choice feel in 10 days, 10 months, 10 years?",
+            "Pre-mortem + Red Team: imagine failure, invite a skeptic to attack the plan.",
+            "Decision Journal: log context, options, criteria, prediction; review monthly.",
+            "Stoplight Fallbacks: green (go), yellow (constraints), red (abort) with triggers."
+          ],
+          "transformation_indicators": [
+            "Fewer decision reversals per quarter",
+            "Shorter decision cycle time without quality loss",
+            "Higher stakeholder alignment scores on key calls",
+            "Improved forecast calibration (Brier/quality notes)",
+            "Lower post-decision regret reported in reviews"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Scene VI: Guardians and Gatekeepers",
+          "preliminary_beat": "Theme Stated — Balanced Decisions",
+          "save_the_cat_beat": "Push",
+          "character_state": "Under pressure, testing judgment among allies and gatekeepers.",
+          "ordinary_world_baseline": "Reactive choices shaped by hidden frames and urgency.",
+          "call_to_adventure_preview": "Balanced decisions turn pressure into precision and consent."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies and Enemies",
+            "section_description": "The hero encounters trials and forms alliances.",
+            "connection_focus_area": "Navigating group dynamics",
+            "connect_points": {
+              "point1": "Identify key stakeholders in your challenge",
+              "point2": "Assess pros and cons of each ally/foe",
+              "point3": "Determine how each relationship influences your decision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map three critical influences on your choice",
+              "objective2": "Evaluate two possible outcomes",
+              "objective3": "Select one balanced decision and justify it"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Prospect Theory & Framing",
+            "section_description": "How the presentation of options biases our decisions.",
+            "connection_focus_area": "Mitigating decision bias",
+            "connect_points": {
+              "point1": "Recognize one framing effect in your context",
+              "point2": "Reframe the choice in neutral terms",
+              "point3": "Compare decisions under both frames"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one cognitive bias at play",
+              "objective2": "Reframe a current decision scenario",
+              "objective3": "Measure how reframing alters your choice"
+            }
+          },
+          "book3": {
+            "title": "Decisive",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "WRAP Process",
+            "section_description": "A four-step process (Widen, Reality-test, Attain, Prepare) for better decisions.",
+            "connection_focus_area": "Implementing a decision framework",
+            "connect_points": {
+              "point1": "Widen your options list",
+              "point2": "Reality-test your top two choices",
+              "point3": "Prepare to be wrong with fallback plans"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Generate at least four options for a current choice",
+              "objective2": "Conduct a premortem on your preferred option",
+              "objective3": "Draft two fallback strategies"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Gate of Weighing, three councils press conflicting remedies; Francisco lays glowing criteria across twin scales before any vote.",
+          "symbolic_moment": "A counterweight etched ‘long-run cost’ steadies the trembling pans; the beam settles true.",
+          "emotional_landscape": "Tense, deliberate, anchored—respectful silence as tradeoffs come into focus.",
+          "threshold_vision": "Clarity earns consent; fair process unlocks collective power.",
+          "transformation_promise": "A leader who shows his math turns factions into a coalition."
+        },
+
+        "epic_novel_pages": "Page 196 - 210",
+        "epic_chapter_focus": "Push",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "focus_area": "Decision Making",
+        "specific_task_group_description": "Learn to weigh multiple influences and choose the optimal path when under pressure.",
+        "specific_task_group_tagline": "Decide with clarity"
+      },
       "personality_profile_175": {},
       "personality_profile_176": {},
       "personality_profile_177": {},
