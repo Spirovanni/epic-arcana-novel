@@ -36026,7 +36026,198 @@
         "specific_task_group_description": "Harness group strengths and collaborate to push past self-doubt.",
         "specific_task_group_tagline": "Strength in unity"
       },
-      "personality_profile_170": {},
+      "personality_profile_170": {
+        "canonical_id": "EA-170",
+        "unique_identifier": "STG 5.1.4.1",
+        "specific_task_group_title": "Mettle Energy",
+        "all_chapter": 170,
+        "novel_book": 5,
+        "chapter": "Chapter 10",
+        "chapter_title": "Pressure — Mettle Energy",
+        "type": "Specific Task Group",
+        "display_name": "The Tempered Core",
+        "theme": "Resilience is forged under pressure and strengthened by mentors, allies, and repeatable habits.",
+        "family": "Resilience / Support — Grit, Mentors & Micro-Habits",
+    
+        "summary": "Under mounting cosmic pressure, Francisco forges an unbreakable spirit by drawing strength from mentors and allied networks. He pairs courage with structure—rituals, handoffs, and clear asks for help—so stamina becomes a shared, sustainable asset rather than a solitary burden.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "stays steady when complexity spikes",
+            "activates mentors and allies early",
+            "converts stress into structured routines",
+            "links values to daily grit practices",
+            "models asking for help without ego"
+          ],
+          "shadow": [
+            "white-knuckling through without support",
+            "stoicism that hides real strain",
+            "rigidity when tactics should adapt",
+            "overreliance on endurance over recovery",
+            "help-seeking only after burnout hits"
+          ],
+          "growth_focus": [
+            "pre-commit to a help protocol before crisis",
+            "separate identity from output under strain",
+            "schedule recovery as a first-class task",
+            "swap stubbornness for adaptive grit",
+            "codify ally roles and escalation paths"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 5, Chapter 10 — Under pressure, Francisco turns to mentors and ally networks to harden resolve and sustain pace."
+        },
+    
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—courage tempered with care, asking and offering support."
+        },
+    
+        "color_alignment": {
+          "name": "Midnight Express",
+          "hsl": "240,100%,10%",
+          "rgb_hex": "#000033",
+          "color_symbolism": "Midnight keel—deep, steady ballast that holds course in heavy seas."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.88,
+            "empathy": 0.72,
+            "openness": 0.70,
+            "orderliness": 0.76,
+            "conscientiousness": 0.82,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.77,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.52,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "agency": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1701","Q1702","Q1703","Q1704","Q1705","Q1706","Q1707","Q1708"
+          ],
+          "signals_map": {
+            "Q1701": { "dimension": "stability", "polarity": 1, "content": "I keep a calm cadence when pressure spikes." },
+            "Q1702": { "dimension": "agency", "polarity": 1, "content": "I ask for targeted help before I’m overwhelmed." },
+            "Q1703": { "dimension": "conscientiousness", "polarity": 1, "content": "I run crisis routines (checklists, cues, reviews) to stay consistent." },
+            "Q1704": { "dimension": "cooperativeness", "polarity": 1, "content": "I activate allies with clear roles and timelines." },
+            "Q1705": { "dimension": "orderliness", "polarity": 1, "content": "I define escalation paths for when plans slip." },
+            "Q1706": { "dimension": "adaptability", "polarity": 1, "content": "I adjust tactics without abandoning the mission." },
+            "Q1707": { "dimension": "empathy", "polarity": 1, "content": "I normalize recovery and encourage others to use it." },
+            "Q1708": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect daily grit practices to core values and objectives." }
+          },
+          "daily_prompt": "Where is pressure highest today—and which mentor or ally will you activate with a clear ask?",
+          "practices": [
+            "Mentor Ping: 90-second update + one precise ask.",
+            "Three-Anchor Routine: breath reset, values cue, first small win.",
+            "Red-Amber-Green Board: surface strain early; trigger support rules.",
+            "Recovery Block: 25–45 minutes scheduled like a meeting.",
+            "After-Action Mini: two facts, one feeling, one fix for next time."
+          ],
+          "transformation_indicators": [
+            "Faster recovery time from setbacks",
+            "Higher adherence to resilience rituals during peak load",
+            "Earlier help-seeking and clearer asks",
+            "Stable output quality under deadline stress",
+            "Increase in ally activations before escalation"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Mettle Energy",
+          "save_the_cat_beat": "Theme Stated",
+          "character_state": "Pressure rising; resilience shifts from solo endurance to supported strength.",
+          "ordinary_world_baseline": "Thin reserves, lone-wolf coping, irregular recovery.",
+          "call_to_adventure_preview": "What you carry with others becomes bearable—and repeatable."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The hero meets allies who lend strength and guidance",
+            "connection_focus_area": "Building support networks",
+            "connect_points": {
+              "point1": "Identify one mentor you can rely on",
+              "point2": "Note key lessons from their guidance",
+              "point3": "Plan how to leverage their support"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three potential allies",
+              "objective2": "Document one piece of advice you’ll follow",
+              "objective3": "Demonstrate asking for help when under stress"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Resilience under Pressure",
+            "section_description": "How perseverance sustains performance",
+            "connection_focus_area": "Cultivating mental toughness",
+            "connect_points": {
+              "point1": "Describe a time you overcame a setback",
+              "point2": "Identify strategies you used",
+              "point3": "Apply one strategy to a current challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your core values",
+              "objective2": "Link values to resilience practices",
+              "objective3": "Commit to one grit-building exercise"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious / Make It Easy",
+            "section_description": "Designing environments and routines for consistency",
+            "connection_focus_area": "Building small resilience habits",
+            "connect_points": {
+              "point1": "Choose one daily habit to reinforce resilience",
+              "point2": "Set a cue and reward structure",
+              "point3": "Track habit adherence for one week"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Establish a resilience-trigger habit",
+              "objective2": "Measure habit success daily",
+              "objective3": "Reflect on habit’s impact after one week"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the mettle testing grounds, alarms crescendo. Francisco signals his mentor cadre; their voices steady his breath as protocols click into place.",
+          "symbolic_moment": "A dark-blue sigil—the Tempered Core—flares across allied armor when each accepts a support role.",
+          "emotional_landscape": "Grave focus, quiet courage, shared steadiness.",
+          "threshold_vision": "Pressure does not crack what is tempered—especially when many hammers strike in rhythm.",
+          "transformation_promise": "A rebellion that distributes strain outlasts any single storm."
+        },
+    
+        "epic_novel_pages": "Page 136 - 150",
+        "epic_chapter_focus": "Pressure",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Harness your inner strength under mounting pressure by calling on mentors and allies for support.",
+        "specific_task_group_tagline": "Forge an unbreakable spirit"
+      },
       "personality_profile_171": {},
       "personality_profile_172": {},
       "personality_profile_173": {},
