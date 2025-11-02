@@ -36218,7 +36218,198 @@
         "specific_task_group_description": "Harness your inner strength under mounting pressure by calling on mentors and allies for support.",
         "specific_task_group_tagline": "Forge an unbreakable spirit"
       },
-      "personality_profile_171": {},
+      "personality_profile_171": {
+        "canonical_id": "EA-171",
+        "unique_identifier": "STG 5.1.4.2",
+        "specific_task_group_title": "Swift Determination",
+        "all_chapter": 171,
+        "novel_book": 5,
+        "chapter": "Chapter 11",
+        "chapter_title": "Pinch — Swift Determination",
+        "type": "Specific Task Group",
+        "display_name": "The First Mover",
+        "theme": "In a pinch, decisive motion converts guidance into results.",
+        "family": "Action / Execution — Initiative, Velocity & Crisis Readiness",
+
+        "summary": "When critical moments arrive, Francisco learns to act fast and learn faster, translating mentor guidance into immediate, testable moves. Swift determination becomes his operating system: bias-to-act, tight feedback loops, and clear communication that keeps momentum when cosmic balance hangs in the balance.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Knight",
+
+        "traits": {
+          "strengths": [
+            "converts advice into action within 24 hours",
+            "sets clear decision timers and sticks to them",
+            "launches minimal viable actions to learn quickly",
+            "signals choices crisply and mobilizes support",
+            "maintains momentum under pressure without panic"
+          ],
+          "shadow": [
+            "moves so fast key signals get missed",
+            "steamrolls consultation in the name of speed",
+            "action addiction that crowds out reflection",
+            "team fatigue from perpetual urgency",
+            "skips controls, creating downstream rework"
+          ],
+          "growth_focus": [
+            "pair speed with lightweight checklists",
+            "time-box action and schedule review windows",
+            "state a hypothesis before every quick strike",
+            "invite a 2-minute pre-mortem for critical moves",
+            "separate reversible vs. irreversible decisions"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 5, Chapter 11 — With allies aligned, Francisco learns to move first and refine in motion."
+        },
+
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—courage plus prudent checks via trusted counsel."
+        },
+
+        "color_alignment": {
+          "name": "Violet",
+          "hsl": "300,76%,72%",
+          "rgb_hex": "#EE82EE",
+          "color_symbolism": "Electric violet—decisive flare that cuts through fog."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.88,
+            "stability": 0.68,
+            "empathy": 0.72,
+            "openness": 0.76,
+            "orderliness": 0.64,
+            "conscientiousness": 0.78,
+            "adaptability": 0.83,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.77,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.74,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "adaptability": 0.35,
+            "risk_tolerance": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1711","Q1712","Q1713","Q1714","Q1715","Q1716","Q1717","Q1718"
+          ],
+          "signals_map": {
+            "Q1711": { "dimension": "agency", "polarity": 1, "content": "I translate guidance into a concrete step within 24 hours." },
+            "Q1712": { "dimension": "risk_tolerance", "polarity": 1, "content": "I prefer reversible decisions made quickly to preserve momentum." },
+            "Q1713": { "dimension": "adaptability", "polarity": 1, "content": "I adjust course rapidly when new data appears." },
+            "Q1714": { "dimension": "conscientiousness", "polarity": 1, "content": "I use short checklists to keep speed without skipping essentials." },
+            "Q1715": { "dimension": "openness", "polarity": 1, "content": "I treat every quick action as a hypothesis to be tested." },
+            "Q1716": { "dimension": "cooperativeness", "polarity": 1, "content": "I loop in key allies with concise action briefs." },
+            "Q1717": { "dimension": "orderliness", "polarity": 1, "content": "I set a timer for decisions and stick to it." },
+            "Q1718": { "dimension": "stability", "polarity": 1, "content": "I stay composed when executing under time pressure." }
+          },
+          "daily_prompt": "What is the smallest decisive move you can make in the next 15 minutes—and how will you review its result within 24 hours?",
+          "practices": [
+            "15-Minute Quick Strike: define hypothesis → smallest action → timer.",
+            "Two-Minute Pre-Mortem: name top failure mode and one safeguard.",
+            "24-Hour Review: log outcome, keep/kill/tweak decision.",
+            "Reversible vs. One-Way Gate: label and pace decisions accordingly.",
+            "Ally Ping: send a 5-line action brief before executing."
+          ],
+          "transformation_indicators": [
+            "Reduced mean time to decision in pinch scenarios",
+            "Shorter cycle time from idea to first test",
+            "Higher ratio of shipped experiments to proposals",
+            "Sustained morale under time pressure",
+            "Improved stakeholder confidence in crisis response"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Swift Determination",
+          "save_the_cat_beat": "Pinch",
+          "character_state": "Mentor guidance in hand; shifting from planning to punch.",
+          "ordinary_world_baseline": "Hesitation and overthinking slow execution.",
+          "call_to_adventure_preview": "Speed plus feedback beats perfection: act to learn."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The hero receives tools and advice to move forward",
+            "connection_focus_area": "Acting on guidance",
+            "connect_points": {
+              "point1": "Choose one piece of mentor advice",
+              "point2": "Plan a swift execution step",
+              "point3": "Review results immediately"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one actionable insight",
+              "objective2": "Execute it within 24 hours",
+              "objective3": "Assess its impact"
+            }
+          },
+          "book2": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Build-Measure-Learn",
+            "section_description": "Rapid experimentation and feedback loops",
+            "connection_focus_area": "Iterative action",
+            "connect_points": {
+              "point1": "Define a minimal viable action",
+              "point2": "Measure a key metric",
+              "point3": "Learn and iterate"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Launch a quick experiment",
+              "objective2": "Collect data within 48 hours",
+              "objective3": "Adjust based on feedback"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset in Action",
+            "section_description": "How to embrace challenges proactively",
+            "connection_focus_area": "Courageous execution",
+            "connect_points": {
+              "point1": "Identify a challenging task",
+              "point2": "Frame it as an opportunity",
+              "point3": "Attempt it immediately"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one challenging goal",
+              "objective2": "Outline first three steps",
+              "objective3": "Complete step one"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "Alarms spike across the life-force lattice; Francisco receives a terse mentor glyph: 'Move now.' He commits a micro-team and executes within a single orbit.",
+          "symbolic_moment": "A violet flare cuts through the void, marking a decisive turn as allies echo the signal across sectors.",
+          "emotional_landscape": "Focused urgency, grounded confidence, shared readiness.",
+          "threshold_vision": "Action creates clarity; feedback guides the next strike.",
+          "transformation_promise": "A coalition that moves first and learns fastest outpaces chaos."
+        },
+
+        "epic_novel_pages": "Page 151 - 165",
+        "epic_chapter_focus": "Pinch",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "focus_area": "Initiative",
+        "specific_task_group_description": "Learn to take decisive action when faced with critical moments, drawing on guidance from your allies.",
+        "specific_task_group_tagline": "Ready. Set. Act."
+      },
       "personality_profile_172": {},
       "personality_profile_173": {},
       "personality_profile_174": {},
