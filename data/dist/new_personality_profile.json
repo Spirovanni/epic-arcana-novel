@@ -37621,7 +37621,205 @@
         "specific_task_group_description": "Learn to galvanize your allies by recognizing and nurturing their unique strengths.",
         "specific_task_group_tagline": "Ignite the spark in your team"
       },
-      "personality_profile_178": {},
+      "personality_profile_178": {
+        "canonical_id": "EA-178",
+        "unique_identifier": "STG 5.2.2.2",
+        "specific_task_group_title": "Maven of Opportunities",
+        "all_chapter": 178,
+        "novel_book": 5,
+        "chapter": "Chapter 18",
+        "chapter_title": "Build-up (Set-up) — Maven of Opportunities",
+        "type": "Specific Task Group",
+        "display_name": "The Opportunity Maven",
+        "theme": "Turn challenges into openings by scanning widely, debiasing your view, and keeping multiple options alive.",
+        "family": "Opportunity Recognition / Perception — Optionality, Blue Oceans & Bias-Aware Scanning",
+    
+        "summary": "In preparation for the most daunting cosmic challenges, Francisco sharpens his perception to spot hidden possibilities where others see dead-ends. By countering cognitive biases, cultivating optionality, and prototyping small bets, he learns to transform constraints into corridors of progress and balance.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Seven",
+    
+        "traits": {
+          "strengths": [
+            "scans broadly beyond the obvious constraints",
+            "counters bias with structured checks",
+            "keeps multiple options alive without overcommitting",
+            "prototypes ‘small bets’ to learn fast",
+            "frames constraints as creative prompts"
+          ],
+          "shadow": [
+            "option overload leading to decision drag",
+            "chasing novelty instead of value",
+            "analysis paralysis in high-uncertainty contexts",
+            "under-resourcing the best pathway",
+            "anchoring on ‘blue sky’ while ignoring execution risk"
+          ],
+          "growth_focus": [
+            "set decision gates for when to converge",
+            "pair ideation with minimal test plans",
+            "timebox exploration vs. commitment",
+            "track bias checks in writing",
+            "design stop-rules before starting experiments"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Balances",
+          "chapter_theme": "Approach to the Innermost Cave",
+          "fiction_chapter_context": "Book 5, Chapter 18 — On the Road of Trials, Francisco trains his perception to recognize and activate hidden openings."
+        },
+    
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—disciplined curiosity, deliberate scanning, and data-informed optionality."
+        },
+    
+        "color_alignment": {
+          "name": "Blue Violet",
+          "hsl": "270,100%,60%",
+          "rgb_hex": "#9933FF",
+          "color_symbolism": "Vision at the horizon—seeing possibilities before they fully form."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.77,
+            "stability": 0.68,
+            "empathy": 0.74,
+            "openness": 0.91,
+            "orderliness": 0.62,
+            "conscientiousness": 0.71,
+            "adaptability": 0.88,
+            "abstract_reasoning": 0.83,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.66,
+            "emotional_intensity": 0.63,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.84,
+            "imagination": 0.87
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "adaptability": 0.35,
+            "abstract_reasoning": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1781",
+            "Q1782",
+            "Q1783",
+            "Q1784",
+            "Q1785",
+            "Q1786",
+            "Q1787",
+            "Q1788"
+          ],
+          "signals_map": {
+            "Q1781": { "dimension": "openness", "polarity": 1, "content": "I routinely reframe constraints to search for unexpected openings." },
+            "Q1782": { "dimension": "adaptability", "polarity": 1, "content": "When a plan stalls, I quickly generate viable alternatives." },
+            "Q1783": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect weak signals to infer emerging opportunities." },
+            "Q1784": { "dimension": "orderliness", "polarity": 1, "content": "I log bias checks (anchors, availability) before big decisions." },
+            "Q1785": { "dimension": "risk_tolerance", "polarity": 1, "content": "I prefer small, low-risk experiments to test new ideas." },
+            "Q1786": { "dimension": "conscientiousness", "polarity": 1, "content": "I define clear stop-rules and success criteria before testing." },
+            "Q1787": { "dimension": "agency", "polarity": 1, "content": "I initiate option-creating moves even under uncertainty." },
+            "Q1788": { "dimension": "cooperativeness", "polarity": 1, "content": "I share scans and invite contradictory feedback to widen perspective." }
+          },
+          "daily_prompt": "Which constraint can you reframe today—and what small bet will you run to learn whether a hidden opening exists?",
+          "practices": [
+            "Opportunity Sweep: 10-minute wide scan of signals (customers, field, rivals, tech) with one written ‘opening’ hypothesis.",
+            "Bias Breaker: name your anchor/availability bias, then write two alternative narratives.",
+            "Option Ledger: keep 3–5 live options with size, test, gate, and next decision date.",
+            "Small-Bet Sprint: 48–72 hour experiment with predefined success and stop-rules.",
+            "Blue-Ocean 1-Pager: value-innovation sketch contrasting ‘as-is’ vs. ‘to-be’ moves."
+          ],
+          "transformation_indicators": [
+            "Increase in number and diversity of viable options per cycle",
+            "Higher conversion rate from experiments to scaled initiatives",
+            "Reduction in decision cycle time at convergence gates",
+            "Documented bias checks attached to major choices",
+            "Greater resilience of plans when primary path fails"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Approach to the Innermost Cave — Maven of Opportunities",
+          "save_the_cat_beat": "Build-up (set-up)",
+          "character_state": "Alert, option-rich, scanning the edges for hidden paths.",
+          "ordinary_world_baseline": "Narrow framing and scarcity thinking limit choices.",
+          "call_to_adventure_preview": "Opportunities hide inside constraints; optionality is your lifeline."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Blue Ocean Strategy",
+            "author": "W. Chan Kim & Renée Mauborgne",
+            "section_of_focus": "Value Innovation",
+            "section_description": "Creating new market spaces by innovating value.",
+            "connection_focus_area": "Expanding possibilities",
+            "connect_points": {
+              "point1": "Map your current ‘red ocean’ constraints",
+              "point2": "Brainstorm one blue ocean idea",
+              "point3": "Prototype a minimal test"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one unmet need",
+              "objective2": "Sketch a value-innovation canvas",
+              "objective3": "Outline a test plan"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Anchoring & Availability",
+            "section_description": "How biases limit our view of possibilities.",
+            "connection_focus_area": "Expanding mental models",
+            "connect_points": {
+              "point1": "Identify one anchor in your thinking",
+              "point2": "List three alternative scenarios",
+              "point3": "Choose one to explore further"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Note one bias at work",
+              "objective2": "Generate three alternative ideas",
+              "objective3": "Select one for a quick experiment"
+            }
+          },
+          "book3": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Optionality",
+            "section_description": "How optionality creates advantage under uncertainty.",
+            "connection_focus_area": "Building optional paths",
+            "connect_points": {
+              "point1": "Identify one optional opportunity",
+              "point2": "Create small stakes to test it",
+              "point3": "Scale based on results"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three potential options",
+              "objective2": "Set up a low-risk test",
+              "objective3": "Analyze outcomes and decide next steps"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a sealed archive world where gateways seem locked, Francisco notices a faint phase shift in a forgotten corridor—an opening masked by protocol.",
+          "symbolic_moment": "He places three tokens (scan, bias-check, small bet) on a star-map; a new path lights where the tokens intersect.",
+          "emotional_landscape": "Curiosity sharpened by discipline; cautious excitement; readiness to pivot.",
+          "threshold_vision": "Optionality multiplies courage—when one door closes, prepared paths keep momentum alive.",
+          "transformation_promise": "A cosmos that learns to create options cannot be cornered."
+        },
+    
+        "epic_novel_pages": "Page 256 - 270",
+        "epic_chapter_focus": "Build-up (set-up)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "focus_area": "Opportunity Recognition",
+        "specific_task_group_description": "Cultivate the ability to spot and seize hidden opportunities even in daunting circumstances.",
+        "specific_task_group_tagline": "Turn challenges into openings"
+      },
       "personality_profile_179": {},
       "personality_profile_180": {},
       "personality_profile_181": {},
