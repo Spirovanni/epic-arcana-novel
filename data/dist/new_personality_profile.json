@@ -38815,7 +38815,205 @@
         "specific_task_group_description": "Leverage breakthrough insights to conceive novel solutions that redefine the journey’s outcome.",
         "specific_task_group_tagline": "Think beyond the possible"
       },
-      "personality_profile_184": {},
+      "personality_profile_184": {
+        "canonical_id": "EA-184",
+        "unique_identifier": "STG 5.2.4.1",
+        "specific_task_group_title": "Fail Often",
+        "all_chapter": 184,
+        "novel_book": 5,
+        "chapter": "Chapter 24",
+        "chapter_title": "Action (conflict) — Fail Often",
+        "type": "Specific Task Group",
+        "display_name": "The Failure Alchemist",
+        "theme": "Frequent, honest failure becomes a learning engine—turning setbacks into signal and openings.",
+        "family": "Resilience — Learning Loops, Psychological Safety & Bounce-Back",
+    
+        "summary": "In the cosmic ‘all is lost’ stretch, Francisco reframes failure as data. By running tight feedback loops, naming root causes, and iterating quickly, he converts breakdowns into breakthroughs and uncovers hidden opportunities that were invisible from success alone.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Five",
+    
+        "traits": {
+          "strengths": [
+            "conducts blameless post-mortems that surface truth",
+            "recovers quickly with actionable next steps",
+            "models candor that increases psychological safety",
+            "tracks error patterns to prevent repeats",
+            "keeps momentum through micro-experiments"
+          ],
+          "shadow": [
+            "romanticizes iteration without shipping",
+            "dwells on autopsies beyond usefulness",
+            "confuses risk with recklessness",
+            "absorbs team burdens and burns out",
+            "avoids celebrating wins, dampening morale"
+          ],
+          "growth_focus": [
+            "time-box analysis and move to test",
+            "separate blame from causality explicitly",
+            "pair every lesson with a behavior change",
+            "protect recovery rituals after misses",
+            "celebrate learning velocity, not just outcomes"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 5, Chapter 24 — In Atonement with the Father, Francisco metabolizes failure into capability and re-centers the mission."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—shared accountability, steady process, and team-first truth-telling."
+        },
+    
+        "color_alignment": {
+          "name": "Violet",
+          "hsl": "300,76%,72%",
+          "rgb_hex": "#EE82EE",
+          "color_symbolism": "Wounds into wisdom—clarity and composure in the midst of loss."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.88,
+            "empathy": 0.67,
+            "openness": 0.73,
+            "orderliness": 0.69,
+            "conscientiousness": 0.82,
+            "adaptability": 0.86,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.62,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1841",
+            "Q1842",
+            "Q1843",
+            "Q1844",
+            "Q1845",
+            "Q1846",
+            "Q1847",
+            "Q1848"
+          ],
+          "signals_map": {
+            "Q1841": { "dimension": "stability", "polarity": 1, "content": "I regain composure quickly after a mistake and re-enter the work." },
+            "Q1842": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert every failure into one concrete behavior change." },
+            "Q1843": { "dimension": "adaptability", "polarity": 1, "content": "I pivot fast when evidence contradicts the plan." },
+            "Q1844": { "dimension": "orderliness", "polarity": 1, "content": "I track error patterns so they do not repeat." },
+            "Q1845": { "dimension": "agency", "polarity": 1, "content": "I initiate post-mortems without waiting to be asked." },
+            "Q1846": { "dimension": "empathy", "polarity": 1, "content": "I keep reviews blameless so people share the real story." },
+            "Q1847": { "dimension": "risk_tolerance", "polarity": 1, "content": "I run small, reversible tests to learn fast after a miss." },
+            "Q1848": { "dimension": "openness", "polarity": 1, "content": "I invite outside perspectives to challenge my conclusions." }
+          },
+          "daily_prompt": "What failure will you autopsy today—and which single behavior will you change by sunset because of what you learned?",
+          "practices": [
+            "Five-Minute Post-Mortem: facts → causes → one fix → owner → due date.",
+            "Pre-Mortem Huddle: imagine failure in advance; list preventions.",
+            "24-Hour Recovery Plan: short rest, small win, share the lesson.",
+            "Small-Bet Loop: ship a minimal correction within 48 hours.",
+            "Safety Ritual: open meetings with a learning highlight, not a win."
+          ],
+          "transformation_indicators": [
+            "Decrease in repeated failure categories",
+            "Faster time-to-recovery after setbacks",
+            "Higher rate of small corrective experiments shipped",
+            "Improved psychological safety pulse scores",
+            "Greater cross-team sharing of lessons learned"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — Fail Often",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Honest inventory; resilience forged in candor and iteration.",
+          "ordinary_world_baseline": "Avoidance of error; fragile confidence.",
+          "call_to_adventure_preview": "Failure becomes guidance; learning accelerates the return to form."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Black Box Thinking",
+            "author": "Matthew Syed",
+            "section_of_focus": "Embracing Failure",
+            "section_description": "Treating mistakes as data for improvement",
+            "connection_focus_area": "Learning from failure",
+            "connect_points": {
+              "point1": "Identify a recent setback",
+              "point2": "Analyze root causes",
+              "point3": "Develop corrective actions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Summarize the root cause of one failure",
+              "objective2": "Implement one corrective action",
+              "objective3": "Evaluate its impact"
+            }
+          },
+          "book2": {
+            "title": "Failing Forward",
+            "author": "John C. Maxwell",
+            "section_of_focus": "Turning Mistakes into Stepping Stones",
+            "section_description": "Using failures as a springboard for growth",
+            "connection_focus_area": "Resilient mindset",
+            "connect_points": {
+              "point1": "Document a past failure",
+              "point2": "Extract a key lesson",
+              "point3": "Plan a next step based on that lesson"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a failure reflection",
+              "objective2": "Define one lesson learned",
+              "objective3": "Apply it to a new goal"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "The Growth Mindset",
+            "section_description": "Beliefs that enable learning and resilience",
+            "connection_focus_area": "Cultivating openness to challenge",
+            "connect_points": {
+              "point1": "Distinguish fixed vs. growth mindset",
+              "point2": "Reframe a recent setback",
+              "point3": "Adopt language of improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a fixed-mindset belief you held",
+              "objective2": "Reframe it into a growth statement",
+              "objective3": "Use that reframe in a small task"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a shattered gantry above the Balance Wells, Francisco watches a containment lattice fail—thousands of lives at stake.",
+          "symbolic_moment": "He lays down his staff, opens a black box recorder of the mission, and narrates his own errors aloud to the council.",
+          "emotional_landscape": "Hollowed shock turning to sober courage.",
+          "threshold_vision": "Each failure is an arrow on the map, pointing to the next right repair.",
+          "transformation_promise": "A culture that learns faster cannot be defeated for long."
+        },
+    
+        "epic_novel_pages": "Page 346 - 360",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Embrace and learn from failures frequently to uncover hidden opportunities.",
+        "specific_task_group_tagline": "Fail forward to succeed"
+      },
       "personality_profile_185": {},
       "personality_profile_186": {},
       "personality_profile_187": {},
