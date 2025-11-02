@@ -33498,7 +33498,180 @@
           "transformation_promise": "When crisis comes, we don’t improvise heroism—we execute care."
         }
       },
-      "personality_profile_156": {},
+      "personality_profile_156": {
+        "canonical_id": "EA-156",
+        "unique_identifier": "STG 4.3.5.1",
+        "specific_task_group_title": "Forward Thinking",
+        "all_chapter": 156,
+        "novel_book": 4,
+        "chapter": "Chapter 36",
+        "chapter_title": "Rescue from Without — Forward Thinking",
+        "type": "Specific Task Group",
+        "display_name": "Forward Thinking",
+        "theme": "Anticipating threats turns crises into opportunities for decisive action.",
+        "family": "Foresight / Strategy — Future Orientation",
+        "summary": "Armed with comprehensive foresight and strategic preparation, Francisco marshals resources to outmaneuver threats before they materialize—shaping events rather than reacting to them, and preserving initiative during cosmic transformation.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Knight",
+        "tarot_symbolism": "Swift intellect in service of the future; movement guided by clear horizons.",
+        "color_alignment": {
+          "name": "Purple Heart",
+          "hsl": "270,100%,40%",
+          "rgb_hex": "#6600CC",
+          "color_symbolism": "Regal vigilance—eyes forward, plans prepared."
+        },
+        "traits": {
+          "strengths": [
+            "runs horizon scanning and trend watches",
+            "anticipates second- and third-order effects",
+            "turns foresight into pre-committed action paths",
+            "designs graceful-failure and redundancy",
+            "communicates early warnings with clarity"
+          ],
+          "shadow": [
+            "overweights distant risks vs. near-term priorities",
+            "planning drag that delays execution",
+            "confirmation bias toward preferred futures",
+            "spreads resources too thin across contingencies",
+            "neglects human factors while modeling"
+          ],
+          "growth_focus": [
+            "time-box foresight → decide on MVP actions",
+            "tie each forecast to a trigger and owner",
+            "run red-team on preferred-future assumptions",
+            "prioritize top three vulnerabilities per quarter",
+            "pair system forecasts with people impacts"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "Battle (set-up)",
+          "fiction_chapter_context": "Book 4, Chapter 36 — Scene XIV: Rescue from Without; preliminary focus: Finale. Armed with foresight, the Prophet marshals resources to outmaneuver incoming threats before they materialize."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clear seeing converted into decisive initiative."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.86,
+            "empathy": 0.66,
+            "openness": 0.85,
+            "orderliness": 0.81,
+            "conscientiousness": 0.87,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.91,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.47,
+            "social_dominance": 0.59,
+            "novelty_seeking": 0.64,
+            "imagination": 0.82
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "conscientiousness": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": ["Q1561","Q1562","Q1563","Q1564","Q1565","Q1566","Q1567","Q1568"],
+          "signals_map": {
+            "Q1561": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map second- and third-order effects before acting." },
+            "Q1562": { "dimension": "conscientiousness", "polarity": 1, "content": "Every forecast I make has a trigger, owner, and first action." },
+            "Q1563": { "dimension": "openness", "polarity": 1, "content": "I actively seek disconfirming signals to refine my outlook." },
+            "Q1564": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a living register of risks, indicators, and responses." },
+            "Q1565": { "dimension": "agency", "polarity": 1, "content": "I pre-commit decisive moves when indicators fire." },
+            "Q1566": { "dimension": "adaptability", "polarity": 1, "content": "I pivot fast when the future deviates from the model." },
+            "Q1567": { "dimension": "stability", "polarity": 1, "content": "I remain calm when probabilities shift sharply." },
+            "Q1568": { "dimension": "imagination", "polarity": 1, "content": "I sketch alternative futures that reveal new options today." }
+          },
+          "daily_prompt": "Which early-warning indicator will you watch today—and what pre-committed action follows if it trips?",
+          "practices": [
+            "Weekly horizon scan: 30 minutes to log signals and set triggers.",
+            "Pre-mortem + pre-plan: three failure modes, three first moves.",
+            "Disruption radar: assign a scout to track emerging threats.",
+            "Quarterly vulnerability audit with redundancy upgrades.",
+            "Close the loop: evidence → assumption update → action log."
+          ],
+          "transformation_indicators": [
+            "Fewer surprise events vs. baseline",
+            "Shorter time from signal to action",
+            "Higher accuracy of quarterly forecasts",
+            "Reduced impact of single-point failures",
+            "Documented pivot decisions tied to triggers"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale (setup) → Battle (set-up)",
+          "save_the_cat_beat": "Battle (set-up)",
+          "character_state": "Proactive strategist—shaping events ahead of contact.",
+          "ordinary_world_baseline": "Reactive scrambling and lagging indicators.",
+          "call_to_adventure_preview": "Foresight becomes force when paired with pre-committed moves."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Prospect Theory",
+            "section_description": "Explores how we evaluate potential gains and losses under uncertainty.",
+            "connection_focus_area": "Understanding biases improves foresight.",
+            "connect_points": {
+              "point1": "Map decision biases in strategic planning.",
+              "point2": "Run risk-perception workshops.",
+              "point3": "Adjust forecasts for loss aversion."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify common cognitive biases in team decisions.",
+              "objective2": "Design debiasing interventions.",
+              "objective3": "Measure forecast accuracy over time."
+            }
+          },
+          "book2": {
+            "title": "The Innovator's Dilemma",
+            "author": "Clayton M. Christensen",
+            "section_of_focus": "Disruptive Innovation",
+            "section_description": "How incumbent firms miss emerging threats and how to anticipate them.",
+            "connection_focus_area": "Spotting early signals prevents strategic surprise.",
+            "connect_points": {
+              "point1": "Set up a disruptive-signals watch team.",
+              "point2": "Prototype low-margin experiments.",
+              "point3": "Integrate learnings into roadmaps."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Launch a disruptive-signals radar.",
+              "objective2": "Track viability of emerging technologies.",
+              "objective3": "Pivot product strategy based on early data."
+            }
+          },
+          "book3": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Via Negativa",
+            "section_description": "Why removal of risk factors can improve system resilience.",
+            "connection_focus_area": "Reducing vulnerabilities enhances future readiness.",
+            "connect_points": {
+              "point1": "Identify single points of failure.",
+              "point2": "Design graceful-failure modes.",
+              "point3": "Regularly prune obsolete processes."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a vulnerability audit.",
+              "objective2": "Implement redundancy in critical paths.",
+              "objective3": "Monitor system robustness under stress."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Signals flicker across the console; before threat becomes contact, orders move—quiet, precise.",
+          "symbolic_moment": "A purple arc traces tomorrow’s route; the circle is already en route today.",
+          "emotional_landscape": "Poised, alert, confidently measured.",
+          "threshold_vision": "We don’t predict to be right—we prepare to be ready.",
+          "transformation_promise": "Initiative stays ours when foresight meets action."
+        }
+      },
       "personality_profile_157": {},
       "personality_profile_158": {},
       "personality_profile_159": {},
