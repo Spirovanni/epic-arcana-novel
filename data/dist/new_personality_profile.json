@@ -36602,7 +36602,198 @@
         "specific_task_group_description": "Leverage collaborative workflows and guidance to maintain high momentum and productivity.",
         "specific_task_group_tagline": "Hustle smarter together"
       },
-      "personality_profile_173": {},
+      "personality_profile_173": {
+        "canonical_id": "EA-173",
+        "unique_identifier": "MAT 5.1",
+        "specific_task_group_title": "Karma",
+        "all_chapter": 173,
+        "novel_book": 5,
+        "chapter": "Chapter 13",
+        "chapter_title": "The Crossing of the Threshold — Karma",
+        "type": "Major Activity Theme",
+        "display_name": "The Turning of the Wheel",
+        "theme": "Actions have echoes. Crossing the threshold means choosing with awareness of consequence and designing options that learn.",
+        "family": "Fate & Change — Cycles, Optionality & Thresholds",
+
+        "summary": "Francisco reaches the karmic nexus where cause meets effect. He learns to recognize threshold moments, accept responsibility for cascading consequences, and design optional, reversible steps that let fate inform without dictating. Karma becomes operational: mapping causal chains, testing small bets, and updating paths as signals return.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Wheel of Fortune",
+
+        "traits": {
+          "strengths": [
+            "senses inflection points and acts at the right moment",
+            "maps cause–effect chains across long arcs",
+            "designs optional paths that keep decisions reversible",
+            "balances responsibility with humility about uncertainty",
+            "builds feedback loops that refine future choices"
+          ],
+          "shadow": [
+            "drifts into fatalism or magical thinking",
+            "over-controls outcomes; resists serendipity",
+            "analysis paralysis at key thresholds",
+            "moralizing others’ outcomes as deserved",
+            "ignores randomness; confuses correlation with causation"
+          ],
+          "growth_focus": [
+            "prefer reversible moves before irreversible commitments",
+            "separate responsibility from blame in reviews",
+            "run small, varied experiments to court luck",
+            "install pre-commit stop-loss and harm-minimizing defaults",
+            "update beliefs quickly when feedback contradicts theory"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Crossing of the Threshold",
+          "fiction_chapter_context": "Book 5, Chapter 13 — Francisco accepts the karmic web and steps from preparation into participation."
+        },
+
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—courageous action informed by systemic understanding; grounded, accountable power."
+        },
+
+        "color_alignment": {
+          "name": "Blue Gem",
+          "hsl": "248,49%,45%",
+          "rgb_hex": "#433AAD",
+          "color_symbolism": "Turning night-sapphire—cycles of chance, poised agency, and lucid responsibility."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.77,
+            "stability": 0.71,
+            "empathy": 0.62,
+            "openness": 0.85,
+            "orderliness": 0.68,
+            "conscientiousness": 0.80,
+            "adaptability": 0.83,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.46,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.72,
+            "imagination": 0.79
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "adaptability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1731","Q1732","Q1733","Q1734","Q1735","Q1736","Q1737","Q1738"
+          ],
+          "signals_map": {
+            "Q1731": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map likely second-order effects before I commit." },
+            "Q1732": { "dimension": "adaptability", "polarity": 1, "content": "I prefer reversible moves when uncertainty is high." },
+            "Q1733": { "dimension": "conscientiousness", "polarity": 1, "content": "I review outcomes without blame to extract lessons." },
+            "Q1734": { "dimension": "openness", "polarity": 1, "content": "I welcome randomness and design for optionality." },
+            "Q1735": { "dimension": "agency", "polarity": 1, "content": "I act at the moment of maximum leverage, not maximum comfort." },
+            "Q1736": { "dimension": "orderliness", "polarity": 1, "content": "I set harm-minimizing defaults before taking bold steps." },
+            "Q1737": { "dimension": "novelty_seeking", "polarity": 1, "content": "I run small experiments to discover better paths." },
+            "Q1738": { "dimension": "stability", "polarity": 1, "content": "I keep emotional steadiness when chance tilts the board." }
+          },
+          "daily_prompt": "What tiny, reversible action will move you across today’s threshold—and what feedback will tell you if the wheel turned the way you intended?",
+          "practices": [
+            "Karmic Ledger: list action → intended effect → observed effect → adjustment.",
+            "Option Trees: draft A/B/C routes with clear revert points.",
+            "1% Experiments: test the smallest version before full commit.",
+            "Pre-Mortem & Post-Decision Review: imagine failure, then review reality without blame.",
+            "Harm-Minimizing Defaults: define stop-loss, cooling-off, and consent checks."
+          ],
+          "transformation_indicators": [
+            "Higher ratio of reversible to irreversible first moves",
+            "Shorter feedback cycles between action and adjustment",
+            "Reduced severity of negative side-effects from decisions",
+            "Increased accuracy of second-order effect forecasts",
+            "Greater team willingness to experiment at thresholds"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Crossing of the Threshold",
+          "preliminary_beat": "Break Into 2 — Karma",
+          "save_the_cat_beat": "Break into Two",
+          "character_state": "From preparation to participation; accepts causal responsibility.",
+          "ordinary_world_baseline": "Operating within familiar constraints; reactive to fate.",
+          "call_to_adventure_preview": "Choice and chance entwine—optionality outperforms prediction."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Crossing of the Threshold",
+            "section_description": "The hero leaves the known world and enters the unknown",
+            "connection_focus_area": "Stepping beyond comfort",
+            "connect_points": {
+              "point1": "Identify your threshold moment",
+              "point2": "Map known vs. unknown challenges",
+              "point3": "Define one action to step forward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your personal threshold",
+              "objective2": "List two unknowns you will face",
+              "objective3": "Take one concrete step into new territory"
+            }
+          },
+          "book2": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Via Negativa & Optionality",
+            "section_description": "How systems thrive on randomness and uncertainty",
+            "connection_focus_area": "Welcoming chance",
+            "connect_points": {
+              "point1": "List three uncertainties in your plan",
+              "point2": "Design optional responses",
+              "point3": "Prepare small experiments"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate one area where unpredictability helps",
+              "objective2": "Create two optional pathways forward",
+              "objective3": "Implement a mini-experiment within 48 hours"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenge",
+            "section_description": "Adopting a growth mindset toward change",
+            "connection_focus_area": "Viewing thresholds as opportunities",
+            "connect_points": {
+              "point1": "Reframe a change event as growth",
+              "point2": "Gather feedback on your approach",
+              "point3": "Adjust mindset language daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Convert one fear of change into a challenge statement",
+              "objective2": "Solicit feedback on that reframe",
+              "objective3": "Journal the impact each evening"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Karmic Nexus, threads of consequence whirl around a sapphire wheel. Francisco steps onto the rim; the weave brightens along paths he can still revise.",
+          "symbolic_moment": "He releases a small, reversible pulse into the lattice; ripples reveal safer crossings and hidden costs.",
+          "emotional_landscape": "Steady curiosity, alert humility, rising resolve.",
+          "threshold_vision": "Agency grows when choices invite learning and limit harm.",
+          "transformation_promise": "A guardian who designs for consequence turns fate from jailer into teacher."
+        },
+
+        "epic_novel_pages": "Page 181 - 195",
+        "epic_chapter_focus": "The Crossing of the Threshold",
+        "epic_preliminary_scene_focus": "Break Into 2",
+        "epic_novel_chapter_focus": "Scene V: The Crossing of the Threshold",
+        "focus_area": "Fate & Change",
+        "specific_task_group_description": "Recognize and harness the pivotal moment when your journey shifts direction under the influence of fate.",
+        "specific_task_group_tagline": "Embrace the wheel turning"
+      },
       "personality_profile_174": {},
       "personality_profile_175": {},
       "personality_profile_176": {},
