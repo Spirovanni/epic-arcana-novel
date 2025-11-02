@@ -34892,7 +34892,180 @@
           "transformation_promise": "Each hard-won lesson becomes a shield for worlds yet unseen."
         }
       },
-      "personality_profile_164": {},
+      "personality_profile_164": {
+        "canonical_id": "EA-164",
+        "unique_identifier": "STG 5.1.2.1",
+        "specific_task_group_title": "Resilient Allegiance",
+        "all_chapter": 164,
+        "novel_book": 5,
+        "chapter": "Chapter 4",
+        "chapter_title": "The Call to Adventure — Resilient Allegiance",
+        "type": "Specific Task Group",
+        "display_name": "Resilient Allegiance",
+        "theme": "Develop steadfast loyalty and resilience as the journey begins.",
+        "family": "Resilience / Allegiance — Loyalty & Endurance",
+        "summary": "In the aftermath of his first cosmic victory, Francisco steadies his mind and vows fidelity to life-force protection. He forges early alliances, installs supportive routines, and adopts a growth posture so commitment holds when pressure spikes.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Nine",
+        "tarot_symbolism": "Guard at the gate—wounded yet unwavering; vigilance sustained by purpose.",
+        "color_alignment": {
+          "name": "Navy Blue",
+          "hsl": "210,100%,50%",
+          "rgb_hex": "#0066FF",
+          "color_symbolism": "Deep resolve—calm endurance under load."
+        },
+        "traits": {
+          "strengths": [
+            "keeps commitments visible and routine-backed",
+            "seeks mentors and integrates counsel quickly",
+            "rebounds from setbacks with structured reviews",
+            "maintains steady tone through extended strain",
+            "protects mission focus against distraction and doubt"
+          ],
+          "shadow": [
+            "white-knuckling through fatigue instead of resting",
+            "over-reliance on self—underusing allies",
+            "rigidity when conditions shift",
+            "taking on too much to prove loyalty",
+            "confusing endurance with silence about needs"
+          ],
+          "growth_focus": [
+            "pair perseverance with planned recovery blocks",
+            "delegate one duty to strengthen the alliance",
+            "run a weekly adaptability audit on routines",
+            "set a boundary that preserves longevity",
+            "log and share one learning from each setback"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Forces of Life",
+          "chapter_theme": "Immediate Reaction",
+          "fiction_chapter_context": "Book 5, Chapter 4 — Scene II: The Call to Adventure; Set-up/Catalyst. Francisco chooses allegiance and builds resilient habits and alliances."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—steadfast commitment expressed as calm, enduring presence."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.90,
+            "empathy": 0.71,
+            "openness": 0.72,
+            "orderliness": 0.81,
+            "conscientiousness": 0.89,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.84,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.54,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "cooperativeness": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1641","Q1642","Q1643","Q1644","Q1645","Q1646","Q1647","Q1648"],
+          "signals_map": {
+            "Q1641": { "dimension": "stability", "polarity": 1, "content": "I remain steady when pressure rises and timelines compress." },
+            "Q1642": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate commitments into daily routines and trackers." },
+            "Q1643": { "dimension": "cooperativeness", "polarity": 1, "content": "I engage mentors/allies and act on their counsel." },
+            "Q1644": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan without abandoning the mission." },
+            "Q1645": { "dimension": "agency", "polarity": 1, "content": "I take initiative to shore up weak points before they fail." },
+            "Q1646": { "dimension": "orderliness", "polarity": 1, "content": "I use cues and checklists to keep allegiance visible." },
+            "Q1647": { "dimension": "empathy", "polarity": 1, "content": "I name needs early so the team can sustain pace together." },
+            "Q1648": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid heroics that jeopardize long-term resilience." }
+          },
+          "daily_prompt": "What ritual will anchor your allegiance today—and where will you make space to recover so it lasts?",
+          "practices": [
+            "Mentor minute: weekly 15-min counsel + one applied action.",
+            "Resilience stack: cue → routine → reward mapped for core habits.",
+            "Setback script: reframe, lesson, next step—share with ally.",
+            "Boundary line: one protective ‘no’ to preserve mission stamina.",
+            "After-action + deload: schedule recovery following surges."
+          ],
+          "transformation_indicators": [
+            "Higher habit adherence over 28-day windows",
+            "Reduced relapse after setbacks",
+            "Increased effective use of allies/mentors",
+            "Fewer preventable errors during fatigue",
+            "Stable performance across extended operations"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Set-up",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "Alert but anchored; choosing endurance over impulse.",
+          "ordinary_world_baseline": "Early wins but fragile routines; allies not yet woven in.",
+          "call_to_adventure_preview": "Allegiance hardens into habit; resilience becomes the bridge."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Meeting with the Mentor",
+            "section_description": "The hero gains guidance and support for the journey",
+            "connection_focus_area": "Finding steadfast allies",
+            "connect_points": {
+              "point1": "Identify who offers guidance",
+              "point2": "Understand the mentor’s wisdom",
+              "point3": "Commit to their counsel"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two sources of support",
+              "objective2": "Summarize key advice received",
+              "objective3": "Plan how to apply that advice"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Design your environment to reinforce positive behaviors",
+            "connection_focus_area": "Building supportive routines",
+            "connect_points": {
+              "point1": "Set clear environmental cues",
+              "point2": "Link new routines to existing habits",
+              "point3": "Track consistency daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one reinforcement cue",
+              "objective2": "Establish a simple routine",
+              "objective3": "Record progress for one week"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Embracing challenge as an opportunity to learn",
+            "connection_focus_area": "Cultivating perseverance",
+            "connect_points": {
+              "point1": "Reframe setbacks as feedback",
+              "point2": "Practice self-compassion",
+              "point3": "Set a stretch goal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a recent setback",
+              "objective2": "Write a learning statement",
+              "objective3": "Outline next steps forward"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within the Guardian Alliance base, Francisco clasps a navy sigil—an oath to hold his post when the night grows longest.",
+          "symbolic_moment": "Nine ward-lights ignite along the perimeter; vigilance becomes shared.",
+          "emotional_landscape": "Sober resolve, quiet courage, durable calm.",
+          "threshold_vision": "Allegiance endures when woven into habit and held by many.",
+          "transformation_promise": "With mentors near and routines set, resilience will outlast the storm."
+        }
+      },
       "personality_profile_165": {},
       "personality_profile_166": {},
       "personality_profile_167": {},
