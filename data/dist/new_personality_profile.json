@@ -32628,7 +32628,180 @@
           "transformation_promise": "When one voice risks honesty, the whole circle strengthens."
         }
       },
-      "personality_profile_151": {},
+      "personality_profile_151": {
+        "canonical_id": "EA-151",
+        "unique_identifier": "STG 4.3.3.2",
+        "specific_task_group_title": "Calm Waters",
+        "all_chapter": 151,
+        "novel_book": 4,
+        "chapter": "Chapter 31",
+        "chapter_title": "The Ultimate Boon — Calm Waters",
+        "type": "Specific Task Group",
+        "display_name": "Calm Waters",
+        "theme": "Cultivating inner calm sustains effective leadership under pressure.",
+        "family": "Self-Regulation / Presence — Calm & Focus",
+        "summary": "After naming doubts and isolation, Francisco practices inner stillness to recover clarity and purpose. Calm Waters equips leaders to use mindfulness and stress-management to maintain composure and wise action in crisis.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Six",
+        "tarot_symbolism": "Passage from turbulence to clarity; thought becomes a quiet channel for action.",
+        "color_alignment": {
+          "name": "Medium Slate Blue",
+          "hsl": "240,100%,70%",
+          "rgb_hex": "#6666FF",
+          "color_symbolism": "Cool steadiness—a signal to slow the mind and steer precisely."
+        },
+        "traits": {
+          "strengths": [
+            "anchors teams with calm presence",
+            "uses breath and body awareness to regulate stress",
+            "keeps attention on essentials under pressure",
+            "models reflective pauses before decisions",
+            "restores group poise in heated moments"
+          ],
+          "shadow": [
+            "confuses calm with emotional distance",
+            "overuses delay as a de-stress tactic",
+            "minimizes urgent signals from others",
+            "ritualizes composure to avoid conflict",
+            "neglects action after reflection"
+          ],
+          "growth_focus": [
+            "pair stillness with time-boxed decisions",
+            "name emotions explicitly before moving on",
+            "invite a challenger to test assumptions",
+            "use brief body scans before high-stakes calls",
+            "track where calm improved outcomes"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Prophet of the Eternal",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 4, Chapter 31 — Scene XII: The Ultimate Boon; focus: Power within (set-up). After naming her doubts, the Prophet practices inner stillness to recover clarity and purpose."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—serene focus directed toward decisive action."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.90,
+            "empathy": 0.76,
+            "openness": 0.74,
+            "orderliness": 0.78,
+            "conscientiousness": 0.82,
+            "adaptability": 0.80,
+            "abstract_reasoning": 0.77,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.56,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.50,
+            "imagination": 0.68
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "adaptability": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q1511","Q1512","Q1513","Q1514","Q1515","Q1516","Q1517","Q1518"],
+          "signals_map": {
+            "Q1511": { "dimension": "stability", "polarity": 1, "content": "I can return to calm quickly during crises." },
+            "Q1512": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan after a brief reset rather than pushing through stress." },
+            "Q1513": { "dimension": "conscientiousness", "polarity": 1, "content": "I protect short reflection windows before big decisions." },
+            "Q1514": { "dimension": "agency", "polarity": 1, "content": "I turn mindful pauses into concrete next steps." },
+            "Q1515": { "dimension": "orderliness", "polarity": 1, "content": "I use repeatable rituals (breathing/body scans) before high-stakes moments." },
+            "Q1516": { "dimension": "empathy", "polarity": 1, "content": "My calm helps others feel safe to speak candidly." },
+            "Q1517": { "dimension": "risk_tolerance", "polarity": 1, "content": "I stay steady while choosing measured risks." },
+            "Q1518": { "dimension": "abstract_reasoning", "polarity": 1, "content": "Clarity rises for me after a short mindful reset." }
+          },
+          "daily_prompt": "Where will a 90-second reset create the most clarity today—and what decision follows it?",
+          "practices": [
+            "90 seconds box-breathing before briefings (4-4-4-4).",
+            "2-minute body scan before high-stakes calls.",
+            "Mindful triage: stop → sort essentials → schedule action.",
+            "Afternoon reset walk; no phone; note 3 specifics you observe.",
+            "End-of-day reflection: one moment calm altered the outcome."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-calm after stress spikes",
+            "Reduced decision errors under time pressure",
+            "Higher perceived clarity in team surveys",
+            "Fewer reactivity incidents in retrospectives",
+            "Increased adoption of reset rituals across team"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Power within (set-up)",
+          "save_the_cat_beat": "Power within (set-up)",
+          "character_state": "Calm restored; judgment sharpens through presence.",
+          "ordinary_world_baseline": "Scattered attention and reactivity.",
+          "call_to_adventure_preview": "Quiet mind, precise action."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Wherever You Go, There You Are",
+            "author": "Jon Kabat-Zinn",
+            "section_of_focus": "Mindfulness Practice",
+            "section_description": "Foundations of mindfulness meditation for stress reduction.",
+            "connection_focus_area": "Present-moment focus anchors leadership decisions.",
+            "connect_points": {
+              "point1": "Lead short guided breathing sessions.",
+              "point2": "Introduce mindfulness breaks in daily routines.",
+              "point3": "Use body scans before high-stakes meetings."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Facilitate a 5-minute mindfulness pause.",
+              "objective2": "Measure perceived stress levels over time.",
+              "objective3": "Assess decision-making speed under calm practice."
+            }
+          },
+          "book2": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Presence over Ego",
+            "section_description": "Techniques to overcome egoic anxiety by anchoring the mind in the present.",
+            "connection_focus_area": "Reducing mental noise improves strategic focus.",
+            "connect_points": {
+              "point1": "Practice conscious awareness drills.",
+              "point2": "Journal reflections on present-moment insights.",
+              "point3": "Share presence exercises in team check-ins."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a presence meditation session.",
+              "objective2": "Track improvements in focus metrics.",
+              "objective3": "Debrief team experiences of reduced anxiety."
+            }
+          },
+          "book3": {
+            "title": "Emotional Agility",
+            "author": "Susan David",
+            "section_of_focus": "Adaptive Emotional Management",
+            "section_description": "Strategies to observe and reframe emotions for effective action.",
+            "connection_focus_area": "Emotional agility enables composure amid chaos.",
+            "connect_points": {
+              "point1": "Implement emotional labeling exercises.",
+              "point2": "Teach reframing techniques for difficult feelings.",
+              "point3": "Role-play responses to emotional triggers."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead an emotional labeling workshop.",
+              "objective2": "Evaluate team emotional resilience scores.",
+              "objective3": "Monitor use of reframing in real scenarios."
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "The air stills; the world narrows to breath and heartbeat as the path ahead becomes visible.",
+          "symbolic_moment": "A river of light smooths into glass; choices appear beneath the surface.",
+          "emotional_landscape": "Composure, quiet confidence, lucid care.",
+          "threshold_vision": "From stillness, strategy.",
+          "transformation_promise": "Calm does not slow the mission—it sharpens it."
+        }
+      },
       "personality_profile_152": {},
       "personality_profile_153": {},
       "personality_profile_154": {},
