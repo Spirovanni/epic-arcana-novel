@@ -36410,7 +36410,198 @@
         "specific_task_group_description": "Learn to take decisive action when faced with critical moments, drawing on guidance from your allies.",
         "specific_task_group_tagline": "Ready. Set. Act."
       },
-      "personality_profile_172": {},
+      "personality_profile_172": {
+        "canonical_id": "EA-172",
+        "unique_identifier": "STG 5.1.4.3",
+        "specific_task_group_title": "Dynamic Hustle",
+        "all_chapter": 172,
+        "novel_book": 5,
+        "chapter": "Chapter 12",
+        "chapter_title": "Allies, Mentors, and Helpers — Dynamic Hustle",
+        "type": "Specific Task Group",
+        "display_name": "The Momentum Engine",
+        "theme": "Sustained momentum emerges when systems, focus, and allies synchronize.",
+        "family": "Productivity / Collaboration — Systems, Focus & Momentum",
+
+        "summary": "Francisco learns to leverage collaborative workflows and mentor guidance to maintain high velocity without burnout. Dynamic Hustle turns hustle into a repeatable team capability—capturing work, clarifying next actions, protecting deep-focus blocks, and broadcasting progress so the coalition moves together.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Nine",
+
+        "traits": {
+          "strengths": [
+            "converts chaos into prioritized queues",
+            "protects deep-work time for high-value output",
+            "keeps teams aligned with concise status signals",
+            "balances speed with quality checks",
+            "builds habits that compound throughput"
+          ],
+          "shadow": [
+            "mistakes motion for progress",
+            "over-schedules, leaving no recovery margin",
+            "optimizes locally, misaligns globally",
+            "neglects creative incubation time",
+            "resists pausing to reassess the system"
+          ],
+          "growth_focus": [
+            "pair velocity metrics with value metrics",
+            "schedule recovery and buffer time explicitly",
+            "run weekly system retros to remove friction",
+            "limit WIP to prevent thrash",
+            "share playbooks so momentum scales beyond you"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 5, Chapter 12 — With allies and systems aligned, Francisco converts guidance into sustained throughput."
+        },
+
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—disciplined systems tempered with flexibility and energizing momentum."
+        },
+
+        "color_alignment": {
+          "name": "Deep Koamaru",
+          "hsl": "240,33%,30%",
+          "rgb_hex": "#333366",
+          "color_symbolism": "Dusk-indigo—steady cadence, focused endurance, shared rhythm."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.72,
+            "empathy": 0.70,
+            "openness": 0.66,
+            "orderliness": 0.84,
+            "conscientiousness": 0.86,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.70,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.58,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "cooperativeness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1721","Q1722","Q1723","Q1724","Q1725","Q1726","Q1727","Q1728"
+          ],
+          "signals_map": {
+            "Q1721": { "dimension": "orderliness", "polarity": 1, "content": "I translate big goals into a visible, prioritized queue." },
+            "Q1722": { "dimension": "conscientiousness", "polarity": 1, "content": "I define clear next actions and owners for every task." },
+            "Q1723": { "dimension": "cooperativeness", "polarity": 1, "content": "I broadcast concise updates so allies can align quickly." },
+            "Q1724": { "dimension": "adaptability", "polarity": 1, "content": "I adjust the plan when new constraints or data appear." },
+            "Q1725": { "dimension": "agency", "polarity": 1, "content": "I initiate momentum by removing blockers without waiting." },
+            "Q1726": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect daily tasks to system-level outcomes." },
+            "Q1727": { "dimension": "stability", "polarity": 1, "content": "I protect recovery time to sustain long-run throughput." },
+            "Q1728": { "dimension": "orderliness", "polarity": 1, "content": "I limit WIP to reduce context switching and thrash." }
+          },
+          "daily_prompt": "Which single blocker will you remove for your team today—and what 25–50 minute deep-work block will you schedule to do it?",
+          "practices": [
+            "Capture & Clarify: empty inboxes; convert every item to a next action with an owner.",
+            "Deep-Work Block: schedule one 50-minute focus session; publish the intention.",
+            "WIP Limits: cap concurrent tasks per person; finish before you start new.",
+            "Standup Signal: 90-second round—blockers, next action, help needed.",
+            "Weekly System Retro: identify one friction point; fix it with a small experiment."
+          ],
+          "transformation_indicators": [
+            "Shorter average cycle time from start to done",
+            "Higher percent of tasks with named owners and next actions",
+            "Reduced context-switch rate per person per day",
+            "Consistent completion of deep-work blocks per week",
+            "Improved cross-team alignment scores on weekly pulse"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Dynamic Hustle",
+          "save_the_cat_beat": "Theme Stated",
+          "character_state": "From isolated effort to orchestrated flow.",
+          "ordinary_world_baseline": "Busy but fragmented motion, unclear ownership, brittle focus.",
+          "call_to_adventure_preview": "When systems serve people, momentum becomes a shared asset."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Getting Things Done",
+            "author": "David Allen",
+            "section_of_focus": "The Workflow Mastery",
+            "section_description": "Organizing tasks and commitments",
+            "connection_focus_area": "Systematic productivity",
+            "connect_points": {
+              "point1": "Capture all open tasks",
+              "point2": "Clarify next actions",
+              "point3": "Review priorities with a partner"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Empty your inbox",
+              "objective2": "Define next actions for five items",
+              "objective3": "Schedule a weekly review"
+            }
+          },
+          "book2": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Rules for Focused Success",
+            "section_description": "Strategies for uninterrupted concentration",
+            "connection_focus_area": "High-value output",
+            "connect_points": {
+              "point1": "Block a 90-minute focus session",
+              "point2": "Eliminate all distractions",
+              "point3": "Evaluate output quality"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete one deep-work session",
+              "objective2": "Measure pages or features produced",
+              "objective3": "Reflect on focus improvements"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Satisfying",
+            "section_description": "Reinforcing positive behavior loops",
+            "connection_focus_area": "Sustained momentum",
+            "connect_points": {
+              "point1": "Set up an immediate reward",
+              "point2": "Track progress visibly",
+              "point3": "Share results with a teammate"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a rewarding habit loop",
+              "objective2": "Log daily achievements",
+              "objective3": "Acknowledge a peer’s contribution"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within a midnight-indigo operations ring, task glyphs flood the air. Francisco sweeps his hand; work condenses into lanes with owners and next actions.",
+          "symbolic_moment": "A shared cadence tone ripples through the coalition; deep-indigo bands pulse as focus windows open across sectors.",
+          "emotional_landscape": "Calm coordination, disciplined drive, quiet satisfaction.",
+          "threshold_vision": "When every ally knows the next smallest step, the whole moves as one.",
+          "transformation_promise": "A network that converts guidance into flow becomes inexhaustible."
+        },
+
+        "epic_novel_pages": "Page 166 - 180",
+        "epic_chapter_focus": "Allies, Mentors, and Helpers",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "focus_area": "Productivity",
+        "specific_task_group_description": "Leverage collaborative workflows and guidance to maintain high momentum and productivity.",
+        "specific_task_group_tagline": "Hustle smarter together"
+      },
       "personality_profile_173": {},
       "personality_profile_174": {},
       "personality_profile_175": {},
