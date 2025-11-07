@@ -39412,7 +39412,196 @@
         "specific_task_group_description": "Fail Forward transforms failure from a destructive force into a constructive catalyst for growth. It requires courageous honesty, lesson extraction, and using those insights to build stronger foundations. By embracing vulnerability, releasing perfectionism, and viewing setbacks with curiosity, individuals develop resilience that transcends mere recovery—distinguishing between failing at a task and being a failure as a person, and enabling authentic, iterative improvement.",
         "specific_task_group_tagline": "Every defeat is data for future victory."
       },
-      "personality_profile_187": {},
+      "personality_profile_187": {
+        "canonical_id": "EA-187",
+        "unique_identifier": "STG 5.2.5.1",
+        "specific_task_group_title": "Responsibility",
+        "all_chapter": 187,
+        "novel_book": 5,
+        "chapter": "Chapter 27",
+        "chapter_title": "The Abyss — Responsibility",
+        "type": "Specific Task Group",
+        "display_name": "The Accountable",
+        "theme": "In crisis, ownership restores control: accountability converts chaos into coordinated action.",
+        "family": "Accountability — Ownership, Proactivity & Repair",
+    
+        "summary": "Amid cascading trials, Francisco reclaims agency by owning outcomes—good and bad. By stating facts without spin, naming his part, and initiating corrective action, he steadies allies and reorients the mission. Responsibility becomes power under pressure, transforming setback into traction.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Knight",
+    
+        "traits": {
+          "strengths": [
+            "states facts, admits fault, and specifies fixes",
+            "turns ambiguity into owned next steps",
+            "keeps promises visible and time-bound",
+            "models calm in public while doing hard work in private",
+            "invites shared ownership without abdication"
+          ],
+          "shadow": [
+            "over-owning others’ work and disempowering them",
+            "perfectionism that delays necessary decisions",
+            "self-criticism that drains momentum",
+            "defensiveness under scrutiny",
+            "confusing control with leadership"
+          ],
+          "growth_focus": [
+            "differentiate authority, responsibility, and accountability",
+            "replace blame language with control-language",
+            "delegate outcomes with clear constraints",
+            "close the loop on every commitment",
+            "schedule post-mortems that end with prevention guards"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 5, Chapter 27 — In the Abyss, Francisco stabilizes the team by owning the mission’s gaps and leading the reset."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled ownership with flexibility and optimism."
+        },
+    
+        "color_alignment": {
+          "name": "Deep Sky Blue",
+          "hsl": "195,100%,50%",
+          "rgb_hex": "#00CCFF",
+          "color_symbolism": "Crisp clarity after confusion—clean lines, clean commitments."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.82,
+            "empathy": 0.74,
+            "openness": 0.68,
+            "orderliness": 0.77,
+            "conscientiousness": 0.88,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.55,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "stability": 0.30,
+            "agency": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q1871","Q1872","Q1873","Q1874","Q1875","Q1876","Q1877","Q1878"],
+          "signals_map": {
+            "Q1871": { "dimension": "conscientiousness", "polarity": 1, "content": "I document commitments with owners, dates, and outcomes." },
+            "Q1872": { "dimension": "agency", "polarity": 1, "content": "When things break, I take the first repair step within 24 hours." },
+            "Q1873": { "dimension": "stability", "polarity": 1, "content": "Under pressure, I communicate early status rather than wait for perfect answers." },
+            "Q1874": { "dimension": "orderliness", "polarity": 1, "content": "I run brief post-mortems that end with prevention guardrails." },
+            "Q1875": { "dimension": "cooperativeness", "polarity": 1, "content": "I share credit broadly and distribute ownership clearly." },
+            "Q1876": { "dimension": "adaptability", "polarity": 1, "content": "I pivot plans quickly while preserving intent and constraints." },
+            "Q1877": { "dimension": "empathy", "polarity": 1, "content": "I acknowledge how misses affected others before proposing fixes." },
+            "Q1878": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I trace failures to system causes, not just individual errors." }
+          },
+          "daily_prompt": "What outcome will you own today—what’s the next visible step, and when will you close the loop?",
+          "practices": [
+            "Ownership Ledger: list active promises with owner/date/status; review daily.",
+            "Red/Yellow/Green Standup: 60-second color-coded status with one unblocker ask.",
+            "Blameless Post-Mortem: facts → impact → prevention guard added in 15 minutes.",
+            "Constraint Delegation: assign outcome, boundaries, check-ins—then step back.",
+            "Promise Closure Ritual: send proof-of-completion notes for every commitment."
+          ],
+          "transformation_indicators": [
+            "Higher on-time delivery rate of owned commitments",
+            "Decrease in repeat incidents for the same root cause",
+            "Shorter mean time to acknowledge and address issues",
+            "Increase in cross-team trust/clarity survey scores",
+            "Documented percentage of commitments with closure notes"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Trials (set-up) — Responsibility",
+          "save_the_cat_beat": "All is Lost",
+          "character_state": "Shaken but steadying; converting shock into owned action.",
+          "ordinary_world_baseline": "Diffuse blame, hidden errors, unclear owners.",
+          "call_to_adventure_preview": "Ownership creates traction when everything else is slipping."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Extreme Ownership",
+            "author": "Jocko Willink & Leif Babin",
+            "section_of_focus": "Taking Extreme Ownership",
+            "section_description": "Leaders own everything in their universe.",
+            "connection_focus_area": "Personal accountability",
+            "connect_points": {
+              "point1": "Identify areas lacking ownership",
+              "point2": "Define corrective actions",
+              "point3": "Communicate ownership to stakeholders"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two tasks you need to own",
+              "objective2": "Draft a plan to address one gap",
+              "objective3": "Share your commitment publicly"
+            }
+          },
+          "book2": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Habit 1: Be Proactive",
+            "section_description": "Taking responsibility for your responses.",
+            "connection_focus_area": "Proactive mindset",
+            "connect_points": {
+              "point1": "Recognize a reactive pattern",
+              "point2": "Formulate a proactive alternative",
+              "point3": "Practice it in a real scenario"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one reactive habit",
+              "objective2": "Write a proactive response plan",
+              "objective3": "Apply it for three consecutive days"
+            }
+          },
+          "book3": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Rising Strong",
+            "section_description": "Owning your story after a fall.",
+            "connection_focus_area": "Resilience through responsibility",
+            "connect_points": {
+              "point1": "Acknowledge a personal failure",
+              "point2": "Share its impact with a peer",
+              "point3": "Outline steps to rebuild trust"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal a recent setback",
+              "objective2": "Discuss it in a trusted circle",
+              "objective3": "Define one trust-building action"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a failing bastion at the rim of the Abyss, Francisco broadcasts a clear status to every ally and adversary: what broke, why it broke, and what he will fix first.",
+          "symbolic_moment": "He inscribes his sigil on a slate of tempered glass—each promise etched and time-stamped—then seals it with starlight visible to the fleet.",
+          "emotional_landscape": "Shock giving way to steadiness; fear converting to focus.",
+          "threshold_vision": "The shortest path through chaos is owned action.",
+          "transformation_promise": "A leader who names reality and owns outcomes becomes the calm in every storm."
+        },
+    
+        "epic_novel_pages": "Page 391 - 405",
+        "epic_chapter_focus": "Trials (set-up)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "focus_area": "Accountability",
+        "specific_task_group_description": "Accept responsibility for your actions amid crisis to regain control.",
+        "specific_task_group_tagline": "Own your role in adversity"
+      },
       "personality_profile_188": {},
       "personality_profile_189": {},
       "personality_profile_190": {},
