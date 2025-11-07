@@ -40186,7 +40186,116 @@
         "green": 153,
         "blue": 255
       },
-      "personality_profile_191": {},
+      "specific_task_group_2": {
+        "id": "EA-191",
+        "unique_identifier": "STG 5.2.6.2",
+        "all_chapter": 191,
+        "novel_book": 5,
+        "chapter": "Chapter 31",
+        "type": "Specific Task Group",
+        "tarot_card_link": "",
+        "tarot_family": "Wands",
+        "new_tarot_family": "",
+        "tarot_card_item": "Nine",
+        "color_name": "Dodger Blue",
+        "hex_code": "#3399FF",
+        "red": 51,
+        "green": 153,
+        "blue": 255,
+        "epic_novel_pages": "Page 451 - 465",
+        "epic_chapter_focus": "Power within (set-up)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_preliminary_scene_description": "",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "specific_task_group_title": "Persistence",
+        "focus_area": "Endurance",
+        "connection_to_the_major_task_group": "Dark Night of the Soul",
+        "specific_task_group_description": "Sustain your effort through hardship by strengthening your inner resolve.",
+        "specific_task_group_tagline": "Keep going when it counts",
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Effort Counts Twice",
+            "section_description": "Combining passion and perseverance",
+            "connection_focus_area": "Unwavering effort",
+            "connect_points": {
+              "point1": "Outline a challenging task",
+              "point2": "Plan incremental effort steps",
+              "point3": "Reflect on daily progress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one challenging goal",
+              "objective2": "Break it into daily actions",
+              "objective3": "Record effort and outcome"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Easy",
+            "section_description": "Simplifying habit formation",
+            "connection_focus_area": "Building small consistent actions",
+            "connect_points": {
+              "point1": "Identify a micro-habit for persistence",
+              "point2": "Link it to an existing routine",
+              "point3": "Track it for two weeks"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one micro-habit",
+              "objective2": "Design a cue for it",
+              "objective3": "Maintain it daily"
+            }
+          },
+          "book3": {
+            "title": "The Dip",
+            "author": "Seth Godin",
+            "section_of_focus": "When to Quit or Push",
+            "section_description": "Knowing when perseverance pays off",
+            "connection_focus_area": "Strategic endurance",
+            "connect_points": {
+              "point1": "Map current dip",
+              "point2": "Evaluate long-term value",
+              "point3": "Decide to persist or pivot"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a current struggle",
+              "objective2": "Assess its strategic importance",
+              "objective3": "Commit to a persistence plan"
+            }
+          }
+        },
+        "hero_journey_beat": "Power within (set-up)",
+        "hero_journey_beat_objective": "The goal of the hero journey beat is to power within (set-up).",
+        "save_the_cat_beat": "Power within (set-up)",
+        "save_the_cat_beat_goal": "",
+        "plot": "Power within (set-up)",
+        "character_arcs": {
+          "Francisco": "Masters cosmic persistence, developing the ability to sustain effort through any hardship by accessing deep reserves of inner strength.",
+          "Persistence_Mentors": "Cosmic entities who have endured through extreme challenges and can teach Francisco about true cosmic endurance.",
+          "Inner_Strength_Sources": "The deep cosmic reserves within Francisco that provide the power needed for sustained effort through adversity.",
+          "Endurance_Transcendence": "Francisco's growing ability to transcend ordinary limits of endurance through cosmic persistence."
+        },
+        "story_gaps_addressed": {
+          "cosmic_endurance": "Francisco learns that cosmic guardianship requires persistence that transcends ordinary physical and mental limits.",
+          "inner_strength_access": "Introduction of how to access and utilize deep cosmic reserves of inner strength.",
+          "sustained_effort": "Development of Francisco's ability to maintain cosmic effectiveness even through prolonged adversity."
+        },
+        "location_details": {
+          "persistence_training_grounds": "Cosmic facilities designed to test and strengthen Francisco's ability to persist through extreme challenges.",
+          "inner_strength_sanctuaries": "Spaces where cosmic guardians can access and strengthen their deep reserves of cosmic endurance."
+        },
+        "series_connections": {
+          "cosmic_persistence": "Francisco's mastery of persistence will be crucial for sustaining effort through the prolonged challenges of Books 7-9.",
+          "endurance_leadership": "His ability to keep going when others falter will be essential for leading through the extended trials of the finale."
+        },
+        "summary": "Drawing on inner cosmic power, Francisco learns to sustain effort through hardship by strengthening his inner resolve. He develops cosmic persistence—the ability to keep going when it counts most, drawing on reserves of inner strength that transcend ordinary endurance. This persistence becomes his key to transcending cosmic adversity.",
+        "pov": "3rd Person Limited",
+        "tense": "Past Tense",
+        "core_emotion": "Varies by chapter",
+        "scene_tone": "Varies by chapter"
+      },
       "personality_profile_192": {},
       "personality_profile_193": {},
       "personality_profile_194": {},
