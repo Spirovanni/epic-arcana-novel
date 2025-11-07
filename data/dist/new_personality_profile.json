@@ -40595,7 +40595,214 @@
         "green": 102,
         "blue": 153
       },
-      "personality_profile_193": {},
+      "personality_profile_193": {
+        "canonical_id": "EA-193",
+        "unique_identifier": "STG 5.2.7.1",
+        "specific_task_group_title": "Burden",
+        "all_chapter": 193,
+        "novel_book": 5,
+        "chapter": "Chapter 33",
+        "chapter_title": "Flight — Burden",
+        "type": "Specific Task Group",
+        "display_name": "The Loadmaster",
+        "theme": "When the weight spikes, momentum survives by spreading load and decisions—focus on the vital few, share the many.",
+        "family": "Conflict Management / Team Power — Delegation, Focus & Load-Balancing",
+    
+        "summary": "Francisco stops carrying the mission alone. He trims the nonessential, distributes ownership with authority, and installs decision rhythms that keep the column moving under fire. Shared load becomes shared speed.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ten",
+    
+        "traits": {
+          "strengths": [
+            "ruthlessly prioritizes the vital few",
+            "delegates outcomes with clear decision rights",
+            "keeps momentum by decentralizing under stress",
+            "maintains accountability without micromanaging",
+            "builds cross-support so no one breaks alone"
+          ],
+          "shadow": [
+            "tries to shoulder too much before delegating",
+            "confuses control with stewardship",
+            "bottlenecks approvals at the top",
+            "spreads team too thin in crises",
+            "under-communicates context when moving fast"
+          ],
+          "growth_focus": [
+            "delegate earlier—transfer authority with the task",
+            "install visual WIP limits to prevent overload",
+            "practice brief, frequent syncs to share context",
+            "define exit criteria for your own tasks",
+            "coach successors so responsibilities travel"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 5, Chapter 33 — During Flight, the company survives by cutting weight and distributing roles mid-movement."
+        },
+    
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—strength that serves by trusting and empowering others."
+        },
+    
+        "color_alignment": {
+          "name": "Navy Blue",
+          "hsl": "210,100%,40%",
+          "rgb_hex": "#0066CC",
+          "color_symbolism": "Deep command in rough seas—calm authority that reallocates force where it’s needed."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.80,
+            "empathy": 0.71,
+            "openness": 0.66,
+            "orderliness": 0.74,
+            "conscientiousness": 0.86,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.84,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.62,
+            "novelty_seeking": 0.55,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "cooperativeness": 0.36,
+            "conscientiousness": 0.34,
+            "agency": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1931",
+            "Q1932",
+            "Q1933",
+            "Q1934",
+            "Q1935",
+            "Q1936",
+            "Q1937",
+            "Q1938"
+          ],
+          "signals_map": {
+            "Q1931": { "dimension": "cooperativeness", "polarity": 1, "content": "I delegate outcomes (not just tasks) and grant matching authority." },
+            "Q1932": { "dimension": "conscientiousness", "polarity": 1, "content": "I prune nonessential work during crises to protect mission flow." },
+            "Q1933": { "dimension": "orderliness", "polarity": 1, "content": "We use clear decision rights so approvals don’t bottleneck." },
+            "Q1934": { "dimension": "agency", "polarity": 1, "content": "Under pressure, I move decisions closest to the information." },
+            "Q1935": { "dimension": "empathy", "polarity": 1, "content": "I monitor teammate load and rebalance before burnout appears." },
+            "Q1936": { "dimension": "social_dominance", "polarity": -1, "content": "I insist on personally approving most decisions even when busy." },
+            "Q1937": { "dimension": "adaptability", "polarity": 1, "content": "When a node fails, I reroute responsibilities within minutes." },
+            "Q1938": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can map work as a system to spot leverage and choke points." }
+          },
+          "daily_prompt": "What will you remove, route, or delegate in the next 10 minutes to increase team speed?",
+          "practices": [
+            "Burden Map: visualize who carries what; rebalance weekly and during crises.",
+            "Delegation Charter: for each handoff, define outcome, authority, constraints, and check-ins.",
+            "Decision Rights Matrix (RACI/DARE): make ownership explicit for key flows.",
+            "WIP Limits: cap concurrent work per person/team to prevent silent overload.",
+            "Relief Rotation: preplanned swaps for high-strain roles to sustain momentum."
+          ],
+          "transformation_indicators": [
+            "Cycle time drops as approvals decentralize",
+            "Fewer blocked tasks and single-point failures",
+            "Lower burnout indicators during peak load",
+            "Higher clarity scores on ownership surveys",
+            "Stable velocity despite spikes in demand"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Action (conflict)",
+          "preliminary_beat": "Break into 3 — Burden",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Overloaded but decisive; ready to trade control for speed.",
+          "ordinary_world_baseline": "Centralized hero work; progress tied to one pair of hands.",
+          "boon_reveal": "Shared load is faster load—decentralize decisions, keep the column moving."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "The Disciplined Pursuit of Less",
+            "section_description": "How to eliminate the nonessential and focus on what matters",
+            "connection_focus_area": "Prioritizing burdens",
+            "connect_points": {
+              "point1": "Identify non-critical tasks to offload",
+              "point2": "Set clear criteria for delegation",
+              "point3": "Create a minimal responsibilities list"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three tasks to delegate",
+              "objective2": "Define delegation criteria",
+              "objective3": "Implement a weekly review of priorities"
+            }
+          },
+          "book2": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "From Command to Team Networks",
+            "section_description": "Building trust and decentralized decision-making",
+            "connection_focus_area": "Sharing authority under stress",
+            "connect_points": {
+              "point1": "Map your team network",
+              "point2": "Identify decision points to decentralize",
+              "point3": "Establish communication rhythms"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Chart your team’s structure",
+              "objective2": "Select two decisions to delegate",
+              "objective3": "Schedule a daily check-in"
+            }
+          },
+          "book3": {
+            "title": "Radical Collaboration",
+            "author": "James Tamm & Ronald Luyet",
+            "section_of_focus": "Creating Synergy",
+            "section_description": "Techniques for collaborative problem-solving",
+            "connection_focus_area": "Equitable burden sharing",
+            "connect_points": {
+              "point1": "Define shared goals",
+              "point2": "Agree on roles and contributions",
+              "point3": "Implement joint accountability"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a shared goals statement",
+              "objective2": "Outline role responsibilities",
+              "objective3": "Set up a joint review process"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Arrows darken the sky as the company runs light; Francisco slashes straps, redistributes packs, and appoints runners with local command.",
+          "symbolic_moment": "He plants the banner in a moving wedge—then hands its pole to three bearers in rotation; the standard never slows.",
+          "emotional_landscape": "Urgent clarity, disciplined trust, kinetic calm.",
+          "boon_definition": "Distributed command and carried weight—each takes less so all move more.",
+          "transformation_promise": "A leader who shares the load creates a column that cannot be stopped."
+        },
+    
+        "epic_novel_pages": "Page 481 - 495",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Conflict Management",
+        "specific_task_group_description": "Learn to distribute and delegate responsibilities under pressure to keep momentum.",
+        "specific_task_group_tagline": "Share the load",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Navy Blue",
+        "hex_code": "#0066CC",
+        "red": 0,
+        "green": 102,
+        "blue": 204
+      },
       "personality_profile_194": {},
       "personality_profile_195": {},
       "personality_profile_196": {},
