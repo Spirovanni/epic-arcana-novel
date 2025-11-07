@@ -39985,7 +39985,207 @@
         "specific_task_group_description": "Draw meaningful insights from complex, high-stakes situations.",
         "specific_task_group_tagline": "See beyond the obvious"
       },
-      "personality_profile_190": {},
+      "personality_profile_190": {
+        "canonical_id": "EA-190",
+        "unique_identifier": "STG 5.2.6.1",
+        "specific_task_group_title": "Purposefulness",
+        "all_chapter": 190,
+        "novel_book": 5,
+        "chapter": "Chapter 30",
+        "chapter_title": "The Ultimate Boon — Purposefulness",
+        "type": "Specific Task Group",
+        "display_name": "The North Star",
+        "theme": "In the darkest hour, clarified purpose becomes renewable power and direction.",
+        "family": "Resilience / Meaning — Purpose, Grit & Direction",
+    
+        "summary": "At his lowest point, Francisco learns to anchor himself to a clear, lived purpose. He translates meaning into steady behaviors—rituals, milestones, and service—so momentum returns even when motivation is gone. Purpose becomes both compass and fuel.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Seven",
+    
+        "traits": {
+          "strengths": [
+            "holds a clear why under pressure",
+            "turns meaning into daily behaviors",
+            "re-centers teams on mission during chaos",
+            "sustains effort through setbacks",
+            "links small actions to long-arc purpose"
+          ],
+          "shadow": [
+            "rigidity around a single narrative of purpose",
+            "moralizing that alienates allies",
+            "neglecting recovery in the name of duty",
+            "confusing activity with meaning",
+            "dismissing short-term emotions as irrelevant"
+          ],
+          "growth_focus": [
+            "pair purpose with rest and renewal",
+            "periodically re-validate your why with data and feedback",
+            "separate identity from current outcomes",
+            "translate purpose into one visible daily habit",
+            "teach others to find their own why (not just follow yours)"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Darkest moment (resolution)",
+          "fiction_chapter_context": "Book 5, Chapter 30 — In The Ultimate Boon, purpose crystallizes into practices that carry the company forward."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—serious purpose balanced by hope, play, and flexibility."
+        },
+    
+        "color_alignment": {
+          "name": "Cornflower Blue",
+          "hsl": "220,100%,70%",
+          "rgb_hex": "#6699FF",
+          "color_symbolism": "A cool beacon in night seas—calm direction when storms peak."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.88,
+            "empathy": 0.72,
+            "openness": 0.70,
+            "orderliness": 0.76,
+            "conscientiousness": 0.86,
+            "adaptability": 0.73,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.52,
+            "imagination": 0.74
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.35,
+            "agency": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1901","Q1902","Q1903","Q1904","Q1905","Q1906","Q1907","Q1908"
+          ],
+          "signals_map": {
+            "Q1901": { "dimension": "agency", "polarity": 1, "content": "I take purposeful action even when I don’t feel motivated." },
+            "Q1902": { "dimension": "stability", "polarity": 1, "content": "My sense of meaning steadies me during crises." },
+            "Q1903": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep daily rituals that embody my long-term mission." },
+            "Q1904": { "dimension": "orderliness", "polarity": 1, "content": "I translate big purpose into milestones and checkpoints." },
+            "Q1905": { "dimension": "empathy", "polarity": 1, "content": "I help others connect their tasks to a larger why." },
+            "Q1906": { "dimension": "adaptability", "polarity": 1, "content": "I can refine my purpose without losing my direction." },
+            "Q1907": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect present sacrifices to future significance." },
+            "Q1908": { "dimension": "stability", "polarity": 1, "content": "Setbacks do not shake my mission focus for long." }
+          },
+          "daily_prompt": "What is one action today that proves your why—even if no one sees it?",
+          "practices": [
+            "Purpose Card: a one-sentence mission carried and read at start/close of day.",
+            "3×3 Milestones: three weekly moves tied to three quarterly aims.",
+            "Anchor Ritual: 10-minute morning cue (read, breathe, choose one deliberate act).",
+            "Meaning Map: link tasks on a board to the long-arc mission.",
+            "Service Turn: extend your purpose by a concrete assist to one person daily."
+          ],
+          "transformation_indicators": [
+            "Shorter bounce-back time after setbacks",
+            "Higher adherence to daily anchor ritual",
+            "Increased completion of purpose-linked milestones",
+            "Team reports clearer line-of-sight to mission",
+            "Reduced value drift during high-stress periods"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Darkest moment (resolution)",
+          "preliminary_beat": "Dark Night of the Soul — Purposefulness",
+          "save_the_cat_beat": "Darkest moment (resolution)",
+          "character_state": "Shaken but oriented; the why is brighter than the storm.",
+          "ordinary_world_baseline": "Diffuse goals; motivation tied to mood.",
+          "boon_reveal": "Purpose is practiced, not proclaimed; repetition makes meaning tangible."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Logotherapy and Purpose",
+            "section_description": "How purpose drives survival in extreme conditions",
+            "connection_focus_area": "Finding meaning under despair",
+            "connect_points": {
+              "point1": "Identify your core why",
+              "point2": "Map how it sustains you in crisis",
+              "point3": "Outline daily reminders of purpose"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate your personal why",
+              "objective2": "Describe how it anchors you under stress",
+              "objective3": "Create a purpose reminder ritual"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Perseverance of Purpose",
+            "section_description": "Sustaining long-term goals with passion",
+            "connection_focus_area": "Steadfast determination",
+            "connect_points": {
+              "point1": "Choose a long-term goal",
+              "point2": "List three ways purpose fuels effort",
+              "point3": "Set weekly milestone markers"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one long-term objective",
+              "objective2": "Plan purpose-driven milestones",
+              "objective3": "Track progress each week"
+            }
+          },
+          "book3": {
+            "title": "The Purpose Driven Life",
+            "author": "Rick Warren",
+            "section_of_focus": "Meaning and Identity",
+            "section_description": "Discovering life’s ultimate purpose",
+            "connection_focus_area": "Personal calling",
+            "connect_points": {
+              "point1": "List your gifts and passions",
+              "point2": "Connect them to a larger mission",
+              "point3": "Draft a mission statement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify three personal strengths",
+              "objective2": "Link them to a mission",
+              "objective3": "Compose a one-sentence mission statement"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Alone in the starless reach, Francisco holds a dim beacon and whispers the vow that first set him on the path; the light steadies.",
+          "symbolic_moment": "He carves his mission into a brass token and pins it to the company banner; hands gather, shoulders square.",
+          "emotional_landscape": "Grave calm, stubborn hope, disciplined resolve.",
+          "boon_definition": "Purpose operationalized—one vow, one ritual, one step—repeated until dawn returns.",
+          "transformation_promise": "A leader who can suffer with meaning can lead through anything."
+        },
+    
+        "epic_novel_pages": "Page 436 - 450",
+        "epic_chapter_focus": "Darkest moment (resolution)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Cultivate a clear sense of purpose when you’re at your lowest to propel you forward.",
+        "specific_task_group_tagline": "Find meaning in the darkest hour",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Cornflower Blue",
+        "hex_code": "#6699FF",
+        "red": 102,
+        "green": 153,
+        "blue": 255
+      },
       "personality_profile_191": {},
       "personality_profile_192": {},
       "personality_profile_193": {},
