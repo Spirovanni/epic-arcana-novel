@@ -40296,7 +40296,207 @@
         "core_emotion": "Varies by chapter",
         "scene_tone": "Varies by chapter"
       },
-      "personality_profile_192": {},
+      "personality_profile_192": {
+        "canonical_id": "EA-192",
+        "unique_identifier": "STG 5.2.6.3",
+        "specific_task_group_title": "Tolerance",
+        "all_chapter": 192,
+        "novel_book": 5,
+        "chapter": "Chapter 32",
+        "chapter_title": "The Ultimate Boon — Tolerance",
+        "type": "Specific Task Group",
+        "display_name": "The Open Compass",
+        "theme": "At the moment of attainment, real wisdom is the capacity to hold contradictions without collapsing into false certainty—and to move forward kindly, anyway.",
+        "family": "Acceptance / Wisdom — Ambiguity, Compassion & Integration",
+    
+        "summary": "Having won the boon, Francisco discovers the gift within the gift: the ability to welcome ambiguity. He learns to balance conflicting duties, emotions, and timelines without forcing premature closure. Tolerance becomes a working practice—clear values, soft grip, deliberate steps.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Eight",
+    
+        "traits": {
+          "strengths": [
+            "holds space for ambiguity without stalling",
+            "balances competing priorities with composure",
+            "listens deeply across differences",
+            "integrates paradox into clear next actions",
+            "maintains kindness under uncertainty"
+          ],
+          "shadow": [
+            "indecision disguised as open-mindedness",
+            "boundaries blur to avoid conflict",
+            "over-tolerating dysfunction or delay",
+            "spiritual bypassing (acceptance instead of action)",
+            "slow response in true emergencies"
+          ],
+          "growth_focus": [
+            "set decision deadlines when stakes are high",
+            "name non-negotiables so tolerance has edges",
+            "translate ambiguity into small reversible experiments",
+            "practice firm compassion: kind, clear, and timely",
+            "audit ‘tolerance drift’ where patience becomes avoidance"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 5, Chapter 32 — With the boon in hand, Francisco accepts paradox and chooses measured, value-aligned action."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3 — serene acceptance energized into purposeful engagement."
+        },
+    
+        "color_alignment": {
+          "name": "Lochmara",
+          "hsl": "210,50%,40%",
+          "rgb_hex": "#336699",
+          "color_symbolism": "Deep ocean steadiness—vision that sees through shifting surface currents."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.80,
+            "empathy": 0.86,
+            "openness": 0.88,
+            "orderliness": 0.62,
+            "conscientiousness": 0.70,
+            "adaptability": 0.84,
+            "abstract_reasoning": 0.76,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.66,
+            "imagination": 0.78
+          },
+          "match_weights": {
+            "adaptability": 0.34,
+            "openness": 0.33,
+            "empathy": 0.33
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1921","Q1922","Q1923","Q1924","Q1925","Q1926","Q1927","Q1928"
+          ],
+          "signals_map": {
+            "Q1921": { "dimension": "openness", "polarity": 1, "content": "I can hold two seemingly true ideas without rushing to resolve them." },
+            "Q1922": { "dimension": "adaptability", "polarity": 1, "content": "When priorities conflict, I create room for a small, testable next step." },
+            "Q1923": { "dimension": "empathy", "polarity": 1, "content": "I stay curious with people I disagree with." },
+            "Q1924": { "dimension": "stability", "polarity": 1, "content": "Uncertainty does not shake my calm for long." },
+            "Q1925": { "dimension": "conscientiousness", "polarity": 1, "content": "I set decision deadlines so ambiguity does not become avoidance." },
+            "Q1926": { "dimension": "orderliness", "polarity": 1, "content": "I clarify non-negotiable values before I compromise." },
+            "Q1927": { "dimension": "agency", "polarity": 1, "content": "I act gently but decisively even when I don’t have perfect information." },
+            "Q1928": { "dimension": "cooperativeness", "polarity": 1, "content": "I seek integrative solutions that honor multiple needs." }
+          },
+          "daily_prompt": "What tension can you hold today without forcing a premature answer—and what small, reversible step will you take anyway?",
+          "practices": [
+            "Paradox Log: capture opposing truths, note the useful edge in each, pick a micro-move.",
+            "Polarity Map: chart upsides/downsides of both poles; design a ‘both/and’ guardrail.",
+            "Two-Truths Brief: write two accurate stories of the situation; plan actions that respect both.",
+            "Values Boundary Line: list non-negotiables so acceptance doesn’t erode ethics.",
+            "Ambiguity Window: 20-minute timebox to decide the next smallest step."
+          ],
+          "transformation_indicators": [
+            "On-time decisions despite incomplete data",
+            "Lower reactivity during surprises",
+            "Increase in reversible experiments launched",
+            "Stakeholders report feeling seen across differences",
+            "Clearer boundaries maintained while staying warm"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Break into 3 — Tolerance",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Steady in uncertainty; hands open, values firm.",
+          "ordinary_world_baseline": "Binary thinking; relief only when issues are ‘closed.’",
+          "boon_reveal": "Maturity is living the answer—value-aligned action amid unresolved tension."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Wisdom of Insecurity",
+            "author": "Alan Watts",
+            "section_of_focus": "Living in the Now",
+            "section_description": "Accepting uncertainty as part of life",
+            "connection_focus_area": "Comfort with ambiguity",
+            "connect_points": {
+              "point1": "Notice discomfort with uncertainty",
+              "point2": "Practice mindful acceptance",
+              "point3": "Journal insights daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a moment of uncertainty",
+              "objective2": "Apply one acceptance technique",
+              "objective3": "Reflect on its effect"
+            }
+          },
+          "book2": {
+            "title": "Radical Acceptance",
+            "author": "Tara Brach",
+            "section_of_focus": "Letting Go of Judgment",
+            "section_description": "Embracing yourself fully",
+            "connection_focus_area": "Self-compassion",
+            "connect_points": {
+              "point1": "Observe self-criticism",
+              "point2": "Offer yourself kindness",
+              "point3": "Practice a guided meditation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a self-judgment",
+              "objective2": "Reframe it with compassion",
+              "objective3": "Use a 5-minute meditation daily"
+            }
+          },
+          "book3": {
+            "title": "Emotional Agility",
+            "author": "Susan David",
+            "section_of_focus": "Allowing Emotions",
+            "section_description": "Welcoming all feelings without judgment",
+            "connection_focus_area": "Adaptive emotional response",
+            "connect_points": {
+              "point1": "Name a difficult emotion",
+              "point2": "Label it without judgment",
+              "point3": "Choose a value-aligned response"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice naming emotions",
+              "objective2": "Record triggers and responses",
+              "objective3": "Select an action aligned to your values"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the edge of the Karmic Nexus, the boon flickers with competing pulls—Francisco breathes, lets both truths stand, and chooses one careful step.",
+          "symbolic_moment": "He draws a circle split by a gentle wave on the banner—two currents, one sea.",
+          "emotional_landscape": "Calm attention, wide compassion, measured courage.",
+          "boon_definition": "Capacity to act while holding paradox—clarity of values with a flexible plan.",
+          "transformation_promise": "A leader who can carry contradictions can carry a universe."
+        },
+    
+        "epic_novel_pages": "Page 466 - 480",
+        "epic_chapter_focus": "The Ultimate Boon",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Acceptance",
+        "specific_task_group_description": "Embrace ambiguity and conflicting priorities when you achieve your goal.",
+        "specific_task_group_tagline": "Receive the boon with openness",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Lochmara",
+        "hex_code": "#336699",
+        "red": 51,
+        "green": 102,
+        "blue": 153
+      },
       "personality_profile_193": {},
       "personality_profile_194": {},
       "personality_profile_195": {},
