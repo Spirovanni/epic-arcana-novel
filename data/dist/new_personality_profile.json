@@ -41420,7 +41420,214 @@
         "green": 0,
         "blue": 255
       },
-      "personality_profile_197": {},
+      "personality_profile_197": {
+        "canonical_id": "EA-197",
+        "unique_identifier": "STG 5.2.8.2",
+        "specific_task_group_title": "Influence",
+        "all_chapter": 197,
+        "novel_book": 5,
+        "chapter": "Chapter 37",
+        "chapter_title": "Rescue from Without — Influence",
+        "type": "Specific Task Group",
+        "display_name": "The Bridge-Builder",
+        "theme": "Credibility multiplied by generosity turns allies into amplifiers; influence is earned long before the ask.",
+        "family": "Persuasion — Reciprocity, Rapport & Framing",
+    
+        "summary": "At the brink of the decisive surge, Francisco doesn’t coerce—he catalyzes. By giving first, honoring names and stories, and setting the room before the message, he turns willing listeners into willing partners. His example is the proof; trust becomes the carrier wave that brings help from beyond.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Ace",
+    
+        "traits": {
+          "strengths": [
+            "builds trust through visible generosity",
+            "frames contexts that heighten receptivity",
+            "links asks to shared values and wins",
+            "remembers details that deepen rapport",
+            "models the behavior he’s requesting"
+          ],
+          "shadow": [
+            "over-indexing on likability at the cost of clarity",
+            "managing optics instead of substance under stress",
+            "spreading influence attempts too thin",
+            "avoiding hard no’s to preserve harmony",
+            "subtle manipulation creeping in if unchecked"
+          ],
+          "growth_focus": [
+            "set ethical guardrails for persuasion in advance",
+            "practice concise, courageous asks",
+            "time-box outreach to protect deep work",
+            "invite informed dissent early to strengthen buy-in",
+            "track value delivered before every request"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Climax",
+          "fiction_chapter_context": "Book 5, Chapter 37 — Rescue from Without arrives because trust and goodwill have been accruing for chapters."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—results-driven influence anchored in loyalty, service, and shared commitment."
+        },
+    
+        "color_alignment": {
+          "name": "Smalt",
+          "hsl": "220,100%,30%",
+          "rgb_hex": "#003399",
+          "color_symbolism": "Deep signal blue—reliable, steady, and seen from afar; the color of trusted channels."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.80,
+            "stability": 0.72,
+            "empathy": 0.79,
+            "openness": 0.68,
+            "orderliness": 0.70,
+            "conscientiousness": 0.76,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.64,
+            "novelty_seeking": 0.60,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "empathy": 0.34,
+            "agency": 0.33,
+            "cooperativeness": 0.33
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1971",
+            "Q1972",
+            "Q1973",
+            "Q1974",
+            "Q1975",
+            "Q1976",
+            "Q1977",
+            "Q1978"
+          ],
+          "signals_map": {
+            "Q1971": { "dimension": "cooperativeness", "polarity": 1, "content": "I give value before I ask for anything." },
+            "Q1972": { "dimension": "empathy", "polarity": 1, "content": "I learn and use people’s names and stories to honor them." },
+            "Q1973": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I set context so my message lands in the right frame." },
+            "Q1974": { "dimension": "agency", "polarity": 1, "content": "I make clear, direct asks aligned to shared goals." },
+            "Q1975": { "dimension": "conscientiousness", "polarity": 1, "content": "I back claims with proof—data, examples, or lived behavior." },
+            "Q1976": { "dimension": "openness", "polarity": 1, "content": "I invite dissent to strengthen the final decision." },
+            "Q1977": { "dimension": "stability", "polarity": 1, "content": "I stay patient with resistance and keep rapport intact." },
+            "Q1978": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a reciprocity ledger to track value given and received." }
+          },
+          "daily_prompt": "Who will you help first today so that your ask tomorrow is simply the next fair step?",
+          "practices": [
+            "Reciprocity Ledger: log value you’ve offered before each request.",
+            "Warm-Open Script: greet by name + shared context + purpose in one breath.",
+            "Pre-Suasion Setup: prime a meeting with a single, value-aligned question.",
+            "Proof Pack: carry three concise proofs (data, story, witness) for each claim.",
+            "Objection Map: list top 5 objections with empathetic, evidence-based replies."
+          ],
+          "transformation_indicators": [
+            "Higher acceptance rate of proposals and requests",
+            "Faster coalition formation around key initiatives",
+            "Rise in trust/rapport scores from stakeholders",
+            "Increase in unsolicited offers of assistance",
+            "Reduced resistance cycles during high-stakes decisions"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Climax",
+          "preliminary_beat": "Finale — Influence",
+          "save_the_cat_beat": "Break into Three",
+          "character_state": "Centered, generous, magnetic—help arrives because help was given.",
+          "ordinary_world_baseline": "Scattered asks, low reciprocity, and tepid buy-in.",
+          "boon_reveal": "Influence scales when credibility walks in first and the ask follows naturally."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Influence",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Reciprocity",
+            "section_description": "How giving first builds influence and commitment",
+            "connection_focus_area": "Building persuasive exchanges",
+            "connect_points": {
+              "point1": "Identify a valuable resource to share",
+              "point2": "Offer help without expectation",
+              "point3": "Observe reciprocation patterns"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Share a resource",
+              "objective2": "Track reciprocal actions",
+              "objective3": "Plan a reciprocity strategy"
+            }
+          },
+          "book2": {
+            "title": "How to Win Friends and Influence People",
+            "author": "Dale Carnegie",
+            "section_of_focus": "Make People Like You",
+            "section_description": "Techniques for genuine rapport and persuasion",
+            "connection_focus_area": "Establishing likability",
+            "connect_points": {
+              "point1": "Use someone’s name in conversation",
+              "point2": "Show genuine interest",
+              "point3": "Remember and reference details"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice using names",
+              "objective2": "Ask three personal questions",
+              "objective3": "Recall details in a follow-up"
+            }
+          },
+          "book3": {
+            "title": "Pre-Suasion",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Priming Moments",
+            "section_description": "Setting the stage for receptivity before persuasion",
+            "connection_focus_area": "Creating persuasive contexts",
+            "connect_points": {
+              "point1": "Choose a context to prime",
+              "point2": "Introduce a relevant question",
+              "point3": "Observe shifts in openness"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a priming question",
+              "objective2": "Implement in a meeting",
+              "objective3": "Evaluate change in responses"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the ridge above a failing line, Francisco hands supplies to a rival captain before asking for passage—the answer is an immediate yes.",
+          "symbolic_moment": "He speaks each ally’s name before the plan; the circle tightens and nods spread like fire catching tinder.",
+          "emotional_landscape": "Warm resolve, earned confidence, invitational authority.",
+          "boon_definition": "Influence operationalized—give first, frame well, ask clean, prove fast.",
+          "transformation_promise": "Allies arrive unbidden when your reputation travels faster than your request."
+        },
+    
+        "epic_novel_pages": "Page 541 - 555",
+        "epic_chapter_focus": "Climax",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Persuasion",
+        "specific_task_group_description": "Leverage relationships and credibility to guide others toward a shared goal.",
+        "specific_task_group_tagline": "Lead by example",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Smalt",
+        "hex_code": "#003399",
+        "red": 0,
+        "green": 51,
+        "blue": 153
+      },
       "personality_profile_198": {},
       "personality_profile_199": {},
       "personality_profile_200": {}
