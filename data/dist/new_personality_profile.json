@@ -39792,7 +39792,199 @@
         "specific_task_group_description": "Maintain your authenticity and values when under extreme pressure.",
         "specific_task_group_tagline": "Stay true when tested"
       },
-      "personality_profile_189": {},
+      "personality_profile_189": {
+        "canonical_id": "EA-189",
+        "unique_identifier": "STG 5.2.5.3",
+        "specific_task_group_title": "Inference",
+        "all_chapter": 189,
+        "novel_book": 5,
+        "chapter": "Chapter 29",
+        "chapter_title": "The Abyss — Inference",
+        "type": "Specific Task Group",
+        "display_name": "The Pattern-Seer",
+        "theme": "Insight under pressure: read the hidden pattern, then act with probabilistic courage.",
+        "family": "Insight / Perception — Pattern Recognition, Probabilistic Reasoning & Foresight",
+    
+        "summary": "In the depths of uncertainty, Francisco learns to extract meaning from incomplete, conflicting signals. He triangulates data, intuition, and lived context to form testable inferences—seeing beyond the obvious to what is actually driving events. Insight becomes a survival tool and a leadership edge.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ten",
+    
+        "traits": {
+          "strengths": [
+            "spots weak signals and connecting threads",
+            "frames crisp hypotheses from messy inputs",
+            "updates beliefs quickly as evidence shifts",
+            "balances intuition with verification",
+            "communicates uncertainty without losing momentum"
+          ],
+          "shadow": [
+            "overfitting narratives to sparse data",
+            "paralysis from analysis in fast crises",
+            "selective attention to confirm a hunch",
+            "aloofness when others need plain language",
+            "projecting patterns where none exist"
+          ],
+          "growth_focus": [
+            "separate facts, assumptions, and leaps",
+            "time-box analysis before action",
+            "seek disconfirming evidence early",
+            "use probability bands, not certainties",
+            "teach the team your inference playbook"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 5, Chapter 29 — In the Abyss phase, Francisco learns to read hidden drivers and choose amid ambiguity."
+        },
+    
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—decisive action after grounded analysis."
+        },
+    
+        "color_alignment": {
+          "name": "Picton Blue",
+          "hsl": "210,50%,60%",
+          "rgb_hex": "#6699CC",
+          "color_symbolism": "Cold clarity—calm cognition cutting through fog."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.77,
+            "empathy": 0.64,
+            "openness": 0.84,
+            "orderliness": 0.71,
+            "conscientiousness": 0.78,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.91,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.62,
+            "imagination": 0.80
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "adaptability": 0.30,
+            "openness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1891","Q1892","Q1893","Q1894","Q1895","Q1896","Q1897","Q1898"
+          ],
+          "signals_map": {
+            "Q1891": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can infer hidden causes from partial or noisy information." },
+            "Q1892": { "dimension": "adaptability", "polarity": 1, "content": "I revise my view quickly when new evidence emerges." },
+            "Q1893": { "dimension": "openness", "polarity": 1, "content": "I consider multiple hypotheses before deciding." },
+            "Q1894": { "dimension": "orderliness", "polarity": 1, "content": "I label facts, assumptions, and guesses separately." },
+            "Q1895": { "dimension": "conscientiousness", "polarity": 1, "content": "I seek disconfirming data to pressure-test my favorite idea." },
+            "Q1896": { "dimension": "risk_tolerance", "polarity": 1, "content": "I act with probability ranges instead of waiting for certainty." },
+            "Q1897": { "dimension": "empathy", "polarity": 1, "content": "I explain complex insights in language others can use." },
+            "Q1898": { "dimension": "agency", "polarity": 1, "content": "I set a time limit for analysis and then move." }
+          },
+          "daily_prompt": "What uncertain situation needs a crisp hypothesis today—and what evidence would most quickly change your mind?",
+          "practices": [
+            "F.A.L.: Facts–Assumptions–Leaps grid before key calls.",
+            "Red Team Five: solicit five ways your idea could be wrong.",
+            "Bayes Lite: assign rough probabilities and update weekly.",
+            "Two-Timer: 70% of the time on data, 30% on disconfirmers.",
+            "Brief the Brief: summarize your inference in three sentences max."
+          ],
+          "transformation_indicators": [
+            "Faster decision cycles with equal or better outcomes",
+            "Higher rate of explicit hypothesis updates",
+            "Decreased rework due to early disconfirmation",
+            "Improved team confidence handling ambiguity",
+            "Clearer separation of fact vs. assumption in briefs"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul — Inference",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Disoriented yet lucid; builds a lantern of inference inside the dark.",
+          "ordinary_world_baseline": "Comfortable certainties; low tolerance for ambiguity.",
+          "abyss_realization": "Meaning is recoverable if you name uncertainty and reason forward."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Thinking About Thinking",
+            "section_description": "Dual systems of thought",
+            "connection_focus_area": "Analytical insight",
+            "connect_points": {
+              "point1": "Identify an intuition vs. analysis moment",
+              "point2": "Evaluate which served better",
+              "point3": "Document the reasoning process"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe System 1 vs. System 2 in a scenario",
+              "objective2": "Choose an appropriate thinking mode",
+              "objective3": "Apply it to a decision"
+            }
+          },
+          "book2": {
+            "title": "Blink",
+            "author": "Malcolm Gladwell",
+            "section_of_focus": "The Power of Thinking Without Thinking",
+            "section_description": "Rapid cognition and its pitfalls",
+            "connection_focus_area": "Split-second inference",
+            "connect_points": {
+              "point1": "Recall a snap judgment you made",
+              "point2": "Analyze its accuracy",
+              "point3": "Adjust for bias next time"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reconstruct a quick decision",
+              "objective2": "List two biases at play",
+              "objective3": "Plan a bias-reduction strategy"
+            }
+          },
+          "book3": {
+            "title": "Superforecasting",
+            "author": "Philip E. Tetlock & Dan Gardner",
+            "section_of_focus": "Mastering Uncertainty",
+            "section_description": "Techniques for accurate prediction",
+            "connection_focus_area": "Evidence-based inference",
+            "connect_points": {
+              "point1": "Break a question into subcomponents",
+              "point2": "Seek relevant data",
+              "point3": "Assign and revise probabilities"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Frame a forecasting question",
+              "objective2": "Gather three data points",
+              "objective3": "Make and update a probability estimate"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a lightless archive drifting at the universe’s trench, Francisco overlays scraps of telemetry, myths, and field rumors into a living map.",
+          "symbolic_moment": "He traces three faint lines that converge—then draws a circle where none appears; the room’s sensors align to his inference and hum.",
+          "emotional_landscape": "Sober focus, disciplined curiosity, earned calm.",
+          "abyss_question": "What is the smallest test that would most decisively change the plan?",
+          "transformation_promise": "When certainty dies, method becomes courage."
+        },
+    
+        "epic_novel_pages": "Page 421 - 435",
+        "epic_chapter_focus": "The Abyss",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Insight",
+        "specific_task_group_description": "Draw meaningful insights from complex, high-stakes situations.",
+        "specific_task_group_tagline": "See beyond the obvious"
+      },
       "personality_profile_190": {},
       "personality_profile_191": {},
       "personality_profile_192": {},
