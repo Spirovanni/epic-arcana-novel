@@ -40186,33 +40186,135 @@
         "green": 153,
         "blue": 255
       },
-      "specific_task_group_191": {
-        "id": "EA-191",
+      "personality_profile_191": {
+        "canonical_id": "EA-191",
         "unique_identifier": "STG 5.2.6.2",
+        "specific_task_group_title": "Persistence",
         "all_chapter": 191,
         "novel_book": 5,
         "chapter": "Chapter 31",
+        "chapter_title": "The Ultimate Boon — Persistence",
         "type": "Specific Task Group",
-        "tarot_card_link": "",
+        "display_name": "The Last Mile",
+        "theme": "When motivation fades, systems and small steady moves carry the load—effort compounds into power from within.",
+        "family": "Endurance / Power Within — Grit, Habits & Pace",
+    
+        "summary": "Francisco learns to convert vow into cadence: micro-habits, recovery, and deliberate pacing that keep him moving through the longest night. Persistence becomes engineered endurance—showing up, precisely, again.",
         "tarot_family": "Wands",
-        "new_tarot_family": "",
         "tarot_card_item": "Nine",
-        "color_name": "Dodger Blue",
-        "hex_code": "#3399FF",
-        "red": 51,
-        "green": 153,
-        "blue": 255,
-        "epic_novel_pages": "Page 451 - 465",
-        "epic_chapter_focus": "Power within (set-up)",
-        "epic_preliminary_scene_focus": "Dark Night of the Soul",
-        "epic_preliminary_scene_description": "",
-        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
-        "epic_novel_section_name": "Part II: Holder of the Balances",
-        "specific_task_group_title": "Persistence",
-        "focus_area": "Endurance",
-        "connection_to_the_major_task_group": "Dark Night of the Soul",
-        "specific_task_group_description": "Sustain your effort through hardship by strengthening your inner resolve.",
-        "specific_task_group_tagline": "Keep going when it counts",
+    
+        "traits": {
+          "strengths": [
+            "shows up reliably despite mood or weather",
+            "breaks hard goals into daily repeatables",
+            "protects energy with pacing and recovery",
+            "models steadiness that teams can draft behind",
+            "links effort to mission so grind has meaning"
+          ],
+          "shadow": [
+            "confuses stubbornness with wisdom",
+            "grinds past recovery signals",
+            "sticks with tactics after they stop working",
+            "equates worth with output streaks",
+            "resists delegation to keep momentum"
+          ],
+          "growth_focus": [
+            "pair consistency with periodic review and pivot rules",
+            "schedule recovery as a non-negotiable task",
+            "separate identity from streaks; track inputs, not ego",
+            "delegate one step to multiply endurance across the team",
+            "use micro-experiments to refresh stale routines"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Power within (set-up)",
+          "fiction_chapter_context": "Book 5, Chapter 31 — In The Ultimate Boon, Francisco taps deep reserves and teaches the company to pace and press."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer stabilizing with 6’s loyalty—principled persistence with prudent risk checks."
+        },
+    
+        "color_alignment": {
+          "name": "Dodger Blue",
+          "hsl": "210,100%,60%",
+          "rgb_hex": "#3399FF",
+          "color_symbolism": "A bright jet stream—forward thrust against headwinds."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.87,
+            "empathy": 0.68,
+            "openness": 0.64,
+            "orderliness": 0.72,
+            "conscientiousness": 0.89,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.47,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.48,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.38,
+            "stability": 0.34,
+            "agency": 0.28
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1911",
+            "Q1912",
+            "Q1913",
+            "Q1914",
+            "Q1915",
+            "Q1916",
+            "Q1917",
+            "Q1918"
+          ],
+          "signals_map": {
+            "Q1911": { "dimension": "conscientiousness", "polarity": 1, "content": "I complete small scheduled actions even when I don’t feel like it." },
+            "Q1912": { "dimension": "stability", "polarity": 1, "content": "Stress rarely knocks me off my routine for long." },
+            "Q1913": { "dimension": "agency", "polarity": 1, "content": "When tired, I reduce the task but still do the rep." },
+            "Q1914": { "dimension": "orderliness", "polarity": 1, "content": "I plan tomorrow’s first step before I stop today." },
+            "Q1915": { "dimension": "adaptability", "polarity": 1, "content": "If a tactic fails, I adjust the approach without quitting the goal." },
+            "Q1916": { "dimension": "risk_tolerance", "polarity": -1, "content": "I push through red-flag fatigue instead of recovering." },
+            "Q1917": { "dimension": "cooperativeness", "polarity": 1, "content": "I ask for draft support when my pace dips." },
+            "Q1918": { "dimension": "conscientiousness", "polarity": 1, "content": "I track inputs (time, reps) to keep momentum tangible." }
+          },
+          "daily_prompt": "What is the smallest honest rep you will complete today—no drama, just done?",
+          "practices": [
+            "Don’t-Break-the-Chain: visual streak board for one core behavior.",
+            "Effort Ladder: scale a task to 100% / 50% / 10% versions to preserve momentum.",
+            "Two-Minute Gate: start with 120 seconds to defeat friction, continue if able.",
+            "Recovery Block: pre-scheduled sleep, nutrition, and deload days.",
+            "Weekly Pivot Check: keep the goal, change the path—one micro-experiment per week."
+          ],
+          "transformation_indicators": [
+            "Streak length increases with fewer zero days",
+            "Higher time-on-task during low-motivation periods",
+            "Improved recoveries (HRV, sleep, or subjective energy)",
+            "Faster return to baseline after disruptions",
+            "Quarterly goals hit via steady weekly inputs"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Power within (set-up)",
+          "preliminary_beat": "Dark Night of the Soul — Persistence",
+          "save_the_cat_beat": "Power within (set-up)",
+          "character_state": "Fatigued but resolute; energy low, commitment high.",
+          "ordinary_world_baseline": "Sprints and stalls; progress tied to mood swings.",
+          "boon_reveal": "Endurance is engineered—tiny, regular actions outrun motivation."
+        },
+    
         "specific_task_group_books_influenced_by": {
           "book1": {
             "title": "Grit",
@@ -40266,35 +40368,31 @@
             }
           }
         },
-        "hero_journey_beat": "Power within (set-up)",
-        "hero_journey_beat_objective": "The goal of the hero journey beat is to power within (set-up).",
-        "save_the_cat_beat": "Power within (set-up)",
-        "save_the_cat_beat_goal": "",
-        "plot": "Power within (set-up)",
-        "character_arcs": {
-          "Francisco": "Masters cosmic persistence, developing the ability to sustain effort through any hardship by accessing deep reserves of inner strength.",
-          "Persistence_Mentors": "Cosmic entities who have endured through extreme challenges and can teach Francisco about true cosmic endurance.",
-          "Inner_Strength_Sources": "The deep cosmic reserves within Francisco that provide the power needed for sustained effort through adversity.",
-          "Endurance_Transcendence": "Francisco's growing ability to transcend ordinary limits of endurance through cosmic persistence."
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the wind-scoured ridge, the company falters; Francisco lowers the pace, shortens the stride, and refuses to stop.",
+          "symbolic_moment": "He knots a blue cord around his wrist—one loop per day shown up—then adds another, and another.",
+          "emotional_landscape": "Gravel calm, disciplined effort, quiet faith.",
+          "boon_definition": "Engineered endurance: small reps, protected recovery, shared pacing that carries the many.",
+          "transformation_promise": "A leader who can continue gently can carry wonders farther than a sprinter ever will."
         },
-        "story_gaps_addressed": {
-          "cosmic_endurance": "Francisco learns that cosmic guardianship requires persistence that transcends ordinary physical and mental limits.",
-          "inner_strength_access": "Introduction of how to access and utilize deep cosmic reserves of inner strength.",
-          "sustained_effort": "Development of Francisco's ability to maintain cosmic effectiveness even through prolonged adversity."
-        },
-        "location_details": {
-          "persistence_training_grounds": "Cosmic facilities designed to test and strengthen Francisco's ability to persist through extreme challenges.",
-          "inner_strength_sanctuaries": "Spaces where cosmic guardians can access and strengthen their deep reserves of cosmic endurance."
-        },
-        "series_connections": {
-          "cosmic_persistence": "Francisco's mastery of persistence will be crucial for sustaining effort through the prolonged challenges of Books 7-9.",
-          "endurance_leadership": "His ability to keep going when others falter will be essential for leading through the extended trials of the finale."
-        },
-        "summary": "Drawing on inner cosmic power, Francisco learns to sustain effort through hardship by strengthening his inner resolve. He develops cosmic persistence—the ability to keep going when it counts most, drawing on reserves of inner strength that transcend ordinary endurance. This persistence becomes his key to transcending cosmic adversity.",
-        "pov": "3rd Person Limited",
-        "tense": "Past Tense",
-        "core_emotion": "Varies by chapter",
-        "scene_tone": "Varies by chapter"
+    
+        "epic_novel_pages": "Page 451 - 465",
+        "epic_chapter_focus": "Power within (set-up)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Endurance",
+        "specific_task_group_description": "Sustain your effort through hardship by strengthening your inner resolve.",
+        "specific_task_group_tagline": "Keep going when it counts",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Dodger Blue",
+        "hex_code": "#3399FF",
+        "red": 51,
+        "green": 153,
+        "blue": 255
       },
       "personality_profile_192": {
         "canonical_id": "EA-192",
