@@ -2010,7 +2010,7 @@
                                 }
                             }
                         },
-                            "major_activity_theme_2": {
+                            "major_activity_theme_1": {
                                 "unique_identifier": "MAT 5.2",
                                 "type": "Major Task Group",
                                 "color_name": "Amethyst",
@@ -2289,6 +2289,66 @@
                                     }
                                 }
                             }
+                        },
+                          "major_activity_theme_2": {
+                            "unique_identifier": "MAT 5.2.2",
+                            "type": "Major Activity Theme",
+                            "color_name": "Summer Sky",
+                            "hex_code": "#22AAEE",
+                            "red": "34",
+                            "green": "170",
+                            "blue": "238",
+                            "major_task_group_title": "Ethical Realism",
+                            "major_task_group_description": "Ethical Realism emphasizes a pragmatic approach to moral decision-making, acknowledging that while ideals guide our sense of right and wrong, real-world constraints and contexts can shape how we fulfill those ideals. By balancing aspiration with practicality, individuals can navigate complex situations responsibly—staying true to core moral principles while adapting to life’s inevitable complications. This method underscores the importance of both integrity and flexibility, allowing for ethical growth grounded in real-life challenges.",
+                            "major_task_group_tagline": "Grounding moral ideals in real-world complexities for principled yet practical choices.",
+                            "major_task_group_books_influenced_by": {
+                                "book1": "Moral Tribes by Joshua Greene",
+                                "book2": "The Righteous Mind by Jonathan Haidt",
+                                "book3": "Justice: What's the Right Thing to Do? by Michael J. Sandel",
+                                "book4": "After Virtue by Alasdair MacIntyre",
+                                "book5": "Practical Ethics by Peter Singer",
+                                "book6": "The Road to Character by David Brooks",
+                                "book7": "The Better Angels of Our Nature by Steven Pinker"
+                            },
+                            "Specific_task_groups": {
+                                "specific_task_group_1": {
+                                    "unique_identifier": "STG 5.2.2.1",
+                                    "chapter": "Chapter 26",
+                                    "type": "Specific Task Group",
+                                    "tarot_card_link": "",
+                                    "tarot_family": "Disks",
+                                    "new_tarot_family": "",
+                                    "tarot_card_item": "Knight",
+                                    "color_name": "Deep Sky Blue",
+                                    "hex_code": "#00CCFF",
+                                    "red": 0,
+                                    "green": 204,
+                                    "blue": 255,
+                                    "epic_novel_pages": "Page 391 - 405",
+                                    "epic_chapter_focus": "Trials (set-up)",
+                                    "epic_preliminary_scene_focus": "All is Lost",
+                                    "epic_preliminary_scene_description": "",
+                                    "epic_novel_chapter_focus": "Scene XI: The Abyss",
+                                    "epic_novel_section_name": "Part II: Holder of the Balances",
+                                    "specific_task_group_title": "Responsibility",
+                                    "focus_area": "Accountability",
+                                    "connection_to_the_major_task_group": "All is Lost",
+                                    "specific_task_group_description": "Accept responsibility for your actions amid crisis to regain control.",
+                                    "specific_task_group_tagline": "Own your role in adversity",
+                                    "specific_task_group_books_influenced_by": {
+                                        "book1": {
+                                            "title": "Extreme Ownership",
+                                            "author": "Jocko Willink & Leif Babin",
+                                            "section_of_focus": "Taking Extreme Ownership",
+                                            "section_description": "Leaders own everything in their universe",
+                                            "connection_focus_area": "Personal accountability",
+                                            "connect_points": {
+                                              "point1": "Identify areas lacking ownership",
+                                              "point2": "Define corrective actions",
+                                              "point3": "Communicate ownership to stakeholders"
+                                            },
+                                            "terminal_learning_objectives": {
+                                              "objective1": "List two tasks you need to own",
                         },
                             "major_task_group_5": {
                                 "unique_identifier": "MTG 5.2.5",
