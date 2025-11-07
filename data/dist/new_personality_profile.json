@@ -41212,7 +41212,214 @@
         "green": 51,
         "blue": 102
       },
-      "personality_profile_196": {},
+      "personality_profile_196": {
+        "canonical_id": "EA-196",
+        "unique_identifier": "STG 5.2.8.1",
+        "specific_task_group_title": "Honor",
+        "all_chapter": 196,
+        "novel_book": 5,
+        "chapter": "Chapter 36",
+        "chapter_title": "Rescue from Without — Honor",
+        "type": "Specific Task Group",
+        "display_name": "The Oathkeeper",
+        "theme": "When the stakes spike, values must get louder—not quieter. Integrity becomes the beacon others can navigate by.",
+        "family": "Ethical Leadership — Integrity, Courage & Trust",
+    
+        "summary": "On the eve of the decisive push, Francisco chooses the narrow road of principle over the easy road of expedience. He makes promises he can keep, speaks plainly, credits others, and corrects mistakes in daylight. His honor becomes operational: rules, rituals, and checks that keep the team’s conscience aligned when pressure peaks.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "keeps commitments under pressure",
+            "models value-aligned decisions in real time",
+            "communicates with candor and respect",
+            "creates climates of psychological safety",
+            "admits mistakes quickly and makes restitution"
+          ],
+          "shadow": [
+            "rigidity that resists pragmatic adjustments",
+            "moral perfectionism that shames others",
+            "slow decision cycles from over-vetting ethics",
+            "confusing transparency with oversharing",
+            "taking on too much burden as 'duty'"
+          ],
+          "growth_focus": [
+            "pair integrity with speed: set pre-agreed guardrails",
+            "distinguish core values from preferences",
+            "practice concise transparency (right info, right time)",
+            "share ethical load via peer review and rotation",
+            "celebrate course-corrections, not just perfect plans"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Battle (set-up)",
+          "fiction_chapter_context": "Book 5, Chapter 36 — Honor in action signals allies to intervene: Rescue from Without."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled action balanced with grace, play, and humanity."
+        },
+    
+        "color_alignment": {
+          "name": "Blue",
+          "hsl": "240,100%,50%",
+          "rgb_hex": "#0000FF",
+          "color_symbolism": "A clear standard in the storm—truth, fidelity, and calm resolve."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.86,
+            "empathy": 0.74,
+            "openness": 0.62,
+            "orderliness": 0.84,
+            "conscientiousness": 0.90,
+            "adaptability": 0.65,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.45,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "stability": 0.30,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q1961",
+            "Q1962",
+            "Q1963",
+            "Q1964",
+            "Q1965",
+            "Q1966",
+            "Q1967",
+            "Q1968"
+          ],
+          "signals_map": {
+            "Q1961": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep my word even when it costs me." },
+            "Q1962": { "dimension": "orderliness", "polarity": 1, "content": "I set clear guardrails so fast choices remain ethical." },
+            "Q1963": { "dimension": "stability", "polarity": 1, "content": "Pressure does not shake my core values." },
+            "Q1964": { "dimension": "empathy", "polarity": 1, "content": "I deliver hard truths with care for people." },
+            "Q1965": { "dimension": "agency", "polarity": 1, "content": "I act against group drift when values are compromised." },
+            "Q1966": { "dimension": "cooperativeness", "polarity": 1, "content": "I share credit and responsibility publicly." },
+            "Q1967": { "dimension": "adaptability", "polarity": 1, "content": "I revise tactics without bending principles." },
+            "Q1968": { "dimension": "risk_tolerance", "polarity": -1, "content": "I refuse opaque shortcuts that undermine trust." }
+          },
+          "daily_prompt": "What promise will you keep today—even if it costs you?",
+          "practices": [
+            "Honor Ledger: track promises made, kept, renegotiated—with reasons.",
+            "Pre-Commit Oath: team agrees to red-line principles before operations.",
+            "Red Team Ethics Check: rotating pair stress-tests decisions for blind spots.",
+            "Credit-Forward Ritual: name contributors first, self last, every briefing.",
+            "Integrity AAR: after-action review includes 'where values held/strained'."
+          ],
+          "transformation_indicators": [
+            "Higher trust and psychological safety scores",
+            "Faster confession–repair cycle after errors",
+            "Reduced value-violation incidents under time pressure",
+            "Greater alignment between stated values and observed behavior",
+            "Increased external support triggered by reputation for integrity"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Battle (set-up)",
+          "preliminary_beat": "Finale — Honor",
+          "save_the_cat_beat": "Battle (set-up)",
+          "character_state": "Rallied, clear-eyed, oath-bound; speed with guardrails.",
+          "ordinary_world_baseline": "Convenient compromises and opaque favors erode trust.",
+          "boon_reveal": "Visible integrity summons aid—Rescue from Without rides to those who stand firm."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Values-Driven Leadership",
+            "section_description": "Leading with courage and authenticity based on core values",
+            "connection_focus_area": "Upholding integrity under pressure",
+            "connect_points": {
+              "point1": "Identify your non-negotiable values",
+              "point2": "Practice vulnerability in leadership",
+              "point3": "Model value-aligned decisions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three core values",
+              "objective2": "Share one vulnerability story",
+              "objective3": "Lead a values-based discussion"
+            }
+          },
+          "book2": {
+            "title": "The Four Agreements",
+            "author": "Don Miguel Ruiz",
+            "section_of_focus": "Be Impeccable with Your Word",
+            "section_description": "Using language with integrity and honesty",
+            "connection_focus_area": "Communicating honorably",
+            "connect_points": {
+              "point1": "Track your promises",
+              "point2": "Eliminate gossip",
+              "point3": "Speak with positive intent"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Record three recent commitments",
+              "objective2": "Identify one instance of harmful speech",
+              "objective3": "Reframe a message positively"
+            }
+          },
+          "book3": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Building Trust",
+            "section_description": "Creating environments where honesty and loyalty flourish",
+            "connection_focus_area": "Trust through honorable action",
+            "connect_points": {
+              "point1": "List trust-building behaviors",
+              "point2": "Offer credit to your team",
+              "point3": "Address a mistake openly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Demonstrate one trust-building behavior",
+              "objective2": "Publicly recognize a teammate",
+              "objective3": "Admit and learn from a personal error"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Under a moon of cold steel, Francisco plants the standard and reads the oath aloud; distant horns answer from unseen allies.",
+          "symbolic_moment": "He returns an ill-won advantage, choosing clean hands over quick victory; the banner glows brighter.",
+          "emotional_landscape": "Fierce calm, sober courage, quiet confidence born of consistency.",
+          "boon_definition": "Honor operationalized—promises tracked, power checked, truth spoken in time.",
+          "transformation_promise": "A leader whose integrity compels reinforcement; help finds the trustworthy."
+        },
+    
+        "epic_novel_pages": "Page 526 - 540",
+        "epic_chapter_focus": "Battle (set-up)",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Ethical Leadership",
+        "specific_task_group_description": "Demonstrate integrity and uphold values when stakes are highest.",
+        "specific_task_group_tagline": "Stand by your principles",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Blue",
+        "hex_code": "#0000FF",
+        "red": 0,
+        "green": 0,
+        "blue": 255
+      },
       "personality_profile_197": {},
       "personality_profile_198": {},
       "personality_profile_199": {},
