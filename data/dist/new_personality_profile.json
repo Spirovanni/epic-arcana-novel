@@ -40803,7 +40803,207 @@
         "green": 102,
         "blue": 204
       },
-      "personality_profile_194": {},
+      "personality_profile_194": {
+        "canonical_id": "EA-194",
+        "unique_identifier": "STG 5.2.7.2",
+        "specific_task_group_title": "Mental Clarity",
+        "all_chapter": 194,
+        "novel_book": 5,
+        "chapter": "Chapter 34",
+        "chapter_title": "Flight — Mental Clarity",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Blade",
+        "theme": "As forces converge, sharpen attention, cut noise, and aim resources with surgical precision.",
+        "family": "Decision Making / Focus — Clarity, Attention & Resource Allocation",
+    
+        "summary": "During Flight, Francisco refines his focus and pares away distraction. Clarity becomes a working discipline—deep blocks, clean frames, deliberate choices—so the resources he earned earlier are deployed with maximum effect. He does less, but what he does lands perfectly.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ace",
+    
+        "traits": {
+          "strengths": [
+            "extracts signal from noise under pressure",
+            "frames problems crisply and chooses decisive actions",
+            "sustains distraction-free focus windows",
+            "allocates time and resources to highest-leverage work",
+            "documents reasoning for repeatable quality decisions"
+          ],
+          "shadow": [
+            "analysis paralysis when standards are too high",
+            "over-pruning nuance; false certainty",
+            "impatience with messy collaboration",
+            "emotional detachment that chills team morale",
+            "rigidity around one ‘right’ frame"
+          ],
+          "growth_focus": [
+            "balance precision with humility—hold frames lightly",
+            "timebox analysis to avoid stall-out",
+            "share context, not just conclusions",
+            "protect recovery (sleep, breaks) to protect clarity",
+            "blend intuition (System 1) with verification (System 2)"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Converge (resolution)",
+          "fiction_chapter_context": "Book 5, Chapter 34 — In Flight, clarity concentrates hard-won gains into precise action."
+        },
+    
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clear sight translated into confident, timely action."
+        },
+    
+        "color_alignment": {
+          "name": "Royal Blue",
+          "hsl": "220,60%,50%",
+          "rgb_hex": "#3366CC",
+          "color_symbolism": "Cold sky just before dawn—quiet certainty, steady aim, clean horizons."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.86,
+            "empathy": 0.62,
+            "openness": 0.68,
+            "orderliness": 0.88,
+            "conscientiousness": 0.89,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.92,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.50,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "conscientiousness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q1941","Q1942","Q1943","Q1944","Q1945","Q1946","Q1947","Q1948"
+          ],
+          "signals_map": {
+            "Q1941": { "dimension": "conscientiousness", "polarity": 1, "content": "I schedule protected blocks for deep, undistracted work." },
+            "Q1942": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I frame decisions with clear criteria before choosing." },
+            "Q1943": { "dimension": "orderliness", "polarity": 1, "content": "I remove clutter—digital and mental—before I start." },
+            "Q1944": { "dimension": "stability", "polarity": 1, "content": "Pressure sharpens my focus rather than scattering it." },
+            "Q1945": { "dimension": "agency", "polarity": 1, "content": "When stakes rise, I cut scope to protect quality." },
+            "Q1946": { "dimension": "adaptability", "polarity": 1, "content": "I can reframe a problem quickly when data changes." },
+            "Q1947": { "dimension": "empathy", "polarity": 1, "content": "I explain the why of my decisions so teams can align." },
+            "Q1948": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid making fast calls without any verification." }
+          },
+          "daily_prompt": "What will you cut today so the essential can shine?",
+          "practices": [
+            "90/30 Deep Block: ninety minutes focused, thirty minutes reset.",
+            "Signal Audit: weekly review—what input sources truly move outcomes?",
+            "Decision Log: one page per major choice—frame, options, criteria, outcome.",
+            "Frame Check: write the problem as a question; verify with a peer in one minute.",
+            "Shutdown Ritual: last ten minutes—close loops, park tomorrow’s top 3."
+          ],
+          "transformation_indicators": [
+            "Reduced context switching during critical windows",
+            "Higher decision quality with shorter cycle times",
+            "Clearer resource allocation linked to priorities",
+            "Team reports better understanding of decision rationale",
+            "Lower error rate from rushed, unframed actions"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Converge (resolution)",
+          "preliminary_beat": "Break into 3 — Mental Clarity",
+          "save_the_cat_beat": "Converge (resolution)",
+          "character_state": "Calm, exacting; attention is a blade, not a floodlight.",
+          "ordinary_world_baseline": "Scattered effort, diffuse focus, busy without bite.",
+          "boon_reveal": "Clarity is created, not found; subtraction reveals the signal."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Work Deeply",
+            "section_description": "Techniques for distraction-free concentration",
+            "connection_focus_area": "Clarity in action",
+            "connect_points": {
+              "point1": "Schedule undisturbed work blocks",
+              "point2": "Define clear objectives for each session",
+              "point3": "Eliminate digital distractions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan two deep work sessions",
+              "objective2": "Set precise goals per session",
+              "objective3": "Remove one major distraction"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Systems 1 and 2",
+            "section_description": "Understanding intuitive vs. deliberate thought",
+            "connection_focus_area": "Sharpening deliberation",
+            "connect_points": {
+              "point1": "Identify a decision benefitting from analysis",
+              "point2": "Apply slow thinking framework",
+              "point3": "Document reasoning steps"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Choose one complex decision",
+              "objective2": "Walk through deliberate steps",
+              "objective3": "Record outcome rationale"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Mindful Presence",
+            "section_description": "Cultivating awareness in the moment",
+            "connection_focus_area": "Present-moment clarity",
+            "connect_points": {
+              "point1": "Practice a 5-minute mindfulness break",
+              "point2": "Note mental clarity gains",
+              "point3": "Apply presence in a decision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete one mindfulness session",
+              "objective2": "Journal immediate insights",
+              "objective3": "Use presence in next choice"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-cut ridge mid-Flight, Francisco closes his eyes; the roar falls away until only the line that matters remains.",
+          "symbolic_moment": "He draws a single stroke through a crowded map; the company pivots, light and lethal.",
+          "emotional_landscape": "Cool focus, quiet confidence, decisive poise.",
+          "boon_definition": "Clarity operationalized—frame, choose, act—resources placed exactly where they decide the day.",
+          "transformation_promise": "A leader who can subtract the noise can steer any storm."
+        },
+    
+        "epic_novel_pages": "Page 496 - 510",
+        "epic_chapter_focus": "Converge (resolution)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Decision Making",
+        "specific_task_group_description": "Refine your focus to make sharp decisions about how to use the resources you’ve gained.",
+        "specific_task_group_tagline": "See things clearly",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Royal Blue",
+        "hex_code": "#3366CC",
+        "red": 51,
+        "green": 102,
+        "blue": 204
+      },
       "personality_profile_195": {},
       "personality_profile_196": {},
       "personality_profile_197": {},
