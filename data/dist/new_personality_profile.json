@@ -41628,7 +41628,205 @@
         "green": 51,
         "blue": 153
       },
-      "personality_profile_198": {},
+      "personality_profile_198": {
+        "canonical_id": "EA-198",
+        "unique_identifier": "MAT 5.3",
+        "specific_task_group_title": "Justice",
+        "all_chapter": 198,
+        "novel_book": 5,
+        "chapter": "Chapter 38",
+        "chapter_title": "Rescue from Without — Justice",
+        "type": "Major Activity Theme",
+        "display_name": "The Keeper of the Scales",
+        "theme": "After the storm, equity is the rebuilding plan—justice aligns repair with responsibility so trust can return.",
+        "family": "Accountability — Fairness, Equity & Restoration",
+    
+        "summary": "Aid arrives, but distribution without justice only reshuffles harm. Francisco establishes principled processes—clear criteria, transparent tradeoffs, and timely restitution—so outcomes match values. By balancing empathy with evidence and procedure, he converts victory into legitimacy.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "Justice",
+    
+        "traits": {
+          "strengths": [
+            "centers objective criteria over impulse",
+            "maps stakeholders and mitigates power imbalances",
+            "communicates decisions with transparency and rationale",
+            "pairs empathy with enforceable standards",
+            "designs restitution paths that heal and deter"
+          ],
+          "shadow": [
+            "paralysis from over-indexing on perfect fairness",
+            "cold proceduralism that flattens context",
+            "public shaming instead of accountable repair",
+            "weaponizing rules to avoid hard conversations",
+            "favoring precedent when reform is needed"
+          ],
+          "growth_focus": [
+            "time-box analysis to prevent fairness paralysis",
+            "include affected voices early in criteria design",
+            "balance consistency with compassionate exceptions",
+            "track outcomes for disparate impact and adjust",
+            "pair accountability with clear, do-able restitution"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Rescue from Without",
+          "fiction_chapter_context": "Book 5, Chapter 38 — External help arrives; Francisco must render fair settlement so rescue becomes restoration."
+        },
+    
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 3—principled action delivered with effective, timely execution."
+        },
+    
+        "color_alignment": {
+          "name": "Dark Blue",
+          "hsl": "232,100%,27%",
+          "rgb_hex": "#001188",
+          "color_symbolism": "Night-court blue—solemn, steady, and exacting; a vow kept in ink and stone."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.86,
+            "empathy": 0.71,
+            "openness": 0.64,
+            "orderliness": 0.88,
+            "conscientiousness": 0.90,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.77,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.45,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.36,
+            "orderliness": 0.34,
+            "stability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1981","Q1982","Q1983","Q1984","Q1985","Q1986","Q1987","Q1988"],
+          "signals_map": {
+            "Q1981": { "dimension": "conscientiousness", "polarity": 1, "content": "I decide using clear, pre-stated criteria rather than ad-hoc preferences." },
+            "Q1982": { "dimension": "orderliness", "polarity": 1, "content": "I document tradeoffs and publish the rationale for tough calls." },
+            "Q1983": { "dimension": "empathy", "polarity": 1, "content": "I solicit input from those most affected before finalizing terms." },
+            "Q1984": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I balance precedent, data, and context to shape remedies." },
+            "Q1985": { "dimension": "stability", "polarity": 1, "content": "I stay even-handed when pressure or favoritism rises." },
+            "Q1986": { "dimension": "cooperativeness", "polarity": 1, "content": "I design restitution that repairs relationships, not just ledgers." },
+            "Q1987": { "dimension": "agency", "polarity": 1, "content": "I close the loop—decisions, timelines, owners, and follow-through." },
+            "Q1988": { "dimension": "orderliness", "polarity": 1, "content": "I maintain an appeal path to correct my own errors." }
+          },
+          "daily_prompt": "Which decision today needs criteria written down—before you make it?",
+          "practices": [
+            "Equity Audit: list stakeholders, benefits, harms, and power differentials.",
+            "Principled Negotiation Canvas: interests, options, standards, BATNAs.",
+            "Transparency Log: publish decision, criteria, rationale, and timeline.",
+            "Restitution Playbook: harm named, remedy offered, follow-up scheduled.",
+            "Disparate-Impact Review: check outcomes by group; adjust if skewed."
+          ],
+          "transformation_indicators": [
+            "Higher acceptance of outcomes by previously disadvantaged groups",
+            "On-time completion of restitution and remedy milestones",
+            "Reduction in appeals due to clearer criteria and rationale",
+            "Trust scores rise among external partners and internal teams",
+            "Fewer ad-hoc exceptions; more principled, documented precedents"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Justice",
+          "save_the_cat_beat": "Rescue from Without",
+          "character_state": "Calm, exact, and transparent—power wielded as stewardship.",
+          "ordinary_world_baseline": "Wins distributed by proximity and noise; grievances accumulate.",
+          "boon_reveal": "Justice converts aid into legitimacy—help that heals, not merely helps."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Justice: What’s the Right Thing to Do?",
+            "author": "Michael Sandel",
+            "section_of_focus": "Fairness and Equality",
+            "section_description": "Philosophical foundations of justice and rights.",
+            "connection_focus_area": "Balancing competing claims",
+            "connect_points": {
+              "point1": "Analyze a recent decision for fairness",
+              "point2": "Identify affected stakeholders",
+              "point3": "Propose an equitable resolution"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Critique a decision from a justice perspective",
+              "objective2": "List stakeholder interests",
+              "objective3": "Design a fair compromise"
+            }
+          },
+          "book2": {
+            "title": "Getting to Yes",
+            "author": "Roger Fisher and William Ury",
+            "section_of_focus": "Principled Negotiation",
+            "section_description": "Separating people from the problem and focusing on interests.",
+            "connection_focus_area": "Negotiating fair outcomes",
+            "connect_points": {
+              "point1": "Identify underlying interests",
+              "point2": "Generate multiple options",
+              "point3": "Use objective criteria"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map interests vs. positions",
+              "objective2": "Draft three negotiation options",
+              "objective3": "Select objective standards"
+            }
+          },
+          "book3": {
+            "title": "The Speed of Trust",
+            "author": "Stephen M.R. Covey",
+            "section_of_focus": "Building Trust",
+            "section_description": "How trust accelerates fairness and accountability.",
+            "connection_focus_area": "Restoring trust through accountability",
+            "connect_points": {
+              "point1": "List actions to rebuild trust",
+              "point2": "Set accountability checkpoints",
+              "point3": "Communicate transparently"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define trust metrics",
+              "objective2": "Establish follow-up schedule",
+              "objective3": "Report progress openly"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a lamplit hall, survivors and rivals gather; Francisco unrolls a charter of redress and speaks each harmed party’s name.",
+          "symbolic_moment": "A silver scale balances three tokens: harm, responsibility, and remedy—the beam steadies only when all three are present.",
+          "emotional_landscape": "Solemn resolve, measured compassion, earned relief.",
+          "boon_definition": "Justice operationalized—criteria set, voices heard, remedies assigned, follow-through tracked.",
+          "transformation_promise": "The company marches lighter when wrongs are righted and outcomes feel deserved."
+        },
+    
+        "epic_novel_pages": "Page 556 - 570",
+        "epic_chapter_focus": "Rescue from Without",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Accountability",
+        "specific_task_group_description": "Ensure fairness and balance in the aftermath of challenge.",
+        "specific_task_group_tagline": "Uphold fairness and equity",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Dark Blue",
+        "hex_code": "#001188",
+        "red": 0,
+        "green": 17,
+        "blue": 136
+      },
       "personality_profile_199": {},
       "personality_profile_200": {}
     },
