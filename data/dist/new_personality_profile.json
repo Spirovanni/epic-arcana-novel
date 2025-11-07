@@ -39602,7 +39602,196 @@
         "specific_task_group_description": "Accept responsibility for your actions amid crisis to regain control.",
         "specific_task_group_tagline": "Own your role in adversity"
       },
-      "personality_profile_188": {},
+      "personality_profile_188": {
+        "canonical_id": "EA-188",
+        "unique_identifier": "STG 5.2.5.2",
+        "specific_task_group_title": "Genuine",
+        "all_chapter": 188,
+        "novel_book": 5,
+        "chapter": "Chapter 28",
+        "chapter_title": "The Abyss — Genuine",
+        "type": "Specific Task Group",
+        "display_name": "The Genuine",
+        "theme": "Authenticity under pressure preserves trust and power; values are your compass in the dark.",
+        "family": "Authenticity — Integrity, Values & Candor",
+    
+        "summary": "In his darkest turn, Francisco refuses to posture or bargain away his core. He names what is true, acts from values, and invites others to do the same. By staying genuine under fire, he stabilizes alliances and keeps the mission aligned with universal balance.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "speaks plain truth without theatrics",
+            "keeps behavior aligned to stated values",
+            "chooses transparency over image management",
+            "balances candor with care for relationships",
+            "admits limits and asks for help early"
+          ],
+          "shadow": [
+            "brutal honesty that wounds needlessly",
+            "performative vulnerability for approval",
+            "rigidity that confuses preference with principle",
+            "withholding truth to avoid discomfort",
+            "over-identifying with a moral image"
+          ],
+          "growth_focus": [
+            "separate core values from negotiables",
+            "pair candor with curiosity and care",
+            "name the personal stake before the claim",
+            "practice short truth-first updates in crisis",
+            "invite disconfirming feedback on your integrity"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 5, Chapter 28 — In a pinch within the Abyss, Francisco anchors the team by acting from unshakable values."
+        },
+    
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—authentic expression guided by principled integrity."
+        },
+    
+        "color_alignment": {
+          "name": "Dodger Blue",
+          "hsl": "204,100%,50%",
+          "rgb_hex": "#0099FF",
+          "color_symbolism": "True sky-blue line—clear direction when visibility drops."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.84,
+            "empathy": 0.82,
+            "openness": 0.70,
+            "orderliness": 0.69,
+            "conscientiousness": 0.86,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.52,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "stability": 0.35,
+            "empathy": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1881","Q1882","Q1883","Q1884","Q1885","Q1886","Q1887","Q1888"],
+          "signals_map": {
+            "Q1881": { "dimension": "conscientiousness", "polarity": 1, "content": "My actions match my stated values when stakes are high." },
+            "Q1882": { "dimension": "stability", "polarity": 1, "content": "I stay grounded enough in crisis to speak simple truths." },
+            "Q1883": { "dimension": "empathy", "polarity": 1, "content": "I pair hard truths with care for how they land." },
+            "Q1884": { "dimension": "agency", "polarity": 1, "content": "I choose value-consistent action even when it costs me." },
+            "Q1885": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite others to challenge me when I drift from our values." },
+            "Q1886": { "dimension": "orderliness", "polarity": 1, "content": "I keep a short list of non-negotiables visible to the team." },
+            "Q1887": { "dimension": "openness", "polarity": 1, "content": "I admit uncertainty rather than pretending certainty." },
+            "Q1888": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept reputational risk to maintain integrity." }
+          },
+          "daily_prompt": "What truth needs saying today—and how will you deliver it with care?",
+          "practices": [
+            "True-North Card: write your 3 non-negotiable values; keep them on-screen/in-pocket.",
+            "90-Second Truth Update: facts → value at stake → next step.",
+            "Candor + Care Script: 'Here’s my view' + 'What am I missing?' + 'How does this land?'",
+            "Integrity Audit: weekly review of actions vs values; log one repair.",
+            "Mask Check: name the persona you use under stress; choose one behavior that drops it."
+          ],
+          "transformation_indicators": [
+            "Rise in psychological safety / candor survey items",
+            "Fewer value-misalignment incidents during crises",
+            "Higher follow-through on stated principles under pressure",
+            "Increase in upward feedback given and received",
+            "Documented repairs when value drift occurs"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Pinch (event/conflict) — Genuine",
+          "save_the_cat_beat": "Dark Night of the Soul",
+          "character_state": "Pressed and tempted to posture; chooses principled presence.",
+          "ordinary_world_baseline": "Image management and hedged truths when stakes rise.",
+          "call_to_adventure_preview": "Authenticity is operational discipline, not a mood."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability and Courage",
+            "section_description": "Embracing authenticity in adversity",
+            "connection_focus_area": "Authentic presence",
+            "connect_points": {
+              "point1": "Identify a mask you wear under stress",
+              "point2": "Practice vulnerability in a safe setting",
+              "point3": "Reflect on the outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one inauthentic behavior",
+              "objective2": "Share a truth in a trusted group",
+              "objective3": "Note its impact on connection"
+            }
+          },
+          "book2": {
+            "title": "Authentic Leadership",
+            "author": "Bill George",
+            "section_of_focus": "Discovering Your True North",
+            "section_description": "Leading with your core values",
+            "connection_focus_area": "Values-based action",
+            "connect_points": {
+              "point1": "Clarify your top three values",
+              "point2": "Assess alignment with actions",
+              "point3": "Adjust one behavior accordingly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your core values",
+              "objective2": "Map one behavior to those values",
+              "objective3": "Implement a realignment plan"
+            }
+          },
+          "book3": {
+            "title": "Radical Candor",
+            "author": "Kim Scott",
+            "section_of_focus": "Care Personally, Challenge Directly",
+            "section_description": "Balancing honesty and empathy",
+            "connection_focus_area": "Candid communication",
+            "connect_points": {
+              "point1": "Deliver one piece of honest feedback",
+              "point2": "Show genuine care in delivery",
+              "point3": "Solicit a response"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan a candid conversation",
+              "objective2": "Practice empathy phrases",
+              "objective3": "Reflect on the feedback exchange"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Abyssal tribunal, a council demands a cosmetic confession to spare the fleet. Francisco declines the script and offers the unvarnished truth of causes and costs.",
+          "symbolic_moment": "He plants a Dodger-blue standard etched with his three non-negotiables; it glows brighter as others speak their truths.",
+          "emotional_landscape": "Taut silence breaking into steady resolve and renewed trust.",
+          "threshold_vision": "Authenticity reweaves fraying bonds faster than any performance.",
+          "transformation_promise": "A coalition that tells the truth can hold a line no force can break."
+        },
+    
+        "epic_novel_pages": "Page 406 - 420",
+        "epic_chapter_focus": "Pinch (event/conflict)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "focus_area": "Authenticity",
+        "specific_task_group_description": "Maintain your authenticity and values when under extreme pressure.",
+        "specific_task_group_tagline": "Stay true when tested"
+      },
       "personality_profile_189": {},
       "personality_profile_190": {},
       "personality_profile_191": {},
