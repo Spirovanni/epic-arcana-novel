@@ -39213,7 +39213,205 @@
         "specific_task_group_description": "Rapidly test ideas and discard what doesn’t work to accelerate learning.",
         "specific_task_group_tagline": "Speed up your failure cycle"
       },
-      "personality_profile_186": {},
+      "personality_profile_186": {
+        "canonical_id": "EA-186",
+        "unique_identifier": "STG 5.2.4.3",
+        "specific_task_group_title": "Fail Forward",
+        "all_chapter": 186,
+        "novel_book": 5,
+        "chapter": "Chapter 26",
+        "chapter_title": "Atonement with the Father — Fail Forward",
+        "type": "Specific Task Group",
+        "display_name": "The Restorer",
+        "theme": "Failure, owned and examined, becomes the bridge to reconciliation, wisdom, and renewed purpose.",
+        "family": "Redemptive Failure — Humility, Repair & Integration",
+    
+        "summary": "At the nadir of despair, Francisco reframes defeat as data and loss as a teacher. By owning harm, seeking forgiveness, and converting remorse into restorative action, he transforms shame into responsibility. Atonement—personal and archetypal—turns setbacks into momentum, aligning heritage with a clarified mission.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Two",
+    
+        "traits": {
+          "strengths": [
+            "owns mistakes quickly and specifically",
+            "turns remorse into concrete amends",
+            "invites feedback from those affected",
+            "extracts principles from setbacks",
+            "models humility that restores trust"
+          ],
+          "shadow": [
+            "lingers in shame and stalls action",
+            "uses apology in place of repair",
+            "spins failures to protect image",
+            "projects blame under stress",
+            "overcorrects with performative penance"
+          ],
+          "growth_focus": [
+            "separate task failure from self-worth",
+            "pair apology with measurable restitution",
+            "publish lessons so others can learn",
+            "schedule reflection before response",
+            "create guardrails to prevent repeats"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 5, Chapter 26 — Failure reframed becomes reconciliation fuel and future guidance."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—accountability, team loyalty, truth over image."
+        },
+    
+        "color_alignment": {
+          "name": "Light Sky Blue",
+          "hsl": "210,100%,80%",
+          "rgb_hex": "#99CCFF",
+          "color_symbolism": "Dawn after the storm—clarity, contrition, and renewed relationship."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.78,
+            "empathy": 0.82,
+            "openness": 0.74,
+            "orderliness": 0.69,
+            "conscientiousness": 0.81,
+            "adaptability": 0.80,
+            "abstract_reasoning": 0.70,
+            "cooperativeness": 0.86,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.64,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.60,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "stability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q1861",
+            "Q1862",
+            "Q1863",
+            "Q1864",
+            "Q1865",
+            "Q1866",
+            "Q1867",
+            "Q1868"
+          ],
+          "signals_map": {
+            "Q1861": { "dimension": "empathy", "polarity": 1, "content": "I name who was impacted and how before I propose repairs." },
+            "Q1862": { "dimension": "stability", "polarity": 1, "content": "I pause to regulate emotion before responding to failure." },
+            "Q1863": { "dimension": "agency", "polarity": 1, "content": "I convert remorse into one concrete amends action within 72 hours." },
+            "Q1864": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite those affected to co-design the repair plan." },
+            "Q1865": { "dimension": "openness", "polarity": 1, "content": "I share failure and learning publicly to prevent repeats." },
+            "Q1866": { "dimension": "conscientiousness", "polarity": 1, "content": "I track restitution promises and close the loop on each." },
+            "Q1867": { "dimension": "adaptability", "polarity": 1, "content": "I update protocols immediately based on what failed." },
+            "Q1868": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I extract a general principle from every setback and apply it." }
+          },
+          "daily_prompt": "Whom did your last failure touch—and what specific repair will you initiate today to turn harm into healing?",
+          "practices": [
+            "Honesty Audit: write what happened, who was harmed, and your part—no spin.",
+            "Restitution Map: list concrete amends with owners, dates, and proof of completion.",
+            "3-Column Reframe: facts / feelings / forward action in 10 minutes.",
+            "Accountability Circle: share a failure and one repair you’ll complete this week.",
+            "Guardrail Design: add one check that would have prevented the failure."
+          ],
+          "transformation_indicators": [
+            "Rise in peer trust and psychological safety scores",
+            "Shorter mean time to acknowledge and repair harm",
+            "Reduction in repeat-category errors",
+            "Increase in upward feedback submitted and acted upon",
+            "Documented closure rate on restitution commitments"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "Dark Night of the Soul — Fail Forward",
+          "save_the_cat_beat": "Dark Night of the Soul",
+          "character_state": "Humbled, reconciliatory, oriented to repair.",
+          "ordinary_world_baseline": "Shame, defensiveness, inherited scripts of perfection.",
+          "call_to_adventure_preview": "Failure, owned with compassion, becomes the teacher that restores relationship and direction."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Falling Upward",
+            "author": "Richard Rohr",
+            "section_of_focus": "The Wisdom of the Second Half of Life",
+            "section_description": "Transforming loss and disappointment into deeper meaning.",
+            "connection_focus_area": "Ego release and reconciliation",
+            "connect_points": {
+              "point1": "Name a failure that exposed an outdated identity.",
+              "point2": "Identify the inherited script it forced you to confront.",
+              "point3": "Describe the wiser purpose that emerged."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate spiritual benefits within a significant failure.",
+              "objective2": "Draft a reflection linking humility to reconciliation.",
+              "objective3": "Adopt one contemplative practice to reframe future setbacks."
+            }
+          },
+          "book2": {
+            "title": "Leadership and Self-Deception",
+            "author": "The Arbinger Institute",
+            "section_of_focus": "Getting Out of the Box",
+            "section_description": "Seeing beyond self-justifying narratives to restore trust.",
+            "connection_focus_area": "Accountability and repair",
+            "connect_points": {
+              "point1": "Track a conflict prolonged by self-justification.",
+              "point2": "List needs you ignored while staying in blame.",
+              "point3": "Outline a restorative conversation centered on empathy."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Diagnose the story that kept you from owning failure.",
+              "objective2": "Design a dialogue framework rooted in responsibility.",
+              "objective3": "Implement one behavior shift signaling renewed integrity."
+            }
+          },
+          "book3": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Perception, Action, Will",
+            "section_description": "Stoic reframing to turn obstacles into growth.",
+            "connection_focus_area": "Purposeful forward motion",
+            "connect_points": {
+              "point1": "Recast a setback as training for reconciliation.",
+              "point2": "List actions that turn remorse into restitution.",
+              "point3": "Define willpower rituals for when absolution feels distant."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Compose a stoic reframe for a current failure.",
+              "objective2": "Design a three-step restoration plan.",
+              "objective3": "Adopt a resilience ritual to sustain repair."
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Penitential Reflectorium, obsidian walls mirror Francisco’s past missteps as he drafts vows of restitution to the lives he’s touched.",
+          "symbolic_moment": "On the Threshold of New Vows, he lays a broken sigil at the altar; it glows and re-forms when he speaks the truth without excuse.",
+          "emotional_landscape": "Contrite hope, sober tenderness, gathering resolve.",
+          "threshold_vision": "True authority is the power to repair what you have broken.",
+          "transformation_promise": "A leader who fails forward becomes a steward of trust."
+        },
+    
+        "epic_novel_pages": "Page 376 - 390",
+        "epic_chapter_focus": "Atonement with the Father",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "focus_area": "Redemptive Failure",
+        "specific_task_group_description": "Fail Forward transforms failure from a destructive force into a constructive catalyst for growth. It requires courageous honesty, lesson extraction, and using those insights to build stronger foundations. By embracing vulnerability, releasing perfectionism, and viewing setbacks with curiosity, individuals develop resilience that transcends mere recovery—distinguishing between failing at a task and being a failure as a person, and enabling authentic, iterative improvement.",
+        "specific_task_group_tagline": "Every defeat is data for future victory."
+      },
       "personality_profile_187": {},
       "personality_profile_188": {},
       "personality_profile_189": {},
