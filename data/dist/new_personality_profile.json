@@ -42026,7 +42026,205 @@
         "green": 0,
         "blue": 255
       },
-      "personality_profile_200": {}
+      "personality_profile_200": {
+        "canonical_id": "EA-200",
+        "unique_identifier": "STG 5.2.9.2",
+        "specific_task_group_title": "Transcendent",
+        "all_chapter": 200,
+        "novel_book": 5,
+        "chapter": "Chapter 40",
+        "chapter_title": "Master of Two Worlds — Transcendent",
+        "type": "Specific Task Group",
+        "display_name": "The Horizon Walker",
+        "theme": "Elevate perspective to integrate new abilities with human wisdom—hold paradox without breaking and see beyond boundaries.",
+        "family": "Vision — Perspective, Optionality & Foresight",
+    
+        "summary": "At mastery’s edge, Francisco learns to stand in two realities at once—power and humility, certainty and curiosity. He integrates what he’s gained and looks farther out, treating ambiguity as signal rather than noise. Vision becomes stewardship.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Six",
+    
+        "traits": {
+          "strengths": [
+            "integrates multiple domains into a cohesive vision",
+            "holds paradox and ambiguity without rushing to closure",
+            "anticipates disruptive shifts and prepares option paths",
+            "grounds visionary plans in human-scale ethics",
+            "keeps long-view while executing present steps"
+          ],
+          "shadow": [
+            "drifts into abstraction and loses operational tempo",
+            "overestimates readiness for radical change",
+            "speaks in metaphors when specifics are needed",
+            "treats dissent as lack of perspective",
+            "spreads attention too thin across horizons"
+          ],
+          "growth_focus": [
+            "pair every horizon insight with a near-term concrete move",
+            "schedule reality checks with operators and skeptics",
+            "translate paradox into two viable experiments",
+            "publish assumptions and update logs visibly",
+            "protect recovery time to prevent visionary fatigue"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 5, Chapter 40 — In the Final Image, the widened view fuses with compassionate action."
+        },
+    
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity joined with grounded courage and decisive protection."
+        },
+    
+        "color_alignment": {
+          "name": "Rich Blue",
+          "hsl": "238,42%,49%",
+          "rgb_hex": "#494CB3",
+          "color_symbolism": "Deep, lucid sky at nautical dusk—vision steady enough to navigate by."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.77,
+            "empathy": 0.73,
+            "openness": 0.86,
+            "orderliness": 0.70,
+            "conscientiousness": 0.76,
+            "adaptability": 0.83,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.75,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.78,
+            "imagination": 0.90
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "abstract_reasoning": 0.35,
+            "adaptability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q2001","Q2002","Q2003","Q2004","Q2005","Q2006","Q2007","Q2008"],
+          "signals_map": {
+            "Q2001": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can hold opposing truths long enough to find the higher-order pattern." },
+            "Q2002": { "dimension": "openness", "polarity": 1, "content": "Ambiguity energizes my curiosity rather than paralyzing me." },
+            "Q2003": { "dimension": "adaptability", "polarity": 1, "content": "I keep multiple option paths open until evidence narrows the field." },
+            "Q2004": { "dimension": "conscientiousness", "polarity": 1, "content": "I pair big-picture vision with near-term, testable actions." },
+            "Q2005": { "dimension": "agency", "polarity": 1, "content": "When the future is unclear, I run small experiments instead of waiting." },
+            "Q2006": { "dimension": "empathy", "polarity": 1, "content": "I frame change in human terms so people can carry it." },
+            "Q2007": { "dimension": "orderliness", "polarity": 1, "content": "I maintain an assumptions log and update it as data arrives." },
+            "Q2008": { "dimension": "stability", "polarity": 1, "content": "I stay calm when plans and identities must evolve." }
+          },
+          "daily_prompt": "What boundary can you blur today—safely—to reveal a better path forward?",
+          "practices": [
+            "Horizon Scan 3×3: three trends × three implications, updated monthly.",
+            "Option Portfolio: maintain at least two small, reversible experiments for each major bet.",
+            "Stoic Reframe: write a 5-line perspective shift for today’s hardest constraint.",
+            "Assumptions Ledger: log, test, and date-stamp top five premises weekly.",
+            "Synthesis Brief: one-page ‘what changed and what we do next’ every Friday."
+          ],
+          "transformation_indicators": [
+            "Fewer false-dichotomy decisions; more both/and solutions",
+            "Rise in small reversible experiments per quarter",
+            "Faster updates to core assumptions after new evidence",
+            "Stakeholder surveys cite clearer long-view with humane tradeoffs",
+            "Improved conversion from insight → next actionable step"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Final Image — Transcendent",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Wide-angled calm; vision braided with compassion.",
+          "ordinary_world_baseline": "Either/or thinking; power or humility but not both.",
+          "boon_reveal": "Integration is the true ascent—seeing farther while standing closer to people."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Innovator's Dilemma",
+            "author": "Clayton M. Christensen",
+            "section_of_focus": "Disruptive Innovation",
+            "section_description": "Understanding shifts in technology and markets",
+            "connection_focus_area": "Anticipating future transformations",
+            "connect_points": {
+              "point1": "Analyze emerging trends",
+              "point2": "Assess disruptive risks",
+              "point3": "Plan adaptive strategies"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two emerging technologies",
+              "objective2": "Evaluate one disruptive risk",
+              "objective3": "Draft a contingency plan"
+            }
+          },
+          "book2": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Optionality",
+            "section_description": "Gaining from disorder and uncertainty",
+            "connection_focus_area": "Building resilient vision",
+            "connect_points": {
+              "point1": "Identify areas of optionality",
+              "point2": "Create small experiments",
+              "point3": "Extract lessons from failures"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design two optionality pathways",
+              "objective2": "Conduct one experiment",
+              "objective3": "Document insights gained"
+            }
+          },
+          "book3": {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "section_of_focus": "Stoic Vision",
+            "section_description": "Maintaining perspective in adversity",
+            "connection_focus_area": "Cultivating a balanced outlook",
+            "connect_points": {
+              "point1": "Practice daily reflection",
+              "point2": "Reframe challenges as opportunities",
+              "point3": "Affirm long-term goals"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a daily journal entry",
+              "objective2": "Reframe one recent setback",
+              "objective3": "Set one long-term vision statement"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the city’s highest parapet, sea and sky blur into one line—Francisco breathes, then opens both hands: power in one, mercy in the other.",
+          "symbolic_moment": "He draws a circle that crosses the border stones—old maps glow, new paths appear without erasing the old.",
+          "emotional_landscape": "Quiet awe, settled courage, companionable warmth.",
+          "boon_definition": "A lens that widens without distorting—seeing farther while staying human-sized.",
+          "transformation_promise": "A leader who can reconcile worlds can reconcile people."
+        },
+    
+        "epic_novel_pages": "Page 586 - 600",
+        "epic_chapter_focus": "Master of Two Worlds",
+        "epic_preliminary_scene_focus": "Final Image",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Vision",
+        "specific_task_group_description": "Elevate your perspective to integrate new abilities and insights.",
+        "specific_task_group_tagline": "See beyond boundaries",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Rich Blue",
+        "hex_code": "#494CB3",
+        "red": 73,
+        "green": 76,
+        "blue": 179
+      }
     },
     "family_6": {},
     "family_7": {},
