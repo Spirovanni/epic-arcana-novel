@@ -41827,7 +41827,205 @@
         "green": 17,
         "blue": 136
       },
-      "personality_profile_199": {},
+      "personality_profile_199": {
+        "canonical_id": "EA-199",
+        "unique_identifier": "STG 5.2.9.1",
+        "specific_task_group_title": "Incentivize",
+        "all_chapter": 199,
+        "novel_book": 5,
+        "chapter": "Chapter 39",
+        "chapter_title": "Master of Two Worlds — Incentivize",
+        "type": "Specific Task Group",
+        "display_name": "The Flywheel Architect",
+        "theme": "Tie rewards to the behaviors that build your world so momentum compounds long after the spotlight moves on.",
+        "family": "Motivation — Autonomy, Mastery & Purpose",
+    
+        "summary": "Resolution isn’t the end—it’s the moment you encode victory into habits. Francisco designs simple, transparent incentives that favor learning, service, and shared purpose. By aligning rewards with the outcomes you want repeated, he turns one win into a flywheel.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Seven",
+    
+        "traits": {
+          "strengths": [
+            "designs rewards that reinforce desired behavior",
+            "balances intrinsic and extrinsic motivators",
+            "links milestones to visible progress",
+            "keeps rules simple, transparent, and fair",
+            "builds compounding feedback loops"
+          ],
+          "shadow": [
+            "overweights extrinsic rewards and crowds out purpose",
+            "creates metrics that can be gamed",
+            "short-termism that erodes culture",
+            "unequal access to rewards across roles",
+            "overly complex schemes that confuse participants"
+          ],
+          "growth_focus": [
+            "pilot small and measure unintended effects",
+            "favor autonomy, mastery, and purpose over prizes",
+            "publish guardrails and review dates for each incentive",
+            "ensure equity by monitoring disparate impact",
+            "retire any reward that drives the wrong behavior"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Holder of the Life Force",
+          "chapter_theme": "Resolution",
+          "fiction_chapter_context": "Book 5, Chapter 39 — In Master of Two Worlds, incentive loops stitch the elixir into daily life."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 2—recognition systems built to uplift the whole, not just status."
+        },
+    
+        "color_alignment": {
+          "name": "Blue",
+          "hsl": "240,100%,50%",
+          "rgb_hex": "#0000FF",
+          "color_symbolism": "Flag-blue assurance—reliable rewards for reliable progress."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.81,
+            "stability": 0.74,
+            "empathy": 0.70,
+            "openness": 0.68,
+            "orderliness": 0.78,
+            "conscientiousness": 0.87,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.53,
+            "social_dominance": 0.57,
+            "novelty_seeking": 0.60,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "agency": 0.35,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": ["Q1991","Q1992","Q1993","Q1994","Q1995","Q1996","Q1997","Q1998"],
+          "signals_map": {
+            "Q1991": { "dimension": "conscientiousness", "polarity": 1, "content": "I design rewards that reinforce the exact behaviors we want more of." },
+            "Q1992": { "dimension": "orderliness", "polarity": 1, "content": "I make progress visible with milestones, tokens, or dashboards." },
+            "Q1993": { "dimension": "orderliness", "polarity": 1, "content": "I prefer simple, transparent rules over complex reward schemes." },
+            "Q1994": { "dimension": "openness", "polarity": 1, "content": "I align incentives with autonomy, mastery, and purpose to protect intrinsic drive." },
+            "Q1995": { "dimension": "adaptability", "polarity": 1, "content": "I pilot incentives and watch for unintended effects before scaling." },
+            "Q1996": { "dimension": "cooperativeness", "polarity": 1, "content": "I celebrate team contributions publicly and often." },
+            "Q1997": { "dimension": "agency", "polarity": 1, "content": "I retire rewards that create gaming or short-termism." },
+            "Q1998": { "dimension": "conscientiousness", "polarity": 1, "content": "I link rewards to learning and improvement, not just outcomes." }
+          },
+          "daily_prompt": "What tiny reward will you tie to today’s least-appealing but important habit?",
+          "practices": [
+            "Incentive Canvas: desired behavior, trigger, reward, metric, guardrails, review date.",
+            "Mastery Tokens: visible markers earned for skill growth; redeemable for stretch roles.",
+            "Autonomy Menu: participant-chosen paths with equivalent credit toward goals.",
+            "Progress Ledger: weekly roll-up of behaviors rewarded vs. targets and values.",
+            "Sunset Rule: schedule to review/retire any incentive that distorts behavior."
+          ],
+          "transformation_indicators": [
+            "Sustained engagement 60/90 days post-launch",
+            "Higher completion of mastery milestones",
+            "Drop in metric-gaming and perverse-incentive flags",
+            "Increase in peer recognition events per week",
+            "Survey shift toward intrinsic-motivation statements"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Resolution",
+          "preliminary_beat": "Master of Two Worlds — Incentivize",
+          "save_the_cat_beat": "Finale",
+          "character_state": "Systems-minded; victory codified into habits and rewards.",
+          "ordinary_world_baseline": "Wins fade after finish lines; motivation spikes then crashes.",
+          "boon_reveal": "Sustainable incentive loops keep the elixir flowing."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "The Three Elements of Motivation",
+            "section_description": "Autonomy, mastery, and purpose that fuel motivation",
+            "connection_focus_area": "Designing effective incentives",
+            "connect_points": {
+              "point1": "Map out areas for autonomy",
+              "point2": "Set mastery milestones",
+              "point3": "Clarify overarching purpose"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one autonomy-enhancing change",
+              "objective2": "Establish a mastery benchmark",
+              "objective3": "Articulate a clear purpose statement"
+            }
+          },
+          "book2": {
+            "title": "Influence",
+            "author": "Robert B. Cialdini",
+            "section_of_focus": "Principle of Reciprocation",
+            "section_description": "How giving prompts returns positive response",
+            "connection_focus_area": "Building reciprocal incentive systems",
+            "connect_points": {
+              "point1": "Identify small gifts to offer",
+              "point2": "Plan timing of reciprocation",
+              "point3": "Measure response uplift"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three reciprocal incentives",
+              "objective2": "Schedule their delivery",
+              "objective3": "Track resulting engagement"
+            }
+          },
+          "book3": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Interest and Habit Formation",
+            "section_description": "Sustaining effort through intrinsic drive",
+            "connection_focus_area": "Cultivating long-term incentives",
+            "connect_points": {
+              "point1": "Identify personal interests",
+              "point2": "Link incentives to habits",
+              "point3": "Review progress weekly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one interest-based reward",
+              "objective2": "Integrate it into a daily habit",
+              "objective3": "Evaluate its effect after one week"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At first light, brass rings are set along the ramparts; each chimes when a crew completes a true service—the walls begin to sing.",
+          "symbolic_moment": "A flywheel carved with runes of Service, Skill, and Purpose turns—faster with every small, repeated win.",
+          "emotional_landscape": "Bright resolve, playful momentum, earned pride.",
+          "boon_definition": "Incentives that teach: every reward points back to learning, contribution, and the shared mission.",
+          "transformation_promise": "When meaning fuels the engine, the city thrives long after the hero moves on."
+        },
+    
+        "epic_novel_pages": "Page 571 - 585",
+        "epic_chapter_focus": "Resolution",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part II: Holder of the Balances",
+        "focus_area": "Motivation",
+        "specific_task_group_description": "Create incentives to sustain growth beyond completion.",
+        "specific_task_group_tagline": "Reward progress to drive action",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Blue",
+        "hex_code": "#0000FF",
+        "red": 0,
+        "green": 0,
+        "blue": 255
+      },
       "personality_profile_200": {}
     },
     "family_6": {},
