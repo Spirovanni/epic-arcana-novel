@@ -50069,7 +50069,197 @@
         "green": 255,
         "blue": 255
       },
-      "personality_profile_240": {}
+      "personality_profile_240": {
+        "canonical_id": "EA-240",
+        "unique_identifier": "STG 6.2.9.2",
+        "specific_task_group_title": "Craftiness",
+        "all_chapter": 240,
+        "novel_book": 6,
+        "chapter": "Chapter 40",
+        "chapter_title": "Master of Two Worlds — Craftiness",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Tactician",
+        "theme": "Strategy that bridges realms—read the field, place leverage precisely, and design wins that endure without collateral damage.",
+        "family": "Strategy / Craftiness — Leverage, Sequencing & De-biasing",
+        "summary": "Francisco’s cunning has matured into principled craft. He designs coherent actions, sequences them for compounding effect, and checks bias with red-team rigor. Master of Two Worlds means the plan serves both realms: precise, humane, and sustainable.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "spots hidden leverage and sequences plays",
+            "pressure-tests plans with premortems and red-teams",
+            "balances bold moves with graceful exits",
+            "turns diagnosis into three coherent actions",
+            "wins clean—minimizing friction and unintended harm"
+          ],
+          "shadow": [
+            "over-optimizes instead of shipping",
+            "treats people as pieces on a board",
+            "leans on cleverness when clarity would suffice",
+            "short-term tricks that erode trust",
+            "analysis loops that delay decisive action"
+          ],
+          "growth_focus": [
+            "publish intent so allies can align",
+            "design ‘win without humiliation’ criteria",
+            "set explicit stop-loss and exit rules",
+            "run premortem + bias check before commitment",
+            "reserve white-space for emergence and pivots"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 6, Chapter 40 — Strategy that honors sky and river alike; leverage replaces brute force."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—decisive protection refined into service-led strategy."
+        },
+        "color_alignment": {
+          "name": "Viking",
+          "hsl": "187,45%,47%",
+          "rgb_hex": "#42A7B0",
+          "color_symbolism": "Sea-steel: calm, adaptive cunning that cuts cleanly."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.68,
+            "empathy": 0.57,
+            "openness": 0.74,
+            "orderliness": 0.72,
+            "conscientiousness": 0.81,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.63,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.66,
+            "novelty_seeking": 0.71,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "agency": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q2401","Q2402","Q2403","Q2404",
+            "Q2405","Q2406","Q2407","Q2408"
+          ],
+          "signals_map": {
+            "Q2401": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map leverage points and constraints before proposing actions." },
+            "Q2402": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate strategy into three coherent actions with owners and metrics." },
+            "Q2403": { "dimension": "agency", "polarity": 1, "content": "After a premortem, I choose a decisive move despite imperfect information." },
+            "Q2404": { "dimension": "openness", "polarity": 1, "content": "I actively seek disconfirming evidence before committing." },
+            "Q2405": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a decision log and review outcomes monthly." },
+            "Q2406": { "dimension": "empathy", "polarity": -1, "content": "I treat stakeholders as pieces on a board to secure a win." },
+            "Q2407": { "dimension": "adaptability", "polarity": 1, "content": "I pivot quickly when leading indicators break from plan." },
+            "Q2408": { "dimension": "risk_tolerance", "polarity": 1, "content": "I set explicit stop-loss and exit criteria for each strategic bet." }
+          },
+          "daily_prompt": "What single leverage point will make everything else easier—or unnecessary—today?",
+          "practices": [
+            "Kernel Card: diagnosis → guiding policy → three coherent actions.",
+            "Premortem: list reasons the plan fails; design safeguards.",
+            "Red-Team/Blue-Team: invite disconfirmation before lock-in.",
+            "Strategy Pulse: define leading indicators; review weekly.",
+            "Decision Journal: log assumptions, signals, result, lesson."
+          ],
+          "transformation_indicators": [
+            "Fewer surprise failures; higher hit rate on bets",
+            "Cycle time from diagnosis to action shrinks",
+            "Leading indicators reliably predict outcomes",
+            "Stakeholder trust increases with clearer intent",
+            "Reversible decisions executed faster with equal/better results"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Final Image — Craftiness",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Strategic poise; cunning refined into principled craft.",
+          "ordinary_world_baseline": "Isolated tactics and clever one-offs that don’t scale.",
+          "push_turn": "Leverage replaces force; plans serve both realms and leave bridges, not scars."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "section_of_focus": "Strategic Planning",
+            "section_description": "Foundations of crafting effective strategy",
+            "connection_focus_area": "Battlefield preparation",
+            "connect_points": {
+              "point1": "Assess the environment",
+              "point2": "Identify strengths and weaknesses",
+              "point3": "Formulate a clear plan"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a SWOT analysis",
+              "objective2": "Draft a three-step strategy",
+              "objective3": "Set measurable success criteria"
+            }
+          },
+          "book2": {
+            "title": "Good Strategy Bad Strategy",
+            "author": "Richard P. Rumelt",
+            "section_of_focus": "Kernel of Strategy",
+            "section_description": "Core elements of effective strategic design",
+            "connection_focus_area": "Leveraging leverage",
+            "connect_points": {
+              "point1": "Define the critical challenge",
+              "point2": "Identify leverage points",
+              "point3": "Specify coherent actions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate the central challenge",
+              "objective2": "List two leverage points",
+              "objective3": "Design a coherent action plan"
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Strategic Biases",
+            "section_description": "How cognitive biases affect decision making",
+            "connection_focus_area": "Mitigating bias",
+            "connect_points": {
+              "point1": "Identify a personal bias",
+              "point2": "Apply a de-biasing technique",
+              "point3": "Review decisions for bias impact"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one common bias",
+              "objective2": "Practice a de-biasing exercise",
+              "objective3": "Evaluate a past decision through a bias lens"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the estuary sky-bridge, Francisco layers decoy sails and tide-gates; one plan for the wind world, one for the river—both snap into a single rhythm.",
+          "symbolic_moment": "Seven mirrored blades laid over the map catch twin horizons; he tilts them until sky and current align.",
+          "emotional_landscape": "Quiet smile, unshakable calm, the hum of inevitability.",
+          "craftiness_definition": "Ethical cunning—design routes that spare force and multiply effect.",
+          "transformation_promise": "When strategy honors both worlds, victories endure and communities deepen."
+        },
+        "epic_novel_pages": "Page 586 - 600",
+        "epic_chapter_focus": "Master of Two Worlds",
+        "epic_preliminary_scene_focus": "Final Image",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Strategy",
+        "specific_task_group_description": "Apply strategic insights to craft a sustainable path forward.",
+        "specific_task_group_tagline": "Master your approach",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Viking",
+        "hex_code": "#42A7B0",
+        "red": 66,
+        "green": 167,
+        "blue": 176
+      }
     },
     "family_7": {
       "personality_profile_241": {},
