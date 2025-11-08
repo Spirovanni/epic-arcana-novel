@@ -50452,8 +50452,198 @@
         "red": 204,
         "green": 255,
         "blue": 204
+      },
+      "personality_profile_242": {
+        "canonical_id": "EA-242",
+        "unique_identifier": "STG 7.1.1.2",
+        "specific_task_group_title": "Recovery",
+        "all_chapter": 242,
+        "novel_book": 7,
+        "chapter": "Chapter 2",
+        "chapter_title": "Inciting Incident — Recovery",
+        "type": "Specific Task Group",
+        "display_name": "The Healer at Dawn",
+        "theme": "Healing isn’t erasing the wound—it’s rebuilding capacity around the scar and choosing the next step with care.",
+        "family": "Healing / Recovery — Rest, Repair & Integration",
+        "summary": "Before the call fully arrives, Francisco steadies the system. He names the hurts, re-establishes healthy rhythms, and recruits allies for the slow work. Recovery becomes architecture: boundaries that keep the good in, practices that move the pain through, and honest debriefs that turn injury into instruction.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Five",
+        "traits": {
+          "strengths": [
+            "acknowledges pain without catastrophizing",
+            "creates safe routines that restore capacity",
+            "enlists trustworthy allies and resources",
+            "translates setbacks into care plans",
+            "models patient, steady progress"
+          ],
+          "shadow": [
+            "lingers in processing past the point of utility",
+            "confuses rest with avoidance",
+            "absorbs others’ pain without boundaries",
+            "rebuilds comfort but not capability",
+            "postpones necessary decisions for ‘one more day of healing’"
+          ],
+          "growth_focus": [
+            "pair reflection with a 24-hour action",
+            "cap processing sessions with a decision",
+            "set one firm boundary and enforce it",
+            "replace one maladaptive soothe with a healthy ritual",
+            "track energy gains to prove recovery is working"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 7, Chapter 2 — Ordinary World: recovery protocols prime the courage to answer the call."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—compassion strengthened by clear boundaries and decisive action."
+        },
+        "color_alignment": {
+          "name": "Dark Sea Green",
+          "hsl": "120,40%,70%",
+          "rgb_hex": "#99CC99",
+          "color_symbolism": "Moss after rain—quiet restoration, living structure returning."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.60,
+            "stability": 0.86,
+            "empathy": 0.82,
+            "openness": 0.68,
+            "orderliness": 0.70,
+            "conscientiousness": 0.73,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.56,
+            "cooperativeness": 0.79,
+            "risk_tolerance": 0.49,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.42,
+            "novelty_seeking": 0.50,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2421","Q2422","Q2423","Q2424",
+            "Q2425","Q2426","Q2427","Q2428"
+          ],
+          "signals_map": {
+            "Q2421": { "dimension": "stability", "polarity": 1, "content": "I can rest without losing momentum on what matters." },
+            "Q2422": { "dimension": "empathy", "polarity": 1, "content": "I ask for help early and accept it without guilt." },
+            "Q2423": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert a setback into a written recovery plan." },
+            "Q2424": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a simple daily ritual that restores energy." },
+            "Q2425": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid necessary discomfort even when it would speed healing." },
+            "Q2426": { "dimension": "agency", "polarity": 1, "content": "Within 24 hours I take one concrete step that supports recovery." },
+            "Q2427": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan when a coping strategy stops working." },
+            "Q2428": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate my limits so others can support effectively." }
+          },
+          "daily_prompt": "What needs gentle repair today—and what single boundary or practice will move that repair forward?",
+          "practices": [
+            "Triage List: name the wound, the need, and the next care step.",
+            "Boundary Line: write one sentence that protects your recovery and share it with an ally.",
+            "Replace & Rewire: swap one numbing habit for a 10-minute restorative ritual.",
+            "Ally Check-In: brief daily message stating need + plan + win.",
+            "Evening Debrief: three lines—what hurt, what helped, what’s next."
+          ],
+          "transformation_indicators": [
+            "Shorter recovery time after stressors",
+            "Consistent adherence to a simple care routine",
+            "Clearer boundaries communicated and respected",
+            "Decline in maladaptive coping behaviors",
+            "Visible energy gains and readiness to re-engage"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Inciting Incident — Recovery",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Tender but steady; honest about limits; building back wisely.",
+          "ordinary_world_baseline": "Lingering strain from prior battles; capacity being rebuilt on purpose.",
+          "push_turn": "Repair gains create courage and bandwidth to accept the call."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero’s departure from the familiar",
+            "connection_focus_area": "Overcoming emotional barriers",
+            "connect_points": {
+              "point1": "Acknowledge the emotional impact",
+              "point2": "Identify support allies",
+              "point3": "Commit to moving forward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List past challenges to heal",
+              "objective2": "Name two support resources",
+              "objective3": "Define readiness to embark"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "The Science of Habit Change",
+            "section_description": "Techniques to replace bad habits with positive ones",
+            "connection_focus_area": "Replacing hurt patterns",
+            "connect_points": {
+              "point1": "Select one unhealthy pattern",
+              "point2": "Plan a positive replacement",
+              "point3": "Set environmental cues"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one pattern to change",
+              "objective2": "Design a replacement behavior",
+              "objective3": "Implement a cue for the new habit"
+            }
+          },
+          "book3": {
+            "title": "Rising Strong",
+            "author": "Brené Brown",
+            "section_of_focus": "The Reckoning",
+            "section_description": "Owning our stories of struggle",
+            "connection_focus_area": "Processing vulnerability",
+            "connect_points": {
+              "point1": "Write down a past setback",
+              "point2": "Explore emotions felt",
+              "point3": "Decide on a path forward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document one setback story",
+              "objective2": "Identify associated emotions",
+              "objective3": "Outline next steps to recover"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the quiet infirmary of the Unity Nexus, Francisco catalogues wounds like constellations—each mapped, each tending begun.",
+          "symbolic_moment": "A cracked chalice is mended with silver seams; when filled, it does not leak—the repair becomes the strongest part.",
+          "emotional_landscape": "Soft vigilance, humane steadiness, permission to breathe.",
+          "recovery_definition": "Restoration of capacity through truth, care, and boundaries.",
+          "transformation_promise": "A leader who heals well multiplies the readiness of many."
+        },
+        "epic_novel_pages": "Page 16 - 30",
+        "epic_chapter_focus": "Inciting Incident",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Healing",
+        "specific_task_group_description": "Begin to heal from past wounds and prepare for what comes next.",
+        "specific_task_group_tagline": "Heal and rebuild",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Dark Sea Green",
+        "hex_code": "#99CC99",
+        "red": 153,
+        "green": 204,
+        "blue": 153
       },    
-      "personality_profile_242": {},
       "personality_profile_243": {},
       "personality_profile_244": {},
       "personality_profile_245": {},
