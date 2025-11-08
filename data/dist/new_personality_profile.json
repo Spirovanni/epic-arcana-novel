@@ -47127,7 +47127,208 @@
         "green": 128,
         "blue": 128
       },
-      "personality_profile_225": {},
+      "personality_profile_225": {
+        "canonical_id": "EA-225",
+        "unique_identifier": "STG 6.2.4.2",
+        "specific_task_group_title": "Fresh Starts",
+        "all_chapter": 225,
+        "novel_book": 6,
+        "chapter": "Chapter 25",
+        "chapter_title": "Dedication (resolution) — Fresh Starts",
+        "type": "Specific Task Group",
+        "display_name": "The Reset Architect",
+        "theme": "Failure isn’t finale—it’s the lab note for a smarter beginning. Restart small, learn fast, recommit boldly.",
+        "family": "Renewal — Iteration, Restart & Recommitment",
+
+        "summary": "After the darkest dip, Francisco treats failure as feedback. He relaunches with smaller, clearer moves, embeds new cues and rituals, and turns the sting of loss into a disciplined restart protocol. Dedication becomes visible as the cadence of beginning again—on purpose.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Four",
+
+        "traits": {
+          "strengths": [
+            "restarts quickly with a cleaner scope",
+            "tracks learning instead of defending ego",
+            "uses simple metrics to guide pivots",
+            "installs cues that make new habits stick",
+            "invites peers to pressure-test the reset"
+          ],
+          "shadow": [
+            "serial restarting without synthesis",
+            "abandoning too soon when discomfort spikes",
+            "over-engineering routines that kill momentum",
+            "hiding missteps to preserve image",
+            "confusing motion with meaningful change"
+          ],
+          "growth_focus": [
+            "write one insight before every restart to lock learning",
+            "define a success metric and a stop condition up front",
+            "schedule a 24-hour relaunch window after setbacks",
+            "run one red-team review to avoid repeat errors",
+            "celebrate adherence, not intensity, for the first week"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "Dedication (resolution)",
+          "fiction_chapter_context": "Book 6, Chapter 25 — In Atonement with the Father, humility becomes resolve: begin again, better."
+        },
+
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principle meets playful iteration; progress over perfection."
+        },
+
+        "color_alignment": {
+          "name": "Atoll",
+          "hsl": "180,43%,35%",
+          "rgb_hex": "#338080",
+          "color_symbolism": "Deep teal reset—cool head, clean slate, steady current forward."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.77,
+            "empathy": 0.66,
+            "openness": 0.74,
+            "orderliness": 0.70,
+            "conscientiousness": 0.82,
+            "adaptability": 0.84,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.73,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.63,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "adaptability": 0.40,
+            "conscientiousness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2251","Q2252","Q2253","Q2254",
+            "Q2255","Q2256","Q2257","Q2258"
+          ],
+          "signals_map": {
+            "Q2251": { "dimension": "adaptability", "polarity": 1, "content": "After a miss, I relaunch with a smaller, clearer version within 24 hours." },
+            "Q2252": { "dimension": "conscientiousness", "polarity": 1, "content": "I track new starts with one simple metric reviewed daily." },
+            "Q2253": { "dimension": "stability", "polarity": 1, "content": "A setback is a signal, not an identity—I reset calmly." },
+            "Q2254": { "dimension": "orderliness", "polarity": 1, "content": "I use a restart checklist to avoid repeating the same mistake." },
+            "Q2255": { "dimension": "risk_tolerance", "polarity": -1, "content": "I cling to failing paths to dodge the discomfort of change." },
+            "Q2256": { "dimension": "agency", "polarity": 1, "content": "I declare a restart and recruit one ally to keep me honest." },
+            "Q2257": { "dimension": "openness", "polarity": 1, "content": "I treat feedback from the last attempt as design input, not judgment." },
+            "Q2258": { "dimension": "conscientiousness", "polarity": 1, "content": "Before I begin again, I define the stop condition and review date." }
+          },
+          "daily_prompt": "What will you restart today, what metric proves it’s working, and when will you pivot?",
+          "practices": [
+            "24-Hour Reset: relaunch a smaller version within a day.",
+            "BML Micro-Loop: Build → Measure → Learn in ≤48 hours.",
+            "Cue Install: pair the new habit with a strong existing trigger.",
+            "Restart Checklist: why it failed, what changes, what measure, stop-loss.",
+            "Weekly Pivot/Persevere: fifteen-minute review against metrics."
+          ],
+          "transformation_indicators": [
+            "Reduced time-to-restart after setbacks",
+            "Fewer repeat errors across cycles",
+            "Longer habit-adherence streaks",
+            "Higher learning ROI per experiment",
+            "Team reports of renewed morale and clarity"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Dedication (resolution)",
+          "preliminary_beat": "All is Lost — recommitment ignition",
+          "save_the_cat_beat": "Dedication (resolution)",
+          "character_state": "Humbled, clear, recommitting to the next best version.",
+          "ordinary_world_baseline": "Sunk-cost clinging; perfection before progress.",
+          "dedication_turn": "Admit the miss → extract the lesson → restart smaller → measure."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Build–Measure–Learn",
+            "section_description": "Iterative experimentation to find what works",
+            "connection_focus_area": "Launching small experiments",
+            "connect_points": {
+              "point1": "Design a rapid learning experiment",
+              "point2": "Collect and analyze feedback",
+              "point3": "Decide to pivot or persevere"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Outline one experiment to test a new approach",
+              "objective2": "Gather data on its outcome",
+              "objective3": "Determine next steps based on results"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Cue design for new habits",
+            "connection_focus_area": "Embedding fresh routines",
+            "connect_points": {
+              "point1": "Identify a new habit to adopt",
+              "point2": "Set a clear trigger for it",
+              "point3": "Track it daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one new habit",
+              "objective2": "Establish its cue",
+              "objective3": "Log its performance for a week"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Embracing challenges to grow",
+            "connection_focus_area": "Starting anew with resilience",
+            "connect_points": {
+              "point1": "Reframe a past failure as a lesson",
+              "point2": "Set a growth-oriented goal",
+              "point3": "Plan steps to achieve it"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Transform one fixed mindset belief",
+              "objective2": "Apply a learning statement in a task",
+              "objective3": "Reflect on progress after one week"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the stone-lit nave, the Father’s verdict is not punishment but permission: begin again. Francisco kneels, rewrites the order of battle in four lines, and rises with a smaller, sharper plan.",
+          "symbolic_moment": "A broken hourglass sealed with wax—the sand that’s spilled becomes grit for the next casting.",
+          "emotional_landscape": "Sting → stillness → steadiness → subtle lift of resolve.",
+          "fresh_starts_definition": "A deliberate relaunch that preserves the lesson, shrinks the scope, and restores cadence.",
+          "reset_protocol": "Admit • distill • redesign • relaunch • review."
+        },
+
+        "epic_novel_pages": "Page 361 - 375",
+        "epic_chapter_focus": "Dedication (resolution)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Renewal",
+        "specific_task_group_description": "Embrace new beginnings after failure and recommit to your goals.",
+        "specific_task_group_tagline": "Begin again boldly",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Atoll",
+        "hex_code": "#338080",
+        "red": 51,
+        "green": 128,
+        "blue": 128
+      },
       "personality_profile_226": {},
       "personality_profile_227": {},
       "personality_profile_228": {},
