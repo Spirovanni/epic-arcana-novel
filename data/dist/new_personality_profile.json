@@ -47329,7 +47329,208 @@
         "green": 128,
         "blue": 128
       },
-      "personality_profile_226": {},
+      "personality_profile_226": {
+        "canonical_id": "EA-226",
+        "unique_identifier": "STG 6.2.4.3",
+        "specific_task_group_title": "Transparent",
+        "all_chapter": 226,
+        "novel_book": 6,
+        "chapter": "Chapter 26",
+        "chapter_title": "Atonement with the Father — Transparent",
+        "type": "Specific Task Group",
+        "display_name": "The Open Channel",
+        "theme": "Truth with care rebuilds trust; clarity over comfort; say the whole thing and listen like you mean it.",
+        "family": "Communication — Candor, Clarity & Trust",
+        
+        "summary": "In the wreckage after ‘All is Lost,’ Francisco learns that only radical clarity can stitch the alliance back together. He names the breach, owns his part, states facts before feelings, and invites reply. Openness becomes a discipline—listening clean, speaking plain, and creating safety strong enough for hard truths to land.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "King",
+        
+        "traits": {
+          "strengths": [
+            "states reality plainly without theatrics",
+            "pairs directness with genuine care",
+            "builds psychological safety in conflict",
+            "listens to understand, not to reload",
+            "turns feedback into shared standards"
+          ],
+          "shadow": [
+            "over-sharing that overwhelms others",
+            "brutal honesty that forgets grace",
+            "confusing transparency with consensus",
+            "using ‘truth’ to rush complex repair",
+            "fatigue from perpetual openness duty"
+          ],
+          "growth_focus": [
+            "separate facts, feelings, and guesses",
+            "timebox tough talks and add debrief",
+            "invite counter-views before decisions",
+            "agree on repair steps, owners, dates",
+            "practice ‘care first, challenge second’"
+          ]
+        },
+        
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 6, Chapter 26 — In the halls of judgment, Francisco rebuilds trust through fearless candor and careful listening."
+        },
+        
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm connection sharpened into clear, responsible action."
+        },
+        
+        "color_alignment": {
+          "name": "Electric Blue",
+          "hsl": "180,100%,80%",
+          "rgb_hex": "#99FFFF",
+          "color_symbolism": "A beacon-blue signal—no distortion, just clean transmission."
+        },
+        
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.72,
+            "empathy": 0.84,
+            "openness": 0.81,
+            "orderliness": 0.67,
+            "conscientiousness": 0.74,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.86,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.52,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "cooperativeness": 0.35,
+            "empathy": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2261","Q2262","Q2263","Q2264",
+            "Q2265","Q2266","Q2267","Q2268"
+          ],
+          "signals_map": {
+            "Q2261": { "dimension": "openness", "polarity": 1, "content": "I separate facts, feelings, and stories before I speak." },
+            "Q2262": { "dimension": "empathy", "polarity": 1, "content": "I lead with care so hard truths can be heard." },
+            "Q2263": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite disagreement early and thank people for it." },
+            "Q2264": { "dimension": "conscientiousness", "polarity": 1, "content": "We document agreements (who/what/when) after tough talks." },
+            "Q2265": { "dimension": "stability", "polarity": 1, "content": "In conflict, I breathe, slow down, and choose clean language." },
+            "Q2266": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid naming issues until I am sure everyone will agree." },
+            "Q2267": { "dimension": "agency", "polarity": 1, "content": "I own my part first, then ask for others’ perspectives." },
+            "Q2268": { "dimension": "orderliness", "polarity": 1, "content": "I use a standard feedback frame (situation–behavior–impact–next)." }
+          },
+          "daily_prompt": "What truth, if spoken today, would increase trust tomorrow—and what’s the kindest way to say it?",
+          "practices": [
+            "CLEAR Protocol: Care, Listen, Evidence, Ask, Repair-plan.",
+            "SBI+N: Situation → Behavior → Impact → Next-step.",
+            "Listening Ladder: reflect → label → check → summarize → ask.",
+            "Transparency Ledger: decisions, reasons, tradeoffs, owners, dates.",
+            "Two-Way Mirror: share one vulnerability; request one candid note back."
+          ],
+          "transformation_indicators": [
+            "Faster conflict resolution cycles and fewer re-escalations",
+            "Higher psychological safety scores in retrospectives",
+            "More precise action items after hard meetings",
+            "Increase in upward feedback frequency and quality",
+            "Reduced ‘surprise issues’ due to earlier surfacing"
+          ]
+        },
+        
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — rupture demands truth",
+          "save_the_cat_beat": "Atonement with the Father",
+          "character_state": "Humbled, steady, courageously honest.",
+          "ordinary_world_baseline": "Assumptions unspoken; politeness over progress.",
+          "atonement_turn": "Name the breach, own your part, tell the whole truth, and co-author repair."
+        },
+        
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Radical Candor",
+            "author": "Kim Scott",
+            "section_of_focus": "Care Personally, Challenge Directly",
+            "section_description": "Balancing honest feedback with empathy",
+            "connection_focus_area": "Delivering truth with kindness",
+            "connect_points": {
+              "point1": "Give one piece of direct feedback",
+              "point2": "Pair it with genuine care",
+              "point3": "Invite reciprocal feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Prepare a feedback statement",
+              "objective2": "Deliver it to a peer",
+              "objective3": "Reflect on the response"
+            }
+          },
+          "book2": {
+            "title": "Crucial Conversations",
+            "author": "Patterson, Grenny, et al.",
+            "section_of_focus": "Master My Stories",
+            "section_description": "Staying calm in high-stakes dialogues",
+            "connection_focus_area": "Creating safety in tough talks",
+            "connect_points": {
+              "point1": "Identify your own emotions",
+              "point2": "Share facts before feelings",
+              "point3": "Ask open questions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Note an upcoming crucial conversation",
+              "objective2": "Plan your factual opening",
+              "objective3": "Engage using dialogue skills"
+            }
+          },
+          "book3": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Rumbling with Vulnerability",
+            "section_description": "Courageous communication practices",
+            "connection_focus_area": "Owning tough topics",
+            "connect_points": {
+              "point1": "Acknowledge a vulnerability",
+              "point2": "Set clear boundaries",
+              "point3": "Hold a brave conversation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal one vulnerable topic",
+              "objective2": "Define a boundary around it",
+              "objective3": "Discuss it with a trusted peer"
+            }
+          }
+        },
+        
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a hall of mirrored waters, Francisco removes his helm, meets every eye, and recounts the failure without excuse; his voice carries like a bell through cold blue light.",
+          "symbolic_moment": "He lays his sword flat, edge turned outward—a vow to cut confusion, not people.",
+          "emotional_landscape": "Tense honesty, steadied breath, relief at being fully seen.",
+          "transparency_definition": "Nothing hidden, nothing weaponized: truth offered with care and a plan.",
+          "atonement_promise": "Where clarity flows, trust returns—and the work can move again."
+        },
+        
+        "epic_novel_pages": "Page 376 - 390",
+        "epic_chapter_focus": "Atonement with the Father",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Communication",
+        "specific_task_group_description": "Foster openness and clarity to rebuild trust and collaboration.",
+        "specific_task_group_tagline": "Speak and listen with candor",
+        
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Electric Blue",
+        "hex_code": "#99FFFF",
+        "red": 153,
+        "green": 255,
+        "blue": 255
+      }, 
       "personality_profile_227": {},
       "personality_profile_228": {},
       "personality_profile_229": {},
