@@ -42824,161 +42824,204 @@
         "green": 204,
         "blue": 255
       },
-      "specific_task_group_204": {
-        "id": "EA-205",
-        "unique_identifier": "STG 6.1.2.2",
-        "all_chapter": 205,
+      "personality_profile_204": {
+        "canonical_id": "EA-204",
+        "unique_identifier": "STG 6.1.2.1",
+        "specific_task_group_title": "Salvation",
+        "all_chapter": 204,
         "novel_book": 6,
-        "chapter": "Chapter 5",
+        "chapter": "Chapter 4",
+        "chapter_title": "The Call to Adventure — Salvation",
         "type": "Specific Task Group",
-        "tarot_card_link": "",
-        "tarot_family": "Swords",
-        "new_tarot_family": "",
-        "tarot_card_item": "Queen",
-        "color_name": "Pacific Blue",
-        "hex_code": "#0099CC",
-        "red": 0,
-        "green": 153,
-        "blue": 204,
-        "epic_novel_pages": "Page 61 - 75",
-        "epic_chapter_focus": "Reaction",
-        "epic_preliminary_scene_focus": "Catalyst",
-        "epic_preliminary_scene_description": "",
-        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
-        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
-        "specific_task_group_title": "Sacrifice",
-        "focus_area": "Commitment & Cost",
-        "connection_to_the_major_task_group": "The Call to Adventure",
-        "specific_task_group_description": "Identify what you must give up in order to fully commit to your quest.",
-        "specific_task_group_tagline": "Pay the price",
+        "display_name": "The Wellspring",
+        "theme": "When help arrives, receive it fully: heal, regroup, and restart stronger.",
+        "family": "Resilience & Renewal — Aid, Recovery & Sustainable Return",
+    
+        "summary": "Facing systemic scarcity, Francisco learns that the first strategic move is not acceleration but renewal. By recognizing allies, accepting aid, and restoring his systems, he converts exhaustion into readiness. Recovery becomes an operational capability, not a luxury.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Nine",
+    
+        "traits": {
+          "strengths": [
+            "recognizes and mobilizes available aid quickly",
+            "creates predictable recovery protocols",
+            "translates setback into structured renewal",
+            "asks for help with clarity and specificity",
+            "returns to action with higher readiness"
+          ],
+          "shadow": [
+            "martyrdom and refusal to receive support",
+            "treating rest as weakness or delay",
+            "over-reliance on external rescue without reform",
+            "guilt-driven overwork after recovery",
+            "vague help requests that waste goodwill"
+          ],
+          "growth_focus": [
+            "codify a recovery plan before crisis hits",
+            "practice specific, time-boxed help requests",
+            "pair every aid event with a system fix",
+            "schedule non-negotiable renewal windows",
+            "define a clear ‘ready to resume’ checklist"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "Immediate Reaction",
+          "fiction_chapter_context": "Book 6, Chapter 4 — Aid appears and the wells are primed; recovery becomes the catalyst for decisive movement."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—restored calm expressed as focused, value-aligned action."
+        },
+    
+        "color_alignment": {
+          "name": "Java",
+          "hsl": "180,50%,40%",
+          "rgb_hex": "#339999",
+          "color_symbolism": "Restorative teal—cool clarity and replenished reserves."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.86,
+            "empathy": 0.79,
+            "openness": 0.74,
+            "orderliness": 0.77,
+            "conscientiousness": 0.80,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.83,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.55,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "stability": 0.34,
+            "cooperativeness": 0.33,
+            "conscientiousness": 0.33
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q2041","Q2042","Q2043","Q2044","Q2045","Q2046","Q2047","Q2048"],
+          "signals_map": {
+            "Q2041": { "dimension": "cooperativeness", "polarity": 1, "content": "I can ask for specific help without apology or vagueness." },
+            "Q2042": { "dimension": "stability", "polarity": 1, "content": "I keep a written recovery protocol for stressful cycles." },
+            "Q2043": { "dimension": "conscientiousness", "polarity": 1, "content": "I schedule renewal windows as seriously as deliverables." },
+            "Q2044": { "dimension": "agency", "polarity": 1, "content": "After receiving aid, I implement one system fix to reduce repeat crises." },
+            "Q2045": { "dimension": "empathy", "polarity": 1, "content": "I receive support with gratitude and clarity about next steps." },
+            "Q2046": { "dimension": "orderliness", "polarity": 1, "content": "I use a restart checklist to re-enter high performance safely." },
+            "Q2047": { "dimension": "adaptability", "polarity": 1, "content": "I can pivot from self-reliance to collaboration when conditions demand it." },
+            "Q2048": { "dimension": "stability", "polarity": 1, "content": "I treat rest and repair as operational necessities, not optional perks." }
+          },
+          "daily_prompt": "What support can you request today that would turn recovery into readiness within 24 hours?",
+          "practices": [
+            "Aid Map: list allies/resources; write three specific 15-minute asks.",
+            "Recovery Window: pre-book a 45-minute renewal block with clear start/stop rituals.",
+            "Grace Protocol: gratitude note + ‘one system fix’ within 24 hours of aid.",
+            "Restart Checklist: hydration, breath reset, priority selection, next smallest step.",
+            "Energy Ledger: track activities that deplete/restore; rebalance weekly."
+          ],
+          "transformation_indicators": [
+            "Faster recovery time from overload to stable operation",
+            "Increase in specific help requests accepted and completed",
+            "Reduction in repeated crises due to post-aid system fixes",
+            "Higher adherence to scheduled renewal windows",
+            "Improved team sentiment around sustainable pacing"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Immediate Reaction",
+          "preliminary_beat": "Setup — Salvation",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "Shaken, aided, re-oxygenating; strength returns with structure.",
+          "ordinary_world_baseline": "White-knuckle soloing and depletion loops.",
+          "boon_reveal": "Accepting aid and codifying recovery multiplies capacity for the journey."
+        },
+    
         "specific_task_group_books_influenced_by": {
           "book1": {
             "title": "The Hero with a Thousand Faces",
             "author": "Joseph Campbell",
-            "section_of_focus": "The Road of Trials",
-            "section_description": "The hero faces challenges that demand sacrifice",
-            "connection_focus_area": "Understanding true cost",
+            "section_of_focus": "Supernatural Aid",
+            "section_description": "The hero receives assistance from unexpected sources",
+            "connection_focus_area": "Seeking guidance and support",
             "connect_points": {
-              "point1": "List what you’ll need to relinquish",
-              "point2": "Consider short-term discomforts",
-              "point3": "Affirm your commitment"
+              "point1": "Identify mentors or allies in your life",
+              "point2": "Outline forms of support available",
+              "point3": "Prepare to accept help graciously"
             },
             "terminal_learning_objectives": {
-              "objective1": "Define one personal sacrifice needed",
-              "objective2": "Weigh its benefits vs. costs",
-              "objective3": "Verbally commit to that sacrifice"
+              "objective1": "Name one person who can support you",
+              "objective2": "List two resources you can draw on",
+              "objective3": "Practice asking for help in a small task"
             }
           },
           "book2": {
-            "title": "Lean In",
-            "author": "Sheryl Sandberg",
-            "section_of_focus": "Taking Risks",
-            "section_description": "How to push past hesitation and accept trade-offs",
-            "connection_focus_area": "Overcoming fear of loss",
+            "title": "The Power of Myth",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call and the Message",
+            "section_description": "Mythic structures that convey guidance to the hero",
+            "connection_focus_area": "Interpreting guidance",
             "connect_points": {
-              "point1": "Identify a fear tied to giving something up",
-              "point2": "Plan steps to mitigate it",
-              "point3": "Enlist support in your decision"
+              "point1": "Reflect on signs and symbols in your journey",
+              "point2": "Interpret one meaningful message",
+              "point3": "Integrate that message into your plan"
             },
             "terminal_learning_objectives": {
-              "objective1": "Name the risk you will take",
-              "objective2": "Outline mitigation strategies",
-              "objective3": "Share your plan with a peer"
+              "objective1": "Journal one sign you noticed recently",
+              "objective2": "Explain its possible meaning",
+              "objective3": "Apply that insight to a next step"
             }
           },
           "book3": {
-            "title": "Deep Work",
-            "author": "Cal Newport",
-            "section_of_focus": "Rule #1: Work Deeply",
-            "section_description": "Eliminating shallow commitments to focus on what matters",
-            "connection_focus_area": "Prioritizing high-value activities",
+            "title": "Option B",
+            "author": "Sheryl Sandberg & Adam Grant",
+            "section_of_focus": "Building Resilience",
+            "section_description": "How to recover and grow after adversity",
+            "connection_focus_area": "Cultivating hope",
             "connect_points": {
-              "point1": "Audit shallow tasks in your schedule",
-              "point2": "Drop one low-value activity",
-              "point3": "Allocate that time to your mission"
+              "point1": "Share a story of overcoming a setback",
+              "point2": "List three coping strategies",
+              "point3": "Set one resilience-building goal"
             },
             "terminal_learning_objectives": {
-              "objective1": "List two shallow tasks to remove",
-              "objective2": "Schedule a deep work block",
-              "objective3": "Report on the outcome after one session"
+              "objective1": "Describe a personal setback you’ve overcome",
+              "objective2": "Select one new coping strategy to try",
+              "objective3": "Commit to daily practice of that strategy"
             }
           }
         },
-        "hero_journey_beat": "Reaction",
-        "hero_journey_beat_objective": "The goal of the hero journey beat is to reaction.",
-        "save_the_cat_beat": "Reaction",
-        "save_the_cat_beat_goal": "",
-        "plot": "Reaction",
-        "character_arcs": {
-          "Francisco": "Learns that cosmic salvation requires sacrificing old approaches and embracing transformational strategic thinking.",
-          "Sacrifice_Guides": "Cosmic entities who help Francisco understand what must be given up to achieve cosmic transformation.",
-          "Old_Paradigms": "Previous cosmic management approaches that Francisco must release to access new strategic abilities.",
-          "Transformation_Catalysts": "Forces that help Francisco transition from old to new approaches to cosmic strategy."
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a sunless vault, a chorus of distant beacons answers Francisco’s signal; clean water surges through cracked conduits.",
+          "symbolic_moment": "He kneels at a fractured cistern, accepts a proffered cup, and scripts the Renewal Protocol into the stone.",
+          "emotional_landscape": "Relief, humility, steadying courage.",
+          "boon_definition": "Operational recovery—aid received, systems repaired, readiness restored.",
+          "transformation_promise": "From lone endurance to communal resilience—capacity expands because recovery is designed, not improvised."
         },
-        "story_gaps_addressed": {
-          "paradigm_shift": "Francisco learns that solving cosmic scarcity requires fundamental changes in thinking and approach.",
-          "strategic_sacrifice": "Introduction of sacrifice as necessary for accessing new levels of cosmic strategic ability.",
-          "transformation_catalyst": "Sacrifice becomes the trigger for Francisco's evolution into a cosmic alchemist."
-        },
-        "location_details": {
-          "sacrifice_transformation_chambers": "Cosmic spaces where Francisco can release old paradigms and embrace new strategic approaches.",
-          "paradigm_shift_nexus": "The cosmic intersection where old and new approaches to cosmic strategy meet."
-        },
-        "series_connections": {
-          "sacrificial_leadership": "Francisco's willingness to sacrifice old approaches prepares him for the ultimate sacrifices in Books 7-9.",
-          "transformational_strategy": "His paradigm shift will be essential for the revolutionary approaches needed in the finale."
-        },
-        "summary": "Francisco realizes that salvation from cosmic dearth requires profound sacrifice - not just of resources, but of old ways of thinking about cosmic management. He must sacrifice his attachment to previous cosmic roles and embrace a new paradigm of intentional strategy. This sacrifice becomes the catalyst for his transformation into a true cosmic alchemist.",
-        "pov": "3rd Person Limited",
-        "tense": "Past Tense",
-        "core_emotion": "Tension and conflict",
-        "scene_tone": "Dramatic and intense",
-        "scenes": [
-          {
-            "scene_number": 1,
-            "title": "Scene 1",
-            "setup": "Francisco realizes that salvation from cosmic dearth requires profound sacrifice - not just of resources, but of old ways of thinking about cosmic management",
-            "symbolism": "Placeholder symbolism",
-            "beat_goal": "Advance the narrative progression",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Strategic determination",
-            "scene_tone": "Cosmic transformation"
-          },
-          {
-            "scene_number": 2,
-            "title": "Scene 2",
-            "setup": "He must sacrifice his attachment to previous cosmic roles and embrace a new paradigm of intentional strategy",
-            "symbolism": "Placeholder symbolism",
-            "beat_goal": "Advance the narrative progression",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Strategic determination",
-            "scene_tone": "Cosmic transformation"
-          },
-          {
-            "scene_number": 3,
-            "title": "Scene 3",
-            "setup": "This sacrifice becomes the catalyst for his transformation into a true cosmic alchemist",
-            "symbolism": "Placeholder symbolism",
-            "beat_goal": "Advance the narrative progression",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Strategic determination",
-            "scene_tone": "Cosmic transformation"
-          },
-          {
-            "scene_number": 4,
-            "title": "Scene 4",
-            "setup": "Part 4 of Sacrifice development",
-            "symbolism": "Placeholder symbolism",
-            "beat_goal": "Advance the narrative progression",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Strategic determination",
-            "scene_tone": "Cosmic transformation"
-          }
-        ]
+    
+        "epic_novel_pages": "Page 46 - 60",
+        "epic_chapter_focus": "Immediate Reaction",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Resilience & Renewal",
+        "specific_task_group_description": "Recognize the moment of aid and allow yourself to heal and regroup before continuing.",
+        "specific_task_group_tagline": "Embrace renewal",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Java",
+        "hex_code": "#339999",
+        "red": 51,
+        "green": 153,
+        "blue": 153
       },
       "personality_profile_205": {
         "canonical_id": "EA-205",
