@@ -51217,7 +51217,197 @@
         "green": 153,
         "blue": 102
       },    
-      "personality_profile_246": {},
+      "personality_profile_246": {
+        "canonical_id": "EA-246",
+        "unique_identifier": "STG 7.1.2.3",
+        "specific_task_group_title": "Purity",
+        "all_chapter": 246,
+        "novel_book": 7,
+        "chapter": "Chapter 6",
+        "chapter_title": "The Call to Adventure — Purity",
+        "type": "Specific Task Group",
+        "display_name": "The Clear Signal",
+        "theme": "Simplicity isn’t small—it’s surgical: subtracting noise so every move serves the mission.",
+        "family": "Simplicity / Purity — Focus, Essentialism & Deep Work",
+        "summary": "At the edge of a new campaign, Francisco strips the mission to its spine. He discards ornamental tasks, says clean ‘no’s,’ and aligns effort to a single outcome: reconciliation. The less he carries, the farther he can lead—and the faster trust gathers behind him.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Six",
+        "traits": {
+          "strengths": [
+            "locks attention on the highest‐leverage objective",
+            "cuts scope creep with principled ‘no’s’",
+            "converts complexity into a simple operating picture",
+            "signals clean intent that stakeholders can trust",
+            "sustains deep work without ambient noise"
+          ],
+          "shadow": [
+            "can become rigid about ‘the one right way’",
+            "moralizes simplicity and alienates partners",
+            "underestimates necessary nuance or ritual",
+            "burns bridges by pruning too aggressively",
+            "neglects rest or community in pursuit of purity"
+          ],
+          "growth_focus": [
+            "pair subtraction with compassion and context",
+            "set review cadences to re-test assumptions",
+            "define objective criteria for yes/no decisions",
+            "anchor tactics to the long ‘why,’ not just the short ‘what’",
+            "schedule periodic exploration to prevent tunnel vision"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 7, Chapter 6 — Call to Adventure: purity strips noise and proves trustworthy intent."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled focus enlivened by flexibility and joy."
+        },
+        "color_alignment": {
+          "name": "Forest Green",
+          "hsl": "120,50%,40%",
+          "rgb_hex": "#339933",
+          "color_symbolism": "Pine-true clarity—growth channeled along a single, living line."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.78,
+            "empathy": 0.60,
+            "openness": 0.63,
+            "orderliness": 0.86,
+            "conscientiousness": 0.88,
+            "adaptability": 0.62,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.66,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.44,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.50,
+            "imagination": 0.61
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2461","Q2462","Q2463","Q2464",
+            "Q2465","Q2466","Q2467","Q2468"
+          ],
+          "signals_map": {
+            "Q2461": { "dimension": "orderliness", "polarity": 1, "content": "I use explicit criteria to decide what gets cut and what stays." },
+            "Q2462": { "dimension": "conscientiousness", "polarity": 1, "content": "I protect deep-work blocks even when demands spike." },
+            "Q2463": { "dimension": "agency", "polarity": 1, "content": "I say ‘no’ to good ideas that dilute the mission." },
+            "Q2464": { "dimension": "stability", "polarity": 1, "content": "Fewer priorities make me calmer and more consistent." },
+            "Q2465": { "dimension": "empathy", "polarity": 1, "content": "I explain the why behind cuts so people feel respected." },
+            "Q2466": { "dimension": "adaptability", "polarity": 1, "content": "I revisit what we cut if new evidence warrants it." },
+            "Q2467": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid experiments that might add temporary complexity." },
+            "Q2468": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can translate a complex plan into a simple decision tree." }
+          },
+          "daily_prompt": "What will you subtract today that makes everything else easier or unnecessary?",
+          "practices": [
+            "Essential List: write the single outcome; list 3 actions that most advance it.",
+            "90-Minute Deep Block: one task, no notifications, visible timer.",
+            "Boundary Script: a prepared ‘no’ with the mission-aligned ‘yes’ it protects.",
+            "One Yes, Many Noes: pick one priority; explicitly park competing requests.",
+            "Signal Audit: remove one tool/meeting that adds noise more than value."
+          ],
+          "transformation_indicators": [
+            "Reduced WIP and context switching",
+            "Higher throughput on the top objective",
+            "Stakeholders report clearer intent and trust",
+            "Earlier delivery of milestone outcomes",
+            "Documented ‘no’ decisions with positive downstream effects"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst — Purity",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Stripped-down and intentional; signal over noise.",
+          "ordinary_world_baseline": "Competing agendas, scope creep, ceremonial clutter.",
+          "push_turn": "Subtraction clarifies the path; trust rises around clean intent."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero commits wholeheartedly to the journey",
+            "connection_focus_area": "Single-minded focus",
+            "connect_points": {
+              "point1": "Identify one core goal",
+              "point2": "Eliminate non-essential tasks",
+              "point3": "Allocate time to the mission"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your primary objective",
+              "objective2": "List three distractions to remove",
+              "objective3": "Create a focused action plan"
+            }
+          },
+          "book2": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "The Essentialist Mindset",
+            "section_description": "Choosing less to achieve more",
+            "connection_focus_area": "Prioritization",
+            "connect_points": {
+              "point1": "Distinguish essential vs. trivial",
+              "point2": "Say no to one non-essential request",
+              "point3": "Commit to one high-impact activity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Categorize tasks by impact",
+              "objective2": "Decline one low-value task",
+              "objective3": "Schedule time for your highest priority"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Work Deeply",
+            "section_description": "Strategies for distraction-free concentration",
+            "connection_focus_area": "Focused execution",
+            "connect_points": {
+              "point1": "Block a 90-minute deep session",
+              "point2": "Eliminate digital interruptions",
+              "point3": "Track deep work output"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan a deep work block",
+              "objective2": "Remove one common distraction",
+              "objective3": "Measure output from the session"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Muster Plain of Aegir, Francisco empties his pack—tokens, ribbons, extra pennants—until only flight maps, a compass, and the treaty draft remain.",
+          "symbolic_moment": "He draws one clean line across a crowded chart; the escorts fall in behind the path no one can mistake.",
+          "emotional_landscape": "Spare, steady, decisive—heat focused to a point.",
+          "contentment_definition": "Purity as subtraction in service of aim: fewer signals, stronger promise.",
+          "transformation_promise": "A leader who carries only what matters moves faster—and becomes easier to follow."
+        },
+        "epic_novel_pages": "Page 76 - 90",
+        "epic_chapter_focus": "The Call to Adventure",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Simplicity",
+        "specific_task_group_description": "Strip away distractions and focus on your core mission.",
+        "specific_task_group_tagline": "Keep your path pure",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Forest Green",
+        "hex_code": "#339933",
+        "red": 51,
+        "green": 153,
+        "blue": 51
+      },    
       "personality_profile_247": {},
       "personality_profile_248": {},
       "personality_profile_249": {},
