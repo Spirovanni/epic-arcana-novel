@@ -47722,7 +47722,208 @@
         "green": 255,
         "blue": 255
       }, 
-      "personality_profile_228": {},
+      "personality_profile_228": {
+        "canonical_id": "EA-228",
+        "unique_identifier": "STG 6.2.5.2",
+        "specific_task_group_title": "Challenge",
+        "all_chapter": 228,
+        "novel_book": 6,
+        "chapter": "Chapter 28",
+        "chapter_title": "Pinch — Challenge",
+        "type": "Specific Task Group",
+        "display_name": "The Constraint Breaker",
+        "theme": "Constraints aren’t cages—they’re blueprints for breakthroughs when you look twice and think once.",
+        "family": "Problem-Solving — Reframing, Analysis & Experimentation",
+        
+        "summary": "Under maximal pressure, Francisco stops wrestling the problem and starts shaping it. He reframes obstacles into design constraints, slows his thinking to map root causes, and prototypes quick, low-risk moves. The pinch doesn’t narrow options—it clarifies them.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Seven",
+        
+        "traits": {
+          "strengths": [
+            "reframes blockers into solvable specs",
+            "runs deliberate, bias-aware analysis",
+            "prototypes quickly with tight feedback loops",
+            "keeps team calm and option-rich under stress",
+            "documents decisions and rationale for reuse"
+          ],
+          "shadow": [
+            "analysis paralysis when stakes feel high",
+            "over-engineering simple fixes",
+            "dismissing gut cues that carry signal",
+            "problem-hopping without closure",
+            "under-communicating trade-offs to stakeholders"
+          ],
+          "growth_focus": [
+            "time-box analysis before testing",
+            "ship a ‘minimum viable solution’ first",
+            "pair intuition with a falsifiable check",
+            "close loops with a decision log",
+            "state risks and mitigation in plain language"
+          ]
+        },
+        
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Pinch (event/conflict)",
+          "fiction_chapter_context": "Book 6, Chapter 28 — In the Abyss, the Dark Night pinches Francisco into clarity; constraints become his drafting table."
+        },
+        
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—calm analysis fueling decisive action when pressure peaks."
+        },
+        
+        "color_alignment": {
+          "name": "Aqua",
+          "hsl": "180,100%,60%",
+          "rgb_hex": "#33FFFF",
+          "color_symbolism": "Pure, pressurized clarity—cool head amid heat."
+        },
+        
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.71,
+            "empathy": 0.62,
+            "openness": 0.82,
+            "orderliness": 0.76,
+            "conscientiousness": 0.80,
+            "adaptability": 0.83,
+            "abstract_reasoning": 0.86,
+            "cooperativeness": 0.67,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.74,
+            "imagination": 0.79
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "adaptability": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2281","Q2282","Q2283","Q2284",
+            "Q2285","Q2286","Q2287","Q2288"
+          ],
+          "signals_map": {
+            "Q2281": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map causes and constraints before proposing fixes." },
+            "Q2282": { "dimension": "adaptability", "polarity": 1, "content": "When a plan stalls, I generate at least two alternatives." },
+            "Q2283": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep a decision log that captures trade-offs and tests." },
+            "Q2284": { "dimension": "orderliness", "polarity": 1, "content": "I break complex problems into sequenced, testable steps." },
+            "Q2285": { "dimension": "openness", "polarity": 1, "content": "I invite opposing views to stress-test my approach." },
+            "Q2286": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay action until I’m 100% certain of success." },
+            "Q2287": { "dimension": "agency", "polarity": 1, "content": "I ship small solutions fast to learn in the real world." },
+            "Q2288": { "dimension": "stability", "polarity": 1, "content": "Pressure helps me focus on essentials instead of noise." }
+          },
+          "daily_prompt": "What’s the simplest test you can run today to learn the most about your hardest problem?",
+          "practices": [
+            "Root Cause 5×Why: ask ‘why’ five times before proposing fixes.",
+            "Constraint Canvas: list limits; turn each into a design rule.",
+            "MVS Launch: deploy a minimum viable solution within 24 hours.",
+            "Red Team Minute: 60 seconds for someone to argue the opposite.",
+            "Decision Docket: log choice, trade-offs, test date, revisit date."
+          ],
+          "transformation_indicators": [
+            "Shorter time from problem discovery to first test",
+            "Higher solution reuse due to clear decision logs",
+            "Reduced rework from premature overbuild",
+            "More options generated under time pressure",
+            "Team reports calmer, clearer problem cycles"
+          ]
+        },
+        
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Pinch — Challenge",
+          "save_the_cat_beat": "Pinch (event/conflict)",
+          "character_state": "Squeezed but inventive; pressure channels into plans.",
+          "ordinary_world_baseline": "Problems treated as interruptions and irritants.",
+          "pinch_turn": "Constraint reframed as a brief; options multiply through method."
+        },
+        
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Perception & Action",
+            "section_description": "Turning obstacles into opportunities",
+            "connection_focus_area": "Creative reframing",
+            "connect_points": {
+              "point1": "Identify the core obstacle",
+              "point2": "Reframe it as a chance to innovate",
+              "point3": "Design an actionable solution"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one current barrier",
+              "objective2": "Reframe its meaning",
+              "objective3": "Draft a solution plan"
+            }
+          },
+          "book2": {
+            "title": "Creative Confidence",
+            "author": "Tom Kelley & David Kelley",
+            "section_of_focus": "Overcoming Fear",
+            "section_description": "Building the courage to create",
+            "connection_focus_area": "Experimentation",
+            "connect_points": {
+              "point1": "Prototype one rough idea",
+              "point2": "Gather rapid feedback",
+              "point3": "Iterate based on insights"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Sketch a quick prototype",
+              "objective2": "Test it with a peer",
+              "objective3": "Incorporate feedback"
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 2 Thinking",
+            "section_description": "Slow, deliberate thought for complex problems",
+            "connection_focus_area": "Deliberate analysis",
+            "connect_points": {
+              "point1": "Pause before reacting",
+              "point2": "Break down the problem",
+              "point3": "Assess options systematically"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Note one decision bias",
+              "objective2": "Apply slow thinking to a challenge",
+              "objective3": "Evaluate the decision outcome"
+            }
+          }
+        },
+        
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a shattered quay, Francisco chalks three paths on wet stone—each a different way across the whirlpooling channel.",
+          "symbolic_moment": "A snapped compass needle aligns with a seam in the rock; guidance by fracture, not by north.",
+          "emotional_landscape": "Cold clarity, tight focus, a low flame of resolve.",
+          "challenge_definition": "Turn the pinch into a design brief; prove options with the smallest working move.",
+          "transformation_promise": "A leader who can convert pressure into prototypes can route a fleet through any strait."
+        },
+        
+        "epic_novel_pages": "Page 406 - 420",
+        "epic_chapter_focus": "Pinch (event/conflict)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Problem-Solving",
+        "specific_task_group_description": "Confront complex obstacles head-on and develop creative solutions.",
+        "specific_task_group_tagline": "Rise to the challenge",
+        
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Aqua",
+        "hex_code": "#33FFFF",
+        "red": 51,
+        "green": 255,
+        "blue": 255
+      },
       "personality_profile_229": {},
       "personality_profile_230": {},
       "personality_profile_231": {},
