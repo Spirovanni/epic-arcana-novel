@@ -44683,7 +44683,215 @@
         "green": 102,
         "blue": 102
       },
-      "personality_profile_213": {},
+      "personality_profile_213": {
+        "canonical_id": "EA-213",
+        "unique_identifier": "MAT 6.1",
+        "specific_task_group_title": "(Give) Sacrifice",
+        "all_chapter": 213,
+        "novel_book": 6,
+        "chapter": "Chapter 13",
+        "chapter_title": "The Crossing of the Threshold — (Give) Sacrifice",
+        "type": "Major Activity Theme",
+        "display_name": "The Suspended Giver",
+        "theme": "To move forward, you must release what once moved you—letting go becomes the engine of becoming.",
+        "family": "Letting Go / Perspective — Release, Surrender & Insight",
+    
+        "summary": "Francisco abandons the pursuit of personal achievement and accepts a higher role: giving himself so that greater balance emerges. In stillness and surrender, he discovers new leverage—the power to transform not by grasping, but by releasing. Sacrifice reframes cost as investment in the world he’s called to heal.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Hanged Man",
+    
+        "traits": {
+          "strengths": [
+            "releases ego claims for shared gain",
+            "sees from inverted angles under stress",
+            "turns loss into signal and direction",
+            "models calm in liminal space",
+            "chooses long-arc justice over short wins"
+          ],
+          "shadow": [
+            "martyrdom to avoid hard choices",
+            "chronic delay framed as ‘waiting for a sign’",
+            "guilt-driven giving that drains teams",
+            "confusing self-erasure with service",
+            "attachment to suffering as identity"
+          ],
+          "growth_focus": [
+            "exchange self-sacrifice for value-aligned service",
+            "time-box liminal pauses with explicit exit criteria",
+            "pair surrender with a next-step commitment",
+            "measure impact, not pain endured",
+            "practice ‘clean yes / clean no’ to protect capacity"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Crossing the Threshold",
+          "fiction_chapter_context": "Book 6, Chapter 13 — Francisco relinquishes the pursuits that defined him to enter the crafts of true alchemy."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—surrender becomes effective service with clear goals and healthy boundaries."
+        },
+    
+        "color_alignment": {
+          "name": "Scooter",
+          "hsl": "189,50%,43%",
+          "rgb_hex": "#3793A4",
+          "color_symbolism": "Tidal pause before the turn—cool suspension that clarifies what must be released."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.81,
+            "empathy": 0.84,
+            "openness": 0.78,
+            "orderliness": 0.60,
+            "conscientiousness": 0.74,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.86,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.55,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "empathy": 0.30,
+            "stability": 0.35,
+            "adaptability": 0.35
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2131",
+            "Q2132",
+            "Q2133",
+            "Q2134",
+            "Q2135",
+            "Q2136",
+            "Q2137",
+            "Q2138"
+          ],
+          "signals_map": {
+            "Q2131": { "dimension": "adaptability", "polarity": 1, "content": "I can release a plan I’m attached to when new truths emerge." },
+            "Q2132": { "dimension": "stability", "polarity": 1, "content": "Liminal, in-between seasons do not rattle me for long." },
+            "Q2133": { "dimension": "empathy", "polarity": 1, "content": "I trade personal credit to advance the collective good." },
+            "Q2134": { "dimension": "agency", "polarity": 1, "content": "Choosing to let go feels like an active decision, not defeat." },
+            "Q2135": { "dimension": "orderliness", "polarity": -1, "content": "I cling to routines even when they no longer serve the mission." },
+            "Q2136": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite others to carry what I set down, with clear context." },
+            "Q2137": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can step into the unknown once I’ve named what I’m releasing." },
+            "Q2138": { "dimension": "conscientiousness", "polarity": 1, "content": "I frame sacrifice with measurable intent and checkpoints." }
+          },
+          "daily_prompt": "What will you set down today so the mission can move?",
+          "practices": [
+            "Sacrifice Ledger: list one attachment, one gain unlocked, one boundary kept.",
+            "Inversion Drill: view a problem ‘upside down’ and name the hidden option.",
+            "Threshold Timer: define entry/exit criteria for a waiting period.",
+            "Clean Yes/No: commit without apology or decline without guilt.",
+            "Credit Transfer: attribute a win publicly to partners who enabled it."
+          ],
+          "transformation_indicators": [
+            "Shorter time from recognition to release",
+            "Clearer boundaries paired with service",
+            "Fewer martyrdom cues in self-talk",
+            "Higher team agency as credit is shared",
+            "Evidence of impact framed beyond personal cost"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Crossing of the Threshold",
+          "preliminary_beat": "Break Into 2 — (Give) Sacrifice",
+          "save_the_cat_beat": "The Crossing of the Threshold",
+          "character_state": "Suspended, observant, willing to trade self-claim for shared ascent.",
+          "ordinary_world_baseline": "Achievement as identity; control as safety.",
+          "threshold_turn": "Release becomes leverage; surrender widens the field of action."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Crossing the First Threshold",
+            "section_description": "Leaving the known world by surrendering prior certainties",
+            "connection_focus_area": "Embracing sacrifice for transformation",
+            "connect_points": {
+              "point1": "Identify beliefs you must let go",
+              "point2": "Map out what you gain in return",
+              "point3": "Commit to a symbolic rite of passage"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three beliefs to release",
+              "objective2": "Describe new possibilities opened",
+              "objective3": "Perform a small ceremony to mark change"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Finding Meaning in Suffering",
+            "section_description": "Purpose discovered through loss and reframe",
+            "connection_focus_area": "Deriving growth from loss",
+            "connect_points": {
+              "point1": "Reflect on a past hardship",
+              "point2": "Extract a lesson learned",
+              "point3": "Apply that lesson to your journey"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one past sacrifice",
+              "objective2": "Identify its hidden benefit",
+              "objective3": "Plan how to leverage that insight now"
+            }
+          },
+          "book3": {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "section_of_focus": "The Desert of Trials",
+            "section_description": "Letting go of comfort to pursue a calling",
+            "connection_focus_area": "Trusting the process",
+            "connect_points": {
+              "point1": "Recall a time you stepped into uncertainty",
+              "point2": "Note how you adapted",
+              "point3": "Define one new risk to take"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Narrate your leap into the unknown",
+              "objective2": "List strategies you used to cope",
+              "objective3": "Design a small experiment outside your comfort zone"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a windless gantry above a drained sea, Francisco unpins the sigil of his former rank and lets it fall into the silted basin.",
+          "symbolic_moment": "Upside-down meditation in the Leviathan frame; blood rush quiets, vision widens, the map redraws itself.",
+          "emotional_landscape": "Solemn clarity, aching release, fearless quiet.",
+          "sacrifice_definition": "Not self-erasure, but targeted release—laying down the lesser leverage to lift the larger whole.",
+          "threshold_ritual": "Three breaths for what ends, three names for who carries on, one vow spoken to the waters: ‘I give so life can flow.’",
+          "transformation_promise": "A strategist who wields surrender as a precise instrument of change."
+        },
+    
+        "epic_novel_pages": "Page 181 - 195",
+        "epic_chapter_focus": "The Crossing of the Threshold",
+        "epic_preliminary_scene_focus": "Break Into 2",
+        "epic_novel_chapter_focus": "Scene V: The Crossing of the Threshold",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Letting Go",
+        "specific_task_group_description": "Release attachments and old patterns to fully commit to the next phase of the journey.",
+        "specific_task_group_tagline": "Lose to gain",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Scooter",
+        "hex_code": "#3793A4",
+        "red": 55,
+        "green": 147,
+        "blue": 164
+      },
       "personality_profile_214": {},
       "personality_profile_215": {},
       "personality_profile_216": {},
