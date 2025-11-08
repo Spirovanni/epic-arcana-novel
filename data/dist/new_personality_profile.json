@@ -47530,8 +47530,198 @@
         "red": 153,
         "green": 255,
         "blue": 255
+      },
+      "personality_profile_227": {
+        "canonical_id": "EA-227",
+        "unique_identifier": "STG 6.2.5.1",
+        "specific_task_group_title": "Growth",
+        "all_chapter": 227,
+        "novel_book": 6,
+        "chapter": "Chapter 27",
+        "chapter_title": "Trials — Growth",
+        "type": "Specific Task Group",
+        "display_name": "The Upward Spiral",
+        "theme": "Setbacks become raw material; you iterate, integrate, and rise.",
+        "family": "Personal Development — Learning, Habits & Mastery",
+        "summary": "As trials compound, Francisco reframes adversity as curriculum. He systematizes feedback, builds skills in tight loops, and treats plateaus as training ground rather than verdict. Growth shifts from hope to habit.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "hunts feedback and integrates it quickly",
+            "turns mistakes into next-step checklists",
+            "tracks visible habits and invisible beliefs",
+            "sustains effort with cadence not drama",
+            "models a learn-out-loud culture"
+          ],
+          "shadow": [
+            "chasing improvement without consolidation",
+            "over-optimizing trivial metrics",
+            "treating rest as optional",
+            "masking perfectionism as ‘standards’",
+            "comparison that steals momentum"
+          ],
+          "growth_focus": [
+            "pair each push with a recovery ritual",
+            "stabilize wins before raising the bar",
+            "measure meaningful outcomes, not vanity stats",
+            "time-box learning loops to prevent drift",
+            "celebrate plateaus as strength-building"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Trials (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 27 — In the Abyss, growth is chosen and measured; integrity is tested under pressure."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—ambition tempered by steady practice and team-minded resilience."
+        },
+        "color_alignment": {
+          "name": "Baby Blue",
+          "hsl": "180,100%,70%",
+          "rgb_hex": "#66FFFF",
+          "color_symbolism": "Fresh current over coral—clear, oxygenated water that feeds renewal."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.70,
+            "empathy": 0.64,
+            "openness": 0.86,
+            "orderliness": 0.74,
+            "conscientiousness": 0.82,
+            "adaptability": 0.84,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.76,
+            "imagination": 0.78
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "adaptability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2271","Q2272","Q2273","Q2274",
+            "Q2275","Q2276","Q2277","Q2278"
+          ],
+          "signals_map": {
+            "Q2271": { "dimension": "openness", "polarity": 1, "content": "I invite disconfirming feedback to refine my approach." },
+            "Q2272": { "dimension": "adaptability", "polarity": 1, "content": "I pivot tactics without abandoning the objective." },
+            "Q2273": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert lessons into checklists and routines." },
+            "Q2274": { "dimension": "orderliness", "polarity": 1, "content": "I stabilize a new habit before adding another." },
+            "Q2275": { "dimension": "stability", "polarity": 1, "content": "Plateaus don’t rattle me; I treat them as training load." },
+            "Q2276": { "dimension": "risk_tolerance", "polarity": -1, "content": "I keep increasing intensity even when recovery is overdue." },
+            "Q2277": { "dimension": "novelty_seeking", "polarity": 1, "content": "I experiment in small, safe-to-fail trials." },
+            "Q2278": { "dimension": "agency", "polarity": 1, "content": "Each day I define one improvement and one proof it worked." }
+          },
+          "daily_prompt": "What will you iterate today—and how will you prove it worked?",
+          "practices": [
+            "1% Loop: pick one variable, improve it by a tiny, testable notch.",
+            "Post-Mortem Lite: note cause → adjustment → next trial (3 lines).",
+            "Skill Ladder: define Level 1–5; log reps at the current rung.",
+            "Plateau Party: hold gains for 7 days before raising load.",
+            "Recovery Anchor: schedule sleep/breath/walk as non-negotiable."
+          ],
+          "transformation_indicators": [
+            "Higher proficiency on defined skill ladder",
+            "Longer habit streaks with fewer relapses",
+            "Faster recovery after setbacks",
+            "Quality improvements visible in review samples",
+            "Peers adopt your growth rituals"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Trials — Growth",
+          "save_the_cat_beat": "Trials (set-up)",
+          "character_state": "Shaken but studious; despair mined for data.",
+          "ordinary_world_baseline": "Progress depended on mood and luck.",
+          "abyss_turn": "Failure becomes feedback; the climb is measured and repeatable."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Beliefs that embrace challenge and learning",
+            "connection_focus_area": "Cultivating perseverance",
+            "connect_points": {
+              "point1": "Identify a fixed-mindset barrier",
+              "point2": "Reframe it as a growth opportunity",
+              "point3": "Apply the reframe to a current challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Recognize one fixed-mindset thought",
+              "objective2": "Convert it into a growth statement",
+              "objective3": "Test that statement in action"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Building Perseverance",
+            "section_description": "How passion and persistence drive success",
+            "connection_focus_area": "Sustaining effort over time",
+            "connect_points": {
+              "point1": "Set a long-term goal",
+              "point2": "Break it into daily tasks",
+              "point3": "Track your daily consistency"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one long-term objective",
+              "objective2": "Create a 30-day action plan",
+              "objective3": "Evaluate progress weekly"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Stick",
+            "section_description": "Designing systems to support lasting change",
+            "connection_focus_area": "Building growth habits",
+            "connect_points": {
+              "point1": "Choose one habit to develop",
+              "point2": "Implement environment cues",
+              "point3": "Monitor habit consistency"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select a keystone habit",
+              "objective2": "Set up a habit tracker",
+              "objective3": "Maintain the habit for one week"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the lip of the Abyss, Francisco chalks a ladder onto ruined stone—rungs labeled with tiny, stubborn goals.",
+          "symbolic_moment": "A snapped cord becomes a bookmark in his field journal: not an end, a reference point.",
+          "emotional_landscape": "Rattled nerves settling into disciplined breath; curiosity returning after the jolt.",
+          "growth_definition": "Improvement by design—small trials with evidence of change.",
+          "transformation_promise": "A leader who learns faster than conditions worsen can reverse any slide."
+        },
+        "epic_novel_pages": "Page 391 - 405",
+        "epic_chapter_focus": "Trials (set-up)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Personal Development",
+        "specific_task_group_description": "Harness adversity as fuel for personal growth and skill building.",
+        "specific_task_group_tagline": "Thrive through challenge",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Baby Blue",
+        "hex_code": "#66FFFF",
+        "red": 102,
+        "green": 255,
+        "blue": 255
       }, 
-      "personality_profile_227": {},
       "personality_profile_228": {},
       "personality_profile_229": {},
       "personality_profile_230": {},
