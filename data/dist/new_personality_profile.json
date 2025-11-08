@@ -42625,7 +42625,205 @@
         "green": 204,
         "blue": 204
       },
-      "personality_profile_203": {},
+      "personality_profile_203": {
+        "canonical_id": "EA-203",
+        "unique_identifier": "STG 6.1.1.3",
+        "specific_task_group_title": "Dearth",
+        "all_chapter": 203,
+        "novel_book": 6,
+        "chapter": "Chapter 3",
+        "chapter_title": "The Ordinary World — Dearth",
+        "type": "Specific Task Group",
+        "display_name": "The Gap Cartographer",
+        "theme": "Inventory the truth early: what’s missing, what’s vital, what’s next.",
+        "family": "Resource Assessment — Readiness, Constraints & Allocation",
+    
+        "summary": "Francisco surveys a universe running dry and commits to a clear-eyed inventory of reality. He names shortages, ranks risks, and designs lean tests to validate what must be true before action scales. Scarcity stops being a fear; it becomes a map.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Four",
+    
+        "traits": {
+          "strengths": [
+            "maps gaps quickly and honestly",
+            "quantifies risk and resource needs",
+            "prioritizes the vital few over the trivial many",
+            "designs lean tests to validate assumptions",
+            "builds clear acquisition and de-risking plans"
+          ],
+          "shadow": [
+            "analysis paralysis when data is incomplete",
+            "scarcity-hoarding mindset that slows flow",
+            "over-optimizing before learning",
+            "undervaluing informed intuition",
+            "communicating deficits without solution framing"
+          ],
+          "growth_focus": [
+            "time-box assessments to prevent drift",
+            "pair every risk with a smallest viable test",
+            "state minimum viable resources before scaling",
+            "balance numbers with narrative context and stakes",
+            "share shortages alongside options and tradeoffs"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 6, Chapter 3 — A census of scarcity reveals the battlefield before the first move."
+        },
+    
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—rigorous assessment translated into decisive resourcing."
+        },
+    
+        "color_alignment": {
+          "name": "Summer Sky",
+          "hsl": "195,100%,60%",
+          "rgb_hex": "#33CCFF",
+          "color_symbolism": "Crisp daylight over open water—clear sight lines for honest counts."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.75,
+            "empathy": 0.64,
+            "openness": 0.72,
+            "orderliness": 0.84,
+            "conscientiousness": 0.82,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.81,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.55,
+            "imagination": 0.67
+          },
+          "match_weights": {
+            "orderliness": 0.34,
+            "abstract_reasoning": 0.33,
+            "conscientiousness": 0.33
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q2031","Q2032","Q2033","Q2034","Q2035","Q2036","Q2037","Q2038"],
+          "signals_map": {
+            "Q2031": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain an up-to-date inventory of skills, tools, and constraints." },
+            "Q2032": { "dimension": "abstract_reasoning", "polarity": 1, "content": "Before acting, I identify the riskiest assumption to test." },
+            "Q2033": { "dimension": "orderliness", "polarity": 1, "content": "I can drop non-essential tasks without guilt to protect the vital few." },
+            "Q2034": { "dimension": "openness", "polarity": 1, "content": "I translate a long-term vision into concrete resource requirements." },
+            "Q2035": { "dimension": "conscientiousness", "polarity": 1, "content": "I set time-boxed tests with clear success criteria." },
+            "Q2036": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate shortages with options and tradeoffs." },
+            "Q2037": { "dimension": "agency", "polarity": 1, "content": "I move with sufficient data instead of waiting for perfect data." },
+            "Q2038": { "dimension": "orderliness", "polarity": 1, "content": "I allocate weekly time to close the single biggest gap." }
+          },
+          "daily_prompt": "What is today’s riskiest assumption, and what is the smallest test you can run within an hour?",
+          "practices": [
+            "15-Minute Lean Audit: list gaps, pick one, define the smallest test.",
+            "Vital Few Board: keep only three active priorities visible.",
+            "MVR Sheet: define Minimum Viable Resources before launch.",
+            "Stop-Doing Rule: drop one trivial task per week.",
+            "Tradeoff Memo: document options, costs, and chosen constraint."
+          ],
+          "transformation_indicators": [
+            "Shorter time from gap identification to test launch",
+            "Higher percentage of experiments with clear success criteria",
+            "Reduced rework due to earlier assumption checks",
+            "Improved team consensus on the ‘vital few’",
+            "Quarter-over-quarter gap-closure rate increase"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Setup — Dearth",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Sober, precise, unsentimental—truth before tactics.",
+          "ordinary_world_baseline": "Diffuse priorities; invisible constraints; optimistic guesswork.",
+          "boon_reveal": "A reality-based map converts fear of scarcity into targeted action."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Validated Learning",
+            "section_description": "Testing assumptions with minimal waste",
+            "connection_focus_area": "Assessing what you lack",
+            "connect_points": {
+              "point1": "List untested assumptions",
+              "point2": "Design minimal tests",
+              "point3": "Measure outcomes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one risky assumption",
+              "objective2": "Outline a simple test",
+              "objective3": "Collect and interpret data"
+            }
+          },
+          "book2": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore",
+            "section_description": "Discern the vital few from the trivial many",
+            "connection_focus_area": "Prioritizing resources",
+            "connect_points": {
+              "point1": "Identify your top three resources",
+              "point2": "Eliminate one non-essential task",
+              "point3": "Allocate time to fill key gaps"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Rank your resources by importance",
+              "objective2": "Choose one task to drop",
+              "objective3": "Schedule a gap-filling activity"
+            }
+          },
+          "book3": {
+            "title": "Seven Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Habit 2: Begin with the End in Mind",
+            "section_description": "Clarify your vision to guide resource planning",
+            "connection_focus_area": "Goal-oriented assessment",
+            "connect_points": {
+              "point1": "Define your long-term outcome",
+              "point2": "Identify resources needed",
+              "point3": "Map a path to acquire them"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write your personal vision statement",
+              "objective2": "List resources required",
+              "objective3": "Draft an acquisition plan"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Through a dim system of husked worlds, Francisco unfurls a lattice of light-graphs, counting cisterns, tallying loss.",
+          "symbolic_moment": "He releases a hoarded ingot into a dry fountain; the basin glows, revealing channels that must be cleared, not clutched.",
+          "emotional_landscape": "Sober clarity, disciplined compassion, steady resolve.",
+          "boon_definition": "A living ledger of lack—ranked risks, named needs, and the next right test.",
+          "transformation_promise": "With truth mapped, every step conserves life force instead of spending it blindly."
+        },
+    
+        "epic_novel_pages": "Page 31 - 45",
+        "epic_chapter_focus": "The Ordinary World",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Resource Assessment",
+        "specific_task_group_description": "Identify gaps in your skills, knowledge, and tools before moving forward.",
+        "specific_task_group_tagline": "Spot shortages early",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Summer Sky",
+        "hex_code": "#33CCFF",
+        "red": 51,
+        "green": 204,
+        "blue": 255
+      },
       "personality_profile_204": {},
       "personality_profile_205": {},
       "personality_profile_206": {},
