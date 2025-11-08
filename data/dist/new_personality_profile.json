@@ -49687,7 +49687,197 @@
         "green": 153,
         "blue": 153
       },    
-      "personality_profile_238": {},
+      "personality_profile_238": {
+        "canonical_id": "EA-238",
+        "unique_identifier": "MAT 6.3",
+        "specific_task_group_title": "Transformation — On Death Ground",
+        "all_chapter": 238,
+        "novel_book": 6,
+        "chapter": "Chapter 38",
+        "chapter_title": "Rescue from Without — Transformation (Death Ground)",
+        "type": "Major Activity Theme",
+        "display_name": "The Phoenix Threshold",
+        "theme": "End well to begin wiser—chosen endings and timely aid unlock a rebirth that no single hero could achieve alone.",
+        "family": "Rebirth / Transformation — Endings, Surrender & Renewal",
+        "summary": "At the brink where retreat is impossible, Francisco allows an old identity to die and accepts help that multiplies his effort. The rescue is mutual: allies arrive because endings were made clear. Closure becomes a catalyst—systems shed the obsolete, a community coheres, and renewal scales far beyond one person.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "Death",
+        "traits": {
+          "strengths": [
+            "names what must end and designs clean exits",
+            "asks for and orchestrates help at the right moment",
+            "turns loss into learning and structure",
+            "builds antifragile teams that benefit from shocks",
+            "ritualizes closure so momentum resumes without baggage"
+          ],
+          "shadow": [
+            "clings to legacy roles or tools past usefulness",
+            "romanticizes the past; resists external input",
+            "rushes ‘rebirth’ and skips grieving or debrief",
+            "swings to scorched-earth change when patient pruning would do",
+            "outsources responsibility under the banner of ‘rescue’"
+          ],
+          "growth_focus": [
+            "codify graceful end-of-life processes for projects",
+            "practice ‘ask early’—invite aid before crisis spikes",
+            "pair each ending with a small learning artifact",
+            "map stakeholder impacts and build support bridges",
+            "stress-test plans; add redundancy where failure is costly"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Rescue from Without",
+          "fiction_chapter_context": "Book 6, Chapter 38 — Allies arrive as Francisco releases the old form; community becomes the carrier of renewal."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—strength transmuted into service; control surrendered to empower the community’s rebirth."
+        },
+        "color_alignment": {
+          "name": "Turquoise",
+          "hsl": "172,70%,55%",
+          "rgb_hex": "#3CDDC8",
+          "color_symbolism": "Tidal renewal—blue-green waters that wash away the old and reveal living foundations."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.58,
+            "empathy": 0.80,
+            "openness": 0.82,
+            "orderliness": 0.62,
+            "conscientiousness": 0.74,
+            "adaptability": 0.86,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.81,
+            "risk_tolerance": 0.68,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.77,
+            "imagination": 0.79
+          },
+          "match_weights": {
+            "adaptability": 0.35,
+            "agency": 0.35,
+            "empathy": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q2381","Q2382","Q2383","Q2384",
+            "Q2385","Q2386","Q2387","Q2388"
+          ],
+          "signals_map": {
+            "Q2381": { "dimension": "agency", "polarity": 1, "content": "I can name what must end so the next stage can begin." },
+            "Q2382": { "dimension": "conscientiousness", "polarity": 1, "content": "I design clean handoffs and retirement plans for work in sunset." },
+            "Q2383": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite outside help at the right moment to scale renewal." },
+            "Q2384": { "dimension": "orderliness", "polarity": 1, "content": "I ritualize closure so teams move forward without residue." },
+            "Q2385": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I convert loss into models and checklists we can reuse." },
+            "Q2386": { "dimension": "adaptability", "polarity": -1, "content": "I cling to legacy roles or tools because change feels like loss." },
+            "Q2387": { "dimension": "empathy", "polarity": 1, "content": "I map who will be affected and plan support through the transition." },
+            "Q2388": { "dimension": "risk_tolerance", "polarity": 1, "content": "When the window opens, I act decisively to cross the threshold." }
+          },
+          "daily_prompt": "What will you lay to rest today—and who can help midwife the new thing you’re bringing to life?",
+          "practices": [
+            "Sunset Inventory: list 3 processes/tools to retire; choose one to decommission cleanly.",
+            "Ask Early: request a specific form of aid before stress peaks.",
+            "Closure Rite: hold a 10-minute debrief to extract lessons and gratitude.",
+            "Bridge Plan: map impacts, owners, timelines for the transition period.",
+            "Redundancy Drill: stress-test a critical path and add a backup."
+          ],
+          "transformation_indicators": [
+            "Clear decommission log with owners and dates",
+            "Lower drag from legacy commitments within two sprints",
+            "Increased cross-team aid requests accepted and fulfilled",
+            "Lessons captured from endings and reused in launches",
+            "Stability metrics improve despite higher change velocity"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Transformation (Death Ground)",
+          "save_the_cat_beat": "Finale",
+          "character_state": "Ego-light, community-held; decisive about endings and invitations.",
+          "ordinary_world_baseline": "Holds on too long; hesitates to ask for help.",
+          "push_turn": "External aid meets disciplined closure; rebirth scales through the network."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Death and Rebirth",
+            "section_description": "The universal pattern of ending and renewal in mythic journey",
+            "connection_focus_area": "Understanding transformation cycles",
+            "connect_points": {
+              "point1": "Identify a personal ending",
+              "point2": "Map the ensuing new beginning",
+              "point3": "Recognize the growth in between"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a past personal ‘death’ phase",
+              "objective2": "Articulate the lesson learned",
+              "objective3": "Outline the new phase initiated"
+            }
+          },
+          "book2": {
+            "title": "Leading Change",
+            "author": "John P. Kotter",
+            "section_of_focus": "Creating the New Culture",
+            "section_description": "How endings pave way for transformation in organizations",
+            "connection_focus_area": "Designing effective renewal strategies",
+            "connect_points": {
+              "point1": "Recognize what must end",
+              "point2": "Plan the transition process",
+              "point3": "Embed the new practices"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two elements to retire",
+              "objective2": "Draft a transition plan",
+              "objective3": "Set metrics for adoption"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Surrendering to the Now",
+            "section_description": "Letting go of past identities to access transformation",
+            "connection_focus_area": "Harnessing presence for renewal",
+            "connect_points": {
+              "point1": "Notice a lingering attachment",
+              "point2": "Practice letting-go meditation",
+              "point3": "Observe shifts in awareness"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a limiting belief to release",
+              "objective2": "Engage in a present-moment exercise",
+              "objective3": "Reflect on the change in perspective"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-scoured escarpment—the ‘death ground’—Francisco signals the last stand. Beacon fires answer across the basin as allied skiffs crest the turquoise dawn.",
+          "symbolic_moment": "He unknots his old commander’s sash and lets it fall into ash; a tide-green glow rises from the stones as new vows are sworn.",
+          "emotional_landscape": "Solemn release, then relief; steadied by the weight of many hands.",
+          "death_ground_definition": "Zero-retreat conditions—chosen or imposed—that force adaptation and birth a stronger form.",
+          "transformation_promise": "Endings faced with courage create communities that can carry the future together."
+        },
+        "epic_novel_pages": "Page 556 - 570",
+        "epic_chapter_focus": "Rescue from Without",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Rebirth",
+        "specific_task_group_description": "Embrace endings to catalyze profound renewal and transformation.",
+        "specific_task_group_tagline": "Rise through change",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Turquoise",
+        "hex_code": "#3CDDC8",
+        "red": 60,
+        "green": 221,
+        "blue": 200
+      },
       "personality_profile_239": {},
       "personality_profile_240": {}
     },
@@ -49695,7 +49885,43 @@
       "personality_profile_241": {},
       "personality_profile_242": {},
       "personality_profile_243": {},
-      "personality_profile_244": {}
+      "personality_profile_244": {},
+      "personality_profile_245": {},
+      "personality_profile_246": {},
+      "personality_profile_247": {},
+      "personality_profile_248": {},
+      "personality_profile_249": {},
+      "personality_profile_250": {},
+      "personality_profile_251": {},
+      "personality_profile_252": {},
+      "personality_profile_253": {},
+      "personality_profile_254": {},
+      "personality_profile_255": {},
+      "personality_profile_256": {},
+      "personality_profile_257": {},
+      "personality_profile_258": {},
+      "personality_profile_259": {},
+      "personality_profile_260": {},
+      "personality_profile_261": {},
+      "personality_profile_262": {},
+      "personality_profile_263": {},
+      "personality_profile_264": {},
+      "personality_profile_265": {},
+      "personality_profile_266": {},
+      "personality_profile_267": {},
+      "personality_profile_268": {},
+      "personality_profile_269": {},
+      "personality_profile_270": {},
+      "personality_profile_271": {},
+      "personality_profile_272": {},
+      "personality_profile_273": {},
+      "personality_profile_274": {},
+      "personality_profile_275": {},
+      "personality_profile_276": {},
+      "personality_profile_277": {},
+      "personality_profile_278": {},
+      "personality_profile_279": {},
+      "personality_profile_280": {}
     },
     "family_8": {},
     "family_9": {}
