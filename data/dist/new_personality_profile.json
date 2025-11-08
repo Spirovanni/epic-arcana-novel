@@ -48126,7 +48126,208 @@
           "green": 255,
           "blue": 204
       },
-      "personality_profile_230": {},
+      "personality_profile_230": {
+        "canonical_id": "EA-230",
+        "unique_identifier": "STG 6.2.6.1",
+        "specific_task_group_title": "Vigilance",
+        "all_chapter": 230,
+        "novel_book": 6,
+        "chapter": "Chapter 30",
+        "chapter_title": "Darkest Moment — Vigilance",
+        "type": "Specific Task Group",
+        "display_name": "The Midnight Sentinel",
+        "theme": "Hold the line when the lights flicker; protect the progress, scan for threat, and buy tomorrow a chance.",
+        "family": "Resilience / Fortitude — Awareness, Guardrails & Recovery",
+
+        "summary": "At the nadir of the journey, Francisco learns that survival is a skill. Vigilance becomes more than paranoia—it’s disciplined attention paired with calm routines that preserve gains under stress. He watches, hardens weak points, and keeps meaning close so the night cannot unmake the work of the day.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Two",
+
+        "traits": {
+          "strengths": [
+            "anticipates failure modes before they cascade",
+            "sets guardrails that prevent backsliding",
+            "keeps composure when signals spike",
+            "protects hard-won gains with redundancy",
+            "communicates clearly under pressure"
+          ],
+          "shadow": [
+            "hyper-vigilance that drains morale",
+            "mistrust of delegation",
+            "confusing activity with readiness",
+            "catastrophizing rare risks",
+            "postponing rest ‘until it’s safe’"
+          ],
+          "growth_focus": [
+            "separate true signals from noise with thresholds",
+            "pair watchfulness with recovery windows",
+            "document ‘tripwires’ and matching actions",
+            "delegate sentinel roles to share load",
+            "review alerts weekly to prune false alarms"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Darkest moment (resolution)",
+          "fiction_chapter_context": "Book 6, Chapter 30 — On the cusp of the Ultimate Boon, the night watch protects fragile gains and readies the return."
+        },
+
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9 — alert courage tempered by steady calm and trust."
+        },
+
+        "color_alignment": {
+          "name": "Downy",
+          "hsl": "180,50%,60%",
+          "rgb_hex": "#66CCCC",
+          "color_symbolism": "Sea-green vigilance—calm waters with eyes open."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.88,
+            "empathy": 0.64,
+            "openness": 0.58,
+            "orderliness": 0.82,
+            "conscientiousness": 0.90,
+            "adaptability": 0.63,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.38,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.42,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.40,
+            "orderliness": 0.20
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2301","Q2302","Q2303","Q2304",
+            "Q2305","Q2306","Q2307","Q2308"
+          ],
+          "signals_map": {
+            "Q2301": { "dimension": "stability", "polarity": 1, "content": "In crisis, I slow down first and then decide." },
+            "Q2302": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain checklists that protect hard-won progress." },
+            "Q2303": { "dimension": "orderliness", "polarity": 1, "content": "I use tripwires (thresholds) to trigger predefined actions." },
+            "Q2304": { "dimension": "risk_tolerance", "polarity": -1, "content": "I take shortcuts at night as long as outcomes look okay." },
+            "Q2305": { "dimension": "agency", "polarity": 1, "content": "When danger rises, I assign roles and move with intent." },
+            "Q2306": { "dimension": "adaptability", "polarity": 1, "content": "I can pivot plans without losing the objective." },
+            "Q2307": { "dimension": "empathy", "polarity": 1, "content": "I keep the team calm by naming reality without drama." },
+            "Q2308": { "dimension": "orderliness", "polarity": 1, "content": "I conduct after-action reviews to harden weak points." }
+          },
+          "daily_prompt": "What must be guarded tonight—and what will you release so you can return stronger?",
+          "practices": [
+            "Tripwire Matrix: define thresholds → action pairs for top 5 risks.",
+            "Redundancy Rule of Two: backups for tools, time, and people.",
+            "Calm Loop: 4-7-8 breaths, status check, single next move.",
+            "Lock-the-Gains: end-of-day snapshot, sync, and rollback point.",
+            "Sentinel Rotation: share watch duties to prevent burnout."
+          ],
+          "transformation_indicators": [
+            "Fewer regressions after stressful events",
+            "Consistent recovery windows honored",
+            "Lower false-alarm rate in alert system",
+            "Faster mitigation from tripwire to action",
+            "Team reports higher calm under pressure"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Dark Night of the Soul",
+          "preliminary_beat": "Darkest Moment — Vigilance",
+          "save_the_cat_beat": "Darkest moment (resolution)",
+          "character_state": "Alert, anchored, conserving strength for the turn.",
+          "ordinary_world_baseline": "Reactive scanning and scattered safeguards.",
+          "push_turn": "Watchfulness becomes a system—threats mapped, gains locked, rest protected."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Benefiting from Disorder",
+            "section_description": "How systems gain from stress and volatility",
+            "connection_focus_area": "Building resilience through adversity",
+            "connect_points": {
+              "point1": "Embrace small shocks",
+              "point2": "Learn from volatility",
+              "point3": "Apply redundancy in your plans"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe how to benefit from disruption",
+              "objective2": "Identify one area to add redundancy",
+              "objective3": "Plan a resilience test"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Logotherapy in Life Crises",
+            "section_description": "Finding purpose under extreme suffering",
+            "connection_focus_area": "Finding meaning in hardship",
+            "connect_points": {
+              "point1": "Acknowledge suffering",
+              "point2": "Identify personal purpose",
+              "point3": "Commit to a meaningful goal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal one source of meaning",
+              "objective2": "Articulate a personal purpose statement",
+              "objective3": "Set a small, purposeful action"
+            }
+          },
+          "book3": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Managing Emotions",
+            "section_description": "Techniques for emotional self-regulation",
+            "connection_focus_area": "Maintaining composure under stress",
+            "connect_points": {
+              "point1": "Recognize emotional triggers",
+              "point2": "Practice mindfulness",
+              "point3": "Use breathing exercises"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one stress trigger",
+              "objective2": "Implement a mindfulness practice",
+              "objective3": "Evaluate emotional response"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the wind-skinned parapet, Francisco paces the perimeter lights; below, the reservoir hums—abundance newly coaxed, still fragile.",
+          "symbolic_moment": "A lantern wick trimmed to a steady flame—less smoke, longer burn; he copies the principle into his watch plan.",
+          "emotional_landscape": "Quiet fear, disciplined breath, a thin yet resilient thread of meaning.",
+          "vigilance_definition": "Alertness that protects the boon, not paranoia that poisons it.",
+          "transformation_promise": "What survives the night meets dawn stronger than it began."
+        },
+
+        "epic_novel_pages": "Page 436 - 450",
+        "epic_chapter_focus": "Darkest moment (resolution)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Maintain alertness and protect your gains to survive the darkest hour.",
+        "specific_task_group_tagline": "Stay watchful through crisis",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Downy",
+        "hex_code": "#66CCCC",
+        "red": 102,
+        "green": 204,
+        "blue": 204
+      },
       "personality_profile_231": {},
       "personality_profile_232": {},
       "personality_profile_233": {},
