@@ -49496,12 +49496,207 @@
         "green": 255,
         "blue": 255
       },    
-      "personality_profile_237": {},
+      "personality_profile_237": {
+        "canonical_id": "EA-237",
+        "unique_identifier": "STG 6.2.8.2",
+        "specific_task_group_title": "Constraint",
+        "all_chapter": 237,
+        "novel_book": 6,
+        "chapter": "Chapter 37",
+        "chapter_title": "Climax — Constraint",
+        "type": "Specific Task Group",
+        "display_name": "The Narrow Gate",
+        "theme": "Limits aren’t cages—they’re channels. Well-drawn boundaries turn scattered effort into decisive force.",
+        "family": "Boundaries / Constraint — Focus, Prioritization & Protective Limits",
+        "summary": "At the crest of the Finale, Francisco stops trying to do everything and starts constraining everything. By pruning options, defending deep work, and setting hard lanes for allies, he converts chaos into thrust. What to exclude becomes the most powerful strategic choice.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "channels energy through clearly defined lanes",
+            "ruthlessly prioritizes the critical few over the trivial many",
+            "uses constraints to spark creative solutions under pressure",
+            "protects deep-work windows and team bandwidth",
+            "prevents scope creep with crisp yes–if agreements"
+          ],
+          "shadow": [
+            "can turn principled focus into rigidity during change",
+            "says ‘no’ reflexively and misses smart bets",
+            "over-prunes options too early in discovery",
+            "enforces boundaries as walls rather than bridges",
+            "delays commits waiting for the ‘perfect’ plan"
+          ],
+          "growth_focus": [
+            "separate hard constraints from self-imposed ones",
+            "run periodic scope reviews to reopen good options",
+            "apply a one-in/one-out rule for commitments",
+            "timebox exploration before narrowing",
+            "communicate boundaries with a collaborative yes–if frame"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Climax",
+          "fiction_chapter_context": "Book 6, Chapter 37 — Rescue from Without: tight constraints channel the coalition’s push without overextension."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled focus animated by flexible, creative energy."
+        },
+        "color_alignment": {
+          "name": "Persian Green",
+          "hsl": "180,100%,30%",
+          "rgb_hex": "#009999",
+          "color_symbolism": "A deep channel of water—contained power, disciplined flow."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.60,
+            "stability": 0.85,
+            "empathy": 0.62,
+            "openness": 0.58,
+            "orderliness": 0.83,
+            "conscientiousness": 0.86,
+            "adaptability": 0.62,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.38,
+            "emotional_intensity": 0.42,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.49,
+            "imagination": 0.56
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.87,
+          "top_signal_items": [
+            "Q2371","Q2372","Q2373","Q2374",
+            "Q2375","Q2376","Q2377","Q2378"
+          ],
+          "signals_map": {
+            "Q2371": { "dimension": "conscientiousness", "polarity": 1, "content": "I define the shortest viable scope and hold to it under pressure." },
+            "Q2372": { "dimension": "orderliness", "polarity": 1, "content": "I protect deep-work blocks with hard calendar and communication boundaries." },
+            "Q2373": { "dimension": "agency", "polarity": 1, "content": "I eliminate low-value commitments quickly to preserve focus." },
+            "Q2374": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I use intentional constraints (time, tools, page limits) to boost creativity." },
+            "Q2375": { "dimension": "orderliness", "polarity": -1, "content": "I accept tasks that don’t fit priorities because it’s easier than saying no." },
+            "Q2376": { "dimension": "cooperativeness", "polarity": 1, "content": "I offer yes–if options that honor my limits and keep momentum." },
+            "Q2377": { "dimension": "stability", "polarity": 1, "content": "I schedule recovery so boundaries don’t erode when stakes rise." },
+            "Q2378": { "dimension": "adaptability", "polarity": 1, "content": "When time is tight, I focus harder and simplify the plan instead of rushing." }
+          },
+          "daily_prompt": "What will you exclude today to make your best work inevitable?",
+          "practices": [
+            "Priority Three: choose the 3 outcomes that matter and ignore the rest.",
+            "Deep Work Gate: a named, protected block with pre-committed rules of no access.",
+            "Yes–If Script: convert requests into conditional agreements that fit constraints.",
+            "One-In/One-Out: add nothing without releasing something of equal load.",
+            "Constraint Sprint: 45-minute build using only two tools and one page of notes."
+          ],
+          "transformation_indicators": [
+            "Higher throughput with fewer context switches",
+            "Sharper no/yes–if decisions at intake",
+            "More deep-work hours sustained week over week",
+            "Fewer late-stage pivots and rework cycles",
+            "Team reports less overload and clearer lanes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Constraint",
+          "save_the_cat_beat": "Break into Three",
+          "character_state": "Tightly focused; energy contained and directed.",
+          "ordinary_world_baseline": "Diffuse effort and boundary leaks invite chaos.",
+          "push_turn": "Limits become levers; exclusion converts noise into power."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore and Evaluate",
+            "section_description": "Discern what’s truly important",
+            "connection_focus_area": "Focusing within limits",
+            "connect_points": {
+              "point1": "List your top three priorities",
+              "point2": "Eliminate one trivial commitment",
+              "point3": "Allocate time to what matters"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one nonessential to remove",
+              "objective2": "Redesign a daily schedule",
+              "objective3": "Track focus improvements"
+            }
+          },
+          "book2": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Ritualize Deep Work",
+            "section_description": "Setting boundaries for focused effort",
+            "connection_focus_area": "Maximizing productivity within constraints",
+            "connect_points": {
+              "point1": "Define a deep work session",
+              "point2": "Eliminate distractions",
+              "point3": "Measure outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Schedule a 60-minute deep work block",
+              "objective2": "Identify and remove one distraction",
+              "objective3": "Reflect on productivity gains"
+            }
+          },
+          "book3": {
+            "title": "Boundaries",
+            "author": "Henry Cloud & John Townsend",
+            "section_of_focus": "Knowing and Maintaining Personal Limits",
+            "section_description": "Principles for healthy boundary setting",
+            "connection_focus_area": "Preserving energy and focus",
+            "connect_points": {
+              "point1": "Identify one personal boundary",
+              "point2": "Communicate it clearly",
+              "point3": "Enforce it in a scenario"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate one boundary you need",
+              "objective2": "Practice stating it to someone",
+              "objective3": "Assess its effectiveness"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-cut ridge, Francisco redraws the flight lanes—two corridors only. Decoys sigh into dead air as the coalition locks into the narrow gate.",
+          "symbolic_moment": "A leather strap cinched around a bundle—he cuts one weight loose and the whole glider rises.",
+          "emotional_landscape": "Calm compression, alert resolve, clean intent.",
+          "constraint_definition": "Deliberate limits that concentrate power and protect momentum.",
+          "transformation_promise": "A leader who chooses the vital few turns the Finale from many motions into one decisive vector."
+        },
+        "epic_novel_pages": "Page 541 - 555",
+        "epic_chapter_focus": "Climax",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Boundaries",
+        "specific_task_group_description": "Recognize and leverage limitations to channel your efforts most effectively.",
+        "specific_task_group_tagline": "Embrace boundaries",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Persian Green",
+        "hex_code": "#009999",
+        "red": 0,
+        "green": 153,
+        "blue": 153
+      },    
       "personality_profile_238": {},
       "personality_profile_239": {},
       "personality_profile_240": {}
     },
-    "family_7": {},
+    "family_7": {
+      "personality_profile_241": {},
+      "personality_profile_242": {},
+      "personality_profile_243": {},
+      "personality_profile_244": {}
+    },
     "family_8": {},
     "family_9": {}
   }
