@@ -45707,7 +45707,214 @@
         "green": 214,
         "blue": 255
       },
-      "personality_profile_218": {},
+      "personality_profile_218": {
+        "canonical_id": "EA-218",
+        "unique_identifier": "STG 6.2.2.2",
+        "specific_task_group_title": "Emotional Stability",
+        "all_chapter": 218,
+        "novel_book": 6,
+        "chapter": "Chapter 18",
+        "chapter_title": "Build-Up (Set-Up) — Emotional Stability",
+        "type": "Specific Task Group",
+        "display_name": "The Steady Tide",
+        "theme": "Equanimity is engineered: name the feeling, breathe the body, choose the next move.",
+        "family": "Emotional Regulation / Equanimity — Awareness, Modulation & Recovery",
+
+        "summary": "As the stakes rise, Francisco learns to quiet inner storms without going numb. He labels what he feels, regulates his physiology, and routes energy into deliberate action. Calm becomes a practiced capability—portable, repeatable, and contagious.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Queen",
+
+        "traits": {
+          "strengths": [
+            "tags emotions precisely and early",
+            "uses breath to reset physiology on demand",
+            "keeps decision quality high under pressure",
+            "diffuses group anxiety with steady tone",
+            "recovers baseline quickly after spikes"
+          ],
+          "shadow": [
+            "confusing suppression with regulation",
+            "over-soothing until urgency fades",
+            "avoiding necessary conflict",
+            "using calm as a mask for fatigue",
+            "resisting help to ‘prove’ composure"
+          ],
+          "growth_focus": [
+            "share state out loud: name + need",
+            "pair calm with clear time-bound decisions",
+            "schedule micro-resets before key calls",
+            "practice surfacing hard truths kindly",
+            "track time-to-baseline as a metric"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "Build-up (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 18 — On the Road of Trials, composure becomes Francisco’s tactical edge approaching the Innermost Cave."
+        },
+
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—grounded calm directed into effective, timely action."
+        },
+
+        "color_alignment": {
+          "name": "Maya Blue",
+          "hsl": "200,100%,70%",
+          "rgb_hex": "#66CCFF",
+          "color_symbolism": "Clear bay under bright sky—still surface, capable depths."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.86,
+            "empathy": 0.74,
+            "openness": 0.62,
+            "orderliness": 0.70,
+            "conscientiousness": 0.78,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.40,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2181",
+            "Q2182",
+            "Q2183",
+            "Q2184",
+            "Q2185",
+            "Q2186",
+            "Q2187",
+            "Q2188"
+          ],
+          "signals_map": {
+            "Q2181": { "dimension": "stability", "polarity": 1, "content": "I can return to baseline within minutes after an emotional spike." },
+            "Q2182": { "dimension": "empathy", "polarity": 1, "content": "I name my feeling before I narrate my opinion." },
+            "Q2183": { "dimension": "conscientiousness", "polarity": 1, "content": "I prepare a calming routine before high-stakes moments." },
+            "Q2184": { "dimension": "agency", "polarity": 1, "content": "Under pressure, I choose my response instead of reacting." },
+            "Q2185": { "dimension": "stability", "polarity": -1, "content": "I bottle emotions to look composed." },
+            "Q2186": { "dimension": "adaptability", "polarity": 1, "content": "If a plan triggers stress, I reframe and resize the next step." },
+            "Q2187": { "dimension": "orderliness", "polarity": 1, "content": "I schedule micro-resets (breath, walk, water) into my day." },
+            "Q2188": { "dimension": "cooperativeness", "polarity": 1, "content": "I ask teammates to reflect my tone when the room heats up." }
+          },
+          "daily_prompt": "What feeling needs a name today—and what ritual will bring you back to center?",
+          "practices": [
+            "90-Second Wave: notice, name, breathe until the surge passes.",
+            "Box Breath 4×4×4×4 before decisions.",
+            "5–4–3–2–1 grounding with one physical reset (stand, sip, step).",
+            "State-Then-Strategy: ‘I’m feeling ___. Next, I will ___.’",
+            "Baseline Log: track spikes, triggers, and time-to-baseline."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-baseline after stressors",
+            "Fewer reactivity errors in meetings",
+            "Higher decision quality under load",
+            "Peer reports of steadier team climate",
+            "Routine use of pre-brief and debrief resets"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Build-up (set-up)",
+          "preliminary_beat": "Approach to the Innermost Cave — Emotional Stability",
+          "save_the_cat_beat": "Build-up (set-up)",
+          "character_state": "Centered and responsive; emotion informs, does not drive.",
+          "ordinary_world_baseline": "Spikes derail pacing; silence masquerades as calm.",
+          "push_turn": "Calm becomes an active skill—label, regulate, choose."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Managing Your Emotions",
+            "section_description": "Tools to stay balanced under pressure",
+            "connection_focus_area": "Awareness and modulation",
+            "connect_points": {
+              "point1": "Label your emotions accurately",
+              "point2": "Practice breathing techniques",
+              "point3": "Reflect on triggers"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name three emotions you felt today",
+              "objective2": "Use one breathing exercise when stressed",
+              "objective3": "Journal a trigger and response"
+            }
+          },
+          "book2": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenges",
+            "section_description": "Growth mindset under adversity",
+            "connection_focus_area": "Reframing stress as growth",
+            "connect_points": {
+              "point1": "Reframe one stressful event",
+              "point2": "Seek learning in discomfort",
+              "point3": "Set a growth intention"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reframe a current stressor",
+              "objective2": "Identify a learning goal from it",
+              "objective3": "Share your growth intention"
+            }
+          },
+          "book3": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Road of Trials",
+            "section_description": "Emotional tests on the hero’s path",
+            "connection_focus_area": "Strength through adversity",
+            "connect_points": {
+              "point1": "Map one emotional trial",
+              "point2": "Identify support allies",
+              "point3": "Draw strength from triumphs"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document an emotional trial",
+              "objective2": "List two sources of support",
+              "objective3": "Celebrate a small victory"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the span above the surge gates, alarms strobe cyan. Francisco matches breath to the pulse of the pumps; the team steadying as his cadence steadies them.",
+          "symbolic_moment": "A stormglass clears—tiny crystals melt as the breath slows.",
+          "emotional_landscape": "Cool clarity, contained force, warmth returning after the wave.",
+          "emotional_stability_definition": "Naming, breathing, and choosing to bring the system back within operating range.",
+          "transformation_promise": "A calm leader can move complex systems without breaking them."
+        },
+
+        "epic_novel_pages": "Page 256 - 270",
+        "epic_chapter_focus": "Build-up (set-up)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Emotional Regulation",
+        "specific_task_group_description": "Cultivate inner calm in the face of mounting challenges.",
+        "specific_task_group_tagline": "Stay centered under stress",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Maya Blue",
+        "hex_code": "#66CCFF",
+        "red": 102,
+        "green": 204,
+        "blue": 255
+      },
       "personality_profile_219": {},
       "personality_profile_220": {},
       "personality_profile_221": {},
