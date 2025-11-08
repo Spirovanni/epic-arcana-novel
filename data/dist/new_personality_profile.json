@@ -42426,7 +42426,205 @@
         "green": 255,
         "blue": 255
       },
-      "personality_profile_202": {},
+      "personality_profile_202": {
+        "canonical_id": "EA-202",
+        "unique_identifier": "STG 6.1.1.2",
+        "specific_task_group_title": "Authentic Self",
+        "all_chapter": 202,
+        "novel_book": 6,
+        "chapter": "Chapter 2",
+        "chapter_title": "The Call to Adventure — Authentic Self",
+        "type": "Specific Task Group",
+        "display_name": "The Unmasked Navigator",
+        "theme": "Before you cross the threshold, drop the disguise—values aligned, voice steady, steps true.",
+        "family": "Self-Awareness — Identity, Values & Integrity",
+    
+        "summary": "Pressed by the first shock of crisis, Francisco strips away roles that no longer fit. He names his core values, reclaims his voice, and aligns choices with identity. Authenticity becomes operating efficiency: less friction, more signal.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Six",
+    
+        "traits": {
+          "strengths": [
+            "clarifies values under pressure",
+            "speaks plainly without performance",
+            "aligns actions with identity and mission",
+            "sets and honors healthy boundaries",
+            "models vulnerability that builds trust"
+          ],
+          "shadow": [
+            "over-disclosure that burdens others",
+            "rigidity about a preferred self-story",
+            "confusing comfort with authenticity",
+            "withdrawing when feedback challenges identity",
+            "performing ‘authenticity’ for approval"
+          ],
+          "growth_focus": [
+            "practice truth with kindness and timing",
+            "separate core values from old narratives",
+            "treat feedback as data, not a verdict",
+            "codify two non-negotiables and one flexible point",
+            "translate identity into one daily boundary kept"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "Inciting Incident",
+          "fiction_chapter_context": "Book 6, Chapter 2 — The Call to Adventure strikes; only the true name can answer."
+        },
+    
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—authentic feeling refined into principled action."
+        },
+    
+        "color_alignment": {
+          "name": "Morning Glory",
+          "hsl": "180,33%,70%",
+          "rgb_hex": "#99CCCC",
+          "color_symbolism": "Soft dawn over water—gentle clarity revealing true contours."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.83,
+            "empathy": 0.86,
+            "openness": 0.82,
+            "orderliness": 0.66,
+            "conscientiousness": 0.78,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.70,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.61,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "stability": 0.30,
+            "conscientiousness": 0.35
+          },
+          "threshold": 0.83,
+          "top_signal_items": ["Q2021","Q2022","Q2023","Q2024","Q2025","Q2026","Q2027","Q2028"],
+          "signals_map": {
+            "Q2021": { "dimension": "stability", "polarity": 1, "content": "My choices stay aligned with my values when stakes rise." },
+            "Q2022": { "dimension": "empathy", "polarity": 1, "content": "I can be honest without abandoning kindness." },
+            "Q2023": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep boundaries I set for myself and others." },
+            "Q2024": { "dimension": "openness", "polarity": 1, "content": "Feedback about me is information, not identity." },
+            "Q2025": { "dimension": "agency", "polarity": 1, "content": "I act even when being true to myself risks approval." },
+            "Q2026": { "dimension": "cooperativeness", "polarity": 1, "content": "I share just enough context to build trust, not to offload." },
+            "Q2027": { "dimension": "orderliness", "polarity": 1, "content": "I have two written non-negotiables guiding decisions." },
+            "Q2028": { "dimension": "adaptability", "polarity": 1, "content": "I can revise self-story without betraying core values." }
+          },
+          "daily_prompt": "What boundary, kept today, proves who you are when no one is watching?",
+          "practices": [
+            "Values Triad: write 3 values, 1 behavior for each, review nightly.",
+            "Boundary Script: one sentence you’ll say when a line is crossed.",
+            "2% Braver Share: disclose a small true thing that matters.",
+            "Story Audit: replace an outdated self-label with observable facts.",
+            "True North Check: ask, “Does this choice match my top value?”"
+          ],
+          "transformation_indicators": [
+            "Reduced value-drift during high pressure",
+            "Higher boundary adherence rate",
+            "Increased clarity and brevity in self-disclosure",
+            "More purpose-aligned goals set and kept",
+            "Greater team trust scores tied to consistency"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Inciting Incident — Authentic Self",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Shocked into clarity; the mask feels heavy, the voice grows sure.",
+          "ordinary_world_baseline": "Adaptive personas for approval; blurred boundaries.",
+          "boon_reveal": "Authenticity is energy returned to action—less leakage, cleaner direction."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Logotherapy",
+            "section_description": "Finding purpose even in hardship",
+            "connection_focus_area": "Clarifying personal values",
+            "connect_points": {
+              "point1": "Reflect on your deepest motives",
+              "point2": "Identify sources of meaning",
+              "point3": "Commit to purpose-driven action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write down your top three values",
+              "objective2": "Describe an experience that affirmed one",
+              "objective3": "Set a purpose-aligned goal for this journey"
+            }
+          },
+          "book2": {
+            "title": "The Gifts of Imperfection",
+            "author": "Brené Brown",
+            "section_of_focus": "Wholehearted Living",
+            "section_description": "Cultivating authenticity through vulnerability",
+            "connection_focus_area": "Building genuine self-expression",
+            "connect_points": {
+              "point1": "Acknowledge one personal imperfection",
+              "point2": "Practice speaking your truth",
+              "point3": "Set healthy boundaries"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal a vulnerability you’ll embrace",
+              "objective2": "Share a personal story with a peer",
+              "objective3": "Establish one new boundary"
+            }
+          },
+          "book3": {
+            "title": "True North",
+            "author": "Bill George",
+            "section_of_focus": "Authentic Leadership",
+            "section_description": "Leading by staying true to your values",
+            "connection_focus_area": "Aligning actions with identity",
+            "connect_points": {
+              "point1": "Map your life story for key themes",
+              "point2": "Identify leadership principles you embody",
+              "point3": "Draft a personal mission statement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Outline your life-story highlights",
+              "objective2": "List three guiding principles",
+              "objective3": "Compose a one-sentence mission statement"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a mirror-lake vault, sigils of borrowed titles fade from Francisco’s cloak; his true crest glows at the sternum.",
+          "symbolic_moment": "He unpins an ornate mask and lays it on the quay; the tide lifts—answering the true name beneath.",
+          "emotional_landscape": "Tremor, relief, steadying courage.",
+          "boon_definition": "Identity aligned: fewer detours, cleaner signals, faster course corrections.",
+          "transformation_promise": "The leader who knows his name can carry others across without losing himself."
+        },
+    
+        "epic_novel_pages": "Page 16 - 30",
+        "epic_chapter_focus": "Inciting Incident",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Self-Awareness",
+        "specific_task_group_description": "Reconnect with your core values and true identity before stepping forward.",
+        "specific_task_group_tagline": "Embrace who you are",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Morning Glory",
+        "hex_code": "#99CCCC",
+        "red": 153,
+        "green": 204,
+        "blue": 204
+      },
       "personality_profile_203": {},
       "personality_profile_204": {},
       "personality_profile_205": {},
