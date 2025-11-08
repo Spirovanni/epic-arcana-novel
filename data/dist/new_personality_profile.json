@@ -50835,33 +50835,121 @@
         "green": 204,
         "blue": 153
       },    
-      "specific_task_group_244": {
-        "id": "EA-244",
+      "personality_profile_244": {
+        "canonical_id": "EA-244",
         "unique_identifier": "STG 7.1.2.1",
+        "specific_task_group_title": "Vision",
         "all_chapter": 244,
         "novel_book": 7,
         "chapter": "Chapter 4",
+        "chapter_title": "The Call to Adventure — Vision",
         "type": "Specific Task Group",
-        "tarot_card_link": "",
+        "display_name": "The Far Beacon",
+        "theme": "Vision is disciplined clarity—a precise picture of ‘why’ and ‘where’ that turns scattered effort into aligned motion.",
+        "family": "Clarity / Vision — Purpose, Foresight & Coherent Direction",
+        "summary": "Fresh from recovery, Francisco names the horizon. He translates awe into aim, sketches the route, and chooses constraints that sharpen courage. The beacon he carries isn’t just a dream; it’s a working diagram that pulls allies into formation.",
         "tarot_family": "Wands",
-        "new_tarot_family": "",
         "tarot_card_item": "King",
-        "color_name": "Laurel",
-        "hex_code": "#669966",
-        "red": 102,
-        "green": 153,
-        "blue": 102,
-        "epic_novel_pages": "Page 46 - 60",
-        "epic_chapter_focus": "Immediate Reaction",
-        "epic_preliminary_scene_focus": "Set-up",
-        "epic_preliminary_scene_description": "",
-        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
-        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
-        "specific_task_group_title": "Vision",
-        "focus_area": "Clarity",
-        "connection_to_the_major_task_group": "Set-up",
-        "specific_task_group_description": "Define a clear vision for the journey ahead and align your intentions with purpose.",
-        "specific_task_group_tagline": "See the path clearly",
+        "traits": {
+          "strengths": [
+            "distills complex signals into a single compelling direction",
+            "aligns teams with plain-spoken purpose and milestones",
+            "anticipates second-order effects before committing",
+            "chooses constraints that increase focus and creativity",
+            "keeps ‘why’ visible in daily execution"
+          ],
+          "shadow": [
+            "overcommits to an elegant plan despite new evidence",
+            "confuses vivid narrative with validated feasibility",
+            "sets timelines by aspiration instead of capacity",
+            "filters dissent too aggressively to protect momentum",
+            "lets strategy drift from feedback loops"
+          ],
+          "growth_focus": [
+            "pair every vision statement with a falsifiable test",
+            "schedule red-team reviews at each milestone",
+            "publish decision criteria before choosing paths",
+            "tie narrative to capacity planning and buffers",
+            "instrument the plan—measure leading signals"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 7, Chapter 4 — Inciting Incident: a clear telos snaps the coalition into a shared trajectory."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled clarity enlivened by hopeful flexibility."
+        },
+        "color_alignment": {
+          "name": "Laurel",
+          "hsl": "120,25%,50%",
+          "rgb_hex": "#669966",
+          "color_symbolism": "Bay leaves on a north wind—honor bound to purpose, green fire for the long march."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.72,
+            "empathy": 0.64,
+            "openness": 0.78,
+            "orderliness": 0.71,
+            "conscientiousness": 0.75,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.80,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.63,
+            "imagination": 0.77
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "abstract_reasoning": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2441","Q2442","Q2443","Q2444",
+            "Q2445","Q2446","Q2447","Q2448"
+          ],
+          "signals_map": {
+            "Q2441": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can turn scattered inputs into a single, testable direction." },
+            "Q2442": { "dimension": "openness", "polarity": 1, "content": "I update the destination when new evidence changes the map." },
+            "Q2443": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert vision into milestones with owners and dates." },
+            "Q2444": { "dimension": "agency", "polarity": 1, "content": "I take the first concrete step before the plan feels perfect." },
+            "Q2445": { "dimension": "orderliness", "polarity": 1, "content": "I publish the decision criteria before choosing between options." },
+            "Q2446": { "dimension": "risk_tolerance", "polarity": -1, "content": "I ignore downside analysis if it slows momentum on a bold plan." },
+            "Q2447": { "dimension": "adaptability", "polarity": 1, "content": "I schedule red-team reviews to stress-test our direction." },
+            "Q2448": { "dimension": "cooperativeness", "polarity": 1, "content": "I align stakeholders by tying their goals to the shared ‘why’." }
+          },
+          "daily_prompt": "What’s the smallest test that would embarrass a pretty story—or crown it?",
+          "practices": [
+            "North-Star One-Pager: write the why, end-state, constraints, and first 3 bets.",
+            "Milestone Triad: define outcome, owner, and evidence for each step.",
+            "Red-Team Hour: invite dissent; log changes to the plan.",
+            "Pre-Mortem Sketch: list 5 ways the plan fails; add countermeasures.",
+            "Beacon Broadcast: repeat the vision in 2 sentences at every stand-up."
+          ],
+          "transformation_indicators": [
+            "Decision latency drops with higher decision quality",
+            "Milestones achieved with fewer reworks",
+            "Stakeholder alignment scores trend upward",
+            "Plan revisions correlate with leading indicators, not surprises",
+            "Risk capture rate rises while severity of issues falls"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Inciting Incident — Vision",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Eyes up; purpose clicks into focus.",
+          "ordinary_world_baseline": "Diffuse motives and overlapping agendas",
+          "push_turn": "A single vivid objective converts chaos into coordinated motion."
+        },
         "specific_task_group_books_influenced_by": {
           "book1": {
             "title": "The Hero with a Thousand Faces",
@@ -50915,82 +51003,29 @@
             }
           }
         },
-        "hero_journey_beat": "The Call to Adventure",
-        "hero_journey_beat_objective": "The goal of the hero journey beat is to the call to adventure.",
-        "save_the_cat_beat": "Inciting Incident",
-        "save_the_cat_beat_goal": "",
-        "plot": "The Call to Adventure",
-        "character_arcs": {
-          "Francisco": "Receives a cosmic vision of universal harmony that becomes his call to adventure and ultimate goal.",
-          "Vision_Granters": "Cosmic entities who provide Francisco with the glimpse of universal harmony to inspire his mission.",
-          "Harmonious_Future": "The potential cosmic state where all conflicts are resolved and opposing forces work in unity.",
-          "Vision_Challenges": "The seemingly impossible obstacles that stand between current cosmic conflict and ultimate harmony."
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Terrace of Banners, winds braid smoke from rival campfires as Francisco lays a transparent chart over the valley and draws a single line through storm and sun.",
+          "symbolic_moment": "A laurel sprig pressed into parchment marks the true north; when rotated, it aligns the stars and the road below.",
+          "emotional_landscape": "Calm, resolute, quietly electric—purpose tightening into trajectory.",
+          "contentment_definition": "Vision as a working diagram: a two-sentence why, a map with constraints, and the first proof-of-path.",
+          "transformation_promise": "A leader who can name the horizon—and prove it—turns scattered factions into a fleet."
         },
-        "story_gaps_addressed": {
-          "ultimate_goal": "Francisco receives a clear vision of what cosmic reconciliation could achieve - universal harmony.",
-          "inspiration_source": "The vision provides the motivation and inspiration needed for the seemingly impossible reconciliation task.",
-          "cosmic_potential": "Introduction of the ultimate potential of the cosmos when all conflicts are resolved."
-        },
-        "location_details": {
-          "vision_reception_chambers": "Cosmic spaces where Francisco can receive and process the vision of universal harmony.",
-          "harmony_projection_centers": "Facilities that can project and share visions of cosmic potential and unity."
-        },
-        "series_connections": {
-          "ultimate_vision": "Francisco's vision of universal harmony becomes the guiding goal for the entire series finale.",
-          "cosmic_destiny": "His understanding of cosmic potential prepares for the ultimate transformation in Book 9."
-        },
-        "summary": "Francisco receives a cosmic vision of universal harmony - a glimpse of what the cosmos could become if all cosmic conflicts were resolved and opposing forces were unified. This vision becomes his call to adventure, showing him the ultimate goal of cosmic reconciliation and inspiring him to undertake the seemingly impossible task of healing eternal cosmic divisions.",
-        "pov": "3rd Person Limited",
-        "tense": "Past Tense",
-        "core_emotion": "Awe and inspiration",
-        "scene_tone": "Visionary and transformative",
-        "scenes": [
-          {
-            "scene_number": 1,
-            "title": "Scene 1",
-            "setup": "Francisco receives a cosmic vision of universal harmony, a profound glimpse into what the cosmos could become if all conflicts were resolved.",
-            "symbolism": "Vision and revelation",
-            "beat_goal": "Introduce the cosmic vision as Francisco's ultimate calling",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Awe and inspiration",
-            "scene_tone": "Visionary and transformative"
-          },
-          {
-            "scene_number": 2,
-            "title": "Scene 2",
-            "setup": "The vision shows Francisco what the cosmos could become if all cosmic conflicts were resolved and opposing forces were unified in perfect harmony.",
-            "symbolism": "Unity and potential",
-            "beat_goal": "Detail the cosmic potential revealed in the vision",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Awe and inspiration",
-            "scene_tone": "Visionary and transformative"
-          },
-          {
-            "scene_number": 3,
-            "title": "Scene 3",
-            "setup": "This cosmic vision becomes Francisco's call to adventure, showing him the ultimate goal of cosmic reconciliation that he must pursue.",
-            "symbolism": "Call and destiny",
-            "beat_goal": "Establish the vision as Francisco's heroic calling",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Awe and inspiration",
-            "scene_tone": "Visionary and transformative"
-          },
-          {
-            "scene_number": 4,
-            "title": "Scene 4",
-            "setup": "The vision inspires Francisco to undertake the seemingly impossible task of healing eternal cosmic divisions, despite the overwhelming challenge ahead.",
-            "symbolism": "Courage and commitment",
-            "beat_goal": "Francisco accepts the impossible mission revealed by the vision",
-            "pov": "3rd Person Limited",
-            "tense": "Past Tense",
-            "core_emotion": "Awe and inspiration",
-            "scene_tone": "Visionary and transformative"
-          }
-        ]
-      },    
+        "epic_novel_pages": "Page 46 - 60",
+        "epic_chapter_focus": "Immediate Reaction",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Clarity",
+        "specific_task_group_description": "Define a clear vision for the journey ahead and align your intentions with purpose.",
+        "specific_task_group_tagline": "See the path clearly",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Laurel",
+        "hex_code": "#669966",
+        "red": 102,
+        "green": 153,
+        "blue": 102
+      },       
       "personality_profile_245": {},
       "personality_profile_246": {},
       "personality_profile_247": {},
