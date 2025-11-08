@@ -45915,7 +45915,208 @@
         "green": 204,
         "blue": 255
       },
-      "personality_profile_219": {},
+      "personality_profile_219": {
+        "canonical_id": "EA-219",
+        "unique_identifier": "STG 6.2.2.3",
+        "specific_task_group_title": "Tension",
+        "all_chapter": 219,
+        "novel_book": 6,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Road of Trials — Tension",
+        "type": "Specific Task Group",
+        "display_name": "The Balanced Bowstring",
+        "theme": "Stress isn’t the enemy—mismanaged strain is. Calibrate the load and convert pressure into precision.",
+        "family": "Stress Management / Resilience — Load, Release & Rebound",
+
+        "summary": "As competing demands tighten, Francisco learns to treat pressure like a force to be shaped. He maps tensions, sets load limits, breathes space into the moment, and channels stress into sequence and speed. Balance under pull becomes a practiced discipline.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Five",
+
+        "traits": {
+          "strengths": [
+            "keeps direction when pulled in opposing ways",
+            "translates pressure into clear priorities",
+            "names conflicts early and invites resolution",
+            "holds steady tone that reduces group reactivity",
+            "recovers rhythm quickly after spikes"
+          ],
+          "shadow": [
+            "over-controlling when stakes rise",
+            "masking strain until it snaps",
+            "treating every pull as equally urgent",
+            "conflict avoidance that defers decisions",
+            "relying on adrenaline as a planning tool"
+          ],
+          "growth_focus": [
+            "set explicit load limits and renegotiate asks",
+            "use a two-minute reset before high-impact calls",
+            "grade tensions by impact, not volume",
+            "replace vague urgency with time-boxed sprints",
+            "close each day with a release ritual"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 6, Chapter 19 — Approaching the Innermost Cave, the alliance strains under competing demands; Francisco tunes load, not just speed."
+        },
+
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled pressure turning flexible, creative, and light enough to move."
+        },
+
+        "color_alignment": {
+          "name": "Picton Blue",
+          "hsl": "198,52%,61%",
+          "rgb_hex": "#52A3CC",
+          "color_symbolism": "Crisp sky before a storm—alert, clear, and ready to hold the line."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.82,
+            "empathy": 0.70,
+            "openness": 0.60,
+            "orderliness": 0.74,
+            "conscientiousness": 0.76,
+            "adaptability": 0.73,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.54,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "agency": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2191","Q2192","Q2193","Q2194",
+            "Q2195","Q2196","Q2197","Q2198"
+          ],
+          "signals_map": {
+            "Q2191": { "dimension": "stability", "polarity": 1, "content": "When demands pull in opposite directions, I keep operating within limits I set." },
+            "Q2192": { "dimension": "agency", "polarity": 1, "content": "I state load limits and renegotiate timelines before quality drops." },
+            "Q2193": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert pressure into a prioritized, sequenced action list." },
+            "Q2194": { "dimension": "adaptability", "polarity": 1, "content": "When constraints shift, I reallocate resources without losing momentum." },
+            "Q2195": { "dimension": "emotional_intensity", "polarity": -1, "content": "Under stress I escalate conflict rather than channeling it." },
+            "Q2196": { "dimension": "cooperativeness", "polarity": 1, "content": "I name tensions neutrally and invite joint problem-solving." },
+            "Q2197": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can take calculated risks under time pressure without panicking." },
+            "Q2198": { "dimension": "stability", "polarity": 1, "content": "Before deciding while overwhelmed, I use a two-minute reset ritual." }
+          },
+          "daily_prompt": "Which tension will you calibrate today—what’s the load limit, and what’s your release ritual?",
+          "practices": [
+            "Bowstring Check: load limit, form (posture/breath), release (action).",
+            "Stress Reappraisal Script: ‘This energy can fuel focus; my next move is ___.’",
+            "Constraint Map: list pulls → score impact → sequence by value.",
+            "2-Minute Reset: inhale 4, hold 4, exhale 6, hold 2; repeat four rounds.",
+            "Evening Release: write what can wait, stretch spine/shoulders, shut down device."
+          ],
+          "transformation_indicators": [
+            "Shorter conflict cycle times and cleaner resolutions",
+            "Fewer quality dips during peak load",
+            "Clearer renegotiation of timelines before slippage",
+            "Team reports steadier climate under pressure",
+            "Consistent end-of-day release ritual adherence"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Approach to the Innermost Cave — Tension",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "Pulled but poised; load measured, stance deliberate.",
+          "ordinary_world_baseline": "Urgency chooses for him; conflicts linger unresolved.",
+          "push_turn": "Pressure becomes instrument—graded, tuned, and purposefully released."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Overcoming Obstacles",
+            "section_description": "Perseverance under pressure",
+            "connection_focus_area": "Sustained effort",
+            "connect_points": {
+              "point1": "Define your long-term goal",
+              "point2": "Chart small wins",
+              "point3": "Reflect on setbacks"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State a key long-term goal",
+              "objective2": "List three micro-wins so far",
+              "objective3": "Describe one comeback strategy"
+            }
+          },
+          "book2": {
+            "title": "The Upside of Stress",
+            "author": "Kelly McGonigal",
+            "section_of_focus": "Rethinking Stress",
+            "section_description": "Turning stress into strength",
+            "connection_focus_area": "Positive stress mindset",
+            "connect_points": {
+              "point1": "Identify a stress benefit",
+              "point2": "Practice stress reappraisal",
+              "point3": "Use stress to boost focus"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one positive stress outcome",
+              "objective2": "Reappraise a current stressor",
+              "objective3": "Apply a stress-to-focus technique"
+            }
+          },
+          "book3": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies and Enemies",
+            "section_description": "Tension and conflict in the hero’s journey",
+            "connection_focus_area": "Managing narrative tension",
+            "connect_points": {
+              "point1": "Map one antagonist",
+              "point2": "Identify an ally",
+              "point3": "Extract lesson from conflict"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Detail one key conflict",
+              "objective2": "Name an ally you can lean on",
+              "objective3": "Summarize a lesson learned"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "Inside the surge corridor, counterweights groan as floodgates grind against opposing currents. Francisco plants his stance and calls the sequence—pull, hold, release.",
+          "symbolic_moment": "A tuning fork hums true when the cable tension aligns; the team feels the note and steadies.",
+          "emotional_landscape": "Edges tight but clear; heat in the chest, cool in the mind.",
+          "tension_definition": "Measured strain that stores usable energy; calibrated, not avoided.",
+          "transformation_promise": "The leader who tunes tension can carry the bridge while others cross."
+        },
+
+        "epic_novel_pages": "Page 271 - 285",
+        "epic_chapter_focus": "The Road of Trials",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Stress Management",
+        "specific_task_group_description": "Navigate competing demands and pressure to keep moving forward.",
+        "specific_task_group_tagline": "Balance the pull",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Picton Blue",
+        "hex_code": "#52A3CC",
+        "red": 82,
+        "green": 163,
+        "blue": 204
+      },
       "personality_profile_220": {},
       "personality_profile_221": {},
       "personality_profile_222": {},
