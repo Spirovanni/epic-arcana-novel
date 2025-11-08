@@ -42980,7 +42980,205 @@
           }
         ]
       },
-      "personality_profile_205": {},
+      "personality_profile_205": {
+        "canonical_id": "EA-205",
+        "unique_identifier": "STG 6.1.2.2",
+        "specific_task_group_title": "Sacrifice",
+        "all_chapter": 205,
+        "novel_book": 6,
+        "chapter": "Chapter 5",
+        "chapter_title": "The Call to Adventure — Sacrifice",
+        "type": "Specific Task Group",
+        "display_name": "The Price Payer",
+        "theme": "Every great yes is funded by a hundred smaller no’s—clarify the cost, then pay it with purpose.",
+        "family": "Commitment & Cost — Trade-offs, Focus & Resolve",
+    
+        "summary": "Francisco accepts that progress requires release. By auditing shallow obligations, naming real risks, and ceding familiar roles, he concentrates power on what matters. Sacrifice becomes a design choice, not a crisis—an intentional pruning that feeds the roots.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Queen",
+    
+        "traits": {
+          "strengths": [
+            "chooses mission over momentum for its own sake",
+            "sets clear boundaries and honors them",
+            "turns trade-offs into written commitments",
+            "communicates costs candidly to allies",
+            "reallocates time from shallow to vital work"
+          ],
+          "shadow": [
+            "self-denial that breeds resentment",
+            "grand sacrifices with vague outcomes",
+            "performative hardship to earn approval",
+            "over-cutting supports needed for endurance",
+            "confusing urgency with importance"
+          ],
+          "growth_focus": [
+            "tie every sacrifice to a measurable gain",
+            "replace cut tasks with one high-value block",
+            "enlist an accountability partner for trade-offs",
+            "practice compassionate self-talk during loss",
+            "review costs quarterly; restore anything essential"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "Reaction",
+          "fiction_chapter_context": "Book 6, Chapter 5 — The call sharpens: old roles are laid down so the mission can advance."
+        },
+    
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—courageous commitment with grounded calm when facing loss."
+        },
+    
+        "color_alignment": {
+          "name": "Pacific Blue",
+          "hsl": "195,100%,40%",
+          "rgb_hex": "#0099CC",
+          "color_symbolism": "Clear, cool resolve—oceanic depth that accepts the tide’s give-and-take."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.71,
+            "stability": 0.74,
+            "empathy": 0.76,
+            "openness": 0.68,
+            "orderliness": 0.78,
+            "conscientiousness": 0.84,
+            "adaptability": 0.65,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.54,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.34,
+            "cooperativeness": 0.33,
+            "agency": 0.33
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q2051","Q2052","Q2053","Q2054","Q2055","Q2056","Q2057","Q2058"],
+          "signals_map": {
+            "Q2051": { "dimension": "conscientiousness", "polarity": 1, "content": "I drop low-value tasks to make room for mission-critical work." },
+            "Q2052": { "dimension": "agency", "polarity": 1, "content": "I willingly pay short-term costs for long-term gains." },
+            "Q2053": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate trade-offs clearly so others can align." },
+            "Q2054": { "dimension": "orderliness", "polarity": 1, "content": "I convert sacrifices into written schedules and checkpoints." },
+            "Q2055": { "dimension": "stability", "polarity": 1, "content": "Letting go of comforts doesn’t derail my focus for long." },
+            "Q2056": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept calculated risk when the mission demands it." },
+            "Q2057": { "dimension": "empathy", "polarity": 1, "content": "I consider the human impact of my trade-offs before acting." },
+            "Q2058": { "dimension": "adaptability", "polarity": 1, "content": "I revise sacrifices if data shows diminishing returns." }
+          },
+          "daily_prompt": "What will you release this week that buys back at least one deep-work hour for the mission?",
+          "practices": [
+            "Cost Ledger: write the specific gain each sacrifice funds.",
+            "Stop-Start Swap: drop one shallow task, start one high-value block.",
+            "Boundary Sentence: a single line you’ll use to decline misaligned asks.",
+            "Risk Mitigation Card: list risk, countermeasure, checkpoint date.",
+            "Support Triangle: name 3 allies—ask one concrete favor each."
+          ],
+          "transformation_indicators": [
+            "Reduced weekly hours on shallow work",
+            "Greater consistency of scheduled deep-work blocks",
+            "Clearer stakeholder alignment on trade-offs",
+            "Lower relapse into previously cut commitments",
+            "Improved mission velocity after each sacrifice cycle"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Reaction",
+          "preliminary_beat": "Catalyst — Sacrifice",
+          "save_the_cat_beat": "Reaction",
+          "character_state": "Stung by cost but resolute; hands open to let go and take hold.",
+          "ordinary_world_baseline": "Overextended, role-cluttered, diffusion masquerading as diligence.",
+          "boon_reveal": "Focused loss multiplies impact—sacrifice concentrates power."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Road of Trials",
+            "section_description": "The hero faces challenges that demand sacrifice",
+            "connection_focus_area": "Understanding true cost",
+            "connect_points": {
+              "point1": "List what you’ll need to relinquish",
+              "point2": "Consider short-term discomforts",
+              "point3": "Affirm your commitment"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one personal sacrifice needed",
+              "objective2": "Weigh its benefits vs. costs",
+              "objective3": "Verbally commit to that sacrifice"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Taking Risks",
+            "section_description": "How to push past hesitation and accept trade-offs",
+            "connection_focus_area": "Overcoming fear of loss",
+            "connect_points": {
+              "point1": "Identify a fear tied to giving something up",
+              "point2": "Plan steps to mitigate it",
+              "point3": "Enlist support in your decision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name the risk you will take",
+              "objective2": "Outline mitigation strategies",
+              "objective3": "Share your plan with a peer"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Rule #1: Work Deeply",
+            "section_description": "Eliminating shallow commitments to focus on what matters",
+            "connection_focus_area": "Prioritizing high-value activities",
+            "connect_points": {
+              "point1": "Audit shallow tasks in your schedule",
+              "point2": "Drop one low-value activity",
+              "point3": "Allocate that time to your mission"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two shallow tasks to remove",
+              "objective2": "Schedule a deep work block",
+              "objective3": "Report on the outcome after one session"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the quay of broken aqueducts, Francisco unbuckles a beloved sigil of office and lets it fall into the tide—weight traded for speed.",
+          "symbolic_moment": "He scores a ledger into stone: LOSS → GAIN, then signs beneath the column of gains.",
+          "emotional_landscape": "Austere resolve, clean grief, purposeful calm.",
+          "boon_definition": "Selective renunciation that funds decisive action.",
+          "transformation_promise": "What he lays down becomes the current that carries the mission farther."
+        },
+    
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Commitment & Cost",
+        "specific_task_group_description": "Identify what you must give up in order to fully commit to your quest.",
+        "specific_task_group_tagline": "Pay the price",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Pacific Blue",
+        "hex_code": "#0099CC",
+        "red": 0,
+        "green": 153,
+        "blue": 204
+      },
       "personality_profile_206": {},
       "personality_profile_207": {},
       "personality_profile_208": {},
