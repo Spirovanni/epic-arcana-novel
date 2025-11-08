@@ -46925,7 +46925,208 @@
         "green": 176,
         "blue": 208
       },
-      "personality_profile_224": {},
+      "personality_profile_224": {
+        "canonical_id": "EA-224",
+        "unique_identifier": "STG 6.2.4.1",
+        "specific_task_group_title": "Inspired Action",
+        "all_chapter": 224,
+        "novel_book": 6,
+        "chapter": "Chapter 24",
+        "chapter_title": "Action (conflict) — Inspired Action",
+        "type": "Specific Task Group",
+        "display_name": "The Storm-Forward Captain",
+        "theme": "When the map burns, you move by signal and courage—intuition converts despair into the first decisive step.",
+        "family": "Motivation & Leadership — Initiative, Resolve & Rallying",
+
+        "summary": "At the low point, Francisco stops waiting for perfect plans and acts from quiet, verified intuition. He reframes adversity into intent, delegates with clarity, and takes the smallest high-consequence step that reopens momentum. Action becomes a beacon others can follow through the dark.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Knight",
+
+        "traits": {
+          "strengths": [
+            "initiates movement when others freeze",
+            "hears signal inside noise and acts on it",
+            "frames purpose so teams rally fast",
+            "chooses minimum viable decisive step",
+            "delegates with intent rather than orders"
+          ],
+          "shadow": [
+            "acting to avoid feeling, not to create value",
+            "skipping checks that prevent rework",
+            "over-trusting gut outside domain expertise",
+            "impatience with slower processors",
+            "hero mode that crowds out team agency"
+          ],
+          "growth_focus": [
+            "pair intuition with a two-check rule (data + peer)",
+            "state intent, success criteria, and stop loss before moving",
+            "designate a red-team to challenge the first move",
+            "convert solo pushes into distributed initiatives",
+            "log ‘what changed because we moved?’ after each action"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 6, Chapter 24 — In Atonement with the Father, inspired initiative cuts through despair and reorients the campaign."
+        },
+
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—drive tempered by collective vigilance; intent replaces image."
+        },
+
+        "color_alignment": {
+          "name": "Teal",
+          "hsl": "180,100%,25%",
+          "rgb_hex": "#008080",
+          "color_symbolism": "Cold-current teal—steady nerve and clear intent in rough water."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.88,
+            "stability": 0.66,
+            "empathy": 0.70,
+            "openness": 0.78,
+            "orderliness": 0.62,
+            "conscientiousness": 0.76,
+            "adaptability": 0.81,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.57,
+            "novelty_seeking": 0.69,
+            "imagination": 0.71
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "adaptability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2241","Q2242","Q2243","Q2244",
+            "Q2245","Q2246","Q2247","Q2248"
+          ],
+          "signals_map": {
+            "Q2241": { "dimension": "agency", "polarity": 1, "content": "When plans fail, I define intent and take the smallest decisive step." },
+            "Q2242": { "dimension": "adaptability", "polarity": 1, "content": "I adjust mid-move without losing the mission’s aim." },
+            "Q2243": { "dimension": "conscientiousness", "polarity": 1, "content": "I set a clear stop loss before acting in uncertainty." },
+            "Q2244": { "dimension": "orderliness", "polarity": 1, "content": "I translate intuition into a brief with outcomes and owners." },
+            "Q2245": { "dimension": "empathy", "polarity": 1, "content": "I share intent so people can choose how to best contribute." },
+            "Q2246": { "dimension": "risk_tolerance", "polarity": -1, "content": "I act just to feel in control even when waiting would be wiser." },
+            "Q2247": { "dimension": "stability", "polarity": 1, "content": "I can move while staying calm enough to perceive new data." },
+            "Q2248": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite a quick challenge to my first impulse before execution." }
+          },
+          "daily_prompt": "What is the smallest decisive step that changes the state—and what’s your stop loss?",
+          "practices": [
+            "Intent Brief: one sentence of purpose, success, and constraints.",
+            "Two-Check Rule: gut + data or gut + peer before action.",
+            "MVS (Minimum Viable Step): ship the tiniest change that creates learning.",
+            "Delegation by Intent: assign outcome and authority, not tasks.",
+            "After-Action Minute: log signal learned, next micro-move, and sunset criteria."
+          ],
+          "transformation_indicators": [
+            "Shorter time from stall to first meaningful movement",
+            "Fewer reworks due to unvetted impulses",
+            "Higher team initiative without micromanagement",
+            "Clearer stop-loss and pivot points documented",
+            "Morale upticks during crises due to visible progress"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Action (conflict)",
+          "preliminary_beat": "All is Lost — the spark of intent pierces the dark",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Tired, cornered, but lucid—listening for the true signal.",
+          "ordinary_world_baseline": "Motion equals progress; plans over presence; commands over consent.",
+          "action_turn": "Signal → Intent → Tiny decisive move → Momentum."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Amor Fati",
+            "section_description": "Using adversity as an advantage",
+            "connection_focus_area": "Turning crisis into action",
+            "connect_points": {
+              "point1": "Identify the underlying opportunity in a setback",
+              "point2": "Reframe challenges as pathways",
+              "point3": "Commit to the first actionable step"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three recent obstacles and their hidden opportunities",
+              "objective2": "Reframe one current challenge positively",
+              "objective3": "Execute one small action toward that challenge"
+            }
+          },
+          "book2": {
+            "title": "Leadership in Turbulent Times",
+            "author": "Doris Kearns Goodwin",
+            "section_of_focus": "Abraham Lincoln’s Resolve",
+            "section_description": "Leading through the Civil War’s darkest hours",
+            "connection_focus_area": "Maintaining direction under crisis",
+            "connect_points": {
+              "point1": "Extract Lincoln’s decision-making principles",
+              "point2": "Map them to your current dilemma",
+              "point3": "Draft a crisis leadership action plan"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Outline two of Lincoln’s leadership choices",
+              "objective2": "Apply one principle to a personal setback",
+              "objective3": "Assess the outcome of that application"
+            }
+          },
+          "book3": {
+            "title": "Turn the Ship Around!",
+            "author": "L. David Marquet",
+            "section_of_focus": "Leader-Leader Model",
+            "section_description": "Empowering others to take initiative",
+            "connection_focus_area": "Inspiring action in your team",
+            "connect_points": {
+              "point1": "Identify one task to delegate fully",
+              "point2": "Provide clear intent and authority",
+              "point3": "Observe and coach rather than direct"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Delegate one responsibility with intent",
+              "objective2": "Monitor the team’s execution without intervening",
+              "objective3": "Reflect on the team’s performance and adjust"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the wind-flayed causeway, the Father’s silence feels like a verdict. Francisco steadies his breath, states intent, and signals: two fingers, south sluice—move.",
+          "symbolic_moment": "A shattered standard becomes a torch when wrapped in oil-soaked sail—leadership is light, not cloth.",
+          "emotional_landscape": "Hollowed dread, then a clean line of purpose cutting through the storm.",
+          "inspired_action_definition": "A smallest-effective move born from aligned intuition, verified by a quick check, executed with shared intent.",
+          "momentum_signal": "Resistance shifts from absolute to elastic; the world begins to answer back."
+        },
+
+        "epic_novel_pages": "Page 346 - 360",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Motivation & Leadership",
+        "specific_task_group_description": "Take decisive steps even at your lowest moment to turn despair into momentum.",
+        "specific_task_group_tagline": "Act in spite of fear",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Teal",
+        "hex_code": "#008080",
+        "red": 0,
+        "green": 128,
+        "blue": 128
+      },
       "personality_profile_225": {},
       "personality_profile_226": {},
       "personality_profile_227": {},
