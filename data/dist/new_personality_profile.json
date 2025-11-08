@@ -49305,7 +49305,197 @@
         "green": 153,
         "blue": 102
       },
-      "personality_profile_236": {},
+      "personality_profile_236": {
+        "canonical_id": "EA-236",
+        "unique_identifier": "STG 6.2.8.1",
+        "specific_task_group_title": "Counter Deception",
+        "all_chapter": 236,
+        "novel_book": 6,
+        "chapter": "Chapter 36",
+        "chapter_title": "Battle (set-up) — Counter Deception",
+        "type": "Specific Task Group",
+        "display_name": "The False-Color Filter",
+        "theme": "Victory favors the patient analyst—see the pattern beneath the performance and the trap loses its teeth.",
+        "family": "Tactics / Counter-Deception — Clarity, Verification & Discipline",
+        "summary": "On the edge of the Finale, Francisco tunes out theatrics and tunes into signal. He baselines behavior, stress-tests stories, and uses red-team probes to force truth to surface. With noise stripped out, feints collapse and pathways sharpen.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "spots inconsistencies quickly without overreacting",
+            "uses structured checks to prevent snap errors",
+            "designs feints to test adversary intent",
+            "stays calm when narratives conflict",
+            "documents assumptions so they can be disproved fast"
+          ],
+          "shadow": [
+            "can drift into analysis paralysis",
+            "mistrust bleeds into relationships if unchecked",
+            "overuses tests when decisive action is needed",
+            "fixates on anomalies that don’t matter",
+            "treats intuition as suspect even when well-trained"
+          ],
+          "growth_focus": [
+            "time-box deep analysis before committing",
+            "separate people from patterns—verify behavior, respect bonds",
+            "predefine ‘act now’ triggers alongside ‘gather more’ rules",
+            "weight anomalies by impact, not novelty",
+            "train intuition with post-mortems so it earns your trust"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Battle (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 36 — Rescue from Without: counter deception clears the lane for allied rescue."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Questioner integrating to 9—skepticism steadied by calm; verification without panic."
+        },
+        "color_alignment": {
+          "name": "Aqua",
+          "hsl": "180,100%,50%",
+          "rgb_hex": "#00FFFF",
+          "color_symbolism": "True-cyan clarity—signals separated from noise, truth lit from all sides."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.82,
+            "empathy": 0.58,
+            "openness": 0.61,
+            "orderliness": 0.78,
+            "conscientiousness": 0.82,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.84,
+            "cooperativeness": 0.67,
+            "risk_tolerance": 0.44,
+            "emotional_intensity": 0.40,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.52,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "conscientiousness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q2361","Q2362","Q2363","Q2364",
+            "Q2365","Q2366","Q2367","Q2368"
+          ],
+          "signals_map": {
+            "Q2361": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I cross-check important claims with at least two independent sources before acting." },
+            "Q2362": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep baselines so anomalies stand out immediately." },
+            "Q2363": { "dimension": "adaptability", "polarity": 1, "content": "When new data contradicts the plan, I update instead of defending it." },
+            "Q2364": { "dimension": "orderliness", "polarity": 1, "content": "I write down assumptions so we can test and retire them quickly." },
+            "Q2365": { "dimension": "risk_tolerance", "polarity": -1, "content": "Under pressure, I rush decisions without corroboration." },
+            "Q2366": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I run red-team or devil’s-advocate reviews on critical strategies." },
+            "Q2367": { "dimension": "stability", "polarity": 1, "content": "Conflicting narratives don’t rattle me; I wait for corroboration." },
+            "Q2368": { "dimension": "empathy", "polarity": 1, "content": "I watch for baseline shifts in tone and body language during key moments." }
+          },
+          "daily_prompt": "What story are you being sold today—and what is the smallest check that will test it?",
+          "practices": [
+            "Two-Source Rule: verify key claims with two independent confirmations.",
+            "Baseline & Spike Scan: note normal patterns; flag stress spikes for review.",
+            "Bias Pause: 90-second System-2 check before irreversible moves.",
+            "Red-Team Five: 5 minutes of ‘how does this fail?’ before commit.",
+            "3x3 Debrief: 3 facts, 3 assumptions, 3 next tests after every op."
+          ],
+          "transformation_indicators": [
+            "Fewer baited detours; higher signal-to-noise decisions",
+            "Reduced error rate on first-pass judgments",
+            "Faster course-corrections with less rework",
+            "Improved OPSEC and fewer exploitable tells",
+            "Team confidence rises in decision protocols"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Counter Deception",
+          "save_the_cat_beat": "Finale",
+          "character_state": "Calm, alert, unswayed by spectacle.",
+          "ordinary_world_baseline": "Reacting to surfaces; baited by decoys.",
+          "push_turn": "Baselines + bias checks expose the real path; feints lose power."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "section_of_focus": "Deception in War",
+            "section_description": "Strategies for misleading the enemy",
+            "connection_focus_area": "Mastering tactical misdirection",
+            "connect_points": {
+              "point1": "Identify common ruses in your context",
+              "point2": "Plan a counterstrategy",
+              "point3": "Execute feints to test reactions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two deceptive tactics",
+              "objective2": "Draft a counter-deception plan",
+              "objective3": "Evaluate its effectiveness in a scenario"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Heuristics and Biases",
+            "section_description": "How cognitive shortcuts lead to errors",
+            "connection_focus_area": "Detecting flawed assumptions",
+            "connect_points": {
+              "point1": "Recognize a bias affecting your judgment",
+              "point2": "Slow down to analyze it",
+              "point3": "Adjust your decision accordingly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one personal bias",
+              "objective2": "Describe its impact on a choice",
+              "objective3": "Apply a corrective strategy"
+            }
+          },
+          "book3": {
+            "title": "Spy the Lie",
+            "author": "Philip Houston",
+            "section_of_focus": "Detecting Deception",
+            "section_description": "Techniques for spotting falsehoods",
+            "connection_focus_area": "Strengthening truth detection",
+            "connect_points": {
+              "point1": "Note baseline behaviors",
+              "point2": "Spot deviations under stress",
+              "point3": "Practice questioning techniques"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one deception cue",
+              "objective2": "Demonstrate a probing question",
+              "objective3": "Assess the response pattern"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "From the airframe’s shadow, Francisco seeds a false corridor with decoys; when the wind ripples wrong, he sees the ambush breathe.",
+          "symbolic_moment": "A prism over a map—white light splits into telltale bands; one route holds true color.",
+          "emotional_landscape": "Cool focus, deliberate breath, decisive hands.",
+          "counter_deception_definition": "Systematic truth-finding under pressure: baseline, test, corroborate, act.",
+          "transformation_promise": "A leader who filters spectacle from signal denies the enemy their favorite weapon: your attention."
+        },
+        "epic_novel_pages": "Page 526 - 540",
+        "epic_chapter_focus": "Battle (set-up)",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Tactics",
+        "specific_task_group_description": "Uncover hidden motives and safeguard against misdirection in the decisive battle.",
+        "specific_task_group_tagline": "See through falsehoods",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Aqua",
+        "hex_code": "#00FFFF",
+        "red": 0,
+        "green": 255,
+        "blue": 255
+      },    
       "personality_profile_237": {},
       "personality_profile_238": {},
       "personality_profile_239": {},
