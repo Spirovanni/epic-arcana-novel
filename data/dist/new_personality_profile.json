@@ -48732,7 +48732,197 @@
         "green": 204,
         "blue": 204
       },
-      "personality_profile_233": {},
+      "personality_profile_233": {
+        "canonical_id": "EA-233",
+        "unique_identifier": "STG 6.2.7.1",
+        "specific_task_group_title": "Contentment",
+        "all_chapter": 233,
+        "novel_book": 6,
+        "chapter": "Chapter 33",
+        "chapter_title": "Action — Contentment",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Well",
+        "theme": "Satisfaction isn’t the finish line—it’s the stable platform that lets you leap farther without grasping.",
+        "family": "Fulfillment / Contentment — Gratitude, Sufficiency & Presence",
+        "summary": "As the story enters Flight, Francisco learns to draw strength from what’s already whole. Contentment becomes kinetic—gratitude steadies his aim, presence prevents waste, and he acts without the drag of neediness. Peace with the path so far turns momentum into lift.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Nine",
+        "traits": {
+          "strengths": [
+            "radiates calm focus under pressure",
+            "sustains effort without frantic urgency",
+            "celebrates progress to fuel the next push",
+            "anchors teams in gratitude and perspective",
+            "chooses high-quality action over restless motion"
+          ],
+          "shadow": [
+            "mistakes comfort for completion",
+            "avoids necessary friction or hard feedback",
+            "underplays ambition to keep the peace",
+            "settles for ‘good enough’ too early",
+            "lets routine dull creative edge"
+          ],
+          "growth_focus": [
+            "pair gratitude with a stretch target",
+            "schedule periodic ‘discomfort reps’",
+            "use success metrics not comfort as the stop signal",
+            "invite one tough critique per milestone",
+            "practice ‘savor then surge’ cycles"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 6, Chapter 33 — Flight: contentment stabilizes lift so Francisco can maneuver decisively."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—grounded satisfaction channeled into purposeful, visible action."
+        },
+        "color_alignment": {
+          "name": "Medium Spring Green",
+          "hsl": "150,100%,60%",
+          "rgb_hex": "#33FF99",
+          "color_symbolism": "New shoots after rain—ease with momentum, growth without strain."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.88,
+            "empathy": 0.76,
+            "openness": 0.66,
+            "orderliness": 0.64,
+            "conscientiousness": 0.72,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.45,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.55,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2331","Q2332","Q2333","Q2334",
+            "Q2335","Q2336","Q2337","Q2338"
+          ],
+          "signals_map": {
+            "Q2331": { "dimension": "stability", "polarity": 1, "content": "I can feel satisfied with progress while still pushing the work forward." },
+            "Q2332": { "dimension": "empathy", "polarity": 1, "content": "I openly celebrate teammates’ wins to reinforce momentum." },
+            "Q2333": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert ‘what went well’ into the next clear action." },
+            "Q2334": { "dimension": "agency", "polarity": 1, "content": "I act from enoughness, not from urgency or scarcity." },
+            "Q2335": { "dimension": "orderliness", "polarity": 1, "content": "I close loops before starting new ones to keep energy clean." },
+            "Q2336": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid healthy risks because the current state already feels comfortable." },
+            "Q2337": { "dimension": "adaptability", "polarity": 1, "content": "I can enjoy the present and still pivot when the signal changes." },
+            "Q2338": { "dimension": "stability", "polarity": 1, "content": "Gratitude practices help me stay calm when stakes rise." }
+          },
+          "daily_prompt": "What can you genuinely savor today—and what single bold move will that gratitude empower?",
+          "practices": [
+            "Gratitude Trio: note 3 specifics that made progress possible.",
+            "Flow Block: 30 minutes single-tasking on the highest-leverage step.",
+            "Savor-Then-Surge: pause to acknowledge a win, then commit to one stretch action.",
+            "Sufficiency Statement: write a one-line ‘I have enough to begin’ before starting.",
+            "Boundary Guard: define a hard stop to keep satisfaction from blurring focus."
+          ],
+          "transformation_indicators": [
+            "Higher quality per unit time (fewer reworks)",
+            "More consistent momentum with lower stress spikes",
+            "Team reports steadier morale and clearer priorities",
+            "Wins documented and translated into next actions",
+            "Increased willingness to take calibrated stretch risks"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Break into 3 — Contentment",
+          "save_the_cat_beat": "Break into 3",
+          "character_state": "Grounded and grateful; energy smooth, not frantic.",
+          "ordinary_world_baseline": "Restless striving; satisfaction contingent on outcomes.",
+          "push_turn": "Savoring becomes fuel; peace converts motion into lift."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "Optimal Experience",
+            "section_description": "Discovering joy in fully engaging activities",
+            "connection_focus_area": "Cultivating present-moment engagement",
+            "connect_points": {
+              "point1": "Identify what activities induce flow for you",
+              "point2": "Practice full immersion in one task",
+              "point3": "Reflect on the sense of satisfaction afterward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two flow activities",
+              "objective2": "Allocate a 30-minute focused session",
+              "objective3": "Journal feelings of engagement"
+            }
+          },
+          "book2": {
+            "title": "The Art of Happiness",
+            "author": "Dalai Lama & Howard C. Cutler",
+            "section_of_focus": "Happiness and Training the Mind",
+            "section_description": "Techniques to cultivate inner contentment",
+            "connection_focus_area": "Developing lasting well-being",
+            "connect_points": {
+              "point1": "Practice one daily gratitude reflection",
+              "point2": "Notice moments of inner calm",
+              "point3": "Record sources of joy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Keep a three-item gratitude list",
+              "objective2": "Identify one calm practice",
+              "objective3": "Apply it twice this week"
+            }
+          },
+          "book3": {
+            "title": "The Happiness Hypothesis",
+            "author": "Jonathan Haidt",
+            "section_of_focus": "The Divided Self",
+            "section_description": "Balancing desires and satisfaction",
+            "connection_focus_area": "Understanding how inner harmony arises",
+            "connect_points": {
+              "point1": "Map internal tensions",
+              "point2": "Practice reconciling conflicting goals",
+              "point3": "Note resulting contentment"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one internal conflict",
+              "objective2": "Apply a balancing exercise",
+              "objective3": "Evaluate emotional outcome"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On an emerald ridge above the floodplain, Francisco steadies the glider-fleet; wind at his cheek, he counts what’s working and trims for lift.",
+          "symbolic_moment": "A simple tin cup—filled at a mountain spring—reflects sky; he drinks slowly, then signals the dive that saves the convoy.",
+          "emotional_landscape": "Satisfied breath, alert eyes, an undercurrent of ready courage.",
+          "contentment_definition": "Sufficiency that sharpens—not softens—your edge.",
+          "transformation_promise": "A leader who can savor without stopping turns gratitude into glide distance."
+        },
+        "epic_novel_pages": "Page 481 - 495",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Fulfillment",
+        "specific_task_group_description": "Embrace satisfaction with your journey so far to empower the next leap.",
+        "specific_task_group_tagline": "Find peace in progress",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Medium Spring Green",
+        "hex_code": "#33FF99",
+        "red": 51,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_234": {},
       "personality_profile_235": {},
       "personality_profile_236": {},
