@@ -50835,7 +50835,162 @@
         "green": 204,
         "blue": 153
       },    
-      "personality_profile_244": {},
+      "specific_task_group_244": {
+        "id": "EA-244",
+        "unique_identifier": "STG 7.1.2.1",
+        "all_chapter": 244,
+        "novel_book": 7,
+        "chapter": "Chapter 4",
+        "type": "Specific Task Group",
+        "tarot_card_link": "",
+        "tarot_family": "Wands",
+        "new_tarot_family": "",
+        "tarot_card_item": "King",
+        "color_name": "Laurel",
+        "hex_code": "#669966",
+        "red": 102,
+        "green": 153,
+        "blue": 102,
+        "epic_novel_pages": "Page 46 - 60",
+        "epic_chapter_focus": "Immediate Reaction",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_preliminary_scene_description": "",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "specific_task_group_title": "Vision",
+        "focus_area": "Clarity",
+        "connection_to_the_major_task_group": "Set-up",
+        "specific_task_group_description": "Define a clear vision for the journey ahead and align your intentions with purpose.",
+        "specific_task_group_tagline": "See the path clearly",
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero commits to the journey beyond the familiar world",
+            "connection_focus_area": "Clarifying purpose",
+            "connect_points": {
+              "point1": "Identify the deeper motive for your quest",
+              "point2": "Visualize the transformation you seek",
+              "point3": "Commit to a guiding principle"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your core guiding value",
+              "objective2": "Write a concise vision statement",
+              "objective3": "Share your vision with a trusted ally"
+            }
+          },
+          "book2": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "Assume You Know",
+            "section_description": "Discovering the underlying 'why' behind actions",
+            "connection_focus_area": "Purpose-driven direction",
+            "connect_points": {
+              "point1": "Articulate your personal why",
+              "point2": "Align one upcoming action to that why",
+              "point3": "Communicate your why to someone"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your 'why' in one sentence",
+              "objective2": "Plan one activity that reflects it",
+              "objective3": "Explain your why to a peer"
+            }
+          },
+          "book3": {
+            "title": "Visioneering",
+            "author": "Andy Stanley",
+            "section_of_focus": "Clarity",
+            "section_description": "Steps to shape and articulate a compelling vision",
+            "connection_focus_area": "Building foresight",
+            "connect_points": {
+              "point1": "Draft a vivid description of your goal",
+              "point2": "Outline three key milestones",
+              "point3": "Identify two potential obstacles"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Compose a detailed vision statement",
+              "objective2": "List three milestones to achieve it",
+              "objective3": "Anticipate and plan for two challenges"
+            }
+          }
+        },
+        "hero_journey_beat": "The Call to Adventure",
+        "hero_journey_beat_objective": "The goal of the hero journey beat is to the call to adventure.",
+        "save_the_cat_beat": "Inciting Incident",
+        "save_the_cat_beat_goal": "",
+        "plot": "The Call to Adventure",
+        "character_arcs": {
+          "Francisco": "Receives a cosmic vision of universal harmony that becomes his call to adventure and ultimate goal.",
+          "Vision_Granters": "Cosmic entities who provide Francisco with the glimpse of universal harmony to inspire his mission.",
+          "Harmonious_Future": "The potential cosmic state where all conflicts are resolved and opposing forces work in unity.",
+          "Vision_Challenges": "The seemingly impossible obstacles that stand between current cosmic conflict and ultimate harmony."
+        },
+        "story_gaps_addressed": {
+          "ultimate_goal": "Francisco receives a clear vision of what cosmic reconciliation could achieve - universal harmony.",
+          "inspiration_source": "The vision provides the motivation and inspiration needed for the seemingly impossible reconciliation task.",
+          "cosmic_potential": "Introduction of the ultimate potential of the cosmos when all conflicts are resolved."
+        },
+        "location_details": {
+          "vision_reception_chambers": "Cosmic spaces where Francisco can receive and process the vision of universal harmony.",
+          "harmony_projection_centers": "Facilities that can project and share visions of cosmic potential and unity."
+        },
+        "series_connections": {
+          "ultimate_vision": "Francisco's vision of universal harmony becomes the guiding goal for the entire series finale.",
+          "cosmic_destiny": "His understanding of cosmic potential prepares for the ultimate transformation in Book 9."
+        },
+        "summary": "Francisco receives a cosmic vision of universal harmony - a glimpse of what the cosmos could become if all cosmic conflicts were resolved and opposing forces were unified. This vision becomes his call to adventure, showing him the ultimate goal of cosmic reconciliation and inspiring him to undertake the seemingly impossible task of healing eternal cosmic divisions.",
+        "pov": "3rd Person Limited",
+        "tense": "Past Tense",
+        "core_emotion": "Awe and inspiration",
+        "scene_tone": "Visionary and transformative",
+        "scenes": [
+          {
+            "scene_number": 1,
+            "title": "Scene 1",
+            "setup": "Francisco receives a cosmic vision of universal harmony, a profound glimpse into what the cosmos could become if all conflicts were resolved.",
+            "symbolism": "Vision and revelation",
+            "beat_goal": "Introduce the cosmic vision as Francisco's ultimate calling",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Awe and inspiration",
+            "scene_tone": "Visionary and transformative"
+          },
+          {
+            "scene_number": 2,
+            "title": "Scene 2",
+            "setup": "The vision shows Francisco what the cosmos could become if all cosmic conflicts were resolved and opposing forces were unified in perfect harmony.",
+            "symbolism": "Unity and potential",
+            "beat_goal": "Detail the cosmic potential revealed in the vision",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Awe and inspiration",
+            "scene_tone": "Visionary and transformative"
+          },
+          {
+            "scene_number": 3,
+            "title": "Scene 3",
+            "setup": "This cosmic vision becomes Francisco's call to adventure, showing him the ultimate goal of cosmic reconciliation that he must pursue.",
+            "symbolism": "Call and destiny",
+            "beat_goal": "Establish the vision as Francisco's heroic calling",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Awe and inspiration",
+            "scene_tone": "Visionary and transformative"
+          },
+          {
+            "scene_number": 4,
+            "title": "Scene 4",
+            "setup": "The vision inspires Francisco to undertake the seemingly impossible task of healing eternal cosmic divisions, despite the overwhelming challenge ahead.",
+            "symbolism": "Courage and commitment",
+            "beat_goal": "Francisco accepts the impossible mission revealed by the vision",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Awe and inspiration",
+            "scene_tone": "Visionary and transformative"
+          }
+        ]
+      },    
       "personality_profile_245": {},
       "personality_profile_246": {},
       "personality_profile_247": {},
