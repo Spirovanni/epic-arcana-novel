@@ -44059,7 +44059,214 @@
         "green": 102,
         "blue": 102
       },
-      "personality_profile_210": {},
+      "personality_profile_210": {
+        "canonical_id": "EA-210",
+        "unique_identifier": "STG 6.1.4.1",
+        "specific_task_group_title": "Originality",
+        "all_chapter": 210,
+        "novel_book": 6,
+        "chapter": "Chapter 10",
+        "chapter_title": "Pressure — Originality",
+        "type": "Specific Task Group",
+        "display_name": "The First Spark",
+        "theme": "Under pressure, constraints become catalysts; mentors can light the match, but the flame must be yours.",
+        "family": "Creativity / Vision — Novelty, Flow & Synthesis",
+    
+        "summary": "Caught between collapsing timelines and impatient allies, Francisco learns that imitation will not save a thirsty cosmos. He turns pressure into a forge, remixing mentor wisdom into ideas that bear his personal stamp. By prototyping fast and embracing odd combinations, originality becomes both a shield and a spear.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Knight",
+    
+        "traits": {
+          "strengths": [
+            "generates novel options under time pressure",
+            "remixes mentor guidance into unique solutions",
+            "finds creative use in tight constraints",
+            "rapidly prototypes to learn in the open",
+            "communicates the why behind unusual choices"
+          ],
+          "shadow": [
+            "chases novelty over fit",
+            "inconsistent follow-through after ideation",
+            "dismisses incremental improvements",
+            "over-identifies with ideas and resists edits",
+            "difficulty standardizing successful experiments"
+          ],
+          "growth_focus": [
+            "pair each bold idea with a simple success metric",
+            "time-box divergence, then commit to converge",
+            "ship v1 in 24 hours and iterate weekly",
+            "invite a skeptic to stress-test assumptions",
+            "turn wins into repeatable playbooks"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Pressure",
+          "fiction_chapter_context": "Book 6, Chapter 10 — In Allies, Mentors, and Helpers, mentors amplify a distinctive voice that pressure reveals."
+        },
+    
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—playful novelty grounded by depth and discipline."
+        },
+    
+        "color_alignment": {
+          "name": "Cyprus",
+          "hsl": "180,100%,10%",
+          "rgb_hex": "#003333",
+          "color_symbolism": "A deep teal trench—quiet pressure birthing luminous currents of insight."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.63,
+            "empathy": 0.66,
+            "openness": 0.88,
+            "orderliness": 0.48,
+            "conscientiousness": 0.62,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.76,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.67,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.53,
+            "novelty_seeking": 0.86,
+            "imagination": 0.90
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "imagination": 0.35,
+            "novelty_seeking": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2101",
+            "Q2102",
+            "Q2103",
+            "Q2104",
+            "Q2105",
+            "Q2106",
+            "Q2107",
+            "Q2108"
+          ],
+          "signals_map": {
+            "Q2101": { "dimension": "adaptability", "polarity": 1, "content": "I turn constraints into prompts for invention." },
+            "Q2102": { "dimension": "emotional_intensity", "polarity": 1, "content": "Pressure sharpens my originality rather than dulls it." },
+            "Q2103": { "dimension": "openness", "polarity": 1, "content": "I remix mentor insights into ideas with my own signature." },
+            "Q2104": { "dimension": "risk_tolerance", "polarity": 1, "content": "I test unusual approaches quickly to learn what works." },
+            "Q2105": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep a simple ritual that reliably triggers creative flow." },
+            "Q2106": { "dimension": "adaptability", "polarity": 1, "content": "I can discard good ideas to pursue better ones." },
+            "Q2107": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I explain the novel value of my idea in one clear sentence." },
+            "Q2108": { "dimension": "openness", "polarity": 1, "content": "I seek divergent perspectives before choosing a path." }
+          },
+          "daily_prompt": "What odd combination could solve today’s constraint, and what’s your 24-hour v1?",
+          "practices": [
+            "Constraint Canvas: list top 5 constraints; invert each into a design rule.",
+            "Waterline Ritual: 10 minutes near water (or audio) to trigger flow, then write 10 ideas.",
+            "Mentor Remix: merge 3 mentor lessons into one original concept and a one-sentence pitch.",
+            "3×20 Divergence: three bursts of 20 ideas with new lenses each round (user, system, nature).",
+            "Public Prototype: ship a safe-to-fail v1 and gather 5 reactions within 24 hours."
+          ],
+          "transformation_indicators": [
+            "Time from concept to first prototype decreases",
+            "Higher ratio of shipped experiments to proposed ideas",
+            "Stakeholders report clearer novelty-plus-fit explanations",
+            "Playbooks extracted from successful prototypes",
+            "Measured impact of v1→v2 iterations improves"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Pressure",
+          "preliminary_beat": "Theme Stated — Originality",
+          "save_the_cat_beat": "Pressure",
+          "character_state": "Compressed by stakes; choosing invention over imitation.",
+          "ordinary_world_baseline": "Inspiration scattered, awaiting permission; ideas unshipped.",
+          "threshold_choice": "Publish a bold prototype—mentor-informed, unmistakably yours."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "How mentors guide the hero",
+            "connection_focus_area": "Harnessing guidance",
+            "connect_points": {
+              "point1": "Identify key mentors in your life",
+              "point2": "Learn how they support your vision",
+              "point3": "Integrate their insight into your ideas"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three mentors and their gifts",
+              "objective2": "Describe how you will apply their advice",
+              "objective3": "Draft a creative concept influenced by a mentor"
+            }
+          },
+          "book2": {
+            "title": "Blue Mind",
+            "author": "Wallace J. Nichols",
+            "section_of_focus": "Creativity by Water",
+            "section_description": "How water inspires innovation",
+            "connection_focus_area": "Tapping flow states",
+            "connect_points": {
+              "point1": "Recall a moment of creative clarity near water",
+              "point2": "Analyze what triggered that insight",
+              "point3": "Plan a water-based creative ritual"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your water-inspired insight",
+              "objective2": "Design a 10-minute water ritual",
+              "objective3": "Implement it and record results"
+            }
+          },
+          "book3": {
+            "title": "Creative Confidence",
+            "author": "Tom Kelley & David Kelley",
+            "section_of_focus": "Embracing Originality",
+            "section_description": "Building confidence in your ideas",
+            "connection_focus_area": "Overcoming self-doubt",
+            "connect_points": {
+              "point1": "Identify a self-doubt that hinders creativity",
+              "point2": "Reframe it as an opportunity",
+              "point3": "Prototype one bold idea despite fear"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one limiting belief",
+              "objective2": "Create a positive reframe",
+              "objective3": "Share a prototype with a peer"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "At a wave-lashed quay, mentors form a crescent around Francisco; each offers a tool, but he fashions a new one from their fragments.",
+          "symbolic_moment": "He breaks a wax seal of imitation and stamps the banner with a sigil no one has seen before—the tide hitches.",
+          "emotional_landscape": "Taut urgency softening into playful daring; the grin that appears when risk turns into art.",
+          "boon_definition": "Pressure-forged novelty—originality that stands up in the storm.",
+          "transformation_promise": "His voice will open channels no map has drawn."
+        },
+    
+        "epic_novel_pages": "Page 136 - 150",
+        "epic_chapter_focus": "Pressure",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Creativity",
+        "specific_task_group_description": "Express your unique ideas and vision to stand out among your peers.",
+        "specific_task_group_tagline": "Let your originality shine",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Cyprus",
+        "hex_code": "#003333",
+        "red": 0,
+        "green": 51,
+        "blue": 51
+      },
       "personality_profile_211": {},
       "personality_profile_212": {},
       "personality_profile_213": {},
