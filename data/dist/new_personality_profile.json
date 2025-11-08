@@ -45499,7 +45499,214 @@
         "green": 222,
         "blue": 255
       },
-      "personality_profile_217": {},
+      "personality_profile_217": {
+        "canonical_id": "EA-217",
+        "unique_identifier": "STG 6.2.2.1",
+        "specific_task_group_title": "Controlled Procrastination",
+        "all_chapter": 217,
+        "novel_book": 6,
+        "chapter": "Chapter 17",
+        "chapter_title": "Old World Contrast (Resolution) — Controlled Procrastination",
+        "type": "Specific Task Group",
+        "display_name": "The Purposeful Pause",
+        "theme": "Delay becomes design when you give it rules—wait for signal, fill the gap with prep, and launch on time.",
+        "family": "Time Management / Cadence — Pace, Prioritization & Timing",
+
+        "summary": "Francisco learns to turn waiting into a weapon: he reframes delay as a deliberate interval for scouting, sequencing, and staging. By defining why to wait—and what must be ready when the window opens—he swaps guilt for leverage and lands moves in their right time.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Queen",
+
+        "traits": {
+          "strengths": [
+            "converts idle time into targeted preparation",
+            "sets clear launch criteria before pausing",
+            "times efforts to energy and external windows",
+            "uses short, bounded breaks to reset focus",
+            "keeps momentum through micro-tasks while waiting"
+          ],
+          "shadow": [
+            "relabeling avoidance as ‘strategy’",
+            "missing windows by over-optimizing timing",
+            "letting small breaks sprawl",
+            "analysis drift during the pause",
+            "outsourcing decisions to the clock instead of owning them"
+          ],
+          "growth_focus": [
+            "write explicit ‘why wait’ and ‘until when’ rules",
+            "pre-load a 10-minute prep list for every delay",
+            "use a hard re-entry alarm with a named next action",
+            "timebox reflection; decide with a DRI and deadline",
+            "track hit rate of ‘right-time’ launches vs. total starts"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "Old world contrast (resolution)",
+          "fiction_chapter_context": "Book 6, Chapter 17 — On the Road of Trials, Francisco turns hesitation into staging at the threshold of the Innermost Cave."
+        },
+
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—speed tempered by prudent timing, preparation, and shared situational awareness."
+        },
+
+        "color_alignment": {
+          "name": "Light Sky Blue",
+          "hsl": "200,100%,76%",
+          "rgb_hex": "#85D6FF",
+          "color_symbolism": "Clear air before the jump—light, alert, and perfectly timed."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.74,
+            "empathy": 0.60,
+            "openness": 0.66,
+            "orderliness": 0.81,
+            "conscientiousness": 0.86,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.57,
+            "imagination": 0.65
+          },
+          "match_weights": {
+            "conscientiousness": 0.38,
+            "orderliness": 0.37,
+            "agency": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2171",
+            "Q2172",
+            "Q2173",
+            "Q2174",
+            "Q2175",
+            "Q2176",
+            "Q2177",
+            "Q2178"
+          ],
+          "signals_map": {
+            "Q2171": { "dimension": "conscientiousness", "polarity": 1, "content": "Before pausing, I define what ‘ready to resume’ looks like." },
+            "Q2172": { "dimension": "orderliness", "polarity": 1, "content": "I keep an ‘incubation list’ of 10-minute prep tasks for waiting periods." },
+            "Q2173": { "dimension": "agency", "polarity": 1, "content": "I choose when to wait; the clock doesn’t choose for me." },
+            "Q2174": { "dimension": "stability", "polarity": 1, "content": "Breaks are timed and end with a named next move." },
+            "Q2175": { "dimension": "risk_tolerance", "polarity": -1, "content": "I keep waiting for perfect timing instead of launching good enough." },
+            "Q2176": { "dimension": "adaptability", "polarity": 1, "content": "If the window shifts, I re-sequence without losing momentum." },
+            "Q2177": { "dimension": "orderliness", "polarity": 1, "content": "I use unschedule blocks so rest and work both have borders." },
+            "Q2178": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I test whether waiting improves quality or just soothes anxiety." }
+          },
+          "daily_prompt": "What will you delay on purpose today—and what prep will earn that delay?",
+          "practices": [
+            "Unschedule Grid: calendar rest first; place deep work around it.",
+            "Launch Criteria Card: list signals that end the pause and start action.",
+            "Incubation Kit: 5–10 minute tasks ready for every wait window.",
+            "Two-Minute Ignition: if stalled, do a 120-second starter task now.",
+            "Abort/Commit Checkpoint: timer dings—either launch or rescope explicitly."
+          ],
+          "transformation_indicators": [
+            "Higher first-pass quality on timed launches",
+            "Fewer missed windows due to over-waiting",
+            "Consistent re-entry with named next actions",
+            "Reduced guilt during breaks; clearer recovery",
+            "Better alignment of effort with external timing signals"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Old world contrast (resolution)",
+          "preliminary_beat": "Approach to the Innermost Cave — Controlled Procrastination",
+          "save_the_cat_beat": "Old world contrast (resolution)",
+          "character_state": "Measured and selective; waiting is engineered, not accidental.",
+          "ordinary_world_baseline": "Delay equals avoidance; energy leaks through guilt and distraction.",
+          "push_turn": "Delay gains rules—bounded pauses convert into prep and precise launch windows."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Road of Trials",
+            "section_description": "Challenges and growth on the hero’s journey",
+            "connection_focus_area": "Strategic use of obstacles",
+            "connect_points": {
+              "point1": "Frame procrastination as a test",
+              "point2": "Identify moments for reflection",
+              "point3": "Turn waiting into preparation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reinterpret one delay as an opportunity",
+              "objective2": "List three preparatory tasks to do while waiting",
+              "objective3": "Schedule one ‘procrastination break’ intentionally"
+            }
+          },
+          "book2": {
+            "title": "The Now Habit",
+            "author": "Neil Fiore",
+            "section_of_focus": "The Work of Procrastination",
+            "section_description": "Techniques to overcome avoidance",
+            "connection_focus_area": "Structured procrastination",
+            "connect_points": {
+              "point1": "Use unschedule to plan tasks",
+              "point2": "Apply the ‘unschedule break’",
+              "point3": "Replace guilt with focus"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create an unschedule calendar",
+              "objective2": "Plan two intentional breaks",
+              "objective3": "Complete one high-priority task during a break"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Embrace Boredom",
+            "section_description": "Training your focus muscle",
+            "connection_focus_area": "Turning downtime into deep work",
+            "connect_points": {
+              "point1": "Schedule a distraction-free session",
+              "point2": "Set clear outcome goals",
+              "point3": "Track progress in a journal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one deep work goal",
+              "objective2": "Execute a 30-minute focus block",
+              "objective3": "Record your insights after the block"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the approach to the Innermost Cave, sluice-gates thrum with tidal logic. Francisco holds the team at ready—mapping currents, staging tools, and breathing with the gates’ rhythm until the window blooms.",
+          "symbolic_moment": "An hourglass laid on its side—time becomes a channel, not a drain.",
+          "emotional_landscape": "Calm alertness, poised energy, faint ache of restraint giving way to clean release.",
+          "controlled_procrastination_definition": "Delay with declared purpose, bounded by criteria and a launch time.",
+          "transformation_promise": "Right-time action outperforms constant action—precision multiplies force."
+        },
+
+        "epic_novel_pages": "Page 241 - 255",
+        "epic_chapter_focus": "Old world contrast (resolution)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Time Management",
+        "specific_task_group_description": "Learn to harness delay strategically to optimize your next move.",
+        "specific_task_group_tagline": "Delay with purpose",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Light Sky Blue",
+        "hex_code": "#85D6FF",
+        "red": 133,
+        "green": 214,
+        "blue": 255
+      },
       "personality_profile_218": {},
       "personality_profile_219": {},
       "personality_profile_220": {},
