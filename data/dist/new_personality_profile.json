@@ -44475,7 +44475,214 @@
         "green": 128,
         "blue": 128
       },
-      "personality_profile_212": {},
+      "personality_profile_212": {
+        "canonical_id": "EA-212",
+        "unique_identifier": "STG 6.1.4.3",
+        "specific_task_group_title": "Regard",
+        "all_chapter": 212,
+        "novel_book": 6,
+        "chapter": "Chapter 12",
+        "chapter_title": "Allies, Mentors, and Helpers — Regard",
+        "type": "Specific Task Group",
+        "display_name": "The Circle-Maker",
+        "theme": "Respect turns a crowd into a crew—mutual esteem unlocks speed, safety, and shared genius.",
+        "family": "Respect / Teaming — Trust, Safety & Credit",
+    
+        "summary": "Francisco learns that progress under pressure depends on how deeply people feel seen. He practices overt respect—crediting efforts, inviting critique, and protecting dignity—so collaboration becomes a force multiplier rather than a friction point.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Page",
+    
+        "traits": {
+          "strengths": [
+            "signals respect early and often",
+            "credits others’ wins publicly",
+            "listens for intent before judging impact",
+            "hosts psychologically safe dialogues",
+            "translates differences into combined advantages"
+          ],
+          "shadow": [
+            "over-accommodates to keep harmony",
+            "avoids hard feedback too long",
+            "equates niceness with alignment",
+            "lets louder voices dominate airtime",
+            "spends more time praising than deciding"
+          ],
+          "growth_focus": [
+            "pair respect with clear boundaries and standards",
+            "practice timely, specific constructive feedback",
+            "rotate airtime and enforce speaking limits",
+            "separate idea merit from relationship warmth",
+            "close loops: appreciation → decision → action"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 6, Chapter 12 — The crew coheres as regard rituals convert strangers into a circle of safety."
+        },
+    
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—empathy and harmony channeled into clear goals and decisive follow-through."
+        },
+    
+        "color_alignment": {
+          "name": "Blumine",
+          "hsl": "180,33%,30%",
+          "rgb_hex": "#336666",
+          "color_symbolism": "Deep teal for trust at depth—calm waters that hold every voice."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.78,
+            "empathy": 0.88,
+            "openness": 0.70,
+            "orderliness": 0.60,
+            "conscientiousness": 0.72,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.50,
+            "emotional_intensity": 0.56,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.58,
+            "imagination": 0.68
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "empathy": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2121",
+            "Q2122",
+            "Q2123",
+            "Q2124",
+            "Q2125",
+            "Q2126",
+            "Q2127",
+            "Q2128"
+          ],
+          "signals_map": {
+            "Q2121": { "dimension": "cooperativeness", "polarity": 1, "content": "I intentionally credit others’ work in front of stakeholders." },
+            "Q2122": { "dimension": "empathy", "polarity": 1, "content": "I listen for intent before reacting to impact." },
+            "Q2123": { "dimension": "stability", "polarity": 1, "content": "I keep discussions calm and respectful under stress." },
+            "Q2124": { "dimension": "conscientiousness", "polarity": 1, "content": "I close loops: appreciation, decision, and next step are explicit." },
+            "Q2125": { "dimension": "openness", "polarity": 1, "content": "I invite critique of my ideas without defensiveness." },
+            "Q2126": { "dimension": "orderliness", "polarity": 1, "content": "Meetings include norms that protect airtime for every voice." },
+            "Q2127": { "dimension": "agency", "polarity": 1, "content": "I combine respect with clear standards and boundaries." },
+            "Q2128": { "dimension": "cooperativeness", "polarity": 1, "content": "I translate conflicts into shared goals we can rally around." }
+          },
+          "daily_prompt": "Who will you honor today, and what concrete action will make them feel unmistakably respected?",
+          "practices": [
+            "Respect Ritual: open meetings with a 60-second gratitude round.",
+            "Credit-First Updates: name contributors before outcomes.",
+            "Two-Way Feedback: pair appreciation with one actionable suggestion.",
+            "Airtime Rotation: last-to-speak rule for leaders; track talk ratios.",
+            "Boundary + Safety Check: restate norms and consequences before hot topics."
+          ],
+          "transformation_indicators": [
+            "Psychological safety pulse trend (weekly)",
+            "Airtime balance across roles",
+            "Speed from discussion to decision",
+            "Peer-reported recognition frequency",
+            "Drop in rework due to misheard intent"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Regard",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Building the circle; respect converts difference into durable trust.",
+          "ordinary_world_baseline": "Polite coordination without true safety.",
+          "threshold_choice": "Name contributions, invite critique, and set norms before the hard work begins."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Tribes",
+            "author": "Seth Godin",
+            "section_of_focus": "Leading Your Tribe",
+            "section_description": "The power of respect in leadership",
+            "connection_focus_area": "Fostering trust",
+            "connect_points": {
+              "point1": "Identify your community",
+              "point2": "Explore how you show respect",
+              "point3": "Plan a respect-building action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your tribe’s values",
+              "objective2": "List three respect rituals",
+              "objective3": "Implement one ritual this week"
+            }
+          },
+          "book2": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Cultivating Trust",
+            "section_description": "Respect as the bedrock of courage",
+            "connection_focus_area": "Building vulnerability-based trust",
+            "connect_points": {
+              "point1": "Share a personal story",
+              "point2": "Invite feedback respectfully",
+              "point3": "Acknowledge contributions publicly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead one honest conversation",
+              "objective2": "Solicit feedback on respect",
+              "objective3": "Recognize one ally by name"
+            }
+          },
+          "book3": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Circle of Safety",
+            "section_description": "Creating respect-filled environments",
+            "connection_focus_area": "Ensuring psychological safety",
+            "connect_points": {
+              "point1": "Map your team’s trust levels",
+              "point2": "Address one concern respectfully",
+              "point3": "Celebrate a team success together"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Assess psychological safety",
+              "objective2": "Plan one safety-building ritual",
+              "objective3": "Facilitate a team check-in"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the tide-lit hall, each ally lays a token on the table; Francisco names their gifts before any plan is made.",
+          "symbolic_moment": "A braided cord is formed from many strands—pulled taut, it holds; released, it returns unbroken.",
+          "emotional_landscape": "Warm regard, steady confidence, courageous honesty.",
+          "boon_definition": "Mutual respect operationalized—norms, credit, and safety that let hard truths move fast.",
+          "transformation_promise": "A fleet that rows in rhythm outpaces any lone swimmer."
+        },
+    
+        "epic_novel_pages": "Page 166 - 180",
+        "epic_chapter_focus": "Allies, Mentors, and Helpers",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Respect",
+        "specific_task_group_description": "Cultivate mutual respect to strengthen collaboration.",
+        "specific_task_group_tagline": "Build mutual esteem",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Blumine",
+        "hex_code": "#336666",
+        "red": 51,
+        "green": 102,
+        "blue": 102
+      },
       "personality_profile_213": {},
       "personality_profile_214": {},
       "personality_profile_215": {},
