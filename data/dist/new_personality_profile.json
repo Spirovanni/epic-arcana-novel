@@ -44267,7 +44267,214 @@
         "green": 51,
         "blue": 51
       },
-      "personality_profile_211": {},
+      "personality_profile_211": {
+        "canonical_id": "EA-211",
+        "unique_identifier": "STG 6.1.4.2",
+        "specific_task_group_title": "Voracious",
+        "all_chapter": 211,
+        "novel_book": 6,
+        "chapter": "Chapter 11",
+        "chapter_title": "Pinch — Voracious",
+        "type": "Specific Task Group",
+        "display_name": "The Tide Scholar",
+        "theme": "When pressure pinches, hunger for truth must be harnessed into habits—curiosity that feeds, not distracts.",
+        "family": "Curiosity / Learning — Focus, Habits & Inquiry",
+    
+        "summary": "Pressed by the scale of the drought, Francisco becomes ravenous for knowledge—scouring archives, mentors, and signals across timelines. He systematizes his curiosity into daily questions, short experiments, and teach-backs so intake reliably becomes impact.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Six",
+    
+        "traits": {
+          "strengths": [
+            "asks incisive, generative questions",
+            "sustains long focus during study blocks",
+            "builds cross-disciplinary mental links",
+            "turns research into quick experiments",
+            "shares learnings clearly and often"
+          ],
+          "shadow": [
+            "consumes info without application",
+            "overcollects sources, underdecides",
+            "confuses novelty with relevance",
+            "avoids action until ‘fully prepared’",
+            "burns out by skipping recovery"
+          ],
+          "growth_focus": [
+            "convert each question into a 20-minute test",
+            "limit sources; decide with a time box",
+            "track one metric per learning sprint",
+            "schedule recovery after deep blocks",
+            "teach back your learning in five sentences"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Pinch",
+          "fiction_chapter_context": "Book 6, Chapter 11 — With allies and mentors, the pinch for time turns curiosity into disciplined pursuit."
+        },
+    
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 7—depth steadied by playful exploration and sharing."
+        },
+    
+        "color_alignment": {
+          "name": "Teal",
+          "hsl": "180,100%,25%",
+          "rgb_hex": "#008080",
+          "color_symbolism": "Calm depth and balanced inquiry—cool head, warm questions."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.65,
+            "empathy": 0.62,
+            "openness": 0.89,
+            "orderliness": 0.58,
+            "conscientiousness": 0.66,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.81,
+            "cooperativeness": 0.67,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.78,
+            "imagination": 0.84
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "abstract_reasoning": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2111",
+            "Q2112",
+            "Q2113",
+            "Q2114",
+            "Q2115",
+            "Q2116",
+            "Q2117",
+            "Q2118"
+          ],
+          "signals_map": {
+            "Q2111": { "dimension": "openness", "polarity": 1, "content": "I keep a running list of questions I can’t stop thinking about." },
+            "Q2112": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn research into small, scheduled study blocks." },
+            "Q2113": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect ideas across fields to form better questions." },
+            "Q2114": { "dimension": "adaptability", "polarity": 1, "content": "I pivot my inquiry when data disproves my hunch." },
+            "Q2115": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite mentors or peers to critique my questions." },
+            "Q2116": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a simple capture system for notes and sources." },
+            "Q2117": { "dimension": "risk_tolerance", "polarity": 1, "content": "I’m willing to experiment before I feel fully ready." },
+            "Q2118": { "dimension": "imagination", "polarity": 1, "content": "I imagine multiple answers and design a quick test to compare them." }
+          },
+          "daily_prompt": "Which question deserves 30 focused minutes today—and what evidence will decide your next step?",
+          "practices": [
+            "Quest Log: capture 3 questions daily; star one to test.",
+            "Habit-Stacked Inquiry: ask your starred question right after a fixed routine.",
+            "Flow Block (30m): single task, timer on, distractions off.",
+            "Teach-Back 5: summarize what you learned in five sentences.",
+            "Question→Experiment: design a 20-minute test and log the result."
+          ],
+          "transformation_indicators": [
+            "Weekly count of starred questions converted to experiments",
+            "Focus blocks completed vs. scheduled",
+            "Cycle time from question to applied change",
+            "Clarity scores from peer teach-backs",
+            "Reduction in unused notes vs. actionable summaries"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Pinch",
+          "preliminary_beat": "Theme Stated — Voracious",
+          "save_the_cat_beat": "Pinch",
+          "character_state": "Pressed for time; curiosity becomes disciplined and directed.",
+          "ordinary_world_baseline": "Passive intake and scattered interest.",
+          "threshold_choice": "Select one burning question and ship a testable insight today."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "The Elements of Flow",
+            "section_description": "How curiosity propels deep engagement",
+            "connection_focus_area": "Sustaining focus",
+            "connect_points": {
+              "point1": "Identify an activity that fully absorbs you",
+              "point2": "Note what sparks your curiosity",
+              "point3": "Replicate those conditions in learning"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Choose a topic for deep study",
+              "objective2": "Set a 30-minute focus session",
+              "objective3": "Reflect on obstacles to immersion"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Designing cues for new learning habits",
+            "connection_focus_area": "Habit-stacking curiosity",
+            "connect_points": {
+              "point1": "Choose a daily question prompt",
+              "point2": "Attach it to an existing routine",
+              "point3": "Track your questions and answers"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your curiosity habit",
+              "objective2": "Link it to a trigger",
+              "objective3": "Review your quest log weekly"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Curiosity vs. Comfort",
+            "section_description": "Embracing questions as growth",
+            "connection_focus_area": "Shifting from fixed to growth",
+            "connect_points": {
+              "point1": "Reframe a challenge as a question",
+              "point2": "Seek feedback on your inquiry",
+              "point3": "Adjust your approach with new data"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three areas of curiosity",
+              "objective2": "Solicit feedback on one inquiry",
+              "objective3": "Revise your question accordingly"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within a tidal archive where shelves breathe like bellows, Francisco and his mentors triage questions as waves thrum the stone.",
+          "symbolic_moment": "He carves a single inquiry into a tide-stone and drops it into the basin; ripples reveal three possible currents.",
+          "emotional_landscape": "Hungry focus, bright wonder, disciplined patience.",
+          "boon_definition": "Systematized curiosity—intake that reliably becomes insight and action under pressure.",
+          "transformation_promise": "He will build wells of knowledge, not just buckets."
+        },
+    
+        "epic_novel_pages": "Page 151 - 165",
+        "epic_chapter_focus": "Pinch",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Curiosity",
+        "specific_task_group_description": "Devour new knowledge and ask questions to fuel your growth.",
+        "specific_task_group_tagline": "Feed your curiosity",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Teal",
+        "hex_code": "#008080",
+        "red": 0,
+        "green": 128,
+        "blue": 128
+      },
       "personality_profile_212": {},
       "personality_profile_213": {},
       "personality_profile_214": {},
