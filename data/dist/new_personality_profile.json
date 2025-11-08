@@ -48328,7 +48328,208 @@
         "green": 204,
         "blue": 204
       },
-      "personality_profile_231": {},
+      "personality_profile_231": {
+        "canonical_id": "EA-231",
+        "unique_identifier": "STG 6.2.6.2",
+        "specific_task_group_title": "Reevaluation",
+        "all_chapter": 231,
+        "novel_book": 6,
+        "chapter": "Chapter 31",
+        "chapter_title": "Power Within — Reevaluation",
+        "type": "Specific Task Group",
+        "display_name": "The Still Water Appraiser",
+        "theme": "Silence sharpens power; pause, review, and make the one change that moves everything.",
+        "family": "Reflection / Metacognition — Clarity, Calibration & Course-Correction",
+        
+        "summary": "Francisco turns inward and takes inventory. Instead of reacting, he reviews patterns, extracts signal from noise, and makes precise adjustments. Reflection stops being hesitation and becomes a disciplined edge: a calm that converts experience into advantage.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Four",
+        
+        "traits": {
+          "strengths": [
+            "creates space to think before acting",
+            "extracts lessons quickly from outcomes",
+            "sees root causes beneath surface events",
+            "updates plans with surgical tweaks",
+            "models composure that steadies the team"
+          ],
+          "shadow": [
+            "analysis paralysis under time pressure",
+            "overweighting past data vs. emerging signals",
+            "second-guessing decisive teammates",
+            "using review as avoidance",
+            "over-editing plans that were already good"
+          ],
+          "growth_focus": [
+            "time-box reflection to protect momentum",
+            "pair each insight with one action",
+            "validate lessons with outside feedback",
+            "track decisions to learn from variance",
+            "treat imperfection as a data point, not a verdict"
+          ]
+        },
+        
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Power within (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 31 — The Ultimate Boon begins within; stillness reveals the seam of strength beneath fear."
+        },
+        
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity turning into clean, decisive action."
+        },
+        
+        "color_alignment": {
+          "name": "Medium Turquoise",
+          "hsl": "180,60%,50%",
+          "rgb_hex": "#33CCCC",
+          "color_symbolism": "Calm, clear shallows—vision returning as the waters settle."
+        },
+        
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.80,
+            "empathy": 0.72,
+            "openness": 0.82,
+            "orderliness": 0.74,
+            "conscientiousness": 0.77,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.58,
+            "imagination": 0.81
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "conscientiousness": 0.30,
+            "adaptability": 0.35
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2311","Q2312","Q2313","Q2314",
+            "Q2315","Q2316","Q2317","Q2318"
+          ],
+          "signals_map": {
+            "Q2311": { "dimension": "conscientiousness", "polarity": 1, "content": "I review outcomes before deciding what to change." },
+            "Q2312": { "dimension": "openness", "polarity": 1, "content": "New information can overturn my prior plan without ego friction." },
+            "Q2313": { "dimension": "adaptability", "polarity": 1, "content": "I pivot in small, controlled steps to test better options." },
+            "Q2314": { "dimension": "stability", "polarity": 1, "content": "I stay calm long enough to see the real problem, not just its symptoms." },
+            "Q2315": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I connect patterns across separate events to find root causes." },
+            "Q2316": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay action until I’m certain, even when a good-enough move exists." },
+            "Q2317": { "dimension": "orderliness", "polarity": 1, "content": "I document decisions so we can learn from hits and misses." },
+            "Q2318": { "dimension": "agency", "polarity": 1, "content": "Every reflection ends with one concrete adjustment I will make now." }
+          },
+          "daily_prompt": "What will you reassess today—and what single tweak will you commit to?",
+          "practices": [
+            "24-Hour Lookback: win, miss, tweak (3 bullets).",
+            "3R Loop: Record → Reflect → Re-route in 15 minutes.",
+            "Decision Journal: hypothesis, action, result, lesson.",
+            "Time-boxed Review: 10 minutes to think, 1 minute to pick the next move.",
+            "External Mirror: ask one ally to sanity-check your tweak."
+          ],
+          "transformation_indicators": [
+            "Fewer reactivity spikes; more measured responses",
+            "Higher hit-rate on second attempts after tweaks",
+            "Clear audit trail of decisions and lessons",
+            "Shorter time from insight to adjustment",
+            "Team adopts shared reflection cadence"
+          ]
+        },
+        
+        "hero_journey_position": {
+          "stage": "Dark Night of the Soul",
+          "preliminary_beat": "Power within — Reevaluation",
+          "save_the_cat_beat": "Power within (set-up)",
+          "character_state": "Quiet, observant; energy turned inward and conserved.",
+          "ordinary_world_baseline": "React-first, think-later; scattered corrections.",
+          "power_within_turn": "Reflection consolidates strength; a clear inner compass emerges."
+        },
+        
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Road Less Traveled",
+            "author": "M. Scott Peck",
+            "section_of_focus": "Discipline and Grace",
+            "section_description": "The role of self-reflection in personal growth",
+            "connection_focus_area": "Evaluating past behaviors",
+            "connect_points": {
+              "point1": "Journal your recent decisions",
+              "point2": "Identify lessons learned",
+              "point3": "Plan strategic adjustments"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a brief reflection",
+              "objective2": "Extract three key insights",
+              "objective3": "Draft an updated action plan"
+            }
+          },
+          "book2": {
+            "title": "Emotional Agility",
+            "author": "Susan David",
+            "section_of_focus": "Living with Your Whole Self",
+            "section_description": "Using emotions constructively",
+            "connection_focus_area": "Adapting inner narrative",
+            "connect_points": {
+              "point1": "Notice an arising emotion",
+              "point2": "Acknowledge without judgment",
+              "point3": "Choose a constructive response"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Label one strong emotion",
+              "objective2": "Practice an acceptance technique",
+              "objective3": "Select a positive action"
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 2 Thinking",
+            "section_description": "Deliberate, reflective reasoning",
+            "connection_focus_area": "Cultivating slow review",
+            "connect_points": {
+              "point1": "Identify an automatic reaction",
+              "point2": "Pause to analyze",
+              "point3": "Decide intentionally"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Note one decision bias",
+              "objective2": "Apply slow thinking once",
+              "objective3": "Document your reasoning"
+            }
+          }
+        },
+        
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the tide-vault beneath the citadel, turquoise light ripples across stone; Francisco lays yesterday’s maps beside today’s currents and listens.",
+          "symbolic_moment": "An unattended cup—ignored in motion—fills from a quiet spring; what was missed by haste appears in stillness.",
+          "emotional_landscape": "Composed focus, lucid empathy, a current of quiet resolve.",
+          "reevaluation_definition": "Pause that turns noise into signal and motion into meaning.",
+          "transformation_promise": "Small, precise corrections compound into decisive destiny shifts."
+        },
+        
+        "epic_novel_pages": "Page 451 - 465",
+        "epic_chapter_focus": "Power within (set-up)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Reflection",
+        "specific_task_group_description": "Reassess past actions and adjust strategy to harness inner strength.",
+        "specific_task_group_tagline": "Pause, review, renew",
+        
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Medium Turquoise",
+        "hex_code": "#33CCCC",
+        "red": 51,
+        "green": 204,
+        "blue": 204
+      },
       "personality_profile_232": {},
       "personality_profile_233": {},
       "personality_profile_234": {},
