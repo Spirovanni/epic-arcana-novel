@@ -46723,7 +46723,208 @@
         "green": 83,
         "blue": 104
       },
-      "personality_profile_223": {},
+      "personality_profile_223": {
+        "canonical_id": "EA-223",
+        "unique_identifier": "MAT 6.2",
+        "specific_task_group_title": "Transformation – On Death Ground",
+        "all_chapter": 223,
+        "novel_book": 6,
+        "chapter": "Chapter 23",
+        "chapter_title": "The Supreme Ordeal — Transformation – On Death Ground",
+        "type": "Major Activity Theme",
+        "display_name": "The Death-Ground Chrysalis",
+        "theme": "When retreat is impossible, identity molts; crisis becomes the cocoon that remakes you.",
+        "family": "Metamorphosis / Rebirth — Collapse, Surrender & Emergence",
+
+        "summary": "Forced onto death ground, Francisco can’t revert to old tactics. He surrenders the former self, allows total reorganization, and re-emerges aligned to a larger purpose. The ordeal stops being about surviving the moment and becomes about becoming the one who can transform the world beyond it.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Ace",
+
+        "traits": {
+          "strengths": [
+            "burns the boats—full commitment under constraint",
+            "transmutes fear into focused action",
+            "reconstructs identity around mission",
+            "draws deep meaning from hardship",
+            "models calm in existential stakes"
+          ],
+          "shadow": [
+            "romanticizing crisis as a lifestyle",
+            "scorched-earth decisions that ignore nuance",
+            "identity fusion with role or outcome",
+            "impatience with incremental healing",
+            "discounting help when self-reliance spikes"
+          ],
+          "growth_focus": [
+            "practice reversible experiments before irreversible moves",
+            "pair surrender with specific support structures",
+            "separate ‘who I am’ from ‘what I do’",
+            "codify lessons so change sustains post-crisis",
+            "build post-ordeal recovery and reintegration rituals"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 6, Chapter 23 — In meeting the Goddess, Francisco’s former self must die for the boon to live."
+        },
+
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—raw will softened into courageous service; power remade as care."
+        },
+
+        "color_alignment": {
+          "name": "Seagull",
+          "hsl": "200,51%,63%",
+          "rgb_hex": "#70B0D0",
+          "color_symbolism": "Cold, lucid blue of deep water—clarity born in the trough of the wave."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.86,
+            "stability": 0.64,
+            "empathy": 0.74,
+            "openness": 0.82,
+            "orderliness": 0.61,
+            "conscientiousness": 0.79,
+            "adaptability": 0.88,
+            "abstract_reasoning": 0.77,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.81,
+            "emotional_intensity": 0.67,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.76,
+            "imagination": 0.84
+          },
+          "match_weights": {
+            "adaptability": 0.35,
+            "agency": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2231","Q2232","Q2233","Q2234",
+            "Q2235","Q2236","Q2237","Q2238"
+          ],
+          "signals_map": {
+            "Q2231": { "dimension": "agency", "polarity": 1, "content": "When there’s no safe option, I commit fully to the necessary one." },
+            "Q2232": { "dimension": "adaptability", "polarity": 1, "content": "I can shed a role or identity when the mission requires it." },
+            "Q2233": { "dimension": "openness", "polarity": 1, "content": "I treat collapse as information about what must be rebuilt." },
+            "Q2234": { "dimension": "conscientiousness", "polarity": 1, "content": "I capture lessons during crisis so they survive success." },
+            "Q2235": { "dimension": "stability", "polarity": 1, "content": "Existential pressure sharpens—rather than scatters—my focus." },
+            "Q2236": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can make irreversible moves when they unlock new capability." },
+            "Q2237": { "dimension": "empathy", "polarity": 1, "content": "Even in crisis, I consider how change lands on others." },
+            "Q2238": { "dimension": "orderliness", "polarity": -1, "content": "I cling to the old plan even when the terrain has changed." }
+          },
+          "daily_prompt": "What part of you no longer serves the mission—and how will you lay it down today?",
+          "practices": [
+            "Reversibility Test: prefer decisions you can unwind—reserve ‘burn the boats’ for clear thresholds.",
+            "Two-List Molt: write ‘shed’ and ‘keep’; move one habit today.",
+            "Witness Circle: share the surrender with two trusted allies; assign a spotter role.",
+            "Boons Ledger: log each ordeal insight and where it will be applied.",
+            "Re-entry Protocol: schedule decompression, sleep, and celebration after the push."
+          ],
+          "transformation_indicators": [
+            "Less time stuck between options when stakes rise",
+            "Faster identity realignment to updated mission",
+            "Documented lessons reused across teams",
+            "Visible post-ordeal recovery (no crash-and-burn)",
+            "Stakeholders report steadier confidence during crises"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Reward — threshold insight earned through surrender",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "No retreat; the former self is inadequate by design.",
+          "ordinary_world_baseline": "Security through contingency; identity anchored to past competence.",
+          "ordeal_turn": "Shed to scale—by releasing the old form, capacity matches the calling."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Reward",
+            "section_description": "The hero gains the ultimate boon after surviving the ordeal",
+            "connection_focus_area": "Profound change after the darkest trial",
+            "connect_points": {
+              "point1": "Identify your pivotal low point",
+              "point2": "Map the shift in perspective",
+              "point3": "Celebrate the internal gift gained"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your personal ordeal",
+              "objective2": "Explain the insight received",
+              "objective3": "Articulate how you will integrate it"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor Frankl",
+            "section_of_focus": "Experiences in a Concentration Camp",
+            "section_description": "Finding purpose amid extreme suffering",
+            "connection_focus_area": "Creating meaning through crisis",
+            "connect_points": {
+              "point1": "Recall a past hardship",
+              "point2": "Identify how you found meaning",
+              "point3": "Apply that framework to a current challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal a transformative experience",
+              "objective2": "Extract a guiding principle",
+              "objective3": "Use it to reframe a problem"
+            }
+          },
+          "book3": {
+            "title": "The Alchemist",
+            "author": "Paulo Coelho",
+            "section_of_focus": "The Soul of the World",
+            "section_description": "The protagonist’s ultimate realization of personal legend",
+            "connection_focus_area": "Alchemy of self-transformation",
+            "connect_points": {
+              "point1": "Define your personal legend",
+              "point2": "List three omens you’ve followed",
+              "point3": "Plan a next step toward your dream"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State your highest aspiration",
+              "objective2": "Recognize guidance in everyday signs",
+              "objective3": "Take one concrete step toward it"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wave-blasted promontory, the Goddess asks a price: the name by which Francisco has led until now. He lowers it into the sea, and the tide does not return it.",
+          "symbolic_moment": "A shattered astrolabe becomes a compass when its fragments are aligned to the stars—navigation reborn from wreckage.",
+          "emotional_landscape": "Grave quiet, lucid terror, then an enlarging stillness that feels like freedom.",
+          "death_ground_definition": "A condition engineered (or accepted) where only transformation permits survival.",
+          "rebirth_signal": "New constraints feel like capabilities—what was heavy now functions as structure."
+        },
+
+        "epic_novel_pages": "Page 331 - 345",
+        "epic_chapter_focus": "The Supreme Ordeal",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene IX: The Meeting with a Goddess",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Metamorphosis",
+        "specific_task_group_description": "Embrace total collapse of the old self to awaken a new level of being.",
+        "specific_task_group_tagline": "Rebirth through crisis",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Seagull",
+        "hex_code": "#70B0D0",
+        "red": 112,
+        "green": 176,
+        "blue": 208
+      },
       "personality_profile_224": {},
       "personality_profile_225": {},
       "personality_profile_226": {},
