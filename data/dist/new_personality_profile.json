@@ -45291,7 +45291,214 @@
         "green": 229,
         "blue": 255
       },
-      "personality_profile_216": {},
+      "personality_profile_216": {
+        "canonical_id": "EA-216",
+        "unique_identifier": "STG 6.2.1.3",
+        "specific_task_group_title": "Accord",
+        "all_chapter": 216,
+        "novel_book": 6,
+        "chapter": "Chapter 16",
+        "chapter_title": "Fun and Games (Event/Conflict) — Accord",
+        "type": "Specific Task Group",
+        "display_name": "The Accord Weaver",
+        "theme": "Harmony isn’t the absence of friction—it’s shared rhythm under pressure that turns many hands into one instrument.",
+        "family": "Collaboration / Alliance — Trust, Timing & Shared Rhythm",
+
+        "summary": "In lighter-but-live trials with the Guardians and Gatekeepers, Francisco learns that progress depends on synchronized effort. He forges unity through shared challenges, builds trust by making information and intent visible, and discovers that patience with process yields faster outcomes than force. Accord becomes the multiplier of power.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Four",
+
+        "traits": {
+          "strengths": [
+            "synchronizes roles and timing quickly",
+            "circulates context so teams act in parallel",
+            "turns friction into a learning cadence",
+            "invites complementary strengths into the center",
+            "keeps morale playful without losing focus"
+          ],
+          "shadow": [
+            "papering over real conflict to keep the vibe",
+            "consensus-seeking that slows decisive moves",
+            "over-reliance on meetings instead of clarity",
+            "groupthink that mutes dissenting signal",
+            "confusing friendliness with functional trust"
+          ],
+          "growth_focus": [
+            "protect structured dissent in every huddle",
+            "codify handoffs and ‘done’ definitions",
+            "replace status talk with visible metrics",
+            "timebox debate; decide with a clear owner",
+            "practice cross-training to remove single points of failure"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "Fun and games (event/conflict)",
+          "fiction_chapter_context": "Book 6, Chapter 16 — Guardians and Gatekeepers stage live exercises where unity under motion decides success."
+        },
+
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm cohesion translated into coordinated action and visible results."
+        },
+
+        "color_alignment": {
+          "name": "Columbia Blue",
+          "hsl": "197,100%,82%",
+          "rgb_hex": "#9DDEFF",
+          "color_symbolism": "Clear-sky banner over a forming alliance—light, open, and ready to coordinate."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.65,
+            "stability": 0.78,
+            "empathy": 0.76,
+            "openness": 0.69,
+            "orderliness": 0.66,
+            "conscientiousness": 0.72,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.65,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.60,
+            "imagination": 0.68
+          },
+          "match_weights": {
+            "cooperativeness": 0.38,
+            "empathy": 0.32,
+            "adaptability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2161",
+            "Q2162",
+            "Q2163",
+            "Q2164",
+            "Q2165",
+            "Q2166",
+            "Q2167",
+            "Q2168"
+          ],
+          "signals_map": {
+            "Q2161": { "dimension": "cooperativeness", "polarity": 1, "content": "I share context early so others can move without waiting on me." },
+            "Q2162": { "dimension": "orderliness", "polarity": 1, "content": "Our handoffs have clear owners, triggers, and ‘done’ states." },
+            "Q2163": { "dimension": "empathy", "polarity": 1, "content": "I surface and honor differences instead of smoothing them away." },
+            "Q2164": { "dimension": "adaptability", "polarity": 1, "content": "When conditions shift, we re-sync roles and cadence fast." },
+            "Q2165": { "dimension": "stability", "polarity": 1, "content": "I keep tone steady so teams can take useful risks." },
+            "Q2166": { "dimension": "social_dominance", "polarity": -1, "content": "I dominate airtime to keep things on track. (reverse-scored)" },
+            "Q2167": { "dimension": "conscientiousness", "polarity": 1, "content": "I replace status talk with simple, visible metrics." },
+            "Q2168": { "dimension": "agency", "polarity": 1, "content": "If consensus stalls, I clarify who decides and by when." }
+          },
+          "daily_prompt": "What rhythm will you set today so others can move with you—what signal will make it visible?",
+          "practices": [
+            "Three-Min Stand-Up: intent, obstacle, one concrete move.",
+            "Handoff Contract: owner, trigger, definition of done, next owner.",
+            "Info Radiator: post one live metric the team actually uses.",
+            "Dissent Ticket: 60-second ‘pushback’ window before commit.",
+            "3-2-1 After-Action: 3 keeps, 2 changes, 1 pledge by each member."
+          ],
+          "transformation_indicators": [
+            "Shorter handoff delays and fewer rework loops",
+            "Higher cross-help frequency across roles",
+            "More evenly distributed speaking time in huddles",
+            "Decisions timeboxed with named DRIs",
+            "Conflicts raised earlier and resolved faster"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Fun and games (event/conflict)",
+          "preliminary_beat": "Fun and Games — Accord",
+          "save_the_cat_beat": "Fun and games (event/conflict)",
+          "character_state": "Alert, collaborative, testing tempos and trust.",
+          "ordinary_world_baseline": "Work as parallel solos; progress gated by the loudest voice.",
+          "push_turn": "Work becomes ensemble—clear cues, clean handoffs, visible rhythm."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Fun and Games",
+            "section_description": "Allies unite in the hero’s trials",
+            "connection_focus_area": "Shared experience",
+            "connect_points": {
+              "point1": "Identify a past group success",
+              "point2": "Analyze roles played",
+              "point3": "Plan a collaborative task"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one past victory",
+              "objective2": "Define each role’s contribution",
+              "objective3": "Execute a mini-team exercise"
+            }
+          },
+          "book2": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "Shared Consciousness",
+            "section_description": "Building networked collaboration",
+            "connection_focus_area": "Adaptive teamwork",
+            "connect_points": {
+              "point1": "Map your team’s network",
+              "point2": "Share real-time information",
+              "point3": "Coordinate a quick decision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draw your team map",
+              "objective2": "Hold a 5-minute info share",
+              "objective3": "Debrief the outcome"
+            }
+          },
+          "book3": {
+            "title": "Collaborative Intelligence",
+            "author": "Diana Whitney",
+            "section_of_focus": "Synergistic Action",
+            "section_description": "Harnessing collective wisdom",
+            "connection_focus_area": "Group problem-solving",
+            "connect_points": {
+              "point1": "Select a shared problem",
+              "point2": "Brainstorm as a group",
+              "point3": "Prototype a solution"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define the problem clearly",
+              "objective2": "Generate three ideas together",
+              "objective3": "Build a quick prototype"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-cut platform above the cataract, Guardians throw shifting tasks at Francisco’s crew; he sets a cadence—call, echo, act—until the team moves like one organism.",
+          "symbolic_moment": "A knot woven from four different cords—role colors—holds the load when none alone could bear it.",
+          "emotional_landscape": "Playful strain, rising trust, quick laughter between concentrated moves.",
+          "accord_definition": "Cooperation under pressure—shared rhythm that multiplies capability.",
+          "transformation_promise": "A circle that syncs can lift what no single arm can."
+        },
+
+        "epic_novel_pages": "Page 226 - 240",
+        "epic_chapter_focus": "Fun and games (event/conflict)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Collaboration",
+        "specific_task_group_description": "Forge harmony with your allies through shared challenges.",
+        "specific_task_group_tagline": "Build unity under pressure",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Columbia Blue",
+        "hex_code": "#9DDEFF",
+        "red": 157,
+        "green": 222,
+        "blue": 255
+      },
       "personality_profile_217": {},
       "personality_profile_218": {},
       "personality_profile_219": {},
