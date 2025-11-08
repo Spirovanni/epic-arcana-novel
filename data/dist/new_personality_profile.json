@@ -46521,7 +46521,208 @@
         "green": 104,
         "blue": 130
       },
-      "personality_profile_222": {},
+      "personality_profile_222": {
+        "canonical_id": "EA-222",
+        "unique_identifier": "STG 6.2.3.3",
+        "specific_task_group_title": "Ego Abandonment",
+        "all_chapter": 222,
+        "novel_book": 6,
+        "chapter": "Chapter 22",
+        "chapter_title": "Reaction (set-up) — Ego Abandonment",
+        "type": "Specific Task Group",
+        "display_name": "The Empty Cup",
+        "theme": "When you let go of being the hero, the work becomes heroic.",
+        "family": "Humility / Surrender — Perspective, Teachability & Balance",
+
+        "summary": "In the calm after conquest, Francisco loosens his grip on identity and lets the lesson lead. Titles, credit, and certainty fall away; precision, listening, and service expand. By emptying himself, he carries more—discipline directs power toward the whole.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Eight",
+
+        "traits": {
+          "strengths": [
+            "defers spotlight to elevate outcomes",
+            "listens past praise to hear signal",
+            "invites critique and integrates quickly",
+            "shares authority and standards openly",
+            "keeps process sacred, ego optional"
+          ],
+          "shadow": [
+            "false modesty masking control",
+            "self-erasure that confuses the team",
+            "hesitation to claim mistakes plainly",
+            "over-reliance on consensus when decisiveness is needed",
+            "aversion to healthy recognition and boundaries"
+          ],
+          "growth_focus": [
+            "practice clear ownership without attachment",
+            "separate role value from self-worth",
+            "schedule feedback rituals with action follow-up",
+            "use ‘facts → feelings → forward’ in hard talks",
+            "accept earned credit while redirecting benefits"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Reaction (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 22 — After the Reward, humility reframes power before the return escalates."
+        },
+
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4 with healthy boundaries—service without self-loss; humility with honest self-knowledge."
+        },
+
+        "color_alignment": {
+          "name": "Chathams Blue",
+          "hsl": "200,42%,29%",
+          "rgb_hex": "#2A5368",
+          "color_symbolism": "Deep sea composure—ego sinks, clarity floats."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.78,
+            "empathy": 0.88,
+            "openness": 0.72,
+            "orderliness": 0.63,
+            "conscientiousness": 0.76,
+            "adaptability": 0.73,
+            "abstract_reasoning": 0.65,
+            "cooperativeness": 0.90,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.42,
+            "novelty_seeking": 0.55,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "cooperativeness": 0.35,
+            "empathy": 0.35,
+            "stability": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2221","Q2222","Q2223","Q2224",
+            "Q2225","Q2226","Q2227","Q2228"
+          ],
+          "signals_map": {
+            "Q2221": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite dissent and make it safe to disagree with me." },
+            "Q2222": { "dimension": "empathy", "polarity": 1, "content": "I can name how my decisions land on others without becoming defensive." },
+            "Q2223": { "dimension": "stability", "polarity": 1, "content": "Praise or criticism doesn’t change my process discipline." },
+            "Q2224": { "dimension": "social_dominance", "polarity": -1, "content": "I do not need the final word to feel effective." },
+            "Q2225": { "dimension": "conscientiousness", "polarity": 1, "content": "I document decisions so the team depends on the system, not on me." },
+            "Q2226": { "dimension": "agency", "polarity": 1, "content": "I take responsibility quickly and repair in public when appropriate." },
+            "Q2227": { "dimension": "openness", "polarity": 1, "content": "I change course when better evidence appears, regardless of who found it." },
+            "Q2228": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid risks taken only to protect my image." }
+          },
+          "daily_prompt": "What will you set down today—title, credit, certainty—so the mission can move easier?",
+          "practices": [
+            "Ego Audit: list motive, method, measure before key moves.",
+            "Credit Flip: name three contributors before outcomes.",
+            "Two-Chair Review: argue against your own plan for 5 minutes.",
+            "Silent Window: 10 minutes of listening-only in debriefs.",
+            "Repair Script: ‘Impact I caused → apology → fix → follow-up date.’"
+          ],
+          "transformation_indicators": [
+            "Higher team talk time vs. leader talk time in meetings",
+            "Faster conflict repair cycles with explicit ownership",
+            "Decisions traced to shared evidence, not authority",
+            "Growth in peer-led initiatives and succession depth",
+            "Stable process adherence despite praise/critique swings"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Reward",
+          "preliminary_beat": "Reaction (set-up) — Ego Abandonment",
+          "save_the_cat_beat": "Reaction (set-up)",
+          "character_state": "Power steadied by restraint; identity lighter than responsibility.",
+          "ordinary_world_baseline": "Recognition-seeking, defensiveness, authority as identity.",
+          "reaction_turn": "Empty to aim: set self aside so the boon scales cleanly."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Supreme Ordeal",
+            "section_description": "The hero must surrender ego to be reborn",
+            "connection_focus_area": "Transformation through letting go",
+            "connect_points": {
+              "point1": "Acknowledge your limitations",
+              "point2": "Embrace vulnerability",
+              "point3": "Invite new perspectives"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three personal limitations",
+              "objective2": "Share one with a peer",
+              "objective3": "Practice openness in a conversation"
+            }
+          },
+          "book2": {
+            "title": "Ego Is the Enemy",
+            "author": "Ryan Holiday",
+            "section_of_focus": "The Battle of Ego",
+            "section_description": "Strategies to overcome self-centeredness",
+            "connection_focus_area": "Cultivating humility",
+            "connect_points": {
+              "point1": "Identify an ego-driven habit",
+              "point2": "Design a humility exercise",
+              "point3": "Reflect on the result"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Pinpoint one ego habit",
+              "objective2": "Perform a humility exercise daily",
+              "objective3": "Journal the changes observed"
+            }
+          },
+          "book3": {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "section_of_focus": "On Humility",
+            "section_description": "Stoic reflections on selflessness",
+            "connection_focus_area": "Mindful self-examination",
+            "connect_points": {
+              "point1": "Record one Stoic meditation",
+              "point2": "Apply it to a daily challenge",
+              "point3": "Note your emotional shift"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Memorize one quote",
+              "objective2": "Use it when ego arises",
+              "objective3": "Report on its effect"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the still bay, Francisco removes his insignia and sets it on the pier; the tide takes the shine, leaves the work.",
+          "symbolic_moment": "A mirror-smooth pool refuses his reflection until he kneels—only the team appears behind him, clear and whole.",
+          "emotional_landscape": "Unburdened calm, alert compassion, disciplined quiet.",
+          "ego_abandonment_definition": "Using less self to move more world.",
+          "transformation_promise": "Power that bows becomes power that builds."
+        },
+
+        "epic_novel_pages": "Page 316 - 330",
+        "epic_chapter_focus": "Reaction (set-up)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Humility",
+        "specific_task_group_description": "Let go of pride to fully integrate your lessons and blessings.",
+        "specific_task_group_tagline": "Release to receive",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Chathams Blue",
+        "hex_code": "#2A5368",
+        "red": 42,
+        "green": 83,
+        "blue": 104
+      },
       "personality_profile_223": {},
       "personality_profile_224": {},
       "personality_profile_225": {},
