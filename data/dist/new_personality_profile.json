@@ -49878,7 +49878,197 @@
         "green": 221,
         "blue": 200
       },
-      "personality_profile_239": {},
+      "personality_profile_239": {
+        "canonical_id": "EA-239",
+        "unique_identifier": "STG 6.2.9.1",
+        "specific_task_group_title": "Learning",
+        "all_chapter": 239,
+        "novel_book": 6,
+        "chapter": "Chapter 39",
+        "chapter_title": "Resolution — Learning",
+        "type": "Specific Task Group",
+        "display_name": "The Bridge Scholar",
+        "theme": "Learning is the elixir returned home—codify the hard-won insight, integrate it across worlds, and keep the flywheel turning.",
+        "family": "Growth / Learning — Integration, Metacognition & Self-Directed Practice",
+        "summary": "Francisco consolidates what the journey taught him and turns it into living systems—playbooks, rituals, and shared language. He doesn’t just know; he teaches, iterates, and embeds. Master of Two Worlds means lessons travel both directions, improving the ordinary world without losing the wonder of the special one.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "turns experience into reusable frameworks",
+            "builds habits that compound skill and insight",
+            "teaches back to test and deepen understanding",
+            "maps knowledge across domains to spark innovation",
+            "balances exploration with disciplined practice"
+          ],
+          "shadow": [
+            "stalls in research loops instead of shipping",
+            "over-systematizes simple tasks",
+            "avoids ambiguity by clinging to proven methods",
+            "collects information without integration",
+            "delegates application while hoarding theory"
+          ],
+          "growth_focus": [
+            "time-box research and bias toward a shipped draft",
+            "use ‘build one, teach one’ for every new concept",
+            "capture one principle per win in your playbook",
+            "practice interleaving—mix skills in one session",
+            "schedule deliberate practice with feedback"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Resolution",
+          "fiction_chapter_context": "Book 6, Chapter 39 — Master of Two Worlds: Francisco codifies the elixir so both realms advance."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—knowledge embodied as decisive, contributive action."
+        },
+        "color_alignment": {
+          "name": "Aqua",
+          "hsl": "180,100%,50%",
+          "rgb_hex": "#00FFFF",
+          "color_symbolism": "Clear, conductive current—insight that circulates and connects."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.66,
+            "empathy": 0.68,
+            "openness": 0.86,
+            "orderliness": 0.74,
+            "conscientiousness": 0.83,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.84,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.51,
+            "novelty_seeking": 0.69,
+            "imagination": 0.82
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "openness": 0.35,
+            "abstract_reasoning": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2391","Q2392","Q2393","Q2394",
+            "Q2395","Q2396","Q2397","Q2398"
+          ],
+          "signals_map": {
+            "Q2391": { "dimension": "openness", "polarity": 1, "content": "I build concept maps to connect ideas across domains." },
+            "Q2392": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate insights into weekly learning sprints with owners and dates." },
+            "Q2393": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I use teach-back to verify I truly understand a concept." },
+            "Q2394": { "dimension": "adaptability", "polarity": 1, "content": "I pivot methods when feedback reveals an easier path to the goal." },
+            "Q2395": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a living knowledge base linked to decisions and outcomes." },
+            "Q2396": { "dimension": "risk_tolerance", "polarity": -1, "content": "I stick to familiar sources even when evidence shows they’re stale." },
+            "Q2397": { "dimension": "agency", "polarity": 1, "content": "I set explicit learning goals tied to mission outcomes." },
+            "Q2398": { "dimension": "cooperativeness", "polarity": 1, "content": "I publish playbooks so others can reuse what I learned." }
+          },
+          "daily_prompt": "What did you learn today, and where will you apply it once before the day ends?",
+          "practices": [
+            "Spaced Repetition: create 10 flashcards from today’s insights and schedule reviews.",
+            "Feynman One-Pager: explain a concept in plain language with one worked example.",
+            "Interleaving Matrix: mix 2–3 skills in a single 30-minute practice block.",
+            "Concept Map: draw relationships among ideas; highlight gaps to research.",
+            "Teach-Back: share a 3-minute demo or note to your team to crystallize learning."
+          ],
+          "transformation_indicators": [
+            "Higher retention with shorter review cycles",
+            "Time-to-competence decreases across new skills",
+            "Playbooks reused by peers across contexts",
+            "Fewer repeated mistakes; postmortems feed the library",
+            "Increased rate of shipped, learning-informed iterations"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Finale — Resolution (Learning)",
+          "save_the_cat_beat": "Finale",
+          "character_state": "Scholar-practitioner; elixir codified and circulating.",
+          "ordinary_world_baseline": "Ad hoc wins; knowledge trapped in heads and habits.",
+          "push_turn": "Insight becomes system; the elixir is taught, tested, and scaled."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Master of Two Worlds",
+            "section_description": "Integrating insights from ordinary and special worlds",
+            "connection_focus_area": "Bridging and applying knowledge",
+            "connect_points": {
+              "point1": "Map key learnings from each world",
+              "point2": "Identify integration points",
+              "point3": "Plan next steps using combined wisdom"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three core insights gained",
+              "objective2": "Demonstrate integration in a real task",
+              "objective3": "Outline a plan for ongoing learning"
+            }
+          },
+          "book2": {
+            "title": "A Mind for Numbers",
+            "author": "Barbara Oakley",
+            "section_of_focus": "Learning How to Learn",
+            "section_description": "Cognitive strategies for mastery",
+            "connection_focus_area": "Optimizing learning processes",
+            "connect_points": {
+              "point1": "Apply spaced repetition",
+              "point2": "Alternate focused and diffuse modes",
+              "point3": "Build a concept map"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a spaced-repetition schedule",
+              "objective2": "Switch modes when stuck",
+              "objective3": "Build and review a concept map"
+            }
+          },
+          "book3": {
+            "title": "The Adult Learner",
+            "author": "Malcolm S. Knowles",
+            "section_of_focus": "Self-Directed Learning",
+            "section_description": "Taking responsibility for learning pathways",
+            "connection_focus_area": "Personal accountability",
+            "connect_points": {
+              "point1": "Set a learning goal",
+              "point2": "Identify resources",
+              "point3": "Establish evaluation criteria"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a SMART learning goal",
+              "objective2": "Gather three key resources",
+              "objective3": "Develop a self-assessment rubric"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Returning to the delta capital, Francisco convenes guilds on the river terrace; charts of wind, tide, and starlight become a shared curriculum.",
+          "symbolic_moment": "He pours starlit water into twin bowls—one for sky, one for soil—then inscribes the bridge rune between them.",
+          "emotional_landscape": "Quiet pride, teacher’s joy, a steady current of purpose.",
+          "learning_definition": "The disciplined circulation of insight—captured, taught, and applied.",
+          "transformation_promise": "A world that learns deliberately becomes antifragile; progress compounds."
+        },
+        "epic_novel_pages": "Page 571 - 585",
+        "epic_chapter_focus": "Resolution",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Growth",
+        "specific_task_group_description": "Consolidate insights and reinforce lessons from the journey.",
+        "specific_task_group_tagline": "Embrace continuous growth",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Aqua",
+        "hex_code": "#00FFFF",
+        "red": 0,
+        "green": 255,
+        "blue": 255
+      },
       "personality_profile_240": {}
     },
     "family_7": {
