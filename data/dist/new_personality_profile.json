@@ -43421,7 +43421,235 @@
         "green": 153,
         "blue": 153
       },
-      "personality_profile_207": {},
+      "personality_profile_207": {
+        "canonical_id": "EA-207",
+        "unique_identifier": "STG 6.1.3.1",
+        "specific_task_group_title": "Mental Shift",
+        "all_chapter": 207,
+        "novel_book": 6,
+        "chapter": "Chapter 7",
+        "chapter_title": "Refusal of the Call — Mental Shift",
+        "type": "Specific Task Group",
+        "display_name": "The Reframer",
+        "theme": "When the frame changes, the field changes—hesitation turns to motion once the mind pivots.",
+        "family": "Perspective / Change — Growth, Reframing & Choice",
+        "summary": "Francisco catches his own fixed narratives in the act and swaps them for growth statements. He scripts small, critical moves, engineers the environment for success, and balances quick intuition with a deliberate check. The inner debate resolves: from reacting to creating, from scarcity to designed abundance.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Six",
+        "traits": {
+          "strengths": [
+            "reframes setbacks into learning signals",
+            "balances snap judgments with a brief deliberate check",
+            "scripts small next moves that compound",
+            "engineers environment and defaults to reduce friction",
+            "decouples identity from past patterns; updates fast"
+          ],
+          "shadow": [
+            "change-whiplash for teammates if pivots are too frequent",
+            "analysis paralysis when overcorrecting for bias",
+            "premature optimism masking real risks",
+            "discarding proven routines in pursuit of novelty",
+            "over-indexing on cognition while neglecting emotion"
+          ],
+          "growth_focus": [
+            "pair each reframe with one measurable action",
+            "set guardrails: maximum one strategic pivot per cycle",
+            "run a 60-second bias check before big calls",
+            "stabilize two core routines while experimenting elsewhere",
+            "close the loop with a weekly evidence review"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Action",
+          "fiction_chapter_context": "Book 6, Chapter 7 — In Refusal of the Call, the mental lens flips and the campaign truly begins."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Observer integrating to 8—clear perception channeled into decisive action."
+        },
+        "color_alignment": {
+          "name": "Summer Sky",
+          "hsl": "200,60%,50%",
+          "rgb_hex": "#3399CC",
+          "color_symbolism": "A clean front of weather—visibility restored, safe passage ahead."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.81,
+            "stability": 0.64,
+            "empathy": 0.68,
+            "openness": 0.86,
+            "orderliness": 0.62,
+            "conscientiousness": 0.74,
+            "adaptability": 0.90,
+            "abstract_reasoning": 0.80,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.66,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.77,
+            "imagination": 0.79
+          },
+          "match_weights": {
+            "adaptability": 0.4,
+            "agency": 0.3,
+            "openness": 0.3
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2071",
+            "Q2072",
+            "Q2073",
+            "Q2074",
+            "Q2075",
+            "Q2076",
+            "Q2077",
+            "Q2078"
+          ],
+          "signals_map": {
+            "Q2071": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "When new facts appear, I update my plan without drama."
+            },
+            "Q2072": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I turn reframes into immediate, visible next steps."
+            },
+            "Q2073": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I welcome challenges that require me to rethink assumptions."
+            },
+            "Q2074": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I can hold multiple interpretations until evidence selects one."
+            },
+            "Q2075": {
+              "dimension": "orderliness",
+              "polarity": -1,
+              "content": "I cling to the original plan even when conditions change."
+            },
+            "Q2076": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I script one small, critical move to anchor each shift."
+            },
+            "Q2077": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "Testing a new path beats stalling for perfect certainty."
+            },
+            "Q2078": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I keep two core routines steady while I experiment elsewhere."
+            }
+          },
+          "daily_prompt": "What belief needs upgrading today—and what single move will prove the upgrade?",
+          "practices": [
+            "Reframe Drill: write fixed belief → growth version → one action.",
+            "Bright-Spot Rip: copy a recent success pattern into a new context.",
+            "Script the Next Move: define a 5-minute critical action with a cue.",
+            "Rider-Elephant-Path: align logic, emotion, and environment for the shift.",
+            "Bias Check Pause: 60 seconds to name likely biases before deciding."
+          ],
+          "transformation_indicators": [
+            "Faster pivot time from new evidence to action",
+            "Reduced decision regret after bias checks",
+            "Higher completion rate of scripted next moves",
+            "Stable core routines despite experimentation",
+            "Team reports clearer rationale behind changes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Action",
+          "preliminary_beat": "Refusal of the Call — inner debate resolves into motion",
+          "save_the_cat_beat": "Debate",
+          "character_state": "Reluctant but turning; testing a new lens with small proofs.",
+          "ordinary_world_baseline": "Reactive, scarcity-anchored problem-solving.",
+          "boon_reveal": "Change the frame, change the game; tiny moves swing momentum."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "The Growth Mindset",
+            "section_description": "Understanding fixed vs growth mindset",
+            "connection_focus_area": "Adopting new perspectives",
+            "connect_points": {
+              "point1": "Identify a fixed-mindset belief",
+              "point2": "Reframe it into a growth mindset",
+              "point3": "Apply reframing to a current obstacle"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one fixed-mindset belief",
+              "objective2": "Transform it into a growth statement",
+              "objective3": "Use the new growth statement in a task"
+            }
+          },
+          "book2": {
+            "title": "Switch",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "Direct the Rider",
+            "section_description": "How to motivate change by shaping the path",
+            "connection_focus_area": "Facilitating change",
+            "connect_points": {
+              "point1": "Find one bright spot in your process",
+              "point2": "Script a small, critical move",
+              "point3": "Modify the environment for success"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a successful exemplar",
+              "objective2": "Define one small change to test",
+              "objective3": "Plan an environmental tweak"
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Two Systems",
+            "section_description": "Understanding intuitive vs deliberate thinking",
+            "connection_focus_area": "Balancing thought processes",
+            "connect_points": {
+              "point1": "Distinguish System 1 vs System 2 decisions",
+              "point2": "Practice slowing down in one decision",
+              "point3": "Apply deliberate reasoning to a problem"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Explain differences between the systems",
+              "objective2": "Use System 2 in a chosen task",
+              "objective3": "Reflect on the impact of slowing down"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a windless sea of dust, Francisco watches a dying current; with one breath he names the lie he’s believed—and the tide stirs.",
+          "symbolic_moment": "He etches a new axiom on a water-compass: ‘Assumptions are valves.’ The needle swivels toward possibility.",
+          "emotional_landscape": "Edgy resolve, lucid curiosity, cautious optimism.",
+          "boon_definition": "A practiced reframe paired with a single, scripted act that proves a better future.",
+          "transformation_promise": "A strategist who can update fast without losing the team."
+        },
+        "epic_novel_pages": "Page 91 - 105",
+        "epic_chapter_focus": "Action",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Perspective Transformation",
+        "specific_task_group_description": "Change your mindset to overcome hesitation and embrace the challenge.",
+        "specific_task_group_tagline": "Shift your perspective",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Summer Sky",
+        "hex_code": "#3399CC",
+        "red": 51,
+        "green": 153,
+        "blue": 204
+      },
       "personality_profile_208": {},
       "personality_profile_209": {},
       "personality_profile_210": {},
