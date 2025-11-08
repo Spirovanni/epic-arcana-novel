@@ -45094,7 +45094,203 @@
         "green": 234,
         "blue": 255
       },
-      "personality_profile_215": {},
+      "personality_profile_215": {
+        "canonical_id": "EA-215",
+        "unique_identifier": "STG 6.2.1.2",
+        "specific_task_group_title": "Esteem",
+        "all_chapter": 215,
+        "novel_book": 6,
+        "chapter": "Chapter 15",
+        "chapter_title": "New World (Set-up) — Esteem",
+        "type": "Specific Task Group",
+        "display_name": "The Upright Standard",
+        "theme": "In unfamiliar ground, confidence is built by aligned action and small, visible wins.",
+        "family": "Self-Worth / Dignity — Confidence, Belonging & Courage",
+        "summary": "In the new cosmic realm of transformation, Francisco learns to cultivate esteem—both steady self-regard and appreciation for the work and beings involved. Through small victories and value-aligned actions, he builds confidence that sustains motivation when the terrain is strange and the tests are real.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "King",
+        "traits": {
+          "strengths": [
+            "projects calm confidence under pressure",
+            "anchors worth in values and practice, not applause",
+            "turns small wins into momentum",
+            "models dignity and respect in conflict",
+            "uplifts others’ capabilities and voice"
+          ],
+          "shadow": [
+            "seeks external validation in new arenas",
+            "overcompensates with bravado when uncertain",
+            "dismisses feedback as threat to identity",
+            "ties esteem to outcomes over effort",
+            "compares progress to others’ highlight reels"
+          ],
+          "growth_focus": [
+            "stack micro-wins to seed authentic confidence",
+            "separate identity from results; affirm values daily",
+            "invite targeted feedback on one behavior",
+            "practice esteem through service and recognition",
+            "name and retire one ‘performer’ mask"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Child of the Great Transformers",
+          "chapter_theme": "New world (set-up)",
+          "fiction_chapter_context": "Book 6, Chapter 15 — In the court of Guardians and Gatekeepers, esteem is proven by small, value-true acts that earn trust."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—confidence tempered by loyalty, preparation, and shared strength."
+        },
+        "color_alignment": {
+          "name": "Columbia Blue",
+          "hsl": "200,100%,85%",
+          "rgb_hex": "#B1E5FF",
+          "color_symbolism": "High-sky clarity—quiet confidence and open horizons in a new domain."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.83,
+            "empathy": 0.71,
+            "openness": 0.68,
+            "orderliness": 0.64,
+            "conscientiousness": 0.78,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.60,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.62,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "stability": 0.34,
+            "agency": 0.33,
+            "conscientiousness": 0.33
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2151",
+            "Q2152",
+            "Q2153",
+            "Q2154",
+            "Q2155",
+            "Q2156",
+            "Q2157",
+            "Q2158"
+          ],
+          "signals_map": {
+            "Q2151": { "dimension": "stability", "polarity": 1, "content": "I can maintain self-respect even when outcomes are uncertain." },
+            "Q2152": { "dimension": "agency", "polarity": 1, "content": "Small wins in new environments quickly boost my momentum." },
+            "Q2153": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn values into daily, observable behaviors." },
+            "Q2154": { "dimension": "empathy", "polarity": 1, "content": "I recognize and celebrate others’ contributions to the mission." },
+            "Q2155": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my approach without doubting my worth." },
+            "Q2156": { "dimension": "orderliness", "polarity": 1, "content": "I track micro-milestones to reinforce confidence." },
+            "Q2157": { "dimension": "risk_tolerance", "polarity": 1, "content": "I share early drafts/ideas despite imperfect polish." },
+            "Q2158": { "dimension": "stability", "polarity": -1, "content": "Criticism feels like a threat to who I am. (reverse-scored)" }
+          },
+          "daily_prompt": "What tiny, value-aligned action today would prove your worth to yourself?",
+          "practices": [
+            "Win Ledger: record one micro-victory per day and its enabling behavior.",
+            "Esteem by Service: give specific, public credit to one teammate daily.",
+            "Values Check: a 60-second morning affirmation—value → behavior → setting.",
+            "Feedback Frame: ask for one ‘keep/stop/start’ on visible behavior weekly.",
+            "Confidence Sprint: 25-minute focused task in a new area; log the lesson."
+          ],
+          "transformation_indicators": [
+            "Higher consistency of value-aligned behaviors",
+            "Reduced approval-seeking in novel settings",
+            "Increased rate of small-win capture per week",
+            "More upward recognition given to peers",
+            "Greater resilience after visible mistakes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "New world (set-up)",
+          "preliminary_beat": "New World (Set-up) — Esteem",
+          "save_the_cat_beat": "New world (set-up)",
+          "character_state": "Wary but upright; confidence gathering around practiced values.",
+          "ordinary_world_baseline": "Self-worth tied to familiar metrics and arenas.",
+          "push_turn": "Esteem shifts from audience approval to value-aligned acts performed in public micro-moments."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Meeting with the Mentor",
+            "section_description": "Gaining confidence from guidance",
+            "connection_focus_area": "Inner belief",
+            "connect_points": {
+              "point1": "Recall mentor’s encouraging words",
+              "point2": "Identify your strengths",
+              "point3": "Apply one strength today"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three personal strengths",
+              "objective2": "Use one in a new situation",
+              "objective3": "Journal the outcome"
+            }
+          },
+          "book2": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Wholeheartedness",
+            "section_description": "Embracing vulnerability builds worth",
+            "connection_focus_area": "Courage under uncertainty",
+            "connect_points": {
+              "point1": "Share a small vulnerability",
+              "point2": "Notice positive feedback",
+              "point3": "Reinforce self-esteem"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one vulnerability shared",
+              "objective2": "Record positive responses",
+              "objective3": "Plan a next vulnerable step"
+            }
+          },
+          "book3": {
+            "title": "Braving the Wilderness",
+            "author": "Brené Brown",
+            "section_of_focus": "True Belonging",
+            "section_description": "Finding worth in yourself",
+            "connection_focus_area": "Belonging before belief",
+            "connect_points": {
+              "point1": "Define your core values",
+              "point2": "Assess alignment in new world",
+              "point3": "Act on one value today"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State three core values",
+              "objective2": "Evaluate one current action",
+              "objective3": "Adjust for better alignment"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Crossing a wind-whitened causeway into the Gatekeepers’ court, Francisco squares his shoulders and offers a simple, value-true pledge.",
+          "symbolic_moment": "He etches three strengths into a riverstone and sets it on the team altar: Courage, Courtesy, Craft.",
+          "emotional_landscape": "Quiet resolve, earned pride, generous regard.",
+          "esteem_definition": "Confidence operationalized through small, public commitments kept in a new world.",
+          "transformation_promise": "Esteem that dignifies the self and elevates the circle."
+        },
+        "epic_novel_pages": "Page 211 - 225",
+        "epic_chapter_focus": "New world (set-up)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Self-Worth",
+        "specific_task_group_description": "Build confidence through small victories in unfamiliar territory.",
+        "specific_task_group_tagline": "Stand tall in the new world",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Columbia Blue",
+        "hex_code": "#B1E5FF",
+        "red": 177,
+        "green": 229,
+        "blue": 255
+      },
       "personality_profile_216": {},
       "personality_profile_217": {},
       "personality_profile_218": {},
