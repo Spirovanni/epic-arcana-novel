@@ -43222,7 +43222,205 @@
         "green": 153,
         "blue": 204
       },
-      "personality_profile_206": {},
+      "personality_profile_206": {
+        "canonical_id": "EA-206",
+        "unique_identifier": "STG 6.1.2.3",
+        "specific_task_group_title": "Promise",
+        "all_chapter": 206,
+        "novel_book": 6,
+        "chapter": "Chapter 6",
+        "chapter_title": "The Call to Adventure — Promise",
+        "type": "Specific Task Group",
+        "display_name": "The Vowkeeper",
+        "theme": "A clearly spoken vow turns direction into destiny—your word becomes a compass others can steer by.",
+        "family": "Vision & Pledge — Why, Word & Mission",
+    
+        "summary": "Francisco names his why in public and binds action to it. The promise is specific, measurable, and witnessed—shifting him from intention to covenant. With purpose articulated and milestones set, his word creates gravity that aligns allies and choices.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Page",
+    
+        "traits": {
+          "strengths": [
+            "states a crisp, testable mission vow",
+            "translates promise into milestones and reviews",
+            "keeps public commitments under pressure",
+            "invites accountability and feedback loops",
+            "links daily tasks to the pledged outcome"
+          ],
+          "shadow": [
+            "over-promising to earn buy-in",
+            "rigidity when conditions change",
+            "quiet self-betrayal on small slips",
+            "outsourcing integrity to external approval",
+            "vague vows that can’t be falsified"
+          ],
+          "growth_focus": [
+            "make vows falsifiable with dates and metrics",
+            "schedule mid-course vow reviews to adapt",
+            "practice repair—own, amend, recommit fast",
+            "balance promise with capacity and rest",
+            "teach the team to write their own clear vows"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 6, Chapter 6 — A public oath reframes the campaign from hope to mandate."
+        },
+    
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—ambition tempered by loyalty and follow-through to a declared promise."
+        },
+    
+        "color_alignment": {
+          "name": "Cadet Blue",
+          "hsl": "180,20%,50%",
+          "rgb_hex": "#669999",
+          "color_symbolism": "Sea-steel calm: steady vows made in shifting waters."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.75,
+            "stability": 0.72,
+            "empathy": 0.74,
+            "openness": 0.70,
+            "orderliness": 0.77,
+            "conscientiousness": 0.86,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.65,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.56,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.58,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "conscientiousness": 0.36,
+            "agency": 0.34,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": ["Q2061","Q2062","Q2063","Q2064","Q2065","Q2066","Q2067","Q2068"],
+          "signals_map": {
+            "Q2061": { "dimension": "agency", "polarity": 1, "content": "I can state my mission in one clear sentence that others can repeat." },
+            "Q2062": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert promises into dated milestones and check-ins." },
+            "Q2063": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite a partner to hold me accountable to my vow." },
+            "Q2064": { "dimension": "orderliness", "polarity": 1, "content": "I track vow progress visibly on a board or ledger." },
+            "Q2065": { "dimension": "stability", "polarity": 1, "content": "Setbacks don’t cancel my promise; they refine the plan." },
+            "Q2066": { "dimension": "adaptability", "polarity": 1, "content": "I renegotiate scope when facts change while keeping the intent." },
+            "Q2067": { "dimension": "empathy", "polarity": 1, "content": "I consider how my vow impacts allies before declaring it." },
+            "Q2068": { "dimension": "risk_tolerance", "polarity": 1, "content": "I’m willing to risk reputation to keep a worthy promise." }
+          },
+          "daily_prompt": "What one action today proves your promise is real—not just said?",
+          "practices": [
+            "Vow Card: one-sentence promise, metric, and date carried and read daily.",
+            "Milestone Ladder: three dated rungs that climb to the vow.",
+            "Public Ledger: visible tracker shared with your team or mentor.",
+            "Repair Ritual: script to own a miss, amend, and reset the clock.",
+            "Witness Circle: three peers who hear the vow and schedule check-ins."
+          ],
+          "transformation_indicators": [
+            "Higher milestone completion rate against vow schedule",
+            "Faster recovery after slips via Repair Ritual",
+            "Increased teammate recall of your mission sentence",
+            "Reduced variance between plan and actual effort",
+            "More adaptive vow revisions without goal drift"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst — Promise",
+          "save_the_cat_beat": "The Call to Adventure",
+          "character_state": "Hope crystallized into commitment; words bind will to way.",
+          "ordinary_world_baseline": "Good intentions, soft boundaries, quiet drift.",
+          "boon_reveal": "A promise, spoken aloud, rearranges the future by first rearranging you."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "The Golden Circle",
+            "section_description": "How great leaders inspire action by clarifying purpose",
+            "connection_focus_area": "Articulating vision",
+            "connect_points": {
+              "point1": "State your personal ‘why’",
+              "point2": "Link it to your next steps",
+              "point3": "Share it with a trusted partner"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write down your core purpose",
+              "objective2": "Explain how it drives your quest",
+              "objective3": "Practice communicating it clearly"
+            }
+          },
+          "book2": {
+            "title": "The Four Agreements",
+            "author": "Don Miguel Ruiz",
+            "section_of_focus": "Be Impeccable with Your Word",
+            "section_description": "The power of keeping promises to yourself and others",
+            "connection_focus_area": "Integrity in commitment",
+            "connect_points": {
+              "point1": "Make one clear promise to yourself",
+              "point2": "Outline steps to keep it",
+              "point3": "Reflect daily on your progress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a single promise for this journey",
+              "objective2": "List three action steps to uphold it",
+              "objective3": "Journal successes and challenges each day"
+            }
+          },
+          "book3": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Habit 2: Begin with the End in Mind",
+            "section_description": "Envisioning your destination to guide decisions",
+            "connection_focus_area": "Creating a personal mission",
+            "connect_points": {
+              "point1": "Draft a mission statement",
+              "point2": "Identify key milestones",
+              "point3": "Plan accountability checks"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Compose your personal mission",
+              "objective2": "List three milestones on your path",
+              "objective3": "Schedule a mid-journey review"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a tide-lit causeway, Francisco raises a bronze chalice and declares the vow before the company—the sea stills to listen.",
+          "symbolic_moment": "He etches the mission into a cadet-blue tablet; each milestone is a notch sailors can feel in the dark.",
+          "emotional_landscape": "Solemn brightness, steady courage, accountable hope.",
+          "boon_definition": "A measurable oath that converts meaning into navigational law.",
+          "transformation_promise": "With a kept word, waters part; with a repaired word, they calm again."
+        },
+    
+        "epic_novel_pages": "Page 76 - 90",
+        "epic_chapter_focus": "The Call to Adventure",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Vision & Pledge",
+        "specific_task_group_description": "Define the commitment you make as you embark on your journey.",
+        "specific_task_group_tagline": "Pledge your path",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Cadet Blue",
+        "hex_code": "#669999",
+        "red": 102,
+        "green": 153,
+        "blue": 153
+      },
       "personality_profile_207": {},
       "personality_profile_208": {},
       "personality_profile_209": {},
