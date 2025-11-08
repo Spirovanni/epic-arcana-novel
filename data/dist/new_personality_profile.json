@@ -42227,7 +42227,205 @@
       }
     },
     "family_6": {
-      "personality_profile_201": {},
+      "personality_profile_201": {
+        "canonical_id": "EA-201",
+        "unique_identifier": "STG 6.1.1.1",
+        "specific_task_group_title": "Fast-Thinking",
+        "all_chapter": 201,
+        "novel_book": 6,
+        "chapter": "Chapter 1",
+        "chapter_title": "The Ordinary World — Fast-Thinking",
+        "type": "Specific Task Group",
+        "display_name": "The Quicksilver Knight",
+        "theme": "Move first, think clearly, correct fast—use intuition as a starter, not a substitute.",
+        "family": "Rapid Response — Intuition, Heuristics & Tempo",
+    
+        "summary": "Re-entering the ordinary world, Francisco learns to make crisp judgments under time pressure. He pairs swift intuition with simple checks, avoiding analysis paralysis without sliding into recklessness. Speed becomes a discipline.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Knight",
+    
+        "traits": {
+          "strengths": [
+            "acts decisively with minimal, relevant data",
+            "uses heuristics and checklists to keep speed accurate",
+            "shifts from plan to action without losing intent",
+            "spots high-signal cues in noisy environments",
+            "time-boxes decisions to maintain tempo"
+          ],
+          "shadow": [
+            "overconfident snap calls in novel domains",
+            "skips stakeholder checks that would change the call",
+            "confuses motion with progress",
+            "defaults to familiar patterns (availability bias)",
+            "under-communicates rationale to the team"
+          ],
+          "growth_focus": [
+            "announce your decision timer aloud (e.g., 90 seconds) to prevent drift",
+            "run a 20-second bias check (confirmation, anchoring, sunk cost)",
+            "capture a one-line rationale for later review",
+            "pre-define two ‘abort/adjust’ triggers per decision",
+            "debrief one fast call daily: keep, tweak, or discard the heuristic"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Spirit of the Mighty Waters",
+          "chapter_theme": "Intro",
+          "fiction_chapter_context": "Book 6, Chapter 1 — Opening Image: baseline tempo, fast judgments calibrated in the ordinary world."
+        },
+    
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—energy and speed tempered by precise observation."
+        },
+    
+        "color_alignment": {
+          "name": "Light Cyan",
+          "hsl": "180,100%,90%",
+          "rgb_hex": "#CCFFFF",
+          "color_symbolism": "Glacial clarity under pressure—cool head, swift current."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.84,
+            "stability": 0.68,
+            "empathy": 0.64,
+            "openness": 0.81,
+            "orderliness": 0.62,
+            "conscientiousness": 0.72,
+            "adaptability": 0.86,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.67,
+            "risk_tolerance": 0.71,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.56,
+            "novelty_seeking": 0.77,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "adaptability": 0.35,
+            "agency": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": ["Q2011","Q2012","Q2013","Q2014","Q2015","Q2016","Q2017","Q2018"],
+          "signals_map": {
+            "Q2011": { "dimension": "agency", "polarity": 1, "content": "I set short decision timers and commit when it expires." },
+            "Q2012": { "dimension": "adaptability", "polarity": 1, "content": "If new facts arrive, I pivot without ego." },
+            "Q2013": { "dimension": "openness", "polarity": 1, "content": "I welcome quick feedback to refine a fast call." },
+            "Q2014": { "dimension": "orderliness", "polarity": 1, "content": "I keep a small checklist to sanity-check snap judgments." },
+            "Q2015": { "dimension": "risk_tolerance", "polarity": 1, "content": "I prefer small, reversible bets to slow, perfect plans." },
+            "Q2016": { "dimension": "conscientiousness", "polarity": 1, "content": "I note my rationale so we can learn from outcomes." },
+            "Q2017": { "dimension": "stability", "polarity": 1, "content": "Urgency sharpens me; I stay calm at speed." },
+            "Q2018": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I recognize signal cues that predict outcomes quickly." }
+          },
+          "daily_prompt": "What decision can you time-box to 90 seconds—and what two facts are truly decisive?",
+          "practices": [
+            "OODA Micro-Loop: Observe–Orient–Decide–Act in under 60s; repeat as data changes.",
+            "Bias Tripwire: say out loud one likely bias before deciding.",
+            "Two-Fact Rule: pick the two highest-signal facts; ignore the rest.",
+            "Abort/Adjust Markers: predefine conditions that trigger a course correction.",
+            "60s AAR: after-action review in one minute—what to keep, tweak, drop."
+          ],
+          "transformation_indicators": [
+            "Reduced average decision latency with stable or improved outcomes",
+            "Higher ratio of reversible-to-irreversible choices in early phases",
+            "Fewer bias-related reversals post-hoc",
+            "Improved team clarity on rationale and triggers",
+            "Faster recoveries when decisions are adjusted"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — Fast-Thinking",
+          "save_the_cat_beat": "Opening Image",
+          "character_state": "Alert and ready; instincts quick, calibration beginning.",
+          "ordinary_world_baseline": "Tends to over-optimize speed or over-analyze; learning optimal tempo.",
+          "boon_reveal": "Speed + small checks beats both panic and paralysis."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Blink",
+            "author": "Malcolm Gladwell",
+            "section_of_focus": "Adaptive Unconscious",
+            "section_description": "How we make snap judgments in the blink of an eye",
+            "connection_focus_area": "Harnessing intuition",
+            "connect_points": {
+              "point1": "Trust first impressions appropriately",
+              "point2": "Recognize when rapid cognition serves you",
+              "point3": "Avoid overthinking simple decisions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a fast decision you made successfully",
+              "objective2": "Identify one situation where you hesitated unnecessarily",
+              "objective3": "Practice making one judgment under a strict time limit"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 1 Thinking",
+            "section_description": "The fast, automatic, intuitive approach to problem solving",
+            "connection_focus_area": "Balancing speed and accuracy",
+            "connect_points": {
+              "point1": "Distinguish between System 1 and System 2 processes",
+              "point2": "Spot common cognitive biases in rapid thought",
+              "point3": "Apply fast thinking when stakes are low"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name two biases you’ve experienced in quick decisions",
+              "objective2": "Outline one strategy to check a snap judgment",
+              "objective3": "Implement a pause technique in your next decision"
+            }
+          },
+          "book3": {
+            "title": "The Art of Thinking Clearly",
+            "author": "Rolf Dobelli",
+            "section_of_focus": "Common Thinking Errors",
+            "section_description": "A compendium of cognitive biases and how to avoid them",
+            "connection_focus_area": "Avoiding pitfalls in rapid thinking",
+            "connect_points": {
+              "point1": "Notice when hindsight bias creeps in",
+              "point2": "Counter confirmation bias in quick judgments",
+              "point3": "Structure simple heuristics to guide fast choices"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three biases to watch for in fast thinking",
+              "objective2": "Create a simple decision heuristic",
+              "objective3": "Apply that heuristic in one real-world scenario"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-bright quay, water clocks tick; Francisco scans three signals, calls the move before the bell, and the harbor flows again.",
+          "symbolic_moment": "He engraves a tiny decision timer on his gauntlet—mercy on one edge, precision on the other.",
+          "emotional_landscape": "Crisp focus, cool urgency, contained confidence.",
+          "boon_definition": "Tempo discipline—swift action with pre-set checks and clean reversals.",
+          "transformation_promise": "A leader who can choose fast and correct faster becomes the city’s first responder of wisdom."
+        },
+    
+        "epic_novel_pages": "Page 1 - 15",
+        "epic_chapter_focus": "Intro",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Rapid Response",
+        "specific_task_group_description": "Develop the ability to make quick, accurate judgments in unfamiliar situations.",
+        "specific_task_group_tagline": "Think on your feet",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Light Cyan",
+        "hex_code": "#CCFFFF",
+        "red": 204,
+        "green": 255,
+        "blue": 255
+      },
       "personality_profile_202": {},
       "personality_profile_203": {},
       "personality_profile_204": {},
