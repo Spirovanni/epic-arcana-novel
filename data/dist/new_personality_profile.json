@@ -42824,7 +42824,162 @@
         "green": 204,
         "blue": 255
       },
-      "personality_profile_204": {},
+      "specific_task_group_204": {
+        "id": "EA-205",
+        "unique_identifier": "STG 6.1.2.2",
+        "all_chapter": 205,
+        "novel_book": 6,
+        "chapter": "Chapter 5",
+        "type": "Specific Task Group",
+        "tarot_card_link": "",
+        "tarot_family": "Swords",
+        "new_tarot_family": "",
+        "tarot_card_item": "Queen",
+        "color_name": "Pacific Blue",
+        "hex_code": "#0099CC",
+        "red": 0,
+        "green": 153,
+        "blue": 204,
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_preliminary_scene_description": "",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "specific_task_group_title": "Sacrifice",
+        "focus_area": "Commitment & Cost",
+        "connection_to_the_major_task_group": "The Call to Adventure",
+        "specific_task_group_description": "Identify what you must give up in order to fully commit to your quest.",
+        "specific_task_group_tagline": "Pay the price",
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Road of Trials",
+            "section_description": "The hero faces challenges that demand sacrifice",
+            "connection_focus_area": "Understanding true cost",
+            "connect_points": {
+              "point1": "List what you’ll need to relinquish",
+              "point2": "Consider short-term discomforts",
+              "point3": "Affirm your commitment"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one personal sacrifice needed",
+              "objective2": "Weigh its benefits vs. costs",
+              "objective3": "Verbally commit to that sacrifice"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Taking Risks",
+            "section_description": "How to push past hesitation and accept trade-offs",
+            "connection_focus_area": "Overcoming fear of loss",
+            "connect_points": {
+              "point1": "Identify a fear tied to giving something up",
+              "point2": "Plan steps to mitigate it",
+              "point3": "Enlist support in your decision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name the risk you will take",
+              "objective2": "Outline mitigation strategies",
+              "objective3": "Share your plan with a peer"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Rule #1: Work Deeply",
+            "section_description": "Eliminating shallow commitments to focus on what matters",
+            "connection_focus_area": "Prioritizing high-value activities",
+            "connect_points": {
+              "point1": "Audit shallow tasks in your schedule",
+              "point2": "Drop one low-value activity",
+              "point3": "Allocate that time to your mission"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two shallow tasks to remove",
+              "objective2": "Schedule a deep work block",
+              "objective3": "Report on the outcome after one session"
+            }
+          }
+        },
+        "hero_journey_beat": "Reaction",
+        "hero_journey_beat_objective": "The goal of the hero journey beat is to reaction.",
+        "save_the_cat_beat": "Reaction",
+        "save_the_cat_beat_goal": "",
+        "plot": "Reaction",
+        "character_arcs": {
+          "Francisco": "Learns that cosmic salvation requires sacrificing old approaches and embracing transformational strategic thinking.",
+          "Sacrifice_Guides": "Cosmic entities who help Francisco understand what must be given up to achieve cosmic transformation.",
+          "Old_Paradigms": "Previous cosmic management approaches that Francisco must release to access new strategic abilities.",
+          "Transformation_Catalysts": "Forces that help Francisco transition from old to new approaches to cosmic strategy."
+        },
+        "story_gaps_addressed": {
+          "paradigm_shift": "Francisco learns that solving cosmic scarcity requires fundamental changes in thinking and approach.",
+          "strategic_sacrifice": "Introduction of sacrifice as necessary for accessing new levels of cosmic strategic ability.",
+          "transformation_catalyst": "Sacrifice becomes the trigger for Francisco's evolution into a cosmic alchemist."
+        },
+        "location_details": {
+          "sacrifice_transformation_chambers": "Cosmic spaces where Francisco can release old paradigms and embrace new strategic approaches.",
+          "paradigm_shift_nexus": "The cosmic intersection where old and new approaches to cosmic strategy meet."
+        },
+        "series_connections": {
+          "sacrificial_leadership": "Francisco's willingness to sacrifice old approaches prepares him for the ultimate sacrifices in Books 7-9.",
+          "transformational_strategy": "His paradigm shift will be essential for the revolutionary approaches needed in the finale."
+        },
+        "summary": "Francisco realizes that salvation from cosmic dearth requires profound sacrifice - not just of resources, but of old ways of thinking about cosmic management. He must sacrifice his attachment to previous cosmic roles and embrace a new paradigm of intentional strategy. This sacrifice becomes the catalyst for his transformation into a true cosmic alchemist.",
+        "pov": "3rd Person Limited",
+        "tense": "Past Tense",
+        "core_emotion": "Tension and conflict",
+        "scene_tone": "Dramatic and intense",
+        "scenes": [
+          {
+            "scene_number": 1,
+            "title": "Scene 1",
+            "setup": "Francisco realizes that salvation from cosmic dearth requires profound sacrifice - not just of resources, but of old ways of thinking about cosmic management",
+            "symbolism": "Placeholder symbolism",
+            "beat_goal": "Advance the narrative progression",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Strategic determination",
+            "scene_tone": "Cosmic transformation"
+          },
+          {
+            "scene_number": 2,
+            "title": "Scene 2",
+            "setup": "He must sacrifice his attachment to previous cosmic roles and embrace a new paradigm of intentional strategy",
+            "symbolism": "Placeholder symbolism",
+            "beat_goal": "Advance the narrative progression",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Strategic determination",
+            "scene_tone": "Cosmic transformation"
+          },
+          {
+            "scene_number": 3,
+            "title": "Scene 3",
+            "setup": "This sacrifice becomes the catalyst for his transformation into a true cosmic alchemist",
+            "symbolism": "Placeholder symbolism",
+            "beat_goal": "Advance the narrative progression",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Strategic determination",
+            "scene_tone": "Cosmic transformation"
+          },
+          {
+            "scene_number": 4,
+            "title": "Scene 4",
+            "setup": "Part 4 of Sacrifice development",
+            "symbolism": "Placeholder symbolism",
+            "beat_goal": "Advance the narrative progression",
+            "pov": "3rd Person Limited",
+            "tense": "Past Tense",
+            "core_emotion": "Strategic determination",
+            "scene_tone": "Cosmic transformation"
+          }
+        ]
+      },
       "personality_profile_205": {},
       "personality_profile_206": {},
       "personality_profile_207": {},
