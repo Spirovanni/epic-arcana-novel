@@ -44892,7 +44892,208 @@
         "green": 147,
         "blue": 164
       },
-      "personality_profile_214": {},
+      "personality_profile_214": {
+        "canonical_id": "EA-214",
+        "unique_identifier": "STG 6.2.1.1",
+        "specific_task_group_title": "Travail",
+        "all_chapter": 214,
+        "novel_book": 6,
+        "chapter": "Chapter 14",
+        "chapter_title": "Push — Travail",
+        "type": "Specific Task Group",
+        "display_name": "The Enduring Hammer",
+        "theme": "You don’t grow around the hard thing—you grow through it; effort becomes the forge of character.",
+        "family": "Perseverance / Fortitude — Stamina, Grit & Follow-Through",
+    
+        "summary": "As trials tighten, Francisco learns that transformation is labor. He accepts pain with purpose, paces his effort, and mines each setback for instruction. Endurance stops being white-knuckled survival and becomes skilled, rhythmic work toward a larger restoration.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "shows up when conditions are worst",
+            "extracts lessons mid-trial, not just after",
+            "paces energy to finish strong",
+            "turns pain into procedure",
+            "models steady courage for the team"
+          ],
+          "shadow": [
+            "stoicism that hides real strain",
+            "confusing grind with progress",
+            "overwork that erodes judgment",
+            "tunnel vision under pressure",
+            "treating rest as a reward not a requirement"
+          ],
+          "growth_focus": [
+            "pair toil with recovery rituals",
+            "define ‘done for today’ to prevent spillover",
+            "measure meaningful outputs, not hours",
+            "surface strain early with a check-in script",
+            "practice micro-wins to sustain momentum"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Push",
+          "fiction_chapter_context": "Book 6, Chapter 14 — Guardians and Gatekeepers test Francisco’s capacity to persist with intelligence, not just force."
+        },
+    
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 3—courage and stamina channeled into focused, effective execution."
+        },
+    
+        "color_alignment": {
+          "name": "Pattens Blue",
+          "hsl": "199,100%,88%",
+          "rgb_hex": "#C1EAFF",
+          "color_symbolism": "Pale sky after a long storm—light returning as work continues."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.75,
+            "stability": 0.83,
+            "empathy": 0.68,
+            "openness": 0.62,
+            "orderliness": 0.72,
+            "conscientiousness": 0.88,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.54,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.49,
+            "novelty_seeking": 0.50,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "stability": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q2141","Q2142","Q2143","Q2144",
+            "Q2145","Q2146","Q2147","Q2148"
+          ],
+          "signals_map": {
+            "Q2141": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep moving a hard task forward in small, planned increments." },
+            "Q2142": { "dimension": "stability", "polarity": 1, "content": "Pressure sharpens my focus instead of scattering it." },
+            "Q2143": { "dimension": "agency", "polarity": 1, "content": "When blocked, I create a smaller next move and execute it." },
+            "Q2144": { "dimension": "orderliness", "polarity": 1, "content": "I translate setbacks into checklists and protocols." },
+            "Q2145": { "dimension": "empathy", "polarity": 1, "content": "I encourage teammates to pace themselves without shame." },
+            "Q2146": { "dimension": "risk_tolerance", "polarity": -1, "content": "I push through warning signs instead of pausing to reassess." },
+            "Q2147": { "dimension": "adaptability", "polarity": 1, "content": "I can change tactics without losing commitment to the goal." },
+            "Q2148": { "dimension": "stability", "polarity": 1, "content": "I end the day deliberately to protect tomorrow’s strength." }
+          },
+          "daily_prompt": "What hard inch will you move today—and how will you recover after?",
+          "practices": [
+            "3×10 Rule: three ten-minute pushes on the toughest task.",
+            "Effort Ledger: log strain, lesson, and one adjustment.",
+            "Finish Line Ritual: define stop time + closeout checklist.",
+            "Micro-Win Stack: break work into wins ≤20 minutes each.",
+            "Recovery Anchor: schedule a non-negotiable reset (sleep, breath, walk)."
+          ],
+          "transformation_indicators": [
+            "Higher completion rate on toughest tasks",
+            "Reduced rework due to fatigue mistakes",
+            "Consistent stop times and recovery adherence",
+            "More lessons captured during—not after—trials",
+            "Team reports steadier morale under pressure"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Tests, Allies and Enemies",
+          "preliminary_beat": "Push — Travail",
+          "save_the_cat_beat": "Push",
+          "character_state": "Tired but targeted; pain mapped to purpose.",
+          "ordinary_world_baseline": "Effort reactive and sporadic; progress tied to mood.",
+          "push_turn": "Labor becomes method—strain is paced, measured, and instructive."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Road of Trials",
+            "section_description": "The hero’s series of tests",
+            "connection_focus_area": "Facing adversity",
+            "connect_points": {
+              "point1": "List your current trials",
+              "point2": "Identify lessons in each",
+              "point3": "Plan your next step"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name three challenges",
+              "objective2": "Extract one lesson per challenge",
+              "objective3": "Commit to one trial protocol"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Perseverance Pays",
+            "section_description": "Cultivating long-term stamina",
+            "connection_focus_area": "Sustained effort",
+            "connect_points": {
+              "point1": "Define your long-term goal",
+              "point2": "Break it into daily tasks",
+              "point3": "Track your progress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate a personal long-term goal",
+              "objective2": "Set up a tracking system",
+              "objective3": "Review progress weekly"
+            }
+          },
+          "book3": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Motivation 3.0",
+            "section_description": "Autonomy, mastery, purpose",
+            "connection_focus_area": "Fueling resilience",
+            "connect_points": {
+              "point1": "Identify your intrinsic motivator",
+              "point2": "Link it to your trial",
+              "point3": "Adjust for autonomy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State your core motivator",
+              "objective2": "Design a self-directed task",
+              "objective3": "Reflect on purpose alignment"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a broken aqueduct, Francisco and the gatekeepers haul stone under a pale, wind-cut sky; each lift chants cadence into the cold.",
+          "symbolic_moment": "A cracked gauntlet becomes a metronome—tap, breathe, lift; the rhythm outlasts the ache.",
+          "emotional_landscape": "Sinew-deep strain, quiet resolve, flares of hard-won hope.",
+          "travail_definition": "Effort with feedback—labor that learns while it lifts.",
+          "transformation_promise": "A leader who can suffer skillfully can restore what collapses."
+        },
+    
+        "epic_novel_pages": "Page 196 - 210",
+        "epic_chapter_focus": "Push",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Perseverance",
+        "specific_task_group_description": "Endure and learn from the toughest trials to build resilience.",
+        "specific_task_group_tagline": "Grow through challenge",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Pattens Blue",
+        "hex_code": "#C1EAFF",
+        "red": 193,
+        "green": 234,
+        "blue": 255
+      },
       "personality_profile_215": {},
       "personality_profile_216": {},
       "personality_profile_217": {},
