@@ -49114,7 +49114,197 @@
         "green": 204,
         "blue": 153
       },    
-      "personality_profile_235": {},
+      "personality_profile_235": {
+        "canonical_id": "EA-235",
+        "unique_identifier": "STG 6.2.7.3",
+        "specific_task_group_title": "Center",
+        "all_chapter": 235,
+        "novel_book": 6,
+        "chapter": "Chapter 35",
+        "chapter_title": "Flight (Finale) — Center",
+        "type": "Specific Task Group",
+        "display_name": "The Stillpoint",
+        "theme": "Balance isn’t standing still—it’s the constant, tiny corrections that keep you true while everything else moves.",
+        "family": "Balance / Center — Equanimity, Rhythm & Boundaries",
+        "summary": "In the finale of Flight, Francisco holds the line between speed and stability. He builds a rhythm of micro-adjustments, renewing energy without losing pace. Centering stops the swings—momentum turns smooth, decisions sharpen, and the formation holds.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "stays steady under acceleration",
+            "builds routines that protect peak focus",
+            "balances urgency with recovery cycles",
+            "keeps teams synchronized and on-tempo",
+            "notices drift early and corrects lightly"
+          ],
+          "shadow": [
+            "confuses comfort with equilibrium",
+            "over-relies on routine when adaptation is needed",
+            "avoids bold moves that disturb balance",
+            "spends too long tuning instead of launching",
+            "lets boundaries harden into rigidity"
+          ],
+          "growth_focus": [
+            "pair stability with one weekly stretch",
+            "use ‘light touch’ corrections before issues compound",
+            "schedule deliberate recovery as a performance tool",
+            "set guardrails, not cages—review and relax when safe",
+            "define the trigger to pivot, not just to persist"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Flight (Finale)",
+          "fiction_chapter_context": "Book 6, Chapter 35 — Flight: centering holds formation as systems accelerate toward resolution."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker with a disciplined 1-wing—calm presence channeled into rhythmic, principled execution."
+        },
+        "color_alignment": {
+          "name": "Shamrock Green",
+          "hsl": "160,100%,30%",
+          "rgb_hex": "#009966",
+          "color_symbolism": "Gyroscope green—living balance, course kept true in crosswinds."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.90,
+            "empathy": 0.70,
+            "openness": 0.62,
+            "orderliness": 0.70,
+            "conscientiousness": 0.74,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.73,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.42,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.53,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.30,
+            "adaptability": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2351","Q2352","Q2353","Q2354",
+            "Q2355","Q2356","Q2357","Q2358"
+          ],
+          "signals_map": {
+            "Q2351": { "dimension": "stability", "polarity": 1, "content": "Under pressure, I return to a simple routine that keeps me steady." },
+            "Q2352": { "dimension": "conscientiousness", "polarity": 1, "content": "I use checklists or cues to maintain consistency at speed." },
+            "Q2353": { "dimension": "adaptability", "polarity": 1, "content": "I pivot cleanly when signals show the plan is drifting." },
+            "Q2354": { "dimension": "agency", "polarity": 1, "content": "I correct small deviations early instead of waiting for a crisis." },
+            "Q2355": { "dimension": "orderliness", "polarity": 1, "content": "I set clear guardrails so creativity doesn’t create chaos." },
+            "Q2356": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid bold moves if they might disrupt my current balance." },
+            "Q2357": { "dimension": "empathy", "polarity": 1, "content": "I watch team energy and adjust tempo to keep everyone aligned." },
+            "Q2358": { "dimension": "stability", "polarity": 1, "content": "Recovery blocks are on my calendar like any mission-critical task." }
+          },
+          "daily_prompt": "Where are you drifting today—and what single light-touch correction returns you to true?",
+          "practices": [
+            "Tempo Set: choose a daily cadence (work/recover) and stick to it.",
+            "Two-Point Check: mid-morning and mid-afternoon drift scan + micro-adjust.",
+            "Boundary Brief: define start/stop, then protect both with alarms.",
+            "Renewal Ritual: 10-minute breath/walk reset before high-stakes work.",
+            "Checklist Lite: a 5-item pre-flight to prevent avoidable errors."
+          ],
+          "transformation_indicators": [
+            "Fewer last-minute scrambles; steadier throughput",
+            "Lower error rate with equal or higher velocity",
+            "Team reports smoother handoffs and timing",
+            "Recovery honored without loss of momentum",
+            "Course corrections made earlier and with less friction"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Flight — Center",
+          "save_the_cat_beat": "Flight (Finale)",
+          "character_state": "Grounded in motion; calm spine, agile hands.",
+          "ordinary_world_baseline": "Reactive swings between overdrive and stall.",
+          "push_turn": "Centering creates lift without wobble; small corrections, big stability."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Sharpen the Saw",
+            "section_description": "Balancing and renewing resources",
+            "connection_focus_area": "Sustaining personal balance",
+            "connect_points": {
+              "point1": "Schedule daily renewal",
+              "point2": "Integrate mind, body, spirit",
+              "point3": "Reflect weekly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan a renewal routine",
+              "objective2": "Track adherence",
+              "objective3": "Assess impact on balance"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Habit Stacking",
+            "section_description": "Building routines to maintain stability",
+            "connection_focus_area": "Embedding balanced habits",
+            "connect_points": {
+              "point1": "Identify one keystone habit",
+              "point2": "Stack it with an existing routine",
+              "point3": "Monitor consistency"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one keystone habit",
+              "objective2": "Implement stacking",
+              "objective3": "Review progress after one week"
+            }
+          },
+          "book3": {
+            "title": "The Practice of Everyday Life",
+            "author": "Michel de Certeau",
+            "section_of_focus": "Tactics of the Everyday",
+            "section_description": "Finding stability in daily practices",
+            "connection_focus_area": "Grounding through routine",
+            "connect_points": {
+              "point1": "Choose a daily ritual",
+              "point2": "Apply it consistently",
+              "point3": "Observe its stabilizing effect"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one daily ritual",
+              "objective2": "Practice it for five days",
+              "objective3": "Evaluate its impact"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "High above the delta, Francisco rides the crosswind. He taps the vane, trims the sail—one degree—and the fleet hums back into line.",
+          "symbolic_moment": "A spinning gyroscope settles on his palm; when he relaxes his grip, it holds truer.",
+          "emotional_landscape": "Even cadence, bright focus, quiet confidence.",
+          "balance_definition": "Equilibrium through continuous, minimal correction.",
+          "transformation_promise": "A leader who guards the center turns turbulence into smooth ascent."
+        },
+        "epic_novel_pages": "Page 511 - 525",
+        "epic_chapter_focus": "Flight (Finale)",
+        "epic_preliminary_scene_focus": "Scene XIII: Flight",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Balance",
+        "specific_task_group_description": "Maintain equilibrium amidst change to stay grounded.",
+        "specific_task_group_tagline": "Find your center",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Shamrock Green",
+        "hex_code": "#009966",
+        "red": 0,
+        "green": 153,
+        "blue": 102
+      },
       "personality_profile_236": {},
       "personality_profile_237": {},
       "personality_profile_238": {},
