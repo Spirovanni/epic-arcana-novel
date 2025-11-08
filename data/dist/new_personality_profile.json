@@ -50262,7 +50262,197 @@
       }
     },
     "family_7": {
-      "personality_profile_241": {},
+      "personality_profile_241": {
+        "canonical_id": "EA-241",
+        "unique_identifier": "STG 7.1.1.1",
+        "specific_task_group_title": "Renewed Hope",
+        "all_chapter": 241,
+        "novel_book": 7,
+        "chapter": "Chapter 1",
+        "chapter_title": "Intro — Renewed Hope",
+        "type": "Specific Task Group",
+        "display_name": "The Dawn Restorer",
+        "theme": "Hope isn’t a wish—it’s the disciplined restart that turns a fresh page into forward motion.",
+        "family": "Renewal / Hope — Beginnings, Resilience & Optimism",
+        "summary": "At first light, the world is ordinary again—by choice. Francisco returns with a calmer center and a clearer horizon. He rebuilds from the smallest unit of progress: one grounded habit, one honest belief, one next step. Hope becomes structure: cues, routines, and a vision sturdy enough to carry others.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ten",
+        "traits": {
+          "strengths": [
+            "projects steady optimism without denial",
+            "restarts cleanly after setbacks",
+            "translates vision into small dependable habits",
+            "models calm, future-facing leadership",
+            "spotlights workable paths in complex situations"
+          ],
+          "shadow": [
+            "confuses positive tone with real readiness",
+            "papers over hard truths to preserve momentum",
+            "spreads energy too thin across new starts",
+            "accepts symbolic changes instead of structural ones",
+            "avoids debriefing ‘why it failed’ moments"
+          ],
+          "growth_focus": [
+            "pair hope statements with hard metrics",
+            "schedule a weekly post-mortem on restarts",
+            "limit simultaneous new habits to one",
+            "surface one inconvenient fact per plan",
+            "bind optimism to a concrete 72-hour action"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 7, Chapter 1 — Opening Image: hopeful routines re-establish rhythm before the first summons."
+        },
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—bright possibility grounded by focused depth and preparation."
+        },
+        "color_alignment": {
+          "name": "Blue Romance",
+          "hsl": "120,100%,90%",
+          "rgb_hex": "#CCFFCC",
+          "color_symbolism": "Morning mist over new fields—gentle renewal, clean breath, patient beginnings."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.82,
+            "empathy": 0.74,
+            "openness": 0.72,
+            "orderliness": 0.66,
+            "conscientiousness": 0.70,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.58,
+            "cooperativeness": 0.77,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.63,
+            "imagination": 0.67
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "adaptability": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2411","Q2412","Q2413","Q2414",
+            "Q2415","Q2416","Q2417","Q2418"
+          ],
+          "signals_map": {
+            "Q2411": { "dimension": "stability", "polarity": 1, "content": "After a setback, I can calmly reset and begin again within 24 hours." },
+            "Q2412": { "dimension": "openness", "polarity": 1, "content": "I treat new beginnings as experiments rather than ultimatums." },
+            "Q2413": { "dimension": "conscientiousness", "polarity": 1, "content": "I link hopeful goals to specific cues, times, and places." },
+            "Q2414": { "dimension": "adaptability", "polarity": 1, "content": "I adjust my plan when reality contradicts my assumptions." },
+            "Q2415": { "dimension": "agency", "polarity": 1, "content": "I can identify one smallest viable action to start momentum today." },
+            "Q2416": { "dimension": "orderliness", "polarity": 1, "content": "I clear one obstruction before adding a new habit." },
+            "Q2417": { "dimension": "risk_tolerance", "polarity": -1, "content": "I postpone necessary risks until conditions feel perfectly safe." },
+            "Q2418": { "dimension": "empathy", "polarity": 1, "content": "I share renewal plans in ways that invite others’ honest input." }
+          },
+          "daily_prompt": "What truth will you face this morning—and what single concrete start will turn your hope into movement?",
+          "practices": [
+            "Reset Ritual: clear workspace, name one truth, pick one 15-minute task.",
+            "First Light Habit: anchor the key habit to a reliable daily cue.",
+            "72-Hour Rule: schedule three small actions before the week widens.",
+            "Reality Check: list one assumption and a fast test to validate it.",
+            "Gratitude-to-Goal: write one gratitude, then one action it enables."
+          ],
+          "transformation_indicators": [
+            "Faster recovery time from setbacks",
+            "Consistent completion of first daily action",
+            "Plans show explicit tests for assumptions",
+            "Hope statements paired with measurable steps",
+            "Team reports clearer, calmer starts to initiatives"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — Renewed Hope",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Calm, forward-leaning; optimism harnessed to routine.",
+          "ordinary_world_baseline": "Recent victories, but fragile systems; renewal through structure.",
+          "push_turn": "Tiny dependable starts convert hope into a new operational rhythm."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ordinary World",
+            "section_description": "The hero’s life before the journey begins",
+            "connection_focus_area": "Setting the stage for transformation",
+            "connect_points": {
+              "point1": "Identify the normal world comforts",
+              "point2": "Note what has changed",
+              "point3": "Recognize the spark of renewal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your current status quo",
+              "objective2": "Articulate one area ripe for renewal",
+              "objective3": "Define a personal vision for new beginnings"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Building Better Habits",
+            "section_description": "How small changes accumulate into big transformation",
+            "connection_focus_area": "Rebuilding routines",
+            "connect_points": {
+              "point1": "Choose one habit to renew",
+              "point2": "Set a clear starting cue",
+              "point3": "Plan for immediate feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one new habit",
+              "objective2": "Design a habit trigger",
+              "objective3": "Track the first week’s progress"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "The Growth Mindset",
+            "section_description": "Adopting beliefs that foster resilience and hope",
+            "connection_focus_area": "Cultivating optimism",
+            "connect_points": {
+              "point1": "Identify a fixed mindset belief",
+              "point2": "Reframe it for growth",
+              "point3": "Apply it to a new challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Recognize one limiting belief",
+              "objective2": "Transform it into a growth statement",
+              "objective3": "Use that reframe in action"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Dawn spills across the Reconciliation Terrace. Francisco—now Daughter of the Reconcilers—walks the flagstones, naming what is whole and what must begin again.",
+          "symbolic_moment": "A frayed banner is re-stitched by hand and raised with the sun; the seam line gleams like a horizon.",
+          "emotional_landscape": "Quiet resolve, soft buoyancy, readiness without rush.",
+          "renewed_hope_definition": "A truthful restart: seeing clearly, starting small, aiming far.",
+          "transformation_promise": "A leader who can restart well can lead others through any beginning."
+        },
+        "epic_novel_pages": "Page 1 - 15",
+        "epic_chapter_focus": "Intro",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Renewal",
+        "specific_task_group_description": "Embrace the start of a new chapter with confidence and purpose.",
+        "specific_task_group_tagline": "Embrace new beginnings",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Blue Romance",
+        "hex_code": "#CCFFCC",
+        "red": 204,
+        "green": 255,
+        "blue": 204
+      },    
       "personality_profile_242": {},
       "personality_profile_243": {},
       "personality_profile_244": {},
