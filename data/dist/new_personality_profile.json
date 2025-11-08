@@ -47924,7 +47924,208 @@
         "green": 255,
         "blue": 255
       },
-      "personality_profile_229": {},
+      "personality_profile_229": {
+          "canonical_id": "EA-229",
+          "unique_identifier": "STG 6.2.5.3",
+          "specific_task_group_title": "Limitless Potential",
+          "all_chapter": 229,
+          "novel_book": 6,
+          "chapter": "Chapter 29",
+          "chapter_title": "The Abyss — Limitless Potential",
+          "type": "Specific Task Group",
+          "display_name": "The Horizon Cartographer",
+          "theme": "When the map ends, imagination drafts the next coast; vision turns abyss into frontier.",
+      
+          "summary": "In the deepest quiet before renewal, Francisco refuses the smallness of the present frame. He stretches sightlines beyond the visible, names new coordinates, and aligns the team to a farther shore. Vision stops being fantasy and becomes navigable strategy.",
+          "tarot_family": "Wands",
+          "tarot_card_item": "Page",
+      
+          "traits": {
+            "strengths": [
+              "projects long arcs from sparse signals",
+              "keeps purpose central while exploring options",
+              "translates dreams into staged roadmaps",
+              "spots uncontested spaces others ignore",
+              "rallies allies with clear, vivid direction"
+            ],
+            "shadow": [
+              "vision drift without delivery guardrails",
+              "chasing novelty over necessary depth",
+              "scope inflation that strains capacity",
+              "underestimating switching costs",
+              "premature evangelizing before validation"
+            ],
+            "growth_focus": [
+              "bind each vision to a falsifiable hypothesis",
+              "time-box exploration before commit",
+              "pair dreamer with a builder-critic",
+              "budget runway for iteration, not perfection",
+              "publish a stop-doing list per vision cycle"
+            ]
+          },
+      
+          "book_association": {
+            "nonfiction_series": "The Human Framework",
+            "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+            "chapter_theme": "The Abyss",
+            "fiction_chapter_context": "Book 6, Chapter 29 — In the Abyss, new horizons replace failing maps; strategy turns darkness into direction."
+          },
+      
+          "enneagram_link": {
+            "family_number": 7,
+            "note": "Enthusiast integrating to 5—expansive vision grounded by disciplined depth."
+          },
+      
+          "color_alignment": {
+            "name": "Magic Mint",
+            "hsl": "150,100%,80%",
+            "rgb_hex": "#99FFCC",
+            "color_symbolism": "Breath of new air over unknown waters—refresh, widen, explore."
+          },
+      
+          "scoring_model": {
+            "dimensions": {
+              "agency": 0.78,
+              "stability": 0.60,
+              "empathy": 0.67,
+              "openness": 0.92,
+              "orderliness": 0.58,
+              "conscientiousness": 0.70,
+              "adaptability": 0.82,
+              "abstract_reasoning": 0.88,
+              "cooperativeness": 0.71,
+              "risk_tolerance": 0.73,
+              "emotional_intensity": 0.55,
+              "social_dominance": 0.52,
+              "novelty_seeking": 0.90,
+              "imagination": 0.95
+            },
+            "match_weights": {
+              "openness": 0.35,
+              "imagination": 0.35,
+              "abstract_reasoning": 0.20,
+              "agency": 0.10
+            },
+            "threshold": 0.84,
+            "top_signal_items": [
+              "Q2291","Q2292","Q2293","Q2294",
+              "Q2295","Q2296","Q2297","Q2298"
+            ],
+            "signals_map": {
+              "Q2291": { "dimension": "imagination", "polarity": 1, "content": "I enjoy drafting futures that don’t yet have a path." },
+              "Q2292": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can connect weak signals into a coherent strategic story." },
+              "Q2293": { "dimension": "openness", "polarity": 1, "content": "I seek perspectives that contradict my initial vision." },
+              "Q2294": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate big ideas into staged milestones with exit criteria." },
+              "Q2295": { "dimension": "risk_tolerance", "polarity": 1, "content": "I’m comfortable piloting in uncertainty if the learning is clear." },
+              "Q2296": { "dimension": "orderliness", "polarity": -1, "content": "I jump to new ideas before finishing validation of the last one." },
+              "Q2297": { "dimension": "agency", "polarity": 1, "content": "I convene the right people to test a bold hypothesis quickly." },
+              "Q2298": { "dimension": "adaptability", "polarity": 1, "content": "When data contradicts the plan, I update the plan—fast." }
+            },
+            "daily_prompt": "What horizon are you naming today—and what tiny, testable step makes it real?",
+            "practices": [
+              "One-Page Vision: purpose, bets, 3 staged milestones, kill-switch.",
+              "Signal Scan: 10 minutes logging weak signals + implications.",
+              "Blue-Ocean Canvas: eliminate–reduce–raise–create grid per idea.",
+              "Pilot Triangle: define hypothesis, metric, and max spend/time.",
+              "Debias Debrief: list surprises; decide pivot, persist, or pause."
+            ],
+            "transformation_indicators": [
+              "Clearer horizon statements tied to falsifiable tests",
+              "Higher pilot-to-decision ratio (less endless exploring)",
+              "Reduced scope creep via staged milestones",
+              "Faster plan updates after disconfirming data",
+              "Team reports stronger alignment around purpose"
+            ]
+          },
+      
+          "hero_journey_position": {
+            "stage": "Dark Night of the Soul",
+            "preliminary_beat": "The Abyss — Limitless Potential",
+            "save_the_cat_beat": "The Abyss",
+            "character_state": "Steady gaze beyond fear; possibilities mapped where paths are missing.",
+            "ordinary_world_baseline": "Vision talked about, rarely tightened into tests.",
+            "abyss_turn": "The ‘edge of map’ becomes a launchpad—fear reframed as frontier."
+          },
+      
+          "specific_task_group_books_influenced_by": {
+            "book1": {
+              "title": "Blue Ocean Strategy",
+              "author": "W. Chan Kim & Renée Mauborgne",
+              "section_of_focus": "Creating New Markets",
+              "section_description": "How to make competition irrelevant",
+              "connection_focus_area": "Strategic innovation",
+              "connect_points": {
+                "point1": "Identify an uncontested space",
+                "point2": "Map value curves",
+                "point3": "Develop a blue-ocean offering"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Pinpoint one market gap",
+                "objective2": "Sketch a value innovation plan",
+                "objective3": "Validate the idea with potential users"
+              }
+            },
+            "book2": {
+              "title": "The Innovator’s Dilemma",
+              "author": "Clayton M. Christensen",
+              "section_of_focus": "Disruptive Innovation",
+              "section_description": "Why successful companies fail and how to avoid it",
+              "connection_focus_area": "Embracing disruptive ideas",
+              "connect_points": {
+                "point1": "Analyze an industry disruption",
+                "point2": "Brainstorm a disruptive solution",
+                "point3": "Plan a small-scale test"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Describe one disruptive trend",
+                "objective2": "Propose a novel solution concept",
+                "objective3": "Draft a test protocol"
+              }
+            },
+            "book3": {
+              "title": "Start with Why",
+              "author": "Simon Sinek",
+              "section_of_focus": "The Golden Circle",
+              "section_description": "How great leaders inspire action",
+              "connection_focus_area": "Clarifying purpose",
+              "connect_points": {
+                "point1": "Define your core ‘why’",
+                "point2": "Align your vision with it",
+                "point3": "Communicate the why to stakeholders"
+              },
+              "terminal_learning_objectives": {
+                "objective1": "Articulate your personal ‘why’",
+                "objective2": "Craft a vision statement",
+                "objective3": "Share it with your team"
+              }
+            }
+          },
+      
+          "laurasia_narrative_integration": {
+            "opening_scene": "On a lightless sea, Francisco sights a faint aurora where no stars are charted; he sketches a new meridian across the void.",
+            "symbolic_moment": "A compass with a missing needle becomes a projector—the map is cast outward from within.",
+            "emotional_landscape": "Quiet awe, disciplined daring, a hum of collective expectancy.",
+            "limitless_potential_definition": "Purpose-led imagination constrained only by evidence and ethics.",
+            "transformation_promise": "A leader who can see beyond the frame can steer a world beyond its limits."
+          },
+      
+          "epic_novel_pages": "Page 421 - 435",
+          "epic_chapter_focus": "The Abyss",
+          "epic_preliminary_scene_focus": "Dark Night of the Soul",
+          "epic_novel_chapter_focus": "Scene XI: The Abyss",
+          "epic_novel_section_name": "Part II: Child of the Great Transformers",
+          "focus_area": "Vision & Strategy",
+          "specific_task_group_description": "Expand your vision beyond current limits and chart a course for new horizons.",
+          "specific_task_group_tagline": "Dream without bounds",
+      
+          "tarot_card_link": "",
+          "new_tarot_family": "",
+          "color_name": "Magic Mint",
+          "hex_code": "#99FFCC",
+          "red": 153,
+          "green": 255,
+          "blue": 204
+      },
       "personality_profile_230": {},
       "personality_profile_231": {},
       "personality_profile_232": {},
