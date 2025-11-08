@@ -51026,7 +51026,197 @@
         "green": 153,
         "blue": 102
       },       
-      "personality_profile_245": {},
+      "personality_profile_245": {
+        "canonical_id": "EA-245",
+        "unique_identifier": "STG 7.1.2.2",
+        "specific_task_group_title": "Truth Finder",
+        "all_chapter": 245,
+        "novel_book": 7,
+        "chapter": "Chapter 5",
+        "chapter_title": "The Call to Adventure — Truth Finder",
+        "type": "Specific Task Group",
+        "display_name": "The Honest Edge",
+        "theme": "Truth isn’t a cudgel—it’s alignment: cutting through noise so choices land where reality actually lives.",
+        "family": "Integrity / Truth — Candor, Evidence & Alignment",
+        "summary": "When the first sparks fly, Francisco refuses the comfort of narrative. He hunts facts, names biases, and delivers candor with care. By anchoring action to what’s verifiably real, he turns conflict into clarity and gives his coalition a blade that won’t break.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "separates signal from story under pressure",
+            "tests assumptions with disconfirming evidence",
+            "speaks hard truths without humiliation",
+            "updates positions quickly when data shifts",
+            "ties plans to measurable reality checks"
+          ],
+          "shadow": [
+            "over-indexes on proof and stalls momentum",
+            "uses ‘truth’ to win rather than to align",
+            "dismisses intuition that lacks data wrappers",
+            "delivers candor without enough context or care",
+            "treats uncertainty as failure instead of frontier"
+          ],
+          "growth_focus": [
+            "pair every critique with a workable next step",
+            "calibrate candor to audience readiness",
+            "log intuition as a testable hypothesis",
+            "time-box investigations to protect speed",
+            "invite red-teamers to stress-test your certainty"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 7, Chapter 5 — Catalyst: truth cuts a clean opening through tangle and rumor."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—evidence-fed courage; clarity that moves."
+        },
+        "color_alignment": {
+          "name": "Eucalyptus",
+          "hsl": "150,50%,40%",
+          "rgb_hex": "#339966",
+          "color_symbolism": "Cool green steel—fresh, precise, uncompromisingly clear."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.74,
+            "empathy": 0.62,
+            "openness": 0.70,
+            "orderliness": 0.75,
+            "conscientiousness": 0.82,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.58,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "abstract_reasoning": 0.35,
+            "orderliness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2451","Q2452","Q2453","Q2454",
+            "Q2455","Q2456","Q2457","Q2458"
+          ],
+          "signals_map": {
+            "Q2451": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I separate what I know from what I’m guessing and label both." },
+            "Q2452": { "dimension": "conscientiousness", "polarity": 1, "content": "I tie decisions to specific evidence and document sources." },
+            "Q2453": { "dimension": "orderliness", "polarity": 1, "content": "I run a quick pre-mortem before committing to a path." },
+            "Q2454": { "dimension": "agency", "polarity": 1, "content": "I act on the best available facts while scheduling a revisit when new data arrives." },
+            "Q2455": { "dimension": "empathy", "polarity": 1, "content": "I deliver hard truths with context and an invitation to respond." },
+            "Q2456": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay action waiting for perfect information." },
+            "Q2457": { "dimension": "adaptability", "polarity": 1, "content": "I revise my stance quickly when contradictory evidence is strong." },
+            "Q2458": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite a red team to challenge our assumptions before launch." }
+          },
+          "daily_prompt": "What uncomfortable fact, if faced today, would simplify three decisions this week?",
+          "practices": [
+            "Evidence Packet: assemble 1-page facts, sources, and unknowns before debate.",
+            "Bias Check: name the top cognitive bias likely at play; add a countermeasure.",
+            "Candor Script: write the hard truth + care frame + next best step.",
+            "Disconfirming Probe: seek one piece of evidence that would overturn your view.",
+            "Truth Ledger: after-action note where reality diverged from plan and why."
+          ],
+          "transformation_indicators": [
+            "Shorter debates with higher decision quality",
+            "Fewer reversals due to missed facts or rumors",
+            "Higher trust scores after difficult updates",
+            "Clear audit trail from claim → evidence → action",
+            "Faster pivots when data contradicts assumptions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Catalyst — Truth Finder",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Reality-aligned; steady nerve, open file.",
+          "ordinary_world_baseline": "Fog of rumor, bias-driven choices, eroding trust.",
+          "push_turn": "Verified facts slice a corridor through noise; action locks to evidence."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero faces the truth of the journey ahead",
+            "connection_focus_area": "Confronting reality",
+            "connect_points": {
+              "point1": "Identify a truth you’ve been avoiding",
+              "point2": "Assess its impact on your journey",
+              "point3": "Decide how to act on it"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State one hidden truth",
+              "objective2": "Evaluate its implications",
+              "objective3": "Plan a truthful action"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "The Two Systems",
+            "section_description": "How intuition and logic shape our beliefs",
+            "connection_focus_area": "Uncovering bias",
+            "connect_points": {
+              "point1": "Spot one cognitive bias",
+              "point2": "Gather evidence to challenge it",
+              "point3": "Update your perspective"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a bias in your thinking",
+              "objective2": "Collect contradicting data",
+              "objective3": "Revise your belief accordingly"
+            }
+          },
+          "book3": {
+            "title": "Radical Candor",
+            "author": "Kim Scott",
+            "section_of_focus": "Care Personally, Challenge Directly",
+            "section_description": "Balancing empathy with honesty",
+            "connection_focus_area": "Delivering tough truths",
+            "connect_points": {
+              "point1": "Prepare to share a hard truth",
+              "point2": "Frame it with care",
+              "point3": "Invite feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a candid feedback message",
+              "objective2": "Deliver it with empathy",
+              "objective3": "Solicit and reflect on response"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Archive of Unsaid Wars, Francisco lays rival chronicles side by side; he marks overlaps in green and gaps in black, then walks the corridor those lines create.",
+          "symbolic_moment": "An obsidian blade mirrored on still water shows two edges; he tilts it until both reflections align—then speaks the congruent line aloud.",
+          "emotional_landscape": "Cool focus, compassionate edge, forward pull.",
+          "contentment_definition": "Truth as alignment: claims + evidence + consequence tracked out loud.",
+          "transformation_promise": "A leader who wields verifiable reality can cut a door where others see a wall."
+        },
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Integrity",
+        "specific_task_group_description": "Seek out the real facts and align your next steps with what’s true.",
+        "specific_task_group_tagline": "Discover what’s real",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Eucalyptus",
+        "hex_code": "#339966",
+        "red": 51,
+        "green": 153,
+        "blue": 102
+      },    
       "personality_profile_246": {},
       "personality_profile_247": {},
       "personality_profile_248": {},
