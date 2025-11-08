@@ -43650,7 +43650,207 @@
         "green": 153,
         "blue": 204
       },
-      "personality_profile_208": {},
+      "personality_profile_208": {
+        "canonical_id": "EA-208",
+        "unique_identifier": "STG 6.1.3.2",
+        "specific_task_group_title": "Well-Grounded",
+        "all_chapter": 208,
+        "novel_book": 6,
+        "chapter": "Chapter 8",
+        "chapter_title": "Refusal of the Call — Well-Grounded",
+        "type": "Specific Task Group",
+        "display_name": "The Keel",
+        "theme": "Anchor to facts and presence; steadiness turns debate into deliberate motion.",
+        "family": "Stability / Balance — Grounding, Presence & Reality-Testing",
+    
+        "summary": "As new consequences surface, Francisco roots himself in reality: naming feelings, checking facts, and acting from calm. He pairs visionary aims with practical next steps, turning doubt into centered execution. Grounded attention becomes his force multiplier.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Two",
+    
+        "traits": {
+          "strengths": [
+            "stabilizes the room with calm presence",
+            "fact-checks assumptions before escalation",
+            "balances vision with practical constraints",
+            "uses body cues to regulate emotions",
+            "keeps plans realistic without losing ambition"
+          ],
+          "shadow": [
+            "can over-index on caution and stall momentum",
+            "confuses acceptance with passivity",
+            "defaults to ‘prove it’ when trust would suffice",
+            "downplays intuition in favor of data only",
+            "grips control when delegation is needed"
+          ],
+          "growth_focus": [
+            "bind each grounding routine to one bold step",
+            "treat acceptance as a launchpad, not a finish line",
+            "practice ‘data + gut’ synthesis before big calls",
+            "set a delegation quota for critical tasks",
+            "schedule regular reality-checks with dissenting voices"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Consequence",
+          "fiction_chapter_context": "Book 6, Chapter 8 — In Refusal of the Call, steadiness under debate turns the tide from doubt to action."
+        },
+    
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—vigilance grounded in equanimity and trust."
+        },
+    
+        "color_alignment": {
+          "name": "Cerulean",
+          "hsl": "200,100%,30%",
+          "rgb_hex": "#006699",
+          "color_symbolism": "Deep water clarity—cool focus, reliable depth."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.86,
+            "empathy": 0.70,
+            "openness": 0.62,
+            "orderliness": 0.76,
+            "conscientiousness": 0.78,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.53,
+            "novelty_seeking": 0.55,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2081","Q2082","Q2083","Q2084","Q2085","Q2086","Q2087","Q2088"
+          ],
+          "signals_map": {
+            "Q2081": { "dimension": "stability", "polarity": 1, "content": "I pause to name what I’m feeling before I act." },
+            "Q2082": { "dimension": "conscientiousness", "polarity": 1, "content": "I verify key facts when tensions rise." },
+            "Q2083": { "dimension": "agency", "polarity": 1, "content": "After grounding, I take one clear next step." },
+            "Q2084": { "dimension": "orderliness", "polarity": 1, "content": "I translate vision into constraints, milestones, and owners." },
+            "Q2085": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay decisions when I already have enough to proceed." },
+            "Q2086": { "dimension": "empathy", "polarity": 1, "content": "I can hold others’ emotions without losing my center." },
+            "Q2087": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I separate facts, interpretations, and feelings before deciding." },
+            "Q2088": { "dimension": "adaptability", "polarity": 1, "content": "I accept present reality and adjust plans without drama." }
+          },
+          "daily_prompt": "What truth—about the situation and about you—will steady your next move?",
+          "practices": [
+            "Box Breathing 4×4×4×4 before key decisions.",
+            "Three Columns: Facts / Story / Action (one line each).",
+            "Grounding Object: touch + describe 3 details to re-center.",
+            "90-Second Name-and-Tame: label emotion, ride the surge, choose.",
+            "Reality Check Huddle: ask one skeptic to poke holes, then refine."
+          ],
+          "transformation_indicators": [
+            "Shorter time from escalation to calm action",
+            "Higher accuracy of first decisions under pressure",
+            "Consistent translation of goals into constraints/milestones",
+            "Improved team perception of steadiness and trust",
+            "Fewer avoidable delays due to over-verification"
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "Consequence",
+          "preliminary_beat": "Debate — Well-Grounded",
+          "save_the_cat_beat": "Consequence",
+          "character_state": "Centered under scrutiny; calm becomes leverage.",
+          "ordinary_world_baseline": "Unmoored by others’ urgency and doubt.",
+          "boon_reveal": "Stability multiplies force—presence makes choices cleaner."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Grounding in Awareness",
+            "section_description": "Using awareness to stabilize emotional responses",
+            "connection_focus_area": "Building emotional stability",
+            "connect_points": {
+              "point1": "Notice one strong emotion",
+              "point2": "Label it accurately",
+              "point3": "Use a regulation technique"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a current emotion",
+              "objective2": "Name it precisely",
+              "objective3": "Apply one calming method"
+            }
+          },
+          "book2": {
+            "title": "Radical Acceptance",
+            "author": "Tara Brach",
+            "section_of_focus": "Grounding in Reality",
+            "section_description": "Embracing reality to reduce suffering",
+            "connection_focus_area": "Accepting the present",
+            "connect_points": {
+              "point1": "Notice resistance to truth",
+              "point2": "Practice letting go",
+              "point3": "Find peace in acceptance"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal one point of resistance",
+              "objective2": "Practice acceptance for 1 minute",
+              "objective3": "Reflect on the outcome"
+            }
+          },
+          "book3": {
+            "title": "Wherever You Go, There You Are",
+            "author": "Thich Nhat Hanh",
+            "section_of_focus": "Mindfulness",
+            "section_description": "Practicing presence",
+            "connection_focus_area": "Cultivating grounded presence",
+            "connect_points": {
+              "point1": "Perform a 5-minute breathing exercise",
+              "point2": "Pause before reacting",
+              "point3": "Note sensations in your body"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a 5-minute mindfulness session",
+              "objective2": "Record three observations",
+              "objective3": "Integrate mindfulness once daily"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "Storm-lit council decks sway above the drought sea; Francisco plants a hand on the rail, breathes, and the map stops shaking.",
+          "symbolic_moment": "He inlays a strip of cerulean glass into the helm—whenever fingers find it, the course corrects.",
+          "emotional_landscape": "Cool focus, contained urgency, quiet confidence.",
+          "boon_definition": "A practiced return to reality—facts named, body calmed, one grounded step.",
+          "transformation_promise": "A leader whose steadiness makes bold action safe."
+        },
+    
+        "epic_novel_pages": "Page 106 - 120",
+        "epic_chapter_focus": "Consequence",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: The Spirit of the Mighty Waters",
+        "focus_area": "Stability & Balance",
+        "specific_task_group_description": "Anchor yourself in facts and reality to counter doubt.",
+        "specific_task_group_tagline": "Find your footing",
+    
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Cerulean",
+        "hex_code": "#006699",
+        "red": 0,
+        "green": 102,
+        "blue": 153
+      },
       "personality_profile_209": {},
       "personality_profile_210": {},
       "personality_profile_211": {},
