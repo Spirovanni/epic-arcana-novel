@@ -50644,7 +50644,197 @@
         "green": 204,
         "blue": 153
       },    
-      "personality_profile_243": {},
+      "personality_profile_243": {
+        "canonical_id": "EA-243",
+        "unique_identifier": "STG 7.1.1.3",
+        "specific_task_group_title": "Optimistic",
+        "all_chapter": 243,
+        "novel_book": 7,
+        "chapter": "Chapter 3",
+        "chapter_title": "The Ordinary World — Optimistic",
+        "type": "Specific Task Group",
+        "display_name": "The Bright Lens",
+        "theme": "Optimism isn’t denial; it’s disciplined sight—choosing the angle that reveals options and invites others to move.",
+        "family": "Positivity / Optimism — Hope, Reframing & Contagious Confidence",
+        "summary": "In the calm after upheaval, Francisco trains his gaze. He learns to spot lines of harmony inside old fractures, reframing stalemates as starts. Positivity turns kinetic: his outlook spreads, rallies allies, and begins tilting whole systems toward reconciliation.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Ten",
+        "traits": {
+          "strengths": [
+            "projects steady hope under ambiguity",
+            "reframes setbacks into actionable experiments",
+            "energizes groups with constructive language",
+            "spots bridges where others see walls",
+            "maintains morale without sugarcoating risks"
+          ],
+          "shadow": [
+            "glosses over warning signs to keep spirits high",
+            "confuses upbeat talk with actual readiness",
+            "pressures skeptics to ‘get on board’ too soon",
+            "jumps to silver linings before listening fully",
+            "burns out from carrying group morale alone"
+          ],
+          "growth_focus": [
+            "pair every reframe with a risk check",
+            "schedule space to hear unfiltered concerns",
+            "convert optimism to a concrete next step",
+            "track outcomes to avoid wishful loops",
+            "share the load—make optimism a team practice"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 7, Chapter 3 — Ordinary World: optimism reframes the field and energizes early allies."
+        },
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—buoyant energy tempered by reflective focus."
+        },
+        "color_alignment": {
+          "name": "Silver Tree",
+          "hsl": "150,50%,60%",
+          "rgb_hex": "#66CC99",
+          "color_symbolism": "Leaf‐light through canopy—clear sight, living renewal."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.77,
+            "empathy": 0.74,
+            "openness": 0.72,
+            "orderliness": 0.61,
+            "conscientiousness": 0.66,
+            "adaptability": 0.73,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.60,
+            "imagination": 0.67
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "empathy": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2431","Q2432","Q2433","Q2434",
+            "Q2435","Q2436","Q2437","Q2438"
+          ],
+          "signals_map": {
+            "Q2431": { "dimension": "stability", "polarity": 1, "content": "Under pressure, I default to a calm, constructive outlook." },
+            "Q2432": { "dimension": "empathy", "polarity": 1, "content": "I validate concerns before offering a more positive angle." },
+            "Q2433": { "dimension": "openness", "polarity": 1, "content": "I can imagine multiple good outcomes from the same situation." },
+            "Q2434": { "dimension": "agency", "polarity": 1, "content": "My optimism translates into a clear next step I can take now." },
+            "Q2435": { "dimension": "orderliness", "polarity": 1, "content": "I document reframes and track whether they actually helped." },
+            "Q2436": { "dimension": "risk_tolerance", "polarity": -1, "content": "I overlook risks if they might dampen team enthusiasm." },
+            "Q2437": { "dimension": "adaptability", "polarity": 1, "content": "If evidence shifts, I update my outlook without drama." },
+            "Q2438": { "dimension": "cooperativeness", "polarity": 1, "content": "My positive mindset helps align divergent stakeholders." }
+          },
+          "daily_prompt": "Where’s the most stubborn ‘no’ today—and what believable ‘yes’ can you pilot right next to it?",
+          "practices": [
+            "Explanatory Reframe: write the setback, then 2 alternate causes you can influence.",
+            "Positivity Journal: 3 concrete wins; 1 action they unlock.",
+            "Gratitude Ripple: thank one skeptic for a valid risk they caught.",
+            "Optimism Sprint: 20 minutes on a small, winnable slice that proves progress.",
+            "Yet Clause: append “yet” to one stuck belief and restate the plan."
+          ],
+          "transformation_indicators": [
+            "Higher reframe-to-action ratio (less cheerleading, more doing)",
+            "Faster recovery from setbacks with documented learnings",
+            "Stakeholder sentiment trendlines tilt positive",
+            "Reduction in avoidable risk misses (optimism paired with checks)",
+            "Increased cross-faction participation after hopeful messaging"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Set-up — Optimistic",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Hopeful baseline; alert to wounds but oriented to possibility.",
+          "ordinary_world_baseline": "Residual heaviness from prior conflicts; scattered morale.",
+          "push_turn": "Reframes convert constraints into invitations; allies mirror the stance."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Happiness Advantage",
+            "author": "Shawn Achor",
+            "section_of_focus": "The Happiness Advantage",
+            "section_description": "How positivity fuels performance",
+            "connection_focus_area": "Leveraging optimism",
+            "connect_points": {
+              "point1": "List three things you’re grateful for",
+              "point2": "Practice a daily positive journal",
+              "point3": "Share optimism with others"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write three gratitude entries",
+              "objective2": "Maintain a positivity journal for a week",
+              "objective3": "Offer one act of kindness daily"
+            }
+          },
+          "book2": {
+            "title": "Learned Optimism",
+            "author": "Martin Seligman",
+            "section_of_focus": "The Origins of Optimism",
+            "section_description": "Understanding explanatory styles",
+            "connection_focus_area": "Reframing negative thoughts",
+            "connect_points": {
+              "point1": "Identify a negative thought",
+              "point2": "Reframe with evidence",
+              "point3": "Test the new belief"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Spot one pessimistic thought",
+              "objective2": "Create a counterstatement",
+              "objective3": "Record outcomes of the reframe"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "The Power of Yet",
+            "section_description": "Embracing growth language",
+            "connection_focus_area": "Positive framing",
+            "connect_points": {
+              "point1": "Add “yet” to a limiting belief",
+              "point2": "Practice growth‐oriented self‐talk",
+              "point3": "Share your reframed belief"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Append “yet” to a self‐limiting statement",
+              "objective2": "Adopt growth language in one conversation",
+              "objective3": "Reflect on impact of the shift"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At dawn over the Vale of Mirrors, Francisco studies rival banners reflected on still water; he traces a flight path that intersects, not avoids, their shadows.",
+          "symbolic_moment": "He flips a fractured lens; the crack aligns with the horizon and becomes a guiding line for two approaching envoys.",
+          "emotional_landscape": "Light, alert, quietly brave—hope disciplined into strategy.",
+          "contentment_definition": "Optimism as practiced perception: seeing what could work and committing to test it.",
+          "transformation_promise": "A leader who can locate believable hope makes coalitions possible where none existed."
+        },
+        "epic_novel_pages": "Page 31 - 45",
+        "epic_chapter_focus": "The Ordinary World",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Positivity",
+        "specific_task_group_description": "Cultivate a positive mindset to face challenges with confidence.",
+        "specific_task_group_tagline": "Cultivate positive outlook",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Silver Tree",
+        "hex_code": "#66CC99",
+        "red": 102,
+        "green": 204,
+        "blue": 153
+      },    
       "personality_profile_244": {},
       "personality_profile_245": {},
       "personality_profile_246": {},
