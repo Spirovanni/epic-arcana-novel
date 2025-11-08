@@ -48923,7 +48923,197 @@
         "green": 255,
         "blue": 153
       },
-      "personality_profile_234": {},
+      "personality_profile_234": {
+        "canonical_id": "EA-234",
+        "unique_identifier": "STG 6.2.7.2",
+        "specific_task_group_title": "Thirst for Knowledge",
+        "all_chapter": 234,
+        "novel_book": 6,
+        "chapter": "Chapter 34",
+        "chapter_title": "Converge — Thirst for Knowledge",
+        "type": "Specific Task Group",
+        "display_name": "The Seeker’s Lantern",
+        "theme": "Curiosity widens the map and sharpens the compass—questions become engines that pull you into wiser action.",
+        "family": "Curiosity / Thirst for Knowledge — Inquiry, Breadth & Depth",
+        "summary": "As forces converge, Francisco stops guessing and starts knowing. He turns questions into probes, prototypes, and briefings that guide the next decisive move. Curiosity is not a detour but the fuel that clarifies route, lowers risk, and quickens momentum.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Page",
+        "traits": {
+          "strengths": [
+            "asks catalytic questions that unlock options",
+            "connects patterns across domains quickly",
+            "tests ideas with light, learn-first experiments",
+            "translates research into crisp next actions",
+            "builds shared understanding through clear briefs"
+          ],
+          "shadow": [
+            "analysis stretch that delays action",
+            "collects sources without synthesizing",
+            "chases novelty over relevance",
+            "overcomplicates simple choices",
+            "resists committing while data is incomplete"
+          ],
+          "growth_focus": [
+            "time-box research and declare a decision point",
+            "ship a small test before gathering more data",
+            "use a one-page decision memo template",
+            "prioritize ‘decision-useful’ questions",
+            "close the loop: archive, tag, and brief the team"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Converge (resolution)",
+          "fiction_chapter_context": "Book 6, Chapter 34 — Flight: curiosity consolidates intel so Francisco can steer clean through crosswinds."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator expanding toward 7—curiosity energized into exploratory, flexible action."
+        },
+        "color_alignment": {
+          "name": "Shamrock",
+          "hsl": "160,60%,50%",
+          "rgb_hex": "#33CC99",
+          "color_symbolism": "Forest trail opening—keen inquiry clears the next bend."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.65,
+            "empathy": 0.62,
+            "openness": 0.82,
+            "orderliness": 0.58,
+            "conscientiousness": 0.66,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.74,
+            "imagination": 0.80
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "abstract_reasoning": 0.30,
+            "imagination": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2341","Q2342","Q2343","Q2344",
+            "Q2345","Q2346","Q2347","Q2348"
+          ],
+          "signals_map": {
+            "Q2341": { "dimension": "openness", "polarity": 1, "content": "I seek primary sources before settling on a position." },
+            "Q2342": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I build simple models to compare options and outcomes." },
+            "Q2343": { "dimension": "imagination", "polarity": 1, "content": "I visualize multiple futures and trace them back to present choices." },
+            "Q2344": { "dimension": "cooperativeness", "polarity": 1, "content": "I share findings in plain language so others can act quickly." },
+            "Q2345": { "dimension": "orderliness", "polarity": 1, "content": "I capture what I learn and tag it for fast retrieval." },
+            "Q2346": { "dimension": "risk_tolerance", "polarity": -1, "content": "I hesitate to act until I’ve researched exhaustively." },
+            "Q2347": { "dimension": "adaptability", "polarity": 1, "content": "New information changes my plan—even late in the game." },
+            "Q2348": { "dimension": "agency", "polarity": 1, "content": "When curious, I run a small test instead of debating theories." }
+          },
+          "daily_prompt": "What single question, if answered today, would make the next decision obvious—and how will you answer it fast?",
+          "practices": [
+            "Five Whys: drill to root cause before proposing fixes.",
+            "60/6 Sprint: 60 minutes of research → 6-sentence decision memo.",
+            "Tiny Pilot: test the riskiest assumption with the smallest experiment.",
+            "Evidence Ladder: rate sources from anecdote to primary data.",
+            "Knowledge Garden: archive, tag, and brief one insight per day."
+          ],
+          "transformation_indicators": [
+            "Faster time-to-decision with equal or better outcomes",
+            "Higher hit-rate on first-try solutions",
+            "Less rework due to false assumptions",
+            "Team reports clearer rationale behind choices",
+            "Reusable research assets grow week over week"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Break into 3 — Thirst for Knowledge",
+          "save_the_cat_beat": "Break into 3",
+          "character_state": "Inquisitive and directed; seeking clarifies, it doesn’t stall.",
+          "ordinary_world_baseline": "Information hoarding without synthesis; slow decisions.",
+          "push_turn": "Questions become prototypes; learning converts to lift."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "A Curious Mind",
+            "author": "Brian Grazer & Charles Fishman",
+            "section_of_focus": "The Power of Questions",
+            "section_description": "Using curiosity to fuel discovery",
+            "connection_focus_area": "Leveraging questions for insight",
+            "connect_points": {
+              "point1": "List five questions you have",
+              "point2": "Research one answer",
+              "point3": "Share your findings"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Formulate three insightful questions",
+              "objective2": "Investigate one in-depth",
+              "objective3": "Present your conclusion"
+            }
+          },
+          "book2": {
+            "title": "Range",
+            "author": "David Epstein",
+            "section_of_focus": "The Cult of the Head Start",
+            "section_description": "How broad exploration fosters learning",
+            "connection_focus_area": "Broadening your knowledge base",
+            "connect_points": {
+              "point1": "Try a new hobby",
+              "point2": "Connect it to your main goal",
+              "point3": "Reflect on cross-application"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Experiment with one new skill",
+              "objective2": "Make one cross-disciplinary link",
+              "objective3": "Document the insight"
+            }
+          },
+          "book3": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 2 Thinking",
+            "section_description": "Slow, deliberate reasoning",
+            "connection_focus_area": "Deep analytical exploration",
+            "connect_points": {
+              "point1": "Identify one assumption",
+              "point2": "Pause to analyze it",
+              "point3": "Test alternative"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document one bias",
+              "objective2": "Apply slow thinking to a problem",
+              "objective3": "Evaluate the result"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Over the humming struts of a wind-bridge, Francisco reads the sky like a ledger; he queries the currents, then angles the fleet toward the quiet corridor.",
+          "symbolic_moment": "A brass astrolabe snaps true when he removes a decorative plate—signal over ornament.",
+          "emotional_landscape": "Alert, precise, quietly thrilled by clarity.",
+          "curiosity_definition": "Hunger for understanding that widens options and sharpens aim.",
+          "transformation_promise": "A leader who learns quickly lifts everyone out of the fog faster."
+        },
+        "epic_novel_pages": "Page 496 - 510",
+        "epic_chapter_focus": "Converge (resolution)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Curiosity",
+        "specific_task_group_description": "Pursue deeper understanding to guide your journey’s next phase.",
+        "specific_task_group_tagline": "Seek what you don’t yet know",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Shamrock",
+        "hex_code": "#33CC99",
+        "red": 51,
+        "green": 204,
+        "blue": 153
+      },    
       "personality_profile_235": {},
       "personality_profile_236": {},
       "personality_profile_237": {},
