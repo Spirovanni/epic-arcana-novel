@@ -46319,7 +46319,208 @@
         "green": 130,
         "blue": 163
       },
-      "personality_profile_221": {},
+      "personality_profile_221": {
+        "canonical_id": "EA-221",
+        "unique_identifier": "STG 6.2.3.2",
+        "specific_task_group_title": "Benevolent Conquest",
+        "all_chapter": 221,
+        "novel_book": 6,
+        "chapter": "Chapter 21",
+        "chapter_title": "Reversal — Benevolent Conquest",
+        "type": "Specific Task Group",
+        "display_name": "The Open-Handed Victor",
+        "theme": "Your greatest win is the good you share; power proves itself by what it empowers.",
+        "family": "Resolution / Reward — Generosity, Responsibility & Integration",
+
+        "summary": "After the crucible, Francisco discovers that victory isn’t a finish line but a fountain. He turns the boon outward—credit flows, knowledge is taught, systems are strengthened—so the win multiplies beyond himself. Mastery becomes stewardship, and conquest becomes care.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Five",
+
+        "traits": {
+          "strengths": [
+            "shares credit and spreads capability",
+            "documents the boon so others can use it",
+            "balances assertion with care",
+            "repairs harm quickly and openly",
+            "turns personal wins into team lift"
+          ],
+          "shadow": [
+            "performative generosity masking control",
+            "giving beyond capacity to ‘earn’ approval",
+            "over-optimizing optics instead of impact",
+            "resentment when gratitude is not shown",
+            "mission creep from unfocused helping"
+          ],
+          "growth_focus": [
+            "measure shared outcomes, not applause",
+            "pilot small give-backs before scaling",
+            "set guardrails for sustainable generosity",
+            "separate teaching the boon from owning it",
+            "practice credit-first language in debriefs"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Mighty Waters",
+          "chapter_theme": "Reversal (resolution)",
+          "fiction_chapter_context": "Book 6, Chapter 21 — After the Supreme Ordeal, the boon is claimed, taught, and shared as the true reversal."
+        },
+
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—strength guided by service; power protects and uplifts."
+        },
+
+        "color_alignment": {
+          "name": "Astral",
+          "hsl": "200,42%,36%",
+          "rgb_hex": "#356882",
+          "color_symbolism": "Deep steel-blue resolve turning sharp victory into calm, sustaining care."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.68,
+            "empathy": 0.86,
+            "openness": 0.64,
+            "orderliness": 0.61,
+            "conscientiousness": 0.74,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.59,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.71,
+            "novelty_seeking": 0.56,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "agency": 0.30,
+            "empathy": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q2211","Q2212","Q2213","Q2214",
+            "Q2215","Q2216","Q2217","Q2218"
+          ],
+          "signals_map": {
+            "Q2211": { "dimension": "cooperativeness", "polarity": 1, "content": "I convert personal wins into advantages for the group." },
+            "Q2212": { "dimension": "empathy", "polarity": 1, "content": "I recognize others’ contributions before highlighting my own." },
+            "Q2213": { "dimension": "agency", "polarity": 1, "content": "I take responsibility for outcomes and lead the repair when needed." },
+            "Q2214": { "dimension": "risk_tolerance", "polarity": -1, "content": "I’ll pursue a win even if it risks key relationships." },
+            "Q2215": { "dimension": "conscientiousness", "polarity": 1, "content": "I document the ‘boon’ so others can repeat the result without me." },
+            "Q2216": { "dimension": "social_dominance", "polarity": -1, "content": "I step back deliberately to create space for new leaders." },
+            "Q2217": { "dimension": "adaptability", "polarity": 1, "content": "I tailor how I share the win to fit each audience." },
+            "Q2218": { "dimension": "orderliness", "polarity": 1, "content": "I build lightweight guardrails so generosity stays sustainable." }
+          },
+          "daily_prompt": "Whom will today’s win lift—and precisely how will you make it easy for them to use?",
+          "practices": [
+            "Boon Canvas: codify the win (problem → method → checklist → pitfalls).",
+            "Victory Dividend: allocate a fixed % of each success to teaching or tools.",
+            "Credit Cascade: name three contributors in every debrief before outcomes.",
+            "Guardrail Pact: define limits (time/energy) for giving to avoid burnout.",
+            "Replication Sprint: run a small teach-back to prove others can repeat it."
+          ],
+          "transformation_indicators": [
+            "Replicated wins by peers without your involvement",
+            "Higher team morale after high-stakes pushes",
+            "Faster recovery from conflicts due to transparent repair",
+            "Documented playbooks used across groups",
+            "Increased cross-functional invitations to lead teach-backs"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Reward",
+          "preliminary_beat": "Reversal — Benevolent Conquest",
+          "save_the_cat_beat": "Reversal (resolution)",
+          "character_state": "Power unbound and purpose-aligned; wins are vehicles for uplift.",
+          "ordinary_world_baseline": "Victory as possession; zero-sum reflexes and guarded credit.",
+          "reversal_turn": "Win-to-give: the boon scales only when shared and taught."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Reward",
+            "section_description": "The hero gains treasure or insight after the ordeal",
+            "connection_focus_area": "Sharing the boon",
+            "connect_points": {
+              "point1": "Identify your personal boon",
+              "point2": "Consider its value to others",
+              "point3": "Plan an act of giving"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your key takeaway",
+              "objective2": "List three ways to share it",
+              "objective3": "Execute one act of generosity"
+            }
+          },
+          "book2": {
+            "title": "Give and Take",
+            "author": "Adam Grant",
+            "section_of_focus": "The Benefits of Giving",
+            "section_description": "How helping others leads to success",
+            "connection_focus_area": "Reciprocal generosity",
+            "connect_points": {
+              "point1": "Identify someone to help",
+              "point2": "Offer your skills freely",
+              "point3": "Observe the ripple effect"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Perform a random act of kindness",
+              "objective2": "Track the outcome",
+              "objective3": "Reflect on its impact"
+            }
+          },
+          "book3": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor Frankl",
+            "section_of_focus": "Creating Meaning",
+            "section_description": "Finding purpose through suffering and altruism",
+            "connection_focus_area": "Meaning in giving",
+            "connect_points": {
+              "point1": "Reflect on a past hardship",
+              "point2": "Identify how helping others helped you",
+              "point3": "Plan a purpose-driven action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write about a meaningful help you gave",
+              "objective2": "Connect it to personal growth",
+              "objective3": "Design a new altruistic goal"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-cut terrace above the floodplain, Francisco lays his blade at the feet of those who bled beside him and opens the ledger of the boon.",
+          "symbolic_moment": "The sword’s shadow widens into a bridge; one by one, allies cross carrying new tools learned from the victory.",
+          "emotional_landscape": "Quiet pride, relieved humility, generosity that feels like gravity pulling others upward.",
+          "benevolent_conquest_definition": "To win by widening the circle—turning triumph into transferable strength.",
+          "transformation_promise": "A leader who shares the crown multiplies the kingdom."
+        },
+
+        "epic_novel_pages": "Page 301 - 315",
+        "epic_chapter_focus": "Reversal (resolution)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Child of the Great Transformers",
+        "focus_area": "Resolution",
+        "specific_task_group_description": "Harness your victories to uplift others and solidify growth.",
+        "specific_task_group_tagline": "Triumph with generosity",
+
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Astral",
+        "hex_code": "#356882",
+        "red": 53,
+        "green": 104,
+        "blue": 130
+      },
       "personality_profile_222": {},
       "personality_profile_223": {},
       "personality_profile_224": {},
