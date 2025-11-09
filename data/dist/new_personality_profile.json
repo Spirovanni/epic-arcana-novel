@@ -55272,7 +55272,203 @@
         "green": 255,
         "blue": 102
       },
-      "personality_profile_267": {},
+      "personality_profile_267": {
+        "canonical_id": "EA-267",
+        "unique_identifier": "STG 7.3.2.1",
+        "specific_task_group_title": "Fervency",
+        "all_chapter": 267,
+        "novel_book": 7,
+        "chapter": "Chapter 27",
+        "chapter_title": "The Abyss — Fervency",
+        "type": "Specific Task Group",
+        "display_name": "The Undying Ember",
+        "theme": "When everything goes dark, fuel the flame on purpose—rituals, reasons, and one brave act at a time.",
+        "family": "Intensity — Purpose, Endurance & Emotional Fuel",
+        "summary": "On the lip of nothing, Francisco refuses to fade. He stacks small reasons, rehearses the why, and ships a single act of hope—then another. Heat returns. Signals steady. The team leans in, borrowing courage from his ordered fire.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Knight",
+        "traits": {
+          "strengths": [
+            "summons focused intensity without overwhelming others",
+            "turns purpose into daily non-negotiables",
+            "recovers quickly from emotional dips",
+            "channels passion into disciplined action",
+            "transfers morale through clear, energizing language"
+          ],
+          "shadow": [
+            "pushes too hard and ignores rest signals",
+            "confuses dramatic effort with effective effort",
+            "frames dissent as lack of heart",
+            "lets urgency erode listening",
+            "clings to momentum when a pause is wiser"
+          ],
+          "growth_focus": [
+            "pair every surge with a recovery micro-ritual",
+            "separate ‘loud’ effort from leading indicators",
+            "invite a contrary voice before mobilizing",
+            "schedule purpose cues instead of relying on willpower",
+            "define a stop-loss for emotional overdrive"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 7, Chapter 27 — Abyss: despair crests; ordered fervor re-ignites the march."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—force in service; power tempered by care."
+        },
+        "color_alignment": {
+          "name": "Free Speech Green",
+          "hsl": "132,100%,50%",
+          "rgb_hex": "#00FF33",
+          "color_symbolism": "Neon verdure—life insisting on itself in the deepest night."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.71,
+            "stability": 0.63,
+            "empathy": 0.64,
+            "openness": 0.62,
+            "orderliness": 0.60,
+            "conscientiousness": 0.67,
+            "adaptability": 0.65,
+            "abstract_reasoning": 0.60,
+            "cooperativeness": 0.66,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.72,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.57,
+            "imagination": 0.59
+          },
+          "match_weights": {
+            "emotional_intensity": 0.40,
+            "agency": 0.30,
+            "stability": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2671",
+            "Q2672",
+            "Q2673",
+            "Q2674",
+            "Q2675",
+            "Q2676",
+            "Q2677",
+            "Q2678"
+          ],
+          "signals_map": {
+            "Q2671": { "dimension": "emotional_intensity", "polarity": 1, "content": "I can summon focused zeal without burning others out." },
+            "Q2672": { "dimension": "agency", "polarity": 1, "content": "When hope is thin, I still take one purposeful action." },
+            "Q2673": { "dimension": "stability", "polarity": 1, "content": "I rely on steady rituals that carry me through low points." },
+            "Q2674": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn purpose into a daily non-negotiable task." },
+            "Q2675": { "dimension": "empathy", "polarity": 1, "content": "I lend energy while respecting my limits and others’ bandwidth." },
+            "Q2676": { "dimension": "risk_tolerance", "polarity": -1, "content": "In the abyss, I reach for grand gestures that can derail the plan." },
+            "Q2677": { "dimension": "openness", "polarity": 1, "content": "I update beliefs forged in easier times when reality demands it." },
+            "Q2678": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite a witness or partner when my fire dims to share the load." }
+          },
+          "daily_prompt": "What single ember—ritual, reason, or ask—will you feed today to turn darkness into direction?",
+          "practices": [
+            "Purpose Cue Stack: place a visual, auditory, and calendar cue tied to one non-negotiable action.",
+            "90-Second Reset: breath, posture, one sentence of why—then move.",
+            "Three Sparks: text a peer gratitude, log one win, ship one 5-minute task.",
+            "Floor-of-Yes: define the smallest action that still honors your values.",
+            "Energy Budget: schedule a recovery ritual for every push block."
+          ],
+          "transformation_indicators": [
+            "Consistent daily action across low-morale windows",
+            "Reduced volatility in effort and affect",
+            "Faster rebound after setbacks with logged lessons",
+            "Team adoption of purpose cues and recovery rituals",
+            "Increased purpose-language in status updates and briefs"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "All is Lost — Fervency",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Drained yet directed; heat returns via ordered rituals and shared purpose.",
+          "ordinary_world_baseline": "Frayed will, scattered effort, dimming hope.",
+          "push_turn": "A small, public act of hope creates copyable rhythm and lifts the line."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Abyss",
+            "section_description": "The hero confronts the greatest challenge and feels utter despair.",
+            "connection_focus_area": "Endurance under overwhelm",
+            "connect_points": {
+              "point1": "Identify moments you felt most powerless",
+              "point2": "Recall inner strengths you’ve drawn upon before",
+              "point3": "Commit to one act of hope"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your lowest point",
+              "objective2": "List two past strengths you can draw on",
+              "objective3": "Define one hopeful action to take now"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Sustaining Passion",
+            "section_description": "How to maintain motivation over long challenges.",
+            "connection_focus_area": "Fueling perseverance",
+            "connect_points": {
+              "point1": "Pinpoint your core passion",
+              "point2": "Design a daily reminder of purpose",
+              "point3": "Track small progress each day"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify your passion statement",
+              "objective2": "Set up a daily purpose cue",
+              "objective3": "Record one progress metric"
+            }
+          },
+          "book3": {
+            "title": "High Performance Habits",
+            "author": "Brendon Burchard",
+            "section_of_focus": "Ritualize Energy",
+            "section_description": "Building habits that sustain high energy levels.",
+            "connection_focus_area": "Managing emotional fuel",
+            "connect_points": {
+              "point1": "List three energizing practices",
+              "point2": "Schedule one energy ritual",
+              "point3": "Monitor your energy daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define three energy rituals",
+              "objective2": "Implement one ritual today",
+              "objective3": "Log energy shifts for three days"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath the Lightless Arch, the host falters. Francisco kneels, presses palm to stone, and whispers the vow; a faint green fire gutters, then steadies along the ridge.",
+          "symbolic_moment": "He lifts a shard of mirrorsteel, etching one line: ‘Hold.’ The mark glows emerald, a pulse the ranks can match.",
+          "emotional_landscape": "Sober, fierce, steadfastly warm.",
+          "contentment_definition": "Fervor as disciplined fuel—rituals that keep the fire when will alone cannot.",
+          "transformation_promise": "A leader who orders passion into practice can relight an army from a single ember."
+        },
+        "epic_novel_pages": "Page 391 - 405",
+        "epic_chapter_focus": "Trials (set-up)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Intensity",
+        "specific_task_group_description": "Sustain emotional energy in the darkest moment by recalling your purpose and values.",
+        "specific_task_group_tagline": "Keep the fire alive",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Free Speech Green",
+        "hex_code": "#00FF33",
+        "red": 0,
+        "green": 255,
+        "blue": 51
+      },
       "personality_profile_268": {},
       "personality_profile_269": {},
       "personality_profile_270": {},
