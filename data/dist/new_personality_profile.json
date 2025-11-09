@@ -53509,7 +53509,197 @@
         "green": 173,
         "blue": 92
       },    
-      "personality_profile_258": {},
+      "personality_profile_258": {
+        "canonical_id": "EA-258",
+        "unique_identifier": "STG 7.2.2.2",
+        "specific_task_group_title": "Action-Oriented",
+        "all_chapter": 258,
+        "novel_book": 7,
+        "chapter": "Chapter 18",
+        "chapter_title": "The Road of Trials — Action-Oriented",
+        "type": "Specific Task Group",
+        "display_name": "The Forward Edge",
+        "theme": "Momentum clarifies: commit the body and the mind follows—small, certain strikes carve channels through uncertainty.",
+        "family": "Decision Execution — Commitment, Momentum & Focused Drive",
+        "summary": "On the brink of the innermost approach, Francisco stops circling the problem. He names the next move, launches before doubt congeals, and lets motion generate the map. Imperfect action reveals the hidden doors that planning alone could not see.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Knight",
+        "traits": {
+          "strengths": [
+            "converts intent into visible progress fast",
+            "breaks ambiguity into shippable first steps",
+            "sustains momentum through tight feedback loops",
+            "keeps teams focused on the next concrete move",
+            "chooses decisive paths under time pressure"
+          ],
+          "shadow": [
+            "acts before aligning key stakeholders",
+            "undervalues reflection and recovery time",
+            "confuses motion with traction",
+            "cuts corners on risk checks",
+            "overcommits to a path after sunk effort"
+          ],
+          "growth_focus": [
+            "pair every launch with a pre-set review checkpoint",
+            "run a quick risk scan before committing resources",
+            "timebox the first experiment; define an exit criteria",
+            "broadcast the ‘why now’ to align allies",
+            "log outcomes to separate speed from value"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 7, Chapter 18 — Approach: decisive probes forward under gathering pressure."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—force tempered by service; decisive action aimed at care."
+        },
+        "color_alignment": {
+          "name": "Pigment Green",
+          "hsl": "140,100%,30%",
+          "rgb_hex": "#009933",
+          "color_symbolism": "Cutting verdure—vigorous growth, clean commitment, forward thrust."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.60,
+            "empathy": 0.58,
+            "openness": 0.62,
+            "orderliness": 0.66,
+            "conscientiousness": 0.72,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.60,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.66,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "conscientiousness": 0.30,
+            "risk_tolerance": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2581","Q2582","Q2583","Q2584",
+            "Q2585","Q2586","Q2587","Q2588"
+          ],
+          "signals_map": {
+            "Q2581": { "dimension": "agency", "polarity": 1, "content": "When I know the next step, I take it immediately." },
+            "Q2582": { "dimension": "conscientiousness", "polarity": 1, "content": "I define a small deliverable to prove progress fast." },
+            "Q2583": { "dimension": "risk_tolerance", "polarity": 1, "content": "I can act amid incomplete information if stakes demand it." },
+            "Q2584": { "dimension": "orderliness", "polarity": 1, "content": "I timebox experiments and review results on schedule." },
+            "Q2585": { "dimension": "cooperativeness", "polarity": 1, "content": "I notify stakeholders of the move and the metric we’ll watch." },
+            "Q2586": { "dimension": "stability", "polarity": 1, "content": "Pressure sharpens my focus rather than scattering it." },
+            "Q2587": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay action until I feel completely certain." },
+            "Q2588": { "dimension": "adaptability", "polarity": 1, "content": "If results differ from plan, I pivot without drama." }
+          },
+          "daily_prompt": "What single action—shipped within 30 minutes—moves the mission furthest today?",
+          "practices": [
+            "Five-Second Launch: count down and start the smallest useful slice now.",
+            "Next-Step Ledger: write the next concrete move and the success metric beside it.",
+            "Risk Flash Check: 60 seconds to list top 2 risks and your guardrails.",
+            "Stakeholder Ping: one-paragraph ‘why/what/when’ before you move.",
+            "After-Action Dot: jot one learning and one adjustment immediately after shipping."
+          ],
+          "transformation_indicators": [
+            "Cycle time from decision to action steadily shrinks",
+            "Higher ratio of shipped experiments to proposals",
+            "Clear audit trail linking actions to outcome metrics",
+            "Reduced ‘analysis paralysis’ blockers in retros",
+            "Faster, calmer pivots when evidence shifts"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Approach to the Innermost Cave — Action-Oriented",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "Primed to strike; doubt acknowledged, priority named.",
+          "ordinary_world_baseline": "Overplanning, delayed starts, distributed responsibility.",
+          "push_turn": "A visible, timeboxed action proves traction and unlocks the next gate."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Approach to the Innermost Cave",
+            "section_description": "The hero commits to action.",
+            "connection_focus_area": "Moving forward",
+            "connect_points": {
+              "point1": "Identify your first step",
+              "point2": "Clarify required resources",
+              "point3": "Schedule your action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your immediate action",
+              "objective2": "List needed resources",
+              "objective3": "Set a deadline"
+            }
+          },
+          "book2": {
+            "title": "The 5 Second Rule",
+            "author": "Mel Robbins",
+            "section_of_focus": "Start Before You’re Ready",
+            "section_description": "How small actions build momentum.",
+            "connection_focus_area": "Overcoming hesitation",
+            "connect_points": {
+              "point1": "Count down to action",
+              "point2": "Move within five seconds",
+              "point3": "Note the result"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Perform one five-second launch",
+              "objective2": "Record your experience",
+              "objective3": "Plan the next launch"
+            }
+          },
+          "book3": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore and Evaluate",
+            "section_description": "Choosing the right actions.",
+            "connection_focus_area": "Focused execution",
+            "connect_points": {
+              "point1": "List potential actions",
+              "point2": "Evaluate importance",
+              "point3": "Eliminate distractions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one essential task",
+              "objective2": "Remove one nonessential task",
+              "objective3": "Complete the chosen task"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Under a sky tight with storm-sign, Francisco marks three paths on obsidian ground; he chooses the one with wind in its teeth and steps.",
+          "symbolic_moment": "A blade dips to touch the threshold stone; the gate hums only when metal meets rock—motion activates passage.",
+          "emotional_landscape": "Keen, lean, forward-leaning calm.",
+          "contentment_definition": "Action as clarified intent—one precise move that makes the next one obvious.",
+          "transformation_promise": "A leader who ships the first true step turns fear into a staircase others can climb."
+        },
+        "epic_novel_pages": "Page 256 - 270",
+        "epic_chapter_focus": "Build-up (set-up)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Decision Execution",
+        "specific_task_group_description": "Take decisive steps toward your goal.",
+        "specific_task_group_tagline": "Act with conviction",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Pigment Green",
+        "hex_code": "#009933",
+        "red": 0,
+        "green": 153,
+        "blue": 51
+      },    
       "personality_profile_259": {},
       "personality_profile_260": {},
       "personality_profile_261": {},
