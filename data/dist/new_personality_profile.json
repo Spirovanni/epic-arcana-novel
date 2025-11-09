@@ -55469,7 +55469,203 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_268": {},
+      "personality_profile_268": {
+        "canonical_id": "EA-268",
+        "unique_identifier": "STG 7.3.2.2",
+        "specific_task_group_title": "Recharge",
+        "all_chapter": 268,
+        "novel_book": 7,
+        "chapter": "Chapter 28",
+        "chapter_title": "The Abyss — Recharge",
+        "type": "Specific Task Group",
+        "display_name": "The Renewal Bay",
+        "theme": "Rest is a tactic: step back on purpose, refill the system, and return sharper than you left.",
+        "family": "Recovery — Rest, Restoration & Energy Management",
+        "summary": "Francisco quits the grind long enough to heal the engine. Sleep is anchored, breath is trained, counsel is rotated. He re-enters with steadier hands and brighter edges; the host moves lighter because he does.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "treats recovery as a strategic lever, not a luxury",
+            "sets clear off-switches and honors them",
+            "designs cycles that balance push with replenish",
+            "models boundary-setting without guilt",
+            "returns from rest with decisive clarity"
+          ],
+          "shadow": [
+            "waits for collapse before permitting rest",
+            "labels recovery as ‘lost time’ and overcorrects with frenzy",
+            "confuses numbing with renewal",
+            "lets others’ urgency override boundaries",
+            "abandons routines the moment crisis passes"
+          ],
+          "growth_focus": [
+            "schedule recovery first, then fit work around it",
+            "define hard stop times and visible away signals",
+            "replace passive scrolling with active repair (walk, breath, stretch)",
+            "log energy before/after rests to prove ROI",
+            "delegate one duty per cycle to protect the buffer"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 7, Chapter 28 — Dark Night: deliberate rest restores edge; the march resumes with steadier cadence."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—restored center channeled into efficient action."
+        },
+        "color_alignment": {
+          "name": "Spring Green",
+          "hsl": "144,100%,50%",
+          "rgb_hex": "#00FF66",
+          "color_symbolism": "Electric spring—clean renewal, lucid focus, stored strength."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.55,
+            "stability": 0.78,
+            "empathy": 0.66,
+            "openness": 0.64,
+            "orderliness": 0.67,
+            "conscientiousness": 0.68,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.60,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.53,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2681",
+            "Q2682",
+            "Q2683",
+            "Q2684",
+            "Q2685",
+            "Q2686",
+            "Q2687",
+            "Q2688"
+          ],
+          "signals_map": {
+            "Q2681": { "dimension": "stability", "polarity": 1, "content": "I schedule recovery with the same rigor as work." },
+            "Q2682": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep hard stop times even when others keep pushing." },
+            "Q2683": { "dimension": "adaptability", "polarity": 1, "content": "I adjust workload when biofeedback or fatigue spikes." },
+            "Q2684": { "dimension": "orderliness", "polarity": 1, "content": "My days follow a push–replenish cycle by design." },
+            "Q2685": { "dimension": "agency", "polarity": 1, "content": "After rest, I commit to one decisive next action." },
+            "Q2686": { "dimension": "risk_tolerance", "polarity": -1, "content": "I ignore warning signs and power through exhaustion." },
+            "Q2687": { "dimension": "empathy", "polarity": 1, "content": "I normalize teammates taking healthy breaks and cover for them." },
+            "Q2688": { "dimension": "openness", "polarity": 1, "content": "I experiment with micro-rests and keep the ones that work." }
+          },
+          "daily_prompt": "What will you stop—or pause—today so tomorrow’s effort lands stronger?",
+          "practices": [
+            "Anchor Sleep: fixed bedtime/wake window for 7 days.",
+            "Ultradian Rhythm: 90-minute focus block + 15-minute repair.",
+            "Active Repair: 10-minute walk + breath cadence (4-6) between blocks.",
+            "Digital Sabbath Micro-dose: one hour device-free sanctuary daily.",
+            "Recovery Budget: pre-allocate 20% of capacity to rest & contingency."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-clarity after breaks",
+            "Lower error rates during late-cycle work",
+            "Stable energy across multi-day pushes",
+            "Increased HR-style recovery signals (subjective or device-tracked)",
+            "Higher retention and morale from normalized rest culture"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul — Recharge",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Depleted but disciplined; boundaries up, buffers restored.",
+          "ordinary_world_baseline": "Unbroken grind, frayed focus, brittle decisions.",
+          "push_turn": "Deliberate rest returns precision; the next move is cleaner and costs less."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Dark Night of the Soul",
+            "section_description": "The hero experiences utter darkness before rebirth.",
+            "connection_focus_area": "Rest as renewal",
+            "connect_points": {
+              "point1": "Identify signs of burnout",
+              "point2": "Plan a restorative break",
+              "point3": "Reflect on gains from rest"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two burnout indicators",
+              "objective2": "Schedule a 24-hour rest",
+              "objective3": "Journal insights from the break"
+            }
+          },
+          "book2": {
+            "title": "The Power of Rest",
+            "author": "Alex Soojung-Kim Pang",
+            "section_of_focus": "The Science of Recovery",
+            "section_description": "Evidence for why rest enhances performance.",
+            "connection_focus_area": "Prioritizing recovery",
+            "connect_points": {
+              "point1": "Record your sleep patterns",
+              "point2": "Integrate micro-breaks into your day",
+              "point3": "Measure alertness before/after rest"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Analyze one week of sleep data",
+              "objective2": "Implement two 5-minute breaks daily",
+              "objective3": "Report changes in focus"
+            }
+          },
+          "book3": {
+            "title": "Peak: Secrets from the New Science of Expertise",
+            "author": "Anders Ericsson",
+            "section_of_focus": "Deliberate Practice and Recovery",
+            "section_description": "Balancing intense practice with necessary rest.",
+            "connection_focus_area": "Optimizing performance cycles",
+            "connect_points": {
+              "point1": "Design a practice–rest schedule",
+              "point2": "Track performance trends",
+              "point3": "Adjust rest intervals for peak focus"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a 90-minute practice cycle with breaks",
+              "objective2": "Chart performance daily",
+              "objective3": "Refine intervals after three cycles"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Verdant Cloister, Francisco shelves his blade and enters the mineral pool; starmaps above him dim, then re-order along a calmer grid.",
+          "symbolic_moment": "He sets a metronome stone to a slow pulse; the host syncs breath to the beat and the corridor brightens.",
+          "emotional_landscape": "Quiet, restorative, lucid.",
+          "contentment_definition": "Recovery as responsibility—restoring edge so the next strike is precise and humane.",
+          "transformation_promise": "A leader who rests on purpose returns with surplus—clarity to spare, and strength others can borrow."
+        },
+        "epic_novel_pages": "Page 406 - 420",
+        "epic_chapter_focus": "Pinch (event/conflict)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Recovery",
+        "specific_task_group_description": "Allow yourself deliberate rest to rebuild mental and physical strength for the final battle.",
+        "specific_task_group_tagline": "Refresh to renew",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Spring Green",
+        "hex_code": "#00FF66",
+        "red": 0,
+        "green": 255,
+        "blue": 102
+      },    
       "personality_profile_269": {},
       "personality_profile_270": {},
       "personality_profile_271": {},
