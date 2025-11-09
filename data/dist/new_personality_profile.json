@@ -58160,7 +58160,203 @@
       }
     },
     "family_8": {
-      "personality_profile_281": {},
+      "personality_profile_281": {
+        "canonical_id": "EA-281",
+        "unique_identifier": "STG 8.1.1.1",
+        "specific_task_group_title": "Wisdom",
+        "all_chapter": 281,
+        "novel_book": 8,
+        "chapter": "Chapter 1",
+        "chapter_title": "The Ordinary World — Wisdom",
+        "type": "Specific Task Group",
+        "display_name": "The Jade Counselor",
+        "theme": "Slow the mind, sharpen the lens: distill lessons into foresight and turn clear seeing into clean action.",
+        "family": "Insight — Discernment, Strategy & Foresight",
+        "summary": "A calm re-entry. Francisco inventories assumptions, re-threads lessons from Book 7, and sets a cadence for thinking that refuses hurry. Plans are sketched with contingencies, biases are named, and each insight is coupled to a next step. The work begins with clarity, not noise.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "spots patterns and hidden assumptions quickly",
+            "balances analysis with concise operational moves",
+            "keeps a decision log and reviews outcomes",
+            "uses premortems and backcasts to de-risk plans",
+            "turns feedback into refined mental models"
+          ],
+          "shadow": [
+            "overthinks and misses small windows of opportunity",
+            "uses ‘prudence’ to mask avoidance of risk",
+            "treats analysis artifacts as progress",
+            "discounts intuition and embodied signals",
+            "gets rigid about frameworks under stress"
+          ],
+          "growth_focus": [
+            "time-box analysis and commit to a single next action",
+            "pair every insight with a measurable experiment",
+            "run lightweight premortems instead of exhaustive ones",
+            "invite a dissenting voice before locking a plan",
+            "review bias triggers monthly and update guardrails"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "The Ordinary World",
+          "fiction_chapter_context": "Book 8, Chapter 1 — Opening image: a strategist returning home with clearer eyes and steadier hands."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity backed by decisive will."
+        },
+        "color_alignment": {
+          "name": "Mint Green",
+          "hsl": "120,100%,80%",
+          "rgb_hex": "#99FF99",
+          "color_symbolism": "Fresh clarity and gentle steadiness—the hue of cool insight turning toward action."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.74,
+            "empathy": 0.62,
+            "openness": 0.79,
+            "orderliness": 0.71,
+            "conscientiousness": 0.76,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.83,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.41,
+            "novelty_seeking": 0.57,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "conscientiousness": 0.33,
+            "openness": 0.27
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2811",
+            "Q2812",
+            "Q2813",
+            "Q2814",
+            "Q2815",
+            "Q2816",
+            "Q2817",
+            "Q2818"
+          ],
+          "signals_map": {
+            "Q2811": { "dimension": "conscientiousness", "polarity": 1, "content": "I slow my thinking before key decisions and map assumptions." },
+            "Q2812": { "dimension": "openness", "polarity": 1, "content": "I reframe recurring beliefs when evidence contradicts them." },
+            "Q2813": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I sketch multiple scenarios and pre-decide triggers." },
+            "Q2814": { "dimension": "orderliness", "polarity": 1, "content": "I prefer clarity over speed when stakes are high." },
+            "Q2815": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I run a quick premortem to surface risks before acting." },
+            "Q2816": { "dimension": "risk_tolerance", "polarity": -1, "content": "I act on first impulse without checking for bias." },
+            "Q2817": { "dimension": "agency", "polarity": 1, "content": "I translate a core insight into one immediate, concrete step." },
+            "Q2818": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep a decision log and review outcomes monthly." }
+          },
+          "daily_prompt": "Which assumption needs testing today—and what single step will turn that test into better action?",
+          "practices": [
+            "Assumption Sweep: list top 5 assumptions; mark evidence for/against; keep 1 to test.",
+            "Premortem Lite: 5-minute failure sketch; add one safeguard.",
+            "Decision Log: record context, choice, hypothesis; set a review date.",
+            "Red Team Ping: ask one trusted skeptic for a 2-minute critique.",
+            "One-Step Commit: convert the clearest insight into a measurable experiment by end of day."
+          ],
+          "transformation_indicators": [
+            "Shorter cycle time from insight to action",
+            "Higher hit-rate on forecasted outcomes",
+            "Fewer surprise regressions due to unchecked assumptions",
+            "Routine use of premortems/backcasts in plans",
+            "Consistent decision-log reviews with course corrections"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — Wisdom",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Observant, deliberate, unhurried; insight is paired with small, certain moves.",
+          "ordinary_world_baseline": "Reactive choices, untested assumptions, and progress by luck more than design.",
+          "push_turn": "A reflective discipline is adopted—assumptions tested, scenarios prepared, action tethered to evidence."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "section_of_focus": "Book 2: On the Quality of Thought",
+            "section_description": "Harnessing reflection to refine judgment",
+            "connection_focus_area": "Cultivating self-awareness",
+            "connect_points": {
+              "point1": "Identify a recurring thought pattern",
+              "point2": "Challenge any unhelpful beliefs",
+              "point3": "Reframe one perspective"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal one belief you’ll reframe",
+              "objective2": "Apply the new perspective in a small task",
+              "objective3": "Reflect on its impact"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Thinking Slowly",
+            "section_description": "Engaging deliberate decision-making",
+            "connection_focus_area": "Promoting mindful analysis",
+            "connect_points": {
+              "point1": "Note one quick assumption you make",
+              "point2": "Slow down and analyze it",
+              "point3": "Compare initial vs. deliberate outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one assumption shift",
+              "objective2": "Outline slow thinking steps",
+              "objective3": "Practice mindful decision once"
+            }
+          },
+          "book3": {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "section_of_focus": "Chapter 1: Laying Plans",
+            "section_description": "Strategizing with clarity",
+            "connection_focus_area": "Applying foresight to action",
+            "connect_points": {
+              "point1": "Map out three possible scenarios",
+              "point2": "Evaluate their risks",
+              "point3": "Choose the best path"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a simple strategic plan",
+              "objective2": "List potential obstacles",
+              "objective3": "Decide on immediate next action"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Jade Causeway between twin rivers, Francisco watches mirrored currents carry whispers from prior worlds.",
+          "symbolic_moment": "He etches a small sigil onto a water-clock; with each drop, one assumption loosens and a clearer course appears.",
+          "emotional_landscape": "Cool, lucid, patient.",
+          "contentment_definition": "Confidence as clarity-in-motion: think well, act cleanly, review honestly.",
+          "transformation_promise": "A leader who sees clearly moves lightly—and brings others into the light."
+        },
+        "epic_novel_pages": "Page 1 - 15",
+        "epic_chapter_focus": "Intro",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Insight",
+        "specific_task_group_description": "Cultivate discernment by reflecting on past lessons and applying insight to current challenges.",
+        "specific_task_group_tagline": "Harness insight for action",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Mint Green",
+        "hex_code": "#99FF99",
+        "red": 153,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_282": {},
       "personality_profile_283": {},
       "personality_profile_284": {},
