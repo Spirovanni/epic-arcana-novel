@@ -52363,7 +52363,197 @@
         "green": 128,
         "blue": 0
       },    
-      "personality_profile_252": {},
+      "personality_profile_252": {
+        "canonical_id": "EA-252",
+        "unique_identifier": "STG 7.1.4.3",
+        "specific_task_group_title": "Diversion",
+        "all_chapter": 252,
+        "novel_book": 7,
+        "chapter": "Chapter 12",
+        "chapter_title": "Allies, Mentors, and Helpers — Diversion",
+        "type": "Specific Task Group",
+        "display_name": "The Strategic Breath",
+        "theme": "Rest isn’t retreat; it’s refit—an intentional pause that restores signal, widens options, and returns you sharper than you left.",
+        "family": "Strategic Pause / Diversion — Renewal, Energy Management & Perspective Shifts",
+        "summary": "Pressed by accumulating strain, Francisco learns to engineer recovery on purpose. Mentors teach him to protect margin, to exit breaks with a plan, and to treat diversion as a tactical maneuver. The result isn’t drift—it’s cleaner decisions, steadier morale, and longer reach.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Four",
+        "traits": {
+          "strengths": [
+            "protects recovery blocks like mission-critical appointments",
+            "uses short, designed pauses to reduce error and rework",
+            "exits breaks with a crisp re-entry plan",
+            "leverages play and stillness to unlock fresh angles",
+            "stabilizes team cadence by modeling sustainable pace"
+          ],
+          "shadow": [
+            "confuses avoidance with recovery; stretches pauses too long",
+            "over-optimizes rituals instead of doing the work",
+            "retreats into solitude under the banner of ‘recharge’",
+            "loses urgency after extended downtime",
+            "treats rest as a reward, not a tactic—skips it when most needed"
+          ],
+          "growth_focus": [
+            "timebox pauses and set a re-entry task before you break",
+            "pair every diversion with a measurable outcome target",
+            "run a weekly energy/error review to tune cadence",
+            "share your renewal plan so the team can sync",
+            "practice a 60-second reset when a full break isn’t possible"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 7, Chapter 12 — Allies & Mentors: planned diversion renews capacity and sharpens counsel before the next push."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—rest that readies decisive motion."
+        },
+        "color_alignment": {
+          "name": "Fun Green",
+          "hsl": "150,100%,20%",
+          "rgb_hex": "#006633",
+          "color_symbolism": "Forest hush at noon—cool shade that restores edge and aim."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.55,
+            "stability": 0.80,
+            "empathy": 0.69,
+            "openness": 0.60,
+            "orderliness": 0.64,
+            "conscientiousness": 0.68,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.59,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.40,
+            "social_dominance": 0.38,
+            "novelty_seeking": 0.48,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "stability": 0.45,
+            "conscientiousness": 0.30,
+            "adaptability": 0.25
+          },
+          "threshold": 0.81,
+          "top_signal_items": [
+            "Q2521","Q2522","Q2523","Q2524",
+            "Q2525","Q2526","Q2527","Q2528"
+          ],
+          "signals_map": {
+            "Q2521": { "dimension": "stability", "polarity": 1, "content": "I schedule renewal blocks and protect them like key meetings." },
+            "Q2522": { "dimension": "conscientiousness", "polarity": 1, "content": "I exit breaks with a three-bullet re-entry plan." },
+            "Q2523": { "dimension": "adaptability", "polarity": 1, "content": "I adjust cadence based on energy and signal, not guilt." },
+            "Q2524": { "dimension": "agency", "polarity": 1, "content": "I treat rest as a tactic to increase output, not a reward." },
+            "Q2525": { "dimension": "orderliness", "polarity": 1, "content": "I track energy and error rates to tune my pause schedule." },
+            "Q2526": { "dimension": "risk_tolerance", "polarity": -1, "content": "I push through exhaustion rather than taking a timely break." },
+            "Q2527": { "dimension": "empathy", "polarity": 1, "content": "I normalize recovery in the team to keep morale and trust high." },
+            "Q2528": { "dimension": "abstract_reasoning", "polarity": 1, "content": "Stepping away reliably reveals patterns I miss when grinding." }
+          },
+          "daily_prompt": "What 15-minute renewal will you schedule today—and what single action will you launch the moment it ends?",
+          "practices": [
+            "90/15 Cadence: work 90 minutes, recover 15; set the next action before the break.",
+            "Green Room Reset: quiet space, breathe 6 cycles, name the next move.",
+            "Digital Drain Audit: mute one notification stream during deep blocks.",
+            "Re-entry 3•2•1: list 3 tasks, choose 2, start 1 within 60 seconds.",
+            "Play Spark: 10–15 minutes of low-stakes creativity to unlock perspective."
+          ],
+          "transformation_indicators": [
+            "Lower error/rework after planned pauses",
+            "More stable daily energy with fewer late-day slumps",
+            "Improved time-to-clarity after breaks",
+            "Team adoption of shared renewal rhythms",
+            "Reduced context-switching during critical work windows"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Diversion",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Tired but teachable; learning to rest as a tactic.",
+          "ordinary_world_baseline": "White-knuckle grind with diminishing returns.",
+          "push_turn": "Strategic retreats produce sharper advances and steadier teams."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "Moments of respite and counsel from trusted guides.",
+            "connection_focus_area": "Rest and recuperation",
+            "connect_points": {
+              "point1": "Identify a scene of rest in the hero’s journey",
+              "point2": "Note the guidance provided",
+              "point3": "Plan your own restorative activity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one restful practice",
+              "objective2": "Schedule it this week",
+              "objective3": "Reflect on its effect"
+            }
+          },
+          "book2": {
+            "title": "The Power of Full Engagement",
+            "author": "Jim Loehr & Tony Schwartz",
+            "section_of_focus": "Energy Renewal",
+            "section_description": "Balancing stress and recovery for peak performance.",
+            "connection_focus_area": "Managing energy",
+            "connect_points": {
+              "point1": "List one energy depletion activity",
+              "point2": "Select one recovery ritual",
+              "point3": "Incorporate it daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a stress trigger",
+              "objective2": "Choose a recovery ritual",
+              "objective3": "Track energy levels before/after"
+            }
+          },
+          "book3": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore",
+            "section_description": "The importance of play and rest in creative thinking.",
+            "connection_focus_area": "Intentional downtime",
+            "connect_points": {
+              "point1": "Block 15 minutes for creative play",
+              "point2": "Notice any new ideas",
+              "point3": "Capture insights"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Schedule a play break",
+              "objective2": "Record new thoughts",
+              "objective3": "Apply one insight immediately"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a canopy of emerald glass, the Reconcilers’ greenroom hums; Francisco lays down his sword maps, breathes, and listens to the room’s slow pulse.",
+          "symbolic_moment": "Four sheathed blades hang as a wind chime; a brief breeze turns discord into a single tone that points toward the next corridor.",
+          "emotional_landscape": "Calm, restored, quietly certain.",
+          "contentment_definition": "Diversion as intentional renewal: pausing to sharpen perception and stamina.",
+          "transformation_promise": "A leader who rests on purpose returns clearer, steadier—and makes endurance a shared strategy."
+        },
+        "epic_novel_pages": "Page 166 - 180",
+        "epic_chapter_focus": "Allies, Mentors, and Helpers",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Strategic Pause",
+        "specific_task_group_description": "Take a purposeful break to refresh mind and body before the next challenge.",
+        "specific_task_group_tagline": "Pause with purpose",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Fun Green",
+        "hex_code": "#006633",
+        "red": 0,
+        "green": 102,
+        "blue": 51
+      },    
       "personality_profile_253": {},
       "personality_profile_254": {},
       "personality_profile_255": {},
