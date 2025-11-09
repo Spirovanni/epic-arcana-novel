@@ -52172,7 +52172,197 @@
         "green": 51,
         "blue": 0
       }, 
-      "personality_profile_251": {},
+      "personality_profile_251": {
+        "canonical_id": "EA-251",
+        "unique_identifier": "STG 7.1.4.2",
+        "specific_task_group_title": "Curiosity",
+        "all_chapter": 251,
+        "novel_book": 7,
+        "chapter": "Chapter 11",
+        "chapter_title": "Allies, Mentors, and Helpers — Curiosity",
+        "type": "Specific Task Group",
+        "display_name": "The Open Compass",
+        "theme": "Curiosity isn’t noise; it’s trained wonder—sharper questions that widen the map and expose patterns you can act on.",
+        "family": "Intellectual Inquiry / Curiosity — Wonder, Pattern-Seeking & Reframing",
+        "summary": "In the pinch between pressure and possibility, Francisco turns to questions. He learns to ask clean, non-leading prompts, to listen past answers for structures, and to update quickly. Mentors open doors when they see his curiosity produce decisions—not delays.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Page",
+        "traits": {
+          "strengths": [
+            "frames probing, non-leading questions that surface signal",
+            "listens for patterns beneath first answers",
+            "updates beliefs quickly when evidence shifts",
+            "connects disparate facts into workable hypotheses",
+            "invites dissent to refine understanding"
+          ],
+          "shadow": [
+            "uses questions to stall commitment (‘analysis drift’)",
+            "overfits neat patterns to messy reality",
+            "chases novelty over depth; spreads attention thin",
+            "presses others with rapid-fire inquiry that feels adversarial",
+            "clings to pet hypotheses despite counterevidence"
+          ],
+          "growth_focus": [
+            "pair every core question with a 30-minute experiment",
+            "timebox research to prevent analysis drift",
+            "keep a disconfirming-evidence log",
+            "ask one naive question in every mentor meeting",
+            "close each inquiry with a 3-bullet decision summary"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 7, Chapter 11 — Pinch: curiosity turns mentorship into motion, revealing hidden common ground."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—curiosity converting into decisive action."
+        },
+        "color_alignment": {
+          "name": "Green",
+          "hsl": "120,100%,25%",
+          "rgb_hex": "#008000",
+          "color_symbolism": "Evergreen inquiry—rooted questions that keep growing useful answers."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.61,
+            "stability": 0.72,
+            "empathy": 0.71,
+            "openness": 0.82,
+            "orderliness": 0.58,
+            "conscientiousness": 0.64,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.42,
+            "novelty_seeking": 0.75,
+            "imagination": 0.79
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "adaptability": 0.30,
+            "abstract_reasoning": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2511","Q2512","Q2513","Q2514",
+            "Q2515","Q2516","Q2517","Q2518"
+          ],
+          "signals_map": {
+            "Q2511": { "dimension": "openness", "polarity": 1, "content": "I enjoy revising my view when better evidence appears." },
+            "Q2512": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I link ideas across domains to see hidden structure." },
+            "Q2513": { "dimension": "adaptability", "polarity": 1, "content": "I switch lines of inquiry quickly when a path goes cold." },
+            "Q2514": { "dimension": "agency", "polarity": 1, "content": "I end research with a concrete next experiment." },
+            "Q2515": { "dimension": "orderliness", "polarity": 1, "content": "I capture questions and answers in a searchable log." },
+            "Q2516": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid asking naive questions in front of experts." },
+            "Q2517": { "dimension": "empathy", "polarity": 1, "content": "I tailor questions to honor the mentor’s perspective." },
+            "Q2518": { "dimension": "cooperativeness", "polarity": 1, "content": "I share learnings back to the group to improve decisions." }
+          },
+          "daily_prompt": "Which assumption deserves a fresh ‘why’—and what 30-minute test will you run today?",
+          "practices": [
+            "Mentor Triad: ask one why/one how/one what-if, then synthesize.",
+            "Disconfirming Hunt: list 2 facts that could be true if you’re wrong.",
+            "Pattern Notebook: diagram links between rival viewpoints.",
+            "Curiosity Walk: 10 minutes observing without judging; record 3 surprises.",
+            "Micro-Experiment: timebox a test that turns an answer into evidence."
+          ],
+          "transformation_indicators": [
+            "Higher question-to-experiment conversion rate",
+            "Faster belief updates after new evidence",
+            "Mentors volunteer more access due to thoughtful inquiry",
+            "Discovery of shared interests across opposing factions",
+            "Less rework caused by faulty assumptions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Curiosity",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Humble, investigative; eager to be corrected.",
+          "ordinary_world_baseline": "Assumed knowledge; brittle answers",
+          "push_turn": "Questions reveal hidden trails; mentors share their maps."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The hero learns from mentors through dialogue.",
+            "connection_focus_area": "Learning through questions",
+            "connect_points": {
+              "point1": "Note a question the hero asks a mentor",
+              "point2": "Identify the insight gained",
+              "point3": "Apply the insight to your situation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Record one question for a mentor",
+              "objective2": "Capture the answer you receive",
+              "objective3": "Implement the new insight"
+            }
+          },
+          "book2": {
+            "title": "Think Again",
+            "author": "Adam Grant",
+            "section_of_focus": "The Joy of Being Wrong",
+            "section_description": "Cultivating curiosity by challenging your own views.",
+            "connection_focus_area": "Questioning assumptions",
+            "connect_points": {
+              "point1": "List a belief you hold",
+              "point2": "Formulate a question to test it",
+              "point3": "Research or discuss to find answers"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one core belief",
+              "objective2": "Create two probing questions",
+              "objective3": "Seek a perspective that challenges it"
+            }
+          },
+          "book3": {
+            "title": "A More Beautiful Question",
+            "author": "Warren Berger",
+            "section_of_focus": "Why Questioning Matters",
+            "section_description": "How asking the right questions drives innovation.",
+            "connection_focus_area": "Power of inquiry",
+            "connect_points": {
+              "point1": "Craft a 'why' question about your goal",
+              "point2": "Share it with a mentor",
+              "point3": "Note the new ideas that emerge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write one 'why' question",
+              "objective2": "Ask it in conversation",
+              "objective3": "Document the response"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Conclave of Echoes, Francisco chalks quiet circles across a slate floor, asking elders three questions that make rival maps overlap.",
+          "symbolic_moment": "A page’s cup catches rain through a skylight; ripples form a question mark, then settle into a shared route.",
+          "emotional_landscape": "Attentive, receptive, lightly excited.",
+          "contentment_definition": "Curiosity as disciplined wonder: questions that earn evidence and invite alliance.",
+          "transformation_promise": "A leader who learns in public makes truth collaborative—and reconciliation possible."
+        },
+        "epic_novel_pages": "Page 151 - 165",
+        "epic_chapter_focus": "Pinch",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Intellectual Inquiry",
+        "specific_task_group_description": "Engage with mentors by asking questions to expand your understanding.",
+        "specific_task_group_tagline": "Stay curious",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Green",
+        "hex_code": "#008000",
+        "red": 0,
+        "green": 128,
+        "blue": 0
+      },    
       "personality_profile_252": {},
       "personality_profile_253": {},
       "personality_profile_254": {},
