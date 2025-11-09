@@ -55863,7 +55863,235 @@
         "green": 255,
         "blue": 153
       },
-      "personality_profile_270": {},
+      "personality_profile_270": {
+        "canonical_id": "EA-270",
+        "unique_identifier": "STG 7.3.3.1",
+        "specific_task_group_title": "Understanding",
+        "all_chapter": 270,
+        "novel_book": 7,
+        "chapter": "Chapter 30",
+        "chapter_title": "The Ultimate Boon — Understanding",
+        "type": "Specific Task Group",
+        "display_name": "The Grounded Prism",
+        "theme": "Clarity is earned: distill pain into principles, shape your environment around them, and wisdom begins to steer without strain.",
+        "family": "Insight — Reflection, Synthesis & Inner Clarity",
+        "summary": "After the deepest descent, Francisco stops chasing answers and starts refining them. He sifts trials into teachable rules, binds insight to habit, and lets calm structure do the carrying. What was chaos becomes cadence; what was wound becomes wisdom.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "extracts durable principles from complex experience",
+            "translates insight into simple, repeatable practices",
+            "designs environments that cue the right behavior",
+            "stays steady and observant under pressure",
+            "teaches others to see the pattern beneath events"
+          ],
+          "shadow": [
+            "overthinks and delays decisive action awaiting perfect clarity",
+            "codifies rules too early and stifles creative options",
+            "uses insight as distance rather than engagement",
+            "confuses elegant models for on-the-ground reality",
+            "neglects emotion while privileging analysis"
+          ],
+          "growth_focus": [
+            "timebox analysis and ship a small, testable rule",
+            "pair every principle with one behavior and one cue",
+            "invite a counterexample before finalizing a model",
+            "practice naming the feeling before naming the fix",
+            "review outcomes weekly and retire rules that don’t earn their keep"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 7, Chapter 30 — From the long night, Francisco extracts a living principle and sets it to work."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clarity moving into embodied, decisive action."
+        },
+        "color_alignment": {
+          "name": "Aquamarine",
+          "hsl": "160,100%,70%",
+          "rgb_hex": "#66FFCC",
+          "color_symbolism": "Luminous calm—clean insight, breathable space, steady renewal."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.78,
+            "empathy": 0.66,
+            "openness": 0.74,
+            "orderliness": 0.68,
+            "conscientiousness": 0.72,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.83,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.58,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.40,
+            "openness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2701",
+            "Q2702",
+            "Q2703",
+            "Q2704",
+            "Q2705",
+            "Q2706",
+            "Q2707",
+            "Q2708"
+          ],
+          "signals_map": {
+            "Q2701": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I translate complex experiences into simple governing principles."
+            },
+            "Q2702": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "After hard lessons, I revisit assumptions and update my view."
+            },
+            "Q2703": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I stay calm long enough to see the pattern beneath the pain."
+            },
+            "Q2704": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I turn insights into repeatable practices with owners and cadence."
+            },
+            "Q2705": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I design cues and constraints so the right choice becomes obvious."
+            },
+            "Q2706": {
+              "dimension": "risk_tolerance",
+              "polarity": -1,
+              "content": "I avoid acting until I understand everything perfectly."
+            },
+            "Q2707": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "When reality disproves my model, I update fast and keep moving."
+            },
+            "Q2708": {
+              "dimension": "imagination",
+              "polarity": 1,
+              "content": "I visualize multiple futures to pressure-test today’s rule."
+            }
+          },
+          "daily_prompt": "What lesson is trying to lead you today—and what single behavior and cue will embody it by noon?",
+          "practices": [
+            "Post-Mortem Prism: harvest one principle from a setback; name trigger, behavior, and expected outcome.",
+            "Principle Ledger: maintain a living list of rules; weekly prune any that don’t earn results.",
+            "Cue Craft: place one visual or environmental cue where the behavior begins.",
+            "Wisdom Walk: 10 minutes of movement to ask, “What did today teach—and how will it show up tomorrow?”",
+            "Rule-to-Ritual: run a 5-minute micro-ritual that enacts the principle the same way, every day."
+          ],
+          "transformation_indicators": [
+            "Shorter insight-to-implementation cycle time",
+            "Fewer repeated mistakes on the same class of problem",
+            "Environmental cues visible at points of decision",
+            "Consistent execution under stress with lower variance",
+            "Stakeholders can recite the governing principle in their own words"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Dark Night of the Soul — Understanding",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Clarity after descent; principles distilled; compass steady.",
+          "ordinary_world_baseline": "Reactive fixes without synthesis; lessons evaporate under pressure.",
+          "push_turn": "One distilled principle becomes a living rule that turns darkness into direction."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ultimate Boon",
+            "section_description": "The hero attains the goal and understands its significance",
+            "connection_focus_area": "Extracting wisdom from triumph",
+            "connect_points": {
+              "point1": "Identify the core lesson from your hardest trial",
+              "point2": "Translate that lesson into guiding principles",
+              "point3": "Envision how that wisdom will shape your path"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate one key insight from adversity",
+              "objective2": "Define three guiding principles",
+              "objective3": "Map an action plan rooted in those principles"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Design your environment to surface key behaviors",
+            "connection_focus_area": "Highlighting insights through habit design",
+            "connect_points": {
+              "point1": "Select one insight to reinforce daily",
+              "point2": "Create a visual cue for that insight",
+              "point3": "Build a simple habit around reflecting on it"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Choose a habit to embed your insight",
+              "objective2": "Implement a daily reminder system",
+              "objective3": "Track your consistency for one week"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenges",
+            "section_description": "Adopting a growth mindset in the face of difficulty",
+            "connection_focus_area": "Viewing setbacks as opportunities",
+            "connect_points": {
+              "point1": "Reframe one past setback as a learning moment",
+              "point2": "Journal a growth-oriented response",
+              "point3": "Share your reframing with a peer"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a fixed-mindset rant",
+              "objective2": "Rephrase it with growth-oriented language",
+              "objective3": "Apply that reframe in a current challenge"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Archive of Still Waters, shelves float above a glassy lake. Francisco lowers a quill into the surface and a sentence writes itself in light.",
+          "symbolic_moment": "He sets a single stone rule upon a pedestal; ripples radiate and settle into a clear path across the water.",
+          "emotional_landscape": "Quiet, assured, newly spacious.",
+          "contentment_definition": "Understanding as lived alignment—principles that breathe through practice until effort feels like ease.",
+          "transformation_promise": "A leader who grounds insight in ritual turns wisdom into a road others can walk."
+        },
+        "epic_novel_pages": "Page 436 - 450",
+        "epic_chapter_focus": "Darkest moment (resolution)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Insight",
+        "specific_task_group_description": "Reflect on your deepest challenges to uncover the lessons that will guide your rebirth.",
+        "specific_task_group_tagline": "See the light within",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Aquamarine",
+        "hex_code": "#66FFCC",
+        "red": 102,
+        "green": 255,
+        "blue": 204
+      },
       "personality_profile_271": {},
       "personality_profile_272": {},
       "personality_profile_273": {},
