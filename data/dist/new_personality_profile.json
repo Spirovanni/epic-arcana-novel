@@ -57764,7 +57764,203 @@
         "green": 242,
         "blue": 128
       },
-      "personality_profile_279": {},
+      "personality_profile_279": {
+        "canonical_id": "EA-279",
+        "unique_identifier": "STG 7.3.6.1",
+        "specific_task_group_title": "Earned Success",
+        "all_chapter": 279,
+        "novel_book": 7,
+        "chapter": "Chapter 39",
+        "chapter_title": "Master of Two Worlds — Earned Success",
+        "type": "Specific Task Group",
+        "display_name": "The Bannered Return",
+        "theme": "Honor the finish without stopping the march: name the win, share the credit, and convert celebration into the next commitment.",
+        "family": "Recognition — Achievement, Gratitude & Integration",
+        "summary": "The crossing back is lined with standards raised by many hands. Francisco resists the solo spotlight, enumerates the real gains, and threads gratitude into policy. Laurels don’t lull; they signal continuity—what worked becomes the new baseline, and the next ascent is already charted.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Six",
+        "traits": {
+          "strengths": [
+            "surfaces concrete outcomes and ties them to behaviors",
+            "distributes credit visibly and fairly across contributors",
+            "designs rituals of gratitude that strengthen culture",
+            "captures lessons and codifies them into SOPs",
+            "frames wins as a launchpad for the next cycle"
+          ],
+          "shadow": [
+            "slips into optics over substance when praise is abundant",
+            "lets victory laps delay essential follow-through",
+            "overemphasizes personal recognition, shrinking the circle",
+            "confuses morale boosts with durable improvements",
+            "avoids naming gaps to keep the mood celebratory"
+          ],
+          "growth_focus": [
+            "anchor recognition in metrics and specific behaviors",
+            "pair every celebration with a clear recommitment step",
+            "run a frank ‘what still hurts’ segment in the review",
+            "rotate the spotlight to under-sung contributors",
+            "turn the gratitude list into a replication playbook"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 7, Chapter 39 — Master of Two Worlds: achievements tallied, gratitude broadcast, and gains woven into law."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—celebration grounded in loyalty, systems, and shared success."
+        },
+        "color_alignment": {
+          "name": "Lime",
+          "hsl": "120,100%,50%",
+          "rgb_hex": "#00FF00",
+          "color_symbolism": "Fresh laurel—living proof of effort, renewal, and onward motion."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.74,
+            "empathy": 0.77,
+            "openness": 0.63,
+            "orderliness": 0.71,
+            "conscientiousness": 0.76,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.79,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "empathy": 0.35,
+            "conscientiousness": 0.35,
+            "stability": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2791",
+            "Q2792",
+            "Q2793",
+            "Q2794",
+            "Q2795",
+            "Q2796",
+            "Q2797",
+            "Q2798"
+          ],
+          "signals_map": {
+            "Q2791": { "dimension": "cooperativeness", "polarity": 1, "content": "I share credit early and often, naming specific contributions." },
+            "Q2792": { "dimension": "conscientiousness", "polarity": 1, "content": "I document outcomes and tie recognition to measurable impact." },
+            "Q2793": { "dimension": "empathy", "polarity": 1, "content": "I express gratitude in ways that match how each person prefers to be appreciated." },
+            "Q2794": { "dimension": "stability", "polarity": 1, "content": "I celebrate wins without losing the thread of our longer mission." },
+            "Q2795": { "dimension": "orderliness", "polarity": 1, "content": "We close projects with a repeatable review-and-gratitude ritual." },
+            "Q2796": { "dimension": "social_dominance", "polarity": -1, "content": "I center the spotlight on myself rather than the team." },
+            "Q2797": { "dimension": "adaptability", "polarity": 1, "content": "I refine recognition systems based on team feedback." },
+            "Q2798": { "dimension": "agency", "polarity": 1, "content": "I convert wins into a concrete next-level commitment." }
+          },
+          "daily_prompt": "What outcome deserves specific thanks today—and what next commitment will keep that momentum honest?",
+          "practices": [
+            "Victory Log: list outcomes, owner names, and the behaviors that produced them.",
+            "Credit Rotation: highlight an under-sung contributor at each milestone.",
+            "Outcome Toast: pair gratitude with one concrete follow-on action.",
+            "Gratitude 2×2: thank publicly and privately; log both.",
+            "Next Pledge: for every win, write and schedule the next commitment."
+          ],
+          "transformation_indicators": [
+            "Higher retention and repeat collaboration from key contributors",
+            "Reduced ‘hero dependency’ as credit and know-how spread",
+            "Uptick in referrals and unsolicited offers to help",
+            "Increase in documented SOPs following major wins",
+            "Shorter lag from success to next committed objective"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Finale — Earned Success",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Grounded, grateful, integrative—able to hold inner and outer measures of success at once.",
+          "ordinary_world_baseline": "Uncredited toil and isolated wins that failed to propagate.",
+          "push_turn": "Public recognition is structured into practices that bind the community and set the next aim."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "What Perseverance Really Means",
+            "section_description": "How sustained effort leads to mastery",
+            "connection_focus_area": "Valuing long-term dedication",
+            "connect_points": {
+              "point1": "Identify a skill you persevered in",
+              "point2": "Describe how persistence paid off",
+              "point3": "Plan next steps to deepen mastery"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Summarize one personal grit story",
+              "objective2": "List two benefits of sustained effort",
+              "objective3": "Set a new long-term goal"
+            }
+          },
+          "book2": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "The Puzzle of Motivation",
+            "section_description": "Intrinsic vs. extrinsic rewards",
+            "connection_focus_area": "Understanding true incentives",
+            "connect_points": {
+              "point1": "Differentiate intrinsic and extrinsic rewards",
+              "point2": "Choose one intrinsic motivator",
+              "point3": "Design a personal reward system"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your top intrinsic motivator",
+              "objective2": "Create a mini reward plan",
+              "objective3": "Track its impact over a week"
+            }
+          },
+          "book3": {
+            "title": "The Happiness Advantage",
+            "author": "Shawn Achor",
+            "section_of_focus": "Positive Psychology and Success",
+            "section_description": "How happiness fuels performance",
+            "connection_focus_area": "Linking success to well-being",
+            "connect_points": {
+              "point1": "Recall a recent happy moment",
+              "point2": "Connect it to a success you had",
+              "point3": "Plan a daily gratitude practice"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal three daily gratitudes",
+              "objective2": "Note performance improvements",
+              "objective3": "Share gratitude with someone"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Across the Twin Causeways, banners ripple as the Host returns; Francisco pauses at the Gate of Echoes and reads the roll of names.",
+          "symbolic_moment": "He binds a laurel to the city’s ledger-staff; its leaves glow and branch, tracing every hand that lifted the work.",
+          "emotional_landscape": "Warm, steady, quietly exultant.",
+          "contentment_definition": "Success as shared ascent—the summit is proof of the rope team, not the solo climber.",
+          "transformation_promise": "A leader who honors the many turns triumph into tradition."
+        },
+        "epic_novel_pages": "Page 571 - 585",
+        "epic_chapter_focus": "Resolution",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Recognition",
+        "specific_task_group_description": "Reap the rewards of your journey by acknowledging your accomplishments and sharing gratitude.",
+        "specific_task_group_tagline": "Celebrate what you’ve earned",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Lime",
+        "hex_code": "#00FF00",
+        "red": 0,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_280": {}
     },
     "family_8": {},
