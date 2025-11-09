@@ -56779,7 +56779,203 @@
         "green": 255,
         "blue": 204
       },
-      "personality_profile_274": {},
+      "personality_profile_274": {
+        "canonical_id": "EA-274",
+        "unique_identifier": "STG 7.3.4.2",
+        "specific_task_group_title": "Struggle",
+        "all_chapter": 274,
+        "novel_book": 7,
+        "chapter": "Chapter 34",
+        "chapter_title": "Flight — Struggle",
+        "type": "Specific Task Group",
+        "display_name": "The Forged Weave",
+        "theme": "Forge unity from conflict: braid hard-won lessons into one operating rhythm and let the struggle become structure.",
+        "family": "Integration — Synthesis, Unity & Converged Action",
+        "summary": "Threads pull in different directions until Francisco braids them. Failures become fibers, wins become knots, and the rope holds. With a single cadence across tools, teams, and timelines, the mission stops competing with itself and starts compounding.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Five",
+        "traits": {
+          "strengths": [
+            "turns competing learnings into a single actionable plan",
+            "maps intersections between methods to remove duplication",
+            "sets one shared cadence across multiple workstreams",
+            "ties gratitude and credit to measurable outcomes",
+            "keeps the mission coherent under pressure"
+          ],
+          "shadow": [
+            "over-integrates and loses useful dissent",
+            "forces premature convergence before evidence is ready",
+            "lets tracking replace real progress",
+            "ignores edge-cases that don’t fit the weave",
+            "stays in synthesis mode instead of executing"
+          ],
+          "growth_focus": [
+            "timebox synthesis; ship a minimum integrated version quickly",
+            "preserve one dissenting experiment as a hedge",
+            "tie each integrated decision to a falsifiable metric",
+            "review the weave weekly and prune dead strands",
+            "balance unity with a clearly scoped sandbox for variation"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Flight",
+          "fiction_chapter_context": "Book 7, Chapter 34 — Flight: convergence under strain; the rope is tested and holds."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled unity energized by pragmatic flexibility."
+        },
+        "color_alignment": {
+          "name": "Caribbean Green",
+          "hsl": "165,100%,40%",
+          "rgb_hex": "#00CC99",
+          "color_symbolism": "Tidal clarity—cool resolve that braids currents into a single flow."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.69,
+            "empathy": 0.62,
+            "openness": 0.68,
+            "orderliness": 0.66,
+            "conscientiousness": 0.73,
+            "adaptability": 0.74,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.56,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.58,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "abstract_reasoning": 0.35,
+            "stability": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2741",
+            "Q2742",
+            "Q2743",
+            "Q2744",
+            "Q2745",
+            "Q2746",
+            "Q2747",
+            "Q2748"
+          ],
+          "signals_map": {
+            "Q2741": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I diagram how separate efforts intersect before unifying them." },
+            "Q2742": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert multiple lessons into one operating rule with owners." },
+            "Q2743": { "dimension": "stability", "polarity": 1, "content": "Once integrated, I hold the cadence steady long enough to learn." },
+            "Q2744": { "dimension": "orderliness", "polarity": 1, "content": "I track a small set of shared metrics across all strands." },
+            "Q2745": { "dimension": "cooperativeness", "polarity": 1, "content": "I align allies on one plan and credit contributions by outcome." },
+            "Q2746": { "dimension": "openness", "polarity": 1, "content": "I keep one controlled variation running to test the weave." },
+            "Q2747": { "dimension": "stability", "polarity": -1, "content": "I let parallel plans compete indefinitely without convergence." },
+            "Q2748": { "dimension": "agency", "polarity": 1, "content": "I declare a single decision and move resources to support it." }
+          },
+          "daily_prompt": "What two threads are still competing—and what single rule would braid them into one pull today?",
+          "practices": [
+            "Synthesis Map: draw intersections across goals, methods, and owners; remove duplicates.",
+            "Metric Triad: choose three shared measures for the integrated plan; publish them.",
+            "Integration Sprint: ship a minimum unified workflow within 72 hours.",
+            "Conflict-to-Complement: rewrite one tension pair as a role pair (guardrail vs. driver).",
+            "Convergence Review: weekly 20-minute prune of dead strands and reinforcement of strong ones."
+          ],
+          "transformation_indicators": [
+            "Fewer duplicative efforts across teams",
+            "Higher ratio of shared to siloed metrics",
+            "Shorter handoff times between strands",
+            "Increased on-time delivery after convergence",
+            "Clear ownership and outcomes tied to the unified plan"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Break into 3 — Struggle",
+          "save_the_cat_beat": "Flight",
+          "character_state": "Principled, composed, convergence-oriented; many threads, one pull.",
+          "ordinary_world_baseline": "Fragmented lessons and conflicting tactics.",
+          "push_turn": "Disparate efforts braid into a single rhythm that accelerates the return."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Return with the Elixir",
+            "section_description": "The hero integrates the journey’s gifts for the final act",
+            "connection_focus_area": "Blending insights cohesively",
+            "connect_points": {
+              "point1": "Identify core gifts acquired",
+              "point2": "Determine how they intersect",
+              "point3": "Plan a unified application"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your journey’s key takeaways",
+              "objective2": "Describe how they support each other",
+              "objective3": "Draft a consolidated action plan"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Habit Tracking",
+            "section_description": "Monitoring progress to refine behaviors",
+            "connection_focus_area": "Measuring integrated efforts",
+            "connect_points": {
+              "point1": "Select metrics for each key learning",
+              "point2": "Set up a combined tracking system",
+              "point3": "Review and adjust weekly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Choose three metrics to track",
+              "objective2": "Implement a tracking log",
+              "objective3": "Analyze data and refine approach"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Transformative Feedback",
+            "section_description": "Using feedback loops to evolve",
+            "connection_focus_area": "Iterative improvement",
+            "connect_points": {
+              "point1": "Collect feedback on your integration plan",
+              "point2": "Identify one area for refinement",
+              "point3": "Implement feedback in next cycle"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Solicit constructive feedback",
+              "objective2": "Pinpoint improvement opportunities",
+              "objective3": "Apply changes and document outcomes"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Convergence Moorings, Francisco ties six wind-ropes from rival banners into one hawser and the fleet moves as a single body.",
+          "symbolic_moment": "He threads a broken filament from each trial into a woven cord; when pulled, the splice holds.",
+          "emotional_landscape": "Resolute, unified, purpose-steady.",
+          "contentment_definition": "Unity as deliberate craft—differences bound into strength with measured tension.",
+          "transformation_promise": "A leader who forges a weave turns struggle into structure the world can climb."
+        },
+        "epic_novel_pages": "Page 496 - 510",
+        "epic_chapter_focus": "Converge (resolution)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Integration",
+        "specific_task_group_description": "Combine lessons learned into a coherent approach for final victory.",
+        "specific_task_group_tagline": "Forge unity from conflict",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Caribbean Green",
+        "hex_code": "#00CC99",
+        "red": 0,
+        "green": 204,
+        "blue": 153
+      },
       "personality_profile_275": {},
       "personality_profile_276": {},
       "personality_profile_277": {},
