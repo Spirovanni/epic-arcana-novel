@@ -55666,7 +55666,203 @@
         "green": 255,
         "blue": 102
       },    
-      "personality_profile_269": {},
+      "personality_profile_269": {
+        "canonical_id": "EA-269",
+        "unique_identifier": "STG 7.3.2.3",
+        "specific_task_group_title": "Evolution",
+        "all_chapter": 269,
+        "novel_book": 7,
+        "chapter": "Chapter 29",
+        "chapter_title": "The Abyss — Evolution",
+        "type": "Specific Task Group",
+        "display_name": "The Emergent Edge",
+        "theme": "Adversity is a kiln: hold your shape in the heat, learn its pattern, and step out tempered and more precise.",
+        "family": "Growth — Evolution, Mastery & Adaptive Learning",
+        "summary": "Rock-bottom becomes a workshop. Francisco studies the fracture lines, maps cause to consequence, and converts pain into protocols. What once broke him now feeds design: micro-experiments, measured risk, and deliberate practice. Strength returns—sharper, chosen, transferable.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "reframes setbacks into specific learning loops",
+            "prototypes quickly and measures outcomes",
+            "sustains momentum through disciplined micro-wins",
+            "balances bold experiments with stabilizing routines",
+            "documents playbooks that others can reuse"
+          ],
+          "shadow": [
+            "over-optimizes process and forgets the human pulse",
+            "iterates endlessly without shipping the big bet",
+            "treats every challenge as a growth task (burnout risk)",
+            "uses experimentation to avoid commitment",
+            "chases novelty over compounding mastery"
+          ],
+          "growth_focus": [
+            "timebox iterations and commit to a ship date",
+            "pair each experiment with a recovery ritual",
+            "choose one domain to compound for 90 days",
+            "write a ‘stop doing’ list for anti-patterns",
+            "turn one insight into a simple team practice"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 7, Chapter 29 — Emergence: the dark pressure forges capacity; practice becomes power."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—driven growth stabilized by systems, loyalty, and disciplined practice."
+        },
+        "color_alignment": {
+          "name": "Light Green",
+          "hsl": "140,100%,70%",
+          "rgb_hex": "#66FF99",
+          "color_symbolism": "New growth after storm—fresh vigor guided by structure."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.68,
+            "empathy": 0.64,
+            "openness": 0.78,
+            "orderliness": 0.62,
+            "conscientiousness": 0.71,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.72,
+            "imagination": 0.76
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "adaptability": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2691",
+            "Q2692",
+            "Q2693",
+            "Q2694",
+            "Q2695",
+            "Q2696",
+            "Q2697",
+            "Q2698"
+          ],
+          "signals_map": {
+            "Q2691": { "dimension": "adaptability", "polarity": 1, "content": "I treat hard moments as training signals and adjust my approach fast." },
+            "Q2692": { "dimension": "openness", "polarity": 1, "content": "I seek new frames that convert setbacks into learning opportunities." },
+            "Q2693": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map cause-and-effect to find leverage where growth will cascade." },
+            "Q2694": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn insights into repeatable practices with clear checkpoints." },
+            "Q2695": { "dimension": "agency", "polarity": 1, "content": "I pick one decisive experiment and run it now." },
+            "Q2696": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid uncomfortable experiments even when growth requires them." },
+            "Q2697": { "dimension": "stability", "polarity": 1, "content": "I keep steady under pressure while iterating." },
+            "Q2698": { "dimension": "imagination", "polarity": 1, "content": "I visualize the next-version me and prototype behaviors to match." }
+          },
+          "daily_prompt": "What single behavior will you upgrade today—and what metric will prove the upgrade?",
+          "practices": [
+            "One-Bet Sprint: choose one growth lever; run a 3–5 day experiment with a fixed success metric.",
+            "Failure Ledger: log misses, extract one rule, and apply it within 24 hours.",
+            "Compounding Window: protect a 60–90 minute block daily for the same capability.",
+            "Friction Audit: list top three blockers; remove or redesign one today.",
+            "Recovery Pairing: attach a short renewal ritual to every intense push."
+          ],
+          "transformation_indicators": [
+            "Shorter recovery time after setbacks",
+            "Higher experiment-to-shipped ratio",
+            "Clear, reusable playbooks emerging from lessons",
+            "Stable performance under increased challenge",
+            "Visible compounding in one chosen domain"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul — Evolution",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Tempered, experimental, methodical; courage yoked to practice.",
+          "ordinary_world_baseline": "Reactive effort, scattered learning, fragile confidence.",
+          "push_turn": "Pain is converted into a disciplined growth engine that lifts capability and resolve."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ultimate Boon",
+            "section_description": "The hero claims the prize and transforms.",
+            "connection_focus_area": "Growth through trial",
+            "connect_points": {
+              "point1": "List three strengths you’ve gained",
+              "point2": "Plan how to apply them",
+              "point3": "Share insights with others"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name three new capabilities",
+              "objective2": "Develop an application plan",
+              "objective3": "Teach one lesson learned"
+            }
+          },
+          "book2": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Embracing challenges to learn and improve.",
+            "connection_focus_area": "Attitude toward adversity",
+            "connect_points": {
+              "point1": "Reframe one setback positively",
+              "point2": "Practice improvement language",
+              "point3": "Seek feedback on progress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reframe a past failure",
+              "objective2": "Use growth language daily",
+              "objective3": "Collect feedback from a peer"
+            }
+          },
+          "book3": {
+            "title": "The Upside of Stress",
+            "author": "Kelly McGonigal",
+            "section_of_focus": "Using Stress as Fuel",
+            "section_description": "How to leverage stress responses for growth.",
+            "connection_focus_area": "Stress-driven development",
+            "connect_points": {
+              "point1": "Identify one stressor as opportunity",
+              "point2": "Apply a stress-management technique",
+              "point3": "Evaluate performance change"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Convert a stressor into a goal",
+              "objective2": "Practice one stress intervention",
+              "objective3": "Measure its impact on performance"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a shattered colonnade, green light seeps through fissures; Francisco traces the cracks and sketches a stronger arch from their pattern.",
+          "symbolic_moment": "He quenches a heated blade in spring water; steam rises as the metal holds a new edge.",
+          "emotional_landscape": "Resolute, lucid, quietly audacious.",
+          "contentment_definition": "Mastery as learned resilience—process over pride, compounding over flash.",
+          "transformation_promise": "A leader who evolves under pressure teaches worlds to turn damage into design."
+        },
+        "epic_novel_pages": "Page 421 - 435",
+        "epic_chapter_focus": "The Abyss",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Growth",
+        "specific_task_group_description": "Convert adversity into a catalyst for personal transformation and mastery.",
+        "specific_task_group_tagline": "Rise stronger",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Light Green",
+        "hex_code": "#66FF99",
+        "red": 102,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_270": {},
       "personality_profile_271": {},
       "personality_profile_272": {},
