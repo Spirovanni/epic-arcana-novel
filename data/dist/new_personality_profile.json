@@ -53318,7 +53318,197 @@
         "green": 189,
         "blue": 125
       },    
-      "personality_profile_257": {},
+      "personality_profile_257": {
+        "canonical_id": "EA-257",
+        "unique_identifier": "STG 7.2.2.1",
+        "specific_task_group_title": "Imposition",
+        "all_chapter": 257,
+        "novel_book": 7,
+        "chapter": "Chapter 17",
+        "chapter_title": "The Road of Trials — Imposition",
+        "type": "Specific Task Group",
+        "display_name": "The Green Mandate",
+        "theme": "Boundaries aren’t bludgeons—they’re bridges with guardrails: state the line, state the why, and make keeping it the easiest thing to do.",
+        "family": "Authority Dynamics / Imposition — Boundaries, Accountability & Order",
+        "summary": "Approaching the inner thresholds, Francisco trades soft hopes for clear lines. He claims the authority needed to hold new norms, writes obligations as living rules, and links each promise to consequence. Order becomes a kindness: structure that keeps the peace from sliding backward.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ten",
+        "traits": {
+          "strengths": [
+            "states expectations plainly and early",
+            "ties commitments to visible checkpoints",
+            "creates systems that outlast personalities",
+            "enforces fairly—same rule, same result",
+            "balances firmness with reasons and respect"
+          ],
+          "shadow": [
+            "over-specifies rules that stifle initiative",
+            "equates dissent with defiance",
+            "enforces speed over understanding",
+            "confuses control with care",
+            "imposes before inviting input"
+          ],
+          "growth_focus": [
+            "co-design boundaries with those who keep them",
+            "separate non-negotiables from negotiables in writing",
+            "publish consequences before enforcement begins",
+            "add a review cadence to relax rules that proved excessive",
+            "train for the rule you’ll enforce—don’t surprise people"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 7, Chapter 17 — Approach: assert necessary boundaries to prevent relapse into conflict."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—protective strength in service of care."
+        },
+        "color_alignment": {
+          "name": "Chateau Green",
+          "hsl": "140,54%,44%",
+          "rgb_hex": "#33AD5C",
+          "color_symbolism": "Tempered verdure—firm boundaries that still breathe and grow."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.75,
+            "empathy": 0.61,
+            "openness": 0.57,
+            "orderliness": 0.74,
+            "conscientiousness": 0.73,
+            "adaptability": 0.65,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.56,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.59,
+            "novelty_seeking": 0.55,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "orderliness": 0.35,
+            "cooperativeness": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2571","Q2572","Q2573","Q2574",
+            "Q2575","Q2576","Q2577","Q2578"
+          ],
+          "signals_map": {
+            "Q2571": { "dimension": "agency", "polarity": 1, "content": "I claim the authority needed to protect the agreement we chose." },
+            "Q2572": { "dimension": "orderliness", "polarity": 1, "content": "Expectations and consequences are documented before we start." },
+            "Q2573": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite those affected to shape the rules they’ll keep." },
+            "Q2574": { "dimension": "stability", "polarity": 1, "content": "I enforce consistently—no favorites, no exceptions." },
+            "Q2575": { "dimension": "empathy", "polarity": 1, "content": "I explain the why behind each boundary to secure buy-in." },
+            "Q2576": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid setting hard lines to keep everyone comfortable." },
+            "Q2577": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map how each rule prevents a specific failure mode." },
+            "Q2578": { "dimension": "adaptability", "polarity": 1, "content": "If evidence shows overreach, I revise the rule on schedule." }
+          },
+          "daily_prompt": "Which boundary must be stated today—and what fair, pre-agreed consequence will make it real?",
+          "practices": [
+            "Boundary Script: write the rule, rationale, and consequence in one sentence.",
+            "Expectation Ledger: list non-negotiables vs. negotiables; share before activation.",
+            "Consequence Ladder: define first, second, and third responses—no surprises.",
+            "SLA Draft: convert promises into time-boxed, measurable service levels.",
+            "Accountability Loop: schedule a 30-day review to keep rules proportionate."
+          ],
+          "transformation_indicators": [
+            "Fewer boundary breaches after clear publication",
+            "Stable compliance across factions (reduced exceptions)",
+            "Faster conflict resolution due to pre-agreed ladders",
+            "Evidence-based revisions replace ad-hoc crackdowns",
+            "Morale steady or rising despite firmer lines"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Approach to the Innermost Cave — Imposition",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "Authority assumed with care; obligations named; systems primed.",
+          "ordinary_world_baseline": "Soft promises, uneven enforcement, drift toward old patterns.",
+          "push_turn": "Clear, co-designed boundaries convert fragile truces into durable order."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Approach to the Innermost Cave",
+            "section_description": "The hero prepares to face their greatest challenge.",
+            "connection_focus_area": "Stepping into authority",
+            "connect_points": {
+              "point1": "Identify the power you must claim",
+              "point2": "Understand the cost of imposition",
+              "point3": "Prepare your justification"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your domain of authority",
+              "objective2": "List two obligations you impose",
+              "objective3": "State the rationale behind each"
+            }
+          },
+          "book2": {
+            "title": "Crucial Conversations",
+            "author": "Kerry Patterson et al.",
+            "section_of_focus": "Getting Unstuck",
+            "section_description": "How to impose difficult boundaries calmly.",
+            "connection_focus_area": "Boundary setting",
+            "connect_points": {
+              "point1": "Plan your key message",
+              "point2": "Anticipate resistance",
+              "point3": "Choose your tone"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft your boundary script",
+              "objective2": "Identify two likely objections",
+              "objective3": "Rehearse your delivery"
+            }
+          },
+          "book3": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Clear is Kind",
+            "section_description": "The importance of clear expectations.",
+            "connection_focus_area": "Leading with clarity",
+            "connect_points": {
+              "point1": "Define your expectations",
+              "point2": "Articulate them directly",
+              "point3": "Invite accountability"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write down three expectations",
+              "objective2": "Practice stating them clearly",
+              "objective3": "Solicit feedback on clarity"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Bastion of Scales, just before the Innermost Gate, Francisco lays three tablets: Promise, Proof, Consequence—light etches each as banners gather.",
+          "symbolic_moment": "He plants a living hedge across a scarred corridor; it bends to let the pledged pass and gently turns the oathless away.",
+          "emotional_landscape": "Steady, protective, lucid.",
+          "contentment_definition": "Clarity with compassion—structure that frees rather than cages.",
+          "transformation_promise": "A leader who sets fair lines protects the fragile good long enough for it to grow."
+        },
+        "epic_novel_pages": "Page 241 - 255",
+        "epic_chapter_focus": "Old world (set-up) (resolution)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Authority Dynamics",
+        "specific_task_group_description": "Assert boundaries and obligations in the new world.",
+        "specific_task_group_tagline": "Establish your domain",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Chateau Green",
+        "hex_code": "#33AD5C",
+        "red": 51,
+        "green": 173,
+        "blue": 92
+      },    
       "personality_profile_258": {},
       "personality_profile_259": {},
       "personality_profile_260": {},
