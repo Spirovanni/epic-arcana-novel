@@ -51980,8 +51980,198 @@
         "red": 0,
         "green": 102,
         "blue": 0
-      },    
-      "personality_profile_250": {},
+      },  
+      "personality_profile_250": {
+        "canonical_id": "EA-250",
+        "unique_identifier": "STG 7.1.4.1",
+        "specific_task_group_title": "Emotionally Strong",
+        "all_chapter": 250,
+        "novel_book": 7,
+        "chapter": "Chapter 10",
+        "chapter_title": "Allies, Mentors, and Helpers — Emotionally Strong",
+        "type": "Specific Task Group",
+        "display_name": "The Steady Harbor",
+        "theme": "Strength isn’t stoicism; it’s distributed capacity—anchoring in mentors and allies so your heart carries weight without cracking.",
+        "family": "Emotional Resilience / Emotionally Strong — Support, Vulnerability & Fortitude",
+        "summary": "Pressure gathers, but Francisco stops white-knuckling. He names what’s real, accepts help before the cliff edge, and builds rituals that turn strain into steadiness. Boundaries plus bonds become his armor; resilience shifts from solo endurance to a shared, repeatable system.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "regulates emotion without numbing; stays present under load",
+            "asks for help early and converts support into stamina",
+            "models boundaries and aftercare during hard pushes",
+            "reflects quickly, then re-engages without rumination",
+            "anchors teams with calm, empathetic presence"
+          ],
+          "shadow": [
+            "equates stoicism with strength and suppresses signals",
+            "over-functions for others instead of asking for help",
+            "blurs boundaries to keep peace, breeding quiet resentment",
+            "absorbs team emotion then burns out later",
+            "avoids hard rest; resilience decays unnoticed"
+          ],
+          "growth_focus": [
+            "practice help-asking before 30% depletion",
+            "embed micro-boundaries directly on the calendar",
+            "log stressors and choose one regulation tool per day",
+            "schedule decompression after peak events",
+            "share load across allies; formalize a buddy system"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 7, Chapter 10 — Allies/Mentors: under gathering pressure, he learns to be held so he can hold others."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—care fortified by backbone and boundaries."
+        },
+        "color_alignment": {
+          "name": "Myrtle",
+          "hsl": "120,100%,10%",
+          "rgb_hex": "#003300",
+          "color_symbolism": "Evergreen root—quiet strength, life held steady in storms."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.84,
+            "empathy": 0.82,
+            "openness": 0.62,
+            "orderliness": 0.64,
+            "conscientiousness": 0.70,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.60,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.50,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.52,
+            "imagination": 0.59
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2501","Q2502","Q2503","Q2504",
+            "Q2505","Q2506","Q2507","Q2508"
+          ],
+          "signals_map": {
+            "Q2501": { "dimension": "stability", "polarity": 1, "content": "I can name what I feel and still choose my response." },
+            "Q2502": { "dimension": "empathy", "polarity": 1, "content": "When stakes rise, I enlist trusted allies for support." },
+            "Q2503": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep stabilizing routines during pressure cycles." },
+            "Q2504": { "dimension": "adaptability", "polarity": 1, "content": "If one coping tool stalls, I switch to another quickly." },
+            "Q2505": { "dimension": "cooperativeness", "polarity": 1, "content": "I reciprocate support without over-functioning for others." },
+            "Q2506": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid asking for help because it feels risky to appear needy." },
+            "Q2507": { "dimension": "orderliness", "polarity": 1, "content": "I schedule recovery blocks after heavy efforts." },
+            "Q2508": { "dimension": "stability", "polarity": 1, "content": "Breathing or grounding brings me back within two minutes." }
+          },
+          "daily_prompt": "Who are your two spotters today—and what recovery block will you book now?",
+          "practices": [
+            "Box Breathing 4-4-6-2 for 3 minutes before critical work.",
+            "Mentor Ping: share one pressure point and one plan.",
+            "Emotion Labeling: two words and one body cue, then choose a tool.",
+            "Boundary Micro-List: one guarded yes, one clean no.",
+            "Aftercare 15: decompress, log one lesson, set the next micro-step."
+          ],
+          "transformation_indicators": [
+            "Shorter recovery time after stress spikes",
+            "Earlier help-seeking before burnout",
+            "Fewer conflict escalations under load",
+            "Stable execution quality during high pressure",
+            "Team reports higher psychological safety"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Theme Stated — Emotionally Strong",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Centered-by-community; courageous vulnerability.",
+          "ordinary_world_baseline": "White-knuckle self-reliance; brittle calm.",
+          "push_turn": "Accepts support and sets boundaries; pressure converts to poise."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The hero receives guidance and support from mentors.",
+            "connection_focus_area": "Leveraging support",
+            "connect_points": {
+              "point1": "Identify one mentor or guide in your life",
+              "point2": "Note their advice or wisdom",
+              "point3": "Plan how to apply their guidance"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name a trusted mentor",
+              "objective2": "Summarize their key advice",
+              "objective3": "Implement one piece of guidance this week"
+            }
+          },
+          "book2": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "Embracing vulnerability to build strength.",
+            "connection_focus_area": "Courage through connection",
+            "connect_points": {
+              "point1": "Acknowledge one fear",
+              "point2": "Share it with a trusted ally",
+              "point3": "Reflect on the support you receive"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal a vulnerability",
+              "objective2": "Discuss it with someone supportive",
+              "objective3": "Note the impact of sharing"
+            }
+          },
+          "book3": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Social Skills",
+            "section_description": "Using emotional awareness to connect and lead.",
+            "connection_focus_area": "Building rapport",
+            "connect_points": {
+              "point1": "Practice active listening in a conversation",
+              "point2": "Observe emotional cues",
+              "point3": "Respond with empathy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Listen without interrupting",
+              "objective2": "Identify one emotion the speaker shows",
+              "objective3": "Offer an empathetic response"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Under a myrtle canopy as thunder stacks on the horizon, mentors encircle Francisco; palms align and their breathing braids into one cadence.",
+          "symbolic_moment": "A queen’s cup passes hand to hand—each ally adds a drop of strength; the vessel grows heavy yet never spills.",
+          "emotional_landscape": "Held, grounded, quietly fierce.",
+          "contentment_definition": "Emotional strength as shared capacity: boundaries plus bonds that keep the heart operational under strain.",
+          "transformation_promise": "A leader strong enough to be supported becomes unbreakable—and makes others braver."
+        },
+        "epic_novel_pages": "Page 136 - 150",
+        "epic_chapter_focus": "Pressure",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Emotional Resilience",
+        "specific_task_group_description": "Build inner fortitude with guidance and support from your mentors and peers.",
+        "specific_task_group_tagline": "Stand strong through support",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Myrtle",
+        "hex_code": "#003300",
+        "red": 0,
+        "green": 51,
+        "blue": 0
+      }, 
       "personality_profile_251": {},
       "personality_profile_252": {},
       "personality_profile_253": {},
