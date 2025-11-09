@@ -56976,7 +56976,203 @@
         "green": 204,
         "blue": 153
       },
-      "personality_profile_275": {},
+      "personality_profile_275": {
+        "canonical_id": "EA-275",
+        "unique_identifier": "STG 7.3.4.3",
+        "specific_task_group_title": "Emotionally Balanced",
+        "all_chapter": 275,
+        "novel_book": 7,
+        "chapter": "Chapter 35",
+        "chapter_title": "Flight — Emotionally Balanced",
+        "type": "Specific Task Group",
+        "display_name": "The Still Regent",
+        "theme": "Equilibrium is power: steady the heart, align the mind, and deliver the boon without turbulence.",
+        "family": "Mastery — Equilibrium, Emotional Regulation & Centered Leadership",
+        "summary": "At altitude the winds are strongest, yet Francisco’s standard does not whip. He paces the return with measured breath, translating triumph into service without spikes of pride or dips of doubt. Calm becomes a climate others can breathe in—and perform within.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "King",
+        "traits": {
+          "strengths": [
+            "maintains composure under acute pressure",
+            "balances empathy with decisive clarity",
+            "stabilizes team affect and tempo",
+            "uses rituals to recover quickly from shocks",
+            "models dignified celebration and debrief"
+          ],
+          "shadow": [
+            "over-flattens emotion and mutes needed urgency",
+            "confuses detachment with objectivity",
+            "avoids righteous anger when boundaries are crossed",
+            "defaults to routine when boldness is required",
+            "rewards harmony over healthy dissent"
+          ],
+          "growth_focus": [
+            "pair calm with a clear escalation trigger",
+            "schedule brief, honest emotional check-ins post-event",
+            "name non-negotiables that warrant forceful response",
+            "practice ‘calm then commit’—center, decide, mobilize",
+            "celebrate wins with specific learning captured"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Flight",
+          "fiction_chapter_context": "Book 7, Chapter 35 — The homeward arc steadied: heart and mind in concert as the boon is delivered."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—serene presence channeled into poised execution."
+        },
+        "color_alignment": {
+          "name": "Medium Sea Green",
+          "hsl": "140,60%,50%",
+          "rgb_hex": "#33CC66",
+          "color_symbolism": "Even-keel jade—restorative calm that carries strength without strain."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.61,
+            "stability": 0.78,
+            "empathy": 0.70,
+            "openness": 0.62,
+            "orderliness": 0.68,
+            "conscientiousness": 0.71,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.73,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.45,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.54,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2751",
+            "Q2752",
+            "Q2753",
+            "Q2754",
+            "Q2755",
+            "Q2756",
+            "Q2757",
+            "Q2758"
+          ],
+          "signals_map": {
+            "Q2751": { "dimension": "stability", "polarity": 1, "content": "In tense moments I use a centering cue before I speak or decide." },
+            "Q2752": { "dimension": "empathy", "polarity": 1, "content": "I recognize and name emotions without letting them steer the mission." },
+            "Q2753": { "dimension": "conscientiousness", "polarity": 1, "content": "I run a brief reward-and-review ritual after major wins to lock learning." },
+            "Q2754": { "dimension": "orderliness", "polarity": 1, "content": "I keep a crisis playbook with roles, cues, and de-escalation steps." },
+            "Q2755": { "dimension": "adaptability", "polarity": 1, "content": "When conditions flip, I reset breath, restate aim, and re-assign calmly." },
+            "Q2756": { "dimension": "stability", "polarity": -1, "content": "Under stress my tone spikes or collapses, and others follow the swing." },
+            "Q2757": { "dimension": "agency", "polarity": 1, "content": "My calm ends in action: a clear decision and mobilized next step." },
+            "Q2758": { "dimension": "cooperativeness", "polarity": 1, "content": "I mirror others’ emotions without absorbing them, then guide to center." }
+          },
+          "daily_prompt": "What is your single centering cue today, and what specific decision will you take immediately after using it?",
+          "practices": [
+            "Box Breath 4×4×4×4 before critical calls; speak on the exhale.",
+            "Equanimity Script: one sentence naming feeling, one naming focus.",
+            "Crisis Card: top three de-escalation moves kept visible at workstation.",
+            "Win-Then-Why: 2-minute celebration paired with one learning note.",
+            "Recovery Clock: schedule a 10-minute reset block after high-stakes events."
+          ],
+          "transformation_indicators": [
+            "Reduced volatility in tone and pace during crises",
+            "Faster recovery time to baseline after shocks",
+            "Higher team confidence and compliance under pressure",
+            "Consistent post-win debriefs producing actionable tweaks",
+            "Stable decision quality as stakes and visibility rise"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Finale — Emotionally Balanced",
+          "save_the_cat_beat": "Flight",
+          "character_state": "Centered, composed, generous; mastery without drag.",
+          "ordinary_world_baseline": "Reactive swings, pride spikes, and aftermath crashes.",
+          "push_turn": "Equanimity turns triumph into smooth delivery and shared uplift."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Master of Two Worlds",
+            "section_description": "The hero achieves balance between inner and outer worlds",
+            "connection_focus_area": "Sustaining dual mastery",
+            "connect_points": {
+              "point1": "Identify how you balance emotion and logic",
+              "point2": "Practice techniques to stay centered",
+              "point3": "Plan for moments of upheaval"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your balance strategy",
+              "objective2": "Demonstrate one centering exercise",
+              "objective3": "Outline steps for crisis calm"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Satisfying",
+            "section_description": "Reward your wins to sustain progress",
+            "connection_focus_area": "Reinforcing emotional stability",
+            "connect_points": {
+              "point1": "Define a rewarding ritual post-achievement",
+              "point2": "Implement it consistently",
+              "point3": "Monitor its impact on your mindset"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a reward system for balance",
+              "objective2": "Execute it after each success",
+              "objective3": "Assess emotional resilience improvements"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Sustaining Growth",
+            "section_description": "Embedding a growth mindset into daily life",
+            "connection_focus_area": "Perpetuating equilibrium",
+            "connect_points": {
+              "point1": "Choose a daily mindset affirmation",
+              "point2": "Recite it each morning",
+              "point3": "Reflect on its effect weekly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select an affirmation for balance",
+              "objective2": "Incorporate it into your routine",
+              "objective3": "Journal weekly reflections"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Calm Meridian the crosswinds roar, yet Francisco’s banner hangs straight as he guides the host across the sky-bridge.",
+          "symbolic_moment": "He balances a brimming bowl on a racing chariot; not a drop spills when he raises his hand to signal the descent.",
+          "emotional_landscape": "Serene, grounded, quietly exultant.",
+          "contentment_definition": "Balance as service—feeling fully without being driven by feeling.",
+          "transformation_promise": "A leader whose calm sets the rhythm turns victory into nourishment, not noise."
+        },
+        "epic_novel_pages": "Page 511 - 525",
+        "epic_chapter_focus": "Flight",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Mastery",
+        "specific_task_group_description": "Maintain equilibrium of heart and mind when delivering your final triumph.",
+        "specific_task_group_tagline": "Lead with calm confidence",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Medium Sea Green",
+        "hex_code": "#33CC66",
+        "red": 51,
+        "green": 204,
+        "blue": 102
+      },
       "personality_profile_276": {},
       "personality_profile_277": {},
       "personality_profile_278": {},
