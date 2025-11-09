@@ -57370,7 +57370,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_277": {},
+      "personality_profile_277": {
+        "canonical_id": "EA-277",
+        "unique_identifier": "STG 7.3.5.2",
+        "specific_task_group_title": "Sustainable Results",
+        "all_chapter": 277,
+        "novel_book": 7,
+        "chapter": "Chapter 37",
+        "chapter_title": "Rescue from Without — Sustainable Results",
+        "type": "Specific Task Group",
+        "display_name": "The Evergreen Engine",
+        "theme": "Make progress that outlives the push: turn wins into systems, systems into culture, and culture into compounding momentum.",
+        "family": "Endurance — Persistence, Systems & Self-Sustaining Change",
+        "summary": "Francisco stops treating victories as events and begins treating them as flywheels. He designs mechanisms that hold gains, delegates power to stewards, and builds feedback loops that keep improving without his constant touch. The work stops being fragile—and starts being inevitable.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "turns one-off wins into repeatable processes",
+            "designs clear ownership, metrics, and feedback loops",
+            "protects essentials from distraction and drift",
+            "balances pace with endurance to avoid burnout",
+            "architects systems that improve under use"
+          ],
+          "shadow": [
+            "over-optimizes process and slows necessary change",
+            "confuses longevity with relevance",
+            "avoids bold bets that disrupt stability",
+            "lets dashboards replace ground truth",
+            "delays decisions in pursuit of the perfect system"
+          ],
+          "growth_focus": [
+            "time-box system design; ship the minimum stable loop",
+            "pair every metric with a direct observation ritual",
+            "schedule disruptive experiments inside safe sandboxes",
+            "write a single-owner charter for each critical loop",
+            "install a sunset/review date for every policy"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Rescue from Without",
+          "fiction_chapter_context": "Book 7, Chapter 37 — Aid arrives and is woven into structures that make gains durable."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled systems infused with resilient energy and optimism."
+        },
+        "color_alignment": {
+          "name": "Malachite",
+          "hsl": "150,100%,40%",
+          "rgb_hex": "#00CC66",
+          "color_symbolism": "Living green—growth made steady, tended, and sustained."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.84,
+            "empathy": 0.63,
+            "openness": 0.60,
+            "orderliness": 0.74,
+            "conscientiousness": 0.78,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.64,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2771",
+            "Q2772",
+            "Q2773",
+            "Q2774",
+            "Q2775",
+            "Q2776",
+            "Q2777",
+            "Q2778"
+          ],
+          "signals_map": {
+            "Q2771": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert a successful tactic into a checklist with owners and review dates." },
+            "Q2772": { "dimension": "stability", "polarity": 1, "content": "I prefer steady compounding over quick spikes in performance." },
+            "Q2773": { "dimension": "orderliness", "polarity": 1, "content": "Every critical loop I run has a metric, a cadence, and a single accountable person." },
+            "Q2774": { "dimension": "agency", "polarity": 1, "content": "When a win lands, I immediately lock it in with a sustaining mechanism." },
+            "Q2775": { "dimension": "adaptability", "polarity": 1, "content": "If a system stops working, I prune and refit it rather than forcing compliance." },
+            "Q2776": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid experiments that could destabilize established routines." },
+            "Q2777": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model how small daily inputs compound into meaningful outcomes over time." },
+            "Q2778": { "dimension": "cooperativeness", "polarity": 1, "content": "I distribute stewardship so the work continues even when I’m absent." }
+          },
+          "daily_prompt": "Which win from yesterday can you lock into a simple loop today—owner, metric, cadence?",
+          "practices": [
+            "Flywheel Charter: define purpose, owner, inputs, outputs, and weekly review for one core loop.",
+            "Guard the Essentials: block deep-work windows that protect sustaining tasks from urgent noise.",
+            "After-Action to SOP: turn one lesson learned into a 3-step standard operating procedure.",
+            "Metric + Walkaround: pair each dashboard metric with an in-person/first-hand check.",
+            "Sunset & Refresh: set a 90-day review to prune outdated steps and add improvements."
+          ],
+          "transformation_indicators": [
+            "Output variance decreases while trendline rises",
+            "Lower reliance on single actors as stewardship distributes",
+            "Onboarding time drops as SOPs mature",
+            "Review cycles consistently yield incremental improvements",
+            "Key metrics sustain or improve after the leader steps back"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Sustainable Results",
+          "save_the_cat_beat": "Rescue from Without",
+          "character_state": "From solo strain to shared stewardship; systems shoulder the load.",
+          "ordinary_world_baseline": "Event-driven wins fade without maintenance; success depends on the hero’s presence.",
+          "push_turn": "External aid is woven into durable mechanisms; the system begins to self-propel."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Persistence Over Time",
+            "section_description": "How passion and perseverance drive long-term success",
+            "connection_focus_area": "Cultivating sustained effort",
+            "connect_points": {
+              "point1": "Define a compelling long-term goal",
+              "point2": "Break it into incremental steps",
+              "point3": "Reflect on progress regularly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate a long-term vision",
+              "objective2": "Plan incremental milestones",
+              "objective3": "Set up a reflection habit"
+            }
+          },
+          "book2": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Enduring Focus",
+            "section_description": "Strategies for sustained, distraction-free work",
+            "connection_focus_area": "Protecting high-value habits",
+            "connect_points": {
+              "point1": "Schedule deep-work blocks",
+              "point2": "Minimize external distractions",
+              "point3": "Track session effectiveness"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Block two daily deep-work sessions",
+              "objective2": "Eliminate one common distraction",
+              "objective3": "Measure productivity gains"
+            }
+          },
+          "book3": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Intrinsic Motivation",
+            "section_description": "Leveraging autonomy, mastery, and purpose for sustained drive",
+            "connection_focus_area": "Fueling long-term engagement",
+            "connect_points": {
+              "point1": "Identify personal purpose",
+              "point2": "Set mastery-oriented goals",
+              "point3": "Create autonomy in your routines"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your core purpose",
+              "objective2": "Formulate a mastery goal",
+              "objective3": "Implement one autonomy practice"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Upon the Terrace of Gears, Francisco threads a silver key through interlocking rings; distant engines wake, each turning the next.",
+          "symbolic_moment": "He inscribes a charter into living stone—names, cadences, measures—and the runes glow as stewards step forward to claim their loops.",
+          "emotional_landscape": "Calm, steady, quietly confident; momentum hums beneath the surface.",
+          "contentment_definition": "Satisfaction as stewardship—what you build continues, because many hands now keep time.",
+          "transformation_promise": "A leader who systematizes the boon leaves a world that improves itself."
+        },
+        "epic_novel_pages": "Page 541 - 555",
+        "epic_chapter_focus": "Climax",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Endurance",
+        "specific_task_group_description": "Maintain and sustain improvements beyond initial successes.",
+        "specific_task_group_tagline": "Make progress last",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Malachite",
+        "hex_code": "#00CC66",
+        "red": 0,
+        "green": 204,
+        "blue": 102
+      },
       "personality_profile_278": {},
       "personality_profile_279": {},
       "personality_profile_280": {}
