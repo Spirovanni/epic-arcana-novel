@@ -53890,8 +53890,198 @@
         "red": 0,
         "green": 122,
         "blue": 41
-      },    
-      "personality_profile_260": {},
+      },
+      "personality_profile_260": {
+        "canonical_id": "EA-260",
+        "unique_identifier": "STG 7.2.3.1",
+        "specific_task_group_title": "Prioritization",
+        "all_chapter": 260,
+        "novel_book": 7,
+        "chapter": "Chapter 20",
+        "chapter_title": "The Supreme Ordeal — Prioritization",
+        "type": "Specific Task Group",
+        "display_name": "The Cascade Lens",
+        "theme": "Focus decides fate: choose the keystone conflicts, sequence for cascade, and let the trivial wait.",
+        "family": "Task Prioritization — Focus, Sequencing & Leverage",
+        "summary": "The map is crowded; the path cannot be. Francisco stands before a thicket of worthy fights and learns to rank by leverage. He names the vital few, orders the moves, blocks noise, and commits. One resolved knot loosens three more, and the field begins to simplify itself.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "ranks decisions by leverage and timing",
+            "protects keystone tasks with clear time blocks",
+            "translates strategy into a single visible next step",
+            "cuts scope cleanly to preserve momentum",
+            "tracks cascade effects to refine future picks"
+          ],
+          "shadow": [
+            "over-polishes the list instead of starting",
+            "confuses urgency signals with true importance",
+            "spends attention defending the plan, not delivering",
+            "starves exploratory work that feeds the pipeline",
+            "lets sunk costs keep a low-impact task alive"
+          ],
+          "growth_focus": [
+            "set a daily ‘one thing’ and ship it before noon",
+            "tie each task to a measurable cascade effect",
+            "schedule exploration blocks separate from execution",
+            "use a hard stop to prevent overwork on trivialities",
+            "review the bottom 30% and delete without regret"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 7, Chapter 20 — Ordeal: triage by leverage; keystone conflicts first."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clear analysis converted into decisive priority calls."
+        },
+        "color_alignment": {
+          "name": "Crusoe",
+          "hsl": "140,100%,19%",
+          "rgb_hex": "#006221",
+          "color_symbolism": "Jungle focus—deep green corridor carved through overwhelming growth."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.76,
+            "empathy": 0.60,
+            "openness": 0.62,
+            "orderliness": 0.78,
+            "conscientiousness": 0.80,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "orderliness": 0.35,
+            "conscientiousness": 0.35,
+            "agency": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2601","Q2602","Q2603","Q2604",
+            "Q2605","Q2606","Q2607","Q2608"
+          ],
+          "signals_map": {
+            "Q2601": { "dimension": "agency", "polarity": 1, "content": "I pick one keystone task and move it before anything else." },
+            "Q2602": { "dimension": "orderliness", "polarity": 1, "content": "I rank work by impact, not noise, and stick to the order." },
+            "Q2603": { "dimension": "conscientiousness", "polarity": 1, "content": "I protect deep work blocks and defend them from interruption." },
+            "Q2604": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model second-order effects to find leverage points." },
+            "Q2605": { "dimension": "adaptability", "polarity": 1, "content": "When evidence changes the leverage, I re-sequence fast." },
+            "Q2606": { "dimension": "novelty_seeking", "polarity": -1, "content": "I chase new tasks even if they displace higher-impact work." },
+            "Q2607": { "dimension": "stability", "polarity": 1, "content": "I stay calm when deferring nonessential tasks or requests." },
+            "Q2608": { "dimension": "conscientiousness", "polarity": 1, "content": "I close loops daily on the top priority before touching the rest." }
+          },
+          "daily_prompt": "What single keystone task, done today, will unlock three others—and when will you protect the block to do it?",
+          "practices": [
+            "Keystone Block: schedule a 2-hour focus window; move the one task that moves the rest.",
+            "Impact Ladder: write the cascade each task triggers; pick the highest rung.",
+            "Scope Shear: remove 30% of nonessential steps before starting.",
+            "Signal vs. Noise Check: rate inputs by impact, then urgency—act only on high-impact first.",
+            "After-Action Cadence: log results and adjust tomorrow’s order using real effects."
+          ],
+          "transformation_indicators": [
+            "Higher ratio of shipped keystone tasks vs. total tasks",
+            "Shorter cycle time from priority selection to delivery",
+            "Visible cascade effects (unblocked follow-ons) per keystone",
+            "Reduced context switches during protected blocks",
+            "Consistent deletion of low-impact work without negative outcomes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Ordeal (Temptation) — Prioritization",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "Narrowed, disciplined, leverage-seeking; distractions quarantined.",
+          "ordinary_world_baseline": "Crowded task lists; motion without momentum; diluted focus.",
+          "push_turn": "A single high-leverage win triggers a cascade that simplifies the battlefield."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore and Evaluate",
+            "section_description": "Identifying what is truly essential and eliminating the rest.",
+            "connection_focus_area": "Prioritization",
+            "connect_points": {
+              "point1": "Distinguish the vital few from the trivial many",
+              "point2": "Assess each task’s impact",
+              "point3": "Rank tasks by importance"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your top three essential tasks",
+              "objective2": "Eliminate two nonessential tasks",
+              "objective3": "Schedule essential tasks first each day"
+            }
+          },
+          "book2": {
+            "title": "The One Thing",
+            "author": "Gary Keller",
+            "section_of_focus": "The Focus Question",
+            "section_description": "How asking the right question concentrates effort.",
+            "connection_focus_area": "Targeted prioritization",
+            "connect_points": {
+              "point1": "Pinpoint the single most important task",
+              "point2": "Block out time for it",
+              "point3": "Measure progress daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your one priority for today",
+              "objective2": "Protect time to work on it",
+              "objective3": "Track completion status"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Work Deeply",
+            "section_description": "Building rituals to maximize focused effort.",
+            "connection_focus_area": "Eliminate distractions",
+            "connect_points": {
+              "point1": "Set a strict work ritual",
+              "point2": "Create a distraction-free environment",
+              "point3": "Track hours of deep work"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Establish a two-hour deep work block",
+              "objective2": "Log each session’s duration",
+              "objective3": "Reflect on outcomes weekly"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Thousand Threads, Francisco studies a knot of glowing lines; he touches one strand and three snarls loosen down the line.",
+          "symbolic_moment": "He sets a single emerald pin on a battle board; distant markers shift, corridors open, noise recedes.",
+          "emotional_landscape": "Sober, precise, quietly fierce.",
+          "contentment_definition": "Peace as picked battles—move the lever, not the furniture.",
+          "transformation_promise": "A leader who chooses the right first step turns chaos into a solvable sequence."
+        },
+        "epic_novel_pages": "Page 286 - 300",
+        "epic_chapter_focus": "Midpoint",
+        "epic_preliminary_scene_focus": "The Ordeal (Temptation)",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Task Prioritization",
+        "specific_task_group_description": "Order and focus on the most critical tasks to navigate your greatest challenge.",
+        "specific_task_group_tagline": "Focus on what matters first",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Crusoe",
+        "hex_code": "#006221",
+        "red": 0,
+        "green": 98,
+        "blue": 33
+      },
       "personality_profile_261": {},
       "personality_profile_262": {},
       "personality_profile_263": {},
