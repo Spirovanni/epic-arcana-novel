@@ -56321,7 +56321,235 @@
         "green": 255,
         "blue": 153
       },
-      "personality_profile_272": {},
+      "personality_profile_272": {
+        "canonical_id": "EA-272",
+        "unique_identifier": "STG 7.3.3.3",
+        "specific_task_group_title": "Prudence",
+        "all_chapter": 272,
+        "novel_book": 7,
+        "chapter": "Chapter 32",
+        "chapter_title": "The Ultimate Boon — Prudence",
+        "type": "Specific Task Group",
+        "display_name": "The Measured Hand",
+        "theme": "Wisdom is paced power: apply the boon with clear limits, steady cadence, and checks that outlast the mood of the moment.",
+        "family": "Balance — Prudence, Discernment & Sustainable Action",
+        "summary": "Francisco tempers brightness with ballast. He frames the boon in guardrails, stages change, and invites review by those it will touch. Excess drains away; what remains is durable—policies that breathe, decisions that hold, and gains that do not collapse under their own excitement.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "translates insight into paced, reversible steps",
+            "builds guardrails and exit criteria before acting",
+            "balances opportunity with risk through structured tests",
+            "keeps outcomes measurable and traceable to intent",
+            "holds steady under pressure to rush"
+          ],
+          "shadow": [
+            "over-analyzes and misses narrow windows",
+            "uses caution to avoid necessary courage",
+            "adds process that outlives its purpose",
+            "equates slowness with safety in every case",
+            "trusts precedent even when context has shifted"
+          ],
+          "growth_focus": [
+            "timebox analysis and decide when the window matters",
+            "pair each safeguard with a bold first move",
+            "retire controls that no longer serve",
+            "explicitly test when speed beats certainty",
+            "invite dissent early to sharpen judgment"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 7, Chapter 32 — Return: the boon is portioned with care; policy replaces impulse."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled prudence enlivened by flexible optimism."
+        },
+        "color_alignment": {
+          "name": "Bright Turquoise",
+          "hsl": "168,100%,50%",
+          "rgb_hex": "#00FFCC",
+          "color_symbolism": "Clear aqua—cool discernment, clean lines, sustainable flow."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.84,
+            "empathy": 0.62,
+            "openness": 0.63,
+            "orderliness": 0.82,
+            "conscientiousness": 0.86,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.41,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.50,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2721",
+            "Q2722",
+            "Q2723",
+            "Q2724",
+            "Q2725",
+            "Q2726",
+            "Q2727",
+            "Q2728"
+          ],
+          "signals_map": {
+            "Q2721": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I define guardrails and success criteria before I act."
+            },
+            "Q2722": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I stage initiatives into small, testable increments."
+            },
+            "Q2723": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Pressure to rush does not change my decision quality."
+            },
+            "Q2724": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I weigh second-order effects, not only first outcomes."
+            },
+            "Q2725": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When the window is narrow, I timebox analysis and move."
+            },
+            "Q2726": {
+              "dimension": "risk_tolerance",
+              "polarity": -1,
+              "content": "I delay action until certainty is absolute."
+            },
+            "Q2727": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I retire controls once evidence shows they’re redundant."
+            },
+            "Q2728": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I invite dissent early to refine prudent choices."
+            }
+          },
+          "daily_prompt": "What safeguard and what bold first step will you pair today to make progress that lasts?",
+          "practices": [
+            "Guardrail First: before any launch, write success/failure criteria and exit ramps.",
+            "Pilot then Policy: run a reversible pilot with pre-set review date and metrics.",
+            "Window Check: score urgency vs. certainty; pick timebox accordingly.",
+            "Control Cleanup: monthly prune rules that no longer reduce risk.",
+            "Pre-Mortem Huddle: list 5 ways the plan fails; add the lightest effective countermeasures."
+          ],
+          "transformation_indicators": [
+            "Fewer reversals post-launch with equal or faster throughput",
+            "Explicit exit criteria used in reviews, not added retroactively",
+            "Declining count of obsolete controls over time",
+            "Higher hit rate of pilots graduating to policy",
+            "Stakeholders report clarity on why and when to move"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Break into 3 — Prudence",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Steady, discerning, responsibly empowered.",
+          "ordinary_world_baseline": "Impulsive wins followed by costly corrections.",
+          "push_turn": "The boon is yoked to pace and proof—progress that can return home and hold."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Return with the Elixir",
+            "section_description": "The hero brings back the boon to benefit others",
+            "connection_focus_area": "Sharing wisdom responsibly",
+            "connect_points": {
+              "point1": "Choose one insight to share",
+              "point2": "Plan a thoughtful delivery",
+              "point3": "Gather feedback on its impact"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify your chosen insight",
+              "objective2": "Draft a sharing plan",
+              "objective3": "Evaluate audience response"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious & Make It Attractive",
+            "section_description": "Design clear, appealing cues for new behaviors",
+            "connection_focus_area": "Structuring wise actions",
+            "connect_points": {
+              "point1": "Define a prudent habit to start",
+              "point2": "Create a visible reminder",
+              "point3": "Incentivize yourself to follow through"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one prudent habit",
+              "objective2": "Build its cue into your space",
+              "objective3": "Reward completion consistently"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Deliberate Practice",
+            "section_description": "Using targeted effort to improve skills",
+            "connection_focus_area": "Refining application through feedback",
+            "connect_points": {
+              "point1": "Identify one skill to apply your insight",
+              "point2": "Plan a deliberate practice session",
+              "point3": "Seek feedback and iterate"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your practice plan",
+              "objective2": "Execute one session",
+              "objective3": "Adjust based on feedback"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Terrace of Scales, two channels meet—swift and still; Francisco sets sluice gates so the waters feed the terraces instead of flooding the plain.",
+          "symbolic_moment": "He inks a thin line across a bright map; towns along the route light one by one only as the line reaches them.",
+          "emotional_landscape": "Calm, deliberate, quietly confident.",
+          "contentment_definition": "Prudence as living balance—power tuned to context, growth paced to endure.",
+          "transformation_promise": "A leader who measures before pouring ensures the boon irrigates generations, not headlines."
+        },
+        "epic_novel_pages": "Page 466 - 480",
+        "epic_chapter_focus": "The Ultimate Boon",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Balance",
+        "specific_task_group_description": "Apply your hard-won insights with careful judgment to ensure sustainable success.",
+        "specific_task_group_tagline": "Act with wisdom",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Bright Turquoise",
+        "hex_code": "#00FFCC",
+        "red": 0,
+        "green": 255,
+        "blue": 204
+      },
       "personality_profile_273": {},
       "personality_profile_274": {},
       "personality_profile_275": {},
