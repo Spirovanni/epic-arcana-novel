@@ -53127,7 +53127,197 @@
         "green": 202,
         "blue": 151
       },
-      "personality_profile_256": {},
+      "personality_profile_256": {
+        "canonical_id": "EA-256",
+        "unique_identifier": "STG 7.2.1.3",
+        "specific_task_group_title": "Advantage",
+        "all_chapter": 256,
+        "novel_book": 7,
+        "chapter": "Chapter 16",
+        "chapter_title": "Guardians and Gatekeepers — Advantage",
+        "type": "Specific Task Group",
+        "display_name": "The Emerald Vantage",
+        "theme": "Position beats force: find the fulcrum, focus pressure, and make one move worth a hundred.",
+        "family": "Strategic Positioning / Advantage — Leverage, Vantage & Focused Action",
+        "summary": "With early reconciliations on the board, Francisco climbs to higher ground. He maps strengths, spots slack lines, and concentrates effort where one push unlocks many doors. Advantage becomes ethical leverage—wins that widen the path for larger healing.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "locates high-leverage points quickly",
+            "turns small wins into wider openings",
+            "allocates scarce resources with discipline",
+            "reads terrain and timing for decisive effect",
+            "links tactical gains to strategic arcs"
+          ],
+          "shadow": [
+            "over-optimizes the plan and misses windows",
+            "confuses altitude for insight (vantage without ground truth)",
+            "hoards resources for the ‘perfect’ strike",
+            "frames everything as a contest, reducing trust",
+            "underestimates morale as a force multiplier"
+          ],
+          "growth_focus": [
+            "pair every leverage map with on-the-ground checks",
+            "timebox analysis; commit when 70% is known",
+            "publish criteria for where resources go (and why)",
+            "convert each gain into one rule others can reuse",
+            "track second-order effects, not just the first win"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Guardians and Gatekeepers",
+          "fiction_chapter_context": "Book 7, Chapter 16 — Fun & Games: leverage early wins into positions that open larger gates."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—clear analysis channeled into bold, timely action."
+        },
+        "color_alignment": {
+          "name": "Emerald",
+          "hsl": "140,42%,55%",
+          "rgb_hex": "#5CBD7D",
+          "color_symbolism": "High ridge greenery—clarity of view, living momentum, advantage held with care."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.70,
+            "empathy": 0.62,
+            "openness": 0.63,
+            "orderliness": 0.62,
+            "conscientiousness": 0.71,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.49,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.61,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "abstract_reasoning": 0.30,
+            "orderliness": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2561","Q2562","Q2563","Q2564",
+            "Q2565","Q2566","Q2567","Q2568"
+          ],
+          "signals_map": {
+            "Q2561": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I can spot where a small push will change the whole board." },
+            "Q2562": { "dimension": "agency", "polarity": 1, "content": "Once I see the fulcrum, I act before the window closes." },
+            "Q2563": { "dimension": "orderliness", "polarity": 1, "content": "I publish clear criteria for how we allocate effort." },
+            "Q2564": { "dimension": "adaptability", "polarity": 1, "content": "If terrain shifts, I pivot the plan without losing aim." },
+            "Q2565": { "dimension": "cooperativeness", "polarity": 1, "content": "I turn individual wins into shared playbooks others can reuse." },
+            "Q2566": { "dimension": "risk_tolerance", "polarity": -1, "content": "I delay commitments while waiting for perfect certainty." },
+            "Q2567": { "dimension": "stability", "polarity": 1, "content": "I keep cadence steady so gains consolidate, not evaporate." },
+            "Q2568": { "dimension": "agency", "polarity": 1, "content": "I choose one decisive move instead of scattering effort." }
+          },
+          "daily_prompt": "What single position, if strengthened today, would make multiple problems easier—or irrelevant?",
+          "practices": [
+            "Leverage Map: list assets, chokepoints, and one move that multiplies effect.",
+            "Fulcrum Test: for any plan, name the smallest action with widest ripple.",
+            "Two-Step Rally: convert a win into a documented play others can run tomorrow.",
+            "Kill a Weak Front: stop one low-yield effort and redeploy to your edge.",
+            "Metric of Advantage: track the second-order gains unlocked by today’s move."
+          ],
+          "transformation_indicators": [
+            "Fewer initiatives with higher compounded impact",
+            "Documented plays reused across teams/factions",
+            "Shorter time from insight to first decisive move",
+            "Resource concentration aligned to clear advantages",
+            "Measured second-order effects (doors opened by one push)"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians and Gatekeepers",
+          "preliminary_beat": "Tests, Allies and Enemies — Advantage",
+          "save_the_cat_beat": "Guardians and Gatekeepers",
+          "character_state": "High-ground thinking; disciplined resource focus; momentum seeking compounding paths.",
+          "ordinary_world_baseline": "Wins scattered; effort diluted; terrain read but underused.",
+          "push_turn": "A precise strike at a fulcrum converts scattered progress into a corridor of openings."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies and Enemies",
+            "section_description": "How the hero navigates tests to grow stronger.",
+            "connection_focus_area": "Leveraging allies",
+            "connect_points": {
+              "point1": "Identify new opportunities",
+              "point2": "Assess allies’ strengths",
+              "point3": "Plan your next move"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two opportunities",
+              "objective2": "Describe an ally’s strength",
+              "objective3": "Outline your next step"
+            }
+          },
+          "book2": {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "section_of_focus": "Weak Points and Strong",
+            "section_description": "Exploit strengths and weaknesses with timing and placement.",
+            "connection_focus_area": "Tactical advantage",
+            "connect_points": {
+              "point1": "Analyze opponent’s weakness",
+              "point2": "Highlight your strength",
+              "point3": "Develop a focused tactic"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one weakness",
+              "objective2": "Map your strength",
+              "objective3": "Draft a tactical plan"
+            }
+          },
+          "book3": {
+            "title": "Good Strategy Bad Strategy",
+            "author": "Richard P. Rumelt",
+            "section_of_focus": "Using Leverage",
+            "section_description": "Focus resources on the critical advantage.",
+            "connection_focus_area": "Strategic focus",
+            "connect_points": {
+              "point1": "Define critical resource",
+              "point2": "Allocate it effectively",
+              "point3": "Measure the outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your resource",
+              "objective2": "Plan its use",
+              "objective3": "Set a metric to track"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "From a basalt parapet above the Gatefield, Francisco traces supply lights threading the valley—one junction glows brighter: the fulcrum.",
+          "symbolic_moment": "He plants a slender standard on a ridge; its shadow falls across three locked doors, and each hinge unsticks in sequence.",
+          "emotional_landscape": "Clear-eyed, patient, quietly daring.",
+          "contentment_definition": "Advantage as ethical leverage—choosing the point that frees the many, not flatters the few.",
+          "transformation_promise": "A leader who finds the fulcrum turns small courage into systemic change."
+        },
+        "epic_novel_pages": "Page 226 - 240",
+        "epic_chapter_focus": "Fun and games (event/conflict)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Strategic Positioning",
+        "specific_task_group_description": "Leverage opportunities to gain the upper hand.",
+        "specific_task_group_tagline": "Seize strategic advantage",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Emerald",
+        "hex_code": "#5CBD7D",
+        "red": 92,
+        "green": 189,
+        "blue": 125
+      },    
       "personality_profile_257": {},
       "personality_profile_258": {},
       "personality_profile_259": {},
