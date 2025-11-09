@@ -57173,7 +57173,203 @@
         "green": 204,
         "blue": 102
       },
-      "personality_profile_276": {},
+      "personality_profile_276": {
+        "canonical_id": "EA-276",
+        "unique_identifier": "STG 7.3.5.1",
+        "specific_task_group_title": "New Habits",
+        "all_chapter": 276,
+        "novel_book": 7,
+        "chapter": "Chapter 36",
+        "chapter_title": "Rescue from Without — New Habits",
+        "type": "Specific Task Group",
+        "display_name": "The Builder of Routines",
+        "theme": "Identity drives habit; habit drives destiny: design cues and rewards that make the right action automatic.",
+        "family": "Behavior Change — Identity, Routines & Systems",
+        "summary": "Help arrives—and stays—in the form of structure. Francisco stops white-knuckling progress and begins to architect it: tiny actions tied to who he is becoming, stacked on what he already does, rewarded so they repeat. Rescue takes shape as systems, not streaks of will.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "translates big aims into tiny, repeatable actions",
+            "engineers environments where the default is the desired behavior",
+            "maps cue-routine-reward loops and swaps routines surgically",
+            "tracks progress visually to sustain momentum",
+            "anchors habits to identity for durability under stress"
+          ],
+          "shadow": [
+            "optimizes routines without questioning the underlying goal",
+            "adds too many habits at once, causing overload",
+            "lets tracking replace true doing",
+            "clings to a system when conditions have changed",
+            "relies on novelty rather than consistency"
+          ],
+          "growth_focus": [
+            "start with one habit; protect it for two weeks before adding another",
+            "tie each habit to a specific identity statement",
+            "design a clear ‘never miss twice’ recovery plan",
+            "audit monthly: prune habits that no longer serve the aim",
+            "pair every habit with an immediate, honest reward"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Rescue from Without",
+          "fiction_chapter_context": "Book 7, Chapter 36 — External aid becomes internalized as systems; identity-backed routines carry the mission."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled routines energized by joyful momentum."
+        },
+        "color_alignment": {
+          "name": "Lime",
+          "hsl": "120,100%,50%",
+          "rgb_hex": "#00FF00",
+          "color_symbolism": "Fresh imperative—living green that signals go and grows with each small act."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.72,
+            "empathy": 0.63,
+            "openness": 0.60,
+            "orderliness": 0.77,
+            "conscientiousness": 0.79,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.64,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.52,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2761",
+            "Q2762",
+            "Q2763",
+            "Q2764",
+            "Q2765",
+            "Q2766",
+            "Q2767",
+            "Q2768"
+          ],
+          "signals_map": {
+            "Q2761": { "dimension": "conscientiousness", "polarity": 1, "content": "I write: ‘I am the kind of person who ___ every day,’ then act on it." },
+            "Q2762": { "dimension": "orderliness", "polarity": 1, "content": "I stack a new habit onto an existing cue so it fires reliably." },
+            "Q2763": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map cue–routine–reward and swap the routine to change outcomes." },
+            "Q2764": { "dimension": "stability", "polarity": 1, "content": "I shrink habits to two minutes when capacity is low, then expand." },
+            "Q2765": { "dimension": "adaptability", "polarity": 1, "content": "I celebrate completion immediately to encode the loop." },
+            "Q2766": { "dimension": "conscientiousness", "polarity": -1, "content": "I depend on willpower alone without cues, stacking, or rewards." },
+            "Q2767": { "dimension": "orderliness", "polarity": 1, "content": "I track streaks visibly and use ‘never miss twice’ to recover." },
+            "Q2768": { "dimension": "agency", "polarity": 1, "content": "I design the environment so the right action is the easy action." }
+          },
+          "daily_prompt": "Which identity do you want to vote for today, and what two-minute action—tied to a specific cue—will cast that vote now?",
+          "practices": [
+            "Identity Line: complete the sentence ‘I am the kind of person who…’ and place it where you act.",
+            "Anchor–Stack–Reward: pick an existing cue, add a 30-second habit, celebrate immediately.",
+            "Habit Loop Audit: log one cue–routine–reward loop; replace only the routine.",
+            "Two-Minute Rule: compress any habit to a 120-second starter you can’t refuse.",
+            "Streakboard: visible tracker with a simple rule—never miss twice."
+          ],
+          "transformation_indicators": [
+            "Longer streaks with fewer resets",
+            "Higher % of days where anchor triggers the action",
+            "Replacement of an old routine with the designed routine in key contexts",
+            "Lower reported activation energy to start",
+            "Stable execution on high-stress days"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — New Habits",
+          "save_the_cat_beat": "Rescue from Without",
+          "character_state": "Supported by allies and systems; identity and routines aligned.",
+          "ordinary_world_baseline": "Willpower spikes and inconsistent follow-through.",
+          "push_turn": "External aid and designed systems convert intention into automatic action."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Identity-based Habits",
+            "section_description": "How small habits reinforce a new self-image",
+            "connection_focus_area": "Anchoring new routines",
+            "connect_points": {
+              "point1": "Identify one identity-based habit",
+              "point2": "Stack it onto an existing routine",
+              "point3": "Celebrate each small win"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a habit tied to your identity",
+              "objective2": "Attach that habit to a daily cue",
+              "objective3": "Track and celebrate daily completion"
+            }
+          },
+          "book2": {
+            "title": "The Power of Habit",
+            "author": "Charles Duhigg",
+            "section_of_focus": "The Habit Loop",
+            "section_description": "Understanding cue, routine, reward cycles",
+            "connection_focus_area": "Rewiring unhelpful loops",
+            "connect_points": {
+              "point1": "Map your own habit loop",
+              "point2": "Swap out an old routine",
+              "point3": "Choose an empowering reward"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document one existing habit loop",
+              "objective2": "Implement a routine swap",
+              "objective3": "Evaluate the new reward’s impact"
+            }
+          },
+          "book3": {
+            "title": "Tiny Habits",
+            "author": "B. J. Fogg",
+            "section_of_focus": "Behavior Design",
+            "section_description": "How to engineer habits by starting small",
+            "connection_focus_area": "Scaling up incremental changes",
+            "connect_points": {
+              "point1": "Create a micro-version of a desired habit",
+              "point2": "Pair it with an existing behavior",
+              "point3": "Use celebration to cement the habit"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a mini habit",
+              "objective2": "Identify an anchor behavior",
+              "objective3": "Practice celebrating progress"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Clockwork Causeway, allies arrive bearing metronome lanterns; their pulses align the host as morning gathers.",
+          "symbolic_moment": "Francisco slips a silver ring onto the sun’s chain—dawn clicks into a rhythm that repeats without command.",
+          "emotional_landscape": "Assured, methodical, quietly optimistic.",
+          "contentment_definition": "Freedom as frictionless alignment—systems that make the right thing the easy thing.",
+          "transformation_promise": "A leader who builds habits rescues effort from chaos, making excellence inevitable."
+        },
+        "epic_novel_pages": "Page 526 - 540",
+        "epic_chapter_focus": "Battle (set-up)",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Behavior Change",
+        "specific_task_group_description": "Establish daily routines that support long-term transformation.",
+        "specific_task_group_tagline": "Build life-changing habits",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Lime",
+        "hex_code": "#00FF00",
+        "red": 0,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_277": {},
       "personality_profile_278": {},
       "personality_profile_279": {},
