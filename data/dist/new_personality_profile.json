@@ -52554,7 +52554,197 @@
         "green": 102,
         "blue": 51
       },    
-      "personality_profile_253": {},
+      "personality_profile_253": {
+        "canonical_id": "EA-253",
+        "unique_identifier": "MAT 7.1",
+        "specific_task_group_title": "Reconciliation",
+        "all_chapter": 253,
+        "novel_book": 7,
+        "chapter": "Chapter 13",
+        "chapter_title": "The Crossing of the Threshold — Reconciliation",
+        "type": "Major Activity Theme",
+        "display_name": "The Tempered Bridge",
+        "theme": "Integration is movement: blend the opposites on purpose, and the crossing bears your weight—and invites others across.",
+        "family": "Integration / Reconciliation — Balance, Synthesis & Harmonized Action",
+        "summary": "At the lip of a new realm, Francisco steadies the mix. He learns to hold tension without fracture, to pour from rival vessels into one channel, and to convert compromise into cadence. Balanced, he steps through—carrying a pattern others can follow.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "Temperance",
+        "traits": {
+          "strengths": [
+            "holds competing aims without losing momentum",
+            "translates compromise into clear operating rules",
+            "coaxes coalitions toward shared principles",
+            "paces change so gains stick",
+            "models calm, measured execution under pressure"
+          ],
+          "shadow": [
+            "over-indexes on harmony and blunts necessary edge",
+            "spends too long blending when a clean cut is wiser",
+            "confuses delay with prudence",
+            "dilutes vision to satisfy every party",
+            "avoids decisive bets to keep options open"
+          ],
+          "growth_focus": [
+            "set a decision timebox before synthesis work begins",
+            "name the non-negotiables first, then blend the rest",
+            "turn each compromise into one enforceable rule",
+            "pair balance with a bold first step",
+            "track outcomes to ensure ‘win-win’ is real, not rhetorical"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "The Crossing of the Threshold",
+          "fiction_chapter_context": "Book 7, Chapter 13 — Threshold: inner factions reconcile; forward motion becomes possible."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—serene balance channelled into decisive action."
+        },
+        "color_alignment": {
+          "name": "Chateau Green",
+          "hsl": "149,50%,42%",
+          "rgb_hex": "#2F8F4F",
+          "color_symbolism": "Tempered jade—quiet strength, measured union, dependable stride."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.82,
+            "empathy": 0.74,
+            "openness": 0.66,
+            "orderliness": 0.63,
+            "conscientiousness": 0.70,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.65,
+            "cooperativeness": 0.79,
+            "risk_tolerance": 0.53,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.57,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "cooperativeness": 0.35,
+            "stability": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2531","Q2532","Q2533","Q2534",
+            "Q2535","Q2536","Q2537","Q2538"
+          ],
+          "signals_map": {
+            "Q2531": { "dimension": "cooperativeness", "polarity": 1, "content": "I look for a third path that honors the best of both sides." },
+            "Q2532": { "dimension": "stability", "polarity": 1, "content": "When tensions rise, I slow the pace to balance tradeoffs deliberately." },
+            "Q2533": { "dimension": "openness", "polarity": 1, "content": "I can hold contradictions without forcing instant closure." },
+            "Q2534": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn agreements into clear rules we can actually follow." },
+            "Q2535": { "dimension": "agency", "polarity": 1, "content": "Once a synthesis appears, I commit and take the first step." },
+            "Q2536": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid decisive commitments so I can keep all options open." },
+            "Q2537": { "dimension": "adaptability", "polarity": 1, "content": "I switch frames until a workable blend comes into view." },
+            "Q2538": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map shared principles beneath opposing positions." }
+          },
+          "daily_prompt": "Which two tensions can you blend today—and what single step will lock that balance into behavior?",
+          "practices": [
+            "Two-Glass Method: write the gifts/risks of each side; pour into one rule that keeps both gifts while limiting risks.",
+            "Tradeoff Ledger: list costs you accept for the chosen blend; assign owners and stop-losses.",
+            "Harmony Sprint: 25 minutes executing the blended plan to prove viability now.",
+            "Non-Negotiables First: state 1–2 inviolables before synthesis to avoid mushy compromise.",
+            "Bridge Statement: script how you’ll explain the new balance to skeptics in one paragraph."
+          ],
+          "transformation_indicators": [
+            "Fewer stalemates; more blended decisions shipped on time",
+            "Clear rules replacing ad-hoc exceptions",
+            "Stakeholders repeat the bridge statement verbatim",
+            "Stability under stress tests (fewer reversals)",
+            "Measured increases in velocity without spike in rework"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Crossing of the Threshold",
+          "preliminary_beat": "Break Into 2 — Reconciliation",
+          "save_the_cat_beat": "Break Into 2",
+          "character_state": "Poised between worlds; tensions named, principles unified.",
+          "ordinary_world_baseline": "Fragmented motives and stop-start progress.",
+          "push_turn": "Integrated stance converts caution into cadence and attracts allies to the crossing."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Crossing of the Threshold",
+            "section_description": "The hero begins the journey into a new realm of adventure.",
+            "connection_focus_area": "Embracing transformation",
+            "connect_points": {
+              "point1": "Identify the threshold you’re crossing",
+              "point2": "Recognize the inner shifts required",
+              "point3": "Commit to living in the new paradigm"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your personal threshold moment",
+              "objective2": "List two changes you need to make",
+              "objective3": "Draft a plan to sustain those changes"
+            }
+          },
+          "book2": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore",
+            "section_description": "Deciding what is truly essential before moving forward.",
+            "connection_focus_area": "Prioritizing transformation",
+            "connect_points": {
+              "point1": "Define one essential value",
+              "point2": "Eliminate a non-essential task",
+              "point3": "Allocate time to your priority"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify your top value",
+              "objective2": "Remove one distraction",
+              "objective3": "Schedule a time block for your priority"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Presence",
+            "section_description": "Cultivating awareness in the present moment to navigate change.",
+            "connection_focus_area": "Living in the now",
+            "connect_points": {
+              "point1": "Practice a 5-minute mindfulness exercise",
+              "point2": "Notice when your mind drifts",
+              "point3": "Bring attention back to the present"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a 5-minute meditation",
+              "objective2": "Log moments of mind-wandering",
+              "objective3": "Apply presence during one daily activity"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Confluence Gate, two rivers—one glacial, one volcanic—meet beneath a tempered arch; Francisco kneels, cups both waters, and tastes a third current only present together.",
+          "symbolic_moment": "He pours from twin flasks into a single bowl; the surface stills, reflecting a path beyond the misted threshold.",
+          "emotional_landscape": "Measured, resolute, quietly exultant.",
+          "contentment_definition": "Reconciliation as disciplined blend—naming what must remain and what must transform until motion is smooth.",
+          "transformation_promise": "A leader who tempers extremes makes crossings possible that brute force could never open."
+        },
+        "epic_novel_pages": "Page 181 - 195",
+        "epic_chapter_focus": "The Crossing of the Threshold",
+        "epic_preliminary_scene_focus": "Break Into 2",
+        "epic_novel_chapter_focus": "Scene V: The Crossing of the Threshold",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Integration",
+        "specific_task_group_description": "Blend opposing forces within to achieve inner harmony and forward motion.",
+        "specific_task_group_tagline": "Find balance and move forward",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Chateau Green",
+        "hex_code": "#2F8F4F",
+        "red": 47,
+        "green": 143,
+        "blue": 79
+      },    
       "personality_profile_254": {},
       "personality_profile_255": {},
       "personality_profile_256": {},
