@@ -54845,8 +54845,236 @@
         "red": 0,
         "green": 128,
         "blue": 0
-      },    
-      "personality_profile_265": {},
+      },
+      "personality_profile_265": {
+        "canonical_id": "EA-265",
+        "unique_identifier": "STG 7.3.1.2",
+        "specific_task_group_title": "Avenging Force",
+        "all_chapter": 265,
+        "novel_book": 7,
+        "chapter": "Chapter 25",
+        "chapter_title": "Atonement with the Father — Avenging Force",
+        "type": "Specific Task Group",
+        "display_name": "The Righteous Surge",
+        "theme": "Pain becomes propulsion: bind rage to rules, aim justice at systems, and strike where change endures.",
+        "family": "Resurgence — Resolve, Justice & Decisive Action",
+        "summary": "From the crater of ‘All is Lost,’ Francisco gathers what still burns and forges it into vector. He names the harm, chooses the target, writes the rules of engagement—and moves. Not vengeance for its own sake, but measured force that breaks cycles and clears space for healing.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Page",
+        "traits": {
+          "strengths": [
+            "channels anger into principled, goal-tied action",
+            "sets crisp boundaries and enforces them consistently",
+            "prioritizes impact over optics under pressure",
+            "converts hard lessons into operating rules",
+            "rallies allies with clarity, tempo, and purpose"
+          ],
+          "shadow": [
+            "overcorrects into force when patience would compound",
+            "frames dissent as obstruction rather than signal",
+            "treats velocity as virtue even when direction drifts",
+            "lets moral certainty eclipse curiosity",
+            "burns cycles proving a point instead of solving it"
+          ],
+          "growth_focus": [
+            "pair every surge with a measurable safeguard",
+            "schedule a red-team check before irreversible moves",
+            "separate offense at behavior from care for people",
+            "define ‘enough’ so escalation stops on purpose",
+            "translate each win into one repeatable practice"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 7, Chapter 25 — All is Lost: resolve hardens; justice becomes disciplined motion."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—strong spine guided by service and protection."
+        },
+        "color_alignment": {
+          "name": "Forest Green",
+          "hsl": "129,77%,28%",
+          "rgb_hex": "#118022",
+          "color_symbolism": "Tempered vigor—living strength directed with care."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.76,
+            "stability": 0.68,
+            "empathy": 0.58,
+            "openness": 0.60,
+            "orderliness": 0.66,
+            "conscientiousness": 0.71,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.61,
+            "risk_tolerance": 0.70,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.68,
+            "novelty_seeking": 0.57,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "conscientiousness": 0.35,
+            "risk_tolerance": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2651",
+            "Q2652",
+            "Q2653",
+            "Q2654",
+            "Q2655",
+            "Q2656",
+            "Q2657",
+            "Q2658"
+          ],
+          "signals_map": {
+            "Q2651": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When a line is crossed, I act within minutes—not weeks."
+            },
+            "Q2652": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I convert hard-won lessons into simple rules we can follow."
+            },
+            "Q2653": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "If the mission demands it, I’ll take a clean, bounded risk."
+            },
+            "Q2654": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I pair every push with clear limits and accountability."
+            },
+            "Q2655": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I separate the person from the pattern I’m correcting."
+            },
+            "Q2656": {
+              "dimension": "openness",
+              "polarity": -1,
+              "content": "Once I’m sure I’m right, I rarely revisit the premise."
+            },
+            "Q2657": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Pressure sharpens my focus rather than scattering it."
+            },
+            "Q2658": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I invite allies to red-team my plan before we commit."
+            }
+          },
+          "daily_prompt": "Where is principled force required today—and what safeguard will ensure it heals rather than harms?",
+          "practices": [
+            "Justice Ledger: write the harm, the principle, the narrow remedy, and the stop condition.",
+            "Two-Stage Strike: Stage 1 (notice & boundary), Stage 2 (consequence) if breach repeats.",
+            "Red-Team Ten: 10 minutes for one trusted skeptic to stress-test the plan.",
+            "Safeguard Pairing: attach one metric and one brake to every surge.",
+            "Rule Harvest: after action, codify one rule that prevents recurrence."
+          ],
+          "transformation_indicators": [
+            "Fewer repeat breaches after interventions",
+            "Shorter decision-to-action cycle with stable outcomes",
+            "Clearer boundaries acknowledged by stakeholders",
+            "Higher quality dissent surfaced before action",
+            "Wins converted into durable policies and practices"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — Avenging Force",
+          "save_the_cat_beat": "Atonement with the Father",
+          "character_state": "Centered, disciplined, mission-true; force yoked to principle.",
+          "ordinary_world_baseline": "Diffuse striving, blurred lines, energy spent on optics.",
+          "push_turn": "Measured strike establishes new norms and restores direction."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ultimate Boon",
+            "section_description": "The hero claims the prize after supreme ordeal.",
+            "connection_focus_area": "Turning tribulation into triumph",
+            "connect_points": {
+              "point1": "Define your ultimate goal",
+              "point2": "Map obstacles overcome",
+              "point3": "Articulate how struggle fueled success"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State your supreme boon",
+              "objective2": "List three strengths gained",
+              "objective3": "Plan next bold action"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Interest and Practice",
+            "section_description": "Building endurance through deliberate effort.",
+            "connection_focus_area": "Perseverance under pressure",
+            "connect_points": {
+              "point1": "Identify your long-term aim",
+              "point2": "Set daily practice targets",
+              "point3": "Record small wins"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a five-year goal",
+              "objective2": "Create a practice log",
+              "objective3": "Reflect on one difficulty overcome"
+            }
+          },
+          "book3": {
+            "title": "The Laws of Victory",
+            "author": "Napoleon Hill",
+            "section_of_focus": "Definiteness of Purpose",
+            "section_description": "Focusing willpower on a clear aim.",
+            "connection_focus_area": "Directing energy",
+            "connect_points": {
+              "point1": "Write a purpose statement",
+              "point2": "Eliminate distractions",
+              "point3": "Align daily tasks with purpose"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Craft a written purpose",
+              "objective2": "List and remove two distractions",
+              "objective3": "Schedule three aligned tasks"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Rampart of Ash, banners hang torn; Francisco plants a green-edged standard, its woven glyphs setting new terms none can mistake.",
+          "symbolic_moment": "He quenches his blade in a basin etched with vows; steam rises, and the rules of engagement seal like tempered steel.",
+          "emotional_landscape": "Fierce, disciplined, unshakably directed.",
+          "contentment_definition": "Justice as constructive force—tight scope, clean lines, lasting relief.",
+          "transformation_promise": "A leader who wields principled power turns endings into frameworks that hold."
+        },
+        "epic_novel_pages": "Page 361 - 375",
+        "epic_chapter_focus": "Dedication (resolution)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Resurgence",
+        "specific_task_group_description": "Harness righteous resolve to transform suffering into decisive action against the final challenge.",
+        "specific_task_group_tagline": "Let strength be your guide",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Forest Green",
+        "hex_code": "#118022",
+        "red": 17,
+        "green": 128,
+        "blue": 34
+      },
       "personality_profile_266": {},
       "personality_profile_267": {},
       "personality_profile_268": {},
