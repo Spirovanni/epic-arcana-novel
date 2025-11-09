@@ -54082,7 +54082,197 @@
         "green": 98,
         "blue": 33
       },
-      "personality_profile_261": {},
+      "personality_profile_261": {
+        "canonical_id": "EA-261",
+        "unique_identifier": "STG 7.2.3.2",
+        "specific_task_group_title": "Calculated Sacrifice",
+        "all_chapter": 261,
+        "novel_book": 7,
+        "chapter": "Chapter 21",
+        "chapter_title": "The Supreme Ordeal — Calculated Sacrifice",
+        "type": "Specific Task Group",
+        "display_name": "The Jade Scale",
+        "theme": "Every win costs something—name the price, pay it on purpose, and let the loss buy the breakthrough.",
+        "family": "Tradeoffs & Cost — Sacrifice, Non-Negotiables & Consequence",
+        "summary": "The board is crowded and time is thin. Francisco stops trying to keep everything alive and chooses what must be released so the right battle can be won. He publishes the costs, guards the non-negotiables, and converts loss into runway. The path tightens; momentum returns.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "names non-negotiables and visible costs up front",
+            "prunes scope cleanly without losing the core intent",
+            "trades short-term comfort for long-term leverage",
+            "explains the ‘why’ of cuts to preserve trust",
+            "turns freed capacity into immediate progress on keystones"
+          ],
+          "shadow": [
+            "cuts muscle with fat under time pressure",
+            "frames sacrifice as virtue instead of strategy",
+            "hides real costs to avoid pushback",
+            "keeps sunk-cost projects alive too long",
+            "treats teammates as line items rather than partners"
+          ],
+          "growth_focus": [
+            "run a quick red-team review before final cuts",
+            "publish a cost ledger with owners and mitigations",
+            "protect recovery capacity while pruning",
+            "define exit criteria in advance for projects",
+            "pair each cut with a support to absorb impact"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 7, Chapter 21 — Ordeal: a chosen loss unlocks the real path forward."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled cuts delivered with humane flexibility."
+        },
+        "color_alignment": {
+          "name": "Japanese Laurel",
+          "hsl": "117,89%,26%",
+          "rgb_hex": "#0A7E07",
+          "color_symbolism": "Disciplined verdure—earned clarity; the green of chosen cost that feeds growth."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.74,
+            "empathy": 0.62,
+            "openness": 0.61,
+            "orderliness": 0.79,
+            "conscientiousness": 0.82,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.51,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.50,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "agency": 0.30,
+            "orderliness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2611","Q2612","Q2613","Q2614",
+            "Q2615","Q2616","Q2617","Q2618"
+          ],
+          "signals_map": {
+            "Q2611": { "dimension": "conscientiousness", "polarity": 1, "content": "Before committing, I list the real costs and accept them in writing." },
+            "Q2612": { "dimension": "agency", "polarity": 1, "content": "I choose one deliberate sacrifice that unlocks the highest-leverage move." },
+            "Q2613": { "dimension": "orderliness", "polarity": 1, "content": "I prune scope visibly and publish a one-page updated plan." },
+            "Q2614": { "dimension": "empathy", "polarity": 1, "content": "I communicate tradeoffs with care and add supports for those affected." },
+            "Q2615": { "dimension": "stability", "polarity": 1, "content": "When pressure rises, I hold the line on non-negotiables." },
+            "Q2616": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid necessary cuts to keep everyone comfortable." },
+            "Q2617": { "dimension": "adaptability", "polarity": 1, "content": "If a cut harms outcomes, I revisit quickly and adjust." },
+            "Q2618": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model second-order effects of each tradeoff before deciding." }
+          },
+          "daily_prompt": "What will you deliberately give up today so the keystone move can happen?",
+          "practices": [
+            "Cost Ledger: list each cut, the gain it funds, and the mitigation.",
+            "Kill/Keep/Convert: triage work—end, continue, or transform—with criteria.",
+            "Guardrail Statement: write the non-negotiables that must not be sacrificed.",
+            "Sacrifice Pairing: match each cut with a support (tool, time, or teammate).",
+            "Sunset Review: schedule a hard end date for experiments unless renewed."
+          ],
+          "transformation_indicators": [
+            "Reduced WIP with higher throughput on keystone work",
+            "Shorter cycle time from decision to visible progress",
+            "Stakeholder trust sustained or improved after cuts",
+            "Lower burnout due to protected capacity and supports",
+            "Minimal rework from over-pruning (muscle spared while fat removed)"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Ordeal (Temptation) — Calculated Sacrifice",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "Principled, pared, purpose-first; cost owned, runway cleared.",
+          "ordinary_world_baseline": "Diffuse commitments, hidden costs, brittle promises.",
+          "push_turn": "A chosen loss buys decisive movement and changes the odds."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Eliminate",
+            "section_description": "Choosing the vital few by cutting the trivial many.",
+            "connection_focus_area": "Focused tradeoffs",
+            "connect_points": {
+              "point1": "Name your non-negotiables",
+              "point2": "Cut one low-impact commitment",
+              "point3": "Protect time for the keystone"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three trivial-many items",
+              "objective2": "Eliminate at least one today",
+              "objective3": "Block time for the vital task"
+            }
+          },
+          "book2": {
+            "title": "The Dip",
+            "author": "Seth Godin",
+            "section_of_focus": "Quit the Wrong Stuff",
+            "section_description": "Knowing when to lean in or exit.",
+            "connection_focus_area": "Strategic quitting",
+            "connect_points": {
+              "point1": "Identify one cul-de-sac project",
+              "point2": "Write exit criteria",
+              "point3": "Reinvest freed capacity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Diagnose one dead-end effort",
+              "objective2": "Set a sunset condition",
+              "objective3": "Plan where the capacity goes"
+            }
+          },
+          "book3": {
+            "title": "Decisive",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "Widen Your Options",
+            "section_description": "Avoiding narrow frames and overconfidence.",
+            "connection_focus_area": "Better decisions under cost",
+            "connect_points": {
+              "point1": "Generate two alternate paths",
+              "point2": "Run a pre-mortem on your cut",
+              "point3": "Test with a small reversible step"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a second viable option",
+              "objective2": "Write a quick pre-mortem",
+              "objective3": "Pilot a reversible decision"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Chamber of Weights, twin scales hold cherished banners and the passage stone; Francisco removes a beloved token so the gate can rise.",
+          "symbolic_moment": "He inscribes a ‘Cost Paid’ sigil; corridors brighten and the shorter path reveals itself.",
+          "emotional_landscape": "Somber, resolved, clean.",
+          "contentment_definition": "Peace as paid clarity—choosing what to lose to free what must live.",
+          "transformation_promise": "A leader who owns cost converts sacrifice into speed and trust."
+        },
+        "epic_novel_pages": "Page 301 - 315",
+        "epic_chapter_focus": "Midpoint",
+        "epic_preliminary_scene_focus": "The Ordeal (Temptation)",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Tradeoffs & Cost",
+        "specific_task_group_description": "Choose and communicate necessary sacrifices to unlock the most leveraged path.",
+        "specific_task_group_tagline": "Pay the right price",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Japanese Laurel",
+        "hex_code": "#0A7E07",
+        "red": 10,
+        "green": 126,
+        "blue": 7
+      },    
       "personality_profile_262": {},
       "personality_profile_263": {},
       "personality_profile_264": {},
