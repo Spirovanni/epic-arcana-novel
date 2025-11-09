@@ -52745,7 +52745,197 @@
         "green": 143,
         "blue": 79
       },
-      "personality_profile_254": {},
+      "personality_profile_254": {
+        "canonical_id": "EA-254",
+        "unique_identifier": "STG 7.2.1.1",
+        "specific_task_group_title": "Material Success",
+        "all_chapter": 254,
+        "novel_book": 7,
+        "chapter": "Chapter 14",
+        "chapter_title": "Guardians and Gatekeepers — Material Success",
+        "type": "Specific Task Group",
+        "display_name": "The Proven Ledger",
+        "theme": "Results are the trust engine—make value visible, measure it honestly, and the gates swing open.",
+        "family": "Wealth Building / Material Success — Assets, Proof & Stewardship",
+        "summary": "Pressed by gatekeepers, Francisco learns that goodwill isn’t enough—outcomes must be counted. He translates reconciliations into assets, bundles evidence, and posts the score where all can see. Proof replaces promises; doors that once tested him now invite him through.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Nine",
+        "traits": {
+          "strengths": [
+            "turns collaborations into measurable wins",
+            "charts value flows and removes leakage",
+            "builds dashboards teams actually use",
+            "converts principles into enforceable terms",
+            "keeps momentum steady with visible milestones"
+          ],
+          "shadow": [
+            "over-fixates on metrics and misses meaning",
+            "optimizes local gains at system cost",
+            "treats people like line items under stress",
+            "confuses activity logs with real impact",
+            "avoids long-term bets that lack near-term proof"
+          ],
+          "growth_focus": [
+            "pair every KPI with a human outcome",
+            "run a ‘whole-system’ check before optimizing",
+            "publish assumptions alongside numbers",
+            "reserve 10% effort for long-horizon bets",
+            "invite a skeptic to audit your proof pack"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "Push",
+          "fiction_chapter_context": "Book 7, Chapter 14 — Guardians and Gatekeepers: material proof of reconciliation opens the way."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—ambition tempered by reliability, standards, and shared accountability."
+        },
+        "color_alignment": {
+          "name": "Vista Blue",
+          "hsl": "146,43%,71%",
+          "rgb_hex": "#97D5AC",
+          "color_symbolism": "Minted trust—cool clarity, counted value, steady gain."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.78,
+            "empathy": 0.62,
+            "openness": 0.60,
+            "orderliness": 0.74,
+            "conscientiousness": 0.82,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.71,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "agency": 0.30,
+            "orderliness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2541","Q2542","Q2543","Q2544",
+            "Q2545","Q2546","Q2547","Q2548"
+          ],
+          "signals_map": {
+            "Q2541": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate agreements into clear terms, owners, and dates." },
+            "Q2542": { "dimension": "agency", "polarity": 1, "content": "I move from idea to a measurable pilot quickly." },
+            "Q2543": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a simple scoreboard everyone can read at a glance." },
+            "Q2544": { "dimension": "stability", "polarity": 1, "content": "When pressure rises, I keep cadence and protect quality." },
+            "Q2545": { "dimension": "cooperativeness", "polarity": 1, "content": "I credit partners transparently to reinforce the coalition." },
+            "Q2546": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid long-horizon bets unless returns are near certain." },
+            "Q2547": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map how today’s win compounds into durable advantage." },
+            "Q2548": { "dimension": "openness", "polarity": 1, "content": "If evidence contradicts the plan, I revise targets and tell the truth." }
+          },
+          "daily_prompt": "What proof would convince a fair skeptic today—and what smallest shippable step can you publish before dusk?",
+          "practices": [
+            "Proof Pack: compile before/after, metrics, and a 3-sentence narrative.",
+            "Value Stream Map: trace where effort leaks; plug one leak now.",
+            "Partner Ledger: log contributions and split credit explicitly.",
+            "Gate Brief: one-page summary for gatekeepers—goal, proof, next step.",
+            "Scoreboard Ritual: update the visible metric at a fixed daily time."
+          ],
+          "transformation_indicators": [
+            "Cycle times shorten while quality holds or improves",
+            "Public dashboards replace status meetings",
+            "Allies cite your proof in their pitches (second-order trust)",
+            "Fewer reversals after gate reviews",
+            "Asset base (skills, tools, reserves) trends upward quarter over quarter"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians and Gatekeepers",
+          "preliminary_beat": "Tests, Allies and Enemies — Material Success",
+          "save_the_cat_beat": "Guardians and Gatekeepers",
+          "character_state": "Evidence-focused; calm tempo; coalition aligned on measurable value.",
+          "ordinary_world_baseline": "Goodwill-heavy, proof-light agreements that stall at gates.",
+          "push_turn": "Visible results convert scrutiny into sponsorship; the path widens."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies and Enemies",
+            "section_description": "How heroes persist through trials to receive their boon.",
+            "connection_focus_area": "Achieving the Boon",
+            "connect_points": {
+              "point1": "Identify the boon you seek",
+              "point2": "Trace the trials overcome",
+              "point3": "Map how allies contributed"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your personal boon",
+              "objective2": "List three trials faced",
+              "objective3": "Name two key allies"
+            }
+          },
+          "book2": {
+            "title": "Rich Dad Poor Dad",
+            "author": "Robert Kiyosaki",
+            "section_of_focus": "Assets and Liabilities",
+            "section_description": "Understanding what truly builds wealth.",
+            "connection_focus_area": "Managing Wealth",
+            "connect_points": {
+              "point1": "Differentiate assets vs. liabilities",
+              "point2": "Assess your own holdings",
+              "point3": "Plan one new asset acquisition"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define an asset you own",
+              "objective2": "List two liabilities to reduce",
+              "objective3": "Outline a purchase plan"
+            }
+          },
+          "book3": {
+            "title": "The Millionaire Mind",
+            "author": "Thomas J. Stanley",
+            "section_of_focus": "Wealth Accumulation",
+            "section_description": "Mindsets and habits that lead to material success.",
+            "connection_focus_area": "Building Success Habits",
+            "connect_points": {
+              "point1": "Identify one wealth habit to adopt",
+              "point2": "Set a schedule for it",
+              "point3": "Track your first result"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select a daily wealth habit",
+              "objective2": "Practice it three times",
+              "objective3": "Record your progress"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Before the Sapphire Gates, auditors of the Old Accord weigh banners of promise against scales of evidence; Francisco unveils ledgers whose sums glow where wounds once bled.",
+          "symbolic_moment": "A sealed amphora is tapped; clear water overflows into dry channels, then is measured—rivulets marked, fields greening in view.",
+          "emotional_landscape": "Steady, accountable, quietly proud.",
+          "contentment_definition": "Success as verified stewardship—value created, shared, and sustained.",
+          "transformation_promise": "A leader who proves the boon turns thresholds into corridors."
+        },
+        "epic_novel_pages": "Page 196 - 210",
+        "epic_chapter_focus": "Push",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Wealth Building",
+        "specific_task_group_description": "Demonstrate and secure tangible rewards gained through collaboration.",
+        "specific_task_group_tagline": "Claim your material rewards",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Vista Blue",
+        "hex_code": "#97D5AC",
+        "red": 151,
+        "green": 213,
+        "blue": 172
+      },    
       "personality_profile_255": {},
       "personality_profile_256": {},
       "personality_profile_257": {},
