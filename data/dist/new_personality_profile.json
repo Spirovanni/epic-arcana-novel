@@ -57567,7 +57567,203 @@
         "green": 204,
         "blue": 102
       },
-      "personality_profile_278": {},
+      "personality_profile_278": {
+        "canonical_id": "EA-278",
+        "unique_identifier": "MAT 7.3",
+        "specific_task_group_title": "Restructuring",
+        "all_chapter": 278,
+        "novel_book": 7,
+        "chapter": "Chapter 38",
+        "chapter_title": "Rescue from Without — Restructuring",
+        "type": "Major Activity Theme",
+        "display_name": "The Lightning Scaffold",
+        "theme": "When the old tower cracks, pull it with purpose: clear the rubble, keep the load-bearing truths, and raise a structure that breathes.",
+        "family": "Restructuring / Transformation — Disruption, Renewal & Structural Reinvention",
+        "summary": "Shock becomes blueprint. Francisco stops propping up brittle walls and turns to deliberate deconstruction. With allies at his flank, he pulls failing frames in a controlled fall, salvages what serves, and seeds a stronger lattice. Collapse is not an end but a clearing for better architecture.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Tower",
+        "traits": {
+          "strengths": [
+            "diagnoses structural failure quickly and calmly",
+            "plans controlled demolition with safety margins",
+            "salvages reusable assets and codifies lessons",
+            "designs simple, strong replacement architectures",
+            "communicates why-change narratives that win consent"
+          ],
+          "shadow": [
+            "moves to teardown before fully testing fixes",
+            "underestimates emotional cost of abrupt change",
+            "over-indexes on efficiency at the expense of care",
+            "creates change churn with overlapping initiatives",
+            "assumes buy-in because the plan is \"obviously right\""
+          ],
+          "growth_focus": [
+            "prove the need: show failure data before teardown",
+            "stage change: pilot, gate, and expand deliberately",
+            "pair every removal with a humane transition plan",
+            "publish a salvage list: what stays, what goes, why",
+            "embed feedback loops to adjust the new design"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Rescue from Without",
+          "fiction_chapter_context": "Book 7, Chapter 38 — Rescue from Without: external aid catalyzes engineered teardown and rebuild."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—decisive power tempered by service and care during upheaval."
+        },
+        "color_alignment": {
+          "name": "Spring Green",
+          "hsl": "148,89%,53%",
+          "rgb_hex": "#1EF280",
+          "color_symbolism": "Verdant surge after lightning—fresh growth through purposeful dismantling."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.62,
+            "empathy": 0.58,
+            "openness": 0.76,
+            "orderliness": 0.72,
+            "conscientiousness": 0.74,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.75,
+            "emotional_intensity": 0.60,
+            "social_dominance": 0.59,
+            "novelty_seeking": 0.73,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "adaptability": 0.30,
+            "openness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2781",
+            "Q2782",
+            "Q2783",
+            "Q2784",
+            "Q2785",
+            "Q2786",
+            "Q2787",
+            "Q2788"
+          ],
+          "signals_map": {
+            "Q2781": { "dimension": "agency", "polarity": 1, "content": "I drive decisive teardown when evidence shows a system is failing." },
+            "Q2782": { "dimension": "openness", "polarity": 1, "content": "I question default structures and invite better patterns to replace them." },
+            "Q2783": { "dimension": "adaptability", "polarity": 1, "content": "I pivot plans as new facts surface during change." },
+            "Q2784": { "dimension": "orderliness", "polarity": 1, "content": "I design simple guardrails that keep the rebuild safe and on track." },
+            "Q2785": { "dimension": "risk_tolerance", "polarity": 1, "content": "I’m comfortable decommissioning legacy processes when the cost of keeping them exceeds the risk of change." },
+            "Q2786": { "dimension": "stability", "polarity": -1, "content": "I avoid disruptive steps even when systems repeatedly fail." },
+            "Q2787": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I map causal chains to isolate the true load-bearing failures." },
+            "Q2788": { "dimension": "conscientiousness", "polarity": 1, "content": "I define clear ‘done’ states for the new structure and verify them." }
+          },
+          "daily_prompt": "What brittle structure needs a controlled pull today—and what small, safe pilot proves the better frame?",
+          "practices": [
+            "Pre-Mortem & Pull: list failure modes, design a safe teardown, and pre-commit rollback criteria.",
+            "Kill-Switch Inventory: document legacy elements with triggers to retire each one.",
+            "Bright-Spot Salvage: identify reusable strengths; specify how they fit the new design.",
+            "Two-Week Pilot: test the replacement in a contained area; measure outcome and load.",
+            "Change-Log Broadcast: publish what changed, why, metrics, and next steps."
+          ],
+          "transformation_indicators": [
+            "Legacy incident rates fall while throughput rises",
+            "Lead time from decision to safe rebuild decreases",
+            "Optionality increases (more viable paths during stress)",
+            "Stakeholders can recite the new operating principles",
+            "Mean time to recovery (MTTR) shortens after disruptions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Rescue from Without",
+          "preliminary_beat": "Finale — Restructuring",
+          "save_the_cat_beat": "Rescue from Without",
+          "character_state": "Backed by external aid; poised to dismantle brittleness and stand up a stronger frame.",
+          "ordinary_world_baseline": "Entrenched, brittle systems patched past their limits.",
+          "push_turn": "Catalytic allies and events justify decisive teardown and rapid redesign."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Who Moved My Cheese?",
+            "author": "Spencer Johnson",
+            "section_of_focus": "The Change Process",
+            "section_description": "Adapting to unexpected shifts in one’s environment",
+            "connection_focus_area": "Responding to sudden upheaval",
+            "connect_points": {
+              "point1": "Identify an area of sudden change in your life",
+              "point2": "Chart new pathways through uncertainty",
+              "point3": "Review and adjust as new information arises"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Recognize recent disruptions",
+              "objective2": "Draft three adaptive responses",
+              "objective3": "Implement and evaluate one response"
+            }
+          },
+          "book2": {
+            "title": "Switch",
+            "author": "Chip Heath & Dan Heath",
+            "section_of_focus": "Direct the Rider",
+            "section_description": "How to clarify direction under upheaval",
+            "connection_focus_area": "Guiding action amid chaos",
+            "connect_points": {
+              "point1": "Find existing 'bright spots' of stability",
+              "point2": "Script one critical adaptive move",
+              "point3": "Define a clear endpoint vision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two bright spots to leverage",
+              "objective2": "Write a precise next step plan",
+              "objective3": "Articulate the desired outcome clearly"
+            }
+          },
+          "book3": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Optionality",
+            "section_description": "Gaining from disorder and volatility",
+            "connection_focus_area": "Building resilience through options",
+            "connect_points": {
+              "point1": "Identify three optional paths forward",
+              "point2": "Stress-test one choice under uncertainty",
+              "point3": "Collect lessons from volatility"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Generate multiple contingency options",
+              "objective2": "Conduct a mini stress-test on one option",
+              "objective3": "Incorporate insights into a revised plan"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Lightning fractures the Sky-Bridge; Francisco signals the Host, and a lace of radiant scaffolds blooms to guide a controlled fall.",
+          "symbolic_moment": "He drives a living grounding-rod into the rubble; green filaments climb it, knitting a fresh lattice from the salvage.",
+          "emotional_landscape": "Fierce, lucid, steady-handed.",
+          "contentment_definition": "Restructuring as disciplined demolition—ending what cannot carry life so life can return stronger.",
+          "transformation_promise": "A leader who can pull a tower safely can raise a city that endures the storm."
+        },
+        "epic_novel_pages": "Page 556 - 570",
+        "epic_chapter_focus": "Rescue from Without",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Transformation",
+        "specific_task_group_description": "Break down old structures to rebuild stronger foundations.",
+        "specific_task_group_tagline": "Embrace necessary breaks to build back better",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Spring Green",
+        "hex_code": "#1EF280",
+        "red": 30,
+        "green": 242,
+        "blue": 128
+      },
       "personality_profile_279": {},
       "personality_profile_280": {}
     },
