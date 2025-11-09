@@ -51599,7 +51599,197 @@
         "green": 153,
         "blue": 0
       },    
-      "personality_profile_248": {},
+      "personality_profile_248": {
+        "canonical_id": "EA-248",
+        "unique_identifier": "STG 7.1.3.2",
+        "specific_task_group_title": "Abundant Emotion",
+        "all_chapter": 248,
+        "novel_book": 7,
+        "chapter": "Chapter 8",
+        "chapter_title": "Refusal of the Call — Abundant Emotion",
+        "type": "Specific Task Group",
+        "display_name": "The Open Cup",
+        "theme": "Feeling fully is not a detour—it’s the shortest path through; naming and honoring emotion converts inertia into intelligent action.",
+        "family": "Emotional Awareness / Abundant Emotion — Presence, Acceptance & Integration",
+        "summary": "Detachment kept the peace, but not the truth. Francisco learns to meet grief, fear, and anger without flinching—treating emotion as signal, not storm. Once named and held, those currents pull him forward, unlocking motion where diplomacy alone stalled.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "names and normalizes complex feelings in the room",
+            "stays present with grief or anger without shutting down",
+            "turns emotion into a clear informational signal",
+            "models vulnerability that builds deep trust",
+            "senses undercurrents that stall negotiations early"
+          ],
+          "shadow": [
+            "over-identifies with pain and loses perspective",
+            "lets intensity flood timing and tone",
+            "uses ‘processing’ to postpone decisions",
+            "mistakes catharsis for concrete progress",
+            "seeks validation instead of clarity when challenged"
+          ],
+          "growth_focus": [
+            "time-box processing, then choose one consequential move",
+            "use RAIN: Recognize, Allow, Investigate, Nurture",
+            "separate data, story, and feeling in notes",
+            "share one feeling + one fact + one ask",
+            "build renewal rituals to prevent overwhelm"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "Refusal of the Call",
+          "fiction_chapter_context": "Book 7, Chapter 8 — Debate/Refusal: abundant feeling is acknowledged and directed into forward motion."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 2—emotional depth harnessed as generous connection and action."
+        },
+        "color_alignment": {
+          "name": "San Felix",
+          "hsl": "120,33%,30%",
+          "rgb_hex": "#336633",
+          "color_symbolism": "Deep grove at dusk—rooted presence, felt intelligence."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.60,
+            "stability": 0.58,
+            "empathy": 0.88,
+            "openness": 0.78,
+            "orderliness": 0.56,
+            "conscientiousness": 0.62,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.60,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.50,
+            "emotional_intensity": 0.78,
+            "social_dominance": 0.44,
+            "novelty_seeking": 0.59,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "empathy": 0.40,
+            "adaptability": 0.30,
+            "stability": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2481","Q2482","Q2483","Q2484",
+            "Q2485","Q2486","Q2487","Q2488"
+          ],
+          "signals_map": {
+            "Q2481": { "dimension": "empathy", "polarity": 1, "content": "I can sit with someone’s difficult feelings without rushing to fix them." },
+            "Q2482": { "dimension": "emotional_intensity", "polarity": 1, "content": "When emotions surge, I can name them precisely and stay present." },
+            "Q2483": { "dimension": "adaptability", "polarity": 1, "content": "After acknowledging feelings, I pivot into a concrete next step." },
+            "Q2484": { "dimension": "stability", "polarity": 1, "content": "I can self-soothe and return to baseline after strong emotion." },
+            "Q2485": { "dimension": "openness", "polarity": 1, "content": "I treat emotion as data that may reveal better options." },
+            "Q2486": { "dimension": "orderliness", "polarity": -1, "content": "Strong feelings often derail my planned work for the day." },
+            "Q2487": { "dimension": "agency", "polarity": 1, "content": "I translate felt insight into a specific request or action." },
+            "Q2488": { "dimension": "cooperativeness", "polarity": 1, "content": "I share emotions in ways that increase alignment, not reactivity." }
+          },
+          "daily_prompt": "What feeling is loudest right now—and what single, specific action does it suggest?",
+          "practices": [
+            "90-Second Name: breathe, label the strongest feeling, write one sentence about its signal.",
+            "RAIN Micro-Cycle: Recognize → Allow → Investigate → Nurture, in under 3 minutes.",
+            "Feel-Fact-Ask: share one feeling, one observable fact, and one clear request.",
+            "Trigger Map: list two reliable triggers and your pre-planned responses.",
+            "Completion Ritual: brief somatic reset (walk, shake, music) before re-engaging work."
+          ],
+          "transformation_indicators": [
+            "Shorter time from emotional surge to decisive action",
+            "Fewer avoidant delays masked as ‘more processing’",
+            "Improved stakeholder trust after candid check-ins",
+            "More effective de-escalations across factions",
+            "Documented links between emotion signals and better outcomes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Debate — Abundant Emotion",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "Feeling-rich but reluctant; emotions surfaced, not yet harnessed.",
+          "ordinary_world_baseline": "Diplomatic detachment; heart-signals underused.",
+          "push_turn": "Names and processes feelings, then commits to one consequential move."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "The power of embracing and expressing emotions",
+            "connection_focus_area": "Emotional courage",
+            "connect_points": {
+              "point1": "Identify an emotion you avoid",
+              "point2": "Journal about its impact",
+              "point3": "Share it with a trusted friend"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one suppressed emotion",
+              "objective2": "Describe its influence",
+              "objective3": "Express it in conversation"
+            }
+          },
+          "book2": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Self-Awareness",
+            "section_description": "Understanding one’s own emotional landscape",
+            "connection_focus_area": "Mapping feelings",
+            "connect_points": {
+              "point1": "Chart emotions over a day",
+              "point2": "Label each feeling accurately",
+              "point3": "Reflect on triggers"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete an emotional log",
+              "objective2": "Use precise labels",
+              "objective3": "Identify two triggers"
+            }
+          },
+          "book3": {
+            "title": "The Gifts of Imperfection",
+            "author": "Brené Brown",
+            "section_of_focus": "Wholehearted Living",
+            "section_description": "Cultivating self-compassion and authenticity",
+            "connection_focus_area": "Embracing feelings",
+            "connect_points": {
+              "point1": "Practice self-compassion in a journal",
+              "point2": "Acknowledge one imperfection",
+              "point3": "Reframe negative self-talk"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a self-compassion note",
+              "objective2": "List one imperfection you accept",
+              "objective3": "Transform a negative thought into positive"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath the Ashen Colonnade, a blackwater basin echoes with old grievances; Francisco rests a palm on the surface and lets the voices rise until the ripples steady.",
+          "symbolic_moment": "From an ace-marked chalice he pours three bowls—anger, grief, fear—then drinks from each before blending them for the first shared toast.",
+          "emotional_landscape": "Tender, intense, anchored—tears without losing the mission line.",
+          "contentment_definition": "Emotion as data: honored fully, directed wisely.",
+          "transformation_promise": "A leader who feels without flooding turns deadlock into honest movement."
+        },
+        "epic_novel_pages": "Page 106 - 120",
+        "epic_chapter_focus": "Consequence",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Emotional Awareness",
+        "specific_task_group_description": "Explore and honor your full range of feelings to move past inertia.",
+        "specific_task_group_tagline": "Feel deeply to act boldly",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "San Felix",
+        "hex_code": "#336633",
+        "red": 51,
+        "green": 102,
+        "blue": 51
+      },    
       "personality_profile_249": {},
       "personality_profile_250": {},
       "personality_profile_251": {},
