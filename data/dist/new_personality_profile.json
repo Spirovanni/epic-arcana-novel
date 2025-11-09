@@ -54655,7 +54655,197 @@
         "green": 143,
         "blue": 79
       },    
-      "personality_profile_264": {},
+      "personality_profile_264": {
+        "canonical_id": "EA-264",
+        "unique_identifier": "STG 7.3.1.1",
+        "specific_task_group_title": "Transition",
+        "all_chapter": 264,
+        "novel_book": 7,
+        "chapter": "Chapter 24",
+        "chapter_title": "Atonement with the Father — Transition",
+        "type": "Specific Task Group",
+        "display_name": "The Turning Point",
+        "theme": "Name the loss, codify the lesson, and choose a new line of march—direction beats speed when you’re rebuilding trust with yourself.",
+        "family": "Reorientation — Recovery, Resets & Directional Clarity",
+        "summary": "After the hard break of ‘All is Lost,’ Francisco doesn’t lunge—he levels. He honors the wound, extracts the signal, and writes it into practice. A simple reset ritual replaces thrash; a single next waypoint replaces scattered motion. The fall becomes foundation, and movement resumes with purpose.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Four",
+        "traits": {
+          "strengths": [
+            "turns defeat into diagnostic data within 24 hours",
+            "establishes a simple ritual that reliably restarts momentum",
+            "communicates a clear compass after a setback",
+            "protects focus with boundary resets and timeboxing",
+            "converts lessons learned into operating rules teams can follow"
+          ],
+          "shadow": [
+            "rushes the rebound and skips grieving/learning",
+            "clings to the old plan to avoid uncertainty",
+            "confuses motion with direction",
+            "overcorrects into rigidity after chaos",
+            "isolates instead of enlisting allies in the reset"
+          ],
+          "growth_focus": [
+            "write three lessons from the loss before acting",
+            "design a 10-minute reset routine with a visible trigger",
+            "change one rule or checklist item per lesson learned",
+            "schedule a brief ally debrief to sanity-check direction",
+            "track two lead indicators to confirm the new course"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 7, Chapter 24 — All is Lost: fall absorbed; inner authority reconciled; course re-drawn."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled reset infused with renewed energy and flexibility."
+        },
+        "color_alignment": {
+          "name": "Green",
+          "hsl": "120,100%,25%",
+          "rgb_hex": "#008000",
+          "color_symbolism": "Verdant restart—discipline rooted, growth resuming."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.67,
+            "stability": 0.76,
+            "empathy": 0.64,
+            "openness": 0.65,
+            "orderliness": 0.73,
+            "conscientiousness": 0.78,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.47,
+            "novelty_seeking": 0.52,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "stability": 0.34,
+            "conscientiousness": 0.33,
+            "adaptability": 0.33
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2641","Q2642","Q2643","Q2644",
+            "Q2645","Q2646","Q2647","Q2648"
+          ],
+          "signals_map": {
+            "Q2641": { "dimension": "stability", "polarity": 1, "content": "After a setback, I run a defined reset routine within 24 hours." },
+            "Q2642": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate lessons learned into a written rule or checklist." },
+            "Q2643": { "dimension": "adaptability", "polarity": 1, "content": "I can change plans without losing the mission’s intent." },
+            "Q2644": { "dimension": "agency", "polarity": 1, "content": "Even when direction feels uncertain, I choose one next step now." },
+            "Q2645": { "dimension": "orderliness", "polarity": 1, "content": "I set cues and boundaries that support the new course." },
+            "Q2646": { "dimension": "cooperativeness", "polarity": -1, "content": "After a loss, I withdraw instead of enlisting allies in the reset." },
+            "Q2647": { "dimension": "openness", "polarity": 1, "content": "I admit when a plan failed and try a different approach." },
+            "Q2648": { "dimension": "stability", "polarity": 1, "content": "I pace the comeback so it’s sustainable, not a crash-and-burn sprint." }
+          },
+          "daily_prompt": "What, exactly, did the last miss teach you—and what tiny rule plus action will steer you better today?",
+          "practices": [
+            "Two-Line After-Action: “What happened?” → “What I change next.”",
+            "10-Minute Reset: breath, compass line, single task started to completion.",
+            "Compass Card: 1 intent, 3 priorities, 1 boundary for the day.",
+            "Ally Debrief: 15-minute check to confirm direction and remove friction.",
+            "Boundary Reset: write a stop-doing item; enforce it for 7 days."
+          ],
+          "transformation_indicators": [
+            "Shorter bounce-back interval from setbacks",
+            "Reduced context switching and cleaner focus blocks",
+            "Fewer repeat mistakes; rules updated after incidents",
+            "Visible momentum sustained for 7+ consecutive days",
+            "Higher alignment scores from key allies after resets"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — Transition",
+          "save_the_cat_beat": "All is Lost",
+          "character_state": "Humbled, reflective; authority internalized; bearing restored.",
+          "ordinary_world_baseline": "Disorientation, reactive effort, fragmented aims.",
+          "push_turn": "Lessons are codified into rituals; renewed resolve converts loss into leverage."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Atonement with the Father",
+            "section_description": "Reconciling with inner authority to gain new strength.",
+            "connection_focus_area": "Integration of loss into new strength",
+            "connect_points": {
+              "point1": "Identify the lesson in defeat",
+              "point2": "Acknowledge inner transformation",
+              "point3": "Commit to the next phase"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Explain how failure shaped your values",
+              "objective2": "Articulate a renewed mission",
+              "objective3": "Design one concrete next step"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Clear cues that initiate better behaviors.",
+            "connection_focus_area": "Building a transition routine",
+            "connect_points": {
+              "point1": "Choose a trigger for renewal",
+              "point2": "Design a simple transition habit",
+              "point3": "Track consistency"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a daily renewal ritual",
+              "objective2": "Set up environmental reminders",
+              "objective3": "Use a habit tracker for 7 days"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenges",
+            "section_description": "Viewing setbacks as growth opportunities.",
+            "connection_focus_area": "Reframing loss as learning",
+            "connect_points": {
+              "point1": "List three lessons from defeat",
+              "point2": "Rephrase each as a growth statement",
+              "point3": "Share one with a peer for feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Transform one setback into a learning plan",
+              "objective2": "Apply growth language in daily reflection",
+              "objective3": "Mentor someone else through a challenge"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Broken Banner Field, Francisco knots the torn standard to a new staff; the wind shifts, and the line of march tilts by one true degree.",
+          "symbolic_moment": "He inscribes a green sigil inside his bracer—‘Again, on purpose’—and the sigil warms when he chooses the next right step.",
+          "emotional_landscape": "Sober, steady, rekindled.",
+          "contentment_definition": "Transition as chosen course—grief honored, compass clear, cadence restored.",
+          "transformation_promise": "A leader who turns loss into law can steer hosts through the break and into formation."
+        },
+        "epic_novel_pages": "Page 346 - 360",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Reorientation",
+        "specific_task_group_description": "Navigate the difficult shift from despair to renewed resolve by integrating lessons learned.",
+        "specific_task_group_tagline": "Embrace the turning point",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Green",
+        "hex_code": "#008000",
+        "red": 0,
+        "green": 128,
+        "blue": 0
+      },    
       "personality_profile_265": {},
       "personality_profile_266": {},
       "personality_profile_267": {},
