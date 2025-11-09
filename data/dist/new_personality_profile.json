@@ -54273,7 +54273,197 @@
         "green": 126,
         "blue": 7
       },    
-      "personality_profile_262": {},
+      "personality_profile_262": {
+        "canonical_id": "EA-262",
+        "unique_identifier": "STG 7.2.3.3",
+        "specific_task_group_title": "Tradition of Excellence",
+        "all_chapter": 262,
+        "novel_book": 7,
+        "chapter": "Chapter 22",
+        "chapter_title": "The Supreme Ordeal — Tradition of Excellence",
+        "type": "Specific Task Group",
+        "display_name": "The Evergreen Standard",
+        "theme": "Honor what works, explain why it works, and upgrade it without breaking the lineage—excellence that lasts is excellence that learns.",
+        "family": "Cultural Legacy — Standards, Rituals & Mastery",
+        "summary": "Francisco turns toward the practices that endured: small rituals, clean handoffs, craft taught by example. He codifies the why behind the rules, retires the brittle parts, and trains successors. The result isn’t nostalgia—it’s throughput with soul, a culture that keeps its edge.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Six",
+        "traits": {
+          "strengths": [
+            "preserves core standards without becoming rigid",
+            "codifies rituals into teachable habits and checklists",
+            "aligns daily behaviors tightly to shared values",
+            "mentors others in craft, cadence, and care",
+            "protects quality under pressure and time squeeze"
+          ],
+          "shadow": [
+            "defends tradition past its usefulness",
+            "uses standards to gatekeep instead of grow",
+            "confuses longevity with relevance",
+            "over-polishes at the expense of delivery",
+            "shames deviations rather than coaching upgrades"
+          ],
+          "growth_focus": [
+            "separate principles (keep) from practices (adapt)",
+            "create ‘safe-to-try’ zones for iteration on rituals",
+            "pair every standard with its purpose and metric",
+            "schedule ritual audits to retire what no longer serves",
+            "coach deviations into documented improvements"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 7, Chapter 22 — Reward: excellence rituals are renewed and taught forward."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—steadfast standards tempered with calm, inclusive stewardship."
+        },
+        "color_alignment": {
+          "name": "British Racing Green",
+          "hsl": "142,100%,12%",
+          "rgb_hex": "#003E15",
+          "color_symbolism": "Heritage speed—discipline, pedigree, and quiet power that holds at pace."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.82,
+            "empathy": 0.66,
+            "openness": 0.55,
+            "orderliness": 0.83,
+            "conscientiousness": 0.85,
+            "adaptability": 0.60,
+            "abstract_reasoning": 0.64,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.46,
+            "novelty_seeking": 0.42,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "stability": 0.35,
+            "orderliness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2621","Q2622","Q2623","Q2624",
+            "Q2625","Q2626","Q2627","Q2628"
+          ],
+          "signals_map": {
+            "Q2621": { "dimension": "conscientiousness", "polarity": 1, "content": "I uphold clear standards even when timelines compress." },
+            "Q2622": { "dimension": "stability", "polarity": 1, "content": "I keep small excellence rituals daily to steady the team." },
+            "Q2623": { "dimension": "orderliness", "polarity": 1, "content": "I document practices so others can replicate them reliably." },
+            "Q2624": { "dimension": "openness", "polarity": 1, "content": "I keep the principle and update the method when data says so." },
+            "Q2625": { "dimension": "cooperativeness", "polarity": 1, "content": "I teach the standard rather than hoard expertise." },
+            "Q2626": { "dimension": "novelty_seeking", "polarity": -1, "content": "I chase novelty at the expense of proven approaches." },
+            "Q2627": { "dimension": "adaptability", "polarity": 1, "content": "When a ritual stops working, I pilot an upgrade fast." },
+            "Q2628": { "dimension": "agency", "polarity": 1, "content": "I intervene when quality drifts and reset the bar with examples." }
+          },
+          "daily_prompt": "Which standard will you renew today—and what small upgrade will make it easier to keep?",
+          "practices": [
+            "Sweep the Shed 5: end-of-day reset—repair, restock, ready the next shift.",
+            "Ritual Audit: list current rituals; keep, upgrade, or retire with reasons.",
+            "Standard + Why + Metric: publish the purpose and the success signal.",
+            "Apprentice Loop: demonstrate, shadow, hand off; log one improvement.",
+            "Heritage Upgrade: choose one legacy practice and modernize it safely."
+          ],
+          "transformation_indicators": [
+            "Defect rates decline while pace holds or improves",
+            "Ritual adherence rises without extra policing",
+            "Faster onboarding via documented craft and drills",
+            "Quality incidents resolved by standards, not heroics",
+            "Legacy practices refreshed on a cadence (audit history)"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Reward — Tradition of Excellence",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "Grounded in craft; standards explicit; upgrades welcomed.",
+          "ordinary_world_baseline": "Ad-hoc wins, frayed culture, personality-driven quality.",
+          "push_turn": "A renewed standard becomes shared muscle memory, unlocking reliable performance under pressure."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Legacy",
+            "author": "James Kerr",
+            "section_of_focus": "Sweep the Sheds",
+            "section_description": "Small acts that build lasting culture",
+            "connection_focus_area": "Foundational excellence",
+            "connect_points": {
+              "point1": "Identify everyday rituals",
+              "point2": "Commit to consistency",
+              "point3": "Celebrate small wins"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three positive rituals",
+              "objective2": "Implement one daily",
+              "objective3": "Note its impact"
+            }
+          },
+          "book2": {
+            "title": "Good to Great",
+            "author": "Jim Collins",
+            "section_of_focus": "Level 5 Leadership",
+            "section_description": "Ambition for the organization above self",
+            "connection_focus_area": "Sustaining excellence",
+            "connect_points": {
+              "point1": "Define your organization’s core values",
+              "point2": "Align daily actions",
+              "point3": "Measure against standards"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate core values",
+              "objective2": "Link one behavior to each",
+              "objective3": "Review alignment weekly"
+            }
+          },
+          "book3": {
+            "title": "The Culture Code",
+            "author": "Daniel Coyle",
+            "section_of_focus": "Skill Building",
+            "section_description": "How to foster deep practice and mastery",
+            "connection_focus_area": "Excellence through practice",
+            "connect_points": {
+              "point1": "Identify a key skill",
+              "point2": "Design short practice drills",
+              "point3": "Track improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one mastery skill",
+              "objective2": "Practice it daily for 10 minutes",
+              "objective3": "Log progress over a week"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Standards, banners of reconciled houses hang in deep green; Francisco oils the hinge of an ancient gate before the procession passes.",
+          "symbolic_moment": "He retires a frayed cord to the Archive and threads a stronger line, inscribing the reason and the rule beside it.",
+          "emotional_landscape": "Steady, respectful, quietly proud.",
+          "contentment_definition": "Excellence as living heritage—kept true by care, kept sharp by learning.",
+          "transformation_promise": "A leader who renews tradition turns culture into an engine that survives the storm."
+        },
+        "epic_novel_pages": "Page 316 - 330",
+        "epic_chapter_focus": "Reaction (set-up)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Cultural Legacy",
+        "specific_task_group_description": "Honor established standards to uphold excellence in your journey.",
+        "specific_task_group_tagline": "Build on proven traditions",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "British Racing Green",
+        "hex_code": "#003E15",
+        "red": 0,
+        "green": 62,
+        "blue": 21
+      },    
       "personality_profile_263": {},
       "personality_profile_264": {},
       "personality_profile_265": {},
