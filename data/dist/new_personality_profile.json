@@ -51789,8 +51789,198 @@
         "red": 51,
         "green": 102,
         "blue": 51
+      },
+      "personality_profile_249": {
+        "canonical_id": "EA-249",
+        "unique_identifier": "STG 7.1.3.3",
+        "specific_task_group_title": "Active",
+        "all_chapter": 249,
+        "novel_book": 7,
+        "chapter": "Chapter 9",
+        "chapter_title": "Refusal of the Call — Active",
+        "type": "Specific Task Group",
+        "display_name": "The First Move",
+        "theme": "Clarity often follows motion; ship a small, real action now and let the next step appear in its wake.",
+        "family": "Action Readiness / Active — Initiative, Momentum & Execution",
+        "summary": "Analysis kept Francisco clever; action makes him consequential. He trades perfect plans for timed first moves, learns in public, and turns friction into traction. Momentum becomes his method—imperfect, visible steps that pull others into motion.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Five",
+        "traits": {
+          "strengths": [
+            "starts before full certainty, using small reversible steps",
+            "breaks complexity into crisp next actions",
+            "time-boxes experiments and closes loops",
+            "converts lessons into immediate adjustments",
+            "models pace that energizes hesitant partners"
+          ],
+          "shadow": [
+            "confuses activity with progress under stress",
+            "jumps without alignment and creates rework",
+            "ignores recovery time; risks burnout",
+            "skips documentation and loses compounding gains",
+            "overcommits to too many parallel starts"
+          ],
+          "growth_focus": [
+            "pair every start with a clear stop and review",
+            "secure a minimum alignment check before launch",
+            "document one lesson and one tweak per ship",
+            "limit active projects; finish before adding",
+            "schedule recovery blocks after sprints"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Reconcilers",
+          "chapter_theme": "Refusal of the Call",
+          "fiction_chapter_context": "Book 7, Chapter 9 — Refusal/Debate: hesitation breaks when a small, public action proves the path."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 3—courage crystallized into decisive execution."
+        },
+        "color_alignment": {
+          "name": "Green",
+          "hsl": "120,100%,20%",
+          "rgb_hex": "#006600",
+          "color_symbolism": "New growth breaking soil—commitment made visible."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.62,
+            "empathy": 0.60,
+            "openness": 0.64,
+            "orderliness": 0.66,
+            "conscientiousness": 0.74,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.66,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.63,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "conscientiousness": 0.35,
+            "adaptability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2491","Q2492","Q2493","Q2494",
+            "Q2495","Q2496","Q2497","Q2498"
+          ],
+          "signals_map": {
+            "Q2491": { "dimension": "agency", "polarity": 1, "content": "I start before I feel fully ready by defining a 5-minute first move." },
+            "Q2492": { "dimension": "conscientiousness", "polarity": 1, "content": "I break big goals into the smallest executable next action." },
+            "Q2493": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept small, reversible failures to learn faster." },
+            "Q2494": { "dimension": "orderliness", "polarity": 1, "content": "I time-box experiments and close the loop the same day." },
+            "Q2495": { "dimension": "adaptability", "polarity": 1, "content": "If the first step stalls, I pivot to an adjacent step within minutes." },
+            "Q2496": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I reverse-engineer outcomes into a minimal path of actions." },
+            "Q2497": { "dimension": "stability", "polarity": -1, "content": "I delay action when I can’t guarantee a perfect plan." },
+            "Q2498": { "dimension": "agency", "polarity": 1, "content": "I publicly commit to a next step to create momentum and accountability." }
+          },
+          "daily_prompt": "What is the smallest useful action you can ship in 10 minutes—and where will it live when it’s done?",
+          "practices": [
+            "10-Minute Launch: start a timer and ship a micro-deliverable.",
+            "Frog First: do the top task’s first substep before messages.",
+            "Two-Minute Rule: if ≤2 minutes, do it immediately.",
+            "Demo Bias: end each day with one visible artifact.",
+            "After-Action Note: one lesson, one tweak, next step."
+          ],
+          "transformation_indicators": [
+            "Reduced task-start latency across priorities",
+            "More shipped artifacts per week",
+            "Higher completion rate of first substeps",
+            "Experiments concluded within planned timeboxes",
+            "Stakeholders report faster, steadier momentum"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Debate — Active",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "Aware but hesitating; analysis crowding motion.",
+          "ordinary_world_baseline": "Plans multiply; shipped work lags.",
+          "push_turn": "Accepts imperfect starts; action creates clarity."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The War of Art",
+            "author": "Steven Pressfield",
+            "section_of_focus": "Resistance",
+            "section_description": "Overcoming internal barriers to action",
+            "connection_focus_area": "Battling procrastination",
+            "connect_points": {
+              "point1": "Identify one form of resistance today",
+              "point2": "Set a timer for 10 minutes of work",
+              "point3": "Notice and push through discomfort"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your top resistance",
+              "objective2": "Complete a 10-minute task",
+              "objective3": "Reflect on progress"
+            }
+          },
+          "book2": {
+            "title": "Eat That Frog!",
+            "author": "Brian Tracy",
+            "section_of_focus": "Prioritizing Tasks",
+            "section_description": "Tackling the most important task first",
+            "connection_focus_area": "Action initiation",
+            "connect_points": {
+              "point1": "Choose your 'frog' task",
+              "point2": "Break it into substeps",
+              "point3": "Begin immediately"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your top task",
+              "objective2": "List three substeps",
+              "objective3": "Start the first substep"
+            }
+          },
+          "book3": {
+            "title": "Getting Things Done",
+            "author": "David Allen",
+            "section_of_focus": "The Five Steps",
+            "section_description": "Capturing and clarifying actions",
+            "connection_focus_area": "Effective execution",
+            "connect_points": {
+              "point1": "Capture one commitment",
+              "point2": "Clarify the next action",
+              "point3": "Organize it into your system"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Record one task in your system",
+              "objective2": "Identify its next action",
+              "objective3": "Place it in the correct list"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the wind-scarred terrace of Verdant Bastion, Francisco chalks a small green mark on the flagstone—then moves; the first corridor through the blockade opens.",
+          "symbolic_moment": "He draws a single line across a contested map; two factions agree to test a narrow cease-lane where it crosses.",
+          "emotional_landscape": "Nervy, focused, pragmatic—momentum over perfection.",
+          "contentment_definition": "Action as disciplined experiment: start small, learn loud.",
+          "transformation_promise": "A leader who moves first makes belief tangible; hesitation gives way to coordinated motion."
+        },
+        "epic_novel_pages": "Page 121 - 135",
+        "epic_chapter_focus": "Refusal of the Call",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: Daughter of the Reconcilers",
+        "focus_area": "Action Readiness",
+        "specific_task_group_description": "Shift from hesitation to proactive steps, even if imperfect.",
+        "specific_task_group_tagline": "Do something now",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Green",
+        "hex_code": "#006600",
+        "red": 0,
+        "green": 102,
+        "blue": 0
       },    
-      "personality_profile_249": {},
       "personality_profile_250": {},
       "personality_profile_251": {},
       "personality_profile_252": {},
