@@ -56092,7 +56092,235 @@
         "green": 255,
         "blue": 204
       },
-      "personality_profile_271": {},
+      "personality_profile_271": {
+        "canonical_id": "EA-271",
+        "unique_identifier": "STG 7.3.3.2",
+        "specific_task_group_title": "Life Force",
+        "all_chapter": 271,
+        "novel_book": 7,
+        "chapter": "Chapter 31",
+        "chapter_title": "The Ultimate Boon — Life Force",
+        "type": "Specific Task Group",
+        "display_name": "The Verdant Engine",
+        "theme": "Vitality fuels velocity: kindle core energy, stack simple rituals, and power begins to carry the work—and everyone in it.",
+        "family": "Renewal — Vitality, Resilience & Energized Presence",
+        "summary": "Francisco stops borrowing tomorrow’s strength and starts generating it. Breath, light, movement—he braids them into ritual. The field brightens, cadence lifts, and his presence recharges the host. Momentum turns from grind to glide.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "reliably generates energy on demand through repeatable rituals",
+            "amplifies team stamina with pacing, breaks, and morale cues",
+            "links purpose to physiology for durable motivation",
+            "recovers quickly from setbacks and relaunches with momentum",
+            "models sustainable intensity without burnout"
+          ],
+          "shadow": [
+            "pushes too hard and ignores early fatigue signals",
+            "confuses hype with real recovery",
+            "over-identifies with output and neglects restoration",
+            "sets a pace others can’t sustain",
+            "treats rest as a reward instead of a requirement"
+          ],
+          "growth_focus": [
+            "schedule non-negotiable recovery blocks before adding work",
+            "pair every push with a planned recharge ritual",
+            "track real energy metrics (sleep, HRV, mood) not just hours",
+            "teach one energizing habit to a teammate weekly",
+            "create ‘yellow-flag’ rules that pause effort when signals dip"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 7, Chapter 31 — Revival: the host feels the surge; Francisco’s breath becomes the banner."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—potent drive softened into restorative care for self and others."
+        },
+        "color_alignment": {
+          "name": "Medium Spring Green",
+          "hsl": "156,100%,50%",
+          "rgb_hex": "#00FF99",
+          "color_symbolism": "Fresh surge—living current, clean renewal, courageous buoyancy."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.72,
+            "empathy": 0.66,
+            "openness": 0.64,
+            "orderliness": 0.60,
+            "conscientiousness": 0.67,
+            "adaptability": 0.78,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.70,
+            "risk_tolerance": 0.59,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.66,
+            "imagination": 0.68
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "adaptability": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2711",
+            "Q2712",
+            "Q2713",
+            "Q2714",
+            "Q2715",
+            "Q2716",
+            "Q2717",
+            "Q2718"
+          ],
+          "signals_map": {
+            "Q2711": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I can summon usable energy on demand with a short ritual."
+            },
+            "Q2712": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "When plans stall, I reset my state and relaunch within minutes."
+            },
+            "Q2713": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Sleep, nutrition, and breath work are non-negotiable systems, not afterthoughts."
+            },
+            "Q2714": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I stack energizing habits onto routines and track them to stick."
+            },
+            "Q2715": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I tune team cadence to protect people from burnout while keeping pace."
+            },
+            "Q2716": {
+              "dimension": "risk_tolerance",
+              "polarity": -1,
+              "content": "I keep pushing even when early fatigue signals are obvious."
+            },
+            "Q2717": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I share my recharge playbook so others can recover faster."
+            },
+            "Q2718": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I run small experiments with recovery protocols and keep what measurably works."
+            }
+          },
+          "daily_prompt": "What one ritual will recharge you—and which teammate will you energize with it today?",
+          "practices": [
+            "90-Second Reset: inhale 4, hold 4, exhale 6 × 6 cycles; stand, shake, re-enter.",
+            "Light-Move-Water: 5 minutes outside + 20 squats or a brisk walk + a full glass of water.",
+            "Habit-Stack Spark: attach a 2-minute breath or stretch to your first morning task.",
+            "Micro-Joy Log: capture three tiny wins before lunch to amplify momentum.",
+            "Team Pulse: 60-second check-in on energy; if average <7/10, trigger a shared reset."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-recover after intensive sprints",
+            "Upward trend in sleep quality or HRV proxies",
+            "Stable output with reduced variance under pressure",
+            "Decrease in reported burnout flags over two weeks",
+            "More unsolicited offers to collaborate due to visible energy"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Dark Night of the Soul — Life Force",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Recharged, rhythmic, contagiously vital; purpose embodied.",
+          "ordinary_world_baseline": "Erratic bursts, energy debt, morale dips.",
+          "push_turn": "A personal recharge ritual becomes a shared engine that lifts the host."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Resurrection",
+            "section_description": "The hero returns alive with renewed vigor",
+            "connection_focus_area": "Harnessing newfound power",
+            "connect_points": {
+              "point1": "Recall a moment of personal resurgence",
+              "point2": "List the fuels that sparked it",
+              "point3": "Plan how to recreate that energy daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your revival experience",
+              "objective2": "Identify three sources of energy",
+              "objective3": "Implement one daily energizer ritual"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Habit Stacking",
+            "section_description": "Link new habits to existing routines",
+            "connection_focus_area": "Embedding vitality in rituals",
+            "connect_points": {
+              "point1": "Choose an energizing action",
+              "point2": "Stack it onto a morning routine",
+              "point3": "Track your stacked habit for five days"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your energizer action",
+              "objective2": "Attach it to a daily cue",
+              "objective3": "Log completion each morning"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Cultivating Resilience",
+            "section_description": "Using a growth mindset to bounce back stronger",
+            "connection_focus_area": "Fueling perseverance",
+            "connect_points": {
+              "point1": "Identify one resilient response you admire",
+              "point2": "Practice that response in a small challenge",
+              "point3": "Reflect on how it strengthened you"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select a resilience strategy",
+              "objective2": "Apply it to a daily hurdle",
+              "objective3": "Journal its impact on your mindset"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Green Fire, wind-bells wake as dawn spills through emerald glass; Francisco inhales and the banners lift with his breath.",
+          "symbolic_moment": "He lowers a seed into a brazier; it flares without burning, pulsing in time with the marching host.",
+          "emotional_landscape": "Buoyant, warm, vigorously steady.",
+          "contentment_definition": "Life force as disciplined renewal—power sourced from care, not grind.",
+          "transformation_promise": "A leader who generates energy teaches worlds to run on restoration instead of depletion."
+        },
+        "epic_novel_pages": "Page 451 - 465",
+        "epic_chapter_focus": "Power within (set-up)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Renewal",
+        "specific_task_group_description": "Rekindle your core passion and vitality to power the next phase of your journey.",
+        "specific_task_group_tagline": "Ignite your inner flame",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Medium Spring Green",
+        "hex_code": "#00FF99",
+        "red": 0,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_272": {},
       "personality_profile_273": {},
       "personality_profile_274": {},
