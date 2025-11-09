@@ -57961,7 +57961,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_280": {}
+      "personality_profile_280": {
+        "canonical_id": "EA-280",
+        "unique_identifier": "STG 7.3.6.2",
+        "specific_task_group_title": "Satisfaction",
+        "all_chapter": 280,
+        "novel_book": 7,
+        "chapter": "Chapter 40",
+        "chapter_title": "Master of Two Worlds — Satisfaction",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Crown",
+        "theme": "Completion with continuity: savor, codify, and circulate the boon so the glow outlasts the applause.",
+        "family": "Fulfillment — Flow, Meaning & Stewardship",
+        "summary": "The work lands and stays. Francisco names what was won, links it to purpose, and converts good feeling into durable practice. Celebration becomes stewardship—gratitude moves through channels, not into a cul-de-sac. Satisfaction is quiet, green, and ongoing.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "savors outcomes without slipping into complacency",
+            "links fulfillment to purpose, service, and teaching",
+            "institutionalizes practices that sustain gains",
+            "models healthy pacing, recovery, and boundaries",
+            "shares win stories that instruct rather than boast"
+          ],
+          "shadow": [
+            "drifts into comfort and softens future ambition",
+            "uses ‘satisfaction’ language to mask avoidance",
+            "equates stillness with stagnation and overcorrects",
+            "centers private fulfillment, neglecting distribution",
+            "lets affirmations replace measurable follow-through"
+          ],
+          "growth_focus": [
+            "define what ‘enough’ looks like—then set a renewal aim",
+            "pair every celebration with a maintenance or mentoring step",
+            "schedule periodic discomfort blocks to prevent drift",
+            "publish a sustainment dashboard linking inputs to outcomes",
+            "convert personal joy into a standard others can replicate"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 7, Chapter 40 — Final image: mastery worn lightly; joy shared, not hoarded."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—serene fulfillment expressed through purposeful output."
+        },
+        "color_alignment": {
+          "name": "Eucalyptus",
+          "hsl": "146,63%,40%",
+          "rgb_hex": "#26A452",
+          "color_symbolism": "Calm, enduring verdancy—contentment that feeds continued growth."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.60,
+            "stability": 0.78,
+            "empathy": 0.75,
+            "openness": 0.66,
+            "orderliness": 0.72,
+            "conscientiousness": 0.77,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.40,
+            "novelty_seeking": 0.50,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "stability": 0.37,
+            "empathy": 0.33,
+            "openness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2801",
+            "Q2802",
+            "Q2803",
+            "Q2804",
+            "Q2805",
+            "Q2806",
+            "Q2807",
+            "Q2808"
+          ],
+          "signals_map": {
+            "Q2801": { "dimension": "stability", "polarity": 1, "content": "I celebrate without dropping the routines that produced the win." },
+            "Q2802": { "dimension": "empathy", "polarity": 1, "content": "I share success in ways that clearly uplift others." },
+            "Q2803": { "dimension": "openness", "polarity": 1, "content": "I reflect on what made this achievement meaningful." },
+            "Q2804": { "dimension": "conscientiousness", "polarity": 1, "content": "I schedule sustainment tasks immediately after milestones." },
+            "Q2805": { "dimension": "orderliness", "polarity": 1, "content": "I track well-being and flow hours alongside output." },
+            "Q2806": { "dimension": "social_dominance", "polarity": -1, "content": "I treat success as proof I’m above feedback." },
+            "Q2807": { "dimension": "adaptability", "polarity": 1, "content": "I adjust rituals when they stop working instead of forcing them." },
+            "Q2808": { "dimension": "agency", "polarity": 1, "content": "I turn satisfaction into a concrete stewardship act for others." }
+          },
+          "daily_prompt": "What small act will convert today’s good feeling into tomorrow’s durable habit—for someone besides you?",
+          "practices": [
+            "Flow Replay: write three conditions of your last flow state; recreate one today.",
+            "Meaning Map: link your latest win to your purpose statement and update if needed.",
+            "Savor & Share: post a 60-second debrief that teaches one replicable lesson.",
+            "Gratitude Chain: thank a contributor and pass them a concrete opportunity.",
+            "Sustainment Block: a weekly 90-minute ‘keep it great’ session on maintenance tasks."
+          ],
+          "transformation_indicators": [
+            "Increase in weekly flow hours alongside stable workload",
+            "Stable well-being scores during periods of high output",
+            "Mentorship handoffs that replicate success in new teams",
+            "Lower relapse/rework rates 30–60 days post-launch",
+            "Adherence to sustainment rituals across consecutive weeks"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Final Image — Satisfaction",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Grounded, fulfilled, distributing benefits while maintaining the engine that made them possible.",
+          "ordinary_world_baseline": "Hustle without savor: wins fade quickly and purpose statements gather dust.",
+          "push_turn": "Fulfillment is ritualized and shared, turning completion into durable culture."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "The Conditions of Flow",
+            "section_description": "How engagement leads to deep satisfaction",
+            "connection_focus_area": "Achieving lasting engagement",
+            "connect_points": {
+              "point1": "Recall a flow experience",
+              "point2": "Analyze its conditions",
+              "point3": "Replicate one condition this week"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your peak flow state",
+              "objective2": "List its key factors",
+              "objective3": "Plan to recreate one factor"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "The Will to Meaning",
+            "section_description": "Finding purpose in every circumstance",
+            "connection_focus_area": "Connecting success to purpose",
+            "connect_points": {
+              "point1": "Identify a personal purpose statement",
+              "point2": "Link recent achievement to that purpose",
+              "point3": "Adjust purpose statement if needed"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Craft or refine your purpose statement",
+              "objective2": "Document how success aligns",
+              "objective3": "Share purpose with a mentor"
+            }
+          },
+          "book3": {
+            "title": "The Four Agreements",
+            "author": "Don Miguel Ruiz",
+            "section_of_focus": "Be Impeccable with Your Word",
+            "section_description": "Using language to foster self-respect",
+            "connection_focus_area": "Honoring achievements authentically",
+            "connect_points": {
+              "point1": "Choose affirmations for your success",
+              "point2": "Speak them daily",
+              "point3": "Note impacts on self-esteem"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write three success affirmations",
+              "objective2": "Practice them each morning",
+              "objective3": "Reflect weekly on changes"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Verdant Court, Francisco plants the Ace-Disk in the plaza; green filaments arc outward into the city’s channels.",
+          "symbolic_moment": "A quiet cup overflows into many sluices—the boon circulates, feeding gardens farther than the eye can follow.",
+          "emotional_landscape": "Calm, replenished, generously luminous.",
+          "contentment_definition": "Satisfaction as stewardship—joy that keeps the lights on for others.",
+          "transformation_promise": "A leader who savors well sustains well; the afterglow becomes infrastructure."
+        },
+        "epic_novel_pages": "Page 586 - 600",
+        "epic_chapter_focus": "Master of Two Worlds",
+        "epic_preliminary_scene_focus": "Final Image",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Fulfillment",
+        "specific_task_group_description": "Savor your achievements and identify ways to sustain progress and share success with others.",
+        "specific_task_group_tagline": "Savor your success",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Eucalyptus",
+        "hex_code": "#26A452",
+        "red": 38,
+        "green": 164,
+        "blue": 82
+      }
     },
     "family_8": {},
     "family_9": {}
