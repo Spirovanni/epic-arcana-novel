@@ -52935,8 +52935,198 @@
         "red": 151,
         "green": 213,
         "blue": 172
-      },    
-      "personality_profile_255": {},
+      },
+      "personality_profile_255": {
+        "canonical_id": "EA-255",
+        "unique_identifier": "STG 7.2.1.2",
+        "specific_task_group_title": "Romantic Excursion",
+        "all_chapter": 255,
+        "novel_book": 7,
+        "chapter": "Chapter 15",
+        "chapter_title": "Guardians and Gatekeepers — Romantic Excursion",
+        "type": "Specific Task Group",
+        "display_name": "The Verdant Duet",
+        "theme": "Reconciliation blooms at human scale: build safety, pace the spark, and let curiosity turn former rivals into partners.",
+        "family": "Relationship Dynamics / Romantic Excursion — Safety, Attachment & Rituals of Trust",
+        "summary": "In a new realm with fresh rules, Francisco learns that peace deepens when hearts do. He creates secure spaces where once-opposed envoys can name fears, make bids, and practice repair. Attachment-informed rituals convert chemistry into steadiness; attraction ceases to be a distraction and becomes a bridge.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "designs safe containers for vulnerable dialogue",
+            "names and responds to ‘bids’ quickly and clearly",
+            "translates friction into repeatable repair rituals",
+            "balances passion with boundaries and consent",
+            "turns private connection into public cooperation"
+          ],
+          "shadow": [
+            "confuses intense chemistry with long-term fit",
+            "over-functions as mediator and neglects self-needs",
+            "rushes pace to lock in harmony prematurely",
+            "uses charm to sidestep hard conversations",
+            "idealizes partners and misses red flags"
+          ],
+          "growth_focus": [
+            "set shared boundaries and pacing upfront",
+            "run attachment-style check-ins to tune safety",
+            "co-design one daily micro-ritual of trust",
+            "separate chemistry from values alignment on paper",
+            "state one personal need without cushioning it"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "New world (set-up)",
+          "fiction_chapter_context": "Book 7, Chapter 15 — Early alliances warm into bonds; romance becomes a diplomatic asset, not a liability."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—care deepened by authentic self-expression and clear needs."
+        },
+        "color_alignment": {
+          "name": "Padua",
+          "hsl": "149,45%,64%",
+          "rgb_hex": "#7DCA97",
+          "color_symbolism": "Garden pact—fresh trust, living reciprocity, gentle vitality."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.70,
+            "empathy": 0.86,
+            "openness": 0.72,
+            "orderliness": 0.57,
+            "conscientiousness": 0.64,
+            "adaptability": 0.75,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.83,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.66,
+            "social_dominance": 0.40,
+            "novelty_seeking": 0.59,
+            "imagination": 0.65
+          },
+          "match_weights": {
+            "empathy": 0.40,
+            "cooperativeness": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.81,
+          "top_signal_items": [
+            "Q2551","Q2552","Q2553","Q2554",
+            "Q2555","Q2556","Q2557","Q2558"
+          ],
+          "signals_map": {
+            "Q2551": { "dimension": "empathy", "polarity": 1, "content": "I track bids for connection and try to meet them promptly." },
+            "Q2552": { "dimension": "cooperativeness", "polarity": 1, "content": "I propose shared rituals that make trust visible." },
+            "Q2553": { "dimension": "stability", "polarity": 1, "content": "I pace closeness to keep safety intact for both sides." },
+            "Q2554": { "dimension": "openness", "polarity": 1, "content": "I stay curious about differences instead of pressing for sameness." },
+            "Q2555": { "dimension": "agency", "polarity": 1, "content": "When tension spikes, I initiate a repair attempt within the hour." },
+            "Q2556": { "dimension": "risk_tolerance", "polarity": -1, "content": "I escalate commitment before we’ve tested alignment." },
+            "Q2557": { "dimension": "conscientiousness", "polarity": 1, "content": "We document boundaries and revisit them on a schedule." },
+            "Q2558": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I articulate how private harmony supports public cooperation." }
+          },
+          "daily_prompt": "What tiny trust ritual can you run today—and how will you know it worked?",
+          "practices": [
+            "Attachment Check-In: each names a need, a fear, and one small ask.",
+            "Bids & Turns Log: record three bids; note your response (turn toward/away).",
+            "72-Hour Pace Rule: no new intimacy step without a day of reflection.",
+            "Repair Script: “When X happened, I felt Y. Next time can we try Z?”",
+            "Shared Curiosity Walk: 20 minutes exploring a question with no fixing."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-repair after ruptures",
+            "Consistent completion of daily trust rituals",
+            "Clearer boundary language with fewer violations",
+            "Shift from chemistry-only to values+vision alignment",
+            "Public cooperation improves alongside private harmony"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Guardians and Gatekeepers",
+          "preliminary_beat": "Tests, Allies and Enemies — Romantic Excursion",
+          "save_the_cat_beat": "Guardians and Gatekeepers",
+          "character_state": "Open yet paced; translating attraction into protocols of care.",
+          "ordinary_world_baseline": "Arm’s-length diplomacy; brittle truces without personal trust.",
+          "push_turn": "Secure bonds reduce friction at the gates; joint pledges gain credibility."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies and Enemies",
+            "section_description": "Exploring relationships and conflicts that test loyalty.",
+            "connection_focus_area": "Navigating emotional challenges",
+            "connect_points": {
+              "point1": "Identify three key allies",
+              "point2": "Reflect on romantic tensions",
+              "point3": "Plan a supportive approach"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your primary allies",
+              "objective2": "Describe one emotional challenge",
+              "objective3": "Draft a plan to foster support"
+            }
+          },
+          "book2": {
+            "title": "Attached",
+            "author": "Amir Levine & Rachel Heller",
+            "section_of_focus": "The Science of Trust",
+            "section_description": "Understanding attachment in relationships.",
+            "connection_focus_area": "Building secure bonds",
+            "connect_points": {
+              "point1": "Recognize your attachment style",
+              "point2": "Practice open communication",
+              "point3": "Establish trust-building rituals"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify your attachment style",
+              "objective2": "Share one feeling openly",
+              "objective3": "Set a daily check-in habit"
+            }
+          },
+          "book3": {
+            "title": "Hold Me Tight",
+            "author": "Dr. Sue Johnson",
+            "section_of_focus": "Emotionally Focused Therapy",
+            "section_description": "Creating secure bonds through emotional responsiveness.",
+            "connection_focus_area": "Strengthening intimacy",
+            "connect_points": {
+              "point1": "Map your interaction cycle",
+              "point2": "Practice expressing need",
+              "point3": "Offer empathy in response"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Chart one interaction cycle",
+              "objective2": "Express one need honestly",
+              "objective3": "Respond empathetically once"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Along the Padua Promenade—terraces of emerald glass—two former adversaries share a slow circuit while fireflies sketch treaty sigils in the air.",
+          "symbolic_moment": "They exchange cups at a moonlit basin; the waters mingle, then clear, revealing their mirrored vows etched beneath.",
+          "emotional_landscape": "Soft, attentive, cautiously radiant.",
+          "contentment_definition": "Trust as practiced tenderness—small, repeated care that steadies the bridge.",
+          "transformation_promise": "When love learns protocols, diplomacy inherits courage."
+        },
+        "epic_novel_pages": "Page 211 - 225",
+        "epic_chapter_focus": "New world (set-up)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Relationship Dynamics",
+        "specific_task_group_description": "Explore the blossoming emotional connection in a new environment.",
+        "specific_task_group_tagline": "Ignite the spark of romance",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Padua",
+        "hex_code": "#7DCA97",
+        "red": 125,
+        "green": 202,
+        "blue": 151
+      },
       "personality_profile_256": {},
       "personality_profile_257": {},
       "personality_profile_258": {},
