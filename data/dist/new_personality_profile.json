@@ -53700,7 +53700,197 @@
         "green": 153,
         "blue": 51
       },    
-      "personality_profile_259": {},
+      "personality_profile_259": {
+        "canonical_id": "EA-259",
+        "unique_identifier": "STG 7.2.2.3",
+        "specific_task_group_title": "Positive Reception",
+        "all_chapter": 259,
+        "novel_book": 7,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Road of Trials — Positive Reception",
+        "type": "Specific Task Group",
+        "display_name": "The Receiving Circle",
+        "theme": "Reception multiplies force: welcome aid with clarity, turn gratitude into structure, and a network begins to carry itself.",
+        "family": "Community Building — Reception, Reciprocity & Belonging",
+        "summary": "Edges soften at the approach. Francisco stops doing it all alone and opens channels—credit given, asks made plain, feedback routed to action. The field answers back. Circles form, gifts circulate, and momentum becomes communal instead of solitary.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Six",
+        "traits": {
+          "strengths": [
+            "invites contributions and makes paths to help obvious",
+            "translates feedback into visible adjustments quickly",
+            "credits allies publicly and often",
+            "designs rituals that reinforce belonging",
+            "turns one-time favors into repeatable support systems"
+          ],
+          "shadow": [
+            "over-indexes on consensus at the cost of velocity",
+            "absorbs low-quality advice to avoid disappointing others",
+            "confuses applause with effectiveness",
+            "people-pleases instead of setting firm boundaries",
+            "lets gratitude replace accountability"
+          ],
+          "growth_focus": [
+            "pair every thanks with a clear next ask or action",
+            "create a feedback triage: adopt, park, decline—with reasons",
+            "set contribution thresholds to keep quality high",
+            "publish a credit log tied to outcomes, not noise",
+            "practice ‘no for now’ to protect focus and trust"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Daughter of the Flaming Sword",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 7, Chapter 19 — Approach: allies answer the call; reciprocity hardens into structure."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—warm reception fortified by boundaries and backbone."
+        },
+        "color_alignment": {
+          "name": "Camarone",
+          "hsl": "141,100%,24%",
+          "rgb_hex": "#007A29",
+          "color_symbolism": "Deep verdant welcome—fertile ground where gifts take root and return."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.70,
+            "empathy": 0.78,
+            "openness": 0.66,
+            "orderliness": 0.64,
+            "conscientiousness": 0.69,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.50,
+            "emotional_intensity": 0.56,
+            "social_dominance": 0.42,
+            "novelty_seeking": 0.55,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "empathy": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2591","Q2592","Q2593","Q2594",
+            "Q2595","Q2596","Q2597","Q2598"
+          ],
+          "signals_map": {
+            "Q2591": { "dimension": "cooperativeness", "polarity": 1, "content": "I proactively ask for help and define how it can land usefully." },
+            "Q2592": { "dimension": "empathy", "polarity": 1, "content": "I acknowledge the intent behind feedback before I sort it." },
+            "Q2593": { "dimension": "stability", "polarity": 1, "content": "I accept support without losing the throughline of the mission." },
+            "Q2594": { "dimension": "conscientiousness", "polarity": 1, "content": "I log contributions and tie gratitude to specific outcomes." },
+            "Q2595": { "dimension": "orderliness", "polarity": 1, "content": "I route input through a clear adopt/park/decline process." },
+            "Q2596": { "dimension": "cooperativeness", "polarity": -1, "content": "I avoid asking others to help, even when it would speed the work." },
+            "Q2597": { "dimension": "adaptability", "polarity": 1, "content": "When allies surface a better path, I pivot and credit them." },
+            "Q2598": { "dimension": "agency", "polarity": 1, "content": "I convert ally energy into one concrete, shared next step." }
+          },
+          "daily_prompt": "Who’s already leaning in—and what precise, shared action will turn that goodwill into momentum today?",
+          "practices": [
+            "Ally Map: list current supporters; assign each a specific co-owned next step.",
+            "Gratitude Loop: thank publicly, then pair with a clear follow-on ask.",
+            "Feedback Triage: 10 minutes to sort inputs into adopt/park/decline with reasons.",
+            "Help-First Micro-Act: ship a 5-minute favor to a key ally to seed reciprocity.",
+            "Reciprocity Ledger: track given/received support and outcomes weekly."
+          ],
+          "transformation_indicators": [
+            "Rise in co-delivered outputs vs. solo efforts",
+            "Shorter feedback-to-change cycle times",
+            "Clear attribution lines that increase repeat contributions",
+            "Higher retention of allies across trial phases",
+            "Trust signals up: more unsolicited high-quality offers to help"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Approach to the Innermost Cave — Positive Reception",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "Receptive, structured, outward-facing; requests and routes are explicit.",
+          "ordinary_world_baseline": "Isolated effort; praise without pipelines; sporadic help.",
+          "push_turn": "Received support is converted into a shared mechanism that accelerates the approach."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Approach to the Innermost Cave",
+            "section_description": "How allies reinforce the hero’s courage.",
+            "connection_focus_area": "Strength in unity",
+            "connect_points": {
+              "point1": "List supportive allies",
+              "point2": "Note their contributions",
+              "point3": "Express gratitude"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify three allies",
+              "objective2": "Describe one support received",
+              "objective3": "Send a thank-you"
+            }
+          },
+          "book2": {
+            "title": "Give and Take",
+            "author": "Adam Grant",
+            "section_of_focus": "The Ripple Effect",
+            "section_description": "How generosity builds strong networks.",
+            "connection_focus_area": "Cultivating reciprocity",
+            "connect_points": {
+              "point1": "Perform one generous act",
+              "point2": "Observe the response",
+              "point3": "Plan a follow-up"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a small act of help",
+              "objective2": "Note feedback received",
+              "objective3": "Develop a gratitude habit"
+            }
+          },
+          "book3": {
+            "title": "The Culture Code",
+            "author": "Daniel Coyle",
+            "section_of_focus": "Building Belonging",
+            "section_description": "Creating environments where people feel safe to contribute.",
+            "connection_focus_area": "Fostering trust",
+            "connect_points": {
+              "point1": "Identify one trust-building behavior",
+              "point2": "Practice it in a group",
+              "point3": "Reflect on the impact"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one inclusive behavior",
+              "objective2": "Use it in a discussion",
+              "objective3": "Record the outcome"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Terrace of Echoes, Francisco raises a signal bowl; distant camps answer with answering tones that braid into a steady chord.",
+          "symbolic_moment": "He writes the names of helpers in green ink upon a living ledger; the vines glow and weave lines between them.",
+          "emotional_landscape": "Warm, grounded, gratefully alert.",
+          "contentment_definition": "Belonging as practiced reciprocity—clear asks, clean credit, shared lift.",
+          "transformation_promise": "A leader who receives well teaches a world to carry itself together."
+        },
+        "epic_novel_pages": "Page 271 - 285",
+        "epic_chapter_focus": "The Road of Trials",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Daughter of the Flaming Sword",
+        "focus_area": "Community Building",
+        "specific_task_group_description": "Welcome support and feedback from allies.",
+        "specific_task_group_tagline": "Receive and reciprocate generosity",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Camarone",
+        "hex_code": "#007A29",
+        "red": 0,
+        "green": 122,
+        "blue": 41
+      },    
       "personality_profile_260": {},
       "personality_profile_261": {},
       "personality_profile_262": {},
