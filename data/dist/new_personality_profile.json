@@ -55075,7 +55075,203 @@
         "green": 128,
         "blue": 34
       },
-      "personality_profile_266": {},
+      "personality_profile_266": {
+        "canonical_id": "EA-266",
+        "unique_identifier": "STG 7.3.1.3",
+        "specific_task_group_title": "Highly Responsive",
+        "all_chapter": 266,
+        "novel_book": 7,
+        "chapter": "Chapter 26",
+        "chapter_title": "Atonement with the Father — Highly Responsive",
+        "type": "Specific Task Group",
+        "display_name": "The Swift Current",
+        "theme": "Speed with spine: sense the shift, make the micro-move, and lock the learning into shared rhythm.",
+        "family": "Adaptation — Agility, Feedback & Rapid Iteration",
+        "summary": "After the break, Francisco stops waiting for perfect clarity. He tunes to live signals, ships reversible moves, and publishes changes so others can align in stride. Agility turns disciplined: sprints have safeguards, pivots leave trails, and momentum coheres around a clear, shared beat.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "reads weak signals and adjusts plans within hours",
+            "ships small, reversible tests to learn fast",
+            "keeps teams aligned with simple, visible change logs",
+            "pairs speed with clear owners, metrics, and stop-conditions",
+            "turns feedback into next actions without drama"
+          ],
+          "shadow": [
+            "pivots too often, creating whiplash and fatigue",
+            "confuses activity with progress under pressure",
+            "downplays long-term risks for near-term wins",
+            "skips stakeholder check-ins to save time",
+            "lets novelty bias override stable baselines"
+          ],
+          "growth_focus": [
+            "time-box pivots and require a metric before moving",
+            "run two-way-door decisions by default; define rollback",
+            "schedule daily signal sweeps instead of reacting ad hoc",
+            "publish a one-paragraph rationale for every change",
+            "protect one deep-work block to prevent churn"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Host of the Mighty",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 7, Chapter 26 — All is Lost: integration clicks; agility becomes disciplined response."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—velocity anchored by team signals and safeguards."
+        },
+        "color_alignment": {
+          "name": "Screamin' Green",
+          "hsl": "135,100%,60%",
+          "rgb_hex": "#33FF66",
+          "color_symbolism": "Kinetic spring—fresh surge, swift correction, visible life."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.72,
+            "stability": 0.60,
+            "empathy": 0.62,
+            "openness": 0.69,
+            "orderliness": 0.58,
+            "conscientiousness": 0.64,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.66,
+            "risk_tolerance": 0.67,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.68,
+            "imagination": 0.61
+          },
+          "match_weights": {
+            "adaptability": 0.40,
+            "agency": 0.30,
+            "orderliness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2661",
+            "Q2662",
+            "Q2663",
+            "Q2664",
+            "Q2665",
+            "Q2666",
+            "Q2667",
+            "Q2668"
+          ],
+          "signals_map": {
+            "Q2661": { "dimension": "adaptability", "polarity": 1, "content": "I adjust plans within hours when live data shifts." },
+            "Q2662": { "dimension": "agency", "polarity": 1, "content": "I initiate a reversible move rather than wait for perfect certainty." },
+            "Q2663": { "dimension": "orderliness", "polarity": 1, "content": "Every pivot gets an owner, metric, and stop-condition." },
+            "Q2664": { "dimension": "risk_tolerance", "polarity": 1, "content": "I prefer small, bounded bets that teach fast." },
+            "Q2665": { "dimension": "conscientiousness", "polarity": 1, "content": "I log decisions publicly so teams can align without meetings." },
+            "Q2666": { "dimension": "stability", "polarity": -1, "content": "I chase new signals even when they derail the current sprint." },
+            "Q2667": { "dimension": "openness", "polarity": 1, "content": "I invite counter-signals to test the proposed change." },
+            "Q2668": { "dimension": "cooperativeness", "polarity": 1, "content": "I broadcast updates in a simple format others can mirror." }
+          },
+          "daily_prompt": "What tiny, reversible move will test today’s reality—and where will you publish the result so everyone can pivot together?",
+          "practices": [
+            "MVP-15: ship a 15-minute prototype that answers one question.",
+            "Signal Sweep: 10 minutes scanning metrics, risks, and stakeholder notes before changes.",
+            "Two-Way Door: default to decisions you can roll back; define the rollback up front.",
+            "Change Log One-Pager: rationale, metric, owner, next review time.",
+            "Flow Primer: 5 minutes of breath + single-task setup before sprinting."
+          ],
+          "transformation_indicators": [
+            "Shorter idea-to-experiment cycle without rise in rework",
+            "Higher percentage of changes with defined rollback paths",
+            "Stable velocity across sprints despite external volatility",
+            "Fewer surprise impacts due to clear broadcast routines",
+            "Increased adoption of shared change-log across teams"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "All is Lost — Highly Responsive",
+          "save_the_cat_beat": "Atonement with the Father",
+          "character_state": "Calm, iterative, externally tuned; speed yoked to shared safeguards.",
+          "ordinary_world_baseline": "Reactive flurries, silent pivots, misaligned momentum.",
+          "push_turn": "A visible micro-win with rollback defined restores trust and tempo."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "Optimal Experience",
+            "section_description": "Balancing challenge and skill for peak performance.",
+            "connection_focus_area": "Adapting to changing demands",
+            "connect_points": {
+              "point1": "Identify challenge-skill balance",
+              "point2": "Set clear feedback loops",
+              "point3": "Enter flow through focused practice"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your flow conditions",
+              "objective2": "Implement one feedback mechanism",
+              "objective3": "Practice a 10-minute flow session"
+            }
+          },
+          "book2": {
+            "title": "The Lean Startup",
+            "author": "Eric Ries",
+            "section_of_focus": "Build-Measure-Learn",
+            "section_description": "Rapid iterations driven by validated learning.",
+            "connection_focus_area": "Quick adaptation cycles",
+            "connect_points": {
+              "point1": "Draft an MVP for your next step",
+              "point2": "Define key metrics",
+              "point3": "Plan an iteration loop"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Outline your MVP",
+              "objective2": "Select two valid metrics",
+              "objective3": "Run one build-measure cycle"
+            }
+          },
+          "book3": {
+            "title": "Scrum: The Art of Doing Twice the Work in Half the Time",
+            "author": "Jeff Sutherland",
+            "section_of_focus": "Sprint Planning",
+            "section_description": "Organizing work into rapid, focused sprints.",
+            "connection_focus_area": "Burst execution",
+            "connect_points": {
+              "point1": "Define a one-week sprint goal",
+              "point2": "Create a sprint backlog",
+              "point3": "Hold a daily sync"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Set a sprint goal",
+              "objective2": "List sprint tasks",
+              "objective3": "Run a three-day sprint"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Turning Plain, storm-winds shear; banners snap as Francisco signals a quick redeploy—three flags shift, the line breathes, the threat slides past.",
+          "symbolic_moment": "He marks a two-way door on the battle map; a green thread shows the route forward and the clean retreat if signals sour.",
+          "emotional_landscape": "Alert, fluid, quietly confident.",
+          "contentment_definition": "Responsiveness as practiced rhythm—fast, small steps that keep the whole in tune.",
+          "transformation_promise": "A leader who moves at the speed of truth turns chaos into cadence."
+        },
+        "epic_novel_pages": "Page 376 - 390",
+        "epic_chapter_focus": "Atonement with the Father",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Host of the Mighty",
+        "focus_area": "Adaptation",
+        "specific_task_group_description": "Respond swiftly and effectively to seize the final opportunity with clarity and purpose.",
+        "specific_task_group_tagline": "Stay agile, strike true",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Screamin' Green",
+        "hex_code": "#33FF66",
+        "red": 51,
+        "green": 255,
+        "blue": 102
+      },
       "personality_profile_267": {},
       "personality_profile_268": {},
       "personality_profile_269": {},
