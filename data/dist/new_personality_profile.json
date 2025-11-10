@@ -60130,7 +60130,203 @@
         "green": 191,
         "blue": 64
       },
-      "personality_profile_291": {},
+      "personality_profile_291": {
+        "canonical_id": "EA-291",
+        "unique_identifier": "STG 8.1.4.2",
+        "specific_task_group_title": "Withdrawal",
+        "all_chapter": 291,
+        "novel_book": 8,
+        "chapter": "Chapter 11",
+        "chapter_title": "Pinch — Withdrawal",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Return",
+        "theme": "Step back to move true: protect the signal, empty the noise, and let solitude metabolize insight into precise next steps.",
+        "family": "Self-reflection — Solitude, Stillness & Reentry Planning",
+        "summary": "Francisco intentionally disengages to process the boon and restore clarity. In stillness, patterns surface; energy refills. He designs a clean reentry—what to resume, what to retire—and returns with fewer moves, sharper aim, and steadier pace.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "protects quiet blocks and honors them",
+            "turns reflection into concrete reentry steps",
+            "reduces noise and guards attention boundaries",
+            "recovers energy without guilt or apology",
+            "returns with fewer, clearer priorities"
+          ],
+          "shadow": [
+            "uses retreat to avoid hard choices",
+            "stays in reflection too long and loses momentum",
+            "ghosts collaborators instead of communicating time away",
+            "confuses information hoarding with insight",
+            "breaks rest at the first ping of urgency"
+          ],
+          "growth_focus": [
+            "schedule a daily 20–30 minute stillness block",
+            "write a 3×3 reentry (3 insights, 3 decisions, 3 actions)",
+            "set and share a device boundary during retreat",
+            "name one task to drop after reflection",
+            "plan a 24-hour micro-retreat each month"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Pinch",
+          "fiction_chapter_context": "Book 8, Chapter 11 — Allies wait at the margin while Francisco withdraws, journals the theme, and scripts his return."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—solitude distilled into decisive action."
+        },
+        "color_alignment": {
+          "name": "Chartreuse",
+          "hsl": "90,100%,50%",
+          "rgb_hex": "#7FFF00",
+          "color_symbolism": "Electric renewal—green fire that recharges focus."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.74,
+            "empathy": 0.58,
+            "openness": 0.69,
+            "orderliness": 0.62,
+            "conscientiousness": 0.68,
+            "adaptability": 0.63,
+            "abstract_reasoning": 0.67,
+            "cooperativeness": 0.60,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.55,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "openness": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.81,
+          "top_signal_items": [
+            "Q2911",
+            "Q2912",
+            "Q2913",
+            "Q2914",
+            "Q2915",
+            "Q2916",
+            "Q2917",
+            "Q2918"
+          ],
+          "signals_map": {
+            "Q2911": { "dimension": "stability", "polarity": 1, "content": "I schedule quiet blocks before critical pushes to reset and refocus." },
+            "Q2912": { "dimension": "openness", "polarity": 1, "content": "Solitude helps me notice weak signals and hidden insights." },
+            "Q2913": { "dimension": "conscientiousness", "polarity": 1, "content": "I use a written reentry checklist after reflection sessions." },
+            "Q2914": { "dimension": "agency", "polarity": 1, "content": "I choose to pause rather than grind mindlessly." },
+            "Q2915": { "dimension": "orderliness", "polarity": 1, "content": "I protect a daily device-free boundary for thinking time." },
+            "Q2916": { "dimension": "stability", "polarity": -1, "content": "I abandon rest as soon as urgency spikes." },
+            "Q2917": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate withdrawal windows so allies can plan." },
+            "Q2918": { "dimension": "abstract_reasoning", "polarity": 1, "content": "Reflection lets me integrate patterns into a concise plan." }
+          },
+          "daily_prompt": "What will you remove or pause today so the next hour lands twice as clean?",
+          "practices": [
+            "Stillness Block: 20–30 minutes of quiet, same time daily.",
+            "Morning Pages: three uncensored pages to clear mental clutter.",
+            "Boundary Bell: start/stop ritual to protect reflection time.",
+            "Reentry 3×3: 3 insights, 3 decisions, 3 actions before you resume.",
+            "Device Sabbath: 60 minutes offline to reset attention."
+          ],
+          "transformation_indicators": [
+            "Lower rework rate after reentry",
+            "Clearer next actions and shorter task lists",
+            "Reduced decision fatigue and context switching",
+            "More consistent deep-work blocks held",
+            "Allies report better timing and clarity on updates"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Pinch",
+          "preliminary_beat": "Pinch — Withdrawal",
+          "save_the_cat_beat": "Pinch",
+          "character_state": "Centered, low-noise, plan-ready.",
+          "ordinary_world_baseline": "Constant output, reactive choices, scattered focus.",
+          "push_turn": "A brief retreat produces a firm reentry plan and restored energy."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The retreat phase and inner preparation",
+            "connection_focus_area": "Inner transformation",
+            "connect_points": {
+              "point1": "Identify a personal retreat space",
+              "point2": "Journal the lessons you discover",
+              "point3": "Plan your reentry strategy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your ideal retreat",
+              "objective2": "Journal three insights",
+              "objective3": "Schedule a brief reflection period"
+            }
+          },
+          "book2": {
+            "title": "Quiet",
+            "author": "Susan Cain",
+            "section_of_focus": "The Power of Solitude",
+            "section_description": "Harnessing solitude for creative clarity",
+            "connection_focus_area": "Recharging through stillness",
+            "connect_points": {
+              "point1": "Choose a quiet location",
+              "point2": "Set a 10-minute timer",
+              "point3": "Reflect on your thoughts"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one silent spot",
+              "objective2": "Practice solitude for 10 minutes",
+              "objective3": "Note the difference in focus"
+            }
+          },
+          "book3": {
+            "title": "The Artist’s Way",
+            "author": "Julia Cameron",
+            "section_of_focus": "Morning Pages",
+            "section_description": "Creative recovery through journal practice",
+            "connection_focus_area": "Clearing mental clutter",
+            "connect_points": {
+              "point1": "Set aside time each morning",
+              "point2": "Write three pages without censor",
+              "point3": "Review themes that emerge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete one morning pages session",
+              "objective2": "Review and highlight key themes",
+              "objective3": "Plan follow-up creative action"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Antechamber of Echoes, Francisco lays down his mantle; the waters still, and the theme he ignored begins to write itself.",
+          "symbolic_moment": "A bowl of chartreuse light empties, then fills—only what matters remains.",
+          "emotional_landscape": "Quiet, centered, purposeful.",
+          "contentment_definition": "Rest as preparation, not escape.",
+          "transformation_promise": "Step back to step true."
+        },
+        "epic_novel_pages": "Page 151 - 165",
+        "epic_chapter_focus": "Pinch",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Self-reflection",
+        "specific_task_group_description": "Step back to process insights and recharge through inner reflection.",
+        "specific_task_group_tagline": "Retreat to advance",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Chartreuse",
+        "hex_code": "#7FFF00",
+        "red": 127,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_292": {},
       "personality_profile_293": {},
       "personality_profile_294": {},
