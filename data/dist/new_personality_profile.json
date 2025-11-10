@@ -59539,7 +59539,203 @@
         "green": 204,
         "blue": 0
       },
-      "personality_profile_288": {},
+      "personality_profile_288": {
+        "canonical_id": "EA-288",
+        "unique_identifier": "STG 8.1.3.2",
+        "specific_task_group_title": "Contribution",
+        "all_chapter": 288,
+        "novel_book": 8,
+        "chapter": "Chapter 8",
+        "chapter_title": "Consequence — Contribution",
+        "type": "Specific Task Group",
+        "display_name": "The Long Table Builder",
+        "theme": "Service dissolves hesitation: aim your strength outward, install repeatable ways to help, and let shared wins compound.",
+        "family": "Service — Contribution, Stewardship & Reciprocity",
+        "summary": "Francisco turns outward. Instead of wrestling doubts alone, he routes energy into useful aid. He maps needs to strengths, sets healthy guardrails, and designs small, consistent acts of service. Contribution becomes a system—light to others, ballast to himself.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Ten",
+        "traits": {
+          "strengths": [
+            "spots practical ways to help quickly",
+            "designs repeatable service routines",
+            "balances generosity with clear boundaries",
+            "matches strengths to community needs",
+            "builds coalitions around shared wins"
+          ],
+          "shadow": [
+            "over-gives to avoid inner work",
+            "confuses busy helping with real impact",
+            "neglects rest and recovery",
+            "saves others from problems they should own",
+            "gives without agreements, breeding resentment"
+          ],
+          "growth_focus": [
+            "define a weekly 30-minute contribution block",
+            "create a ‘give-with-guardrails’ checklist",
+            "map one strength to one local need",
+            "close the loop: ask how help landed",
+            "track energy: pause giving when your tank is red"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Consequence",
+          "fiction_chapter_context": "Book 8, Chapter 8 — Debate breaks; service moves the world a notch."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 8—generosity with backbone and boundaries."
+        },
+        "color_alignment": {
+          "name": "Dark Pastel Green",
+          "hsl": "135,100%,40%",
+          "rgb_hex": "#00CC33",
+          "color_symbolism": "Community growth—structured giving that multiplies life."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.67,
+            "empathy": 0.78,
+            "openness": 0.62,
+            "orderliness": 0.65,
+            "conscientiousness": 0.72,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.52,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "cooperativeness": 0.45,
+            "conscientiousness": 0.30,
+            "empathy": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2881",
+            "Q2882",
+            "Q2883",
+            "Q2884",
+            "Q2885",
+            "Q2886",
+            "Q2887",
+            "Q2888"
+          ],
+          "signals_map": {
+            "Q2881": { "dimension": "cooperativeness", "polarity": 1, "content": "I look for chances to lighten someone’s load today." },
+            "Q2882": { "dimension": "conscientiousness", "polarity": 1, "content": "I make service a recurring system, not a random act." },
+            "Q2883": { "dimension": "empathy", "polarity": 1, "content": "I tune to needs before offering solutions." },
+            "Q2884": { "dimension": "agency", "polarity": 1, "content": "I act without waiting for perfect conditions." },
+            "Q2885": { "dimension": "orderliness", "polarity": 1, "content": "I calendar contribution blocks and protect them." },
+            "Q2886": { "dimension": "risk_tolerance", "polarity": 1, "content": "I take small social risks to offer help early." },
+            "Q2887": { "dimension": "stability", "polarity": -1, "content": "I withdraw my help when I feel uncertain." },
+            "Q2888": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I design simple loops that match strengths to needs." }
+          },
+          "daily_prompt": "Who gets better because of you today, and what’s your ten-minute contribution?",
+          "practices": [
+            "Ten-Minute Serve: a quick, concrete aid aligned to your strengths.",
+            "Strengths→Needs Map: list top 3 strengths; pair each with one live need.",
+            "Give with Guardrails: define scope, timebox, and a clear handoff.",
+            "Knowledge Drop: share a template, checklist, or intro that others can reuse.",
+            "Contribution Retro: weekly review—impact, energy cost, next improvement."
+          ],
+          "transformation_indicators": [
+            "More scheduled service blocks actually executed",
+            "Clearer boundaries honored during helping",
+            "Faster start times—less hesitation before aiding",
+            "Requests for your contributions increase via referrals",
+            "Measured outcomes (time saved, errors reduced, morale up)"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Consequence",
+          "preliminary_beat": "Debate — Contribution",
+          "save_the_cat_beat": "Consequence",
+          "character_state": "Outward-facing, systems-minded, quietly brave.",
+          "ordinary_world_baseline": "Inward conservation, value uncertain, energy stalled.",
+          "push_turn": "One structured act of service unlocks belonging and momentum."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Refusal of the Call",
+            "section_description": "The hero tests personal limits for a greater good",
+            "connection_focus_area": "Self-transcendence",
+            "connect_points": {
+              "point1": "Spot one way you can support another",
+              "point2": "Offer help without expectation",
+              "point3": "Reflect on the impact"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List one act of service",
+              "objective2": "Perform it today",
+              "objective3": "Journal the outcome"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Finding Purpose",
+            "section_description": "How service creates meaning under hardship",
+            "connection_focus_area": "Purpose through contribution",
+            "connect_points": {
+              "point1": "Identify a small need around you",
+              "point2": "Plan a brief act of kindness",
+              "point3": "Notice the emotional outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Pinpoint one need",
+              "objective2": "Execute an act of kindness",
+              "objective3": "Reflect on personal meaning"
+            }
+          },
+          "book3": {
+            "title": "Give and Take",
+            "author": "Adam Grant",
+            "section_of_focus": "Givers, Takers, and Matchers",
+            "section_description": "How giving shapes relationships",
+            "connection_focus_area": "Effective generosity",
+            "connect_points": {
+              "point1": "Offer knowledge or time",
+              "point2": "Set healthy boundaries",
+              "point3": "Seek reciprocal learning"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Offer help to one person",
+              "objective2": "Establish a give/take boundary",
+              "objective3": "Track the exchange result"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Thousand Hands, Francisco lays tools upon a long green table as caravans arrive with small needs and bright ideas.",
+          "symbolic_moment": "Two bowls—one for giving, one for rest—kept side by side; both are filled.",
+          "emotional_landscape": "Warm, purposeful, quietly uplifting.",
+          "contentment_definition": "Belonging through useful presence.",
+          "transformation_promise": "When gifts circulate, strength multiplies."
+        },
+        "epic_novel_pages": "Page 106 - 120",
+        "epic_chapter_focus": "Consequence",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Service",
+        "specific_task_group_description": "Channel energy outward to help others even when you feel hesitant.",
+        "specific_task_group_tagline": "Give your strength away",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Dark Pastel Green",
+        "hex_code": "#00CC33",
+        "red": 0,
+        "green": 204,
+        "blue": 51
+      },
       "personality_profile_289": {},
       "personality_profile_290": {},
       "personality_profile_291": {},
