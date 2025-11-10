@@ -60721,7 +60721,203 @@
         "green": 213,
         "blue": 64
       },
-      "personality_profile_294": {},
+      "personality_profile_294": {
+        "canonical_id": "EA-294",
+        "unique_identifier": "STG 8.2.1.1",
+        "specific_task_group_title": "Valor",
+        "all_chapter": 294,
+        "novel_book": 8,
+        "chapter": "Chapter 14",
+        "chapter_title": "Push — Valor",
+        "type": "Specific Task Group",
+        "display_name": "The Standard-Bearer",
+        "theme": "Real courage is informed, vulnerable action—name the fear, open the visor, and step into the fire with purpose.",
+        "family": "Courage — Bravery, Vulnerability & Grit",
+        "summary": "As challenges escalate, Francisco plants his feet. He doesn’t posture—he practices: naming the fear, choosing the next hard inch, and inviting allies into the gap. Valor here isn’t noise; it’s precise movement under pressure with a chest open to the hit and eyes on the mission.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "stays mission-focused under stress",
+            "acts despite fear; uses it as data",
+            "models vulnerability to mobilize trust",
+            "turns big risks into staged, reversible bets",
+            "rallies allies with clear, calm direction"
+          ],
+          "shadow": [
+            "confuses recklessness with bravery",
+            "armors up and isolates under heat",
+            "overcommits to battles that don’t matter",
+            "ignores recovery and burns out the team",
+            "treats dissent as disloyalty instead of signal"
+          ],
+          "growth_focus": [
+            "name the smallest courageous step (SCS) and do it today",
+            "share one real fear with a trusted ally before action",
+            "pre-commit a stop-loss condition for each risky push",
+            "schedule decompression after every high-heat event",
+            "separate signal from ego—drop one nonessential fight"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Push",
+          "fiction_chapter_context": "Book 8, Chapter 14 — Guardians close ranks; Francisco advances one measured step and the tide answers."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist cultivating earned courage (integration to 9’s calm and 3’s decisive action)."
+        },
+        "color_alignment": {
+          "name": "Australian Mint",
+          "hsl": "75,100%,84%",
+          "rgb_hex": "#EAFFAC",
+          "color_symbolism": "Pale dawn-green—quiet bravery at first light before the charge."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.68,
+            "empathy": 0.58,
+            "openness": 0.61,
+            "orderliness": 0.55,
+            "conscientiousness": 0.64,
+            "adaptability": 0.60,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.59,
+            "risk_tolerance": 0.78,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.66,
+            "novelty_seeking": 0.63,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "risk_tolerance": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2941",
+            "Q2942",
+            "Q2943",
+            "Q2944",
+            "Q2945",
+            "Q2946",
+            "Q2947",
+            "Q2948"
+          ],
+          "signals_map": {
+            "Q2941": { "dimension": "agency", "polarity": 1, "content": "I take the smallest courageous step even when outcomes are uncertain." },
+            "Q2942": { "dimension": "risk_tolerance", "polarity": 1, "content": "I convert big risks into staged, reversible bets." },
+            "Q2943": { "dimension": "stability", "polarity": 1, "content": "Under pressure, I slow down my breath and narrow my focus." },
+            "Q2944": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite allies in and ask for help before I push." },
+            "Q2945": { "dimension": "social_dominance", "polarity": 1, "content": "I provide calm, concise direction in chaotic moments." },
+            "Q2946": { "dimension": "orderliness", "polarity": 1, "content": "For each risky move, I define success metrics and a stop-loss." },
+            "Q2947": { "dimension": "empathy", "polarity": 1, "content": "I name my fear out loud to build trust and alignment." },
+            "Q2948": { "dimension": "risk_tolerance", "polarity": -1, "content": "I escalate conflict just to prove I’m brave." }
+          },
+          "daily_prompt": "What is today’s smallest courageous step—and what’s your stop-loss?",
+          "practices": [
+            "SCS (Smallest Courageous Step): identify, time-box to 15 minutes, execute.",
+            "Fear-to-Data: write the fear, extract the signal, choose one mitigation.",
+            "Buddy Check: share plan + stop-loss with an ally; request a post-action debrief.",
+            "Heat Map: list fights; star the one tied to mission—drop one that isn’t.",
+            "After-Action Recovery: schedule 10 minutes of decompression and note lessons."
+          ],
+          "transformation_indicators": [
+            "Higher ratio of decisive micro-moves to stalled deliberation",
+            "Clear stop-loss rules used in risky pushes",
+            "Increased ally engagement before high-heat actions",
+            "Lower rework caused by impulsive choices",
+            "Peers report steadier leadership under adversity"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Push",
+          "preliminary_beat": "Tests, Allies and Enemies — Valor",
+          "save_the_cat_beat": "Push",
+          "character_state": "Brave, transparent, mission-locked.",
+          "ordinary_world_baseline": "Hesitation, soloing, reactive swings.",
+          "push_turn": "Vulnerable truth shared, smallest courageous step taken, tide shifts."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Tests, Allies, and Enemies",
+            "section_description": "The hero meets challenges and makes allies.",
+            "connection_focus_area": "Understanding trials",
+            "connect_points": {
+              "point1": "Identify key personal challenges",
+              "point2": "Recognize available support",
+              "point3": "Assess your own strengths"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three challenges you’ve faced",
+              "objective2": "Name two allies you can rely on",
+              "objective3": "Draft a plan to confront one fear"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "The Power of Passion and Perseverance",
+            "section_description": "The role of sustained effort in overcoming obstacles.",
+            "connection_focus_area": "Cultivating long-term courage",
+            "connect_points": {
+              "point1": "Define a courageous long-term goal",
+              "point2": "Break it into small milestones",
+              "point3": "Track daily progress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Set one brave goal",
+              "objective2": "Complete the first milestone",
+              "objective3": "Reflect on perseverance"
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "The Vulnerability Armory",
+            "section_description": "Harnessing vulnerability as a source of courage.",
+            "connection_focus_area": "Embracing uncertainty",
+            "connect_points": {
+              "point1": "Acknowledge a personal vulnerability",
+              "point2": "Share it with someone you trust",
+              "point3": "Use feedback to grow"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one vulnerability",
+              "objective2": "Discuss it openly",
+              "objective3": "Apply the insight to a challenge"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Gate of Flux, banners whip in crosswinds; Francisco lifts the mint-pale standard and names the fear before the host.",
+          "symbolic_moment": "He draws a thin chalk line—one step across it and the tide obeys; not force, but focus moves the sea.",
+          "emotional_landscape": "Tense, lucid, quietly defiant.",
+          "contentment_definition": "Courage as clarity: the next right inch, done with an open heart.",
+          "transformation_promise": "Valor doesn’t shout—it steadies the field."
+        },
+        "epic_novel_pages": "Page 196 - 210",
+        "epic_chapter_focus": "Push",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Courage under fire",
+        "specific_task_group_description": "Build inner strength by confronting fears and demonstrating bravery in challenging situations.",
+        "specific_task_group_tagline": "Stand tall in adversity",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Australian Mint",
+        "hex_code": "#EAFFAC",
+        "red": 234,
+        "green": 255,
+        "blue": 172
+      },
       "personality_profile_295": {},
       "personality_profile_296": {},
       "personality_profile_297": {},
