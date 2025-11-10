@@ -60918,7 +60918,203 @@
         "green": 255,
         "blue": 172
       },
-      "personality_profile_295": {},
+      "personality_profile_295": {
+        "canonical_id": "EA-295",
+        "unique_identifier": "STG 8.2.1.2",
+        "specific_task_group_title": "Authority",
+        "all_chapter": 295,
+        "novel_book": 8,
+        "chapter": "Chapter 15",
+        "chapter_title": "New World (Set-Up) — Authority",
+        "type": "Specific Task Group",
+        "display_name": "The Servant Sovereign",
+        "theme": "Real authority is borrowed from those you serve: own the outcome, protect the team, and decide with clarity when the moment is loud.",
+        "family": "Leadership — Service, Accountability & Trust",
+        "summary": "Francisco reframes power as stewardship. He builds a circle of safety, decides under pressure without drama, and owns the consequences. Trust compounds, voluntary cooperation rises, and the work scales because responsibility sits squarely where it belongs.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "King",
+        "traits": {
+          "strengths": [
+            "creates psychological safety that unlocks initiative",
+            "makes timely, ethical decisions with limited information",
+            "models extreme ownership and visible accountability",
+            "balances firmness with empathy and clarity",
+            "delegates intent, not tasks; equips others to lead"
+          ],
+          "shadow": [
+            "over-controls to prevent mistakes, crushing initiative",
+            "confuses urgency with importance and burns trust",
+            "avoids hard feedback conversations until too late",
+            "hoards context, resulting in dependency",
+            "projects certainty when a probe-and-learn is wiser"
+          ],
+          "growth_focus": [
+            "publish a one-page commander's intent for the current mission",
+            "run weekly AARs: what went well, what to improve, who owns next step",
+            "replace two approvals with clear decision rights",
+            "practice a 24-hour ownership rule for surfaced issues",
+            "schedule one candor conversation and document agreements"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "New World (Set-Up)",
+          "fiction_chapter_context": "Book 8, Chapter 15 — Guardians and Gatekeepers: authority tested at the threshold; stewardship over spectacle."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled leadership tempered by optimism and flexibility."
+        },
+        "color_alignment": {
+          "name": "Tidal",
+          "hsl": "75,100%,80%",
+          "rgb_hex": "#E5FF97",
+          "color_symbolism": "Sunlit command—calm clarity under pressure; guidance without glare."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.72,
+            "empathy": 0.70,
+            "openness": 0.63,
+            "orderliness": 0.69,
+            "conscientiousness": 0.80,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.61,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.64,
+            "novelty_seeking": 0.55,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "cooperativeness": 0.35,
+            "agency": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2951",
+            "Q2952",
+            "Q2953",
+            "Q2954",
+            "Q2955",
+            "Q2956",
+            "Q2957",
+            "Q2958"
+          ],
+          "signals_map": {
+            "Q2951": { "dimension": "conscientiousness", "polarity": 1, "content": "I take public ownership of results and specify the repair plan." },
+            "Q2952": { "dimension": "agency", "polarity": 1, "content": "When time is short, I decide, communicate intent, and move." },
+            "Q2953": { "dimension": "cooperativeness", "polarity": 1, "content": "I design decisions to include the right voices without bogging down." },
+            "Q2954": { "dimension": "orderliness", "polarity": 1, "content": "We use clear decision rights and escalation paths instead of ad-hoc lobbying." },
+            "Q2955": { "dimension": "empathy", "polarity": 1, "content": "I protect people while holding standards—high care, high bar." },
+            "Q2956": { "dimension": "social_dominance", "polarity": -1, "content": "I bypass dissent to move faster because pushback slows execution." },
+            "Q2957": { "dimension": "stability", "polarity": 1, "content": "Under pressure I regulate my state first, then lead the room." },
+            "Q2958": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept prudent risk when values and mission are clear." }
+          },
+          "daily_prompt": "What choice today—made visibly and owned fully—will increase trust and momentum?",
+          "practices": [
+            "Circle of Safety: open with states, risks, and help needed; end with clear owners.",
+            "Commander’s Intent: one page—purpose, key tasks, end state—shared before action.",
+            "AAR Rhythm: 30-minute weekly debrief (WW, EBI, Next Step Owner).",
+            "Decision Log: date, decider, options, rationale, review date.",
+            "Ownership Ledger: list issues you own; post updates within 24 hours."
+          ],
+          "transformation_indicators": [
+            "Faster decisions with higher downstream alignment",
+            "Increase in proactive escalations and fewer hidden fires",
+            "Team reports greater psychological safety and clarity",
+            "More delegated decisions resolved without rework",
+            "Public ownership of errors followed by measurable fixes"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "New World (Set-Up)",
+          "preliminary_beat": "New World — Authority",
+          "save_the_cat_beat": "New world (set-up)",
+          "character_state": "Trusted, accountable, decisive; power used as service.",
+          "ordinary_world_baseline": "Solo expertise, ad-hoc approvals, fragmented trust.",
+          "push_turn": "Taking ownership for consequences earns durable authority and cooperation."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Creating a Circle of Safety",
+            "section_description": "Building trust and shared purpose in teams.",
+            "connection_focus_area": "Leading allies",
+            "connect_points": {
+              "point1": "Identify team needs",
+              "point2": "Foster mutual trust",
+              "point3": "Act ethically under stress"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe how to build safety",
+              "objective2": "Implement one trust-building action",
+              "objective3": "Reflect on ethical leadership"
+            }
+          },
+          "book2": {
+            "title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "section_of_focus": "Building Trust",
+            "section_description": "Overcoming barriers to team cohesion.",
+            "connection_focus_area": "Strengthening alliances",
+            "connect_points": {
+              "point1": "Identify trust gaps",
+              "point2": "Encourage vulnerability",
+              "point3": "Promote open dialogue"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List two trust barriers",
+              "objective2": "Propose a vulnerability exercise",
+              "objective3": "Lead one honest conversation"
+            }
+          },
+          "book3": {
+            "title": "Extreme Ownership",
+            "author": "Jocko Willink",
+            "section_of_focus": "Leading Up and Down the Chain of Command",
+            "section_description": "Taking full responsibility as a leader.",
+            "connection_focus_area": "Authority with accountability",
+            "connect_points": {
+              "point1": "Acknowledge your role",
+              "point2": "Own mistakes publicly",
+              "point3": "Empower your team"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one area to own",
+              "objective2": "Admit a past error",
+              "objective3": "Delegate one responsibility"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Tidewall, Francisco lifts a lantern of pale gold; the swell hushes as sentries and seekers turn toward its steady circle.",
+          "symbolic_moment": "He places his signet not on a throne but on a ledger of debts and promises—authority anchored to accountability.",
+          "emotional_landscape": "Grounded, clear, quietly formidable.",
+          "contentment_definition": "Leadership as stewardship: fewer surprises, more shared strength.",
+          "transformation_promise": "Owned consequences unlock voluntary power."
+        },
+        "epic_novel_pages": "Page 211 - 225",
+        "epic_chapter_focus": "New world (set-up)",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_novel_chapter_focus": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Leadership",
+        "specific_task_group_description": "Develop leadership skills by making decisive, ethical choices under pressure.",
+        "specific_task_group_tagline": "Lead with integrity",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Tidal",
+        "hex_code": "#E5FF97",
+        "red": 229,
+        "green": 255,
+        "blue": 151
+      },
       "personality_profile_296": {},
       "personality_profile_297": {},
       "personality_profile_298": {},
