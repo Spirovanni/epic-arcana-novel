@@ -60327,7 +60327,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_292": {},
+      "personality_profile_292": {
+        "canonical_id": "EA-292",
+        "unique_identifier": "STG 8.1.4.3",
+        "specific_task_group_title": "Abundance",
+        "all_chapter": 292,
+        "novel_book": 8,
+        "chapter": "Chapter 12",
+        "chapter_title": "Allies, Mentors, and Helpers — Abundance",
+        "type": "Specific Task Group",
+        "display_name": "The Circle of Plenty",
+        "theme": "Gratitude multiplies capacity: name your helpers, celebrate the wins, and watch the network compound.",
+        "family": "Gratitude — Appreciation, Celebration & Communal Wealth",
+        "summary": "Francisco primes his circle to think in terms of plenty, not scarcity. By recognizing support, celebrating shared wins, and practicing appreciation, the crew’s options expand. Gratitude becomes infrastructure—trust deepens, resources flow, and momentum accelerates.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "spots overlooked resources and support",
+            "expresses thanks specifically and often",
+            "celebrates team wins to reinforce morale",
+            "invites participation and shared credit",
+            "turns relationships into resilient networks"
+          ],
+          "shadow": [
+            "toxic positivity that ignores real constraints",
+            "gratitude as performance instead of sincerity",
+            "over-reliance on others to fill gaps",
+            "diffuses ownership by thanking instead of deciding",
+            "avoids hard feedback to ‘keep vibes high’"
+          ],
+          "growth_focus": [
+            "schedule a weekly ‘ally audit’ (who helped, how to repay)",
+            "replace generic thanks with specific acknowledgement",
+            "pair each celebration with a next-step commitment",
+            "document one constraint honestly before reframing it",
+            "offer one unsolicited, useful resource to an ally"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Allies, Mentors, and Helpers",
+          "fiction_chapter_context": "Book 8, Chapter 12 — The circle gathers; gratitude unlocks hidden doors."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—gratitude expressed as authentic, specific appreciation."
+        },
+        "color_alignment": {
+          "name": "Limeade",
+          "hsl": "90,50%,40%",
+          "rgb_hex": "#669933",
+          "color_symbolism": "Ripening growth—shared harvests, communal plenty, living reciprocity."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.70,
+            "empathy": 0.85,
+            "openness": 0.67,
+            "orderliness": 0.60,
+            "conscientiousness": 0.66,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.57,
+            "imagination": 0.61
+          },
+          "match_weights": {
+            "cooperativeness": 0.45,
+            "empathy": 0.35,
+            "stability": 0.20
+          },
+          "threshold": 0.81,
+          "top_signal_items": [
+            "Q2921",
+            "Q2922",
+            "Q2923",
+            "Q2924",
+            "Q2925",
+            "Q2926",
+            "Q2927",
+            "Q2928"
+          ],
+          "signals_map": {
+            "Q2921": { "dimension": "cooperativeness", "polarity": 1, "content": "I routinely credit others by name for their contributions." },
+            "Q2922": { "dimension": "empathy", "polarity": 1, "content": "I recognize what support costs others and thank them specifically." },
+            "Q2923": { "dimension": "stability", "polarity": 1, "content": "I keep celebrating progress even during uncertain stretches." },
+            "Q2924": { "dimension": "conscientiousness", "polarity": 1, "content": "I turn gratitude into action—follow-ups, introductions, and resources." },
+            "Q2925": { "dimension": "orderliness", "polarity": 1, "content": "I maintain a simple system to track help given and repaid." },
+            "Q2926": { "dimension": "agency", "polarity": -1, "content": "I wait for others to notice my needs before asking for help." },
+            "Q2927": { "dimension": "social_dominance", "polarity": -1, "content": "I avoid directing next steps to keep everyone comfortable." },
+            "Q2928": { "dimension": "openness", "polarity": 1, "content": "I invite diverse voices to shape how we celebrate wins." }
+          },
+          "daily_prompt": "Who unlocked something for you this week—and how will you repay it with action?",
+          "practices": [
+            "Ally Ledger: track help received, value given back, and planned reciprocity.",
+            "Specific Thanks: send one detailed note naming the behavior and impact.",
+            "Shared Spotlight: lift an ally publicly and attach a concrete opportunity.",
+            "Gratitude + Next Step: every celebration ends with a signed next action.",
+            "Reciprocity Sprint: 25 minutes dedicated to connecting two allies to each other."
+          ],
+          "transformation_indicators": [
+            "Increase in cross-introductions and warm referrals",
+            "Faster resource acquisition after public celebrations",
+            "Higher response rates to asks framed with reciprocity",
+            "Documented ‘give-back’ completions in the Ally Ledger",
+            "More diverse contributors visible in planning and delivery"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "Allies, Mentors, and Helpers — Abundance",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "Appreciative, connective, resource-amplifying.",
+          "ordinary_world_baseline": "Solo scarcity mindset; help is invisible, gratitude implicit.",
+          "push_turn": "Naming and celebrating allies unlocks hidden capacities and new paths."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Allies, Mentors, and Helpers",
+            "section_description": "The community of support that sustains the hero",
+            "connection_focus_area": "Acknowledging support",
+            "connect_points": {
+              "point1": "List three people who helped you",
+              "point2": "Send a note of thanks",
+              "point3": "Reflect on how they contributed"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify three allies",
+              "objective2": "Express gratitude in writing",
+              "objective3": "Journal the emotional impact"
+            }
+          },
+          "book2": {
+            "title": "Thanks! How Practicing Gratitude Can Make You Happier",
+            "author": "Robert Emmons",
+            "section_of_focus": "The Science of Gratitude",
+            "section_description": "Research-backed benefits of gratitude practice",
+            "connection_focus_area": "Building appreciation",
+            "connect_points": {
+              "point1": "Keep a daily gratitude list",
+              "point2": "Share one gratitude verbally",
+              "point3": "Note mood changes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three things you’re grateful for",
+              "objective2": "Tell someone one of those items",
+              "objective3": "Assess your mood before and after"
+            }
+          },
+          "book3": {
+            "title": "The Happiness Advantage",
+            "author": "Shawn Achor",
+            "section_of_focus": "Positive Psychology Principles",
+            "section_description": "How gratitude fuels success",
+            "connection_focus_area": "Leveraging positive mindset",
+            "connect_points": {
+              "point1": "Document three daily wins",
+              "point2": "Share one win with a friend",
+              "point3": "Implement one positivity habit"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Record three wins each day",
+              "objective2": "Share one win publicly",
+              "objective3": "Adopt one new positive habit"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Atrium of Echoing Cups, Francisco raises a lime-lit chalice; each ally’s name spoken becomes a doorway that opens in the walls.",
+          "symbolic_moment": "Three cups brim and overflow into one basin—separate streams forming shared abundance.",
+          "emotional_landscape": "Warm, connective, quietly celebratory.",
+          "contentment_definition": "Gratitude as architecture—relationships arranged to carry weight and flow.",
+          "transformation_promise": "What we honor grows; what we thank returns with friends."
+        },
+        "epic_novel_pages": "Page 166 - 180",
+        "epic_chapter_focus": "Allies, Mentors, and Helpers",
+        "epic_preliminary_scene_focus": "Theme Stated",
+        "epic_novel_chapter_focus": "Scene IV: Allies, Mentors, and Helpers",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Gratitude",
+        "specific_task_group_description": "Recognize and celebrate the resources and support around you.",
+        "specific_task_group_tagline": "Abundance is all around",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Limeade",
+        "hex_code": "#669933",
+        "red": 102,
+        "green": 153,
+        "blue": 51
+      },
       "personality_profile_293": {},
       "personality_profile_294": {},
       "personality_profile_295": {},
