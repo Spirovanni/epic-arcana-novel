@@ -61706,7 +61706,203 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_299": {},
+      "personality_profile_299": {
+        "canonical_id": "EA-299",
+        "unique_identifier": "STG 8.2.2.3",
+        "specific_task_group_title": "Moving On",
+        "all_chapter": 299,
+        "novel_book": 8,
+        "chapter": "Chapter 19",
+        "chapter_title": "The Road of Trials — Moving On",
+        "type": "Specific Task Group",
+        "display_name": "The Unburdened Traveler",
+        "theme": "Progress accelerates when you release what no longer serves—close loops, return weight, and step lighter.",
+        "family": "Letting Go — Closure, Release & Forward Momentum",
+        "summary": "Francisco stops dragging yesterday into today. He identifies stale duties and sentimental anchors, performs clean closures, and replaces them with present-aligned commitments. By traveling lighter, he regains speed, attention, and joy.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ten",
+        "traits": {
+          "strengths": [
+            "names and closes outdated commitments cleanly",
+            "creates rituals for emotional release and closure",
+            "prioritizes present-aligned goals over legacy burdens",
+            "keeps momentum by avoiding re-opening closed loops",
+            "models graceful endings that preserve relationships"
+          ],
+          "shadow": [
+            "clings to sunk costs and old identities",
+            "revisits closed issues and drains momentum",
+            "confuses avoidance with release",
+            "hoards artifacts ‘just in case’",
+            "over-indexes on nostalgia during change"
+          ],
+          "growth_focus": [
+            "run a ‘keep/close/transfer’ audit on current obligations",
+            "design a 15-minute closure ritual for one lingering item",
+            "archive or delete one cache of legacy files",
+            "replace one ended habit with a present-aligned micro-habit",
+            "set a ‘no re-litigating past decisions’ boundary for 30 days"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "The Road of Trials",
+          "fiction_chapter_context": "Book 8, Chapter 19 — Approach to the Innermost Cave: shedding weight before the descent."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—equanimity becomes decisive forward motion."
+        },
+        "color_alignment": {
+          "name": "Yellow Green",
+          "hsl": "75,66%,48%",
+          "rgb_hex": "#A3CC29",
+          "color_symbolism": "Olive-spring renewal—fresh growth after pruning."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.64,
+            "empathy": 0.67,
+            "openness": 0.70,
+            "orderliness": 0.56,
+            "conscientiousness": 0.60,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.61,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.58,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "adaptability": 0.40,
+            "stability": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2991",
+            "Q2992",
+            "Q2993",
+            "Q2994",
+            "Q2995",
+            "Q2996",
+            "Q2997",
+            "Q2998"
+          ],
+          "signals_map": {
+            "Q2991": { "dimension": "adaptability", "polarity": 1, "content": "I can end projects gracefully when their purpose is complete." },
+            "Q2992": { "dimension": "stability", "polarity": 1, "content": "Once I close a loop, I don’t re-open it without new evidence." },
+            "Q2993": { "dimension": "conscientiousness", "polarity": 1, "content": "I document closure steps so others aren’t left hanging." },
+            "Q2994": { "dimension": "agency", "polarity": 1, "content": "I choose what to carry forward instead of letting it choose me." },
+            "Q2995": { "dimension": "orderliness", "polarity": 1, "content": "I archive or delete artifacts that no longer serve the mission." },
+            "Q2996": { "dimension": "empathy", "polarity": 1, "content": "I communicate endings with care and respect for stakeholders." },
+            "Q2997": { "dimension": "risk_tolerance", "polarity": 1, "content": "I release sunk costs even when it stings now to win later." },
+            "Q2998": { "dimension": "stability", "polarity": -1, "content": "I keep old commitments to avoid uncomfortable conversations." }
+          },
+          "daily_prompt": "What burden will you set down today—and what small, present-aligned action will replace it?",
+          "practices": [
+            "Closure Ritual: thank → summarize → handoff/finish → archive → boundary.",
+            "Keep/Close/Transfer Audit: review obligations weekly and categorize.",
+            "Sunk-Cost Reset: write the cost already paid; decide only on future value.",
+            "Artifact Pruning: 10-minute daily delete/archive of legacy files and notes.",
+            "Replacement Habit: pair every ending with a 2-minute successor habit."
+          ],
+          "transformation_indicators": [
+            "Shorter open-loop list; fewer re-opened issues",
+            "Higher time-in-focus on current priorities",
+            "Stakeholder satisfaction with closure communication",
+            "Noticeable reduction in cognitive drag and nostalgia loops",
+            "Faster commit-to-ship cycle after endings"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "The Road of Trials — Moving On",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "Light, present-aligned, forward-only.",
+          "ordinary_world_baseline": "Overburdened by past obligations and identities.",
+          "push_turn": "A deliberate release creates space—and momentum rushes in."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Letting Go",
+            "author": "David R. Hawkins",
+            "section_of_focus": "The Mechanism of Surrender",
+            "section_description": "Techniques for releasing negative attachments.",
+            "connection_focus_area": "Emotional liberation",
+            "connect_points": {
+              "point1": "Identify an old grievance",
+              "point2": "Practice silent surrender",
+              "point3": "Observe emotional shift"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one attachment to release",
+              "objective2": "Perform a surrender exercise",
+              "objective3": "Journal your experience"
+            }
+          },
+          "book2": {
+            "title": "Transitions",
+            "author": "William Bridges",
+            "section_of_focus": "Ending, Losing, Letting Go",
+            "section_description": "Navigating life’s endings gracefully.",
+            "connection_focus_area": "Healthy closure",
+            "connect_points": {
+              "point1": "Map your transition stages",
+              "point2": "Acknowledge emotions",
+              "point3": "Craft a closure ritual"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your transition",
+              "objective2": "Complete a closure ritual",
+              "objective3": "Share insights with a friend"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Living in the Present",
+            "section_description": "Techniques for releasing past and future anxieties.",
+            "connection_focus_area": "Present-moment awareness",
+            "connect_points": {
+              "point1": "Practice a 5-minute mindfulness",
+              "point2": "Note intrusive thoughts",
+              "point3": "Refocus on breath"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete one mindfulness session",
+              "objective2": "Record thoughts let go",
+              "objective3": "Integrate present focus daily"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a wind-carved ridge, Francisco unlaces a pack of old sigils; each fades to pollen as it touches the air, and the path ahead brightens.",
+          "symbolic_moment": "A cord—once knotted with oaths—slides free; the knot remains on the ground while the line becomes a guiding thread forward.",
+          "emotional_landscape": "Light, grateful, forward-drawn.",
+          "contentment_definition": "Peace as unburdened presence: only what serves the next true step remains.",
+          "transformation_promise": "Release is propulsion."
+        },
+        "epic_novel_pages": "Page 271 - 285",
+        "epic_chapter_focus": "The Road of Trials",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Letting Go",
+        "specific_task_group_description": "Release past burdens and make space for new progress.",
+        "specific_task_group_tagline": "Let go and advance",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Yellow Green",
+        "hex_code": "#A3CC29",
+        "red": 163,
+        "green": 204,
+        "blue": 41
+      },
       "personality_profile_300": {},
       "personality_profile_301": {},
       "personality_profile_302": {},
