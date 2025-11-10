@@ -58751,7 +58751,203 @@
         "green": 255,
         "blue": 102
       },
-      "personality_profile_284": {},
+      "personality_profile_284": {
+        "canonical_id": "EA-284",
+        "unique_identifier": "STG 8.1.2.1",
+        "specific_task_group_title": "Skill Development",
+        "all_chapter": 284,
+        "novel_book": 8,
+        "chapter": "Chapter 4",
+        "chapter_title": "Immediate Reaction — Skill Development",
+        "type": "Specific Task Group",
+        "display_name": "The Deliberate Maker",
+        "theme": "Mastery is engineered: break skills into units, rehearse with feedback, and stack tiny wins until excellence is ordinary.",
+        "family": "Capability Building — Deliberate Practice & Systems Learning",
+        "summary": "The toolbox stops being decorative. Francisco decomposes the impossible into drills, measures progress in public, and routes feedback straight into the next rep. Confidence shifts from hope to evidence as skills compound.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Page",
+        "traits": {
+          "strengths": [
+            "maps big abilities into small, trainable sub-skills",
+            "sets measurable reps with clear ‘done’ definitions",
+            "seeks fast feedback and iterates without ego",
+            "designs practice environments that remove friction",
+            "tracks progress visually to sustain motivation"
+          ],
+          "shadow": [
+            "gets stuck perfecting drills instead of shipping",
+            "collects courses/resources without practicing",
+            "confuses complexity with sophistication",
+            "avoids coaching to protect pride",
+            "drops practice when quick wins slow down"
+          ],
+          "growth_focus": [
+            "replace resource hunting with a daily 20-minute drill",
+            "pair every drill with a feedback source and metric",
+            "publish a weekly skills ledger (wins, misses, next)",
+            "schedule a coach or peer review every 7 days",
+            "ship one tiny application after each practice block"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Immediate Reaction",
+          "fiction_chapter_context": "Book 8, Chapter 4 — The Call: first drills begin; metrics light the board."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—curiosity fortified by decisive action."
+        },
+        "color_alignment": {
+          "name": "Lime Green",
+          "hsl": "120,100%,60%",
+          "rgb_hex": "#33FF33",
+          "color_symbolism": "Fresh growth—alive, lucid, and teachable."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.66,
+            "empathy": 0.55,
+            "openness": 0.70,
+            "orderliness": 0.72,
+            "conscientiousness": 0.80,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.58,
+            "risk_tolerance": 0.54,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.57,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.35,
+            "abstract_reasoning": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2841",
+            "Q2842",
+            "Q2843",
+            "Q2844",
+            "Q2845",
+            "Q2846",
+            "Q2847",
+            "Q2848"
+          ],
+          "signals_map": {
+            "Q2841": { "dimension": "conscientiousness", "polarity": 1, "content": "I break goals into measurable drills with finish lines." },
+            "Q2842": { "dimension": "orderliness", "polarity": 1, "content": "I keep a visible skills ledger to track reps and results." },
+            "Q2843": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I model sub-skill dependencies before I practice." },
+            "Q2844": { "dimension": "adaptability", "polarity": 1, "content": "I adjust drills immediately based on feedback." },
+            "Q2845": { "dimension": "agency", "polarity": 1, "content": "I schedule practice first, resources second." },
+            "Q2846": { "dimension": "conscientiousness", "polarity": -1, "content": "I postpone practice until I’ve found the perfect method." },
+            "Q2847": { "dimension": "cooperativeness", "polarity": 1, "content": "I invite critique from a coach or peer weekly." },
+            "Q2848": { "dimension": "stability", "polarity": 1, "content": "I keep practicing when the early easy wins fade." }
+          },
+          "daily_prompt": "Which single sub-skill, practiced for 20 minutes today with feedback, moves the needle the most?",
+          "practices": [
+            "20-Minute Drill: one sub-skill, one metric, one tweak.",
+            "Skills Ledger: log reps, score, lesson, next change.",
+            "Friction Sweep: remove one obstacle from your practice space.",
+            "Coach Touchpoint: 10-minute critique every 7 days.",
+            "Tiny Ship: apply today’s drill in a real micro-deliverable."
+          ],
+          "transformation_indicators": [
+            "Weekly uptick in drill scores for target sub-skills",
+            "Reduced time-to-feedback after each practice block",
+            "Higher retention of learned steps across sessions",
+            "Fewer skipped practices; tighter variance in cadence",
+            "Regular micro-ships that demonstrate applied skill"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call → Catalyst",
+          "preliminary_beat": "Catalyst — Skill Development",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "Humbled novice; curious, structured, ready to measure.",
+          "ordinary_world_baseline": "Unscoped talent, scattered resources, inconsistent drills.",
+          "push_turn": "First measured rep converts doubt into trajectory."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero’s first step beyond the familiar world",
+            "connection_focus_area": "Emerging skills",
+            "connect_points": {
+              "point1": "Identify the key abilities you lack",
+              "point2": "Map out resources to develop them",
+              "point3": "Set milestones for practice"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three skills to develop",
+              "objective2": "Gather at least two learning resources",
+              "objective3": "Schedule daily practice sessions"
+            }
+          },
+          "book2": {
+            "title": "Peak",
+            "author": "Anders Ericsson",
+            "section_of_focus": "Deliberate Practice",
+            "section_description": "How focused, structured practice leads to mastery",
+            "connection_focus_area": "Skill mastery",
+            "connect_points": {
+              "point1": "Break skills into micro-tasks",
+              "point2": "Define measurable practice goals",
+              "point3": "Solicit regular feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Craft a 20-minute daily practice plan",
+              "objective2": "Choose one coach or mentor",
+              "objective3": "Implement a feedback loop"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Beliefs that enable learning and resilience",
+            "connection_focus_area": "Resilience in learning",
+            "connect_points": {
+              "point1": "Reframe mistakes as opportunities",
+              "point2": "Set stretch goals",
+              "point3": "Practice self-compassion in setbacks"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one limiting belief",
+              "objective2": "Reframe it into a growth statement",
+              "objective3": "Apply that reframe in practice"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within the Prismarium, hovering glyphs split complex arts into glowing, countable strokes; each stroke hums when executed cleanly.",
+          "symbolic_moment": "A metronome constellation clicks into being; with each perfect rep, a star brightens and holds.",
+          "emotional_landscape": "Focused, patient, quietly fierce.",
+          "contentment_definition": "Competence earned in public numbers—calm pride in repeatable excellence.",
+          "transformation_promise": "Every rep is a rung; the ladder appears as you climb."
+        },
+        "epic_novel_pages": "Page 46 - 60",
+        "epic_chapter_focus": "Immediate Reaction",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Capability Building",
+        "specific_task_group_description": "Build core skills needed to face the upcoming challenges.",
+        "specific_task_group_tagline": "Hone your abilities for the journey ahead",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Lime Green",
+        "hex_code": "#33FF33",
+        "red": 51,
+        "green": 255,
+        "blue": 51
+      },
       "personality_profile_285": {},
       "personality_profile_286": {},
       "personality_profile_287": {},
