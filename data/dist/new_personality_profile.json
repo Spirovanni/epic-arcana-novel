@@ -59933,7 +59933,203 @@
         "green": 204,
         "blue": 102
       },
-      "personality_profile_290": {},
+      "personality_profile_290": {
+        "canonical_id": "EA-290",
+        "unique_identifier": "STG 8.1.4.1",
+        "specific_task_group_title": "Mentorship",
+        "all_chapter": 290,
+        "novel_book": 8,
+        "chapter": "Chapter 10",
+        "chapter_title": "Guidance — Mentorship",
+        "type": "Specific Task Group",
+        "display_name": "The Mentor’s Boon",
+        "theme": "You go farther with a guide: borrow sight, inherit craft, and cross the threshold carrying wisdom you didn’t have to earn the hard way.",
+        "family": "Guidance — Teachers, Boons & Transfer of Wisdom",
+        "summary": "Francisco accepts counsel and receives a tangible boon—tools, maps, language—that compress the learning curve. He stops white-knuckling solo and starts apprenticing to proven patterns. Guidance turns doubt into direction; the path opens as he steps.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Knight",
+        "traits": {
+          "strengths": [
+            "seeks qualified mentors and asks precise questions",
+            "turns feedback into fast, visible iteration",
+            "models excellence before improvising",
+            "shares credit and circulates the boon to others",
+            "translates big wisdom into small daily rituals"
+          ],
+          "shadow": [
+            "idolizes mentors and silences own judgment",
+            "collects advice without committing to a path",
+            "confuses access to experts with finished work",
+            "resists mentorship due to pride or past hurt",
+            "overfits to one teacher’s style in all contexts"
+          ],
+          "growth_focus": [
+            "define one mentor for one skill and a clear cadence",
+            "ask three high-leverage questions before the next rep",
+            "convert feedback into a 7-day micro-practice",
+            "teach one distilled lesson to lock learning",
+            "retire a piece of outdated advice respectfully"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Meeting the Mentor",
+          "fiction_chapter_context": "Book 8, Chapter 10 — The boon is offered; oaths refined; the threshold brightens."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled action lightened by curiosity and trust."
+        },
+        "color_alignment": {
+          "name": "Moss Green",
+          "hsl": "80,50%,50%",
+          "rgb_hex": "#8CBF40",
+          "color_symbolism": "Living counsel—earthy steadiness with fresh growth at the edges."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.64,
+            "empathy": 0.62,
+            "openness": 0.72,
+            "orderliness": 0.56,
+            "conscientiousness": 0.63,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.61,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.57,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "conscientiousness": 0.35,
+            "cooperativeness": 0.25
+          },
+          "threshold": 0.80,
+          "top_signal_items": [
+            "Q2901",
+            "Q2902",
+            "Q2903",
+            "Q2904",
+            "Q2905",
+            "Q2906",
+            "Q2907",
+            "Q2908"
+          ],
+          "signals_map": {
+            "Q2901": { "dimension": "openness", "polarity": 1, "content": "I actively seek mentors and novel models to compress learning." },
+            "Q2902": { "dimension": "conscientiousness", "polarity": 1, "content": "I convert feedback into a concrete 7-day practice plan." },
+            "Q2903": { "dimension": "cooperativeness", "polarity": 1, "content": "I share credit and pass along what I’ve been given." },
+            "Q2904": { "dimension": "agency", "polarity": 1, "content": "I decide, then use advice to refine—not replace—my direction." },
+            "Q2905": { "dimension": "orderliness", "polarity": 1, "content": "I keep a living playbook of mentor principles and drills." },
+            "Q2906": { "dimension": "risk_tolerance", "polarity": 1, "content": "I test new guidance quickly on a small, real stake." },
+            "Q2907": { "dimension": "openness", "polarity": -1, "content": "I dismiss guidance if it isn’t mine originally." },
+            "Q2908": { "dimension": "stability", "polarity": 1, "content": "I hold steady when corrections arrive; ego doesn’t flinch long." }
+          },
+          "daily_prompt": "What question, asked of whom today, would save you a week of wandering?",
+          "practices": [
+            "Mentor Cadence: 20-minute weekly review with three prepared questions.",
+            "Boon to Drill: translate one insight into a repeatable micro-habit.",
+            "Red Pen Run: apply mentor notes immediately to one live artifact.",
+            "Teach-Back: share a 2-minute summary to an ally to cement learning.",
+            "Boon Ledger: track outcomes attributable to guidance vs. guessing."
+          ],
+          "transformation_indicators": [
+            "Shorter time from advice received to action taken",
+            "Fewer repeat mistakes noted in reviews",
+            "Growing library of personal drills/playbooks",
+            "Mentor network expands and diversifies",
+            "Peers report receiving useful pass-along insights"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Meeting the Mentor",
+          "preliminary_beat": "Guidance — Mentorship",
+          "save_the_cat_beat": "Break into Two",
+          "character_state": "Teachable, directional, equipped with a boon.",
+          "ordinary_world_baseline": "Lone-wolf effort, slow iteration, brittle confidence.",
+          "push_turn": "A received boon plus a clear cadence converts courage into capability."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Supernatural Aid",
+            "section_description": "The mentor’s boon equips the hero",
+            "connection_focus_area": "Receiving and wielding the boon",
+            "connect_points": {
+              "point1": "Name your boon (tool, map, mantra)",
+              "point2": "Define the ritual to use it daily",
+              "point3": "Identify when to pass it on"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate the boon’s purpose",
+              "objective2": "Demonstrate its daily drill",
+              "objective3": "Document criteria to teach it"
+            }
+          },
+          "book2": {
+            "title": "Mastery",
+            "author": "Robert Greene",
+            "section_of_focus": "Apprenticeship",
+            "section_description": "Deliberate learning under guidance",
+            "connection_focus_area": "Structuring mentorship",
+            "connect_points": {
+              "point1": "Choose a domain mentor",
+              "point2": "Set a feedback cadence",
+              "point3": "Define a project to absorb skills"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Establish a mentor agreement",
+              "objective2": "Collect weekly red-pen notes",
+              "objective3": "Ship one mentored deliverable"
+            }
+          },
+          "book3": {
+            "title": "The Talent Code",
+            "author": "Daniel Coyle",
+            "section_of_focus": "Deep Practice",
+            "section_description": "Myelin-building reps and chunking",
+            "connection_focus_area": "Turning advice into drills",
+            "connect_points": {
+              "point1": "Chunk a skill into micro-moves",
+              "point2": "Slow-rep the hardest segment",
+              "point3": "Run immediate feedback loops"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design three micro-drills",
+              "objective2": "Complete 7 days of reps",
+              "objective3": "Measure error-rate drop"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Verdant Vestibule, a figure robed in moss offers Francisco a cup that mirrors the sky; in its surface, paths braid into one road.",
+          "symbolic_moment": "A moss-green thread stitches his map to a living compass—the needle turns only when he asks the right question.",
+          "emotional_landscape": "Humbled, clear, quietly galvanized.",
+          "contentment_definition": "Guided autonomy—choosing with help, owning the step.",
+          "transformation_promise": "The boon you carry is the bridge you build for others."
+        },
+        "epic_novel_pages": "Page 136 - 150",
+        "epic_chapter_focus": "Guidance",
+        "epic_preliminary_scene_focus": "Break into Two",
+        "epic_novel_chapter_focus": "Scene IV: Supernatural Aid",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Mentorship",
+        "specific_task_group_description": "Engage mentors, receive the boon, and convert guidance into repeatable practice.",
+        "specific_task_group_tagline": "Ask better, learn faster, cross sooner",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Moss Green",
+        "hex_code": "#8CBF40",
+        "red": 140,
+        "green": 191,
+        "blue": 64
+      },
       "personality_profile_291": {},
       "personality_profile_292": {},
       "personality_profile_293": {},
