@@ -60524,7 +60524,203 @@
         "green": 153,
         "blue": 51
       },
-      "personality_profile_293": {},
+      "personality_profile_293": {
+        "canonical_id": "EA-293",
+        "unique_identifier": "MAT 8.1",
+        "specific_task_group_title": "Meditation",
+        "all_chapter": 293,
+        "novel_book": 8,
+        "chapter": "Chapter 13",
+        "chapter_title": "The Crossing of the Threshold — Meditation",
+        "type": "Major Activity Theme",
+        "display_name": "The Star’s Stillness",
+        "theme": "Hope is a practice: sit, breathe, integrate—then step forward with light you made inside.",
+        "family": "Guided Reflection — Stillness, Presence & Hope",
+        "summary": "At the brink of a new world, Francisco doesn’t rush—he roots. Breath slows, focus widens, and lessons knit together into quiet certainty. The Star’s promise of renewal turns practical: a repeatable stillness that carries him across the line from preparing to doing.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Star",
+        "traits": {
+          "strengths": [
+            "self-regulates under pressure through breath and attention",
+            "integrates lessons into clear next moves",
+            "cultivates hopeful focus amid uncertainty",
+            "models calm that stabilizes teams",
+            "returns to presence quickly after distraction"
+          ],
+          "shadow": [
+            "uses reflection to procrastinate decisions",
+            "spiritual bypassing—naming calm while avoiding conflict",
+            "over-indexes on solitude, under-communicates timing",
+            "treats practice as perfectionism rather than progress",
+            "waits for ‘perfect clarity’ before acting"
+          ],
+          "growth_focus": [
+            "time-box reflection, time-box action—equal containers",
+            "close each sit with one concrete next step",
+            "name one discomfort honestly before reframing it",
+            "share your threshold intention with an ally",
+            "track mood-before/mood-after across seven sessions"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "The Crossing of the Threshold",
+          "fiction_chapter_context": "Book 8, Chapter 13 — Under The Star, breath steadies; the new world begins with a single mindful step."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—calm transmuted into purposeful motion."
+        },
+        "color_alignment": {
+          "name": "Apple",
+          "hsl": "109,64%,54%",
+          "rgb_hex": "#5BD540",
+          "color_symbolism": "Renewal and grounded hope—green light at the edge of a new path."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.56,
+            "stability": 0.82,
+            "empathy": 0.68,
+            "openness": 0.74,
+            "orderliness": 0.58,
+            "conscientiousness": 0.64,
+            "adaptability": 0.62,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.63,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.42,
+            "novelty_seeking": 0.52,
+            "imagination": 0.70
+          },
+          "match_weights": {
+            "stability": 0.45,
+            "openness": 0.30,
+            "empathy": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2931",
+            "Q2932",
+            "Q2933",
+            "Q2934",
+            "Q2935",
+            "Q2936",
+            "Q2937",
+            "Q2938"
+          ],
+          "signals_map": {
+            "Q2931": { "dimension": "stability", "polarity": 1, "content": "I use breath and posture to downshift reactivity before I decide." },
+            "Q2932": { "dimension": "openness", "polarity": 1, "content": "I welcome uncertainty and observe it without rushing to fix." },
+            "Q2933": { "dimension": "conscientiousness", "polarity": 1, "content": "I end reflection sessions by writing a single next action." },
+            "Q2934": { "dimension": "agency", "polarity": 1, "content": "I cross small thresholds daily to keep momentum alive." },
+            "Q2935": { "dimension": "orderliness", "polarity": 1, "content": "I keep a simple log of sits, insights, and next steps." },
+            "Q2936": { "dimension": "social_dominance", "polarity": -1, "content": "I avoid decisive conversations by ‘needing more time to reflect.’" },
+            "Q2937": { "dimension": "empathy", "polarity": 1, "content": "My calm helps others regulate and think clearly." },
+            "Q2938": { "dimension": "adaptability", "polarity": 1, "content": "I can return to presence quickly after distraction or stress." }
+          },
+          "daily_prompt": "What single breath, thought, or step will carry you across today’s threshold?",
+          "practices": [
+            "Star Breath: 4–7–8 pattern for five cycles; notice tension leaving on the 8.",
+            "Threshold Sit: 5 minutes before any high-stakes action; finish by writing one step.",
+            "Integration Note: three lines—lesson, obstacle named, next act.",
+            "Anchor Cue: pick a physical doorway you pass; each crossing = one conscious breath.",
+            "Evening Recall: replay one moment you chose calm over urgency; tag the effect."
+          ],
+          "transformation_indicators": [
+            "Shorter time from reflection to first concrete action",
+            "Consistent pre-action sits logged for key decisions",
+            "Fewer impulsive rewrites or reversals after action",
+            "Stakeholder feedback citing steadier presence under pressure",
+            "Higher clarity ratings in post-session notes (self-reported)"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Crossing of the Threshold",
+          "preliminary_beat": "Break Into 2 — Meditation",
+          "save_the_cat_beat": "The Crossing of the Threshold",
+          "character_state": "Centered, integrating, action-ready.",
+          "ordinary_world_baseline": "Scattered prep, unchanneled insights, reactive starts.",
+          "push_turn": "Stillness converts preparation into decisive movement."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Crossing the Threshold",
+            "section_description": "The hero’s first step into the unknown and the transformation it sparks",
+            "connection_focus_area": "Embracing change",
+            "connect_points": {
+              "point1": "Identify a moment you stepped beyond your comfort zone",
+              "point2": "Reflect on how it changed you",
+              "point3": "Plan a small threshold to cross today"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a personal threshold moment",
+              "objective2": "Journal the emotional shift",
+              "objective3": "Define one actionable next step"
+            }
+          },
+          "book2": {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "section_of_focus": "Book V",
+            "section_description": "Reflections on inner calm and self-mastery",
+            "connection_focus_area": "Stoic mindfulness",
+            "connect_points": {
+              "point1": "Note a recurring thought pattern",
+              "point2": "Practice detachment from it",
+              "point3": "Reframe with a virtue-centered intention"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one recurring thought",
+              "objective2": "Reframe it stoically",
+              "objective3": "Apply a virtue-based response"
+            }
+          },
+          "book3": {
+            "title": "Wherever You Go, There You Are",
+            "author": "Jon Kabat-Zinn",
+            "section_of_focus": "Meditation Techniques",
+            "section_description": "Guided mindfulness practices for daily life",
+            "connection_focus_area": "Cultivating presence",
+            "connect_points": {
+              "point1": "Set a timer for mindful breathing",
+              "point2": "Observe bodily sensations without judgment",
+              "point3": "Return attention to breath when distracted"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a 5-minute seated meditation",
+              "objective2": "Describe three sensations noticed",
+              "objective3": "Note its effect on your mindset"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath The Star’s pale green corona, Francisco kneels at the brink; with each long breath, the roar of the unknown dims to a river’s hush.",
+          "symbolic_moment": "A single drop from the constellation’s vessel ripples across black water—when it returns, the surface is a mirror he can step through.",
+          "emotional_landscape": "Quiet, lucid, gently expectant.",
+          "contentment_definition": "A steady heart that turns fear into focus and focus into first steps.",
+          "transformation_promise": "Stillness is the bridge; hope walks across."
+        },
+        "epic_novel_pages": "Page 181 - 195",
+        "epic_chapter_focus": "The Crossing of the Threshold",
+        "epic_preliminary_scene_focus": "Break Into 2",
+        "epic_novel_chapter_focus": "Scene V: The Crossing of the Threshold",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Guided reflection",
+        "specific_task_group_description": "Practice mindfulness to integrate lessons and maintain hope during moments of transition.",
+        "specific_task_group_tagline": "Find hope through stillness",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Apple",
+        "hex_code": "#5BD540",
+        "red": 91,
+        "green": 213,
+        "blue": 64
+      },
       "personality_profile_294": {},
       "personality_profile_295": {},
       "personality_profile_296": {},
