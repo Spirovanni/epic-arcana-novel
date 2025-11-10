@@ -58948,7 +58948,203 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_285": {},
+      "personality_profile_285": {
+        "canonical_id": "EA-285",
+        "unique_identifier": "STG 8.1.2.2",
+        "specific_task_group_title": "Liberty",
+        "all_chapter": 285,
+        "novel_book": 8,
+        "chapter": "Chapter 5",
+        "chapter_title": "Reaction — Liberty",
+        "type": "Specific Task Group",
+        "display_name": "The Sovereign Path",
+        "theme": "Freedom expands when you choose your constraints: define the mission, draw the lines, and act by design—not default.",
+        "family": "Autonomy — Agency, Boundaries & Self-Direction",
+        "summary": "Choice stops being a mood and becomes a system. Francisco names the mission, cuts the noise, and installs boundaries that protect momentum. Decisions get lighter as structure carries the load; liberty grows because discipline pays the bills.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "clarifies personal mission and scope",
+            "sets clean boundaries and enforces them kindly",
+            "designs self-directed systems for work and life",
+            "balances freedom with responsibility and cadence",
+            "chooses constraints that increase long-term options"
+          ],
+          "shadow": [
+            "rebels on principle and wastes energy proving independence",
+            "confuses optionality with progress",
+            "says yes to too many new lanes at once",
+            "protects autonomy but under-communicates impact",
+            "treats boundaries as walls instead of agreements"
+          ],
+          "growth_focus": [
+            "write a one-sentence mission for the next 90 days",
+            "convert one vague boundary into a clear, shared agreement",
+            "replace three low-value choices with a default routine",
+            "install a weekly autonomy review (wins, frictions, fixes)",
+            "trade one short-term freedom for a bigger future freedom"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Reaction",
+          "fiction_chapter_context": "Book 8, Chapter 5 — The Call: oaths drafted, circles drawn; liberty aligned to purpose."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—self-determination tempered by care."
+        },
+        "color_alignment": {
+          "name": "Fern",
+          "hsl": "120,50%,60%",
+          "rgb_hex": "#66CC66",
+          "color_symbolism": "Living green—healthy boundaries that let growth flourish."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.62,
+            "empathy": 0.56,
+            "openness": 0.68,
+            "orderliness": 0.58,
+            "conscientiousness": 0.64,
+            "adaptability": 0.63,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.52,
+            "risk_tolerance": 0.71,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.60,
+            "novelty_seeking": 0.65,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "agency": 0.45,
+            "openness": 0.30,
+            "stability": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2851",
+            "Q2852",
+            "Q2853",
+            "Q2854",
+            "Q2855",
+            "Q2856",
+            "Q2857",
+            "Q2858"
+          ],
+          "signals_map": {
+            "Q2851": { "dimension": "agency", "polarity": 1, "content": "I write my mission and choose constraints that support it." },
+            "Q2852": { "dimension": "openness", "polarity": 1, "content": "I explore options, then narrow to a decisive path." },
+            "Q2853": { "dimension": "stability", "polarity": 1, "content": "I keep my word to myself even when plans change." },
+            "Q2854": { "dimension": "conscientiousness", "polarity": 1, "content": "I translate values into weekly routines and checkpoints." },
+            "Q2855": { "dimension": "orderliness", "polarity": 1, "content": "I use default rules to reduce trivial decisions." },
+            "Q2856": { "dimension": "cooperativeness", "polarity": -1, "content": "I abandon my boundaries to avoid disappointing others." },
+            "Q2857": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept short-term discomfort to secure long-term freedom." },
+            "Q2858": { "dimension": "social_dominance", "polarity": 1, "content": "I calmly assert needs and negotiate clear agreements." }
+          },
+          "daily_prompt": "What boundary or single choice today increases your freedom tomorrow?",
+          "practices": [
+            "Autonomy Contract: one-sentence 90-day mission with three do-not-dos.",
+            "Boundary Script: write and rehearse a kind, firm ‘no’ for common asks.",
+            "Decision Budget: pre-decide recurring choices (when, what, how long).",
+            "Self-Directed Sprint: 90 minutes on a mission-critical task, no inputs.",
+            "Freedom Ledger: weekly review—choices that expanded vs. shrank freedom."
+          ],
+          "transformation_indicators": [
+            "Fewer context switches; more deep work blocks held",
+            "Clear increase in ‘no’s’ aligned to mission",
+            "Lower decision fatigue reported in weekly review",
+            "Higher follow-through on self-set commitments",
+            "Stakeholders echo clarity around your boundaries"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Reaction",
+          "preliminary_beat": "Reaction — Liberty",
+          "save_the_cat_beat": "Reaction",
+          "character_state": "Self-directed, boundary-clear, mission-fixed.",
+          "ordinary_world_baseline": "External agendas, diffuse goals, reactive choices.",
+          "push_turn": "A chosen constraint unlocks real freedom and momentum."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Call to Adventure",
+            "section_description": "The hero commits to the journey beyond safety",
+            "connection_focus_area": "Taking initiative",
+            "connect_points": {
+              "point1": "Clarify your personal call to adventure",
+              "point2": "Identify allies and resources",
+              "point3": "Make one decisive action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate your commitment",
+              "objective2": "List potential allies",
+              "objective3": "Execute a first step"
+            }
+          },
+          "book2": {
+            "title": "Drive",
+            "author": "Daniel H. Pink",
+            "section_of_focus": "Autonomy",
+            "section_description": "The desire to direct our own lives",
+            "connection_focus_area": "Self-determination",
+            "connect_points": {
+              "point1": "Define your personal mission",
+              "point2": "Design your own work system",
+              "point3": "Set boundaries to protect autonomy"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a mission statement",
+              "objective2": "Outline your ideal routine",
+              "objective3": "Establish three boundary rules"
+            }
+          },
+          "book3": {
+            "title": "The Road Less Traveled",
+            "author": "M. Scott Peck",
+            "section_of_focus": "Discipline",
+            "section_description": "Balancing freedom with responsibility",
+            "connection_focus_area": "Sustainable liberty",
+            "connect_points": {
+              "point1": "Identify freedom’s boundaries",
+              "point2": "Plan daily disciplines",
+              "point3": "Reflect on autonomy’s costs"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write down one discipline to adopt",
+              "objective2": "Track your adherence for a week",
+              "objective3": "Journal reflections daily"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Rim of Choices, Francisco draws a circle of fern-light; within it, the noise of ten thousand futures quiets to one clear vow.",
+          "symbolic_moment": "A key of living jade clicks into a lock only he can carry—doors close behind him so the path ahead can open.",
+          "emotional_landscape": "Resolute, clean, quietly powerful.",
+          "contentment_definition": "Freedom as alignment: fewer, better yeses guarded by graceful noes.",
+          "transformation_promise": "Boundaries make room for destiny."
+        },
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Autonomy",
+        "specific_task_group_description": "Embrace the freedom to set your own course and make empowered decisions.",
+        "specific_task_group_tagline": "Claim your independence",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Fern",
+        "hex_code": "#66CC66",
+        "red": 102,
+        "green": 204,
+        "blue": 102
+      },
       "personality_profile_286": {},
       "personality_profile_287": {},
       "personality_profile_288": {},
