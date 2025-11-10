@@ -58357,7 +58357,203 @@
         "green": 255,
         "blue": 153
       },
-      "personality_profile_282": {},
+      "personality_profile_282": {
+        "canonical_id": "EA-282",
+        "unique_identifier": "STG 8.1.1.2",
+        "specific_task_group_title": "Containment",
+        "all_chapter": 282,
+        "novel_book": 8,
+        "chapter": "Chapter 2",
+        "chapter_title": "The Ordinary World — Containment",
+        "type": "Specific Task Group",
+        "display_name": "The Reef Warden",
+        "theme": "Boundaries create balance: ring-fence what matters, route the rest, and power flows where it should—safely.",
+        "family": "Stability — Limits, Safety Protocols & Resource Stewardship",
+        "summary": "In the first tremor after arrival, Francisco stops trying to hold the ocean in his hands and builds channels. He labels, gates, and grounds. Requests hit buffers, power has rails, and calm returns. With containment, force becomes usable instead of overwhelming.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Four",
+        "traits": {
+          "strengths": [
+            "sets clear boundaries and communicates them early",
+            "prioritizes essential work and defers the rest without guilt",
+            "designs safety checks for high-risk actions",
+            "tracks resources and capacity with disciplined reviews",
+            "creates stable routines that others can rely on"
+          ],
+          "shadow": [
+            "can become rigid under stress and resist iteration",
+            "over-controls to avoid uncertainty, slowing momentum",
+            "confuses hoarding with safeguarding",
+            "says yes to ‘just one more’ and overloads the system",
+            "treats boundaries as walls instead of valves"
+          ],
+          "growth_focus": [
+            "treat each boundary as adjustable: specify conditions to open/close",
+            "pair every limit with an escalation path",
+            "audit commitments weekly and sunset one low-value item",
+            "separate safety constraints (non-negotiable) from preference limits",
+            "practice a ‘clean no’ script tied to capacity and priorities"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Inciting Incident",
+          "fiction_chapter_context": "Book 8, Chapter 2 — Inciting surge: first walls, first valves, first vows."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled limits softened by flexibility and optimism."
+        },
+        "color_alignment": {
+          "name": "Reef",
+          "hsl": "90,100%,80%",
+          "rgb_hex": "#CCFF99",
+          "color_symbolism": "Sea-glass calm: living barriers that guide currents and protect life."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.86,
+            "empathy": 0.62,
+            "openness": 0.54,
+            "orderliness": 0.82,
+            "conscientiousness": 0.84,
+            "adaptability": 0.57,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.60,
+            "risk_tolerance": 0.32,
+            "emotional_intensity": 0.45,
+            "social_dominance": 0.40,
+            "novelty_seeking": 0.38,
+            "imagination": 0.52
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "conscientiousness": 0.35,
+            "orderliness": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2821",
+            "Q2822",
+            "Q2823",
+            "Q2824",
+            "Q2825",
+            "Q2826",
+            "Q2827",
+            "Q2828"
+          ],
+          "signals_map": {
+            "Q2821": { "dimension": "stability", "polarity": 1, "content": "I define clear limits so critical work remains protected." },
+            "Q2822": { "dimension": "conscientiousness", "polarity": 1, "content": "I run routine safety checks before high-impact actions." },
+            "Q2823": { "dimension": "orderliness", "polarity": 1, "content": "I track capacity and adjust intake to match reality." },
+            "Q2824": { "dimension": "agency", "polarity": 1, "content": "I say no or not yet when requests exceed our constraints." },
+            "Q2825": { "dimension": "risk_tolerance", "polarity": -1, "content": "I proceed without guardrails when time is short." },
+            "Q2826": { "dimension": "adaptability", "polarity": 1, "content": "I treat boundaries as valves: open or close with conditions." },
+            "Q2827": { "dimension": "orderliness", "polarity": 1, "content": "I audit commitments weekly and retire low-value items." },
+            "Q2828": { "dimension": "stability", "polarity": 1, "content": "I separate non-negotiable safety constraints from preferences." }
+          },
+          "daily_prompt": "Which single boundary, clarified today, will prevent tomorrow’s fire drill?",
+          "practices": [
+            "Capacity Ledger: list active commitments; mark max WIP and remove one item.",
+            "Valve Design: write open/close criteria for one boundary and share it.",
+            "Guardrail Pass: add a pre-flight check to any high-risk action.",
+            "Sunset Ritual: archive one legacy task and document why.",
+            "Clean No Script: rehearse a values-based decline with an alternative path."
+          ],
+          "transformation_indicators": [
+            "Fewer priority collisions and emergency escalations",
+            "Stable WIP limits observed across cycles",
+            "Lead time drops for essential work",
+            "Higher satisfaction scores from stakeholders on clarity and predictability",
+            "Incident rate decreases after guardrail adoption"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Inciting Incident — Containment",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Calm under pressure; channels surge through clearly labeled routes.",
+          "ordinary_world_baseline": "Over-commitment, unclear intake, safety by luck not design.",
+          "push_turn": "First surge exposes weak seams; boundaries become explicit and operational."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Essentialism",
+            "author": "Greg McKeown",
+            "section_of_focus": "Explore",
+            "section_description": "Learning to say no to the unessential",
+            "connection_focus_area": "Prioritizing what matters",
+            "connect_points": {
+              "point1": "Identify three non-essentials",
+              "point2": "Eliminate one commitment",
+              "point3": "Track restored focus"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List non-essentials in your life",
+              "objective2": "Remove one distraction",
+              "objective3": "Monitor focus gains"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Designing cues for new behaviors",
+            "connection_focus_area": "Shaping your environment",
+            "connect_points": {
+              "point1": "Choose one habit to contain",
+              "point2": "Set up an environmental cue",
+              "point3": "Measure progress daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your cue and habit",
+              "objective2": "Implement the cue",
+              "objective3": "Track daily consistency"
+            }
+          },
+          "book3": {
+            "title": "Boundaries",
+            "author": "Henry Cloud & John Townsend",
+            "section_of_focus": "What Are Boundaries?",
+            "section_description": "Understanding healthy limits",
+            "connection_focus_area": "Protecting your energy",
+            "connect_points": {
+              "point1": "Name one boundary you need",
+              "point2": "Communicate it clearly",
+              "point3": "Enforce it consistently"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a personal boundary",
+              "objective2": "Practice stating it",
+              "objective3": "Reflect on its effect"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Breakwater of Mirrors, currents slam the pylons; Francisco etches runes that turn the surge into ordered channels.",
+          "symbolic_moment": "A translucent valve-sigil glows; when he speaks the vow, wild tide threads into a steady braid.",
+          "emotional_landscape": "Grounded, vigilant, dutifully calm.",
+          "contentment_definition": "Protection without paralysis—living limits that let life move safely.",
+          "transformation_promise": "With right containers, power serves purpose instead of swallowing it."
+        },
+        "epic_novel_pages": "Page 16 - 30",
+        "epic_chapter_focus": "Inciting Incident",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Scene I: The Ordinary World",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Stability",
+        "specific_task_group_description": "Establish boundaries to manage resources effectively and maintain balance.",
+        "specific_task_group_tagline": "Keep your elements in check",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Reef",
+        "hex_code": "#CCFF99",
+        "red": 204,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_283": {},
       "personality_profile_284": {},
       "personality_profile_285": {},
