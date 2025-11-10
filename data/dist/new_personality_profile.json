@@ -61312,7 +61312,203 @@
         "green": 255,
         "blue": 125
       },
-      "personality_profile_297": {},
+      "personality_profile_297": {
+        "canonical_id": "EA-297",
+        "unique_identifier": "STG 8.2.2.1",
+        "specific_task_group_title": "Prescience",
+        "all_chapter": 297,
+        "novel_book": 8,
+        "chapter": "Chapter 17",
+        "chapter_title": "Old World Contrast — Prescience",
+        "type": "Specific Task Group",
+        "display_name": "The Watchtower",
+        "theme": "See three moves ahead, prune bad futures early, and let contingency—not panic—carry the weight.",
+        "family": "Foresight — Anticipation, Scenarios & Contingencies",
+        "summary": "Francisco climbs from gut guesses to disciplined foresight: mapping scenarios, running premortems, and building graceful off-ramps. The more futures he rehearses, the quieter the present becomes; surprise turns into prepared response.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "thinks in branches, not lines (scenario trees)",
+            "spots second- and third-order effects quickly",
+            "uses premortems to de-risk bold moves",
+            "keeps contingency kits ready without fanfare",
+            "updates beliefs fast when evidence changes"
+          ],
+          "shadow": [
+            "analysis drag—over-modeling low-probability paths",
+            "confuses caution with excellence; action lags",
+            "signal hoarding—waits for perfect certainty",
+            "telegraphs worry to allies, dampening momentum",
+            "locks into a favorite scenario and resists contrary data"
+          ],
+          "growth_focus": [
+            "timebox analysis; ship a 70% plan with contingencies",
+            "run a daily micro-premortem on one key action",
+            "write a kill-switch rule for sunk-cost moments",
+            "practice weekly belief-updates (what changed and why)",
+            "appoint a red team to challenge your favorite plan"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Old World Contrast (Resolution)",
+          "fiction_chapter_context": "Book 8, Chapter 17 — Approach: paths diverge; the watchtower lights reveal costs the old world could not bear to see."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 1—clarity channeled into principled plans."
+        },
+        "color_alignment": {
+          "name": "Mindaro",
+          "hsl": "75,100%,68%",
+          "rgb_hex": "#D6FF5C",
+          "color_symbolism": "Signal-green—beacons of early warning and prepared response."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.66,
+            "empathy": 0.55,
+            "openness": 0.78,
+            "orderliness": 0.61,
+            "conscientiousness": 0.71,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.86,
+            "cooperativeness": 0.58,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.62,
+            "imagination": 0.73
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.45,
+            "orderliness": 0.30,
+            "openness": 0.25
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q2971",
+            "Q2972",
+            "Q2973",
+            "Q2974",
+            "Q2975",
+            "Q2976",
+            "Q2977",
+            "Q2978"
+          ],
+          "signals_map": {
+            "Q2971": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I sketch scenario branches before I commit to a plan." },
+            "Q2972": { "dimension": "orderliness", "polarity": 1, "content": "I keep written contingencies with clear triggers." },
+            "Q2973": { "dimension": "openness", "polarity": 1, "content": "I revise predictions quickly when facts change." },
+            "Q2974": { "dimension": "conscientiousness", "polarity": 1, "content": "I run premortems to surface hidden failure points." },
+            "Q2975": { "dimension": "risk_tolerance", "polarity": 1, "content": "I take calculated risks when downside is capped." },
+            "Q2976": { "dimension": "agency", "polarity": 1, "content": "I act on 70% clarity and let contingencies cover the rest." },
+            "Q2977": { "dimension": "adaptability", "polarity": 1, "content": "I pivot without drama when a trigger condition is met." },
+            "Q2978": { "dimension": "emotional_intensity", "polarity": -1, "content": "I delay action until I feel absolutely certain." }
+          },
+          "daily_prompt": "What plausible failure can you preempt today with a tiny contingency?",
+          "practices": [
+            "Premortem Drill: write ‘How did this fail?’ then fix the top 3 causes.",
+            "Three-Scenario Map: best/base/worst with triggers and shifts.",
+            "Trigger Board: if-then rules that auto-move you to Plan B.",
+            "Red-Team 30: invite a critic to break your plan for 30 minutes.",
+            "Contingency Cache: prebuild templates, comms, and checklists."
+          ],
+          "transformation_indicators": [
+            "Fewer ‘unforeseen’ blockers; issues appear earlier in logs",
+            "On-time pivots at predefined trigger thresholds",
+            "Shorter recovery time from setbacks",
+            "Higher hit-rate on estimates and forecasts",
+            "Stakeholders report increased calm during change"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Old World Contrast (Resolution)",
+          "preliminary_beat": "Old World Contrast — Prescience",
+          "save_the_cat_beat": "Old world contrast (resolution)",
+          "character_state": "Eyes-up strategist; plans branched, contingencies primed.",
+          "ordinary_world_baseline": "Linear planning, recency bias, gut-only bets.",
+          "push_turn": "Seeing the downstream cost of inaction snaps the plan into focus."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Art of War",
+            "author": "Sun Tzu",
+            "section_of_focus": "Planning and Preparation",
+            "section_description": "Strategies for foreseeing and countering threats.",
+            "connection_focus_area": "Strategic anticipation",
+            "connect_points": {
+              "point1": "Identify emerging risks",
+              "point2": "Map potential scenarios",
+              "point3": "Develop contingency plans"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft three ‘what-if’ scenarios",
+              "objective2": "Outline countermeasures for each",
+              "objective3": "Present your plan to a peer"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "Prospective Hindsight",
+            "section_description": "Techniques to reduce bias in forecasting.",
+            "connection_focus_area": "Accurate foresight",
+            "connect_points": {
+              "point1": "Recognize cognitive biases",
+              "point2": "Apply premortem analysis",
+              "point3": "Adjust predictions accordingly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Conduct a premortem on a past project",
+              "objective2": "List two biases you encountered",
+              "objective3": "Propose mitigation strategies"
+            }
+          },
+          "book3": {
+            "title": "Futureproof",
+            "author": "Kevin Roose",
+            "section_of_focus": "Anticipating Change",
+            "section_description": "How to prepare for technological shifts.",
+            "connection_focus_area": "Agile foresight",
+            "connect_points": {
+              "point1": "Scan emerging trends",
+              "point2": "Identify skills gaps",
+              "point3": "Plan upskilling steps"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three upcoming trends",
+              "objective2": "Assess your readiness",
+              "objective3": "Enroll in one learning resource"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "From the watchtower above the flux, Francisco draws branching lines of light across the sea of time; each path answers with a distant echo.",
+          "symbolic_moment": "A lantern of Mindaro fire flares when a hidden risk is named—fear dissolves into choreography.",
+          "emotional_landscape": "Composed, alert, quietly decisive.",
+          "contentment_definition": "Peace as preparedness: calm born of options already rehearsed.",
+          "transformation_promise": "By seeing sooner, he saves more."
+        },
+        "epic_novel_pages": "Page 241 - 255",
+        "epic_chapter_focus": "Old world contrast (resolution)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Foresight",
+        "specific_task_group_description": "Cultivate your ability to anticipate obstacles and chart a clear path forward.",
+        "specific_task_group_tagline": "See tomorrow today",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Mindaro",
+        "hex_code": "#D6FF5C",
+        "red": 214,
+        "green": 255,
+        "blue": 92
+      },
       "personality_profile_298": {},
       "personality_profile_299": {},
       "personality_profile_300": {},
