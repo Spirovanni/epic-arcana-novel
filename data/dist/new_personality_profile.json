@@ -61509,7 +61509,203 @@
         "green": 255,
         "blue": 92
       },
-      "personality_profile_298": {},
+      "personality_profile_298": {
+        "canonical_id": "EA-298",
+        "unique_identifier": "STG 8.2.2.2",
+        "specific_task_group_title": "Unknown",
+        "all_chapter": 298,
+        "novel_book": 8,
+        "chapter": "Chapter 18",
+        "chapter_title": "Build-up — Unknown",
+        "type": "Specific Task Group",
+        "display_name": "The Fogwalker",
+        "theme": "Clarity is earned inside uncertainty: decide with ~60% information, run small bets, update fast.",
+        "family": "Ambiguity Tolerance — Optionality, Experimentation & Calm Under Uncertainty",
+        "summary": "Francisco stops waiting for perfect maps and starts moving through the mist. He treats uncertainty as terrain, not a trap—making reversible decisions, instrumenting experiments, and updating beliefs quickly. Confidence comes from cadence: sense → decide → test → learn → iterate.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Eight",
+        "traits": {
+          "strengths": [
+            "stays calm and decisive with incomplete data",
+            "designs reversible, low-cost experiments",
+            "updates beliefs quickly when evidence shifts",
+            "balances instinct with lightweight validation",
+            "builds robustness and option value under volatility"
+          ],
+          "shadow": [
+            "lingers in exploration and delays necessary commits",
+            "uses ‘unknowns’ to avoid accountability",
+            "collects signals without defining success criteria",
+            "confuses chaos with creativity",
+            "neglects documentation that would compound learning"
+          ],
+          "growth_focus": [
+            "define a 7-day experiment with a clear success metric",
+            "time-box research; decide at 60% confidence",
+            "write a premortem and a reversal plan before launching",
+            "log a daily Bayesian update: what moved your belief and why",
+            "capture experiment results in a one-page memo within 24 hours"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Build-up (set-up)",
+          "fiction_chapter_context": "Book 8, Chapter 18 — Approach to the Innermost Cave: navigating by instruments through conceptual fog."
+        },
+        "enneagram_link": {
+          "family_number": 7,
+          "note": "Enthusiast integrating to 5—playful optionality grounded by inquiry and evidence."
+        },
+        "color_alignment": {
+          "name": "Pear",
+          "hsl": "75,100%,60%",
+          "rgb_hex": "#CCFF33",
+          "color_symbolism": "Signal-green caution light: proceed, but instrument the path."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.66,
+            "stability": 0.58,
+            "empathy": 0.55,
+            "openness": 0.78,
+            "orderliness": 0.50,
+            "conscientiousness": 0.62,
+            "adaptability": 0.82,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.57,
+            "risk_tolerance": 0.70,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.76,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "adaptability": 0.45,
+            "openness": 0.30,
+            "risk_tolerance": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q2981",
+            "Q2982",
+            "Q2983",
+            "Q2984",
+            "Q2985",
+            "Q2986",
+            "Q2987",
+            "Q2988"
+          ],
+          "signals_map": {
+            "Q2981": { "dimension": "adaptability", "polarity": 1, "content": "I can act decisively with partial information and adjust as I learn." },
+            "Q2982": { "dimension": "openness", "polarity": 1, "content": "I explore multiple hypotheses before favoring one." },
+            "Q2983": { "dimension": "risk_tolerance", "polarity": 1, "content": "I prefer reversible bets to preserve option value." },
+            "Q2984": { "dimension": "conscientiousness", "polarity": 1, "content": "I set explicit success metrics for experiments." },
+            "Q2985": { "dimension": "orderliness", "polarity": 1, "content": "I document decisions, assumptions, and update notes." },
+            "Q2986": { "dimension": "stability", "polarity": 1, "content": "I remain calm when outcomes are ambiguous." },
+            "Q2987": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I use models to reason about unknowns and edge cases." },
+            "Q2988": { "dimension": "agency", "polarity": -1, "content": "I postpone action until certainty is guaranteed." }
+          },
+          "daily_prompt": "What decision will you make today at 60% confidence—and what metric will tell you to continue, pivot, or stop?",
+          "practices": [
+            "Two-Way Door Rule: prefer reversible decisions; decide fast, revisit with data.",
+            "Premortem & Reversal Plan: write failure modes and a safe rollback before launch.",
+            "Bayesian Log: track belief updates with brief ‘evidence → new odds’ notes.",
+            "Tiny Stress Tests: add small, controlled volatility to build antifragility.",
+            "Instrumented Bets: define a single success metric and a check-in interval."
+          ],
+          "transformation_indicators": [
+            "Shorter decision cycles with higher learning velocity",
+            "Clear success metrics attached to most initiatives",
+            "Documented belief updates and fewer re-lit debates",
+            "Greater psychological calm reported under uncertainty",
+            "Higher ratio of reversible to irreversible decisions"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Build-up (set-up)",
+          "preliminary_beat": "Build-up — Unknown",
+          "save_the_cat_beat": "Build-up (set-up)",
+          "character_state": "Instrumented, option-rich, calm under ambiguity.",
+          "ordinary_world_baseline": "Overanalysis, demand for certainty, decision paralysis.",
+          "push_turn": "A reversible experiment converts fog into feedback."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Black Swan",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Navigating the Unexpected",
+            "section_description": "Thriving amid rare, unpredictable events.",
+            "connection_focus_area": "Decision-making under uncertainty",
+            "connect_points": {
+              "point1": "Identify rare risk factors",
+              "point2": "Build robustness",
+              "point3": "Plan for tail events"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a black swan in your field",
+              "objective2": "Outline resilience measures",
+              "objective3": "Develop an early warning signal"
+            }
+          },
+          "book2": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Benefiting from Disorder",
+            "section_description": "How volatility can strengthen systems.",
+            "connection_focus_area": "Leverage unpredictability",
+            "connect_points": {
+              "point1": "Identify points of fragility",
+              "point2": "Introduce small stresses",
+              "point3": "Measure improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Run a small stress test",
+              "objective2": "Record its impact",
+              "objective3": "Plan further iterations"
+            }
+          },
+          "book3": {
+            "title": "The Gift of Fear",
+            "author": "Gavin de Becker",
+            "section_of_focus": "Trusting Instincts",
+            "section_description": "Leveraging intuition when logic fails.",
+            "connection_focus_area": "Instinctive decision-making",
+            "connect_points": {
+              "point1": "Recognize gut signals",
+              "point2": "Validate with data",
+              "point3": "Act swiftly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Note one instinct you heeded",
+              "objective2": "Correlate with factual outcome",
+              "objective3": "Refine your intuition practice"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a sea of luminous fog, Francisco raises a sextant of green light; stars are veiled, but the instruments hum with quiet truth.",
+          "symbolic_moment": "A two-way door appears in the haze—he steps through, tethered by a silver recall thread he can pull at will.",
+          "emotional_landscape": "Steady, inquisitive, alert to subtle signals.",
+          "contentment_definition": "Peace without guarantees: progress measured in learned signals, not perfect foresight.",
+          "transformation_promise": "When the map is missing, build the compass."
+        },
+        "epic_novel_pages": "Page 256 - 270",
+        "epic_chapter_focus": "Build-up (set-up)",
+        "epic_preliminary_scene_focus": "Approach to the Innermost Cave",
+        "epic_novel_chapter_focus": "Scene VII: The Road of Trials",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Ambiguity Tolerance",
+        "specific_task_group_description": "Learn to make confident decisions when outcomes are unclear and information is limited.",
+        "specific_task_group_tagline": "Embrace uncertainty",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Pear",
+        "hex_code": "#CCFF33",
+        "red": 204,
+        "green": 255,
+        "blue": 51
+      },
       "personality_profile_299": {},
       "personality_profile_300": {},
       "personality_profile_301": {},
