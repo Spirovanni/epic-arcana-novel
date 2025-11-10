@@ -59145,7 +59145,203 @@
         "green": 204,
         "blue": 102
       },
-      "personality_profile_286": {},
+      "personality_profile_286": {
+        "canonical_id": "EA-286",
+        "unique_identifier": "STG 8.1.2.3",
+        "specific_task_group_title": "Abundance",
+        "all_chapter": 286,
+        "novel_book": 8,
+        "chapter": "Chapter 6",
+        "chapter_title": "The Call to Adventure — Abundance",
+        "type": "Specific Task Group",
+        "display_name": "The Plenty Engine",
+        "theme": "Abundance compounds when resources move through systems: inventory what you have, route it with intention, and let value circulate.",
+        "family": "Resourcefulness — Assets, Ingenuity & Compounding",
+        "summary": "Resourcefulness turns intent into compounding value. Francisco inventories time, talent, tools, and allies; he builds simple loops that turn small wins into flywheels. Abundance shows up as flow, not hoarding—buffers grow, waste drops, and every input finds a higher use.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "King",
+        "traits": {
+          "strengths": [
+            "spots underused assets and recombines them creatively",
+            "builds repeatable systems that compound value over time",
+            "maintains buffers and reserves to reduce fragility",
+            "invests in relationships and knowledge networks",
+            "tests small reversible bets before scaling"
+          ],
+          "shadow": [
+            "chases more inputs instead of optimizing the ones on hand",
+            "hoards options and delays decisive commitment",
+            "over-engineers systems that slow momentum",
+            "confuses revenue for true value creation",
+            "treats personal energy as an infinite resource"
+          ],
+          "growth_focus": [
+            "draft a 90-day resource map (assets, gaps, allies)",
+            "install a 10% buffer rule for time and budget",
+            "run one weekly tiny-bet experiment with clear kill criteria",
+            "sunset one non-performing project to free capacity",
+            "track three compounding metrics: cash, time, energy"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "The Call to Adventure",
+          "fiction_chapter_context": "Book 8, Chapter 6 — The summons of plenty: new wells open; supply meets purpose as ledgers turn to living maps."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—ambition anchored by stewardship and team systems."
+        },
+        "color_alignment": {
+          "name": "Free Speech Green",
+          "hsl": "120,100%,40%",
+          "rgb_hex": "#00CC00",
+          "color_symbolism": "Verdant prosperity—growth guided by wise cultivation."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.66,
+            "empathy": 0.58,
+            "openness": 0.72,
+            "orderliness": 0.69,
+            "conscientiousness": 0.77,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.62,
+            "risk_tolerance": 0.64,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.67,
+            "imagination": 0.69
+          },
+          "match_weights": {
+            "conscientiousness": 0.40,
+            "orderliness": 0.30,
+            "adaptability": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2861",
+            "Q2862",
+            "Q2863",
+            "Q2864",
+            "Q2865",
+            "Q2866",
+            "Q2867",
+            "Q2868"
+          ],
+          "signals_map": {
+            "Q2861": { "dimension": "agency", "polarity": 1, "content": "I direct where resources flow instead of letting urgency decide." },
+            "Q2862": { "dimension": "conscientiousness", "polarity": 1, "content": "I track inputs, outputs, and lessons to refine my system." },
+            "Q2863": { "dimension": "orderliness", "polarity": 1, "content": "I keep buffers and templates that reduce waste and rework." },
+            "Q2864": { "dimension": "adaptability", "polarity": 1, "content": "I re-route around constraints quickly without losing aim." },
+            "Q2865": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I spot patterns that let me recombine assets for higher leverage." },
+            "Q2866": { "dimension": "risk_tolerance", "polarity": 1, "content": "I place small, reversible bets and scale only what proves out." },
+            "Q2867": { "dimension": "cooperativeness", "polarity": 1, "content": "I cultivate reciprocal value with partners and share upside." },
+            "Q2868": { "dimension": "novelty_seeking", "polarity": -1, "content": "I chase new tools even when current ones would suffice." }
+          },
+          "daily_prompt": "What small asset can you compound today, and through which simple loop will it grow?",
+          "practices": [
+            "Asset Inventory Canvas: list time, skills, tools, capital, allies; tag by leverage.",
+            "Leverage Ladder: connect each asset to one higher-value use case.",
+            "10% Buffer Rule: reserve time and budget to absorb shocks and seize chances.",
+            "Tiny Bets Lab: run a weekly reversible experiment with explicit stop/go metrics.",
+            "Compounding Journal: track ROI per hour and reuse rate of templates/systems."
+          ],
+          "transformation_indicators": [
+            "Larger time and cash buffers maintained consistently",
+            "Higher reuse of templates, checklists, and automations",
+            "Waste and rework trend downward across sprints",
+            "ROI per focused hour increases quarter over quarter",
+            "Allies engaged in repeat collaborations with shared wins"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "The Call to Adventure — Abundance",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "Resourced, inventive, leverage-minded.",
+          "ordinary_world_baseline": "Scarcity reflexes, scattered spending, ad-hoc effort.",
+          "push_turn": "A small, repeatable win proves abundance is designed, not discovered."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Think and Grow Rich",
+            "author": "Napoleon Hill",
+            "section_of_focus": "Desire and Faith",
+            "section_description": "Harnessing belief to attract opportunity",
+            "connection_focus_area": "Cultivating abundance mindset",
+            "connect_points": {
+              "point1": "Clarify your deepest desires",
+              "point2": "Visualize resource fulfillment",
+              "point3": "Affirm daily abundance beliefs"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write a clear desire statement",
+              "objective2": "Create a vision board",
+              "objective3": "Recite affirmations daily"
+            }
+          },
+          "book2": {
+            "title": "Abundance",
+            "author": "Peter H. Diamandis & Steven Kotler",
+            "section_of_focus": "The Future of Plenty",
+            "section_description": "How technology creates limitless resources",
+            "connection_focus_area": "Leveraging innovation",
+            "connect_points": {
+              "point1": "Identify emerging technologies",
+              "point2": "Map them to your goals",
+              "point3": "Plan small experiments"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three relevant technologies",
+              "objective2": "Draft an experiment plan",
+              "objective3": "Launch one pilot project"
+            }
+          },
+          "book3": {
+            "title": "The Richest Man in Babylon",
+            "author": "George S. Clason",
+            "section_of_focus": "Seven Cures for a Lean Purse",
+            "section_description": "Timeless principles for wealth accumulation",
+            "connection_focus_area": "Practical resource management",
+            "connect_points": {
+              "point1": "Pay yourself first",
+              "point2": "Control expenditures",
+              "point3": "Invest wisely"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Allocate 10% of income to savings",
+              "objective2": "Track every expense",
+              "objective3": "Make one small investment"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Vault of Living Jade, silent conduits thrum awake as Francisco reroutes dormant channels; unused stores quicken into rivers.",
+          "symbolic_moment": "A seed-coin splits and grows ring on ring, minting light into water—what is given returns increased.",
+          "emotional_landscape": "Assured, generous, quietly electric.",
+          "contentment_definition": "Enoughness multiplied by stewardship—flow over stock.",
+          "transformation_promise": "When value circulates, everything grows."
+        },
+        "epic_novel_pages": "Page 76 - 90",
+        "epic_chapter_focus": "The Call to Adventure",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_novel_chapter_focus": "Scene II: The Call to Adventure",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Resourcefulness",
+        "specific_task_group_description": "Gather and leverage resources to support your quest.",
+        "specific_task_group_tagline": "Leverage what you have to thrive",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Free Speech Green",
+        "hex_code": "#00CC00",
+        "red": 0,
+        "green": 204,
+        "blue": 0
+      },
       "personality_profile_287": {},
       "personality_profile_288": {},
       "personality_profile_289": {},
