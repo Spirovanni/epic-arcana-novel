@@ -59342,7 +59342,203 @@
         "green": 204,
         "blue": 0
       },
-      "personality_profile_287": {},
+      "personality_profile_287": {
+        "canonical_id": "EA-287",
+        "unique_identifier": "STG 8.1.3.1",
+        "specific_task_group_title": "Tested Faith",
+        "all_chapter": 287,
+        "novel_book": 8,
+        "chapter": "Chapter 7",
+        "chapter_title": "Refusal of the Call — Tested Faith",
+        "type": "Specific Task Group",
+        "display_name": "The Unshaken Sentinel",
+        "theme": "Conviction survives the storm—name the fear, anchor to purpose, and take the next brave inch, today and again tomorrow.",
+        "family": "Resilience — Conviction, Perseverance & Courage",
+        "summary": "When the chorus of doubt gets loud, Francisco doesn’t win by arguing—he wins by acting. He names the fear, shrinks the target, and keeps a promise small enough to complete and strong enough to compound. Courage becomes a ritual: micro-commitments, honest check-ins, and a purpose line he can carry into any weather.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Nine",
+        "traits": {
+          "strengths": [
+            "anchors to a clear purpose under pressure",
+            "converts doubt into tiny courageous actions",
+            "keeps momentum with daily micro-commitments",
+            "seeks support and accountability early",
+            "reframes setbacks into training data"
+          ],
+          "shadow": [
+            "white-knuckles through burnout instead of resting",
+            "catastrophizes future outcomes under stress",
+            "stalls waiting to ‘feel ready’",
+            "hides fears, limiting useful feedback",
+            "confuses stubbornness with resilience"
+          ],
+          "growth_focus": [
+            "write a one-line purpose you can recite under stress",
+            "complete a daily 5-minute ‘courage rep’ before noon",
+            "keep a ‘wins dossier’—10 lines you reread when wobbling",
+            "ask one ally for perspective on your next hard step",
+            "define a reset ritual for when plans derail (90 seconds)"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Dweller Between the Waters",
+          "chapter_theme": "Refusal of the Call",
+          "fiction_chapter_context": "Book 8, Chapter 7 — Refusal and resolve: doubts rise; the vow holds."
+        },
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "Loyalist integrating to 9—courage steadied by inner calm."
+        },
+        "color_alignment": {
+          "name": "Kelly Green",
+          "hsl": "105,100%,40%",
+          "rgb_hex": "#33CC00",
+          "color_symbolism": "Living grit—evergreen steadiness that weathers the gale."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.78,
+            "empathy": 0.59,
+            "openness": 0.60,
+            "orderliness": 0.62,
+            "conscientiousness": 0.75,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.64,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.50,
+            "imagination": 0.57
+          },
+          "match_weights": {
+            "stability": 0.45,
+            "conscientiousness": 0.30,
+            "agency": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q2871",
+            "Q2872",
+            "Q2873",
+            "Q2874",
+            "Q2875",
+            "Q2876",
+            "Q2877",
+            "Q2878"
+          ],
+          "signals_map": {
+            "Q2871": { "dimension": "stability", "polarity": 1, "content": "I keep faith anchored to purpose when stress spikes." },
+            "Q2872": { "dimension": "conscientiousness", "polarity": 1, "content": "I hold small daily commitments even on bad days." },
+            "Q2873": { "dimension": "agency", "polarity": 1, "content": "I choose one courageous action rather than waiting to feel ready." },
+            "Q2874": { "dimension": "adaptability", "polarity": 1, "content": "I adjust plans without abandoning the mission." },
+            "Q2875": { "dimension": "cooperativeness", "polarity": 1, "content": "I ask a trusted ally for perspective when I doubt." },
+            "Q2876": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept manageable risk to break inertia." },
+            "Q2877": { "dimension": "emotional_intensity", "polarity": -1, "content": "I let fear set my schedule." },
+            "Q2878": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I reframe setbacks as signal, not verdict." }
+          },
+          "daily_prompt": "What single brave inch will you take today—and by what time?",
+          "practices": [
+            "Courage Rep: a 5-minute uncomfortable action before noon.",
+            "Anchor Line: carry and recite a one-sentence purpose under stress.",
+            "Wins Dossier: keep 10 lines of past proof; reread before hard tasks.",
+            "Fear→Plan: write the fear, then script a 90-second counter-move.",
+            "Accountability Ping: 30-second daily check-in with a trusted ally."
+          ],
+          "transformation_indicators": [
+            "Shorter delay before starting difficult tasks",
+            "Greater streaks of daily micro-commitments",
+            "Faster recovery after disruptions or misses",
+            "Earlier outreach for perspective and support",
+            "Fewer catastrophic narratives in weekly journal"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Debate — Tested Faith",
+          "save_the_cat_beat": "Action",
+          "character_state": "Steady under strain; purpose-first, inch-at-a-time.",
+          "ordinary_world_baseline": "Second-guessing, delayed starts, brittle willpower.",
+          "push_turn": "A single completed ‘courage rep’ proves momentum is stronger than fear."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Refusal of the Call",
+            "section_description": "The hero wrestles with fear and hesitation",
+            "connection_focus_area": "Overcoming inner resistance",
+            "connect_points": {
+              "point1": "Identify your deepest fear",
+              "point2": "Recall past victories over doubt",
+              "point3": "Commit to one small act of courage"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name the fear you face",
+              "objective2": "Journal a past triumph over it",
+              "objective3": "Take one concrete brave step today"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Sustaining Effort",
+            "section_description": "The power of passion and perseverance",
+            "connection_focus_area": "Building lasting resolve",
+            "connect_points": {
+              "point1": "Set a long-term goal under stress",
+              "point2": "Plan daily micro-habits",
+              "point3": "Track progress visibly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one enduring goal",
+              "objective2": "Establish a 5-minute daily practice",
+              "objective3": "Log progress each day"
+            }
+          },
+          "book3": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "The courage to be seen and take risks",
+            "connection_focus_area": "Embracing uncertainty",
+            "connect_points": {
+              "point1": "Acknowledge what scares you",
+              "point2": "Share it with a trusted ally",
+              "point3": "Invite feedback on your next step"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name one vulnerability out loud",
+              "objective2": "Solicit supportive feedback",
+              "objective3": "Act on that feedback"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Windbreak Steps, Francisco faces a wall of voices—old doubts in new disguises. He plants the vow like a staff and breathes until the gale remembers his name.",
+          "symbolic_moment": "A frayed banner is stitched mid-storm and lifted again; the standard holds.",
+          "emotional_landscape": "Grit-bright, steady, luminous under pressure.",
+          "contentment_definition": "Courage as continuity—small promises kept when it’s hardest.",
+          "transformation_promise": "Faith practiced becomes proof."
+        },
+        "epic_novel_pages": "Page 91 - 105",
+        "epic_chapter_focus": "Action",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_novel_chapter_focus": "Scene III: Refusal of the Call",
+        "epic_novel_section_name": "Part I: Dweller Between the Waters",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Draw on inner conviction to withstand doubts and setbacks.",
+        "specific_task_group_tagline": "Stand firm when everything shakes",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Kelly Green",
+        "hex_code": "#33CC00",
+        "red": 51,
+        "green": 204,
+        "blue": 0
+      },
       "personality_profile_288": {},
       "personality_profile_289": {},
       "personality_profile_290": {},
