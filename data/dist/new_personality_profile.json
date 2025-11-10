@@ -61903,7 +61903,203 @@
         "green": 204,
         "blue": 41
       },
-      "personality_profile_300": {},
+      "personality_profile_300": {
+        "canonical_id": "EA-300",
+        "unique_identifier": "STG 8.2.3.1",
+        "specific_task_group_title": "Inner Alignment",
+        "all_chapter": 300,
+        "novel_book": 8,
+        "chapter": "Chapter 20",
+        "chapter_title": "Midpoint — Inner Alignment",
+        "type": "Specific Task Group",
+        "display_name": "The Aligned Axis",
+        "theme": "Integrity scales when values decide your calendar—align identity, habits, and choices so effort compounds cleanly.",
+        "family": "Integration — Values, Identity & Coherence",
+        "summary": "At the hinge of the journey, Francisco stops the micro-frictions: the person he claims to be, the work he does, and the rituals that carry him now click into one track. No more off-brand yeses or heroic but misaligned pushes—just clean, value-driven motion.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "translates core values into visible daily behaviors",
+            "designs identity-based habits and clear triggers",
+            "keeps promises to self under pressure",
+            "prioritizes congruence over convenience",
+            "audits commitments for principle fit"
+          ],
+          "shadow": [
+            "rigid moralizing that resists useful iteration",
+            "performative virtue without follow-through",
+            "decision paralysis when values feel equal",
+            "over-scheduling ‘good’ habits past capacity",
+            "quiet resentment when others misalign"
+          ],
+          "growth_focus": [
+            "write a 1-sentence identity statement for the next 90 days",
+            "map three daily actions to three core values",
+            "install one visual cue for a keystone habit",
+            "schedule a weekly congruence review (wins, drifts, fixes)",
+            "replace one ‘should’ with a value-true ‘must’"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Midpoint",
+          "fiction_chapter_context": "Book 8, Chapter 20 — Supreme Ordeal approaches: inner axis locks; outer storm gathers."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principled focus opens into ease and vitality."
+        },
+        "color_alignment": {
+          "name": "Limerick",
+          "hsl": "75,66%,38%",
+          "rgb_hex": "#82A321",
+          "color_symbolism": "Olive standard of resolve—rooted growth, steady flame."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.72,
+            "empathy": 0.60,
+            "openness": 0.63,
+            "orderliness": 0.71,
+            "conscientiousness": 0.83,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.58,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.49,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.45,
+            "agency": 0.35,
+            "orderliness": 0.20
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q3001",
+            "Q3002",
+            "Q3003",
+            "Q3004",
+            "Q3005",
+            "Q3006",
+            "Q3007",
+            "Q3008"
+          ],
+          "signals_map": {
+            "Q3001": { "dimension": "conscientiousness", "polarity": 1, "content": "My calendar reflects my values more than my inbox." },
+            "Q3002": { "dimension": "agency", "polarity": 1, "content": "I proactively design habits that express who I choose to be." },
+            "Q3003": { "dimension": "orderliness", "polarity": 1, "content": "I use simple cues and checklists to keep actions congruent." },
+            "Q3004": { "dimension": "stability", "polarity": 1, "content": "Under stress, I return to my principles before choosing." },
+            "Q3005": { "dimension": "openness", "polarity": 1, "content": "When evidence shows drift, I adjust methods while keeping values." },
+            "Q3006": { "dimension": "cooperativeness", "polarity": 1, "content": "I communicate my principles so collaborators know my lines." },
+            "Q3007": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept short-term loss to stay aligned long-term." },
+            "Q3008": { "dimension": "emotional_intensity", "polarity": -1, "content": "I let urgency override my principles when pressure spikes." }
+          },
+          "daily_prompt": "What is one decision today that, made in full alignment, makes the next ten decisions easier?",
+          "practices": [
+            "Identity Card: 1-sentence ‘Who I am’ + 3 daily proofs; review each morning.",
+            "Value→Habit Map: pair each core value with a 2-minute keystone behavior.",
+            "Congruence Review (weekly): list drifts, identify root cause, patch system.",
+            "Trigger Design: place visible cues where the behavior happens.",
+            "Principle Pre-Commit: draft scripts for likely pressure scenarios."
+          ],
+          "transformation_indicators": [
+            "Higher adherence to identity-based habits under time pressure",
+            "Reduced value-action gaps in weekly reviews",
+            "Stakeholders note predictable, principled decisions",
+            "Calendar time shifts from reactive to principle-anchored blocks",
+            "Lower decision fatigue; clearer ‘no’ to misaligned asks"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Midpoint",
+          "preliminary_beat": "Midpoint — Inner Alignment",
+          "save_the_cat_beat": "Midpoint",
+          "character_state": "Calm, congruent, pressure-ready.",
+          "ordinary_world_baseline": "Fragmented intentions; effort leaks through misaligned tasks.",
+          "push_turn": "The inner axis locks—principles begin steering tactics by default."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Finding Purpose",
+            "section_description": "Discovering how meaning underpins resilience in adversity.",
+            "connection_focus_area": "Meaningful congruence",
+            "connect_points": {
+              "point1": "Identify three personal values",
+              "point2": "Map daily actions to each value",
+              "point3": "Spot and correct any misalignments"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your top three values",
+              "objective2": "Evaluate one recent decision for value alignment",
+              "objective3": "Adjust tomorrow’s plan to better reflect those values"
+            }
+          },
+          "book2": {
+            "title": "The 7 Habits of Highly Effective People",
+            "author": "Stephen R. Covey",
+            "section_of_focus": "Be Proactive",
+            "section_description": "Taking initiative to align your habits with your principles.",
+            "connection_focus_area": "Habit alignment",
+            "connect_points": {
+              "point1": "Choose one habit to reinforce",
+              "point2": "Link it to a core value",
+              "point3": "Design a trigger for that habit"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select one habit-value pair",
+              "objective2": "Create a reminder system",
+              "objective3": "Track adherence for three days"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Designing cues that align habits with your identity.",
+            "connection_focus_area": "Identity alignment",
+            "connect_points": {
+              "point1": "Craft an identity statement",
+              "point2": "Associate one key habit with that identity",
+              "point3": "Set up an environment cue"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write your ‘who I want to be’ statement",
+              "objective2": "Define one habit that embodies it",
+              "objective3": "Establish a daily cue for that habit"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Chamber of Still Mirrors, Francisco watches five reflections—power, love, wisdom, service, will—step into a single silhouette that breathes as one.",
+          "symbolic_moment": "A twin-pointed wand fuses at the grip, forming a single line that hums true north.",
+          "emotional_landscape": "Steady, lucid, quietly unstoppable.",
+          "contentment_definition": "Peace as coherence: nothing important argues inside.",
+          "transformation_promise": "Aligned within, unshakeable without."
+        },
+        "epic_novel_pages": "Page 286 - 300",
+        "epic_chapter_focus": "Midpoint",
+        "epic_preliminary_scene_focus": "The Ordeal (Temptation)",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Integration",
+        "specific_task_group_description": "Harmonize your core values and daily actions to maintain inner coherence amid challenges.",
+        "specific_task_group_tagline": "Align inside out",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Limerick",
+        "hex_code": "#82A321",
+        "red": 130,
+        "green": 163,
+        "blue": 33
+      },
       "personality_profile_301": {},
       "personality_profile_302": {},
       "personality_profile_303": {},
