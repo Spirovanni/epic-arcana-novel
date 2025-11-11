@@ -62691,7 +62691,203 @@
         "green": 208,
         "blue": 79
       },
-      "personality_profile_304": {},
+      "personality_profile_304": {
+        "canonical_id": "EA-304",
+        "unique_identifier": "STG 8.3.1.1",
+        "specific_task_group_title": "Stable Growth",
+        "all_chapter": 304,
+        "novel_book": 8,
+        "chapter": "Chapter 24",
+        "chapter_title": "Action (Conflict) — Stable Growth",
+        "type": "Specific Task Group",
+        "display_name": "The Steady Forge",
+        "theme": "Progress that survives pressure: anchor habits, stack small wins, and fortify the base before you raise the tower.",
+        "family": "Sustainable Progress — Habits, Systems & Compounding",
+        "summary": "When everything wobbles, Francisco stops chasing velocity and builds reliability. He clarifies next actions, installs micro-habits, and measures only what compounds. The flame stays steady; results accrete. Stability turns ‘almost’ into always.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Four",
+        "traits": {
+          "strengths": [
+            "designs simple systems that are easy to keep",
+            "tracks lead indicators and celebrates small wins",
+            "translates vision into next actions and routines",
+            "builds capacity gradually without burnout",
+            "resists shiny-object drift; protects cadence"
+          ],
+          "shadow": [
+            "over-optimizes the system and forgets the goal",
+            "gets rigid; mistakes stability for stagnation",
+            "hoards capacity instead of deploying it",
+            "avoids healthy risk that unlocks growth",
+            "lets checklists replace real feedback"
+          ],
+          "growth_focus": [
+            "set a minimum ‘floor’ routine for bad days",
+            "run a weekly ops review (wins, stucks, fixes)",
+            "replace one vanity metric with a lead metric",
+            "add a 10% slack buffer to key commitments",
+            "pilot a tiny risk each week to prevent rigidity"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 8, Chapter 24 — Atonement with the Father: stability forged under pressure."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Principled builder integrating to 7—discipline warmed by flexibility and optimism."
+        },
+        "color_alignment": {
+          "name": "Chartreuse",
+          "hsl": "90,100%,50%",
+          "rgb_hex": "#7FFF00",
+          "color_symbolism": "Spring green—new growth made durable through consistent tending."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.61,
+            "stability": 0.78,
+            "empathy": 0.56,
+            "openness": 0.54,
+            "orderliness": 0.80,
+            "conscientiousness": 0.82,
+            "adaptability": 0.62,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.60,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.42,
+            "social_dominance": 0.50,
+            "novelty_seeking": 0.40,
+            "imagination": 0.55
+          },
+          "match_weights": {
+            "conscientiousness": 0.45,
+            "orderliness": 0.35,
+            "stability": 0.20
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q3041",
+            "Q3042",
+            "Q3043",
+            "Q3044",
+            "Q3045",
+            "Q3046",
+            "Q3047",
+            "Q3048"
+          ],
+          "signals_map": {
+            "Q3041": { "dimension": "conscientiousness", "polarity": 1, "content": "I maintain a minimum ‘floor’ routine even on bad days." },
+            "Q3042": { "dimension": "orderliness", "polarity": 1, "content": "I use simple checklists to keep momentum without overcomplicating." },
+            "Q3043": { "dimension": "stability", "polarity": 1, "content": "I add buffer time to protect delivery under stress." },
+            "Q3044": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I choose lead indicators that predict outcomes I care about." },
+            "Q3045": { "dimension": "agency", "polarity": 1, "content": "I convert goals into concrete next actions daily." },
+            "Q3046": { "dimension": "risk_tolerance", "polarity": -1, "content": "I avoid small experiments that could improve the system." },
+            "Q3047": { "dimension": "adaptability", "polarity": 1, "content": "I revisit processes weekly and tune what’s clunky." },
+            "Q3048": { "dimension": "novelty_seeking", "polarity": -1, "content": "I abandon working routines for the next new tactic." }
+          },
+          "daily_prompt": "What is the smallest repeatable action today that will still count if everything else goes sideways?",
+          "practices": [
+            "Baselines Before Ambition: define non-negotiable daily floors for health, craft, and service.",
+            "Two-Minute Floor: start each key habit with a 2-minute version to protect streaks.",
+            "Ops Review Friday: inspect wins/stucks/fixes; swap one vanity metric for a lead metric.",
+            "Green-Bar KPI: track one visible lead indicator; aim for steady green, not spikes.",
+            "Stability Budget: reserve 10% capacity for buffers, refactors, and maintenance."
+          ],
+          "transformation_indicators": [
+            "Week-over-week micro-gains on lead metrics",
+            "Fewer deadline slips despite similar load",
+            "Reduced variance in output quality",
+            "Higher habit streak length and recovery speed",
+            "Systems remain functional during stress tests"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Action (conflict)",
+          "preliminary_beat": "All is Lost",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Calm under pressure; trading speed for reliability.",
+          "ordinary_world_baseline": "Burst effort, brittle systems, inconsistent follow-through.",
+          "push_turn": "A small, kept promise rekindles momentum and becomes the new standard."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Obvious",
+            "section_description": "Turning small habits into lasting routines.",
+            "connection_focus_area": "Habit foundations",
+            "connect_points": {
+              "point1": "Break growth into micro-habits",
+              "point2": "Design cues for consistency",
+              "point3": "Track progress daily"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three micro-habits to adopt",
+              "objective2": "Set up environmental triggers",
+              "objective3": "Review habit tracker weekly"
+            }
+          },
+          "book2": {
+            "title": "Getting Things Done",
+            "author": "David Allen",
+            "section_of_focus": "Next Actions",
+            "section_description": "Clarifying immediate steps for momentum.",
+            "connection_focus_area": "Continuous workflow",
+            "connect_points": {
+              "point1": "Define next actionable steps",
+              "point2": "Organize tasks by context",
+              "point3": "Schedule regular reviews"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create an 'Next Actions' list",
+              "objective2": "Implement a weekly review",
+              "objective3": "Reduce task clutter"
+            }
+          },
+          "book3": {
+            "title": "The Compound Effect",
+            "author": "Darren Hardy",
+            "section_of_focus": "The Principle",
+            "section_description": "Small choices delivered consistently yield big results.",
+            "connection_focus_area": "Incremental improvement",
+            "connect_points": {
+              "point1": "Calculate the impact of daily actions",
+              "point2": "Identify one small change to implement",
+              "point3": "Project long-term outcomes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Quantify one small win",
+              "objective2": "Plan daily improvement steps",
+              "objective3": "Set three-month benchmarks"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the Furnace Keep’s basalt dais, Francisco banks the world-fire into steady channels; sparks become lines, lines become a lattice of light.",
+          "symbolic_moment": "He places a single green stone at the lattice’s heart—every pulse that passes through returns stronger.",
+          "emotional_landscape": "Methodical, grounded, quietly fierce.",
+          "contentment_definition": "Peace as momentum—small wins, kept daily, that no storm can strip away.",
+          "transformation_promise": "What is stable can scale; what is steady can save."
+        },
+        "epic_novel_pages": "Page 346 - 360",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Sustainable Progress",
+        "specific_task_group_description": "Establish reliable progress by building on solid foundations and reinforcing small wins.",
+        "specific_task_group_tagline": "Grow with stability",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Chartreuse",
+        "hex_code": "#7FFF00",
+        "red": 127,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_305": {},
       "personality_profile_306": {},
       "personality_profile_307": {},
