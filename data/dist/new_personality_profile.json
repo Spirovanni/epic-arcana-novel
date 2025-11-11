@@ -62494,7 +62494,203 @@
         "green": 104,
         "blue": 21
       },
-      "personality_profile_303": {},
+      "personality_profile_303": {
+        "canonical_id": "EA-303",
+        "unique_identifier": "MAT 8.2",
+        "specific_task_group_title": "Subconscious Mind",
+        "all_chapter": 303,
+        "novel_book": 8,
+        "chapter": "Chapter 23",
+        "chapter_title": "The Supreme Ordeal — Subconscious Mind",
+        "type": "Major Activity Theme",
+        "display_name": "The Lunar Navigator",
+        "theme": "When reason reaches its shoreline, intuition sails on—quiet the surface, read the depths, and let symbols steer the course.",
+        "family": "Intuition — Subconscious, Pattern Sense & Symbolic Insight",
+        "summary": "Francisco descends beneath conscious noise to the moonlit engine room of mind. By trusting felt data, dream logic, and symbolic echoes, he accesses a wider bandwidth of guidance. The result isn’t superstition—it’s synthesis: fast pattern-recognition braided with slow discernment. Decisions become calmer, timing cleaner, and action truer.",
+        "tarot_family": "Major Arcana",
+        "tarot_card_item": "The Moon",
+        "traits": {
+          "strengths": [
+            "detects patterns and weak signals others miss",
+            "balances gut sense with deliberate verification",
+            "uses dreams, symbols, and metaphors to ideate",
+            "stays calm in ambiguity; perceives undercurrents",
+            "switches fluidly between fast and slow thinking"
+          ],
+          "shadow": [
+            "overreads noise as meaning; apophenia risk",
+            "defaults to vibes over evidence under stress",
+            "avoids hard conversations by ‘waiting for a sign’",
+            "lets rumination masquerade as intuition",
+            "confuses mood states with true signals"
+          ],
+          "growth_focus": [
+            "define a two-step check: intuition first, evidence second",
+            "separate raw impressions from interpretations on paper",
+            "time-box intuitive scans before a decision window",
+            "keep a symbol ledger to validate patterns retrospectively",
+            "schedule one ‘no-input’ hour weekly to strengthen signal"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "The Supreme Ordeal",
+          "fiction_chapter_context": "Book 8, Chapter 23 — Meeting with a Goddess: moonlit rite; the subconscious answers."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Depth-first perception with healthy 1/5 lines—imagination grounded by principle and inquiry."
+        },
+        "color_alignment": {
+          "name": "Conifer",
+          "hsl": "75,56%,58%",
+          "rgb_hex": "#B0D04F",
+          "color_symbolism": "Green-gold illumination—intuition made useful, growth guided by inner light."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.57,
+            "stability": 0.55,
+            "empathy": 0.66,
+            "openness": 0.82,
+            "orderliness": 0.48,
+            "conscientiousness": 0.53,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.61,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.62,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.72,
+            "imagination": 0.86
+          },
+          "match_weights": {
+            "openness": 0.40,
+            "imagination": 0.35,
+            "abstract_reasoning": 0.25
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q3031",
+            "Q3032",
+            "Q3033",
+            "Q3034",
+            "Q3035",
+            "Q3036",
+            "Q3037",
+            "Q3038"
+          ],
+          "signals_map": {
+            "Q3031": { "dimension": "imagination", "polarity": 1, "content": "I translate dreams, symbols, and metaphors into testable ideas." },
+            "Q3032": { "dimension": "openness", "polarity": 1, "content": "I give intuition the first word—never the only word." },
+            "Q3033": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I verify gut hunches with simple experiments." },
+            "Q3034": { "dimension": "stability", "polarity": 1, "content": "I remain calm in uncertainty and track signals over time." },
+            "Q3035": { "dimension": "orderliness", "polarity": 1, "content": "I keep a pattern journal separating raw data from conclusions." },
+            "Q3036": { "dimension": "conscientiousness", "polarity": 1, "content": "I time-box intuitive exploration before committing." },
+            "Q3037": { "dimension": "risk_tolerance", "polarity": 1, "content": "I will act with imperfect information when the window is narrow." },
+            "Q3038": { "dimension": "emotional_intensity", "polarity": -1, "content": "I let my current mood define what my intuition says." }
+          },
+          "daily_prompt": "What quiet signal is trying to be heard beneath today’s noise—and how will you test it?",
+          "practices": [
+            "Symbol Ledger: split page into ‘impressions’ vs. ‘evidence’; reconcile weekly.",
+            "Dream-to-Design: capture one dream image at wake, generate a micro-experiment from it.",
+            "90/15 Oracle: 90 minutes no-input focus, 15 minutes to extract signals and next steps.",
+            "Two-Lens Review: intuition writes the first draft; reason edits with data.",
+            "Moonwalk: 20-minute silent walk at dusk/dawn; log three non-obvious patterns."
+          ],
+          "transformation_indicators": [
+            "Higher decision clarity with fewer reversals",
+            "Improved hit-rate of first-pass hunches (tracked)",
+            "Shorter time from impression → experiment",
+            "Reduced analysis paralysis during high ambiguity",
+            "Stakeholders report clearer ‘why now’ narratives"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Supreme Ordeal",
+          "preliminary_beat": "The Supreme Ordeal — Subconscious Mind",
+          "save_the_cat_beat": "The Supreme Ordeal",
+          "character_state": "Integrating subconscious guidance; poised between doubt and deep knowing.",
+          "ordinary_world_baseline": "Over-reliance on analysis; noisy mind; second-guessing intuition.",
+          "push_turn": "A symbol from the deep resolves a paradox and unlocks decisive action."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Blink",
+            "author": "Malcolm Gladwell",
+            "section_of_focus": "Thin-Slicing",
+            "section_description": "How rapid cognition and gut judgments shape our understanding.",
+            "connection_focus_area": "Harnessing intuition",
+            "connect_points": {
+              "point1": "Identify scenarios for quick judgments",
+              "point2": "Compare gut feeling vs. analysis",
+              "point3": "Refine your instinct through feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe one situation suited for intuition",
+              "objective2": "Record a gut-based decision outcome",
+              "objective3": "Adjust your process based on results"
+            }
+          },
+          "book2": {
+            "title": "Thinking, Fast and Slow",
+            "author": "Daniel Kahneman",
+            "section_of_focus": "System 1 and System 2",
+            "section_description": "Understanding the interplay between automatic and deliberate thought.",
+            "connection_focus_area": "Balancing thought processes",
+            "connect_points": {
+              "point1": "Differentiate a System 1 reaction",
+              "point2": "Engage System 2 reflection",
+              "point3": "Note when to switch modes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one System 1 bias you hold",
+              "objective2": "Apply slow thinking to counter it",
+              "objective3": "Evaluate the improved outcome"
+            }
+          },
+          "book3": {
+            "title": "The Inner Game of Tennis",
+            "author": "W. Timothy Gallwey",
+            "section_of_focus": "Quieting the Mind",
+            "section_description": "Techniques to reduce self-interference and access natural performance.",
+            "connection_focus_area": "Accessing flow states",
+            "connect_points": {
+              "point1": "Practice non-judgmental observation",
+              "point2": "Notice internal chatter",
+              "point3": "Shift focus to the task"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Record moments of self-interference",
+              "objective2": "Apply one mindfulness technique",
+              "objective3": "Measure performance improvement"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Beneath a green-gold aurora, Francisco kneels at a black tidepool; the moon doubles in the still water, and the reflection blinks first.",
+          "symbolic_moment": "From the pool rises a silver key of memory; when turned, it unlocks a door behind his sternum, and the ocean hums in his chest.",
+          "emotional_landscape": "Quiet, tidal, lucid.",
+          "contentment_definition": "Rightness without proof: the felt alignment when the inner compass clicks north.",
+          "transformation_promise": "Trust refined by testing becomes guidance you can build a world on."
+        },
+        "epic_novel_pages": "Page 331 - 345",
+        "epic_chapter_focus": "The Supreme Ordeal",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene IX: The Meeting with a Goddess",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Intuition",
+        "specific_task_group_description": "Delve into hidden motivations and leverage intuition to guide your decisions beyond conscious reasoning.",
+        "specific_task_group_tagline": "Trust your inner vision",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Conifer",
+        "hex_code": "#B0D04F",
+        "red": 176,
+        "green": 208,
+        "blue": 79
+      },
       "personality_profile_304": {},
       "personality_profile_305": {},
       "personality_profile_306": {},
