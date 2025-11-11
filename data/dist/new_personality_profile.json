@@ -62297,7 +62297,203 @@
         "green": 130,
         "blue": 26
       },
-      "personality_profile_302": {},
+      "personality_profile_302": {
+        "canonical_id": "EA-302",
+        "unique_identifier": "STG 8.2.3.3",
+        "specific_task_group_title": "Energy Stream",
+        "all_chapter": 302,
+        "novel_book": 8,
+        "chapter": "Chapter 22",
+        "chapter_title": "Reaction (set-up) — Energy Stream",
+        "type": "Specific Task Group",
+        "display_name": "The Current Keeper",
+        "theme": "Flow isn’t an accident—it’s engineered: design the triggers, guard the time, and ride the current until the work starts working on you.",
+        "family": "Flow — Focus, Rhythm & Recovery",
+        "summary": "Francisco learns to enter flow on command. He sets tight boundaries, stacks reliable triggers, and aims attention like a laser. Distraction drops, immersion rises, and momentum compounds—turning principles into production.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Page",
+        "traits": {
+          "strengths": [
+            "builds repeatable flow rituals and cues",
+            "holds 60–120 minute deep-focus blocks",
+            "scopes one clear outcome per session",
+            "tracks interruptions and eliminates root causes",
+            "warms up quickly and lands cleanly with a shutdown ritual"
+          ],
+          "shadow": [
+            "confuses busyness with depth",
+            "over-optimizes tools instead of practicing",
+            "breaks flow with context switching and notifications",
+            "avoids feedback loops that sharpen the craft",
+            "burns out by skipping recovery and transitions"
+          ],
+          "growth_focus": [
+            "define a single daily ‘most important block’ (MIB)",
+            "establish a 3-step pre-flow ritual (cue, warm-up, launch)",
+            "use a visible interruption log for one week",
+            "close every session with a 3-minute shutdown note",
+            "protect one weekly long-form ‘long swim’ (120–180 mins)"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Reaction (set-up)",
+          "fiction_chapter_context": "Book 8, Chapter 22 — Reward in motion: principles become practice as the current gathers."
+        },
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator integrating to 8—depth harnessed into decisive doing."
+        },
+        "color_alignment": {
+          "name": "Fiji Green",
+          "hsl": "75,66%,24%",
+          "rgb_hex": "#536815",
+          "color_symbolism": "Dense evergreen—grounded power, disciplined focus."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.67,
+            "empathy": 0.54,
+            "openness": 0.61,
+            "orderliness": 0.72,
+            "conscientiousness": 0.79,
+            "adaptability": 0.58,
+            "abstract_reasoning": 0.66,
+            "cooperativeness": 0.55,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.45,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.57,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "conscientiousness": 0.45,
+            "orderliness": 0.30,
+            "agency": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q3021",
+            "Q3022",
+            "Q3023",
+            "Q3024",
+            "Q3025",
+            "Q3026",
+            "Q3027",
+            "Q3028"
+          ],
+          "signals_map": {
+            "Q3021": { "dimension": "conscientiousness", "polarity": 1, "content": "I schedule a protected 90–120 minute deep-work block each day." },
+            "Q3022": { "dimension": "orderliness", "polarity": 1, "content": "My pre-work ritual follows the same 3–step sequence." },
+            "Q3023": { "dimension": "agency", "polarity": 1, "content": "I choose one outcome per session and ignore the rest." },
+            "Q3024": { "dimension": "adaptability", "polarity": 1, "content": "I adjust difficulty to keep challenge slightly above skill." },
+            "Q3025": { "dimension": "openness", "polarity": 1, "content": "I experiment with triggers and keep what reliably induces flow." },
+            "Q3026": { "dimension": "orderliness", "polarity": -1, "content": "I frequently task-switch or check messages mid-session." },
+            "Q3027": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I define success metrics for each block before I start." },
+            "Q3028": { "dimension": "stability", "polarity": 1, "content": "I end with a written shutdown to reduce residue and carryover." }
+          },
+          "daily_prompt": "What single outcome will you ship in today’s protected flow block—and which trigger will launch you into it?",
+          "practices": [
+            "Flow Warm-Start: 3 minutes of cue → micro-win → timer launch.",
+            "Single Target Rule: one outcome, visible on a card, face-up.",
+            "Interruption Ledger: tally source, time lost, and countermeasure.",
+            "90–20–90 Protocol: two deep blocks split by a full break.",
+            "Shutdown Script: summarize progress, define next step, power down."
+          ],
+          "transformation_indicators": [
+            "Increased daily minutes in uninterrupted focus",
+            "Lowered context-switch count per session",
+            "Higher session completion rate for defined outcomes",
+            "Shorter time-to-flow after ritual start",
+            "Clearer next-step notes reduce restart friction"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Reaction (set-up)",
+          "preliminary_beat": "Reaction (set-up) — Energy Stream",
+          "save_the_cat_beat": "Reaction (set-up)",
+          "character_state": "Principled, focused, operationalizing mastery.",
+          "ordinary_world_baseline": "Scattered attention, shallow bursts, reactive checks.",
+          "push_turn": "One protected block proves more potent than a dozen scattered hours."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "Conditions of Flow",
+            "section_description": "Elements that foster optimal experience and performance.",
+            "connection_focus_area": "Flow triggers",
+            "connect_points": {
+              "point1": "Identify your flow triggers",
+              "point2": "Design a distraction-free space",
+              "point3": "Time-block a flow session"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three personal flow triggers",
+              "objective2": "Schedule a 90-minute focus block",
+              "objective3": "Evaluate immersion level"
+            }
+          },
+          "book2": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Working Deeply",
+            "section_description": "Strategies for maximizing concentration and minimizing interruptions.",
+            "connection_focus_area": "Deep focus habits",
+            "connect_points": {
+              "point1": "Define one deep work ritual",
+              "point2": "Set an explicit goal",
+              "point3": "Track interruptions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Establish a daily deep work period",
+              "objective2": "Measure distraction frequency",
+              "objective3": "Implement one remedy"
+            }
+          },
+          "book3": {
+            "title": "Peak",
+            "author": "Anders Ericsson",
+            "section_of_focus": "Deliberate Practice",
+            "section_description": "The role of focused, goal-oriented practice in skill mastery.",
+            "connection_focus_area": "Purposeful practice",
+            "connect_points": {
+              "point1": "Set a clear practice goal",
+              "point2": "Obtain targeted feedback",
+              "point3": "Adjust technique"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a skill to improve",
+              "objective2": "Seek feedback from a mentor",
+              "objective3": "Refine one aspect daily"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the Confluence, Francisco sinks a jade rod into the river of light; the current bends, then steadies, awaiting his aim.",
+          "symbolic_moment": "A ring of stillness forms around him—within it, a single note stretches into a clear, continuous line.",
+          "emotional_landscape": "Absorbed, precise, quietly exultant.",
+          "contentment_definition": "Effort without friction: attention moving as one piece.",
+          "transformation_promise": "When the current is harnessed, the work becomes inevitable."
+        },
+        "epic_novel_pages": "Page 316 - 330",
+        "epic_chapter_focus": "Reaction (set-up)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Flow State",
+        "specific_task_group_description": "Learn to harness and sustain peak focus and productivity through deliberate practice.",
+        "specific_task_group_tagline": "Ride the current",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Fiji Green",
+        "hex_code": "#536815",
+        "red": 83,
+        "green": 104,
+        "blue": 21
+      },
       "personality_profile_303": {},
       "personality_profile_304": {},
       "personality_profile_305": {},
