@@ -62100,7 +62100,203 @@
         "green": 163,
         "blue": 33
       },
-      "personality_profile_301": {},
+      "personality_profile_301": {
+        "canonical_id": "EA-301",
+        "unique_identifier": "STG 8.2.3.2",
+        "specific_task_group_title": "Principles",
+        "all_chapter": 301,
+        "novel_book": 8,
+        "chapter": "Chapter 21",
+        "chapter_title": "Reversal (resolution) — Principles",
+        "type": "Specific Task Group",
+        "display_name": "The Living Code",
+        "theme": "Write your rules, then let them rule—codified principles turn chaos into a compass under pressure.",
+        "family": "Guiding Values — Principles, Standards & Codex",
+        "summary": "Fresh from inner alignment, Francisco engraves what won’t bend. Choices become lighter because the code carries the weight. Under stress, he doesn’t search for courage—he searches the page, and the page answers.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "codifies values into clear, testable rules",
+            "decides quickly by referencing first principles",
+            "updates the code from lessons learned (no ego)",
+            "models integrity under time and social pressure",
+            "communicates standards so teams can self-govern"
+          ],
+          "shadow": [
+            "rigidity when nuance is required",
+            "confuses preferences with principles",
+            "over-documents; slow to ship changes",
+            "uses ‘principles’ to avoid accountability",
+            "applies rules to others more than self"
+          ],
+          "growth_focus": [
+            "separate core principles (timeless) from policies (changeable)",
+            "create a 1-page operating code ‘v1.0’",
+            "add a review cadence and change log",
+            "pressure-test one rule in a real decision",
+            "teach the code to an ally; invite edits"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Ruler of Flux and Reflux",
+          "chapter_theme": "Reversal (resolution)",
+          "fiction_chapter_context": "Book 8, Chapter 21 — Reward articulated: law from lesson, compass from ordeal."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Reformer integrating to 7—principle with flexibility and joy."
+        },
+        "color_alignment": {
+          "name": "Olive Drab",
+          "hsl": "75,67%,31%",
+          "rgb_hex": "#68821A",
+          "color_symbolism": "Seasoned wisdom—earthy steadiness that guides in storms."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.72,
+            "empathy": 0.58,
+            "openness": 0.56,
+            "orderliness": 0.74,
+            "conscientiousness": 0.86,
+            "adaptability": 0.60,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.62,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.46,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.45,
+            "imagination": 0.55
+          },
+          "match_weights": {
+            "conscientiousness": 0.50,
+            "orderliness": 0.30,
+            "stability": 0.20
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q3011",
+            "Q3012",
+            "Q3013",
+            "Q3014",
+            "Q3015",
+            "Q3016",
+            "Q3017",
+            "Q3018"
+          ],
+          "signals_map": {
+            "Q3011": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep a written set of principles and consult them before big choices." },
+            "Q3012": { "dimension": "orderliness", "polarity": 1, "content": "I turn mistakes into explicit rules so we don’t repeat them." },
+            "Q3013": { "dimension": "stability", "polarity": 1, "content": "When values conflict, I apply a pre-defined ‘highest good’ tie-breaker." },
+            "Q3014": { "dimension": "cooperativeness", "polarity": 1, "content": "I share my operating principles so collaborators know my lines." },
+            "Q3015": { "dimension": "agency", "polarity": 1, "content": "Under pressure, I follow the code even when it’s costly." },
+            "Q3016": { "dimension": "conscientiousness", "polarity": -1, "content": "I change my principles to fit the situation." },
+            "Q3017": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I run postmortems that refine or retire principles with evidence." },
+            "Q3018": { "dimension": "adaptability", "polarity": -1, "content": "I freeze when a scenario isn’t covered by my rules." }
+          },
+          "daily_prompt": "Which single principle will you apply—under real pressure—today?",
+          "practices": [
+            "Principle Card v1.0: one page with 5–7 rules; carry it and reference before key decisions.",
+            "Decision Triage: if time < 2 min, nearest rule; else 5-minute write-up using the code.",
+            "Precommit Scripts: write exact phrases you’ll use when a rule is tested socially.",
+            "Red-Team the Code: ask an ally to find one exception or loophole each week.",
+            "Change Log: date, decision, rule applied, outcome, proposed revision."
+          ],
+          "transformation_indicators": [
+            "Faster, more consistent choices in recurring scenarios",
+            "Fewer reversals under social or time pressure",
+            "Stakeholders can predict your decisions from your code",
+            "Clear audit trail from principle → action → result",
+            "Regular, evidence-based updates to the code"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Reversal (resolution)",
+          "preliminary_beat": "Reversal — Principles",
+          "save_the_cat_beat": "Reversal (resolution)",
+          "character_state": "Principle-anchored, calm authority.",
+          "ordinary_world_baseline": "Situational ethics; decisions swing with context and pressure.",
+          "push_turn": "The code is written—and in writing it, the code begins to write him."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Principles",
+            "author": "Ray Dalio",
+            "section_of_focus": "Life Principles",
+            "section_description": "Fundamental truths for consistent decision-making.",
+            "connection_focus_area": "Principled decisions",
+            "connect_points": {
+              "point1": "Articulate two personal principles",
+              "point2": "Apply each to a past decision",
+              "point3": "Reflect on the outcomes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List your two guiding principles",
+              "objective2": "Describe a decision guided by them",
+              "objective3": "Evaluate its success"
+            }
+          },
+          "book2": {
+            "title": "Meditations",
+            "author": "Marcus Aurelius",
+            "section_of_focus": "Stoic Maxims",
+            "section_description": "Timeless principles for inner strength and clarity.",
+            "connection_focus_area": "Stoic grounding",
+            "connect_points": {
+              "point1": "Select one maxim that resonates",
+              "point2": "Interpret its modern relevance",
+              "point3": "Apply it to a current challenge"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Choose a stoic maxim",
+              "objective2": "Write its interpretation",
+              "objective3": "Journal its application"
+            }
+          },
+          "book3": {
+            "title": "Nicomachean Ethics",
+            "author": "Aristotle",
+            "section_of_focus": "Virtue as Habit",
+            "section_description": "Building moral character through repeated action.",
+            "connection_focus_area": "Virtuous practice",
+            "connect_points": {
+              "point1": "Identify one virtue to cultivate",
+              "point2": "Plan a daily exercise",
+              "point3": "Record reflections"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select a virtue",
+              "objective2": "Carry out its practice for three days",
+              "objective3": "Note personal growth"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Olive Stone, twelve axioms etch themselves into the air; when Francisco speaks them, the tides of flux and reflux pause to listen.",
+          "symbolic_moment": "A weighted scale settles at true; its beam is a living branch engraved with the code.",
+          "emotional_landscape": "Gravely serene, declarative, steadying.",
+          "contentment_definition": "Peace as fidelity to a well-chosen code.",
+          "transformation_promise": "Principles make goodness predictable."
+        },
+        "epic_novel_pages": "Page 301 - 315",
+        "epic_chapter_focus": "Reversal (resolution)",
+        "epic_preliminary_scene_focus": "The Reward",
+        "epic_novel_chapter_focus": "Scene VIII: The Supreme Ordeal",
+        "epic_novel_section_name": "Part II: Ruler of Flux and Reflux",
+        "focus_area": "Guiding Values",
+        "specific_task_group_description": "Define and document your core principles to steer every critical choice.",
+        "specific_task_group_tagline": "Live by your code",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Olive Drab",
+        "hex_code": "#68821A",
+        "red": 104,
+        "green": 130,
+        "blue": 26
+      },
       "personality_profile_302": {},
       "personality_profile_303": {},
       "personality_profile_304": {},
