@@ -64661,7 +64661,203 @@
         "green": 204,
         "blue": 51
       },
-      "personality_profile_314": {},
+      "personality_profile_314": {
+        "canonical_id": "EA-314",
+        "unique_identifier": "STG 8.3.4.2",
+        "specific_task_group_title": "Challenging Decision",
+        "all_chapter": 314,
+        "novel_book": 8,
+        "chapter": "Chapter 34",
+        "chapter_title": "Flight — Challenging Decision",
+        "type": "Specific Task Group",
+        "display_name": "The Forked Choice",
+        "theme": "Under pressure, clarity is earned: gather just enough truth, align to your highest aim, commit, and move.",
+        "family": "Decision-Making — Clarity, Ethics & Commitment",
+        "summary": "With the boon secured and time compressing, Francisco weighs costs in real time, narrows options to the essential, and chooses a vector that honors the mission and the many it touches.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Two",
+        "traits": {
+          "strengths": [
+            "frames choices crisply with clear trade-offs",
+            "balances principles, risk, and timing",
+            "sets decision triggers and avoids drift",
+            "communicates rationale and next actions",
+            "commits publicly and follows through"
+          ],
+          "shadow": [
+            "over-analyzes and misses the window",
+            "outsources hard calls to consensus",
+            "hides behind ‘more data’ to delay action",
+            "pivots too often without re-briefing",
+            "downplays ethical stakes to go faster"
+          ],
+          "growth_focus": [
+            "define a two-way vs one-way door policy",
+            "set a decision deadline and stick to it",
+            "write a 5-line rationale before announcing",
+            "run a 10-minute premortem, then commit",
+            "log reversals and learn the pattern"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Converge (resolution)",
+          "fiction_chapter_context": "Book 8, Chapter 34 — Flight: sky lanes narrow; two corridors remain; one choice carries all."
+        },
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "Principled decider integrating to 7—moral clarity gains courageous momentum."
+        },
+        "color_alignment": {
+          "name": "Apple",
+          "hsl": "100,60%,50%",
+          "rgb_hex": "#66CC33",
+          "color_symbolism": "Fresh, grounded judgment—growth guided by a clear edge."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.64,
+            "empathy": 0.60,
+            "openness": 0.66,
+            "orderliness": 0.78,
+            "conscientiousness": 0.81,
+            "adaptability": 0.66,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.62,
+            "risk_tolerance": 0.68,
+            "emotional_intensity": 0.52,
+            "social_dominance": 0.70,
+            "novelty_seeking": 0.58,
+            "imagination": 0.61
+          },
+          "match_weights": {
+            "abstract_reasoning": 0.35,
+            "orderliness": 0.35,
+            "risk_tolerance": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q3141",
+            "Q3142",
+            "Q3143",
+            "Q3144",
+            "Q3145",
+            "Q3146",
+            "Q3147",
+            "Q3148"
+          ],
+          "signals_map": {
+            "Q3141": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I reduce options to 2–3 viable paths with explicit trade-offs." },
+            "Q3142": { "dimension": "orderliness", "polarity": 1, "content": "I set a decision deadline and decision owner for every fork." },
+            "Q3143": { "dimension": "risk_tolerance", "polarity": 1, "content": "I act when information is sufficient, not perfect." },
+            "Q3144": { "dimension": "conscientiousness", "polarity": 1, "content": "I publish a 5-line rationale and immediate next steps." },
+            "Q3145": { "dimension": "empathy", "polarity": 1, "content": "I consider who pays the cost and how to mitigate harm." },
+            "Q3146": { "dimension": "agency", "polarity": 1, "content": "I commit publicly and accept responsibility for outcomes." },
+            "Q3147": { "dimension": "stability", "polarity": 1, "content": "I avoid churn by defining when a decision can be revisited." },
+            "Q3148": { "dimension": "orderliness", "polarity": -1, "content": "I wait for perfect consensus before moving." }
+          },
+          "daily_prompt": "What single choice, made and communicated today, most advances your highest goal?",
+          "practices": [
+            "OODA Rapid: Observe–Orient–Decide–Act in one timed loop.",
+            "Two-Way Door Test: move fast on reversible choices; slow down on one-way doors.",
+            "5-Line Decision Brief: context, options, choice, why, first actions.",
+            "Premortem + Commit: name failure modes for 10 minutes—then lock the call.",
+            "Choice Journal: log decisions, triggers, reversibility, revisit date."
+          ],
+          "transformation_indicators": [
+            "Shorter decision latency with fewer walk-backs",
+            "Clear ownership and revisit criteria on major calls",
+            "Less context churn; more execution time",
+            "Ethical rationale stated alongside ROI",
+            "Higher on-time starts after decisions are issued"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Converge (resolution)",
+          "preliminary_beat": "Break into 3 — Challenging Decision",
+          "save_the_cat_beat": "Converge (resolution)",
+          "character_state": "Calm under pressure, values-led, action-biased.",
+          "ordinary_world_baseline": "Analysis paralysis and contradictory signals.",
+          "push_turn": "Direction chosen; resources align; momentum returns."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Flight",
+            "section_description": "The hero’s daring return with the boon.",
+            "connection_focus_area": "Interpreting achievement",
+            "connect_points": {
+              "point1": "Recognize your earned reward",
+              "point2": "Weigh next steps",
+              "point3": "Commit to a direction"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe your chosen path",
+              "objective2": "List three supporting reasons",
+              "objective3": "Take the first action step"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Making Tough Calls",
+            "section_description": "Overcoming hesitation in leadership decisions.",
+            "connection_focus_area": "Courageous commitment",
+            "connect_points": {
+              "point1": "Identify one difficult choice",
+              "point2": "Outline potential risks",
+              "point3": "Enlist peer support"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name the decision you’ll make",
+              "objective2": "Draft a risk-management plan",
+              "objective3": "Share your commitment publicly"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Making Good Habits Inevitable",
+            "section_description": "Designing environments for better choices.",
+            "connection_focus_area": "Structuring decision cues",
+            "connect_points": {
+              "point1": "Set clear decision triggers",
+              "point2": "Eliminate friction",
+              "point3": "Reinforce the chosen action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your decision cue",
+              "objective2": "Remove one barrier",
+              "objective3": "Review effectiveness"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Stormlines split the sky into two green corridors; pennons strain as Francisco lifts crossed blades, then tilts one—vectors settle, ships heel into the chosen wind.",
+          "symbolic_moment": "An apple-green glint along the edge of steel—judgment made, path cut clean.",
+          "emotional_landscape": "Tense stillness breaking into purposeful motion.",
+          "contentment_definition": "Peace as conviction: the quiet after a right call.",
+          "transformation_promise": "When choice is owned, the world coheres and moves."
+        },
+        "epic_novel_pages": "Page 496 - 510",
+        "epic_chapter_focus": "Converge (resolution)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Decision-making",
+        "specific_task_group_description": "Evaluate your options under pressure and commit to the path that aligns with your highest goal.",
+        "specific_task_group_tagline": "Decide boldly",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Apple",
+        "hex_code": "#66CC33",
+        "red": 102,
+        "green": 204,
+        "blue": 51
+      },
       "personality_profile_315": {},
       "personality_profile_316": {},
       "personality_profile_317": {},
