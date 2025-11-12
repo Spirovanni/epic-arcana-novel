@@ -63479,7 +63479,203 @@
         "green": 255,
         "blue": 102
       },
-      "personality_profile_308": {},
+      "personality_profile_308": {
+        "canonical_id": "EA-308",
+        "unique_identifier": "STG 8.3.2.2",
+        "specific_task_group_title": "Spiritual Growth",
+        "all_chapter": 308,
+        "novel_book": 8,
+        "chapter": "Chapter 28",
+        "chapter_title": "The Abyss — Spiritual Growth",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Forge",
+        "theme": "Adversity becomes compost for the soul; presence, purpose, and letting go turn pressure into renewal.",
+        "family": "Inner Transformation — Presence, Purpose & Release",
+        "summary": "In the dark night stretch, Francisco turns inward, transmuting pain into meaning. He anchors in the present, sheds what no longer serves, and reemerges with a steadier flame. Spiritual growth shifts from an idea to a practiced alignment that restores clarity and quiet strength.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "translates hardship into insight and purpose",
+            "maintains present-moment awareness under pressure",
+            "radiates calm that steadies groups",
+            "links daily actions to core values",
+            "sustains simple, consistent contemplative practices"
+          ],
+          "shadow": [
+            "spiritual bypassing to avoid hard facts",
+            "withdrawing from practical needs or timelines",
+            "using serenity talk to dodge conflict",
+            "over-indexing on reflection instead of action",
+            "rigidity about rituals and routines"
+          ],
+          "growth_focus": [
+            "keep a 15-minute daily stillness streak",
+            "write a one-sentence mission and act on it",
+            "replace one rumination loop with breath + micro-action",
+            "schedule a weekly ‘letting-go’ audit",
+            "translate one value into a concrete behavior today"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Pinch (event/conflict)",
+          "fiction_chapter_context": "Book 8, Chapter 28 — The Abyss: the light you carry is forged in the dark; the interior becomes a lantern."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—depth tempered into principled practice."
+        },
+        "color_alignment": {
+          "name": "Spring Bud",
+          "hsl": "84,100%,50%",
+          "rgb_hex": "#99FF00",
+          "color_symbolism": "Sprouting renewal—fresh growth born from release."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.70,
+            "empathy": 0.74,
+            "openness": 0.78,
+            "orderliness": 0.61,
+            "conscientiousness": 0.66,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.64,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.64,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.58,
+            "imagination": 0.75
+          },
+          "match_weights": {
+            "openness": 0.35,
+            "stability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q3081",
+            "Q3082",
+            "Q3083",
+            "Q3084",
+            "Q3085",
+            "Q3086",
+            "Q3087",
+            "Q3088"
+          ],
+          "signals_map": {
+            "Q3081": { "dimension": "openness", "polarity": 1, "content": "I reflect daily to convert pain into learning." },
+            "Q3082": { "dimension": "stability", "polarity": 1, "content": "Under stress, I anchor in the present with breath." },
+            "Q3083": { "dimension": "conscientiousness", "polarity": 1, "content": "I choose one value-guided act even when it’s inconvenient." },
+            "Q3084": { "dimension": "adaptability", "polarity": 1, "content": "I release one unhelpful attachment each week." },
+            "Q3085": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I design simple rituals that return me to purpose." },
+            "Q3086": { "dimension": "conscientiousness", "polarity": -1, "content": "I call avoidance ‘being spiritual’ to dodge hard facts." },
+            "Q3087": { "dimension": "stability", "polarity": 1, "content": "I keep my voice calm when others escalate." },
+            "Q3088": { "dimension": "adaptability", "polarity": 1, "content": "I replace rumination with one small, present action." }
+          },
+          "daily_prompt": "What can you release or reframe right now to move with more clarity?",
+          "practices": [
+            "15-Minute Stillness: sit, breathe, return attention when it wanders.",
+            "Meaning Map: note one hardship → lesson → behavior shift.",
+            "Purpose Pulse: one line each morning—‘Today I will live my value by…’.",
+            "Surrender Audit: list what no longer serves; mark one to release.",
+            "Presence Reset: 3 breaths before replies, decisions, or handoffs."
+          ],
+          "transformation_indicators": [
+            "Less rumination, faster recovery to baseline",
+            "Clearer value-to-behavior links in daily choices",
+            "Calmer tone under pressure acknowledged by peers",
+            "Regular practice streaks sustained beyond 14 days",
+            "Quicker turn from insight to concrete action"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Pinch (event/conflict)",
+          "preliminary_beat": "Dark Night of the Soul — Spiritual Growth",
+          "save_the_cat_beat": "Pinch (event/conflict)",
+          "character_state": "Stripped down, value-anchored, present.",
+          "ordinary_world_baseline": "Restless seeking, scattered attention, unresolved grief.",
+          "push_turn": "Letting go creates space; purpose returns as a steady flame."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Untethered Soul",
+            "author": "Michael A. Singer",
+            "section_of_focus": "Letting Go",
+            "section_description": "Releasing inner blockages to find freedom.",
+            "connection_focus_area": "Emotional liberation",
+            "connect_points": {
+              "point1": "Observe inner dialogue",
+              "point2": "Practice non-attachment",
+              "point3": "Journal emotional patterns"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify a recurring inner dialogue",
+              "objective2": "Practice a letting-go exercise",
+              "objective3": "Reflect on emotional shifts"
+            }
+          },
+          "book2": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Finding Purpose",
+            "section_description": "Discovering meaning through suffering.",
+            "connection_focus_area": "Purposeful resilience",
+            "connect_points": {
+              "point1": "Define personal values",
+              "point2": "Link values to daily actions",
+              "point3": "Set a purpose-driven goal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draft a personal mission statement",
+              "objective2": "Plan a value-aligned action",
+              "objective3": "Measure meaning in daily life"
+            }
+          },
+          "book3": {
+            "title": "The Power of Now",
+            "author": "Eckhart Tolle",
+            "section_of_focus": "Present Moment",
+            "section_description": "Anchoring in the now for inner peace.",
+            "connection_focus_area": "Mindful presence",
+            "connect_points": {
+              "point1": "Practice a 10-minute meditation",
+              "point2": "Notice present sensations",
+              "point3": "Record moments of presence"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a daily mindfulness log",
+              "objective2": "Extend meditation to 15 minutes",
+              "objective3": "Report on awareness improvements"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the moonless hollow, wind pours through pines like a breath; Francisco kneels, palms to earth, and the ground answers with a low, green glow.",
+          "symbolic_moment": "A small, emerald flame blooms inside his chest and becomes a lantern others can see in the dark.",
+          "emotional_landscape": "Tender courage, lucid stillness, quiet resolve.",
+          "contentment_definition": "Enoughness that doesn’t need proof—just presence aligned with purpose.",
+          "transformation_promise": "When the heart stops bracing, the path appears."
+        },
+        "epic_novel_pages": "Page 406 - 420",
+        "epic_chapter_focus": "Pinch (event/conflict)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Inner Transformation",
+        "specific_task_group_description": "Turn adversity inward to cultivate deeper self-awareness and spiritual resilience.",
+        "specific_task_group_tagline": "Grow from within",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Spring Bud",
+        "hex_code": "#99FF00",
+        "red": 153,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_309": {},
       "personality_profile_310": {},
       "personality_profile_311": {},
