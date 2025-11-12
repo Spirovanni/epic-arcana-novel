@@ -64464,7 +64464,203 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_313": {},
+      "personality_profile_313": {
+        "canonical_id": "EA-313",
+        "unique_identifier": "STG 8.3.4.1",
+        "specific_task_group_title": "Take Charge",
+        "all_chapter": 313,
+        "novel_book": 8,
+        "chapter": "Chapter 33",
+        "chapter_title": "Flight — Take Charge",
+        "type": "Specific Task Group",
+        "display_name": "The Command Signal",
+        "theme": "When the boon is secured, leadership is choosing a vector, communicating it crisply, and owning the consequences.",
+        "family": "Leadership — Vision, Decision & Accountability",
+        "summary": "Francisco steps to the helm. He frames the objective, mobilizes allies, and converts intent into movement. Ambiguity narrows; momentum spikes.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Seven",
+        "traits": {
+          "strengths": [
+            "sets clear north-star outcomes and milestones",
+            "turns intent into simple, actionable orders",
+            "rallies allies and aligns resources fast",
+            "balances speed with disciplined follow-through",
+            "owns decisions and broadcasts lessons learned"
+          ],
+          "shadow": [
+            "overrides input and blindsides the team",
+            "confuses urgency with importance",
+            "micromanages instead of empowering",
+            "announces direction without support plans",
+            "avoids public accountability when wrong"
+          ],
+          "growth_focus": [
+            "run a 1-page intent brief: purpose, end-state, risks",
+            "name decision owners and escalation paths",
+            "replace status with effects-based updates",
+            "time-box choices: decide, diarize, or delete",
+            "close the loop publicly on each major call"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Action (conflict)",
+          "fiction_chapter_context": "Book 8, Chapter 33 — Flight: with the boon in hand, command clarifies and the return begins under green banners."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—power directed as protection and service."
+        },
+        "color_alignment": {
+          "name": "Lime Green",
+          "hsl": "120,60%,50%",
+          "rgb_hex": "#33CC33",
+          "color_symbolism": "Decisive growth—fresh authority that moves things forward."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.88,
+            "stability": 0.66,
+            "empathy": 0.58,
+            "openness": 0.62,
+            "orderliness": 0.76,
+            "conscientiousness": 0.79,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.69,
+            "cooperativeness": 0.63,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.82,
+            "novelty_seeking": 0.61,
+            "imagination": 0.64
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "conscientiousness": 0.35,
+            "orderliness": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q3131",
+            "Q3132",
+            "Q3133",
+            "Q3134",
+            "Q3135",
+            "Q3136",
+            "Q3137",
+            "Q3138"
+          ],
+          "signals_map": {
+            "Q3131": { "dimension": "agency", "polarity": 1, "content": "I define a clear end-state and who owns each decision." },
+            "Q3132": { "dimension": "conscientiousness", "polarity": 1, "content": "I publish a one-page commander’s intent before action." },
+            "Q3133": { "dimension": "orderliness", "polarity": 1, "content": "I map risks and triggers with explicit contingencies." },
+            "Q3134": { "dimension": "social_dominance", "polarity": 1, "content": "I mobilize allies quickly and ask directly for resources." },
+            "Q3135": { "dimension": "risk_tolerance", "polarity": 1, "content": "I time-box decisions and prefer reversible choices first." },
+            "Q3136": { "dimension": "empathy", "polarity": 1, "content": "I invite dissent early and summarize it back before deciding." },
+            "Q3137": { "dimension": "agency", "polarity": -1, "content": "I delay key calls waiting for perfect information." },
+            "Q3138": { "dimension": "conscientiousness", "polarity": 1, "content": "I close the loop publicly on outcomes and lessons learned." }
+          },
+          "daily_prompt": "What single decision—made and communicated today—would unlock the most momentum?",
+          "practices": [
+            "Commander’s Intent: purpose, key tasks, end-state—one page max.",
+            "Greenlight Cadence: set a daily decision window and stick to it.",
+            "Effects-Based SITREP: report outcomes, not activity; 3 bullets.",
+            "Decision Register: log choice, owner, due-by, review date.",
+            "Red-Team 10: invite 10 minutes of structured dissent pre-launch."
+          ],
+          "transformation_indicators": [
+            "Faster decision cycle time with fewer reversals",
+            "Clear ownership and escalations on every initiative",
+            "Higher mission effects per unit of effort",
+            "Visible, public after-action learning",
+            "Team reports increased clarity and confidence"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Action (conflict)",
+          "preliminary_beat": "Break into 3 — Take Charge",
+          "save_the_cat_beat": "Action (conflict)",
+          "character_state": "Decisive, accountable, forward-leaning.",
+          "ordinary_world_baseline": "Hesitation, unclear command relationships, mixed signals.",
+          "push_turn": "Authority owned; intent clarified; movement coordinated."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Return",
+            "section_description": "Flight home with the boon; leadership clarifies the path.",
+            "connection_focus_area": "Embracing authority",
+            "connect_points": {
+              "point1": "Chart the path forward",
+              "point2": "Mobilize allies and assets",
+              "point3": "Hold a clear vision of victory"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define your next strategic move",
+              "objective2": "Share the vision and roles",
+              "objective3": "Lead a focused team huddle"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Taking Initiative",
+            "section_description": "Stepping proactively into leadership.",
+            "connection_focus_area": "Asserting direction",
+            "connect_points": {
+              "point1": "Name one bold decision",
+              "point2": "Assemble support and resources",
+              "point3": "Communicate plan and ask clearly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Select a decision to lead",
+              "objective2": "Outline a support strategy",
+              "objective3": "Announce the plan publicly"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Habit Stacking",
+            "section_description": "Small cues create reliable leadership behavior.",
+            "connection_focus_area": "Embedding leadership actions",
+            "connect_points": {
+              "point1": "Break leadership into micro-habits",
+              "point2": "Set daily cues and checklists",
+              "point3": "Review and refine weekly"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three micro-habits",
+              "objective2": "Track for one week",
+              "objective3": "Reflect and adjust"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "Trumpets cut the cold air as emerald pennons snap; Francisco raises the signal torch and the sky answers with lift.",
+          "symbolic_moment": "A green arc drawn across the map—vector chosen, burdens accepted—ships pivot in one smooth wave.",
+          "emotional_landscape": "Focused resolve, crisp urgency, calm command.",
+          "contentment_definition": "Peace as clarity: the confidence of a called shot and a team in motion.",
+          "transformation_promise": "When leadership owns the vector, the whole world turns its prow."
+        },
+        "epic_novel_pages": "Page 481 - 495",
+        "epic_chapter_focus": "Action (conflict)",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Leadership",
+        "specific_task_group_description": "Step confidently into your role and assert direction when it matters most.",
+        "specific_task_group_tagline": "Lead boldly",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Lime Green",
+        "hex_code": "#33CC33",
+        "red": 51,
+        "green": 204,
+        "blue": 51
+      },
       "personality_profile_314": {},
       "personality_profile_315": {},
       "personality_profile_316": {},
