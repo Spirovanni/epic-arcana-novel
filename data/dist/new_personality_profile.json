@@ -64267,7 +64267,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_312": {},
+      "personality_profile_312": {
+        "canonical_id": "EA-312",
+        "unique_identifier": "STG 8.3.3.3",
+        "specific_task_group_title": "Desolation",
+        "all_chapter": 312,
+        "novel_book": 8,
+        "chapter": "Chapter 32",
+        "chapter_title": "The Ultimate Boon — Desolation",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Return",
+        "theme": "After the peak, power is tempered by processing—naming the cost, integrating the change, and choosing how to re-enter.",
+        "family": "Integration — Emotional Mastery & Reentry",
+        "summary": "Francisco stabilizes after the storm. He metabolizes loss and victory into usable wisdom, sets clear boundaries for the next phase, and returns with steadiness instead of adrenaline.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Five",
+        "traits": {
+          "strengths": [
+            "names emotions precisely and early",
+            "creates reentry plans that protect energy",
+            "integrates wins/losses into clear lessons",
+            "models calm under lingering ambiguity",
+            "uses boundaries to sustain momentum"
+          ],
+          "shadow": [
+            "lingers in post-event emptiness too long",
+            "confuses isolation with recovery",
+            "over-intellectualizes feelings",
+            "avoids celebration to ‘stay serious’",
+            "returns too fast without debrief"
+          ],
+          "growth_focus": [
+            "schedule a 20-minute integration window after major pushes",
+            "write one page: ‘what changed, what stays, what stops’",
+            "share one boundary for your return week",
+            "celebrate one lesson, not just the outcome",
+            "ask for a witness: one person to reflect back growth"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "The Ultimate Boon",
+          "fiction_chapter_context": "Book 8, Chapter 32 — Break into 3: the power is claimed, but the soul must settle before the road home."
+        },
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—depth of feeling distilled into principled action."
+        },
+        "color_alignment": {
+          "name": "Bright Green",
+          "hsl": "105,100%,60%",
+          "rgb_hex": "#66FF33",
+          "color_symbolism": "Healing vitality—new growth after the storm; grounded optimism."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.80,
+            "empathy": 0.66,
+            "openness": 0.64,
+            "orderliness": 0.68,
+            "conscientiousness": 0.74,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.65,
+            "cooperativeness": 0.69,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.46,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.44,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.35,
+            "adaptability": 0.30
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q3121",
+            "Q3122",
+            "Q3123",
+            "Q3124",
+            "Q3125",
+            "Q3126",
+            "Q3127",
+            "Q3128"
+          ],
+          "signals_map": {
+            "Q3121": { "dimension": "stability", "polarity": 1, "content": "I schedule time to process before I re-enter normal pace." },
+            "Q3122": { "dimension": "conscientiousness", "polarity": 1, "content": "I write clear lessons learned within 24 hours of a big push." },
+            "Q3123": { "dimension": "empathy", "polarity": 1, "content": "I can name what I feel without blaming others or myself." },
+            "Q3124": { "dimension": "adaptability", "polarity": 1, "content": "I adjust plans based on integration insights, not momentum." },
+            "Q3125": { "dimension": "orderliness", "polarity": 1, "content": "I publish a simple reentry plan with boundaries and priorities." },
+            "Q3126": { "dimension": "risk_tolerance", "polarity": -1, "content": "I rush back into action to avoid sitting with discomfort." },
+            "Q3127": { "dimension": "agency", "polarity": 1, "content": "I ask for a witness to reflect my growth and blind spots." },
+            "Q3128": { "dimension": "emotional_intensity", "polarity": -1, "content": "I let post-event emptiness define my next steps." }
+          },
+          "daily_prompt": "What emotion needs naming—and what boundary needs setting—so your return today is steady, not reactive?",
+          "practices": [
+            "Three-Box Debrief: KEEP / STOP / START—one line each.",
+            "Body Scan Bookmark: 3 minutes to locate tension and release it.",
+            "Witness & Boundary: share one boundary and ask one ally to hold it with you.",
+            "Celebrate the Lesson: name the learning and mark it with a small ritual.",
+            "48-Hour Reentry Plan: top 3 priorities, 2 no-go’s, 1 recovery block."
+          ],
+          "transformation_indicators": [
+            "Shorter emotional whiplash after high-stakes events",
+            "Clear reentry plans adopted by the team",
+            "Fewer reactive decisions in the first 72 hours",
+            "Lessons learned referenced in subsequent sprints",
+            "Visible boundaries honored without friction"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Break into 3 — Desolation",
+          "save_the_cat_beat": "The Ultimate Boon",
+          "character_state": "Calm, boundaried, process-oriented.",
+          "ordinary_world_baseline": "Rushed returns, unprocessed wins/losses, emotional ricochet.",
+          "push_turn": "Integration first, then return—power made usable."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Return",
+            "section_description": "Reintegrating the boon into ordinary life.",
+            "connection_focus_area": "Reentry and reflection",
+            "connect_points": {
+              "point1": "Reflect on what changed",
+              "point2": "Plan your first steps home",
+              "point3": "Share one insight with your circle"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal transformation effects",
+              "objective2": "Draft a reentry plan",
+              "objective3": "Discuss learnings with a peer"
+            }
+          },
+          "book2": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "Owning your transformed self.",
+            "connection_focus_area": "Owning change",
+            "connect_points": {
+              "point1": "Acknowledge growth out loud",
+              "point2": "Set two new boundaries",
+              "point3": "Practice one courageous conversation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one new strength",
+              "objective2": "Share it openly",
+              "objective3": "Invite feedback"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Sustaining resilience and learning.",
+            "connection_focus_area": "Continued improvement",
+            "connect_points": {
+              "point1": "Set the next learning goal",
+              "point2": "Establish feedback loops",
+              "point3": "Adjust based on results"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define the next challenge",
+              "objective2": "Schedule feedback check-ins",
+              "objective3": "Document the growth path"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the far side of victory, the field is quiet; banners hang heavy with dew as Francisco exhales the weight he would not carry home.",
+          "symbolic_moment": "He lays a single green ribbon on basalt—loss and learning braided—then turns with lighter steps.",
+          "emotional_landscape": "Hollow to whole; sobered calm; gentle resolve.",
+          "contentment_definition": "Peace is momentum that remembers to breathe.",
+          "transformation_promise": "When power returns tempered, it stops burning the hand that wields it."
+        },
+        "epic_novel_pages": "Page 466 - 480",
+        "epic_chapter_focus": "The Ultimate Boon",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Integration",
+        "specific_task_group_description": "Process and integrate the transformation’s aftermath before returning.",
+        "specific_task_group_tagline": "Heal after triumph",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Bright Green",
+        "hex_code": "#66FF33",
+        "red": 102,
+        "green": 255,
+        "blue": 51
+      },
       "personality_profile_313": {},
       "personality_profile_314": {},
       "personality_profile_315": {},
