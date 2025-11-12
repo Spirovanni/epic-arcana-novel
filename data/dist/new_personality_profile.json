@@ -64070,7 +64070,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_311": {},
+      "personality_profile_311": {
+        "canonical_id": "EA-311",
+        "unique_identifier": "STG 8.3.3.2",
+        "specific_task_group_title": "Bold Actions",
+        "all_chapter": 311,
+        "novel_book": 8,
+        "chapter": "Chapter 31",
+        "chapter_title": "The Ultimate Boon — Bold Actions",
+        "type": "Specific Task Group",
+        "display_name": "The Greenlight Move",
+        "theme": "Power becomes real when you move. Decisive steps convert earned insight into visible change.",
+        "family": "Empowerment — Courage, Initiative & Decisive Motion",
+        "summary": "Francisco stops auditioning and starts acting. He names the boon, chooses the arena, and commits in public. Vulnerability isn’t a brake—it’s proof he’s alive at the wheel.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "acts decisively with principled intent",
+            "turns clarity into momentum within hours",
+            "rallies allies with crisp calls to action",
+            "stakes visible commitments and follows through",
+            "balances daring moves with ethical guardrails"
+          ],
+          "shadow": [
+            "mistakes speed for strategy",
+            "overexposes the team to avoidable risk",
+            "confuses visibility with impact",
+            "dismisses cautions as ‘negativity’",
+            "jumps to action to escape discomfort"
+          ],
+          "growth_focus": [
+            "write a one-sentence ‘why now’ before each bold step",
+            "define worst-case, stopper, and tripwire before launch",
+            "pre-commit to a 48-hour review of results and lessons",
+            "enlist a red-team peer to poke holes fast",
+            "translate every big move into three micro-steps for day one"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Power within (set-up)",
+          "fiction_chapter_context": "Book 8, Chapter 31 — The Ultimate Boon: the prize is potency, cashed in through one unmistakable move."
+        },
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—force refined by service; courage used to uplift."
+        },
+        "color_alignment": {
+          "name": "Harlequin",
+          "hsl": "108,100%,50%",
+          "rgb_hex": "#33FF00",
+          "color_symbolism": "Greenlight energy—permission granted, action engaged."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.62,
+            "empathy": 0.60,
+            "openness": 0.68,
+            "orderliness": 0.66,
+            "conscientiousness": 0.69,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.70,
+            "cooperativeness": 0.61,
+            "risk_tolerance": 0.76,
+            "emotional_intensity": 0.58,
+            "social_dominance": 0.72,
+            "novelty_seeking": 0.67,
+            "imagination": 0.66
+          },
+          "match_weights": {
+            "agency": 0.40,
+            "risk_tolerance": 0.35,
+            "conscientiousness": 0.25
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q3111",
+            "Q3112",
+            "Q3113",
+            "Q3114",
+            "Q3115",
+            "Q3116",
+            "Q3117",
+            "Q3118"
+          ],
+          "signals_map": {
+            "Q3111": { "dimension": "agency", "polarity": 1, "content": "I convert decisions into visible moves within 24 hours." },
+            "Q3112": { "dimension": "risk_tolerance", "polarity": 1, "content": "I accept exposure if the principle and timing are right." },
+            "Q3113": { "dimension": "conscientiousness", "polarity": 1, "content": "Before bold moves, I define success, tripwires, and stop rules." },
+            "Q3114": { "dimension": "social_dominance", "polarity": 1, "content": "I call the play in clear language and take the first step myself." },
+            "Q3115": { "dimension": "adaptability", "polarity": 1, "content": "I revise course quickly without losing the mission." },
+            "Q3116": { "dimension": "stability", "polarity": -1, "content": "I push action even when key risks are unknown." },
+            "Q3117": { "dimension": "openness", "polarity": 1, "content": "I invite a fast critique before locking the plan." },
+            "Q3118": { "dimension": "orderliness", "polarity": 1, "content": "I break big bets into first, next, and never steps." }
+          },
+          "daily_prompt": "What single bold step—taken today—would make the boon real for you and your team?",
+          "practices": [
+            "Greenlight Ritual: name boon → first step → time → owner; execute within 24 hours.",
+            "Tripwire Planning: define stop/slow/go metrics before action.",
+            "Red-Team Five: five-minute pre-brief with a skeptic to stress the move.",
+            "Public Commit: write the commitment where stakeholders can see and track it.",
+            "Debrief 48: evaluate outcomes, distill one rule you’ll reuse."
+          ],
+          "transformation_indicators": [
+            "Shorter decision-to-action cycle time",
+            "Clear tripwires prevent runaway risk",
+            "Stakeholders echo the ‘why now’ in their own words",
+            "Higher rate of decisive, ethical moves",
+            "Lessons captured within 48 hours of each bold step"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Power within — Bold Actions",
+          "save_the_cat_beat": "Power within (set-up)",
+          "character_state": "Charged, exposed, principled.",
+          "ordinary_world_baseline": "Hesitation disguised as endless preparation.",
+          "push_turn": "Claim the boon by moving first—then learn at full speed."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ultimate Boon",
+            "section_description": "The hero claims the prize of the adventure.",
+            "connection_focus_area": "Claiming victory",
+            "connect_points": {
+              "point1": "Recognize your earned reward",
+              "point2": "Plan one decisive step",
+              "point3": "Embody heroic confidence"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "State your personal boon",
+              "objective2": "List three actions to claim it",
+              "objective3": "Execute one immediately"
+            }
+          },
+          "book2": {
+            "title": "Lean In",
+            "author": "Sheryl Sandberg",
+            "section_of_focus": "Taking Risks",
+            "section_description": "Push past hesitation and lead.",
+            "connection_focus_area": "Overcoming doubt",
+            "connect_points": {
+              "point1": "Identify one bold move",
+              "point2": "Outline risk mitigation",
+              "point3": "Enlist support network"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your bold action",
+              "objective2": "Draft a risk plan",
+              "objective3": "Ask a mentor for feedback"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Building Better Habits",
+            "section_description": "Tiny changes drive big results.",
+            "connection_focus_area": "Embedding action",
+            "connect_points": {
+              "point1": "Break the bold act into small steps",
+              "point2": "Set clear cues",
+              "point3": "Track execution"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define three micro-actions",
+              "objective2": "Implement a habit tracker",
+              "objective3": "Review at week’s end"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the citadel’s green-lit terrace, Francisco raises a hand; the signal arcs like a comet and the city inhales together.",
+          "symbolic_moment": "A harlequin flare—pure green—cuts the night; every heart feels the click from intent to motion.",
+          "emotional_landscape": "Anticipation, exposed courage, clean resolve.",
+          "contentment_definition": "Knowing the right move and making it—while others are still thinking.",
+          "transformation_promise": "One principled leap reconfigures the board for everyone watching."
+        },
+        "epic_novel_pages": "Page 451 - 465",
+        "epic_chapter_focus": "Power within (set-up)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Empowerment",
+        "specific_task_group_description": "Seize your reward by taking decisive, courageous steps.",
+        "specific_task_group_tagline": "Act with conviction",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Harlequin",
+        "hex_code": "#33FF00",
+        "red": 51,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_312": {},
       "personality_profile_313": {},
       "personality_profile_314": {},
