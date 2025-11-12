@@ -62888,7 +62888,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_305": {},
+      "personality_profile_305": {
+        "canonical_id": "EA-305",
+        "unique_identifier": "STG 8.3.1.2",
+        "specific_task_group_title": "Five Senses",
+        "all_chapter": 305,
+        "novel_book": 8,
+        "chapter": "Chapter 25",
+        "chapter_title": "Dedication (Resolution) — Five Senses",
+        "type": "Specific Task Group",
+        "display_name": "The Embodied Compass",
+        "theme": "When clarity fractures, come back to the body—see, hear, feel, smell, taste—anchor attention and let coherence rebuild from the present moment out.",
+        "family": "Embodied Awareness — Presence, Sensation & Grounding",
+        "summary": "After the ‘all is lost’ plunge, Francisco recommits by re-entering his body. He uses the five senses to quiet rumination, re-center attention, and reestablish momentum. Presence becomes a practice: fewer loops in the head, more signals from the world. From this grounded state, decisions sharpen and energy returns.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Ace",
+        "traits": {
+          "strengths": [
+            "grounds attention through sensory cues under stress",
+            "designs spaces that reduce noise and heighten focus",
+            "uses breath and body-weight awareness to reset",
+            "tracks interruptions and optimizes for deep work",
+            "savors small wins to recharge motivation"
+          ],
+          "shadow": [
+            "numbs out or dissociates when overloaded",
+            "confuses stimulation with true engagement",
+            "over-optimizes rituals and resists spontaneity",
+            "ignores subtle bodily signals until crisis",
+            "lets digital noise hijack the senses"
+          ],
+          "growth_focus": [
+            "install a 5–4–3–2–1 scan as a daily reset",
+            "set a single sensory cue that starts deep work",
+            "reduce one persistent sensory distraction by 50%",
+            "build a two-minute ‘savor ritual’ after hard tasks",
+            "log interruptions for one week and remove the top two"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Dedication (resolution)",
+          "fiction_chapter_context": "Book 8, Chapter 25 — Atonement with the Father: presence rebuilt through the body."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—grounded calm channeling into focused action."
+        },
+        "color_alignment": {
+          "name": "Mantis",
+          "hsl": "93,51%,52%",
+          "rgb_hex": "#7BC342",
+          "color_symbolism": "Verdant renewal—life returns as attention returns to the body."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.74,
+            "empathy": 0.61,
+            "openness": 0.62,
+            "orderliness": 0.56,
+            "conscientiousness": 0.59,
+            "adaptability": 0.65,
+            "abstract_reasoning": 0.55,
+            "cooperativeness": 0.60,
+            "risk_tolerance": 0.48,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.45,
+            "novelty_seeking": 0.54,
+            "imagination": 0.58
+          },
+          "match_weights": {
+            "stability": 0.45,
+            "conscientiousness": 0.30,
+            "adaptability": 0.25
+          },
+          "threshold": 0.81,
+          "top_signal_items": [
+            "Q3051",
+            "Q3052",
+            "Q3053",
+            "Q3054",
+            "Q3055",
+            "Q3056",
+            "Q3057",
+            "Q3058"
+          ],
+          "signals_map": {
+            "Q3051": { "dimension": "stability", "polarity": 1, "content": "I use a 5–4–3–2–1 sensory scan to reset attention." },
+            "Q3052": { "dimension": "openness", "polarity": 1, "content": "I notice raw sights, sounds, and textures before labeling them." },
+            "Q3053": { "dimension": "stability", "polarity": 1, "content": "When overwhelmed, I return to breath and body weight." },
+            "Q3054": { "dimension": "orderliness", "polarity": 1, "content": "My workspace is tuned to minimize sensory noise." },
+            "Q3055": { "dimension": "conscientiousness", "polarity": 1, "content": "I schedule deep-work blocks with clear environmental cues." },
+            "Q3056": { "dimension": "stability", "polarity": -1, "content": "Under stress I numb out or dissociate from bodily signals." },
+            "Q3057": { "dimension": "adaptability", "polarity": 1, "content": "I use simple taste/scent rituals to shift mental state." },
+            "Q3058": { "dimension": "conscientiousness", "polarity": 1, "content": "I track interruptions per hour and act on what I learn." }
+          },
+          "daily_prompt": "Which single sensory cue will you use right now to return to the present?",
+          "practices": [
+            "5–4–3–2–1 Scan: name five sights, four sounds, three touches, two scents, one taste.",
+            "Box Breathing: 4×4×4×4 cycle to settle the nervous system before focus blocks.",
+            "Soundscape Mapping: list distinct layers of ambient sound; lower or remove one.",
+            "Texture Walk: spend two minutes cataloging tactile surfaces; choose one as an anchor.",
+            "Savor Ritual: a 60–90 second taste/scent cue immediately after a hard task to encode success."
+          ],
+          "transformation_indicators": [
+            "Lower reported rumination during weekly review",
+            "Reduced interruptions per focus hour",
+            "Faster recovery from stress (time-to-calm decreases)",
+            "Higher deep-work completion rate",
+            "Consistent use of a personal sensory anchor"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Dedication (resolution)",
+          "preliminary_beat": "Dedication — Five Senses",
+          "save_the_cat_beat": "Dedication (resolution)",
+          "character_state": "Embodied, grounded, present-focused.",
+          "ordinary_world_baseline": "Disembodied, scattered attention, numb or flooded.",
+          "push_turn": "A full-senses ritual restores clarity and recommits him to the path."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Body Keeps the Score",
+            "author": "Bessel van der Kolk",
+            "section_of_focus": "Sensory Awareness",
+            "section_description": "Using senses to heal and ground the self.",
+            "connection_focus_area": "Embodied presence",
+            "connect_points": {
+              "point1": "Notice physical sensations",
+              "point2": "Mirror mindful movements",
+              "point3": "Practice deep breathing"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal daily sensory observations",
+              "objective2": "Perform a mirror movement exercise",
+              "objective3": "Implement a breathing routine"
+            }
+          },
+          "book2": {
+            "title": "Flow",
+            "author": "Mihaly Csikszentmihalyi",
+            "section_of_focus": "Attention and Experience",
+            "section_description": "Achieving flow by focusing fully on tasks.",
+            "connection_focus_area": "Peak engagement",
+            "connect_points": {
+              "point1": "Select a flow activity",
+              "point2": "Eliminate distractions",
+              "point3": "Tune into feedback loops"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Plan a one-hour flow session",
+              "objective2": "Record environmental tweaks",
+              "objective3": "Reflect on engagement levels"
+            }
+          },
+          "book3": {
+            "title": "Deep Work",
+            "author": "Cal Newport",
+            "section_of_focus": "Rules for Focused Success",
+            "section_description": "Techniques for sustained concentration.",
+            "connection_focus_area": "Sensory immersion",
+            "connect_points": {
+              "point1": "Block a distraction-free period",
+              "point2": "Optimize your workspace",
+              "point3": "Measure output quality"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Schedule a deep-work block",
+              "objective2": "Implement a no-phone policy",
+              "objective3": "Assess productivity gains"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Ember Cloister, Francisco kneels—palms on warm stone, breath tasting faint ash while distant forges hum. Sight, sound, touch, scent, taste line up like ranks and the world steadies.",
+          "symbolic_moment": "A single drop of cool water on his tongue becomes an oath: return to the body, return to the work.",
+          "emotional_landscape": "Quiet, steadying, resolute.",
+          "contentment_definition": "Peace as contact: life felt directly, not argued with.",
+          "transformation_promise": "Presence rebuilds power; the body leads the mind home."
+        },
+        "epic_novel_pages": "Page 361 - 375",
+        "epic_chapter_focus": "Dedication (resolution)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Embodied Awareness",
+        "specific_task_group_description": "Engage all five senses to deepen awareness and reconnect with the present moment.",
+        "specific_task_group_tagline": "Experience fully",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Mantis",
+        "hex_code": "#7BC342",
+        "red": 123,
+        "green": 195,
+        "blue": 66
+      },
       "personality_profile_306": {},
       "personality_profile_307": {},
       "personality_profile_308": {},
