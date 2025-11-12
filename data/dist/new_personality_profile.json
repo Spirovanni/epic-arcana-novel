@@ -63676,7 +63676,203 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_309": {},
+      "personality_profile_309": {
+        "canonical_id": "EA-309",
+        "unique_identifier": "STG 8.3.2.3",
+        "specific_task_group_title": "Friendship",
+        "all_chapter": 309,
+        "novel_book": 8,
+        "chapter": "Chapter 29",
+        "chapter_title": "The Abyss — Friendship",
+        "type": "Specific Task Group",
+        "display_name": "The Circle that Holds",
+        "theme": "In the deepest dark, bonded hearts braid strength—support becomes the rope that lifts everyone out.",
+        "family": "Support Networks — Trust, Reciprocity & Resilience",
+        "summary": "Francisco leans into his circle. Mutual care and honest vulnerability forge a net that won’t tear under load. By giving and receiving help without keeping score, the group endures the abyss together—and emerges tighter, steadier, and braver.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "cultivates loyal, high-trust bonds",
+            "asks for and offers help early",
+            "creates rituals for regular connection",
+            "models vulnerable honesty without drama",
+            "balances reciprocity across the network"
+          ],
+          "shadow": [
+            "overfunctions and becomes the group’s fixer",
+            "avoids burdening others and isolates under stress",
+            "keeps informal score of favors",
+            "confuses proximity with real intimacy",
+            "tolerates draining relationships too long"
+          ],
+          "growth_focus": [
+            "schedule micro-check-ins (10 minutes) with key allies",
+            "ask clearly for one concrete assist this week",
+            "set a boundary with warmth and firmness",
+            "replace vague support with named commitments",
+            "log gives/receives to spot imbalance early"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "The Abyss",
+          "fiction_chapter_context": "Book 8, Chapter 29 — The Abyss: friendships hold the line when light is thin and the way forward is unclear."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—support deepened by authentic self-expression."
+        },
+        "color_alignment": {
+          "name": "Green Yellow",
+          "hsl": "90,100%,60%",
+          "rgb_hex": "#99FF33",
+          "color_symbolism": "Renewal through kinship—shared growth, living bonds, mutual uplift."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.62,
+            "stability": 0.66,
+            "empathy": 0.83,
+            "openness": 0.67,
+            "orderliness": 0.61,
+            "conscientiousness": 0.64,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.63,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.53,
+            "emotional_intensity": 0.57,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.58,
+            "imagination": 0.60
+          },
+          "match_weights": {
+            "cooperativeness": 0.35,
+            "empathy": 0.35,
+            "stability": 0.30
+          },
+          "threshold": 0.85,
+          "top_signal_items": [
+            "Q3091",
+            "Q3092",
+            "Q3093",
+            "Q3094",
+            "Q3095",
+            "Q3096",
+            "Q3097",
+            "Q3098"
+          ],
+          "signals_map": {
+            "Q3091": { "dimension": "cooperativeness", "polarity": 1, "content": "I ask for help before I’m overwhelmed and offer it before I’m asked." },
+            "Q3092": { "dimension": "empathy", "polarity": 1, "content": "When a friend struggles, I listen first, name needs second, and act third." },
+            "Q3093": { "dimension": "stability", "polarity": 1, "content": "I maintain regular touchpoints so support is steady, not episodic." },
+            "Q3094": { "dimension": "orderliness", "polarity": 1, "content": "I convert ‘let me know’ into clear commitments with owners and dates." },
+            "Q3095": { "dimension": "cooperativeness", "polarity": -1, "content": "I avoid asking for help even when stuck because I don’t want to burden others." },
+            "Q3096": { "dimension": "adaptability", "polarity": 1, "content": "I flex roles to cover gaps without losing sight of boundaries." },
+            "Q3097": { "dimension": "conscientiousness", "polarity": 1, "content": "I keep promises to my circle and renegotiate quickly if something slips." },
+            "Q3098": { "dimension": "openness", "polarity": 1, "content": "I share honest context so people can actually support the right thing." }
+          },
+          "daily_prompt": "Who in your circle needs a check-in today—and what specific, practical support can you offer or request?",
+          "practices": [
+            "Circle of Three: rotate weekly 15-minute calls among three core allies.",
+            "Mutual Aid Board: a shared list of ‘needs’ and ‘offers’ updated every Friday.",
+            "Honesty Minute: one truth, one ask, one thanks—timeboxed in every sync.",
+            "Boundary Script: pre-write ‘no for now’ language that preserves warmth.",
+            "Reciprocity Review: monthly reflection on gives/receives to rebalance."
+          ],
+          "transformation_indicators": [
+            "Asks and offers become specific, time-bound, and easier to accept",
+            "Lower distress during crises due to predictable support",
+            "Faster recovery after setbacks; less isolation behaviors",
+            "Richer vulnerability without emotional spillover",
+            "Network resilience—help routes around single-point failures"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "The Abyss — Friendship",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "Vulnerable yet supported; courage multiplied by kinship.",
+          "ordinary_world_baseline": "Self-reliance masking loneliness; favors traded, not shared.",
+          "push_turn": "Genuine reciprocity forms a safety net strong enough to cross the void."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Tribes",
+            "author": "Seth Godin",
+            "section_of_focus": "Building Movements",
+            "section_description": "Creating strong, supportive communities.",
+            "connection_focus_area": "Community bonds",
+            "connect_points": {
+              "point1": "Identify your tribe",
+              "point2": "Foster regular connection",
+              "point3": "Share a common vision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map your support network",
+              "objective2": "Schedule a tribe gathering",
+              "objective3": "Articulate shared values"
+            }
+          },
+          "book2": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Wholehearted Living",
+            "section_description": "Cultivating meaningful connections through vulnerability.",
+            "connection_focus_area": "Authentic relationships",
+            "connect_points": {
+              "point1": "Share a personal story",
+              "point2": "Offer and solicit support",
+              "point3": "Practice empathetic listening"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead one honest conversation",
+              "objective2": "Provide compassionate feedback",
+              "objective3": "Reflect on relational growth"
+            }
+          },
+          "book3": {
+            "title": "Give and Take",
+            "author": "Adam Grant",
+            "section_of_focus": "Reciprocity Styles",
+            "section_description": "Balancing giving and receiving in relationships.",
+            "connection_focus_area": "Mutual support",
+            "connect_points": {
+              "point1": "Perform one act of generosity",
+              "point2": "Accept help gracefully",
+              "point3": "Track reciprocal interactions"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a generosity log",
+              "objective2": "Acknowledge one received favor",
+              "objective3": "Plan a mutual aid activity"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the crater’s lip, three friends clasp wrists—light travels skin to skin until their shadows glow.",
+          "symbolic_moment": "Shared breath becomes a chant; the abyss answers with a softer echo.",
+          "emotional_landscape": "Warmth in the cold, steadiness under strain, hope born of together.",
+          "contentment_definition": "To be held and to hold—no one falls alone.",
+          "transformation_promise": "When courage is braided, the drop becomes a stair."
+        },
+        "epic_novel_pages": "Page 421 - 435",
+        "epic_chapter_focus": "The Abyss",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Support Networks",
+        "specific_task_group_description": "Leverage the strength of close relationships to navigate your deepest trials.",
+        "specific_task_group_tagline": "Lean on your circle",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Green Yellow",
+        "hex_code": "#99FF33",
+        "red": 153,
+        "green": 255,
+        "blue": 51
+      },
       "personality_profile_310": {},
       "personality_profile_311": {},
       "personality_profile_312": {},
