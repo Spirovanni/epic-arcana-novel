@@ -63282,7 +63282,203 @@
         "green": 255,
         "blue": 102
       },
-      "personality_profile_307": {},
+      "personality_profile_307": {
+        "canonical_id": "EA-307",
+        "unique_identifier": "STG 8.3.2.1",
+        "specific_task_group_title": "Synchronized",
+        "all_chapter": 307,
+        "novel_book": 8,
+        "chapter": "Chapter 27",
+        "chapter_title": "The Abyss — Synchronized",
+        "type": "Specific Task Group",
+        "display_name": "The One Rhythm",
+        "theme": "Teams move like one organism when trust, timing, and shared intent lock into cadence.",
+        "family": "Coordination — Trust, Timing & Shared Rhythm",
+        "summary": "Francisco orchestrates many hands into one motion. Information flows, roles mesh, and timing becomes the quiet superpower. Fragmented efforts give way to a single pulse; synchronization turns chaos into momentum.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Queen",
+        "traits": {
+          "strengths": [
+            "creates shared cadence across people and tasks",
+            "communicates crisp timing cues and intent",
+            "designs simple interfaces between teams",
+            "balances autonomy with interdependence",
+            "spots latency and removes coordination friction"
+          ],
+          "shadow": [
+            "over-engineers process and slows initiative",
+            "waits for perfect alignment before acting",
+            "confuses consensus with commitment",
+            "paper-covers conflict instead of resolving it",
+            "hoards updates, causing downstream surprises"
+          ],
+          "growth_focus": [
+            "replace status meetings with 90-second syncs",
+            "publish ‘who needs what by when’ daily",
+            "define interfaces, not instructions",
+            "surface and settle one hard misalignment",
+            "measure and shrink handoff latency"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Trials",
+          "fiction_chapter_context": "Book 8, Chapter 27 — The Abyss: circles of effort lock into one timing, and the work breathes as a unit."
+        },
+        "enneagram_link": {
+          "family_number": 9,
+          "note": "Peacemaker integrating to 3—harmony converted into coordinated action."
+        },
+        "color_alignment": {
+          "name": "Feijoa",
+          "hsl": "100,100%,70%",
+          "rgb_hex": "#99FF66",
+          "color_symbolism": "Spring vitality—cooperation, living systems in tune."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.61,
+            "stability": 0.67,
+            "empathy": 0.71,
+            "openness": 0.62,
+            "orderliness": 0.74,
+            "conscientiousness": 0.72,
+            "adaptability": 0.72,
+            "abstract_reasoning": 0.68,
+            "cooperativeness": 0.86,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.50,
+            "social_dominance": 0.58,
+            "novelty_seeking": 0.60,
+            "imagination": 0.62
+          },
+          "match_weights": {
+            "cooperativeness": 0.40,
+            "orderliness": 0.30,
+            "adaptability": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q3071",
+            "Q3072",
+            "Q3073",
+            "Q3074",
+            "Q3075",
+            "Q3076",
+            "Q3077",
+            "Q3078"
+          ],
+          "signals_map": {
+            "Q3071": { "dimension": "cooperativeness", "polarity": 1, "content": "I share context early so others can move in parallel." },
+            "Q3072": { "dimension": "orderliness", "polarity": 1, "content": "I define clear handoffs: who, what, when, and the ready-state." },
+            "Q3073": { "dimension": "adaptability", "polarity": 1, "content": "When plans shift, I realign timing and interfaces fast." },
+            "Q3074": { "dimension": "conscientiousness", "polarity": 1, "content": "I publish rhythm metrics (cadence, latency, rework) and improve them." },
+            "Q3075": { "dimension": "empathy", "polarity": 1, "content": "I tune communication to how adjacent teams actually receive it." },
+            "Q3076": { "dimension": "cooperativeness", "polarity": -1, "content": "I hold updates until they’re perfect, even if it delays others." },
+            "Q3077": { "dimension": "stability", "polarity": 1, "content": "I keep tempo steady under pressure so the team can think." },
+            "Q3078": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I design simple shared protocols rather than complex rules." }
+          },
+          "daily_prompt": "What single cadence cue or update would help the whole group move in sync today?",
+          "practices": [
+            "90-Second Stand-Up: intent, obstacle, next handoff—timeboxed and crisp.",
+            "Interface Map: document inputs/outputs between units; keep it to one page.",
+            "Latency Hunt: measure time between ‘done here’ and ‘start there’; remove one blocker.",
+            "Bounded Autonomy Drill: clarify decisions decentralized vs. centralized.",
+            "After-Action Rhythm: 10-minute debrief focused on timing, handoffs, and clarity."
+          ],
+          "transformation_indicators": [
+            "Shorter handoff latency and fewer rework loops",
+            "Consistent cadence with fewer urgent interrupts",
+            "Stakeholders repeat the shared intent in their own words",
+            "Conflicts surfaced earlier and resolved faster",
+            "Parallel work increases without quality loss"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Trials (set-up)",
+          "preliminary_beat": "Trials — Synchronized",
+          "save_the_cat_beat": "Trials (set-up)",
+          "character_state": "Interdependent, tempo-aware, cadence-driven.",
+          "ordinary_world_baseline": "Siloed updates, mismatched timing, duplicated effort.",
+          "push_turn": "A shared rhythm replaces fragmentation and unlocks flow."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Team of Teams",
+            "author": "General Stanley McChrystal",
+            "section_of_focus": "Shared Consciousness",
+            "section_description": "Interconnected units acting with common intent.",
+            "connection_focus_area": "Collective coordination",
+            "connect_points": {
+              "point1": "Map interdependencies",
+              "point2": "Share real-time context",
+              "point3": "Enable decentralized action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Draw a living dependency graph",
+              "objective2": "Launch a shared situational dashboard",
+              "objective3": "Delegate one key decision to the edge"
+            }
+          },
+          "book2": {
+            "title": "The Five Dysfunctions of a Team",
+            "author": "Patrick Lencioni",
+            "section_of_focus": "Trust and Commitment",
+            "section_description": "Foundations for reliable coordination.",
+            "connection_focus_area": "Building trust",
+            "connect_points": {
+              "point1": "Run a vulnerability round",
+              "point2": "Agree on one shared outcome",
+              "point3": "Create mutual accountability rituals"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Publish a one-page team charter",
+              "objective2": "Schedule weekly peer feedback",
+              "objective3": "Track commitments visibly"
+            }
+          },
+          "book3": {
+            "title": "Collective Genius",
+            "author": "Linda Hill",
+            "section_of_focus": "Collective Creativity",
+            "section_description": "Innovation through coordinated diversity.",
+            "connection_focus_area": "Synergistic problem solving",
+            "connect_points": {
+              "point1": "Run cross-functional ideation",
+              "point2": "Share rough prototypes early",
+              "point3": "Iterate in tight loops"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Host a 2-hour design jam",
+              "objective2": "Ship a same-day prototype",
+              "objective3": "Log learnings in a common repo"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the basalt causeway, drums fall into one tempo; banners lean the same way as if the wind itself were recruited.",
+          "symbolic_moment": "A lattice of green light threads between allies—each pulse a promise, each promise right on time.",
+          "emotional_landscape": "Calm focus, shared courage, subtle electricity.",
+          "contentment_definition": "Belonging through precision: every voice heard, every move on-beat.",
+          "transformation_promise": "When many hearts share one rhythm, the abyss becomes a bridge."
+        },
+        "epic_novel_pages": "Page 391 - 405",
+        "epic_chapter_focus": "Trials (set-up)",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene XI: The Abyss",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Harmonious Action",
+        "specific_task_group_description": "Coordinate your efforts with others to overcome deep challenges through collective alignment.",
+        "specific_task_group_tagline": "Move as one",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Feijoa",
+        "hex_code": "#99FF66",
+        "red": 153,
+        "green": 255,
+        "blue": 102
+      },
       "personality_profile_308": {},
       "personality_profile_309": {},
       "personality_profile_310": {},
