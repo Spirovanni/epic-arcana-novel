@@ -64858,7 +64858,203 @@
         "green": 204,
         "blue": 51
       },
-      "personality_profile_315": {},
+      "personality_profile_315": {
+        "canonical_id": "EA-315",
+        "unique_identifier": "STG 8.3.4.3",
+        "specific_task_group_title": "Appreciating the Moment",
+        "all_chapter": 315,
+        "novel_book": 8,
+        "chapter": "Chapter 35",
+        "chapter_title": "Flight — Appreciating the Moment",
+        "type": "Specific Task Group",
+        "display_name": "The Quiet Victory",
+        "theme": "Pause, breathe, and honor the ground gained—gratitude locks in growth and steadies the return.",
+        "family": "Reflection — Gratitude, Presence & Integration",
+        "summary": "As momentum crests, Francisco builds a deliberate pause: he names the wins, credits the people, and lets meaning catch up to motion. Celebration becomes integration—fuel for the road home rather than a detour.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Nine",
+        "traits": {
+          "strengths": [
+            "anchors teams in simple celebration and gratitude rituals",
+            "turns achievements into shared lessons and reusable playbooks",
+            "links outcomes back to purpose and values",
+            "designs recovery cycles to prevent burnout",
+            "models calm presence that settles the room"
+          ],
+          "shadow": [
+            "lingers in the glow and delays the next move",
+            "uses celebration to avoid unresolved conflict",
+            "treats reflection as performance rather than truth",
+            "forgets to credit quiet contributors",
+            "equates nonstop push with worthiness to rest"
+          ],
+          "growth_focus": [
+            "install a weekly 3-wins/1-lesson cadence",
+            "thank three contributors by name and impact",
+            "define a ‘done → celebrate → recover’ ritual",
+            "schedule micro-sabbaths after major pushes",
+            "surface and resolve one lingering tension"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Flight",
+          "fiction_chapter_context": "Book 8, Chapter 35 — Flight: speed eases to glide; victories are counted, spirits refueled."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—gratitude deepens into authentic self-regard and presence."
+        },
+        "color_alignment": {
+          "name": "La Palma",
+          "hsl": "100,100%,30%",
+          "rgb_hex": "#339900",
+          "color_symbolism": "Deep grove green—earned contentment, steady renewal."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.58,
+            "stability": 0.80,
+            "empathy": 0.78,
+            "openness": 0.66,
+            "orderliness": 0.68,
+            "conscientiousness": 0.75,
+            "adaptability": 0.64,
+            "abstract_reasoning": 0.62,
+            "cooperativeness": 0.72,
+            "risk_tolerance": 0.45,
+            "emotional_intensity": 0.48,
+            "social_dominance": 0.52,
+            "novelty_seeking": 0.50,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "stability": 0.40,
+            "empathy": 0.30,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.83,
+          "top_signal_items": [
+            "Q3151",
+            "Q3152",
+            "Q3153",
+            "Q3154",
+            "Q3155",
+            "Q3156",
+            "Q3157",
+            "Q3158"
+          ],
+          "signals_map": {
+            "Q3151": { "dimension": "conscientiousness", "polarity": 1, "content": "I capture three wins and one lesson before closing a day." },
+            "Q3152": { "dimension": "empathy", "polarity": 1, "content": "I publicly credit contributors by name and impact." },
+            "Q3153": { "dimension": "stability", "polarity": 1, "content": "I schedule decompression time after major pushes." },
+            "Q3154": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I tie outcomes back to purpose and values." },
+            "Q3155": { "dimension": "stability", "polarity": 1, "content": "I practice a 60-second breath reset before the next sprint." },
+            "Q3156": { "dimension": "orderliness", "polarity": -1, "content": "I skip celebration to ‘save time’ and push on." },
+            "Q3157": { "dimension": "cooperativeness", "polarity": 1, "content": "I keep a gratitude ledger for unseen helpers." },
+            "Q3158": { "dimension": "conscientiousness", "polarity": 1, "content": "I define a simple ‘done → celebrate → recover’ ritual." }
+          },
+          "daily_prompt": "What will you savor—and who will you thank—before you launch the next sprint?",
+          "practices": [
+            "3 Wins & 1 Lesson: write them; share one aloud.",
+            "Gratitude Triad: thank a peer, a mentor, and a behind-the-scenes helper.",
+            "Breath + Reset: 60 seconds box-breathing before the next decision.",
+            "Contribution Spotlight: 90 seconds to name who made the win possible and how.",
+            "Recovery Plan: micro-sabbath on the calendar within 48 hours of delivery."
+          ],
+          "transformation_indicators": [
+            "Higher morale and lower post-delivery burnout",
+            "Clearer lessons logged and reused in future cycles",
+            "Broader recognition across visible and invisible roles",
+            "Shorter ramp-up time for the next initiative",
+            "More consistent pace with fewer boom-and-bust swings"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Flight",
+          "preliminary_beat": "Finale — Appreciating the Moment",
+          "save_the_cat_beat": "Flight",
+          "character_state": "Grateful, steady, meaning-anchored.",
+          "ordinary_world_baseline": "Relentless push with little reflection; victories blur together.",
+          "push_turn": "Celebration ritual converts speed into sustainable return."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Master of Two Worlds",
+            "section_description": "Balancing the boon with ordinary life.",
+            "connection_focus_area": "Integration of gains",
+            "connect_points": {
+              "point1": "Reflect on personal growth",
+              "point2": "Plan real-world application",
+              "point3": "Share insights with community"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Journal three wins",
+              "objective2": "Draft next steps",
+              "objective3": "Discuss lessons learned"
+            }
+          },
+          "book2": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Vulnerability",
+            "section_description": "Owning your story in moments of success.",
+            "connection_focus_area": "Owning accomplishments",
+            "connect_points": {
+              "point1": "Acknowledge your strengths",
+              "point2": "Set boundaries for the next phase",
+              "point3": "Practice sharing achievements"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three new strengths",
+              "objective2": "Share one publicly",
+              "objective3": "Invite feedback"
+            }
+          },
+          "book3": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Make It Attractive",
+            "section_description": "Reinforce progress through rewarding rituals.",
+            "connection_focus_area": "Celebrating small wins",
+            "connect_points": {
+              "point1": "Define a reward ritual",
+              "point2": "Schedule regular reflections",
+              "point3": "Track moments of gratitude"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a celebration ritual",
+              "objective2": "Reflect weekly",
+              "objective3": "Adjust based on insights"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "The fleet rights its masts; sails slacken to a quiet hum as Francisco lifts a hand—the sea answers with a softer green and the crews finally exhale.",
+          "symbolic_moment": "Nine emerald pennons fold in unison; each fold a name spoken and a debt of gratitude paid.",
+          "emotional_landscape": "Warm relief, grounded pride, unhurried breath.",
+          "contentment_definition": "Meaning caught up to motion; the win is felt, not just recorded.",
+          "transformation_promise": "Celebrate well to return strong—the moment you honor becomes the strength you carry."
+        },
+        "epic_novel_pages": "Page 511 - 525",
+        "epic_chapter_focus": "Flight",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIII: Flight",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Reflection",
+        "specific_task_group_description": "Pause to acknowledge and savor the journey’s achievements before moving on.",
+        "specific_task_group_tagline": "Celebrate progress",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "La Palma",
+        "hex_code": "#339900",
+        "red": 51,
+        "green": 153,
+        "blue": 0
+      },    
       "personality_profile_316": {},
       "personality_profile_317": {},
       "personality_profile_318": {},
