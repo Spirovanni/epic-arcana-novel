@@ -63873,7 +63873,203 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_310": {},
+      "personality_profile_310": {
+        "canonical_id": "EA-310",
+        "unique_identifier": "STG 8.3.3.1",
+        "specific_task_group_title": "Defeat",
+        "all_chapter": 310,
+        "novel_book": 8,
+        "chapter": "Chapter 30",
+        "chapter_title": "The Ultimate Boon — Defeat",
+        "type": "Specific Task Group",
+        "display_name": "The Lesson in the Loss",
+        "theme": "When the fall is studied, it becomes footing. Failure, faced cleanly, converts into fuel for the next ascent.",
+        "family": "Adversity — Failure, Resilience & Reframe",
+        "summary": "Francisco meets the lowest point with clear eyes. He names the setback, extracts the principle, and redesigns his approach. By turning defeats into data, he forges a sturdier path and a steadier self.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Five",
+        "traits": {
+          "strengths": [
+            "owns mistakes without defensiveness",
+            "performs fast post-mortems and acts on findings",
+            "keeps purpose steady when plans shatter",
+            "reframes ‘failure’ into hypotheses to test",
+            "models grit with calm, teachable tone"
+          ],
+          "shadow": [
+            "overidentifies with outcomes and spirals",
+            "hides small losses until they grow",
+            "chases quick wins to numb the sting",
+            "treats lessons as theory without implementation",
+            "turns self-critique into self-punishment"
+          ],
+          "growth_focus": [
+            "schedule a 20-minute blameless retro within 24 hours of any miss",
+            "write one ‘because of this, we now…’ operational change",
+            "replace ‘I failed’ with ‘the method failed this test—next?’",
+            "ask one trusted peer for a blind-spot readout",
+            "track rework rate and celebrate the first 10% drop"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Darkest moment (resolution)",
+          "fiction_chapter_context": "Book 8, Chapter 30 — The Ultimate Boon: the boon is the blueprint—harvested from the wreckage with steady hands."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—humility, preparation, and shared resilience after a fall."
+        },
+        "color_alignment": {
+          "name": "Bright Green",
+          "hsl": "100,100%,50%",
+          "rgb_hex": "#66FF00",
+          "color_symbolism": "Shock-green renewal—photosynthetic bounce-back, life insisting on another try."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.78,
+            "empathy": 0.66,
+            "openness": 0.69,
+            "orderliness": 0.70,
+            "conscientiousness": 0.76,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.62,
+            "risk_tolerance": 0.57,
+            "emotional_intensity": 0.54,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.59,
+            "imagination": 0.63
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "adaptability": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.84,
+          "top_signal_items": [
+            "Q3101",
+            "Q3102",
+            "Q3103",
+            "Q3104",
+            "Q3105",
+            "Q3106",
+            "Q3107",
+            "Q3108"
+          ],
+          "signals_map": {
+            "Q3101": { "dimension": "stability", "polarity": 1, "content": "After a setback, I stabilize tempo first—then diagnose." },
+            "Q3102": { "dimension": "conscientiousness", "polarity": 1, "content": "I run blameless post-mortems and publish the actions, not just the notes." },
+            "Q3103": { "dimension": "adaptability", "polarity": 1, "content": "I pivot the method without abandoning the mission." },
+            "Q3104": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I separate signal from noise and test the smallest fix first." },
+            "Q3105": { "dimension": "openness", "polarity": 1, "content": "I invite critique and incorporate it visibly." },
+            "Q3106": { "dimension": "stability", "polarity": -1, "content": "I avoid looking at losses until they pass on their own." },
+            "Q3107": { "dimension": "agency", "polarity": 1, "content": "I convert regret into a concrete next step within 24 hours." },
+            "Q3108": { "dimension": "orderliness", "polarity": 1, "content": "I track recurring failure modes and retire them with playbooks." }
+          },
+          "daily_prompt": "What single operational change—proven by a recent miss—will you implement today?",
+          "practices": [
+            "24-Hour Retro: facts → causes → tests → owner → date, no blame.",
+            "Failure Ledger: catalog misses, patterns, and retired failure modes.",
+            "Pre-Mortem Lite: preview the top three ways this plan could fail, add mitigations.",
+            "Red Team Call: invite a friendly critic before launch to stress the plan.",
+            "Recovery Drill: rehearse the first five minutes after an expected failure."
+          ],
+          "transformation_indicators": [
+            "Shorter recovery time and fewer repeated failure modes",
+            "Higher psychological safety to report near-misses early",
+            "Clear ‘because of this, we now…’ changes after retros",
+            "Reduced rework and smoother handoffs post-incident",
+            "Purpose and morale stabilize faster after losses"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "The Ultimate Boon",
+          "preliminary_beat": "Dark Night of the Soul — Defeat",
+          "save_the_cat_beat": "Darkest moment (resolution)",
+          "character_state": "Humbled, evidence-driven, quietly resolute.",
+          "ordinary_world_baseline": "Shame-avoidance, hidden errors, brittle confidence.",
+          "push_turn": "The failed attempt becomes the map; pain points turn into playbooks."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "The Ordeal",
+            "section_description": "The hero’s lowest point and moment of greatest peril.",
+            "connection_focus_area": "Understanding failure",
+            "connect_points": {
+              "point1": "Identify the pivotal setback",
+              "point2": "Analyze its causes",
+              "point3": "Determine the turning lesson"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe a personal failure",
+              "objective2": "List three lessons learned",
+              "objective3": "Plan one adjustment based on insight"
+            }
+          },
+          "book2": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Overcoming Obstacles",
+            "section_description": "How perseverance leads to success.",
+            "connection_focus_area": "Cultivating resilience",
+            "connect_points": {
+              "point1": "Outline a comeback strategy",
+              "point2": "Set a perseverance goal",
+              "point3": "Track small wins post-setback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one resilience practice",
+              "objective2": "Implement it for one week",
+              "objective3": "Reflect on progress"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Embracing Challenges",
+            "section_description": "How a growth mindset transforms obstacles.",
+            "connection_focus_area": "Reframing failure",
+            "connect_points": {
+              "point1": "Reframe a setback as growth",
+              "point2": "Adopt growth-oriented language",
+              "point3": "Solicit feedback on improvement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Turn one failure into a learning moment",
+              "objective2": "Use ‘yet’ in describing challenges",
+              "objective3": "Share reframe with a peer"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the shattered ridge, Francisco kneels, palms on stone—mapping cracks like constellations of what to fix next.",
+          "symbolic_moment": "A blade of bright green breaks through ash; the first shoot names the lesson and the season to come.",
+          "emotional_landscape": "Hurt without hurry, clarity after shock, purpose rekindled.",
+          "contentment_definition": "Peace is not never falling; it’s knowing exactly how to stand again.",
+          "transformation_promise": "Loss becomes leverage when the fallen piece is turned into a stepping stone."
+        },
+        "epic_novel_pages": "Page 436 - 450",
+        "epic_chapter_focus": "Darkest moment (resolution)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_novel_chapter_focus": "Scene XII: The Ultimate Boon",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Adversity",
+        "specific_task_group_description": "Confront your deepest failure and extract its lessons to prepare for renewal.",
+        "specific_task_group_tagline": "Rise from defeat",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Bright Green",
+        "hex_code": "#66FF00",
+        "red": 102,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_311": {},
       "personality_profile_312": {},
       "personality_profile_313": {},
