@@ -63085,7 +63085,203 @@
         "green": 195,
         "blue": 66
       },
-      "personality_profile_306": {},
+      "personality_profile_306": {
+        "canonical_id": "EA-306",
+        "unique_identifier": "STG 8.3.1.3",
+        "specific_task_group_title": "Emanation",
+        "all_chapter": 306,
+        "novel_book": 8,
+        "chapter": "Chapter 26",
+        "chapter_title": "Atonement with the Father — Emanation",
+        "type": "Specific Task Group",
+        "display_name": "The Radiant Field",
+        "theme": "Influence scales from the inside out: align breath and body, then project warm strength that steadies rooms and uplifts people.",
+        "family": "Projecting Presence — Warmth, Power & Credibility",
+        "summary": "At the edge of collapse, Francisco stops forcing outcomes and starts radiating. He marries calm body language with ethical clarity, turning presence into a carrier wave. Authority feels safe, not sharp; vision travels farther with fewer words. By emanating steadiness, he dissolves resistance and rekindles momentum.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Three",
+        "traits": {
+          "strengths": [
+            "projects warm authority under pressure",
+            "uses posture, pacing, and eye contact to stabilize groups",
+            "models desired behaviors instead of over-explaining",
+            "leverages social proof without grandstanding",
+            "balances confidence with genuine empathy"
+          ],
+          "shadow": [
+            "over-performs charisma and under-delivers structure",
+            "confuses attention for alignment",
+            "leans on authority signals instead of listening",
+            "lets praise bias decisions",
+            "burns out by holding the room alone"
+          ],
+          "growth_focus": [
+            "craft a 1-sentence expert stance that names value, not ego",
+            "install a pre-meeting breath + posture reset (90 seconds)",
+            "replace 1 persuasive monologue with a modeled micro-behavior",
+            "collect 2 authentic testimonials tied to outcomes, not opinions",
+            "schedule a debrief to separate applause from impact"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Atonement with the Father",
+          "fiction_chapter_context": "Book 8, Chapter 26 — Presence reconciles power with care; credibility becomes service."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 6—confident projection anchored by reliability and service."
+        },
+        "color_alignment": {
+          "name": "Mindaro",
+          "hsl": "90,100%,70%",
+          "rgb_hex": "#CCFF66",
+          "color_symbolism": "Sunlit green—growth that others can feel and follow."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.70,
+            "stability": 0.64,
+            "empathy": 0.66,
+            "openness": 0.61,
+            "orderliness": 0.52,
+            "conscientiousness": 0.57,
+            "adaptability": 0.62,
+            "abstract_reasoning": 0.58,
+            "cooperativeness": 0.63,
+            "risk_tolerance": 0.58,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.72,
+            "novelty_seeking": 0.56,
+            "imagination": 0.59
+          },
+          "match_weights": {
+            "social_dominance": 0.40,
+            "empathy": 0.35,
+            "stability": 0.25
+          },
+          "threshold": 0.82,
+          "top_signal_items": [
+            "Q3061",
+            "Q3062",
+            "Q3063",
+            "Q3064",
+            "Q3065",
+            "Q3066",
+            "Q3067",
+            "Q3068"
+          ],
+          "signals_map": {
+            "Q3061": { "dimension": "social_dominance", "polarity": 1, "content": "I project calm, grounded energy before I speak." },
+            "Q3062": { "dimension": "empathy", "polarity": 1, "content": "I tune posture and tone to how others feel, not just what I want." },
+            "Q3063": { "dimension": "stability", "polarity": 1, "content": "I use a brief breath routine to settle a room and myself." },
+            "Q3064": { "dimension": "conscientiousness", "polarity": 1, "content": "I model the behavior I’m asking for within two minutes." },
+            "Q3065": { "dimension": "cooperativeness", "polarity": 1, "content": "I highlight peers’ wins as proof, not self-promotion." },
+            "Q3066": { "dimension": "social_dominance", "polarity": -1, "content": "I rely on charisma when my plan lacks substance." },
+            "Q3067": { "dimension": "empathy", "polarity": 1, "content": "I ask one grounding question to surface the room’s real concern." },
+            "Q3068": { "dimension": "orderliness", "polarity": 1, "content": "I close with a crisp next step that converts energy into action." }
+          },
+          "daily_prompt": "How will you project warm strength (not volume) in your next interaction?",
+          "practices": [
+            "Radiance Breathing: 4 slow breaths—expand posture on inhale, soften jaw on exhale.",
+            "Power-with Posture: feet grounded, chest open, shoulders soft; hold 60–90 seconds.",
+            "Model-then-Ask: demonstrate the target behavior for 30 seconds, then invite mirroring.",
+            "Social Proof Thread: share one outcome-anchored testimonial per week.",
+            "Applause vs. Impact Debrief: list praise received; translate into one measurable result."
+          ],
+          "transformation_indicators": [
+            "Shorter time-to-calm for tense meetings",
+            "Higher follow-through after brief modeling",
+            "Increased peer amplification (others echo the message)",
+            "Fewer persuasive monologues; more concise directives",
+            "Testimonials reference outcomes rather than personality"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Atonement with the Father",
+          "preliminary_beat": "Atonement — Emanation",
+          "save_the_cat_beat": "Atonement with the Father",
+          "character_state": "Centered, warm, quietly commanding.",
+          "ordinary_world_baseline": "Scattered signals; power or warmth—but rarely both.",
+          "push_turn": "Presence radiates outward; the room steadies and leans in."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Influence",
+            "author": "Robert Cialdini",
+            "section_of_focus": "Social Proof",
+            "section_description": "Leveraging credibility to inspire others.",
+            "connection_focus_area": "Radiating credibility",
+            "connect_points": {
+              "point1": "Showcase expertise",
+              "point2": "Gather authentic testimonials",
+              "point3": "Model desired behavior"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Craft your expert statement",
+              "objective2": "Collect two testimonials",
+              "objective3": "Demonstrate one best practice"
+            }
+          },
+          "book2": {
+            "title": "Presence",
+            "author": "Amy Cuddy",
+            "section_of_focus": "Body Language",
+            "section_description": "Using posture to project confidence.",
+            "connection_focus_area": "Embodied influence",
+            "connect_points": {
+              "point1": "Adopt open postures",
+              "point2": "Incorporate purposeful gestures",
+              "point3": "Maintain steady eye contact"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice power posing",
+              "objective2": "Record audience reactions",
+              "objective3": "Refine nonverbal cues"
+            }
+          },
+          "book3": {
+            "title": "The Charisma Myth",
+            "author": "Olivia Fox Cabane",
+            "section_of_focus": "Warmth and Power",
+            "section_description": "Balancing approachability with strength.",
+            "connection_focus_area": "Magnetic presence",
+            "connect_points": {
+              "point1": "Use genuine smiles",
+              "point2": "Modulate your voice tone",
+              "point3": "Engage in active listening"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Deliver one genuine compliment",
+              "objective2": "Practice vocal variety",
+              "objective3": "Conduct one mindful listening session"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the Hall of Ashen Crowns, Francisco lifts his gaze; heat hushes and a tide of green-gold light ripples from his chest. Blades lower—not by command, but relief.",
+          "symbolic_moment": "Three torchflames lean outward yet burn steadier, as if borrowing his breath.",
+          "emotional_landscape": "Assured, generous, quietly luminous.",
+          "contentment_definition": "When your presence carries the weight—your words can travel light.",
+          "transformation_promise": "Emanation turns power into shelter; others grow taller in your field."
+        },
+        "epic_novel_pages": "Page 376 - 390",
+        "epic_chapter_focus": "Atonement with the Father",
+        "epic_preliminary_scene_focus": "All is Lost",
+        "epic_novel_chapter_focus": "Scene X: Atonement with the Father",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Projecting Presence",
+        "specific_task_group_description": "Radiate your core energy outward to influence and uplift your surroundings.",
+        "specific_task_group_tagline": "Project your presence",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Mindaro",
+        "hex_code": "#CCFF66",
+        "red": 204,
+        "green": 255,
+        "blue": 102
+      },
       "personality_profile_307": {},
       "personality_profile_308": {},
       "personality_profile_309": {},
