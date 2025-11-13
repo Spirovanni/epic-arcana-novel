@@ -65055,7 +65055,203 @@
         "green": 153,
         "blue": 0
       },    
-      "personality_profile_316": {},
+      "personality_profile_316": {
+        "canonical_id": "EA-316",
+        "unique_identifier": "STG 8.3.5.1",
+        "specific_task_group_title": "Manifesting Vision",
+        "all_chapter": 316,
+        "novel_book": 8,
+        "chapter": "Chapter 36",
+        "chapter_title": "Rescue from Without — Manifesting Vision",
+        "type": "Specific Task Group",
+        "display_name": "The Living Beacon",
+        "theme": "A vivid, shared picture of the future pulls allies into formation and turns scattered effort into one coordinated rescue.",
+        "family": "Vision — Clarity, Direction & Rallying Purpose",
+        "summary": "As the final battle looms, Francisco stops improvising and starts broadcasting. He sharpens a single north star, translates it into concrete moves, and invites allies to see themselves inside the outcome. Vision shifts from private insight to public signal—an orienting beam that aligns courage, resources, and timing for the rescue to work.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "King",
+        "traits": {
+          "strengths": [
+            "articulates a vivid, concrete future state others can picture living in",
+            "links big vision to clear priorities, paths, and tradeoffs",
+            "uses stories, symbols, and images to make direction memorable",
+            "rallies allies by naming their role in the larger pattern",
+            "holds purpose steady when pressure or panic spikes"
+          ],
+          "shadow": [
+            "treats vision as a monologue instead of a co-authored map",
+            "overrides feedback in order to ‘protect’ the vision",
+            "gets attached to form instead of underlying purpose",
+            "broadcasts lofty ideals without defining near-term moves",
+            "assumes people understand the picture without checking"
+          ],
+          "growth_focus": [
+            "pressure-test the vision with dissenting voices before broadcasting it widely",
+            "translate the north star into three concrete strategic moves",
+            "ask key allies to restate the vision in their own words",
+            "separate non-negotiable principles from flexible tactics",
+            "design simple visual cues that keep the vision front-of-mind"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Battle",
+          "fiction_chapter_context": "Book 8, Chapter 36 — Rescue from Without: Francisco’s clarified vision becomes the signal fires that guide allies into the final conflict."
+        },
+        "enneagram_link": {
+          "family_number": 3,
+          "note": "Achiever integrating to 9—ambition tempered by service, vision shaped around collective alignment."
+        },
+        "color_alignment": {
+          "name": "Yellow",
+          "hsl": "60,100%,50%",
+          "rgb_hex": "#FFFF00",
+          "color_symbolism": "Solar signal—beacon, clarity, and a rallying flare before the charge."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.63,
+            "empathy": 0.64,
+            "openness": 0.72,
+            "orderliness": 0.69,
+            "conscientiousness": 0.76,
+            "adaptability": 0.67,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.61,
+            "risk_tolerance": 0.68,
+            "emotional_intensity": 0.55,
+            "social_dominance": 0.77,
+            "novelty_seeking": 0.71,
+            "imagination": 0.78
+          },
+          "match_weights": {
+            "agency": 0.35,
+            "abstract_reasoning": 0.35,
+            "social_dominance": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q3161",
+            "Q3162",
+            "Q3163",
+            "Q3164",
+            "Q3165",
+            "Q3166",
+            "Q3167",
+            "Q3168"
+          ],
+          "signals_map": {
+            "Q3161": { "dimension": "agency", "polarity": 1, "content": "I paint a vivid picture of the future that others can actually imagine themselves inside." },
+            "Q3162": { "dimension": "abstract_reasoning", "polarity": 1, "content": "I translate big-picture vision into three to five concrete strategic moves." },
+            "Q3163": { "dimension": "social_dominance", "polarity": 1, "content": "I’m comfortable being the visible standard-bearer for a shared goal." },
+            "Q3164": { "dimension": "conscientiousness", "polarity": 1, "content": "I revisit and refine the north star when conditions change." },
+            "Q3165": { "dimension": "openness", "polarity": 1, "content": "I invite honest critique to sharpen, not dilute, the vision." },
+            "Q3166": { "dimension": "cooperativeness", "polarity": -1, "content": "I keep the plan in my head and expect others to just ‘get it’." },
+            "Q3167": { "dimension": "stability", "polarity": 1, "content": "In chaos, I restate the why until people steady around it." },
+            "Q3168": { "dimension": "imagination", "polarity": 1, "content": "I use metaphors, images, or stories so direction is easy to remember and retell." }
+          },
+          "daily_prompt": "If your allies only remembered one sentence or image today, what would make the vision unmistakably clear?",
+          "practices": [
+            "One-Sentence North Star: write the goal in fifteen words or less; start key meetings by reading it aloud.",
+            "Vision Story Draft: narrate ‘a day when we’ve succeeded’ in one page and share it with allies.",
+            "Signal Map: list who needs to see what, how often, and through which channels to stay aligned.",
+            "Redline Circle: ask three trusted partners to mark up your vision for blind spots and risks.",
+            "Anchor Ritual: open critical decisions by restating purpose; close by naming one action that clearly serves it."
+          ],
+          "transformation_indicators": [
+            "Allies can paraphrase the vision in their own words without losing its essence",
+            "Decisions and priorities cluster naturally around the same north star",
+            "Fewer ‘urgent’ efforts that don’t fit the direction survive beyond a week",
+            "External partners start echoing your language, metaphors, and imagery",
+            "Momentum feels focused rather than frantic—more thrust, less thrash"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Battle (set-up)",
+          "preliminary_beat": "Preparation for Rescue — Manifesting Vision",
+          "save_the_cat_beat": "Battle (set-up)",
+          "character_state": "Signal-bright, future-anchored, rallying others into formation.",
+          "ordinary_world_baseline": "Effort is scattered, goals feel fuzzy, and help arrives without a clear plan to plug into.",
+          "push_turn": "The vision sharpens into a banner others can see, name, and move toward together."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "The Hero with a Thousand Faces",
+            "author": "Joseph Campbell",
+            "section_of_focus": "Rescue from Without",
+            "section_description": "When outside aid and guidance arrive to carry the hero beyond solo limits.",
+            "connection_focus_area": "Embracing external aid",
+            "connect_points": {
+              "point1": "Identify who can offer decisive help",
+              "point2": "Practice clearly asking for the support you need",
+              "point3": "Weave external guidance into your own plan of action"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Name your key ally or resource",
+              "objective2": "List three ways to enlist their support",
+              "objective3": "Draft and share a collaboration plan"
+            }
+          },
+          "book2": {
+            "title": "Atomic Habits",
+            "author": "James Clear",
+            "section_of_focus": "Building Better Habits",
+            "section_description": "Tiny, consistent actions that make big visions executable.",
+            "connection_focus_area": "Cultivating visionary habits",
+            "connect_points": {
+              "point1": "Break the vision into small, daily behaviors",
+              "point2": "Design environmental cues that point back to the north star",
+              "point3": "Track visible progress toward the envisioned outcome"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define one micro-habit for advancing your vision",
+              "objective2": "Create a simple tracker for that habit",
+              "objective3": "Commit to one visionary action per day for a week"
+            }
+          },
+          "book3": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Growth Mindset",
+            "section_description": "Seeing vision as an evolving path, not a fixed verdict.",
+            "connection_focus_area": "Framing vision as growth",
+            "connect_points": {
+              "point1": "Reframe setbacks as feedback on the path, not failure of the vision",
+              "point2": "Seek constructive critique to refine direction",
+              "point3": "Use language of iteration and improvement when you speak about the future"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Spot one fixed-mindset trap in how you hold your vision",
+              "objective2": "Rewrite it in growth-oriented language",
+              "objective3": "Apply the reframe in your next planning conversation"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the brink of the final clash, Francisco stands atop a star-bastion as a ring of yellow suns ignites behind him, casting a clear path of light across the void toward the embattled worlds.",
+          "symbolic_moment": "A single lance of golden fire rises above the armies, then splits into countless thinner beams that thread themselves into every banner and shield, giving each ally the same emblem of rescue.",
+          "emotional_landscape": "Charged calm, anticipatory courage, focused urgency held together by a shared picture of what comes after the battle.",
+          "contentment_definition": "Knowing exactly what you are marching toward—and watching others choose that same horizon with you.",
+          "transformation_promise": "When vision turns into a visible standard, rescue becomes choreography instead of chaos."
+        },
+        "epic_novel_pages": "Page 526 - 540",
+        "epic_chapter_focus": "Battle (set-up)",
+        "epic_preliminary_scene_focus": "Finale",
+        "epic_novel_chapter_focus": "Scene XIV: Rescue from Without",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Clarity & Purpose",
+        "specific_task_group_description": "Define and project the clear vision needed to guide allies in the rescue.",
+        "specific_task_group_tagline": "See it, then make it real",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Yellow",
+        "hex_code": "#FFFF00",
+        "red": 255,
+        "green": 255,
+        "blue": 0
+      },    
       "personality_profile_317": {},
       "personality_profile_318": {},
       "personality_profile_319": {},
