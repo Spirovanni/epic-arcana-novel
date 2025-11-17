@@ -65875,10 +65875,237 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_320": {}
+      "personality_profile_320": {
+        "canonical_id": "EA-320",
+        "unique_identifier": "STG 8.3.6.2",
+        "specific_task_group_title": "Meaningful",
+        "all_chapter": 320,
+        "novel_book": 8,
+        "chapter": "Chapter 40",
+        "chapter_title": "Master of Two Worlds — Meaningful",
+        "type": "Specific Task Group",
+        "display_name": "The Legacy Weaver",
+        "theme": "When mastery matures, the real question becomes not ‘How high did I climb?’ but ‘Who is safer, stronger, and freer because I was here?’",
+        "family": "Legacy Creation — Purpose, Impact & Continuity",
+        "summary": "Francisco reaches a point where achievement alone is no longer satisfying; only enduring impact counts. Master of inner and outer worlds, he begins to braid every skill, scar, and insight into contributions that will outlast him. Success turns to significance as he orients his choices around what the cosmos will remember, not what it will applaud in the moment.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Knight",
+        "traits": {
+          "strengths": [
+            "anchors actions in a clear sense of purpose and ‘why’",
+            "thinks in terms of decades and generations, not just quarters",
+            "channels ambition into service and long-term contribution",
+            "balances humility with resolve in leadership roles",
+            "designs systems and structures that keep working without them"
+          ],
+          "shadow": [
+            "over-responsibilizes, feeling they must fix everything themselves",
+            "postpones joy in the name of ‘future impact’",
+            "can become preachy or self-righteous about purpose",
+            "clings to a single vision even when conditions change",
+            "ties identity too tightly to being ‘important’ or ‘needed’"
+          ],
+          "growth_focus": [
+            "separate your worth from your level of visible impact",
+            "invite others into ownership so the legacy is shared, not hoarded",
+            "update your ‘why’ as you grow instead of treating it as frozen",
+            "pair long-horizon goals with near-term experiments and feedback",
+            "practice celebrating small, quiet contributions as much as big wins"
+          ]
+        },
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Lord of the Fire of the World",
+          "chapter_theme": "Master of Two Worlds",
+          "fiction_chapter_context": "Book 8, Chapter 40 — Master of Two Worlds: Francisco turns hard-won mastery into a living legacy, aligning cosmic systems so that meaning and service carry on without him."
+        },
+        "enneagram_link": {
+          "family_number": 2,
+          "note": "Helper integrating to 4—service rooted in deep, authentic purpose rather than approval."
+        },
+        "color_alignment": {
+          "name": "Lima",
+          "hsl": "93,64%,48%",
+          "rgb_hex": "#74C62B",
+          "color_symbolism": "Living green—enduring growth, fertile outcomes, work that keeps bearing fruit."
+        },
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.74,
+            "empathy": 0.88,
+            "openness": 0.72,
+            "orderliness": 0.79,
+            "conscientiousness": 0.86,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.76,
+            "cooperativeness": 0.82,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.67,
+            "social_dominance": 0.70,
+            "novelty_seeking": 0.61,
+            "imagination": 0.73
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "empathy": 0.35,
+            "cooperativeness": 0.30
+          },
+          "threshold": 0.88,
+          "top_signal_items": [
+            "Q3201",
+            "Q3202",
+            "Q3203",
+            "Q3204",
+            "Q3205",
+            "Q3206",
+            "Q3207",
+            "Q3208"
+          ],
+          "signals_map": {
+            "Q3201": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I think about how my choices will matter years or decades from now, not just this week."
+            },
+            "Q3202": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "It genuinely matters to me whether my work improves other people’s lives."
+            },
+            "Q3203": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I’d rather build something meaningful with others than be the sole star of the story."
+            },
+            "Q3204": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When I see a meaningful gap in the world, I feel responsible to act on it."
+            },
+            "Q3205": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I periodically revisit my sense of purpose and adjust my path as I learn."
+            },
+            "Q3206": {
+              "dimension": "social_dominance",
+              "polarity": -1,
+              "content": "I need to be seen as the hero of every important story I’m part of."
+            },
+            "Q3207": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I can stay steady and patient when working on long, slow-impact projects."
+            },
+            "Q3208": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I naturally connect my daily actions to a larger mission or narrative."
+            }
+          },
+          "daily_prompt": "What is one small choice today that your future community—not just your future self—would thank you for?",
+          "practices": [
+            "Why Statement Refinement: rewrite your personal ‘Why’ in one sentence; check if today’s calendar reflects it.",
+            "Legacy Map: sketch how your current work could benefit people you may never meet; add one concrete action to strengthen that path.",
+            "Impact Review: once a week, list three ways your actions helped others, however quietly.",
+            "Stakeholder Circle: identify the people most affected by your decisions and ask one of them what ‘better’ looks like.",
+            "Slow Work Ritual: dedicate an uninterrupted block to work whose payoff is long-term, and close by writing why it matters."
+          ],
+          "transformation_indicators": [
+            "Decisions are increasingly guided by purpose and impact, not just urgency or ego",
+            "You share credit easily and design contributions others can carry forward",
+            "Feedback from others references how you’ve helped them grow, not just what you’ve achieved",
+            "Short-term sacrifices feel more acceptable when they serve long-horizon goals",
+            "You can describe your legacy aims clearly in a few grounded, concrete sentences"
+          ]
+        },
+        "hero_journey_position": {
+          "stage": "Master of Two Worlds",
+          "preliminary_beat": "Final Image — Meaningful",
+          "save_the_cat_beat": "Master of Two Worlds",
+          "character_state": "Grounded, purpose-driven, able to move between inner transformation and outer responsibility with ease.",
+          "ordinary_world_baseline": "Chasing achievement for its own sake, mistaking busyness for contribution.",
+          "push_turn": "Francisco realizes that true mastery is proven not in what he can do, but in what remains better long after he steps away."
+        },
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Start with Why",
+            "author": "Simon Sinek",
+            "section_of_focus": "Chapter 1: Assume You Know",
+            "section_description": "The power of purpose in guiding meaningful work.",
+            "connection_focus_area": "Legacy Creation",
+            "connect_points": {
+              "point1": "Define your foundational purpose",
+              "point2": "Align actions to that purpose",
+              "point3": "Inspire others through clarity of vision"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate a personal ‘Why’ statement",
+              "objective2": "Align daily tasks with overarching purpose",
+              "objective3": "Communicate vision to stakeholders"
+            }
+          },
+          "book2": {
+            "title": "Good to Great",
+            "author": "Jim Collins",
+            "section_of_focus": "Level 5 Leadership",
+            "section_description": "How humility and resolve build enduring organizations.",
+            "connection_focus_area": "Legacy Creation",
+            "connect_points": {
+              "point1": "Cultivate humble yet driven leadership",
+              "point2": "Implement sustainable strategies",
+              "point3": "Build a culture of excellence"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Develop leadership practices that outlast trends",
+              "objective2": "Design systems for long-term success",
+              "objective3": "Foster an environment of accountability"
+            }
+          },
+          "book3": {
+            "title": "Lincoln on Leadership",
+            "author": "Donald T. Phillips",
+            "section_of_focus": "Chapter The Enduring Leader",
+            "section_description": "Attributes that create a lasting legacy.",
+            "connection_focus_area": "Legacy Creation",
+            "connect_points": {
+              "point1": "Embody integrity in decision-making",
+              "point2": "Lead with empathy and vision",
+              "point3": "Ensure your work serves the greater good"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice ethical decision-making",
+              "objective2": "Demonstrate empathy in leadership",
+              "objective3": "Plan initiatives for societal impact"
+            }
+          }
+        },
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a quiet rise between the reborn cities and the healed wastelands, Francisco and his mount stand watch as new roads, gardens, and learning halls spread out like lines of light across the continent.",
+          "symbolic_moment": "He plants his spear in the soil; it dissolves into a living tree whose roots drink from the old scars of war and whose branches hang with lanterns for travelers yet unborn.",
+          "emotional_landscape": "Deep calm, tender pride, a gentle ache of responsibility mixed with relief.",
+          "contentment_definition": "Knowing that the work of your hands will keep protecting and uplifting others long after your name is forgotten.",
+          "transformation_promise": "When mastery turns toward meaning, every step becomes an inheritance, not just a footprint."
+        },
+        "epic_novel_pages": "Page 586 - 600",
+        "epic_chapter_focus": "Master of Two Worlds",
+        "epic_preliminary_scene_focus": "Final Image",
+        "epic_novel_chapter_focus": "Scene XV: Master of Two Worlds",
+        "epic_novel_section_name": "Part III: Lord of the Fire of the World",
+        "focus_area": "Legacy Creation",
+        "specific_task_group_description": "Channel accomplishments into contributions that resonate beyond self.",
+        "specific_task_group_tagline": "From success to significance",
+        "tarot_card_link": "Disks/Knight",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Lima",
+        "hex_code": "#74C62B",
+        "red": 116,
+        "green": 198,
+        "blue": 48
+      }
     },
     "family_9": {
-      "personality_profile_320": {},
       "personality_profile_321": {},
       "personality_profile_322": {},
       "personality_profile_323": {},
