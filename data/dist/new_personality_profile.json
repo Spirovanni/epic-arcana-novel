@@ -66106,7 +66106,244 @@
       }
     },
     "family_9": {
-      "personality_profile_321": {},
+      "personality_profile_321": {
+        "canonical_id": "EA-321",
+        "unique_identifier": "STG 9.1.1.1",
+        "specific_task_group_title": "Acknowledge",
+        "all_chapter": 321,
+        "novel_book": 9,
+        "chapter": "Chapter 1",
+        "chapter_title": "The Ordinary World — Acknowledge",
+        "type": "Specific Task Group",
+        "display_name": "The Honest Mirror",
+        "theme": "Before anything can be healed, moved, or elevated, it has to be seen as it truly is—no filters, no faking, just clear, grounded noticing.",
+        "family": "Self-Awareness — Noticing, Naming & Acceptance",
+        "summary": "Francisco, now the Spirit of the Primal Fire, begins the final cycle not with a dramatic act, but with radical seeing. He turns luminous attention on himself and the cosmos, naming what is actually present—fears, strengths, distortions, and dormant brilliance. In this quiet but foundational phase, acknowledgement becomes ignition: by seeing clearly, he lays the only stable ground from which true revitalization can rise.",
+        "tarot_family": "Disks",
+        "tarot_card_item": "Nine",
+
+        "traits": {
+          "strengths": [
+            "notices inner states and shifts with fine-grained detail",
+            "names thoughts and emotions without rushing to edit or fix them",
+            "tracks personal patterns over time and extracts insight",
+            "holds both strengths and flaws in an honest, compassionate light",
+            "uses gratitude and reflection to orient toward what is working"
+          ],
+          "shadow": [
+            "gets stuck in analysis, looping through self-observation without action",
+            "leans toward self-criticism instead of curiosity when seeing flaws",
+            "filters awareness through old narratives (‘this is just who I am’)",
+            "minimizes wins and over-focuses on what’s missing or wrong",
+            "treats feelings as facts instead of signals to be explored"
+          ],
+          "growth_focus": [
+            "replace judgmental labels with descriptive ones (‘I notice…’ vs. ‘I am bad at…’)",
+            "add body sensations and context when naming emotions to deepen clarity",
+            "balance shadow work with intentional gratitude and strength-spotting",
+            "schedule micro-reflection windows instead of waiting for a ‘perfect’ time",
+            "share one honest observation with a trusted ally to normalize visibility"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Self-Awareness",
+          "fiction_chapter_context": "Book 9, Chapter 1 — The Ordinary World: Francisco, now Spirit of the Primal Fire, walks the unawakened cosmos and begins by simply naming what is—its wounds, its beauty, and his own true state."
+        },
+
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "Individualist integrating to 1—deep feeling channeled into clear, grounded self-observation."
+        },
+
+        "color_alignment": {
+          "name": "Canary",
+          "hsl": "60,100%,80%",
+          "rgb_hex": "#FFFF99",
+          "color_symbolism": "Soft daylight—gentle illumination, early awareness, the first honest look around."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.64,
+            "stability": 0.62,
+            "empathy": 0.82,
+            "openness": 0.80,
+            "orderliness": 0.68,
+            "conscientiousness": 0.74,
+            "adaptability": 0.69,
+            "abstract_reasoning": 0.71,
+            "cooperativeness": 0.76,
+            "risk_tolerance": 0.55,
+            "emotional_intensity": 0.79,
+            "social_dominance": 0.48,
+            "novelty_seeking": 0.58,
+            "imagination": 0.77
+          },
+          "match_weights": {
+            "emotional_intensity": 0.35,
+            "openness": 0.35,
+            "conscientiousness": 0.30
+          },
+          "threshold": 0.86,
+          "top_signal_items": [
+            "Q3211",
+            "Q3212",
+            "Q3213",
+            "Q3214",
+            "Q3215",
+            "Q3216",
+            "Q3217",
+            "Q3218"
+          ],
+          "signals_map": {
+            "Q3211": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I regularly pause to notice what I’m thinking and feeling instead of running on autopilot."
+            },
+            "Q3212": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "I can usually name my emotions with more nuance than just ‘good’ or ‘bad’."
+            },
+            "Q3213": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I keep some form of log—mental or written—of patterns I see in my reactions over time."
+            },
+            "Q3214": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Seeing uncomfortable truths about myself doesn’t destroy me; it helps me grow."
+            },
+            "Q3215": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "As I understand my own emotions better, I also understand others’ inner worlds more easily."
+            },
+            "Q3216": {
+              "dimension": "stability",
+              "polarity": -1,
+              "content": "I avoid looking at my real feelings because I’m afraid of what I’ll find."
+            },
+            "Q3217": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I can connect my current emotional state to the stories and beliefs sitting underneath it."
+            },
+            "Q3218": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I intentionally schedule small moments for reflection instead of leaving self-awareness to chance."
+            }
+          },
+          "daily_prompt": "If you paused for sixty seconds right now, what three words would best describe your inner state—and what might those words be trying to tell you?",
+          "practices": [
+            "Three-Word Check-In: once or twice a day, write three words describing your current inner state; no editing, just noticing.",
+            "Trigger Trace: when you feel a spike (anger, shame, anxiety), gently ask, ‘What just happened before this?’ and jot down the chain.",
+            "Gratitude + Grit Log: list two things you’re grateful for and one hard thing you’re facing—with one sentence of honest acknowledgment.",
+            "RAIN Micro-Pause: practice Recognize, Allow, Investigate, Nurture for a single emotion; keep it under five minutes.",
+            "Strengths Mirror: at the end of the day, name one strength you used (even in a tiny way) and how it helped you navigate."
+          ],
+          "transformation_indicators": [
+            "You can name your emotions and thoughts with increasing nuance and speed",
+            "You catch yourself in old patterns earlier and with less self-judgment",
+            "Gratitude and honest self-critique begin to coexist instead of canceling each other out",
+            "Others notice that you respond more thoughtfully instead of just reacting",
+            "You feel more ‘inside your own life’ instead of watching it blur past on autopilot"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — Acknowledge",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Newly awakened, luminous, surveying a still-asleep cosmos while taking stock of his own true condition.",
+          "ordinary_world_baseline": "Unquestioned habits, unexamined emotions, a universe running on inherited momentum.",
+          "push_turn": "Francisco realizes that before he can revitalize anything, he must see and name exactly what is—within himself and within the worlds he’s sworn to heal."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Emotional Intelligence",
+            "author": "Daniel Goleman",
+            "section_of_focus": "Part One: The Mind and Emotional Intelligence",
+            "section_description": "How self-awareness underpins emotional mastery.",
+            "connection_focus_area": "Self-Awareness",
+            "connect_points": {
+              "point1": "Track your emotional triggers",
+              "point2": "Reflect on your habitual reactions",
+              "point3": "Record your insights in a journal"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Recognize and label primary emotions in real time",
+              "objective2": "Describe personal triggers and patterns",
+              "objective3": "Implement brief daily reflection practices"
+            }
+          },
+          "book2": {
+            "title": "Thanks! How Practicing Gratitude Can Make You Happier",
+            "author": "Robert Emmons",
+            "section_of_focus": "Chapter 2: The Psychology of Gratitude",
+            "section_description": "Techniques for acknowledging positive elements in life.",
+            "connection_focus_area": "Self-Awareness",
+            "connect_points": {
+              "point1": "List three things you’re grateful for each morning",
+              "point2": "Write a brief thank-you note weekly",
+              "point3": "Pause to appreciate small successes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Maintain a gratitude log for one month",
+              "objective2": "Express appreciation to others at least once weekly",
+              "objective3": "Cultivate a habit of daily positive acknowledgment"
+            }
+          },
+          "book3": {
+            "title": "Radical Acceptance",
+            "author": "Tara Brach",
+            "section_of_focus": "Part Two: The RAIN of Self-Acceptance",
+            "section_description": "Mindful practices for acknowledging difficult emotions.",
+            "connection_focus_area": "Self-Awareness",
+            "connect_points": {
+              "point1": "Recognize discomfort without judgment",
+              "point2": "Investigate underlying beliefs",
+              "point3": "Nurture self-compassion through guided pauses"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement the RAIN practice daily",
+              "objective2": "Identify core beliefs fueling distress",
+              "objective3": "Demonstrate self-compassion in challenging moments"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the gray pre-dawn over Laurasia, Francisco stands at the lip of a vast, quiet caldera where the world’s first fire once burned. The land is still, the cities asleep, but faint ember-lines of energy trace through mountains, rivers, and distant towers.",
+          "symbolic_moment": "He lifts a hand and the ember-lines flare just enough to show their fractures and knots—not yet healed, not yet ruined, simply revealed. For the first time, he sees the entire pattern as it truly is.",
+          "emotional_landscape": "Calm, solemn wonder, a tender ache of responsibility, and the steady warmth of honest seeing.",
+          "contentment_definition": "The deep peace of finally telling the truth about where you are, without rushing to be somewhere else.",
+          "transformation_promise": "When the ordinary world is seen clearly, even its cracks and shadows become fuel for change, not reasons to hide."
+        },
+
+        "epic_novel_pages": "Page 1 - 15",
+        "epic_chapter_focus": "Intro",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Self-Awareness",
+        "specific_task_group_description": "Cultivate the habit of noticing and naming your thoughts, feelings and strengths.",
+        "specific_task_group_tagline": "See yourself clearly",
+        "tarot_card_link": "",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Canary",
+        "hex_code": "#FFFF99",
+        "red": 255,
+        "green": 255,
+        "blue": 153
+      },
       "personality_profile_322": {},
       "personality_profile_323": {},
       "personality_profile_324": {},
