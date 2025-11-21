@@ -66344,7 +66344,244 @@
         "green": 255,
         "blue": 153
       },
-      "personality_profile_322": {},
+      "personality_profile_322": {
+        "canonical_id": "EA-322",
+        "unique_identifier": "STG 9.1.1.2",
+        "specific_task_group_title": "Ruin",
+        "all_chapter": 322,
+        "novel_book": 9,
+        "chapter": "Chapter 2",
+        "chapter_title": "Inciting Incident — Ruin",
+        "type": "Specific Task Group",
+        "display_name": "The Beautiful Collapse",
+        "theme": "When the old structure finally breaks, it doesn’t mean the story is over—it means the real story can finally begin.",
+        "family": "Crisis Management — Collapse, Volatility & Rebirth",
+        "summary": "Just as Francisco steps into his role as Spirit of the Primal Fire, the universe answers with open resistance: systems crack, illusions fail, and the first true fractures appear in the ‘ordinary’ world. Instead of scrambling to preserve the façade, he leans into ruin—seeing it as data, not doom. By holding steady while structures fall, he models a new posture toward crisis: name what is breaking, harvest what still holds, and use the wreckage as raw material for a stronger design. Ruin becomes an intentional threshold, not a random catastrophe.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "Ten",
+
+        "traits": {
+          "strengths": [
+            "stays mentally present when things fall apart instead of dissociating",
+            "quickly identifies which pieces of a failing system are salvageable",
+            "reframes breakdowns as necessary steps toward a truer design",
+            "communicates calmly in crisis, stabilizing others’ emotions",
+            "uses past hardships as a playbook for navigating current collapse"
+          ],
+          "shadow": [
+            "waits for full collapse before making needed changes",
+            "over-identifies with being ‘the one who survives chaos’ and seeks drama",
+            "focuses so much on endurance that they neglect repair and renewal",
+            "clings to meaning in suffering while ignoring avoidable harm",
+            "tries to manage every variable instead of accepting uncertainty"
+          ],
+          "growth_focus": [
+            "name one pattern that always seems to break under stress—and retire it on purpose",
+            "separate what’s actually dying from what is simply changing shape",
+            "practice asking, ‘What is this collapse making possible that wasn’t possible before?’",
+            "build small ‘antifragile drills’ instead of waiting for life to deliver the big quake",
+            "let at least one trusted person see you in the middle of the mess, not just after the comeback"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Crisis Management",
+          "fiction_chapter_context": "Book 9, Chapter 2 — Ruin: As Francisco begins the cosmic revitalization, the first true fractures appear across Laurasia’s systems; his response to these breaking points becomes the inciting rhythm of the final cycle."
+        },
+
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "Challenger integrating to 2—raw strength tempered into protective, purposeful crisis leadership."
+        },
+
+        "color_alignment": {
+          "name": "Laser Lemon",
+          "hsl": "60,100%,70%",
+          "rgb_hex": "#FFFF66",
+          "color_symbolism": "Warning flare and dawn at once—the sharp light that reveals what can’t go on as before."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.78,
+            "stability": 0.69,
+            "empathy": 0.70,
+            "openness": 0.74,
+            "orderliness": 0.63,
+            "conscientiousness": 0.77,
+            "adaptability": 0.76,
+            "abstract_reasoning": 0.73,
+            "cooperativeness": 0.68,
+            "risk_tolerance": 0.72,
+            "emotional_intensity": 0.81,
+            "social_dominance": 0.66,
+            "novelty_seeking": 0.64,
+            "imagination": 0.75
+          },
+          "match_weights": {
+            "stability": 0.35,
+            "conscientiousness": 0.35,
+            "adaptability": 0.30
+          },
+          "threshold": 0.87,
+          "top_signal_items": [
+            "Q3221",
+            "Q3222",
+            "Q3223",
+            "Q3224",
+            "Q3225",
+            "Q3226",
+            "Q3227",
+            "Q3228"
+          ],
+          "signals_map": {
+            "Q3221": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "When plans implode, I can stay grounded long enough to see what’s actually happening."
+            },
+            "Q3222": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I’m willing to dismantle an old approach completely if it keeps failing under pressure."
+            },
+            "Q3223": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "In a crisis, I prioritize triage—what must be saved, what can be let go, and what can be rebuilt later."
+            },
+            "Q3224": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I see patterns in how things break and use them to design stronger systems next time."
+            },
+            "Q3225": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "Even when I’m overwhelmed, I can usually find a thread of meaning to hold onto."
+            },
+            "Q3226": {
+              "dimension": "stability",
+              "polarity": -1,
+              "content": "When something important collapses, I shut down or lash out instead of learning from it."
+            },
+            "Q3227": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "I’m willing to accept short-term discomfort or loss to prevent a bigger disaster later."
+            },
+            "Q3228": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "In the middle of a crisis, I look for one concrete move I can make instead of waiting to feel ready."
+            }
+          },
+          "daily_prompt": "What is one structure—habit, belief, or routine—that keeps cracking under stress in your life, and what tiny piece of it are you ready to let break on purpose so something better can grow?",
+          "practices": [
+            "Failure Autopsy: choose one past ‘ruin’ and map what failed, what survived, and what grew afterward—turn it into a one-page case study.",
+            "Fragility Scan: list three areas of your life (work, relationships, health) and circle the one that feels most brittle; name one small stress-test you could safely run.",
+            "Obstacle Reframe: take a current problem and write two columns: ‘Block’ and ‘Builder’; under ‘Builder’, list how this same problem could strengthen you.",
+            "Controlled Burn: intentionally retire one outdated habit, role, or commitment this week and journal the emotional fallout and hidden gains.",
+            "Meaning Anchor: during a tough moment, pause to ask, ‘If this were a training montage, what skill or strength would this scene be building in me?’"
+          ],
+          "transformation_indicators": [
+            "You bounce back from shocks faster and with more clarity about what actually happened",
+            "You start initiating changes before life forces catastrophic ones on you",
+            "Others look to you for steadiness and perspective when things fall apart",
+            "You can talk about past ‘ruins’ without getting stuck in blame or regret",
+            "Your systems, habits, and relationships show signs of getting stronger after stress, not weaker"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Ordinary World",
+          "preliminary_beat": "Opening Image — Ruin",
+          "save_the_cat_beat": "Setup",
+          "character_state": "Newly awakened fire walking through a world built on brittle assumptions, watching the first hairline cracks spread.",
+          "ordinary_world_baseline": "A universe that appears stable on the surface but is held together by exhausted beliefs and fragile structures.",
+          "push_turn": "The first visible collapses force Francisco—and everyone watching—to admit that the old way cannot carry the weight of what’s coming."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Antifragile",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Book One: The Antifragile: An Introduction",
+            "section_description": "How systems benefit from volatility and breakdown.",
+            "connection_focus_area": "Crisis Management",
+            "connect_points": {
+              "point1": "Identify fragile areas in your routines",
+              "point2": "Introduce controlled stressors to test resilience",
+              "point3": "Leverage setbacks as growth opportunities"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Map out personal vulnerabilities and resilience factors",
+              "objective2": "Design small challenges to strengthen weak points",
+              "objective3": "Reflect on lessons learned from each disruption"
+            }
+          },
+          "book2": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Part Two: The Discipline of Perception",
+            "section_description": "Reframing crisis as a catalyst for progress.",
+            "connection_focus_area": "Crisis Management",
+            "connect_points": {
+              "point1": "Practice positive reinterpretation",
+              "point2": "Focus on what you can control",
+              "point3": "Take incremental action in the face of obstacles"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reframe a recent challenge as an opportunity",
+              "objective2": "List controllable vs. uncontrollable factors in a crisis",
+              "objective3": "Draft an action plan for the next obstacle"
+            }
+          },
+          "book3": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Part One: Experiences in a Concentration Camp",
+            "section_description": "Finding purpose amidst profound suffering.",
+            "connection_focus_area": "Crisis Management",
+            "connect_points": {
+              "point1": "Identify personal sources of meaning",
+              "point2": "Anchor decisions in your core purpose",
+              "point3": "Cultivate gratitude in adversity"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Write your personal mission statement",
+              "objective2": "Apply meaning-centered reflection during hardship",
+              "objective3": "Share learned insights with a peer group"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "Fault-lines of light appear beneath Laurasia’s great cities as if the continent itself is exhaling. Towers flicker, ley-lines surge, and ancient wards groan under invisible pressure while Francisco watches from the rim of the primal caldera.",
+          "symbolic_moment": "A single spire, once the pride of an old order, cracks and collapses in perfect silence; its fall sends a wave of golden dust that reveals hidden sigils etched into the streets below—truth exposed by ruin.",
+          "emotional_landscape": "Grave calm, fierce compassion, a quiet refusal to panic, and a strange, steady hope in what the collapse might uncover.",
+          "contentment_definition": "Knowing that letting the wrong things fail is an act of care, not negligence.",
+          "transformation_promise": "When you stop trying to save what is already dead, your energy returns to building what actually deserves to live."
+        },
+
+        "epic_novel_pages": "Page 16 - 30",
+        "epic_chapter_focus": "Inciting Incident",
+        "epic_preliminary_scene_focus": "Opening Image",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Crisis Management",
+        "specific_task_group_description": "Confront and deconstruct outdated beliefs or habits that no longer serve you.",
+        "specific_task_group_tagline": "Break to rebuild",
+        "tarot_card_link": "Swords/Ten",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Laser Lemon",
+        "hex_code": "#FFFF66",
+        "red": 255,
+        "green": 255,
+        "blue": 102
+      },
       "personality_profile_323": {},
       "personality_profile_324": {},
       "personality_profile_325": {},
