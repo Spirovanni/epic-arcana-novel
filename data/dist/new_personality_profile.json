@@ -68027,7 +68027,253 @@
         "green": 204,
         "blue": 102
       },
-      "personality_profile_329": {},
+      "personality_profile_329": {
+        "canonical_id": "EA-329",
+        "unique_identifier": "STG 9.1.3.3",
+        "specific_task_group_title": "Victory",
+        "all_chapter": 329,
+        "novel_book": 9,
+        "chapter": "Chapter 9",
+        "chapter_title": "The Road of Trials — Victory Through Resilient Strength",
+        "type": "Specific Task Group",
+        "display_name": "The Victorious Flame of Fortitude",
+        "theme": "Your victories are not lucky breaks—they are the visible scar tissue of every time you refused to stay down.",
+        "family": "Resilience — Strength Forged Through Repeated Trials",
+ 
+        "summary": "In this phase of Book 9, Francisco is no longer just enduring cosmic pressure—he is deliberately forging strength from it. The universe surrounds him with escalating trials that test both his cosmic body and universal mind. Each challenge comes with an easy way out: retreat, compromise, or quiet surrender. Each time, he chooses the harder path—growth over comfort, purpose over relief.\n\nInside the cosmic strength training facilities and fortitude forging chambers, Francisco is stretched to the edge of his capacities. Gravity wells compress his form, timelines fold to simulate centuries of effort, and paradox storms batter his focus. He fails, recalibrates, and stands again. The aim is not invincibility, but unbreakable commitment. Instead of fearing setbacks as evidence of weakness, he treats them as the gym where his courage and stamina are built.\n\nSmall victories accumulate: a crisis stabilized here, a collapsing system rebalanced there, a frightened cluster of beings inspired to keep going when they would have given up. The universe begins to read his pattern—this is a being who will not abandon the work, no matter how many times the path fractures. His wins are rarely flashy; they are the product of consistent effort, disciplined recovery, and ruthless honesty about what still needs strengthening.\n\nBy the end of this trial, Francisco carries a new kind of authority. His strength is not just power; it is proof. Proof that he can be relied on when the weight of transformation is too heavy for others to hold alone. His resilience becomes a signal flare in the cosmos: setbacks are not the end of the story, only the forge in which ultimate victory is tempered.",
+ 
+        "tarot_family": "Wands",
+        "tarot_card_item": "Six",
+ 
+        "traits": {
+          "strengths": [
+            "persists through difficulty long after most would have stopped",
+            "treats setbacks as feedback rather than final verdicts",
+            "able to push body and mind through demanding conditions with disciplined recovery",
+            "inspires others by modeling effort, endurance, and consistency",
+            "channels frustration into renewed focus and determination"
+          ],
+          "shadow": [
+            "may push past healthy limits and neglect rest or support",
+            "can become impatient with those who tire or retreat more quickly",
+            "risks tying self-worth too tightly to performance and output",
+            "may see slowing down or adjusting plans as ‘weakness’",
+            "can struggle to celebrate progress, always looking to the next challenge"
+          ],
+          "growth_focus": [
+            "learn to view rest, recovery, and delegation as strategic tools, not weaknesses",
+            "celebrate small wins to reinforce momentum and morale",
+            "allow yourself to adjust goals without seeing it as giving up",
+            "invite others into the process so resilience becomes shared, not solitary",
+            "practice emotional honesty about strain and fear instead of suppressing it"
+          ]
+        },
+ 
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Victory, Resilience, and Strength Forged Through Trials",
+          "fiction_chapter_context": "Book 9, Chapter 9 — Victory: Francisco’s body and mind are honed in cosmic strength facilities and fortitude forging chambers as he turns every refusal, obstacle, and collapse into fuel for ultimate transformation."
+        },
+ 
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "The Indomitable Protector—driven to stand strong under pressure, defend what matters, and push through resistance toward meaningful victory."
+        },
+ 
+        "color_alignment": {
+          "name": "Olive",
+          "hsl": "60,100%,30%",
+          "rgb_hex": "#999900",
+          "color_symbolism": "A deep, earthy yellow-green—evoking seasoned strength, grounded endurance, and the quiet pride of hard-won victories."
+        },
+ 
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.88,
+            "stability": 0.90,
+            "empathy": 0.68,
+            "openness": 0.72,
+            "orderliness": 0.78,
+            "conscientiousness": 0.86,
+            "adaptability": 0.80,
+            "abstract_reasoning": 0.79,
+            "cooperativeness": 0.74,
+            "risk_tolerance": 0.76,
+            "emotional_intensity": 0.70,
+            "social_dominance": 0.68,
+            "novelty_seeking": 0.69,
+            "imagination": 0.75
+          },
+          "match_weights": {
+            "stability": 0.28,
+            "conscientiousness": 0.25,
+            "agency": 0.20,
+            "adaptability": 0.15,
+            "risk_tolerance": 0.12
+          },
+          "threshold": 0.87,
+ 
+          "top_signal_items": [
+            "Q3291",
+            "Q3292",
+            "Q3293",
+            "Q3294",
+            "Q3295",
+            "Q3296",
+            "Q3297",
+            "Q3298"
+          ],
+          "signals_map": {
+            "Q3291": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "When I get knocked down by setbacks, I eventually find a way to stand back up and move forward."
+            },
+            "Q3292": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I stay committed to my goals even when progress feels slow and frustrating."
+            },
+            "Q3293": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "In difficult situations, I focus on what I can control and act on it."
+            },
+            "Q3294": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "I’m willing to endure discomfort, uncertainty, or fatigue if it serves a meaningful purpose."
+            },
+            "Q3295": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "When my original plan fails, I look for alternate routes instead of giving up."
+            },
+            "Q3296": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "Challenges stir strong emotions in me, which I try to channel into focused effort."
+            },
+            "Q3297": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "Routines, habits, and structure help me keep going even when my motivation dips."
+            },
+            "Q3298": {
+              "dimension": "stability",
+              "polarity": -1,
+              "content": "When I experience failure, I find it hard to trust that things will ever improve."
+            }
+          },
+ 
+          "daily_prompt": "Where can you choose the small hard action over the easy escape today, so that your future self stands stronger tomorrow?",
+ 
+          "practices": [
+            "Micro-Wins Log: At the end of each day, write down three moments where you kept going, adjusted, or tried again instead of quitting.",
+            "Fortitude Rep: Once a day, intentionally do one small thing that is uncomfortable but valuable (a hard conversation, a workout, a focused work block) and note how you feel after completing it.",
+            "Setback Autopsy: When something goes wrong, briefly describe what happened, what you controlled, what you didn’t, and one specific lesson you’re taking forward.",
+            "Energy Boundaries: Each week, identify one activity that drains you without meaningful return and either reduce, delegate, or redesign it to preserve strength for what matters most.",
+            "Victory Ritual: Create a short personal ritual (gesture, phrase, or action) to mark completed efforts, reminding yourself that progress—even imperfect—is still victory."
+          ],
+ 
+          "transformation_indicators": [
+            "You stop seeing failure as proof that you’re not capable and start seeing it as a cue to adjust your training approach.",
+            "Your goals become clearer and more structured, broken into milestones you can actually track and celebrate.",
+            "Others describe you as ‘dependable under pressure’ and look to you when things get difficult.",
+            "You feel less tempted to abandon difficult paths when obstacles appear, because you recognize them as part of the process.",
+            "Your sense of strength shifts from how much you can carry alone to how consistently you can show up, adapt, and keep moving with others."
+          ]
+        },
+ 
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Debate — Testing Whether the Pain of the Path Is Worth the Victory It Promises",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "A powerful but still-tempering force, learning that true victory is not a single moment of triumph but the cumulative result of countless returns to the fight.",
+          "ordinary_world_baseline": "A universe where many beings retreat at the first sign of overwhelming resistance, assuming that struggle is evidence they chose the wrong path.",
+          "push_turn": "By choosing to interpret every refusal, obstacle, and collapse as training rather than condemnation, Francisco transforms The Road of Trials into the forge that makes universal transformation possible."
+        },
+ 
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Grit",
+            "author": "Angela Duckworth",
+            "section_of_focus": "Chapter 4: Effort Counts Twice",
+            "section_description": "The multiplier effect of effort over talent.",
+            "connection_focus_area": "Resilience",
+            "connect_points": {
+              "point1": "Set a long-term goal",
+              "point2": "Break it into manageable milestones",
+              "point3": "Track daily effort"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Define a 6-month goal",
+              "objective2": "List milestone tasks",
+              "objective3": "Maintain a daily progress log"
+            }
+          },
+          "book2": {
+            "title": "Mindset",
+            "author": "Carol S. Dweck",
+            "section_of_focus": "Chapter 6: The Danger of Praise",
+            "section_description": "Cultivating a growth mindset through feedback.",
+            "connection_focus_area": "Resilience",
+            "connect_points": {
+              "point1": "Praise effort over talent",
+              "point2": "Embrace challenges",
+              "point3": "Reflect on failures"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Give effort-based praise weekly",
+              "objective2": "Attempt one new challenge weekly",
+              "objective3": "Write failure reflections"
+            }
+          },
+          "book3": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Chapter 5: Discipline",
+            "section_description": "Turning obstacles into opportunities.",
+            "connection_focus_area": "Resilience",
+            "connect_points": {
+              "point1": "Perceive obstacles as advantages",
+              "point2": "Act despite fear",
+              "point3": "Persist through difficulty"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one obstacle per week",
+              "objective2": "Take one bold action despite fear",
+              "objective3": "Review progress monthly"
+            }
+          }
+        },
+ 
+        "laurasia_narrative_integration": {
+          "opening_scene": "Within the cosmic strength training facilities, Francisco moves through shifting gravities and reality fields that test every fiber of his being. Entire nebulae are compressed into weights he must lift, while timelines stretch and loop so that a single exercise can span centuries of disciplined effort in a heartbeat.",
+          "symbolic_moment": "In the fortitude forging chambers, Francisco is offered a tempting shortcut: a surge of borrowed strength that would finish the work quickly but leave the universe dependent and fragile. Instead, he chooses the slower path of earned power, accepting pain and delay so that all beings will grow stronger alongside him. The chamber responds by etching luminous bands of living light around his form—scars that glow whenever he chooses perseverance over expediency.",
+          "emotional_landscape": "Significant and impactful: a blend of exhaustion, fierce determination, flashes of doubt, and the quiet satisfaction of knowing each repetition is building something permanent.",
+          "victory_definition": "Not just winning once, but becoming the kind of presence that can be trusted to show up, stand firm, and keep going until the work is truly done.",
+          "transformation_promise": "When your resilience becomes your signature, every setback adds weight to your eventual victory—and others will find the courage to keep going because they watched you refuse to stop."
+        },
+ 
+        "epic_novel_pages": "Page 121 - 135",
+        "epic_chapter_focus": "Refusal of the Call",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_preliminary_scene_description": "Scene III: Refusal of the Call",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Resilience",
+        "specific_task_group_description": "Harness setbacks to fuel progress and achieve small wins.",
+        "specific_task_group_tagline": "Victory through persistence",
+        "tarot_card_link": "Wands/Six",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Olive",
+        "hex_code": "#999900",
+        "red": 153,
+        "green": 153,
+        "blue": 0
+      },
       "personality_profile_330": {},
       "personality_profile_331": {},
       "personality_profile_332": {},
