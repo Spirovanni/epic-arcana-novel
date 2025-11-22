@@ -67780,7 +67780,253 @@
         "green": 204,
         "blue": 51
       },
-      "personality_profile_328": {},
+      "personality_profile_328": {
+        "canonical_id": "EA-328",
+        "unique_identifier": "STG 9.1.3.2",
+        "specific_task_group_title": "Intellectual Adventure",
+        "all_chapter": 328,
+        "novel_book": 9,
+        "chapter": "Chapter 8",
+        "chapter_title": "The Road of Trials — Intellectual Adventure",
+        "type": "Specific Task Group",
+        "display_name": "The Inquisitive Knight of Integrity",
+        "theme": "Your curiosity is not random wandering—it’s a disciplined quest to test ideas, reveal truth, and stand for what you can live with in the light.",
+        "family": "Curiosity — Exploration Guided by Conscience",
+ 
+        "summary": "In this phase of Book 9, Francisco enters an era of intellectual trials where every question, hypothesis, and decision carries cosmic weight. His mind becomes a battlefield of possibilities: with the power to reshape existence, he must ensure his curiosity doesn’t drift into recklessness or self-serving cleverness.\n\nInstead of chasing novelty for its own sake, Francisco uses his intellectual adventure to probe the ethical edges of transformation. He subjects every bright idea to the test of integrity: Does this serve the highest good of all existence? Could this change be trusted if everyone knew how and why it was made? In the integrity testing chambers, he is confronted with tempting shortcuts, seductive half-truths, and elegant solutions that would privately benefit a few at the expense of the many. Each time, he must choose whether to bend principle or sharpen it.\n\nThrough this gauntlet, Francisco becomes not just brilliant, but dependable. He transforms curiosity into a disciplined, courageous practice of asking better questions, inviting diverse perspectives, and refusing to implement any cosmic change that cannot withstand full transparency. His intellectual adventure becomes a pilgrimage: from cleverness to wisdom, from possibility to responsibility, from ‘Can I do this?’ to ‘Should I—and under what conditions?’\n\nBy the end of this trial, Francisco stands as a living oath: a mind that roams widely, a conscience that stands firmly, and a presence that all beings can trust to wield cosmic power with honor.",
+ 
+        "tarot_family": "Swords",
+        "tarot_card_item": "Knight",
+ 
+        "traits": {
+          "strengths": [
+            "insatiably curious and energized by complex questions and systems",
+            "naturally drawn to connect ideas across domains and disciplines",
+            "values truth and transparency, even when they are uncomfortable",
+            "able to think several moves ahead and anticipate consequences",
+            "deeply committed to being someone others can intellectually and morally trust"
+          ],
+          "shadow": [
+            "may overthink decisions and get stuck in analysis instead of acting",
+            "can become overly critical of self or others when standards aren’t met",
+            "risks using intellect to justify avoidance or delay hard choices",
+            "may unintentionally intimidate others with intensity or precision",
+            "can struggle to relax when ethical questions feel unresolved"
+          ],
+          "growth_focus": [
+            "treat action as part of learning; decide, test, and refine instead of waiting for perfect certainty",
+            "share your internal reasoning so others can trust not only your conclusions but your process",
+            "allow space for emotional and intuitive input alongside logic and data",
+            "practice giving yourself grace when you discover past blind spots or mistakes",
+            "use your curiosity not just to evaluate ideas, but also to better understand people"
+          ]
+        },
+ 
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Intellectual Adventure, Curiosity & Ethical Integrity Under Trial",
+          "fiction_chapter_context": "Book 9, Chapter 8 — Intellectual Adventure: Francisco moves through the integrity testing chambers of the cosmos, letting his curiosity explore the widest range of possibilities while his conscience filters which realities are worthy to exist."
+        },
+ 
+        "enneagram_link": {
+          "family_number": 1,
+          "note": "The Principled Explorer—driven to improve the world through high standards, ethical clarity, and thoughtful questioning."
+        },
+ 
+        "color_alignment": {
+          "name": "Wild Willow",
+          "hsl": "60,50%,60%",
+          "rgb_hex": "#CCCC66",
+          "color_symbolism": "A soft, steady yellow-green—curious, attentive, and grounded. The color of a mind that explores widely while remaining rooted in integrity."
+        },
+ 
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.74,
+            "stability": 0.78,
+            "empathy": 0.75,
+            "openness": 0.90,
+            "orderliness": 0.70,
+            "conscientiousness": 0.86,
+            "adaptability": 0.77,
+            "abstract_reasoning": 0.88,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.62,
+            "emotional_intensity": 0.64,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.76,
+            "imagination": 0.84
+          },
+          "match_weights": {
+            "openness": 0.25,
+            "conscientiousness": 0.30,
+            "abstract_reasoning": 0.20,
+            "stability": 0.15,
+            "cooperativeness": 0.10
+          },
+          "threshold": 0.88,
+ 
+          "top_signal_items": [
+            "Q3281",
+            "Q3282",
+            "Q3283",
+            "Q3284",
+            "Q3285",
+            "Q3286",
+            "Q3287",
+            "Q3288"
+          ],
+          "signals_map": {
+            "Q3281": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "I’m energized by big, complex questions and often pursue answers far beyond what’s required."
+            },
+            "Q3282": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I enjoy connecting ideas from very different areas to see what new possibilities emerge."
+            },
+            "Q3283": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I care deeply that my decisions are fair, honest, and consistent with my values."
+            },
+            "Q3284": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "People can rely on me to keep my word, even when it’s inconvenient or difficult."
+            },
+            "Q3285": {
+              "dimension": "risk_tolerance",
+              "polarity": -1,
+              "content": "The possibility of making an unethical or regrettable choice sometimes makes me hesitate to act at all."
+            },
+            "Q3286": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "Once I’ve examined an issue thoroughly, I’m willing to take responsibility for a final decision."
+            },
+            "Q3287": {
+              "dimension": "novelty_seeking",
+              "polarity": 1,
+              "content": "I deliberately seek out unfamiliar perspectives, even if they challenge what I currently believe."
+            },
+            "Q3288": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I want others to understand not only what I decide, but why I’ve chosen that path."
+            }
+          },
+ 
+          "daily_prompt": "What question, if you asked it honestly and followed it all the way through today, would bring your life and your choices closer to what you can proudly stand behind?",
+ 
+          "practices": [
+            "Ethical Deconstruction: Once a day, take a decision (past, present, or upcoming) and briefly list its potential benefits, harms, and who is affected. Ask: ‘Would I be comfortable explaining this decision publicly?’",
+            "Curiosity Window: Reserve a short block of time weekly to explore a topic outside your usual domain—then write one paragraph on how it changes your view of a current problem.",
+            "Integrity Check-In: At the end of the day, ask yourself: ‘Where did I act in alignment with my values? Where did I drift?’ Note one small adjustment for tomorrow.",
+            "Transparent Reasoning: In one conversation per day, share not just your conclusion, but the reasoning you used to get there. Invite others to question it.",
+            "Courageous Question: When you feel hesitation or fogginess, pause and ask, ‘What am I afraid to find out here?’ Write the answer, even if you don’t act on it yet."
+          ],
+ 
+          "transformation_indicators": [
+            "You move from avoiding decisions to making them thoughtfully, then refining based on what you learn.",
+            "Others begin to seek you out for both your insight and your fairness, not just your intelligence.",
+            "You feel less haunted by ‘what-ifs’ because you can clearly trace and trust your decision-making process.",
+            "Your curiosity becomes more focused and purposeful, tied to real-world ethical questions rather than endless abstraction.",
+            "You notice growing pride in being someone whose word and reasoning can be counted on, even under pressure."
+          ]
+        },
+ 
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Debate — Testing Ideas and Integrity Before Fully Committing",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "A rigorous, curious mind stepping into a gauntlet of tests where every insight and every moral line will be challenged.",
+          "ordinary_world_baseline": "A universe accustomed to using intellect for advantage, justification, or control rather than for shared truth and collective good.",
+          "push_turn": "By choosing to let curiosity serve conscience, Francisco turns the Road of Trials into a proving ground where integrity—not power—qualifies him to reshape existence."
+        },
+ 
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Range",
+            "author": "David Epstein",
+            "section_of_focus": "Chapter 1: Generalists versus Specialists",
+            "section_description": "How broad thinking fosters innovation.",
+            "connection_focus_area": "Curiosity",
+            "connect_points": {
+              "point1": "Explore diverse topics weekly",
+              "point2": "Connect unrelated ideas",
+              "point3": "Reflect on cross-domain insights"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design a cross-disciplinary mini-project",
+              "objective2": "Document three novel idea connections",
+              "objective3": "Hold weekly exploratory sessions"
+            }
+          },
+          "book2": {
+            "title": "Curious",
+            "author": "Ian Leslie",
+            "section_of_focus": "Chapter 3: The Defeat of Curiosity",
+            "section_description": "Strategies to sustain deep interest.",
+            "connection_focus_area": "Curiosity",
+            "connect_points": {
+              "point1": "Ask open-ended questions",
+              "point2": "Resist premature closure",
+              "point3": "Pursue depth beyond surface"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Generate three open questions daily",
+              "objective2": "Dive deeper into one topic each day",
+              "objective3": "Journal moments of curiosity loss"
+            }
+          },
+          "book3": {
+            "title": "A Curious Mind",
+            "author": "Brian Grazer & Charles Fishman",
+            "section_of_focus": "Chapter 2: The Power of Curiosity",
+            "section_description": "Using questions to build connections.",
+            "connection_focus_area": "Curiosity",
+            "connect_points": {
+              "point1": "Conduct monthly informational interviews",
+              "point2": "Listen actively for new perspectives",
+              "point3": "Follow up on surprising facts"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Schedule one interview per month",
+              "objective2": "Capture two insights per interview",
+              "objective3": "Share findings with a peer"
+            }
+          }
+        },
+ 
+        "laurasia_narrative_integration": {
+          "opening_scene": "Inside the integrity testing chambers, reality itself bends into thought experiments. Entire galaxies appear and vanish as simulations—a decision made here could become law there. Francisco walks through corridors of living equations and ethical dilemmas, each door presenting a different version of the future shaped by his choices.",
+          "symbolic_moment": "Francisco is shown a scenario where a single elegant transformation would instantly stabilize millions of worlds—but at the hidden cost of silencing a smaller, stranger cluster of emerging consciousness. Tempted by the beauty of the solution, he stops, senses the quiet lives at risk of being erased, and refuses to proceed until a path is found that honors them too. The simulated universe flickers, recalculates, and reveals a more complex but more humane route forward.",
+          "emotional_landscape": "Dynamic and taut: thrilling discovery and possibility, intertwined with the sobering weight of knowing that every decision sets a precedent for all who come after.",
+          "contentment_definition": "Not the comfort of easy answers, but the deep peace of knowing you sought truth thoroughly and acted in a way your future self—and others—can respect.",
+          "transformation_promise": "When your curiosity is anchored in integrity, your questions don’t just change what you know—they change who can safely rely on you when the stakes are cosmic."
+        },
+ 
+        "epic_novel_pages": "Page 106 - 120",
+        "epic_chapter_focus": "Consequence",
+        "epic_preliminary_scene_focus": "Debate",
+        "epic_preliminary_scene_description": "Scene III: Refusal of the Call",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Curiosity",
+        "specific_task_group_description": "Engage in exploratory learning to break through mental blocks.",
+        "specific_task_group_tagline": "Curiosity conquers fear",
+        "tarot_card_link": "Swords/Knight",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Wild Willow",
+        "hex_code": "#CCCC66",
+        "red": 204,
+        "green": 204,
+        "blue": 102
+      },
       "personality_profile_329": {},
       "personality_profile_330": {},
       "personality_profile_331": {},
