@@ -66821,7 +66821,245 @@
         "green": 255,
         "blue": 51
       },
-      "personality_profile_324": {},
+      "personality_profile_324": {
+        "canonical_id": "EA-324",
+        "unique_identifier": "STG 9.1.2.1",
+        "specific_task_group_title": "Study",
+        "all_chapter": 324,
+        "novel_book": 9,
+        "chapter": "Chapter 4",
+        "chapter_title": "The Call to Adventure — Study",
+        "type": "Specific Task Group",
+        "display_name": "The Regenerative Scholar",
+        "theme": "When the universe calls you forward, the first brave response isn’t a dramatic leap—it’s a disciplined season of learning that keeps you from burning out mid-journey.",
+        "family": "Learning — Study, Regeneration & Skill-Building",
+        "summary": "In the early movements of the final book, Francisco realizes that raw cosmic power and heroic will are not enough. To carry the Spirit of the Primal Fire without scorching himself or the universe, he must become a student again—this time of rest, cycles, and sustainable mastery. Study becomes sacred: he maps energy patterns across galaxies, observes how worlds renew themselves, and designs deliberate cycles of exertion and recovery. Instead of charging endlessly forward, he learns to pause, review, and integrate. His learning is not cramming; it is regenerative study—every lesson both sharpens his focus and replenishes his strength. The more he understands, the more gently and effectively he can guide the coming transformation.",
+        "tarot_family": "Cups",
+        "tarot_card_item": "Four",
+ 
+        "traits": {
+          "strengths": [
+            "approaches growth with structured curiosity and clear learning goals",
+            "values preparation and understanding over impulsive action",
+            "can sustain deep focus in study when aligned with a meaningful purpose",
+            "naturally connects rest, reflection, and learning into one integrated rhythm",
+            "notices patterns across experiences and turns them into repeatable practices"
+          ],
+          "shadow": [
+            "gets stuck in ‘one more thing to learn’ and delays action",
+            "uses study as a way to avoid emotional risk or vulnerability",
+            "pushes themselves to overwork mentally and calls it ‘productivity’",
+            "feels guilty resting unless they can justify it as ‘useful’",
+            "hoards knowledge instead of sharing it in simple, accessible ways"
+          ],
+          "growth_focus": [
+            "treat rest as part of the curriculum, not as a reward you must earn",
+            "decide what is ‘enough to start’ learning before taking a next step",
+            "alternate focused study with diffuse, relaxed reflection",
+            "share what you’re learning in small, imperfect ways instead of waiting to be an expert",
+            "design learning sprints with a clear start, midpoint check-in, and reset"
+          ]
+        },
+ 
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Learning",
+          "fiction_chapter_context": "Book 9, Chapter 4 — Study: Francisco honors the call to adventure not with reckless motion, but with intentional learning and regenerative rest that will sustain the final transformation."
+        },
+ 
+        "enneagram_link": {
+          "family_number": 5,
+          "note": "Investigator in balance—curious, methodical, and learning to pair intense study with embodied rest and contribution."
+        },
+ 
+        "color_alignment": {
+          "name": "Electric Lime",
+          "hsl": "72,100%,50%",
+          "rgb_hex": "#CCFF00",
+          "color_symbolism": "An energized, luminous green—the alert mind and refreshed spirit that come from study paired with renewal."
+        },
+ 
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.68,
+            "stability": 0.74,
+            "empathy": 0.71,
+            "openness": 0.84,
+            "orderliness": 0.80,
+            "conscientiousness": 0.88,
+            "adaptability": 0.70,
+            "abstract_reasoning": 0.86,
+            "cooperativeness": 0.73,
+            "risk_tolerance": 0.56,
+            "emotional_intensity": 0.63,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.69,
+            "imagination": 0.81
+          },
+          "match_weights": {
+            "conscientiousness": 0.35,
+            "abstract_reasoning": 0.35,
+            "openness": 0.30
+          },
+          "threshold": 0.88,
+          "top_signal_items": [
+            "Q3241",
+            "Q3242",
+            "Q3243",
+            "Q3244",
+            "Q3245",
+            "Q3246",
+            "Q3247",
+            "Q3248"
+          ],
+          "signals_map": {
+            "Q3241": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I prefer to understand the ‘why’ and ‘how’ before I fully commit to action."
+            },
+            "Q3242": {
+              "dimension": "abstract_reasoning",
+              "polarity": 1,
+              "content": "I enjoy spotting patterns and frameworks that connect different ideas together."
+            },
+            "Q3243": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "Learning new skills or concepts is one of the main ways I feel alive and engaged."
+            },
+            "Q3244": {
+              "dimension": "orderliness",
+              "polarity": 1,
+              "content": "I like to plan my study time or practice sessions instead of just ‘winging it.’"
+            },
+            "Q3245": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "When I feel overwhelmed, structured learning or review helps calm me down."
+            },
+            "Q3246": {
+              "dimension": "conscientiousness",
+              "polarity": -1,
+              "content": "I often jump into action without taking time to learn what I’m doing."
+            },
+            "Q3247": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "I can update my approach quickly when new information proves me wrong."
+            },
+            "Q3248": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "I’m willing to design my own ‘study plan’ or practice routine instead of waiting for someone else to give me one."
+            }
+          },
+          "daily_prompt": "Where is life asking you to learn before you leap—and how can you design one focused, regenerative study block today instead of draining yourself with scattered effort?",
+          "practices": [
+            "Learning Sprint Map: choose one skill or topic and outline a 7-day micro-learning sprint with tiny daily goals.",
+            "Regenerative Pomodoros: run 3–4 focused blocks (20–30 minutes) of study or practice, followed by a real break that actually restores you.",
+            "Insight Capture: after each session, write down one new pattern, mistake, or question in a single sentence.",
+            "Energy Audit: track when your mind feels most fresh; schedule your hardest learning tasks into those windows.",
+            "Teach-Back Ritual: once a week, explain something you’re learning to someone else (or a blank page) in simple language."
+          ],
+          "transformation_indicators": [
+            "You feel less guilty resting because you see how directly it fuels your learning and performance.",
+            "Your study time shifts from random consumption to intentional, goal-driven sessions.",
+            "You start taking smaller, smarter risks because you feel prepared instead of guessing.",
+            "You notice clearer patterns in your mistakes and adjust faster each time.",
+            "People around you begin to see you not just as ‘smart,’ but as a calm, sustainable source of insight."
+          ]
+        },
+ 
+        "hero_journey_position": {
+          "stage": "The Call to Adventure",
+          "preliminary_beat": "Immediate Reaction — Study",
+          "save_the_cat_beat": "Inciting Incident",
+          "character_state": "A newly awakened cosmic force that chooses to pick up a notebook before a sword.",
+          "ordinary_world_baseline": "A universe that has glorified constant output for ages, now facing a final transformation that can only be survived through intelligent pacing and deep understanding.",
+          "push_turn": "Francisco responds to the call to adventure not by rushing ahead, but by designing the learning and rest systems that will let him finish what the cosmos started in him."
+        },
+ 
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Make It Stick: The Science of Successful Learning",
+            "author": "Peter C. Brown",
+            "section_of_focus": "Chapter 3: Mix Up Your Practice",
+            "section_description": "How interleaving practice enhances retention.",
+            "connection_focus_area": "Learning",
+            "connect_points": {
+              "point1": "Implement spaced retrieval exercises",
+              "point2": "Alternate topics in each study session",
+              "point3": "Self-test rather than reread notes"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Design an interleaved study plan",
+              "objective2": "Use self-testing in every session",
+              "objective3": "Review incorrect items daily"
+            }
+          },
+          "book2": {
+            "title": "Ultralearning",
+            "author": "Scott Young",
+            "section_of_focus": "Metalearning",
+            "section_description": "Mapping out the learning process for efficiency.",
+            "connection_focus_area": "Learning",
+            "connect_points": {
+              "point1": "Define clear learning goals",
+              "point2": "Research optimal resources",
+              "point3": "Schedule focused deep-work blocks"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Create a project outline for a new skill",
+              "objective2": "Identify top three learning resources",
+              "objective3": "Allocate daily deep-work time"
+            }
+          },
+          "book3": {
+            "title": "A Mind for Numbers",
+            "author": "Barbara Oakley",
+            "section_of_focus": "Chapter 2: Focused versus Diffuse Mode",
+            "section_description": "Balancing intense focus with relaxed reflection.",
+            "connection_focus_area": "Learning",
+            "connect_points": {
+              "point1": "Work in 25-minute Pomodoros",
+              "point2": "Take 5-minute breaks between sessions",
+              "point3": "Journal insights after each session"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete four Pomodoro cycles daily",
+              "objective2": "Record at least one insight per cycle",
+              "objective3": "Adjust cycle length based on performance"
+            }
+          }
+        },
+ 
+        "laurasia_narrative_integration": {
+          "opening_scene": "In a vaulted chamber of crystalline shelves, star-maps and energy diagrams hover in the air around Francisco. Constellations bend into graphs; nebulae resolve into slow, pulsing waveforms. Instead of commanding the cosmos to move, he studies how it breathes.",
+          "symbolic_moment": "Francisco closes a colossal tome of battle histories and instead opens a slender, glowing codex titled simply ‘Cycles.’ As he reads, the rhythm of his own inner fire syncs with the rise and fall of distant suns.",
+          "emotional_landscape": "Calm focus, humble curiosity, a quiet relief that he does not have to force everything—he can learn to move with the universe instead of against it.",
+          "contentment_definition": "Knowing you are allowed to pause and learn, even when everything in you wants to prove you’re already enough.",
+          "transformation_promise": "When learning and rest become allies instead of afterthoughts, your call to adventure stops feeling like a demand and starts feeling like a craft."
+        },
+ 
+        "epic_novel_pages": "Page 46 - 60",
+        "epic_chapter_focus": "Immediate Reaction",
+        "epic_preliminary_scene_focus": "Set-up",
+        "epic_preliminary_scene_description": "Scene II: The Call to Adventure",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Learning",
+        "specific_task_group_description": "Deepen your understanding of new skills through deliberate study sessions.",
+        "specific_task_group_tagline": "Learn with intent",
+        "tarot_card_link": "",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Electric Lime",
+        "hex_code": "#CCFF00",
+        "red": 204,
+        "green": 255,
+        "blue": 0
+      },
       "personality_profile_325": {},
       "personality_profile_326": {},
       "personality_profile_327": {},
