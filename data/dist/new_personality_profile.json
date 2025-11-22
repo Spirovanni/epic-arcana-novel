@@ -67300,7 +67300,246 @@
         "green": 204,
         "blue": 51
       },
-      "personality_profile_326": {},
+      "personality_profile_326": {
+        "canonical_id": "EA-326",
+        "unique_identifier": "STG 9.1.2.3",
+        "specific_task_group_title": "Strife",
+        "all_chapter": 326,
+        "novel_book": 9,
+        "chapter": "Chapter 6",
+        "chapter_title": "Allies, Mentors, and Helpers — Strife",
+        "type": "Specific Task Group",
+        "display_name": "The Grief-Tempered Guardian",
+        "theme": "Real strength isn’t the absence of struggle—it is the courage to walk through conflict, grief, and change with an open heart, and to turn shared pain into shared healing.",
+        "family": "Conflict — Grief, Healing & Resilient Connection",
+        "summary": "In this phase of Book 9, Francisco stands in the fault line between what the universe was and what it is becoming. The transformation he set in motion has a cost: worlds ending, identities dissolving, stories closing. Strife erupts not only as external conflict but as a tidal wave of grief—anger, confusion, denial, and sorrow moving through countless beings at once. Instead of suppressing this pain or forcing quick compliance, Francisco chooses a different path: he treats cosmic conflict as sacred. He creates spaces where grief can be expressed without shame and tension can be held without collapse.\n\nAs he leans into strife rather than running from it, Francisco discovers that grief, when honored, becomes a forge. Old loyalties, buried wounds, and hidden resentments surface and are worked through. In guiding this painful process, Francisco’s leadership becomes deeply compassionate. Conflict is no longer a threat to the mission; it becomes the very fire that tempers the new universe, welding beings together through shared mourning and shared meaning. His mastery of cosmic grief turns strife into a bridge between endings and beginnings.",
+        "tarot_family": "Wands",
+        "tarot_card_item": "Five",
+ 
+        "traits": {
+          "strengths": [
+            "willing to face emotional and relational conflict instead of avoiding it",
+            "able to hold space for others’ pain without rushing to fix or silence it",
+            "transforms disagreements into deeper understanding and alignment",
+            "uses tension as fuel for growth, innovation, and honesty",
+            "remains present and grounded even when emotions run high"
+          ],
+          "shadow": [
+            "can become addicted to struggle, mistaking constant conflict for progress",
+            "may provoke unnecessary confrontations to feel alive or in control",
+            "risks carrying others’ grief as their own, leading to emotional exhaustion",
+            "can confuse chaos with authenticity, resisting calm or stability",
+            "may stay in harmful dynamics too long in the name of ‘working it out’"
+          ],
+          "growth_focus": [
+            "distinguish between necessary, healthy conflict and drama that drains you",
+            "set time and energy limits for hard conversations to protect your capacity",
+            "practice naming your own feelings before interpreting others’ motives",
+            "invite support from allies or mentors instead of holding all grief alone",
+            "honor endings as much as new beginnings—allow yourself to fully mourn"
+          ]
+        },
+ 
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Conflict, Grief & Healing",
+          "fiction_chapter_context": "Book 9, Chapter 6 — Strife: Francisco learns that the universe cannot transform without grieving the loss of what it used to be, and he becomes the one who walks with all beings through that grief."
+        },
+ 
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "The deep-feeling Alchemist—willing to enter sorrow and struggle to uncover authentic connection, beauty, and meaning on the other side of pain."
+        },
+ 
+        "color_alignment": {
+          "name": "Citrus",
+          "hsl": "80,100%,40%",
+          "rgb_hex": "#99CC00",
+          "color_symbolism": "A vivid yellow-green—the sharp, electric edge of living things that grow through storms, not despite them."
+        },
+ 
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.73,
+            "stability": 0.55,
+            "empathy": 0.86,
+            "openness": 0.82,
+            "orderliness": 0.58,
+            "conscientiousness": 0.76,
+            "adaptability": 0.79,
+            "abstract_reasoning": 0.72,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.71,
+            "emotional_intensity": 0.88,
+            "social_dominance": 0.64,
+            "novelty_seeking": 0.69,
+            "imagination": 0.78
+          },
+          "match_weights": {
+            "emotional_intensity": 0.30,
+            "empathy": 0.30,
+            "adaptability": 0.20,
+            "agency": 0.20
+          },
+          "threshold": 0.88,
+          "top_signal_items": [
+            "Q3261",
+            "Q3262",
+            "Q3263",
+            "Q3264",
+            "Q3265",
+            "Q3266",
+            "Q3267",
+            "Q3268"
+          ],
+          "signals_map": {
+            "Q3261": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "When strong emotions show up—in me or others—I’d rather face them directly than pretend everything is fine."
+            },
+            "Q3262": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I can usually sense the pain beneath someone’s anger or defensiveness."
+            },
+            "Q3263": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "Conflict and change often end up teaching me something important about myself or my relationships."
+            },
+            "Q3264": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "If tension arises, I’m willing to initiate a hard but honest conversation to address it."
+            },
+            "Q3265": {
+              "dimension": "stability",
+              "polarity": -1,
+              "content": "When people around me are upset, I feel overwhelmed and do almost anything to stop the discomfort."
+            },
+            "Q3266": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "Even when I disagree, I try to stay curious about what the other person is feeling and needing."
+            },
+            "Q3267": {
+              "dimension": "orderliness",
+              "polarity": -1,
+              "content": "I avoid difficult topics because I’m afraid they’ll create chaos I can’t control."
+            },
+            "Q3268": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "Some of my most meaningful relationships were forged by going through a hard situation together."
+            }
+          },
+          "daily_prompt": "Where in your life is there unspoken grief or tension that, if faced with honesty and compassion, could actually deepen trust instead of breaking it?",
+          "practices": [
+            "Name the Loss: once a day, write down one thing—from a role, dream, season, or relationship—that you’ve lost or that is changing, and give yourself permission to feel whatever comes up.",
+            "Gentle Confrontation: choose one low-to-medium stakes conflict and initiate a calm conversation where your only goals are to listen, validate, and clarify what each of you is experiencing.",
+            "Grief Circle: gather a small group (or journal as if you were a group) where each person finishes the sentence: “What I’m afraid to admit I’m grieving is…”",
+            "Trigger Mapping: notice one situation where you became defensive or shut down; later, map what was said, what you felt, and what you feared might be true.",
+            "Completion Ritual: create a simple personal ritual (a walk, a candle, a letter you don’t send) to mark the end of an old phase and consciously bless the new one."
+          ],
+          "transformation_indicators": [
+            "You find yourself less afraid of ‘hard talks’ and more interested in what they can reveal and heal.",
+            "Tears, frustration, and discomfort start to feel like part of the process—not proof that something is wrong with you.",
+            "You notice that addressing conflict directly leads to more trust, not less, even if it’s messy at first.",
+            "You begin to honor your own grief instead of minimizing it, and this makes you more patient with others’ pain.",
+            "Strife no longer feels like an enemy to your purpose; it becomes one of the teachers shaping your deepest strength."
+          ]
+        },
+ 
+        "hero_journey_position": {
+          "stage": "Allies, Mentors, and Helpers",
+          "preliminary_beat": "The Call to Adventure — Catalyst Through Conflict",
+          "save_the_cat_beat": "Allies, Mentors, and Helpers",
+          "character_state": "A cosmic healer-warrior gathering allies not by avoiding pain, but by standing with them in their grief.",
+          "ordinary_world_baseline": "A universe that has treated conflict and grief as signs of failure—something to suppress, bypass, or outrun.",
+          "push_turn": "By choosing to walk into universal grief instead of away from it, Francisco attracts allies who are willing to be honest, vulnerable, and fully present for the transformation ahead."
+        },
+ 
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Crucial Conversations",
+            "author": "Kerry Patterson",
+            "section_of_focus": "Chapter 4: Make It Safe",
+            "section_description": "Creating a safe space for difficult dialogues.",
+            "connection_focus_area": "Conflict",
+            "connect_points": {
+              "point1": "Establish mutual purpose",
+              "point2": "Use contrasting language",
+              "point3": "Monitor emotional tone"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice a crucial conversation weekly",
+              "objective2": "Identify and apply safety techniques",
+              "objective3": "Debrief conflict outcomes"
+            }
+          },
+          "book2": {
+            "title": "The Anatomy of Peace",
+            "author": "The Arbinger Institute",
+            "section_of_focus": "Chapter 3: From Heart at War to Heart at Peace",
+            "section_description": "Transforming conflict mindset.",
+            "connection_focus_area": "Conflict",
+            "connect_points": {
+              "point1": "Recognize your stance in conflict",
+              "point2": "Shift to a peace-seeking posture",
+              "point3": "Apply empathy in tension"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify one war-like mindset weekly",
+              "objective2": "Practice peace posture daily",
+              "objective3": "Reflect on conflict transformation"
+            }
+          },
+          "book3": {
+            "title": "Thanks for the Feedback",
+            "author": "Douglas Stone & Sheila Heen",
+            "section_of_focus": "Chapter 6: Truth Triggers",
+            "section_description": "Managing emotional reactions to feedback.",
+            "connection_focus_area": "Conflict",
+            "connect_points": {
+              "point1": "Notice your defensive triggers",
+              "point2": "Ask clarifying questions",
+              "point3": "Thank the giver of feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Document one defensive trigger",
+              "objective2": "Apply clarifying questions in feedback",
+              "objective3": "Express gratitude after receiving critique"
+            }
+          }
+        },
+ 
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a dimmed cosmic plain, entire galaxies appear as translucent echoes of themselves—half-present, half-fading. Francisco walks among beings of light and shadow, each one carrying pieces of worlds that no longer fit in the new order. The air vibrates with unshed tears and unspoken anger.",
+          "symbolic_moment": "In the center of a universal grief processing hall, Francisco kneels with a being who has just lost an entire timeline of possibility. He does not offer easy answers; instead, he weeps with them. As their tears fall, the floor beneath them grows new constellations—grief crystallized into stars.",
+          "emotional_landscape": "Raw, aching, and strangely hopeful—waves of sorrow rolling through a field of stubborn, quiet courage.",
+          "contentment_definition": "Not pretending everything is okay, but knowing you are allowed to feel everything and still move forward together.",
+          "transformation_promise": "When you stop running from strife and learn to grieve honestly, every ending becomes compost for a more compassionate universe."
+        },
+ 
+        "epic_novel_pages": "Page 76 - 90",
+        "epic_chapter_focus": "The Call to Adventure",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_preliminary_scene_description": "Scene II: The Call to Adventure",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Conflict",
+        "specific_task_group_description": "Engage with healthy conflict to sharpen resolve and adaptability.",
+        "specific_task_group_tagline": "Embrace the struggle",
+        "tarot_card_link": "Wands/Five",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Citrus",
+        "hex_code": "#99CC00",
+        "red": 153,
+        "green": 204,
+        "blue": 0
+      },
       "personality_profile_327": {},
       "personality_profile_328": {},
       "personality_profile_329": {},
