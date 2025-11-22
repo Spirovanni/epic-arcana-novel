@@ -69262,7 +69262,253 @@
         "green": 204,
         "blue": 43
       },
-      "personality_profile_334": {},
+      "personality_profile_334": {
+        "canonical_id": "EA-334",
+        "unique_identifier": "STG 9.2.1.1",
+        "specific_task_group_title": "Sorrow",
+        "all_chapter": 334,
+        "novel_book": 9,
+        "chapter": "Chapter 14",
+        "chapter_title": "The Road of Trials — Sorrow at the Gates of Time",
+        "type": "Specific Task Group",
+        "display_name": "The Great One of the Night of Sorrow",
+        "theme": "When you stop outrunning grief and sit beside it, sorrow turns from a weight you drag into a compass pointing toward what mattered most all along.",
+        "family": "Emotional Depth — Finding Meaning, Strength, and Revelation in Sorrow",
+    
+        "summary": "In this phase of Book 9, Francisco’s trials shift from purely external exertion to the interior landscapes that most beings avoid: grief, loss, regret, and the unhealed wounds of entire eras. As he becomes the Great One of the Night of Time, his temporal mastery doesn’t simply grant him access to all moments—it grants him access to all sorrows. Every heartbreak, every abandoned timeline, every world that fell before its time now echoes within his awareness.\n\nInside the temporal transcendence chambers, Francisco walks through time like a vast, living archive of grief. He encounters civilizations in their final hours, individuals at the precise moment of devastating loss, and his own past selves at their most fragile points. The temptation is powerful: shut the doors, numb out, and treat sorrow as a contamination that must be sealed away so the work can continue. Instead, he chooses the harder path—to stay present, to feel fully, and to honor each pain as a sacred signal rather than an inconvenient glitch.\n\nIn the discovery revelation laboratories, his primal curiosity fuses with emotional depth. Rather than analyzing sorrow from a safe, clinical distance, he allows it to teach him. He learns how trauma imprints in bodies, worlds, and timelines; how unresolved grief destabilizes whole systems; and how meaning, gratitude, and shared story can transform agony into resilience. He becomes capable of holding multiple times and multiple heartbreaks at once, without collapsing.\n\nBy the end of this trial, Francisco’s authority is no longer based solely on power, knowledge, or temporal reach. It is grounded in his willingness to feel what others cannot bear to face. His presence communicates to the cosmos: no grief is too vast to be witnessed, no loss too old to be honored, no sorrow so deep that it cannot be woven into a new pattern of strength. Sorrow becomes not the end of the path, but the hidden gate through which true resilience and revolutionary understanding are born.",
+    
+        "tarot_family": "Swords",
+        "tarot_card_item": "Three",
+    
+        "traits": {
+          "strengths": [
+            "able to sit with painful emotions without immediately numbing, fixing, or fleeing",
+            "finds meaning and insight in experiences of loss, setback, and heartbreak",
+            "offers deep, grounded presence to others in their moments of sorrow",
+            "notices the connection between emotional wounds and long-term patterns or choices",
+            "capable of transforming personal and collective grief into fuel for growth and wisdom"
+          ],
+          "shadow": [
+            "may become absorbed in pain and struggle to return to lightness or joy",
+            "can over-identify with suffering and begin to see themselves primarily as ‘wounded’",
+            "risks revisiting old hurts repeatedly without moving into integration or action",
+            "may romanticize sorrow or believe that happiness is shallow or unsafe",
+            "can withdraw from others when overwhelmed, making healing feel lonelier than it needs to be"
+          ],
+          "growth_focus": [
+            "practice moving between feeling deeply and grounding in the present, so you don’t drown in what you discover",
+            "invite trusted people or practices (therapy, community, spiritual support) into your healing process instead of carrying everything alone",
+            "notice when your body signals ‘too much’ and use gentle regulation (breath, movement, rest) instead of pushing further into intensity",
+            "allow joy, play, and beauty to coexist with sorrow rather than waiting to be fully ‘healed’ before receiving them",
+            "anchor your reflections in meaning and next steps—what this pain is teaching you, and how it can shape your choices going forward"
+          ]
+        },
+    
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Sorrow, Emotional Depth, and Temporal Revelation",
+          "fiction_chapter_context": "Book 9, Chapter 14 — Sorrow: As the Great One of the Night of Time, Francisco moves through temporal transcendence chambers and discovery revelation laboratories, facing the accumulated grief of countless moments and using primal curiosity to turn cosmic sorrow into revolutionary insight and resilient strength."
+        },
+    
+        "enneagram_link": {
+          "family_number": 4,
+          "note": "The Depth-Seeking Heart — oriented toward authenticity, emotional truth, and finding beauty and meaning in experiences of loss and longing."
+        },
+    
+        "color_alignment": {
+          "name": "Drover",
+          "hsl": "48,100%,80%",
+          "rgb_hex": "#FFEA97",
+          "color_symbolism": "A soft, luminous yellow-gold—like late-afternoon light over an old field—evoking remembered warmth, tender melancholy, and the quiet strength that comes from having lived through many seasons."
+        },
+    
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.63,
+            "stability": 0.56,
+            "empathy": 0.90,
+            "openness": 0.84,
+            "orderliness": 0.68,
+            "conscientiousness": 0.74,
+            "adaptability": 0.71,
+            "abstract_reasoning": 0.77,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.52,
+            "emotional_intensity": 0.92,
+            "social_dominance": 0.54,
+            "novelty_seeking": 0.66,
+            "imagination": 0.83
+          },
+          "match_weights": {
+            "emotional_intensity": 0.26,
+            "empathy": 0.24,
+            "openness": 0.20,
+            "stability": 0.15,
+            "imagination": 0.15
+          },
+          "threshold": 0.86,
+    
+          "top_signal_items": [
+            "Q3341",
+            "Q3342",
+            "Q3343",
+            "Q3344",
+            "Q3345",
+            "Q3346",
+            "Q3347",
+            "Q3348"
+          ],
+          "signals_map": {
+            "Q3341": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "When something painful happens, I tend to feel it very deeply, sometimes for a long time."
+            },
+            "Q3342": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I can easily sense and resonate with the grief or sadness of others, even when they don’t put it into words."
+            },
+            "Q3343": {
+              "dimension": "openness",
+              "polarity": 1,
+              "content": "Difficult experiences often lead me to question, reflect, and search for deeper meaning rather than just ‘moving on.’"
+            },
+            "Q3344": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Even when I’m hurting, a part of me is able to sit with the emotion instead of completely shutting down."
+            },
+            "Q3345": {
+              "dimension": "imagination",
+              "polarity": 1,
+              "content": "I often describe my emotional states through images, metaphors, or symbolic language."
+            },
+            "Q3346": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I make intentional efforts—journaling, therapy, rituals, or reflection—to work through my difficult feelings."
+            },
+            "Q3347": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "Old memories of loss or regret can still stir strong emotions in me, even years later."
+            },
+            "Q3348": {
+              "dimension": "stability",
+              "polarity": -1,
+              "content": "I try to avoid thinking about painful events from my past because I worry they might overwhelm me."
+            }
+          },
+    
+          "daily_prompt": "Where in your life is sorrow still sitting just outside the door—and what small, safe way could you invite it in today so it can finally be felt, honored, and heard?",
+    
+          "practices": [
+            "Grief Mapping: Once a week, choose one difficult memory and write down what happened, how it felt then, and how it feels now. Name any meaning or values that pain revealed.",
+            "Body Check-In: Spend five quiet minutes a day scanning your body for where sadness or tension lives (chest, throat, stomach). Gently breathe into that area and imagine soft warmth surrounding it.",
+            "Sorrow-to-Meaning Journal: At least three times a week, write a brief entry that starts with, “This hurt taught me…” and see what insights emerge about your priorities, boundaries, or desires.",
+            "Shared Story Circle: Choose a trusted person and, once a week, share one story of struggle or loss. Focus on being honest rather than polished. Offer the same listening space to them when they’re ready.",
+            "Ritual of Remembrance: Create a small personal ritual (lighting a candle, placing an object, saying a name or phrase) to honor people, versions of you, or chapters of life that are gone but still meaningful."
+          ],
+    
+          "transformation_indicators": [
+            "You become less afraid of your own strong emotions and more willing to feel them without immediately numbing or distracting yourself.",
+            "Past experiences of loss begin to feel like sources of wisdom and clarity, not just random suffering.",
+            "You notice that your body softens more quickly after waves of sadness, recovering without staying stuck in tension as long.",
+            "Other people begin to seek you out when they’re hurting, because they feel safe and understood in your presence.",
+            "Sorrow stops being the place where your story ends and becomes the doorway through which your deepest courage, creativity, and compassion emerge."
+          ]
+        },
+    
+        "hero_journey_position": {
+          "stage": "The Road of Trials",
+          "preliminary_beat": "Tests, Allies, and Enemies — Guardians and Gatekeepers of the Heart’s Deepest Night",
+          "save_the_cat_beat": "The Road of Trials",
+          "character_state": "A time-walking witness who is learning that true mastery of the Night of Time requires not only seeing every moment, but feeling the grief woven through them without losing himself.",
+          "ordinary_world_baseline": "A universe where most beings survive by speeding past their own pain, treating grief as a threat to productivity rather than a teacher of what truly matters.",
+          "push_turn": "By stepping into the temporal transcendence chambers and refusing to look away from the cosmos’s accumulated sorrow, Francisco turns The Road of Trials into a crucible of emotional depth—unlocking the revolutionary discoveries that only become visible when grief is fully faced."
+        },
+    
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Part I: Experiences in a Concentration Camp",
+            "section_description": "How purpose and meaning help sustain life under suffering.",
+            "connection_focus_area": "Emotional Depth",
+            "connect_points": {
+              "point1": "Reflect on personal challenges",
+              "point2": "Identify sources of meaning",
+              "point3": "Journal daily gratitude"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "List three personal sources of meaning",
+              "objective2": "Develop a resilience action plan",
+              "objective3": "Practice gratitude journaling daily"
+            }
+          },
+          "book2": {
+            "title": "The Body Keeps the Score",
+            "author": "Bessel Van der Kolk",
+            "section_of_focus": "Part II: Dealing with Trauma",
+            "section_description": "Understanding how trauma and sorrow manifest physically and mentally.",
+            "connection_focus_area": "Emotional Depth",
+            "connect_points": {
+              "point1": "Notice bodily sensations of sorrow",
+              "point2": "Use breathwork to soothe tension",
+              "point3": "Engage in gentle movement"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify two trauma triggers",
+              "objective2": "Practice breathwork twice daily",
+              "objective3": "Incorporate mindful movement"
+            }
+          },
+          "book3": {
+            "title": "Rising Strong",
+            "author": "Brené Brown",
+            "section_of_focus": "Chapter 3: The Reckoning",
+            "section_description": "Owning our stories of struggle to transform sorrow into growth.",
+            "connection_focus_area": "Emotional Depth",
+            "connect_points": {
+              "point1": "Write down moments of vulnerability",
+              "point2": "Share your story with a trusted friend",
+              "point3": "Identify lessons learned"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Complete a vulnerability journal entry",
+              "objective2": "Discuss one story of struggle",
+              "objective3": "Extract one lesson per week"
+            }
+          }
+        },
+    
+        "laurasia_narrative_integration": {
+          "opening_scene": "In the temporal transcendence chambers of Part II: The Great One of the Night of Time, Francisco stands within a vast, starless vault where rivers of luminous threads flow in every direction. Each thread is a timeline, and within each glimmer are moments of unspoken sorrow—silent goodbyes, worlds ending in the dark, and hearts breaking in places no one ever witnessed.",
+          "symbolic_moment": "At the heart of the chamber, Francisco encounters a suspended blade of crystallized starlight piercing a ring of dimmed suns—the living sigil of the Three of Swords. He is offered the option to seal this symbol away, erasing the universe’s conscious memory of its deepest grief. Instead, he draws the blade through his own chest of light, allowing every sorrow of the cosmos to pass through him and be seen, felt, and named. As he does, the ring of suns ignites once more, their light soft but unwavering, illuminating new pathways of discovery in the discovery revelation laboratories.",
+          "emotional_landscape": "Revelatory and tender: waves of ache, nostalgia, and regret moving through a foundation of fierce, quiet courage. There is pain, but it is no longer chaotic; it is organized into meaning, like constellations drawn from what once seemed like random points of darkness.",
+          "victory_definition": "Not the erasure of grief, but the integration of it—becoming someone who can hold past, present, and future sorrow without collapsing, and who can guide others to transform their pain into insight, connection, and renewed capacity to love.",
+          "transformation_promise": "When you allow your sorrow to be fully honored—in your body, your story, and your choices—time itself begins to shift. The moments that once felt like permanent fractures become luminous markers on a map, guiding you toward deeper strength, clearer priorities, and a kind of wisdom that no unbroken life could ever produce."
+        },
+    
+        "epic_novel_pages": "Page 196 - 210",
+        "epic_chapter_focus": "Push",
+        "epic_preliminary_scene_focus": "Tests, Allies and Enemies",
+        "epic_preliminary_scene_description": "Scene VI: Guardians and Gatekeepers",
+        "epic_novel_chapter_focus": "Part II: The Great One of the Night of Time",
+        "epic_novel_section_name": "Part II: The Great One of the Night of Time",
+        "focus_area": "Emotional Depth",
+        "specific_task_group_description": "Work through feelings of sorrow by acknowledging and honoring your emotions.",
+        "specific_task_group_tagline": "Embrace the pain to find your strength",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Drover",
+        "hex_code": "#FFEA97",
+        "red": 255,
+        "green": 234,
+        "blue": 151
+      },
       "personality_profile_335": {},
       "personality_profile_336": {},
       "personality_profile_337": {},
