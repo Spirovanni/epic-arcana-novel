@@ -67060,7 +67060,246 @@
         "green": 255,
         "blue": 0
       },
-      "personality_profile_325": {},
+      "personality_profile_325": {
+        "canonical_id": "EA-325",
+        "unique_identifier": "STG 9.1.2.2",
+        "specific_task_group_title": "Respect",
+        "all_chapter": 325,
+        "novel_book": 9,
+        "chapter": "Chapter 5",
+        "chapter_title": "Refusal of the Call — Respect",
+        "type": "Specific Task Group",
+        "display_name": "The Resolute Steward",
+        "theme": "When the final decision arrives, true leadership isn’t loud domination—it’s quiet, unshakeable resolve that treats every being with dignity while still saying a clear, costly yes.",
+        "family": "Leadership — Respect, Resolve & Cosmic Responsibility",
+        "summary": "In this phase of Book 9, Francisco stands at the last threshold: accept the ultimate responsibility for cosmic transformation or retreat into a simpler, smaller existence. The universe holds its breath. His power is no longer in raw force or clever strategy—it is in how he treats the lives affected by his choice. Respect becomes his compass. He listens to the silent voices of worlds, honors their fears, and allows himself to feel the weight of his decision instead of numbing it. By rooting his leadership in mutual regard rather than superiority, he summons a deeper kind of authority. His acceptance of the call is not a reckless charge; it is a reverent commitment to carry the transformation for everyone, not over them. That respect ignites the rallying cry the universe has been waiting for.",
+        "tarot_family": "Swords",
+        "tarot_card_item": "King",
+ 
+        "traits": {
+          "strengths": [
+            "leads from a place of earned authority grounded in respect, not intimidation",
+            "listens deeply before deciding, especially when stakes are high",
+            "can hold the weight of responsibility without collapsing or deflecting blame",
+            "models calm, principled decision-making under pressure",
+            "inspires loyalty by acknowledging others’ dignity and contributions"
+          ],
+          "shadow": [
+            "hesitates too long out of fear of hurting or disappointing others",
+            "carries more responsibility than is truly theirs, leading to burnout",
+            "struggles to set limits with those they feel responsible for",
+            "can become rigid about ‘doing the right thing’ and lose flexibility",
+            "uses respect as a shield to avoid necessary conflict or hard truths"
+          ],
+          "growth_focus": [
+            "differentiate between responsibility you truly own and burdens you’ve adopted",
+            "practice making timely decisions even when everyone is not fully satisfied",
+            "speak clear boundaries as an act of respect, not rejection",
+            "allow others to carry their share of the load instead of rescuing them",
+            "treat your own needs with the same dignity you offer everyone else"
+          ]
+        },
+ 
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Leadership",
+          "fiction_chapter_context": "Book 9, Chapter 5 — Respect: Francisco stands at the final decision point, accepting ultimate responsibility with a leadership style rooted in honor, mutual regard, and unwavering resolve."
+        },
+ 
+        "enneagram_link": {
+          "family_number": 8,
+          "note": "The Challenger in service—strong, protective leadership that learns to soften through respect, vulnerability, and shared power."
+        },
+ 
+        "color_alignment": {
+          "name": "Wattle",
+          "hsl": "60,60%,50%",
+          "rgb_hex": "#CCCC33",
+          "color_symbolism": "A muted golden yellow—the sober glow of earned authority and grounded resolve, rather than flashy dominance."
+        },
+ 
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.82,
+            "stability": 0.78,
+            "empathy": 0.77,
+            "openness": 0.71,
+            "orderliness": 0.76,
+            "conscientiousness": 0.84,
+            "adaptability": 0.68,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.80,
+            "risk_tolerance": 0.69,
+            "emotional_intensity": 0.67,
+            "social_dominance": 0.81,
+            "novelty_seeking": 0.61,
+            "imagination": 0.72
+          },
+          "match_weights": {
+            "agency": 0.30,
+            "social_dominance": 0.30,
+            "empathy": 0.25,
+            "conscientiousness": 0.15
+          },
+          "threshold": 0.88,
+          "top_signal_items": [
+            "Q3251",
+            "Q3252",
+            "Q3253",
+            "Q3254",
+            "Q3255",
+            "Q3256",
+            "Q3257",
+            "Q3258"
+          ],
+          "signals_map": {
+            "Q3251": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When a hard decision needs to be made, I’d rather step up than wait for someone else."
+            },
+            "Q3252": {
+              "dimension": "empathy",
+              "polarity": 1,
+              "content": "I think about how my choices impact others, even when I know I can’t please everyone."
+            },
+            "Q3253": {
+              "dimension": "social_dominance",
+              "polarity": 1,
+              "content": "People often look to me for direction when situations become stressful or unclear."
+            },
+            "Q3254": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "I believe respecting others’ perspectives makes my decisions stronger, not weaker."
+            },
+            "Q3255": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I feel a strong responsibility to follow through once I’ve given my word."
+            },
+            "Q3256": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "Even under pressure, I try to stay grounded so others can rely on me."
+            },
+            "Q3257": {
+              "dimension": "agency",
+              "polarity": -1,
+              "content": "When decisions are high-stakes, I usually prefer that someone else takes the lead."
+            },
+            "Q3258": {
+              "dimension": "empathy",
+              "polarity": -1,
+              "content": "I rarely think about how my choices might affect people who aren’t in the room."
+            }
+          },
+          "daily_prompt": "Where is life asking you to stop hovering on the edge and make a clear, respectful decision—and what would it look like to say yes without abandoning your own dignity or anyone else’s?",
+          "practices": [
+            "Respect Inventory: list the people your decisions most affect; next to each name, write one way you can show them visible respect this week.",
+            "Two-Minute Listening Drill: once a day, let someone share a concern and reflect back what you heard before offering any solution.",
+            "Choice Line in the Sand: identify one situation where you’ve been delaying a decision; write down your criteria, set a deadline, and decide.",
+            "Shared Wins Log: at the end of each day, note one success and explicitly attribute who helped make it possible—even if it was mostly you.",
+            "Resolve Ritual: before a big decision, pause, breathe, place a hand on your chest, and quietly name the values you’re choosing to honor."
+          ],
+          "transformation_indicators": [
+            "You feel less torn between being ‘nice’ and being decisive—your choices start to embody both clarity and care.",
+            "People begin to trust your leadership not just because you’re strong, but because you’re fair and respectful.",
+            "You stop over-owning every outcome and start sharing responsibility and credit more freely.",
+            "Difficult conversations become opportunities to deepen respect instead of landmines to avoid.",
+            "Your final decisions feel aligned with your deepest values, even when they are costly or unpopular."
+          ]
+        },
+ 
+        "hero_journey_position": {
+          "stage": "Refusal of the Call",
+          "preliminary_beat": "Reaction — Catalyst",
+          "save_the_cat_beat": "Catalyst",
+          "character_state": "A cosmic leader who knows exactly how much this choice will cost—and must choose it anyway.",
+          "ordinary_world_baseline": "A universe accustomed to leaders who either dominate without regard or retreat to safety when things get hard.",
+          "push_turn": "Francisco’s refusal isn’t cowardice; it is the last testing of his motives. When he finally accepts, he does so with full awareness, choosing respect-filled responsibility over comfortable escape."
+        },
+ 
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Leaders Eat Last",
+            "author": "Simon Sinek",
+            "section_of_focus": "Chapter 4: The Big C",
+            "section_description": "Building trust and respect within teams.",
+            "connection_focus_area": "Leadership",
+            "connect_points": {
+              "point1": "Prioritize team welfare",
+              "point2": "Share credit for successes",
+              "point3": "Solicit honest feedback"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Implement weekly team check-ins",
+              "objective2": "Document shared wins",
+              "objective3": "Act on at least one feedback point"
+            }
+          },
+          "book2": {
+            "title": "Dare to Lead",
+            "author": "Brené Brown",
+            "section_of_focus": "Chapter 5: Courage and Vulnerability",
+            "section_description": "Leading through empathy and authenticity.",
+            "connection_focus_area": "Leadership",
+            "connect_points": {
+              "point1": "Share personal challenges",
+              "point2": "Model vulnerability in meetings",
+              "point3": "Celebrate team courage"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Lead one vulnerability exercise",
+              "objective2": "Host a team empathy workshop",
+              "objective3": "Recognize courage publicly"
+            }
+          },
+          "book3": {
+            "title": "The Respect Effect",
+            "author": "Paul N. Gorman",
+            "section_of_focus": "Chapter 2: Respect as Currency",
+            "section_description": "How respect transforms relationships.",
+            "connection_focus_area": "Leadership",
+            "connect_points": {
+              "point1": "Acknowledge individual strengths",
+              "point2": "Practice respectful feedback",
+              "point3": "Maintain dignity under pressure"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Deliver respectful feedback twice weekly",
+              "objective2": "Document respect-building actions",
+              "objective3": "Reflect on respect breakdowns"
+            }
+          }
+        },
+ 
+        "laurasia_narrative_integration": {
+          "opening_scene": "On a vast plateau of starlight, countless worlds shimmer below Francisco like candles on the edge of going out. Before him stands the Ultimate Choice Chamber—its doors open, inviting, and heavy with consequence. Behind him is the path back to a quieter, smaller life.",
+          "symbolic_moment": "Francisco kneels and presses his forehead to the luminous floor. Instead of demanding strength, he whispers gratitude for every being this choice will touch. When he finally rises, his decision is already made.",
+          "emotional_landscape": "Dense stillness, fear transmuted into resolve, a deep ache for what will be lost and a quiet joy for what can now be saved.",
+          "contentment_definition": "Not the absence of burden, but the peace of knowing you chose your burden on purpose—and chose it with respect for yourself and everyone it will touch.",
+          "transformation_promise": "When you learn to lead with honor, your yes becomes a signal fire—calling others not to your greatness, but to their own."
+        },
+ 
+        "epic_novel_pages": "Page 61 - 75",
+        "epic_chapter_focus": "Reaction",
+        "epic_preliminary_scene_focus": "Catalyst",
+        "epic_preliminary_scene_description": "Scene II: The Call to Adventure",
+        "epic_novel_chapter_focus": "Part I: Spirit of the Primal Fire",
+        "epic_novel_section_name": "Part I: Spirit of the Primal Fire",
+        "focus_area": "Leadership",
+        "specific_task_group_description": "Cultivate leadership rooted in respect by actively listening and acknowledging contributions.",
+        "specific_task_group_tagline": "Lead with honor",
+        "tarot_card_link": "Swords/King",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Wattle",
+        "hex_code": "#CCCC33",
+        "red": 204,
+        "green": 204,
+        "blue": 51
+      },
       "personality_profile_326": {},
       "personality_profile_327": {},
       "personality_profile_328": {},
