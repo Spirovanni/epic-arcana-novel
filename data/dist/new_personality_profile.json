@@ -73709,7 +73709,140 @@
         "green": 153,
         "blue": 102
       },
-      "personality_profile_352": {},
+      "specific_task_group_352": {
+        "id": "EA-352",
+        "unique_identifier": "STG 9.2.6.3",
+        "all_chapter": 352,
+        "novel_book": 9,
+        "chapter": "Chapter 32",
+        "type": "Specific Task Group",
+        "tarot_card_link": "",
+        "tarot_family": "Disks",
+        "new_tarot_family": "",
+        "tarot_card_item": "Page",
+        "color_name": "Dim Gray",
+        "hex_code": "#666666",
+        "red": 102,
+        "green": 102,
+        "blue": 102,
+        "epic_novel_pages": "Page 466 - 480",
+        "epic_chapter_focus": "The Ultimate Boon",
+        "epic_preliminary_scene_focus": "Break into 3",
+        "epic_preliminary_scene_description": "Scene XII: The Ultimate Boon",
+        "epic_novel_chapter_focus": "Part II: The Great One of the Night of Time",
+        "epic_novel_section_name": "Part II: The Great One of the Night of Time",
+        "specific_task_group_title": "Attractive Entanglement",
+        "focus_area": "The Ultimate Boon",
+        "connection_to_the_major_task_group": "Break into 3",
+        "specific_task_group_description": "The hero realizes the interconnectedness of all forces and embraces unity.",
+        "specific_task_group_tagline": "Intertwined destinies.",
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Connected",
+            "author": "Nicholas A. Christakis",
+            "section_of_focus": "Social Networks",
+            "section_description": "How human connections shape behavior.",
+            "connection_focus_area": "Understanding interdependence.",
+            "connect_points": {
+              "point1": "Analyze network effects on individuals.",
+              "point2": "Map patterns of influence.",
+              "point3": "Leverage connections for collective growth."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Describe principles of network theory.",
+              "objective2": "Identify key influencers in a network.",
+              "objective3": "Apply network insights to collaboration."
+            }
+          },
+          "book2": {
+            "title": "The Web of Life",
+            "author": "Fritjof Capra",
+            "section_of_focus": "Systems Thinking",
+            "section_description": "A holistic view of living systems.",
+            "connection_focus_area": "Appreciating systemic unity.",
+            "connect_points": {
+              "point1": "Describe feedback loops in ecosystems.",
+              "point2": "Explain emergent properties.",
+              "point3": "Integrate holistic thinking into strategy."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Demonstrate understanding of systems theory.",
+              "objective2": "Use holistic approaches in problem-solving.",
+              "objective3": "Foster interdepartmental collaboration."
+            }
+          },
+          "book3": {
+            "title": "Braiding Sweetgrass",
+            "author": "Robin Wall Kimmerer",
+            "section_of_focus": "Reciprocity",
+            "section_description": "Interwoven relationships with the natural world.",
+            "connection_focus_area": "Cultivating mutual benefit.",
+            "connect_points": {
+              "point1": "Recognize reciprocity in nature.",
+              "point2": "Foster respectful exchange.",
+              "point3": "Integrate gratitude into practice."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Practice gratitude in teamwork.",
+              "objective2": "Identify mutual benefits in partnerships.",
+              "objective3": "Cultivate a sense of stewardship."
+            }
+          }
+        },
+        "pov": "3rd Person Limited",
+        "tense": "Past Tense",
+        "core_emotion": "Stability and guidance",
+        "scene_tone": "Dynamic and purposeful",
+        "scenes": [
+          {
+            "scene_number": 1,
+            "title": "Scene 1",
+            "setup": "Francisco masters the management of emotions during times of cosmic distress and desolation.",
+            "symbolism": "Symbolic elements representing Francisco's cosmic transformation and universal revitalization",
+            "beat_goal": "Advance Francisco's journey toward ultimate cosmic mastery and universal harmony"
+          },
+          {
+            "scene_number": 2,
+            "title": "Scene 2",
+            "setup": "His emotional mastery provides stability and guidance for all existence during the challenges of universal transformation.",
+            "symbolism": "Symbolic elements representing Francisco's cosmic transformation and universal revitalization",
+            "beat_goal": "Advance Francisco's journey toward ultimate cosmic mastery and universal harmony"
+          },
+          {
+            "scene_number": 3,
+            "title": "Scene 3",
+            "setup": "Continue the chapter's narrative progression.",
+            "symbolism": "Symbolic elements representing Francisco's cosmic transformation and universal revitalization",
+            "beat_goal": "Advance Francisco's journey toward ultimate cosmic mastery and universal harmony"
+          },
+          {
+            "scene_number": 4,
+            "title": "Scene 4",
+            "setup": "Continue the chapter's narrative progression.",
+            "symbolism": "Symbolic elements representing Francisco's cosmic transformation and universal revitalization",
+            "beat_goal": "Advance Francisco's journey toward ultimate cosmic mastery and universal harmony"
+          }
+        ],
+        "character_arcs": {
+          "Francisco": "Masters emotional management during cosmic distress, providing stability for all existence during transformation.",
+          "Cosmic_Distress": "The universal emotional challenges that arise during the process of cosmic transformation.",
+          "Emotional_Mastery": "Francisco's supreme ability to manage and guide emotions during times of cosmic upheaval.",
+          "Universal_Stability": "The emotional stability and guidance that Francisco provides for all existence during transformation."
+        },
+        "story_gaps_addressed": {
+          "distress_management": "Francisco masters the management of emotions during cosmic distress and transformation.",
+          "stability_provision": "Introduction of Francisco's role in providing emotional stability during universal upheaval.",
+          "guidance_leadership": "Development of Francisco's ability to guide all existence through emotional challenges."
+        },
+        "location_details": {
+          "cosmic_distress_management_centers": "Facilities designed for managing emotions during universal upheaval and transformation.",
+          "emotional_stability_networks": "Systems that provide emotional guidance and support throughout the universe."
+        },
+        "series_connections": {
+          "emotional_culmination": "Francisco's distress management represents the culmination of his emotional development from Books 1-8.",
+          "stability_foundation": "His emotional mastery provides the foundation for universal stability during transformation."
+        }
+      }, 
       "personality_profile_353": {},
       "personality_profile_354": {},
       "personality_profile_355": {},
