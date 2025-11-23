@@ -31,11 +31,18 @@ export default function PersonalitiesPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [searchResults, setSearchResults] = useState<PersonalityProfile[]>([])
 
-  // Load all personalities
+  // Load all personalities with retry logic
   useEffect(() => {
-    const loadPersonalities = async () => {
+    const loadPersonalities = async (retryCount = 0) => {
+      const maxRetries = 3;
       try {
-        const response = await fetch('/api/personalities')
+        const response = await fetch('/api/personalities', {
+          method: 'GET',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        })
+
         if (response.ok) {
           const data = await response.json()
           if (Array.isArray(data)) {
@@ -45,11 +52,18 @@ export default function PersonalitiesPage() {
               new Set(data.map((p: PersonalityProfile) => p.family).filter(Boolean))
             ).sort() as string[]
             setDistinctFamilies(families)
+            setError(null)
           } else {
-            throw new Error('Invalid data format received')
+            throw new Error('Invalid data format received from API')
           }
         } else {
-          throw new Error(`Failed to load personalities: ${response.status}`)
+          if (response.status === 500 && retryCount < maxRetries) {
+            // Retry on server error
+            console.warn(`API returned 500, retrying... (attempt ${retryCount + 1}/${maxRetries})`)
+            setTimeout(() => loadPersonalities(retryCount + 1), 1000 * (retryCount + 1))
+            return
+          }
+          throw new Error(`API Error ${response.status}: ${response.statusText}`)
         }
       } catch (error) {
         console.error('Error loading personalities:', error)
@@ -104,16 +118,36 @@ export default function PersonalitiesPage() {
   if (error) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 p-6">
-        <div className="container mx-auto max-w-7xl">
+        <DashboardNavbar />
+        <div className="container mx-auto max-w-7xl pt-8">
           <div className="flex items-center justify-center min-h-[50vh]">
-            <Card className="bg-slate-800/50 border-red-500/30">
-              <CardContent className="p-8 text-center">
+            <Card className="bg-slate-800/50 border-red-500/30 w-full max-w-md">
+              <CardContent className="p-8 text-center space-y-4">
                 <div className="text-6xl mb-4">⚠️</div>
-                <h3 className="text-xl font-semibold text-red-300 mb-2">Error Loading Personalities</h3>
-                <p className="text-gray-400 mb-4">{error}</p>
-                <Button onClick={() => window.location.reload()} variant="outline">
-                  Try Again
-                </Button>
+                <div>
+                  <h3 className="text-xl font-semibold text-red-300 mb-2">Unable to Load Personalities</h3>
+                  <p className="text-gray-400 text-sm mb-4 break-words">
+                    {error}
+                  </p>
+                  <p className="text-gray-500 text-xs mb-6">
+                    This may be a temporary issue. Please try again.
+                  </p>
+                </div>
+                <div className="space-y-2">
+                  <Button
+                    onClick={() => window.location.reload()}
+                    className="w-full bg-gradient-to-r from-violet-500 via-indigo-500 to-blue-500 hover:from-violet-400 hover:via-indigo-400 hover:to-blue-400"
+                  >
+                    Try Again
+                  </Button>
+                  <Button
+                    onClick={() => window.location.href = '/landing'}
+                    variant="outline"
+                    className="w-full"
+                  >
+                    Back to Landing
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>
