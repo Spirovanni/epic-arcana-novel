@@ -1,0 +1,2522 @@
+{
+  "EA-001": {
+    "id": "1bbea510-152d-4ec8-9a57-8baa839c2831",
+    "unique_identifier": "STG 1.1.1.1",
+    "display_name": "Sentinel of the Darkest Hour",
+    "family": "Order / Systems - Resilience Foundation",
+    "theme": "The Awakening from Despair"
+  },
+  "EA-002": {
+    "id": "6a7f6d9d-f27b-460b-a731-ee7dd435f7cb",
+    "unique_identifier": "STG 1.1.1.2",
+    "display_name": "Guardian of Innocent Truth",
+    "family": "Order / Systems - Resilience Foundation",
+    "theme": "Vibratile - Guileless Honesty in Rising Tension"
+  },
+  "EA-003": {
+    "id": "eb06b169-9e40-45d4-a594-bc9ca5de4aa9",
+    "unique_identifier": "STG 1.1.1.3",
+    "display_name": "Artisan of Determined Mastery",
+    "family": "Order / Systems - Resilience Foundation",
+    "theme": "Vibrant Determination - Crafting Purpose from Pain"
+  },
+  "EA-004": {
+    "id": "feaa42a4-476e-4241-b798-02a66213e512",
+    "unique_identifier": "STG 1.1.2.1",
+    "display_name": "Herald of Explosive Awakening",
+    "family": "Order / Systems - Transformation",
+    "theme": "Explosive Creativity - Swift Decisive Action"
+  },
+  "EA-005": {
+    "id": "6d2dd54d-fb83-4dcd-a0ab-a2e6574111c5",
+    "unique_identifier": "STG 1.1.2.2",
+    "display_name": "Architect of Humbled Ownership",
+    "family": "Order / Systems - Transformation",
+    "theme": "Ownership - Taking Responsibility After Manipulation"
+  },
+  "EA-006": {
+    "id": "848385cf-8aca-40f6-ae7d-42e9577b66f9",
+    "unique_identifier": "STG 1.1.2.3",
+    "display_name": "Sovereign of Accountable Action",
+    "family": "Order / Systems - Execution",
+    "theme": "Dominion - Taking Command Through Ownership"
+  },
+  "EA-007": {
+    "id": "000cefdf-4e33-4aea-84fe-18403fa1cb31",
+    "unique_identifier": "STG 1.1.3.1",
+    "display_name": "Disciple of Inner Dominion",
+    "family": "Order / Systems - Self-Control",
+    "theme": "Transformation - Mastering Self Through Discipline"
+  },
+  "EA-008": {
+    "id": "2c3aedb1-313d-4733-9808-3c3b272f395a",
+    "unique_identifier": "STG 1.1.3.2",
+    "display_name": "Bearer of Transformation's Burden",
+    "family": "Order / Systems - Change Management",
+    "theme": "Transformation - The Dark Side of Change"
+  },
+  "EA-009": {
+    "id": "870a1d92-d220-4638-aa96-6b1e7b7c0c31",
+    "unique_identifier": "STG 1.1.3.3",
+    "display_name": "Warrior of Collective Resolve",
+    "family": "Order / Systems - Persistence",
+    "theme": "Determination - Finding Strength Through Unity"
+  },
+  "EA-010": {
+    "id": "471feda1-f116-4f75-bf74-27cf130381ae",
+    "unique_identifier": "STG 1.1.4.1",
+    "display_name": "Architect of Collaborative Systems",
+    "family": "Order / Systems - Organization",
+    "theme": "Structure - Creating Order Through Organization"
+  },
+  "EA-011": {
+    "id": "9a689334-202d-433c-b7fd-e70d7f33c9de",
+    "unique_identifier": "STG 1.1.4.2",
+    "display_name": "Guardian of Mindful Acceptance",
+    "family": "Order / Systems - Mindfulness",
+    "theme": "Acceptance - Embracing Reality Without Resistance"
+  },
+  "EA-012": {
+    "id": "2ad0384b-b020-4622-9919-6e985d09350f",
+    "unique_identifier": "STG 1.1.4.3",
+    "display_name": "Keeper of Grateful Milestones",
+    "family": "Order / Systems - Appreciation",
+    "theme": "Celebration - Honoring Journey Through Appreciation"
+  },
+  "EA-013": {
+    "id": "52b26085-e28c-4a63-acab-e697bdb4f37c",
+    "unique_identifier": "MAT 1.1",
+    "display_name": "The Fool at the Threshold",
+    "family": "Order / Systems - Expansion",
+    "theme": "Potentiality - Embracing Limitless Growth"
+  },
+  "EA-014": {
+    "id": "0cbac8f1-6ef3-4f75-84ed-0be3f217dca0",
+    "unique_identifier": "STG 1.2.1.1",
+    "display_name": "Phoenix Rising from Collapse",
+    "family": "Order / Systems - Resilience",
+    "theme": "Breakdown - Resilience Through Devastation"
+  },
+  "EA-015": {
+    "id": "80deedc8-262a-4bfd-bf09-0c5fb96975f8",
+    "unique_identifier": "STG 1.2.1.2",
+    "display_name": "The Warrior's Inner Light",
+    "family": "Order / Systems - Fortitude",
+    "theme": "Confidence - Leading From Within"
+  },
+  "EA-016": {
+    "id": "cd449a20-e20b-45ef-bfcb-f155960886fa",
+    "unique_identifier": "STG 1.2.1.3",
+    "display_name": "The Voice of Clear Truth",
+    "family": "Order / Systems - Fortitude",
+    "theme": "Assertiveness - Clarity Through Authentic Communication"
+  },
+  "EA-017": {
+    "id": "2e3949a7-2e9f-4511-bab9-84f9eda66bb1",
+    "unique_identifier": "STG 1.2.2.1",
+    "display_name": "The Gardener of Plenty",
+    "family": "Order / Systems - Harmony",
+    "theme": "Abundance - From Scarcity to Prosperity Consciousness"
+  },
+  "EA-018": {
+    "id": "a25b1682-175b-43d5-afc9-e09b08dbb367",
+    "unique_identifier": "STG 1.2.2.2",
+    "display_name": "The Master of Integrated Wellness",
+    "family": "Order / Systems - Harmony",
+    "theme": "Well-Being - Body, Mind, and Spirit in Harmony"
+  },
+  "EA-019": {
+    "id": "a736cff3-b7b3-436d-ae2f-02c8a03c7866",
+    "unique_identifier": "STG 1.2.2.3",
+    "display_name": "The Apprentice of Manifestation",
+    "family": "Order / Systems - Harmony",
+    "theme": "Creativity - Transforming Vision Into Reality"
+  },
+  "EA-020": {
+    "id": "669cebc0-b3a9-4867-a132-3f5f0c20af7f",
+    "unique_identifier": "STG 1.2.3.1",
+    "display_name": "The Anchor in the Storm",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Stability - Grounded Leadership Through Upheaval"
+  },
+  "EA-021": {
+    "id": "1149abbb-a731-48c8-9db9-f5def750e402",
+    "unique_identifier": "STG 1.2.3.2",
+    "display_name": "The Patient Cultivator",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Perseverance - Long-Term Resilience Through Strategic Patience"
+  },
+  "EA-022": {
+    "id": "25babd0a-e85c-452c-9817-fbe8ec9878f8",
+    "unique_identifier": "STG 1.2.3.3",
+    "display_name": "The Mindful Cultivator",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Investing - Strategic Resource Cultivation Through Mindful Direction"
+  },
+  "EA-023": {
+    "id": "02f213c1-e49f-4978-8ad5-a36cc0bea748",
+    "unique_identifier": "MAT 1.2",
+    "display_name": "The Conscious Magician",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Direction - Mastery Through Conscious Will and Present Awareness"
+  },
+  "EA-024": {
+    "id": "2ad8420f-cf5a-4355-b304-ef89dfb87714",
+    "unique_identifier": "STG 1.3.1.1",
+    "display_name": "The Phoenix Transformer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "New Beginnings - Transformation Through Release and Renewal"
+  },
+  "EA-025": {
+    "id": "d3ee3cea-8c16-42af-ae21-27a68386e5bf",
+    "unique_identifier": "STG 1.3.1.2",
+    "display_name": "The Temptation Resister",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Stability - Leadership Tested Through Deepest Temptations"
+  },
+  "EA-026": {
+    "id": "a0c41a99-2126-4ee9-934a-7c5c4e99c474",
+    "unique_identifier": "STG 1.3.1.3",
+    "display_name": "The Discerning Chooser",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Balance - Strategic Wisdom Through Opportunity Evaluation"
+  },
+  "EA-027": {
+    "id": "f32bf122-034f-4172-9d5f-22b4ee85c1a8",
+    "unique_identifier": "STG 1.3.2.1",
+    "display_name": "The Triumphant Master",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Opportunities - Growth Through Demonstrated Competence"
+  },
+  "EA-028": {
+    "id": "67b345ca-a98c-4adc-b793-910dfecd146f",
+    "unique_identifier": "STG 1.3.2.2",
+    "display_name": "The Wounded Healer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Achievement - Transformation Through Painful Disruption"
+  },
+  "EA-029": {
+    "id": "268ad778-2cdf-45be-916f-5e0de0dadec0",
+    "unique_identifier": "STG 1.3.2.3",
+    "display_name": "The Adaptive Innovator",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Disruption - Innovation Through Rapid Adaptation Under Pressure"
+  },
+  "EA-030": {
+    "id": "2c89a6c1-638b-4680-a88f-e44f90c9205d",
+    "unique_identifier": "STG 1.3.3.1",
+    "display_name": "The Wise Restorer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Restoration - Healing Through Balanced Decision-Making"
+  },
+  "EA-031": {
+    "id": "4b64b48a-4bf8-4348-9bce-58edc1b213f9",
+    "unique_identifier": "STG 1.3.3.2",
+    "display_name": "The Strategic Executor",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Deployment - Systematic Achievement Through Coordinated Action"
+  },
+  "EA-032": {
+    "id": "fcc2de2a-95fe-43ce-a227-58a0c6578991",
+    "unique_identifier": "STG 1.3.3.3",
+    "display_name": "The Patient Cultivator",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Assessment - Long-Term Value Through Strategic Patience"
+  },
+  "EA-033": {
+    "id": "34c53f62-0bad-4d68-84bd-7bba478e71ab",
+    "unique_identifier": "STG 1.3.4.1",
+    "display_name": "The Devoted Craftsman",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Mastery - Excellence Through Dedicated Skill Refinement"
+  },
+  "EA-034": {
+    "id": "e965ddf1-46de-43c6-9fa7-ad7afb1ae6ba",
+    "unique_identifier": "STG 1.3.4.2",
+    "display_name": "The Visionary Inspirer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Inspiration - Mobilizing Others Through Purpose and Vision"
+  },
+  "EA-035": {
+    "id": "5e86e524-972b-48f9-8889-f78d81898404",
+    "unique_identifier": "STG 1.3.4.3",
+    "display_name": "The Burden Bearer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Ambition - Transformational Impact Through Carried Responsibility"
+  },
+  "EA-036": {
+    "id": "b408857f-45fe-4b99-a41b-969954b7d92d",
+    "unique_identifier": "STG 1.3.5.1",
+    "display_name": "The Collaborative Unifier",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Collaboration - Transformational Impact Through Partnership"
+  },
+  "EA-037": {
+    "id": "0a123705-98b9-4a70-a002-e88a49f03540",
+    "unique_identifier": "STG 1.3.5.2",
+    "display_name": "The Potential Actualizer",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Potentiality - Transformational Breakthrough Through Synthesis"
+  },
+  "EA-038": {
+    "id": "22b97cf8-9473-409e-a3a8-af951ecc0f5b",
+    "unique_identifier": "MAT 1.3",
+    "display_name": "The Inner Wisdom Keeper",
+    "family": "Order / Systems - Leadership Foundation",
+    "theme": "Inner Knowledge - Sacred Wisdom Through Self-Discovery"
+  },
+  "EA-039": {
+    "id": "a527fb1d-7b63-446d-b359-b2c2186255f4",
+    "unique_identifier": "STG 1.3.6.1",
+    "display_name": "The Fulfilled Achiever",
+    "family": "Order / Systems - Fulfillment Foundation",
+    "theme": "Success - Profound Satisfaction Through Meaningful Achievement"
+  },
+  "EA-040": {
+    "id": "bd35231b-b3e4-49d7-b448-6acdcb832bf0",
+    "unique_identifier": "STG 1.3.6.2",
+    "display_name": "The Master of Two Worlds",
+    "family": "Order / Systems - Fulfillment Foundation",
+    "theme": "Aspiration - Freedom Through Mastery of Dual Reality"
+  },
+  "EA-041": {
+    "id": "9776b20f-8c26-4fbf-a845-7063407c1764",
+    "unique_identifier": "STG 2.1.1.1",
+    "display_name": "Guardian of Abandoned Victories",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "The Reflection on Unfulfilled Potential"
+  },
+  "EA-042": {
+    "id": "462c5307-dac0-4b24-8f2e-cc13fedb6256",
+    "unique_identifier": "STG 2.1.1.2",
+    "display_name": "Wielder of Intense Force",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "The Channeling of Unwavering Determination"
+  },
+  "EA-043": {
+    "id": "2d4d1505-c0fc-4420-8771-a0c325afb1af",
+    "unique_identifier": "STG 2.1.1.3",
+    "display_name": "Architect of Enduring Force",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "The Transformation from Surge to System"
+  },
+  "EA-044": {
+    "id": "64ed9845-783a-4fcb-9d68-0851249bf421",
+    "unique_identifier": "STG 2.1.2.1",
+    "display_name": "Master of Thriving Through Pressure",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Turning Adversity into Opportunity"
+  },
+  "EA-045": {
+    "id": "33aee565-0297-42ef-9df4-dd699af5c509",
+    "unique_identifier": "STG 2.1.2.2",
+    "display_name": "Orchestrator of Continuous Progress",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Leveraging Lessons for Acceleration"
+  },
+  "EA-046": {
+    "id": "dfc98f5b-0790-4878-ad91-27d361d6b33f",
+    "unique_identifier": "STG 2.1.2.3",
+    "display_name": "Cultivator of Gracious Strength",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Transforming Adversity Through Appreciation"
+  },
+  "EA-047": {
+    "id": "ceb4d453-7343-496f-8171-b8a1dd730fd3",
+    "unique_identifier": "STG 2.1.3.1",
+    "display_name": "Master of Sophisticated Judgment",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Elevating Decisions Beyond Impulse"
+  },
+  "EA-048": {
+    "id": "4a468f4c-995a-4cb2-aa26-ce32093ac11b",
+    "unique_identifier": "STG 2.1.3.2",
+    "display_name": "Bearer of Disillusioning Truth",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Dismantling Illusions for Authentic Foundation"
+  },
+  "EA-049": {
+    "id": "51d7687d-f304-48ab-a9ed-578bee113216",
+    "unique_identifier": "STG 2.1.3.3",
+    "display_name": "Guardian of Sacred Mourning",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Honoring Loss While Moving Toward Life"
+  },
+  "EA-050": {
+    "id": "1c8333aa-e5bc-4faf-804e-330a10064b1b",
+    "unique_identifier": "STG 2.1.4.1",
+    "display_name": "Master of Fluid Foundations",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Thriving Through Instability and Adaptive Resilience"
+  },
+  "EA-051": {
+    "id": "b0f6da4d-030f-4210-9a53-6de29fede411",
+    "unique_identifier": "STG 2.1.4.2",
+    "display_name": "Wielder of Decisive Momentum",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Seizing Fleeting Windows with Swift Action"
+  },
+  "EA-052": {
+    "id": "ad4d3cad-d456-4224-9772-87c24cbb76db",
+    "unique_identifier": "STG 2.1.4.3",
+    "display_name": "Keeper of Restorative Wisdom",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Strategic Recovery as Foundation for Sustained Excellence"
+  },
+  "EA-053": {
+    "id": "f0e5f00d-874e-44de-bd15-d9511912bed5",
+    "unique_identifier": "MAT 2.1",
+    "display_name": "Architect of Sacred Unity",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Forging Collective Strength Through Authentic Connection"
+  },
+  "EA-054": {
+    "id": "cd60eafe-c163-426a-914b-095525031f74",
+    "unique_identifier": "STG 2.2.1.1",
+    "display_name": "Steward of Expanding Horizons",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Strategic Adaptation Through Vision and Flexibility"
+  },
+  "EA-055": {
+    "id": "776c1134-89de-4fbe-968b-6dcb9706fe65",
+    "unique_identifier": "STG 2.2.1.3",
+    "display_name": "Master of Generative Compassion",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Transforming Emotional Insight Into Creative Breakthrough"
+  },
+  "EA-056": {
+    "id": "07b5a353-6905-402f-95bf-9ad32dba27f3",
+    "unique_identifier": "STG 2.2.1.3",
+    "display_name": "Alchemist of Adversity",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Transforming Hardship Into Unbreakable Strength"
+  },
+  "EA-057": {
+    "id": "746c3ef8-a39a-4dc2-864a-b56ec4345724",
+    "unique_identifier": "STG 2.2.2.1",
+    "display_name": "Herald of Dawn",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Illuminating the Path Through Darkness With Unwavering Hope"
+  },
+  "EA-058": {
+    "id": "7d194e76-4c58-46dd-b3df-2f4ccdfa15ab",
+    "unique_identifier": "STG 2.2.2.2",
+    "display_name": "Guardian of Sacred Ground",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Defending What Matters With Unwavering Moral Courage"
+  },
+  "EA-059": {
+    "id": "97dbc393-d2b1-4421-9c3b-af12179f013a",
+    "unique_identifier": "STG 2.2.2.3",
+    "display_name": "Keeper of Sacred Bonds",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Standing Together Through Every Trial With Unwavering Loyalty"
+  },
+  "EA-060": {
+    "id": "9cbad789-45db-49b0-b1c6-317372573d5b",
+    "unique_identifier": "STG 2.2.3.1",
+    "display_name": "Wounded Defender",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Standing Firm When the Storm Hits Through Battle-Tested Backbone"
+  },
+  "EA-061": {
+    "id": "76f1350e-980d-459c-a47b-6b940548f4be",
+    "unique_identifier": "STG 2.2.3.2",
+    "display_name": "Inspirational Sovereign",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Leading Through Magnetic Vision and Passionate Purpose"
+  },
+  "EA-062": {
+    "id": "8fe96df6-43eb-4163-9ddc-cd4bcb79c76d",
+    "unique_identifier": "STG 2.2.3.3",
+    "display_name": "Adventurous Spirit",
+    "family": "Belonging / Care - Endurance Foundation",
+    "theme": "Charging Forward With Passionate Action and Bold Momentum"
+  },
+  "EA-063": {
+    "id": "f0e38749-42c2-421c-9f44-3f61ca881db5",
+    "unique_identifier": "MAT 2.2",
+    "display_name": "Visionary Strategist",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Leading Through Expanded Vision and Strategic Foresight"
+  },
+  "EA-064": {
+    "id": "59cb49b1-90ba-4f32-8604-91831531fdf4",
+    "unique_identifier": "MAT 2.3",
+    "display_name": "Abundant Celebrant",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Recognizing Achievement and Celebrating Collective Prosperity"
+  },
+  "EA-065": {
+    "id": "bdde490c-d86a-48b7-94f4-acc47137688b",
+    "unique_identifier": "MAT 2.4",
+    "display_name": "Constructive Challenger",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Engaging Healthy Competition and Transforming Conflict into Growth"
+  },
+  "EA-066": {
+    "id": "9481cdcd-871b-4b86-ad37-6c9e8520f3aa",
+    "unique_identifier": "MAT 2.5",
+    "display_name": "Triumphant Leader",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Celebrating Success and Inspiring Through Visible Achievement"
+  },
+  "EA-067": {
+    "id": "cd936943-336c-404a-8826-f13ed4ec266a",
+    "unique_identifier": "MAT 2.6",
+    "display_name": "Resilient Defender",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Standing Ground and Protecting Hard-Won Gains Under Pressure"
+  },
+  "EA-068": {
+    "id": "416f27dc-6852-4430-871a-af5cc8ee8dbd",
+    "unique_identifier": "MAT 2.7",
+    "display_name": "Swift Executor",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Seizing Opportunities and Accelerating Progress Through Rapid Action"
+  },
+  "EA-069": {
+    "id": "68fdc2fd-14c0-4ae8-a12d-f7f2e007afcc",
+    "unique_identifier": "MAT 2.8",
+    "display_name": "Enduring Guardian",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Maintaining Vigilance and Pushing Through Exhaustion Toward Completion"
+  },
+  "EA-070": {
+    "id": "3cc91139-a721-4171-b2a8-9d63864311f0",
+    "unique_identifier": "MAT 2.9",
+    "display_name": "Responsible Completer",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Carrying Heavy Responsibility Through to Completion and Knowing When to Delegate"
+  },
+  "EA-071": {
+    "id": "17914bd9-e446-4abb-83e9-7957a74f5e59",
+    "unique_identifier": "MAT 2.10",
+    "display_name": "Curious Messenger",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Exploring New Possibilities with Enthusiastic Energy and Fresh Perspective"
+  },
+  "EA-072": {
+    "id": "2f59e3fa-d4ee-4b69-9ec6-91d93271df0b",
+    "unique_identifier": "MAT 2.11",
+    "display_name": "Bold Pioneer",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Pursuing Goals with Passionate Energy and Adventurous Spirit"
+  },
+  "EA-073": {
+    "id": "8c8e8280-b0a7-4411-8f3a-3b883714eb3c",
+    "unique_identifier": "MAT 2.12",
+    "display_name": "Magnetic Leader",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Leading Through Confident Presence and Authentic Charismatic Influence"
+  },
+  "EA-074": {
+    "id": "e1492f41-99d3-41c8-9e0c-4b457cfe19ab",
+    "unique_identifier": "MAT 2.13",
+    "display_name": "Inspirational Sovereign",
+    "family": "Belonging / Care - Leadership",
+    "theme": "Leading Through Masterful Vision and Inspiring Purpose-Driven Action"
+  },
+  "EA-075": {
+    "id": "fc062a18-caa7-4e1e-b869-162d1c52375f",
+    "unique_identifier": "STG 2.2.7.3",
+    "display_name": "Visionary Business Builder",
+    "family": "Belonging / Care - Entrepreneurial Transformation",
+    "theme": "Launching Vision into Ventures with Lean Innovation"
+  },
+  "EA-076": {
+    "id": "ccea3cbb-d305-4c1d-8d31-13dc1ab2680c",
+    "unique_identifier": "MAT 2.15",
+    "display_name": "Emotionally Abundant Leader",
+    "family": "Belonging / Care - Emotional Leadership",
+    "theme": "Leading Through Emotional Renewal and Abundant Presence"
+  },
+  "EA-077": {
+    "id": "5f11dcba-2413-4166-b4c4-21c16d7c7e04",
+    "unique_identifier": "STG 2.2.8.2",
+    "display_name": "Crisis Innovation Catalyst",
+    "family": "Belonging / Care - Innovation Leadership",
+    "theme": "Driving Bold Breakthrough Solutions Through Aggressive Ideation Under Pressure"
+  },
+  "EA-078": {
+    "id": "38917a33-aefa-4bb5-99c3-7b06bcf71a99",
+    "unique_identifier": "MAT 2.3",
+    "display_name": "Sustainable Leadership Catalyst",
+    "family": "Belonging / Care - Leadership Energy",
+    "theme": "Maintaining Vital Energy and Authority Through Disciplined Renewal Under Sustained Pressure"
+  },
+  "EA-361": {
+    "id": "71ea7a35-7872-43d1-bf7a-345223b1b6c0",
+    "unique_identifier": "STG 2.2.9.1",
+    "display_name": "Chapter 79 Personality",
+    "family": "Belonging / Care",
+    "theme": "Chapter 79 Theme"
+  },
+  "EA-080": {
+    "id": "71e166f2-a354-47f5-9a82-7a56960d9746",
+    "unique_identifier": "STG 2.13.2",
+    "display_name": "The Solitary Steward",
+    "family": "Order / Systems — Stewardship & Integration",
+    "theme": "Consolidating mastery through intentional solitude—protecting gains, clarifying purpose, and preparing steady re-entry to the world"
+  },
+  "EA-081": {
+    "id": "e1eb1509-5043-40b8-bc84-49826e2650f0",
+    "unique_identifier": "STG 3.1.1.1",
+    "display_name": "Radiant Initiator",
+    "family": "Expression / Inspiration — Emergent Identity",
+    "theme": "Igniting authentic expression and inspiring others by revealing inner light at the very first step of a new arc."
+  },
+  "EA-082": {
+    "id": "4924a715-051f-499f-90e3-7b298f4b6dfd",
+    "unique_identifier": "STG 3.1.1.2",
+    "display_name": "Disruptive Catalyst",
+    "family": "Expression / Initiative — Direction & Choice",
+    "theme": "Shattering false equilibrium to reveal the real problem, force a first decision, and open new lines of action."
+  },
+  "EA-083": {
+    "id": "9d23b5b3-ccee-41d1-8d39-f31720eac290",
+    "unique_identifier": "STG 3.1.1.3",
+    "display_name": "Reflective Architect",
+    "family": "Emotion / Reflection — Self-Mastery & Awareness",
+    "theme": "Exploring the inner landscape to align motivation, mastery, and moral purpose—transforming doubt into deliberate understanding."
+  },
+  "EA-084": {
+    "id": "e181a3a6-b2ad-4775-b27b-1095e5514f99",
+    "unique_identifier": "STG 3.1.2.1",
+    "display_name": "Wounded Healer",
+    "family": "Emotion / Healing — Resilience & Repair",
+    "theme": "Facing sudden harm and old scars to begin true healing—transforming pain into resilient strength and relational repair."
+  },
+  "EA-085": {
+    "id": "c77543eb-a944-4cee-b03d-d6a24089d6be",
+    "unique_identifier": "STG 3.1.2.2",
+    "display_name": "Liberated Strategist",
+    "family": "Mind / Clarity — Release & Liberation",
+    "theme": "Releasing the past to reclaim power—cutting what no longer serves, creating space for disciplined freedom and forward motion."
+  },
+  "EA-086": {
+    "id": "904b5efd-8abe-4021-b7ac-1a26bc5b7ca1",
+    "unique_identifier": "STG 3.1.2.3",
+    "display_name": "Rekindled Seeker",
+    "family": "Emotion / Motivation — Renewal & Passion",
+    "theme": "Reigniting purpose through conscious reengagement—transforming numbness and doubt into renewed curiosity, vitality, and drive."
+  },
+  "EA-087": {
+    "id": "3a421445-68ac-4a38-aba5-d7e8fc1708c6",
+    "unique_identifier": "STG 3.1.3.1",
+    "display_name": "Resourceful Alchemist",
+    "family": "Matter / Practice — Creativity & Pragmatism",
+    "theme": "Turning constraints into catalysts through rapid ideation, prototyping, and adaptive problem-solving when stakes are high."
+  },
+  "EA-088": {
+    "id": "f26ca178-07cd-4fca-afd2-59cbf3a3e212",
+    "unique_identifier": "STG 3.1.3.2",
+    "display_name": "Discerning Arbiter",
+    "family": "Mind / Ethos — Decision & Integrity",
+    "theme": "Balancing intuition and logic to choose wisely under pressure—aligning decisions with higher values through disciplined discernment."
+  },
+  "EA-089": {
+    "id": "373dda60-d01b-4dca-b487-d82ebae0e430",
+    "unique_identifier": "STG 3.1.3.3",
+    "display_name": "Serene Navigator",
+    "family": "Mind / Equanimity — Emotional Regulation & Leadership",
+    "theme": "Transforming turmoil into steady leadership—regulating emotion to restore clarity, confidence, and direction for self and others."
+  },
+  "EA-090": {
+    "id": "f97f81ed-2a66-43c4-837c-4b078c6c9d87",
+    "unique_identifier": "STG 3.1.4.1",
+    "display_name": "Essentialist Commander",
+    "family": "Mind / Precision — Focus & Simplification",
+    "theme": "Cutting through chaos to restore clarity—leadership through simplicity, focus, and disciplined elimination of the nonessential."
+  },
+  "EA-091": {
+    "id": "6f021392-e317-4feb-a8bc-ed1dbd9bd687",
+    "unique_identifier": "STG 3.1.4.2",
+    "display_name": "Valiant Catalyst",
+    "family": "Spirit / Valor — Bravery & Integrity",
+    "theme": "Facing fear as initiation—transforming paralysis into momentum through deliberate risk and faith in purpose."
+  },
+  "EA-092": {
+    "id": "a5354a48-f7d8-42e8-ad23-daea50b39f8e",
+    "unique_identifier": "STG 3.1.4.3",
+    "display_name": "Abundance Weaver",
+    "family": "Emotion / Communion — Generosity & Shared Wealth",
+    "theme": "Multiplying good by sharing it—transforming scarcity reflex into generous flow that strengthens community and sustains power."
+  },
+  "EA-093": {
+    "id": "6c0263b4-97f5-47ee-b629-4d4744efaa9f",
+    "unique_identifier": "MAT 3.1",
+    "display_name": "Hierophant of Insight",
+    "family": "Spirit / Order — Wisdom & Transmission",
+    "theme": "Passing from knowledge to wisdom—translating personal enlightenment into collective illumination through shared ritual, discipline, and teaching."
+  },
+  "EA-094": {
+    "id": "7ffc7e7b-be9c-4aba-a14c-1d2d9b9a6a09",
+    "unique_identifier": "STG 3.2.1.1",
+    "display_name": "Strategic Pathfinder",
+    "family": "Mind / Structure — Strategy & Purpose",
+    "theme": "Turning intention into architecture—directing purpose through defined objectives, milestones, and disciplined pursuit."
+  },
+  "EA-095": {
+    "id": "d11fae13-9f7e-4e2c-af0c-d53b55c4c34f",
+    "unique_identifier": "STG 3.2.1.2",
+    "display_name": "Anguish Alchemist",
+    "family": "Emotion / Fortitude — Regulation & Resolve",
+    "theme": "Transmuting pain into precision—acknowledging, regulating, and channeling intense emotion into deliberate, values-led action."
+  },
+  "EA-096": {
+    "id": "a1c8a2d9-e75e-47ca-99b3-2ea73f0911d3",
+    "unique_identifier": "STG 3.2.1.3",
+    "display_name": "Adaptive Tactician",
+    "family": "Mind / Flexibility — Cognitive Adaptation",
+    "theme": "Training the mind to pivot—reframing obstacles, shifting strategies in real time, and staying lucid under evolving pressure."
+  },
+  "EA-097": {
+    "id": "8f9087ea-c49a-4f67-8ad7-d1836b21196b",
+    "unique_identifier": "STG 3.2.2.1",
+    "display_name": "Conscious Victor",
+    "family": "Spirit / Resilience — Purpose & Mastery",
+    "theme": "The disciplined celebration of growth—transforming small victories into sustainable confidence and renewed purpose."
+  },
+  "EA-098": {
+    "id": "0837b9ae-e513-4fde-af59-da6414b98c96",
+    "unique_identifier": "STG 3.2.2.2",
+    "display_name": "Clarity Warden",
+    "family": "Mind / Discipline — Attention & Concentration",
+    "theme": "Guarding attention as sacred fuel—eliminating distraction to enter deep concentration and execute with precision."
+  },
+  "EA-099": {
+    "id": "630f9d37-2422-4064-ad95-52966f9f8cc2",
+    "unique_identifier": "STG 3.2.2.3",
+    "display_name": "Purposeful Builder",
+    "family": "Will / Drive — Motivation & Devotion",
+    "theme": "Harnessing intrinsic drive to pursue a long arc of service—clarifying devotion, setting stretch aims, and sustaining momentum through trials."
+  },
+  "EA-100": {
+    "id": "0db2823a-1b8f-4944-9bed-892799817e64",
+    "unique_identifier": "STG 3.2.3.1",
+    "display_name": "Rooted Champion",
+    "family": "Will / Integrity — Core Strengths & Centeredness",
+    "theme": "Staying grounded in one’s core strengths while navigating temptation and transformation—stability as power."
+  },
+  "EA-101": {
+    "id": "5fc225b9-c070-487a-ac3b-cf8ba54dd5aa",
+    "unique_identifier": "STG 3.2.3.2",
+    "display_name": "Bridgekeeper",
+    "family": "Heart / Connection — Empathy & Trust",
+    "theme": "Mutual trust and empathic communication forge alliances stronger than individual will—unity through understanding."
+  },
+  "EA-102": {
+    "id": "29daa815-1e89-4345-bfed-7309819b8a5b",
+    "unique_identifier": "STG 3.2.3.3",
+    "display_name": "The Deliberate Navigator",
+    "family": "Mind / Insight — Decision & Clarity",
+    "theme": "Strategic discernment through choice and clarity—balancing intuition with analysis when multiple paths emerge."
+  },
+  "EA-103": {
+    "id": "5c16812b-a212-4177-aac5-7d583fdf66c6",
+    "unique_identifier": "MAT 3.2",
+    "display_name": "The Visionary Knight",
+    "family": "Vision / Creation — Dream & Manifestation",
+    "theme": "The creative mind as a divine tool—imagination bridges mortal limits with infinite potential."
+  },
+  "EA-104": {
+    "id": "baa2da36-794d-49c3-b875-0211dfe4859a",
+    "unique_identifier": "STG 3.2.4.1",
+    "display_name": "The Architect King",
+    "family": "Authority / Structure — Leadership & Legacy",
+    "theme": "Leadership through stewardship—expanding power by empowering others."
+  },
+  "EA-105": {
+    "id": "ee060ec6-7d23-4fa6-8133-5f4acb11005d",
+    "unique_identifier": "STG 3.2.4.2",
+    "display_name": "The Tranquil Warrior",
+    "family": "Spirit / Trust — Surrender & Transformation",
+    "theme": "Power through release—mastery in letting go of control and trusting the flow of divine purpose."
+  },
+  "EA-106": {
+    "id": "bca92a2b-5758-4fd2-a55c-f008089343f1",
+    "unique_identifier": "STG 3.2.4.3",
+    "display_name": "The Luminary Architect",
+    "family": "Creation / Vision — Birth & Innovation",
+    "theme": "Creation reborn from surrender—the divine spark that turns vision into genesis."
+  },
+  "EA-107": {
+    "id": "e70ef8cb-c6bd-4ffb-b65b-8ebf9cc596c3",
+    "unique_identifier": "STG 3.2.5.1",
+    "display_name": "The Hearthkeeper",
+    "family": "Healing / Restoration — Sanctuary & Stillness",
+    "theme": "Peace born of simplicity—finding sacred renewal in the warmth of everyday life."
+  },
+  "EA-108": {
+    "id": "40b481c5-ab7a-496c-8df5-5f0540fc887c",
+    "unique_identifier": "STG 3.2.5.2",
+    "display_name": "The Flamebearer",
+    "family": "Leadership / Inspiration — Mobilization & Momentum",
+    "theme": "Unity through passion—igniting collective will in times of despair."
+  },
+  "EA-109": {
+    "id": "462e63cc-ae49-4bab-bcf1-8fd4b6bda6c8",
+    "unique_identifier": "STG 3.2.5.3",
+    "display_name": "The Burden Weaver",
+    "family": "Leadership / Empowerment — Trust & Distribution",
+    "theme": "Strength through sharing—true power emerges when leadership becomes collective."
+  },
+  "EA-110": {
+    "id": "53f19bc5-b8c2-4196-af67-5f0dc39c1193",
+    "unique_identifier": "STG 3.2.6.1",
+    "display_name": "The Unbroken Sentinel",
+    "family": "Endurance / Grit — Resilience & Recovery",
+    "theme": "Endure, adapt, and rise—where suffering becomes the forge of strength."
+  },
+  "EA-111": {
+    "id": "23ffc976-1603-4775-87e6-6bb4eba45dd8",
+    "unique_identifier": "STG 3.2.6.2",
+    "display_name": "The Radiant Beacon",
+    "family": "Influence / Presence — Charisma & Communication",
+    "theme": "Presence that awakens purpose—voice, body, and story aligned to serve."
+  },
+  "EA-112": {
+    "id": "1e1767b7-aafd-4221-819e-ace88c6e9a80",
+    "unique_identifier": "STG 3.2.6.3",
+    "display_name": "The Covenant Binder",
+    "family": "Team Cohesion — Unity & Shared Accountability",
+    "theme": "We become strong together—loyalty forged through shared purpose and trust."
+  },
+  "EA-113": {
+    "id": "9207f15c-3564-48a4-84af-e01ca7a7d076",
+    "unique_identifier": "STG 3.2.7.1",
+    "display_name": "The Peacewright",
+    "family": "Leadership / Alliance — Mediation & Bridge-Building",
+    "theme": "Unity through principled dialogue—coalitions endure when differences are honored and bridged."
+  },
+  "EA-114": {
+    "id": "c4e3e172-b484-4178-9d9e-f372ae01230d",
+    "unique_identifier": "STG 3.2.7.2",
+    "display_name": "The Boundary Keeper",
+    "family": "Sustainability / Integrity — Boundaries & Safeguards",
+    "theme": "Integrity needs edges—clear limits keep the mission healthy and whole."
+  },
+  "EA-115": {
+    "id": "2293f7fc-e8f6-43c4-8697-e960f841e37a",
+    "unique_identifier": "STG 3.2.7.3",
+    "display_name": "The Motive Cartographer",
+    "family": "Strategy / Insight — Curiosity & Intent Mapping",
+    "theme": "Clarity through curiosity—read the currents beneath behavior to navigate wisely."
+  },
+  "EA-116": {
+    "id": "e8ad5edf-5f2b-4189-9fe8-ef3967794cfe",
+    "unique_identifier": "STG 3.2.8.1",
+    "display_name": "The Wonder-Keeper",
+    "family": "Emotional Reclamation / Joy — Play, Curiosity, Creative Courage",
+    "theme": "Play restores courage—reclaiming innocence rekindles hope in the heat of battle."
+  },
+  "EA-117": {
+    "id": "30ff47f7-be76-48d4-b2fc-e6984c4b0dc5",
+    "unique_identifier": "STG 3.2.8.2",
+    "display_name": "The Forge-Binder",
+    "family": "Peer Mastery / Accountability — Deliberate Practice in Community",
+    "theme": "Excellence through friction—mutual challenge hardens resolve and hones mastery."
+  },
+  "EA-118": {
+    "id": "a38e0c5b-bc55-463b-9b99-433e60bcde24",
+    "unique_identifier": "MAT 3.3",
+    "display_name": "The Harmonizer",
+    "family": "Partnership / Integration — Trust, Union, and Shared Purpose",
+    "theme": "Partnership as alchemy—two integrated souls amplify creation and restore balance."
+  },
+  "EA-119": {
+    "id": "0dfc8ea3-db39-494a-84df-47e958f4a7f3",
+    "unique_identifier": "STG 3.2.9.1",
+    "display_name": "The Restorer",
+    "family": "Renewal / Restoration — Sustainability, Healing, Integration",
+    "theme": "Healing through renewal—true power lies in restoration, not domination."
+  },
+  "EA-120": {
+    "id": "9d95eb35-0c8d-4e59-9992-68a2b9e56975",
+    "unique_identifier": "STG 3.2.9.2",
+    "display_name": "The Bridgekeeper",
+    "family": "Determination / Integration — Willpower, Harmony, and Completion",
+    "theme": "Resolution through unity—true mastery is balance between power and peace."
+  },
+  "EA-121": {
+    "id": "fb88a651-955a-48be-a7c6-ec7b4595b864",
+    "unique_identifier": "STG 4.1.1.1",
+    "display_name": "The Veil-Cutter",
+    "family": "Insight / Innovation — Truth & Clarity",
+    "theme": "Cut through illusion—clarity creates new paths and ignites decisive action."
+  },
+  "EA-122": {
+    "id": "baed1045-802c-4bc0-9b11-725f199866b1",
+    "unique_identifier": "STG 4.1.1.2",
+    "display_name": "The Bondforger",
+    "family": "Collaboration / Leadership — Trust & Synergy",
+    "theme": "Unity through purpose—trust and shared intent transform chaos into coordinated strength."
+  },
+  "EA-123": {
+    "id": "911a4d59-6931-49fe-a77a-d1b24eed8e4f",
+    "unique_identifier": "STG 4.1.1.3",
+    "display_name": "The Pathwright",
+    "family": "Strategy / Execution — Foresight & Alignment",
+    "theme": "Clarity before motion—strategy turns courage into results."
+  },
+  "EA-124": {
+    "id": "96591f31-1ab0-4fe9-8f8c-bf82403347b4",
+    "unique_identifier": "STG 4.1.2.1",
+    "display_name": "The Contented Seeker",
+    "family": "Achievement / Growth — Fulfilment & Continuity",
+    "theme": "Savor the summit, yet stay curious—the end of one ascent begins the next horizon."
+  },
+  "EA-125": {
+    "id": "c1769646-8b05-46fc-a7dd-fba5e59a5984",
+    "unique_identifier": "STG 4.1.2.2",
+    "display_name": "The Firebrand Advocate",
+    "family": "Influence / Collaboration — Persuasion & Coalition",
+    "theme": "Voice creates velocity—when a clear, ethical story meets the right ears, movements ignite."
+  },
+  "EA-126": {
+    "id": "0338dad9-5c2a-4713-9f38-214f16458d80",
+    "unique_identifier": "STG 4.1.2.3",
+    "display_name": "The Forgekeeper",
+    "family": "Resilience / Mastery — Discipline & Persistence",
+    "theme": "Consistency is freedom—discipline transforms rebellion into endurance."
+  },
+  "EA-127": {
+    "id": "21a11029-60a1-4557-8390-7a2b9df237a2",
+    "unique_identifier": "STG 4.1.3.1",
+    "display_name": "The Bondwright",
+    "family": "Cohesion / Alignment — Purpose & Ethos",
+    "theme": "When convictions align, many voices move as one."
+  },
+  "EA-128": {
+    "id": "a2189c50-03a2-4de7-8e7c-3d7c6df61557",
+    "unique_identifier": "STG 4.1.3.2",
+    "display_name": "The Empath King",
+    "family": "Empathy / Healing — Compassion & Emotional Wisdom",
+    "theme": "True strength is measured by how gently one can hold another’s pain."
+  },
+  "EA-129": {
+    "id": "747734a5-1969-423c-98c8-a8686f520ed8",
+    "unique_identifier": "STG 4.1.3.3",
+    "display_name": "The Steadfast Page",
+    "family": "Reliability / Integrity — Trust & Accountability",
+    "theme": "Trust is not demanded; it is proven, day after day, in the dark when no one watches."
+  },
+  "EA-130": {
+    "id": "3e2d7b58-d6c6-4a5d-a642-d88dd3023601",
+    "unique_identifier": "STG 4.1.4.1",
+    "display_name": "The Strategic Reformer",
+    "family": "Recalibration / Adaptation — Learning & Strategy",
+    "theme": "Step back to see farther—reflection and reorganization turn losses into leverage."
+  },
+  "EA-131": {
+    "id": "89ab4be2-2ff0-4403-8ef4-844fdad5994d",
+    "unique_identifier": "STG 4.1.4.2",
+    "display_name": "The Lightning Vanguard",
+    "family": "Agility / Initiative — Decisive Momentum",
+    "theme": "When the window opens, move—speed is a strategy, not an accident."
+  },
+  "EA-132": {
+    "id": "3466d3d2-a66d-4836-af2c-69d6d551a1df",
+    "unique_identifier": "STG 4.1.4.3",
+    "display_name": "The Bold Pathfinder",
+    "family": "Balanced Boldness — Daring & Foresight",
+    "theme": "Courage accelerates progress—wisdom keeps it from breaking."
+  },
+  "EA-133": {
+    "id": "5f1fbb4e-bf33-4203-add1-4ab5fc27bb94",
+    "unique_identifier": "MAT 4.1",
+    "display_name": "The Triumphant Navigator",
+    "family": "Gratitude / Recognition — Momentum & Bonding",
+    "theme": "Gratitude turns survival into momentum and allies into a living engine of mastery."
+  },
+  "EA-134": {
+    "id": "7de1c135-dc2a-4173-8313-a386cae2699e",
+    "unique_identifier": "STG 4.2.1.1",
+    "display_name": "The Laurel Strategist",
+    "family": "Competitive Edge / Strategy — Advantage & Positioning",
+    "theme": "Advantage is engineered: clarify the end, sharpen your edge, and maneuver with purpose."
+  },
+  "EA-135": {
+    "id": "94a21496-cd86-44f9-8c6e-f38cbacb9600",
+    "unique_identifier": "STG 4.2.1.2",
+    "display_name": "The Enduring Protector",
+    "family": "Resilience / Fortitude — Emotional Strength",
+    "theme": "Resilience is choosing values under pressure—again and again—until storms change their shape."
+  },
+  "EA-136": {
+    "id": "bb73f0a8-5ad2-465d-840a-82c202858e37",
+    "unique_identifier": "STG 4.2.1.3",
+    "display_name": "The Sovereign of Craft",
+    "family": "Expertise / Professionalism — Mastery & Standards",
+    "theme": "Authority flows from excellence practiced in silence and proven in the arena."
+  },
+  "EA-137": {
+    "id": "49cdcde0-31d9-4f69-97d5-f42d04f79972",
+    "unique_identifier": "STG 4.2.2.1",
+    "display_name": "The Pact Bearer",
+    "family": "Collaboration / Reciprocity — Trust & Shared Accountability",
+    "theme": "Power shared is power multiplied—equity turns influence into momentum."
+  },
+  "EA-138": {
+    "id": "cbe62e10-9d2b-4903-87a7-264abe859255",
+    "unique_identifier": "STG 4.2.2.2",
+    "display_name": "The Heartbridge",
+    "family": "Empathy / Compassion — Trust & Unity",
+    "theme": "Connection turns courage into a chorus; love sustains what strategy begins."
+  },
+  "EA-139": {
+    "id": "2387e237-1a2c-48da-8703-2f80b6187d0c",
+    "unique_identifier": "STG 4.2.2.3",
+    "display_name": "The Untethered Liberator",
+    "family": "Confidence / Self-Mastery — Poise & Courage",
+    "theme": "The cage is mostly story—presence loosens every bar."
+  },
+  "EA-140": {
+    "id": "8b4b33a7-6de1-4266-9e62-5889e62c1821",
+    "unique_identifier": "STG 4.2.3.1",
+    "display_name": "The Mediator's Blade",
+    "family": "Negotiation / Diplomacy — Emotional Intelligence & Fairness",
+    "theme": "Tension becomes transformation when clarity meets compassion."
+  },
+  "EA-141": {
+    "id": "97370234-ef49-4128-9eed-a3a7accbcd25",
+    "unique_identifier": "STG 4.2.3.2",
+    "display_name": "The Builder of Dawn",
+    "family": "Sustainability / Stewardship — Purpose & Continuity",
+    "theme": "What you build beyond yourself is what was truly yours all along."
+  },
+  "EA-142": {
+    "id": "605327fa-a243-4993-9246-bbfebf0af462",
+    "unique_identifier": "STG 4.2.3.3",
+    "display_name": "The Measurer of Stars",
+    "family": "Measurement / Growth — Accountability & Mastery",
+    "theme": "Celebration without reflection fades; measurement gives joy its direction."
+  },
+  "EA-143": {
+    "id": "e8f1f278-1d75-472d-a046-9d9ed6a108a1",
+    "unique_identifier": "MAT 4.2",
+    "display_name": "The Gentle Strength",
+    "family": "Self-Mastery / Temperance — Emotional Regulation & Disciplined Will",
+    "theme": "True strength is grace under fire—power governed by values, not appetite."
+  },
+  "EA-144": {
+    "id": "443900c2-fb41-4aa0-8dd6-23b56369b00e",
+    "unique_identifier": "STG 4.3.1.1",
+    "display_name": "The Grounded Queen",
+    "family": "Resilience / Presence — Values, Focus & Poise",
+    "theme": "When the world tilts, roots matter more than wings."
+  },
+  "EA-145": {
+    "id": "746d5c03-f887-4c10-8169-63408112240b",
+    "unique_identifier": "STG 4.3.1.2",
+    "display_name": "The Architect Queen",
+    "family": "Productivity / Systems — Priorities, Routines & Execution",
+    "theme": "Order is not rigidity—it is the scaffolding that lets genius climb."
+  },
+  "EA-146": {
+    "id": "ab532e2c-50b7-4ca8-a039-7df48482d02e",
+    "unique_identifier": "STG 4.3.1.3",
+    "display_name": "The Measured Catalyst",
+    "family": "Self-Regulation / Energy — Pacing, Renewal & Discernment",
+    "theme": "Power lasts when pace is wise."
+  },
+  "EA-147": {
+    "id": "ec5f2333-7c80-446d-a501-bd0ed97d5ed8",
+    "unique_identifier": "STG 4.3.2.1",
+    "display_name": "The Sovereign Intellect",
+    "family": "Economic Realism — Rational Strategy",
+    "theme": "Clarity over chaos; reason guides the way through the Abyss."
+  },
+  "EA-148": {
+    "id": "25487056-b610-46c3-9b21-d122ec69da1b",
+    "unique_identifier": "STG 4.3.2.2",
+    "display_name": "The Prudent Builder",
+    "family": "Economic Realism — Market Calibration",
+    "theme": "Calibrate risk and value; invest energy where compounding is real."
+  },
+  "EA-149": {
+    "id": "2a5bd5da-2c81-421f-a0a1-e2a603316625",
+    "unique_identifier": "STG 4.3.2.3",
+    "display_name": "The Gratitude Guardian",
+    "family": "Economic Realism — Gratitude Practice",
+    "theme": "Gratitude renews strength; remembering the good lightens the dark."
+  },
+  "EA-150": {
+    "id": "be35d152-e10a-43b4-b767-ed6c865bdf61",
+    "unique_identifier": "STG 4.3.3.1",
+    "display_name": "Feeling Left Out",
+    "family": "Belonging / Inclusion — Emotional Awareness",
+    "theme": "Acknowledging isolation is the first step toward reconnection and collective resilience."
+  },
+  "EA-151": {
+    "id": "e48da073-af08-45e4-b98d-045723a35a3c",
+    "unique_identifier": "STG 4.3.3.2",
+    "display_name": "Calm Waters",
+    "family": "Self-Regulation / Presence — Calm & Focus",
+    "theme": "Cultivating inner calm sustains effective leadership under pressure."
+  },
+  "EA-152": {
+    "id": "68cb9778-ae4f-42af-bffe-6469573cd34d",
+    "unique_identifier": "STG 4.3.3.3",
+    "display_name": "Follow Your Heart",
+    "family": "Authenticity / Purpose — Values & Vision",
+    "theme": "Leading with authenticity inspires trust and galvanizes collective purpose."
+  },
+  "EA-153": {
+    "id": "11c18075-af74-496e-b67b-1b75c52aa5e8",
+    "unique_identifier": "STG 4.3.4.1",
+    "display_name": "Creative Idealism",
+    "family": "Creativity / Vision — Innovation & Possibility",
+    "theme": "Innovation in crisis propels collective transformation."
+  },
+  "EA-154": {
+    "id": "d84e67b7-eb78-4bbc-acee-0d9512e6f675",
+    "unique_identifier": "STG 4.3.4.2",
+    "display_name": "Op-For Planning",
+    "family": "Strategy / Foresight — Adversary Simulation",
+    "theme": "Understanding opponents sharpens resilient strategies."
+  },
+  "EA-155": {
+    "id": "c4802e58-aa01-4f34-9737-6d12ddf04a70",
+    "unique_identifier": "STG 4.3.4.3",
+    "display_name": "Exigency Planning",
+    "family": "Crisis Readiness / Systems — Rapid Response & Resilience",
+    "theme": "Preparedness underpins resilience and swift recovery."
+  },
+  "EA-156": {
+    "id": "c37160af-fcdc-41ab-b4d0-a4ece77c7369",
+    "unique_identifier": "STG 4.3.5.1",
+    "display_name": "Forward Thinking",
+    "family": "Foresight / Strategy — Future Orientation",
+    "theme": "Anticipating threats turns crises into opportunities for decisive action."
+  },
+  "EA-157": {
+    "id": "327d9f70-317d-41c7-bf0e-a5edb4c4dbb0",
+    "unique_identifier": "STG 4.3.5.2",
+    "display_name": "Inspirational Empathy",
+    "family": "Empathy / Connection — Emotional Intelligence",
+    "theme": "Compassionate leadership unites hearts when stakes are highest."
+  },
+  "EA-158": {
+    "id": "946f9c44-d697-4a88-829e-aacef16f80c6",
+    "unique_identifier": "MAT 4.3",
+    "display_name": "Inner Lighthouse",
+    "family": "Introspection / Wisdom — Reflection & Integration",
+    "theme": "Turning inward reveals hidden wisdom that guides outward action."
+  },
+  "EA-159": {
+    "id": "cc307cab-54db-4ce0-8212-d7594c6bf3cc",
+    "unique_identifier": "STG 4.3.6.1",
+    "display_name": "Stack Wins/Losses",
+    "family": "Measurement / Learning — Review & Improvement",
+    "theme": "Measuring outcomes reveals patterns to replicate success and address failure."
+  },
+  "EA-160": {
+    "id": "5fb90e65-ff54-46fe-9929-806e15140402",
+    "unique_identifier": "STG 4.3.6.2",
+    "display_name": "Foresight",
+    "family": "Foresight / Planning — Scenarios & Signals",
+    "theme": "Anticipating future conditions ensures the Prophet’s guidance remains relevant across eras."
+  },
+  "EA-161": {
+    "id": "67dfbcff-3b32-46af-b936-dc42ed52ea4d",
+    "unique_identifier": "STG 5.1.1.1",
+    "display_name": "Readiness",
+    "family": "Preparation / Baseline — Assessment & Priming",
+    "theme": "Assess your current state of mind and resources to prepare for the journey ahead."
+  },
+  "EA-162": {
+    "id": "3cf23ae5-3a0c-4962-adea-04f724b4474d",
+    "unique_identifier": "STG 5.1.1.2",
+    "display_name": "Confirmation",
+    "family": "Commitment / Courage — Decision & Momentum",
+    "theme": "Solidify your decision to embark and gather initial support."
+  },
+  "EA-163": {
+    "id": "24c15324-6b8c-491b-a9c5-7053a3a04d0c",
+    "unique_identifier": "STG 5.1.1.3",
+    "display_name": "Tumultuous Victory",
+    "family": "Early Challenges — Tests, Allies & Enemies",
+    "theme": "Face and overcome your first real obstacle to build momentum."
+  },
+  "EA-164": {
+    "id": "45abf622-4b05-4002-b209-f940989d79de",
+    "unique_identifier": "STG 5.1.2.1",
+    "display_name": "Resilient Allegiance",
+    "family": "Resilience / Allegiance — Loyalty & Endurance",
+    "theme": "Develop steadfast loyalty and resilience as the journey begins."
+  },
+  "EA-165": {
+    "id": "4d2e90e9-3703-49bb-953a-5c3b2ac197ba",
+    "unique_identifier": "STG 5.1.2.2",
+    "display_name": "The Reignition",
+    "family": "Renewal / Motivation — Optimism, Energy & Momentum",
+    "theme": "Hope, made operational, becomes renewable energy for teams."
+  },
+  "EA-166": {
+    "id": "ed0ca491-16eb-47e6-8176-13b7ed5b09a9",
+    "unique_identifier": "STG 5.1.2.3",
+    "display_name": "The Quiet Benefactor",
+    "family": "Generosity / Service — Aid, Reciprocity & Trust",
+    "theme": "Give early, give precisely, give without needing the receipt."
+  },
+  "EA-167": {
+    "id": "b72dd8bb-d6b6-43b9-8698-db6ab2dc6482",
+    "unique_identifier": "STG 5.1.3.1",
+    "display_name": "The Steady Hand",
+    "family": "Emotional Intelligence / Compassion — Self-Regulation & Grace",
+    "theme": "Grace under pressure converts doubt into aligned action."
+  },
+  "EA-168": {
+    "id": "31d51301-f24c-42a4-a4d0-de55d11f09cc",
+    "unique_identifier": "STG 5.1.3.2",
+    "display_name": "The Adaptive Strategist",
+    "family": "Critical Thinking — Flexible Reasoning, Bias Awareness & Real-Time Updating",
+    "theme": "Flexible reasoning beats rigid certainty—update fast, decide clean."
+  },
+  "EA-169": {
+    "id": "5b328822-26b3-40f9-800f-51ed8f4775db",
+    "unique_identifier": "STG 5.1.3.3",
+    "display_name": "The Ensemble Engine",
+    "family": "Teamwork — Trust, Role Clarity & Cross-Functional Execution",
+    "theme": "Trust, shared context, and explicit ownership convert hesitant individuals into a confident unit."
+  },
+  "EA-170": {
+    "id": "a34f36c7-ceb5-445a-ab35-6c5666eaa058",
+    "unique_identifier": "STG 5.1.4.1",
+    "display_name": "The Tempered Core",
+    "family": "Resilience / Support — Grit, Mentors & Micro-Habits",
+    "theme": "Resilience is forged under pressure and strengthened by mentors, allies, and repeatable habits."
+  },
+  "EA-171": {
+    "id": "74a0bb52-d1ed-4bf6-b50d-4caf7fb266be",
+    "unique_identifier": "STG 5.1.4.2",
+    "display_name": "The First Mover",
+    "family": "Action / Execution — Initiative, Velocity & Crisis Readiness",
+    "theme": "In a pinch, decisive motion converts guidance into results."
+  },
+  "EA-172": {
+    "id": "297c3683-cded-4e6c-959b-92c72ada35ae",
+    "unique_identifier": "STG 5.1.4.3",
+    "display_name": "The Momentum Engine",
+    "family": "Productivity / Collaboration — Systems, Focus & Momentum",
+    "theme": "Sustained momentum emerges when systems, focus, and allies synchronize."
+  },
+  "EA-173": {
+    "id": "815ecd7f-2bf5-46e4-86c3-096394ff5086",
+    "unique_identifier": "MAT 5.1",
+    "display_name": "The Turning of the Wheel",
+    "family": "Fate & Change — Cycles, Optionality & Thresholds",
+    "theme": "Actions have echoes. Crossing the threshold means choosing with awareness of consequence and designing options that learn."
+  },
+  "EA-174": {
+    "id": "69105083-2b58-4972-8314-65d51511052a",
+    "unique_identifier": "STG 5.2.1.1",
+    "display_name": "The Judicious Pivot",
+    "family": "Decision-Making / Equilibrium — Tradeoffs, Clarity & Consequence",
+    "theme": "Clarity under pressure—structured choices that honor tradeoffs and consequences."
+  },
+  "EA-175": {
+    "id": "dfccf943-4d6a-46ad-bd57-bbf648bae787",
+    "unique_identifier": "STG 5.2.1.2",
+    "display_name": "The Accountable Steward",
+    "family": "Leadership / Ownership — Accountability, Safety & Stewardship",
+    "theme": "Ownership turns authority into safety and results—leaders make outcomes their duty, not their ego."
+  },
+  "EA-176": {
+    "id": "6c24ec9e-acd7-4cd2-aca2-fbb519b29d68",
+    "unique_identifier": "STG 5.2.1.3",
+    "display_name": "The Unreadable",
+    "family": "Strategy / Maneuvering — Unpredictability, Deception & Initiative",
+    "theme": "Strategic unpredictability preserves initiative without sacrificing ethics."
+  },
+  "EA-177": {
+    "id": "1960ddc0-0df8-4f4e-9e86-0009d91aca95",
+    "unique_identifier": "STG 5.2.2.1",
+    "display_name": "The Spark-Bringer",
+    "family": "Influence & Motivation — Intrinsic Drive & Talent Uplift",
+    "theme": "Great leaders multiply capacity by spotting strengths, creating safety, and giving talent oxygen to burn brighter."
+  },
+  "EA-178": {
+    "id": "8f117a30-9650-4db8-a08e-3109ae3c73bf",
+    "unique_identifier": "STG 5.2.2.2",
+    "display_name": "The Opportunity Maven",
+    "family": "Opportunity Recognition / Perception — Optionality, Blue Oceans & Bias-Aware Scanning",
+    "theme": "Turn challenges into openings by scanning widely, debiasing your view, and keeping multiple options alive."
+  },
+  "EA-179": {
+    "id": "e1451b11-74b4-406c-977c-034e72d6ec2a",
+    "unique_identifier": "STG 5.2.2.3",
+    "display_name": "The Transformation Architect",
+    "family": "Vision & Change / Leadership — Purpose, Systems & Orchestration",
+    "theme": "Vision, sequenced change, and coalition-building turn intent into irreversible momentum."
+  },
+  "EA-180": {
+    "id": "a060b6a5-ddb9-4a39-8ab3-f753fcd9b1bb",
+    "unique_identifier": "STG 5.2.3.1",
+    "display_name": "The Flowwright",
+    "family": "Peak Performance — Flow, Resilience & Integration",
+    "theme": "Peak performance emerges when purpose, preparation, and presence lock into alignment—especially under supreme pressure."
+  },
+  "EA-181": {
+    "id": "8ecc0b56-024f-42d2-b2d1-3dc7b195f779",
+    "unique_identifier": "STG 5.2.3.2",
+    "display_name": "The Conviction Courier",
+    "family": "Influence & Impact — Persuasion, Messaging & Trust",
+    "theme": "Turn hard-won insight into movement by speaking with clarity, care, and courage."
+  },
+  "EA-182": {
+    "id": "91864014-c488-445e-9fb5-aae11a6d5da6",
+    "unique_identifier": "STG 5.2.3.3",
+    "display_name": "The Inner Helm",
+    "family": "Emotional Mastery — Self-Regulation, Discipline & Calm",
+    "theme": "When success arrives, the true test begins: govern your impulses so wisdom can steer the win."
+  },
+  "EA-183": {
+    "id": "26988e24-08ca-4a7c-a8ff-a215f7ce99b8",
+    "unique_identifier": "MAT 5.2",
+    "display_name": "The Breakthrough Architect",
+    "family": "Creative Innovation — Breakthroughs, Daring Ideas & Cross-Domain Synthesis",
+    "theme": "Revelation fuels invention—turn insight into systems that reframe the whole journey."
+  },
+  "EA-184": {
+    "id": "4c555e39-19a2-486e-b039-53014ae30191",
+    "unique_identifier": "STG 5.2.4.1",
+    "display_name": "The Failure Alchemist",
+    "family": "Resilience — Learning Loops, Psychological Safety & Bounce-Back",
+    "theme": "Frequent, honest failure becomes a learning engine—turning setbacks into signal and openings."
+  },
+  "EA-185": {
+    "id": "661665cf-7420-430c-a216-2aaad8e1ca35",
+    "unique_identifier": "STG 5.2.4.2",
+    "display_name": "The Sprintwright",
+    "family": "Iteration — Experiments, Feedback & Optionality",
+    "theme": "Rapid experiments turn confusion into clarity—speed plus learning beats perfection."
+  },
+  "EA-186": {
+    "id": "a3fc45b0-f9dc-47d7-9b01-69cf25cbb030",
+    "unique_identifier": "STG 5.2.4.3",
+    "display_name": "The Restorer",
+    "family": "Redemptive Failure — Humility, Repair & Integration",
+    "theme": "Failure, owned and examined, becomes the bridge to reconciliation, wisdom, and renewed purpose."
+  },
+  "EA-187": {
+    "id": "8d531945-0703-43cc-a0d2-838c582d16f7",
+    "unique_identifier": "STG 5.2.5.1",
+    "display_name": "The Accountable",
+    "family": "Accountability — Ownership, Proactivity & Repair",
+    "theme": "In crisis, ownership restores control: accountability converts chaos into coordinated action."
+  },
+  "EA-188": {
+    "id": "eebc4b7f-2841-4d5c-8877-c9ca9c68afce",
+    "unique_identifier": "STG 5.2.5.2",
+    "display_name": "The Genuine",
+    "family": "Authenticity — Integrity, Values & Candor",
+    "theme": "Authenticity under pressure preserves trust and power; values are your compass in the dark."
+  },
+  "EA-189": {
+    "id": "33e28296-f332-42dd-b206-91569b36f28a",
+    "unique_identifier": "STG 5.2.5.3",
+    "display_name": "The Pattern-Seer",
+    "family": "Insight / Perception — Pattern Recognition, Probabilistic Reasoning & Foresight",
+    "theme": "Insight under pressure: read the hidden pattern, then act with probabilistic courage."
+  },
+  "EA-190": {
+    "id": "bd0c02b4-e317-46d5-9d4d-651ba1698f75",
+    "unique_identifier": "STG 5.2.6.1",
+    "display_name": "The North Star",
+    "family": "Resilience / Meaning — Purpose, Grit & Direction",
+    "theme": "In the darkest hour, clarified purpose becomes renewable power and direction."
+  },
+  "EA-191": {
+    "id": "16312df3-6c66-48bd-80eb-f1768dbbfe80",
+    "unique_identifier": "STG 5.2.6.2",
+    "display_name": "The Last Mile",
+    "family": "Endurance / Power Within — Grit, Habits & Pace",
+    "theme": "When motivation fades, systems and small steady moves carry the load—effort compounds into power from within."
+  },
+  "EA-192": {
+    "id": "5443aed8-1061-425f-822d-5d2a93fdf417",
+    "unique_identifier": "STG 5.2.6.3",
+    "display_name": "The Open Compass",
+    "family": "Acceptance / Wisdom — Ambiguity, Compassion & Integration",
+    "theme": "At the moment of attainment, real wisdom is the capacity to hold contradictions without collapsing into false certainty—and to move forward kindly, anyway."
+  },
+  "EA-193": {
+    "id": "0a21b09e-b140-4b15-a99d-10f93b9b569c",
+    "unique_identifier": "STG 5.2.7.1",
+    "display_name": "The Loadmaster",
+    "family": "Conflict Management / Team Power — Delegation, Focus & Load-Balancing",
+    "theme": "When the weight spikes, momentum survives by spreading load and decisions—focus on the vital few, share the many."
+  },
+  "EA-194": {
+    "id": "87d6d91d-f85f-4e15-a65d-82871498d081",
+    "unique_identifier": "STG 5.2.7.2",
+    "display_name": "The Quiet Blade",
+    "family": "Decision Making / Focus — Clarity, Attention & Resource Allocation",
+    "theme": "As forces converge, sharpen attention, cut noise, and aim resources with surgical precision."
+  },
+  "EA-195": {
+    "id": "577f58fb-6b8e-4ebd-a4be-f94b0c2e1808",
+    "unique_identifier": "STG 5.2.7.3",
+    "display_name": "The Commons Architect",
+    "family": "Justice / Stewardship — Equity, Access & Shared Prosperity",
+    "theme": "Prosperity scales when value is designed to circulate—fairly, transparently, and where it’s needed most."
+  },
+  "EA-196": {
+    "id": "b1e20d3c-220a-4d61-b0a2-b93648dd1dcf",
+    "unique_identifier": "STG 5.2.8.1",
+    "display_name": "The Oathkeeper",
+    "family": "Ethical Leadership — Integrity, Courage & Trust",
+    "theme": "When the stakes spike, values must get louder—not quieter. Integrity becomes the beacon others can navigate by."
+  },
+  "EA-197": {
+    "id": "043b6eec-4af7-43f7-ba22-7eb292301030",
+    "unique_identifier": "STG 5.2.8.2",
+    "display_name": "The Bridge-Builder",
+    "family": "Persuasion — Reciprocity, Rapport & Framing",
+    "theme": "Credibility multiplied by generosity turns allies into amplifiers; influence is earned long before the ask."
+  },
+  "EA-198": {
+    "id": "02e2ab22-7853-4f23-a052-9ebcb709ef5a",
+    "unique_identifier": "MAT 5.3",
+    "display_name": "The Keeper of the Scales",
+    "family": "Accountability — Fairness, Equity & Restoration",
+    "theme": "After the storm, equity is the rebuilding plan—justice aligns repair with responsibility so trust can return."
+  },
+  "EA-199": {
+    "id": "63b567c2-088f-4026-baa2-61e809d48c2e",
+    "unique_identifier": "STG 5.2.9.1",
+    "display_name": "The Flywheel Architect",
+    "family": "Motivation — Autonomy, Mastery & Purpose",
+    "theme": "Tie rewards to the behaviors that build your world so momentum compounds long after the spotlight moves on."
+  },
+  "EA-200": {
+    "id": "2cf90a8c-1424-45b5-9962-7ea6895ea48f",
+    "unique_identifier": "STG 5.2.9.2",
+    "display_name": "The Horizon Walker",
+    "family": "Vision — Perspective, Optionality & Foresight",
+    "theme": "Elevate perspective to integrate new abilities with human wisdom—hold paradox without breaking and see beyond boundaries."
+  },
+  "EA-201": {
+    "id": "44c5cc98-2c0f-4057-b511-ef5684202c4e",
+    "unique_identifier": "STG 6.1.1.1",
+    "display_name": "The Quicksilver Knight",
+    "family": "Rapid Response — Intuition, Heuristics & Tempo",
+    "theme": "Move first, think clearly, correct fast—use intuition as a starter, not a substitute."
+  },
+  "EA-202": {
+    "id": "dd17058a-c626-4190-bff8-02bf73b64e3e",
+    "unique_identifier": "STG 6.1.1.2",
+    "display_name": "The Unmasked Navigator",
+    "family": "Self-Awareness — Identity, Values & Integrity",
+    "theme": "Before you cross the threshold, drop the disguise—values aligned, voice steady, steps true."
+  },
+  "EA-203": {
+    "id": "4e611b2c-7cf0-4041-8e82-824330365f2d",
+    "unique_identifier": "STG 6.1.1.3",
+    "display_name": "The Gap Cartographer",
+    "family": "Resource Assessment — Readiness, Constraints & Allocation",
+    "theme": "Inventory the truth early: what’s missing, what’s vital, what’s next."
+  },
+  "EA-204": {
+    "id": "c182d0f0-15c2-4aff-9095-c62122d485e6",
+    "unique_identifier": "STG 6.1.2.1",
+    "display_name": "The Wellspring",
+    "family": "Resilience & Renewal — Aid, Recovery & Sustainable Return",
+    "theme": "When help arrives, receive it fully: heal, regroup, and restart stronger."
+  },
+  "EA-205": {
+    "id": "5a583f7d-110d-4e33-99c3-4fdb488418a9",
+    "unique_identifier": "STG 6.1.2.2",
+    "display_name": "The Price Payer",
+    "family": "Commitment & Cost — Trade-offs, Focus & Resolve",
+    "theme": "Every great yes is funded by a hundred smaller no’s—clarify the cost, then pay it with purpose."
+  },
+  "EA-206": {
+    "id": "f24b3b02-ed94-4078-890e-95cf9a9bea40",
+    "unique_identifier": "STG 6.1.2.3",
+    "display_name": "The Vowkeeper",
+    "family": "Vision & Pledge — Why, Word & Mission",
+    "theme": "A clearly spoken vow turns direction into destiny—your word becomes a compass others can steer by."
+  },
+  "EA-207": {
+    "id": "791861dd-3a93-4158-bdb5-4b68b4029e61",
+    "unique_identifier": "STG 6.1.3.1",
+    "display_name": "The Reframer",
+    "family": "Perspective / Change — Growth, Reframing & Choice",
+    "theme": "When the frame changes, the field changes—hesitation turns to motion once the mind pivots."
+  },
+  "EA-208": {
+    "id": "b5d127c4-beb9-4327-8b11-8ee1b325c445",
+    "unique_identifier": "STG 6.1.3.2",
+    "display_name": "The Keel",
+    "family": "Stability / Balance — Grounding, Presence & Reality-Testing",
+    "theme": "Anchor to facts and presence; steadiness turns debate into deliberate motion."
+  },
+  "EA-209": {
+    "id": "79484bfc-f3b1-40c8-981e-cfd6f77eb0f9",
+    "unique_identifier": "STG 6.1.3.3",
+    "display_name": "The Watchmaker",
+    "family": "Stability / Precision — Focus, Rigor & Rhythm",
+    "theme": "Rigor without momentum becomes refusal; the craft is to turn detail into motion."
+  },
+  "EA-210": {
+    "id": "4e2b474d-0f18-45f5-913d-a2242af49a39",
+    "unique_identifier": "STG 6.1.4.1",
+    "display_name": "The First Spark",
+    "family": "Creativity / Vision — Novelty, Flow & Synthesis",
+    "theme": "Under pressure, constraints become catalysts; mentors can light the match, but the flame must be yours."
+  },
+  "EA-211": {
+    "id": "a9b4d7e4-863e-476c-9c25-fa4461d40dbd",
+    "unique_identifier": "STG 6.1.4.2",
+    "display_name": "The Tide Scholar",
+    "family": "Curiosity / Learning — Focus, Habits & Inquiry",
+    "theme": "When pressure pinches, hunger for truth must be harnessed into habits—curiosity that feeds, not distracts."
+  },
+  "EA-212": {
+    "id": "d3ea7cd7-6d72-4900-9d9e-1df559401de2",
+    "unique_identifier": "STG 6.1.4.3",
+    "display_name": "The Circle-Maker",
+    "family": "Respect / Teaming — Trust, Safety & Credit",
+    "theme": "Respect turns a crowd into a crew—mutual esteem unlocks speed, safety, and shared genius."
+  },
+  "EA-213": {
+    "id": "d872c803-5a78-4d28-933b-61216e3a7af0",
+    "unique_identifier": "MAT 6.1",
+    "display_name": "The Suspended Giver",
+    "family": "Letting Go / Perspective — Release, Surrender & Insight",
+    "theme": "To move forward, you must release what once moved you—letting go becomes the engine of becoming."
+  },
+  "EA-214": {
+    "id": "27d4f325-b801-434f-862d-6557daadff90",
+    "unique_identifier": "STG 6.2.1.1",
+    "display_name": "The Enduring Hammer",
+    "family": "Perseverance / Fortitude — Stamina, Grit & Follow-Through",
+    "theme": "You don’t grow around the hard thing—you grow through it; effort becomes the forge of character."
+  },
+  "EA-215": {
+    "id": "3cee4859-e5de-4afa-a213-c6f844bce55f",
+    "unique_identifier": "STG 6.2.1.2",
+    "display_name": "The Upright Standard",
+    "family": "Self-Worth / Dignity — Confidence, Belonging & Courage",
+    "theme": "In unfamiliar ground, confidence is built by aligned action and small, visible wins."
+  },
+  "EA-216": {
+    "id": "91a1a657-44ff-4808-8908-603956fb7a94",
+    "unique_identifier": "STG 6.2.1.3",
+    "display_name": "The Accord Weaver",
+    "family": "Collaboration / Alliance — Trust, Timing & Shared Rhythm",
+    "theme": "Harmony isn’t the absence of friction—it’s shared rhythm under pressure that turns many hands into one instrument."
+  },
+  "EA-217": {
+    "id": "1c411632-5fc4-4485-b02f-4c7dfc7cddbe",
+    "unique_identifier": "STG 6.2.2.1",
+    "display_name": "The Purposeful Pause",
+    "family": "Time Management / Cadence — Pace, Prioritization & Timing",
+    "theme": "Delay becomes design when you give it rules—wait for signal, fill the gap with prep, and launch on time."
+  },
+  "EA-218": {
+    "id": "0dee1f5b-642b-4c9c-815f-4c2724d5f61b",
+    "unique_identifier": "STG 6.2.2.2",
+    "display_name": "The Steady Tide",
+    "family": "Emotional Regulation / Equanimity — Awareness, Modulation & Recovery",
+    "theme": "Equanimity is engineered: name the feeling, breathe the body, choose the next move."
+  },
+  "EA-219": {
+    "id": "6afa53a9-0439-4454-81c5-9d4463cdca87",
+    "unique_identifier": "STG 6.2.2.3",
+    "display_name": "The Balanced Bowstring",
+    "family": "Stress Management / Resilience — Load, Release & Rebound",
+    "theme": "Stress isn’t the enemy—mismanaged strain is. Calibrate the load and convert pressure into precision."
+  },
+  "EA-220": {
+    "id": "40f671a9-7858-4ee0-ae74-dd176022a0d2",
+    "unique_identifier": "STG 6.2.3.1",
+    "display_name": "The Anchor of Compassion",
+    "family": "Connection / Compassion — Bonding, Belonging & Repair",
+    "theme": "Love is not a feeling on the sidelines—it’s the force that binds people to purpose and turns possibility into reality."
+  },
+  "EA-221": {
+    "id": "19868ec6-9151-49f3-a2ca-1402c9c09e76",
+    "unique_identifier": "STG 6.2.3.2",
+    "display_name": "The Open-Handed Victor",
+    "family": "Resolution / Reward — Generosity, Responsibility & Integration",
+    "theme": "Your greatest win is the good you share; power proves itself by what it empowers."
+  },
+  "EA-222": {
+    "id": "a5043f9b-29eb-482b-95c8-5215333ebf23",
+    "unique_identifier": "STG 6.2.3.3",
+    "display_name": "The Empty Cup",
+    "family": "Humility / Surrender — Perspective, Teachability & Balance",
+    "theme": "When you let go of being the hero, the work becomes heroic."
+  },
+  "EA-223": {
+    "id": "d71e9a0a-919e-4e07-9bcd-4545ae06ad3f",
+    "unique_identifier": "MAT 6.2",
+    "display_name": "The Death-Ground Chrysalis",
+    "family": "Metamorphosis / Rebirth — Collapse, Surrender & Emergence",
+    "theme": "When retreat is impossible, identity molts; crisis becomes the cocoon that remakes you."
+  },
+  "EA-224": {
+    "id": "3b667b1f-cb91-44e8-b2d5-a46c36817ccf",
+    "unique_identifier": "STG 6.2.4.1",
+    "display_name": "The Storm-Forward Captain",
+    "family": "Motivation & Leadership — Initiative, Resolve & Rallying",
+    "theme": "When the map burns, you move by signal and courage—intuition converts despair into the first decisive step."
+  },
+  "EA-225": {
+    "id": "3323c54d-644b-400c-a4f6-c94523177826",
+    "unique_identifier": "STG 6.2.4.2",
+    "display_name": "The Reset Architect",
+    "family": "Renewal — Iteration, Restart & Recommitment",
+    "theme": "Failure isn’t finale—it’s the lab note for a smarter beginning. Restart small, learn fast, recommit boldly."
+  },
+  "EA-226": {
+    "id": "51aefbb0-9db7-4600-8aa9-813ba224f947",
+    "unique_identifier": "STG 6.2.4.3",
+    "display_name": "The Open Channel",
+    "family": "Communication — Candor, Clarity & Trust",
+    "theme": "Truth with care rebuilds trust; clarity over comfort; say the whole thing and listen like you mean it."
+  },
+  "EA-227": {
+    "id": "cd7576e8-f3da-4ef5-8565-6dea4e823f22",
+    "unique_identifier": "STG 6.2.5.1",
+    "display_name": "The Upward Spiral",
+    "family": "Personal Development — Learning, Habits & Mastery",
+    "theme": "Setbacks become raw material; you iterate, integrate, and rise."
+  },
+  "EA-228": {
+    "id": "619b83ce-efe9-4747-b977-d95fda0cd415",
+    "unique_identifier": "STG 6.2.5.2",
+    "display_name": "The Constraint Breaker",
+    "family": "Problem-Solving — Reframing, Analysis & Experimentation",
+    "theme": "Constraints aren’t cages—they’re blueprints for breakthroughs when you look twice and think once."
+  },
+  "EA-229": {
+    "id": "e16a1e2d-fb24-4589-b002-0e157e6ad2fd",
+    "unique_identifier": "STG 6.2.5.3",
+    "display_name": "The Horizon Cartographer",
+    "family": " ",
+    "theme": "When the map ends, imagination drafts the next coast; vision turns abyss into frontier."
+  },
+  "EA-230": {
+    "id": "e2fb2c92-c92f-4141-a7e0-273b10699401",
+    "unique_identifier": "STG 6.2.6.1",
+    "display_name": "The Midnight Sentinel",
+    "family": "Resilience / Fortitude — Awareness, Guardrails & Recovery",
+    "theme": "Hold the line when the lights flicker; protect the progress, scan for threat, and buy tomorrow a chance."
+  },
+  "EA-231": {
+    "id": "86db8729-6d12-4fbe-925a-a23a91a8b11e",
+    "unique_identifier": "STG 6.2.6.2",
+    "display_name": "The Still Water Appraiser",
+    "family": "Reflection / Metacognition — Clarity, Calibration & Course-Correction",
+    "theme": "Silence sharpens power; pause, review, and make the one change that moves everything."
+  },
+  "EA-232": {
+    "id": "d779a8e5-d0e7-4fa8-b5d2-0080b5493a2c",
+    "unique_identifier": "STG 6.2.6.3",
+    "display_name": "The Boon Sentinel",
+    "family": "Stability / Safeguarding — Redundancy, Rigor & Risk Controls",
+    "theme": "Protect the win: fortify, simplify, and make success repeatable before you scale."
+  },
+  "EA-233": {
+    "id": "69f79605-28e5-40c0-9801-45c635de7b48",
+    "unique_identifier": "STG 6.2.7.1",
+    "display_name": "The Quiet Well",
+    "family": "Fulfillment / Contentment — Gratitude, Sufficiency & Presence",
+    "theme": "Satisfaction isn’t the finish line—it’s the stable platform that lets you leap farther without grasping."
+  },
+  "EA-234": {
+    "id": "23434696-aadc-4129-8c9c-3c321d95afb5",
+    "unique_identifier": "STG 6.2.7.2",
+    "display_name": "The Seeker’s Lantern",
+    "family": "Curiosity / Thirst for Knowledge — Inquiry, Breadth & Depth",
+    "theme": "Curiosity widens the map and sharpens the compass—questions become engines that pull you into wiser action."
+  },
+  "EA-235": {
+    "id": "119ed23f-0354-4f28-ace4-c21e3869bbef",
+    "unique_identifier": "STG 6.2.7.3",
+    "display_name": "The Stillpoint",
+    "family": "Balance / Center — Equanimity, Rhythm & Boundaries",
+    "theme": "Balance isn’t standing still—it’s the constant, tiny corrections that keep you true while everything else moves."
+  },
+  "EA-236": {
+    "id": "ed4a73d0-63ea-45ca-80a9-4ca48969a83d",
+    "unique_identifier": "STG 6.2.8.1",
+    "display_name": "The False-Color Filter",
+    "family": "Tactics / Counter-Deception — Clarity, Verification & Discipline",
+    "theme": "Victory favors the patient analyst—see the pattern beneath the performance and the trap loses its teeth."
+  },
+  "EA-237": {
+    "id": "4dac72fb-c5d0-4230-8317-6b2a35a8947b",
+    "unique_identifier": "STG 6.2.8.2",
+    "display_name": "The Narrow Gate",
+    "family": "Boundaries / Constraint — Focus, Prioritization & Protective Limits",
+    "theme": "Limits aren’t cages—they’re channels. Well-drawn boundaries turn scattered effort into decisive force."
+  },
+  "EA-238": {
+    "id": "c54fe0c0-8489-476d-9fd7-3b1e099cb5d6",
+    "unique_identifier": "MAT 6.3",
+    "display_name": "The Phoenix Threshold",
+    "family": "Rebirth / Transformation — Endings, Surrender & Renewal",
+    "theme": "End well to begin wiser—chosen endings and timely aid unlock a rebirth that no single hero could achieve alone."
+  },
+  "EA-239": {
+    "id": "281c5baa-4082-416e-90f3-f63d72a65890",
+    "unique_identifier": "STG 6.2.9.1",
+    "display_name": "The Bridge Scholar",
+    "family": "Growth / Learning — Integration, Metacognition & Self-Directed Practice",
+    "theme": "Learning is the elixir returned home—codify the hard-won insight, integrate it across worlds, and keep the flywheel turning."
+  },
+  "EA-240": {
+    "id": "3ed38270-1642-4f50-92be-5977b6e74d26",
+    "unique_identifier": "STG 6.2.9.2",
+    "display_name": "The Quiet Tactician",
+    "family": "Strategy / Craftiness — Leverage, Sequencing & De-biasing",
+    "theme": "Strategy that bridges realms—read the field, place leverage precisely, and design wins that endure without collateral damage."
+  },
+  "EA-241": {
+    "id": "cb0d442a-8605-4a63-9c5b-55e800d1b598",
+    "unique_identifier": "STG 7.1.1.1",
+    "display_name": "The Dawn Restorer",
+    "family": "Renewal / Hope — Beginnings, Resilience & Optimism",
+    "theme": "Hope isn’t a wish—it’s the disciplined restart that turns a fresh page into forward motion."
+  },
+  "EA-242": {
+    "id": "5c36332f-79b6-4885-a417-e22c4f1bd6b6",
+    "unique_identifier": "STG 7.1.1.2",
+    "display_name": "The Healer at Dawn",
+    "family": "Healing / Recovery — Rest, Repair & Integration",
+    "theme": "Healing isn’t erasing the wound—it’s rebuilding capacity around the scar and choosing the next step with care."
+  },
+  "EA-243": {
+    "id": "d4450262-75be-4b6f-aec7-2b025af92ee0",
+    "unique_identifier": "STG 7.1.1.3",
+    "display_name": "The Bright Lens",
+    "family": "Positivity / Optimism — Hope, Reframing & Contagious Confidence",
+    "theme": "Optimism isn’t denial; it’s disciplined sight—choosing the angle that reveals options and invites others to move."
+  },
+  "EA-244": {
+    "id": "a6009758-e812-4657-a4c9-a0e8f9993a7e",
+    "unique_identifier": "STG 7.1.2.1",
+    "display_name": "The Far Beacon",
+    "family": "Clarity / Vision — Purpose, Foresight & Coherent Direction",
+    "theme": "Vision is disciplined clarity—a precise picture of ‘why’ and ‘where’ that turns scattered effort into aligned motion."
+  },
+  "EA-245": {
+    "id": "565e19a8-a044-46c9-86dd-99b8ad739b16",
+    "unique_identifier": "STG 7.1.2.2",
+    "display_name": "The Honest Edge",
+    "family": "Integrity / Truth — Candor, Evidence & Alignment",
+    "theme": "Truth isn’t a cudgel—it’s alignment: cutting through noise so choices land where reality actually lives."
+  },
+  "EA-246": {
+    "id": "a4ce0758-a1e4-41a5-9f37-35d18652877f",
+    "unique_identifier": "STG 7.1.2.3",
+    "display_name": "The Clear Signal",
+    "family": "Simplicity / Purity — Focus, Essentialism & Deep Work",
+    "theme": "Simplicity isn’t small—it’s surgical: subtracting noise so every move serves the mission."
+  },
+  "EA-247": {
+    "id": "1816abe4-1255-4923-90b2-0499598aa0b8",
+    "unique_identifier": "STG 7.1.3.1",
+    "display_name": "The Long March",
+    "family": "Persistence / Diligence — Stamina, Consistency & Earned Confidence",
+    "theme": "Diligence is courage in slow motion—choosing traction over theatrics when the mission feels too big."
+  },
+  "EA-248": {
+    "id": "95af35e8-2f9c-4636-be8c-cf39a6e334ab",
+    "unique_identifier": "STG 7.1.3.2",
+    "display_name": "The Open Cup",
+    "family": "Emotional Awareness / Abundant Emotion — Presence, Acceptance & Integration",
+    "theme": "Feeling fully is not a detour—it’s the shortest path through; naming and honoring emotion converts inertia into intelligent action."
+  },
+  "EA-249": {
+    "id": "70ae9f47-85a7-4f68-bd13-9fd72ab05cc8",
+    "unique_identifier": "STG 7.1.3.3",
+    "display_name": "The First Move",
+    "family": "Action Readiness / Active — Initiative, Momentum & Execution",
+    "theme": "Clarity often follows motion; ship a small, real action now and let the next step appear in its wake."
+  },
+  "EA-250": {
+    "id": "829729e9-5463-434f-a8d2-d3bf1449796c",
+    "unique_identifier": "STG 7.1.4.1",
+    "display_name": "The Steady Harbor",
+    "family": "Emotional Resilience / Emotionally Strong — Support, Vulnerability & Fortitude",
+    "theme": "Strength isn’t stoicism; it’s distributed capacity—anchoring in mentors and allies so your heart carries weight without cracking."
+  },
+  "EA-251": {
+    "id": "a720c85f-835a-4d8f-93ca-8d17545bf6c8",
+    "unique_identifier": "STG 7.1.4.2",
+    "display_name": "The Open Compass",
+    "family": "Intellectual Inquiry / Curiosity — Wonder, Pattern-Seeking & Reframing",
+    "theme": "Curiosity isn’t noise; it’s trained wonder—sharper questions that widen the map and expose patterns you can act on."
+  },
+  "EA-252": {
+    "id": "a6e7d9af-4717-4638-8d6f-e0d4593c3031",
+    "unique_identifier": "STG 7.1.4.3",
+    "display_name": "The Strategic Breath",
+    "family": "Strategic Pause / Diversion — Renewal, Energy Management & Perspective Shifts",
+    "theme": "Rest isn’t retreat; it’s refit—an intentional pause that restores signal, widens options, and returns you sharper than you left."
+  },
+  "EA-253": {
+    "id": "2663a5f7-16a5-4872-9fbe-3d3026d561cf",
+    "unique_identifier": "MAT 7.1",
+    "display_name": "The Tempered Bridge",
+    "family": "Integration / Reconciliation — Balance, Synthesis & Harmonized Action",
+    "theme": "Integration is movement: blend the opposites on purpose, and the crossing bears your weight—and invites others across."
+  },
+  "EA-254": {
+    "id": "9302a91c-eb02-4573-b0fb-6be84eab29d1",
+    "unique_identifier": "STG 7.2.1.1",
+    "display_name": "The Proven Ledger",
+    "family": "Wealth Building / Material Success — Assets, Proof & Stewardship",
+    "theme": "Results are the trust engine—make value visible, measure it honestly, and the gates swing open."
+  },
+  "EA-255": {
+    "id": "2066819f-4267-4206-b585-2387660ea8a1",
+    "unique_identifier": "STG 7.2.1.2",
+    "display_name": "The Verdant Duet",
+    "family": "Relationship Dynamics / Romantic Excursion — Safety, Attachment & Rituals of Trust",
+    "theme": "Reconciliation blooms at human scale: build safety, pace the spark, and let curiosity turn former rivals into partners."
+  },
+  "EA-256": {
+    "id": "b499166d-653b-4ceb-99c4-d117feae1c8c",
+    "unique_identifier": "STG 7.2.1.3",
+    "display_name": "The Emerald Vantage",
+    "family": "Strategic Positioning / Advantage — Leverage, Vantage & Focused Action",
+    "theme": "Position beats force: find the fulcrum, focus pressure, and make one move worth a hundred."
+  },
+  "EA-257": {
+    "id": "9d1ea13b-44d3-4bc6-adc4-fffd6553d09b",
+    "unique_identifier": "STG 7.2.2.1",
+    "display_name": "The Green Mandate",
+    "family": "Authority Dynamics / Imposition — Boundaries, Accountability & Order",
+    "theme": "Boundaries aren’t bludgeons—they’re bridges with guardrails: state the line, state the why, and make keeping it the easiest thing to do."
+  },
+  "EA-258": {
+    "id": "8b3b484e-f3f6-497a-9d0b-2cbff8c18d2d",
+    "unique_identifier": "STG 7.2.2.2",
+    "display_name": "The Forward Edge",
+    "family": "Decision Execution — Commitment, Momentum & Focused Drive",
+    "theme": "Momentum clarifies: commit the body and the mind follows—small, certain strikes carve channels through uncertainty."
+  },
+  "EA-259": {
+    "id": "13e5572f-5183-4d34-9f9a-cd520ffde547",
+    "unique_identifier": "STG 7.2.2.3",
+    "display_name": "The Receiving Circle",
+    "family": "Community Building — Reception, Reciprocity & Belonging",
+    "theme": "Reception multiplies force: welcome aid with clarity, turn gratitude into structure, and a network begins to carry itself."
+  },
+  "EA-260": {
+    "id": "360f9684-bffd-45b6-ba45-f31ae18c1025",
+    "unique_identifier": "STG 7.2.3.1",
+    "display_name": "The Cascade Lens",
+    "family": "Task Prioritization — Focus, Sequencing & Leverage",
+    "theme": "Focus decides fate: choose the keystone conflicts, sequence for cascade, and let the trivial wait."
+  },
+  "EA-261": {
+    "id": "b11d7109-cdd5-4563-85a6-dac582a44272",
+    "unique_identifier": "STG 7.2.3.2",
+    "display_name": "The Jade Scale",
+    "family": "Tradeoffs & Cost — Sacrifice, Non-Negotiables & Consequence",
+    "theme": "Every win costs something—name the price, pay it on purpose, and let the loss buy the breakthrough."
+  },
+  "EA-262": {
+    "id": "30f45136-f593-4afb-ae48-1697477fe986",
+    "unique_identifier": "STG 7.2.3.3",
+    "display_name": "The Evergreen Standard",
+    "family": "Cultural Legacy — Standards, Rituals & Mastery",
+    "theme": "Honor what works, explain why it works, and upgrade it without breaking the lineage—excellence that lasts is excellence that learns."
+  },
+  "EA-263": {
+    "id": "7ece5ae9-2924-4a4d-b328-f223dffa75ff",
+    "unique_identifier": "MAT 7.2",
+    "display_name": "The Unshackled Ledger",
+    "family": "Temptation & Attachment — Desire, Value Alignment & Voluntary Limits",
+    "theme": "Name the pull, price the cost, and choose on purpose—when value leads, appetite serves and freedom returns."
+  },
+  "EA-264": {
+    "id": "e01fa039-9f8a-47e5-b309-b05b2e212e0a",
+    "unique_identifier": "STG 7.3.1.1",
+    "display_name": "The Turning Point",
+    "family": "Reorientation — Recovery, Resets & Directional Clarity",
+    "theme": "Name the loss, codify the lesson, and choose a new line of march—direction beats speed when you’re rebuilding trust with yourself."
+  },
+  "EA-265": {
+    "id": "78ee4bf6-2528-4b5f-a500-cc3ff1cdd0a7",
+    "unique_identifier": "STG 7.3.1.2",
+    "display_name": "The Righteous Surge",
+    "family": "Resurgence — Resolve, Justice & Decisive Action",
+    "theme": "Pain becomes propulsion: bind rage to rules, aim justice at systems, and strike where change endures."
+  },
+  "EA-266": {
+    "id": "e6e01cc1-d0f9-487a-9ffc-609b895f9eba",
+    "unique_identifier": "STG 7.3.1.3",
+    "display_name": "The Swift Current",
+    "family": "Adaptation — Agility, Feedback & Rapid Iteration",
+    "theme": "Speed with spine: sense the shift, make the micro-move, and lock the learning into shared rhythm."
+  },
+  "EA-267": {
+    "id": "171ea3ae-6c4e-4b00-8d32-40db2b43d043",
+    "unique_identifier": "STG 7.3.2.1",
+    "display_name": "The Undying Ember",
+    "family": "Intensity — Purpose, Endurance & Emotional Fuel",
+    "theme": "When everything goes dark, fuel the flame on purpose—rituals, reasons, and one brave act at a time."
+  },
+  "EA-268": {
+    "id": "5afe92fd-cd91-4cbc-97dd-458f735dfb5f",
+    "unique_identifier": "STG 7.3.2.2",
+    "display_name": "The Renewal Bay",
+    "family": "Recovery — Rest, Restoration & Energy Management",
+    "theme": "Rest is a tactic: step back on purpose, refill the system, and return sharper than you left."
+  },
+  "EA-269": {
+    "id": "6d255c67-a9de-431a-b2a5-f79786b1c316",
+    "unique_identifier": "STG 7.3.2.3",
+    "display_name": "The Emergent Edge",
+    "family": "Growth — Evolution, Mastery & Adaptive Learning",
+    "theme": "Adversity is a kiln: hold your shape in the heat, learn its pattern, and step out tempered and more precise."
+  },
+  "EA-270": {
+    "id": "69f519b4-3433-4b61-bcb5-f08767e60c1c",
+    "unique_identifier": "STG 7.3.3.1",
+    "display_name": "The Grounded Prism",
+    "family": "Insight — Reflection, Synthesis & Inner Clarity",
+    "theme": "Clarity is earned: distill pain into principles, shape your environment around them, and wisdom begins to steer without strain."
+  },
+  "EA-271": {
+    "id": "dfc08b1e-50ab-473d-a252-82efe653fcbb",
+    "unique_identifier": "STG 7.3.3.2",
+    "display_name": "The Verdant Engine",
+    "family": "Renewal — Vitality, Resilience & Energized Presence",
+    "theme": "Vitality fuels velocity: kindle core energy, stack simple rituals, and power begins to carry the work—and everyone in it."
+  },
+  "EA-272": {
+    "id": "daf76d9b-ee2d-4ca2-bd6e-bbd2a275c395",
+    "unique_identifier": "STG 7.3.3.3",
+    "display_name": "The Measured Hand",
+    "family": "Balance — Prudence, Discernment & Sustainable Action",
+    "theme": "Wisdom is paced power: apply the boon with clear limits, steady cadence, and checks that outlast the mood of the moment."
+  },
+  "EA-273": {
+    "id": "88318bcf-921a-4135-aac4-e28ab8d996b4",
+    "unique_identifier": "STG 7.3.4.1",
+    "display_name": "The Agile Pivot",
+    "family": "Adaptability — Variance, Agility & Course Correction",
+    "theme": "Adaptation beats certainty: pivot on signal, anchor in principles, and variance turns from threat into thrust."
+  },
+  "EA-274": {
+    "id": "20dd3233-f7f1-46cc-bec2-d5fece30c734",
+    "unique_identifier": "STG 7.3.4.2",
+    "display_name": "The Forged Weave",
+    "family": "Integration — Synthesis, Unity & Converged Action",
+    "theme": "Forge unity from conflict: braid hard-won lessons into one operating rhythm and let the struggle become structure."
+  },
+  "EA-275": {
+    "id": "eb03eb48-1cc3-4969-bceb-1aa8363f0be4",
+    "unique_identifier": "STG 7.3.4.3",
+    "display_name": "The Still Regent",
+    "family": "Mastery — Equilibrium, Emotional Regulation & Centered Leadership",
+    "theme": "Equilibrium is power: steady the heart, align the mind, and deliver the boon without turbulence."
+  },
+  "EA-276": {
+    "id": "3d4b883f-100e-40f0-8014-9892bb8fc500",
+    "unique_identifier": "STG 7.3.5.1",
+    "display_name": "The Builder of Routines",
+    "family": "Behavior Change — Identity, Routines & Systems",
+    "theme": "Identity drives habit; habit drives destiny: design cues and rewards that make the right action automatic."
+  },
+  "EA-277": {
+    "id": "337b3ff7-a797-4e29-95e2-fb567ba4a2e4",
+    "unique_identifier": "STG 7.3.5.2",
+    "display_name": "The Evergreen Engine",
+    "family": "Endurance — Persistence, Systems & Self-Sustaining Change",
+    "theme": "Make progress that outlives the push: turn wins into systems, systems into culture, and culture into compounding momentum."
+  },
+  "EA-278": {
+    "id": "40686f85-c3ea-4c8b-8f9c-55b768954fc3",
+    "unique_identifier": "MAT 7.3",
+    "display_name": "The Lightning Scaffold",
+    "family": "Restructuring / Transformation — Disruption, Renewal & Structural Reinvention",
+    "theme": "When the old tower cracks, pull it with purpose: clear the rubble, keep the load-bearing truths, and raise a structure that breathes."
+  },
+  "EA-279": {
+    "id": "344890c9-3670-4da6-803e-84ac78d71e92",
+    "unique_identifier": "STG 7.3.6.1",
+    "display_name": "The Bannered Return",
+    "family": "Recognition — Achievement, Gratitude & Integration",
+    "theme": "Honor the finish without stopping the march: name the win, share the credit, and convert celebration into the next commitment."
+  },
+  "EA-280": {
+    "id": "9c8ac345-0527-45b5-85aa-b25a57f59976",
+    "unique_identifier": "STG 7.3.6.2",
+    "display_name": "The Quiet Crown",
+    "family": "Fulfillment — Flow, Meaning & Stewardship",
+    "theme": "Completion with continuity: savor, codify, and circulate the boon so the glow outlasts the applause."
+  },
+  "EA-281": {
+    "id": "06e156c5-4871-4a24-96dc-94d4b2d57844",
+    "unique_identifier": "STG 8.1.1.1",
+    "display_name": "The Jade Counselor",
+    "family": "Insight — Discernment, Strategy & Foresight",
+    "theme": "Slow the mind, sharpen the lens: distill lessons into foresight and turn clear seeing into clean action."
+  },
+  "EA-282": {
+    "id": "d2015e39-b0eb-4656-9b26-e86bce9ef948",
+    "unique_identifier": "STG 8.1.1.2",
+    "display_name": "The Reef Warden",
+    "family": "Stability — Limits, Safety Protocols & Resource Stewardship",
+    "theme": "Boundaries create balance: ring-fence what matters, route the rest, and power flows where it should—safely."
+  },
+  "EA-283": {
+    "id": "363f991a-e2b3-4f5a-aa7f-b5c83e4fa0be",
+    "unique_identifier": "STG 8.1.1.3",
+    "display_name": "The Ignition Rider",
+    "family": "Energy — Motivation, Autonomy & Flow Rituals",
+    "theme": "Energy follows meaning: align action to purpose, wire in ritual, and your battery becomes a power plant."
+  },
+  "EA-284": {
+    "id": "8c645909-56b9-4204-ac33-0284470666b6",
+    "unique_identifier": "STG 8.1.2.1",
+    "display_name": "The Deliberate Maker",
+    "family": "Capability Building — Deliberate Practice & Systems Learning",
+    "theme": "Mastery is engineered: break skills into units, rehearse with feedback, and stack tiny wins until excellence is ordinary."
+  },
+  "EA-285": {
+    "id": "bccc73e4-7d8f-4efb-b809-9a311fa80eb8",
+    "unique_identifier": "STG 8.1.2.2",
+    "display_name": "The Sovereign Path",
+    "family": "Autonomy — Agency, Boundaries & Self-Direction",
+    "theme": "Freedom expands when you choose your constraints: define the mission, draw the lines, and act by design—not default."
+  },
+  "EA-286": {
+    "id": "be65f2ef-a862-4a16-907c-44acd8ab75ee",
+    "unique_identifier": "STG 8.1.2.3",
+    "display_name": "The Plenty Engine",
+    "family": "Resourcefulness — Assets, Ingenuity & Compounding",
+    "theme": "Abundance compounds when resources move through systems: inventory what you have, route it with intention, and let value circulate."
+  },
+  "EA-287": {
+    "id": "ca083f0d-33fa-4581-b6ed-bf71452a8741",
+    "unique_identifier": "STG 8.1.3.1",
+    "display_name": "The Unshaken Sentinel",
+    "family": "Resilience — Conviction, Perseverance & Courage",
+    "theme": "Conviction survives the storm—name the fear, anchor to purpose, and take the next brave inch, today and again tomorrow."
+  },
+  "EA-288": {
+    "id": "5acddc0b-ea8c-4411-8e93-ef1472e2e8c3",
+    "unique_identifier": "STG 8.1.3.2",
+    "display_name": "The Long Table Builder",
+    "family": "Service — Contribution, Stewardship & Reciprocity",
+    "theme": "Service dissolves hesitation: aim your strength outward, install repeatable ways to help, and let shared wins compound."
+  },
+  "EA-289": {
+    "id": "56b2ff66-3cd3-4c8b-b874-c621e9a86b32",
+    "unique_identifier": "STG 8.1.3.3",
+    "display_name": "The Fearwalker",
+    "family": "Courage — Exposure, Resolve & Fear Alchemy",
+    "theme": "Courage is not the absence of fear but the decision to move while afraid—name the shadow, choose the step, own the consequence."
+  },
+  "EA-290": {
+    "id": "eda9e139-ec1c-4889-935e-f9d33ecbdc85",
+    "unique_identifier": "STG 8.1.4.1",
+    "display_name": "The Mentor’s Boon",
+    "family": "Guidance — Teachers, Boons & Transfer of Wisdom",
+    "theme": "You go farther with a guide: borrow sight, inherit craft, and cross the threshold carrying wisdom you didn’t have to earn the hard way."
+  },
+  "EA-291": {
+    "id": "3a172918-b28f-4d66-b117-be5a864d1a6f",
+    "unique_identifier": "STG 8.1.4.2",
+    "display_name": "The Quiet Return",
+    "family": "Self-reflection — Solitude, Stillness & Reentry Planning",
+    "theme": "Step back to move true: protect the signal, empty the noise, and let solitude metabolize insight into precise next steps."
+  },
+  "EA-292": {
+    "id": "9d2ab75b-d2f8-4f67-b561-e9eb1f54a1cf",
+    "unique_identifier": "STG 8.1.4.3",
+    "display_name": "The Circle of Plenty",
+    "family": "Gratitude — Appreciation, Celebration & Communal Wealth",
+    "theme": "Gratitude multiplies capacity: name your helpers, celebrate the wins, and watch the network compound."
+  },
+  "EA-293": {
+    "id": "670326f6-d020-4c39-8f90-16cdb3f95494",
+    "unique_identifier": "MAT 8.1",
+    "display_name": "The Star’s Stillness",
+    "family": "Guided Reflection — Stillness, Presence & Hope",
+    "theme": "Hope is a practice: sit, breathe, integrate—then step forward with light you made inside."
+  },
+  "EA-294": {
+    "id": "9488d319-d99a-4bbe-8f1b-656ae5e0f351",
+    "unique_identifier": "STG 8.2.1.1",
+    "display_name": "The Standard-Bearer",
+    "family": "Courage — Bravery, Vulnerability & Grit",
+    "theme": "Real courage is informed, vulnerable action—name the fear, open the visor, and step into the fire with purpose."
+  },
+  "EA-295": {
+    "id": "bc4e3d1d-34a0-4c49-874c-2697d1504b45",
+    "unique_identifier": "STG 8.2.1.2",
+    "display_name": "The Servant Sovereign",
+    "family": "Leadership — Service, Accountability & Trust",
+    "theme": "Real authority is borrowed from those you serve: own the outcome, protect the team, and decide with clarity when the moment is loud."
+  },
+  "EA-296": {
+    "id": "0a505cb7-60e6-40c1-913b-d9bb036c375e",
+    "unique_identifier": "STG 8.2.1.3",
+    "display_name": "The Lone Signal",
+    "family": "Self-Reliance — Focus, Initiative & Proof of Capability",
+    "theme": "Prove it in practice: build first, validate fast, and earn trust through working results."
+  },
+  "EA-297": {
+    "id": "b0f7b0e1-e35d-4fa4-85fc-1b0e5a3f7ba9",
+    "unique_identifier": "STG 8.2.2.1",
+    "display_name": "The Watchtower",
+    "family": "Foresight — Anticipation, Scenarios & Contingencies",
+    "theme": "See three moves ahead, prune bad futures early, and let contingency—not panic—carry the weight."
+  },
+  "EA-298": {
+    "id": "e0a7ce56-ce5a-44ee-90ab-717f1aaa1186",
+    "unique_identifier": "STG 8.2.2.2",
+    "display_name": "The Fogwalker",
+    "family": "Ambiguity Tolerance — Optionality, Experimentation & Calm Under Uncertainty",
+    "theme": "Clarity is earned inside uncertainty: decide with ~60% information, run small bets, update fast."
+  },
+  "EA-299": {
+    "id": "7f09434f-2bd5-4df4-aabc-cc2e0e16a787",
+    "unique_identifier": "STG 8.2.2.3",
+    "display_name": "The Unburdened Traveler",
+    "family": "Letting Go — Closure, Release & Forward Momentum",
+    "theme": "Progress accelerates when you release what no longer serves—close loops, return weight, and step lighter."
+  },
+  "EA-300": {
+    "id": "3ca8dede-356d-4f7c-8fd5-9d16caa1de6f",
+    "unique_identifier": "STG 8.2.3.1",
+    "display_name": "The Aligned Axis",
+    "family": "Integration — Values, Identity & Coherence",
+    "theme": "Integrity scales when values decide your calendar—align identity, habits, and choices so effort compounds cleanly."
+  },
+  "EA-301": {
+    "id": "4807106c-feb6-4544-abe3-0edb79a8a3e6",
+    "unique_identifier": "STG 8.2.3.2",
+    "display_name": "The Living Code",
+    "family": "Guiding Values — Principles, Standards & Codex",
+    "theme": "Write your rules, then let them rule—codified principles turn chaos into a compass under pressure."
+  },
+  "EA-302": {
+    "id": "e5672e7a-df99-4008-ab1f-1180a36353f1",
+    "unique_identifier": "STG 8.2.3.3",
+    "display_name": "The Current Keeper",
+    "family": "Flow — Focus, Rhythm & Recovery",
+    "theme": "Flow isn’t an accident—it’s engineered: design the triggers, guard the time, and ride the current until the work starts working on you."
+  },
+  "EA-303": {
+    "id": "495bdc2c-34f3-45c8-a0e9-1531e75be86a",
+    "unique_identifier": "MAT 8.2",
+    "display_name": "The Lunar Navigator",
+    "family": "Intuition — Subconscious, Pattern Sense & Symbolic Insight",
+    "theme": "When reason reaches its shoreline, intuition sails on—quiet the surface, read the depths, and let symbols steer the course."
+  },
+  "EA-304": {
+    "id": "a3c92d6a-3cd3-4c8a-89f3-d065ebf2617e",
+    "unique_identifier": "STG 8.3.1.1",
+    "display_name": "The Steady Forge",
+    "family": "Sustainable Progress — Habits, Systems & Compounding",
+    "theme": "Progress that survives pressure: anchor habits, stack small wins, and fortify the base before you raise the tower."
+  },
+  "EA-305": {
+    "id": "fdbf84b9-de73-4262-9c16-4aa952efe8eb",
+    "unique_identifier": "STG 8.3.1.2",
+    "display_name": "The Embodied Compass",
+    "family": "Embodied Awareness — Presence, Sensation & Grounding",
+    "theme": "When clarity fractures, come back to the body—see, hear, feel, smell, taste—anchor attention and let coherence rebuild from the present moment out."
+  },
+  "EA-306": {
+    "id": "d614d854-202a-4de4-95c9-2d2cce9a678d",
+    "unique_identifier": "STG 8.3.1.3",
+    "display_name": "The Radiant Field",
+    "family": "Projecting Presence — Warmth, Power & Credibility",
+    "theme": "Influence scales from the inside out: align breath and body, then project warm strength that steadies rooms and uplifts people."
+  },
+  "EA-307": {
+    "id": "cf676f6b-1ae3-4681-94d6-e9937ebddd82",
+    "unique_identifier": "STG 8.3.2.1",
+    "display_name": "The One Rhythm",
+    "family": "Coordination — Trust, Timing & Shared Rhythm",
+    "theme": "Teams move like one organism when trust, timing, and shared intent lock into cadence."
+  },
+  "EA-308": {
+    "id": "f0c6d4fe-0c01-4b03-94a4-979ef9fd5f38",
+    "unique_identifier": "STG 8.3.2.2",
+    "display_name": "The Quiet Forge",
+    "family": "Inner Transformation — Presence, Purpose & Release",
+    "theme": "Adversity becomes compost for the soul; presence, purpose, and letting go turn pressure into renewal."
+  },
+  "EA-309": {
+    "id": "8fc7d751-9dda-47a7-af2b-79a39b862eb9",
+    "unique_identifier": "STG 8.3.2.3",
+    "display_name": "The Circle that Holds",
+    "family": "Support Networks — Trust, Reciprocity & Resilience",
+    "theme": "In the deepest dark, bonded hearts braid strength—support becomes the rope that lifts everyone out."
+  },
+  "EA-310": {
+    "id": "e347fce9-a576-488d-8be5-3e6e24367082",
+    "unique_identifier": "STG 8.3.3.1",
+    "display_name": "The Lesson in the Loss",
+    "family": "Adversity — Failure, Resilience & Reframe",
+    "theme": "When the fall is studied, it becomes footing. Failure, faced cleanly, converts into fuel for the next ascent."
+  },
+  "EA-311": {
+    "id": "7bf48ac2-731c-4a90-a879-eb7630c65026",
+    "unique_identifier": "STG 8.3.3.2",
+    "display_name": "The Greenlight Move",
+    "family": "Empowerment — Courage, Initiative & Decisive Motion",
+    "theme": "Power becomes real when you move. Decisive steps convert earned insight into visible change."
+  },
+  "EA-312": {
+    "id": "479b84c9-a6b1-44c7-9f0a-eabece078970",
+    "unique_identifier": "STG 8.3.3.3",
+    "display_name": "The Quiet Return",
+    "family": "Integration — Emotional Mastery & Reentry",
+    "theme": "After the peak, power is tempered by processing—naming the cost, integrating the change, and choosing how to re-enter."
+  },
+  "EA-313": {
+    "id": "72601caa-598f-4f2f-b08d-151e6174c96d",
+    "unique_identifier": "STG 8.3.4.1",
+    "display_name": "The Command Signal",
+    "family": "Leadership — Vision, Decision & Accountability",
+    "theme": "When the boon is secured, leadership is choosing a vector, communicating it crisply, and owning the consequences."
+  },
+  "EA-314": {
+    "id": "e3bd2375-bd09-4e0f-9db7-71e9c256b176",
+    "unique_identifier": "STG 8.3.4.2",
+    "display_name": "The Forked Choice",
+    "family": "Decision-Making — Clarity, Ethics & Commitment",
+    "theme": "Under pressure, clarity is earned: gather just enough truth, align to your highest aim, commit, and move."
+  },
+  "EA-315": {
+    "id": "00a0c1ab-476c-4e7f-a248-151f3c553ee0",
+    "unique_identifier": "STG 8.3.4.3",
+    "display_name": "The Quiet Victory",
+    "family": "Reflection — Gratitude, Presence & Integration",
+    "theme": "Pause, breathe, and honor the ground gained—gratitude locks in growth and steadies the return."
+  },
+  "EA-316": {
+    "id": "8befbfd6-43ba-403e-a417-82f3b4e67c11",
+    "unique_identifier": "STG 8.3.5.1",
+    "display_name": "The Living Beacon",
+    "family": "Vision — Clarity, Direction & Rallying Purpose",
+    "theme": "A vivid, shared picture of the future pulls allies into formation and turns scattered effort into one coordinated rescue."
+  },
+  "EA-317": {
+    "id": "bd6af915-ec8f-473c-a205-0d7f5d0a871c",
+    "unique_identifier": "STG 8.3.5.2",
+    "display_name": "The Sacred Let-Go",
+    "family": "Release — Letting Go, Surrender & Radical Trust",
+    "theme": "When the old grip finally loosens, space appears for rescue, renewal, and solutions you could never have muscled into existence."
+  },
+  "EA-318": {
+    "id": "6aad3947-80c6-4544-b8ed-1ce86314475e",
+    "unique_identifier": "MAT 8.3",
+    "display_name": "The Sunlit Mind",
+    "family": "Illumination — Clarity, Integration & Conscious Leadership",
+    "theme": "When awareness stops being a spotlight on the self and becomes a lantern for everyone, decisions shift from survival to stewardship."
+  },
+  "EA-319": {
+    "id": "c2460f29-f5e8-409d-bd30-b0ea4e508df9",
+    "unique_identifier": "STG 8.3.6.1",
+    "display_name": "The Challenger of Limits",
+    "family": "Self-Mastery — Challenge, Discipline & Competitive Growth",
+    "theme": "Real competition is not against other people, but against the ceilings that keep potential small."
+  },
+  "EA-320": {
+    "id": "0976ed7c-bf72-4dd0-8499-490d17b92d10",
+    "unique_identifier": "STG 8.3.6.2",
+    "display_name": "The Legacy Weaver",
+    "family": "Legacy Creation — Purpose, Impact & Continuity",
+    "theme": "When mastery matures, the real question becomes not ‘How high did I climb?’ but ‘Who is safer, stronger, and freer because I was here?’"
+  },
+  "EA-321": {
+    "id": "19524ca5-0fbe-475d-a324-878b6584c887",
+    "unique_identifier": "STG 9.1.1.1",
+    "display_name": "The Honest Mirror",
+    "family": "Self-Awareness — Noticing, Naming & Acceptance",
+    "theme": "Before anything can be healed, moved, or elevated, it has to be seen as it truly is—no filters, no faking, just clear, grounded noticing."
+  },
+  "EA-322": {
+    "id": "d67557e2-a86a-49cb-a5b7-a3ed4d99b697",
+    "unique_identifier": "STG 9.1.1.2",
+    "display_name": "The Beautiful Collapse",
+    "family": "Crisis Management — Collapse, Volatility & Rebirth",
+    "theme": "When the old structure finally breaks, it doesn’t mean the story is over—it means the real story can finally begin."
+  },
+  "EA-323": {
+    "id": "1e064281-d8c7-420e-8ba4-ecec02bcc8d0",
+    "unique_identifier": "STG 9.1.1.3",
+    "display_name": "The Quiet Crown",
+    "family": "Self-Respect — Worth, Boundaries & Inner Nobility",
+    "theme": "Before the universe asks more of you, you must decide how you deserve to be treated—by others, and by yourself."
+  },
+  "EA-324": {
+    "id": "471f4c52-cf3a-4b38-b2e3-95462586ff68",
+    "unique_identifier": "STG 9.1.2.1",
+    "display_name": "The Regenerative Scholar",
+    "family": "Learning — Study, Regeneration & Skill-Building",
+    "theme": "When the universe calls you forward, the first brave response isn’t a dramatic leap—it’s a disciplined season of learning that keeps you from burning out mid-journey."
+  },
+  "EA-325": {
+    "id": "de8c34de-ce05-4172-b194-6f473feed413",
+    "unique_identifier": "STG 9.1.2.2",
+    "display_name": "The Resolute Steward",
+    "family": "Leadership — Respect, Resolve & Cosmic Responsibility",
+    "theme": "When the final decision arrives, true leadership isn’t loud domination—it’s quiet, unshakeable resolve that treats every being with dignity while still saying a clear, costly yes."
+  },
+  "EA-326": {
+    "id": "de46e30a-a52e-48a3-b305-3bc93c760490",
+    "unique_identifier": "STG 9.1.2.3",
+    "display_name": "The Grief-Tempered Guardian",
+    "family": "Conflict — Grief, Healing & Resilient Connection",
+    "theme": "Real strength isn’t the absence of struggle—it is the courage to walk through conflict, grief, and change with an open heart, and to turn shared pain into shared healing."
+  },
+  "EA-327": {
+    "id": "19b669df-65bd-441d-bf94-400410b6362e",
+    "unique_identifier": "STG 9.1.3.1",
+    "display_name": "The Steady Heart in the Storm",
+    "family": "Empathy — Steady Kindness in Chaos",
+    "theme": "In the middle of chaos, true power is the calm, benevolent presence that refuses to abandon empathy—even when everything else is falling apart."
+  },
+  "EA-328": {
+    "id": "6d1296cd-2887-4487-96ca-e3e80eda31b9",
+    "unique_identifier": "STG 9.1.3.2",
+    "display_name": "The Inquisitive Knight of Integrity",
+    "family": "Curiosity — Exploration Guided by Conscience",
+    "theme": "Your curiosity is not random wandering—it’s a disciplined quest to test ideas, reveal truth, and stand for what you can live with in the light."
+  },
+  "EA-329": {
+    "id": "ae7e1990-1bdd-4e39-97c4-f41bdabc39e3",
+    "unique_identifier": "STG 9.1.3.3",
+    "display_name": "The Victorious Flame of Fortitude",
+    "family": "Resilience — Strength Forged Through Repeated Trials",
+    "theme": "Your victories are not lucky breaks—they are the visible scar tissue of every time you refused to stay down."
+  },
+  "EA-330": {
+    "id": "c818157d-62d5-495d-8461-bfce466e8bc0",
+    "unique_identifier": "STG 9.1.4.1",
+    "display_name": "The Restorative Guardian of Balance",
+    "family": "Restoration — Strength Regained Through Intentional Recovery",
+    "theme": "Your capacity to recover is not wasted time; it is the hidden infrastructure that keeps your purpose from collapsing under pressure."
+  },
+  "EA-331": {
+    "id": "10c1b3f5-c161-444b-b5b9-34f9d697ac9b",
+    "unique_identifier": "STG 9.1.4.2",
+    "display_name": "The Creative Conductor of Cosmic Harmony",
+    "family": "Innovation — Emotionally-Driven Creative Problem Solving Under Pressure",
+    "theme": "Your emotions are not interruptions to problem-solving—they’re the signal fire that turns pressure into original solutions no one else can see."
+  },
+  "EA-332": {
+    "id": "9dbf8cc1-81e2-4f9e-b0c4-179d19f43a29",
+    "unique_identifier": "STG 9.1.4.3",
+    "display_name": "The Apex Mind of Living Strategy",
+    "family": "Strategic Thinking — Apex-Level Clarity and Deliberate Insight",
+    "theme": "Your clearest power emerges when you rise above the noise, see the pattern as a whole, and choose with deliberate precision."
+  },
+  "EA-333": {
+    "id": "183873a8-7a04-4501-81d6-de253a0d73ee",
+    "unique_identifier": "MAT 9.1",
+    "display_name": "The Herald of Cosmic Initiation",
+    "family": "Commencement — Answering the Call and Unifying the Tribe Around Shared Purpose",
+    "theme": "Your life changes most profoundly the moment you stop waiting for permission and step forward as the one who calls the tribe into its next era."
+  },
+  "EA-334": {
+    "id": "10591344-9f97-4a58-8387-2eb6cf7eeaa2",
+    "unique_identifier": "STG 9.2.1.1",
+    "display_name": "The Great One of the Night of Sorrow",
+    "family": "Emotional Depth — Finding Meaning, Strength, and Revelation in Sorrow",
+    "theme": "When you stop outrunning grief and sit beside it, sorrow turns from a weight you drag into a compass pointing toward what mattered most all along."
+  },
+  "EA-335": {
+    "id": "4a570252-213f-4b0e-90c1-35844961a882",
+    "unique_identifier": "STG 9.2.1.2",
+    "display_name": "The Prosperous Architect of the New Realm",
+    "family": "Abundance — Prosperity Built Through Intentional Design",
+    "theme": "Real prosperity is not what you accumulate for yourself, but the world you design so that growth becomes possible for everyone."
+  },
+  "EA-336": {
+    "id": "03654ade-f433-4868-99a7-eb4fb4e06b94",
+    "unique_identifier": "STG 9.2.1.3",
+    "display_name": "The Paradigm-Breaking King of Creative Force",
+    "family": "Innovation Energy — Playful Power to Rewrite Reality",
+    "theme": "Your creativity is not just for making new things—it is the quiet revolution that takes apart what no longer deserves to rule you."
+  },
+  "EA-337": {
+    "id": "4b0fce58-39cb-4bc2-a235-953c3dc3cc18",
+    "unique_identifier": "STG 9.2.2.1",
+    "display_name": "The Sunglow Guardian of Intrinsic Worth",
+    "family": "Resilience Development — Learning to Stay with Yourself When Your Effort Wavers",
+    "theme": "Your worth is not as unstable as your effort—real resilience begins when you stop measuring your value by how perfectly you perform."
+  },
+  "EA-338": {
+    "id": "ed54bd6c-8071-4865-89b0-f73ea2de528a",
+    "unique_identifier": "STG 9.2.2.2",
+    "display_name": "The Clear-Eyed Heir of Respectful Authority",
+    "family": "Critical Reflection — Seeing Through Illusions of Approval and Power",
+    "theme": "Not every victory is real, and not every failure is loss; true success is measured by integrity, respect, and alignment with what actually works."
+  },
+  "EA-339": {
+    "id": "77d77d95-8c6a-4927-8887-3a18793ea718",
+    "unique_identifier": "STG 9.2.2.3",
+    "display_name": "The Alchemist of Fear and Creative Tension",
+    "family": "Emotional Intelligence — Fear as Signal, Conflict as Creative Force",
+    "theme": "Courage isn’t the absence of fear; it’s learning to listen to it, stand inside it, and transform conflict into forward motion instead of retreat."
+  },
+  "EA-340": {
+    "id": "d04f8dfa-6d92-4c57-80c8-773586ca50f8",
+    "unique_identifier": "STG 9.2.3.1",
+    "display_name": "The Hearthkeeper in the Cosmic Storm",
+    "family": "Community Harmony — Peacekeeping Amid Crisis",
+    "theme": "Peace is not the absence of crisis, but the presence of people who choose to keep the hearth warm while the universe shudders outside."
+  },
+  "EA-341": {
+    "id": "9de82b94-7302-4c04-beef-3b0fd81cffcb",
+    "unique_identifier": "STG 9.2.3.2",
+    "display_name": "The Keeper of Tested Promises",
+    "family": "Trust — Reliability Proven Through Shared Trials",
+    "theme": "Real trust isn’t built when everything works; it’s forged when you keep showing up after things fall apart."
+  },
+  "EA-342": {
+    "id": "ecd28072-bd5e-4026-b1f8-891f731b80e4",
+    "unique_identifier": "STG 9.2.3.3",
+    "display_name": "The Ember-Circle of Shared Genius",
+    "family": "Collective Creativity — Excellence Forged Through Shared Insight",
+    "theme": "Your highest level isn’t reached alone; it’s unlocked when your best ideas ignite someone else’s, and theirs ignite yours."
+  },
+  "EA-343": {
+    "id": "f668ff5a-566f-4531-993c-c013f54e8d29",
+    "unique_identifier": "MAT 9.2",
+    "display_name": "The Unbreakable Engine of Creative Strength",
+    "family": "Great Strength — Endurance, Purpose, and Structured Creativity Under Maximum Pressure",
+    "theme": "Your true strength is not proven by how hard you push once, but by how creatively you keep advancing when every part of you wants to stop."
+  },
+  "EA-344": {
+    "id": "2b879b46-6bc5-464c-811c-81e9b3e101b7",
+    "unique_identifier": "STG 9.2.4.1",
+    "display_name": "The Ember Knight of Inner Empowerment",
+    "family": "Empowerment — Rising from Ultimate Despair into Disciplined Inner Strength",
+    "theme": "Your lowest moment is not the proof that you’re finished—it’s the forge where your next, truer self is hammered into being."
+  },
+  "EA-345": {
+    "id": "2e4b92ae-4363-48f9-bc0e-b9be5954891d",
+    "unique_identifier": "STG 9.2.4.2",
+    "display_name": "The Queen of Unbroken Truth",
+    "family": "Direct Communication — Truth-Telling in High-Stakes Moments",
+    "theme": "When everything is on the line, softening the truth to spare feelings only deepens the wound—real healing begins the moment someone dares to say what is actually there."
+  },
+  "EA-346": {
+    "id": "4a181561-23f9-4e12-a73b-ad701f8a650a",
+    "unique_identifier": "STG 9.2.4.3",
+    "display_name": "The White Comet of Swift Resolution",
+    "family": "Expeditious Action — Rapid Execution in Sacred Turning Points",
+    "theme": "At the edge of collapse, speed without clarity causes chaos—but when you know exactly what must be done and move on it immediately, you can save in minutes what negligence has been eroding for ages."
+  },
+  "EA-347": {
+    "id": "1d2699b9-fda2-4955-8481-d72f25ca4da8",
+    "unique_identifier": "STG 9.2.5.1",
+    "display_name": "The Conductor of Swift Harmony",
+    "family": "Agile Synchronization — Harmonizing Speed, Structure, and Team Flow",
+    "theme": "When everything is on the line, speed alone is chaos—but when clear roles, clean flow, and shared focus align, a team can move so quickly and coherently it feels like one mind in many bodies."
+  },
+  "EA-348": {
+    "id": "a2dcfe8e-8731-4850-af1e-768c75d0e7e9",
+    "unique_identifier": "STG 9.3.1.2",
+    "display_name": "The Heart of the Unified Host",
+    "family": "Spiritual Cohesion — Shared Soul in the Midst of Trial",
+    "theme": "When the night is deepest, you don’t survive by being the strongest alone—you survive by remembering that you were never meant to stand alone at all."
+  },
+  "EA-349": {
+    "id": "694055db-686e-435c-9b2b-98eaf69979ba",
+    "unique_identifier": "STG 9.3.1.3",
+    "display_name": "The Navigator of the Deep",
+    "family": "Steady Navigation — Direction Rooted in Relationship Under Pressure",
+    "theme": "When the path disappears, you don’t need perfect clarity—you need a true heading and people you trust enough to walk beside you."
+  },
+  "EA-350": {
+    "id": "342afe46-7d03-4337-9048-0e48c9456368",
+    "unique_identifier": "STG 9.2.6.1",
+    "display_name": "The Edgewalker of Charged Nerves",
+    "family": "Threshold Energy — Anxiety and Excitement at the Edge of Transformation",
+    "theme": "On the brink of everything changing, your racing heart isn’t a warning to retreat—it’s proof you’re alive enough to step through."
+  },
+  "EA-351": {
+    "id": "3e3ca26a-7560-49d7-9e26-9fcf3412fbc0",
+    "unique_identifier": "STG 9.2.6.2",
+    "display_name": "The Poised Catalyst",
+    "family": "Equilibrium Energy — Vulnerability, Adaptability, and Inner Balance in Motion",
+    "theme": "Real power within is not rigid control; it’s the ability to stay grounded and honest while everything around you moves."
+  },
+  "EA-352": {
+    "id": "22e916be-2f89-4601-9320-dc6c4d9bd3b2",
+    "unique_identifier": "STG 9.2.6.3",
+    "display_name": "The Entangled Guardian",
+    "family": "Emotional Gravity Field — Interconnection, Distress Management, and Stabilizing Presence",
+    "theme": "True emotional power emerges when you can feel everything that’s happening in the field—and still choose to be a steady, unshakable point of calm."
+  },
+  "EA-353": {
+    "id": "8234b416-8d42-4133-ac83-f1cf1e1a0683",
+    "unique_identifier": "STG 9.2.7.1",
+    "display_name": "The Sovereign Steward",
+    "family": "Stewardship Current — Wealth, Responsibility, and Decisive Governance of Value",
+    "theme": "Real security is not the absence of risk, but the ability to make clear, principled decisions about resources in a way that protects, nourishes, and guides the future."
+  },
+  "EA-354": {
+    "id": "fe4f022d-c238-4111-bf60-4d313dc14b62",
+    "unique_identifier": "STG 9.2.7.2",
+    "display_name": "The Remembering Strategist",
+    "family": "Memory Currents — Reflection, Narrative Integration, and Choice Wisdom",
+    "theme": "Your past is not a prison or a shrine; it’s a living archive of experience that, when viewed clearly, can guide you toward wiser choices in the present."
+  },
+  "EA-355": {
+    "id": "c4edf4ab-83b2-4110-bfa6-213426f38ac2",
+    "unique_identifier": "STG 9.2.7.3",
+    "display_name": "The Integrated Champion",
+    "family": "Achievement Currents — Mastery, Flow, and Sustained Excellence Over Time",
+    "theme": "True success is not a single spike of glory; it is the quiet, disciplined art of sustaining excellence without losing your joy, your relationships, or yourself."
+  },
+  "EA-356": {
+    "id": "5b059cd6-440e-49be-886f-c1899c72bc8b",
+    "unique_identifier": "STG 9.2.8.1",
+    "display_name": "The Unbound Visionary",
+    "family": "Liberation Currents — Vision, Inner Freedom, and Blueprinted Paths Beyond Constraint",
+    "theme": "Real freedom doesn’t always begin with escape; it begins when you can see clearly inside the cage and still design the path beyond it."
+  },
+  "EA-357": {
+    "id": "2c56c4a4-2455-45c7-92aa-7aec7e035032",
+    "unique_identifier": "STG 9.2.8.2",
+    "display_name": "The Releasing Commander",
+    "family": "Transitional Sovereignty — Leadership, Letting Go, and Guiding the Final Passage",
+    "theme": "At the true end of a cycle, leadership isn’t just about holding the line—it’s about knowing what to release so that something greater can live."
+  },
+  "EA-358": {
+    "id": "4a8e77e6-a261-4fd8-9d2a-adddd0ada7ef",
+    "unique_identifier": "MAT 9.3",
+    "display_name": "The Cosmic Pathfinder",
+    "family": "World-Bridging Vector — Curiosity, Mapping, and Rescue from Beyond",
+    "theme": "Real exploration is not escape from the world but a brave expansion of it—walking beyond the known so that others can one day follow safely."
+  },
+  "EA-359": {
+    "id": "a99c8a1e-95ec-4d0d-b54e-8b90b42b28be",
+    "unique_identifier": "STG 9.2.9.1",
+    "display_name": "The Duality Strategist",
+    "family": "Dual Horizon Intelligence — Knowledge, Strategy, and Collaborative Competition Across Timelines",
+    "theme": "True knowledge is the ability to hold multiple realities in mind at once—and choose actions that turn conflict into cooperative evolution."
+  },
+  "EA-360": {
+    "id": "30e42f54-996b-4c00-9cd5-e82028d4d679",
+    "unique_identifier": "STG 9.2.9.2",
+    "display_name": "The Sovereign Bridge",
+    "family": "Crowned Unity — Mastery, Meaning, and Service Between Worlds",
+    "theme": "Real mastery is not escaping into the higher world or surrendering to the old one; it is learning to stand in both at once, carrying meaning between them."
+  }
+}
