@@ -72966,7 +72966,7 @@
         "red": 255,
         "green": 255,
         "blue": 204
-      },    
+      },
       "personality_profile_349": {
         "canonical_id": "EA-349",
         "unique_identifier": "STG 9.3.1.3",
@@ -73215,7 +73215,253 @@
         "green": 204,
         "blue": 153
       },
-      "personality_profile_350": {},
+      "personality_profile_350": {
+        "canonical_id": "EA-350",
+        "unique_identifier": "STG 9.2.6.1",
+        "specific_task_group_title": "Anxiety/Excitement",
+        "all_chapter": 350,
+        "novel_book": 9,
+        "chapter": "Chapter 30",
+        "chapter_title": "The Darkest Moment — Anxiety and Excitement at the Brink of Transformation",
+        "type": "Specific Task Group",
+        "display_name": "The Edgewalker of Charged Nerves",
+        "theme": "On the brink of everything changing, your racing heart isn’t a warning to retreat—it’s proof you’re alive enough to step through.",
+        "family": "Threshold Energy — Anxiety and Excitement at the Edge of Transformation",
+
+        "summary": "In this late phase of Book 9, Francisco stands at the brink of irreversible transformation. The cosmic system is poised on a knife-edge: past cycles of failure, collapse, and miscalculation echo through his body as waves of anxiety, while the possibility of a radically renewed universe crackles around him as pure excitement.\n\nIn earlier stages, Francisco learned to transform setbacks into opportunities. Here, he confronts the emotional cost of that mastery. Every victory has required risk. Every leap forward has been preceded by a moment of doubt. Now those moments converge into a single, overwhelming threshold experience. Anxiety and excitement no longer arrive as separate states; they mix into one high-voltage signal that could either paralyze him or propel him through the final doorway.\n\nInstead of treating anxiety as a defect to suppress, Francisco begins to treat it as information—evidence that something meaningful is at stake. He learns to regulate his body, anchor his mind, and reinterpret the surge of stress as readiness, not doom. The more he practices this internal alchemy, the more the cosmos itself learns to do the same: systems that once shut down under pressure start to bend, reconfigure, and grow.\n\nBy the close of this chapter, Francisco embodies a new pattern for the universe. The darkest moment is no longer the place where stories die; it becomes the ignition point. Anxiety is reframed as raw, unfinished excitement—a sign that transformation is near. For those whose profiles resonate with this pattern, emotional intensity is not a liability; it is the fuel that keeps the evolution of their lives—and the worlds they touch—continuously moving forward.",
+
+        "tarot_family": "Disks",
+        "tarot_card_item": "Five",
+
+        "traits": {
+          "strengths": [
+            "experiences emotional intensity as a sign that something meaningful is at stake",
+            "able to operate under pressure by taking grounded, incremental actions",
+            "reframes stress and anxiety into signals for preparation and focus",
+            "notices patterns in setbacks and uses them to improve strategy",
+            "can inspire others by openly sharing how they act with courage while still feeling afraid"
+          ],
+          "shadow": [
+            "may confuse constant high activation with productivity and burn out quietly",
+            "can become addicted to crisis energy and struggle to rest in calm seasons",
+            "risks interpreting every bodily stress signal as an emergency",
+            "may overthink ‘what could go wrong’ and delay important moves",
+            "can default to self-criticism when feeling anxious instead of offering self-compassion"
+          ],
+          "growth_focus": [
+            "practice naming your state honestly (anxious, excited, both) before deciding how to respond",
+            "build simple body-based routines (breath, movement, grounding) to regulate intensity",
+            "experiment with reinterpreting stress as readiness when the stakes align with your values",
+            "create structured plans for high-stakes moments so your anxiety has a clear place to flow",
+            "share your inner process with trusted allies so you don’t carry threshold moments alone"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — Spirit of the Primal Fire",
+          "chapter_theme": "Anxiety, Excitement, and the Alchemy of Defeat into Growth at the Threshold of Transformation",
+          "fiction_chapter_context": "Book 9, Chapter 30 — Anxiety/Excitement: Francisco demonstrates the ultimate mastery of transforming defeats into growth, using the charged energy of the darkest moment to power continuous cosmic evolution."
+        },
+
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "The Courageous Sentinel—learns to treat anxious anticipation not as a command to retreat, but as a signal to anchor into trust, purpose, and prepared action."
+        },
+
+        "color_alignment": {
+          "name": "Nobel",
+          "hsl": "0,0%,60%",
+          "rgb_hex": "#999999",
+          "color_symbolism": "A soft metallic grey—evoking suspended tension, the quiet hum between dread and anticipation where collapse can become breakthrough."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.79,
+            "stability": 0.58,
+            "empathy": 0.76,
+            "openness": 0.80,
+            "orderliness": 0.70,
+            "conscientiousness": 0.77,
+            "adaptability": 0.83,
+            "abstract_reasoning": 0.74,
+            "cooperativeness": 0.78,
+            "risk_tolerance": 0.71,
+            "emotional_intensity": 0.88,
+            "social_dominance": 0.55,
+            "novelty_seeking": 0.75,
+            "imagination": 0.82
+          },
+          "match_weights": {
+            "emotional_intensity": 0.24,
+            "adaptability": 0.20,
+            "agency": 0.18,
+            "stability": 0.20,
+            "conscientiousness": 0.18
+          },
+          "threshold": 0.86,
+
+          "top_signal_items": [
+            "Q3501",
+            "Q3502",
+            "Q3503",
+            "Q3504",
+            "Q3505",
+            "Q3506",
+            "Q3507",
+            "Q3508"
+          ],
+          "signals_map": {
+            "Q3501": {
+              "dimension": "emotional_intensity",
+              "polarity": 1,
+              "content": "When I care deeply about something, I often feel both nervous and excited at the same time."
+            },
+            "Q3502": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "When I feel anxious before a big step, I adjust my plan rather than abandoning it."
+            },
+            "Q3503": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "Even when my body feels keyed-up or restless, I can still choose actions that move me toward my goal."
+            },
+            "Q3504": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I can ride emotional waves without letting them completely derail my decisions."
+            },
+            "Q3505": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I prepare carefully for important moments so my anxiety has somewhere productive to go."
+            },
+            "Q3506": {
+              "dimension": "risk_tolerance",
+              "polarity": 1,
+              "content": "I’m willing to move forward even when I don’t feel fully ready, as long as the purpose matters."
+            },
+            "Q3507": {
+              "dimension": "emotional_intensity",
+              "polarity": -1,
+              "content": "When I feel anxious, I usually interpret it as a sign that something is wrong and should be avoided."
+            },
+            "Q3508": {
+              "dimension": "adaptability",
+              "polarity": -1,
+              "content": "Big changes leave me so overwhelmed that I tend to freeze instead of experimenting with next steps."
+            }
+          },
+
+          "daily_prompt": "Where are you feeling both nervous and excited right now—and what tiny, purposeful action could let that energy move instead of keeping it trapped inside you?",
+
+          "practices": [
+            "Name & Normalize: When you feel keyed up, pause and state out loud (or in writing): “I’m feeling anxious and excited because this matters.” Notice how naming the state reduces its power.",
+            "Breath the Bridge: Use a simple pattern (inhale 4, hold 4, exhale 6–8) for 2–3 minutes before important actions, telling yourself, “I’m teaching my body that activation can coexist with safety.”",
+            "Micro-Bravery Reps: Once per day, choose a small action that scares you slightly but aligns with your values (a message, a request, a decision) and complete it within 10 minutes.",
+            "Meaning Map: When anxiety spikes, jot down three things this moment could mean for your growth if you stay with it instead of backing away.",
+            "Post-Event Debrief: After a high-intensity moment, reflect briefly: What did I fear? What actually happened? What did I prove to myself? Use this to recalibrate your future threat meter."
+          ],
+
+          "transformation_indicators": [
+            "You begin to notice earlier when you are both anxious and excited—and you use that awareness to plan supports instead of cancelling or ghosting commitments.",
+            "Stressful situations feel more like demanding training sessions than personal verdicts on your worth or capability.",
+            "You increasingly choose small courageous actions in the presence of fear rather than waiting to feel ‘ready’ first.",
+            "Others describe you as steady under pressure, not because you are calm, but because you keep moving thoughtfully even while activated.",
+            "Your story about yourself shifts from ‘I’m too anxious’ to ‘I know how to work with my intensity at the edge of transformation.’"
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "Dark Night of the Soul",
+          "preliminary_beat": "Darkest Moment — Standing on the Brink of Final Transformation",
+          "save_the_cat_beat": "Dark Night of the Soul",
+          "character_state": "A charged, trembling force standing at the edge of irreversible change, learning to let fear and excitement sharpen purpose instead of shatter resolve.",
+          "ordinary_world_baseline": "A universe where anxious activation is treated as a malfunction to be suppressed, leading many beings to abandon their most important turning points.",
+          "push_turn": "By discovering that anxiety and excitement are two faces of the same threshold energy, Francisco models how to ride the wave of intensity into decisive transformation instead of retreat."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Daring Greatly",
+            "author": "Brené Brown",
+            "section_of_focus": "Wholehearted Living",
+            "section_description": "Embracing vulnerability as a source of strength.",
+            "connection_focus_area": "Transforming anxiety into courage.",
+            "connect_points": {
+              "point1": "Recognize vulnerability as a catalyst for growth.",
+              "point2": "Build resilience through authenticity.",
+              "point3": "Lead with empathy under pressure."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Understand the power of vulnerability.",
+              "objective2": "Develop strategies to embrace uncertainty.",
+              "objective3": "Cultivate empathy in leadership."
+            }
+          },
+          "book2": {
+            "title": "The Upside of Stress",
+            "author": "Kelly McGonigal",
+            "section_of_focus": "Rethinking Stress",
+            "section_description": "How to use stress to enhance performance.",
+            "connection_focus_area": "Harnessing stress for growth.",
+            "connect_points": {
+              "point1": "Reframe stress responses as helpful.",
+              "point2": "Leverage physiological benefits of positive stress.",
+              "point3": "Apply stress adaptation techniques."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Reframe stress as a performance enhancer.",
+              "objective2": "Implement stress management strategies.",
+              "objective3": "Use positive stress to build resilience."
+            }
+          },
+          "book3": {
+            "title": "Man’s Search for Meaning",
+            "author": "Viktor E. Frankl",
+            "section_of_focus": "Meaning in Suffering",
+            "section_description": "Logotherapy and finding purpose under adversity.",
+            "connection_focus_area": "Deriving purpose from challenges.",
+            "connect_points": {
+              "point1": "Identify personal meaning in struggle.",
+              "point2": "Develop purpose-driven actions.",
+              "point3": "Sustain hope under pressure."
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Articulate one’s own life purpose.",
+              "objective2": "Apply logotherapy principles.",
+              "objective3": "Maintain motivation through hardship."
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "At the edge of a collapsing yet rebirthing cosmos, Francisco stands in a convergence chamber where every past failure, misstep, and near-catastrophe is replayed in living light around him. The air vibrates with static—part terror, part thrill—as the final mechanism for continuous cosmic evolution waits for his command.",
+          "symbolic_moment": "As a storm of defeated timelines and abandoned possibilities spins overhead, Francisco places his hand on the core of the transformation engine. For a heartbeat his body shakes with pure anxiety, then he exhales, reinterpreting the tremor as readiness. The chamber responds—defeats melt into luminous threads that weave themselves into the machinery of an ever-improving universe.",
+          "emotional_landscape": "Intense and layered: a mix of dread, awe, heartbreak, and a rising sense of fierce hope. The feeling of standing on a cliff in the dark, knowing the only way forward is a leap—but realizing the wind rushing past your ears might actually be the sound of your wings catching.",
+          "victory_definition": "Not the absence of fear, but the ability to convert fear’s raw voltage into informed, purposeful action at the exact moment it would be easiest to back away.",
+          "transformation_promise": "When you learn to reinterpret anxiety as the body’s way of saying, ‘This matters—prepare and proceed,’ your darkest moments stop being dead ends and instead become launch pads for your highest evolution."
+        },
+
+        "epic_novel_pages": "Page 436 - 450",
+        "epic_chapter_focus": "Darkest moment (resolution)",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_preliminary_scene_description": "Scene XII: The Ultimate Boon",
+        "epic_novel_chapter_focus": "Part II: The Great One of the Night of Time",
+        "epic_novel_section_name": "Part II: The Great One of the Night of Time",
+        "focus_area": "Darkest moment (resolution)",
+        "specific_task_group_description": "The hero confronts waves of anxiety and excitement as they stand on the brink of final transformation.",
+        "specific_task_group_tagline": "Anxiety fuels progress.",
+        "tarot_card_link": "Disks/Five",
+        "new_tarot_family": "Minor Arcana",
+        "color_name": "Nobel",
+        "hex_code": "#999999",
+        "red": 153,
+        "green": 153,
+        "blue": 153
+      },
       "personality_profile_351": {},
       "personality_profile_352": {},
       "personality_profile_353": {},
