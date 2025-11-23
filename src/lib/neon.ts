@@ -1,12 +1,15 @@
 import { neon } from '@neondatabase/serverless';
 
-// Ensure DATABASE_URL is available (should be loaded by the calling script)
+// Ensure DATABASE_URL is available
 const databaseUrl = process.env.DATABASE_URL;
 
 if (!databaseUrl) {
-  throw new Error(
-    'DATABASE_URL is not set. Please ensure it is loaded from .env or .env.local before importing this module.'
-  );
+  const errorMsg =
+    'DATABASE_URL environment variable is not set. ' +
+    'Please configure it in your deployment platform (Vercel, etc.) or local .env file. ' +
+    'Get your Neon connection string from: https://console.neon.tech/app/projects';
+  console.error('❌ Database Configuration Error:', errorMsg);
+  throw new Error(errorMsg);
 }
 
 export const sql = neon(databaseUrl);

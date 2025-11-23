@@ -33,9 +33,18 @@ export async function GET(request: NextRequest) {
     const personalities = await getAllPersonalityProfiles();
     return NextResponse.json(personalities);
   } catch (error) {
-    console.error('Error loading personality profiles:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('Error loading personality profiles:', errorMessage);
+
+    // Return more detailed error information in development
+    const isDevelopment = process.env.NODE_ENV === 'development';
+
     return NextResponse.json(
-      { error: 'Failed to load personality profiles' },
+      {
+        error: 'Failed to load personality profiles',
+        details: isDevelopment ? errorMessage : undefined,
+        timestamp: new Date().toISOString(),
+      },
       { status: 500 }
     );
   }
