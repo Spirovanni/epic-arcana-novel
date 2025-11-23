@@ -72967,7 +72967,254 @@
         "green": 255,
         "blue": 204
       },    
-      "personality_profile_349": {},
+      "personality_profile_349": {
+        "canonical_id": "EA-349",
+        "unique_identifier": "STG 9.3.1.3",
+        "specific_task_group_title": "Steady Navigation",
+        "all_chapter": 349,
+        "novel_book": 9,
+        "chapter": "Chapter 29",
+        "chapter_title": "The Abyss — Steady Navigation Through the Dark Night",
+        "type": "Specific Task Group",
+        "display_name": "The Navigator of the Deep",
+        "theme": "When the path disappears, you don’t need perfect clarity—you need a true heading and people you trust enough to walk beside you.",
+        "family": "Steady Navigation — Direction Rooted in Relationship Under Pressure",
+
+        "summary": "At this point in Book 9, Francisco is no longer just surviving the Abyss—he is learning how to navigate it with deliberate calm and relational wisdom. The cosmos around him is unstable: timelines warp, alliances fray, and old maps fail. What once looked like a clear route forward now dissolves into fog, cross-currents, and conflicting signals.\n\nInstead of chasing quick exits or clinging to rigid plans, Francisco chooses a different approach: he treats the Abyss as a place that requires steady navigation, not heroic thrashing. He builds and strengthens friendships across species, realms, and histories—cosmic bonds that become living constellations he can steer by when the stars themselves blur. These friendships are not sentimental extras; they are guidance systems. Each relationship anchors a piece of direction, perspective, or courage when everything else feels like it’s slipping away.\n\nDrawing on antifragile principles, Francisco structures his choices so that small shocks build resilience instead of collapse. He designs redundant paths, allows for controlled failures, and leans into frequent course corrections rather than chasing one perfect move. When crises hit, he doesn’t sprint blindly; he shortens the horizon, picks the next honest waypoint, and checks in with his allies.\n\nBy the end of this phase, Francisco has woven a social fabric that can hold under pressure. The new universe will not be held together by fear of chaos or blind obedience, but by friendships that have proven themselves in the darkest waters. His gift is not just that he stayed on course—it’s that he taught the cosmos how to keep moving together when the night is at its deepest.",
+
+        "tarot_family": "Swords",
+        "tarot_card_item": "Six",
+
+        "traits": {
+          "strengths": [
+            "remains calm and oriented when others panic or lose direction",
+            "uses relationships and alliances as guidance systems rather than trying to carry everything alone",
+            "prefers steady progress and incremental course corrections over dramatic, risky maneuvers",
+            "designs structures, routines, and check-ins that keep people moving in the same direction under pressure",
+            "able to absorb shocks and setbacks without abandoning the long-term mission"
+          ],
+          "shadow": [
+            "may cling to a familiar course even when conditions clearly demand a bigger change",
+            "can become over-responsible for everyone’s stability, struggling to ask for help personally",
+            "risks suppressing their own emotions to stay ‘steady’ for others, leading to quiet burnout",
+            "might underplay opportunities for bold action, preferring safety over necessary risk",
+            "can confuse being anchored with being stuck, resisting experiments that would actually improve the path"
+          ],
+          "growth_focus": [
+            "differentiate between healthy steadiness and stubborn resistance—regularly ask, ‘Is this course still serving the real mission?’",
+            "share the weight of navigation by inviting others into planning, reflection, and decision-making",
+            "allow yourself to feel and express fear, doubt, or fatigue instead of carrying it silently",
+            "practice small, low-risk experiments so you stay adaptable while remaining grounded",
+            "tend intentionally to key friendships and alliances, so your support network is strong before the next storm hits"
+          ]
+        },
+
+        "book_association": {
+          "nonfiction_series": "The Human Framework",
+          "fiction_series": "Laurasia — The Great One of the Night of Time",
+          "chapter_theme": "Steady navigation, antifragile resilience, and friendship as guidance through the Abyss.",
+          "fiction_chapter_context": "Book 9, Chapter 29 — Steady Navigation: In the deepest phase of the Dark Night, Francisco builds lasting cosmic friendships that become navigational beacons. These relationships form the social fabric of the new universe, allowing him to maintain direction under pressure instead of being torn apart by the Abyss."
+        },
+
+        "enneagram_link": {
+          "family_number": 6,
+          "note": "The Steady Sentinel—grounded by loyalty, committed to the group’s safety, and focused on staying oriented when uncertainty and fear are highest."
+        },
+
+        "color_alignment": {
+          "name": "Green Mist",
+          "hsl": "60,33%,70%",
+          "rgb_hex": "#CCCC99",
+          "color_symbolism": "A soft, muted green-gold haze—suggesting quiet resilience, low-drama confidence, and the ability to stay calm and oriented when visibility is poor."
+        },
+
+        "scoring_model": {
+          "dimensions": {
+            "agency": 0.77,
+            "stability": 0.89,
+            "empathy": 0.82,
+            "openness": 0.71,
+            "orderliness": 0.75,
+            "conscientiousness": 0.83,
+            "adaptability": 0.84,
+            "abstract_reasoning": 0.78,
+            "cooperativeness": 0.88,
+            "risk_tolerance": 0.63,
+            "emotional_intensity": 0.68,
+            "social_dominance": 0.64,
+            "novelty_seeking": 0.60,
+            "imagination": 0.74
+          },
+          "match_weights": {
+            "stability": 0.26,
+            "cooperativeness": 0.22,
+            "adaptability": 0.18,
+            "conscientiousness": 0.18,
+            "agency": 0.16
+          },
+          "threshold": 0.86,
+
+          "top_signal_items": [
+            "Q3491",
+            "Q3492",
+            "Q3493",
+            "Q3494",
+            "Q3495",
+            "Q3496",
+            "Q3497",
+            "Q3498"
+          ],
+          "signals_map": {
+            "Q3491": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "In chaotic situations, I’m often the one who stays calm and helps others keep perspective."
+            },
+            "Q3492": {
+              "dimension": "cooperativeness",
+              "polarity": 1,
+              "content": "When things get hard, I lean on trusted relationships instead of trying to push through completely alone."
+            },
+            "Q3493": {
+              "dimension": "adaptability",
+              "polarity": 1,
+              "content": "If a plan stops working, I’m willing to adjust our route while still keeping the bigger goal in view."
+            },
+            "Q3494": {
+              "dimension": "conscientiousness",
+              "polarity": 1,
+              "content": "I like having simple routines or check-ins that keep everyone aligned and moving in the same direction."
+            },
+            "Q3495": {
+              "dimension": "agency",
+              "polarity": 1,
+              "content": "When I feel lost, I focus on choosing one clear next step rather than waiting for a perfect plan."
+            },
+            "Q3496": {
+              "dimension": "emotional_intensity",
+              "polarity": -1,
+              "content": "Under stress, my emotions sometimes swing so hard that I struggle to stay oriented on what matters."
+            },
+            "Q3497": {
+              "dimension": "stability",
+              "polarity": 1,
+              "content": "I can absorb a fair amount of pressure without immediately changing course or abandoning the effort."
+            },
+            "Q3498": {
+              "dimension": "cooperativeness",
+              "polarity": -1,
+              "content": "In tough times, I tend to shut people out instead of letting them help me navigate."
+            }
+          },
+
+          "daily_prompt": "Where in your life do things feel foggy right now—and what is one small, honest waypoint you can set today, together with someone you trust?",
+
+          "practices": [
+            "Three-Point Compass: When you feel overwhelmed, write down (1) what really matters here, (2) what you actually know, and (3) the smallest next step you can take. Use this as your temporary heading.",
+            "Friendship Check-In: Once per week, reach out to one person who helps you stay grounded. Share honestly where you feel lost, and ask how you can support their journey too.",
+            "Storm Log: During stressful periods, keep a short log of what happened, how you responded, and what kept you anchored. Review weekly to notice patterns that help you stay the course.",
+            "Red-Line Ritual: Define in advance your personal signs of overload (sleep, tension, irritability). When two or more appear, pause to rest, delegate, or adjust course instead of pushing blindly.",
+            "Navigation Huddle: For big decisions, gather key allies for a brief ‘navigation session’—name the goal, list real constraints, surface fears, and agree on the next few checkpoints rather than a rigid end-to-end plan."
+          ],
+
+          "transformation_indicators": [
+            "You respond to pressure less with panic or withdrawal and more with grounded curiosity: ‘What’s the next right move?’",
+            "You rely more consistently on trusted relationships, asking for perspective and support instead of quietly carrying everything alone.",
+            "Others begin to describe you as an anchor or guide when situations are confusing or emotionally intense.",
+            "You become more comfortable adjusting plans mid-journey, seeing course corrections as wisdom rather than failure.",
+            "Your life starts to feel less like a series of emergencies and more like a voyage—challenging, yes, but directed and shared."
+          ]
+        },
+
+        "hero_journey_position": {
+          "stage": "The Abyss",
+          "preliminary_beat": "Dark Night of the Soul — Learning to Steady the Course When Everything Feels Lost",
+          "save_the_cat_beat": "The Abyss",
+          "character_state": "A seasoned navigator in the Deep Night, discovering that real strength is not in muscling through the darkness alone, but in steering a network of relationships steadily through it.",
+          "ordinary_world_baseline": "In the old world, individuals and factions faced crises by either clinging to rigid plans or scattering in fear whenever conditions became volatile.",
+          "push_turn": "By building antifragile friendships and choosing steady, relational navigation over frantic escape, Francisco transforms the Abyss from a place of permanent lostness into a training ground for shared, long-term direction."
+        },
+
+        "specific_task_group_books_influenced_by": {
+          "book1": {
+            "title": "Antifragile: Things That Gain from Disorder",
+            "author": "Nassim Nicholas Taleb",
+            "section_of_focus": "Chapter 4: What to Expect",
+            "section_description": "Explores how systems can thrive amid volatility.",
+            "connection_focus_area": "resilient design",
+            "connect_points": {
+              "point1": "Build redundancy",
+              "point2": "Embrace small stressors",
+              "point3": "Adapt through experimentation"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Identify antifragile practices",
+              "objective2": "Design for variability",
+              "objective3": "Measure resilience outcomes"
+            }
+          },
+          "book2": {
+            "title": "The Obstacle Is the Way",
+            "author": "Ryan Holiday",
+            "section_of_focus": "Perception",
+            "section_description": "Shows how reframing difficulties creates opportunity.",
+            "connection_focus_area": "mindset shift",
+            "connect_points": {
+              "point1": "Reinterpret blockers as challenges",
+              "point2": "Focus on controllables",
+              "point3": "Act with calm determination"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Apply Stoic principles",
+              "objective2": "Reframe problems effectively",
+              "objective3": "Sustain composure under stress"
+            }
+          },
+          "book3": {
+            "title": "Resilience: Hard-Won Wisdom for Living a Better Life",
+            "author": "Eric Greitens",
+            "section_of_focus": "Letter III: Life’s Test",
+            "section_description": "Personal narratives on overcoming trials.",
+            "connection_focus_area": "emotional endurance",
+            "connect_points": {
+              "point1": "Cultivate gratitude",
+              "point2": "Seek supportive relationships",
+              "point3": "Practice self-reflection"
+            },
+            "terminal_learning_objectives": {
+              "objective1": "Develop coping strategies",
+              "objective2": "Build support networks",
+              "objective3": "Reflect to grow stronger"
+            }
+          }
+        },
+
+        "laurasia_narrative_integration": {
+          "opening_scene": "On the rim of the deepest cosmic trench, Francisco guides a fleet of luminous vessels—each captained by an ally he has fought beside—through swirling storms of broken time and fraying reality. The stars overhead flicker unreliably, but threads of living light connect the ships, mapping a moving constellation that responds as they adjust course together.",
+          "symbolic_moment": "In the heart of the storm, a shortcut path appears—an apparent clear lane promising quick escape from the Abyss, but which would shatter the fragile network of ships into isolated fragments. Instead of taking it, Francisco signals a slower, more difficult route that keeps everyone together. One by one, the captains align with his decision, and the living light between them brightens, forming a stable ‘road’ through the chaos.",
+          "emotional_landscape": "Creation and foundation: tension, uncertainty, and spikes of fear, met with steady breathing, shared resolve, and the quiet comfort of knowing that no one is navigating this darkness alone.",
+          "navigation_definition": "Navigation is not knowing exactly what lies ahead—it is choosing a shared heading, staying in honest communication, and adjusting together as reality shifts.",
+          "transformation_promise": "When you learn to steer by your values, your friendships, and the next honest waypoint instead of perfect certainty, even the darkest stretches of your journey become places where deeper trust and direction are forged."
+        },
+
+        "epic_novel_pages": "Page 421 – 435",
+        "epic_chapter_focus": "The Abyss",
+        "epic_preliminary_scene_focus": "Dark Night of the Soul",
+        "epic_preliminary_scene_description": "Scene XI: The Abyss",
+        "epic_novel_chapter_focus": "Part II: The Great One of the Night of Time",
+        "epic_novel_section_name": "Part II: The Great One of the Night of Time",
+        "focus_area": "The Abyss",
+        "specific_task_group_description": "Guidelines for maintaining direction under pressure.",
+        "specific_task_group_tagline": "Stay the course.",
+        "connection_to_the_major_task_group": "Dark Night of the Soul",
+        "tarot_card_link": "",
+        "new_tarot_family": "",
+        "color_name": "Green Mist",
+        "hex_code": "#CCCC99",
+        "red": 204,
+        "green": 204,
+        "blue": 153
+      },
       "personality_profile_350": {},
       "personality_profile_351": {},
       "personality_profile_352": {},
