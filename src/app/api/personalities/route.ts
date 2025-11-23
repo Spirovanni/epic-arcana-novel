@@ -1,46 +1,42 @@
-import { NextRequest, NextResponse } from 'next/server'
-import path from 'path'
-import fs from 'fs'
+import { NextRequest, NextResponse } from 'next/server';
+import {
+  getAllPersonalityProfiles,
+  getPersonalityByCanonicalId,
+  searchPersonalities,
+} from '@/lib/personality-db';
 
 export async function GET(request: NextRequest) {
   try {
-    // Get the personalities data file path
-    const dataPath = path.join(process.cwd(), 'lsa-assessment/data/epic_arcana_personality_profiles_1-360_canonical.json')
-    
-    // Check if file exists
-    if (!fs.existsSync(dataPath)) {
-      return NextResponse.json(
-        { error: 'Personality profiles data not found' },
-        { status: 404 }
-      )
-    }
+    const { searchParams } = new URL(request.url);
+    const profileId = searchParams.get('profileId');
+    const searchQuery = searchParams.get('search');
 
-    // Read and parse the personality profiles
-    const fileContent = fs.readFileSync(dataPath, 'utf-8')
-    const personalities = JSON.parse(fileContent)
-
-    // Check for specific personality ID query param
-    const { searchParams } = new URL(request.url)
-    const profileId = searchParams.get('profileId')
-
+    // Get single profile by canonical ID
     if (profileId) {
-      const personality = personalities.find((p: any) => p.id === profileId)
+      const personality = await getPersonalityByCanonicalId(profileId);
       if (!personality) {
         return NextResponse.json(
           { error: 'Personality profile not found' },
           { status: 404 }
-        )
+        );
       }
-      return NextResponse.json(personality)
+      return NextResponse.json(personality);
+    }
+
+    // Search profiles
+    if (searchQuery && searchQuery.trim().length > 0) {
+      const results = await searchPersonalities(searchQuery);
+      return NextResponse.json(results);
     }
 
     // Return all personalities
-    return NextResponse.json(personalities)
+    const personalities = await getAllPersonalityProfiles();
+    return NextResponse.json(personalities);
   } catch (error) {
-    console.error('Error loading personality profiles:', error)
+    console.error('Error loading personality profiles:', error);
     return NextResponse.json(
       { error: 'Failed to load personality profiles' },
       { status: 500 }
-    )
+    );
   }
 }

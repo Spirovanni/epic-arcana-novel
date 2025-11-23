@@ -2,67 +2,27 @@
 
 import { useState, useEffect } from 'react'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
 import { AssessmentButton } from '@/components/ui/AssessmentButton'
 import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
-import { getChapterIconPath } from '@/lib/icons'
-import { ArrowLeft, BookOpen, Users, Calendar, Star, Heart, Zap, Target } from 'lucide-react'
+import { ArrowLeft, BookOpen, Star, Heart, Zap, Target } from 'lucide-react'
 
 interface PersonalityProfile {
   id: string
-  chapter: number
-  display_name: string
-  theme: string
-  family: string
-  summary: string
-  traits: {
-    strengths: string[]
-    shadow: string[]
-    growth_focus: string[]
-  }
-  color_alignment: {
-    rgb_hex: string
-    color_name: string
-  }
-  thematic_essence: {
-    tagline: string
-    core_theme: string
-    focus_area: string
-    connection_to_major_theme: string
-    archetypal_family: string
-  }
-  character_development: {
-    hero_journey_stage: string
-    narrative_arc: {
-      pages: string
-      focus: string
-      scene_description: string
-    }
-    character_arcs: Record<string, string>
-  }
-  literary_influences: Array<{
-    title: string
-    author: string
-    focus_section: string
-    connection: string
-    key_insights: string[]
-  }>
-  book_association: {
-    tarot_connection: {
-      family: string
-      card: string
-      link: string
-    }
-  }
-  scoring_model: {
-    dimensions: Record<string, number>
-  }
+  canonical_id: string
+  unique_identifier: string
+  display_name: string | null
+  theme: string | null
+  family: string | null
+  color_alignment: Record<string, any> | null
+  enneagram_link: Record<string, any> | null
+  book_association: Record<string, any> | null
+  scoring_model: Record<string, any> | null
+  specific_task_group_books_influenced_by: Record<string, any> | null
 }
 
 export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
@@ -73,38 +33,25 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
   useEffect(() => {
     const loadPersonality = async () => {
       try {
-        // Await the params promise
         const { profileId } = await params
-        
+
         if (!profileId) {
           console.error('No profile ID provided')
           setLoading(false)
           return
         }
-        
-        // Load personality profiles and find the specific one
-        const response = await fetch('/api/personalities')
+
+        // Fetch from database via API
+        const response = await fetch(`/api/personalities?profileId=${profileId}`)
         if (response.ok) {
-          const profiles = await response.json()
-          if (!Array.isArray(profiles)) {
-            console.error('Invalid personality data format')
-            setLoading(false)
-            return
-          }
-          
-          const profile = profiles.find((p: PersonalityProfile) => p?.id === profileId)
-          if (profile) {
-            // Validate that the profile has essential data
-            if (profile.display_name && profile.id && profile.chapter) {
-              setPersonality(profile)
-            } else {
-              console.error('Profile missing essential data:', profile)
-            }
+          const profile = await response.json()
+          if (profile && profile.canonical_id) {
+            setPersonality(profile)
           } else {
-            console.error('Profile not found:', profileId)
+            console.error('Profile missing essential data:', profile)
           }
         } else {
-          console.error('Failed to load personalities:', response.status, response.statusText)
+          console.error('Failed to load personality:', response.status)
         }
       } catch (error) {
         console.error('Error loading personality:', error)
@@ -142,17 +89,23 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
   }
 
   const topDimensions = Object.entries(personality.scoring_model?.dimensions || {})
-    .sort(([,a], [,b]) => b - a)
+    .sort(([, a], [, b]) => (b as number) - (a as number))
     .slice(0, 6)
+
+  const colorHex = personality.color_alignment?.rgb_hex || '#6B7280'
+  const colorName = personality.color_alignment?.name || personality.color_alignment?.color_name || 'Color Alignment'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <DashboardNavbar />
-      
+
       {/* Navigation */}
       <div className="border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
         <div className="container mx-auto px-6 py-4">
-          <Link href="/personalities" className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors">
+          <Link
+            href="/personalities"
+            className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors"
+          >
             <ArrowLeft className="h-4 w-4" />
             Back to Personalities
           </Link>
@@ -166,29 +119,22 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
             <div className="relative">
               {/* Background Pattern */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-600/10 to-transparent"></div>
-              
+
               <div className="relative p-8">
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                  {/* Icon and Color */}
+                  {/* Icon and Color Circle */}
                   <div className="flex flex-col items-center space-y-4">
                     <div className="relative">
-                      <div 
+                      <div
                         className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
-                        style={{ backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280' }}
+                        style={{ backgroundColor: colorHex }}
                       />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-16 h-16 relative">
-                          <Image
-                            src={getChapterIconPath(personality.chapter)}
-                            alt={`Chapter ${personality.chapter} Icon`}
-                            fill
-                            className="object-contain filter brightness-0 invert"
-                          />
-                        </div>
+                      <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white/80">
+                        {personality.canonical_id}
                       </div>
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                      {personality.color_alignment?.color_name || 'Color not available'}
+                      {colorName}
                     </Badge>
                   </div>
 
@@ -196,33 +142,39 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                   <div className="flex-1 text-center md:text-left space-y-4">
                     <div>
                       <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent mb-2">
-                        {personality.display_name}
+                        {personality.display_name || 'Unknown Personality'}
                       </h1>
                       <p className="text-xl text-purple-200">
-                        {personality.id} • Chapter {personality.chapter}
+                        {personality.canonical_id} • {personality.unique_identifier}
                       </p>
-                      <p className="text-lg text-gray-300">
-                        {personality.family} • {personality.thematic_essence?.core_theme || 'Theme not available'}
+                      <p className="text-lg text-gray-300 mt-2">
+                        {personality.family || 'Family not specified'}
                       </p>
                     </div>
-                    
-                    <p className="text-lg text-gray-300 italic leading-relaxed max-w-2xl">
-                      "{personality.thematic_essence?.tagline || 'Tagline not available'}"
-                    </p>
 
-                    <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                    {personality.theme && (
+                      <p className="text-lg text-gray-300 italic leading-relaxed max-w-2xl">
+                        "{personality.theme}"
+                      </p>
+                    )}
+
+                    <div className="flex flex-wrap gap-2 justify-center md:justify-start pt-2">
                       <Badge variant="outline" className="border-blue-500/50 text-blue-300">
                         <BookOpen className="h-3 w-3 mr-1" />
-                        {personality.thematic_essence?.focus_area || 'Focus area not available'}
+                        {personality.unique_identifier}
                       </Badge>
-                      <Badge variant="outline" className="border-green-500/50 text-green-300">
-                        <Star className="h-3 w-3 mr-1" />
-                        {personality.thematic_essence?.archetypal_family || 'Family not available'}
-                      </Badge>
-                      <Badge variant="outline" className="border-amber-500/50 text-amber-300">
-                        <Zap className="h-3 w-3 mr-1" />
-                        {personality.character_development?.hero_journey_stage || 'Journey stage not available'}
-                      </Badge>
+                      {personality.enneagram_link?.family_number && (
+                        <Badge variant="outline" className="border-green-500/50 text-green-300">
+                          <Star className="h-3 w-3 mr-1" />
+                          Enneagram Type {personality.enneagram_link.family_number}
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="pt-4">
+                      <AssessmentButton variant="mystical" className="w-full">
+                        Take Assessment to Find Your Type
+                      </AssessmentButton>
                     </div>
                   </div>
                 </div>
@@ -233,11 +185,9 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
         {/* Main Content Tabs */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 bg-slate-800/50 border-purple-500/30">
+          <TabsList className="grid w-full grid-cols-3 bg-slate-800/50 border-purple-500/30">
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="traits">Traits</TabsTrigger>
-            <TabsTrigger value="development">Development</TabsTrigger>
-            <TabsTrigger value="influences">Influences</TabsTrigger>
+            <TabsTrigger value="details">Details</TabsTrigger>
             <TabsTrigger value="dimensions">Dimensions</TabsTrigger>
           </TabsList>
 
@@ -248,29 +198,25 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 <CardHeader>
                   <CardTitle className="text-purple-300 flex items-center gap-2">
                     <Heart className="h-5 w-5" />
-                    Personality Essence
+                    Profile Information
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Core Theme</h4>
-                    <p className="text-gray-300 text-sm">
-                      {personality.thematic_essence?.core_theme || 'Theme not available'} - {personality.thematic_essence?.focus_area || 'Focus not available'}
-                    </p>
+                    <h4 className="font-semibold text-gray-200 mb-2">Canonical ID</h4>
+                    <p className="text-gray-300 text-sm font-mono">{personality.canonical_id}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Summary</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {personality.summary || 'Summary not available'}
-                    </p>
+                    <h4 className="font-semibold text-gray-200 mb-2">Unique Identifier</h4>
+                    <p className="text-gray-300 text-sm font-mono">{personality.unique_identifier}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Deep Connection</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {personality.thematic_essence?.connection_to_major_theme ? 
-                        `${personality.thematic_essence.connection_to_major_theme.slice(0, 200)}...` : 
-                        'Connection description not available'}
-                    </p>
+                    <h4 className="font-semibold text-gray-200 mb-2">Family</h4>
+                    <p className="text-gray-300 text-sm">{personality.family || 'Not specified'}</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-200 mb-2">Display Name</h4>
+                    <p className="text-gray-300 text-sm">{personality.display_name || 'Not specified'}</p>
                   </div>
                 </CardContent>
               </Card>
@@ -279,166 +225,97 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 <CardHeader>
                   <CardTitle className="text-blue-300 flex items-center gap-2">
                     <Target className="h-5 w-5" />
-                    Archetypal Connections
+                    Theme & Context
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Tarot Family</h4>
-                    <div className="flex items-center gap-2">
-                      <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                        {personality.book_association?.tarot_connection?.family || 'Tarot family not available'}
-                      </Badge>
-                      <span className="text-gray-400 text-sm">
-                        {personality.book_association?.tarot_connection?.card || 'Card not available'}
-                      </span>
+                  {personality.theme && (
+                    <div>
+                      <h4 className="font-semibold text-gray-200 mb-2">Central Theme</h4>
+                      <p className="text-gray-400 text-sm leading-relaxed">{personality.theme}</p>
                     </div>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Hero's Journey Stage</h4>
-                    <p className="text-gray-300 text-sm">
-                      {personality.character_development?.hero_journey_stage || 'Journey stage not available'}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-200 mb-2">Story Context</h4>
-                    <p className="text-gray-400 text-sm">
-                      {personality.character_development?.narrative_arc?.pages || 'Pages not available'} - {personality.character_development?.narrative_arc?.focus || 'Focus not available'}
-                    </p>
-                  </div>
-                  <div className="pt-4">
-                    <AssessmentButton variant="mystical" className="w-full">
-                      Take Assessment to Find Your Type
-                    </AssessmentButton>
-                  </div>
+                  )}
+
+                  {personality.enneagram_link && Object.keys(personality.enneagram_link).length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-gray-200 mb-2">Enneagram Connection</h4>
+                      <div className="text-gray-400 text-sm space-y-1">
+                        {personality.enneagram_link.family_number && (
+                          <p>Type: {personality.enneagram_link.family_number}</p>
+                        )}
+                        {personality.enneagram_link.note && (
+                          <p className="italic">{personality.enneagram_link.note}</p>
+                        )}
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
           </TabsContent>
 
-          {/* Traits Tab */}
-          <TabsContent value="traits" className="space-y-6">
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-slate-800/50 border-green-500/30">
-                <CardHeader>
-                  <CardTitle className="text-green-300 flex items-center gap-2">
-                    ✨ Strengths
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {(personality.traits?.strengths || []).map((strength, index) => (
-                      <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-green-400 mt-1">•</span>
-                        {strength}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-800/50 border-amber-500/30">
-                <CardHeader>
-                  <CardTitle className="text-amber-300 flex items-center gap-2">
-                    ⚠️ Shadow Aspects
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {(personality.traits?.shadow || []).map((shadow, index) => (
-                      <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-amber-400 mt-1">•</span>
-                        {shadow}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-slate-800/50 border-blue-500/30">
-                <CardHeader>
-                  <CardTitle className="text-blue-300 flex items-center gap-2">
-                    🎯 Growth Focus
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {(personality.traits?.growth_focus || []).map((focus, index) => (
-                      <li key={index} className="text-gray-300 text-sm flex items-start gap-2">
-                        <span className="text-blue-400 mt-1">•</span>
-                        {focus}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </TabsContent>
-
-          {/* Development Tab */}
-          <TabsContent value="development" className="space-y-6">
+          {/* Details Tab */}
+          <TabsContent value="details" className="space-y-6">
             <Card className="bg-slate-800/50 border-purple-500/30">
               <CardHeader>
                 <CardTitle className="text-purple-300 flex items-center gap-2">
-                  📚 Character Development Journey
+                  📖 Book Association & Influences
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-3">Narrative Arc</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {personality.character_development?.narrative_arc?.scene_description || 'Scene description not available'}
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-200 mb-3">Character Progression</h3>
-                  <div className="grid gap-4">
-                    {Object.entries(personality.character_development?.character_arcs || {}).map(([character, arc]) => (
-                      <div key={character} className="p-4 bg-slate-700/50 rounded-lg border border-purple-500/20">
-                        <h4 className="font-semibold text-purple-300 mb-2">{character}</h4>
-                        <p className="text-gray-400 text-sm leading-relaxed">{arc}</p>
+                {personality.book_association && Object.keys(personality.book_association).length > 0 ? (
+                  <div className="space-y-4">
+                    {Object.entries(personality.book_association).map(([key, value]: [string, any]) => (
+                      <div key={key} className="p-4 bg-slate-700/50 rounded-lg border border-purple-500/20">
+                        <h4 className="font-semibold text-purple-300 mb-2 capitalize">
+                          {key.replace(/_/g, ' ')}
+                        </h4>
+                        {typeof value === 'object' ? (
+                          <div className="text-gray-400 text-sm space-y-1">
+                            {Object.entries(value).map(([k, v]: [string, any]) => (
+                              <p key={k}>
+                                <span className="text-gray-300 capitalize">{k.replace(/_/g, ' ')}:</span> {v}
+                              </p>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-gray-400 text-sm">{value}</p>
+                        )}
                       </div>
                     ))}
                   </div>
-                </div>
+                ) : (
+                  <p className="text-gray-400 text-sm">No book association data available</p>
+                )}
               </CardContent>
             </Card>
-          </TabsContent>
 
-          {/* Influences Tab */}
-          <TabsContent value="influences" className="space-y-6">
-            <div className="grid gap-6">
-              {(personality.literary_influences || []).map((influence, index) => (
-                <Card key={index} className="bg-slate-800/50 border-purple-500/30">
+            {personality.specific_task_group_books_influenced_by &&
+              Object.keys(personality.specific_task_group_books_influenced_by).length > 0 && (
+                <Card className="bg-slate-800/50 border-blue-500/30">
                   <CardHeader>
-                    <CardTitle className="text-purple-300">
-                      "{influence?.title || 'Title not available'}" by {influence?.author || 'Author not available'}
+                    <CardTitle className="text-blue-300 flex items-center gap-2">
+                      <BookOpen className="h-5 w-5" />
+                      Influenced Books & Resources
                     </CardTitle>
-                    <p className="text-gray-400 text-sm">{influence?.focus_section || 'Focus section not available'}</p>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-gray-200 mb-2">Connection to Personality</h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
-                        {influence?.connection || 'Connection not available'}
-                      </p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-200 mb-2">Key Insights</h4>
-                      <ul className="space-y-1">
-                        {(influence?.key_insights || []).map((insight, i) => (
-                          <li key={i} className="text-gray-400 text-sm flex items-start gap-2">
-                            <span className="text-purple-400 mt-1">•</span>
-                            {insight}
-                          </li>
-                        ))}
-                      </ul>
+                  <CardContent>
+                    <div className="grid gap-3">
+                      {Object.entries(personality.specific_task_group_books_influenced_by).map(
+                        ([key, value]: [string, any]) => (
+                          <div
+                            key={key}
+                            className="p-3 bg-slate-700/50 rounded border border-blue-500/20"
+                          >
+                            <p className="text-blue-300 font-semibold">{key}</p>
+                            <p className="text-gray-400 text-sm mt-1">{value}</p>
+                          </div>
+                        )
+                      )}
                     </div>
                   </CardContent>
                 </Card>
-              ))}
-            </div>
+              )}
           </TabsContent>
 
           {/* Dimensions Tab */}
@@ -450,26 +327,32 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid gap-4">
-                  {topDimensions.map(([dimension, score]) => (
-                    <div key={dimension} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-medium text-gray-200 capitalize">
-                          {dimension.replace('_', ' ')}
-                        </span>
-                        <span className={`font-semibold ${getDimensionColor(score)}`}>
-                          {score.toFixed(1)}/10
-                        </span>
+                {topDimensions.length > 0 ? (
+                  <div className="grid gap-4">
+                    {topDimensions.map(([dimension, score]: [string, any]) => (
+                      <div key={dimension} className="space-y-2">
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-gray-200 capitalize">
+                            {dimension.replace(/_/g, ' ')}
+                          </span>
+                          <span className={`font-semibold ${getDimensionColor(score)}`}>
+                            {score?.toFixed(2)}/10
+                          </span>
+                        </div>
+                        <Progress value={(score as number) * 10} className="h-3" />
+                        <div className="text-xs text-gray-500">
+                          {score >= 7
+                            ? 'Strong presence in this personality'
+                            : score >= 4
+                              ? 'Moderate influence on behavior'
+                              : 'Area for potential development'}
+                        </div>
                       </div>
-                      <Progress value={score * 10} className="h-3" />
-                      <div className="text-xs text-gray-500">
-                        {score >= 7 ? 'Strong presence in this personality' :
-                         score >= 4 ? 'Moderate influence on behavior' :
-                         'Area for potential development'}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="text-gray-400 text-sm">No dimension data available</p>
+                )}
               </CardContent>
             </Card>
           </TabsContent>
