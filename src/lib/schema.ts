@@ -735,6 +735,22 @@ export const shadow = pgTable('shadow', {
   updatedAt: timestamp('updated_at').defaultNow(),
 });
 
+// Personality Profile Growth Focus Table
+export const growthFocus = pgTable('growth_focus', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  canonicalId: varchar('canonical_id', { length: 20 }).notNull(), // e.g., "EA-001"
+  profileKey: varchar('profile_key', { length: 50 }), // e.g., "personality_profile_321"
+  uniqueIdentifier: varchar('unique_identifier', { length: 50 }), // e.g., "STG 9.1.1.1"
+  specificTaskGroupTitle: text('specific_task_group_title'),
+  chapterTitle: text('chapter_title'),
+  displayName: text('display_name'),
+  theme: text('theme'),
+  growthIndex: integer('growth_index').notNull(), // 1-based position within profile
+  growthText: text('growth_text').notNull(), // The actual growth focus item
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
 // Human Framework Calendar Tables
 export const calendarSettings = pgTable('calendar_settings', {
   id: integer('id').primaryKey().generatedAlwaysAsIdentity({ name: 'calendar_settings_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
