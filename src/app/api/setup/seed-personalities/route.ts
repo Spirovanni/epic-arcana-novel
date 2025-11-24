@@ -68,7 +68,7 @@ export async function POST(request: Request) {
         await sql`
           INSERT INTO personality_profiles (
             id, canonical_id, unique_identifier, display_name, theme, family,
-            traits, book_association, enneagram_link, color_alignment, scoring_model,
+            book_association, enneagram_link, color_alignment, scoring_model,
             specific_task_group_books_influenced_by
           ) VALUES (
             ${profile.id},
@@ -77,7 +77,6 @@ export async function POST(request: Request) {
             ${profile.display_name || null},
             ${profile.theme || null},
             ${profile.family || null},
-            ${JSON.stringify(profile.traits || {})},
             ${JSON.stringify(profile.book_association || {})},
             ${JSON.stringify(profile.enneagram_link || {})},
             ${JSON.stringify(profile.color_alignment || {})},

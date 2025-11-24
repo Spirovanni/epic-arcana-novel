@@ -16,11 +16,6 @@ interface PersonalityProfile {
   display_name: string | null
   theme: string | null
   family: string | null
-  traits: {
-    strengths?: string[]
-    shadow?: string[]
-    growth_focus?: string[]
-  } | null
   color_alignment: Record<string, any> | null
 }
 
@@ -233,146 +228,7 @@ export default function PersonalitiesPage() {
 
             {searchResults.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {searchResults.map(personality => {
-                  const traits = personality.traits;
-                  const hasTraits = traits && (
-                    (traits.strengths && traits.strengths.length > 0) ||
-                    (traits.shadow && traits.shadow.length > 0) ||
-                    (traits.growth_focus && traits.growth_focus.length > 0)
-                  );
-
-                  return (
-                    <Link
-                      key={personality.id}
-                      href={`/personality/${personality.canonical_id}`}
-                    >
-                      <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group">
-                        <CardContent className="p-4 space-y-3">
-                          <div className="flex items-start justify-between gap-3">
-                            <div className="flex-1">
-                              <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
-                                ID
-                              </div>
-                              <div
-                                className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
-                                style={{
-                                  backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
-                                }}
-                              >
-                                {personality.canonical_id}
-                              </div>
-                            </div>
-                            <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
-                          </div>
-
-                          <div>
-                            <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-2 text-sm">
-                              {personality.display_name || 'Unknown'}
-                            </h3>
-                            <p className="text-xs text-gray-500 mt-1 line-clamp-1">
-                              {personality.unique_identifier}
-                            </p>
-                          </div>
-
-                          {personality.theme && (
-                            <p className="text-xs text-gray-400 line-clamp-2">
-                              {personality.theme}
-                            </p>
-                          )}
-
-                          {personality.family && (
-                            <Badge variant="outline" className="border-purple-500/30 text-purple-300 text-xs">
-                              {personality.family}
-                            </Badge>
-                          )}
-
-                          {hasTraits && (
-                            <div className="space-y-2 border-t border-purple-500/20 pt-3">
-                              {traits.strengths && traits.strengths.length > 0 && (
-                                <div>
-                                  <p className="text-xs font-semibold text-emerald-300 uppercase mb-1">Strengths</p>
-                                  <ul className="space-y-1">
-                                    {traits.strengths.slice(0, 2).map((strength, idx) => (
-                                      <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                        <span className="text-emerald-400 flex-shrink-0">•</span>
-                                        <span>{strength}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-                              {traits.shadow && traits.shadow.length > 0 && (
-                                <div>
-                                  <p className="text-xs font-semibold text-amber-300 uppercase mb-1">Shadow</p>
-                                  <ul className="space-y-1">
-                                    {traits.shadow.slice(0, 2).map((shadow, idx) => (
-                                      <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                        <span className="text-amber-400 flex-shrink-0">•</span>
-                                        <span>{shadow}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-                              {traits.growth_focus && traits.growth_focus.length > 0 && (
-                                <div>
-                                  <p className="text-xs font-semibold text-blue-300 uppercase mb-1">Growth</p>
-                                  <ul className="space-y-1">
-                                    {traits.growth_focus.slice(0, 2).map((growth, idx) => (
-                                      <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                        <span className="text-blue-400 flex-shrink-0">•</span>
-                                        <span>{growth}</span>
-                                      </li>
-                                    ))}
-                                  </ul>
-                                </div>
-                              )}
-                            </div>
-                          )}
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  );
-                })}
-              </div>
-            ) : (
-              <Card className="bg-slate-800/50 border-purple-500/30">
-                <CardContent className="p-8 text-center">
-                  <Sparkles className="h-12 w-12 text-gray-600 mx-auto mb-4" />
-                  <p className="text-gray-400">No personalities match your search.</p>
-                  <Button
-                    onClick={() => setSearchTerm('')}
-                    variant="outline"
-                    className="mt-4"
-                  >
-                    Clear Search
-                  </Button>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-        )}
-
-        {/* All Personalities View (sorted by canonical_id) */}
-        {viewMode === 'families' && !selectedFamily && (
-          <div className="space-y-6">
-            <div>
-              <h1 className="text-3xl font-bold text-white mb-2">All Personalities</h1>
-              <p className="text-gray-400">
-                Browse all {personalities.length} personality profiles sorted by canonical ID
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-              {getSortedPersonalities().map(personality => {
-                const traits = personality.traits;
-                const hasTraits = traits && (
-                  (traits.strengths && traits.strengths.length > 0) ||
-                  (traits.shadow && traits.shadow.length > 0) ||
-                  (traits.growth_focus && traits.growth_focus.length > 0)
-                );
-
-                return (
+                {searchResults.map(personality => (
                   <Link
                     key={personality.id}
                     href={`/personality/${personality.canonical_id}`}
@@ -416,55 +272,88 @@ export default function PersonalitiesPage() {
                             {personality.family}
                           </Badge>
                         )}
-
-                        {hasTraits && (
-                          <div className="space-y-2 border-t border-purple-500/20 pt-3">
-                            {traits.strengths && traits.strengths.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-emerald-300 uppercase mb-1">Strengths</p>
-                                <ul className="space-y-1">
-                                  {traits.strengths.slice(0, 2).map((strength, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-emerald-400 flex-shrink-0">•</span>
-                                      <span>{strength}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                            {traits.shadow && traits.shadow.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-amber-300 uppercase mb-1">Shadow</p>
-                                <ul className="space-y-1">
-                                  {traits.shadow.slice(0, 2).map((shadow, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-amber-400 flex-shrink-0">•</span>
-                                      <span>{shadow}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                            {traits.growth_focus && traits.growth_focus.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-blue-300 uppercase mb-1">Growth</p>
-                                <ul className="space-y-1">
-                                  {traits.growth_focus.slice(0, 2).map((growth, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-blue-400 flex-shrink-0">•</span>
-                                      <span>{growth}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                          </div>
-                        )}
                       </CardContent>
                     </Card>
                   </Link>
-                );
-              })}
+                ))}
+              </div>
+            ) : (
+              <Card className="bg-slate-800/50 border-purple-500/30">
+                <CardContent className="p-8 text-center">
+                  <Sparkles className="h-12 w-12 text-gray-600 mx-auto mb-4" />
+                  <p className="text-gray-400">No personalities match your search.</p>
+                  <Button
+                    onClick={() => setSearchTerm('')}
+                    variant="outline"
+                    className="mt-4"
+                  >
+                    Clear Search
+                  </Button>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        )}
+
+        {/* All Personalities View (sorted by canonical_id) */}
+        {viewMode === 'families' && !selectedFamily && (
+          <div className="space-y-6">
+            <div>
+              <h1 className="text-3xl font-bold text-white mb-2">All Personalities</h1>
+              <p className="text-gray-400">
+                Browse all {personalities.length} personality profiles sorted by canonical ID
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {getSortedPersonalities().map(personality => (
+                <Link
+                  key={personality.id}
+                  href={`/personality/${personality.canonical_id}`}
+                >
+                  <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group">
+                    <CardContent className="p-4 space-y-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
+                            ID
+                          </div>
+                          <div
+                            className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
+                            style={{
+                              backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
+                            }}
+                          >
+                            {personality.canonical_id}
+                          </div>
+                        </div>
+                        <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-2 text-sm">
+                          {personality.display_name || 'Unknown'}
+                        </h3>
+                        <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+                          {personality.unique_identifier}
+                        </p>
+                      </div>
+
+                      {personality.theme && (
+                        <p className="text-xs text-gray-400 line-clamp-2">
+                          {personality.theme}
+                        </p>
+                      )}
+
+                      {personality.family && (
+                        <Badge variant="outline" className="border-purple-500/30 text-purple-300 text-xs">
+                          {personality.family}
+                        </Badge>
+                      )}
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
         )}
@@ -480,101 +369,54 @@ export default function PersonalitiesPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {getPersonalitiesByFamily(selectedFamily).map(personality => {
-                const traits = personality.traits;
-                const hasTraits = traits && (
-                  (traits.strengths && traits.strengths.length > 0) ||
-                  (traits.shadow && traits.shadow.length > 0) ||
-                  (traits.growth_focus && traits.growth_focus.length > 0)
-                );
-
-                return (
-                  <Link
-                    key={personality.id}
-                    href={`/personality/${personality.canonical_id}`}
-                  >
-                    <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group">
-                      <CardContent className="p-4 space-y-3">
-                        <div className="flex items-start justify-between gap-3">
-                          <div className="flex-1">
-                            <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
-                              ID
-                            </div>
-                            <div
-                              className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
-                              style={{
-                                backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
-                              }}
-                            >
-                              {personality.canonical_id}
-                            </div>
+              {getPersonalitiesByFamily(selectedFamily).map(personality => (
+                <Link
+                  key={personality.id}
+                  href={`/personality/${personality.canonical_id}`}
+                >
+                  <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group">
+                    <CardContent className="p-4 space-y-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
+                            ID
                           </div>
-                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
-                        </div>
-
-                        <div>
-                          <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-2 text-sm">
-                            {personality.display_name || 'Unknown'}
-                          </h3>
-                          <p className="text-xs text-gray-500 mt-1 line-clamp-1">
-                            {personality.unique_identifier}
-                          </p>
-                        </div>
-
-                        {personality.theme && (
-                          <p className="text-xs text-gray-400 line-clamp-2">
-                            {personality.theme}
-                          </p>
-                        )}
-
-                        {hasTraits && (
-                          <div className="space-y-2 border-t border-purple-500/20 pt-3">
-                            {traits.strengths && traits.strengths.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-emerald-300 uppercase mb-1">Strengths</p>
-                                <ul className="space-y-1">
-                                  {traits.strengths.slice(0, 2).map((strength, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-emerald-400 flex-shrink-0">•</span>
-                                      <span>{strength}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                            {traits.shadow && traits.shadow.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-amber-300 uppercase mb-1">Shadow</p>
-                                <ul className="space-y-1">
-                                  {traits.shadow.slice(0, 2).map((shadow, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-amber-400 flex-shrink-0">•</span>
-                                      <span>{shadow}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
-                            {traits.growth_focus && traits.growth_focus.length > 0 && (
-                              <div>
-                                <p className="text-xs font-semibold text-blue-300 uppercase mb-1">Growth</p>
-                                <ul className="space-y-1">
-                                  {traits.growth_focus.slice(0, 2).map((growth, idx) => (
-                                    <li key={idx} className="text-xs text-gray-300 line-clamp-1 flex items-start gap-1">
-                                      <span className="text-blue-400 flex-shrink-0">•</span>
-                                      <span>{growth}</span>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            )}
+                          <div
+                            className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
+                            style={{
+                              backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
+                            }}
+                          >
+                            {personality.canonical_id}
                           </div>
-                        )}
-                      </CardContent>
-                    </Card>
-                  </Link>
-                );
-              })}
+                        </div>
+                        <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                      </div>
+
+                      <div>
+                        <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-2 text-sm">
+                          {personality.display_name || 'Unknown'}
+                        </h3>
+                        <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+                          {personality.unique_identifier}
+                        </p>
+                      </div>
+
+                      {personality.theme && (
+                        <p className="text-xs text-gray-400 line-clamp-2">
+                          {personality.theme}
+                        </p>
+                      )}
+
+                      {personality.family && (
+                        <Badge variant="outline" className="border-purple-500/30 text-purple-300 text-xs">
+                          {personality.family}
+                        </Badge>
+                      )}
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
         )}

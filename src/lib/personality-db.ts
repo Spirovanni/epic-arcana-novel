@@ -7,11 +7,6 @@ export interface PersonalityProfile {
   display_name: string | null;
   theme: string | null;
   family: string | null;
-  traits: {
-    strengths?: string[];
-    shadow?: string[];
-    growth_focus?: string[];
-  } | null;
   book_association: Record<string, any> | null;
   enneagram_link: Record<string, any> | null;
   color_alignment: Record<string, any> | null;
@@ -34,7 +29,6 @@ export async function getAllPersonalityProfiles(): Promise<PersonalityProfile[]>
         display_name,
         theme,
         family,
-        traits,
         book_association,
         enneagram_link,
         color_alignment,
@@ -68,7 +62,6 @@ export async function getPersonalityByCanonicalId(
         display_name,
         theme,
         family,
-        traits,
         book_association,
         enneagram_link,
         color_alignment,
@@ -104,7 +97,6 @@ export async function getPersonalitiesByFamily(
         display_name,
         theme,
         family,
-        traits,
         book_association,
         enneagram_link,
         color_alignment,
@@ -140,7 +132,6 @@ export async function searchPersonalities(
         display_name,
         theme,
         family,
-        traits,
         book_association,
         enneagram_link,
         color_alignment,
