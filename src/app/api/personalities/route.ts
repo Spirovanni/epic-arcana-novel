@@ -34,15 +34,17 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(personalities);
   } catch (error) {
     const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error('Error loading personality profiles:', errorMessage);
+    const errorStack = error instanceof Error ? error.stack : undefined;
 
-    // Return more detailed error information in development
-    const isDevelopment = process.env.NODE_ENV === 'development';
+    console.error('❌ Error loading personality profiles:');
+    console.error('Message:', errorMessage);
+    console.error('Stack:', errorStack);
 
     return NextResponse.json(
       {
         error: 'Failed to load personality profiles',
-        details: isDevelopment ? errorMessage : undefined,
+        message: errorMessage,
+        stack: process.env.NODE_ENV === 'development' ? errorStack : undefined,
         timestamp: new Date().toISOString(),
       },
       { status: 500 }
