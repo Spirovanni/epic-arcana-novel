@@ -31,14 +31,16 @@ interface PersonalityProfile {
 }
 
 interface ChapterData {
-  id: string
-  unique_identifier: string
+  id: string | null
+  unique_identifier: string | null
   title: string
   chapter_number: number
   book_number: number
   icon_path: string | null
   hex_code: string | null
   color_name: string | null
+  personality_color: string | null
+  personality_color_name: string | null
   red: number | null
   green: number | null
   blue: number | null
@@ -130,9 +132,9 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
   const colorHex = personality.color_alignment?.rgb_hex || '#6B7280'
   const colorName = personality.color_alignment?.name || personality.color_alignment?.color_name || 'Color Alignment'
 
-  // Use chapter color if available, otherwise use personality color
-  const displayColor = chapterData?.hex_code || colorHex
-  const displayColorName = chapterData?.color_name || colorName
+  // Use personality color from the synced mapping, otherwise fall back to profile color
+  const displayColor = chapterData?.personality_color || colorHex
+  const displayColorName = chapterData?.personality_color_name || colorName
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
@@ -166,33 +168,47 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
               <div className="relative p-8">
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                  {/* Chapter Image or Fallback Circle */}
+                  {/* Chapter Image or Fallback Circle - Centered and sized to 85% */}
                   <div className="flex flex-col items-center space-y-4">
-                    <div className="relative">
+                    <div
+                      className="relative w-40 h-40 flex items-center justify-center"
+                      style={{
+                        backgroundImage: `linear-gradient(135deg, color-mix(in srgb, ${displayColor} 15%, transparent), color-mix(in srgb, ${displayColor} 10%, transparent))`,
+                        borderRadius: '12px',
+                        border: '2px solid rgba(255, 255, 255, 0.1)',
+                        boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)`,
+                      }}
+                    >
                       {chapterData && chapterData.icon_path && !imageLoadError ? (
-                        // Display chapter image
-                        <div className="w-32 h-32 rounded-lg border-4 border-white/20 shadow-2xl overflow-hidden bg-slate-700/50 flex items-center justify-center">
-                          <img
-                            src={chapterData.icon_path}
-                            alt={chapterData.title || personality.display_name || 'Chapter Image'}
-                            className="w-full h-full object-cover"
-                            onError={() => {
-                              // Fallback if image fails to load
-                              setImageLoadError(true);
-                            }}
-                          />
-                        </div>
+                        // Display chapter image - 85% of box
+                        <img
+                          src={chapterData.icon_path}
+                          alt={chapterData.title || personality.display_name || 'Chapter Image'}
+                          className="rounded-lg shadow-lg"
+                          style={{
+                            width: '85%',
+                            height: '85%',
+                            objectFit: 'cover',
+                            border: '2px solid rgba(255, 255, 255, 0.2)',
+                          }}
+                          onError={() => {
+                            // Fallback if image fails to load
+                            setImageLoadError(true);
+                          }}
+                        />
                       ) : (
-                        // Fallback to color circle with chapter color
-                        <>
-                          <div
-                            className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
-                            style={{ backgroundColor: displayColor }}
-                          />
-                          <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white/80">
-                            {personality.canonical_id}
-                          </div>
-                        </>
+                        // Fallback to color circle - 85% of box
+                        <div
+                          className="rounded-full flex items-center justify-center text-4xl font-bold text-white/80 shadow-lg"
+                          style={{
+                            width: '85%',
+                            height: '85%',
+                            backgroundColor: displayColor,
+                            border: '2px solid rgba(255, 255, 255, 0.2)',
+                          }}
+                        >
+                          {personality.canonical_id}
+                        </div>
                       )}
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">

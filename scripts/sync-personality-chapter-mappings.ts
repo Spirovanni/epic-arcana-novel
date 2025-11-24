@@ -8,6 +8,9 @@ interface PersonalityData {
   novel_book: number;
   chapter_title: string;
   specific_task_group_title?: string;
+  color_name?: string;
+  rgb_hex?: string;
+  color_symbolism?: string;
 }
 
 /**
@@ -34,12 +37,16 @@ async function syncPersonalityChapterMappings() {
       const familyData = family as any;
       for (const [, personality] of Object.entries(familyData.personalities)) {
         const personData = personality as any;
+        const colorAlign = personData.color_alignment || {};
         personalities.push({
           canonical_id: personData.canonical_id,
           all_chapter: personData.all_chapter,
           novel_book: personData.novel_book,
           chapter_title: personData.chapter_title || personData.specific_task_group_title,
           specific_task_group_title: personData.specific_task_group_title,
+          color_name: colorAlign.name,
+          rgb_hex: colorAlign.rgb_hex,
+          color_symbolism: colorAlign.color_symbolism,
         });
       }
     }
@@ -55,6 +62,9 @@ async function syncPersonalityChapterMappings() {
         novel_book INTEGER NOT NULL,
         chapter_title TEXT,
         specific_task_group_title TEXT,
+        color_name VARCHAR(100),
+        rgb_hex VARCHAR(7),
+        color_symbolism TEXT,
         created_at TIMESTAMP DEFAULT NOW(),
         updated_at TIMESTAMP DEFAULT NOW()
       );
@@ -75,13 +85,19 @@ async function syncPersonalityChapterMappings() {
             all_chapter,
             novel_book,
             chapter_title,
-            specific_task_group_title
-          ) VALUES ($1, $2, $3, $4, $5)
+            specific_task_group_title,
+            color_name,
+            rgb_hex,
+            color_symbolism
+          ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
           ON CONFLICT (canonical_id) DO UPDATE SET
             all_chapter = $2,
             novel_book = $3,
             chapter_title = $4,
             specific_task_group_title = $5,
+            color_name = $6,
+            rgb_hex = $7,
+            color_symbolism = $8,
             updated_at = NOW()
           `,
           [
@@ -90,6 +106,9 @@ async function syncPersonalityChapterMappings() {
             personality.novel_book,
             personality.chapter_title,
             personality.specific_task_group_title,
+            personality.color_name,
+            personality.rgb_hex,
+            personality.color_symbolism,
           ]
         );
 
@@ -121,7 +140,7 @@ async function syncPersonalityChapterMappings() {
 
     // Show sample data
     const samples = await client.query(
-      'SELECT canonical_id, all_chapter, novel_book, chapter_title FROM personality_chapter_mappings LIMIT 5'
+      'SELECT canonical_id, all_chapter, novel_book, chapter_title, rgb_hex, color_name FROM personality_chapter_mappings LIMIT 5'
     );
 
     console.log('Sample mappings:');
@@ -129,6 +148,7 @@ async function syncPersonalityChapterMappings() {
       console.log(
         `  ${row.canonical_id} → Book ${row.novel_book}, Chapter ${row.all_chapter}: ${row.chapter_title}`
       );
+      console.log(`    Color: ${row.color_name} (${row.rgb_hex})`);
     });
 
     console.log('\n✓ Personality chapter mapping sync complete!\n');

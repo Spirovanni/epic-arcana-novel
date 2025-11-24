@@ -24,7 +24,7 @@ export async function GET(
 
     // Get the personality chapter mapping from our synced table
     const mappingResult = await client.query(
-      'SELECT canonical_id, all_chapter, novel_book, chapter_title FROM personality_chapter_mappings WHERE canonical_id = $1 LIMIT 1',
+      'SELECT canonical_id, all_chapter, novel_book, chapter_title, color_name, rgb_hex, color_symbolism FROM personality_chapter_mappings WHERE canonical_id = $1 LIMIT 1',
       [profileId]
     );
 
@@ -66,15 +66,23 @@ export async function GET(
         chapter_number: mapping.all_chapter,
         book_number: mapping.novel_book,
         icon_path: `/icons/chapters/book${mapping.novel_book}/chapter${mapping.all_chapter}.png`,
-        hex_code: null,
-        color_name: null,
+        hex_code: mapping.rgb_hex,
+        color_name: mapping.color_name,
+        personality_color: mapping.rgb_hex,
+        personality_color_name: mapping.color_name,
         red: null,
         green: null,
         blue: null,
       });
     }
 
-    return NextResponse.json(chapterResult.rows[0]);
+    // Merge chapter data with personality color from mapping
+    const chapterData = chapterResult.rows[0] as any;
+    return NextResponse.json({
+      ...chapterData,
+      personality_color: mapping.rgb_hex,
+      personality_color_name: mapping.color_name,
+    });
   } catch (error) {
     console.error('Error fetching chapter for personality:', error);
     return new NextResponse('Internal Server Error', { status: 500 });
