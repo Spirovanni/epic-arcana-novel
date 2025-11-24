@@ -30,8 +30,21 @@ interface PersonalityProfile {
   specific_task_group_books_influenced_by: Record<string, any> | null
 }
 
+interface ChapterImage {
+  id: string
+  uniqueIdentifier: string
+  title: string
+  iconPath: string | null
+  colorName: string | null
+  hexCode: string | null
+  red: number | null
+  green: number | null
+  blue: number | null
+}
+
 export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
   const [personality, setPersonality] = useState<PersonalityProfile | null>(null)
+  const [chapterImage, setChapterImage] = useState<ChapterImage | null>(null)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('overview')
 
@@ -52,6 +65,22 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
           const profile = await response.json()
           if (profile && profile.canonical_id) {
             setPersonality(profile)
+
+            // Fetch chapter image if unique_identifier exists
+            if (profile.unique_identifier) {
+              try {
+                const chapterResponse = await fetch(
+                  `/api/chapters/by-identifier?uniqueIdentifier=${encodeURIComponent(profile.unique_identifier)}`
+                )
+                if (chapterResponse.ok) {
+                  const chapterData = await chapterResponse.json()
+                  setChapterImage(chapterData)
+                }
+              } catch (error) {
+                console.warn('Failed to load chapter image:', error)
+                // Continue without chapter image - not a critical error
+              }
+            }
           } else {
             console.error('Profile missing essential data:', profile)
           }
@@ -127,19 +156,37 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
               <div className="relative p-8">
                 <div className="flex flex-col md:flex-row items-center gap-8">
-                  {/* Icon and Color Circle */}
+                  {/* Chapter Image or Fallback Circle */}
                   <div className="flex flex-col items-center space-y-4">
                     <div className="relative">
-                      <div
-                        className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
-                        style={{ backgroundColor: colorHex }}
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white/80">
-                        {personality.canonical_id}
-                      </div>
+                      {chapterImage && chapterImage.iconPath ? (
+                        // Display chapter image
+                        <div className="w-32 h-32 rounded-lg border-4 border-white/20 shadow-2xl overflow-hidden bg-slate-700/50 flex items-center justify-center">
+                          <img
+                            src={chapterImage.iconPath}
+                            alt={chapterImage.title || personality.display_name || 'Chapter Image'}
+                            className="w-full h-full object-cover"
+                            onError={(e) => {
+                              // Fallback if image fails to load
+                              (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
+                            }}
+                          />
+                        </div>
+                      ) : (
+                        // Fallback to color circle with canonical ID
+                        <>
+                          <div
+                            className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
+                            style={{ backgroundColor: colorHex }}
+                          />
+                          <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white/80">
+                            {personality.canonical_id}
+                          </div>
+                        </>
+                      )}
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                      {colorName}
+                      {chapterImage ? chapterImage.title : colorName}
                     </Badge>
                   </div>
 
