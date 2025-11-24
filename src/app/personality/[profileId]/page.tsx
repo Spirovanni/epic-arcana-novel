@@ -18,6 +18,11 @@ interface PersonalityProfile {
   display_name: string | null
   theme: string | null
   family: string | null
+  traits?: {
+    strengths?: string[]
+    shadow?: string[]
+    growth_focus?: string[]
+  } | null
   color_alignment: Record<string, any> | null
   enneagram_link: Record<string, any> | null
   book_association: Record<string, any> | null
@@ -256,6 +261,70 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
           {/* Details Tab */}
           <TabsContent value="details" className="space-y-6">
+            {/* Traits Section */}
+            {personality.traits && (personality.traits.strengths?.length ?? 0 + personality.traits.shadow?.length ?? 0 + personality.traits.growth_focus?.length ?? 0) > 0 && (
+              <Card className="bg-slate-800/50 border-green-500/30">
+                <CardHeader>
+                  <CardTitle className="text-green-300 flex items-center gap-2">
+                    <Zap className="h-5 w-5" />
+                    Personality Traits & Development
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-6">
+                  {/* Strengths */}
+                  {personality.traits.strengths && personality.traits.strengths.length > 0 && (
+                    <div className="p-4 bg-emerald-900/20 rounded-lg border border-emerald-500/30">
+                      <h4 className="font-semibold text-emerald-400 mb-3 uppercase tracking-wider text-sm">
+                        ✨ Strengths
+                      </h4>
+                      <ul className="space-y-2">
+                        {personality.traits.strengths.map((strength, idx) => (
+                          <li key={idx} className="text-gray-300 text-sm leading-relaxed flex gap-2">
+                            <span className="text-emerald-400 font-bold">•</span>
+                            <span>{strength}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Shadow Side */}
+                  {personality.traits.shadow && personality.traits.shadow.length > 0 && (
+                    <div className="p-4 bg-amber-900/20 rounded-lg border border-amber-500/30">
+                      <h4 className="font-semibold text-amber-400 mb-3 uppercase tracking-wider text-sm">
+                        🌙 Shadow Side
+                      </h4>
+                      <ul className="space-y-2">
+                        {personality.traits.shadow.map((shadow, idx) => (
+                          <li key={idx} className="text-gray-300 text-sm leading-relaxed flex gap-2">
+                            <span className="text-amber-400 font-bold">•</span>
+                            <span>{shadow}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Growth Focus */}
+                  {personality.traits.growth_focus && personality.traits.growth_focus.length > 0 && (
+                    <div className="p-4 bg-blue-900/20 rounded-lg border border-blue-500/30">
+                      <h4 className="font-semibold text-blue-400 mb-3 uppercase tracking-wider text-sm">
+                        🚀 Growth Focus
+                      </h4>
+                      <ul className="space-y-2">
+                        {personality.traits.growth_focus.map((growth, idx) => (
+                          <li key={idx} className="text-gray-300 text-sm leading-relaxed flex gap-2">
+                            <span className="text-blue-400 font-bold">•</span>
+                            <span>{growth}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            )}
+
             <Card className="bg-slate-800/50 border-purple-500/30">
               <CardHeader>
                 <CardTitle className="text-purple-300 flex items-center gap-2">
