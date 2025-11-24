@@ -45,6 +45,7 @@ interface ChapterImage {
 export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
   const [personality, setPersonality] = useState<PersonalityProfile | null>(null)
   const [chapterImage, setChapterImage] = useState<ChapterImage | null>(null)
+  const [imageLoadError, setImageLoadError] = useState(false)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('overview')
 
@@ -159,16 +160,16 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                   {/* Chapter Image or Fallback Circle */}
                   <div className="flex flex-col items-center space-y-4">
                     <div className="relative">
-                      {chapterImage && chapterImage.iconPath ? (
+                      {chapterImage && chapterImage.iconPath && !imageLoadError ? (
                         // Display chapter image
                         <div className="w-32 h-32 rounded-lg border-4 border-white/20 shadow-2xl overflow-hidden bg-slate-700/50 flex items-center justify-center">
                           <img
                             src={chapterImage.iconPath}
                             alt={chapterImage.title || personality.display_name || 'Chapter Image'}
                             className="w-full h-full object-cover"
-                            onError={(e) => {
+                            onError={() => {
                               // Fallback if image fails to load
-                              (e.currentTarget.parentElement as HTMLElement).style.display = 'none';
+                              setImageLoadError(true);
                             }}
                           />
                         </div>
@@ -186,7 +187,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                       )}
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                      {chapterImage ? chapterImage.title : colorName}
+                      {chapterImage && !imageLoadError ? chapterImage.title : colorName}
                     </Badge>
                   </div>
 
