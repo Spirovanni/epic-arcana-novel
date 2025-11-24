@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Card, CardContent } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Input } from '@/components/ui/input'
 import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
-import { Search, ArrowLeft, Users, BookOpen, ChevronRight, Home, Sparkles } from 'lucide-react'
+import { Search, ArrowLeft, ChevronRight, Home, Sparkles } from 'lucide-react'
 
 interface PersonalityProfile {
   id: string
@@ -96,6 +96,12 @@ export default function PersonalitiesPage() {
 
   const getPersonalitiesByFamily = (family: string) => {
     return personalities.filter(p => p.family === family).sort((a, b) => {
+      return (a.canonical_id || '').localeCompare(b.canonical_id || '')
+    })
+  }
+
+  const getSortedPersonalities = () => {
+    return [...personalities].sort((a, b) => {
       return (a.canonical_id || '').localeCompare(b.canonical_id || '')
     })
   }
@@ -286,62 +292,65 @@ export default function PersonalitiesPage() {
           </div>
         )}
 
-        {/* Families View */}
+        {/* All Personalities View (sorted by canonical_id) */}
         {viewMode === 'families' && !selectedFamily && (
           <div className="space-y-6">
             <div>
-              <h1 className="text-3xl font-bold text-white mb-2">Personality Families</h1>
+              <h1 className="text-3xl font-bold text-white mb-2">All Personalities</h1>
               <p className="text-gray-400">
-                Explore {personalities.length} unique personality profiles organized by family
+                Browse all {personalities.length} personality profiles sorted by canonical ID
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {distinctFamilies.map(family => {
-                const familyPersonalities = getPersonalitiesByFamily(family)
-                const firstPersonality = familyPersonalities[0]
-
-                return (
-                  <button
-                    key={family}
-                    onClick={() => {
-                      setSelectedFamily(family)
-                      setViewMode('family-detail')
-                    }}
-                    className="text-left"
-                  >
-                    <Card className="h-full bg-gradient-to-br from-slate-800/50 to-purple-800/30 border-purple-500/30 hover:border-purple-400/50 hover:from-slate-800/70 hover:to-purple-800/50 transition-all cursor-pointer group">
-                      <CardContent className="p-6 space-y-4">
-                        <div className="flex items-start justify-between gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+              {getSortedPersonalities().map(personality => (
+                <Link
+                  key={personality.id}
+                  href={`/personality/${personality.canonical_id}`}
+                >
+                  <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group">
+                    <CardContent className="p-4 space-y-3">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex-1">
+                          <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
+                            ID
+                          </div>
                           <div
-                            className="w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0 border border-white/10"
+                            className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
                             style={{
-                              backgroundColor: firstPersonality?.color_alignment?.rgb_hex || '#6B7280',
+                              backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
                             }}
                           >
-                            <Users className="h-8 w-8 text-white/60" />
+                            {personality.canonical_id}
                           </div>
-                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors mt-1" />
                         </div>
+                        <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                      </div>
 
-                        <div>
-                          <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors text-lg">
-                            {family}
-                          </h3>
-                          <p className="text-sm text-gray-400 mt-1">
-                            {familyPersonalities.length} profile{familyPersonalities.length !== 1 ? 's' : ''}
-                          </p>
-                        </div>
+                      <div>
+                        <h3 className="font-semibold text-white group-hover:text-purple-300 transition-colors line-clamp-2 text-sm">
+                          {personality.display_name || 'Unknown'}
+                        </h3>
+                        <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+                          {personality.unique_identifier}
+                        </p>
+                      </div>
 
-                        <Badge variant="outline" className="border-purple-500/30 text-purple-300">
-                          <BookOpen className="h-3 w-3 mr-1" />
-                          Browse Family
+                      {personality.theme && (
+                        <p className="text-xs text-gray-400 line-clamp-2">
+                          {personality.theme}
+                        </p>
+                      )}
+
+                      {personality.family && (
+                        <Badge variant="outline" className="border-purple-500/30 text-purple-300 text-xs">
+                          {personality.family}
                         </Badge>
-                      </CardContent>
-                    </Card>
-                  </button>
-                )
-              })}
+                      )}
+                    </CardContent>
+                  </Card>
+                </Link>
+              ))}
             </div>
           </div>
         )}
