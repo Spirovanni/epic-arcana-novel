@@ -34,7 +34,8 @@ export async function POST() {
 
     // Verify the table was created
     const countResult = await sql`SELECT COUNT(*) as count FROM personality_profiles`;
-    const count = (countResult[0] as any)?.count || 0;
+    const countArray = Array.isArray(countResult) ? countResult : [];
+    const count = countArray.length > 0 ? (countArray[0] as any)?.count : 0;
 
     console.log(`[Setup] ✓ Verified: ${count} rows in table`);
 
