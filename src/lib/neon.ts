@@ -1,15 +1,32 @@
 import { neon } from '@neondatabase/serverless';
 
-// Ensure DATABASE_URL is available
-const databaseUrl = process.env.DATABASE_URL;
+let sqlInstance: ReturnType<typeof neon> | null = null;
 
-if (!databaseUrl) {
-  const errorMsg =
-    'DATABASE_URL environment variable is not set. ' +
-    'Please configure it in your deployment platform (Vercel, etc.) or local .env file. ' +
-    'Get your Neon connection string from: https://console.neon.tech/app/projects';
-  console.error('❌ Database Configuration Error:', errorMsg);
-  throw new Error(errorMsg);
+function getSql() {
+  if (!sqlInstance) {
+    const databaseUrl = process.env.DATABASE_URL;
+
+    if (!databaseUrl) {
+      const errorMsg =
+        'DATABASE_URL environment variable is not set. ' +
+        'Please configure it in your deployment platform (Vercel, etc.) or local .env file. ' +
+        'Get your Neon connection string from: https://console.neon.tech/app/projects';
+      console.error('❌ Database Configuration Error:', errorMsg);
+      throw new Error(errorMsg);
+    }
+
+    sqlInstance = neon(databaseUrl);
+  }
+
+  return sqlInstance;
 }
 
-export const sql = neon(databaseUrl);
+// Lazy-load database connection - works with both template literals and direct calls
+export const sql = ((strings: any, ...values: any[]) => {
+  // Template literal call
+  if (Array.isArray(strings)) {
+    return getSql()(strings, ...values);
+  }
+  // Direct call (shouldn't happen, but handle it)
+  return getSql();
+}) as ReturnType<typeof neon>;
