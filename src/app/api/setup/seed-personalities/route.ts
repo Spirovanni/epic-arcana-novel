@@ -65,10 +65,16 @@ export async function POST(request: Request) {
     // Upload profiles in batches
     for (const profile of body.profiles) {
       try {
+        const traits = {
+          strengths: profile.traits?.strengths || [],
+          shadow: profile.traits?.shadow || [],
+          growth_focus: profile.traits?.growth_focus || [],
+        };
+
         await sql`
           INSERT INTO personality_profiles (
             id, canonical_id, unique_identifier, display_name, theme, family,
-            book_association, enneagram_link, color_alignment, scoring_model,
+            traits, book_association, enneagram_link, color_alignment, scoring_model,
             specific_task_group_books_influenced_by
           ) VALUES (
             ${profile.id},
@@ -77,6 +83,7 @@ export async function POST(request: Request) {
             ${profile.display_name || null},
             ${profile.theme || null},
             ${profile.family || null},
+            ${JSON.stringify(traits)},
             ${JSON.stringify(profile.book_association || {})},
             ${JSON.stringify(profile.enneagram_link || {})},
             ${JSON.stringify(profile.color_alignment || {})},
@@ -84,6 +91,7 @@ export async function POST(request: Request) {
             ${JSON.stringify(profile.specific_task_group_books_influenced_by || {})}
           )
           ON CONFLICT (canonical_id) DO UPDATE SET
+            traits = ${JSON.stringify(traits)},
             updated_at = NOW()
         `;
         uploadedCount++;

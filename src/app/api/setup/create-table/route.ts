@@ -20,6 +20,7 @@ export async function POST() {
         display_name TEXT,
         theme TEXT,
         family TEXT,
+        traits JSONB,
         book_association JSONB,
         enneagram_link JSONB,
         color_alignment JSONB,
