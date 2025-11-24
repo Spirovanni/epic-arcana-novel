@@ -30,13 +30,15 @@ interface PersonalityProfile {
   specific_task_group_books_influenced_by: Record<string, any> | null
 }
 
-interface ChapterImage {
+interface ChapterData {
   id: string
-  uniqueIdentifier: string
+  unique_identifier: string
   title: string
-  iconPath: string | null
-  colorName: string | null
-  hexCode: string | null
+  chapter_number: number
+  book_number: number
+  icon_path: string | null
+  hex_code: string | null
+  color_name: string | null
   red: number | null
   green: number | null
   blue: number | null
@@ -44,7 +46,7 @@ interface ChapterImage {
 
 export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
   const [personality, setPersonality] = useState<PersonalityProfile | null>(null)
-  const [chapterImage, setChapterImage] = useState<ChapterImage | null>(null)
+  const [chapterData, setChapterData] = useState<ChapterData | null>(null)
   const [imageLoadError, setImageLoadError] = useState(false)
   const [loading, setLoading] = useState(true)
   const [activeTab, setActiveTab] = useState('overview')
@@ -67,20 +69,18 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
           if (profile && profile.canonical_id) {
             setPersonality(profile)
 
-            // Fetch chapter image if unique_identifier exists
-            if (profile.unique_identifier) {
-              try {
-                const chapterResponse = await fetch(
-                  `/api/chapters/by-identifier?uniqueIdentifier=${encodeURIComponent(profile.unique_identifier)}`
-                )
-                if (chapterResponse.ok) {
-                  const chapterData = await chapterResponse.json()
-                  setChapterImage(chapterData)
-                }
-              } catch (error) {
-                console.warn('Failed to load chapter image:', error)
-                // Continue without chapter image - not a critical error
+            // Fetch sequential chapter mapping for this personality
+            try {
+              const chapterResponse = await fetch(
+                `/api/personalities/${profileId}/chapter`
+              )
+              if (chapterResponse.ok) {
+                const data = await chapterResponse.json()
+                setChapterData(data)
               }
+            } catch (error) {
+              console.warn('Failed to load chapter data:', error)
+              // Continue without chapter data - not a critical error
             }
           } else {
             console.error('Profile missing essential data:', profile)
@@ -130,6 +130,10 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
   const colorHex = personality.color_alignment?.rgb_hex || '#6B7280'
   const colorName = personality.color_alignment?.name || personality.color_alignment?.color_name || 'Color Alignment'
 
+  // Use chapter color if available, otherwise use personality color
+  const displayColor = chapterData?.hex_code || colorHex
+  const displayColorName = chapterData?.color_name || colorName
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <DashboardNavbar />
@@ -149,7 +153,12 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
       <div className="container mx-auto max-w-6xl p-6 space-y-8">
         {/* Hero Section */}
-        <Card className="bg-gradient-to-r from-slate-800/80 to-purple-800/80 backdrop-blur-md border-purple-500/30 text-white overflow-hidden">
+        <Card
+          className="bg-gradient-to-r backdrop-blur-md border-purple-500/30 text-white overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(to right, color-mix(in srgb, ${displayColor} 40%, rgb(30, 41, 59)), color-mix(in srgb, ${displayColor} 20%, rgb(88, 28, 135)))`
+          }}
+        >
           <CardContent className="p-0">
             <div className="relative">
               {/* Background Pattern */}
@@ -160,12 +169,12 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                   {/* Chapter Image or Fallback Circle */}
                   <div className="flex flex-col items-center space-y-4">
                     <div className="relative">
-                      {chapterImage && chapterImage.iconPath && !imageLoadError ? (
+                      {chapterData && chapterData.icon_path && !imageLoadError ? (
                         // Display chapter image
                         <div className="w-32 h-32 rounded-lg border-4 border-white/20 shadow-2xl overflow-hidden bg-slate-700/50 flex items-center justify-center">
                           <img
-                            src={chapterImage.iconPath}
-                            alt={chapterImage.title || personality.display_name || 'Chapter Image'}
+                            src={chapterData.icon_path}
+                            alt={chapterData.title || personality.display_name || 'Chapter Image'}
                             className="w-full h-full object-cover"
                             onError={() => {
                               // Fallback if image fails to load
@@ -174,11 +183,11 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                           />
                         </div>
                       ) : (
-                        // Fallback to color circle with canonical ID
+                        // Fallback to color circle with chapter color
                         <>
                           <div
                             className="w-32 h-32 rounded-full border-4 border-white/20 shadow-2xl"
-                            style={{ backgroundColor: colorHex }}
+                            style={{ backgroundColor: displayColor }}
                           />
                           <div className="absolute inset-0 flex items-center justify-center text-4xl font-bold text-white/80">
                             {personality.canonical_id}
@@ -187,7 +196,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                       )}
                     </div>
                     <Badge className="bg-purple-600/20 text-purple-300 border-purple-500/50">
-                      {chapterImage && !imageLoadError ? chapterImage.title : colorName}
+                      {chapterData && !imageLoadError ? chapterData.title : displayColorName}
                     </Badge>
                   </div>
 
