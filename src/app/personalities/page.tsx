@@ -9,6 +9,58 @@ import { Input } from '@/components/ui/input'
 import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
 import { Search, ArrowLeft, ChevronRight, Home, Sparkles } from 'lucide-react'
 
+interface ChapterData {
+  personality_color: string | null
+  personality_color_name: string | null
+  icon_path: string | null
+  title: string
+}
+
+// Component to display chapter icon with personality color
+function ChapterIcon({ chapterData, canonicalId }: { chapterData?: ChapterData | null; canonicalId: string }) {
+  const [imageLoadError, setImageLoadError] = useState(false)
+  const displayColor = chapterData?.personality_color || '#6B7280'
+
+  return (
+    <div
+      className="relative w-32 h-32 flex items-center justify-center flex-shrink-0"
+      style={{
+        backgroundImage: `linear-gradient(135deg, color-mix(in srgb, ${displayColor} 15%, transparent), color-mix(in srgb, ${displayColor} 10%, transparent))`,
+        borderRadius: '12px',
+        border: '2px solid rgba(255, 255, 255, 0.1)',
+        boxShadow: `0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)`,
+      }}
+    >
+      {chapterData && chapterData.icon_path && !imageLoadError ? (
+        <img
+          src={chapterData.icon_path}
+          alt={chapterData.title || canonicalId}
+          className="rounded-lg shadow-lg"
+          style={{
+            width: '85%',
+            height: '85%',
+            objectFit: 'cover',
+            border: '2px solid rgba(255, 255, 255, 0.2)',
+          }}
+          onError={() => setImageLoadError(true)}
+        />
+      ) : (
+        <div
+          className="rounded-full flex items-center justify-center text-2xl font-bold text-white/80 shadow-lg"
+          style={{
+            width: '85%',
+            height: '85%',
+            backgroundColor: displayColor,
+            border: '2px solid rgba(255, 255, 255, 0.2)',
+          }}
+        >
+          {canonicalId}
+        </div>
+      )}
+    </div>
+  )
+}
+
 interface PersonalityProfile {
   id: string
   canonical_id: string
@@ -22,6 +74,7 @@ interface PersonalityProfile {
     growth_focus?: string[]
   } | null
   color_alignment: Record<string, any> | null
+  chapterData?: ChapterData | null
 }
 
 type ViewMode = 'families' | 'family-detail' | 'search'
@@ -80,6 +133,37 @@ export default function PersonalitiesPage() {
 
     loadPersonalities()
   }, [])
+
+  // Fetch chapter data for all personalities
+  useEffect(() => {
+    const fetchChapterData = async () => {
+      if (personalities.length === 0) return;
+
+      try {
+        const updatedPersonalities = await Promise.all(
+          personalities.map(async (personality) => {
+            try {
+              const response = await fetch(
+                `/api/personalities/${personality.canonical_id}/chapter`
+              );
+              if (response.ok) {
+                const chapterData = await response.json();
+                return { ...personality, chapterData };
+              }
+            } catch (error) {
+              console.warn(`Failed to load chapter data for ${personality.canonical_id}:`, error);
+            }
+            return personality;
+          })
+        );
+        setPersonalities(updatedPersonalities);
+      } catch (error) {
+        console.warn('Failed to fetch chapter data:', error);
+      }
+    };
+
+    fetchChapterData();
+  }, [personalities.length > 0])
 
   // Handle search
   useEffect(() => {
@@ -249,20 +333,8 @@ export default function PersonalitiesPage() {
                       <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                         <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                           <div className="flex items-start justify-between gap-3">
-                            <div className="flex-1">
-                              <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
-                                ID
-                              </div>
-                              <div
-                                className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
-                                style={{
-                                  backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
-                                }}
-                              >
-                                {personality.canonical_id}
-                              </div>
-                            </div>
-                            <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                            <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                            <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                           </div>
 
                           <div>
@@ -365,20 +437,8 @@ export default function PersonalitiesPage() {
                     <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
-                          <div className="flex-1">
-                            <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
-                              ID
-                            </div>
-                            <div
-                              className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
-                              style={{
-                                backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
-                              }}
-                            >
-                              {personality.canonical_id}
-                            </div>
-                          </div>
-                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                         </div>
 
                         <div>
@@ -466,20 +526,8 @@ export default function PersonalitiesPage() {
                     <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
-                          <div className="flex-1">
-                            <div className="text-xs font-bold text-purple-300 uppercase tracking-wider mb-1">
-                              ID
-                            </div>
-                            <div
-                              className="w-full h-10 rounded flex items-center justify-center border border-white/10 text-sm font-bold text-white/90"
-                              style={{
-                                backgroundColor: personality.color_alignment?.rgb_hex || '#6B7280',
-                              }}
-                            >
-                              {personality.canonical_id}
-                            </div>
-                          </div>
-                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-6" />
+                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                          <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                         </div>
 
                         <div>
