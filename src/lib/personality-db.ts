@@ -7,6 +7,11 @@ export interface PersonalityProfile {
   display_name: string | null;
   theme: string | null;
   family: string | null;
+  traits?: {
+    strengths?: string[];
+    shadow?: string[];
+    growth_focus?: string[];
+  } | null;
   book_association: Record<string, any> | null;
   enneagram_link: Record<string, any> | null;
   color_alignment: Record<string, any> | null;
