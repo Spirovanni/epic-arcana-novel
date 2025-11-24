@@ -120,8 +120,10 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
   }
 
   const getDimensionColor = (value: number) => {
-    if (value >= 7) return 'text-green-400'
-    if (value >= 4) return 'text-yellow-400'
+    // Convert to percentage (0-1 range to 0-100)
+    const percentage = value * 100;
+    if (percentage >= 70) return 'text-green-400'
+    if (percentage >= 40) return 'text-yellow-400'
     return 'text-red-400'
   }
 
@@ -481,26 +483,29 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
               <CardContent>
                 {topDimensions.length > 0 ? (
                   <div className="grid gap-4">
-                    {topDimensions.map(([dimension, score]: [string, any]) => (
-                      <div key={dimension} className="space-y-2">
-                        <div className="flex justify-between items-center">
-                          <span className="font-medium text-gray-200 capitalize">
-                            {dimension.replace(/_/g, ' ')}
-                          </span>
-                          <span className={`font-semibold ${getDimensionColor(score)}`}>
-                            {score?.toFixed(2)}/10
-                          </span>
+                    {topDimensions.map(([dimension, score]: [string, any]) => {
+                      const percentage = (score as number) * 100;
+                      return (
+                        <div key={dimension} className="space-y-2">
+                          <div className="flex justify-between items-center">
+                            <span className="font-medium text-gray-200 capitalize">
+                              {dimension.replace(/_/g, ' ')}
+                            </span>
+                            <span className={`font-semibold ${getDimensionColor(score)}`}>
+                              {percentage.toFixed(1)}%
+                            </span>
+                          </div>
+                          <Progress value={percentage} className="h-3" />
+                          <div className="text-xs text-gray-500">
+                            {percentage >= 70
+                              ? 'Strong presence in this personality'
+                              : percentage >= 40
+                                ? 'Moderate influence on behavior'
+                                : 'Area for potential development'}
+                          </div>
                         </div>
-                        <Progress value={(score as number) * 10} className="h-3" />
-                        <div className="text-xs text-gray-500">
-                          {score >= 7
-                            ? 'Strong presence in this personality'
-                            : score >= 4
-                              ? 'Moderate influence on behavior'
-                              : 'Area for potential development'}
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 ) : (
                   <p className="text-gray-400 text-sm">No dimension data available</p>
