@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils';
 import type { HfCalendarResult } from '@/lib/hfCalendar';
 import { getBookColorForDay, getChapterColorForDay, clearChapterColorCache, debugDayColors } from '@/lib/bookColors';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 interface UserAssignment {
   id: string;
   title: string;
@@ -49,11 +51,13 @@ if (typeof window !== 'undefined') {
   assignmentCache.clear();
   clearChapterColorCache();
   
-  // Debug the first 20 days to verify colors
-  debugDayColors(1, 20);
-  
-  // Make debug function available globally
-  (window as any).__debugDayColors = debugDayColors;
+  if (isDev) {
+    // Debug the first 20 days to verify colors
+    debugDayColors(1, 20);
+    
+    // Make debug function available globally
+    (window as any).__debugDayColors = debugDayColors;
+  }
 }
 
 export function TodayCard({ className, date }: TodayCardProps) {

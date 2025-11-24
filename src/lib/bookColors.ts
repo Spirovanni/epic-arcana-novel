@@ -5,6 +5,7 @@
 
 // Cache for chapter color data
 let chapterColorCache: Record<string, string> | null = null;
+const isDev = process.env.NODE_ENV === 'development';
 
 export function getBookNumberForDay(dayOfYear: number): number {
   return Math.min(Math.ceil(dayOfYear / 40.5), 9);
@@ -117,11 +118,15 @@ export function getBookColorForDay(dayOfYear: number): string {
 // Clear the cache (useful for development)
 export function clearChapterColorCache() {
   chapterColorCache = null;
-  console.log('Chapter color cache cleared');
+  if (isDev) {
+    console.log('Chapter color cache cleared');
+  }
 }
 
 // Debug function to see color mappings
 export function debugDayColors(startDay: number = 1, endDay: number = 10) {
+  if (!isDev) return;
+
   console.log('Day-to-Chapter Color Mapping:');
   for (let day = startDay; day <= endDay; day++) {
     const bookNum = getBookNumberForDay(day);
