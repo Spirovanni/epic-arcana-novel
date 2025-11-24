@@ -127,9 +127,10 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
     return 'text-red-400'
   }
 
-  const topDimensions = Object.entries(personality.scoring_model?.dimensions || {})
+  const allDimensions = Object.entries(personality.scoring_model?.dimensions || {})
     .sort(([, a], [, b]) => (b as number) - (a as number))
-    .slice(0, 6)
+
+  const topDimensions = allDimensions.slice(0, 6)
 
   const colorHex = personality.color_alignment?.rgb_hex || '#6B7280'
   const colorName = personality.color_alignment?.name || personality.color_alignment?.color_name || 'Color Alignment'
@@ -481,9 +482,9 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                {topDimensions.length > 0 ? (
+                {allDimensions.length > 0 ? (
                   <div className="grid gap-4">
-                    {topDimensions.map(([dimension, score]: [string, any]) => {
+                    {allDimensions.map(([dimension, score]: [string, any]) => {
                       const percentage = (score as number) * 100;
                       return (
                         <div key={dimension} className="space-y-2">
