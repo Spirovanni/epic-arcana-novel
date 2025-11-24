@@ -22,6 +22,36 @@ export interface PersonalityProfile {
 }
 
 /**
+ * Helper function to build traits object from separate tables
+ */
+async function buildTraitsForProfile(canonicalId: string): Promise<{ strengths?: string[]; shadow?: string[]; growth_focus?: string[] } | null> {
+  try {
+    const [strengthsResult, shadowResult, growthResult] = await Promise.all([
+      sql`SELECT strength_text FROM strengths WHERE canonical_id = ${canonicalId} ORDER BY strength_index ASC`,
+      sql`SELECT shadow_text FROM shadow WHERE canonical_id = ${canonicalId} ORDER BY shadow_index ASC`,
+      sql`SELECT growth_text FROM growth_focus WHERE canonical_id = ${canonicalId} ORDER BY growth_index ASC`
+    ]);
+
+    const strengths = (strengthsResult as { strength_text: string }[])?.map(s => s.strength_text) || [];
+    const shadowTraits = (shadowResult as { shadow_text: string }[])?.map(s => s.shadow_text) || [];
+    const growthFocus = (growthResult as { growth_text: string }[])?.map(g => g.growth_text) || [];
+
+    if (strengths.length === 0 && shadowTraits.length === 0 && growthFocus.length === 0) {
+      return null;
+    }
+
+    return {
+      ...(strengths.length > 0 && { strengths }),
+      ...(shadowTraits.length > 0 && { shadow: shadowTraits }),
+      ...(growthFocus.length > 0 && { growth_focus: growthFocus })
+    };
+  } catch (error) {
+    console.error('Error building traits for profile:', error);
+    return null;
+  }
+}
+
+/**
  * Get all personality profiles from the database
  */
 export async function getAllPersonalityProfiles(): Promise<PersonalityProfile[]> {
@@ -45,7 +75,17 @@ export async function getAllPersonalityProfiles(): Promise<PersonalityProfile[]>
       ORDER BY canonical_id ASC
     `;
 
-    return (result as PersonalityProfile[]) || [];
+    const profiles = (result as PersonalityProfile[]) || [];
+
+    // Add traits to each profile
+    const profilesWithTraits = await Promise.all(
+      profiles.map(async (profile) => ({
+        ...profile,
+        traits: await buildTraitsForProfile(profile.canonical_id)
+      }))
+    );
+
+    return profilesWithTraits;
   } catch (error) {
     console.error('Error fetching all personality profiles:', error);
     throw error;
@@ -80,7 +120,11 @@ export async function getPersonalityByCanonicalId(
     `;
 
     const profiles = result as PersonalityProfile[];
-    return profiles && profiles.length > 0 ? profiles[0] : null;
+    if (!profiles || profiles.length === 0) return null;
+
+    const profile = profiles[0];
+    profile.traits = await buildTraitsForProfile(profile.canonical_id);
+    return profile;
   } catch (error) {
     console.error('Error fetching personality profile:', error);
     throw error;
@@ -114,7 +158,17 @@ export async function getPersonalitiesByFamily(
       ORDER BY canonical_id ASC
     `;
 
-    return (result as PersonalityProfile[]) || [];
+    const profiles = (result as PersonalityProfile[]) || [];
+
+    // Add traits to each profile
+    const profilesWithTraits = await Promise.all(
+      profiles.map(async (profile) => ({
+        ...profile,
+        traits: await buildTraitsForProfile(profile.canonical_id)
+      }))
+    );
+
+    return profilesWithTraits;
   } catch (error) {
     console.error('Error fetching personalities by family:', error);
     throw error;
@@ -153,7 +207,17 @@ export async function searchPersonalities(
       ORDER BY canonical_id ASC
     `;
 
-    return (result as PersonalityProfile[]) || [];
+    const profiles = (result as PersonalityProfile[]) || [];
+
+    // Add traits to each profile
+    const profilesWithTraits = await Promise.all(
+      profiles.map(async (profile) => ({
+        ...profile,
+        traits: await buildTraitsForProfile(profile.canonical_id)
+      }))
+    );
+
+    return profilesWithTraits;
   } catch (error) {
     console.error('Error searching personalities:', error);
     throw error;
