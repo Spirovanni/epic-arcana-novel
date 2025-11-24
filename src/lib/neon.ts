@@ -22,11 +22,7 @@ function getSql() {
 }
 
 // Lazy-load database connection - works with both template literals and direct calls
-export const sql = ((strings: any, ...values: any[]) => {
+export const sql = ((strings: TemplateStringsArray, ...values: any[]) => {
   // Template literal call
-  if (Array.isArray(strings)) {
-    return getSql()(strings, ...values);
-  }
-  // Direct call (shouldn't happen, but handle it)
-  return getSql();
+  return getSql()(strings, ...values);
 }) as ReturnType<typeof neon>;
