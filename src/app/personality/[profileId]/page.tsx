@@ -262,7 +262,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
           {/* Details Tab */}
           <TabsContent value="details" className="space-y-6">
             {/* Traits Section */}
-            {personality.traits && (personality.traits.strengths?.length ?? 0 + personality.traits.shadow?.length ?? 0 + personality.traits.growth_focus?.length ?? 0) > 0 && (
+            {personality.traits && ((personality.traits.strengths?.length ?? 0) + (personality.traits.shadow?.length ?? 0) + (personality.traits.growth_focus?.length ?? 0)) > 0 && (
               <Card className="bg-slate-800/50 border-green-500/30">
                 <CardHeader>
                   <CardTitle className="text-green-300 flex items-center gap-2">
