@@ -308,7 +308,17 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
                             className="p-3 bg-slate-700/50 rounded border border-blue-500/20"
                           >
                             <p className="text-blue-300 font-semibold">{key}</p>
-                            <p className="text-gray-400 text-sm mt-1">{value}</p>
+                            {typeof value === 'object' && value !== null ? (
+                              <div className="text-gray-400 text-sm mt-1 space-y-1">
+                                {Object.entries(value).map(([k, v]: [string, any]) => (
+                                  <p key={k}>
+                                    <span className="text-gray-300 capitalize">{k.replace(/_/g, ' ')}:</span> {String(v)}
+                                  </p>
+                                ))}
+                              </div>
+                            ) : (
+                              <p className="text-gray-400 text-sm mt-1">{String(value)}</p>
+                            )}
                           </div>
                         )
                       )}
