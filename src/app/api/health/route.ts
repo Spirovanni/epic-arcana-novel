@@ -31,10 +31,13 @@ export async function GET() {
   try {
     // Test personality profiles table
     console.log('[Health Check] Testing personality_profiles table...');
-    const profileCount = await sql`SELECT COUNT(*) as count FROM personality_profiles`;
+    const profileCountResult = await sql`SELECT COUNT(*) as count FROM personality_profiles`;
+    const profileCountArray = Array.isArray(profileCountResult) ? profileCountResult : [];
+    const countValue = profileCountArray.length > 0 ? (profileCountArray[0] as any)?.count : 0;
+
     checks.personalityProfiles = {
       status: 'ok',
-      count: profileCount[0]?.count || 0,
+      count: countValue || 0,
     };
   } catch (tableError) {
     console.error('[Health Check] Table error:', tableError);
