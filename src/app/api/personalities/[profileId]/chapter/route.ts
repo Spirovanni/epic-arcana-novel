@@ -24,7 +24,18 @@ export async function GET(
 
     // Get the personality chapter mapping from our synced table
     const mappingResult = await client.query(
-      'SELECT canonical_id, all_chapter, novel_book, chapter_title, color_name, rgb_hex, color_symbolism FROM personality_chapter_mappings WHERE canonical_id = $1 LIMIT 1',
+      `SELECT
+        canonical_id,
+        all_chapter,
+        novel_book,
+        chapter_title,
+        color_name,
+        rgb_hex,
+        color_symbolism,
+        icon_path
+      FROM personality_chapter_mappings
+      WHERE canonical_id = $1
+      LIMIT 1`,
       [profileId]
     );
 
@@ -33,6 +44,13 @@ export async function GET(
     }
 
     const mapping = mappingResult.rows[0] as any;
+
+    // Calculate the chapter number within the book (1-40)
+    // all_chapter 1-40 -> chapter 1-40
+    // all_chapter 41-80 -> chapter 1-40
+    // all_chapter 81-120 -> chapter 1-40
+    // Formula: chapter_within_book = ((all_chapter - 1) % 40) + 1
+    const chapterWithinBook = ((mapping.all_chapter - 1) % 40) + 1;
 
     // Now get the actual chapter data from the chapters table
     const chapterResult = await client.query(
@@ -54,7 +72,7 @@ export async function GET(
       WHERE b.book_number = $1 AND c.chapter_number = $2
       LIMIT 1
       `,
-      [mapping.novel_book, mapping.all_chapter]
+      [mapping.novel_book, chapterWithinBook]
     );
 
     if (chapterResult.rows.length === 0) {
@@ -63,9 +81,9 @@ export async function GET(
         id: null,
         unique_identifier: null,
         title: mapping.chapter_title,
-        chapter_number: mapping.all_chapter,
+        chapter_number: chapterWithinBook,
         book_number: mapping.novel_book,
-        icon_path: `/icons/chapters/book${mapping.novel_book}/chapter${mapping.all_chapter}.png`,
+        icon_path: mapping.icon_path || `/icons/chapters/book${mapping.novel_book}/chapter${chapterWithinBook}.png`,
         hex_code: mapping.rgb_hex,
         color_name: mapping.color_name,
         personality_color: mapping.rgb_hex,
@@ -80,6 +98,7 @@ export async function GET(
     const chapterData = chapterResult.rows[0] as any;
     return NextResponse.json({
       ...chapterData,
+      icon_path: mapping.icon_path || chapterData.icon_path,
       personality_color: mapping.rgb_hex,
       personality_color_name: mapping.color_name,
     });
