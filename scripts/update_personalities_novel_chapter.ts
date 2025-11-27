@@ -1,10 +1,10 @@
 #!/usr/bin/env ts-node
 /**
- * Update personalities table with novel_book and chapter data from new_personality_profile.json
+ * Update personality_profiles table with novel_book and chapter data from new_personality_profile.json
  *
  * This script:
- * 1. Reads ./data/new_personality_profile.json
- * 2. Adds novel_book and chapter columns to personalities table if they don't exist
+ * 1. Reads ./data/dist/new_personality_profile.json
+ * 2. Adds novel_book and chapter columns to personality_profiles table if they don't exist
  * 3. Updates each personality row with the corresponding data from the JSON file
  *
  * Run with: npx tsx ./scripts/update_personalities_novel_chapter.ts
@@ -12,7 +12,11 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import * as dotenv from 'dotenv';
 import { sql } from '../src/lib/neon';
+
+// Load .env file from project root
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
 
 // ============================================================================
 // Type Definitions
@@ -45,7 +49,7 @@ interface NovelChapterUpdate {
 
 async function main() {
   console.log('═══════════════════════════════════════════════════════════');
-  console.log('Starting personalities table novel_book/chapter update...');
+  console.log('Starting personality_profiles table novel_book/chapter update...');
   console.log('═══════════════════════════════════════════════════════════\n');
 
   try {
@@ -122,17 +126,17 @@ async function main() {
     // ========================================================================
     // Step 3: Ensure table columns exist
     // ========================================================================
-    console.log('Step 3: Ensuring personalities table has novel_book and chapter columns...');
+    console.log('Step 3: Ensuring personality_profiles table has novel_book and chapter columns...');
 
     try {
       await sql`
-        ALTER TABLE personalities
+        ALTER TABLE personality_profiles
         ADD COLUMN IF NOT EXISTS novel_book INTEGER;
       `;
       console.log('  ✓ novel_book column ensured');
 
       await sql`
-        ALTER TABLE personalities
+        ALTER TABLE personality_profiles
         ADD COLUMN IF NOT EXISTS chapter TEXT;
       `;
       console.log('  ✓ chapter column ensured');
@@ -144,14 +148,14 @@ async function main() {
       // Check if table doesn't exist
       if (errorMsg.includes('does not exist') || errorMsg.includes('relation')) {
         throw new Error(
-          `The 'personalities' table does not exist in your database.\n` +
-          `Please create the personalities table first and populate it with personality profiles.\n` +
+          `The 'personality_profiles' table does not exist in your database.\n` +
+          `Please create the personality_profiles table first and populate it with personality profiles.\n` +
           `Error: ${errorMsg}`
         );
       }
 
       throw new Error(
-        `Failed to alter personalities table: ${errorMsg}`
+        `Failed to alter personality_profiles table: ${errorMsg}`
       );
     }
 
@@ -168,7 +172,7 @@ async function main() {
       try {
         // Use RETURNING to check if the row was actually updated
         const result = await sql`
-          UPDATE personalities
+          UPDATE personality_profiles
           SET novel_book = ${update.novel_book},
               chapter = ${update.chapter}
           WHERE canonical_id = ${update.canonical_id}
@@ -229,7 +233,7 @@ async function main() {
 
     process.exit(successCount > 0 ? 0 : 1);
   } catch (error) {
-    console.error('\n✗ Error updating personalities novel_book/chapter:');
+    console.error('\n✗ Error updating personality_profiles novel_book/chapter:');
     console.error(error instanceof Error ? error.message : String(error));
     console.error('\n═══════════════════════════════════════════════════════════\n');
     process.exit(1);
