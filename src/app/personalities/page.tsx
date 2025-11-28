@@ -332,10 +332,10 @@ export default function PersonalitiesPage() {
                       href={`/personality/${personality.canonical_id}`}
                     >
                       <Card
-                        className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                        className="h-full transition-all cursor-pointer group flex flex-col !border-2"
                         style={{
                           backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
-                          border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                          borderColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)',
                         }}
                       >
                         <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
@@ -442,10 +442,10 @@ export default function PersonalitiesPage() {
                     href={`/personality/${personality.canonical_id}`}
                   >
                     <Card
-                      className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                      className="h-full transition-all cursor-pointer group flex flex-col !border-2"
                       style={{
                         backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
-                        border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                        borderColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)',
                       }}
                     >
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
@@ -537,10 +537,10 @@ export default function PersonalitiesPage() {
                     href={`/personality/${personality.canonical_id}`}
                   >
                     <Card
-                      className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                      className="h-full transition-all cursor-pointer group flex flex-col !border-2"
                       style={{
                         backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
-                        border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                        borderColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)',
                       }}
                     >
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
