@@ -538,10 +538,10 @@ export default function PersonalitiesPage() {
                   >
                     <Card
                       className="h-full transition-all cursor-pointer group flex flex-col !border-2"
-                      style={{
-                        backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
-                        // borderColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)',
-                      }}
+                      // style={{
+                      //   backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(personality.rgb_hex))` : 'rgb(personality.rgb_hex)',
+                      //   borderColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)',
+                      // }}
                     >
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">

@@ -9,7 +9,7 @@ import { Badge } from '@/components/ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Progress } from '@/components/ui/progress'
 import { DashboardNavbar } from '@/components/dashboard/DashboardNavbar'
-import { ArrowLeft, BookOpen, Star, Heart, Zap, Target } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BookOpen, Star, Heart, Zap, Target } from 'lucide-react'
 
 interface PersonalityProfile {
   id: string
@@ -44,6 +44,22 @@ interface ChapterData {
   red: number | null
   green: number | null
   blue: number | null
+}
+
+function getNextPersonalityId(currentId: string): string | null {
+  const match = currentId.match(/EA-(\d+)/)
+  if (!match) return null
+  const num = parseInt(match[1], 10)
+  if (num >= 360) return null // Last personality
+  return `EA-${String(num + 1).padStart(3, '0')}`
+}
+
+function getPrevPersonalityId(currentId: string): string | null {
+  const match = currentId.match(/EA-(\d+)/)
+  if (!match) return null
+  const num = parseInt(match[1], 10)
+  if (num <= 1) return null // First personality
+  return `EA-${String(num - 1).padStart(3, '0')}`
 }
 
 export default function PersonalityPage({ params }: { params: Promise<{ profileId: string }> }) {
@@ -145,7 +161,7 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
 
       {/* Navigation */}
       <div className="border-b border-white/5 bg-slate-900/80 backdrop-blur-md">
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <Link
             href="/personalities"
             className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 transition-colors"
@@ -153,6 +169,39 @@ export default function PersonalityPage({ params }: { params: Promise<{ profileI
             <ArrowLeft className="h-4 w-4" />
             Back to Personalities
           </Link>
+
+          {/* Navigation Arrows */}
+          <div className="flex items-center gap-4">
+            {getPrevPersonalityId(personality?.canonical_id || '') ? (
+              <Link
+                href={`/personality/${getPrevPersonalityId(personality?.canonical_id || '')}`}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-purple-300 hover:text-purple-200 hover:bg-purple-900/30 transition-colors"
+              >
+                <ArrowLeft className="h-4 w-4" />
+                <span className="text-sm">Previous</span>
+              </Link>
+            ) : (
+              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-gray-600 cursor-not-allowed">
+                <ArrowLeft className="h-4 w-4" />
+                <span className="text-sm">Previous</span>
+              </div>
+            )}
+
+            {getNextPersonalityId(personality?.canonical_id || '') ? (
+              <Link
+                href={`/personality/${getNextPersonalityId(personality?.canonical_id || '')}`}
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-purple-300 hover:text-purple-200 hover:bg-purple-900/30 transition-colors"
+              >
+                <span className="text-sm">Next</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            ) : (
+              <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg text-gray-600 cursor-not-allowed">
+                <span className="text-sm">Next</span>
+                <ArrowRight className="h-4 w-4" />
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
