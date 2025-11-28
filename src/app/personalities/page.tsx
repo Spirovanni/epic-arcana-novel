@@ -331,7 +331,13 @@ export default function PersonalitiesPage() {
                       key={personality.id}
                       href={`/personality/${personality.canonical_id}`}
                     >
-                      <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
+                      <Card
+                        className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                        style={{
+                          backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
+                          border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                        }}
+                      >
                         <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                           <div className="flex items-start justify-between gap-3">
                             <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
@@ -435,7 +441,13 @@ export default function PersonalitiesPage() {
                     key={personality.id}
                     href={`/personality/${personality.canonical_id}`}
                   >
-                    <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
+                    <Card
+                      className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                      style={{
+                        backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
+                        border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                      }}
+                    >
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
                           <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
@@ -524,7 +536,13 @@ export default function PersonalitiesPage() {
                     key={personality.id}
                     href={`/personality/${personality.canonical_id}`}
                   >
-                    <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
+                    <Card
+                      className="h-full hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col"
+                      style={{
+                        backgroundColor: personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 8%, rgb(30 41 59))` : 'rgb(30 41 59 / 0.5)',
+                        border: `2px solid ${personality.rgb_hex ? `color-mix(in srgb, ${personality.rgb_hex} 40%, transparent)` : 'rgb(168 85 247 / 0.3)'}`,
+                      }}
+                    >
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
                           <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
