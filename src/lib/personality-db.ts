@@ -17,6 +17,7 @@ export interface PersonalityProfile {
   color_alignment: Record<string, any> | null;
   scoring_model: Record<string, any> | null;
   specific_task_group_books_influenced_by: Record<string, any> | null;
+  rgb_hex?: string | null;
   created_at?: string;
   updated_at?: string;
 }
@@ -69,6 +70,7 @@ export async function getAllPersonalityProfiles(): Promise<PersonalityProfile[]>
         color_alignment,
         scoring_model,
         specific_task_group_books_influenced_by,
+        rgb_hex,
         created_at,
         updated_at
       FROM personality_profiles
@@ -112,6 +114,7 @@ export async function getPersonalityByCanonicalId(
         color_alignment,
         scoring_model,
         specific_task_group_books_influenced_by,
+        rgb_hex,
         created_at,
         updated_at
       FROM personality_profiles
@@ -151,6 +154,7 @@ export async function getPersonalitiesByFamily(
         color_alignment,
         scoring_model,
         specific_task_group_books_influenced_by,
+        rgb_hex,
         created_at,
         updated_at
       FROM personality_profiles
@@ -196,6 +200,7 @@ export async function searchPersonalities(
         color_alignment,
         scoring_model,
         specific_task_group_books_influenced_by,
+        rgb_hex,
         created_at,
         updated_at
       FROM personality_profiles

@@ -17,9 +17,9 @@ interface ChapterData {
 }
 
 // Component to display chapter icon with personality color
-function ChapterIcon({ chapterData, canonicalId }: { chapterData?: ChapterData | null; canonicalId: string }) {
+function ChapterIcon({ chapterData, canonicalId, rgbHex }: { chapterData?: ChapterData | null; canonicalId: string; rgbHex?: string | null }) {
   const [imageLoadError, setImageLoadError] = useState(false)
-  const displayColor = chapterData?.personality_color || '#6B7280'
+  const displayColor = rgbHex || chapterData?.personality_color || '#6B7280'
 
   return (
     <div
@@ -74,6 +74,7 @@ interface PersonalityProfile {
     growth_focus?: string[]
   } | null
   color_alignment: Record<string, any> | null
+  rgb_hex?: string | null
   chapterData?: ChapterData | null
 }
 
@@ -333,7 +334,7 @@ export default function PersonalitiesPage() {
                       <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                         <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                           <div className="flex items-start justify-between gap-3">
-                            <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                            <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
                             <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                           </div>
 
@@ -437,7 +438,7 @@ export default function PersonalitiesPage() {
                     <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
-                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
                           <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                         </div>
 
@@ -526,7 +527,7 @@ export default function PersonalitiesPage() {
                     <Card className="h-full bg-slate-800/50 border-purple-500/30 hover:border-purple-400/50 hover:bg-slate-800/70 transition-all cursor-pointer group flex flex-col">
                       <CardContent className="p-4 space-y-3 flex-1 flex flex-col">
                         <div className="flex items-start justify-between gap-3">
-                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} />
+                          <ChapterIcon chapterData={personality.chapterData} canonicalId={personality.canonical_id} rgbHex={personality.rgb_hex} />
                           <ChevronRight className="h-5 w-5 text-purple-400 group-hover:text-purple-300 transition-colors flex-shrink-0 mt-2" />
                         </div>
 
