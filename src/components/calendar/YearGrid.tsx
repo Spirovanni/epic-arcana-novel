@@ -169,9 +169,13 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Arrange 81 days in 9x9 grid
-  const grid = Array.from({ length: 9 }, (_, row) =>
-    days.slice(row * 9, (row + 1) * 9)
+  // Separate rest day (81st day) from active days (first 80)
+  const activeDays = days.slice(0, 80);
+  const restDay = days[80]; // The 81st day (rest day)
+
+  // Arrange 80 active days in 8x10 grid
+  const grid = Array.from({ length: 8 }, (_, row) =>
+    activeDays.slice(row * 10, (row + 1) * 10)
   );
 
   return (
@@ -179,7 +183,7 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
       <h3 className="text-sm font-medium text-center text-muted-foreground">
         {title}
       </h3>
-      <div className="grid grid-cols-9 gap-1">
+      <div className="grid grid-cols-10 gap-1">
         {grid.map((row, rowIndex) =>
           row.map((day) => (
             <GridCell
@@ -190,6 +194,18 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
               onClick={() => onDayClick(day)}
             />
           ))
+        )}
+      </div>
+      {/* Rest day positioned at the end of the quarter */}
+      <div className="flex justify-end pt-2">
+        {restDay && (
+          <GridCell
+            key={restDay.dateISO}
+            day={restDay}
+            isSelected={selectedDay === restDay.dateISO}
+            isToday={todayISO === restDay.dateISO}
+            onClick={() => onDayClick(restDay)}
+          />
         )}
       </div>
     </div>
