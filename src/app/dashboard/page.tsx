@@ -8,6 +8,7 @@ import { Progress } from '@/components/ui/progress'
 import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
 import { StrengthsAnalysis } from '@/components/dashboard/StrengthsAnalysis'
 import { GrowthAnalysis } from '@/components/dashboard/GrowthAnalysis'
+import { PersonalityProfileCard } from '@/components/dashboard/PersonalityProfileCard'
 import { useAssessmentDataRefresh } from '@/utils/assessmentEvents'
 import Link from 'next/link'
 import { AssessmentResult } from '@/lib/assessment/types'
@@ -174,39 +175,41 @@ export default function DashboardPage() {
         ) : (
           /* Assessment Complete State */
           <>
-            {/* Quick Stats */}
-            <div className="grid md:grid-cols-4 gap-4">
-              <Card className="bg-gradient-to-r from-primary/20 to-blue-600/20 border-primary/30">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-primary">{latestResult?.dominant_type || 'N/A'}</div>
-                  <div className="text-sm text-muted-foreground">Dominant Type</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border-green-500/30">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                    {latestResult ? Object.entries(latestResult.instincts)
-                      .sort(([,a], [,b]) => b - a)[0][0] : 'N/A'}
-                  </div>
-                  <div className="text-sm text-muted-foreground">Primary Instinct</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-blue-500/30">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{latestResult ? latestResult.wing_bin + 1 : 'N/A'}</div>
-                  <div className="text-sm text-muted-foreground">Wing Pattern</div>
-                </CardContent>
-              </Card>
-              
-              <Card className="bg-gradient-to-r from-amber-600/20 to-orange-600/20 border-amber-500/30">
-                <CardContent className="p-4 text-center">
-                  <div className="text-2xl font-bold text-amber-600 dark:text-amber-400">{latestResult ? latestResult.development_bin + 1 : 'N/A'}</div>
-                  <div className="text-sm text-muted-foreground">Development Stage</div>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Personality Profile Card */}
+            {latestResult && (
+              <div className="grid lg:grid-cols-3 gap-6 mb-8">
+                <div className="lg:col-span-2">
+                  <PersonalityProfileCard result={latestResult} />
+                </div>
+
+                {/* Secondary Stats */}
+                <div className="space-y-4">
+                  <Card className="bg-gradient-to-br from-primary/10 to-purple-600/10 border-primary/30">
+                    <CardContent className="p-4">
+                      <div className="text-sm text-muted-foreground mb-2">Match Confidence</div>
+                      <div className="text-3xl font-bold text-primary mb-2">{latestResult.profile.matchScore || 75}%</div>
+                      <Progress value={latestResult.profile.matchScore || 75} className="h-2" />
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-br from-blue-600/10 to-cyan-600/10 border-blue-500/30">
+                    <CardContent className="p-4">
+                      <div className="text-sm text-muted-foreground mb-2">Enneagram Type</div>
+                      <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">{latestResult.dominant_type}</div>
+                      <div className="text-xs text-muted-foreground">Chapter {latestResult.chapter}</div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="bg-gradient-to-br from-amber-600/10 to-orange-600/10 border-amber-500/30">
+                    <CardContent className="p-4">
+                      <div className="text-sm text-muted-foreground mb-2">Assessment ID</div>
+                      <div className="text-lg font-mono font-bold text-amber-600 dark:text-amber-400">{latestResult.ea_id}</div>
+                      <div className="text-xs text-muted-foreground mt-1">Assessment complete</div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            )}
 
             {/* Action Cards */}
             <div className="grid md:grid-cols-3 gap-6">

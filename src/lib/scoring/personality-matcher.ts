@@ -86,7 +86,7 @@ export async function findMatchingPersonality(
   wingBin: number,
   developmentBin: number,
   dimensionScores: Record<string, number>,
-  instinctStack: { sp: number; so: number; sx: number }
+  instinctStack: { SP: number; SO: number; SX: number }
 ): Promise<PersonalityMatch | null> {
   try {
     // Calculate target chapter within family
@@ -99,7 +99,7 @@ export async function findMatchingPersonality(
     }
 
     // Query for profiles matching the family
-    const profiles = await sql`
+    const profiles = (await sql`
       SELECT
         id,
         canonical_id,
@@ -113,7 +113,7 @@ export async function findMatchingPersonality(
       FROM personality_profiles
       WHERE family = ${family}
       LIMIT 50
-    `;
+    `) as Array<Record<string, any>>;
 
     if (!profiles || profiles.length === 0) {
       console.warn(`No profiles found for family: ${family}`);
@@ -174,7 +174,7 @@ export async function findMatchingPersonality(
  */
 export async function getPersonalityByEAId(eaId: string): Promise<PersonalityMatch | null> {
   try {
-    const result = await sql`
+    const result = (await sql`
       SELECT
         id,
         canonical_id,
@@ -188,7 +188,7 @@ export async function getPersonalityByEAId(eaId: string): Promise<PersonalityMat
       FROM personality_profiles
       WHERE canonical_id = ${eaId}
       LIMIT 1
-    `;
+    `) as Array<Record<string, any>>;
 
     if (!result || result.length === 0) {
       return null;
@@ -229,7 +229,7 @@ export async function getTopMatchingPersonalities(
     }
 
     // Get all profiles in the family
-    const profiles = await sql`
+    const profiles = (await sql`
       SELECT
         id,
         canonical_id,
@@ -244,7 +244,7 @@ export async function getTopMatchingPersonalities(
       WHERE family = ${family}
       ORDER BY canonical_id ASC
       LIMIT ${limit * 2}
-    `;
+    `) as Array<Record<string, any>>;
 
     if (!profiles) {
       return [];
@@ -252,7 +252,7 @@ export async function getTopMatchingPersonalities(
 
     // Score each profile and return top matches
     const scoredProfiles = profiles
-      .map((profile) => ({
+      .map((profile: Record<string, any>) => ({
         ...profile,
         matchScore: Math.round(calculateDimensionAlignmentScore(
           dimensionScores,
@@ -260,9 +260,9 @@ export async function getTopMatchingPersonalities(
         )),
         matchReason: `Alternative ${family} archetype`,
       }))
-      .sort((a, b) => b.matchScore - a.matchScore)
+      .sort((a: Record<string, any>, b: Record<string, any>) => b.matchScore - a.matchScore)
       .slice(0, limit)
-      .map(profile => ({
+      .map((profile: Record<string, any>) => ({
         canonicalId: profile.canonical_id,
         displayName: profile.display_name,
         theme: profile.theme,
@@ -288,7 +288,7 @@ export async function getTopMatchingPersonalities(
 export async function getPersonalityDetails(canonicalId: string) {
   try {
     // Get main profile
-    const profileResult = await sql`
+    const profileResult = (await sql`
       SELECT
         id,
         canonical_id,
@@ -304,7 +304,7 @@ export async function getPersonalityDetails(canonicalId: string) {
       FROM personality_profiles
       WHERE canonical_id = ${canonicalId}
       LIMIT 1
-    `;
+    `) as Array<Record<string, any>>;
 
     if (!profileResult || profileResult.length === 0) {
       return null;
@@ -314,9 +314,9 @@ export async function getPersonalityDetails(canonicalId: string) {
 
     // Get traits from related tables
     const [strengths, shadows, growthFocus] = await Promise.all([
-      sql`SELECT strength_text FROM strengths WHERE canonical_id = ${canonicalId} ORDER BY strength_index ASC`,
-      sql`SELECT shadow_text FROM shadow WHERE canonical_id = ${canonicalId} ORDER BY shadow_index ASC`,
-      sql`SELECT growth_text FROM growth_focus WHERE canonical_id = ${canonicalId} ORDER BY growth_index ASC`,
+      (sql`SELECT strength_text FROM strengths WHERE canonical_id = ${canonicalId} ORDER BY strength_index ASC`) as Promise<Array<Record<string, any>>>,
+      (sql`SELECT shadow_text FROM shadow WHERE canonical_id = ${canonicalId} ORDER BY shadow_index ASC`) as Promise<Array<Record<string, any>>>,
+      (sql`SELECT growth_text FROM growth_focus WHERE canonical_id = ${canonicalId} ORDER BY growth_index ASC`) as Promise<Array<Record<string, any>>>,
     ]);
 
     return {
