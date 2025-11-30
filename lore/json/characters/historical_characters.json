@@ -106,7 +106,7 @@
         "dialogue_style": "Surgical precision—she wields syllogisms like rapier thrusts, yet her laughter (when it escapes) is disarmingly melodic.",
         "role": "Love Interest",
         "birth_year": 1300,
-        "died": null,
+        "died": 1380,
         "story_year": 1321,
         "story_age": 21,
         "groups": [
@@ -116,8 +116,8 @@
         "description": "Novella embodies the tension between intellect and desire.  Her flirtation with Francisco catalyzes his awakening but also sharpens La Signora's jealousy, forming a Tarot-like Lovers-Tower polarity.",
         "birth_place": "Bologna, Italy",
         "birth_place_description": "Europe's oldest university city, its porticoes shelter clandestine debates and clandestine hearts alike.",
-        "death_place": "",
-        "death_place_description": ""
+        "death_place": "Florence, Italy",
+        "death_place_description": "After spending her later years advancing the cause of women's education throughout Italy, Novella dies in Florence, remembered as a pioneer whose intellectual legacy inspired generations of female scholars and philosophers."
     },
             {
         "name": "Giovanni d'Andrea",
@@ -126,7 +126,7 @@
         "personality": "Giovanni d'Andrea exudes a quiet strength and unwavering commitment to his ideals, often serving as the moral compass for those around him. His wisdom is tempered by genuine empathy, allowing him to connect deeply with both students and colleagues. Despite the challenges posed by societal norms, Giovanni remains steadfast in his belief that education is a transformative force capable of reshaping destinies.",
         "background": "Giovanni d'Andrea, a pillar of the University of Bologna, has spent decades cultivating an environment where intellectual curiosity thrives. As a member of esteemed orders such as The Order of the Golden Fleece and The Order of the Dragon, he leverages his connections to protect academic freedom amidst societal upheaval. His devotion to nurturing Novella's potential reflects his belief in challenging traditional norms through education and mentorship.",
         "physical_description": "Giovanni d'Andrea possesses a dignified and scholarly appearance, with silver-streaked hair that reflects his years of wisdom. His eyes, a deep shade of hazel, convey warmth and understanding, often softening the stern lines etched by years of academic rigor. He carries himself with an air of quiet authority, his attire always neat and befitting his esteemed position within the university.",
-        "dialogue_style": "",
+        "dialogue_style": "Measured and academic, blending scholastic precision with paternal warmth. Giovanni often employs legal and philosophical terminology, yet his speech carries an undercurrent of protective affection when discussing Novella. In formal settings, he commands authority with eloquent rhetoric; in private moments, his words become gentler, revealing the vulnerability beneath his scholarly composure.",
         "role": "Father of Novella",
         "birth_year": 1270,
         "died": 1348,
@@ -253,7 +253,9 @@
         ],
         "description": "Marco serves as a mentor to Francisco, providing him with insights into the world of trade and politics. He is a father figure who offers guidance and support, helping Francisco navigate the complexities of his journey.",
         "birth_place": "Bologna, Italy",
-        "birth_place_description": "A bustling city known for its vibrant culture and intellectual pursuits, Bologna is a melting pot of ideas and influences."
+        "birth_place_description": "A bustling city known for its vibrant culture and intellectual pursuits, Bologna is a melting pot of ideas and influences.",
+        "death_place": "Bologna, Italy",
+        "death_place_description": "His tavern becomes a legendary gathering place for philosophers and travelers alike. Marco passes away peacefully in his beloved establishment, his legacy living on through the countless stories shared within its walls."
     },
     {
         "name": "Cino da Pistoia",
@@ -387,8 +389,8 @@
         "description": "Seeks the Crown of the Ancient Ones to anchor a deterministic timeline where gods script every mortal triumph.",
         "birth_place": "Eridu, Sumer",
         "birth_place_description": "Mud-brick ziggurat where freshwater met primordial sea—the cradle of his first worship.",
-        "death_place": "",
-        "death_place_description": ""
+        "death_place": "Pangea's Inferno",
+        "death_place_description": "Should he fall in this cosmic conflict, his realm dissolves into the abyss—yet divine beings transcend mortality. Dagon's fate is bound to the outcome of the Trionfi's prophecy."
     },
     {
         "name": "Salasa Atumari",
@@ -409,8 +411,8 @@
         "description": "Salasa may pivot from antagonist to reluctant ally if love outweighs loyalty—a living embodiment of the *Trionfi* Strength card (heart taming lion).",
         "birth_place": "Dilmun (mythic Bahrain)",
         "birth_place_description": "Perfumed island said to house the wellspring of immortality.",
-        "death_place": null,
-        "death_place_description": null
+        "death_place": "Between Realms",
+        "death_place_description": "If her love for Roger de Flor triumphs over divine duty, Salasa may choose mortality over godhood—transcending her celestial bonds to dwell in the liminal spaces between worlds, forever guardian of both mortal and divine love."
     },
     {
         "name": "Lucia Cartaro",
@@ -432,8 +434,8 @@
         "description": "Lucia is a talented artisan who creates the *Trionfi* cards, infusing them with her own unique magic. Her journey involves overcoming her pride and learning to embrace collaboration.",
         "birth_place": "Bologna, Italy",
         "birth_place_description": "A city known for its rich history of art and scholarship, where the streets are alive with the sounds of artisans at work.",
-        "death_place": null,
-        "death_place_description": null
+        "death_place": "Bologna, Italy",
+        "death_place_description": "After mastering her craft and achieving recognition for her mystical card-making, Lucia establishes the finest card workshop in Bologna. She dies respected by artisans and scholars alike, her techniques preserved through apprentices who continue her legacy."
 
     }
 ] 
