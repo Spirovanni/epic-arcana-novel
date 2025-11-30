@@ -6,6 +6,7 @@ import { calculateTypeProbs, calculateWingBin } from './types'
 import { calculateInstincts } from './instincts'
 import { calculateDevelopmentBin } from './bins'
 import { calculateColor } from './color'
+import { findMatchingPersonality, getTopMatchingPersonalities } from './personality-matcher'
 
 const VERSION = "1.0.0"
 
@@ -39,16 +40,28 @@ export async function scoreAssessment(
   
   // Find top signal items (items with highest absolute contributions)
   const top_signal_items = findTopSignalItems(answers, forcedChoiceItems, likertItems)
-  
-  // Load canonical profile
+
+  // Load canonical profile (fallback)
   const canonicalProfiles = await loadCanonicalProfiles()
   const canonicalProfile = canonicalProfiles.find(p => p.chapter === chapter)
-  
+
+  // Find best matching personality profile from database
+  const personalityMatch = await findMatchingPersonality(
+    dominant_type,
+    wing_bin,
+    development_bin,
+    dimensions,
+    instincts
+  )
+
+  // Get top alternative personality matches
+  const topMatches = await getTopMatchingPersonalities(dominant_type, dimensions, 3)
+
   // Calculate duration
   const startTime = new Date(answers.meta?.startTime || new Date().toISOString())
   const endTime = answers.meta?.endTime ? new Date(answers.meta.endTime) : new Date()
   const duration_sec = Math.round((endTime.getTime() - startTime.getTime()) / 1000)
-  
+
   const result: AssessmentResult = {
     dimensions,
     type_probs,
@@ -60,20 +73,34 @@ export async function scoreAssessment(
     ea_id,
     color,
     top_signal_items,
-    profile: {
+    profile: personalityMatch ? {
+      id: personalityMatch.canonicalId,
+      chapter: chapter,
+      display_name: personalityMatch.displayName || `Epic Arcana ${personalityMatch.canonicalId}`,
+      theme: personalityMatch.theme || 'Mystical archetype',
+      family: personalityMatch.family || 'Unknown',
+      matchScore: personalityMatch.matchScore,
+      matchReason: personalityMatch.matchReason,
+      rgbHex: personalityMatch.rgbHex,
+      enneagramLink: personalityMatch.enneagramLink,
+      colorAlignment: personalityMatch.colorAlignment,
+      scoringModel: personalityMatch.scoringModel,
+    } : {
       id: ea_id,
       chapter: canonicalProfile?.chapter || chapter,
       display_name: canonicalProfile?.display_name || `Epic Arcana ${ea_id}`,
       theme: canonicalProfile?.theme || 'Mystical archetype',
       family: canonicalProfile?.family || 'Unknown',
+      matchScore: 75,
     },
+    alternativeMatches: topMatches,
     meta: {
       duration_sec,
       version: VERSION,
       item_pack: "Laurasia-1.0"
     }
   }
-  
+
   return result
 }
 

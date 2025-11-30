@@ -4,6 +4,7 @@ import { ResultHeader } from '@/components/results/ResultHeader'
 import { TypeBars } from '@/components/results/TypeBars'
 import { ColorSwatch } from '@/components/results/ColorSwatch'
 import { TraitLists } from '@/components/results/TraitLists'
+import { PersonalityInsights } from '@/components/assessment/PersonalityInsights'
 import { AssessmentResult } from '@/lib/assessment/types'
 import Link from 'next/link'
 import fs from 'fs'
@@ -183,7 +184,12 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
           </h3>
           <TraitLists result={result} />
         </div>
-        
+
+        {/* Enhanced Personality Insights */}
+        <div className="mb-12">
+          <PersonalityInsights result={result} />
+        </div>
+
         {/* Top Signal Items */}
         <div className="bg-slate-800/50 border border-purple-500/30 rounded-lg p-6 mb-12">
           <h3 className="text-xl font-semibold text-purple-300 mb-4">
