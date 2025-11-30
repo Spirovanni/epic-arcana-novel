@@ -259,37 +259,35 @@ export default function CharacterProfilePage() {
                       />
                     </div>
                     
-                    {/* Upload Controls */}
+                    {/* Upload Controls - Disabled on Production */}
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-2xl flex items-center justify-center">
-                      <div className="flex flex-col items-center space-y-2">
+                      <div className="flex flex-col items-center space-y-3">
                         <div className="relative group/upload">
-                          <label className="cursor-pointer bg-white/90 hover:bg-white text-gray-800 font-medium py-2 px-4 rounded-lg transition-colors text-sm">
-                            {uploading ? 'Uploading...' : 'Upload Image'}
-                            <input
-                              type="file"
-                              accept="image/jpeg,image/jpg,image/png,image/webp"
-                              onChange={handleImageUpload}
-                              disabled={uploading}
-                              className="hidden"
-                            />
-                          </label>
-                          
-                          {/* Image Upload Guidelines Tooltip */}
-                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover/upload:opacity-100 transition-opacity duration-200 pointer-events-none z-10">
-                            <div className="bg-gray-900 text-white text-xs rounded-lg p-3 shadow-lg min-w-[250px]">
-                              <div className="font-semibold mb-2">Image Upload Guidelines</div>
-                              <ul className="space-y-1 text-xs">
-                                <li>• Formats: JPG, PNG, WebP</li>
-                                <li>• Max size: 5MB</li>
-                                <li>• Max dimensions: 1500x1500px</li>
-                                <li>• Square images work best</li>
-                              </ul>
-                              {/* Arrow pointing down */}
-                              <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                          <div className="bg-blue-500/90 text-white font-medium py-2 px-4 rounded-lg text-sm text-center cursor-help">
+                            Manage Images
+                            {/* Admin Panel Link Tooltip */}
+                            <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover/upload:opacity-100 transition-opacity duration-200 pointer-events-auto z-10">
+                              <div className="bg-gray-900 text-white text-xs rounded-lg p-4 shadow-lg min-w-[280px]">
+                                <div className="font-semibold mb-2">Image Management</div>
+                                <p className="text-gray-100 mb-3">To assign character images, please use the admin panel:</p>
+                                <a
+                                  href="/admin/characters/images"
+                                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-3 rounded transition-colors text-sm mb-2"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  Go to Image Admin →
+                                </a>
+                                <p className="text-gray-300 text-xs">
+                                  The admin panel allows you to select from existing images in our library.
+                                </p>
+                                {/* Arrow pointing down */}
+                                <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        
+
                         {character.imageUrl && (
                           <button
                             onClick={handleImageRemove}
@@ -391,14 +389,18 @@ export default function CharacterProfilePage() {
                       <p className="text-lg text-white/90 leading-relaxed max-w-2xl">{character.description}</p>
                     ) : null}
 
-                    {/* Upload Error Display */}
-                    {uploadError && (
-                      <div className="mt-4 max-w-2xl">
-                        <div className="bg-red-500/20 border border-red-400/30 rounded-lg p-3">
-                          <p className="text-red-200 text-sm">{uploadError}</p>
-                        </div>
+                    {/* Image Management Info */}
+                    <div className="mt-4 max-w-2xl">
+                      <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-4">
+                        <p className="text-blue-100 text-sm">
+                          <strong>Image Management:</strong> To add or change character images, visit the{' '}
+                          <a href="/admin/characters/images" className="underline hover:text-blue-50">
+                            Admin Character Images page
+                          </a>
+                          .
+                        </p>
                       </div>
-                    )}
+                    </div>
 
                     {/* Image Upload Guidelines */}
                     {/* <div className="mt-6 max-w-2xl">
