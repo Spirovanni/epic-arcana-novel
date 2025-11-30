@@ -10,7 +10,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Users, Search, X } from 'lucide-react'
 
-const placeholderImg = '/icons/fallback/default-chapter.png'
+const placeholderImg = '/icons/fallback/default-chapter.svg'
 
 type Character = {
   id?: string;
