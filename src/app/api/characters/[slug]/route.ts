@@ -5,42 +5,54 @@ import { eq } from 'drizzle-orm';
 import { currentUser } from '@clerk/nextjs/server';
 import { getUserPermissions } from '@/lib/auth';
 
+let useFallbackQuery = false;
+let loggedSchemaWarning = false;
+
 export async function GET(request: Request, { params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   try {
     console.log('Fetching character with slug:', slug);
     // Try to select all fields first, then fallback to core fields if there are schema issues
     let result;
-    try {
-      result = await db.select({
-        id: characters.id,
-        name: characters.name,
-        aka: characters.aka,
-        pronouns: characters.pronouns,
-        relation: characters.relation,
-        role: characters.role,
-        description: characters.description,
-        lastSeenChapter: characters.lastSeenChapter,
-        personality: characters.personality,
-        background: characters.background,
-        physicalDescription: characters.physicalDescription,
-        dialogueStyle: characters.dialogueStyle,
-        groups: characters.groups,
-        birthYear: characters.birthYear,
-        died: characters.died,
-        birthPlace: characters.birthPlace,
-        deathPlace: characters.deathPlace,
-        slug: characters.slug,
-        characterType: characters.characterType,
-        imagePrompt: characters.imagePrompt,
-        openArtLink: characters.openArtLink,
-        customSetting: characters.customSetting,
-        imageUrl: characters.imageUrl,
-        createdAt: characters.createdAt,
-        updatedAt: characters.updatedAt,
-      }).from(characters).where(eq(characters.slug, slug));
-    } catch (schemaError) {
-      console.log('Schema error detected, falling back to core fields only:', schemaError);
+    if (!useFallbackQuery) {
+      try {
+        result = await db.select({
+          id: characters.id,
+          name: characters.name,
+          aka: characters.aka,
+          pronouns: characters.pronouns,
+          relation: characters.relation,
+          role: characters.role,
+          description: characters.description,
+          lastSeenChapter: characters.lastSeenChapter,
+          personality: characters.personality,
+          background: characters.background,
+          physicalDescription: characters.physicalDescription,
+          dialogueStyle: characters.dialogueStyle,
+          groups: characters.groups,
+          birthYear: characters.birthYear,
+          died: characters.died,
+          birthPlace: characters.birthPlace,
+          deathPlace: characters.deathPlace,
+          slug: characters.slug,
+          characterType: characters.characterType,
+          imagePrompt: characters.imagePrompt,
+          openArtLink: characters.openArtLink,
+          customSetting: characters.customSetting,
+          imageUrl: characters.imageUrl,
+          createdAt: characters.createdAt,
+          updatedAt: characters.updatedAt,
+        }).from(characters).where(eq(characters.slug, slug));
+      } catch (schemaError) {
+        useFallbackQuery = true;
+        if (!loggedSchemaWarning) {
+          console.warn('Schema error detected, falling back to core fields only:', schemaError);
+          loggedSchemaWarning = true;
+        }
+      }
+    }
+
+    if (!result) {
       // If there's a schema error, select only core fields
       result = await db.select({
         id: characters.id,
@@ -62,6 +74,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
         deathPlace: characters.deathPlace,
         slug: characters.slug,
         characterType: characters.characterType,
+        imageUrl: characters.imageUrl,
         createdAt: characters.createdAt,
         updatedAt: characters.updatedAt,
       }).from(characters).where(eq(characters.slug, slug));
@@ -70,7 +83,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
       if (result.length > 0) {
         result = result.map(char => ({ 
           ...char, 
-          imageUrl: null,
           imagePrompt: null,
           openArtLink: null,
           customSetting: null

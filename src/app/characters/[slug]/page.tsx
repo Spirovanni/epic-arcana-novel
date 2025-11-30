@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
-const placeholderImg = '/icons/fallback/default-chapter.png';
+const placeholderImg = '/icons/fallback/default-chapter.svg';
 
 type Character = {
   id?: string;
