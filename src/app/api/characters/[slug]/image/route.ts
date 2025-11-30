@@ -8,6 +8,14 @@ import { eq } from 'drizzle-orm';
 const ALLOWED_TYPES = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
 const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 
+/**
+ * POST /api/characters/[slug]/image
+ * Upload a character image
+ *
+ * WARNING: This endpoint writes to the local file system.
+ * On serverless platforms like Vercel, the public folder is read-only.
+ * For production, use the /admin/characters/images endpoint to assign existing images instead.
+ */
 export async function POST(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
   try {
     const { slug } = await params;
@@ -29,16 +37,16 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     // Validate file type
     if (!ALLOWED_TYPES.includes(file.type)) {
       console.log('File type rejected:', file.type, 'Allowed types:', ALLOWED_TYPES);
-      return NextResponse.json({ 
-        error: `Invalid file type: ${file.type}. Please upload JPG, PNG, or WebP images only.` 
+      return NextResponse.json({
+        error: `Invalid file type: ${file.type}. Please upload JPG, PNG, or WebP images only.`
       }, { status: 400 });
     }
 
     // Validate file size
     if (file.size > MAX_FILE_SIZE) {
       console.log('File size rejected:', file.size, 'Max allowed:', MAX_FILE_SIZE);
-      return NextResponse.json({ 
-        error: `File too large: ${(file.size / (1024 * 1024)).toFixed(2)}MB. Please upload images smaller than 5MB.` 
+      return NextResponse.json({
+        error: `File too large: ${(file.size / (1024 * 1024)).toFixed(2)}MB. Please upload images smaller than 5MB.`
       }, { status: 400 });
     }
 
@@ -57,17 +65,25 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     const timestamp = Date.now();
     const fileExtension = file.name.split('.').pop()?.toLowerCase() || 'jpg';
     const fileName = `${slug}-${timestamp}.${fileExtension}`;
-    
+
     // Create the file path
     const publicPath = join(process.cwd(), 'public', 'images', 'characters', fileName);
     const urlPath = `/images/characters/${fileName}`;
 
     // Convert file to buffer and save
     console.log('Saving file to:', publicPath);
-    const bytes = await file.arrayBuffer();
-    const buffer = Buffer.from(bytes);
-    await writeFile(publicPath, buffer);
-    console.log('File saved successfully');
+    try {
+      const bytes = await file.arrayBuffer();
+      const buffer = Buffer.from(bytes);
+      await writeFile(publicPath, buffer);
+      console.log('File saved successfully');
+    } catch (fileError) {
+      console.error('File write failed:', fileError);
+      return NextResponse.json({
+        error: 'Failed to save image file. This may be because the server environment does not support file uploads. Please use the admin panel (/admin/characters/images) to assign existing images instead.',
+        details: String(fileError)
+      }, { status: 500 });
+    }
 
     // Update character record with new image URL
     console.log('Updating character with imageUrl:', urlPath);
