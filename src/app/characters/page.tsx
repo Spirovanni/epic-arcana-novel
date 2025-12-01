@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { Users, Search, X } from 'lucide-react'
+import { Users, Search, X, ArrowUp } from 'lucide-react'
 
 const placeholderImg = '/icons/fallback/default-chapter.svg'
 
@@ -163,6 +163,7 @@ export default function CharactersPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [filterRole, setFilterRole] = useState<string | null>(null)
   const [availableRoles, setAvailableRoles] = useState<string[]>([])
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
     fetch('/api/characters')
@@ -209,6 +210,17 @@ export default function CharactersPage() {
       })
   }, [])
 
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 240)
+    handleScroll()
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   // Filter characters based on search and role filter
   useEffect(() => {
     let filtered = characters
@@ -242,6 +254,8 @@ export default function CharactersPage() {
         items={[
           { label: 'Characters', current: true }
         ]}
+        variant="dark"
+        sticky={false}
       />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
@@ -410,6 +424,16 @@ export default function CharactersPage() {
           )}
         </div>
       </main>
+      {showScrollTop && (
+        <button
+          type="button"
+          onClick={handleScrollToTop}
+          className="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          aria-label="Back to top"
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
     </>
   )
-} 
+}
