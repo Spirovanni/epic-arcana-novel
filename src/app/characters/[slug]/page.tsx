@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-border/70 bg-card/90 dark:bg-card/90 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
+  'rounded-3xl border border-border/70 bg-card/90 dark:bg-slate-950/75 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
 const sectionShell =
-  'rounded-2xl border border-border/70 bg-card/95 dark:bg-card/95 supports-[backdrop-filter]:backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
+  'rounded-2xl border border-border/70 bg-gradient-to-br from-card via-card/95 to-card dark:from-slate-950/85 dark:via-slate-900/85 dark:to-slate-950/90 supports-[backdrop-filter]:backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
 
 type Character = {
   id?: string;
@@ -451,7 +451,10 @@ export default function CharacterProfilePage() {
                   <div className="lg:col-span-2 space-y-6">
                     {/* Personality Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Personality</h3>
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
+                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        Personality
+                      </h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.personality || ''}
@@ -469,7 +472,10 @@ export default function CharacterProfilePage() {
 
                     {/* Background Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Background</h3>
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
+                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        Background
+                      </h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.background || ''}
@@ -487,7 +493,10 @@ export default function CharacterProfilePage() {
 
                     {/* Physical Description Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Physical Description</h3>
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
+                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        Physical Description
+                      </h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.physicalDescription || ''}
@@ -505,7 +514,10 @@ export default function CharacterProfilePage() {
 
                     {/* Dialogue Style Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Dialogue Style</h3>
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
+                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        Dialogue Style
+                      </h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.dialogueStyle || ''}
@@ -523,9 +535,12 @@ export default function CharacterProfilePage() {
 
                     {/* Image Details Section */}
                     <div className="rounded-2xl border border-purple-200/70 dark:border-purple-600/50 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/60 dark:to-fuchsia-900/50 p-6 shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(168,85,247,0.3)]">
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center">
-                        <PhotoIcon className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-300" />
-                        Image Details for AI Generation
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
+                        <span className="h-1.5 w-6 rounded-full bg-purple-500/80 shadow-[0_0_12px_-4px_rgba(168,85,247,0.8)]" />
+                        <span className="inline-flex items-center gap-2">
+                          <PhotoIcon className="w-5 h-5 text-purple-600 dark:text-purple-300" />
+                          Image Details for AI Generation
+                        </span>
                       </h3>
                       <div className="space-y-4">
                         {/* AI Prompt */}
@@ -565,7 +580,10 @@ export default function CharacterProfilePage() {
                   <div className="space-y-6">
                     {/* Life Details */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Life Details</h3>
+                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-4">
+                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        Life Details
+                      </h3>
                       {isEditing ? (
                         <div className="space-y-3">
                           <div>
@@ -660,7 +678,10 @@ export default function CharacterProfilePage() {
                     {/* Groups */}
                     {character.groups && Array.isArray(character.groups) && character.groups.length > 0 && (
                       <div className={`${sectionShell} p-6`}>
-                        <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Groups & Affiliations</h3>
+                        <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-4">
+                          <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                          Groups & Affiliations
+                        </h3>
                         <div className="flex flex-wrap gap-2">
                           {character.groups.map((group, index) => (
                             <div key={index} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 dark:bg-primary/25 text-primary-800 dark:text-primary-100 border border-primary/20 dark:border-primary/30 shadow-sm">
@@ -679,7 +700,10 @@ export default function CharacterProfilePage() {
           {related.length > 0 && (
             <div className="mt-12 max-w-6xl mx-auto">
               <div className={`${sectionShell} p-8 dark:border-slate-700/40`}>
-                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Related Characters</h2>
+                <h2 className="flex items-center gap-2 text-2xl font-bold text-foreground mb-6">
+                  <span className="h-2 w-8 rounded-full bg-primary/70 shadow-[0_0_18px_-6px_rgba(59,130,246,0.8)]" />
+                  Related Characters
+                </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {related.filter((c) => c.slug).map((c) => (
                     <Link
