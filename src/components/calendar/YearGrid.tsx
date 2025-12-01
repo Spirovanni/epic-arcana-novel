@@ -173,16 +173,29 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   const activeDays = days.slice(0, 80);
   const restDay = days[80]; // The 81st day (rest day)
 
-  // Arrange 80 active days in 8x10 grid, with rest day in the last position
-  const grid = Array.from({ length: 8 }, (_, row) => {
-    const rowDays = activeDays.slice(row * 10, (row + 1) * 10);
-    // On the 8th (last) row, add the rest day as the 9th position (skipping one space, then placing it)
-    if (row === 7 && restDay) {
-      rowDays.push(...new Array(9 - rowDays.length).fill(null)); // Pad with nulls
-      rowDays.push(restDay); // Add rest day
-    }
-    return rowDays;
-  });
+  // Build grid rows: 7 complete rows of 10 + 1 final row with 3 active days + empty spaces + 1 rest day
+  // Rows 1-7: 10 days each (70 days total)
+  // Row 8: 10 active days (last 10 of the 80) arranged as: 10 days in positions 0-9
+  // But we want: 3 days in positions 0-2, empty space, then rest day positioned at the end
+
+  const grid: (HfCalendarResult | null)[][] = [];
+
+  // Create first 7 full rows (70 days)
+  for (let i = 0; i < 7; i++) {
+    grid.push(activeDays.slice(i * 10, (i + 1) * 10));
+  }
+
+  // Create last row with remaining 10 active days + space + rest day
+  const lastRowActive = activeDays.slice(70, 80);
+  const lastRow: (HfCalendarResult | null)[] = [...lastRowActive];
+
+  // Only add rest day if it exists
+  if (restDay) {
+    lastRow.push(null); // Empty space
+    lastRow.push(restDay); // Rest day
+  }
+
+  grid.push(lastRow);
 
   return (
     <div className="space-y-2">
@@ -191,8 +204,13 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
       </h3>
       <div className="grid grid-cols-10 gap-1">
         {grid.map((row, rowIndex) =>
-          row.map((day, colIndex) =>
-            day ? (
+          row.map((day, colIndex) => {
+            // For the last row, only render up to column 10 (the rest day extends beyond)
+            // Actually, we want to render the rest day too, so render all
+            if (rowIndex < 7 && colIndex >= 10) return null; // Skip extras in non-last rows
+            if (rowIndex === 7 && colIndex > 10) return null; // Skip anything beyond rest day in last row
+
+            return day ? (
               <GridCell
                 key={day.dateISO}
                 day={day}
@@ -202,8 +220,8 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
               />
             ) : (
               <div key={`empty-${rowIndex}-${colIndex}`} className="w-6 h-6" />
-            )
-          )
+            );
+          })
         )}
       </div>
     </div>
