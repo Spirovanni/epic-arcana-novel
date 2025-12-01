@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
@@ -28,36 +28,81 @@ interface Scene {
   id: string;
   sceneNumber: number;
   title: string;
-  description: string;
-  setup: string;
-  beatGoal: string;
-  tarotSymbolism: string;
-  timeline_date: string;
-  timeline_variant: string;
-  location: string;
-  pov: string;
-  core_emotion: string;
-  scene_tone: string;
+  focus?: string;
+  preliminarySceneFocus?: string;
+  preliminarySceneDescription?: string;
+  description?: string;
+  setup?: string;
+  sensoryDetail?: string;
+  internalConflict?: string;
+  beatGoal?: string;
+  tarotSymbolism?: string;
+  heroJourneyStage?: string;
+  pages?: string;
+  symbolism?: string;
+  primaryTarotCard?: string;
+  secondaryTarotCards?: unknown;
+  tarotCardId?: string | null;
+  tarotNarrativeRole?: string;
+  franciscoTarotConnection?: string;
+  laSignoraTarotConnection?: string;
+  dagonTarotConnection?: string;
+  temporalPowerManifested?: string;
+  characterGrowthElement?: string;
+  sceneCardProgression?: number | null;
+  cardReversalSignificance?: string;
+  historicalDate?: string;
+  storyTimelineDate?: string;
+  historicalEventIds?: unknown;
+  temporalDivergencePoint?: string;
+  realWorldContext?: string;
+  alternateTimelineVariant?: string;
+  chronologicalSequence?: number | null;
+  storySequence?: number | null;
+  timelineSignificance?: string;
+  timeline_date?: string;
+  timeline_variant?: string;
+  location?: string;
+  pov?: string;
+  tense?: string;
+  core_emotion?: string;
+  scene_tone?: string;
 }
 
 interface Chapter {
   id: string;
-  title: string;
+  title?: string | null;
   chapterNumber: number;
-  description: string;
-  summary: string;
-  focus: string;
-  focusArea: string;
+  description?: string | null;
+  summary?: string | null;
+  focus?: string | null;
+  focusArea?: string | null;
+  epicNovelPages?: string | null;
+  epicChapterFocus?: string | null;
+  epicNovelChapterFocus?: string | null;
+  epicNovelSectionName?: string | null;
+  tarotCardItem?: string | null;
+  connectionToMajorTaskGroup?: string | null;
+  specificTaskGroupDescription?: string | null;
+  specificTaskGroupTagline?: string | null;
+  specificTaskGroupBooksInfluencedBy?: string[] | null;
+  pov?: string | null;
+  tense?: string | null;
+  coreEmotion?: string | null;
+  sceneTone?: string | null;
+  colorName?: string | null;
+  hexCode?: string | null;
+  red?: number | null;
+  green?: number | null;
+  blue?: number | null;
   colorTheme: {
     name: string;
     hex: string;
     rgb: { red: number; green: number; blue: number };
   };
-  tarotFamily: string;
-  tarotCardLink: string;
-  terminalLearningObjectives?: {
-    [key: string]: string;
-  };
+  tarotFamily?: string | null;
+  tarotCardLink?: string | null;
+  terminalLearningObjectives?: Record<string, unknown>;
   scenes: Scene[];
 }
 
@@ -86,13 +131,466 @@ interface OutlineData {
   stats: Stats;
 }
 
-const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: { 
+type ChapterEdit = Partial<
+  Omit<Chapter, 'scenes' | 'colorTheme'>
+>;
+
+type SceneEdit = Partial<Scene>;
+
+const SceneCard = ({
+  scene,
+  onSaveScene,
+  saving,
+}: {
+  scene: Scene;
+  onSaveScene: (sceneId: string, data: SceneEdit) => Promise<void>;
+  saving?: boolean;
+}) => {
+  const [isEditing, setIsEditing] = useState(false);
+  const [form, setForm] = useState<SceneEdit>(scene);
+  const [secondaryTarotText, setSecondaryTarotText] = useState(() => {
+    if (scene.secondaryTarotCards === undefined || scene.secondaryTarotCards === null) return '';
+    if (typeof scene.secondaryTarotCards === 'string') return scene.secondaryTarotCards;
+    try {
+      return JSON.stringify(scene.secondaryTarotCards, null, 2);
+    } catch {
+      return '';
+    }
+  });
+  const [localError, setLocalError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setForm(scene);
+    if (scene.secondaryTarotCards === undefined || scene.secondaryTarotCards === null) {
+      setSecondaryTarotText('');
+    } else if (typeof scene.secondaryTarotCards === 'string') {
+      setSecondaryTarotText(scene.secondaryTarotCards);
+    } else {
+      try {
+        setSecondaryTarotText(JSON.stringify(scene.secondaryTarotCards, null, 2));
+      } catch {
+        setSecondaryTarotText('');
+      }
+    }
+  }, [scene]);
+
+  const updateField = (field: keyof SceneEdit, value: string) => {
+    setForm(prev => ({ ...prev, [field]: value }));
+  };
+
+  const parseSecondaryTarot = () => {
+    if (!secondaryTarotText.trim()) return undefined;
+    try {
+      return JSON.parse(secondaryTarotText);
+    } catch {
+      // fallback to comma separated list
+      return secondaryTarotText.split(',').map(item => item.trim()).filter(Boolean);
+    }
+  };
+
+  const handleSave = async () => {
+    setLocalError(null);
+    try {
+      await onSaveScene(scene.id, {
+        ...form,
+        secondaryTarotCards: parseSecondaryTarot(),
+      });
+      setIsEditing(false);
+    } catch (error) {
+      console.error('Failed to save scene', error);
+      setLocalError('Unable to save scene. Please try again.');
+    }
+  };
+
+  return (
+    <div 
+      className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
+    >
+      <div className="flex items-start justify-between mb-2">
+        <div className="space-y-1">
+          <h5 className="font-medium text-gray-900 dark:text-gray-100">
+            Scene {scene.sceneNumber}: {scene.title || 'Untitled Scene'}
+          </h5>
+          <div className="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-400">
+            {scene.timeline_date && (
+              <div className="flex items-center gap-1">
+                <CalendarDaysIcon className="w-3 h-3" />
+                {scene.timeline_date}
+              </div>
+            )}
+            {scene.timeline_variant && (
+              <div className="flex items-center gap-1">
+                <DocumentTextIcon className="w-3 h-3" />
+                {scene.timeline_variant}
+              </div>
+            )}
+            {scene.location && (
+              <div className="flex items-center gap-1">
+                <MapPinIcon className="w-3 h-3" />
+                {scene.location}
+              </div>
+            )}
+            {scene.pov && (
+              <div className="flex items-center gap-1">
+                <UserIcon className="w-3 h-3" />
+                {scene.pov}
+              </div>
+            )}
+            {scene.core_emotion && (
+              <div className="flex items-center gap-1">
+                <HeartIcon className="w-3 h-3" />
+                {scene.core_emotion}
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setIsEditing(!isEditing)}
+            className="px-3 py-1 text-xs rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors"
+          >
+            {isEditing ? 'Close' : 'Edit'}
+          </button>
+        </div>
+      </div>
+
+      {scene.setup && !isEditing && (
+        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
+          {scene.setup}
+        </p>
+      )}
+
+      {!isEditing && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="space-y-1">
+            {scene.description && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Description:</span> {scene.description}
+              </p>
+            )}
+            {scene.beatGoal && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Beat Goal:</span> {scene.beatGoal}
+              </p>
+            )}
+            {scene.heroJourneyStage && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Hero&apos;s Journey:</span> {scene.heroJourneyStage}
+              </p>
+            )}
+            {scene.temporalDivergencePoint && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Temporal Divergence:</span> {scene.temporalDivergencePoint}
+              </p>
+            )}
+          </div>
+          <div className="space-y-1">
+            {scene.timelineSignificance && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Timeline Significance:</span> {scene.timelineSignificance}
+              </p>
+            )}
+            {scene.tarotSymbolism && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Tarot:</span> {scene.tarotSymbolism}
+              </p>
+            )}
+            {scene.primaryTarotCard && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Primary Card:</span> {scene.primaryTarotCard}
+              </p>
+            )}
+            {scene.scene_tone && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Tone:</span> {scene.scene_tone}
+              </p>
+            )}
+            {(scene.storySequence || scene.chronologicalSequence) && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Sequence:</span>{' '}
+                {scene.storySequence ? `Story ${scene.storySequence}` : ''} {scene.storySequence && scene.chronologicalSequence ? '•' : ''}
+                {scene.chronologicalSequence ? `Chronology ${scene.chronologicalSequence}` : ''}
+              </p>
+            )}
+            {scene.temporalPowerManifested && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Temporal Power:</span> {scene.temporalPowerManifested}
+              </p>
+            )}
+            {scene.characterGrowthElement && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Growth:</span> {scene.characterGrowthElement}
+              </p>
+            )}
+            {scene.alternateTimelineVariant && (
+              <p className="text-gray-600 dark:text-gray-300">
+                <span className="font-semibold">Alt Timeline:</span> {scene.alternateTimelineVariant}
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+
+      {isEditing && (
+        <div className="mt-4 space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.title || ''}
+              onChange={(e) => updateField('title', e.target.value)}
+              placeholder="Title"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.focus || ''}
+              onChange={(e) => updateField('focus', e.target.value)}
+              placeholder="Focus"
+            />
+          </div>
+          <textarea
+            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+            rows={2}
+            value={form.setup || ''}
+            onChange={(e) => updateField('setup', e.target.value)}
+            placeholder="Setup"
+          />
+          <textarea
+            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+            rows={3}
+            value={form.description || ''}
+            onChange={(e) => updateField('description', e.target.value)}
+            placeholder="Description"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.beatGoal || ''}
+              onChange={(e) => updateField('beatGoal', e.target.value)}
+              placeholder="Beat Goal"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.heroJourneyStage || ''}
+              onChange={(e) => updateField('heroJourneyStage', e.target.value)}
+              placeholder="Hero's Journey Stage"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.timeline_date || ''}
+              onChange={(e) => updateField('timeline_date', e.target.value)}
+              placeholder="Timeline Date"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.timeline_variant || ''}
+              onChange={(e) => updateField('timeline_variant', e.target.value)}
+              placeholder="Timeline Variant"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.location || ''}
+              onChange={(e) => updateField('location', e.target.value)}
+              placeholder="Location"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.pov || ''}
+              onChange={(e) => updateField('pov', e.target.value)}
+              placeholder="POV"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.tense || ''}
+              onChange={(e) => updateField('tense', e.target.value)}
+              placeholder="Tense"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.core_emotion || ''}
+              onChange={(e) => updateField('core_emotion', e.target.value)}
+              placeholder="Core Emotion"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.scene_tone || ''}
+              onChange={(e) => updateField('scene_tone', e.target.value)}
+              placeholder="Scene Tone"
+            />
+          </div>
+          <textarea
+            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+            rows={2}
+            value={form.timelineSignificance || ''}
+            onChange={(e) => updateField('timelineSignificance', e.target.value)}
+            placeholder="Timeline Significance"
+          />
+          <textarea
+            className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+            rows={2}
+            value={form.tarotSymbolism || ''}
+            onChange={(e) => updateField('tarotSymbolism', e.target.value)}
+            placeholder="Tarot Symbolism"
+          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.primaryTarotCard || ''}
+              onChange={(e) => updateField('primaryTarotCard', e.target.value)}
+              placeholder="Primary Tarot Card"
+            />
+            <textarea
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              rows={2}
+              value={secondaryTarotText}
+              onChange={(e) => setSecondaryTarotText(e.target.value)}
+              placeholder="Secondary Tarot Cards (JSON or comma separated)"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.temporalPowerManifested || ''}
+              onChange={(e) => updateField('temporalPowerManifested', e.target.value)}
+              placeholder="Temporal Power Manifested"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.characterGrowthElement || ''}
+              onChange={(e) => updateField('characterGrowthElement', e.target.value)}
+              placeholder="Character Growth Element"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.alternateTimelineVariant || ''}
+              onChange={(e) => updateField('alternateTimelineVariant', e.target.value)}
+              placeholder="Alternate Timeline Variant"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.storySequence || ''}
+              onChange={(e) => updateField('storySequence', e.target.value)}
+              placeholder="Story Sequence"
+            />
+            <input
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+              value={form.chronologicalSequence || ''}
+              onChange={(e) => updateField('chronologicalSequence', e.target.value)}
+              placeholder="Chronological Sequence"
+            />
+          </div>
+          {localError && (
+            <p className="text-sm text-red-500">{localError}</p>
+          )}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handleSave}
+              disabled={saving}
+              className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 transition-colors text-sm font-medium"
+            >
+              {saving ? 'Saving...' : 'Save Scene'}
+            </button>
+            <button
+              onClick={() => {
+                setForm(scene);
+                setIsEditing(false);
+              }}
+              className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ChapterCard = ({ 
+  chapter, 
+  isExpanded, 
+  onToggleExpanded,
+  onSaveChapter,
+  onSaveScene,
+  savingChapterId,
+  savingSceneId,
+}: { 
   chapter: Chapter; 
   isExpanded: boolean; 
   onToggleExpanded: () => void;
+  onSaveChapter: (chapterId: string, data: ChapterEdit) => Promise<void>;
+  onSaveScene: (sceneId: string, data: SceneEdit) => Promise<void>;
+  savingChapterId?: string | null;
+  savingSceneId?: string | null;
 }) => {
   const [showScenes, setShowScenes] = useState(false);
-  
+  const [isEditing, setIsEditing] = useState(false);
+  const [chapterForm, setChapterForm] = useState<ChapterEdit>({
+    title: chapter.title || '',
+    summary: chapter.summary || '',
+    description: chapter.description || '',
+    focus: chapter.focus || '',
+    focusArea: chapter.focusArea || '',
+    epicNovelPages: chapter.epicNovelPages || '',
+    epicChapterFocus: chapter.epicChapterFocus || '',
+    epicNovelChapterFocus: chapter.epicNovelChapterFocus || '',
+    epicNovelSectionName: chapter.epicNovelSectionName || '',
+    tarotCardLink: chapter.tarotCardLink || '',
+    tarotFamily: chapter.tarotFamily || '',
+    tarotCardItem: chapter.tarotCardItem || '',
+    connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
+    specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
+    specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
+    specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
+    pov: chapter.pov || '',
+    tense: chapter.tense || '',
+    coreEmotion: chapter.coreEmotion || '',
+    sceneTone: chapter.sceneTone || '',
+    colorName: chapter.colorName || chapter.colorTheme?.name,
+    hexCode: chapter.hexCode || chapter.colorTheme?.hex,
+    red: chapter.red ?? chapter.colorTheme?.rgb?.red,
+    green: chapter.green ?? chapter.colorTheme?.rgb?.green,
+    blue: chapter.blue ?? chapter.colorTheme?.rgb?.blue,
+  });
+  const [localError, setLocalError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setChapterForm({
+      title: chapter.title || '',
+      summary: chapter.summary || '',
+      description: chapter.description || '',
+      focus: chapter.focus || '',
+      focusArea: chapter.focusArea || '',
+      epicNovelPages: chapter.epicNovelPages || '',
+      epicChapterFocus: chapter.epicChapterFocus || '',
+      epicNovelChapterFocus: chapter.epicNovelChapterFocus || '',
+      epicNovelSectionName: chapter.epicNovelSectionName || '',
+      tarotCardLink: chapter.tarotCardLink || '',
+      tarotFamily: chapter.tarotFamily || '',
+      tarotCardItem: chapter.tarotCardItem || '',
+      connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
+      specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
+      specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
+      specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
+      pov: chapter.pov || '',
+      tense: chapter.tense || '',
+      coreEmotion: chapter.coreEmotion || '',
+      sceneTone: chapter.sceneTone || '',
+      colorName: chapter.colorName || chapter.colorTheme?.name,
+      hexCode: chapter.hexCode || chapter.colorTheme?.hex,
+      red: chapter.red ?? chapter.colorTheme?.rgb?.red,
+      green: chapter.green ?? chapter.colorTheme?.rgb?.green,
+      blue: chapter.blue ?? chapter.colorTheme?.rgb?.blue,
+    });
+  }, [chapter]);
+
   const getChapterIcon = (chapterNumber: number) => {
     if (chapterNumber <= 10) return <RocketLaunchIcon className="w-5 h-5" />;
     if (chapterNumber <= 20) return <BeakerIcon className="w-5 h-5" />;
@@ -112,8 +610,24 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
     return { name: "Development", color: "bg-gray-100 text-gray-800 dark:bg-gray-900/50 dark:text-gray-200" };
   };
 
+  const handleFieldChange = (field: keyof ChapterEdit, value: string | number | string[]) => {
+    setChapterForm(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSaveChapter = async () => {
+    setLocalError(null);
+    try {
+      await onSaveChapter(chapter.id, chapterForm);
+      setIsEditing(false);
+    } catch (error) {
+      console.error('Failed to save chapter', error);
+      setLocalError('Unable to save chapter. Please try again.');
+    }
+  };
+
   const phase = getStoryPhase(chapter.chapterNumber);
   const isComplete = chapter.title && chapter.summary && chapter.scenes.length > 0;
+  const savingChapter = savingChapterId === chapter.id;
 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden">
@@ -185,6 +699,16 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
             <button
               onClick={(e) => {
                 e.stopPropagation();
+                setIsEditing(!isEditing);
+                setShowScenes(false);
+              }}
+              className="px-3 py-2 rounded-lg bg-white/60 dark:bg-black/30 hover:bg-white dark:hover:bg-black/50 text-sm font-medium text-gray-700 dark:text-gray-200 transition-colors"
+            >
+              {isEditing ? 'Close Edit' : 'Edit'}
+            </button>
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
                 setShowScenes(!showScenes);
               }}
               className="p-2 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-white/80 dark:hover:bg-black/40 transition-colors"
@@ -214,14 +738,233 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
       {/* Expanded Content */}
       {isExpanded && (
         <div className="p-6 space-y-6">
-          {/* Chapter Details */}
-          {chapter.description && (
-            <div>
-              <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Description</h4>
-              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-                {chapter.description}
-              </p>
+          {isEditing && (
+            <div className="space-y-4 bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-xl p-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.title || ''}
+                  onChange={(e) => handleFieldChange('title', e.target.value)}
+                  placeholder="Title"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.focus || ''}
+                  onChange={(e) => handleFieldChange('focus', e.target.value)}
+                  placeholder="Focus"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.focusArea || ''}
+                  onChange={(e) => handleFieldChange('focusArea', e.target.value)}
+                  placeholder="Focus Area"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.epicNovelPages || ''}
+                  onChange={(e) => handleFieldChange('epicNovelPages', e.target.value)}
+                  placeholder="Epic Novel Pages"
+                />
+              </div>
+              <textarea
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                rows={3}
+                value={chapterForm.summary || ''}
+                onChange={(e) => handleFieldChange('summary', e.target.value)}
+                placeholder="Summary"
+              />
+              <textarea
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                rows={3}
+                value={chapterForm.description || ''}
+                onChange={(e) => handleFieldChange('description', e.target.value)}
+                placeholder="Description"
+              />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.epicNovelChapterFocus || ''}
+                  onChange={(e) => handleFieldChange('epicNovelChapterFocus', e.target.value)}
+                  placeholder="Novel Chapter Focus"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.epicNovelSectionName || ''}
+                  onChange={(e) => handleFieldChange('epicNovelSectionName', e.target.value)}
+                  placeholder="Section Name"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.connectionToMajorTaskGroup || ''}
+                  onChange={(e) => handleFieldChange('connectionToMajorTaskGroup', e.target.value)}
+                  placeholder="Major Task Connection"
+                />
+              </div>
+              <input
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                value={chapterForm.specificTaskGroupTagline || ''}
+                onChange={(e) => handleFieldChange('specificTaskGroupTagline', e.target.value)}
+                placeholder="Tagline"
+              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.pov || ''}
+                  onChange={(e) => handleFieldChange('pov', e.target.value)}
+                  placeholder="POV"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.tense || ''}
+                  onChange={(e) => handleFieldChange('tense', e.target.value)}
+                  placeholder="Tense"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.coreEmotion || ''}
+                  onChange={(e) => handleFieldChange('coreEmotion', e.target.value)}
+                  placeholder="Core Emotion"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.sceneTone || ''}
+                  onChange={(e) => handleFieldChange('sceneTone', e.target.value)}
+                  placeholder="Scene Tone"
+                />
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.tarotFamily || ''}
+                  onChange={(e) => handleFieldChange('tarotFamily', e.target.value)}
+                  placeholder="Tarot Family"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.tarotCardLink || ''}
+                  onChange={(e) => handleFieldChange('tarotCardLink', e.target.value)}
+                  placeholder="Tarot Card Link"
+                />
+              </div>
+              <input
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                value={chapterForm.tarotCardItem || ''}
+                onChange={(e) => handleFieldChange('tarotCardItem', e.target.value)}
+                placeholder="Tarot Card Item"
+              />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.colorName || ''}
+                  onChange={(e) => handleFieldChange('colorName', e.target.value)}
+                  placeholder="Color Name"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.hexCode || ''}
+                  onChange={(e) => handleFieldChange('hexCode', e.target.value)}
+                  placeholder="Hex Code"
+                />
+                <input
+                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
+                  value={chapterForm.epicChapterFocus || ''}
+                  onChange={(e) => handleFieldChange('epicChapterFocus', e.target.value)}
+                  placeholder="Epic Chapter Focus"
+                />
+              </div>
+              {localError && (
+                <p className="text-sm text-red-500">{localError}</p>
+              )}
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={handleSaveChapter}
+                  disabled={savingChapter}
+                  className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 transition-colors text-sm font-medium"
+                >
+                  {savingChapter ? 'Saving...' : 'Save Chapter'}
+                </button>
+                <button
+                  onClick={() => {
+                    setChapterForm({
+                      title: chapter.title || '',
+                      summary: chapter.summary || '',
+                      description: chapter.description || '',
+                      focus: chapter.focus || '',
+                      focusArea: chapter.focusArea || '',
+                      epicNovelPages: chapter.epicNovelPages || '',
+                      epicChapterFocus: chapter.epicChapterFocus || '',
+                      epicNovelChapterFocus: chapter.epicNovelChapterFocus || '',
+                      epicNovelSectionName: chapter.epicNovelSectionName || '',
+                      tarotCardLink: chapter.tarotCardLink || '',
+                      tarotFamily: chapter.tarotFamily || '',
+                      tarotCardItem: chapter.tarotCardItem || '',
+                      connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
+                      specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
+                      specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
+                      specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
+                      pov: chapter.pov || '',
+                      tense: chapter.tense || '',
+                      coreEmotion: chapter.coreEmotion || '',
+                      sceneTone: chapter.sceneTone || '',
+                      colorName: chapter.colorName || chapter.colorTheme?.name,
+                      hexCode: chapter.hexCode || chapter.colorTheme?.hex,
+                      red: chapter.red ?? chapter.colorTheme?.rgb?.red,
+                      green: chapter.green ?? chapter.colorTheme?.rgb?.green,
+                      blue: chapter.blue ?? chapter.colorTheme?.rgb?.blue,
+                    });
+                    setIsEditing(false);
+                  }}
+                  className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium"
+                >
+                  Cancel
+                </button>
+              </div>
             </div>
+          )}
+
+          {!isEditing && (
+            <>
+              {chapter.description && (
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Description</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    {chapter.description}
+                  </p>
+                </div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Story Metadata</h4>
+                  <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <p><span className="font-semibold">Focus:</span> {chapter.focus || '—'}</p>
+                    <p><span className="font-semibold">Focus Area:</span> {chapter.focusArea || '—'}</p>
+                    <p><span className="font-semibold">POV:</span> {chapter.pov || '—'}</p>
+                    <p><span className="font-semibold">Tense:</span> {chapter.tense || '—'}</p>
+                    <p><span className="font-semibold">Core Emotion:</span> {chapter.coreEmotion || '—'}</p>
+                    <p><span className="font-semibold">Scene Tone:</span> {chapter.sceneTone || '—'}</p>
+                    <p><span className="font-semibold">Epic Pages:</span> {chapter.epicNovelPages || '—'}</p>
+                    <p><span className="font-semibold">Epic Focus:</span> {chapter.epicChapterFocus || chapter.epicNovelChapterFocus || '—'}</p>
+                    <p><span className="font-semibold">Section:</span> {chapter.epicNovelSectionName || '—'}</p>
+                    <p><span className="font-semibold">Major Task Connection:</span> {chapter.connectionToMajorTaskGroup || '—'}</p>
+                    <p><span className="font-semibold">Tagline:</span> {chapter.specificTaskGroupTagline || '—'}</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Tarot & Color</h4>
+                  <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <p><span className="font-semibold">Tarot Family:</span> {chapter.tarotFamily || '—'}</p>
+                    <p><span className="font-semibold">Tarot Card Link:</span> {chapter.tarotCardLink || '—'}</p>
+                    <p><span className="font-semibold">Tarot Card Item:</span> {chapter.tarotCardItem || '—'}</p>
+                    <p><span className="font-semibold">Primary Color:</span> {chapter.colorTheme.name} ({chapter.colorTheme.hex})</p>
+                  </div>
+                </div>
+              </div>
+            </>
           )}
 
           {/* Learning Objectives */}
@@ -310,51 +1053,12 @@ const ChapterCard = ({ chapter, isExpanded, onToggleExpanded }: {
             </h4>
             <div className="space-y-3">
               {chapter.scenes.map((scene) => (
-                <div 
+                <SceneCard 
                   key={scene.id}
-                  className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <h5 className="font-medium text-gray-900 dark:text-gray-100">
-                      Scene {scene.sceneNumber}: {scene.title || 'Untitled Scene'}
-                    </h5>
-                    <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
-                      {scene.timeline_date && (
-                        <div className="flex items-center gap-1">
-                          <CalendarDaysIcon className="w-3 h-3" />
-                          {scene.timeline_date}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    {scene.location && (
-                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-                        <MapPinIcon className="w-3 h-3" />
-                        <span>{scene.location}</span>
-                      </div>
-                    )}
-                    {scene.pov && (
-                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-                        <UserIcon className="w-3 h-3" />
-                        <span>{scene.pov}</span>
-                      </div>
-                    )}
-                    {scene.core_emotion && (
-                      <div className="flex items-center gap-1 text-gray-600 dark:text-gray-400">
-                        <HeartIcon className="w-3 h-3" />
-                        <span>{scene.core_emotion}</span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  {scene.setup && (
-                    <p className="text-gray-700 dark:text-gray-300 text-sm mt-3 leading-relaxed">
-                      {scene.setup}
-                    </p>
-                  )}
-                </div>
+                  scene={scene}
+                  onSaveScene={onSaveScene}
+                  saving={savingSceneId === scene.id}
+                />
               ))}
             </div>
           </div>
@@ -373,26 +1077,32 @@ export default function OutlinePage() {
   const [showTableOfContents, setShowTableOfContents] = useState(false);
   const [selectedChapter, setSelectedChapter] = useState<number | null>(null);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [savingChapterId, setSavingChapterId] = useState<string | null>(null);
+  const [savingSceneId, setSavingSceneId] = useState<string | null>(null);
+  const [fetchError, setFetchError] = useState<string | null>(null);
+
+  const fetchOutlineData = useCallback(async (silent = false) => {
+    if (!bookId) return;
+    if (!silent) setLoading(true);
+    setFetchError(null);
+    try {
+      const response = await fetch(`/api/books/${bookId}/outline-complete`);
+      if (!response.ok) {
+        throw new Error(`Failed to load outline (${response.status})`);
+      }
+      const data = await response.json();
+      setOutlineData(data);
+    } catch (error) {
+      console.error('Failed to fetch outline data:', error);
+      setFetchError('Unable to load outline data right now.');
+    } finally {
+      if (!silent) setLoading(false);
+    }
+  }, [bookId]);
 
   useEffect(() => {
-    if (!bookId) return;
-
-    async function fetchData() {
-      try {
-        const response = await fetch(`/api/books/${bookId}/outline-complete`);
-        if (response.ok) {
-          const data = await response.json();
-          setOutlineData(data);
-        }
-      } catch (error) {
-        console.error('Failed to fetch outline data:', error);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchData();
-  }, [bookId]);
+    fetchOutlineData();
+  }, [fetchOutlineData]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -402,6 +1112,56 @@ export default function OutlinePage() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleSaveChapter = useCallback(async (chapterId: string, data: ChapterEdit) => {
+    setSavingChapterId(chapterId);
+    try {
+      const response = await fetch(`/api/chapters/${chapterId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to save chapter ${chapterId}`);
+      }
+      await fetchOutlineData(true);
+    } catch (error) {
+      console.error('Failed to save chapter', error);
+      setFetchError('Unable to save chapter changes.');
+      throw error;
+    } finally {
+      setSavingChapterId(null);
+    }
+  }, [fetchOutlineData]);
+
+  const handleSaveScene = useCallback(async (sceneId: string, data: SceneEdit) => {
+    setSavingSceneId(sceneId);
+    try {
+      const payload: SceneEdit = { ...data };
+      ['storySequence', 'chronologicalSequence'].forEach((key) => {
+        const k = key as keyof SceneEdit;
+        const value = payload[k];
+        if (typeof value === 'string') {
+          payload[k] = value.trim() === '' ? undefined : Number(value) as unknown as SceneEdit[keyof SceneEdit];
+        }
+      });
+      const response = await fetch(`/api/scenes/${sceneId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!response.ok) {
+        throw new Error(`Failed to save scene ${sceneId}`);
+      }
+      await fetchOutlineData(true);
+    } catch (error) {
+      console.error('Failed to save scene', error);
+      setFetchError('Unable to save scene changes.');
+      throw error;
+    } finally {
+      setSavingSceneId(null);
+    }
+  }, [fetchOutlineData]);
 
   const toggleChapterExpanded = (chapterId: string) => {
     const newExpanded = new Set(expandedChapters);
@@ -459,13 +1219,15 @@ export default function OutlinePage() {
     );
   }
 
-  if (!outlineData) {
+  if (!outlineData && !loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
         <Navbar />
         <div className="max-w-4xl mx-auto px-4 py-12 text-center">
           <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Outline Not Found</h1>
-          <p className="text-gray-600 dark:text-gray-400">We couldn&apos;t load the outline for this book.</p>
+          <p className="text-gray-600 dark:text-gray-400">
+            {fetchError || 'We couldn&apos;t load the outline for this book.'}
+          </p>
         </div>
       </div>
     );
@@ -481,6 +1243,14 @@ export default function OutlinePage() {
         { label: book.title, href: `/books/${bookId}` },
         { label: 'Epic Outline', current: true }
       ]} />
+
+      {fetchError && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+          <div className="rounded-lg border border-red-200 bg-red-50 text-red-800 dark:border-red-800/60 dark:bg-red-900/30 dark:text-red-100 px-4 py-3 text-sm">
+            {fetchError}
+          </div>
+        </div>
+      )}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Epic Header */}
@@ -648,17 +1418,21 @@ export default function OutlinePage() {
         </div>
 
         {/* Chapters */}
-        <div className="space-y-6">
-          {chapters.map((chapter) => (
-            <div key={chapter.id} id={`chapter-${chapter.chapterNumber}`}>
-              <ChapterCard
-                chapter={chapter}
-                isExpanded={expandedChapters.has(chapter.id)}
-                onToggleExpanded={() => toggleChapterExpanded(chapter.id)}
-              />
+            <div className="space-y-6">
+              {chapters.map((chapter) => (
+                <div key={chapter.id} id={`chapter-${chapter.chapterNumber}`}>
+                  <ChapterCard
+                    chapter={chapter}
+                    isExpanded={expandedChapters.has(chapter.id)}
+                    onToggleExpanded={() => toggleChapterExpanded(chapter.id)}
+                    onSaveChapter={handleSaveChapter}
+                    onSaveScene={handleSaveScene}
+                    savingChapterId={savingChapterId}
+                    savingSceneId={savingSceneId}
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
         {/* Epic Footer */}
         <div className="mt-16 text-center">
