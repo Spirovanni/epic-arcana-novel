@@ -15,7 +15,7 @@ interface BreadcrumbsProps {
 
 export default function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
-    <nav className="relative z-40 bg-gradient-to-r from-white to-gray-50 dark:from-gray-950 dark:to-gray-900 backdrop-blur-sm border-b border-gray-200/60 dark:border-gray-800/40 shadow-sm hover:shadow-md transition-shadow duration-300">
+    <nav className="sticky top-20 z-39 bg-gradient-to-r from-white to-gray-50 dark:from-gray-950 dark:to-black backdrop-blur-sm border-b border-gray-200/60 dark:border-gray-800 shadow-sm hover:shadow-md transition-shadow duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-2 py-4">
           <Link
