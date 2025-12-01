@@ -8,8 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
-const heroShell = 'rounded-3xl border border-slate-200/60 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)]';
-const sectionShell = 'rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md shadow-lg';
+const heroShell = 'rounded-3xl border border-slate-200/60 dark:border-slate-700/50 bg-white/80 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900/80 dark:to-slate-950 backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
+const sectionShell = 'rounded-2xl border border-slate-200/60 dark:border-slate-700/50 bg-white/80 dark:bg-gradient-to-br dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-950 backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
 
 type Character = {
   id?: string;
