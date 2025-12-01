@@ -171,10 +171,31 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
 }) {
   // Quarter has 81 days: indices 0-80
   // Display as 9x9 grid (9 rows × 9 columns = 81 cells)
-  // Last cell (row 8, col 8) is the rest day
+  // The rest day should be at index 80 (the 81st day)
   const allDays = days.slice(0, 81);
 
+  // Debug: Log the structure to understand the issue
+  if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+    // Check if rest day is at index 80
+    const restDayIndex = allDays.findIndex(d => d.isRestDay);
+    const lastDayInfo = allDays[80];
+    if (allDays.length > 0 && (restDayIndex !== 80 || !lastDayInfo?.isRestDay)) {
+      console.warn(`QuarterGrid (${title}): Rest day is at index ${restDayIndex}, not 80. Days count: ${allDays.length}`, {
+        restDayIndex,
+        lastDay: lastDayInfo,
+        allDaysLength: allDays.length
+      });
+    }
+  }
+
   // Build 9x9 grid = 81 cells
+  // Instead of assuming rest day is at index 80, find it and place it correctly
+  const restDay = allDays.find(d => d.isRestDay);
+  const activeDays = allDays.filter(d => !d.isRestDay);
+
+  // Reconstruct: 80 active days + 1 rest day
+  const orderedDays = [...activeDays, restDay].filter(Boolean);
+
   const grid: (HfCalendarResult | null)[][] = [];
 
   for (let row = 0; row < 9; row++) {
@@ -182,7 +203,7 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
 
     for (let col = 0; col < 9; col++) {
       const index = row * 9 + col;
-      rowDays.push(allDays[index] || null);
+      rowDays.push(orderedDays[index] || null);
     }
 
     grid.push(rowDays);
