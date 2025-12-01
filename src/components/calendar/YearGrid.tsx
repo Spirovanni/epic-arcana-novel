@@ -390,24 +390,14 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
     );
   }
 
-  // Split data into segments
-  // Ensure each quarter has the rest day at the end (index 80)
-  const ensureRestDayAtEnd = (quarterData: HfCalendarResult[]): HfCalendarResult[] => {
-    const restDay = quarterData.find(d => d.isRestDay);
-    const activeDays = quarterData.filter(d => !d.isRestDay);
-
-    // Return 80 active days + rest day at the end
-    if (restDay) {
-      return [...activeDays.slice(0, 80), restDay];
-    }
-    return activeDays.slice(0, 81);
-  };
-
-  const q1Days = ensureRestDayAtEnd(calendarData.slice(0, 81));
-  const q2Days = ensureRestDayAtEnd(calendarData.slice(81, 162));
+  // Split data into segments - use as-is, no reordering
+  // The data comes sequentially (day 1-365 in order) from the API
+  // Each quarter gets exactly 81 consecutive days
+  const q1Days = calendarData.slice(0, 81);
+  const q2Days = calendarData.slice(81, 162);
   const midBandDays = calendarData.slice(162, 203);
-  const q3Days = ensureRestDayAtEnd(calendarData.slice(203, 284));
-  const q4Days = ensureRestDayAtEnd(calendarData.slice(284, 365));
+  const q3Days = calendarData.slice(203, 284);
+  const q4Days = calendarData.slice(284, 365);
 
   const handleDayClick = (day: HfCalendarResult) => {
     onDayClick?.(day);
