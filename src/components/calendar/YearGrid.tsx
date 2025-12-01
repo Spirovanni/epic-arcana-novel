@@ -169,33 +169,17 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Quarter has 81 days: indices 0-80
-  // Display as 9x9 grid (9 rows × 9 columns = 81 cells)
-  // The rest day should be at index 80 (the 81st day)
+  // Quarter has exactly 81 days: use them as-is without reordering
+  // The days array comes with correct dayOfYear365 values that determine the 20-day cycle
+  // If we reorder, we break the cycle calculations
   const allDays = days.slice(0, 81);
 
-  // Debug: Log the structure to understand the issue
-  if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-    // Check if rest day is at index 80
-    const restDayIndex = allDays.findIndex(d => d.isRestDay);
-    const lastDayInfo = allDays[80];
-    if (allDays.length > 0 && (restDayIndex !== 80 || !lastDayInfo?.isRestDay)) {
-      console.warn(`QuarterGrid (${title}): Rest day is at index ${restDayIndex}, not 80. Days count: ${allDays.length}`, {
-        restDayIndex,
-        lastDay: lastDayInfo,
-        allDaysLength: allDays.length
-      });
-    }
-  }
+  // Find the rest day position (should be at index 80, but verify)
+  const restDayIndex = allDays.findIndex(d => d.isRestDay);
 
   // Build 9x9 grid = 81 cells
-  // Instead of assuming rest day is at index 80, find it and place it correctly
-  const restDay = allDays.find(d => d.isRestDay);
-  const activeDays = allDays.filter(d => !d.isRestDay);
-
-  // Reconstruct: 80 active days + 1 rest day
-  const orderedDays = [...activeDays, restDay].filter(Boolean);
-
+  // Strategy: Display days 0-80 in their original positions
+  // The rest day will appear wherever it naturally falls (should be index 80)
   const grid: (HfCalendarResult | null)[][] = [];
 
   for (let row = 0; row < 9; row++) {
@@ -203,7 +187,16 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
 
     for (let col = 0; col < 9; col++) {
       const index = row * 9 + col;
-      rowDays.push(orderedDays[index] || null);
+      const day = allDays[index];
+
+      // Debug
+      if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+        if (index === 0 || index === 80) {
+          console.log(`QuarterGrid (${title}): Index ${index} => day ${day?.dayOfYear365}, daySignName=${day?.daySignName}, isRest=${day?.isRestDay}`);
+        }
+      }
+
+      rowDays.push(day || null);
     }
 
     grid.push(rowDays);
