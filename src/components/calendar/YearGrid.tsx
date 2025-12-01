@@ -169,35 +169,36 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Extract the first 80 non-rest days and the rest day (81st)
-  // The API provides 81 days total per quarter
+  // Quarter has 81 days: indices 0-80
+  // Days 0-79 are active days (in order)
+  // Day 80 is the rest day (intraSegmentIndex === 81)
   const allDays = days.slice(0, 81);
 
-  // Find the rest day (it will be marked as isRestDay: true)
-  const restDayIndex = allDays.findIndex(d => d.isRestDay);
-  const restDay = restDayIndex >= 0 ? allDays[restDayIndex] : null;
-
-  // Get all active days (non-rest days)
-  const activeDays = allDays.filter(d => !d.isRestDay);
-
-  // Build grid: 7 full rows of 10 + 1 last row with 9 active days + rest day
+  // Build grid: 8 rows of 10 cells
+  // Rows 0-6: indices 0-69 (70 days)
+  // Row 7: indices 70-79 (10 days, where day 80 is the rest day)
   const grid: (HfCalendarResult | null)[][] = [];
 
-  // Create first 7 full rows (70 days)
-  for (let i = 0; i < 7; i++) {
-    grid.push(activeDays.slice(i * 10, (i + 1) * 10));
+  for (let row = 0; row < 8; row++) {
+    const rowDays: (HfCalendarResult | null)[] = [];
+
+    for (let col = 0; col < 10; col++) {
+      const index = row * 10 + col;
+
+      // For row 7, column 9: use the rest day (index 80)
+      if (row === 7 && col === 9) {
+        rowDays.push(allDays[80] || null);
+      } else if (index < 80) {
+        // For all other cells, use the day at that index
+        rowDays.push(allDays[index] || null);
+      } else {
+        // Skip index 80 in row 7 columns 0-8
+        rowDays.push(null);
+      }
+    }
+
+    grid.push(rowDays);
   }
-
-  // Create last row with 9 active days + rest day
-  const lastRowActive = activeDays.slice(70, 79); // Days 71-79 (9 days)
-  const lastRow: (HfCalendarResult | null)[] = [...lastRowActive];
-
-  // Add rest day as the 10th item in the last row
-  if (restDay) {
-    lastRow.push(restDay);
-  }
-
-  grid.push(lastRow);
 
   return (
     <div className="space-y-2">
