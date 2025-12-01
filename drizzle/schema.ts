@@ -517,6 +517,7 @@ export const characters = pgTable("characters", {
 	aka: varchar({ length: 255 }),
 	primaryAffinityId: uuid("primary_affinity_id"),
 	evolution: jsonb(),
+	aiPrompt: text("ai_prompt"),
 	createdAt: timestamp("created_at", { mode: 'string' }).defaultNow(),
 	updatedAt: timestamp("updated_at", { mode: 'string' }).defaultNow(),
 	lastSeenChapter: integer("last_seen_chapter"),
