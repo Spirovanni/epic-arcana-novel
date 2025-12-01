@@ -535,44 +535,42 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-700/60 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/60 dark:to-fuchsia-900/50 p-6 shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(168,85,247,0.3)]">
-                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
-                        <span className="h-1.5 w-7 rounded-full bg-purple-500/80 shadow-[0_0_14px_-4px_rgba(168,85,247,0.8)]" />
-                        <span className="inline-flex items-center gap-2">
-                          <PhotoIcon className="w-5 h-5 text-purple-600 dark:text-purple-300" />
-                          Image Details for AI Generation
-                        </span>
-                      </h3>
-                      <div className="space-y-4">
-                        {/* AI Prompt */}
-                        <div>
-                          <div className="flex flex-wrap justify-between items-center gap-2 mb-2">
-                            <label className="block text-sm font-medium text-slate-800 dark:text-slate-200">
-                              AI Prompt
-                            </label>
-                            <button
-                              onClick={handleCopyPrompt}
-                              disabled={!character?.aiPrompt && !editData?.aiPrompt}
-                              className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-purple-100 dark:bg-white/10 text-purple-700 dark:text-white hover:bg-purple-200 dark:hover:bg-white/20 shadow-sm"
-                            >
-                              <ClipboardIcon className="w-4 h-4 mr-1" />
-                              {promptCopied ? 'Copied!' : 'Copy Prompt'}
-                            </button>
-                          </div>
-                          {isEditing ? (
-                            <textarea
-                              value={editData?.aiPrompt || ''}
-                              onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
-                              rows={6}
-                              className="w-full px-3 py-2 border border-purple-200 dark:border-purple-700/60 rounded-lg bg-white/90 dark:bg-slate-950/70 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 font-mono text-sm dark:shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]"
-                              placeholder="Enter AI prompt for generating this character's image..."
-                            />
-                          ) : (
-                            <div className="text-slate-800 dark:text-slate-100 leading-relaxed bg-white/90 dark:bg-slate-950/70 rounded-lg p-3 border border-purple-200/80 dark:border-purple-700/60 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.4)]">
-                              {character.aiPrompt || 'No AI prompt defined yet.'}
-                            </div>
-                          )}
+                    <div className="relative overflow-hidden rounded-2xl border border-purple-600/40 bg-gradient-to-br from-slate-950/92 via-slate-950/88 to-slate-900/85 shadow-[0_20px_60px_-28px_rgba(124,58,237,0.55)]">
+                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)]" />
+                      <div className="relative p-6 space-y-4">
+                        <h3 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-foreground/90">
+                          <span className="h-1.5 w-8 rounded-full bg-purple-500/90 shadow-[0_0_16px_-4px_rgba(168,85,247,0.9)]" />
+                          <span className="inline-flex items-center gap-2">
+                            <PhotoIcon className="w-5 h-5 text-purple-300" />
+                            Image Details for AI Generation
+                          </span>
+                        </h3>
+                        <div className="flex flex-wrap justify-between items-center gap-2">
+                          <label className="text-xs font-medium text-foreground/80 uppercase tracking-[0.16em]">
+                            AI Prompt
+                          </label>
+                          <button
+                            onClick={handleCopyPrompt}
+                            disabled={!character?.aiPrompt && !editData?.aiPrompt}
+                            className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-purple-100 hover:border-purple-400/70 hover:bg-purple-500/20 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                          >
+                            <ClipboardIcon className="w-4 h-4" />
+                            {promptCopied ? 'Copied!' : 'Copy'}
+                          </button>
                         </div>
+                        {isEditing ? (
+                          <textarea
+                            value={editData?.aiPrompt || ''}
+                            onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
+                            rows={6}
+                            className="w-full px-4 py-3 border border-purple-500/40 rounded-xl bg-slate-950/75 text-slate-100 focus:ring-2 focus:ring-purple-400/70 font-mono text-sm shadow-inner shadow-black/50 placeholder:text-slate-500"
+                            placeholder="Enter AI prompt for generating this character's image..."
+                          />
+                        ) : (
+                          <div className="text-slate-100 leading-relaxed bg-slate-950/70 rounded-xl p-4 border border-purple-500/35 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner shadow-black/50">
+                            {character.aiPrompt || 'No AI prompt defined yet.'}
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
