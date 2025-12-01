@@ -169,22 +169,10 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Take exactly 81 days from the input
-  // Then separate and properly arrange: rest day should be at position 80 (the last cell)
-  const allDays = days.slice(0, 81);
-
-  // Find the rest day and move it to the end if it's not already there
-  const restDayIndex = allDays.findIndex(d => d.isRestDay);
-  const restDay = restDayIndex >= 0 ? allDays[restDayIndex] : null;
-
-  // If rest day exists but is not at the end, reorganize
-  let displayDays = allDays;
-  if (restDay && restDayIndex !== 80) {
-    // Remove the rest day from its current position
-    const withoutRest = allDays.filter((_, idx) => idx !== restDayIndex);
-    // Add it back at the end
-    displayDays = [...withoutRest, restDay];
-  }
+  // Take exactly 81 days from the input - use as-is without reordering
+  // IMPORTANT: Do NOT reorder or filter - this breaks the dayOfYear365 values which
+  // determine the 20-day cycle calculations. The day sign names depend on dayOfYear365!
+  const displayDays = days.slice(0, 81);
 
   // Build 9x9 grid = 81 cells
   // Map array indices directly to grid positions
@@ -403,11 +391,23 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
   }
 
   // Split data into segments
-  const q1Days = calendarData.slice(0, 81);
-  const q2Days = calendarData.slice(81, 162);
+  // Ensure each quarter has the rest day at the end (index 80)
+  const ensureRestDayAtEnd = (quarterData: HfCalendarResult[]): HfCalendarResult[] => {
+    const restDay = quarterData.find(d => d.isRestDay);
+    const activeDays = quarterData.filter(d => !d.isRestDay);
+
+    // Return 80 active days + rest day at the end
+    if (restDay) {
+      return [...activeDays.slice(0, 80), restDay];
+    }
+    return activeDays.slice(0, 81);
+  };
+
+  const q1Days = ensureRestDayAtEnd(calendarData.slice(0, 81));
+  const q2Days = ensureRestDayAtEnd(calendarData.slice(81, 162));
   const midBandDays = calendarData.slice(162, 203);
-  const q3Days = calendarData.slice(203, 284);
-  const q4Days = calendarData.slice(284, 365);
+  const q3Days = ensureRestDayAtEnd(calendarData.slice(203, 284));
+  const q4Days = ensureRestDayAtEnd(calendarData.slice(284, 365));
 
   const handleDayClick = (day: HfCalendarResult) => {
     onDayClick?.(day);
