@@ -169,14 +169,18 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Separate active days (first 80) and rest day (81st day)
-  const activeDays = days.slice(0, 80);
-  const restDay = days[80]; // The 81st day (rest day)
+  // Extract the first 80 non-rest days and the rest day (81st)
+  // The API provides 81 days total per quarter
+  const allDays = days.slice(0, 81);
 
-  // Build grid: 8 rows of 10 days each (80 active days), with rest day as the 10th day in the last row
-  // Rows 1-7: 10 days each (70 active days total)
-  // Row 8: 9 active days (71-79) + 1 rest day (81st day) = 10 items total
+  // Find the rest day (it will be marked as isRestDay: true)
+  const restDayIndex = allDays.findIndex(d => d.isRestDay);
+  const restDay = restDayIndex >= 0 ? allDays[restDayIndex] : null;
 
+  // Get all active days (non-rest days)
+  const activeDays = allDays.filter(d => !d.isRestDay);
+
+  // Build grid: 7 full rows of 10 + 1 last row with 9 active days + rest day
   const grid: (HfCalendarResult | null)[][] = [];
 
   // Create first 7 full rows (70 days)
@@ -185,7 +189,7 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   }
 
   // Create last row with 9 active days + rest day
-  const lastRowActive = activeDays.slice(70, 79); // Only 9 days (71-79)
+  const lastRowActive = activeDays.slice(70, 79); // Days 71-79 (9 days)
   const lastRow: (HfCalendarResult | null)[] = [...lastRowActive];
 
   // Add rest day as the 10th item in the last row
