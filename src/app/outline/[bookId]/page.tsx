@@ -1137,12 +1137,12 @@ export default function OutlinePage() {
   const handleSaveScene = useCallback(async (sceneId: string, data: SceneEdit) => {
     setSavingSceneId(sceneId);
     try {
-      const payload: SceneEdit = { ...data };
+      const payload: Record<string, unknown> = { ...data };
       ['storySequence', 'chronologicalSequence'].forEach((key) => {
-        const k = key as keyof SceneEdit;
-        const value = payload[k];
+        const value = payload[key];
         if (typeof value === 'string') {
-          payload[k] = value.trim() === '' ? undefined : Number(value) as unknown as SceneEdit[keyof SceneEdit];
+          const trimmed = value.trim();
+          payload[key] = trimmed === '' ? undefined : Number(trimmed);
         }
       });
       const response = await fetch(`/api/scenes/${sceneId}`, {
