@@ -169,17 +169,25 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Quarter has exactly 81 days: use them as-is without reordering
-  // The days array comes with correct dayOfYear365 values that determine the 20-day cycle
-  // If we reorder, we break the cycle calculations
+  // Take the 81 days from the input
   const allDays = days.slice(0, 81);
 
-  // Find the rest day position (should be at index 80, but verify)
-  const restDayIndex = allDays.findIndex(d => d.isRestDay);
+  // Separate rest day and active days, maintaining their original order
+  const restDay = allDays.find(d => d.isRestDay);
+  const activeDays = allDays.filter(d => !d.isRestDay);
 
   // Build 9x9 grid = 81 cells
-  // Strategy: Display days 0-80 in their original positions
-  // The rest day will appear wherever it naturally falls (should be index 80)
+  // Strategy: Place 80 active days in order, then rest day at the end (index 80)
+  // This preserves dayOfYear365 values for the active days while moving the rest day to the end
+
+  // Get the first 80 days from the active days array (which has dayOfYear365 intact)
+  const gridDays = activeDays.slice(0, 80);
+
+  // Add rest day at the end if it exists
+  if (restDay) {
+    gridDays.push(restDay);
+  }
+
   const grid: (HfCalendarResult | null)[][] = [];
 
   for (let row = 0; row < 9; row++) {
@@ -187,7 +195,7 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
 
     for (let col = 0; col < 9; col++) {
       const index = row * 9 + col;
-      const day = allDays[index];
+      const day = gridDays[index];
 
       // Debug
       if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
@@ -472,13 +480,6 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
             selectedDay={selectedDay}
             todayISO={todayISO}
           />
-        </div>
-
-        {/* Half-Year Midpoint Circle */}
-        <div className="flex justify-center py-4">
-          <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 via-gold-500 to-emerald-500 shadow-lg flex items-center justify-center">
-            <div className="absolute inset-1 rounded-full bg-background/20" />
-          </div>
         </div>
 
         {/* Mid-Band */}
