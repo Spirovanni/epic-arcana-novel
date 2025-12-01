@@ -297,7 +297,7 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
     const generateFallbackYearData = (year: number): HfCalendarResult[] => {
       const fallbackData: HfCalendarResult[] = [];
       for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
-        const date = new Date(year, 0, dayOfYear - 1);
+        const date = new Date(year, 0, dayOfYear); // dayOfYear is 1-based
         const { segment, intraSegmentIndex } = resolveSegmentClient(dayOfYear);
         
         const isRest = isRestDayClient(segment, intraSegmentIndex);

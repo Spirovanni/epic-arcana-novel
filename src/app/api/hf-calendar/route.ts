@@ -123,7 +123,7 @@ function generateFallbackData(date: Date): HfCalendarResult {
 function generateFallbackYearData(year: number): HfCalendarResult[] {
   const fallbackData: HfCalendarResult[] = [];
   for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
-    const date = new Date(year, 0, dayOfYear - 1);
+    const date = new Date(year, 0, dayOfYear); // dayOfYear is 1-based
     fallbackData.push(generateFallbackData(date));
   }
   return fallbackData;

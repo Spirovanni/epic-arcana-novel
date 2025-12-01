@@ -380,7 +380,7 @@ export async function getFullYearCalendar(year?: number): Promise<HfCalendarResu
     
     // Generate all days for the year
     for (let dayOfYear = 1; dayOfYear <= 365; dayOfYear++) {
-      const date = new Date(targetYear, 0, dayOfYear - 1);
+      const date = new Date(targetYear, 0, dayOfYear); // dayOfYear is 1-based
       // Use the loop dayOfYear directly instead of recalculating to avoid duplicates
       const { segment, intraSegmentIndex } = resolveSegment(dayOfYear);
       
