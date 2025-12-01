@@ -212,9 +212,9 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50/50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-black">
-        <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl dark:bg-primary/20" />
-        <div className="pointer-events-none absolute right-[-120px] bottom-10 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl dark:bg-indigo-600/20" />
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50/50 to-slate-100 dark:from-slate-950 dark:via-slate-900/95 dark:to-black">
+        <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl dark:bg-primary/25" />
+        <div className="pointer-events-none absolute right-[-120px] bottom-10 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl dark:bg-indigo-600/30" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-6">
             <Link 
@@ -250,11 +250,11 @@ export default function CharacterProfilePage() {
           ) : character && (
             <div className={`${heroShell} overflow-hidden max-w-6xl mx-auto`}>
               {/* Header Section */}
-              <div className="relative px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-br from-white/75 via-white/60 to-white/40 dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-950/70">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.12),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.08),transparent_30%)]" />
+              <div className="relative px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-br from-white/75 via-white/60 to-white/40 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-950/85">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.12),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.08),transparent_30%)] dark:bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(168,85,247,0.12),transparent_35%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.1),transparent_35%)]" />
                 <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
                   <div className="relative group">
-                    <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-gradient-to-br from-primary/15 via-indigo-500/10 to-sky-400/10 dark:from-primary/25 dark:via-indigo-600/20 dark:to-sky-500/20 flex items-center justify-center overflow-hidden border border-white/60 dark:border-white/10 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover:scale-[1.02]">
+                    <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-gradient-to-br from-primary/15 via-indigo-500/10 to-sky-400/10 dark:from-primary/30 dark:via-indigo-600/25 dark:to-sky-500/25 flex items-center justify-center overflow-hidden border border-white/60 dark:border-slate-600/40 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.7)] dark:shadow-[0_20px_60px_-15px_rgba(59,130,246,0.3)] transition-transform duration-300 group-hover:scale-[1.02]">
                       <Image 
                         src={character.imageUrl || placeholderImg} 
                         alt={character.name || 'Character'} 
@@ -443,7 +443,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-6 sm:p-8 bg-gradient-to-b from-white/70 via-white/80 to-white/60 dark:from-slate-950/60 dark:via-slate-900/70 dark:to-slate-950/70">
+              <div className="p-6 sm:p-8 bg-gradient-to-b from-white/70 via-white/80 to-white/60 dark:from-slate-950/80 dark:via-slate-900/75 dark:to-slate-950/85">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
@@ -520,7 +520,7 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-700/70 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/40 dark:to-fuchsia-900/30 p-6 shadow-lg">
+                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-600/50 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/60 dark:to-fuchsia-900/50 p-6 shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(168,85,247,0.3)]">
                       <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center">
                         <PhotoIcon className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-300" />
                         Image Details for AI Generation
@@ -546,11 +546,11 @@ export default function CharacterProfilePage() {
                               value={editData?.aiPrompt || ''}
                               onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
                               rows={6}
-                              className="w-full px-3 py-2 border border-purple-200 dark:border-purple-700 rounded-lg bg-white/90 dark:bg-slate-950 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 font-mono text-sm"
+                              className="w-full px-3 py-2 border border-purple-200 dark:border-purple-700/60 rounded-lg bg-white/90 dark:bg-slate-950/70 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 dark:focus:ring-purple-400 font-mono text-sm dark:shadow-[inset_0_2px_4px_rgba(0,0,0,0.5)]"
                               placeholder="Enter AI prompt for generating this character's image..."
                             />
                           ) : (
-                            <div className="text-slate-800 dark:text-slate-100 leading-relaxed bg-white/90 dark:bg-slate-950 rounded-lg p-3 border border-purple-200/80 dark:border-purple-700/70 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner">
+                            <div className="text-slate-800 dark:text-slate-100 leading-relaxed bg-white/90 dark:bg-slate-950/70 rounded-lg p-3 border border-purple-200/80 dark:border-purple-700/60 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner dark:shadow-[inset_0_2px_8px_rgba(0,0,0,0.4)]">
                               {character.aiPrompt || 'No AI prompt defined yet.'}
                             </div>
                           )}
@@ -613,7 +613,7 @@ export default function CharacterProfilePage() {
                             <>
                               {character.birthYear && (
                                 <div className="flex items-center">
-                                  <CalendarIcon className="w-5 h-5 text-slate-400 mr-3" />
+                                  <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Born</div>
                                     <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthYear}</div>
@@ -622,7 +622,7 @@ export default function CharacterProfilePage() {
                               )}
                               {character.died && (
                                 <div className="flex items-center">
-                                  <CalendarIcon className="w-5 h-5 text-slate-400 mr-3" />
+                                  <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Died</div>
                                     <div className="text-sm text-slate-700 dark:text-slate-300">{character.died}</div>
@@ -631,7 +631,7 @@ export default function CharacterProfilePage() {
                               )}
                               {character.birthPlace && (
                                 <div className="flex items-start">
-                                  <MapPinIcon className="w-5 h-5 text-slate-400 mr-3 mt-0.5" />
+                                  <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Birthplace</div>
                                     <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthPlace}</div>
@@ -640,7 +640,7 @@ export default function CharacterProfilePage() {
                               )}
                               {character.deathPlace && (
                                 <div className="flex items-start">
-                                  <MapPinIcon className="w-5 h-5 text-slate-400 mr-3 mt-0.5" />
+                                  <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Deathplace</div>
                                     <div className="text-sm text-slate-700 dark:text-slate-300">{character.deathPlace}</div>
@@ -676,14 +676,14 @@ export default function CharacterProfilePage() {
 
           {related.length > 0 && (
             <div className="mt-12 max-w-6xl mx-auto">
-              <div className={`${sectionShell} p-8`}>
+              <div className={`${sectionShell} p-8 dark:border-slate-700/40`}>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Related Characters</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {related.filter((c) => c.slug).map((c) => (
-                    <Link 
-                      key={c.slug} 
-                      href={`/characters/${c.slug}`} 
-                      className="group rounded-xl border border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-all duration-200 p-4"
+                    <Link
+                      key={c.slug}
+                      href={`/characters/${c.slug}`}
+                      className="group rounded-xl border border-slate-200/70 dark:border-slate-700/40 bg-white/80 dark:bg-slate-900/60 backdrop-blur hover:border-primary/40 dark:hover:border-primary/50 hover:shadow-lg dark:hover:shadow-[0_8px_32px_-8px_rgba(59,130,246,0.3)] transition-all duration-200 p-4"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/50 via-indigo-500/40 to-sky-400/50 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 border border-white/50 dark:border-white/10 shadow-sm">

@@ -57,11 +57,11 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
         }`}
       >
         {/* Image Section - Prominent Display */}
-        <div className="relative w-full aspect-square bg-gradient-to-br from-slate-800/50 to-slate-900/50 dark:from-slate-700/50 dark:to-slate-800/50 overflow-hidden group">
+        <div className="relative w-full aspect-square bg-gradient-to-br from-slate-800/50 to-slate-900/50 dark:from-slate-800/60 dark:to-slate-900/70 overflow-hidden group">
           {character.imageUrl && !imageError ? (
             <>
               {imageLoading && (
-                <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 dark:from-slate-700/50 dark:to-slate-800/50 animate-pulse" />
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 to-slate-900/50 dark:from-slate-800/60 dark:to-slate-900/70 animate-pulse" />
               )}
               <img
                 src={character.imageUrl}
@@ -77,12 +77,12 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
               />
             </>
           ) : (
-            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/30 to-purple-600/30 dark:from-primary/20 dark:to-purple-600/20">
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-primary/30 to-purple-600/30 dark:from-primary/25 dark:to-purple-600/30">
               <div className="text-center">
-                <div className="text-5xl font-bold text-primary/60 dark:text-primary/40 mb-2">
+                <div className="text-5xl font-bold text-primary/70 dark:text-primary/50 mb-2">
                   {initials}
                 </div>
-                <p className="text-xs text-muted-foreground">{character.name}</p>
+                <p className="text-xs text-muted-foreground dark:text-slate-400">{character.name}</p>
               </div>
             </div>
           )}
@@ -96,13 +96,13 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
         </div>
 
         {/* Content Section */}
-        <CardHeader className="pb-2 pt-4">
+        <CardHeader className="pb-2 pt-4 dark:bg-slate-900/50">
           <div className="space-y-1">
-            <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+            <CardTitle className="text-lg font-bold text-foreground dark:text-white group-hover:text-primary transition-colors line-clamp-2">
               {character.name}
             </CardTitle>
             {character.aka && (
-              <p className="text-xs text-muted-foreground italic line-clamp-1">
+              <p className="text-xs text-muted-foreground dark:text-slate-400 italic line-clamp-1">
                 aka. {character.aka}
               </p>
             )}
@@ -112,17 +112,17 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
               </p>
             )}
             {character.pronouns && (
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground dark:text-slate-400">
                 {character.pronouns}
               </p>
             )}
           </div>
         </CardHeader>
 
-        <CardContent className="flex-1 flex flex-col py-2 space-y-3">
+        <CardContent className="flex-1 flex flex-col py-2 space-y-3 dark:bg-slate-900/30">
           {/* Description Section */}
           {character.description && (
-            <p className="text-xs text-muted-foreground line-clamp-3 leading-relaxed">
+            <p className="text-xs text-muted-foreground dark:text-slate-400 line-clamp-3 leading-relaxed">
               {character.description}
             </p>
           )}
@@ -131,12 +131,12 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
           {character.groups && character.groups.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
               {character.groups.slice(0, 3).map((group, index) => (
-                <Badge key={index} variant="secondary" className="text-xs">
+                <Badge key={index} variant="secondary" className="text-xs dark:bg-slate-800/60 dark:text-slate-200">
                   {group}
                 </Badge>
               ))}
               {character.groups.length > 3 && (
-                <Badge variant="outline" className="text-xs">
+                <Badge variant="outline" className="text-xs dark:border-slate-700/60 dark:text-slate-400">
                   +{character.groups.length - 3}
                 </Badge>
               )}
@@ -144,7 +144,7 @@ function CharacterCard({ character, isHighlighted = false }: { character: Charac
           )}
 
           {/* Info Row */}
-          <div className="flex flex-wrap gap-2 text-xs text-muted-foreground pt-1 border-t border-border/50 dark:border-border/30">
+          <div className="flex flex-wrap gap-2 text-xs text-muted-foreground dark:text-slate-400 pt-1 border-t border-border/50 dark:border-slate-800/50">
             {character.birthYear && <span>b. {character.birthYear}</span>}
             {character.died && <span>d. {character.died}</span>}
             {character.birthPlace && <span>{character.birthPlace}</span>}
@@ -257,9 +257,9 @@ export default function CharactersPage() {
         variant="dark"
         sticky={false}
       />
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900">
         {/* Hero Section */}
-        <div className="bg-gradient-to-b from-primary/10 to-transparent dark:from-primary/5 border-b border-border/50 dark:border-border/30">
+        <div className="bg-gradient-to-b from-primary/10 to-transparent dark:from-primary/8 dark:to-slate-900/50 border-b border-border/50 dark:border-slate-800/50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
             <div className="space-y-6">
               <div className="flex items-center gap-4">
