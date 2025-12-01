@@ -108,10 +108,8 @@ export const characters = pgTable('characters', {
     primaryAffinityId: uuid('primary_affinity_id').references(() => trionfiCards.id),
     evolution: jsonb('evolution'),
     lastSeenChapter: integer('last_seen_chapter'), // NEW: Track where they are in the book
-    // Image Details for AI Generation
-    imagePrompt: text('image_prompt'),
-    openArtLink: varchar('open_art_link', { length: 500 }),
-    customSetting: text('custom_setting'),
+    // AI Prompt for Image Generation
+    aiPrompt: text('ai_prompt'),
     // Character Image
     imageUrl: varchar('image_url', { length: 255 }),
     createdAt: timestamp('created_at').defaultNow(),

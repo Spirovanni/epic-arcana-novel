@@ -48,9 +48,7 @@ export async function GET() {
           deathPlace: characters.deathPlace,
           slug: characters.slug,
           characterType: characters.characterType,
-          imagePrompt: characters.imagePrompt,
-          openArtLink: characters.openArtLink,
-          customSetting: characters.customSetting,
+          aiPrompt: characters.aiPrompt,
           imageUrl: characters.imageUrl,
           createdAt: characters.createdAt,
           updatedAt: characters.updatedAt,
@@ -86,17 +84,16 @@ export async function GET() {
         deathPlace: characters.deathPlace,
         slug: characters.slug,
         characterType: characters.characterType,
+        aiPrompt: characters.aiPrompt,
         imageUrl: characters.imageUrl,
         createdAt: characters.createdAt,
         updatedAt: characters.updatedAt,
       }).from(characters);
       
       // Add missing fields as null for all characters if they don't exist
-      allCharacters = allCharacters.map(char => ({ 
-        ...char, 
-        imagePrompt: null,
-        openArtLink: null,
-        customSetting: null
+      allCharacters = allCharacters.map(char => ({
+        ...char,
+        aiPrompt: char.aiPrompt || null
       }));
     }
     
@@ -150,9 +147,7 @@ export async function POST(request: Request) {
         died: characters.died,
         birthPlace: characters.birthPlace,
         deathPlace: characters.deathPlace,
-        imagePrompt: characters.imagePrompt,
-        openArtLink: characters.openArtLink,
-        customSetting: characters.customSetting,
+        aiPrompt: characters.aiPrompt,
         imageUrl: characters.imageUrl,
         lastSeenChapter: characters.lastSeenChapter,
         createdAt: characters.createdAt,

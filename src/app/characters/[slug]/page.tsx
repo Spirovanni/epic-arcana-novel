@@ -29,9 +29,7 @@ type Character = {
   birthPlace?: string | null;
   deathPlace?: string | null;
   // Image Details for AI Generation
-  imagePrompt?: string | null;
-  openArtLink?: string | null;
-  customSetting?: string | null;
+  aiPrompt?: string | null;
   // Character Image
   imageUrl?: string | null;
 };
@@ -127,9 +125,9 @@ export default function CharacterProfilePage() {
   };
 
   const handleCopyPrompt = async () => {
-    const promptText = isEditing ? (editData?.imagePrompt || '') : (character?.imagePrompt || '');
+    const promptText = isEditing ? (editData?.aiPrompt || '') : (character?.aiPrompt || '');
     if (!promptText) return;
-    
+
     try {
       await navigator.clipboard.writeText(promptText);
       setPromptCopied(true);
@@ -537,7 +535,7 @@ export default function CharacterProfilePage() {
                         Image Details for AI Generation
                       </h3>
                       <div className="space-y-4">
-                        {/* Image Prompt */}
+                        {/* AI Prompt */}
                         <div>
                           <div className="flex justify-between items-center mb-2">
                             <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -545,7 +543,7 @@ export default function CharacterProfilePage() {
                             </label>
                             <button
                               onClick={handleCopyPrompt}
-                              disabled={!character?.imagePrompt && !editData?.imagePrompt}
+                              disabled={!character?.aiPrompt && !editData?.aiPrompt}
                               className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900/50"
                             >
                               <ClipboardIcon className="w-4 h-4 mr-1" />
@@ -554,67 +552,16 @@ export default function CharacterProfilePage() {
                           </div>
                           {isEditing ? (
                             <textarea
-                              value={editData?.imagePrompt || ''}
-                              onChange={(e) => handleFieldChange('imagePrompt', e.target.value)}
-                              rows={3}
-                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
+                              value={editData?.aiPrompt || ''}
+                              onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
+                              rows={6}
+                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 font-mono text-sm"
                               placeholder="Enter AI prompt for generating this character's image..."
                             />
                           ) : (
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
-                              {character.imagePrompt || 'No AI prompt defined yet.'}
-                            </p>
-                          )}
-                        </div>
-
-                        {/* OpenArt Link */}
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                            OpenArt Link
-                          </label>
-                          {isEditing ? (
-                            <input
-                              type="url"
-                              value={editData?.openArtLink || ''}
-                              onChange={(e) => handleFieldChange('openArtLink', e.target.value)}
-                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
-                              placeholder="https://openart.ai/..."
-                            />
-                          ) : (
-                            <div className="bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
-                              {character.openArtLink ? (
-                                <a
-                                  href={character.openArtLink}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 underline"
-                                >
-                                  {character.openArtLink}
-                                </a>
-                              ) : (
-                                <span className="text-gray-500 dark:text-gray-400">No OpenArt link provided.</span>
-                              )}
+                            <div className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm">
+                              {character.aiPrompt || 'No AI prompt defined yet.'}
                             </div>
-                          )}
-                        </div>
-
-                        {/* Custom Setting */}
-                        <div>
-                          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                            Custom Setting
-                          </label>
-                          {isEditing ? (
-                            <textarea
-                              value={editData?.customSetting || ''}
-                              onChange={(e) => handleFieldChange('customSetting', e.target.value)}
-                              rows={3}
-                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500"
-                              placeholder="Any custom settings or notes for image generation..."
-                            />
-                          ) : (
-                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600">
-                              {character.customSetting || 'No custom settings defined.'}
-                            </p>
                           )}
                         </div>
                       </div>

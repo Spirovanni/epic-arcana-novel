@@ -36,9 +36,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
           deathPlace: characters.deathPlace,
           slug: characters.slug,
           characterType: characters.characterType,
-          imagePrompt: characters.imagePrompt,
-          openArtLink: characters.openArtLink,
-          customSetting: characters.customSetting,
+          aiPrompt: characters.aiPrompt,
           imageUrl: characters.imageUrl,
           createdAt: characters.createdAt,
           updatedAt: characters.updatedAt,
@@ -74,6 +72,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
         deathPlace: characters.deathPlace,
         slug: characters.slug,
         characterType: characters.characterType,
+        aiPrompt: characters.aiPrompt,
         imageUrl: characters.imageUrl,
         createdAt: characters.createdAt,
         updatedAt: characters.updatedAt,
@@ -81,11 +80,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ slug
       
       // Add missing fields as null if they don't exist
       if (result.length > 0) {
-        result = result.map(char => ({ 
-          ...char, 
-          imagePrompt: null,
-          openArtLink: null,
-          customSetting: null
+        result = result.map(char => ({
+          ...char,
+          aiPrompt: char.aiPrompt || null
         }));
       }
     }
@@ -159,9 +156,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ slug
         died: characters.died,
         birthPlace: characters.birthPlace,
         deathPlace: characters.deathPlace,
-        imagePrompt: characters.imagePrompt,
-        openArtLink: characters.openArtLink,
-        customSetting: characters.customSetting,
+        aiPrompt: characters.aiPrompt,
         imageUrl: characters.imageUrl,
         lastSeenChapter: characters.lastSeenChapter,
         createdAt: characters.createdAt,
