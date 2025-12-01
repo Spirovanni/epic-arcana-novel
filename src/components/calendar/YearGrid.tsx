@@ -170,31 +170,19 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   todayISO: string;
 }) {
   // Quarter has 81 days: indices 0-80
-  // Days 0-79 are active days (in order)
-  // Day 80 is the rest day (intraSegmentIndex === 81)
+  // Display as 9x9 grid (9 rows × 9 columns = 81 cells)
+  // Last cell (row 8, col 8) is the rest day
   const allDays = days.slice(0, 81);
 
-  // Build grid: 8 rows of 10 cells
-  // Rows 0-6: indices 0-69 (70 days)
-  // Row 7: indices 70-79 (10 days, where day 80 is the rest day)
+  // Build 9x9 grid = 81 cells
   const grid: (HfCalendarResult | null)[][] = [];
 
-  for (let row = 0; row < 8; row++) {
+  for (let row = 0; row < 9; row++) {
     const rowDays: (HfCalendarResult | null)[] = [];
 
-    for (let col = 0; col < 10; col++) {
-      const index = row * 10 + col;
-
-      // For row 7, column 9: use the rest day (index 80)
-      if (row === 7 && col === 9) {
-        rowDays.push(allDays[80] || null);
-      } else if (index < 80) {
-        // For all other cells, use the day at that index
-        rowDays.push(allDays[index] || null);
-      } else {
-        // Skip index 80 in row 7 columns 0-8
-        rowDays.push(null);
-      }
+    for (let col = 0; col < 9; col++) {
+      const index = row * 9 + col;
+      rowDays.push(allDays[index] || null);
     }
 
     grid.push(rowDays);
@@ -205,7 +193,7 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
       <h3 className="text-sm font-medium text-center text-muted-foreground">
         {title}
       </h3>
-      <div className="grid grid-cols-10 gap-1">
+      <div className="grid grid-cols-9 gap-1">
         {grid.map((row, rowIndex) =>
           row.map((day, colIndex) => {
             return day ? (
