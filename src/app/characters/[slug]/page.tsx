@@ -8,8 +8,10 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
-const heroShell = 'rounded-3xl border border-slate-200/60 dark:border-slate-700/50 bg-white/80 dark:bg-gradient-to-br dark:from-slate-900 dark:via-slate-900/80 dark:to-slate-950 backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
-const sectionShell = 'rounded-2xl border border-slate-200/60 dark:border-slate-700/50 bg-white/80 dark:bg-gradient-to-br dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-950 backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
+const heroShell =
+  'rounded-3xl border border-border/70 bg-card/90 dark:bg-card/90 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
+const sectionShell =
+  'rounded-2xl border border-border/70 bg-card/95 dark:bg-card/95 supports-[backdrop-filter]:backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
 
 type Character = {
   id?: string;
@@ -212,9 +214,9 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50/50 to-slate-100 dark:from-slate-950 dark:via-slate-900/95 dark:to-black">
-        <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl dark:bg-primary/25" />
-        <div className="pointer-events-none absolute right-[-120px] bottom-10 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl dark:bg-indigo-600/30" />
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-background via-background to-background text-foreground">
+        <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl dark:bg-primary/25" />
+        <div className="pointer-events-none absolute right-[-140px] bottom-6 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-700/25" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-6">
             <Link 
@@ -250,8 +252,8 @@ export default function CharacterProfilePage() {
           ) : character && (
             <div className={`${heroShell} overflow-hidden max-w-6xl mx-auto`}>
               {/* Header Section */}
-              <div className="relative px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-br from-white/75 via-white/60 to-white/40 dark:from-slate-900/90 dark:via-slate-900/80 dark:to-slate-950/85">
-                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.12),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.08),transparent_30%)] dark:bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(168,85,247,0.12),transparent_35%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.1),transparent_35%)]" />
+              <div className="relative px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-br from-card via-card/95 to-muted/70 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.14),transparent_38%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.12),transparent_32%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.08),transparent_30%)] dark:bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.15),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(168,85,247,0.12),transparent_35%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.1),transparent_35%)]" />
                 <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
                   <div className="relative group">
                     <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-gradient-to-br from-primary/15 via-indigo-500/10 to-sky-400/10 dark:from-primary/30 dark:via-indigo-600/25 dark:to-sky-500/25 flex items-center justify-center overflow-hidden border border-white/60 dark:border-slate-600/40 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.7)] dark:shadow-[0_20px_60px_-15px_rgba(59,130,246,0.3)] transition-transform duration-300 group-hover:scale-[1.02]">
@@ -363,7 +365,7 @@ export default function CharacterProfilePage() {
                     ) : (
                       <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
                         {character.pronouns && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/60 dark:bg-white/5 text-slate-800 dark:text-white border border-slate-200/60 dark:border-white/10 shadow-sm">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-muted text-foreground/80 border border-border/60 shadow-sm">
                             <UserIcon className="w-4 h-4 mr-1" />
                             {character.pronouns}
                           </span>
@@ -375,7 +377,7 @@ export default function CharacterProfilePage() {
                           </span>
                         )}
                         {character.relation && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/60 dark:bg-white/5 text-slate-800 dark:text-white border border-slate-200/60 dark:border-white/10 shadow-sm">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-muted text-foreground/80 border border-border/60 shadow-sm">
                             {character.relation}
                           </span>
                         )}
@@ -391,7 +393,7 @@ export default function CharacterProfilePage() {
                         placeholder="Character description..."
                       />
                     ) : character.description ? (
-                      <p className="text-lg text-slate-700 dark:text-slate-200 leading-relaxed max-w-2xl">{character.description}</p>
+                      <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">{character.description}</p>
                     ) : null}
 
                     {/* Image Management Info */}
@@ -459,7 +461,7 @@ export default function CharacterProfilePage() {
                           placeholder="Describe the character's personality..."
                         />
                       ) : (
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {character.personality || 'No personality description yet.'}
                         </p>
                       )}
@@ -477,7 +479,7 @@ export default function CharacterProfilePage() {
                           placeholder="Describe the character's background..."
                         />
                       ) : (
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {character.background || 'No background information yet.'}
                         </p>
                       )}
@@ -495,7 +497,7 @@ export default function CharacterProfilePage() {
                           placeholder="Describe the character's physical appearance..."
                         />
                       ) : (
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {character.physicalDescription || 'No physical description yet.'}
                         </p>
                       )}
@@ -513,7 +515,7 @@ export default function CharacterProfilePage() {
                           placeholder="Describe the character's way of speaking..."
                         />
                       ) : (
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
+                        <p className="text-muted-foreground leading-relaxed">
                           {character.dialogueStyle || 'No dialogue style information yet.'}
                         </p>
                       )}
@@ -616,7 +618,7 @@ export default function CharacterProfilePage() {
                                   <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Born</div>
-                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthYear}</div>
+                                    <div className="text-sm text-muted-foreground">{character.birthYear}</div>
                                   </div>
                                 </div>
                               )}
@@ -625,7 +627,7 @@ export default function CharacterProfilePage() {
                                   <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Died</div>
-                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.died}</div>
+                                    <div className="text-sm text-muted-foreground">{character.died}</div>
                                   </div>
                                 </div>
                               )}
@@ -634,7 +636,7 @@ export default function CharacterProfilePage() {
                                   <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Birthplace</div>
-                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthPlace}</div>
+                                    <div className="text-sm text-muted-foreground">{character.birthPlace}</div>
                                   </div>
                                 </div>
                               )}
@@ -643,7 +645,7 @@ export default function CharacterProfilePage() {
                                   <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
                                     <div className="text-sm font-medium text-slate-900 dark:text-white">Deathplace</div>
-                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.deathPlace}</div>
+                                    <div className="text-sm text-muted-foreground">{character.deathPlace}</div>
                                   </div>
                                 </div>
                               )}
