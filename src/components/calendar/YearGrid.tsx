@@ -173,10 +173,9 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   const activeDays = days.slice(0, 80);
   const restDay = days[80]; // The 81st day (rest day)
 
-  // Build grid rows: 7 complete rows of 10 + 1 final row with 3 active days + empty spaces + 1 rest day
-  // Rows 1-7: 10 days each (70 days total)
-  // Row 8: 10 active days (last 10 of the 80) arranged as: 10 days in positions 0-9
-  // But we want: 3 days in positions 0-2, empty space, then rest day positioned at the end
+  // Build grid: 8 rows of 10 days each (80 active days), with rest day as the 10th day in the last row
+  // Rows 1-7: 10 days each (70 active days total)
+  // Row 8: 9 active days (71-79) + 1 rest day (81st day) = 10 items total
 
   const grid: (HfCalendarResult | null)[][] = [];
 
@@ -185,14 +184,13 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
     grid.push(activeDays.slice(i * 10, (i + 1) * 10));
   }
 
-  // Create last row with remaining 10 active days + space + rest day
-  const lastRowActive = activeDays.slice(70, 80);
+  // Create last row with 9 active days + rest day
+  const lastRowActive = activeDays.slice(70, 79); // Only 9 days (71-79)
   const lastRow: (HfCalendarResult | null)[] = [...lastRowActive];
 
-  // Only add rest day if it exists
+  // Add rest day as the 10th item in the last row
   if (restDay) {
-    lastRow.push(null); // Empty space
-    lastRow.push(restDay); // Rest day
+    lastRow.push(restDay);
   }
 
   grid.push(lastRow);
@@ -205,11 +203,6 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
       <div className="grid grid-cols-10 gap-1">
         {grid.map((row, rowIndex) =>
           row.map((day, colIndex) => {
-            // For the last row, only render up to column 10 (the rest day extends beyond)
-            // Actually, we want to render the rest day too, so render all
-            if (rowIndex < 7 && colIndex >= 10) return null; // Skip extras in non-last rows
-            if (rowIndex === 7 && colIndex > 10) return null; // Skip anything beyond rest day in last row
-
             return day ? (
               <GridCell
                 key={day.dateISO}
