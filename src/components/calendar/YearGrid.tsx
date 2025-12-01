@@ -169,14 +169,20 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
   selectedDay?: string;
   todayISO: string;
 }) {
-  // Separate rest day (81st day) from active days (first 80)
+  // Separate active days (first 80) and rest day (81st day)
   const activeDays = days.slice(0, 80);
   const restDay = days[80]; // The 81st day (rest day)
 
-  // Arrange 80 active days in 8x10 grid
-  const grid = Array.from({ length: 8 }, (_, row) =>
-    activeDays.slice(row * 10, (row + 1) * 10)
-  );
+  // Arrange 80 active days in 8x10 grid, with rest day in the last position
+  const grid = Array.from({ length: 8 }, (_, row) => {
+    const rowDays = activeDays.slice(row * 10, (row + 1) * 10);
+    // On the 8th (last) row, add the rest day as the 9th position (skipping one space, then placing it)
+    if (row === 7 && restDay) {
+      rowDays.push(...new Array(9 - rowDays.length).fill(null)); // Pad with nulls
+      rowDays.push(restDay); // Add rest day
+    }
+    return rowDays;
+  });
 
   return (
     <div className="space-y-2">
@@ -185,27 +191,19 @@ function QuarterGrid({ days, title, onDayClick, selectedDay, todayISO }: {
       </h3>
       <div className="grid grid-cols-10 gap-1">
         {grid.map((row, rowIndex) =>
-          row.map((day) => (
-            <GridCell
-              key={day.dateISO}
-              day={day}
-              isSelected={selectedDay === day.dateISO}
-              isToday={todayISO === day.dateISO}
-              onClick={() => onDayClick(day)}
-            />
-          ))
-        )}
-      </div>
-      {/* Rest day positioned at the end of the quarter */}
-      <div className="flex justify-end pt-2">
-        {restDay && (
-          <GridCell
-            key={restDay.dateISO}
-            day={restDay}
-            isSelected={selectedDay === restDay.dateISO}
-            isToday={todayISO === restDay.dateISO}
-            onClick={() => onDayClick(restDay)}
-          />
+          row.map((day, colIndex) =>
+            day ? (
+              <GridCell
+                key={day.dateISO}
+                day={day}
+                isSelected={selectedDay === day.dateISO}
+                isToday={todayISO === day.dateISO}
+                onClick={() => onDayClick(day)}
+              />
+            ) : (
+              <div key={`empty-${rowIndex}-${colIndex}`} className="w-6 h-6" />
+            )
+          )
         )}
       </div>
     </div>
@@ -456,6 +454,13 @@ export function YearGrid({ year, className, onDayClick, selectedDay }: YearGridP
             selectedDay={selectedDay}
             todayISO={todayISO}
           />
+        </div>
+
+        {/* Half-Year Midpoint Circle */}
+        <div className="flex justify-center py-4">
+          <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 via-gold-500 to-emerald-500 shadow-lg flex items-center justify-center">
+            <div className="absolute inset-1 rounded-full bg-background/20" />
+          </div>
         </div>
 
         {/* Mid-Band */}
