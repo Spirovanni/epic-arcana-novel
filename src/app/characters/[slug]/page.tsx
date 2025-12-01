@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-border/70 bg-card/90 dark:bg-slate-950/75 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)] dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.85)]';
+  'rounded-3xl border border-slate-800/70 bg-gradient-to-br from-slate-900/85 via-slate-950/80 to-slate-900/85 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
 const sectionShell =
-  'rounded-2xl border border-border/70 bg-gradient-to-br from-card via-card/95 to-card dark:from-slate-950/85 dark:via-slate-900/85 dark:to-slate-950/90 supports-[backdrop-filter]:backdrop-blur-md shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(0,0,0,0.7)]';
+  'relative overflow-hidden rounded-2xl border border-slate-800/70 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/85 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
 
 type Character = {
   id?: string;
@@ -214,9 +214,10 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-background via-background to-background text-foreground">
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#060a14] via-[#0c1224] to-[#070b14] text-foreground">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl dark:bg-primary/25" />
         <div className="pointer-events-none absolute right-[-140px] bottom-6 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-700/25" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.08),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_28%),radial-gradient(circle_at_50%_70%,rgba(56,189,248,0.06),transparent_30%)]" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-6">
             <Link 
@@ -445,14 +446,14 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-6 sm:p-8 bg-gradient-to-b from-white/70 via-white/80 to-white/60 dark:from-slate-950/80 dark:via-slate-900/75 dark:to-slate-950/85">
+              <div className="p-6 sm:p-8 bg-gradient-to-b from-slate-950/85 via-slate-950/80 to-slate-950/90">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
                     {/* Personality Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
-                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
+                        <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                         Personality
                       </h3>
                       {isEditing ? (
@@ -472,8 +473,8 @@ export default function CharacterProfilePage() {
 
                     {/* Background Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
-                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
+                        <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                         Background
                       </h3>
                       {isEditing ? (
@@ -493,8 +494,8 @@ export default function CharacterProfilePage() {
 
                     {/* Physical Description Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
-                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
+                        <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                         Physical Description
                       </h3>
                       {isEditing ? (
@@ -514,8 +515,8 @@ export default function CharacterProfilePage() {
 
                     {/* Dialogue Style Section */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
-                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
+                        <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                         Dialogue Style
                       </h3>
                       {isEditing ? (
@@ -534,9 +535,9 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-600/50 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/60 dark:to-fuchsia-900/50 p-6 shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(168,85,247,0.3)]">
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-3">
-                        <span className="h-1.5 w-6 rounded-full bg-purple-500/80 shadow-[0_0_12px_-4px_rgba(168,85,247,0.8)]" />
+                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-700/60 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/60 dark:to-fuchsia-900/50 p-6 shadow-lg dark:shadow-[0_8px_32px_-8px_rgba(168,85,247,0.3)]">
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-3">
+                        <span className="h-1.5 w-7 rounded-full bg-purple-500/80 shadow-[0_0_14px_-4px_rgba(168,85,247,0.8)]" />
                         <span className="inline-flex items-center gap-2">
                           <PhotoIcon className="w-5 h-5 text-purple-600 dark:text-purple-300" />
                           Image Details for AI Generation
@@ -580,8 +581,8 @@ export default function CharacterProfilePage() {
                   <div className="space-y-6">
                     {/* Life Details */}
                     <div className={`${sectionShell} p-6`}>
-                      <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-4">
-                        <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                      <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-4">
+                        <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                         Life Details
                       </h3>
                       {isEditing ? (
@@ -678,8 +679,8 @@ export default function CharacterProfilePage() {
                     {/* Groups */}
                     {character.groups && Array.isArray(character.groups) && character.groups.length > 0 && (
                       <div className={`${sectionShell} p-6`}>
-                        <h3 className="flex items-center gap-2 text-lg font-semibold text-foreground mb-4">
-                          <span className="h-1.5 w-6 rounded-full bg-primary/70 shadow-[0_0_12px_-4px_rgba(59,130,246,0.8)]" />
+                        <h3 className="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-foreground mb-4">
+                          <span className="h-1.5 w-7 rounded-full bg-primary/80 shadow-[0_0_14px_-4px_rgba(59,130,246,0.9)]" />
                           Groups & Affiliations
                         </h3>
                         <div className="flex flex-wrap gap-2">
@@ -700,8 +701,8 @@ export default function CharacterProfilePage() {
           {related.length > 0 && (
             <div className="mt-12 max-w-6xl mx-auto">
               <div className={`${sectionShell} p-8 dark:border-slate-700/40`}>
-                <h2 className="flex items-center gap-2 text-2xl font-bold text-foreground mb-6">
-                  <span className="h-2 w-8 rounded-full bg-primary/70 shadow-[0_0_18px_-6px_rgba(59,130,246,0.8)]" />
+                <h2 className="flex items-center gap-3 text-2xl font-bold text-foreground mb-6">
+                  <span className="h-2 w-10 rounded-full bg-primary/80 shadow-[0_0_18px_-6px_rgba(59,130,246,0.9)]" />
                   Related Characters
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
@@ -709,7 +710,7 @@ export default function CharacterProfilePage() {
                     <Link
                       key={c.slug}
                       href={`/characters/${c.slug}`}
-                      className="group rounded-xl border border-slate-200/70 dark:border-slate-700/40 bg-white/80 dark:bg-slate-900/60 backdrop-blur hover:border-primary/40 dark:hover:border-primary/50 hover:shadow-lg dark:hover:shadow-[0_8px_32px_-8px_rgba(59,130,246,0.3)] transition-all duration-200 p-4"
+                  className="group rounded-xl border border-slate-800/60 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/85 backdrop-blur hover:border-primary/50 hover:shadow-[0_18px_50px_-30px_rgba(59,130,246,0.4)] transition-all duration-200 p-4"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/50 via-indigo-500/40 to-sky-400/50 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 border border-white/50 dark:border-white/10 shadow-sm">
