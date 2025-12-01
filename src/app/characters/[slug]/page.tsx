@@ -8,6 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon, CheckIcon, XMarkIcon, PhotoIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
+const heroShell = 'rounded-3xl border border-slate-200/60 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.55)]';
+const sectionShell = 'rounded-2xl border border-slate-200/60 dark:border-slate-800/60 bg-white/80 dark:bg-slate-900/70 backdrop-blur-md shadow-lg';
 
 type Character = {
   id?: string;
@@ -206,14 +208,18 @@ export default function CharacterProfilePage() {
         items={[
           { label: 'Characters', href: '/characters' },
           { label: character?.name || 'Loading...', current: true }
-        ]} 
+        ]}
+        variant="dark"
+        sticky={false}
       />
-      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-indigo-50/50 to-slate-100 dark:from-slate-950 dark:via-slate-900 dark:to-black">
+        <div className="pointer-events-none absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/10 blur-3xl dark:bg-primary/20" />
+        <div className="pointer-events-none absolute right-[-120px] bottom-10 h-72 w-72 rounded-full bg-indigo-200/30 blur-3xl dark:bg-indigo-600/20" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="mb-6">
             <Link 
               href="/characters" 
-              className="inline-flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-colors duration-200"
+              className="inline-flex items-center text-sm font-medium text-primary/80 dark:text-primary/60 hover:text-primary transition-colors duration-200"
             >
               <ArrowLeftIcon className="w-4 h-4 mr-2" />
               Back to all characters
@@ -221,7 +227,7 @@ export default function CharacterProfilePage() {
           </div>
 
           {loading ? (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 max-w-4xl mx-auto animate-pulse">
+            <div className={`${heroShell} p-8 max-w-4xl mx-auto animate-pulse`}>
               <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                 <div className="w-48 h-48 rounded-2xl bg-gray-200 dark:bg-gray-700" />
                 <div className="flex-1 space-y-4">
@@ -236,23 +242,24 @@ export default function CharacterProfilePage() {
               </div>
             </div>
           ) : error ? (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 max-w-4xl mx-auto text-center">
+            <div className={`${heroShell} p-8 max-w-4xl mx-auto text-center`}>
               <div className="text-red-600 dark:text-red-400 text-lg font-medium">
                 {error}
               </div>
             </div>
           ) : character && (
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden max-w-6xl mx-auto">
+            <div className={`${heroShell} overflow-hidden max-w-6xl mx-auto`}>
               {/* Header Section */}
-              <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-indigo-800 dark:via-purple-800 dark:to-pink-800 px-8 py-12">
-                <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
+              <div className="relative px-6 sm:px-8 py-10 sm:py-12 bg-gradient-to-br from-white/75 via-white/60 to-white/40 dark:from-slate-900/70 dark:via-slate-900/60 dark:to-slate-950/70">
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(59,130,246,0.12),transparent_35%),radial-gradient(circle_at_80%_30%,rgba(236,72,153,0.12),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(56,189,248,0.08),transparent_30%)]" />
+                <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-10">
                   <div className="relative group">
-                    <div className="w-48 h-48 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center overflow-hidden border-4 border-white/30 transition-transform duration-300 hover:scale-200 hover:z-10">
+                    <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-2xl bg-gradient-to-br from-primary/15 via-indigo-500/10 to-sky-400/10 dark:from-primary/25 dark:via-indigo-600/20 dark:to-sky-500/20 flex items-center justify-center overflow-hidden border border-white/60 dark:border-white/10 shadow-[0_20px_60px_-30px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover:scale-[1.02]">
                       <Image 
                         src={character.imageUrl || placeholderImg} 
                         alt={character.name || 'Character'} 
-                        width={192} 
-                        height={192} 
+                        width={224} 
+                        height={224} 
                         className="w-full h-full object-cover rounded-xl" 
                       />
                     </div>
@@ -261,26 +268,26 @@ export default function CharacterProfilePage() {
                     <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-2xl flex items-center justify-center">
                       <div className="flex flex-col items-center space-y-3">
                         <div className="relative group/upload">
-                          <div className="bg-blue-500/90 text-white font-medium py-2 px-4 rounded-lg text-sm text-center cursor-help">
+                          <div className="bg-primary/90 text-white font-medium py-2 px-4 rounded-lg text-sm text-center cursor-help shadow-lg shadow-primary/30">
                             Manage Images
                             {/* Admin Panel Link Tooltip */}
                             <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover/upload:opacity-100 transition-opacity duration-200 pointer-events-auto z-10">
-                              <div className="bg-gray-900 text-white text-xs rounded-lg p-4 shadow-lg min-w-[280px]">
+                              <div className="bg-slate-900 text-white text-xs rounded-lg p-4 shadow-xl min-w-[280px] border border-slate-700/80">
                                 <div className="font-semibold mb-2">Image Management</div>
-                                <p className="text-gray-100 mb-3">To assign character images, please use the admin panel:</p>
+                                <p className="text-slate-100 mb-3">To assign character images, please use the admin panel:</p>
                                 <a
                                   href="/admin/characters/images"
-                                  className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-3 rounded transition-colors text-sm mb-2"
+                                  className="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-3 rounded transition-colors text-sm mb-2"
                                   target="_blank"
                                   rel="noopener noreferrer"
                                 >
                                   Go to Image Admin →
                                 </a>
-                                <p className="text-gray-300 text-xs">
+                                <p className="text-slate-300 text-xs">
                                   The admin panel allows you to select from existing images in our library.
                                 </p>
                                 {/* Arrow pointing down */}
-                                <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-gray-900"></div>
+                                <div className="absolute top-full left-1/2 transform -translate-x-1/2 border-4 border-transparent border-t-slate-900"></div>
                               </div>
                             </div>
                           </div>
@@ -290,7 +297,7 @@ export default function CharacterProfilePage() {
                           <button
                             onClick={handleImageRemove}
                             disabled={uploading}
-                            className="bg-red-500/90 hover:bg-red-600 text-white font-medium py-1 px-3 rounded-lg transition-colors text-xs"
+                            className="bg-red-500/90 hover:bg-red-600 text-white font-medium py-1 px-3 rounded-lg transition-colors text-xs shadow-md"
                           >
                             Remove
                           </button>
@@ -299,7 +306,7 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {character.lastSeenChapter !== null && (
-                      <div className="absolute -bottom-3 -right-3 bg-yellow-400 text-yellow-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                      <div className="absolute -bottom-3 -right-3 bg-amber-400 text-amber-900 text-xs font-bold px-3 py-1 rounded-full shadow-lg border border-amber-300/70">
                         Chapter {character.lastSeenChapter}
                       </div>
                     )}
@@ -310,11 +317,11 @@ export default function CharacterProfilePage() {
                         type="text"
                         value={editData?.name || ''}
                         onChange={(e) => handleFieldChange('name', e.target.value)}
-                        className="text-4xl md:text-5xl font-bold text-white mb-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-4 py-2 focus:ring-2 focus:ring-white/50 w-full max-w-2xl"
+                        className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg px-4 py-2 focus:ring-2 focus:ring-primary/50 w-full max-w-2xl shadow-sm"
                         placeholder="Character name"
                       />
                     ) : (
-                      <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">{character.name}</h1>
+                      <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">{character.name}</h1>
                     )}
                     
                     {isEditing ? (
@@ -322,11 +329,11 @@ export default function CharacterProfilePage() {
                         type="text"
                         value={editData?.aka || ''}
                         onChange={(e) => handleFieldChange('aka', e.target.value)}
-                        className="text-xl text-white/90 mb-4 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg px-3 py-1 focus:ring-2 focus:ring-white/50 w-full max-w-lg"
+                        className="text-lg text-slate-700 dark:text-slate-100 mb-4 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg px-3 py-1 focus:ring-2 focus:ring-primary/40 w-full max-w-lg shadow-sm"
                         placeholder="Also known as..."
                       />
                     ) : character.aka ? (
-                      <div className="text-xl text-white/90 mb-4">aka {character.aka}</div>
+                      <div className="text-lg text-slate-600 dark:text-slate-200 mb-4 italic">aka {character.aka}</div>
                     ) : null}
                     
                     {isEditing ? (
@@ -335,40 +342,40 @@ export default function CharacterProfilePage() {
                           type="text"
                           value={editData?.pronouns || ''}
                           onChange={(e) => handleFieldChange('pronouns', e.target.value)}
-                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          className="px-3 py-2 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-primary/40 shadow-sm"
                           placeholder="Pronouns"
                         />
                         <input
                           type="text"
                           value={editData?.role || ''}
                           onChange={(e) => handleFieldChange('role', e.target.value)}
-                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          className="px-3 py-2 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-primary/40 shadow-sm"
                           placeholder="Role"
                         />
                         <input
                           type="text"
                           value={editData?.relation || ''}
                           onChange={(e) => handleFieldChange('relation', e.target.value)}
-                          className="px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                          className="px-3 py-2 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-primary/40 shadow-sm"
                           placeholder="Relation"
                         />
                       </div>
                     ) : (
                       <div className="flex flex-wrap gap-3 justify-center md:justify-start mb-6">
                         {character.pronouns && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/60 dark:bg-white/5 text-slate-800 dark:text-white border border-slate-200/60 dark:border-white/10 shadow-sm">
                             <UserIcon className="w-4 h-4 mr-1" />
                             {character.pronouns}
                           </span>
                         )}
                         {character.role && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 dark:bg-primary/20 text-primary-700 dark:text-primary-100 border border-primary/20 dark:border-primary/30 shadow-sm">
                             <TagIcon className="w-4 h-4 mr-1" />
                             {character.role}
                           </span>
                         )}
                         {character.relation && (
-                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/60 dark:bg-white/5 text-slate-800 dark:text-white border border-slate-200/60 dark:border-white/10 shadow-sm">
                             {character.relation}
                           </span>
                         )}
@@ -380,41 +387,25 @@ export default function CharacterProfilePage() {
                         value={editData?.description || ''}
                         onChange={(e) => handleFieldChange('description', e.target.value)}
                         rows={3}
-                        className="w-full max-w-2xl px-3 py-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-lg text-white placeholder-white/70 focus:ring-2 focus:ring-white/50"
+                        className="w-full max-w-2xl px-3 py-2 bg-white/70 dark:bg-white/5 backdrop-blur border border-slate-200/70 dark:border-white/10 rounded-lg text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-slate-400 focus:ring-2 focus:ring-primary/40 shadow-sm"
                         placeholder="Character description..."
                       />
                     ) : character.description ? (
-                      <p className="text-lg text-white/90 leading-relaxed max-w-2xl">{character.description}</p>
+                      <p className="text-lg text-slate-700 dark:text-slate-200 leading-relaxed max-w-2xl">{character.description}</p>
                     ) : null}
 
                     {/* Image Management Info */}
                     <div className="mt-4 max-w-2xl">
-                      <div className="bg-blue-500/10 border border-blue-400/30 rounded-lg p-4">
-                        <p className="text-blue-100 text-sm">
+                      <div className="rounded-xl border border-primary/20 dark:border-primary/30 bg-primary/5 dark:bg-primary/10 p-4 shadow-sm">
+                        <p className="text-primary-800 dark:text-primary-100 text-sm">
                           <strong>Image Management:</strong> To add or change character images, visit the{' '}
-                          <a href="/admin/characters/images" className="underline hover:text-blue-50">
+                          <a href="/admin/characters/images" className="underline hover:text-primary">
                             Admin Character Images page
                           </a>
                           .
                         </p>
                       </div>
                     </div>
-
-                    {/* Image Upload Guidelines */}
-                    {/* <div className="mt-6 max-w-2xl">
-                      <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg p-4">
-                        <h4 className="text-white font-medium mb-2 flex items-center">
-                          <PhotoIcon className="w-4 h-4 mr-2" />
-                          Image Upload Guidelines
-                        </h4>
-                        <ul className="text-white/80 text-sm space-y-1">
-                          <li>• <strong>Recommended:</strong> Up to 1,500x1,500 pixels (square)</li>
-                          <li>• <strong>File types:</strong> JPG, PNG, WebP</li>
-                          <li>• <strong>Max size:</strong> 5MB</li>
-                          <li>• <strong>Best quality:</strong> High-resolution portrait images</li>
-                        </ul>
-                      </div>
-                    </div> */}
                   </div>
                   
                   {/* Edit Controls */}
@@ -422,7 +413,7 @@ export default function CharacterProfilePage() {
                     {!isEditing ? (
                       <button
                         onClick={handleEdit}
-                        className="inline-flex items-center px-4 py-2 bg-white/20 hover:bg-white/30 text-white font-medium rounded-lg transition-colors duration-200 backdrop-blur-sm"
+                        className="inline-flex items-center px-4 py-2 bg-slate-900/80 dark:bg-white/10 hover:bg-slate-900 text-white font-medium rounded-lg transition-colors duration-200 backdrop-blur shadow-md"
                       >
                         <PencilIcon className="w-4 h-4 mr-2" />
                         Edit Character
@@ -432,7 +423,7 @@ export default function CharacterProfilePage() {
                         <button
                           onClick={handleSave}
                           disabled={saving}
-                          className="inline-flex items-center px-4 py-2 bg-green-500 hover:bg-green-600 disabled:bg-green-400 text-white font-medium rounded-lg transition-colors duration-200"
+                          className="inline-flex items-center px-4 py-2 bg-emerald-500 hover:bg-emerald-600 disabled:bg-emerald-400 text-white font-medium rounded-lg transition-colors duration-200 shadow-md"
                         >
                           <CheckIcon className="w-4 h-4 mr-2" />
                           {saving ? 'Saving...' : 'Save'}
@@ -440,7 +431,7 @@ export default function CharacterProfilePage() {
                         <button
                           onClick={handleCancel}
                           disabled={saving}
-                          className="inline-flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 disabled:bg-red-400 text-white font-medium rounded-lg transition-colors duration-200"
+                          className="inline-flex items-center px-4 py-2 bg-red-500 hover:bg-red-600 disabled:bg-red-400 text-white font-medium rounded-lg transition-colors duration-200 shadow-md"
                         >
                           <XMarkIcon className="w-4 h-4 mr-2" />
                           Cancel
@@ -452,99 +443,99 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-8">
+              <div className="p-6 sm:p-8 bg-gradient-to-b from-white/70 via-white/80 to-white/60 dark:from-slate-950/60 dark:via-slate-900/70 dark:to-slate-950/70">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
                     {/* Personality Section */}
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Personality</h3>
+                    <div className={`${sectionShell} p-6`}>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Personality</h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.personality || ''}
                           onChange={(e) => handleFieldChange('personality', e.target.value)}
                           rows={4}
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                           placeholder="Describe the character's personality..."
                         />
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                           {character.personality || 'No personality description yet.'}
                         </p>
                       )}
                     </div>
 
                     {/* Background Section */}
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Background</h3>
+                    <div className={`${sectionShell} p-6`}>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Background</h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.background || ''}
                           onChange={(e) => handleFieldChange('background', e.target.value)}
                           rows={4}
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                           placeholder="Describe the character's background..."
                         />
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                           {character.background || 'No background information yet.'}
                         </p>
                       )}
                     </div>
 
                     {/* Physical Description Section */}
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Physical Description</h3>
+                    <div className={`${sectionShell} p-6`}>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Physical Description</h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.physicalDescription || ''}
                           onChange={(e) => handleFieldChange('physicalDescription', e.target.value)}
                           rows={4}
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                           placeholder="Describe the character's physical appearance..."
                         />
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                           {character.physicalDescription || 'No physical description yet.'}
                         </p>
                       )}
                     </div>
 
                     {/* Dialogue Style Section */}
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Dialogue Style</h3>
+                    <div className={`${sectionShell} p-6`}>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3">Dialogue Style</h3>
                       {isEditing ? (
                         <textarea
                           value={editData?.dialogueStyle || ''}
                           onChange={(e) => handleFieldChange('dialogueStyle', e.target.value)}
                           rows={3}
-                          className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                          className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                           placeholder="Describe the character's way of speaking..."
                         />
                       ) : (
-                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed">
                           {character.dialogueStyle || 'No dialogue style information yet.'}
                         </p>
                       )}
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg p-6 border border-purple-200 dark:border-purple-700">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3 flex items-center">
-                        <PhotoIcon className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-400" />
+                    <div className="rounded-2xl border border-purple-200/70 dark:border-purple-700/70 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/40 dark:to-fuchsia-900/30 p-6 shadow-lg">
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-3 flex items-center">
+                        <PhotoIcon className="w-5 h-5 mr-2 text-purple-600 dark:text-purple-300" />
                         Image Details for AI Generation
                       </h3>
                       <div className="space-y-4">
                         {/* AI Prompt */}
                         <div>
-                          <div className="flex justify-between items-center mb-2">
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+                          <div className="flex flex-wrap justify-between items-center gap-2 mb-2">
+                            <label className="block text-sm font-medium text-slate-800 dark:text-slate-200">
                               AI Prompt
                             </label>
                             <button
                               onClick={handleCopyPrompt}
                               disabled={!character?.aiPrompt && !editData?.aiPrompt}
-                              className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:bg-purple-200 dark:hover:bg-purple-900/50"
+                              className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-md transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed bg-purple-100 dark:bg-white/10 text-purple-700 dark:text-white hover:bg-purple-200 dark:hover:bg-white/20 shadow-sm"
                             >
                               <ClipboardIcon className="w-4 h-4 mr-1" />
                               {promptCopied ? 'Copied!' : 'Copy Prompt'}
@@ -555,11 +546,11 @@ export default function CharacterProfilePage() {
                               value={editData?.aiPrompt || ''}
                               onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
                               rows={6}
-                              className="w-full px-3 py-2 border border-purple-300 dark:border-purple-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 font-mono text-sm"
+                              className="w-full px-3 py-2 border border-purple-200 dark:border-purple-700 rounded-lg bg-white/90 dark:bg-slate-950 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-purple-500 font-mono text-sm"
                               placeholder="Enter AI prompt for generating this character's image..."
                             />
                           ) : (
-                            <div className="text-gray-700 dark:text-gray-300 leading-relaxed bg-white dark:bg-gray-800 rounded-lg p-3 border border-purple-200 dark:border-purple-600 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm">
+                            <div className="text-slate-800 dark:text-slate-100 leading-relaxed bg-white/90 dark:bg-slate-950 rounded-lg p-3 border border-purple-200/80 dark:border-purple-700/70 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner">
                               {character.aiPrompt || 'No AI prompt defined yet.'}
                             </div>
                           )}
@@ -571,47 +562,47 @@ export default function CharacterProfilePage() {
                   {/* Sidebar Info */}
                   <div className="space-y-6">
                     {/* Life Details */}
-                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Life Details</h3>
+                    <div className={`${sectionShell} p-6`}>
+                      <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Life Details</h3>
                       {isEditing ? (
                         <div className="space-y-3">
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Birth Year</label>
+                            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Birth Year</label>
                             <input
                               type="text"
                               value={editData?.birthYear || ''}
                               onChange={(e) => handleFieldChange('birthYear', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                               placeholder="e.g., 1265 CE"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Death Year</label>
+                            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Death Year</label>
                             <input
                               type="text"
                               value={editData?.died || ''}
                               onChange={(e) => handleFieldChange('died', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                               placeholder="e.g., 1321 CE"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Birth Place</label>
+                            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Birth Place</label>
                             <input
                               type="text"
                               value={editData?.birthPlace || ''}
                               onChange={(e) => handleFieldChange('birthPlace', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                               placeholder="e.g., Florence, Italy"
                             />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Death Place</label>
+                            <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Death Place</label>
                             <input
                               type="text"
                               value={editData?.deathPlace || ''}
                               onChange={(e) => handleFieldChange('deathPlace', e.target.value)}
-                              className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-indigo-500"
+                              className="w-full px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-lg bg-white/80 dark:bg-slate-900 text-slate-900 dark:text-gray-100 focus:ring-2 focus:ring-primary/40"
                               placeholder="e.g., Ravenna, Italy"
                             />
                           </div>
@@ -622,43 +613,43 @@ export default function CharacterProfilePage() {
                             <>
                               {character.birthYear && (
                                 <div className="flex items-center">
-                                  <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
+                                  <CalendarIcon className="w-5 h-5 text-slate-400 mr-3" />
                                   <div>
-                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Born</div>
-                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthYear}</div>
+                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Born</div>
+                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthYear}</div>
                                   </div>
                                 </div>
                               )}
                               {character.died && (
                                 <div className="flex items-center">
-                                  <CalendarIcon className="w-5 h-5 text-gray-400 mr-3" />
+                                  <CalendarIcon className="w-5 h-5 text-slate-400 mr-3" />
                                   <div>
-                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Died</div>
-                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.died}</div>
+                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Died</div>
+                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.died}</div>
                                   </div>
                                 </div>
                               )}
                               {character.birthPlace && (
                                 <div className="flex items-start">
-                                  <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
+                                  <MapPinIcon className="w-5 h-5 text-slate-400 mr-3 mt-0.5" />
                                   <div>
-                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Birthplace</div>
-                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.birthPlace}</div>
+                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Birthplace</div>
+                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.birthPlace}</div>
                                   </div>
                                 </div>
                               )}
                               {character.deathPlace && (
                                 <div className="flex items-start">
-                                  <MapPinIcon className="w-5 h-5 text-gray-400 mr-3 mt-0.5" />
+                                  <MapPinIcon className="w-5 h-5 text-slate-400 mr-3 mt-0.5" />
                                   <div>
-                                    <div className="text-sm font-medium text-gray-900 dark:text-white">Deathplace</div>
-                                    <div className="text-sm text-gray-600 dark:text-gray-400">{character.deathPlace}</div>
+                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Deathplace</div>
+                                    <div className="text-sm text-slate-700 dark:text-slate-300">{character.deathPlace}</div>
                                   </div>
                                 </div>
                               )}
                             </>
                           ) : (
-                            <p className="text-sm text-gray-500 dark:text-gray-400 italic">No life details recorded yet.</p>
+                            <p className="text-sm text-slate-500 dark:text-slate-400 italic">No life details recorded yet.</p>
                           )}
                         </div>
                       )}
@@ -666,11 +657,11 @@ export default function CharacterProfilePage() {
 
                     {/* Groups */}
                     {character.groups && Array.isArray(character.groups) && character.groups.length > 0 && (
-                      <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Groups & Affiliations</h3>
-                        <div className="space-y-2">
+                      <div className={`${sectionShell} p-6`}>
+                        <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-4">Groups & Affiliations</h3>
+                        <div className="flex flex-wrap gap-2">
                           {character.groups.map((group, index) => (
-                            <div key={index} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-200 mr-2 mb-2">
+                            <div key={index} className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 dark:bg-primary/25 text-primary-800 dark:text-primary-100 border border-primary/20 dark:border-primary/30 shadow-sm">
                               {group}
                             </div>
                           ))}
@@ -685,25 +676,25 @@ export default function CharacterProfilePage() {
 
           {related.length > 0 && (
             <div className="mt-12 max-w-6xl mx-auto">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Characters</h2>
+              <div className={`${sectionShell} p-8`}>
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Related Characters</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                   {related.filter((c) => c.slug).map((c) => (
                     <Link 
                       key={c.slug} 
                       href={`/characters/${c.slug}`} 
-                      className="group bg-gray-50 dark:bg-gray-700 rounded-lg p-4 hover:bg-indigo-50 dark:hover:bg-indigo-900/50 transition-all duration-200 hover:shadow-lg"
+                      className="group rounded-xl border border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/70 backdrop-blur hover:border-primary/40 hover:shadow-lg transition-all duration-200 p-4"
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-indigo-400 to-purple-600 flex items-center justify-center overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/50 via-indigo-500/40 to-sky-400/50 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 border border-white/50 dark:border-white/10 shadow-sm">
                           <Image src={c.imageUrl || placeholderImg} alt={c.name || 'Character'} width={48} height={48} className="w-full h-full object-cover rounded-full" />
                         </div>
                         <div className="flex-1 min-w-0">
-                          <p className="text-sm font-medium text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-200 truncate">
+                          <p className="text-sm font-medium text-slate-900 dark:text-white group-hover:text-primary transition-colors duration-200 truncate">
                             {c.name || 'Unknown Character'}
                           </p>
                           {c.role && (
-                            <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+                            <p className="text-xs text-slate-500 dark:text-slate-400 truncate">
                               {c.role}
                             </p>
                           )}
