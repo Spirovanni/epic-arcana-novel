@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-slate-800/70 bg-gradient-to-br from-slate-900/85 via-slate-950/80 to-slate-900/85 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
+  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-slate-800/70 dark:from-slate-900/85 dark:via-slate-950/80 dark:to-slate-900/85 dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
 const sectionShell =
-  'relative overflow-hidden rounded-2xl border border-slate-800/70 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/85 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
+  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-slate-800/70 dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85 dark:shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
 
 type Character = {
   id?: string;
@@ -214,7 +214,7 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-[#060a14] via-[#0c1224] to-[#070b14] text-foreground">
+      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 text-foreground dark:from-[#060a14] dark:via-[#0c1224] dark:to-[#070b14]">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl dark:bg-primary/25" />
         <div className="pointer-events-none absolute right-[-140px] bottom-6 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-700/25" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.08),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_28%),radial-gradient(circle_at_50%_70%,rgba(56,189,248,0.06),transparent_30%)]" />
@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-6 sm:p-8 bg-gradient-to-b from-slate-950/85 via-slate-950/80 to-slate-950/90">
+              <div className="p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-slate-950/85 dark:via-slate-950/80 dark:to-slate-950/90">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
@@ -535,13 +535,13 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="relative overflow-hidden rounded-2xl border border-purple-600/40 bg-gradient-to-br from-slate-950/92 via-slate-950/88 to-slate-900/85 shadow-[0_20px_60px_-28px_rgba(124,58,237,0.55)]">
-                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)]" />
+                    <div className="relative overflow-hidden rounded-2xl border border-purple-200/70 bg-gradient-to-br from-indigo-50 via-white to-purple-50 shadow-[0_20px_60px_-32px_rgba(59,130,246,0.25)] dark:border-purple-600/40 dark:bg-gradient-to-br dark:from-slate-950/92 dark:via-slate-950/88 dark:to-slate-900/85 dark:shadow-[0_20px_60px_-28px_rgba(124,58,237,0.55)]">
+                      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)]" />
                       <div className="relative p-6 space-y-4">
                         <h3 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-foreground/90">
                           <span className="h-1.5 w-8 rounded-full bg-purple-500/90 shadow-[0_0_16px_-4px_rgba(168,85,247,0.9)]" />
                           <span className="inline-flex items-center gap-2">
-                            <PhotoIcon className="w-5 h-5 text-purple-300" />
+                            <PhotoIcon className="w-5 h-5 text-purple-500 dark:text-purple-300" />
                             Image Details for AI Generation
                           </span>
                         </h3>
@@ -552,7 +552,7 @@ export default function CharacterProfilePage() {
                           <button
                             onClick={handleCopyPrompt}
                             disabled={!character?.aiPrompt && !editData?.aiPrompt}
-                            className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-purple-100 hover:border-purple-400/70 hover:bg-purple-500/20 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                            className="inline-flex items-center gap-2 rounded-full border border-purple-500/40 bg-purple-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-purple-900 hover:border-purple-400/70 hover:bg-purple-100 transition disabled:opacity-50 disabled:cursor-not-allowed dark:bg-purple-500/10 dark:text-purple-100 dark:hover:bg-purple-500/20"
                           >
                             <ClipboardIcon className="w-4 h-4" />
                             {promptCopied ? 'Copied!' : 'Copy'}
@@ -563,11 +563,11 @@ export default function CharacterProfilePage() {
                             value={editData?.aiPrompt || ''}
                             onChange={(e) => handleFieldChange('aiPrompt', e.target.value)}
                             rows={6}
-                            className="w-full px-4 py-3 border border-purple-500/40 rounded-xl bg-slate-950/75 text-slate-100 focus:ring-2 focus:ring-purple-400/70 font-mono text-sm shadow-inner shadow-black/50 placeholder:text-slate-500"
+                            className="w-full px-4 py-3 border border-purple-200 rounded-xl bg-white/90 text-slate-900 focus:ring-2 focus:ring-purple-300 font-mono text-sm shadow-inner shadow-purple-900/10 placeholder:text-slate-500 dark:border-purple-500/40 dark:bg-slate-950/75 dark:text-slate-100 dark:focus:ring-purple-400/70 dark:shadow-black/50"
                             placeholder="Enter AI prompt for generating this character's image..."
                           />
                         ) : (
-                          <div className="text-slate-100 leading-relaxed bg-slate-950/70 rounded-xl p-4 border border-purple-500/35 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner shadow-black/50">
+                          <div className="text-slate-800 leading-relaxed bg-white/90 rounded-xl p-4 border border-purple-200/70 max-h-96 overflow-y-auto whitespace-pre-wrap font-mono text-sm shadow-inner shadow-purple-900/10 dark:text-slate-100 dark:bg-slate-950/70 dark:border-purple-500/35 dark:shadow-black/50">
                             {character.aiPrompt || 'No AI prompt defined yet.'}
                           </div>
                         )}
@@ -708,7 +708,7 @@ export default function CharacterProfilePage() {
                     <Link
                       key={c.slug}
                       href={`/characters/${c.slug}`}
-                  className="group rounded-xl border border-slate-800/60 bg-gradient-to-br from-slate-900/90 via-slate-950/90 to-slate-900/85 backdrop-blur hover:border-primary/50 hover:shadow-[0_18px_50px_-30px_rgba(59,130,246,0.4)] transition-all duration-200 p-4"
+                      className="group rounded-xl border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-slate-100 backdrop-blur hover:border-primary/50 hover:shadow-[0_18px_50px_-30px_rgba(59,130,246,0.4)] transition-all duration-200 p-4 dark:border-slate-800/60 dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/50 via-indigo-500/40 to-sky-400/50 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 border border-white/50 dark:border-white/10 shadow-sm">
