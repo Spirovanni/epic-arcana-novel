@@ -324,7 +324,7 @@ export default function CharacterProfilePage() {
                         placeholder="Character name"
                       />
                     ) : (
-                      <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">{character.name}</h1>
+                      <h1 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-50 mb-2 tracking-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.35)]">{character.name}</h1>
                     )}
                     
                     {isEditing ? (
