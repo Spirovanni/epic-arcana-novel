@@ -408,8 +408,13 @@ const formatChapterForSudowrite = (chapter: Chapter, scenes: Scene[]): string =>
 };
 
 const getChapterIconPath = (chapter: Chapter, bookNumber: number): string => {
-  if (chapter.iconPath) {
-    return `/icons/${chapter.iconPath}`;
+  const icon = chapter.iconPath?.trim();
+  if (icon) {
+    if (icon.startsWith('http')) return icon; // external URL already usable
+    if (icon.startsWith('/')) return icon; // already an absolute path in /public
+    if (icon.startsWith('icons/')) return `/${icon}`; // stored without leading slash
+    if (icon.startsWith('chapters/')) return `/icons/${icon}`; // stored relative to icons folder
+    return `/icons/${icon}`; // fallback prefix for bare filenames
   }
   return `/icons/chapters/book${bookNumber}/chapter${chapter.chapterNumber}.png`;
 };

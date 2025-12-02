@@ -81,6 +81,8 @@ interface Chapter {
   epicChapterFocus?: string | null;
   epicNovelChapterFocus?: string | null;
   epicNovelSectionName?: string | null;
+  epicPreliminarySceneFocus?: string | null;
+  epicPreliminarySceneDescription?: string | null;
   tarotCardItem?: string | null;
   connectionToMajorTaskGroup?: string | null;
   specificTaskGroupDescription?: string | null;
@@ -95,6 +97,8 @@ interface Chapter {
   red?: number | null;
   green?: number | null;
   blue?: number | null;
+  type?: string | null;
+  newTarotFamily?: string | null;
   colorTheme: {
     name: string;
     hex: string;
@@ -103,6 +107,22 @@ interface Chapter {
   tarotFamily?: string | null;
   tarotCardLink?: string | null;
   terminalLearningObjectives?: Record<string, unknown>;
+  // Story structure fields
+  sceneNumber?: number | null;
+  heroJourneyBeat?: string | null;
+  heroJourneyBeatObjective?: string | null;
+  plotBeat?: string | null;
+  saveTheCatBeat?: string | null;
+  saveTheCatBeatGoal?: string | null;
+  // JSON metadata fields
+  characterArcs?: Record<string, unknown> | null;
+  storyGapsAddressed?: Record<string, unknown> | null;
+  locationDetails?: Record<string, unknown> | null;
+  seriesConnections?: Record<string, unknown> | null;
+  // Relationship identifiers
+  taskMasterKey?: string | null;
+  majorTaskGroupKey?: string | null;
+  specificTaskGroupKey?: string | null;
   scenes: Scene[];
 }
 
@@ -932,6 +952,15 @@ const ChapterCard = ({
 
           {!isEditing && (
             <>
+              {chapter.epicPreliminarySceneDescription && (
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Scene Overview</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+                    {chapter.epicPreliminarySceneDescription}
+                  </p>
+                </div>
+              )}
+
               {chapter.description && (
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Description</h4>
@@ -956,6 +985,18 @@ const ChapterCard = ({
                     <p><span className="font-semibold">Section:</span> {chapter.epicNovelSectionName || '—'}</p>
                     <p><span className="font-semibold">Major Task Connection:</span> {chapter.connectionToMajorTaskGroup || '—'}</p>
                     <p><span className="font-semibold">Tagline:</span> {chapter.specificTaskGroupTagline || '—'}</p>
+                    {chapter.epicPreliminarySceneFocus && (
+                      <p><span className="font-semibold">Preliminary Scene Focus:</span> {chapter.epicPreliminarySceneFocus}</p>
+                    )}
+                    {chapter.heroJourneyBeat && (
+                      <p><span className="font-semibold">Hero Journey Beat:</span> {chapter.heroJourneyBeat}</p>
+                    )}
+                    {chapter.plotBeat && (
+                      <p><span className="font-semibold">Plot Beat:</span> {chapter.plotBeat}</p>
+                    )}
+                    {chapter.saveTheCatBeat && (
+                      <p><span className="font-semibold">Save the Cat Beat:</span> {chapter.saveTheCatBeat}</p>
+                    )}
                   </div>
                 </div>
                 <div className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
@@ -969,6 +1010,33 @@ const ChapterCard = ({
                 </div>
               </div>
             </>
+          )}
+
+          {/* Specific Task Group Information */}
+          {(chapter.type === 'Specific Task Group' || chapter.specificTaskGroupDescription) && (
+            <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900 rounded-lg p-4">
+              <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-3">Specific Task Group</h4>
+              <div className="space-y-3 text-sm text-indigo-800 dark:text-indigo-200">
+                {chapter.specificTaskGroupDescription && (
+                  <div>
+                    <p className="font-semibold mb-1">Description:</p>
+                    <p className="leading-relaxed">{chapter.specificTaskGroupDescription}</p>
+                  </div>
+                )}
+                {chapter.connectionToMajorTaskGroup && (
+                  <div>
+                    <p className="font-semibold mb-1">Major Task Connection:</p>
+                    <p className="leading-relaxed">{chapter.connectionToMajorTaskGroup}</p>
+                  </div>
+                )}
+                {chapter.specificTaskGroupTagline && (
+                  <div>
+                    <p className="font-semibold mb-1">Tagline:</p>
+                    <p className="italic">{chapter.specificTaskGroupTagline}</p>
+                  </div>
+                )}
+              </div>
+            </div>
           )}
 
           {/* Learning Objectives */}

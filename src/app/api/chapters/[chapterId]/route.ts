@@ -249,7 +249,24 @@ export async function PUT(request: Request, { params }: { params: Promise<{ chap
       'hexCode': 'hexCode',
       'red': 'red',
       'green': 'green',
-      'blue': 'blue'
+      'blue': 'blue',
+      // New fields for story structure
+      'sceneNumber': 'sceneNumber',
+      'heroJourneyBeat': 'heroJourneyBeat',
+      'heroJourneyBeatObjective': 'heroJourneyBeatObjective',
+      'plotBeat': 'plotBeat',
+      'saveTheCatBeat': 'saveTheCatBeat',
+      'saveTheCatBeatGoal': 'saveTheCatBeatGoal',
+      'characterArcs': 'characterArcs',
+      'storyGapsAddressed': 'storyGapsAddressed',
+      'locationDetails': 'locationDetails',
+      'seriesConnections': 'seriesConnections',
+      'taskMasterKey': 'taskMasterKey',
+      'majorTaskGroupKey': 'majorTaskGroupKey',
+      'specificTaskGroupKey': 'specificTaskGroupKey',
+      'epicPreliminarySceneFocus': 'epicPreliminarySceneFocus',
+      'epicPreliminarySceneDescription': 'epicPreliminarySceneDescription',
+      'newTarotFamily': 'newTarotFamily'
     };
 
     // Only include fields that are defined in the schema
