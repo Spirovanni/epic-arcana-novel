@@ -36,11 +36,15 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       epicChapterFocus: chapters.epicChapterFocus,
       epicNovelChapterFocus: chapters.epicNovelChapterFocus,
       epicNovelSectionName: chapters.epicNovelSectionName,
+      epicPreliminarySceneFocus: chapters.epicPreliminarySceneFocus,
+      epicPreliminarySceneDescription: chapters.epicPreliminarySceneDescription,
       colorName: chapters.colorName,
       hexCode: chapters.hexCode,
       red: chapters.red,
       green: chapters.green,
       blue: chapters.blue,
+      type: chapters.type,
+      newTarotFamily: chapters.newTarotFamily,
       tarotFamily: chapters.tarotFamily,
       tarotCardLink: chapters.tarotCardLink,
       tarotCardItem: chapters.tarotCardItem,
@@ -50,6 +54,22 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       tense: chapters.tense,
       coreEmotion: chapters.coreEmotion,
       sceneTone: chapters.sceneTone,
+      // Story structure fields
+      sceneNumber: chapters.sceneNumber,
+      heroJourneyBeat: chapters.heroJourneyBeat,
+      heroJourneyBeatObjective: chapters.heroJourneyBeatObjective,
+      plotBeat: chapters.plotBeat,
+      saveTheCatBeat: chapters.saveTheCatBeat,
+      saveTheCatBeatGoal: chapters.saveTheCatBeatGoal,
+      // JSON metadata fields
+      characterArcs: chapters.characterArcs,
+      storyGapsAddressed: chapters.storyGapsAddressed,
+      locationDetails: chapters.locationDetails,
+      seriesConnections: chapters.seriesConnections,
+      // Relationship identifiers
+      taskMasterKey: chapters.taskMasterKey,
+      majorTaskGroupKey: chapters.majorTaskGroupKey,
+      specificTaskGroupKey: chapters.specificTaskGroupKey,
       terminalLearningObjectives: chapters.terminalLearningObjectives
     }).from(chapters).where(eq(chapters.bookId, actualBookId)).orderBy(asc(chapters.chapterNumber));
 
