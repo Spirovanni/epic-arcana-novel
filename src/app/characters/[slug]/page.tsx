@@ -214,7 +214,7 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-background text-foreground dark:bg-gradient-to-br dark:from-[#060a14] dark:via-[#0c1224] dark:to-[#070b14]">
+      <main className="relative min-h-screen overflow-hidden bg-background text-foreground dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl dark:bg-primary/25" />
         <div className="pointer-events-none absolute right-[-140px] bottom-6 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-700/25" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.08),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_28%),radial-gradient(circle_at_50%_70%,rgba(56,189,248,0.06),transparent_30%)]" />
@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="relative p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-[#050915] dark:via-[#070d1f] dark:to-[#04070f] dark:border-t dark:border-white/5">
+              <div className="relative p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 dark:border-t dark:border-white/5">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
