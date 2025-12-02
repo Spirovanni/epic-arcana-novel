@@ -1,4 +1,4 @@
-import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real, unique } from 'drizzle-orm/pg-core';
+import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real, unique, index } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
   id: integer().primaryKey().generatedAlwaysAsIdentity({ name: 'users_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
@@ -889,4 +889,79 @@ export const assignmentTemplates = pgTable('assignment_templates', {
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
   unique('templates_type_day_unique').on(table.personalityType, table.dayOfYear)
+]);
+
+// ============================================================================
+// LEARNING RESOURCES & OBJECTIVES SYSTEM
+// Normalized schema for learning resources, connection points, and objectives
+// ============================================================================
+
+// Master table of learning resources (books, sources, etc.)
+export const learningResources = pgTable('learning_resources', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  resourceId: varchar('resource_id', { length: 50 }).unique().notNull(), // "book1", "book2", etc.
+  title: varchar('title', { length: 255 }).notNull(), // "Man's Search for Meaning"
+  author: varchar('author', { length: 255 }), // "Viktor Frankl"
+  sectionOfFocus: varchar('section_of_focus', { length: 255 }), // "Life in Concentration Camps"
+  sectionDescription: text('section_description'), // Full description of section
+  connectionFocusArea: text('connection_focus_area'), // How it relates to chapter theme
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+// Junction table: connects learning resources to chapters
+export const learningResourceChapters = pgTable('learning_resource_chapters', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  learningResourceId: uuid('learning_resource_id')
+    .notNull()
+    .references(() => learningResources.id, { onDelete: 'cascade' }),
+  chapterId: uuid('chapter_id')
+    .notNull()
+    .references(() => chapters.id, { onDelete: 'cascade' }),
+  orderIndex: integer('order_index').default(0), // Maintain order of resources
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+}, (table) => [
+  unique('learning_resource_chapters_unique').on(table.learningResourceId, table.chapterId),
+  index('learning_resource_chapters_chapter_idx').on(table.chapterId),
+  index('learning_resource_chapters_resource_idx').on(table.learningResourceId),
+]);
+
+// Individual connection points (extracted from JSONB)
+export const connectionPoints = pgTable('connection_points', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  learningResourceId: uuid('learning_resource_id')
+    .notNull()
+    .references(() => learningResources.id, { onDelete: 'cascade' }),
+  chapterId: uuid('chapter_id')
+    .notNull()
+    .references(() => chapters.id, { onDelete: 'cascade' }),
+  pointNumber: integer('point_number').notNull(), // 1, 2, 3, etc.
+  description: text('description').notNull(), // The actual connection point text
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  unique('connection_points_unique').on(table.learningResourceId, table.chapterId, table.pointNumber),
+  index('connection_points_resource_chapter_idx').on(table.learningResourceId, table.chapterId),
+  index('connection_points_chapter_idx').on(table.chapterId),
+]);
+
+// Individual terminal learning objectives (extracted from JSONB)
+export const terminalLearningObjectives = pgTable('terminal_learning_objectives', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  learningResourceId: uuid('learning_resource_id')
+    .notNull()
+    .references(() => learningResources.id, { onDelete: 'cascade' }),
+  chapterId: uuid('chapter_id')
+    .notNull()
+    .references(() => chapters.id, { onDelete: 'cascade' }),
+  objectiveNumber: integer('objective_number').notNull(), // 1, 2, 3, etc.
+  description: text('description').notNull(), // The actual objective text
+  bloomLevel: varchar('bloom_level', { length: 50 }), // REMEMBER, UNDERSTAND, APPLY, ANALYZE, EVALUATE, CREATE
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+}, (table) => [
+  unique('terminal_learning_objectives_unique').on(table.learningResourceId, table.chapterId, table.objectiveNumber),
+  index('terminal_learning_objectives_resource_chapter_idx').on(table.learningResourceId, table.chapterId),
+  index('terminal_learning_objectives_chapter_idx').on(table.chapterId),
+  index('terminal_learning_objectives_bloom_idx').on(table.bloomLevel),
 ]);
