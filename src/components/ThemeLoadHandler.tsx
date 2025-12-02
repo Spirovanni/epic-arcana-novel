@@ -14,14 +14,33 @@ export function ThemeLoadHandler() {
   useEffect(() => {
     if (!mounted) return;
 
-    // Mark the theme as loaded to enable transitions
-    const handleThemeLoad = () => {
+    // Ensure dark mode is applied by default
+    const applyDarkMode = () => {
+      const storedTheme = localStorage.getItem('ea-theme');
+
+      if (storedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        // Default to dark mode
+        document.documentElement.classList.add('dark');
+      }
+
       document.documentElement.classList.add("theme-loaded");
     };
 
-    // Wait for theme to be resolved and applied
+    // Apply dark mode immediately
+    applyDarkMode();
+
+    // Also ensure it's applied after theme is resolved
     if (resolvedTheme) {
-      const timer = setTimeout(handleThemeLoad, 50);
+      const timer = setTimeout(() => {
+        if (resolvedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+        document.documentElement.classList.add("theme-loaded");
+      }, 50);
       return () => clearTimeout(timer);
     }
   }, [mounted, resolvedTheme]);
@@ -31,7 +50,7 @@ export function ThemeLoadHandler() {
     if (mounted) {
       const timer = setTimeout(() => {
         document.documentElement.classList.add("theme-loaded");
-      }, 200);
+      }, 100);
       return () => clearTimeout(timer);
     }
   }, [mounted]);
