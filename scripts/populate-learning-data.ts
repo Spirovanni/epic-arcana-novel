@@ -10,6 +10,7 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
 import {
@@ -19,7 +20,10 @@ import {
   terminalLearningObjectives,
   chapters,
 } from '../src/lib/schema';
-import { eq, and } from 'drizzle-orm';
+import { eq } from 'drizzle-orm';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const DATABASE_URL = process.env.DATABASE_URL;
 
@@ -35,45 +39,31 @@ const outlineData = JSON.parse(fs.readFileSync(outlineFilePath, 'utf-8'));
 const client = postgres(DATABASE_URL);
 const db = drizzle(client);
 
-interface Outline {
-  SelfImprovementSeries: {
-    Books: {
-      trilogies: {
-        [trilogyKey: string]: {
-          trilogy_books: {
-            [bookKey: string]: {
-              unique_identifier: string;
-              chapters?: Array<{
-                chapter_number: number;
-                major_task_group_books_influenced_by?: {
-                  [key: string]: string;
-                };
-                connect_points?: {
-                  [key: string]: string;
-                };
-                terminal_learning_objectives?: {
-                  [key: string]: {
-                    bloom_level?: string;
-                    description?: string;
-                  };
-                };
-              }>;
-            };
-          };
-        };
+interface SpecificTaskGroup {
+  all_chapter: number;
+  chapter?: number;
+  chapter_number?: number;
+  specific_task_group_books_influenced_by?: {
+    [bookId: string]: {
+      title?: string;
+      connect_points?: {
+        [key: string]: string;
+      };
+      terminal_learning_objectives?: {
+        [key: string]: {
+          bloom_level?: string;
+          description?: string;
+        } | string;
       };
     };
   };
 }
-
-const outline = outlineData as Outline;
 
 interface LearningResource {
   id: string;
   resourceId: string;
   title: string;
   author?: string;
-  sectionOfFocus?: string;
 }
 
 // Map to track created learning resources
@@ -83,37 +73,47 @@ const resourcesMap = new Map<string, LearningResource>();
 async function extractLearningResources() {
   console.log('Step 1: Extracting learning resources...');
 
-  const trilogies = outline.SelfImprovementSeries.Books.trilogies;
+  const outline = outlineData as any;
+  const trilogies = outline.SelfImprovementSeries?.Books?.trilogies || {};
 
   for (const [trilogyKey, trilogy] of Object.entries(trilogies)) {
-    const books = trilogy.trilogy_books;
+    const trilogyBooks = (trilogy as any).trilogy_books || {};
 
-    for (const [bookKey, book] of Object.entries(books)) {
-      if (!book.chapters) continue;
+    for (const [bookKey, book] of Object.entries(trilogyBooks)) {
+      const taskMasters = (book as any).task_masters || {};
 
-      for (const chapter of book.chapters) {
-        const booksInfluenced = chapter.major_task_group_books_influenced_by || {};
+      for (const [tmKey, taskMaster] of Object.entries(taskMasters)) {
+        const majorTaskGroups = (taskMaster as any).major_task_groups || {};
 
-        for (const [resourceKey, resourceTitle] of Object.entries(
-          booksInfluenced
+        for (const [mtgKey, majorTaskGroup] of Object.entries(
+          majorTaskGroups
         )) {
-          if (!resourcesMap.has(resourceKey)) {
-            // Parse book title and author (format: "Title by Author")
-            const [title, author] = resourceTitle
-              .split(' by ')
-              .map((s: string) => s.trim());
+          const specificTaskGroups = (majorTaskGroup as any)
+            .Specific_task_groups || {};
 
-            const newResource: LearningResource = {
-              id: '', // Will be set after DB insert
-              resourceId: resourceKey,
-              title,
-              author,
-            };
+          for (const [stgKey, specificTaskGroup] of Object.entries(
+            specificTaskGroups
+          )) {
+            const stg = specificTaskGroup as SpecificTaskGroup;
+            const booksInfluenced =
+              stg.specific_task_group_books_influenced_by || {};
 
-            resourcesMap.set(resourceKey, newResource);
-            console.log(
-              `  - Found resource: ${resourceKey} = "${title}" by ${author || 'Unknown'}`
-            );
+            for (const [resourceKey, bookData] of Object.entries(
+              booksInfluenced
+            )) {
+              if (!resourcesMap.has(resourceKey)) {
+                const title = (bookData as any).title || resourceKey;
+
+                const newResource: LearningResource = {
+                  id: '',
+                  resourceId: resourceKey,
+                  title,
+                };
+
+                resourcesMap.set(resourceKey, newResource);
+                console.log(`  - Found resource: ${resourceKey} = "${title}"`);
+              }
+            }
           }
         }
       }
@@ -134,7 +134,7 @@ async function insertLearningResources() {
         .values({
           resourceId: resource.resourceId,
           title: resource.title,
-          author: resource.author,
+          author: undefined,
           sectionOfFocus: undefined,
           sectionDescription: undefined,
           connectionFocusArea: undefined,
@@ -148,9 +148,8 @@ async function insertLearningResources() {
         );
       }
     } catch (error: any) {
-      // Check if it's a unique constraint violation (resource already exists)
       if (error.code === '23505') {
-        // Fetch existing resource
+        // Unique constraint violation
         const existing = await db
           .select()
           .from(learningResources)
@@ -183,130 +182,148 @@ async function processChapters() {
   let totalConnectionPoints = 0;
   let totalObjectives = 0;
 
-  const trilogies = outline.SelfImprovementSeries.Books.trilogies;
+  const outline = outlineData as any;
+  const trilogies = outline.SelfImprovementSeries?.Books?.trilogies || {};
 
   for (const [trilogyKey, trilogy] of Object.entries(trilogies)) {
-    const books = trilogy.trilogy_books;
+    const trilogyBooks = (trilogy as any).trilogy_books || {};
 
-    for (const [bookKey, book] of Object.entries(books)) {
-      if (!book.chapters) continue;
+    for (const [bookKey, book] of Object.entries(trilogyBooks)) {
+      const taskMasters = (book as any).task_masters || {};
 
-      // Get the book from database to match chapters
-      const dbBooks = await db
-        .select()
-        .from(chapters)
-        .where(eq(chapters.chapterNumber, 1))
-        .limit(1);
+      for (const [tmKey, taskMaster] of Object.entries(taskMasters)) {
+        const majorTaskGroups = (taskMaster as any).major_task_groups || {};
 
-      if (!dbBooks.length) {
-        console.log(`  ⚠ Warning: Could not find book for ${bookKey}`);
-        continue;
-      }
+        for (const [mtgKey, majorTaskGroup] of Object.entries(
+          majorTaskGroups
+        )) {
+          const specificTaskGroups = (majorTaskGroup as any)
+            .Specific_task_groups || {};
 
-      for (const chapter of book.chapters) {
-        const booksInfluenced = chapter.major_task_group_books_influenced_by || {};
-        const connectPoints = chapter.connect_points || {};
-        const objectives = chapter.terminal_learning_objectives || {};
+          for (const [stgKey, specificTaskGroup] of Object.entries(
+            specificTaskGroups
+          )) {
+            const stg = specificTaskGroup as SpecificTaskGroup;
 
-        // Find the matching chapter in database
-        const dbChapters = await db
-          .select()
-          .from(chapters)
-          .where(eq(chapters.chapterNumber, chapter.chapter_number))
-          .limit(1);
+            // Determine chapter number - try multiple fields
+            const chapterNumber =
+              stg.all_chapter || stg.chapter || stg.chapter_number || 1;
 
-        if (!dbChapters.length) {
-          console.log(
-            `  ⚠ Warning: Could not find chapter ${chapter.chapter_number} in database`
-          );
-          continue;
-        }
+            // Find the matching chapter in database
+            const dbChapters = await db
+              .select()
+              .from(chapters)
+              .where(eq(chapters.chapterNumber, chapterNumber))
+              .limit(1);
 
-        const dbChapter = dbChapters[0];
-
-        // Process each resource for this chapter
-        for (const [resourceKey] of Object.entries(booksInfluenced)) {
-          const resource = resourcesMap.get(resourceKey);
-          if (!resource || !resource.id) {
-            console.log(
-              `  ⚠ Warning: Resource ${resourceKey} not found in map`
-            );
-            continue;
-          }
-
-          // Create junction table entry
-          try {
-            await db
-              .insert(learningResourceChapters)
-              .values({
-                learningResourceId: resource.id,
-                chapterId: dbChapter.id,
-                orderIndex: 0,
-              });
-
-            totalConnections++;
-          } catch (error: any) {
-            if (error.code !== '23505') {
-              // Ignore duplicate errors
-              console.error(
-                `  ✗ Error creating connection for chapter ${chapter.chapter_number}:`,
-                error.message
+            if (!dbChapters.length) {
+              console.log(
+                `  ⚠ Warning: Could not find chapter ${chapterNumber} in database`
               );
+              continue;
             }
-          }
 
-          // Process connection points for this resource-chapter combo
-          for (const [pointKey, pointText] of Object.entries(connectPoints)) {
-            const pointNumber = parseInt(pointKey.replace('point', '')) || 0;
+            const dbChapter = dbChapters[0];
+            const booksInfluenced = stg.specific_task_group_books_influenced_by || {};
 
-            try {
-              await db
-                .insert(connectionPoints)
-                .values({
-                  learningResourceId: resource.id,
-                  chapterId: dbChapter.id,
-                  pointNumber,
-                  description: pointText,
-                });
-
-              totalConnectionPoints++;
-            } catch (error: any) {
-              if (error.code !== '23505') {
-                console.error(
-                  `  ✗ Error inserting connection point:`,
-                  error.message
+            // Process each resource for this chapter
+            for (const [resourceKey, bookData] of Object.entries(
+              booksInfluenced
+            )) {
+              const resource = resourcesMap.get(resourceKey);
+              if (!resource || !resource.id) {
+                console.log(
+                  `  ⚠ Warning: Resource ${resourceKey} not found in map`
                 );
+                continue;
               }
-            }
-          }
 
-          // Process learning objectives for this resource-chapter combo
-          for (const [objKey, objData] of Object.entries(objectives)) {
-            const objectiveNumber = parseInt(objKey.replace('objective', '')) || 0;
-            const description =
-              typeof objData === 'string'
-                ? objData
-                : (objData as any).description || '';
-            const bloomLevel = typeof objData === 'string' ? undefined : (objData as any).bloom_level;
+              // Create junction table entry
+              try {
+                await db
+                  .insert(learningResourceChapters)
+                  .values({
+                    learningResourceId: resource.id,
+                    chapterId: dbChapter.id,
+                    orderIndex: 0,
+                  });
 
-            try {
-              await db
-                .insert(terminalLearningObjectives)
-                .values({
-                  learningResourceId: resource.id,
-                  chapterId: dbChapter.id,
-                  objectiveNumber,
-                  description,
-                  bloomLevel,
-                });
+                totalConnections++;
+              } catch (error: any) {
+                if (error.code !== '23505') {
+                  // Ignore duplicate errors
+                  console.error(
+                    `  ✗ Error creating connection for chapter ${chapterNumber}:`,
+                    error.message
+                  );
+                }
+              }
 
-              totalObjectives++;
-            } catch (error: any) {
-              if (error.code !== '23505') {
-                console.error(
-                  `  ✗ Error inserting learning objective:`,
-                  error.message
-                );
+              const bookDataObj = bookData as any;
+              const connectPoints = bookDataObj.connect_points || {};
+              const objectives = bookDataObj.terminal_learning_objectives || {};
+
+              // Process connection points
+              for (const [pointKey, pointText] of Object.entries(
+                connectPoints
+              )) {
+                const pointNumber =
+                  parseInt(pointKey.replace('point', '')) || 0;
+
+                try {
+                  await db
+                    .insert(connectionPoints)
+                    .values({
+                      learningResourceId: resource.id,
+                      chapterId: dbChapter.id,
+                      pointNumber,
+                      description: pointText,
+                    });
+
+                  totalConnectionPoints++;
+                } catch (error: any) {
+                  if (error.code !== '23505') {
+                    console.error(
+                      `  ✗ Error inserting connection point:`,
+                      error.message
+                    );
+                  }
+                }
+              }
+
+              // Process learning objectives
+              for (const [objKey, objData] of Object.entries(objectives)) {
+                const objectiveNumber =
+                  parseInt(objKey.replace('objective', '')) || 0;
+                const description =
+                  typeof objData === 'string'
+                    ? objData
+                    : (objData as any).description || '';
+                const bloomLevel =
+                  typeof objData === 'string'
+                    ? undefined
+                    : (objData as any).bloom_level;
+
+                try {
+                  await db
+                    .insert(terminalLearningObjectives)
+                    .values({
+                      learningResourceId: resource.id,
+                      chapterId: dbChapter.id,
+                      objectiveNumber,
+                      description,
+                      bloomLevel,
+                    });
+
+                  totalObjectives++;
+                } catch (error: any) {
+                  if (error.code !== '23505') {
+                    console.error(
+                      `  ✗ Error inserting learning objective:`,
+                      error.message
+                    );
+                  }
+                }
               }
             }
           }
