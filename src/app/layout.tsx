@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeLoadHandler } from "@/components/ThemeLoadHandler";
+import { THEME_STORAGE_KEY } from "@/lib/theme";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,8 +42,6 @@ export default function RootLayout({
         {/* Primary meta tags */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* Color scheme meta tag for dark mode */}
-        <meta name="color-scheme" content="dark" />
         {/* Next.js will inject metadata from the export above */}
       </head>
       <body
@@ -51,13 +50,12 @@ export default function RootLayout({
         <ClerkProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="dark"
+            defaultTheme="system"
             enableSystem={true}
-            storageKey="ea-theme"
+            storageKey={THEME_STORAGE_KEY}
             disableTransitionOnChange
-            forcedTheme={undefined}
           >
-            <ThemeLoadHandler />
+            <ThemeLoadHandler storageKey={THEME_STORAGE_KEY} />
             {children}
           </ThemeProvider>
         </ClerkProvider>

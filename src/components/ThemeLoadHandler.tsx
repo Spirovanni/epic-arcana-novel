@@ -1,41 +1,41 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useTheme } from "next-themes";
 
-export function ThemeLoadHandler() {
-  const { theme, systemTheme, resolvedTheme } = useTheme();
+type ThemeLoadHandlerProps = {
+  storageKey?: string;
+};
+
+export function ThemeLoadHandler({ storageKey = "ea-theme" }: ThemeLoadHandlerProps) {
+  const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  // Immediately apply dark mode before hydration
-  useEffect(() => {
+  const useIsoLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
+  const applyThemeClass = (mode: "light" | "dark") => {
     const html = document.documentElement;
-    const storedTheme = localStorage.getItem('ea-theme');
+    html.classList.toggle("dark", mode === "dark");
+    html.dataset.theme = mode;
+  };
 
-    // Apply dark mode by default, respect user's preference if stored
-    if (storedTheme === 'light') {
-      html.classList.remove('dark');
-    } else {
-      html.classList.add('dark');
-    }
+  useIsoLayoutEffect(() => {
+    const stored = localStorage.getItem(storageKey);
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initial = stored === "light" || stored === "dark"
+      ? stored
+      : systemPrefersDark
+        ? "dark"
+        : "light";
 
+    applyThemeClass(initial);
     setMounted(true);
-  }, []);
+  }, [storageKey]);
 
   useEffect(() => {
-    if (!mounted) return;
-
-    const html = document.documentElement;
-
-    // Apply theme based on resolved theme from next-themes
-    if (resolvedTheme === 'light') {
-      html.classList.remove('dark');
-    } else if (resolvedTheme === 'dark') {
-      html.classList.add('dark');
-    }
-
-    // Mark theme as loaded to enable transitions
-    html.classList.add("theme-loaded");
+    if (!mounted || !resolvedTheme) return;
+    applyThemeClass(resolvedTheme === "dark" ? "dark" : "light");
+    document.documentElement.classList.add("theme-loaded");
   }, [mounted, resolvedTheme]);
 
   return null;
