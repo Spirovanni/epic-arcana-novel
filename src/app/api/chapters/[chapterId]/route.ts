@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters, scenes } from '@/lib/schema';
+import { chapters, books, chapterPages, majorTaskGroups, taskMasters, characterArcs, characters, scenes, learningResources, learningResourceChapters, connectionPoints, terminalLearningObjectives } from '@/lib/schema';
 import { eq, asc } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
@@ -77,6 +77,54 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       .from(scenes)
       .where(eq(scenes.chapterId, chapterId))
       .orderBy(asc(scenes.sceneNumber));
+
+    // Get learning resources for this chapter
+    const linkedResources = await db
+      .select({
+        id: learningResources.id,
+        resourceId: learningResources.resourceId,
+        title: learningResources.title,
+        author: learningResources.author,
+      })
+      .from(learningResourceChapters)
+      .innerJoin(learningResources, eq(learningResourceChapters.learningResourceId, learningResources.id))
+      .where(eq(learningResourceChapters.chapterId, chapterId));
+
+    // For each learning resource, fetch its connection points and objectives
+    const learningResourcesWithData = await Promise.all(
+      linkedResources.map(async (resource) => {
+        const points = await db
+          .select({
+            pointNumber: connectionPoints.pointNumber,
+            description: connectionPoints.description,
+          })
+          .from(connectionPoints)
+          .where(
+            eq(connectionPoints.learningResourceId, resource.id) &&
+            eq(connectionPoints.chapterId, chapterId)
+          )
+          .orderBy(asc(connectionPoints.pointNumber));
+
+        const objectives = await db
+          .select({
+            objectiveNumber: terminalLearningObjectives.objectiveNumber,
+            description: terminalLearningObjectives.description,
+            bloomLevel: terminalLearningObjectives.bloomLevel,
+          })
+          .from(terminalLearningObjectives)
+          .where(
+            eq(terminalLearningObjectives.learningResourceId, resource.id) &&
+            eq(terminalLearningObjectives.chapterId, chapterId)
+          )
+          .orderBy(asc(terminalLearningObjectives.objectiveNumber));
+
+        return {
+          ...resource,
+          connectionPoints: points,
+          objectives,
+        };
+      })
+    );
 
     // Calculate word count from pages
     const totalWordCount = pages.reduce((count, page) => {
@@ -188,6 +236,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       majorTaskGroup: majorTaskGroupData?.majorTaskGroup || null,
       taskMaster: majorTaskGroupData?.taskMaster || null,
       scenes: chapterScenes,
+      learningResources: learningResourcesWithData,
       taskGroups: {
         major: [],
         specific: [],
