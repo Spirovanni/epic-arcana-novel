@@ -1233,6 +1233,10 @@ export default function OutlinePage() {
     );
   }
 
+  if (!outlineData) {
+    return null;
+  }
+
   const { book, chapters, stats } = outlineData;
 
   return (
