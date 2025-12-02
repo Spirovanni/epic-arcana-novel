@@ -634,7 +634,7 @@ export default function CharacterProfilePage() {
                                 <div className="flex items-center">
                                   <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
-                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Born</div>
+                                    <div className="text-sm font-medium text-slate-800 dark:text-slate-100">Born</div>
                                     <div className="text-sm text-muted-foreground">{character.birthYear}</div>
                                   </div>
                                 </div>
@@ -643,7 +643,7 @@ export default function CharacterProfilePage() {
                                 <div className="flex items-center">
                                   <CalendarIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3" />
                                   <div>
-                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Died</div>
+                                    <div className="text-sm font-medium text-slate-800 dark:text-slate-100">Died</div>
                                     <div className="text-sm text-muted-foreground">{character.died}</div>
                                   </div>
                                 </div>
@@ -652,7 +652,7 @@ export default function CharacterProfilePage() {
                                 <div className="flex items-start">
                                   <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
-                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Birthplace</div>
+                                    <div className="text-sm font-medium text-slate-800 dark:text-slate-100">Birthplace</div>
                                     <div className="text-sm text-muted-foreground">{character.birthPlace}</div>
                                   </div>
                                 </div>
@@ -661,7 +661,7 @@ export default function CharacterProfilePage() {
                                 <div className="flex items-start">
                                   <MapPinIcon className="w-5 h-5 text-slate-400 dark:text-slate-500 mr-3 mt-0.5" />
                                   <div>
-                                    <div className="text-sm font-medium text-slate-900 dark:text-white">Deathplace</div>
+                                    <div className="text-sm font-medium text-slate-800 dark:text-slate-100">Deathplace</div>
                                     <div className="text-sm text-muted-foreground">{character.deathPlace}</div>
                                   </div>
                                 </div>
