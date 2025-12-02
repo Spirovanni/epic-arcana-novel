@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="relative p-6 sm:p-8 border-t border-border/60 dark:border-slate-800/50 bg-white/90 dark:bg-transparent supports-[backdrop-filter]:backdrop-blur-xl">
+              <div className="relative p-6 sm:p-8 border-t border-border/60 dark:border-slate-800/50 bg-white/95 dark:bg-gradient-to-b dark:from-slate-950 dark:via-slate-950/95 dark:to-slate-900 supports-[backdrop-filter]:backdrop-blur-xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
