@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-white/10 dark:bg-gradient-to-br dark:from-[#0b1224] dark:via-[#090f1e] dark:to-[#070b14] dark:shadow-[0_30px_80px_-36px_rgba(0,0,0,0.88)]';
+  'rounded-3xl border border-slate-200/80 bg-card supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-white/10 dark:bg-slate-900/85 dark:shadow-[0_30px_80px_-36px_rgba(0,0,0,0.88)]';
 const sectionShell =
-  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-white/10 dark:bg-gradient-to-br dark:from-[#0d152b] dark:via-[#0a1020] dark:to-[#070c17] dark:shadow-[0_22px_60px_-34px_rgba(0,0,0,0.9)]';
+  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-card supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-white/10 dark:bg-slate-900/80 dark:shadow-[0_22px_60px_-34px_rgba(0,0,0,0.9)]';
 
 type Character = {
   id?: string;
@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="relative p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900 dark:border-t dark:border-white/5">
+              <div className="relative p-6 sm:p-8 border-t border-border/60 dark:border-slate-800/50 bg-white/90 dark:bg-transparent supports-[backdrop-filter]:backdrop-blur-xl">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
