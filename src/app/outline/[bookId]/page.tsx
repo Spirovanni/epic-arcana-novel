@@ -689,30 +689,44 @@ const ChapterCard = ({
             </div>
             
             <div className="flex-1 min-w-0">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2 leading-tight">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-3 leading-tight">
                 {chapter.title || `Chapter ${chapter.chapterNumber}`}
               </h3>
-              
-              <div className="flex flex-wrap items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mb-3">
-                <div className="flex items-center gap-1">
-                  <SparklesIcon className="w-4 h-4" />
-                  <span>{chapter.focus || chapter.focusArea || 'Theme TBD'}</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <DocumentTextIcon className="w-4 h-4" />
-                  <span>{chapter.scenes.length} scenes</span>
+
+              {/* Enhanced Metadata Badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+                {chapter.focusArea && (
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900">
+                    <SparklesIcon className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-blue-700 dark:text-blue-300 truncate">{chapter.focusArea}</span>
+                  </div>
+                )}
+                <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-900">
+                  <DocumentTextIcon className="w-3.5 h-3.5 text-amber-600 dark:text-amber-400 flex-shrink-0" />
+                  <span className="text-xs font-semibold text-amber-700 dark:text-amber-300">{chapter.scenes.length} scenes</span>
                 </div>
                 {chapter.tarotFamily && (
-                  <div className="flex items-center gap-1">
-                    <StarIcon className="w-4 h-4" />
-                    <span>{chapter.tarotFamily}</span>
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-pink-50 dark:bg-pink-950/40 border border-pink-200 dark:border-pink-900">
+                    <StarIcon className="w-3.5 h-3.5 text-pink-600 dark:text-pink-400 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-pink-700 dark:text-pink-300 truncate">{chapter.tarotFamily}</span>
+                  </div>
+                )}
+                {chapter.epicNovelPages && (
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-900">
+                    <BookOpenIcon className="w-3.5 h-3.5 text-green-600 dark:text-green-400 flex-shrink-0" />
+                    <span className="text-xs font-semibold text-green-700 dark:text-green-300 truncate">{chapter.epicNovelPages}</span>
                   </div>
                 )}
               </div>
-              
-              
-              {chapter.summary && (
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2">
+
+              {/* Scene Overview - Narrative Hook */}
+              {chapter.epicPreliminarySceneDescription && (
+                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2 italic border-l-4 border-indigo-500 dark:border-indigo-400 pl-3 py-2">
+                  "{chapter.epicPreliminarySceneDescription}"
+                </p>
+              )}
+              {!chapter.epicPreliminarySceneDescription && chapter.summary && (
+                <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed line-clamp-2">
                   {chapter.summary}
                 </p>
               )}
@@ -971,41 +985,74 @@ const ChapterCard = ({
               )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Story Metadata</h4>
-                  <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                    <p><span className="font-semibold">Focus:</span> {chapter.focus || '—'}</p>
-                    <p><span className="font-semibold">Focus Area:</span> {chapter.focusArea || '—'}</p>
-                    <p><span className="font-semibold">POV:</span> {chapter.pov || '—'}</p>
-                    <p><span className="font-semibold">Tense:</span> {chapter.tense || '—'}</p>
-                    <p><span className="font-semibold">Core Emotion:</span> {chapter.coreEmotion || '—'}</p>
-                    <p><span className="font-semibold">Scene Tone:</span> {chapter.sceneTone || '—'}</p>
-                    <p><span className="font-semibold">Epic Pages:</span> {chapter.epicNovelPages || '—'}</p>
-                    <p><span className="font-semibold">Epic Focus:</span> {chapter.epicChapterFocus || chapter.epicNovelChapterFocus || '—'}</p>
-                    <p><span className="font-semibold">Section:</span> {chapter.epicNovelSectionName || '—'}</p>
-                    <p><span className="font-semibold">Major Task Connection:</span> {chapter.connectionToMajorTaskGroup || '—'}</p>
-                    <p><span className="font-semibold">Tagline:</span> {chapter.specificTaskGroupTagline || '—'}</p>
-                    {chapter.epicPreliminarySceneFocus && (
-                      <p><span className="font-semibold">Preliminary Scene Focus:</span> {chapter.epicPreliminarySceneFocus}</p>
-                    )}
+                {/* Narrative Structure Panel */}
+            <div className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900/40 dark:to-blue-950/40 border border-blue-200 dark:border-blue-900 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <BookOpenIcon className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">Narrative Structure</h4>
+                  </div>
+                  <div className="space-y-2.5 text-sm">
                     {chapter.heroJourneyBeat && (
-                      <p><span className="font-semibold">Hero Journey Beat:</span> {chapter.heroJourneyBeat}</p>
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-blue-700 dark:text-blue-300 min-w-fit">Hero's Journey:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-blue-100/50 dark:bg-blue-950/50 px-2 py-0.5 rounded">{chapter.heroJourneyBeat}</span>
+                      </div>
                     )}
                     {chapter.plotBeat && (
-                      <p><span className="font-semibold">Plot Beat:</span> {chapter.plotBeat}</p>
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-amber-700 dark:text-amber-300 min-w-fit">Plot Beat:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-amber-100/50 dark:bg-amber-950/50 px-2 py-0.5 rounded">{chapter.plotBeat}</span>
+                      </div>
                     )}
                     {chapter.saveTheCatBeat && (
-                      <p><span className="font-semibold">Save the Cat Beat:</span> {chapter.saveTheCatBeat}</p>
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-purple-700 dark:text-purple-300 min-w-fit">Save the Cat:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-purple-100/50 dark:bg-purple-950/50 px-2 py-0.5 rounded">{chapter.saveTheCatBeat}</span>
+                      </div>
+                    )}
+                    {chapter.epicPreliminarySceneFocus && (
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-indigo-700 dark:text-indigo-300 min-w-fit">Scene Focus:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-indigo-100/50 dark:bg-indigo-950/50 px-2 py-0.5 rounded">{chapter.epicPreliminarySceneFocus}</span>
+                      </div>
+                    )}
+                    {chapter.coreEmotion && (
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-rose-700 dark:text-rose-300 min-w-fit">Core Emotion:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-rose-100/50 dark:bg-rose-950/50 px-2 py-0.5 rounded">{chapter.coreEmotion}</span>
+                      </div>
+                    )}
+                    {chapter.sceneTone && (
+                      <div className="flex items-start gap-2">
+                        <span className="font-semibold text-teal-700 dark:text-teal-300 min-w-fit">Tone:</span>
+                        <span className="text-gray-700 dark:text-gray-300 bg-teal-100/50 dark:bg-teal-950/50 px-2 py-0.5 rounded">{chapter.sceneTone}</span>
+                      </div>
                     )}
                   </div>
                 </div>
-                <div className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">Tarot & Color</h4>
-                  <div className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
-                    <p><span className="font-semibold">Tarot Family:</span> {chapter.tarotFamily || '—'}</p>
-                    <p><span className="font-semibold">Tarot Card Link:</span> {chapter.tarotCardLink || '—'}</p>
-                    <p><span className="font-semibold">Tarot Card Item:</span> {chapter.tarotCardItem || '—'}</p>
-                    <p><span className="font-semibold">Primary Color:</span> {chapter.colorTheme.name} ({chapter.colorTheme.hex})</p>
+                {/* Tarot & Color Panel */}
+                <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/40 dark:to-pink-950/40 border border-purple-200 dark:border-purple-900 rounded-lg p-4">
+                  <div className="flex items-center gap-2 mb-3">
+                    <StarIcon className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+                    <h4 className="font-semibold text-gray-900 dark:text-gray-100">Tarot & Essence</h4>
+                  </div>
+                  <div className="space-y-3">
+                    {chapter.tarotFamily && (
+                      <div>
+                        <span className="text-xs font-semibold text-purple-700 dark:text-purple-300 uppercase tracking-wide">Tarot Family</span>
+                        <p className="text-sm text-gray-700 dark:text-gray-300 mt-1">{chapter.tarotFamily} {chapter.tarotCardItem ? `- ${chapter.tarotCardItem}` : ''}</p>
+                      </div>
+                    )}
+                    <div className="flex items-center justify-between py-2 px-3 rounded-lg" style={{
+                      backgroundColor: `${chapter.colorTheme.hex}15`,
+                      borderLeft: `4px solid ${chapter.colorTheme.hex}`
+                    }}>
+                      <div>
+                        <span className="text-xs font-semibold text-gray-600 dark:text-gray-300 uppercase tracking-wide">Chapter Color</span>
+                        <p className="text-sm font-medium text-gray-900 dark:text-gray-100 mt-0.5">{chapter.colorTheme.name}</p>
+                      </div>
+                      <div className="w-10 h-10 rounded-lg shadow-md" style={{ backgroundColor: chapter.colorTheme.hex }}></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1014,25 +1061,27 @@ const ChapterCard = ({
 
           {/* Specific Task Group Information */}
           {(chapter.type === 'Specific Task Group' || chapter.specificTaskGroupDescription) && (
-            <div className="bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-900 rounded-lg p-4">
-              <h4 className="font-semibold text-indigo-900 dark:text-indigo-100 mb-3">Specific Task Group</h4>
-              <div className="space-y-3 text-sm text-indigo-800 dark:text-indigo-200">
+            <div className="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950/50 dark:via-purple-950/50 dark:to-pink-950/50 border-2 border-indigo-300 dark:border-indigo-700 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <div className="w-2 h-6 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></div>
+                <h4 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">Thematic Focus</h4>
+              </div>
+              <div className="space-y-4 text-sm">
+                {chapter.specificTaskGroupTagline && (
+                  <div className="px-4 py-3 bg-white/60 dark:bg-black/20 border-l-4 border-indigo-500 rounded-r-lg">
+                    <p className="italic text-gray-800 dark:text-gray-200 font-medium">"{chapter.specificTaskGroupTagline}"</p>
+                  </div>
+                )}
                 {chapter.specificTaskGroupDescription && (
                   <div>
-                    <p className="font-semibold mb-1">Description:</p>
-                    <p className="leading-relaxed">{chapter.specificTaskGroupDescription}</p>
+                    <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">What This Chapter Explores</span>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.specificTaskGroupDescription}</p>
                   </div>
                 )}
                 {chapter.connectionToMajorTaskGroup && (
                   <div>
-                    <p className="font-semibold mb-1">Major Task Connection:</p>
-                    <p className="leading-relaxed">{chapter.connectionToMajorTaskGroup}</p>
-                  </div>
-                )}
-                {chapter.specificTaskGroupTagline && (
-                  <div>
-                    <p className="font-semibold mb-1">Tagline:</p>
-                    <p className="italic">{chapter.specificTaskGroupTagline}</p>
+                    <span className="text-xs font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider">How It Connects</span>
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.connectionToMajorTaskGroup}</p>
                   </div>
                 )}
               </div>
