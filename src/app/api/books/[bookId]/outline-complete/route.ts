@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
-import { chapters, scenes, books } from '@/lib/schema';
+import { chapters, scenes, books, learningResources, learningResourceChapters, connectionPoints, terminalLearningObjectives } from '@/lib/schema';
 import { eq, asc } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
@@ -83,7 +83,61 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     }
 
     const chapterIds = bookChapters.map(c => c.id);
-    
+
+    // Get learning resources for all chapters
+    const learningResourcesByChapter = new Map<string, any[]>();
+    for (const chapterId of chapterIds) {
+      // Get all learning resources linked to this chapter
+      const linkedResources = await db
+        .select({
+          id: learningResources.id,
+          resourceId: learningResources.resourceId,
+          title: learningResources.title,
+          author: learningResources.author,
+        })
+        .from(learningResourceChapters)
+        .innerJoin(learningResources, eq(learningResourceChapters.learningResourceId, learningResources.id))
+        .where(eq(learningResourceChapters.chapterId, chapterId));
+
+      // For each learning resource, fetch its connection points and objectives
+      const resourcesWithData = await Promise.all(
+        linkedResources.map(async (resource) => {
+          const points = await db
+            .select({
+              pointNumber: connectionPoints.pointNumber,
+              description: connectionPoints.description,
+            })
+            .from(connectionPoints)
+            .where(
+              eq(connectionPoints.learningResourceId, resource.id) &&
+              eq(connectionPoints.chapterId, chapterId)
+            )
+            .orderBy(asc(connectionPoints.pointNumber));
+
+          const objectives = await db
+            .select({
+              objectiveNumber: terminalLearningObjectives.objectiveNumber,
+              description: terminalLearningObjectives.description,
+              bloomLevel: terminalLearningObjectives.bloomLevel,
+            })
+            .from(terminalLearningObjectives)
+            .where(
+              eq(terminalLearningObjectives.learningResourceId, resource.id) &&
+              eq(terminalLearningObjectives.chapterId, chapterId)
+            )
+            .orderBy(asc(terminalLearningObjectives.objectiveNumber));
+
+          return {
+            ...resource,
+            connectionPoints: points,
+            objectives,
+          };
+        })
+      );
+
+      learningResourcesByChapter.set(chapterId, resourcesWithData);
+    }
+
     // Get scenes for all chapters
     const scenesByChapter = new Map();
     for (const chapterId of chapterIds) {
@@ -136,7 +190,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       scenesByChapter.set(chapterId, chapterScenes);
     }
 
-    // Combine chapters with their scenes
+    // Combine chapters with their scenes and learning resources
     const chaptersWithScenes = bookChapters.map(chapter => ({
       ...chapter,
       description: chapter.specificTaskGroupDescription || chapter.description,
@@ -144,13 +198,14 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       colorTheme: {
         name: chapter.colorName || 'Orange',
         hex: chapter.hexCode || '#FFA500',
-        rgb: { 
-          red: chapter.red || 255, 
-          green: chapter.green || 165, 
-          blue: chapter.blue || 0 
+        rgb: {
+          red: chapter.red || 255,
+          green: chapter.green || 165,
+          blue: chapter.blue || 0
         }
       },
       scenes: scenesByChapter.get(chapter.id) || [],
+      learningResources: learningResourcesByChapter.get(chapter.id) || [],
       // Ensure terminalLearningObjectives is properly passed through
       terminalLearningObjectives: chapter.terminalLearningObjectives
     }));

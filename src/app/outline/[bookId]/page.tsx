@@ -24,6 +24,22 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
+interface LearningResource {
+  id: string;
+  resourceId: string;
+  title: string;
+  author?: string;
+  connectionPoints: Array<{
+    pointNumber: number;
+    description: string;
+  }>;
+  objectives: Array<{
+    objectiveNumber: number;
+    description: string;
+    bloomLevel?: string;
+  }>;
+}
+
 interface Scene {
   id: string;
   sceneNumber: number;
@@ -123,6 +139,8 @@ interface Chapter {
   taskMasterKey?: string | null;
   majorTaskGroupKey?: string | null;
   specificTaskGroupKey?: string | null;
+  // Learning system data
+  learningResources?: LearningResource[];
   scenes: Scene[];
 }
 
@@ -1084,6 +1102,86 @@ const ChapterCard = ({
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.connectionToMajorTaskGroup}</p>
                   </div>
                 )}
+              </div>
+            </div>
+          )}
+
+          {/* Learning Resources Panel */}
+          {chapter.learningResources && chapter.learningResources.length > 0 && (
+            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-teal-950/40 dark:to-cyan-950/40 border-2 border-teal-200 dark:border-teal-800 rounded-xl p-5">
+              <div className="flex items-center gap-2 mb-4">
+                <BookOpenIcon className="w-5 h-5 text-teal-600 dark:text-teal-400" />
+                <h4 className="text-lg font-bold text-teal-900 dark:text-teal-100">Learning Resources & References</h4>
+              </div>
+              <div className="space-y-4">
+                {chapter.learningResources.map((resource) => (
+                  <div
+                    key={resource.id}
+                    className="bg-white/70 dark:bg-black/20 rounded-lg p-4 border-l-4 border-teal-500"
+                  >
+                    <div className="mb-3">
+                      <h5 className="font-bold text-gray-900 dark:text-gray-100">
+                        {resource.title}
+                      </h5>
+                      {resource.author && (
+                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">
+                          by <span className="font-medium">{resource.author}</span>
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Connection Points */}
+                    {resource.connectionPoints && resource.connectionPoints.length > 0 && (
+                      <div className="mb-3">
+                        <p className="text-xs font-semibold text-teal-700 dark:text-teal-300 uppercase tracking-wider mb-2">
+                          Connection Points
+                        </p>
+                        <ul className="space-y-1.5">
+                          {resource.connectionPoints.map((point, idx) => (
+                            <li
+                              key={idx}
+                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                            >
+                              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-teal-100 dark:bg-teal-900/50 text-teal-700 dark:text-teal-300 text-xs font-semibold flex-shrink-0 mt-0.5">
+                                {point.pointNumber}
+                              </span>
+                              <span>{point.description}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Learning Objectives */}
+                    {resource.objectives && resource.objectives.length > 0 && (
+                      <div>
+                        <p className="text-xs font-semibold text-cyan-700 dark:text-cyan-300 uppercase tracking-wider mb-2">
+                          Learning Objectives
+                        </p>
+                        <ul className="space-y-1.5">
+                          {resource.objectives.map((objective, idx) => (
+                            <li
+                              key={idx}
+                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-2"
+                            >
+                              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300 text-xs font-semibold flex-shrink-0 mt-0.5">
+                                {objective.objectiveNumber}
+                              </span>
+                              <div className="flex-1">
+                                <p>{objective.description}</p>
+                                {objective.bloomLevel && (
+                                  <span className="text-xs text-gray-500 dark:text-gray-400 italic mt-0.5 inline-block">
+                                    ({objective.bloomLevel})
+                                  </span>
+                                )}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                ))}
               </div>
             </div>
           )}
