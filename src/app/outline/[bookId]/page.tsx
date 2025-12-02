@@ -146,6 +146,7 @@ const SceneCard = ({
   onSaveScene: (sceneId: string, data: SceneEdit) => Promise<void>;
   saving?: boolean;
 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [form, setForm] = useState<SceneEdit>(scene);
   const [secondaryTarotText, setSecondaryTarotText] = useState(() => {
@@ -203,48 +204,47 @@ const SceneCard = ({
   };
 
   return (
-    <div 
-      className="bg-white dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-700"
+    <div
+      className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden"
     >
-      <div className="flex items-start justify-between mb-2">
-        <div className="space-y-1">
-          <h5 className="font-medium text-gray-900 dark:text-gray-100">
-            Scene {scene.sceneNumber}: {scene.title || 'Untitled Scene'}
-          </h5>
-          <div className="flex flex-wrap gap-3 text-xs text-gray-500 dark:text-gray-400">
-            {scene.timeline_date && (
-              <div className="flex items-center gap-1">
-                <CalendarDaysIcon className="w-3 h-3" />
-                {scene.timeline_date}
-              </div>
+      <div
+        className="flex items-start justify-between p-4 cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="flex items-start gap-3 flex-1">
+          <div className="pt-1">
+            {isExpanded ? (
+              <ChevronDownIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
+            ) : (
+              <ChevronRightIcon className="w-4 h-4 text-gray-500 dark:text-gray-400" />
             )}
-            {scene.timeline_variant && (
-              <div className="flex items-center gap-1">
-                <DocumentTextIcon className="w-3 h-3" />
-                {scene.timeline_variant}
-              </div>
-            )}
-            {scene.location && (
-              <div className="flex items-center gap-1">
-                <MapPinIcon className="w-3 h-3" />
-                {scene.location}
-              </div>
-            )}
-            {scene.pov && (
-              <div className="flex items-center gap-1">
-                <UserIcon className="w-3 h-3" />
-                {scene.pov}
-              </div>
-            )}
-            {scene.core_emotion && (
-              <div className="flex items-center gap-1">
-                <HeartIcon className="w-3 h-3" />
-                {scene.core_emotion}
+          </div>
+          <div className="flex-1 min-w-0">
+            <h5 className="font-medium text-gray-900 dark:text-gray-100">
+              Scene {scene.sceneNumber}: {scene.title || 'Untitled Scene'}
+            </h5>
+            {!isExpanded && (
+              <div className="flex flex-wrap gap-2 text-xs text-gray-500 dark:text-gray-400 mt-2">
+                {scene.timeline_date && (
+                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                    {scene.timeline_date}
+                  </span>
+                )}
+                {scene.location && (
+                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                    {scene.location}
+                  </span>
+                )}
+                {scene.pov && (
+                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded">
+                    {scene.pov}
+                  </span>
+                )}
               </div>
             )}
           </div>
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 ml-4 flex-shrink-0">
           <button
             onClick={() => setIsEditing(!isEditing)}
             className="px-3 py-1 text-xs rounded-lg bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-200 transition-colors"
@@ -254,14 +254,16 @@ const SceneCard = ({
         </div>
       </div>
 
-      {scene.setup && !isEditing && (
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
-          {scene.setup}
-        </p>
-      )}
+      {isExpanded && (
+        <div className="border-t border-gray-200 dark:border-gray-700 p-4 space-y-4">
+          {scene.setup && !isEditing && (
+            <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+              {scene.setup}
+            </p>
+          )}
 
-      {!isEditing && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          {!isEditing && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
           <div className="space-y-1">
             {scene.description && (
               <p className="text-gray-600 dark:text-gray-300">
@@ -507,6 +509,8 @@ const SceneCard = ({
               Cancel
             </button>
           </div>
+            </div>
+          )}
         </div>
       )}
     </div>
