@@ -11,7 +11,7 @@ const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
   'rounded-3xl border border-slate-200/80 bg-card supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-white/10 dark:bg-slate-900/85 dark:shadow-[0_30px_80px_-36px_rgba(0,0,0,0.88)]';
 const sectionShell =
-  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-card supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-white/10 dark:bg-slate-900/80 dark:shadow-[0_22px_60px_-34px_rgba(0,0,0,0.9)]';
+  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-card supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-white/10 dark:bg-gradient-to-br dark:from-slate-950/95 dark:via-slate-900 dark:to-slate-950/90 dark:shadow-[0_24px_70px_-34px_rgba(0,0,0,0.92)]';
 
 type Character = {
   id?: string;
