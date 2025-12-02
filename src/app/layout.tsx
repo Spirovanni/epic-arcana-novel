@@ -44,24 +44,9 @@ export default function RootLayout({
         {/* Color scheme meta tag for dark mode */}
         <meta name="color-scheme" content="dark" />
         {/* Next.js will inject metadata from the export above */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const theme = localStorage.getItem('ea-theme');
-                const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                if (theme === 'light') {
-                  document.documentElement.classList.remove('dark');
-                } else {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch (e) {}
-            `,
-          }}
-        />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground dark:bg-gradient-to-br dark:from-[#060a14] dark:via-[#0c1224] dark:to-[#070b14]`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground dark:bg-gradient-to-b dark:from-slate-950 dark:to-slate-900`}
       >
         <ClerkProvider>
           <ThemeProvider

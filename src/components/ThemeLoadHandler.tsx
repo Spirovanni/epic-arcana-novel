@@ -7,53 +7,36 @@ export function ThemeLoadHandler() {
   const { theme, systemTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // Immediately apply dark mode before hydration
   useEffect(() => {
+    const html = document.documentElement;
+    const storedTheme = localStorage.getItem('ea-theme');
+
+    // Apply dark mode by default, respect user's preference if stored
+    if (storedTheme === 'light') {
+      html.classList.remove('dark');
+    } else {
+      html.classList.add('dark');
+    }
+
     setMounted(true);
   }, []);
 
   useEffect(() => {
     if (!mounted) return;
 
-    // Ensure dark mode is applied by default
-    const applyDarkMode = () => {
-      const storedTheme = localStorage.getItem('ea-theme');
+    const html = document.documentElement;
 
-      if (storedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        // Default to dark mode
-        document.documentElement.classList.add('dark');
-      }
-
-      document.documentElement.classList.add("theme-loaded");
-    };
-
-    // Apply dark mode immediately
-    applyDarkMode();
-
-    // Also ensure it's applied after theme is resolved
-    if (resolvedTheme) {
-      const timer = setTimeout(() => {
-        if (resolvedTheme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-        document.documentElement.classList.add("theme-loaded");
-      }, 50);
-      return () => clearTimeout(timer);
+    // Apply theme based on resolved theme from next-themes
+    if (resolvedTheme === 'light') {
+      html.classList.remove('dark');
+    } else if (resolvedTheme === 'dark') {
+      html.classList.add('dark');
     }
+
+    // Mark theme as loaded to enable transitions
+    html.classList.add("theme-loaded");
   }, [mounted, resolvedTheme]);
-
-  // Ensure the document is marked as theme-loaded on mount
-  useEffect(() => {
-    if (mounted) {
-      const timer = setTimeout(() => {
-        document.documentElement.classList.add("theme-loaded");
-      }, 100);
-      return () => clearTimeout(timer);
-    }
-  }, [mounted]);
 
   return null;
 }
