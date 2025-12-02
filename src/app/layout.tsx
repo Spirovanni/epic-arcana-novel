@@ -44,13 +44,14 @@ export default function RootLayout({
         {/* Next.js will inject metadata from the export above */}
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-background text-foreground`}
       >
         <ClerkProvider>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
             enableSystem={true}
+            storageKey="ea-theme"
             disableTransitionOnChange
           >
             <ThemeLoadHandler />
