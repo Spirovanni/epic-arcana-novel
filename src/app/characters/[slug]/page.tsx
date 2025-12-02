@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-slate-800/70 dark:from-slate-900/85 dark:via-slate-950/80 dark:to-slate-900/85 dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
+  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-slate-800/70 dark:bg-gradient-to-br dark:from-slate-900/85 dark:via-slate-950/80 dark:to-slate-900/85 dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
 const sectionShell =
-  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-slate-800/70 dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85 dark:shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
+  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-slate-800/70 dark:bg-gradient-to-br dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85 dark:shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
 
 type Character = {
   id?: string;
@@ -214,7 +214,7 @@ export default function CharacterProfilePage() {
         variant="dark"
         sticky={false}
       />
-      <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100 text-foreground dark:from-[#060a14] dark:via-[#0c1224] dark:to-[#070b14]">
+      <main className="relative min-h-screen overflow-hidden bg-background text-foreground dark:bg-gradient-to-br dark:from-[#060a14] dark:via-[#0c1224] dark:to-[#070b14]">
         <div className="pointer-events-none absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/15 blur-3xl dark:bg-primary/25" />
         <div className="pointer-events-none absolute right-[-140px] bottom-6 h-72 w-72 rounded-full bg-indigo-200/40 blur-3xl dark:bg-indigo-700/25" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(59,130,246,0.08),transparent_25%),radial-gradient(circle_at_80%_10%,rgba(236,72,153,0.08),transparent_28%),radial-gradient(circle_at_50%_70%,rgba(56,189,248,0.06),transparent_30%)]" />
@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-slate-950/85 dark:via-slate-950/80 dark:to-slate-950/90">
+              <div className="p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-slate-950/85 dark:via-slate-950/80 dark:to-slate-950/90">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
@@ -708,7 +708,7 @@ export default function CharacterProfilePage() {
                     <Link
                       key={c.slug}
                       href={`/characters/${c.slug}`}
-                      className="group rounded-xl border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-slate-100 backdrop-blur hover:border-primary/50 hover:shadow-[0_18px_50px_-30px_rgba(59,130,246,0.4)] transition-all duration-200 p-4 dark:border-slate-800/60 dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85"
+                      className="group rounded-xl border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-slate-100 backdrop-blur hover:border-primary/50 hover:shadow-[0_18px_50px_-30px_rgba(59,130,246,0.4)] transition-all duration-200 p-4 dark:border-slate-800/60 dark:bg-gradient-to-br dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85"
                     >
                       <div className="flex items-center space-x-3">
                         <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/50 via-indigo-500/40 to-sky-400/50 flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105 border border-white/50 dark:border-white/10 shadow-sm">
