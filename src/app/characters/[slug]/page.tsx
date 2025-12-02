@@ -9,9 +9,9 @@ import { UserIcon, MapPinIcon, CalendarIcon, TagIcon, ArrowLeftIcon, PencilIcon,
 
 const placeholderImg = '/icons/fallback/default-chapter.svg';
 const heroShell =
-  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-slate-800/70 dark:bg-gradient-to-br dark:from-slate-900/85 dark:via-slate-950/80 dark:to-slate-900/85 dark:shadow-[0_25px_70px_-30px_rgba(0,0,0,0.75)]';
+  'rounded-3xl border border-slate-200/80 bg-gradient-to-br from-slate-50 via-white to-slate-100 supports-[backdrop-filter]:backdrop-blur-2xl shadow-[0_18px_50px_-24px_rgba(59,130,246,0.25)] dark:border-white/10 dark:bg-gradient-to-br dark:from-[#0b1224] dark:via-[#090f1e] dark:to-[#070b14] dark:shadow-[0_30px_80px_-36px_rgba(0,0,0,0.88)]';
 const sectionShell =
-  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-slate-800/70 dark:bg-gradient-to-br dark:from-slate-900/90 dark:via-slate-950/90 dark:to-slate-900/85 dark:shadow-[0_18px_50px_-30px_rgba(0,0,0,0.85)]';
+  'relative overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-white via-slate-50 to-slate-100 supports-[backdrop-filter]:backdrop-blur-xl shadow-[0_16px_45px_-28px_rgba(59,130,246,0.2)] dark:border-white/10 dark:bg-gradient-to-br dark:from-[#0d152b] dark:via-[#0a1020] dark:to-[#070c17] dark:shadow-[0_22px_60px_-34px_rgba(0,0,0,0.9)]';
 
 type Character = {
   id?: string;
@@ -446,7 +446,7 @@ export default function CharacterProfilePage() {
               </div>
 
               {/* Main Content */}
-              <div className="p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-slate-950/85 dark:via-slate-950/80 dark:to-slate-950/90">
+              <div className="relative p-6 sm:p-8 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:bg-gradient-to-b dark:from-[#050915] dark:via-[#070d1f] dark:to-[#04070f] dark:border-t dark:border-white/5">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                   {/* Character Details */}
                   <div className="lg:col-span-2 space-y-6">
@@ -535,7 +535,7 @@ export default function CharacterProfilePage() {
                     </div>
 
                     {/* Image Details Section */}
-                    <div className="relative overflow-hidden rounded-2xl border border-purple-200/70 bg-gradient-to-br from-indigo-50 via-white to-purple-50 shadow-[0_20px_60px_-32px_rgba(59,130,246,0.25)] dark:border-purple-600/40 dark:bg-gradient-to-br dark:from-slate-950/92 dark:via-slate-950/88 dark:to-slate-900/85 dark:shadow-[0_20px_60px_-28px_rgba(124,58,237,0.55)]">
+                    <div className="relative overflow-hidden rounded-2xl border border-purple-200/70 bg-gradient-to-br from-indigo-50 via-white to-purple-50 shadow-[0_20px_60px_-32px_rgba(59,130,246,0.25)] dark:border-purple-500/45 dark:bg-gradient-to-br dark:from-[#0b1020] dark:via-[#0c1224] dark:to-[#090f1d] dark:shadow-[0_24px_70px_-32px_rgba(124,58,237,0.55)]">
                       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)] dark:bg-[radial-gradient(circle_at_20%_10%,rgba(147,197,253,0.08),transparent_35%),radial-gradient(circle_at_85%_20%,rgba(168,85,247,0.12),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(99,102,241,0.12),transparent_45%)]" />
                       <div className="relative p-6 space-y-4">
                         <h3 className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.24em] text-foreground/90">
@@ -698,7 +698,7 @@ export default function CharacterProfilePage() {
 
           {related.length > 0 && (
             <div className="mt-12 max-w-6xl mx-auto">
-              <div className={`${sectionShell} p-8 dark:border-slate-700/40`}>
+              <div className={`${sectionShell} p-8 dark:border-white/10`}>
                 <h2 className="flex items-center gap-3 text-2xl font-bold text-foreground mb-6">
                   <span className="h-2 w-10 rounded-full bg-primary/80 shadow-[0_0_18px_-6px_rgba(59,130,246,0.9)]" />
                   Related Characters
