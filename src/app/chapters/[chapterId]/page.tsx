@@ -628,6 +628,7 @@ export default function ChapterWritingPage() {
   const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
   const [showDeleteConfirmation, setShowDeleteConfirmation] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [showLearningResources, setShowLearningResources] = useState(false);
 
   // Handle client-side mounting
   useEffect(() => {
@@ -1777,149 +1778,161 @@ export default function ChapterWritingPage() {
               {/* Literary Influences - From Database Learning Resources */}
               {(data?.learningResources && data.learningResources.length > 0) || (chapter.booksInfluencedBy && typeof chapter.booksInfluencedBy === 'object') ? (
                 <div className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/40 dark:to-orange-950/40 border-2 border-amber-200 dark:border-amber-800 rounded-xl p-6">
-                  <h2 className="text-2xl font-bold mb-6 flex items-center">
-                    <BookOpenIcon className="w-6 h-6 mr-3 text-amber-600 dark:text-amber-400" />
-                    <span className="bg-gradient-to-r from-amber-800 to-orange-700 dark:from-amber-100 dark:to-orange-200 bg-clip-text text-transparent">
-                      Literary Influences & References
-                    </span>
-                  </h2>
+                  <div className="flex items-center justify-between mb-6">
+                    <h2 className="text-2xl font-bold flex items-center">
+                      <BookOpenIcon className="w-6 h-6 mr-3 text-amber-600 dark:text-amber-400" />
+                      <span className="bg-gradient-to-r from-amber-800 to-orange-700 dark:from-amber-100 dark:to-orange-200 bg-clip-text text-transparent">
+                        Literary Influences & References
+                      </span>
+                    </h2>
+                    <button
+                      onClick={() => setShowLearningResources((prev) => !prev)}
+                      className="px-4 py-2 text-sm font-medium rounded-lg bg-white/70 dark:bg-black/30 border border-amber-200 dark:border-amber-700 text-amber-800 dark:text-amber-200 hover:bg-white dark:hover:bg-black/50 transition-colors"
+                    >
+                      {showLearningResources ? 'Hide' : 'Show'} Details
+                    </button>
+                  </div>
 
-                  {/* Database Learning Resources (Priority) */}
-                  {data?.learningResources && data.learningResources.length > 0 ? (
-                    <div className="space-y-4">
-                      {/* Chapter Theme Header (from first resource's specificTaskGroupTitle) */}
-                      {data.learningResources[0]?.specificTaskGroupTitle && (
-                        <div className="mb-6 pb-4 border-b-2 border-amber-300 dark:border-amber-700">
-                          <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
-                            {data.learningResources[0].specificTaskGroupTitle}
-                          </h3>
-                          {data.learningResources[0]?.focusArea && (
-                            <p className="text-sm text-amber-800 dark:text-amber-200 font-medium">
-                              Focus Area: {data.learningResources[0].focusArea}
-                            </p>
+                  {showLearningResources && (
+                    <>
+                      {/* Database Learning Resources (Priority) */}
+                      {data?.learningResources && data.learningResources.length > 0 ? (
+                        <div className="space-y-4">
+                          {/* Chapter Theme Header (from first resource's specificTaskGroupTitle) */}
+                          {data.learningResources[0]?.specificTaskGroupTitle && (
+                            <div className="mb-6 pb-4 border-b-2 border-amber-300 dark:border-amber-700">
+                              <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
+                                {data.learningResources[0].specificTaskGroupTitle}
+                              </h3>
+                              {data.learningResources[0]?.focusArea && (
+                                <p className="text-sm text-amber-800 dark:text-amber-200 font-medium">
+                                  Focus Area: {data.learningResources[0].focusArea}
+                                </p>
+                              )}
+                              {data.learningResources[0]?.tagline && (
+                                <p className="text-sm text-amber-700 dark:text-amber-300 italic mt-2">
+                                  {data.learningResources[0].tagline}
+                                </p>
+                              )}
+                            </div>
                           )}
-                          {data.learningResources[0]?.tagline && (
-                            <p className="text-sm text-amber-700 dark:text-amber-300 italic mt-2">
-                              {data.learningResources[0].tagline}
-                            </p>
-                          )}
+
+                          {data.learningResources.map((resource) => (
+                            <div
+                              key={resource.id}
+                              className="bg-white/70 dark:bg-black/20 rounded-lg p-5 border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow"
+                            >
+                              {/* Resource Header */}
+                              <div className="mb-4">
+                                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
+                                  {resource.title}
+                                </h3>
+                                {resource.author && (
+                                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                                    <span className="font-medium">by</span> {resource.author}
+                                  </p>
+                                )}
+                              </div>
+
+                              {/* Connection Points */}
+                              {resource.connectionPoints && resource.connectionPoints.length > 0 && (
+                                <div className="mb-4">
+                                  <p className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest mb-3">
+                                    💡 Connection Points
+                                  </p>
+                                  <ul className="space-y-2">
+                                    {resource.connectionPoints.map((point, idx) => (
+                                      <li key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex gap-3">
+                                        <span className="inline-flex items-center justify-center min-w-6 h-6 rounded-full bg-amber-200 dark:bg-amber-800 text-amber-900 dark:text-amber-100 text-xs font-bold">
+                                          {point.pointNumber}
+                                        </span>
+                                        <span className="leading-relaxed">{point.description}</span>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+
+                              {/* Learning Objectives */}
+                              {resource.objectives && resource.objectives.length > 0 && (
+                                <div>
+                                  <p className="text-xs font-bold text-orange-700 dark:text-orange-300 uppercase tracking-widest mb-3">
+                                    🎯 Learning Objectives
+                                  </p>
+                                  <ul className="space-y-2">
+                                    {resource.objectives.map((objective, idx) => (
+                                      <li key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex gap-3">
+                                        <span className="inline-flex items-center justify-center min-w-6 h-6 rounded-full bg-orange-200 dark:bg-orange-800 text-orange-900 dark:text-orange-100 text-xs font-bold">
+                                          {objective.objectiveNumber}
+                                        </span>
+                                        <div className="flex-1">
+                                          <p>{objective.description}</p>
+                                          {objective.bloomLevel && (
+                                            <span className="text-xs text-gray-500 dark:text-gray-400 italic mt-1 inline-block">
+                                              Bloom: {objective.bloomLevel}
+                                            </span>
+                                          )}
+                                        </div>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
+
+                      {/* Fallback to Legacy Data */}
+                      {(!data?.learningResources || data.learningResources.length === 0) && chapter.booksInfluencedBy && typeof chapter.booksInfluencedBy === 'object' && (
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                          {Object.entries(chapter.booksInfluencedBy).map(([key, book]) => {
+                            // Handle nested objects safely
+                            if (typeof book === 'object' && book !== null) {
+                              const bookObj = book as { title?: string; author?: string; section_of_focus?: string; section_description?: string };
+                              return (
+                                <div key={key} className="bg-white/70 dark:bg-black/20 rounded-lg p-4 border-l-4 border-amber-400">
+                                  <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                                    {bookObj.title || key}
+                                  </h3>
+                                  <p className="text-gray-700 dark:text-gray-300 text-sm mb-2">
+                                    by {bookObj.author || 'Unknown Author'}
+                                  </p>
+                                  {bookObj.section_of_focus && (
+                                    <p className="text-gray-600 dark:text-gray-400 text-xs">
+                                      Focus: {bookObj.section_of_focus}
+                                    </p>
+                                  )}
+                                  {bookObj.section_description && (
+                                    <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">
+                                      {bookObj.section_description}
+                                    </p>
+                                  )}
+                                </div>
+                              );
+                            } else {
+                              return (
+                                <div key={key} className="bg-white/70 dark:bg-black/20 rounded-lg p-4 border-l-4 border-amber-400">
+                                  <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">{key}</h3>
+                                  <p className="text-gray-700 dark:text-gray-300 text-sm">{String(book || '')}</p>
+                                </div>
+                              );
+                            }
+                          })}
                         </div>
                       )}
 
-                      {data.learningResources.map((resource) => (
-                        <div
-                          key={resource.id}
-                          className="bg-white/70 dark:bg-black/20 rounded-lg p-5 border-l-4 border-amber-500 shadow-sm hover:shadow-md transition-shadow"
-                        >
-                          {/* Resource Header */}
-                          <div className="mb-4">
-                            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">
-                              {resource.title}
-                            </h3>
-                            {resource.author && (
-                              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                                <span className="font-medium">by</span> {resource.author}
-                              </p>
-                            )}
-                          </div>
-
-                          {/* Connection Points */}
-                          {resource.connectionPoints && resource.connectionPoints.length > 0 && (
-                            <div className="mb-4">
-                              <p className="text-xs font-bold text-amber-700 dark:text-amber-300 uppercase tracking-widest mb-3">
-                                💡 Connection Points
-                              </p>
-                              <ul className="space-y-2">
-                                {resource.connectionPoints.map((point, idx) => (
-                                  <li key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex gap-3">
-                                    <span className="inline-flex items-center justify-center min-w-6 h-6 rounded-full bg-amber-200 dark:bg-amber-800 text-amber-900 dark:text-amber-100 text-xs font-bold">
-                                      {point.pointNumber}
-                                    </span>
-                                    <span className="leading-relaxed">{point.description}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-
-                          {/* Learning Objectives */}
-                          {resource.objectives && resource.objectives.length > 0 && (
-                            <div>
-                              <p className="text-xs font-bold text-orange-700 dark:text-orange-300 uppercase tracking-widest mb-3">
-                                🎯 Learning Objectives
-                              </p>
-                              <ul className="space-y-2">
-                                {resource.objectives.map((objective, idx) => (
-                                  <li key={idx} className="text-sm text-gray-700 dark:text-gray-300 flex gap-3">
-                                    <span className="inline-flex items-center justify-center min-w-6 h-6 rounded-full bg-orange-200 dark:bg-orange-800 text-orange-900 dark:text-orange-100 text-xs font-bold">
-                                      {objective.objectiveNumber}
-                                    </span>
-                                    <div className="flex-1">
-                                      <p>{objective.description}</p>
-                                      {objective.bloomLevel && (
-                                        <span className="text-xs text-gray-500 dark:text-gray-400 italic mt-1 inline-block">
-                                          Bloom: {objective.bloomLevel}
-                                        </span>
-                                      )}
-                                    </div>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ) : null}
-
-                  {/* Fallback to Legacy Data */}
-                  {(!data?.learningResources || data.learningResources.length === 0) && chapter.booksInfluencedBy && typeof chapter.booksInfluencedBy === 'object' && (
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {Object.entries(chapter.booksInfluencedBy).map(([key, book]) => {
-                        // Handle nested objects safely
-                        if (typeof book === 'object' && book !== null) {
-                          const bookObj = book as { title?: string; author?: string; section_of_focus?: string; section_description?: string };
-                          return (
-                            <div key={key} className="bg-white/70 dark:bg-black/20 rounded-lg p-4 border-l-4 border-amber-400">
-                              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                                {bookObj.title || key}
-                              </h3>
-                              <p className="text-gray-700 dark:text-gray-300 text-sm mb-2">
-                                by {bookObj.author || 'Unknown Author'}
-                              </p>
-                              {bookObj.section_of_focus && (
-                                <p className="text-gray-600 dark:text-gray-400 text-xs">
-                                  Focus: {bookObj.section_of_focus}
-                                </p>
-                              )}
-                              {bookObj.section_description && (
-                                <p className="text-gray-600 dark:text-gray-400 text-xs mt-1">
-                                  {bookObj.section_description}
-                                </p>
-                              )}
-                            </div>
-                          );
-                        } else {
-                          return (
-                            <div key={key} className="bg-white/70 dark:bg-black/20 rounded-lg p-4 border-l-4 border-amber-400">
-                              <h3 className="font-semibold text-gray-900 dark:text-gray-100 mb-2">{key}</h3>
-                              <p className="text-gray-700 dark:text-gray-300 text-sm">{String(book || '')}</p>
-                            </div>
-                          );
-                        }
-                      })}
-                    </div>
+                      {/* Info Box */}
+                      <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-700">
+                        <p className="text-sm text-amber-700 dark:text-amber-300 italic flex items-center gap-2">
+                          <SparklesIcon className="w-4 h-4" />
+                          {data?.learningResources && data.learningResources.length > 0
+                            ? `${data.learningResources.length} reference${data.learningResources.length !== 1 ? 's' : ''} with curated connection points and learning objectives`
+                            : 'Literary references and influences for this chapter'}
+                        </p>
+                      </div>
+                    </>
                   )}
-
-                  {/* Info Box */}
-                  <div className="mt-6 pt-4 border-t border-amber-200 dark:border-amber-700">
-                    <p className="text-sm text-amber-700 dark:text-amber-300 italic flex items-center gap-2">
-                      <SparklesIcon className="w-4 h-4" />
-                      {data?.learningResources && data.learningResources.length > 0
-                        ? `${data.learningResources.length} reference${data.learningResources.length !== 1 ? 's' : ''} with curated connection points and learning objectives`
-                        : 'Literary references and influences for this chapter'}
-                    </p>
-                  </div>
                 </div>
               ) : null}
             </div>
