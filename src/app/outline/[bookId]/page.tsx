@@ -372,7 +372,17 @@ const SceneCard = ({
       )}
 
       {isEditing && (
-        <div className="mt-4 space-y-3">
+        <div
+          className="mt-4 space-y-3 text-gray-900 dark:text-gray-100
+          [&_input]:text-gray-900 [&_textarea]:text-gray-900
+          [&_input]:dark:text-gray-100 [&_textarea]:dark:text-gray-100
+          [&_input]:placeholder:text-gray-500 [&_textarea]:placeholder:text-gray-500
+          [&_input]:dark:placeholder:text-gray-400 [&_textarea]:dark:placeholder:text-gray-400
+          [&_input]:bg-white [&_textarea]:bg-white
+          [&_input]:dark:bg-gray-900 [&_textarea]:dark:bg-gray-900
+          [&_input]:border-gray-300 [&_textarea]:border-gray-300
+          [&_input]:dark:border-gray-700 [&_textarea]:dark:border-gray-700"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <input
               className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
