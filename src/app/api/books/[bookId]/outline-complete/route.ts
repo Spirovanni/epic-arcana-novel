@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { db } from '@/lib/db';
 import { chapters, scenes, books, learningResources, learningResourceChapters, connectionPoints, terminalLearningObjectives } from '@/lib/schema';
-import { eq, asc } from 'drizzle-orm';
+import { eq, asc, and } from 'drizzle-orm';
 
 export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
   try {
@@ -109,8 +109,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
             })
             .from(connectionPoints)
             .where(
-              eq(connectionPoints.learningResourceId, resource.id) &&
-              eq(connectionPoints.chapterId, chapterId)
+              and(
+                eq(connectionPoints.learningResourceId, resource.id),
+                eq(connectionPoints.chapterId, chapterId)
+              )
             )
             .orderBy(asc(connectionPoints.pointNumber));
 
@@ -122,8 +124,10 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
             })
             .from(terminalLearningObjectives)
             .where(
-              eq(terminalLearningObjectives.learningResourceId, resource.id) &&
-              eq(terminalLearningObjectives.chapterId, chapterId)
+              and(
+                eq(terminalLearningObjectives.learningResourceId, resource.id),
+                eq(terminalLearningObjectives.chapterId, chapterId)
+              )
             )
             .orderBy(asc(terminalLearningObjectives.objectiveNumber));
 
