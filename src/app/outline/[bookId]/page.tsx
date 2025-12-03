@@ -769,10 +769,12 @@ const ChapterCard = ({
                 e.stopPropagation();
                 setShowScenes(!showScenes);
               }}
-              className="p-2 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-white/80 dark:hover:bg-black/40 transition-colors"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white/50 dark:bg-black/20 hover:bg-white/80 dark:hover:bg-black/40 transition-colors text-sm font-medium text-gray-700 dark:text-gray-200"
               title="Toggle scenes"
             >
               <DocumentTextIcon className="w-4 h-4" />
+              <span>{showScenes ? 'Hide' : 'Show'} Scenes</span>
+              <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">({chapter.scenes.length})</span>
             </button>
             <Link 
               href={`/chapters/${chapter.id}`}
