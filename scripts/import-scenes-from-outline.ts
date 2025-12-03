@@ -43,10 +43,12 @@ const collectSceneBundles = (node: unknown, acc: SceneBundle[]) => {
       Array.isArray((maybeChapter as { scenes?: unknown }).scenes)
     ) {
       const bookNumber = Number(maybeChapter.novel_book);
-      const chapterNumber = Number(maybeChapter.all_chapter);
+      const globalChapterNumber = Number(maybeChapter.all_chapter);
       const scenesArray = (maybeChapter.scenes as OutlineScene[]) ?? [];
 
-      if (!Number.isNaN(bookNumber) && !Number.isNaN(chapterNumber)) {
+      if (!Number.isNaN(bookNumber) && !Number.isNaN(globalChapterNumber)) {
+        // Outline uses global chapter numbering across books (40 per book).
+        const chapterNumber = globalChapterNumber - 40 * (bookNumber - 1);
         acc.push({ bookNumber, chapterNumber, scenes: scenesArray });
       }
     }
