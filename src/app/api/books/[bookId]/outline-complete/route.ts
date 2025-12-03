@@ -1,7 +1,24 @@
 import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 import { db } from '@/lib/db';
 import { chapters, scenes, books, learningResources, learningResourceChapters, connectionPoints, terminalLearningObjectives } from '@/lib/schema';
 import { eq, asc, and } from 'drizzle-orm';
+
+// Cache the local book 1 chapter metadata so we only read the file once
+let book1ChapterMetadata: Record<string, any> | null = null;
+const loadBook1ChapterMetadata = () => {
+  if (book1ChapterMetadata) return book1ChapterMetadata;
+  try {
+    const filePath = path.join(process.cwd(), 'epic_arcana_book1_chapter_mapping.json');
+    const raw = fs.readFileSync(filePath, 'utf-8');
+    book1ChapterMetadata = JSON.parse(raw)?.epic_arcana_book_1_chapters?.chapters ?? {};
+  } catch (error) {
+    console.error('[API] Failed to load book 1 chapter mapping file', error);
+    book1ChapterMetadata = {};
+  }
+  return book1ChapterMetadata;
+};
 
 export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
   try {
@@ -195,24 +212,60 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     }
 
     // Combine chapters with their scenes and learning resources
-    const chaptersWithScenes = bookChapters.map(chapter => ({
-      ...chapter,
-      description: chapter.specificTaskGroupDescription || chapter.description,
-      tagline: chapter.specificTaskGroupTagline,
-      colorTheme: {
-        name: chapter.colorName || 'Orange',
-        hex: chapter.hexCode || '#FFA500',
-        rgb: {
-          red: chapter.red || 255,
-          green: chapter.green || 165,
-          blue: chapter.blue || 0
-        }
-      },
-      scenes: scenesByChapter.get(chapter.id) || [],
-      learningResources: learningResourcesByChapter.get(chapter.id) || [],
-      // Ensure terminalLearningObjectives is properly passed through
-      terminalLearningObjectives: chapter.terminalLearningObjectives
-    }));
+    // Pull local metadata for book 1 as a fallback when DB values are missing
+    const book1Meta = book[0].bookNumber === 1 ? loadBook1ChapterMetadata() : {};
+
+    const chaptersWithScenes = bookChapters.map(chapter => {
+      const chapterKey = `chapter_${String(chapter.chapterNumber).padStart(2, '0')}`;
+      const localMeta = book1Meta[chapterKey] || {};
+
+      const focusArea = chapter.focusArea || localMeta.focus_area || chapter.focus;
+      const tarotFamily = chapter.tarotFamily 
+        || chapter.newTarotFamily 
+        || localMeta.tarot_family 
+        || localMeta.new_tarot_family;
+      const epicNovelPages = chapter.epicNovelPages || localMeta.epic_novel_pages;
+      const epicPreliminarySceneDescription = chapter.epicPreliminarySceneDescription || localMeta.epic_preliminary_scene_description;
+      const epicPreliminarySceneFocus = chapter.epicPreliminarySceneFocus || localMeta.epic_preliminary_scene_focus;
+      const summary = chapter.summary || chapter.specificTaskGroupDescription || localMeta.specific_task_group_description || localMeta.specific_task_group_tagline;
+      const description = chapter.specificTaskGroupDescription || chapter.description || localMeta.specific_task_group_description;
+      const tagline = chapter.specificTaskGroupTagline || localMeta.specific_task_group_tagline;
+      const title = chapter.title || localMeta.chapter_title || `Chapter ${chapter.chapterNumber}`;
+
+      const colorName = chapter.colorName || localMeta.color_name || 'Orange';
+      const hexCode = chapter.hexCode || localMeta.hex_code || '#FFA500';
+      const red = chapter.red ?? localMeta.red ?? 255;
+      const green = chapter.green ?? localMeta.green ?? 165;
+      const blue = chapter.blue ?? localMeta.blue ?? 0;
+
+      return {
+        ...chapter,
+        title,
+        focusArea,
+        tarotFamily,
+        epicNovelPages,
+        epicPreliminarySceneDescription,
+        epicPreliminarySceneFocus,
+        summary,
+        description,
+        tagline,
+        specificTaskGroupDescription: description,
+        specificTaskGroupTagline: tagline,
+        colorTheme: {
+          name: colorName,
+          hex: hexCode,
+          rgb: {
+            red,
+            green,
+            blue
+          }
+        },
+        scenes: scenesByChapter.get(chapter.id) || [],
+        learningResources: learningResourcesByChapter.get(chapter.id) || [],
+        // Ensure terminalLearningObjectives is properly passed through
+        terminalLearningObjectives: chapter.terminalLearningObjectives
+      };
+    });
 
     // Calculate statistics
     const totalScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) => sum + scenes.length, 0);
