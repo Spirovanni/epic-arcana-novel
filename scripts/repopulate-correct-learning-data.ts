@@ -64,6 +64,9 @@ interface LearningResource {
   id: string;
   resourceId: string;
   title: string;
+  specificTaskGroupTitle?: string;
+  focusArea?: string;
+  tagline?: string;
 }
 
 // Maps to track resources
@@ -132,6 +135,11 @@ async function extractAndCreateResources() {
             const chapterNumber =
               stg.all_chapter || stg.chapter || stg.chapter_number || 1;
 
+            // Extract chapter metadata
+            const specificTaskGroupTitle = (stg as any).specific_task_group_title;
+            const focusArea = (stg as any).focus_area;
+            const tagline = (stg as any).specific_task_group_tagline;
+
             const booksInfluenced =
               stg.specific_task_group_books_influenced_by || {};
 
@@ -147,6 +155,9 @@ async function extractAndCreateResources() {
                   id: '',
                   resourceId: uniqueKey,
                   title,
+                  specificTaskGroupTitle,
+                  focusArea,
+                  tagline,
                 };
 
                 allResourcesMap.set(uniqueKey, newResource);
@@ -178,6 +189,9 @@ async function extractAndCreateResources() {
           sectionOfFocus: undefined,
           sectionDescription: undefined,
           connectionFocusArea: undefined,
+          specificTaskGroupTitle: resource.specificTaskGroupTitle,
+          focusArea: resource.focusArea,
+          tagline: resource.tagline,
         })
         .returning({ id: learningResources.id });
 

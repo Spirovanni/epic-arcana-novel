@@ -905,6 +905,9 @@ export const learningResources = pgTable('learning_resources', {
   sectionOfFocus: varchar('section_of_focus', { length: 255 }), // "Life in Concentration Camps"
   sectionDescription: text('section_description'), // Full description of section
   connectionFocusArea: text('connection_focus_area'), // How it relates to chapter theme
+  specificTaskGroupTitle: varchar('specific_task_group_title', { length: 255 }), // "Despair", "Guileless", etc.
+  focusArea: varchar('focus_area', { length: 255 }), // "Mental Health", "Honesty", etc.
+  tagline: text('tagline'), // Short description/tagline
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });

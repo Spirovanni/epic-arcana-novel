@@ -323,6 +323,9 @@ interface LearningResource {
   resourceId: string;
   title: string;
   author?: string;
+  specificTaskGroupTitle?: string;
+  focusArea?: string;
+  tagline?: string;
   connectionPoints: Array<{
     pointNumber: number;
     description: string;
@@ -1768,6 +1771,25 @@ export default function ChapterWritingPage() {
                   {/* Database Learning Resources (Priority) */}
                   {data?.learningResources && data.learningResources.length > 0 ? (
                     <div className="space-y-4">
+                      {/* Chapter Theme Header (from first resource's specificTaskGroupTitle) */}
+                      {data.learningResources[0]?.specificTaskGroupTitle && (
+                        <div className="mb-6 pb-4 border-b-2 border-amber-300 dark:border-amber-700">
+                          <h3 className="text-xl font-bold text-amber-900 dark:text-amber-100 mb-2">
+                            {data.learningResources[0].specificTaskGroupTitle}
+                          </h3>
+                          {data.learningResources[0]?.focusArea && (
+                            <p className="text-sm text-amber-800 dark:text-amber-200 font-medium">
+                              Focus Area: {data.learningResources[0].focusArea}
+                            </p>
+                          )}
+                          {data.learningResources[0]?.tagline && (
+                            <p className="text-sm text-amber-700 dark:text-amber-300 italic mt-2">
+                              {data.learningResources[0].tagline}
+                            </p>
+                          )}
+                        </div>
+                      )}
+
                       {data.learningResources.map((resource) => (
                         <div
                           key={resource.id}

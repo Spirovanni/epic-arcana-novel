@@ -85,6 +85,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
         resourceId: learningResources.resourceId,
         title: learningResources.title,
         author: learningResources.author,
+        specificTaskGroupTitle: learningResources.specificTaskGroupTitle,
+        focusArea: learningResources.focusArea,
+        tagline: learningResources.tagline,
       })
       .from(learningResourceChapters)
       .innerJoin(learningResources, eq(learningResourceChapters.learningResourceId, learningResources.id))
