@@ -125,6 +125,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
           )
           .orderBy(asc(terminalLearningObjectives.objectiveNumber));
 
+        console.log(`[API] Resource: ${resource.title} | Points: ${points.length} | Objectives: ${objectives.length}`);
+
         return {
           ...resource,
           connectionPoints: points,
