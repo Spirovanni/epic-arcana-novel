@@ -574,6 +574,7 @@ const ChapterCard = ({
 }) => {
   const [showScenes, setShowScenes] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
+  const [showThematicFocus, setShowThematicFocus] = useState(false);
   const [showLearningResources, setShowLearningResources] = useState(false);
   const [chapterForm, setChapterForm] = useState<ChapterEdit>({
     title: chapter.title || '',
@@ -1081,29 +1082,39 @@ const ChapterCard = ({
           {/* Specific Task Group Information */}
           {(chapter.type === 'Specific Task Group' || chapter.specificTaskGroupDescription) && (
             <div className="bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 dark:from-indigo-950/50 dark:via-purple-950/50 dark:to-pink-950/50 border-2 border-indigo-300 dark:border-indigo-700 rounded-xl p-5">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="w-2 h-6 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></div>
-                <h4 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">Thematic Focus</h4>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-6 bg-gradient-to-b from-indigo-600 to-purple-600 rounded-full"></div>
+                  <h4 className="text-lg font-bold text-indigo-900 dark:text-indigo-100">Thematic Focus</h4>
+                </div>
+                <button
+                  onClick={() => setShowThematicFocus(prev => !prev)}
+                  className="px-3 py-1.5 text-xs font-semibold rounded-lg bg-white/80 dark:bg-black/30 border border-indigo-200 dark:border-indigo-700 text-indigo-800 dark:text-indigo-100 hover:bg-white dark:hover:bg-black/50 transition-colors"
+                >
+                  {showThematicFocus ? 'Hide' : 'Show'} Details
+                </button>
               </div>
-              <div className="space-y-4 text-sm">
-                {chapter.specificTaskGroupTagline && (
-                  <div className="px-4 py-3 bg-white/60 dark:bg-black/20 border-l-4 border-indigo-500 rounded-r-lg">
-                    <p className="italic text-gray-800 dark:text-gray-200 font-medium">"{chapter.specificTaskGroupTagline}"</p>
-                  </div>
-                )}
-                {chapter.specificTaskGroupDescription && (
-                  <div>
-                    <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">What This Chapter Explores</span>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.specificTaskGroupDescription}</p>
-                  </div>
-                )}
-                {chapter.connectionToMajorTaskGroup && (
-                  <div>
-                    <span className="text-xs font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider">How It Connects</span>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.connectionToMajorTaskGroup}</p>
-                  </div>
-                )}
-              </div>
+              {showThematicFocus && (
+                <div className="space-y-4 text-sm">
+                  {chapter.specificTaskGroupTagline && (
+                    <div className="px-4 py-3 bg-white/60 dark:bg-black/20 border-l-4 border-indigo-500 rounded-r-lg">
+                      <p className="italic text-gray-800 dark:text-gray-200 font-medium">"{chapter.specificTaskGroupTagline}"</p>
+                    </div>
+                  )}
+                  {chapter.specificTaskGroupDescription && (
+                    <div>
+                      <span className="text-xs font-bold text-indigo-700 dark:text-indigo-300 uppercase tracking-wider">What This Chapter Explores</span>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.specificTaskGroupDescription}</p>
+                    </div>
+                  )}
+                  {chapter.connectionToMajorTaskGroup && (
+                    <div>
+                      <span className="text-xs font-bold text-purple-700 dark:text-purple-300 uppercase tracking-wider">How It Connects</span>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-2">{chapter.connectionToMajorTaskGroup}</p>
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           )}
 
