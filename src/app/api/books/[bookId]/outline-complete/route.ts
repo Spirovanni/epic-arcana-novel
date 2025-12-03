@@ -6,9 +6,9 @@ import { chapters, scenes, books, learningResources, learningResourceChapters, c
 import { eq, asc, and } from 'drizzle-orm';
 
 // Cache the local book 1 chapter metadata so we only read the file once
-let book1ChapterMetadata: Record<string, any> | null = null;
-const loadBook1ChapterMetadata = () => {
-  if (book1ChapterMetadata) return book1ChapterMetadata;
+let book1ChapterMetadata: Record<string, any> = {};
+const loadBook1ChapterMetadata = (): Record<string, any> => {
+  if (Object.keys(book1ChapterMetadata).length > 0) return book1ChapterMetadata;
   try {
     const filePath = path.join(process.cwd(), 'epic_arcana_book1_chapter_mapping.json');
     const raw = fs.readFileSync(filePath, 'utf-8');
