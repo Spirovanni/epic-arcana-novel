@@ -633,6 +633,22 @@ export default function ChapterWritingPage() {
   useEffect(() => {
   }, []);
 
+  // Debug logging for learning resources
+  useEffect(() => {
+    if (data?.learningResources) {
+      console.log('[FRONTEND DEBUG] Learning Resources:', {
+        count: data.learningResources.length,
+        resources: data.learningResources.map(r => ({
+          id: r.id,
+          title: r.title,
+          pointCount: r.connectionPoints?.length,
+          objectiveCount: r.objectives?.length,
+          firstPoint: r.connectionPoints?.[0]?.description?.substring(0, 50)
+        }))
+      });
+    }
+  }, [data?.learningResources]);
+
   // Check user permissions - TEMPORARILY ALLOWING ALL ACCESS FOR DEVELOPMENT
   useEffect(() => {
     // TODO: Re-enable admin authentication later

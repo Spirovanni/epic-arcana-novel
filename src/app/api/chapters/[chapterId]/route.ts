@@ -135,6 +135,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       })
     );
 
+    console.log(`[API] Total learning resources to return: ${learningResourcesWithData.length}`);
+    learningResourcesWithData.forEach((lr, idx) => {
+      console.log(`[API] Resource ${idx}: ${lr.title} | Points: ${lr.connectionPoints.length}`);
+    });
+
     // Calculate word count from pages
     const totalWordCount = pages.reduce((count, page) => {
       return count + (page.content?.split(/\s+/).filter(word => word.length > 0).length || 0);
