@@ -12700,59 +12700,114 @@
                           "hero_journey_beat": "Tests, Allies, Enemies",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to guardians and gatekeepers.",
                           "save_the_cat_beat": "Fun and Games",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Guardians and Gatekeepers",
+                          "save_the_cat_beat_goal": "Survive the immediate consequences of defying Dagon: a total resource blockade that forces the Council to find strength in scarcity.",
+                          "plot": "Guardians and Gatekeepers: The Empire strikes back not with soldiers, but with siege. The Sanctuary is isolated, and the 'Five of Disks' reality of hardship sets in.",
                           "character_arcs": {
-                            "Francisco": "Discovering his creative powers - the ability to generate new possibilities rather than just choosing between existing ones.",
-                            "Temporal_Refugees": "People displaced by timeline wars who need safe havens, teaching Francisco about the human cost of temporal manipulation.",
-                            "Gherardo": "Amazed by Francisco's creative abilities, his jealousy begins to transform into something more complex - perhaps admiration mixed with resentment."
+                            "Francisco": "Must pivot from 'Creator' (King of Cups) to 'Sustainer' (Five of Disks), realizing that a leader must feed his people not just with hope, but with gritty solutions.",
+                            "Timeline_Factions": "The high of creation fades; they must face the low of deprivation without turning on each other.",
+                            "Dagon_Agents": "Shift tactics to 'starvation'\u2014passive containment intended to break the Council's resolve."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Establishes that advanced temporal manipulation involves creating new realities, not just traveling between existing ones.",
-                            "character_motivation": "Francisco's growing sense of responsibility for the innocent victims of timeline warfare.",
-                            "trionfi_system": "The cards begin to respond to Francisco's creative intent, becoming tools for reality construction rather than just navigation."
+                            "resource_mechanics": "Explains how 'temporal energy' is actually harvested and used (and what happens when it's gone).",
+                            "interpersonal_friction": "Shows the breakdown of unity under stress, a necessary realistic counterpoint to the previous idealism.",
+                            "antifragile_concept": "Demonstrates how the system gets stronger by being stressed."
                           },
                           "location_details": {
-                            "pocket_reality": "A small, stable timeline created by Francisco's will and emotion, designed as a sanctuary for refugees.",
-                            "creation_space": "The liminal area between realities where new timelines can be born, filled with raw temporal energy."
+                            "the_sanctuary_besieged": "The newly built reality, but dimming, cold, and fraying at the edges.",
+                            "the_severed_conduits": "Visual representation of the supply lines to the main timelines being cut."
                           },
                           "series_connections": {
-                            "creative_power": "Francisco's growing ability to create realities will be essential for the reality-reshaping events of Book 9.",
-                            "refugee_theme": "The care for displaced people will influence Francisco's ultimate decision about how to use his cosmic power."
+                            "resource_management": "Introduces the resource economy that will drive the war effort in later books.",
+                            "loyalty_test": "This is the crucible that determines which minor factions stick with Francisco."
                           },
-                          "summary": "Amidst a facade of cooperation, hidden challenges surface as some of Francisco's allies reveal their true agendas. The Medici attempt to assassinate him during a diplomatic meeting, while the Alexandrians try to trap him in a temporal loop. Francisco must learn to face hardship head-on while maintaining his idealism and trust in others.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The euphoria of creating the Sanctuary is short-lived as Dagon cuts the temporal supply lines, effectively placing the Council under siege. Plunged into the harsh reality of the Five of Disks\u2014cold, poverty, and isolation\u2014old factional fault lines reopen. Francisco must apply the philosophy that 'The Obstacle Is the Way,' showing them that their reliance on external energy was a weakness. By cannibalizing their own redundant tech and magical artifacts ('Stone Soup'), they create a self-sustaining loop, proving they are antifragile and cannot be starved out.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Urgency and determination",
-                          "scene_tone": "Varied and dynamic",
+                          "core_emotion": "Desperation turning to gritty resolve",
+                          "scene_tone": "Gritty, claustrophobic, and raw",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "A burgeoning realm of possibility unfolds as Francisco discovers he can create new timeline branches, not just navigate existing ones.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Lights Go Out",
+                              "setup": "Hours after the Sanctuary is stabilized, the ambient light begins to fail. The warmth sucks out of the air. Francisco rushes to the monitors: Dagon hasn't attacked; he has simply turned off the tap. All connections to the resource-rich timelines are severed. The Sanctuary is a closed system with dwindling entropy. Panic sets in instantly\u2014the Medicis complain of the cold, the Alexandrians hoard data pads before the batteries die. The external enemy has become an internal crisis.",
+                              "symbolism": "The Five of Disks imagery: two beggared figures in the snow outside a lit church. The Sanctuary is the church, but the lights are going out. The cold represents the physical reality of 'Adversity' stripping away the conceptual victory of 'Creativity'.",
+                              "beat_goal": "Establish the siege. Move the conflict from 'Magical/Abstract' to 'Physical/Visceral'. Show the fragility of their new creation.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Cold fear",
+                              "scene_tone": "Dark and chilling",
+                              "timeline_date": "Post-Book 1 + 10 weeks (Night)",
+                              "timeline_variant": "The Sanctuary (Besieged)",
+                              "location": "Sanctuary Control Room",
+                              "narrative_function": "The Complication. The victory of Chap 15 is threatened.",
+                              "sudowrite_visual_details": [
+                                "Breath misting in the air.",
+                                "The golden walls of the Sanctuary turning dull grey.",
+                                "Arguments echoing sharply in the silence."
+                              ],
+                              "learning_objective_integration": "Illustrates 'Grit'\u2014passion is easy when things are going well; this tests perseverance."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He must channel his deepest emotions into creative strategies to build stable pocket realities that can serve as refuges for displaced temporal travelers.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Feast of Crumbs",
+                              "setup": "Days pass. Rations (both food and energy) are critical. The factions are segregating, protecting their own. Francisco sees the end: not death by Dagon, but death by civil war. He calls a general assembly in the freezing piazza. He puts his last energy crystal on the table\u2014a personal heirloom. He asks, 'Who next?' It's a gamble. He is asking them to sacrifice their personal reserves for the collective. A standoff ensues. Then, the Knight of Pentacles (patient, grounded) aspect kicks in: he waits. He doesn't preach; he just waits in the cold with his offering.",
+                              "symbolism": "The 'Stone Soup' fable reimagined. The single crystal is the 'stone'. The Five of Disks reversed\u2014finding spiritual wealth in material poverty. The 'Wait' is the core of the 'Patient Leads' (STG 2.2.1.4 foreshadowing) but here it's an act of 'Grit'.",
+                              "beat_goal": "Break the selfishness born of scarcity. Francisco leads by example (sacrifice). A shift from 'hoarding' to 'pooling'.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Grim hope",
+                              "scene_tone": "Quiet tension",
+                              "timeline_date": "Post-Book 1 + 11 weeks",
+                              "timeline_variant": "The Sanctuary (Freezing)",
+                              "location": "The Central Piazza",
+                              "narrative_function": "The Midpoint / The Choice.",
+                              "sudowrite_character_moments": [
+                                "Francisco shivering but refusing to cross his arms.",
+                                "La Signora (Medici) looking at her jewels, then at the freezing children.",
+                                "The clatter of the first donated mechanism hitting the table."
+                              ],
+                              "learning_objective_integration": "Demonstrates 'The Obstacle Is the Way'\u2014using the scarcity to force unity."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "Cannibalizing the Past",
+                              "setup": "With the pooled resources, they don't have enough to repower the status quo. Francisco realizes: 'We have too much legacy junk.' They begin stripping down their ships, their robes, their ceremonial staffs. They tear apart the 'sacred' technologies of their individual factions to build a crude, hybrid generator. It's blasphemy to the scholars, but survival to the soldiers. As they break down their past glories to fuel their present survival, they realize those things were weighing them down anyway. The act of destruction becomes an act of liberation.",
+                              "symbolism": "Breaking the 'Disks' (Pentacles/Material possessions). Antifragility: the system improves because it is forced to shed inefficiency. The hybrid generator is a physical symbol of their Unity\u2014ugly, cobbled together, but working.",
+                              "beat_goal": "The Solution. Implementing the 'remix' strategy under pressure. Validating that they can survive without the Empire's supply lines.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Manic productivity",
+                              "scene_tone": "Industrial and sweaty (warming up)",
+                              "timeline_date": "Post-Book 1 + 11 weeks",
+                              "timeline_variant": "The Sanctuary (Industrializing)",
+                              "location": "The Foundry (converted library)",
+                              "narrative_function": "The Action. Overcoming the obstacle.",
+                              "sudowrite_visual_details": [
+                                "Sparks flying as golden idols are melted down.",
+                                "Alexandrian circuitry wired into Byzantine steam engines.",
+                                "The hum of the new generator\u2014a discordant but steady rhythm."
+                              ],
+                              "learning_objective_integration": "Showcases 'Antifragile'\u2014disorder (the shortage) led to a better, more independent system."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Warmth of Independence",
+                              "setup": "The Sanctuary hums with a new, self-sustained frequency. It's not as bright as before, but it's theirs. Dagon's siege has failed; he can't starve what feeds itself. Francisco stands on the ramparts looking out at the Void. He realizes they are no longer just refugees; they are a colony. They have passed the test of Adversity. The hardship didn't break them; it calcified their bond. They are harder, leaner, and more dangerous now.",
+                              "symbolism": "The Five of Disks resolved: moving from 'destitution' to 'endurance'. The 'calcification' represents the 'Disks' element (Earth/Stone)\u2014solidifying the liquid emotions of the previous chapter. The 'Colony' implies permanence.",
+                              "beat_goal": "Resolution. Affirm the new strength. Set up the next phase (Diplomacy/Expansion).",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pride and weariness",
+                              "scene_tone": "Solid and enduring",
+                              "timeline_date": "Post-Book 1 + 11 weeks",
+                              "timeline_variant": "The Sanctuary (Independent)",
+                              "location": "Sanctuary Ramparts",
+                              "narrative_function": "The Outcome. The hero is changed (hardened).",
+                              "sudowrite_character_moments": [
+                                "Francisco eating a simple meal with the soldiers, refusing the head table.",
+                                "The realization that he prefers this rougher, truer version of leadership.",
+                                "The generator pulsing like a steady heartbeat."
+                              ]
                             }
                           ]
                         }
@@ -12862,59 +12917,109 @@
                           "hero_journey_beat": "Tests, Allies, Enemies",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the road of trials.",
                           "save_the_cat_beat": "Fun and Games",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Road of Trials",
+                          "save_the_cat_beat_goal": "Secure a critical alliance not through conquest or coercion, but through the radical act of vulnerability\u2014the Two of Cups.",
+                          "plot": "The Road of Trials: Francisco attends the 'Banquet of Knives', a diplomatic trap set by the Venetian Doge. He must turn an assassination attempt into a wedding of interests.",
                           "character_arcs": {
-                            "Francisco": "Learning to distinguish between genuine allies and manipulators while maintaining his capacity for trust.",
-                            "Medici_Assassins": "Reveal their fear that Francisco's timeline unification will destroy their economic empire across realities.",
-                            "Alexandrian_Trappers": "Believe that trapping Francisco in a loop will preserve his knowledge and power for future generations."
+                            "Francisco": "Masters the art of 'Diplomatic Aikido'\u2014using an opponent's aggression to create connection.",
+                            "Doge_Venier": "The antagonist of the chapter; a master manipulator who represents the cynical 'Old World' view of alliances.",
+                            "Timeline_Factions": "Watch from the sidelines, learning that their leader can fight with words as well as magic."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how temporal loops can be used as weapons, trapping consciousness in repeating cycles.",
-                            "character_motivation": "Francisco's growing understanding that even his enemies often have understandable motivations.",
-                            "stakes_clarification": "Reveals how Francisco's actions threaten established power structures across multiple timelines."
+                            "political_landscape": "Fleshes out the political powers of the timeline (Venice) as a major player.",
+                            "non_violent_conflict": "Demonstrates conflict resolution that doesn't involve battle magic.",
+                            "two_of_cups_integration": "Shows the card's meaning of 'truce' and 'union' in a high-stakes political context."
                           },
                           "location_details": {
-                            "diplomatic_meeting": "A formal gathering in a neutral timeline, with elaborate security measures that prove insufficient against temporal attacks.",
-                            "temporal_loop_trap": "A repeating reality designed to capture Francisco's consciousness while his body remains trapped in a single moment."
+                            "palazzo_ducale_temporal": "A version of the Doge's Palace existing in a time-loop of the year 1450.",
+                            "the_bridge_of_sighs": "The physical meeting point where the deal is struck."
                           },
                           "series_connections": {
-                            "betrayal_theme": "Francisco's experience with betrayal prepares him for Gherardo's eventual betrayal in Book 3.",
-                            "enemy_understanding": "His growing ability to understand his enemies' motivations will be crucial for the redemption themes of Book 9."
+                            "venetian_fleet": "Securing Venice's help provides the naval support needed for Book 3's sea battles.",
+                            "francisco_statesman": "Establishes Francisco as a legitimate political figure, not just a rebel leader."
                           },
-                          "summary": "As Francisco's journey deepens and the challenges mount, he glimpses both hope and despair in the timeline wars. Despite the betrayals and violence, he chooses optimism to light the path forward, discovering that hope itself can be a form of temporal magic that stabilizes reality.",
-                          "pov": "3rd Person Limited",
+                          "summary": "To secure the resources needed for the Sanctuary (EA-056 fallout), Francisco enters the lion's den: a diplomatic summit with Doge Venier of the Venetian Temporal Fleet. The Doge intends to humiliate and absorb Francisco's movement. Francisco applies the lesson of 'Optimism' and the Two of Cups (Union). He refuses to be provoked, instead finding the hidden emotional need of the Doge\u2014legacy. By offering a partnership that honors Venice's history rather than threatening it, he turns a hostile negotiation into a powerful alliance, proving that shared interest is stronger than coercion.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Confidence and growth",
-                          "scene_tone": "Varied and dynamic",
+                          "core_emotion": "Tense charm and empathetic focus",
+                          "scene_tone": "Machevillian but hopeful",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Amidst a facade of cooperation, hidden challenges surface as some of Francisco's allies reveal their true agendas.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Banquet of Knives",
+                              "setup": "Francisco arrives at the Palazzo Ducale. He is stripped of weapons (and magic dampeners are active). The court jeers at him\u2014the 'Beggar King' of the Sanctuary. Doge Venier toasts to his 'imminent failure'. Francisco smiles. He uses 'Learned Optimism' to reframe the insults as fears. 'They shout because they are afraid of what we represent.' He doesn't defend himself; he compliments the wine. He compliments the architecture. He disarms them with aggressive civility. He spots the Doge's hidden weakness: a portrait of a lost son.",
+                              "symbolism": "The Two of Cups reversed\u2014false friendship, treachery. The 'Banquet' is a classic trap trope, subverted by the hero's refusal to be the victim. The 'Portrait' is the key hole for empathy.",
+                              "beat_goal": "Survive the initial social assault. Identify the emotional lever needed to turn the table.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Cool under pressure",
+                              "scene_tone": "Lavish and hostile",
+                              "timeline_date": "Post-Book 1 + 12 weeks",
+                              "timeline_variant": "Venice Prime (1450)",
+                              "location": "Banquet Hall of the Palazzo Ducale",
+                              "narrative_function": "The Setup. Establishing the antagonist's power and the hero's vulnerability.",
+                              "sudowrite_visual_details": [
+                                "Masked revelers whispering behind fans.",
+                                "The Doge's ring tapping rhythmically on the glass.",
+                                "Francisco's plain clothes amidst the velvet and gold."
+                              ],
+                              "learning_objective_integration": "Demonstrates 'Emotional Intelligence'\u2014reading the room and emotional regulation."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "The Medici attempt to assassinate him during a diplomatic meeting, while the Alexandrians try to trap him in a temporal loop.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Crucial Conversation",
+                              "setup": "Francisco maneuvers a private audience on the balcony. The Doge drops the pretense: 'Submit or be erased.' Francisco ignores the threat and asks about the son (the portrait). The Doge freezes. It's a risk. Francisco speaks of legacy\u2014of building something that lasts beyond the loop. He connects his Sanctuary (from the previous chapter) to the Doge's desire for permanence. He offers not submission, but a 'Union' (Two of Cups). 'Venice rules the waves; we rule the winds of time. Together, we are the storm.'",
+                              "symbolism": "The Two of Cups upright\u2014offering the cup. The balcony represents the 'Bridge'. The switch from 'War' language to 'Legacy' language is the 'Turn'.",
+                              "beat_goal": "Shift the conflict from power (who is stronger) to value (what can we build together). Create the emotional connection.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Sincere vulnerability",
+                              "scene_tone": "Intimate and high-stakes",
+                              "timeline_date": "Post-Book 1 + 12 weeks",
+                              "timeline_variant": "Venice Prime (1450)",
+                              "location": "The Doge's Balcony",
+                              "narrative_function": "The Pivot. The hero changes the game.",
+                              "sudowrite_character_moments": [
+                                "The Doge's mask slipping slightly (metaphorically).",
+                                "Francisco leaning regularly on the balustrade, showing trust.",
+                                "The silence of the canal below mirroring the pause in hostility."
+                              ],
+                              "learning_objective_integration": "Showcases 'Crucial Conversations'\u2014creating safety to talk about high-stakes topics."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "Francisco must learn to face hardship head-on while maintaining his idealism and trust in others.",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Attack",
+                              "setup": "The faction opposed to the alliance (The Council of Ten) attacks. They realize the Doge is wavering and try to assassinate both of them. Suddenly, Francisco and the Doge are fighting back-to-back. Francisco uses his time-slowing (limited in the dampening field) to save the Doge. The Doge uses his knowledge of the palace traps to save Francisco. The physical battle cements the emotional bond formed in the previous scene. They are no longer negotiator and hostage; they are partners.",
+                              "symbolism": "The forging of the alliance in fire. The 'Two' fighting as one. trust built through action.",
+                              "beat_goal": "Cement the alliance. Prove Francisco's worthiness as a partner, not just a talker.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Adrenaline and synchronicity",
+                              "scene_tone": "Action-packed",
+                              "timeline_date": "Post-Book 1 + 12 weeks",
+                              "timeline_variant": "Venice Prime (1450)",
+                              "location": "Palace Corridors / Bridge of Sighs",
+                              "narrative_function": "The Catalyst. The external threat forces the decision.",
+                              "sudowrite_visual_details": [
+                                "Daggers flashing in torchlight.",
+                                "Francisco shouting warnings before they happen.",
+                                "The Doge offering his hand to pull Francisco up."
+                              ]
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Wedding of Interests",
+                              "setup": "The dust settles. The assassins are captured. The Doge publicly embraces Francisco as 'Brother of the Republic'. The alliance is signed. Venice will supply the Sanctuary; Francisco will protect Venice's timeline from Dagon. As Francisco leaves, he looks back. He didn't conquer Venice; he befriended it. He realizes that 'Optimism' isn't blindness\u2014it's the strategic choice to see potential friends in enemies.",
+                              "symbolism": "The Two of Cups realized\u2014the pledge. The 'Wedding' imagery (political, not romantic). The fleet of Venice turning their prows to support the Sanctuary.",
+                              "beat_goal": "Resolution. Verify the gain (resources + fleet). Validate the theme (Diplomacy > War).",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Satisfaction and fatigue",
+                              "scene_tone": "Grand and triumphant",
+                              "timeline_date": "Post-Book 1 + 12 weeks (Dawn)",
+                              "timeline_variant": "Venice Prime",
+                              "location": "The Grand Canal Docks",
+                              "narrative_function": "The Reward.",
+                              "learning_objective_integration": "Reflects 'The Empathy Edge'\u2014empathy created a competitive advantage."
                             }
                           ]
                         },
