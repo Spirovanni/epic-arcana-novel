@@ -18459,65 +18459,102 @@
                           "hero_journey_beat": "Reaction",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to reaction.",
                           "save_the_cat_beat": "Reaction",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Reaction",
+                          "save_the_cat_beat_goal": "Finalize the sacrifice of 'Severing Ties' (Ten of Swords) by ritually destroying his past identity to protect his family.",
+                          "plot": "Reaction: The fight with Gherardo (EA-084) proved Francisco can't go back. He must commit to the Ten of Swords: the death of the ego/identity. He resigns from the University, burns his papers, and writes a final (unsent) letter to his parents. He pins his butterfly life to the board to preserve them, accepting his own pinned fate.",
                           "character_arcs": {
-                            "Francisco": "Makes his first major sacrifice for power - giving up the comfort and security of his old life.",
-                            "Family_Farewell": "Painful goodbyes that may be permanent, as Francisco cannot predict if he'll ever be able to return safely.",
-                            "La_Signora": "Emerges as Francisco's primary companion and guide as he leaves his old life behind.",
-                            "New_Identity": "Francisco begins to shed his identity as a student and embrace his role as a temporal magus."
+                            "Francisco": "The Ghost. He erases Xavi Petrarch so the Magus can live.",
+                            "Dean_Rossi": "The connection to the academic world, bewildered by the resignation.",
+                            "La_Signora": "Waiting in the shadows, the only one who knows the truth."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's willingness to sacrifice personal connections shows his commitment to his greater mission.",
-                            "power_cost": "Establishes that greater power requires greater sacrifice, a theme that will build throughout the series.",
-                            "relationship_dynamics": "Francisco's departure fundamentally changes his relationships with everyone he leaves behind."
+                            "disappearance_logistics": "How he vanishes without triggering a manhunt.",
+                            "emotional_closure": "The ritual act needed to switch psychological gears."
                           },
                           "location_details": {
-                            "departure_ceremony": "Francisco's formal goodbye to his old life, performed with ritual significance.",
-                            "road_to_exile": "The journey away from Bologna becomes a symbolic passage between his old and new identities."
+                            "dean_office": "Smell of old paper and wax. The place of his former ambition.",
+                            "river_reno_bank": "Where he burns his journals. The water flowing away."
                           },
                           "series_connections": {
-                            "sacrifice_theme": "Francisco's willingness to give up personal happiness for duty prepares for his ultimate sacrifice in Book 9.",
-                            "identity_transformation": "His evolution from student to magus continues the character development that spans the entire series."
+                            "the_secret_keeps": "These burned secrets return in Book 6.",
+                            "the_missing_years": "This marks the start of his official 'absence' from history."
                           },
-                          "summary": "Realizing that his presence endangers his family and that old bonds are holding him back, Francisco makes the painful decision to cut ties with his past life. He leaves Bologna, severing connections with family, friends, and his academic career. This separation clears space for new alliances and the full development of his powers, but at great personal cost.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco moves like a ghost. He enters the University at night to leave his resignation. He clears his desk. The Ten of Swords is about hitting bottom so you can rise. He goes to the riverbank at dawn. He burns his journals, his research, and the letter to his parents. As the smoke rises, he feels the heavy swords of responsibility pinning him down, but also a strange relief. The worst has happened. He is free.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": "Finality",
+                          "scene_tone": "Somber",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Realizing that his presence endangers his family and that old bonds are holding him back, Francisco makes the painful decision to cut ties with his past life",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Resignation",
+                              "setup": "University of Bologna. Night. Francisco slips into the Dean's office. He places the letter on the desk. He looks at his nameplate: 'Professor Petrarch'. He takes it and drops it in the trash.",
+                              "symbolism": "The Nameplate. The shedding of the Title.",
+                              "beat_goal": "The Professional Death. Cutting the career tie.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Regret",
+                              "scene_tone": "Quiet",
+                              "timeline_date": "Night (Post-fight)",
+                              "timeline_variant": "University",
+                              "location": "Dean's Office",
+                              "narrative_function": "The Official End.",
+                              "learning_objective_integration": "Reflects 'Essentialism'\u2014eliminating the non-essential."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He leaves Bologna, severing connections with family, friends, and his academic career",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Unsent Letter",
+                              "setup": "Francisco sits in a tavern, writing by candlelight. He describes why he has to leave. He tells his parents he loves them. He tries to explain the magic without sounding mad. Then he stops. sending it would endanger them. He folds it up.",
+                              "symbolism": "The Sealed Letter. Communication cut.",
+                              "beat_goal": "The Emotional Death. Formatting the closure.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Grief",
+                              "scene_tone": "Intimate",
+                              "timeline_date": "Early AM",
+                              "timeline_variant": "Tavern",
+                              "location": "Corner Table",
+                              "narrative_function": "The Internal Monologue.",
+                              "sudowrite_visual_details": [
+                                "The scratch of the quill.",
+                                "The wax dripping on the table.",
+                                "The tear blotting the ink."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This separation clears space for new alliances and the full development of his powers, but at great personal cost",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Ritual",
+                              "setup": "River Reno. Dawn is just a gray line. Francisco builds a small fire. He throws the letter in. Then his journals. The knowledge burns. He watches the ashes float on the water.",
+                              "symbolism": "The Ten of Swords (Dawn after darkness). Transformation by Fire.",
+                              "beat_goal": "The Release. The physical act of letting go.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Empty",
+                              "scene_tone": "Ritualistic",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Riverbank",
+                              "location": "River Reno",
+                              "narrative_function": "The Climax (of the release).",
+                              "learning_objective_integration": "Reflects 'Letting Go'\u2014surrender."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Departure",
+                              "setup": "Sun up. Francisco stands on the hill overlooking Bologna. No luggage, just his cloak and his tools. He turns away. La Signora is waiting for him with a carriage. 'Ready?' she asks. 'No,' he says. 'But let's go.'",
+                              "symbolism": "The Turning Back. The New Horizon.",
+                              "beat_goal": "Resolution. Acceptance of the new path.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Resignation",
+                              "scene_tone": "Cinematic",
+                              "timeline_date": "Morning",
+                              "timeline_variant": "Hilltop",
+                              "location": "Road out of Bologna",
+                              "narrative_function": "The Bridge to Ch 6.",
+                              "sudowrite_character_moments": [
+                                "The red tile roofs glowing in the sun.",
+                                "Francisco's hand tightening on his staff.",
+                                "La Signora's nod of understanding."
+                              ]
                             }
                           ]
                         },
@@ -18604,65 +18641,101 @@
                           "hero_journey_beat": "The Call to Adventure",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the call to adventure.",
                           "save_the_cat_beat": "The Call to Adventure",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Call to Adventure",
+                          "save_the_cat_beat_goal": "Experience the 'Apathy' (Four of Cups) of the emotional crash after the sacrifice, requiring a new spark to reengage.",
+                          "plot": "Reaction (Part 2): Weeks later. Francisco is hiding in a safe house. The adrenaline is gone. He is depressed, staring at a wall. The Four of Cups: three cups offered (past accomplishments), one cup offered by a hand in the cloud (the new mission), but he refuses to look up. La Signora tries to engage him, but he is numb.",
                           "character_arcs": {
-                            "Francisco": "Experiences the dark side of power - isolation, depression, and loss of connection to ordinary human experience.",
-                            "Emotional_Numbness": "Francisco's protective mechanism of shutting down his feelings begins to interfere with his ability to use his powers effectively.",
-                            "La_Signora": "Tries to help Francisco through his depression, revealing more of her own past struggles with power and isolation.",
-                            "Purpose_Crisis": "Francisco questions whether his journey is worth the cost in human connection and happiness."
+                            "Francisco": "The Sleeper. He has shut down to process the trauma.",
+                            "La_Signora": "The Caretaker/Prod. She is patient but worried.",
+                            "The_Child": "A new minor character whose danger wakes him up."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how emotional state affects temporal abilities - Francisco's numbness weakens his connection to the Trionfi cards.",
-                            "character_motivation": "Francisco's depression represents the natural psychological consequence of his choices and losses.",
-                            "power_systems": "Establishes that temporal magic requires emotional authenticity and connection, not just technical skill."
+                            "hero_burnout": "Realistically showing the cost of constant crisis.",
+                            "call_to_adventure_refusal": "The classic refusal beat before the new arc."
                           },
                           "location_details": {
-                            "emotional_wasteland": "Francisco's inner landscape becomes barren and grey, reflecting his psychological state.",
-                            "isolation_chamber": "Physical spaces that mirror Francisco's emotional withdrawal from the world."
+                            "the_safe_house": "Dusty, dim, safe but suffocating.",
+                            "the_village_square": "Where the spark happens."
                           },
                           "series_connections": {
-                            "depression_cycle": "Francisco's struggle with emotional numbness will recur throughout the series as power isolates him further.",
-                            "authentic_emotion": "His need to reconnect with genuine feeling will be crucial for his ultimate humanity in Book 9."
+                            "the_dark_night": "A precursor to deeper depressions in Book 7."
                           },
-                          "summary": "Overwhelmed by the magnitude of his losses and the weight of his responsibilities, Francisco falls into a state of emotional numbness. The grief over severing family ties and the pressure of his growing power threaten to crush his spirit and choke the spark of purpose that drove his journey. He must confront the risk of stagnation as doubts threaten to paralyze his will to continue.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco sits in the dark. La Signora enters with food and news. He ignores both. He feels nothing. 'You saved the city,' she says. 'I lost my brother,' he replies. This is the Four of Cups stagnation. He goes for a walk in the disguise of a beggar. He sees a child playing near a temporal rift (a foreshadowing of the paradox). The child is in danger. Francisco feels a flicker of fear. That fear leads to action. He saves the child. The numbness cracks.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": "Numbness",
+                          "scene_tone": "Gray/Muted",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Overwhelmed by the magnitude of his losses and the weight of his responsibilities, Francisco falls into a state of emotional numbness",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Safe House",
+                              "setup": "Interior. Day (but shutters closed). Dust motes. Francisco lies on a cot, staring at a crack in the ceiling. He hasn't shaved. The magic feels distant, like a limb that's been slept on.",
+                              "symbolism": " The Four of Cups (Closed posture). The Stagnant Water.",
+                              "beat_goal": "Establishing the State. The depth of the depression.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Apathy",
+                              "scene_tone": "Oppressive",
+                              "timeline_date": "Weeks later",
+                              "timeline_variant": "Safe House",
+                              "location": "Bedroom",
+                              "narrative_function": "The Low Point.",
+                              "learning_objective_integration": "Reflects 'Drive'\u2014lack of autonomy/purpose."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "The grief over severing family ties and the pressure of his growing power threaten to crush his spirit and choke the spark of purpose that drove his journey",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Offer Rejected",
+                              "setup": "La Signora brings a map. 'There is a disturbance in the hills. We should check it.' Francisco pushes it away. 'Let someone else be the hero.' He sees the cup being offered (symbolically) and rejects it.",
+                              "symbolism": "The Fourth Cup. Refusal of the Call.",
+                              "beat_goal": "The Conflict. Resistance to re-engaging.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Irritation",
+                              "scene_tone": "Tense",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Safe House",
+                              "location": "Kitchen",
+                              "narrative_function": "The Friction.",
+                              "sudowrite_visual_details": [
+                                "The steam rising from the soup.",
+                                "La Signora's tight lips.",
+                                "The map curling on the table."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "He must confront the risk of stagnation as doubts threaten to paralyze his will to continue",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Walk",
+                              "setup": "Francisco goes out. The air is fresh but it smells flat to him. He wanders the village. People are living normal lives. He feels alien. He sees a child chasing a ball near an old ruin. The air shimmers.",
+                              "symbolism": "The World Continuing. The Glitch.",
+                              "beat_goal": "Please (The Spark). Seeing the anomaly.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Detachment",
+                              "scene_tone": "Observational",
+                              "timeline_date": "Late Afternoon",
+                              "timeline_variant": "Village",
+                              "location": "The Ruins",
+                              "narrative_function": "The Inciting Incident (Micro).",
+                              "learning_objective_integration": "Reflects 'Atomic Habits'\u2014a small cue."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Catch",
+                              "setup": "The ball rolls into the shimmer. The child runs after it. The ruin wall collapses (timeline decay). Francisco moves before he thinks. A blast of kinetic energy holds the wall up. The child grabs the ball and runs out. Francisco drops the wall. He is panting. He feels *something*.",
+                              "symbolism": "The Spark of Action. The Awakening.",
+                              "beat_goal": "The Action. Breaking the apathy.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Adrenaline",
+                              "scene_tone": "Active",
+                              "timeline_date": "Sunset",
+                              "timeline_variant": "Village",
+                              "location": "The Ruins",
+                              "narrative_function": "The Turn.",
+                              "sudowrite_character_moments": [
+                                "The dust coating his throat.",
+                                "The child looking back with wide eyes.",
+                                "His own hand trembling, not from fear, but from use."
+                              ]
                             }
                           ]
                         }
@@ -18772,65 +18845,103 @@
                           "hero_journey_beat": "Action",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to action.",
                           "save_the_cat_beat": "Action",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Action",
+                          "save_the_cat_beat_goal": "Exercise 'Ingenuity' (Two of Disks) to solve a temporal paradox using pure intellect while emotionally detached.",
+                          "plot": "Action (Fun and Games): The ruin collapse was a symptom. The whole village is stuck in a loop. Francisco investigates. He is still emotionally muted (from EA-086), so he treats it like a puzzle. The Two of Disks: Juggling infinite loops. He maps the village's timeline. He must introduce a 'chaos factor' to break the perfect circle without destroying the town.",
                           "character_arcs": {
-                            "Francisco": "Rediscovers his love of intellectual challenge and problem-solving, beginning to emerge from his emotional numbness.",
-                            "Villagers": "Innocent people caught in temporal distortion, reminding Francisco of his responsibility to protect others.",
-                            "Paradox_Entity": "The living manifestation of temporal contradiction that Francisco must outwit rather than overpower.",
-                            "Intellectual_Awakening": "Francisco's mind begins to work at its full capacity again as he engages with the challenge."
+                            "Francisco": "The Technician. He is working without passion, just skill. Reliable but cold.",
+                            "La_Signora": "The Assistant. She handles the people (empathy) while he handles the math.",
+                            "The_Mayor": "The frantic local leader, stuck repeating the same hour."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Introduction of temporal paradoxes as living entities that can threaten reality's stability.",
-                            "character_motivation": "Francisco's protective instincts toward innocent people begin to override his depression.",
-                            "trionfi_system": "The cards respond to intellectual clarity and creative problem-solving, not just emotional intensity."
+                            "mechanics_of_loops": "Defining how time loops work in this universe.",
+                            "magus_competence": "Showing he is a genius, not just a blaster."
                           },
                           "location_details": {
-                            "paradox_village": "A small community where cause and effect have become scrambled, creating impossible situations.",
-                            "temporal_workshop": "Francisco's impromptu laboratory where he develops solutions to temporal problems."
+                            "the_clock_tower": "The center of the loop. The hands spin backwards.",
+                            "the_baker_street": "Where the same cart crashes every hour."
                           },
                           "series_connections": {
-                            "intellectual_mastery": "Francisco's growing problem-solving abilities will be essential for the complex challenges of later books.",
-                            "protective_purpose": "His dedication to protecting innocents will drive many of his choices throughout the series."
+                            "loop_theory": "This knowledge is used to defeat the final boss."
                           },
-                          "summary": "Francisco's apathy is shattered when he encounters a temporal paradox that threatens to unravel reality in a small Italian village. Faced with this formidable obstacle and lacking his usual emotional drive, Francisco must rely on pure intellectual ingenuity to invent a solution. This crisis tests his resourcefulness to its limits and begins to rekindle his sense of purpose.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco and La Signora enter the village. The church bell rings 12. A cart crashes. A dog barks. Then... silence. The bell rings 12 again. The cart crashes again. Francisco watches, taking notes. 'It's a two-body problem,' he says. Two timelines crashing into each other. He must juggle them. He sets up a counter-frequency. He stands in the square, channeling the Two of Disks (balance). He nudges the cart. It misses the wall. The loop breaks. The villagers are confused but safe. Francisco feels a dry satisfaction.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Curiosity"
+                          ],
+                          "scene_tone": "Intellectual/Puzzle",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's apathy is shattered when he encounters a temporal paradox that threatens to unravel reality in a small Italian village",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Stuck Village",
+                              "setup": "They arrive at the village gate. Everything seems normal, then\u2014skip. Like a scratched record. The scene repeats. Francisco checks his pocket watch. It's stopped.",
+                              "symbolism": "The Broken Circle. The Ouroboros.",
+                              "beat_goal": "The Observation. Identifying the anomaly.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Intrigue",
+                              "scene_tone": "Surreal",
+                              "timeline_date": "Noon (Repeated)",
+                              "timeline_variant": "Village Gate",
+                              "location": "Outskirts",
+                              "narrative_function": "The Puzzle Setup.",
+                              "learning_objective_integration": "Reflects 'Lateral Thinking'\u2014observing patterns."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "Faced with this formidable obstacle and lacking his usual emotional drive, Francisco must rely on pure intellectual ingenuity to invent a solution",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Analysis",
+                              "setup": "Francisco sits on a wall, sketching diagrams in the dirt. La Signora calms the panicked Mayor (who remembers the loops). Francisco ignores them. 'It's an interference pattern.' He realizes he needs to create a standing wave to cancel it out.",
+                              "symbolism": "The Two of Disks (The Lemniscate). Balancing forces.",
+                              "beat_goal": "The Hypothesis. Formulating a plan.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Focus",
+                              "scene_tone": "Academic",
+                              "timeline_date": "Noon + 10 min",
+                              "timeline_variant": "Village Square",
+                              "location": "The Square",
+                              "narrative_function": "The Planning.",
+                              "sudowrite_visual_details": [
+                                "The geometric shapes in the dirt.",
+                                "The sweat on the Mayor's brow.",
+                                "The sun fixed at the zenith."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This crisis tests his resourcefulness to its limits and begins to rekindle his sense of purpose",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Experiment",
+                              "setup": "He needs a catalst. He positions La Signora at the north end and himself at the south. They must channel energy precisely when the bell strikes. It requires perfect timing. 'Do not improvise,' he orders her coldlly.",
+                              "symbolism": "The Fulcrum. The scale tipping.",
+                              "beat_goal": "The Execution. Testing the theory.",
+                              "pov": "3rd Person Limited (La Signora)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Determination",
+                              "scene_tone": "Precise",
+                              "timeline_date": "Noon - 1 min",
+                              "timeline_variant": "Village Square",
+                              "location": "North/South Axis",
+                              "narrative_function": "The Action.",
+                              "learning_objective_integration": "Reflects 'Creative Confidence'\u2014rapid prototyping."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Balance",
+                              "setup": "The bell tolls. The wave hits. The air screams. For a second, reality blurs. Francisco holds the two timelines apart (Atlas imagery). He shifts the cart's wheel by an inch. The cart passes. Time moves forward. The sun finally sets. He collapses, drained but successful.",
+                              "symbolism": "Entropy Restored. The Arrow of Time.",
+                              "beat_goal": "Success. The loop is broken.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Relief",
+                              "scene_tone": "Triumphant (Quietly)",
+                              "timeline_date": "Sunset (Finally)",
+                              "timeline_variant": "Village Square",
+                              "location": "The Square",
+                              "narrative_function": "The Resolution.",
+                              "sudowrite_character_moments": [
+                                "The long shadow finally stretching out.",
+                                "Francisco dusting off his hands.",
+                                "The sudden sound of birds (time flowing)."
+                              ]
                             }
                           ]
                         },
@@ -18917,65 +19028,103 @@
                           "hero_journey_beat": "Consequence",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to consequence.",
                           "save_the_cat_beat": "Consequence",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Consequence",
+                          "save_the_cat_beat_goal": "Face the 'Judgement' of the factions while trapped in the 'Eight of Swords' (restriction), using discernment to escape the mental prison.",
+                          "plot": "Consequence: The temporal flare from EA-087 alerted everyone. Vatican agents (The Swords) and Dagon's spies encircle Francisco. He is captured/cornered. Not in a jail, but in a 'diplomatic' bind. They judge his actions. The Eight of Swords imagery\u2014bound and blindfolded. He realizes the trap is legalistic/mental. He must judge *them* to break free.",
                           "character_arcs": {
-                            "Francisco": "Forced to make a crucial decision about his allegiances and future path under pressure from multiple factions.",
-                            "Vatican_Agents": "Arrive to either recruit or capture Francisco, seeing his abilities as too dangerous to remain uncontrolled.",
-                            "Dagon_Emissaries": "Offer Francisco power and knowledge in exchange for his service to their master's agenda.",
-                            "Moral_Compass": "Francisco's ethical framework is tested as he weighs the benefits and costs of different alliances."
+                            "Francisco": "The defendant. He learns to argue for his existence.",
+                            "Inquisitor_Gallego": "New antagonist. A legalist of the timelines.",
+                            "Dagon_Agent": "The chaos option. Offers freedom for servitude."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's choice between different power structures reveals his core values and priorities.",
-                            "stakes_clarification": "The attention from major factions shows that Francisco's abilities have cosmic significance.",
-                            "moral_complexity": "No choice is clearly good or evil - all alliances come with benefits and moral compromises."
+                            "legal_system_of_time": "The Church has a 'Canon Law' for temporal magic.",
+                            "neutral_ground": "Where these factions meet."
                           },
                           "location_details": {
-                            "judgment_tribunal": "A neutral space where representatives of different factions present their cases to Francisco.",
-                            "decision_chamber": "The private space where Francisco must weigh his options without external pressure."
+                            "the_crossroads_inn": "A neutral ground existing between seconds.",
+                            "the_circle_of_swords": "The interrogation formation."
                           },
                           "series_connections": {
-                            "faction_politics": "Francisco's relationship with these power structures will be crucial throughout the series.",
-                            "moral_development": "His growing ability to make complex ethical choices prepares him for the ultimate moral tests ahead."
+                            "the_trial": "Foreshadows the Great Trial in Book 9."
                           },
-                          "summary": "Francisco's success in solving the temporal paradox attracts the attention of both the Vatican's Temporal Authority and Dagon's agents. He must make a critical choice about his future path while under intense scrutiny from multiple factions. The weight of judgment from various powers forces him to examine his principles and decide whether to seek protection, alliance, or continued independence.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco is ambushed at an inn. The Inquisitor declares him 'Anathema' but offers a trial. He is placed in the Circle of Swords (suppression field). He is blindfolded. They read his 'crimes'. But Francisco listens (Discernment). He hears the Dagon agent whispering. He realizes the Inquisitor is bluffing\u2014they need him. The 'prison' is their need for him. He uses this. He mentally outmaneuvers them, pitting the factions against each other, and walks out of the circle.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Clarify (under pressure)"
+                          ],
+                          "scene_tone": "Tense/Courtroom",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's success in solving the temporal paradox attracts the attention of both the Vatican's Temporal Authority and Dagon's agents",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Ambush",
+                              "setup": "The Inn at the Crossroads. Francisco enters, looking for rest. The door locks. The patrons vanish. Eight figures in grey robes stand up. Swords drawn (some literal, some magical). 'Francisco Petrarch, you are detained.'",
+                              "symbolism": "The Eight of Swords (Surrounded). The Trap.",
+                              "beat_goal": "The Capture. Establish the threat level.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Alarm",
+                              "scene_tone": "Suspense",
+                              "timeline_date": "Night",
+                              "timeline_variant": "The Inn",
+                              "location": "Common Room",
+                              "narrative_function": "The Pinch Point.",
+                              "learning_objective_integration": "Reflects 'Thinking, Fast and Slow'\u2014assessing threats."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He must make a critical choice about his future path while under intense scrutiny from multiple factions",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Indictment",
+                              "setup": "He is seated in the center. Blindfolded. Inquisitor Gallego lists the timeline deviations he caused. 'You are a chaos agent.' They want him to sign a confession/contract. He feels the weight of their judgment.",
+                              "symbolism": "The Blindfold. Justice vs Law.",
+                              "beat_goal": "The Accusation. The stakes are set (servitude).",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Doubt",
+                              "scene_tone": "Oppressive",
+                              "timeline_date": "Night (Cont.)",
+                              "timeline_variant": "The Inn",
+                              "location": "The Circle",
+                              "narrative_function": "The Low Point (Psychological).",
+                              "sudowrite_visual_details": [
+                                "The smell of beeswax candles.",
+                                "The scratching of the scribe's pen.",
+                                "The pressure on his temples."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "The weight of judgment from various powers forces him to examine his principles and decide whether to seek protection, alliance, or continued independence",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Whisper",
+                              "setup": "A Dagon agent (disguised as a guard) whispers to him. 'We can break the circle. Just say the word.' It's a temptation. But Francisco discerns the trap within the trap. He refuses. He realizes the Swords aren't touching him; they are waiting for him to move.",
+                              "symbolism": "The Devil on the Shoulder. Discernment.",
+                              "beat_goal": "The Realization. The prison is voluntary.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Insight",
+                              "scene_tone": "Internal",
+                              "timeline_date": "Night (Cont.)",
+                              "timeline_variant": "The Inn",
+                              "location": "The Circle",
+                              "narrative_function": "The Twist.",
+                              "learning_objective_integration": "Reflects 'Decisive'\u2014widening options."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Verdict",
+                              "setup": "Francisco stands up. 'I am not your prisoner. I am the only one holding the timeline together.' He removes the blindfold. The Inquisitor hesitates. Francisco cites an obscure Canon Law (bluffing slightly). He walks through the gap between the swords. They let him pass.",
+                              "symbolism": "The Walkout. Intellectual Dominance.",
+                              "beat_goal": "The Escape. Leaving on his own terms.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Confidence",
+                              "scene_tone": "Vindicated",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "The Road",
+                              "location": "Outside the Inn",
+                              "narrative_function": "The Victory.",
+                              "sudowrite_character_moments": [
+                                "The Inquisitor sheathing his sword in frustration.",
+                                "Francisco breathing the cold air.",
+                                "The realization that he is now a player, not a pawn."
+                              ]
                             }
                           ]
                         },
@@ -19062,65 +19211,103 @@
                           "hero_journey_beat": "Refusal of the Call",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to refusal of the call.",
                           "save_the_cat_beat": "Refusal of the Call",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Refusal of the Call",
+                          "save_the_cat_beat_goal": "Provide 'Calming Guidance' (Six of Swords) to refugees, moving from the chaos of the trial to smoother waters.",
+                          "plot": "Refusal of the Call (The Pivot): Francisco escapes the trial but realizes he isn't alone. The paradox from EA-087 displaced a family (Refugees). He can't leave them. He charters a boat to take them downriver to a sanctuary. The Six of Swords imagery: calm travel, carrying baggage (the refugees/past). He teaches them to breathe through the temporal sickness. He finds his own calm.",
                           "character_arcs": {
-                            "Francisco": "Learning to be a source of stability for others despite his own inner turmoil and uncertainty.",
-                            "La_Signora": "Supports Francisco's need for contemplation while sharing more of her own wisdom about power and responsibility.",
-                            "Temporal_Refugees": "People displaced by timeline conflicts who look to Francisco for guidance and protection.",
-                            "Inner_Teacher": "Francisco begins to access a deeper source of wisdom within himself."
+                            "Francisco": "The Guide. He stops being the victim of the plot and starts leading.",
+                            "The_Refugee_Family": "Mirrors of the family he lost.",
+                            "The_Boatman": "A Charon figure, silent but watchful."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's refusal to choose sides shows his growing independence and self-reliance.",
-                            "leadership_development": "His responsibility for others forces him to develop emotional stability and clear judgment.",
-                            "temporal_mechanics": "Calm, centered consciousness proves more effective for temporal manipulation than emotional intensity."
+                            "human_cost": "Showing what happens to ordinary people in magic wars.",
+                            "magus_responsibility": "Why he fights."
                           },
                           "location_details": {
-                            "meditation_retreat": "A peaceful sanctuary where Francisco can find inner stillness away from external pressures.",
-                            "refugee_camp": "A community of temporal displaced persons who depend on Francisco's protection and guidance."
+                            "the_river_po": "Misty, quiet, a transition space.",
+                            "the_barge": "Crowded but safe."
                           },
                           "series_connections": {
-                            "inner_wisdom": "Francisco's developing ability to access inner guidance will be crucial for the spiritual challenges ahead.",
-                            "leadership_theme": "His evolution as a leader of displaced people prepares him for his cosmic leadership role."
+                            "the_sanctuary": "This location becomes a base in Book 4."
                           },
-                          "summary": "Overwhelmed by the competing demands and his own emotional turmoil, Francisco refuses all offers of alliance and retreats to find inner calm. He must learn to quiet the chaos in his mind and heart to provide steady guidance for those who depend on him, including La Signora and the temporal refugees he's encountered. This period of contemplation helps him find his center amid the storm.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Night on the river. The boat glides silently. Francisco sits with the refugee family. The mother is sick from temporal displacement. Francisco uses his magic not to fight, but to soothe. He teaches her a breathing exercise (Calming Guidance). The water is smooth (Six of Swords). He realizes that running away isn't cowardice if you are guiding others to safety. He accepts his role as a protector.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Peace"
+                          ],
+                          "scene_tone": "Quiet/Flowing",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Overwhelmed by the competing demands and his own emotional turmoil, Francisco refuses all offers of alliance and retreats to find inner calm",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Charter",
+                              "setup": "The docks. Fog. Francisco pays the boatman with the last of his university coin. He helps the family onboard. They are terrified. He speaks softly. 'You are safe with me.'",
+                              "symbolism": "The Ferry. Leaving the shore.",
+                              "beat_goal": "The Departure. Establishing the mission.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Protective",
+                              "scene_tone": "Secretive",
+                              "timeline_date": "Night",
+                              "timeline_variant": "River Docks",
+                              "location": "The Boat",
+                              "narrative_function": "The Transition.",
+                              "learning_objective_integration": "Reflects 'Emotional Intelligence'\u2014empathy."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He must learn to quiet the chaos in his mind and heart to provide steady guidance for those who depend on him, including La Signora and the temporal refugees he's encountered",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Sickness",
+                              "setup": "Mid-river. The mother starts shaking. Temporal radiation. Francisco kneels. He can't heal it, but he can stabilize it. He places his hands on her. He guides her breath. 'In... Out... The time is here. The time is now.'",
+                              "symbolism": "The Healer. The Breath.",
+                              "beat_goal": "The Crisis. Using magic for care.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Compassion",
+                              "scene_tone": "Intimate",
+                              "timeline_date": "Midnight",
+                              "timeline_variant": "The Boat",
+                              "location": "Deck",
+                              "narrative_function": "The Bonding.",
+                              "learning_objective_integration": "Reflects 'Wherever You Go, There You Are'\u2014mindfulness."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This period of contemplation helps him find his center amid the storm",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Discussion",
+                              "setup": "The father asks Francisco why he is helping. 'I thought you were one of them.' Francisco looks at the water. 'I was. Now I am just... moving.' He explains the Six of Swords philosophy: You have to carry the swords (pain) with you, but you don't have to let them sink the boat.",
+                              "symbolism": "The Swords in the Boat. Baggage.",
+                              "beat_goal": "The Philosophy. Articulating the theme.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Melancholy",
+                              "scene_tone": "Philosophical",
+                              "timeline_date": "0200 Hours",
+                              "timeline_variant": "The Boat",
+                              "location": "Stern",
+                              "narrative_function": "The Theme Statement.",
+                              "sudowrite_character_moments": [
+                                "The ripple of water against the hull.",
+                                "The father offering Francisco a piece of bread.",
+                                "The mist clearing slightly."
+                              ]
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Arrival",
+                              "setup": "Dawn. They reach the sanctuary (an old monastery). The water is calm. The journey is over for now. Francisco helps them off. He looks back at the river. He is ready for the next phase. He has found his center.",
+                              "symbolism": "The Far Shore. Safety.",
+                              "beat_goal": "Resolution. End of the immediate danger.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Calm",
+                              "scene_tone": "Hopeful",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Sanctuary",
+                              "location": "The Dock",
+                              "narrative_function": "The Bridge to Ch 10.",
+                              "sudowrite_visual_details": [
+                                "The stone walls of the monastery.",
+                                "The birds singing.",
+                                "The stillness of the water."
+                              ]
                             }
                           ]
                         }
@@ -19230,54 +19417,103 @@
                           "hero_journey_beat": "Pressure",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to pressure.",
                           "save_the_cat_beat": "Pressure",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Pressure",
+                          "save_the_cat_beat_goal": "Execute the 'Removal' (Three of Swords) of non-essential elements, forcing a painful separation to ensure the survival of the mission.",
+                          "plot": "Pressure: The Sanctuary is overrun. Supplies are critical. Francisco faces the 'Three of Swords'\u2014heartbreak born of necessity. To continue the fight, he must send the non-combatant refugees away to a distant (safer but poorer) convent. He strips the mission down to its essential core. It feels like abandonment, but it is survival.",
                           "character_arcs": {
-                            "Francisco": "Learning the art of prioritization and the courage to remove distractions from his path.",
-                            "Competing_Demands": "Various factions and individuals making claims on Francisco's time and attention.",
-                            "Essential_Focus": "Francisco discovers what truly matters most in his mission and commits to those priorities.",
-                            "Delegation_Skills": "He begins to trust others with important responsibilities rather than trying to handle everything himself."
+                            "Francisco": "The Pruner. He learns that leadership means making unpopular, painful choices.",
+                            "Refugee_Mother": "Represents the people he is 'abandoning.' Her disappointment cuts him.",
+                            "La_Signora": "Supports the logic, but mourns the loss of community."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's ability to focus on essentials shows his growing wisdom and leadership maturity.",
-                            "leadership_development": "Learning to delegate and prioritize is crucial for handling cosmic-scale responsibilities.",
-                            "power_management": "Shows how temporal abilities require focused attention and cannot be spread too thin."
+                            "logistics_of_war": "Explaining how a small rebel group feeds itself.",
+                            "moral_cost": "Francisco isn't just a hero; he's a general making sacrifices."
                           },
                           "location_details": {
-                            "focus_chamber": "A space designed for clear thinking and priority-setting, free from external distractions.",
-                            "delegation_council": "Meetings where Francisco assigns responsibilities to trusted allies."
+                            "the_sanctuary_courtyard": "Crowded, noisy, desperate.",
+                            "the_river_docks": "The point of separation."
                           },
                           "series_connections": {
-                            "priority_theme": "Francisco's growing ability to focus on essentials will be crucial for the complex choices in later books.",
-                            "leadership_evolution": "His development as a leader prepares him for the cosmic responsibilities of the series climax."
+                            "the_exiles": "The group he sends away returns in Book 8 to help him."
                           },
-                          "summary": "Under mounting pressure from the Vatican, Dagon's forces, and the needs of his followers, Francisco realizes he must eliminate distractions and focus on the essential. He makes difficult choices about which responsibilities to accept and which to delegate, learning that true leadership requires the courage to say no to good things in order to focus on the most important things.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The Sanctuary is at breaking point. Arguments break out over food. Francisco consults with La Signora: 'We can't sustain this.' He decides to implement 'Removal' (Essentialism). He gathers the group. He speaks hard truths. The Three of Swords pierces the heart of the community. He separates the fighters/scholars from the families. He arranges transport for the families to a neutral convent. The goodbyes are tearful. He stands on the dock, watching them leave, feeling the weight of the sword in his own heart. He is left with a lean, mean, fighting force.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Guilt"
+                          ],
+                          "scene_tone": "Melancholy/Stern",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Under mounting pressure from the Vatican, Dagon's forces, and the needs of his followers, Francisco realizes he must eliminate distractions and focus on the essential",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Overcrowding",
+                              "setup": "Sanctuary mess hall. Loud. A fight breaks out over a piece of bread. Francisco intervenes. The noise is overwhelming. He can't hear himself think (or the timeline). He realizes the clutter is dangerous.",
+                              "symbolism": "The Noise. The Choking Weeds.",
+                              "beat_goal": "The Problem. Identifying the unsustainable state.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Frustration",
+                              "scene_tone": "Chaotic",
+                              "timeline_date": "Noon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Mess Hall",
+                              "narrative_function": "The Pressure Cooker.",
+                              "learning_objective_integration": "Reflects 'Essentialism'\u2014the cost of 'non-essential'."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He makes difficult choices about which responsibilities to accept and which to delegate, learning that true leadership requires the courage to say no to good things in order to focus on the most important things",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Hard Choice",
+                              "setup": "Francisco's study. Quiet. La Signora shows the ledger. 'We have food for three days.' If they keep everyone, everyone starves. If they cut the group, the core survives. Francisco stares at the Three of Swords card on his desk.",
+                              "symbolism": "The Ledger. The Sword.",
+                              "beat_goal": "The Decision. Logic vs Emotion.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Resolve",
+                              "scene_tone": "Cold",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Study",
+                              "narrative_function": "The Choice.",
+                              "sudowrite_visual_details": [
+                                "The red ink in the ledger.",
+                                "The dust dancing in the light beam.",
+                                "Francisco's clenched jaw."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Announcement",
+                              "setup": "Courtyard. Rain. Francisco stands on a crate. He announces the plan. The families will go to Santa Lucia. The fighters will stay. The reaction is shock, then anger, then sadness. The 'Heartbreak' of the Three of Swords.",
+                              "symbolism": "The Rain (Tears). The Separation.",
+                              "beat_goal": "The Action. Delivering the bad news.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pain",
+                              "scene_tone": "Tragic",
+                              "timeline_date": "Evening",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Courtyard",
+                              "narrative_function": "The Climax (Emotional).",
+                              "learning_objective_integration": "Reflects 'The Life-Changing Magic'\u2014discarding with gratitude."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Silence",
+                              "setup": "The boats are gone. The Sanctuary is empty, quiet. Just the 12 core members left. It feels huge and echoing. Francisco sits alone. He has 'cleared the clutter,' but it hurts. La Signora puts a hand on his shoulder. 'Now we can work,' she says.",
+                              "symbolism": "The Empty Room. Clarity cost.",
+                              "beat_goal": "Resolution. The new status quo.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Hollow",
+                              "scene_tone": "Quiet",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Main Hall",
+                              "narrative_function": "The Bridge to Ch 11.",
+                              "sudowrite_character_moments": [
+                                "The echo of his own footsteps.",
+                                "The smell of rain.",
+                                "The realization of the space available."
+                              ]
                             }
                           ]
                         },
@@ -19364,54 +19600,103 @@
                           "hero_journey_beat": "Pinch",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to pinch.",
                           "save_the_cat_beat": "Pinch",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Pinch",
+                          "save_the_cat_beat_goal": "Show 'Courage' (Seven of Swords style) by infiltrating a Vatican stronghold to steal vital intelligence.",
+                          "plot": "Pinch: The 'Pinch' comes from the Vatican closing the net. Francisco needs to know their next move. He adopts the 'Seven of Swords' tactic\u2014stealth and cunning over brute force. It takes immense 'Courage' to walk unarmed into the lion's den. He infiltrates the Cathedral Archives in Bologna (nearby). He acts alone (or with one other), relying on his wits.",
                           "character_arcs": {
-                            "Francisco": "Confronts his deepest fears about his own inadequacy and finds the courage to act despite uncertainty.",
-                            "Vatican_Attackers": "Church forces led by a Temporal Inquisitor who sees Francisco as a threat to divine order.",
-                            "Courage_Mentor": "A figure from Francisco's past who helps him understand the true nature of courage.",
-                            "Fear_Confrontation": "Francisco faces his terror of failure, abandonment, and inadequacy."
+                            "Francisco": "The Spy. Proving he can outsmart the Church, not just out-magic them.",
+                            "Captain_Reyes": "Vatican Guard Captain. The obstacle.",
+                            "Vittoria": "A contact inside the city who helps him in."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's battle with self-doubt shows the human side of his extraordinary abilities.",
-                            "temporal_mechanics": "Courage proves to be a crucial component in accessing the deepest levels of temporal power.",
-                            "conflict_escalation": "The Vatican's direct attack marks a new level of danger and commitment in the conflict."
+                            "intelligence_network": "How Francisco gets his info.",
+                            "vatican_presence": "Establishing the scale of the enemy."
                           },
                           "location_details": {
-                            "courage_battlefield": "The confrontation occurs in a space where Francisco's fears take on physical form.",
-                            "inner_fortress": "Francisco's psychological stronghold where he stores his deepest reserves of courage."
+                            "bologna_cathedral_archives": "Dusty, guarded, labyrinthine.",
+                            "the_confessional": "A hiding spot."
                           },
                           "series_connections": {
-                            "courage_theme": "Francisco's growing courage will be essential for the increasingly dangerous challenges ahead.",
-                            "vatican_conflict": "This confrontation establishes the Church as a major antagonist for the series."
+                            "the_stolen_scroll": "Contains info on the Keystone (Book 4 plot)."
                           },
-                          "summary": "When Francisco's darkest doubts about his worthiness and ability threaten to paralyze him, he must summon inner courage to press forward despite fear of failure. A direct attack by Vatican forces tests not just his power but his resolve, forcing him to choose between safety through submission or dangerous courage through resistance.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco needs the Vatican's troop movements. He enters Bologna in disguise (Priest). He slips into the Cathedral. The Seven of Swords vibe\u2014looking over his shoulder, holding the stolen goods. He encounters Captain Reyes but bluffs his way past. He reaches the archives. He steals the scroll. The tension is high. He escapes by the skin of his teeth, realizing that 'Courage' is not just fighting, but daring to act when terrified.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Adrenaline"
+                          ],
+                          "scene_tone": "Heist/Suspense",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "When Francisco's darkest doubts about his worthiness and ability threaten to paralyze him, he must summon inner courage to press forward despite fear of failure",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Disguise",
+                              "setup": "Just outside Bologna. Vittoria helps Francisco with his cassock. He looks different\u2014shaved, severe. 'If they catch you, I don't know you.' He swallows his fear. 'Courage isn't the absence of fear,' he quotes.",
+                              "symbolism": "The Mask. The False Face.",
+                              "beat_goal": "The Preparation. Raising the stakes.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Anxiety",
+                              "scene_tone": "Tense",
+                              "timeline_date": "Dusk",
+                              "timeline_variant": "Outskirts",
+                              "location": "Safehouse",
+                              "narrative_function": "The Threshold.",
+                              "learning_objective_integration": "Reflects 'Feel the Fear and Do It Anyway'."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "A direct attack by Vatican forces tests not just his power but his resolve, forcing him to choose between safety through submission or dangerous courage through resistance",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Lion's Den",
+                              "setup": "Inside the Cathedral. High mass is ending. Incense. Soldiers at the doors. Francisco walks with purpose (Seven of Swords\u2014swift movement). He nods to a guard. The guard nods back. He is inside.",
+                              "symbolism": "Walking on Thin Ice. The Wolf in Sheep's Clothing.",
+                              "beat_goal": "The Infiltration. Crossing lines.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Focus",
+                              "scene_tone": "Suspense",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Bologna",
+                              "location": "Cathedral Nave",
+                              "narrative_function": "The Action.",
+                              "sudowrite_visual_details": [
+                                "The echo of chanting.",
+                                "The glint of armor.",
+                                "The shadow of the confessional."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Theft",
+                              "setup": "The Archives. He picks the lock (magically quiet). He finds the scroll case marked 'Temporal Containment'. He takes it. He leaves a decoy. He hears footsteps. Captain Reyes is doing rounds.",
+                              "symbolism": "The 7 of Swords (Taking the Swords).",
+                              "beat_goal": "The Objective. Securing the prize.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Fear",
+                              "scene_tone": "High Stakes",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Bologna",
+                              "location": "Archives",
+                              "narrative_function": "The Climax (Action).",
+                              "learning_objective_integration": "Reflects 'Daring Greatly'\u2014vulnerability in action."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Bluff",
+                              "setup": "Reyes stops him in the hallway. 'Father, I don't know your face.' Francisco uses 'Courage'. He doesn't run. He scolds Reyes for interrupting a 'holy mission from the Bishop.' His voice doesn't shake. Reyes apologizes and lets him pass. Francisco walks out into the cool night air, adrenaline crashing.",
+                              "symbolism": "The Tongue as Sword.",
+                              "beat_goal": " The Escape. Emotional payoff.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Relief",
+                              "scene_tone": "Triumphant",
+                              "timeline_date": "Midnight",
+                              "timeline_variant": "Bologna",
+                              "location": "Cathedral Steps",
+                              "narrative_function": "The Resolution.",
+                              "sudowrite_character_moments": [
+                                "The sweat on his back.",
+                                "The cool stone pillar he leans against.",
+                                "The scroll tucked in his sleeve."
+                              ]
                             }
                           ]
                         },
@@ -19498,65 +19783,103 @@
                           "hero_journey_beat": "Allies, Mentors, and Helpers",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to allies, mentors, and helpers.",
                           "save_the_cat_beat": "Allies, Mentors, and Helpers",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Allies, Mentors, and Helpers",
+                          "save_the_cat_beat_goal": "Show 'Abundance' (Three of Cups) by capturing resources and celebrating with the community, cementing the bonds of the team.",
+                          "plot": "Allies/Fun and Games: The scroll from EA-091 reveals a supply route. Francisco leads a raid (the 'Courage' pays off). They capture the wagons without killing (Win-Win). They bring the food back to the Sanctuary. The mood shifts from grim survival to 'Abundance.' They feast. The Three of Cups\u2014toasts, friendship, shared joy. Francisco sees that his 'Removal' decision (EA-090) saved the core, and now 'Abundance' feeds them.",
                           "character_arcs": {
-                            "Francisco": "Learning that power and resources grow when shared, not diminished when distributed.",
-                            "Allied_Community": "A diverse group of temporal refugees, scholars, and mystics who benefit from Francisco's generosity.",
-                            "Abundance_Teacher": "La Signora reveals more about the true nature of power and its relationship to generosity.",
-                            "Sharing_Wisdom": "Francisco begins to teach others about temporal manipulation, multiplying his influence."
+                            "Francisco": "The Provider. He sees his people happy for the first time.",
+                            "The_Twin_Scholars": "Provide comic relief and camaraderie.",
+                            "La_Signora": "Relaxes her guard, showing her warmer side."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's growing generosity shows his evolution from self-focused to community-focused leadership.",
-                            "power_systems": "Shows how temporal abilities can be enhanced through teaching and sharing rather than hoarding.",
-                            "community_building": "Francisco's growing network of allies becomes a crucial resource for future challenges."
+                            "morale": "Refilling the 'emotional tank' of the group.",
+                            "team_dynamics": "Showing why these people follow Francisco."
                           },
                           "location_details": {
-                            "celebration_space": "A joyful gathering where Francisco's community celebrates their victories and bonds.",
-                            "teaching_academy": "Francisco begins to establish centers where others can learn temporal arts."
+                            "the_forest_road": "Site of the ambush.",
+                            "the_sanctuary_hall": "Site of the feast."
                           },
                           "series_connections": {
-                            "abundance_theme": "Francisco's understanding of true abundance will be crucial for his ultimate choice in Book 9.",
-                            "teaching_role": "His evolution into a teacher prepares him for his role as humanity's guide in the final books."
+                            "the_toast": "A specific toast is recalled in the final book before the end."
                           },
-                          "summary": "Following his victory over the Vatican forces, Francisco experiences moments of celebration with his growing community of allies. He discovers that his power and resources are multiplied when shared rather than hoarded, learning that true abundance comes from distribution rather than accumulation. This lesson prepares him for the greater challenges ahead.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco uses the intel to intercept a Vatican convoy. The raid is executed perfectly (showing team competence). They return with wagons of grain, wine, and cloth. The Sanctuary is filled with laughter. They hold a feast. Francisco sits at the head of the table. Three of Cups: Connection, Celebration, Community. He realizes that this\u2014this joy\u2014is what he is fighting for. Not just survival, but life.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Joy"
+                          ],
+                          "scene_tone": "Warm/Celebratory",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Following his victory over the Vatican forces, Francisco experiences moments of celebration with his growing community of allies",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Ambush",
+                              "setup": "Forest Road. The team is in position. Francisco signals. It's not a battle; it's a surgical strike. They disable the wheels. They disarm the guards. 'Go home,' Francisco tells the guards. 'Tell your Bishop we thank him for the donation.'",
+                              "symbolism": "The Harvest. Reaping rewards.",
+                              "beat_goal": "The Victory. Securing abundance.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Competence",
+                              "scene_tone": "Action/Light",
+                              "timeline_date": "Day",
+                              "timeline_variant": "Forest",
+                              "location": "Road",
+                              "narrative_function": "The Win.",
+                              "learning_objective_integration": "Reflects '7 Habits'\u2014Win/Win thinking."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He discovers that his power and resources are multiplied when shared rather than hoarded, learning that true abundance comes from distribution rather than accumulation",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Return",
+                              "setup": "Rolling the wagons into the Sanctuary. The cheers of the 12. Unloading the casks. The smell of bread baking. Francisco feels the tension of EA-090 melting away.",
+                              "symbolism": "The Full Cup.",
+                              "beat_goal": "The Relief. tangible rewards.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Validaton",
+                              "scene_tone": "Happy",
+                              "timeline_date": "Evening",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Courtyard",
+                              "narrative_function": "The Setup for the Party.",
+                              "sudowrite_visual_details": [
+                                "The golden crust of the bread.",
+                                "The red wine pouring.",
+                                "The firelight on smiling faces."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This lesson prepares him for the greater challenges ahead",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Toast",
+                              "setup": "The Feast. Francisco stands up. He raises his cup (Three of Cups). He looks at his 'Essential' team. 'To those we lost, and those we found.' They drink. Bonds are forged here that will last until death.",
+                              "symbolism": "The Three of Cups (Community).",
+                              "beat_goal": "The Connection. Solidifying the team.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Love",
+                              "scene_tone": "Warm",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Mess Hall",
+                              "narrative_function": "The Midpoint High.",
+                              "learning_objective_integration": "Reflects 'The Abundance Book'\u2014gratitude."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Aftermath",
+                              "setup": "Late night. The fire is dying. Francisco and the Twin Scholars look at the stars. They talk about the future, not with fear (as in EA-086) but with hope. 'We can actually do this,' Francisco whispers.",
+                              "symbolism": "The Stars. Limitless possibility.",
+                              "beat_goal": "The Hope. Forward momentum.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Peace",
+                              "scene_tone": "Quiet",
+                              "timeline_date": "Late Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Roof",
+                              "narrative_function": "The Bridge to Ch 13.",
+                              "sudowrite_character_moments": [
+                                "The laughter fading into silence.",
+                                "The vastness of the sky.",
+                                "Francisco smiling without forcing it."
+                              ]
                             }
                           ]
                         }
@@ -19664,32 +19987,109 @@
                           "hero_journey_beat": "The Crossing of the Threshold",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the crossing of the threshold.",
                           "save_the_cat_beat": "The Crossing of the Threshold",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Crossing of the Threshold",
+                          "save_the_cat_beat_goal": "Establish the 'Illumination' (Hierophant) of the group by formalizing their teachings and creating the 'Order of the Eternal'.",
+                          "plot": "Crossing the Threshold: Francisco realizes the abundance and courage of the group are wasted without structure. He channels the 'Hierophant'\u2014the Teacher/Pope. He codifies their knowledge. He writes the 'Codex Aeternum' (or a draft). He initiates his 12 followers into the secrets of time, 'Illuminating' their minds. They cross the threshold from a band of rebels to an Order.",
                           "character_arcs": {
-                            "Francisco": "Completes his transformation from student to master, ready to guide others on their temporal journeys.",
-                            "Magus_Identity": "Francisco fully embraces his role as a temporal magus with all its responsibilities and burdens.",
-                            "Student_Followers": "New disciples who look to Francisco for guidance in developing their own temporal abilities.",
-                            "Wisdom_Integration": "Francisco combines all his experiences into a coherent understanding of temporal arts."
+                            "Francisco": "The Hierophant. He becomes the spiritual/intellectual leader.",
+                            "The_Apprentices": "The 12 transition from refugees to Students.",
+                            "La_Signora": "Becomes the High Priestess (counterpart)."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's evolution into a teacher shows his commitment to helping others rather than just advancing himself.",
-                            "temporal_mechanics": "Establishes Francisco as a master-level practitioner capable of teaching and guiding others.",
-                            "leadership_development": "His role as magus prepares him for the greater leadership challenges of the second half."
+                            "magic_systems": "Explaining the rules of their temporal magic.",
+                            "organization": "How the rebellion is structured."
                           },
                           "location_details": {
-                            "illumination_ceremony": "Francisco's formal acceptance of his role as a temporal magus and teacher.",
-                            "knowledge_synthesis": "The process of integrating all his learning into wisdom he can share with others."
+                            "the_library_sanctum": "The room where he teaches.",
+                            "the_altar_of_time": "A symbolic focal point."
                           },
                           "series_connections": {
-                            "mastery_theme": "Francisco's achievement of mastery in temporal arts prepares him for the cosmic challenges ahead.",
-                            "teacher_role": "His evolution into a guide for others sets up his ultimate role as humanity's teacher in the final books."
+                            "the_order": "This order persists for centuries (in the timeline)."
                           },
-                          "summary": "Having learned the foundational lessons of power, responsibility, and community, Francisco now fully assumes the mantle of temporal magus and guide. He synthesizes his accumulated knowledge and experience to become a teacher and leader for the next generation of temporal practitioners. This transformation marks his crossing from student to master, setting up the greater challenges of Part II.",
-                          "pov": "3rd Person Limited",
-                          "tense": "Past Tense",
-                          "core_emotion": "Varies by chapter",
-                          "scene_tone": "Varies by chapter"
+                          "summary": "Francisco spends days in the library, writing. He calls the group. He explains that they are not just fighting a war; they are protecting the timeline. He performs a rite of 'Illumination,' sharing a deep vision of the time stream with them. It is overwhelming but beautiful. They swear an oath. The Hierophant imagery\u2014keys, instruction, tradition. He is no longer just Francisco; he is the Magus.",
+                          "pov": [
+                            "3rd Person Limited (Francisco)"
+                          ],
+                          "tense": [
+                            "Past Tense"
+                          ],
+                          "core_emotion": [
+                            "Awe"
+                          ],
+                          "scene_tone": "Sacred/Academic",
+                          "scenes": [
+                            {
+                              "scene_number": 1,
+                              "scene_title": "The Writer",
+                              "setup": "Francisco alone. Candlelight. He is trying to put the indescribable into words. 'Illumination' requires clarity. He drafts the First Principle: 'Time is not a river; it is a sea.' He feels the weight of history.",
+                              "symbolism": "The Quill. The Book.",
+                              "beat_goal": "The Synthesis. Creating the lore.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Inspiration",
+                              "scene_tone": "Quiet",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Library",
+                              "narrative_function": "The Preparation.",
+                              "learning_objective_integration": "Reflects 'Mastery'\u2014codifying knowledge."
+                            },
+                            {
+                              "scene_number": 2,
+                              "scene_title": "The Assembly",
+                              "setup": "The 12 gather. They expect battle plans. Francisco gives them philosophy. He explains the 'Hierophant's' role: to bridge the gap between the chaotic divine (Time) and the human mind. He challenges them to learn.",
+                              "symbolism": "The Teacher. The Classroom.",
+                              "beat_goal": "The Call. Demanding intellectual growth.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Authority",
+                              "scene_tone": "Formal",
+                              "timeline_date": "Morning",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Main Hall",
+                              "narrative_function": "The Shift.",
+                              "sudowrite_visual_details": [
+                                "The dust motes in the light.",
+                                "The attentive faces.",
+                                "The diagram drawn on the floor."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Vision",
+                              "setup": "The Rite of Illumination. Francisco links their minds (briefly). They *see* the timeline as he sees it. The vastness. The beauty. The terror. Some weep. Some laugh. They are 'Illuminated.'",
+                              "symbolism": "The Light. The Key.",
+                              "beat_goal": "The Transformation. Sharing the burden.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Transcendence",
+                              "scene_tone": "Mystical",
+                              "timeline_date": "Noon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Main Hall",
+                              "narrative_function": "The Climax (Spiritual).",
+                              "learning_objective_integration": "Reflects 'The Hero with a Thousand Faces'\u2014crossing the threshold."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Oath",
+                              "setup": "The Aftermath. They are shaken but resolute. They swear to protect the timeline, not just for themselves, but for existence. They are now the Order of the Eternal. Francisco accepts their vow.",
+                              "symbolism": "The Circle. The Vow.",
+                              "beat_goal": "Resolution. The birth of the Order.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Solemnity",
+                              "scene_tone": "Ritualistic",
+                              "timeline_date": "Sunset",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Courtyard",
+                              "narrative_function": "The New Era.",
+                              "sudowrite_character_moments": [
+                                "The kneeling figures.",
+                                "The setting sun on the stone.",
+                                "The weight of the responsibility settling."
+                              ]
+                            }
+                          ]
                         }
                       }
                     }
@@ -19823,65 +20223,103 @@
                           "hero_journey_beat": "Push",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to push.",
                           "save_the_cat_beat": "Push",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Push",
+                          "save_the_cat_beat_goal": "Transition to 'Goal Setting' (Page of Disks) by mapping the long-term strategy for the new Order.",
+                          "plot": "Push: The Order exists (EA-093). Now what? 'Goal Setting'. The Page of Disks represents the diligent student/planner. Francisco convenes the first Strategy Council. They map the threats (Vatican, Dagon). They identify the 'Keystone'\u2014a mythical artifact that stabilizes time loops\u2014as their primary objective. They set OKRs (Objectives and Key Sorcery). It's the 'Push' into the new world of the second half of the book.",
                           "character_arcs": {
-                            "Francisco": "Learning to think strategically about long-term goals while managing immediate threats to his community.",
-                            "Vatican_Inquisitors": "A specialized group trained in combating temporal heretics, led by someone Francisco once trusted.",
-                            "Dagon_Infiltrators": "Agents who have gained Francisco's trust only to betray him at a crucial moment.",
-                            "Allied_Council": "Francisco's inner circle of advisors who help him plan for the challenges ahead."
+                            "Francisco": "The Strategist. Moving from reactive to active.",
+                            "The_Scribe": "A Page of Disks figure. Meticulous, careful.",
+                            "The_Scout": "Ready to execute the plan."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Introduction of more sophisticated temporal warfare techniques employed by both sides.",
-                            "character_motivation": "Francisco's growing understanding that his personal journey is part of a larger cosmic conflict.",
-                            "stakes_clarification": "The escalation shows that the conflict has moved beyond personal to existential stakes."
+                            "the_mcrguffin": "Introducing the Keystone explicitly.",
+                            "pacing": "Slowing down to show the intellectual work of war."
                           },
                           "location_details": {
-                            "strategy_council": "Francisco's formal planning sessions with his most trusted advisors.",
-                            "infiltration_discovery": "The shocking revelation of betrayal within Francisco's inner circle."
+                            "the_map_room": "Filled with charts and timelines.",
+                            "the_archive_annex": "Where the stolen scroll is analyzed."
                           },
                           "series_connections": {
-                            "strategic_thinking": "Francisco's growing strategic abilities will be essential for the complex challenges of Books 4-6.",
-                            "betrayal_theme": "The infiltration sets up the pattern of betrayal that will culminate with Gherardo's treachery."
+                            "the_keystone": "The object they chase for the rest of Book 3."
                           },
-                          "summary": "Now established as a temporal magus, Francisco faces new pressures as both his allies and enemies escalate their efforts to control or eliminate him. He must set clear goals for his mission while confronting early obstacles in the form of more sophisticated opposition. The Vatican's Temporal Authority launches a coordinated campaign against him, while Dagon's agents infiltrate his growing community.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The morning after the oath. Francisco unrolls the stolen scroll (from EA-091) and the old maps. He embodies 'Goal Setting.' He teaches the Page of Disks lesson: Vision requires concrete steps. They breakdown the mission. 1. Decrypt the Scroll. 2. Locate the Keystone. 3. Retrieve it before Dagon. They assign teams. The mood is industrious, focused, grounded. The outcome is a clear path forward.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Purpose"
+                          ],
+                          "scene_tone": "Industrious/Focused",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Now established as a temporal magus, Francisco faces new pressures as both his allies and enemies escalate their efforts to control or eliminate him",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Map Room",
+                              "setup": "Dawn. Francisco clears the feast table (EA-092 remnants). He spreads out the maps. The 'Page of Disks' energy\u2014grounding the vision in reality. He calls for the Scribe.",
+                              "symbolism": "The Blank Slate. The Map.",
+                              "beat_goal": "The Start. creating the workspace.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Clarity",
+                              "scene_tone": "Quiet/Work",
+                              "timeline_date": "Morning",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Map Room",
+                              "narrative_function": "The Pivot.",
+                              "learning_objective_integration": "Reflects 'Atomic Habits'\u2014environment design."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He must set clear goals for his mission while confronting early obstacles in the form of more sophisticated opposition",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Objective",
+                              "setup": "The Council gathers. Francisco circles a location on the map. 'The Keystone.' He explains its value. It's not just a treasure; it's a stabilizer. 'If we have this, we control the loops.'",
+                              "symbolism": "The Bullseye.",
+                              "beat_goal": "The Target. Defining success.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Ambition",
+                              "scene_tone": "Strategic",
+                              "timeline_date": "Noon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Map Room",
+                              "narrative_function": "The quest definition.",
+                              "sudowrite_visual_details": [
+                                "The charcoal circle on the parchment.",
+                                "The intent eyes of the council.",
+                                "The finger tracing the route."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "The Vatican's Temporal Authority launches a coordinated campaign against him, while Dagon's agents infiltrate his growing community",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Plan",
+                              "setup": "Breaking it down. Logistics. Who goes? Who stays? Consumables needed. It's boring, unglamorous work, but it's 'Goal Setting.' The Page of Disks thrives here. Francisco delegates (trusting the Order).",
+                              "symbolism": "The List. The Coin (Disks).",
+                              "beat_goal": "The Logistics. Making it real.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Trust",
+                              "scene_tone": "Practical",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Map Room",
+                              "narrative_function": "The Process.",
+                              "learning_objective_integration": "Reflects 'Measure What Matters'\u2014OKRs."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Commitment",
+                              "setup": "The plan is set. The sun is setting. Francisco hands the Scribe the quill. 'Write it down. It is law.' They have a path. The uncertainty of the 'Removal' period is gone. They are moving.",
+                              "symbolism": "The Sealed Scroll.",
+                              "beat_goal": "The Launch. Committing to action.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Determination",
+                              "scene_tone": "Resolute",
+                              "timeline_date": "Sunset",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Map Room",
+                              "narrative_function": "The End of Part 1 (of the book structure).",
+                              "sudowrite_character_moments": [
+                                "The ink drying.",
+                                "The nod exchange.",
+                                "The deep breath before the plunge."
+                              ]
                             }
                           ]
                         },
@@ -19968,65 +20406,103 @@
                           "hero_journey_beat": "New world (set-up)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to new world (set-up).",
                           "save_the_cat_beat": "New world (set-up)",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "New world (set-up)",
+                          "save_the_cat_beat_goal": "Transition to the 'New World' by showing the cost of leadership: 'Focused Anguish' (Nine of Swords).",
+                          "plot": "New World (Setup): The Order is established, but safety is an illusion. Francisco suffers from the 'Nine of Swords'\u2014sleepless nights, anxiety, nightmares of ruin. But he channels this into 'Focused Anguish.' He uses his insomnia to patrol, to check the wards, to simulate attacks. The group thinks he is paranoid. Then, a Vatican scout is caught probing their defenses exactly where Francisco predicted. His anguish saved them.",
                           "character_arcs": {
-                            "Francisco": "Experiencing the psychological burden of leadership and the isolation that comes with great power.",
-                            "Inner_Struggle": "Francisco's internal battle between his desire for connection and the demands of his mission.",
-                            "La_Signora": "Tries to help Francisco manage his psychological burden while dealing with her own growing responsibilities.",
-                            "Community_Pressure": "The expectations and needs of Francisco's followers add to his stress and sense of isolation."
+                            "Francisco": "The Sleepless Watchman. Learning that anxiety can be data.",
+                            "La_Signora": "Worried about his health, trying to make him rest.",
+                            "The_Scout": "Respects Francisco's foresight."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's anguish shows the human cost of his growing power and responsibilities.",
-                            "emotional_complexity": "Explores the psychological toll of leadership and the burden of others' expectations.",
-                            "power_corruption": "Shows how power isolates even those who try to use it responsibly."
+                            "vatican_response": "Showing that the enemy is active and hunting.",
+                            "leadership_toll": "The physical cost of being the 'Hierophant'."
                           },
                           "location_details": {
-                            "isolation_chamber": "Francisco's private space where he struggles with doubt and the weight of responsibility.",
-                            "burden_manifestation": "Physical spaces that reflect the psychological pressure Francisco experiences."
+                            "the_sanctuary_walls": "Patrolled at night.",
+                            "franciscos_quarters": "A place of no rest, filled with maps and candles."
                           },
                           "series_connections": {
-                            "isolation_theme": "Francisco's growing isolation will be a major challenge throughout the remaining books.",
-                            "psychological_burden": "His struggle with leadership pressure prepares for the ultimate choice he must make in Book 9."
+                            "prophetic_dreams": "Hints that his nightmares might be timelines bleeding through."
                           },
-                          "summary": "As Francisco's responsibilities grow heavier, shadows of doubt and anguish surface beneath his confident exterior. The weight of leadership and the constant threat of attack begin to take their psychological toll. He struggles with the isolation that comes with power and the growing distance between himself and those he seeks to protect.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco wakes up screaming. The Nine of Swords. He cannot sleep. He wanders the Sanctuary. He sees flaws in the defense that no one else sees. He wakes the guards. He insists on drills. The order grumbles. 'He is losing it.' But that night, shadows creep over the wall. Francisco is there waiting. He repels the scout. The Order realizes: his burden keeps them safe. 'I sleep so you don't have to,' he doesn't say, but they know.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Dread"
+                          ],
+                          "scene_tone": "Misty/Paranoid",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "As Francisco's responsibilities grow heavier, shadows of doubt and anguish surface beneath his confident exterior",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Nightmare",
+                              "setup": "Francisco\u2019s room. 3 AM. He wakes from a vision of the Sanctuary burning. The Nine of Swords imagery\u2014swords hanging over his bed. He can't go back to sleep. He feels the 'Anguish' of potential failure.",
+                              "symbolism": "The Hanging Swords. The Sweat.",
+                              "beat_goal": "The Motivation. The internal threat.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Panic",
+                              "scene_tone": "Dark",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Quarters",
+                              "narrative_function": "The Hook.",
+                              "learning_objective_integration": "Reflects 'Emotional Agility'\u2014acknowledging the signal of fear."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "The weight of leadership and the constant threat of attack begin to take their psychological toll",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Patrol",
+                              "setup": "Francisco walks the perimeter. The fog is thick. He checks the magical wards. He finds a hairline fracture in the north wall. A small thing, but fatal. He wakes the sentries. They are groggy, annoyed. He is intense, manic.",
+                              "symbolism": "The Crack in the Wall.",
+                              "beat_goal": "The Action. Preparation.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Urgency",
+                              "scene_tone": "Tense",
+                              "timeline_date": "Pre-Dawn",
+                              "timeline_variant": "Sanctuary",
+                              "location": "North Wall",
+                              "narrative_function": "The Conflict (Internal).",
+                              "sudowrite_visual_details": [
+                                "The mist clinging to the stone.",
+                                "The torch sputtering.",
+                                "The look of doubt in the sentry's eyes."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "He struggles with the isolation that comes with power and the growing distance between himself and those he seeks to protect",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Intruder",
+                              "setup": "Just before dawn. The mist shifts. A shadow moves at the North Wall\u2014right where Francisco fixed the ward. The ward flares. Francisco is there instantly. A brief skirmish. The intruder escapes, but is marked. It was a Vatican assassin.",
+                              "symbolism": "The shadow in the fog.",
+                              "beat_goal": "The Validation. The fear was real.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Vindication",
+                              "scene_tone": "Action/Surprise",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Sanctuary",
+                              "location": "North Wall",
+                              "narrative_function": "The Twist.",
+                              "learning_objective_integration": "Reflects 'The Upside of Stress'\u2014harnessing anxiety."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Burden",
+                              "setup": "Morning. The Order sees the blood on the wall. They look at Francisco differently. Not with annoyance, but with awe (and pity). La Signora brings him coffee. 'You need to sleep,' she says. 'Not yet,' he replies. He is the focused guardian.",
+                              "symbolism": "The Coffee. The Blood.",
+                              "beat_goal": "Resolution. Acceptance of the burden.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Weariness",
+                              "scene_tone": "Somber",
+                              "timeline_date": "Morning",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Courtyard",
+                              "narrative_function": "The Theme Stated.",
+                              "sudowrite_character_moments": [
+                                "The trembling of his hand holding the cup.",
+                                "The sun breaking through the mist.",
+                                "The silent nod of the sentry."
+                              ]
                             }
                           ]
                         },
@@ -20113,65 +20589,103 @@
                           "hero_journey_beat": "Fun and games (event/conflict)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to fun and games (event/conflict).",
                           "save_the_cat_beat": "Fun and games (event/conflict)",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Fun and games (event/conflict)",
+                          "save_the_cat_beat_goal": "Show 'Mental Agility' (Page of Swords) by adapting to a new, smarter enemy tactic through wit and flexibility.",
+                          "plot": "Fun and Games: The Vatican sends 'Inquisitor M.', a strategist who doesn't use brute force but traps. He lays a magical snare in the forest. Francisco almost falls for it but uses 'Mental Agility.' He sees the pattern change. He pivots. He directs the team to use the environment (the river, the wind) against the magic. It's a battle of wits. The Page of Swords\u2014energetic, cutting, quick.",
                           "character_arcs": {
-                            "Francisco": "Developing intellectual flexibility and creative problem-solving abilities under pressure.",
-                            "Adaptive_Enemies": "Opponents who learn from each encounter and constantly evolve their tactics.",
-                            "Innovation_Pressure": "The need to stay ahead of enemies forces Francisco to continuously develop new approaches.",
-                            "Mental_Mastery": "Francisco's growing ability to think clearly and creatively even under extreme stress."
+                            "Francisco": "The Tactician. Moving pieces on the board.",
+                            "Inquisitor_M": "A worthy opponent. Cold, calculating.",
+                            "The_Scout": "Executes the feint."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Introduction of adaptive temporal warfare where strategies must constantly evolve.",
-                            "character_motivation": "Francisco's intellectual challenges help him grow beyond his academic background.",
-                            "problem_solving": "Establishes Francisco's growing mastery of complex strategic thinking."
+                            "magic_limitations": "Showing that magic isn't infinite; smarts matter more.",
+                            "enemy_competence": "The villain is not stupid."
                           },
                           "location_details": {
-                            "tactical_laboratory": "Spaces where Francisco develops and tests new approaches to temporal challenges.",
-                            "adaptive_battlefield": "Conflict zones that change and evolve, requiring constant mental flexibility."
+                            "the_broken_bridge": "The site of the trap.",
+                            "the_riverbank": "The escape route."
                           },
                           "series_connections": {
-                            "mental_agility": "Francisco's growing intellectual flexibility will be crucial for the paradigm shifts of Books 7-9.",
-                            "adaptive_thinking": "His ability to evolve his approach will be essential for the ultimate transformation."
+                            "inquisitor_m": "Recurring villain who hunts them intellectually."
                           },
-                          "summary": "Francisco faces increasingly complex challenges that demand he constantly adapt his strategies and thinking. The enemies arrayed against him employ innovative tactics that require mental agility and creative problem-solving. These trials force him to think beyond conventional approaches and develop new methods for dealing with temporal conflicts.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The Scouts report suspicious activity at the bridge. Francisco goes to investigate. It feels wrong. The birds are too quiet. He realizes it's an ambush designed for a 'frontal' thinker. He shifts to 'Page of Swords' mode. He climbs a tree. He sees the glint of a rune trap. Instead of retreating, he throws a rock to trigger it early. The trap explodes. The enemy is revealed, confused. Francisco mocks them (Page of Swords wit) and leads his team away through the river, covering their tracks. 'Be like water,' he teaches them.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Alertness"
+                          ],
+                          "scene_tone": "Clever/Fast-Paced",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco faces increasingly complex challenges that demand he constantly adapt his strategies and thinking",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Trap",
+                              "setup": "The Broken Bridge. It looks enticingly easy to cross. Francisco stops the team. He senses the 'Stiffness' of the air. The enemy expects him to be desperate. He needs to be 'Agile.'",
+                              "symbolism": "The Baited Hook.",
+                              "beat_goal": "The Recognition. Seeing the game.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Suspicion",
+                              "scene_tone": "Quiet Tension",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Forest",
+                              "location": "Bridge",
+                              "narrative_function": "The Challenge.",
+                              "learning_objective_integration": "Reflects 'Thinking, Fast and Slow'\u2014engaging System 2."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "The enemies arrayed against him employ innovative tactics that require mental agility and creative problem-solving",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Pivot",
+                              "setup": "Francisco explains the plan. No magic. Just physics. They will trigger the trap with a counter-weight. He is grinning. This is the 'Fun and Games' beat. He enjoys outsmarting them. The Page of Swords loves a puzzle.",
+                              "symbolism": "The Fulcrum.",
+                              "beat_goal": "The Plan. Creative problem solving.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Mischief",
+                              "scene_tone": "Active",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Forest",
+                              "location": "Underbrush",
+                              "narrative_function": "The Process.",
+                              "sudowrite_visual_details": [
+                                "The intricate knots of the rope.",
+                                "The heavy stone.",
+                                "Francisco's quick hand gestures."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "These trials force him to think beyond conventional approaches and develop new methods for dealing with temporal conflicts",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Trigger",
+                              "setup": "They drop the stone. The bridge explodes in purple fire. The hidden Inquisitors jump out, shouting 'Attack!' But there is no one there. Francisco watches from the ridge. He has wasted their resources and revealed their position.",
+                              "symbolism": "The Smoke and Mirrors.",
+                              "beat_goal": "The Execution. The feint.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Satisfaction",
+                              "scene_tone": "Exciting",
+                              "timeline_date": "Sunset",
+                              "timeline_variant": "Forest",
+                              "location": "Ridge",
+                              "narrative_function": "The Climax (Intellectual).",
+                              "learning_objective_integration": "Reflects 'The Obstacle Is the Way'\u2014turning the attack against them."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Lesson",
+                              "setup": "Back at camp. Francisco teaches the 'Page of Swords' lesson. 'The mind is sharper than the blade.' They debrief. He encourages them to think of three ways they could have died, and three ways they could have won.",
+                              "symbolism": "The Whetstone.",
+                              "beat_goal": "Resolution. Mental toughness.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pride",
+                              "scene_tone": "Didactic",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Campfire",
+                              "narrative_function": "The Integration.",
+                              "sudowrite_character_moments": [
+                                "The laughter of the team.",
+                                "The firelight dancing.",
+                                "Francisco sharpening his dagger."
+                              ]
                             }
                           ]
                         }
@@ -20281,65 +20795,103 @@
                           "hero_journey_beat": "Old world contrast (resolution)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to old world contrast (resolution).",
                           "save_the_cat_beat": "Old world contrast (resolution)",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Old world contrast (resolution)",
+                          "save_the_cat_beat_goal": "Achieve a major 'Triumph' (Nine of Cups) by locating the Keystone, marking the Midpoint climax.",
+                          "plot": "Midpoint: The intel from EA-091 + the strategy from EA-094 pay off. They locate the 'Sunken Crypt' where the Keystone is hidden. They launch a mission to breach it. It is difficult, but they are ready. They solve the puzzle lock. They defeat the guardian. They don't retrieve the object yet (it's guarded by a temporal field), but they confirm it is there. The Nine of Cups\u2014the 'Wish' is granted. They have found the grail. The celebration is raucous, bordering on hubris.",
                           "character_arcs": {
-                            "Francisco": "Experiences a major expansion of understanding that transforms his approach to temporal arts.",
-                            "Consciousness_Discovery": "Francisco learns that temporal manipulation is fundamentally about consciousness rather than just technique.",
-                            "Reality_Connection": "The breakthrough reveals deeper truths about the nature of existence and Francisco's role in it.",
-                            "Renewed_Purpose": "The discovery reinvigorates Francisco's sense of mission and purpose."
+                            "Francisco": "The Victor. He feels unstoppable. The 'Nine of Cups' smuggess.",
+                            "La_Signora": "Cautious. She knows the Tarot; she knows what comes after the 9.",
+                            "The_Scribe": "Overjoyed that the research was correct."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Major revelation about the consciousness-based nature of temporal manipulation.",
-                            "trionfi_system": "The cards are revealed to be interfaces with the fundamental structure of reality.",
-                            "character_motivation": "Francisco's breakthrough gives him new confidence and sense of purpose."
+                            "keystone_location": "Definitively placing the MacGuffin.",
+                            "team_competence": "Showing them winning a major objective."
                           },
                           "location_details": {
-                            "discovery_space": "The location where Francisco makes his breakthrough discovery about consciousness and time.",
-                            "reality_interface": "Spaces where the fundamental structure of existence becomes visible and manipulable."
+                            "the_sunken_crypt": "Atmospheric, watery, ancient.",
+                            "the_puzzle_door": "A test of their combined skills."
                           },
                           "series_connections": {
-                            "consciousness_theme": "Francisco's understanding of consciousness will be crucial for the reality manipulation in Books 8-9.",
-                            "reality_structure": "His discovery of how reality works prepares for his ultimate role in reshaping existence."
+                            "the_crypt_guardian": "Hints at who built the Keystone (The Ancients)."
                           },
-                          "summary": "Francisco achieves a crucial breakthrough in understanding the true nature of temporal manipulation and its relationship to human consciousness. This pivotal discovery renews his confidence and gives him new tools for the challenges ahead. The breakthrough also reveals the connection between the Trionfi cards and the fundamental structure of reality itself.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The expedition reaches the Crypt. It's underwater (partially). They use 'Mental Agility' to breathe. They navigate the traps. They reach the central chamber. There, floating in a stasis field, is the Keystone. It hums with power. Francisco laughs. It is the laugh of 'Triumph.' He toasts the Nine of Cups (figuratively). 'We have won,' he says. 'It's just a matter of time.' They retreat to plan the extraction, high on success.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Euphoria"
+                          ],
+                          "scene_tone": "Epic/Victorious",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco achieves a crucial breakthrough in understanding the true nature of temporal manipulation and its relationship to human consciousness",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Descent",
+                              "setup": "The entrance to the Sunken Crypt. Dark water. Francisco leads the way. He is confident now. 'Trust the math,' he tells the Scribe. They dive.",
+                              "symbolism": "Into the Subconscious (Water).",
+                              "beat_goal": "The Threshold. Entering the danger zone.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Excitement",
+                              "scene_tone": "Adventure",
+                              "timeline_date": "Day",
+                              "timeline_variant": "Crypt",
+                              "location": "Entrance",
+                              "narrative_function": "The Journey.",
+                              "learning_objective_integration": "Reflects 'Grit'\u2014persistence."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "This pivotal discovery renews his confidence and gives him new tools for the challenges ahead",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Guardian",
+                              "setup": "The Puzzle Door. A construct guards it. It asks a riddle of time. Francisco answers it, not with magic, but with philosophy (learned in EA-093). The door opens. The construct bows.",
+                              "symbolism": "The Sphinx.",
+                              "beat_goal": "The Test. Proving worthiness.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Confidence",
+                              "scene_tone": "Mythic",
+                              "timeline_date": "Day",
+                              "timeline_variant": "Crypt",
+                              "location": "Inner Chamber",
+                              "narrative_function": "The Obstacle.",
+                              "sudowrite_visual_details": [
+                                "The grinding of stone.",
+                                "The bioluminescent moss.",
+                                "The calm voice of the construct."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "The breakthrough also reveals the connection between the Trionfi cards and the fundamental structure of reality itself",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Prize",
+                              "setup": "The Keystone revealed. It is beautiful. It pulses with light. The team stares in awe. Francisco touches the barrier. It is strong. He smiles. 'We know where it is. That is enough for today.'",
+                              "symbolism": "The Grail. The Wish.",
+                              "beat_goal": "The Discovery. The midpoint high.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Greed/Desire",
+                              "scene_tone": "Wondrous",
+                              "timeline_date": "Day",
+                              "timeline_variant": "Crypt",
+                              "location": "Sanctum",
+                              "narrative_function": "The Climax (Discovery).",
+                              "learning_objective_integration": "Reflects 'Man's Search for Meaning'\u2014finding the aim."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Hubris",
+                              "setup": "Campfire outside the crypt. They pass a bottle. Everyone is celebrating. Francisco feels like a god. 'Nothing can stop us.' La Signora watches the shadows. She sees the Nine of Cups reversed in the embers.",
+                              "symbolism": "The Gluttony. The False Peak.",
+                              "beat_goal": "Resolution. Setting up the fall.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Arrogance",
+                              "scene_tone": "Ominous Celebration",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Crypt Entrance",
+                              "location": "Campfire",
+                              "narrative_function": "The Pivot to Ch 18.",
+                              "sudowrite_character_moments": [
+                                "Francisco's loud voice.",
+                                "The spilled wine.",
+                                "La Signora's crossed arms."
+                              ]
                             }
                           ]
                         },
@@ -20426,65 +20978,103 @@
                           "hero_journey_beat": "Build-up (set-up)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to build-up (set-up).",
                           "save_the_cat_beat": "Build-up (set-up)",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Build-up (set-up)",
+                          "save_the_cat_beat_goal": "Demonstrate extreme 'Focus' (Ace of Swords) as Francisco's obsession with the Keystone alienates his team.",
+                          "plot": "Bad Guys Close In (Internal): The victory of EA-097 turns sour. Francisco locks himself in his study to design the 'Extraction Spell.' This is the Ace of Swords\u2014pure, cutting intellect. He stops eating. He ignores the Refugee Mother's plea for help with food supplies. He snaps at La Signora. 'Focus' becomes 'Obsession.' He solves the magical problem, but the social cost is high. The Order feels abandoned by their leader.",
                           "character_arcs": {
-                            "Francisco": "Becoming dangerously obsessed with his discovery, losing balance in his life and relationships.",
-                            "Obsessive_Focus": "Francisco's single-minded pursuit of knowledge begins to isolate him from others.",
-                            "Neglected_Relationships": "His friends and allies feel abandoned as Francisco becomes consumed by his research.",
-                            "Knowledge_Hunger": "The breakthrough creates an insatiable desire for deeper understanding that threatens to overwhelm Francisco."
+                            "Francisco": "The Ace. Sharp, cold, singular. He is losing his humanity.",
+                            "La_Signora": "The Voice of Reason. Ignored.",
+                            "Refugee_Mother": "Collateral damage of his neglect."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's obsession shows how the pursuit of knowledge can become its own form of corruption.",
-                            "power_corruption": "Demonstrates how even positive discoveries can lead to destructive behavior patterns.",
-                            "relationship_damage": "Shows how Francisco's growing power continues to isolate him from those he cares about."
+                            "magical_cost": "Shows that high-level magic requires dangerous mental states.",
+                            "team_friction": "The honeymoon period (EA-092) is over."
                           },
                           "location_details": {
-                            "obsession_laboratory": "Francisco's research space becomes increasingly chaotic and isolated from the outside world.",
-                            "neglected_community": "The community Francisco has built begins to suffer from his absence and inattention."
+                            "franciscos_study": "Locked. Dark. Covered in equations.",
+                            "the_mess_hall": "Where the others gather, worried."
                           },
                           "series_connections": {
-                            "obsession_theme": "Francisco's tendency toward obsession will be a recurring challenge throughout the series.",
-                            "balance_struggle": "His difficulty maintaining balance will be crucial for the choices he faces in later books."
+                            "the_extraction_spell": "Used here, but has a flaw that bites them later."
                           },
-                          "summary": "Francisco's breakthrough discovery becomes an obsession that threatens to consume him. His intense focus on understanding the deeper mysteries of temporal manipulation creates new problems as he neglects his relationships and responsibilities. Inner doubts and external distractions threaten to derail his focus as the stakes continue to rise.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Days pass. Francisco is a ghost. The Ace of Swords demands total clarify. He achieves 'Deep Work,' but it is toxic. He figures out how to bypass the Keystone's ward. La Signora breaks down his door. 'We are starving,' she says (metaphorically and literally). He looks at her with cold eyes. 'I am saving the world. Eat less.' It is a shocking moment of cruelty born of 'Focus.' He has the spell, but he may have lost the people.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Obsession"
+                          ],
+                          "scene_tone": "Cold/Clinical",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's breakthrough discovery becomes an obsession that threatens to consume him",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Shut In",
+                              "setup": "Francisco slams the door. 'Disturb me and we fail.' He begins the calculations. The Ace of Swords\u2014cutting away the noise. The noise is his friends.",
+                              "symbolism": "The Locked Door. The Knife.",
+                              "beat_goal": "The Withdrawal. Entering the deep state.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Detachment",
+                              "scene_tone": "Claustrophobic",
+                              "timeline_date": "Day 1",
+                              "timeline_variant": "Study",
+                              "location": "Quarters",
+                              "narrative_function": "The Shift (Negative).",
+                              "learning_objective_integration": "Reflects 'Deep Work'\u2014but the dark side."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "His intense focus on understanding the deeper mysteries of temporal manipulation creates new problems as he neglects his relationships and responsibilities",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Interruption",
+                              "setup": "A novice knocks. 'Master, the scouts...' Francisco blasts the door with a silencing ward. He doesn't even answer. He is tracing a complex rune. A mistake means death.",
+                              "symbolism": "The Silence.",
+                              "beat_goal": "The Rejection. Choosing work over people.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Annoyance",
+                              "scene_tone": "Hostile",
+                              "timeline_date": "Day 2",
+                              "timeline_variant": "Study",
+                              "location": "Quarters",
+                              "narrative_function": "Escalation.",
+                              "sudowrite_visual_details": [
+                                "The dark circles under his eyes.",
+                                "The ink stains on his fingers.",
+                                "The uneaten tray of food."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "Inner doubts and external distractions threaten to derail his focus as the stakes continue to rise",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Breakdown",
+                              "setup": "La Signora enters (she has a key). She sees his state. 'This is not Focus, Francisco. This is madness.' He holds up the parchment. 'It is done.' He expects praise. She gives him pity. 'At what cost?'",
+                              "symbolism": "The Completed Equation.",
+                              "beat_goal": "The Confrontation. Reality check.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Confusion",
+                              "scene_tone": "Dramatic",
+                              "timeline_date": "Day 3",
+                              "timeline_variant": "Study",
+                              "location": "Quarters",
+                              "narrative_function": "The Climax (Interpersonal).",
+                              "learning_objective_integration": "Reflects 'The One Thing'\u2014ignoring everything else."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Cold Truth",
+                              "setup": "He emerges. He gives the spell to the Scribe. 'Prepare the ritual.' He walks past the others without a word. He is a weapon now (Ace of Swords). The team follows, but the warmth of EA-092 is gone.",
+                              "symbolism": "The Machine.",
+                              "beat_goal": "Resolution. The tool is ready.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Numbness",
+                              "scene_tone": "Chilling",
+                              "timeline_date": "Evening",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Hallway",
+                              "narrative_function": "The Setup for Finale.",
+                              "sudowrite_character_moments": [
+                                "The stiff set of his shoulders.",
+                                "The averted eyes of the novices.",
+                                "The wind blowing cold."
+                              ]
                             }
                           ]
                         },
@@ -20571,65 +21161,103 @@
                           "hero_journey_beat": "The Road of Trials",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the road of trials.",
                           "save_the_cat_beat": "The Road of Trials",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Road of Trials",
+                          "save_the_cat_beat_goal": "Show 'Ambition' (Eight of Disks) through the relentless, detailed preparation for the final heist.",
+                          "plot": "All is Lost (Setup): Before the big crash, there is the grind. The Eight of Disks is the card of apprenticeship and detail. The Order prepares for the Keystone extraction based on Francisco's spell (EA-098). It involves 'Ambition'\u2014not just wanting the prize, but doing the hard work to get it. They forge gear. They memorize routes. They practice the extraction. Francisco drives them. His ambition lifts them up, but also wears them down. They are ready, but exhausted.",
                           "character_arcs": {
-                            "Francisco": "Forced to examine whether his devotion is to abstract knowledge or to concrete human welfare.",
-                            "Loyalty_Tests": "Situations that force Francisco to choose between his research and his responsibilities to others.",
-                            "Purpose_Clarification": "Francisco must decide what he is truly devoted to - knowledge, power, or service to others.",
-                            "Character_Revelation": "The trials reveal aspects of Francisco's character that he hasn't acknowledged."
+                            "Francisco": "The Taskmaster. Ensuring perfection.",
+                            "The_Order": "Finding purpose in the routine.",
+                            "La_Signora": "See's the danger of burnout."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's choices reveal his deepest values and priorities.",
-                            "moral_development": "The trials force Francisco to mature in his understanding of responsibility.",
-                            "loyalty_theme": "Establishes Francisco's growing commitment to serving others rather than just pursuing knowledge."
+                            "logistics": "Showing that magic requires physical components.",
+                            "pacing": "The calm before the storm."
                           },
                           "location_details": {
-                            "trial_grounds": "Spaces where Francisco's devotion and loyalty are tested through concrete challenges.",
-                            "choice_chambers": "Moments where Francisco must make clear decisions about his priorities."
+                            "the_armory": "Sparks flying, metal ringing.",
+                            "the_training_ground": "Muddy, trampled."
                           },
                           "series_connections": {
-                            "devotion_theme": "Francisco's growing devotion to service will be crucial for his ultimate sacrifice in Book 9.",
-                            "priority_testing": "His ability to choose correctly will be essential for the moral challenges ahead."
+                            "the_crafted_gear": "Items made here are used in Book 4."
                           },
-                          "summary": "Francisco's obsession is tested when he must choose between his research and his devotion to protecting those who depend on him. Each challenge forces him to examine his true priorities and reveals both hidden strengths and weaknesses in his character. The trials test his loyalty to his purpose versus his loyalty to people.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The Sanctuary becomes a factory. The Eight of Disks energy\u2014hammering, crafting, repeating. Francisco inspects every detail. 'Ambition is not a dream,' he tells them. 'It is a discipline.' He checks the enchanting of the containment box. He corrects a novice's pronunciation. He is relentless. The mood is serious, professional. They are no longer refugees; they are an army. But they are tired. They are ready to launch the mission to the Crypt (EA-097 location) to finish the job.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Determination"
+                          ],
+                          "scene_tone": "Gritty/Industrial",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's obsession is tested when he must choose between his research and his devotion to protecting those who depend on him",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Workshop",
+                              "setup": "The Armory. Heat. Noise. The Twin Scholars are enchanting arrows. Francisco inspects them. He rejects one. 'Do it again.' The standard is perfection.",
+                              "symbolism": "The Hammer and Anvil.",
+                              "beat_goal": "The Standard. establishing stakes.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Excellence",
+                              "scene_tone": "Hard",
+                              "timeline_date": "Day",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Armory",
+                              "narrative_function": "The Process.",
+                              "learning_objective_integration": "Reflects 'Drive'\u2014mastery."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "Each challenge forces him to examine his true priorities and reveals both hidden strengths and weaknesses in his character",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Drill",
+                              "setup": "Training ground. They practice the formation for the Crypt. Again. And again. 'Ambition demands sweat.' They are wet, muddy, angry. But they get it right.",
+                              "symbolism": "The Mud.",
+                              "beat_goal": "The Competence. Forging the team.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Exhaustion",
+                              "scene_tone": "Gritty",
+                              "timeline_date": "Afternoon",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Courtyard",
+                              "narrative_function": "The Hardening.",
+                              "sudowrite_visual_details": [
+                                "The steam rising from bodies.",
+                                "The shout of the commander.",
+                                "The synchronized footsteps."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "The trials test his loyalty to his purpose versus his loyalty to people",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Speech",
+                              "setup": "Night before the mission. Francisco gathers them. He uses 'Ambition' to inspire. 'We are not just surviving anymore. We are taking back tomorrow.' He connects their hard work (8 of Disks) to the glorious potential.",
+                              "symbolism": "The Banner.",
+                              "beat_goal": "The Inspiration. Re-aligning purpose.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Hope",
+                              "scene_tone": "Rallying",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Sanctuary",
+                              "location": "Mess Hall",
+                              "narrative_function": "The Launchpad.",
+                              "learning_objective_integration": "Reflects 'Start with Why'\u2014vision."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Departure",
+                              "setup": "Dawn. They march out. They look like pros. Francisco watches them. He is tired but proud. His 'Ambition' has built this. Now they just have to survive the trap he doesn't know about yet.",
+                              "symbolism": "The Rising Sun.",
+                              "beat_goal": "Resolution. Moving to the Climax.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pride/Anxiety",
+                              "scene_tone": "Epic",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Gate",
+                              "location": "Sanctuary Exit",
+                              "narrative_function": "The End of Part 2 (Book 3).",
+                              "sudowrite_character_moments": [
+                                "The clanking of gear.",
+                                "The last look back at home.",
+                                "Francisco setting his jaw."
+                              ]
                             }
                           ]
                         }
