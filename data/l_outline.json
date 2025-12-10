@@ -17704,65 +17704,102 @@
                           "hero_journey_beat": "The Ordinary World",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to intro.",
                           "save_the_cat_beat": "Opening Image",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Intro",
+                          "save_the_cat_beat_goal": "Establish the 'Ordinary World' of Book 3 with Francisco's new 'Radiance' (Ace of Wands) attracting both awe and danger.",
+                          "plot": "Book 3 Opener: The Magus returns. Francisco is back in Bologna. He has integrated the lessons of Books 1 & 2. He radiates power (Ace of Wands). He is teaching at the University, but his lectures are... different. He is starting a new fire. Novella watches him, seeing the 'Shining One' overlaying the man.",
                           "character_arcs": {
-                            "Francisco": "Transformed from temporal student to emerging magus. His confidence and power are evident, but so is his growing disconnection from ordinary human concerns.",
-                            "Novella": "Witnesses Francisco's transformation with both awe and concern. She begins to feel the distance growing between them as his power increases.",
-                            "Gherardo": "Francisco's growing radiance intensifies his brother's jealousy and sense of inadequacy, setting up his eventual betrayal.",
-                            "Cardinal_Colonna": "Recognizes Francisco's growing power and begins maneuvering to control or co-opt him for the Church's temporal agenda."
+                            "Francisco": "The Teacher. He is confident, charismatic, but slightly detached. He risks becoming 'The Guru'.",
+                            "Novella": "The Grounding Wire. She keeps him connected to reality.",
+                            "Cardinal_Colonna": "The Observer. He sees the potential weapon in Francisco."
                           },
                           "story_gaps_addressed": {
-                            "trionfi_system": "Francisco's cards now respond to his emotional state, creating visible manifestations of power that others can see and feel.",
-                            "character_motivation": "Francisco's growing confidence masks underlying insecurity about whether he deserves his power and abilities.",
-                            "power_corruption": "First signs that Francisco's enhanced abilities are beginning to isolate him from normal human relationships."
+                            "magical_progression": "Shows how much stronger he is since Book 1.",
+                            "social_status": "He is no longer a student; he is a force of nature."
                           },
                           "location_details": {
-                            "bologna_transformed": "The city seems smaller and more mundane after Francisco's timeline adventures. His presence causes subtle temporal ripples that affect the local environment.",
-                            "university_return": "Francisco's old classmates and professors react with mixture of awe and fear to his obvious transformation and power."
+                            "the_lecture_hall": "Dusty, wood-paneled, filled with mesmerized students.",
+                            "the_piazza_at_dusk": "Where the shadows lengthen and the Cardinal watches."
                           },
                           "series_connections": {
-                            "book_9_parallel": "Francisco's current radiance and growing influence will be challenged by his ultimate choice to give up individual power for collective benefit.",
-                            "power_evolution": "This marks the beginning of Francisco's exploration of power's corrupting influence, central to Books 3-5."
+                            "the_radiance": "This 'Ace of Wands' energy eventually attracts the antagonist of Book 3.",
+                            "the_cult_of_personality": "The followers he gains here become a problem later."
                           },
-                          "summary": "Francisco returns to Bologna transformed by his timeline adventures, radiating newfound power and confidence. His enhanced abilities with the Trionfi cards create a burst of creative energy that illuminates hidden talents in those around him, but also attracts unwanted attention from both admirers and enemies. His growing influence sparks the quest for true mastery over temporal forces.",
-                          "pov": "3rd Person Limited",
+                          "summary": "It has been six months since the Rescue. Francisco is back at the University. He is teaching 'Temporal Theory'. But it's not theory anymore; it's practice. He speaks with 'Radiance'. The Ace of Wands energy fills the room. Students hang on his every word. He touches a chalkboard, and the chalk writes itself (a small slip of control). He is high on his own supply. Novella warns him: 'You are glowing too bright.' He laughs. But in the shadows, Colonna sees the glow and smiles. The weapon is ready.",
+                          "pov": "3rd Person Limited (Francisco/Novella)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": "Charisma",
+                          "scene_tone": "Electric",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco returns to Bologna transformed by his timeline adventures, radiating newfound power and confidence",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Lecture",
+                              "setup": "Francisco stands at the podium. He isn't reading notes. He is channeling. He speaks of 'Time as a River'. He gestures, and the dust motes in the air freeze. The students gasp. He smiles. It feels good to be the Master.",
+                              "symbolism": "The Ace of Wands (The Torch). The Stage. The mesmerizing fire.",
+                              "beat_goal": "The Introduction. Establishing the new status quo.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Confidence",
+                              "scene_tone": "Inspiring",
+                              "timeline_date": "Book 3 Start",
+                              "timeline_variant": "Bologna University",
+                              "location": "Lecture Hall",
+                              "narrative_function": "The Hook.",
+                              "learning_objective_integration": "Reflects 'Presence'\u2014commanding the room."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "His enhanced abilities with the Trionfi cards create a burst of creative energy that illuminates hidden talents in those around him, but also attracts unwanted attention from both admirers and enemies",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Aura",
+                              "setup": "Novella waits for him after class. She sees the students touching the hem of his robe (metaphorically). She pulls him into an alcove. 'You're doing it again.' 'Doing what?' 'Shining.' She holds up a mirror. His eyes are literally glowing gold for a second before fading. 'You are a beacon, Francisco. Beizons attract storms.'",
+                              "symbolism": "The Halo. The Mirror (again). The Warning.",
+                              "beat_goal": "The Complication. Power has side effects.",
+                              "pov": "3rd Person Limited (Novella)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Concern",
+                              "scene_tone": "Intimate tension",
+                              "timeline_date": "Post-Lecture",
+                              "timeline_variant": "University Hallway",
+                              "location": "The Alcove",
+                              "narrative_function": "The check on power.",
+                              "sudowrite_visual_details": [
+                                "The golden flecks in his iris.",
+                                "The static electricity making Novella's hair rise.",
+                                "The dark stone of the alcove contrasting with his light."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "His growing influence sparks the quest for true mastery over temporal forces",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Spark",
+                              "setup": "Walking home. A beggar asks for alms. Francisco doesn't give a coin; he touches the beggar's cup. The cheap tin turns to silver. Pure transmutation. The beggar screams in fear/joy. Francisco walks on, feeling benevolent. He doesn't see the crowd gathering behind him. He just performed a miracle on a public street.",
+                              "symbolism": "The Midas Touch. Unchecked benevolence. The Ace manifesting.",
+                              "beat_goal": "The Escalation. A public display of power.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Hubris",
+                              "scene_tone": "Wonder/Danger",
+                              "timeline_date": "Dusk",
+                              "timeline_variant": "Bologna Streets",
+                              "location": "The Piazza",
+                              "narrative_function": "The Inciting Incident setup.",
+                              "learning_objective_integration": "Reflects 'The Gifts of Imperfection' (inverted)\u2014seeking perfection/godhood."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Shadow",
+                              "setup": "Cardinal Colonna is watching from a carriage. He saw the silver cup. He fingers his rosary. 'It is time,' he tells his driver. 'Bring him to the Palace. Tonight.' The Ace of Wands has lit a signal fire, and the wolves are coming.",
+                              "symbolism": "The Spider in the Web. The Extinguisher.",
+                              "beat_goal": "The Threat. The antagonist moves.",
+                              "pov": "3rd Person Limited (Colonna)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Predatory anticipation",
+                              "scene_tone": "Ominous",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Bologna Streets",
+                              "location": "The Carriage",
+                              "narrative_function": "The Cliffhanger to Ch 2.",
+                              "sudowrite_character_moments": [
+                                "The velvet of the carriage interior.",
+                                "The Cardinal's ring tapping on the window.",
+                                "The silver cup glinting in the street below."
+                              ]
                             }
                           ]
                         },
@@ -17849,65 +17886,104 @@
                           "hero_journey_beat": "The Call to Adventure",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to inciting incident.",
                           "save_the_cat_beat": "Inciting Incident",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Inciting Incident",
+                          "save_the_cat_beat_goal": "Face the 'Disruption' (Two of Wands) of the Vatican's ultimatum: serve the Church or be destroyed.",
+                          "plot": "Inciting Incident: The carriage arrives. Francisco is taken to the Colonna Palace. The Cardinal plays the 'Two of Wands'\u2014holding the world in one hand and a wand in the other. He offers Francisco dominion over history, but under Church rule. It is a disruption of Francisco's independent path. He must choose his future.",
                           "character_arcs": {
-                            "Francisco": "Forced to confront the political implications of his power. His academic naivety clashes with the harsh realities of institutional control.",
-                            "Cardinal_Colonna": "Reveals himself as more than just a patron - he's a key player in the Church's secret temporal operations.",
-                            "La_Signora": "Begins to emerge from the shadows, warning Francisco about the true nature of the Vatican's temporal agenda.",
-                            "Vatican_Agents": "Introduction of the Papal Temporal Court, religious officials who monitor and control timeline manipulation."
+                            "Francisco": "The Negotiator. He realizes his academic bubble is popped. He is in the big leagues now.",
+                            "Cardinal_Colonna": "The Gatekeeper. He holds the keys to legal temporal manipulation.",
+                            "Novella": "The Voice of Caution. She urges him not to sign."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Introduction of the Vatican's approach to timeline control - they view it as divinely ordained authority over history.",
-                            "character_motivation": "Francisco must choose between safety through submission or dangerous independence.",
-                            "stakes_clarification": "The Church's interest shows that Francisco's actions have cosmic implications beyond his personal journey."
+                            "political_landscape": "Introduces the Vatican's Temporal Authority.",
+                            "stakes_clarification": "It's not just about adventure anymore; it's about control."
                           },
                           "location_details": {
-                            "vatican_temporal_court": "Hidden chambers beneath St. Peter's Basilica where the Church conducts its temporal operations.",
-                            "colonna_palace": "The Cardinal's residence becomes a pressure cooker of political maneuvering and veiled threats."
+                            "colonna_palace_study": "Opulent, filled with stolen artifacts from time.",
+                            "the_map_room": "A giant map, not of space, but of history."
                           },
                           "series_connections": {
-                            "vatican_authority": "Establishes the religious opposition that will play a crucial role in the series' exploration of divine vs. human authority.",
-                            "institutional_power": "Sets up the theme of individual power confronting institutional control that will culminate in Book 9."
+                            "the_faustian_bargain": "This offer echoes throughout the series.",
+                            "the_temporal_compact": "The laws mentioned here become plot points in Book 5."
                           },
-                          "summary": "Francisco's newfound stability is shattered when Cardinal Colonna presents him with an ultimatum: join the Vatican's Temporal Authority as their chief investigator, or face charges of temporal heresy. This sudden challenge disrupts Francisco's plans and forces him to leap into unknown terrain of ecclesiastical politics and power. The familiar world of academic life gives way to the dangerous realm of Church conspiracy.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco is brought to Colonna. The Cardinal is polite but lethal. He shows Francisco a map of history with 'sanctioned' and 'heretical' timelines marked. He places the Two of Wands on the table. 'You have a choice, Magus. Stand on the parapet and look out at the world you could rule with us... or stay in your little room and burn.' It is the classic Disruption. Francisco's status quo is gone. He claims he needs time to think. Colonna gives him 24 hours.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Dread/Ambition"
+                          ],
+                          "scene_tone": "High Stakes",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's newfound stability is shattered when Cardinal Colonna presents him with an ultimatum: join the Vatican's Temporal Authority as their chief investigator, or face charges of temporal heresy",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Invitation",
+                              "setup": "The carriage ride. Silence. The Swiss Guard is armed with plasma pikes (anachronism). Francisco realizes this isn't a social call. He tries to use magic; dampeners in the carriage block him. He is powerless.",
+                              "symbolism": "The Cage. The blocking of the Ace (power).",
+                              "beat_goal": "The Reality Check. Establishing vulnerability.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Anxiety",
+                              "scene_tone": "Claustrophobic",
+                              "timeline_date": "Night + 1 hour",
+                              "timeline_variant": "The Carriage",
+                              "location": "Streets of Bologna",
+                              "narrative_function": "The Transport.",
+                              "learning_objective_integration": "Reflects 'The Innovator's DNA'\u2014questioning constraints."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "This sudden challenge disrupts Francisco's plans and forces him to leap into unknown terrain of ecclesiastical politics and power",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Offer",
+                              "setup": "Colonna's study. He pours wine. He talks about 'Order'. He reveals the Church's secret: they prune timelines to keep the 'Sacred Timeline' pure. He wants Francisco to be the Pruner. 'You have the talent. We have the mandate.' It is seductive. Order vs Chaos.",
+                              "symbolism": "The Apple. The High Mountain.",
+                              "beat_goal": "The Proposal. The villain makes sense.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Temptation",
+                              "scene_tone": "Seductive",
+                              "timeline_date": "Night + 2 hours",
+                              "timeline_variant": "Colonna Palace",
+                              "location": "The Cardinal's Study",
+                              "narrative_function": "The Temptation.",
+                              "sudowrite_character_moments": [
+                                "Colonna swirling the red wine.",
+                                "Francisco looking at the map of erased histories.",
+                                "The heat of the fireplace."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "The familiar world of academic life gives way to the dangerous realm of Church conspiracy",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Planning",
+                              "setup": "Francisco is released. He returns to Novella. They pace the floor (Two of Wands pacing). 'If I say no, they kill me. If I say yes, they own me.' He looks at the wand in his hand. He needs a third option. He needs to Disrupt the game.",
+                              "symbolism": "The Crossroads. The Two Wands planted in the ground.",
+                              "beat_goal": "The Debate. Weighing options.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Desperation",
+                              "scene_tone": "Frenetic",
+                              "timeline_date": "Night + 4 hours",
+                              "timeline_variant": "Francisco's Apartment",
+                              "location": "Home",
+                              "narrative_function": "The Deliberation.",
+                              "learning_objective_integration": "Reflects 'Originals'\u2014challenging the status quo."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Choice",
+                              "setup": "Dawn. The 24 hours are ticking. Francisco decides. He won't join, and he won't run. He will *infiltrate*. He will accept the offer to destroy it from within. It is a dangerous path. He tells Novella: 'I'll take their wand. And I'll use it to burn their map.'",
+                              "symbolism": "The Trojan Horse. The decision made.",
+                              "beat_goal": "Resolution (of the scene). The plan is set.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Resolve",
+                              "scene_tone": "Grim",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "Francisco's Apartment",
+                              "location": "Home",
+                              "narrative_function": "The Decision.",
+                              "sudowrite_visual_details": [
+                                "The sun rising over the red rooftops.",
+                                "Francisco packing a bag.",
+                                "The grim set of his jaw."
+                              ]
                             }
                           ]
                         },
@@ -17994,64 +18070,102 @@
                           "hero_journey_beat": "The Ordinary World",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the ordinary world.",
                           "save_the_cat_beat": "Setup",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Ordinary World",
+                          "save_the_cat_beat_goal": "Undergo 'Introspection' (Eight of Cups): Francisco walks away from his safe life to prepare for his dangerous double-agent role.",
+                          "plot": "The Setup: Before he goes to Colonna, Francisco must 'clean house'. He realizes his current life\u2014the cups stacked neatly\u2014is emotional baggage he can't carry. The Eight of Cups moment: turning his back on fulfillment to seek a higher/harder truth. He visits his favorite spots in Bologna one last time.",
                           "character_arcs": {
-                            "Francisco": "Beginning to question his own motivations and the source of his growing power. Self-doubt emerges beneath his confidence.",
-                            "Inner_Voices": "Francisco begins to hear different aspects of his personality - the scholar, the hero, the power-seeker - as distinct voices.",
-                            "Dante": "Returns to serve as Francisco's guide through this period of self-examination, helping him understand the psychological aspects of power."
+                            "Francisco": "The Ascetic. He sheds his attachments.",
+                            "Dante": "The Spirit Guide. He appears in the shadows to validate the choice.",
+                            "Novella": "The Anchor being cut loose (temporarily)."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Francisco's introspection reveals the complexity of his desires - he wants to help others but also craves recognition and influence.",
-                            "trionfi_system": "The cards begin to reflect Francisco's internal conflicts, showing him different potential futures based on his choices.",
-                            "psychological_development": "Establishes Francisco's growing self-awareness as crucial for handling greater power responsibly."
+                            "internal_motivation": "Why he risks everything (Sense of Destiny).",
+                            "emotional_preparation": "Steeling himself for the betrayal he must enact."
                           },
                           "location_details": {
-                            "inner_landscape": "Francisco's meditation space becomes a realm where his thoughts and fears take on quasi-physical form.",
-                            "memory_palace": "He constructs mental spaces to organize his experiences and examine his motivations systematically."
+                            "the_two_towers": "Looking out over the city he is leaving.",
+                            "the_university_gates": "The symbol of his old life."
                           },
                           "series_connections": {
-                            "self_knowledge": "Francisco's growing self-awareness will be essential for the moral choices he faces in Books 4-6.",
-                            "inner_work": "The psychological dimension of his journey prepares for the consciousness expansion required in Books 7-9."
+                            "the_hermits_journey": "This walk foreshadows his eventual exile.",
+                            "emotional_detachment": "A necessary skill for the Magus."
                           },
-                          "summary": "Faced with the Vatican's ultimatum, Francisco turns inward, probing the doubts and patterns beneath his newfound confidence. He examines his motivations and fears, trying to understand whether his desire for power stems from noble purpose or personal ego. This introspection lays the groundwork for his journey toward true mastery of both temporal forces and his own character.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Night falls again. Francisco walks the city. He visits the tavern where he laughed with friends. He visits the lecture hall. He stacks these memories (Cups) and then turns away. It is an act of 'Introspection'. He realizes he was seeking validation in these things. Now he seeks Truth. He meets 'Dante' (his subconscious projection) by the Towers. Dante nods. 'The way up is the way down.' Francisco is ready to descend into the Vatican's underworld.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": "Melancholy resolve",
+                          "scene_tone": "Quiet/Nocturnal",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Faced with the Vatican's ultimatum, Francisco turns inward, probing the doubts and patterns beneath his newfound confidence",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Walk",
+                              "setup": "Francisco walks through the student quarter. He sees the life he could have had. Marriage, tenure, comfort. It is beautiful. But it feels 'flat'. The Eight of Cups isn't about leaving bad things; it's about leaving *good* things because they aren't *enough*.",
+                              "symbolism": "The stacked cups left behind. The moon overhead.",
+                              "beat_goal": "The Farewell. Letting go of the 'Normal'.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Bittersweet",
+                              "scene_tone": "Nostalgic",
+                              "timeline_date": "Night (Pre-Departure)",
+                              "timeline_variant": "Bologna Streets",
+                              "location": "Student Quarter",
+                              "narrative_function": "The Emotional Beat.",
+                              "learning_objective_integration": "Reflects 'The Untethered Soul'\u2014letting go."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He examines his motivations and fears, trying to understand whether his desire for power stems from noble purpose or personal ego",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Voice",
+                              "setup": "He stops at the Two Towers. The shadows lengthen. A figure steps out. It's Dante (or a homeless man who looks like him). 'You are looking for the path,' the figure says. 'It is not on the map.' Francisco realizes his guide is his own intuition.",
+                              "symbolism": "The Hermit (Book 9 foreshadowing). The Inner Voice.",
+                              "beat_goal": "The Confirmation. Spiritual alignment.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Clarity",
+                              "scene_tone": "Mystical",
+                              "timeline_date": "Midnight",
+                              "timeline_variant": "Two Towers",
+                              "location": "Piazza di Porta Ravegnana",
+                              "narrative_function": "The Insight.",
+                              "sudowrite_visual_details": [
+                                "The leaning tower against the starfield.",
+                                "The ragged cloak of the stranger.",
+                                "The sound of distant bells."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This introspection lays the groundwork for his journey toward true mastery of both temporal forces and his own character",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Insight",
+                              "setup": "He sits on a bench. He reviews his motives. Why infiltrate? Revenge? No. Curiosity? Partly. Duty? Yes. He realizes he cannot let the timeline be a cage. He fights for Free Will. This purpose gives him the strength to walk away from safety.",
+                              "symbolism": "The Staff. The Cloak. Taking up the burden.",
+                              "beat_goal": "The Motivation. Solidifying the 'Why'.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Determination",
+                              "scene_tone": "Internal",
+                              "timeline_date": "0100 Hours",
+                              "timeline_variant": "The Bench",
+                              "location": "City Park",
+                              "narrative_function": "The Steel.",
+                              "learning_objective_integration": "Reflects 'Emotional Intelligence'\u2014self-awareness."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Decision",
+                              "setup": "He stands up. He turns his back on the University. He faces the direction of the Colonna Palace. He doesn't look back. The Eight of Cups is complete. He has left the emotional shore and is heading into the dark water.",
+                              "symbolism": "Crossing the Line. The Point of No Return.",
+                              "beat_goal": "The Action. Moving toward the danger.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Focus",
+                              "scene_tone": "Final",
+                              "timeline_date": "0200 Hours",
+                              "timeline_variant": "The Road",
+                              "location": "Via Zamboni",
+                              "narrative_function": "The Bridge to Ch 4.",
+                              "sudowrite_character_moments": [
+                                "The crunch of his boots on the cobblestones.",
+                                "The cold night air filling his lungs.",
+                                "The silence of the sleeping city."
+                              ]
                             }
                           ]
                         }
@@ -18161,65 +18275,104 @@
                           "hero_journey_beat": "Refusal of the Call",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to immediate reaction.",
                           "save_the_cat_beat": "Catalyst",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Immediate Reaction",
+                          "save_the_cat_beat_goal": "Experience the 'Trauma' (Five of Cups) of Gherardo's jealousy, acting as the catalyst that severs Francisco's last tie to home.",
+                          "plot": "The Catalyst: Francisco returns home to pack. Gherardo is there. He found the 'Seed' (Ace of Disks fragment) Francisco hid. He senses the power. He attacks Francisco, not with magic, but with words and then a knife. The betrayal. The Five of Cups: spilt wine/blood. Francisco disarms him but is wounded deep in his soul.",
                           "character_arcs": {
-                            "Francisco": "Confronts the personal cost of his transformation - the loss of his brother's love and trust.",
-                            "Gherardo": "His jealousy finally erupts into violence, crossing a line that will define their relationship for the rest of the series.",
-                            "Family_Dynamics": "The Petrarch family is torn apart by Francisco's growing power and Gherardo's inability to accept his brother's success.",
-                            "Healing_Process": "Francisco must learn to heal not just physical wounds but emotional and relational damage."
+                            "Francisco": "The Exile. He realizes he has no family left. The 'Trauma' hardens him.",
+                            "Gherardo": "The Cain figure. Jealousy consumes him. He becomes the recurring antagonist.",
+                            "The_Petrarch_Family": "Shattered by this event."
                           },
                           "story_gaps_addressed": {
-                            "character_motivation": "Gherardo's attack reveals the depth of his jealousy and sets up his eventual betrayal in the series.",
-                            "family_dynamics": "The brothers' conflict represents the broader theme of how power affects personal relationships.",
-                            "emotional_complexity": "Francisco's pain over losing his brother's love adds depth to his character development."
+                            "family_fallout": "Why Francisco never goes home again.",
+                            "origin_of_villainy": "Gherardo's descent starts here."
                           },
                           "location_details": {
-                            "family_home_battlefield": "The Petrarch house becomes a site of destruction and emotional devastation.",
-                            "healing_chambers": "Spaces where Francisco must recover from both physical and emotional wounds."
+                            "the_petrarch_library": "Where the fight happens. Books (knowledge) overturned.",
+                            "the_rainy_street": "Where Francisco flees to."
                           },
                           "series_connections": {
-                            "gherardo_betrayal": "This attack is the first step in Gherardo's journey toward becoming Francisco's enemy.",
-                            "relationship_cost": "Establishes the theme that power comes at the cost of personal relationships, crucial for Francisco's ultimate choice."
+                            "the_brother_war": "This fights echoes until the finale of the series.",
+                            "the_scar": "Francisco keeps the physical scar from this night."
                           },
-                          "summary": "Francisco's introspection is violently interrupted when Gherardo, in a fit of jealous rage, attempts to destroy Francisco's Trionfi cards. The attack fails but leaves both brothers wounded - Francisco physically, Gherardo emotionally. This sudden trauma forces Francisco to confront the fact that his growing power has cost him his closest family relationship, surfacing old scars of brotherly competition and parental expectations.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Francisco enters his family home. Gherardo is waiting in the dark. He holds the Ace fragment. 'You kept this for yourself.' The accusation. The Rage. Gherardo lashes out. A physical brawl. A vase is smashed (Five of Cups imagery). Gherardo tries to stab him. Francisco uses magic to stop him\u2014forcefully. Gherardo looks at him with pure hate. 'Monster.' Francisco realizes the bridge is burned. He looks at the three spilt cups (relationship destroyed) but takes the two standing (his mission and Novella). He leaves the house forever.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by scene context",
-                          "scene_tone": "Reflective and purposeful",
+                          "core_emotion": [
+                            "Heartbreak"
+                          ],
+                          "scene_tone": "Violent/Tragic",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Francisco's introspection is violently interrupted when Gherardo, in a fit of jealous rage, attempts to destroy Francisco's Trionfi cards",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Confrontation",
+                              "setup": "The library. Gherardo is drunk on wine and jealousy. He has been watching Francisco 'shine' (EA-081) and feeling his own shadow. He confronts Francisco. 'You think you are better than us.'",
+                              "symbolism": "Cain and Abel. The Shadow Self.",
+                              "beat_goal": "The Conflict. The verbal attack.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Shock",
+                              "scene_tone": "Tense",
+                              "timeline_date": "0300 Hours",
+                              "timeline_variant": "Petrarch Home",
+                              "location": "Library",
+                              "narrative_function": "The Escalation.",
+                              "learning_objective_integration": "Reflects 'The Body Keeps the Score'\u2014trauma enacted."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "The attack fails but leaves both brothers wounded - Francisco physically, Gherardo emotionally",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Spilled Cup",
+                              "setup": "Gherardo throws the wine glass. It shatters. Red wine stains the rug (blood). He lunges. The physical fight. It is messy, ugly. Brothers fighting. Francisco refuses to use magic until Gherardo pulls a knife.",
+                              "symbolism": "The Five of Cups (3 spilled). The breaking of the bond.",
+                              "beat_goal": "The Violence. The physical attack.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Horror",
+                              "scene_tone": "Visceral",
+                              "timeline_date": "0310 Hours",
+                              "timeline_variant": "Petrarch Home",
+                              "location": "Library",
+                              "narrative_function": "The Breaking Point.",
+                              "sudowrite_visual_details": [
+                                "The smell of spilled wine.",
+                                "The glint of the letter opener.",
+                                "Gherardo's dilated pupils."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This sudden trauma forces Francisco to confront the fact that his growing power has cost him his closest family relationship, surfacing old scars of brotherly competition and parental expectations",
-                              "symbolism": "Symbolic elements to be developed",
-                              "beat_goal": "Advance the narrative and character development",
-                              "pov": "3rd Person Limited",
+                              "scene_title": "The Wound",
+                              "setup": "Francisco catches the blade with a kinetic shield, but it knicks his palm. He pushes Gherardo back with a blast of air. Gherardo hits the wall. Silence. Francisco looks at his bleeding hand. Gherardo looks at him with terror and hate. 'Demon.'",
+                              "symbolism": "The Mark. The Stigma. The separation.",
+                              "beat_goal": "The Climax (of the scene). The magic used against family.",
+                              "pov": "3rd Person Limited (Francisco)",
                               "tense": "Past Tense",
-                              "core_emotion": "Varies by scene context",
-                              "scene_tone": "Reflective and purposeful"
+                              "core_emotion": "Guilt",
+                              "scene_tone": "Tragic",
+                              "timeline_date": "0315 Hours",
+                              "timeline_variant": "Petrarch Home",
+                              "location": "Library",
+                              "narrative_function": "The Change.",
+                              "learning_objective_integration": "Reflects 'Rising Strong'\u2014the reckoning."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Departure",
+                              "setup": "Francisco grabs his bag. He steps over the broken glass. He looks back once. Gherardo is sobbing on the floor. Francisco walks out into the rain. He has lost his past. He is officially the Magus now. Solemnly, he heads to the Colonna Palace to begin his double life.",
+                              "symbolism": "The Exile. The Rain washing away the past.",
+                              "beat_goal": "Resolution. Transition to Colonna.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Grim acceptance",
+                              "scene_tone": "Noir",
+                              "timeline_date": "0330 Hours",
+                              "timeline_variant": "The Street",
+                              "location": "Outside the Home",
+                              "narrative_function": "The End of the Beginning.",
+                              "sudowrite_character_moments": [
+                                "The rain mixing with the blood on his hand.",
+                                "The sound of the door closing forever.",
+                                "Francisco pulling his hood up."
+                              ]
                             }
                           ]
                         },
