@@ -14461,59 +14461,103 @@
                           "hero_journey_beat": "Reward (Seizing the Sword)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to atonement with the father.",
                           "save_the_cat_beat": "All Is Lost",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Atonement with the Father",
+                          "save_the_cat_beat_goal": "The Ordeal (Atonement). The Hero faces death directly to save others.",
+                          "plot": "The Rearguard: Francisco embodies the Seven of Wands\u2014one standing against many\u2014to buy time for the alliance to escape.",
                           "character_arcs": {
-                            "Francisco": "Emerging as a true leader who can inspire others while making difficult decisions under pressure.",
-                            "Aggressive_Faction": "Some allies want to exploit their victory to launch immediate attacks on Dagon's strongholds.",
-                            "Cautious_Faction": "Others prefer to consolidate their gains and build defenses before risking further conflict."
+                            "Francisco": "Fully embraces the 'Guardian' archetype. He is no longer fighting for victory, but for time.",
+                            "Dagon": "Deploys the 'Legion'\u2014a faceless swarm designed to overwhelm individual heroism.",
+                            "Novella": "Forced to leave Francisco behind, a reversal of her usual protective role."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how different strategic approaches to timeline warfare can have cascading effects across realities.",
-                            "character_motivation": "Francisco's growing ability to balance competing demands while maintaining his core vision.",
-                            "leadership_challenges": "Explores the difficulties of leading a coalition with diverse goals and methods."
+                            "combat_mechanics": "Demonstrates how a single powerful reality-bender can hold a choke point against a superior force.",
+                            "cost_of_war": "Casualties are unavoidable; the goal is to minimize them, not eliminate them.",
+                            "emotional_stakes": "The separation of the protagonist from his support network."
                           },
                           "location_details": {
-                            "leadership_council": "A meeting space where Francisco must navigate the competing demands of his diverse coalition.",
-                            "strategic_visualization": "Tools that allow Francisco to show his allies the potential consequences of different approaches."
+                            "the_evacuation_gate": "A narrow, unstable portal requiring constant focus to keep open.",
+                            "the_bottleneck": "A physical corridor leading to the gate, rigged with the 'Playful' traps from the previous chapter."
                           },
                           "series_connections": {
-                            "leadership_mastery": "Francisco's growing leadership skills will be essential for uniting all factions in the series climax.",
-                            "strategic_vision": "His ability to see the bigger picture will be crucial for the complex decisions required in Books 7-9."
+                            "stand_alone_theme": "Foreshadows Francisco's ultimate solitary confrontation in the series finale.",
+                            "reputation_mechanic": "Tales of 'The Man at the Gate' will spread, rallying future allies."
                           },
-                          "summary": "Having rediscovered his joy and purpose, Francisco recommits himself to the cause with renewed dedication. He transforms his earlier despair into fierce devotion, rallying his allies around a shared vision of the future. His valor inspires others to make their own commitments to the greater good.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The 'Play' is over. Dagon sends the Legion\u2014thousands of synchronized combat-simulacra. The Sanctuary cannot hold. They must evacuate through the unstable Gate. Panic threatens to turn the retreat into a rout. Francisco steps into the Bottleneck. He activates the traps set during the 'Games', turning the environment into a weapon. But it's not enough. He must hold the line personally. Wielding the Seven of Wands (Valor), he becomes a living wall of force. He holds for 40 minutes. 4,000 lives saved. He collapses the tunnel on the Legion and barely escapes, broken but victorious in his defiance.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Growing strength and resolve",
-                          "scene_tone": "Intense and action-packed",
+                          "core_emotion": "Desperate courage",
+                          "scene_tone": "Frantic and heroic",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Confronted with the peak conflict of his leadership challenges, Francisco harnesses collective strength to assert his strategic vision.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Breach",
+                              "setup": "The alarms scream. Not a drill. The Legion arrives\u2014faceless, grey, endless. They don't use tactics; they use mass. They swarm the outer shields. The 'Gamification' scoreboards shatter. This is the reality of war. The Quartermaster looks to Francisco: 'We have 20 minutes before they breach the core.'",
+                              "symbolism": "The Flood. The Ant Hill. The loss of individuality in the face of the swarm.",
+                              "beat_goal": "The Inciting Incident of the Chapter. Shift from 'Game' to 'Survival'.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Adrenaline",
+                              "scene_tone": "Chaos",
+                              "timeline_date": "Post-Book 1 + 20 weeks",
+                              "timeline_variant": "Sanctuary Perimeter",
+                              "location": "The Outer Wall",
+                              "narrative_function": "The Threat.",
+                              "sudowrite_visual_details": [
+                                "The unified stomping of ten thousand boots.",
+                                "The shield buckling like wet glass.",
+                                "Francisco's hands shaking, then steadying."
+                              ]
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He faces criticism from some allies who want to pursue more aggressive tactics against Dagon, while others prefer a more cautious approach.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Bottleneck",
+                              "setup": "The order is given: Evacuate. The crowd surges toward the Gate. It's too slow. If they panic, they trample each other. Francisco sees the Legion pouring into the main hall. He looks at Novella. 'Get them through. I'll buy you time.' She tries to argue. He pushes her toward the gate. 'Go!' It is the first time he has physically pushed her away.",
+                              "symbolism": "The Shepherd protecting the flock. The Separation.",
+                              "beat_goal": "The Choice. Accepting the suicide mission.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Selfless love",
+                              "scene_tone": "Heartbreaking urgency",
+                              "timeline_date": "Post-Book 1 + 20 weeks",
+                              "timeline_variant": "Sanctuary Hall",
+                              "location": "The Corridor",
+                              "narrative_function": "The Sacrifice.",
+                              "learning_objective_integration": "Demonstrates 'Critical Decision Making' under extreme pressure."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "Francisco must lead with both vision and conviction to maintain unity.",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "Seven of Wands",
+                              "setup": "Francisco stands alone in the corridor. The Legion charges. He triggers the traps\u2014gravity inversions, slip-planes (the 'Pranks' from yesterday now lethal). It buys seconds. Then they reach him. He fights. Not with finesse, but with raw refusal. He uses the Seven of Wands: 'I am still here.' Every blow he takes is a life saved behind him. He counts them. 3,000. 3,500. He is bleeding, burning out, but he doesn't move.",
+                              "symbolism": "The Seven of Wands card art\u2014one man on a hill fighting six below. The 'Unmovable Object'.",
+                              "beat_goal": "The Climax. pure action and endurance.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pain and defiance",
+                              "scene_tone": "Visceral combat",
+                              "timeline_date": "Post-Book 1 + 20 weeks",
+                              "timeline_variant": "The Choke Point",
+                              "location": "The Bottleneck",
+                              "narrative_function": "The Action.",
+                              "learning_objective_integration": "Reflects 'Valor'\u2014acting in spite of fear and pain."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Last Man",
+                              "setup": "The last child is through. The Gate flickers. Francisco is done. He can't hold them. He slams his hand on the structural support. 'Collapse.' The ceiling comes down. Tons of rock crush the front rank of the Legion. In the dust and chaos, Francisco creates a micro-portal\u2014a 'mouse hole'\u2014and falls through it, uncontrolled. He lands in the dirt of the new base, unconscious, alive by a margin of milliseconds.",
+                              "symbolism": "Samson bringing down the temple (but surviving). The dust settling. The Silence.",
+                              "beat_goal": "Resolution. Escape.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Blackout",
+                              "scene_tone": "Final and heavy",
+                              "timeline_date": "Post-Book 1 + 20 weeks",
+                              "timeline_variant": "New Base (Landing Zone)",
+                              "location": "The Dirt",
+                              "narrative_function": "The Survival.",
+                              "sudowrite_character_moments": [
+                                "The roar of the falling ceiling.",
+                                "The sudden silence of the new timeline.",
+                                "Novella finding his body in the grass."
+                              ]
                             }
                           ]
                         },
@@ -14600,59 +14644,107 @@
                           "hero_journey_beat": "Reward (Seizing the Sword)",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to atonement with the father.",
                           "save_the_cat_beat": "All Is Lost",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Atonement with the Father",
+                          "save_the_cat_beat_goal": "Process the trauma of the near-defeat in EA-065 and internalize the lessons of leadership through 'Reflective Energy'.",
+                          "plot": "The Descent: The physical battle pauses, but the internal battle begins. Francisco must face his own doubts in the quiet of the aftermath (Queen of Cups).",
                           "character_arcs": {
-                            "Francisco": "Rediscovering the joy and wonder that originally motivated his journey, learning that playfulness can be a form of strength.",
-                            "Demoralized_Allies": "Reinspired by Francisco's return to his authentic self, they remember their own reasons for joining the cause.",
-                            "La_Signora": "Reveals her own playful side, showing Francisco that even in cosmic struggles, joy and love remain important."
+                            "Francisco": "Shifts from 'Man of Action' to 'Man of Wisdom'. Learns that silence is as powerful as speech.",
+                            "La_Signora": "Provides the 'Mirror' function, helping Francisco see himself clearly.",
+                            "The_Sanctuary": "The mood shifts from panic (EA-065) to a somber, sacred quiet."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how positive emotions can strengthen timeline stability and create new possibilities.",
-                            "character_motivation": "Francisco's rediscovery of joy reminds him that the goal is not just to win but to create a better world.",
-                            "emotional_complexity": "Explores how humor and playfulness can be forms of resistance against despair and oppression."
+                            "psychological_toll": "Acknowledges that being a hero hurts. Avoids the 'unfeeling action hero' trope.",
+                            "queen_of_cups_meaning": "Focuses on the internal/emotional mastery aspect of the Queen."
                           },
                           "location_details": {
-                            "celebration_space": "A gathering where Francisco and his allies can relax and rediscover their shared humanity.",
-                            "joy_resonance": "The positive emotions create ripples across timelines, strengthening reality and inspiring others."
+                            "the_quiet_room": "Before, a war room; now, a space of meditation.",
+                            "the_still_black_water": "A visual manifestation of the Queen of Cups element in the timeline environment."
                           },
                           "series_connections": {
-                            "joy_theme": "Francisco's rediscovery of joy will be essential for the hopeful resolution of the series.",
-                            "authentic_self": "His return to his true nature sets up the authenticity that will be crucial for the final confrontation."
+                            "philosophical_foundation": "The insights gained here form the moral compass for the rest of the war.",
+                            "marcus_aurelius": "Direct echoes of 'Meditations' in Francisco's internal monologue."
                           },
-                          "summary": "After the intensity of renewed commitment, Francisco turns inward to process the lessons of his journey so far. He harvests the wisdom from his trials, recharges his spiritual and emotional reserves, and emerges with new clarity about his path forward. This reflection prepares him for the greater challenges ahead.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The siege of the Redoubt holds, but the cost was high. In the eerie silence following the attack, Francisco withdraws. He cannot lead effectively until he understands what just happened. He enters a state of deep reflection (Queen of Cups). Guided by La Signora, he looks into the 'Mirror' of his actions. He realizes his fear in the previous chapter wasn't a weakness\u2014it was the data he needed to understand his enemy. He transforms the trauma into 'Reflective Energy', emerging not just as a brave fighter, but as a wise king in waiting.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Wonder and anticipation",
-                          "scene_tone": "Mysterious and adventurous",
+                          "core_emotion": "Melancholy turning to clarity",
+                          "scene_tone": "Quiet, water-like, introspective",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "At Francisco's darkest moment, when the weight of leadership threatens to crush his spirit, he rediscovers the power of joy and humor.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Silence After",
+                              "setup": "The guns are cold. The wounded are being treated. The adrenaline crash hits Francisco hard. He walks away from the celebration of survival. He feels hollow, not triumphant. He finds a quiet, dark room at the back of the Redoubt\u2014an old cistern with still, black water. He sits by it. He tries to write a report, but he can only write 'Why?'. The 'Deep Work' concept of isolation is forced upon him.",
+                              "symbolism": "The Cistern = The Subconscious (Cups/Water). The darkness represents the 'Unknown' parts of himself. The inability to write 'official' words shows the failure of bureaucracy to capture the human experience.",
+                              "beat_goal": "Transition from Action to Reflection. Isolate the hero.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Exhaustion",
+                              "scene_tone": "Still and echoing",
+                              "timeline_date": "Post-Siege + 2 hours",
+                              "timeline_variant": "The Broken Redoubt (Cistern)",
+                              "location": "The Cistern Room",
+                              "narrative_function": "The Decompression.",
+                              "sudowrite_visual_details": [
+                                "The drip-drip-drip of water echoing in the dark.",
+                                "Francisco's reflection distorted in the black water.",
+                                "The trembling of his hands finally stopping."
+                              ],
+                              "learning_objective_integration": "Reflects 'Meditations'\u2014retreating into one's own mind sanctuary."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "Small acts of playfulness and spontaneity help him remember why he began this journey, rekindling hope and drawing his scattered allies back into unity through shared laughter and renewed purpose.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Mirror",
+                              "setup": "La Signora enters. She doesn't speak at first. She just sits. She brings a 'Cup' (tea/water). She asks the Socratic question: 'What did you lose today?' Francisco answers 'My certainty.' She smiles. 'Good. Kings with certainty are dangerous. Kings with questions are wise.' She forces him to look at his fear not as a failure, but as a signal. This is the 'Reflective Practitioner' model\u2014learning from the event.",
+                              "symbolism": "The Queen of Cups (La Signora) offering the Cup of Wisdom. The 'Mirror' conversation. Dealing with the Shadow Self.",
+                              "beat_goal": "Reframe the negative (Fear/Doubt) into a positive (Wisdom/Caution).",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Vulnerable openness",
+                              "scene_tone": "Intimate and soft",
+                              "timeline_date": "Post-Siege + 3 hours",
+                              "timeline_variant": "The Broken Redoubt",
+                              "location": "The Cistern Room",
+                              "narrative_function": "The Lesson.",
+                              "sudowrite_character_moments": [
+                                "La Signora pouring the tea with ritual precision.",
+                                "Francisco finally exhaling the breath he held for 10 pages.",
+                                "The ripple in the water smoothing out."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Integration",
+                              "setup": "Francisco remains alone. He meditates on the lesson. He visualizes the battle again, not with panic, but with detachment (Marcus Aurelius style). He sees the patterns of Dagon's attack he missed before because he was too busy being 'brave'. He realizes Dagon wasn't trying to kill them; he was trying to corral them. The fear *was* the weapon. By seeing this, he neutralizes it. He writes a new entry in his journal: 'The obstacle was the Fear. I have removed the obstacle.'",
+                              "symbolism": "The 'Third Eye' opening. Integrating the Shadow. The pen moving smoothly on the paper now (flow state).",
+                              "beat_goal": "The Epiphany. Gaining a tactical advantage through emotional insight.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Cold clarity",
+                              "scene_tone": "Lucid and sharp",
+                              "timeline_date": "Post-Siege + 5 hours",
+                              "timeline_variant": "The Broken Redoubt",
+                              "location": "The Cistern Room",
+                              "narrative_function": "The Growth.",
+                              "learning_objective_integration": "Demonstrates 'Deep Work'\u2014distraction-free insight generation."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Return",
+                              "setup": "Francisco leaves the cistern. He walks back into the main camp. He looks different\u2014calmer, heavier, but more grounded. The allies look to him. He doesn't shout. He speaks quietly, but everyone hears him. He gives orders that are nuanced, factoring in the fear he felt. He is no longer just the 'General' (Wands); he is the 'Philosopher King' (Cups + Swords). He has digested the experience and turned it into fuel.",
+                              "symbolism": "Emerging from the Cave/Womb. The literal 'Return' of the Hero. The quiet authority vs. the loud bravery of the previous chapter.",
+                              "beat_goal": "Resolution. Show the change in state. Prepare for the strategic shift in the next chapter.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Quiet power",
+                              "scene_tone": "Resonant",
+                              "timeline_date": "Post-Siege + 6 hours",
+                              "timeline_variant": "The Broken Redoubt (Main Hall)",
+                              "location": "Main Hall",
+                              "narrative_function": "The Return with the Elixir (Wisdom).",
+                              "sudowrite_visual_details": [
+                                "The water drying on his boots.",
+                                "The way the soldiers part to let him through without being asked.",
+                                "The clear, un-trembling hand pointing at the map."
+                              ]
                             }
                           ]
                         }
@@ -14762,59 +14854,103 @@
                           "hero_journey_beat": "The Road Back",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the abyss.",
                           "save_the_cat_beat": "Dark Night of the Soul",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Abyss",
+                          "save_the_cat_beat_goal": "Break the stalemate of the 'Dark Night of the Soul' by embracing a radical, 'Open Minded' strategy from an unlikely source.",
+                          "plot": "The Abyss: They are trapped. Standard logic says they die. Francisco uses 'Range' (generalist thinking) to accept a crazy idea from a non-expert, bridging magic and technology.",
                           "character_arcs": {
-                            "Francisco": "Achieving a mature form of courage that comes from understanding the stakes and choosing to act anyway.",
-                            "Recommitted_Allies": "Inspired by Francisco's dedication, they make their own renewed commitments to the cause.",
-                            "Valor_Demonstration": "Francisco's actions show that true bravery isn't the absence of fear but the willingness to act despite it."
+                            "Francisco": "Practices 'Cognitive Flexibility'. Overrules his experts to listen to an outsider.",
+                            "The_Experts": "Represent fixed mindset; they say 'It's impossible'.",
+                            "The_Outsider_Knight": "A minor character (Knight of Rings) who brings the breakthrough idea."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how dedicated commitment can create stronger and more stable timeline changes.",
-                            "character_motivation": "Francisco's mature understanding of valor as service rather than glory.",
-                            "leadership_development": "Explores how leaders inspire others through their own example of commitment."
+                            "innovation_source": "Shows that solutions don't always come from the top.",
+                            "magic_tech_bridge": "Explains how they combine timeline mechanics with old-world alchemy."
                           },
                           "location_details": {
-                            "rededication_ceremony": "A formal gathering where Francisco and his allies renew their commitment to their mission.",
-                            "valor_manifestation": "The collective dedication creates visible effects in the timeline stability around them."
+                            "the_dead_end": "The current tactical situation; a literal and metaphorical wall.",
+                            "the_workshop": "A messy, chaotic space where the new idea is tested."
                           },
                           "series_connections": {
-                            "dedication_theme": "Francisco's mature dedication will be essential for the sustained effort required in Books 7-9.",
-                            "inspirational_leadership": "His ability to inspire others through example will be crucial for the collective action needed in the finale."
+                            "hybrid_magic": "The technique discovered here becomes a staple weapon in Book 3.",
+                            "culture_of_listening": "Francisco establishes a culture where the best idea wins, regardless of rank."
                           },
-                          "summary": "Confronted with the apparent collapse of his plans when Dagon launches a massive counter-offensive, Francisco must open his mind to unexpected allies and radical strategies. He learns to see beyond conventional approaches and embrace innovative solutions that others might dismiss as impossible.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The reflection in the previous chapter yielded clarity: they cannot win by conventional means. Dagon knows their playbook. They need a new game. Francisco gathers his war council. The experts offer defeatist stats. A low-ranking engineer (The Knight of Rings) sheepishly suggests a 'wild' idea: converting the Redoubt's shields into a focused offensive beam, burning out the generator in the process. It's suicide if it fails. The experts mock it. Francisco, applying the 'Open Minded' theme, shuts them down. He listens. He connects the engineer's tech with his own magic. He approves the plan. 'We don't need to be safe. We need to be right.'",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Despair and emptiness",
-                          "scene_tone": "Melancholic and introspective",
+                          "core_emotion": "Daring curiosity",
+                          "scene_tone": "Debative and experimental",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Having rediscovered his joy and purpose, Francisco recommits himself to the cause with renewed dedication.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Dead End",
+                              "setup": "The Council meets. The map is red. Every escape route is blocked. The 'Experts' (Alexandrian Tacticians) are listing the ways they will die. It is a 'Fixed Mindset' trap. They are re-running old simulations. Francisco feels the trap closing\u2014not just the enemy, but the trap of conventional thinking. He remembers his meditation (EA-066). He stops the briefing. 'Stop telling me what we can't do. Tell me what we haven't tried.'",
+                              "symbolism": "The Echo Chamber. The circle of people all nodding at bad news. The 'Wall' on the map.",
+                              "beat_goal": "Establish the intellectual blockage. The old way is dead.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Frustrated urgency",
+                              "scene_tone": "Stifling",
+                              "timeline_date": "Post-SIege + 8 hours",
+                              "timeline_variant": "The Broken Redoubt (War Room)",
+                              "location": "War Room",
+                              "narrative_function": "The problem statement.",
+                              "sudowrite_visual_details": [
+                                "The projection table flickering.",
+                                "The piles of 'Reject' stamps on plans.",
+                                "The oppressive heat of the room."
+                              ],
+                              "learning_objective_integration": "Illustrates 'Think Again'\u2014identifying the need to unlearn."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He transforms his earlier despair into fierce devotion, rallying his allies around a shared vision of the future.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Wild Idea",
+                              "setup": "A silence follows Francisco's demand. A young engineer (Knight of Rings equivalent) speaks up from the back. 'We could invert the polarity of the shield generator.' The experts laugh. 'That would blow us up.' Francisco silences the room settings. 'How?' The engineer explains: use the shield not to block, but to *pull* the enemy in, then collapse the timeline bubble. It's a 'Trojan Horse' strategy. It requires 'Range'\u2014thinking across physics and chrono-mechanics.",
+                              "symbolism": "The Voice from the Back. The Knight offering the Ring (Idea). The inversion of 'Defense' to 'Offense'.",
+                              "beat_goal": "The Pivot. Discovering the potential solution. Overcoming the social pressure to conform.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Spark of hope",
+                              "scene_tone": "Tense but shifting",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "War Room",
+                              "location": "War Room",
+                              "narrative_function": "The Option.",
+                              "learning_objective_integration": "Demonstrates 'Originals'\u2014recognizing a non-obvious idea."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "His valor inspires others to make their own commitments to the greater good.",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Friction",
+                              "setup": "The plan is debated. The risks are 90%. The experts try to kill it with logic. Francisco has to fight for the *possibility* of the idea. He uses 'Cognitive Flexibility'. He asks 'What if we modify it?' He starts drawing on the map. He combines the engineer's tech with his own time-slowing ability to stabilize the 'blow up' risk. They jam on the idea. It evolves from a 'suicide pact' to a 'gamble'. The energy in the room shifts from despair to manic creativity.",
+                              "symbolism": "The Jazz Session. Improvisation. The mixing of Blue (Logic) and Red (Passion) to make Purple (Magic).",
+                              "beat_goal": "Refine the idea. Secure buy-in. Transform the team from critics to co-conspirators.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Creative flow",
+                              "scene_tone": "Fast-paced and cerebral",
+                              "timeline_date": "Hour later",
+                              "timeline_variant": "War Room",
+                              "location": "War Room",
+                              "narrative_function": "The Synthesis.",
+                              "sudowrite_character_moments": [
+                                "Francisco rolling up his sleeves.",
+                                " The engineer gaining confidence, pointing, shouting.",
+                                "The experts reluctantly nodding."
+                              ]
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Green Light",
+                              "setup": "The plan is theoretical. They need to commit. Francisco looks at the engineer. 'Can you build it?' 'In 4 hours.' 'Do it.' He dismisses the council. He walks out with the engineer. He has bet the entire resistance on a 'Knight's' gamble. He feels the thrill of the 'Open Mind'. He realizes that this is how they win\u2014not by being stronger, but by being weirder.",
+                              "symbolism": "The Handshake. The passing of the baton. The opening of the door.",
+                              "beat_goal": "Resolution. The decision is made. The 'Abyss' has a path through it.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Electrified resolve",
+                              "scene_tone": "Decisive",
+                              "timeline_date": "Post-Siege + 10 hours",
+                              "timeline_variant": "Corridor",
+                              "location": "Corridor outside War Room",
+                              "narrative_function": "The Commitment.",
+                              "learning_objective_integration": "Reflects 'Mindset'\u2014choosing growth over safety."
                             }
                           ]
                         },
@@ -14901,59 +15037,102 @@
                           "hero_journey_beat": "The Road Back",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the abyss.",
                           "save_the_cat_beat": "Dark Night of the Soul",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Abyss",
+                          "save_the_cat_beat_goal": "Operationalize the 'Wild Idea' from EA-067 using 'Methodical' precision to survive the 'Dark Night of the Soul'.",
+                          "plot": "The Abyss: The idea is approved, but the execution is impossible. Francisco must become the King of Swords\u2014ruthlessly logical\u2014to break the plan into 1000 executable steps. The 'Checklist' saves them.",
                           "character_arcs": {
-                            "Francisco": "Developing the wisdom that comes from integrating experience, learning to balance action with contemplation.",
-                            "Inner_Guidance": "Francisco's growing ability to access his own inner wisdom and intuition.",
-                            "Mature_Perspective": "He begins to see the larger patterns in his journey and understand his role in the cosmic story."
+                            "Francisco": "Integrates the 'King of Swords'. Becomes a master of logistics and detail, balancing his 'Wands' passion.",
+                            "The_Engineer": "Works side-by-side with Francisco, their relationship evolving from subordinate to partner.",
+                            "The_Chaos": "Replaced by Order."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how reflection and integration can enhance temporal abilities by providing clearer focus.",
-                            "character_motivation": "Francisco's growing wisdom helps him understand the deeper purpose of his mission.",
-                            "spiritual_development": "Explores the inner work required to handle cosmic responsibilities without being overwhelmed."
+                            "execution_gap": "Shows *how* they do the magic, not just that they do it.",
+                            "team_coordination": "Illustrates how a ragtag group acts as a disciplined unit."
                           },
                           "location_details": {
-                            "reflection_space": "A peaceful environment where Francisco can process his experiences without external distractions.",
-                            "wisdom_integration": "The process of turning raw experience into usable knowledge and insight."
+                            "the_assembly_floor": "The physical space where the device is being built.",
+                            "the_whiteboard": "The focal point of the chapter; a wall of tasks."
                           },
                           "series_connections": {
-                            "wisdom_theme": "Francisco's growing wisdom will be essential for the complex choices required in the series climax.",
-                            "inner_development": "His spiritual growth prepares him for the cosmic consciousness required in Books 8-9."
+                            "standard_operating_procedures": "The protocols invented here become the bible for the resistance.",
+                            "future_tech": "The device built here is a prototype for the final weapon."
                           },
-                          "summary": "Amid crushing despair as Dagon's forces seem to be winning, Francisco relies on clear, structured thinking to survive. He methodically charts each step needed to escape the abyss of defeat, using disciplined planning and systematic analysis to find paths through seemingly impossible situations.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The 'Wild Idea' is go. Now comes the hard part. The device needs to be built in 4 hours using scrap parts. Francisco creates a 'Checklist Manifesto' environment. He breaks the impossible task into micro-tasks. He assigns teams. He removes bottlenecks. He is 'Methodical' (King of Swords). There is no drama, no speeches\u2014just the grinding, beautiful noise of competence. They hit a snag; a missing component. Instead of panicking, they 'slow down to speed up' (Thinking, Fast and Slow). They find a logical workaround. The device is finished with seconds to spare.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Confidence and growth",
-                          "scene_tone": "Calm and reflective",
+                          "core_emotion": "Cold focus",
+                          "scene_tone": "Industrial and rhythmic",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "After the intensity of renewed commitment, Francisco turns inward to process the lessons of his journey so far.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Breakdown",
+                              "setup": "The Engineer is overwhelmed. 'It's too much.' Francisco steps in. He wipes the whiteboard. He draws a line. 'Step 1: Coolant. Step 2: Coupling.' He forces the panic into a structure. He creates the 'Checklist'. He gives the team permission to focus only on their one bolt, their one wire. The room calms down. The 'King of Swords' cuts through the noise.",
+                              "symbolism": "The Grid. The Scalpel. The shifting of the mental load from 'All' to 'One Thing'.",
+                              "beat_goal": "Establish the System. Turn chaos into a project plan.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Calculating",
+                              "scene_tone": "Clinical",
+                              "timeline_date": "Post-Siege + 10.5 hours",
+                              "timeline_variant": "Assembly Floor",
+                              "location": "Assembly Floor",
+                              "narrative_function": "The Strategy.",
+                              "sudowrite_visual_details": [
+                                "The squeak of the marker on the board.",
+                                "The synchronized movement of the mechanics.",
+                                "The countdown clock ticking silently."
+                              ],
+                              "learning_objective_integration": "Demonstrates 'The Checklist Manifesto'\u2014cognitive offloading."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He harvests the wisdom from his trials, recharges his spiritual and emotional reserves, and emerges with new clarity about his path forward.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Grind",
+                              "setup": "Montage of the work. Sweat, sparks, but no shouting. Francisco walks the floor. He is not building; he is removing obstacles. A team runs out of flux. He teleports some from the armory. A dispute arises over torque settings. He adjudicates instantly. He is the 'System 2' thinking brain for the 'System 1' muscle of the team. It is efficient. It is 'Deep Work' in a war zone.",
+                              "symbolism": "The Machine. The cogs turning. The conductor of an orchestra of welders.",
+                              "beat_goal": "Show the progress. Validate the method.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Flow state",
+                              "scene_tone": "Rhythmic",
+                              "timeline_date": "Post-Siege + 12 hours",
+                              "timeline_variant": "Assembly Floor",
+                              "location": "Assembly Floor",
+                              "narrative_function": "The Rising Action.",
+                              "learning_objective_integration": "Reflects 'Deep Work'\u2014intense concentration."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "This reflection prepares him for the greater challenges ahead.",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Snag",
+                              "setup": "90% complete. The primary coupler cracks. A groan goes through the room. The Engineer looks defeated. 'We don't have a spare.' Panic threatens to return. Francisco holds up a hand. 'Stop. Think.' He uses 'Thinking, Fast and Slow'. He forces them to slow down. 'What does the coupler *do*?' 'It bridges the charge.' 'What else bridges a charge?' Silence. Then: 'The stasis field coils on the transport.' 'Strip them.' The logic saves them, not luck.",
+                              "symbolism": "The Crack. The Pause. The 'King of Swords' weighing the options.",
+                              "beat_goal": "The Crisis. The Test of the Method.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Steel calm",
+                              "scene_tone": "Tense silence",
+                              "timeline_date": "Post-Siege + 13 hours",
+                              "timeline_variant": "Assembly Floor",
+                              "location": "Assembly Floor",
+                              "narrative_function": "The Complication.",
+                              "sudowrite_character_moments": [
+                                "Francisco's unblinking stare at the cracked part.",
+                                "The Engineer's hands shaking vs. Francisco's stillness."
+                              ]
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Lock",
+                              "setup": "The new part is fitted. It holds. The device hums to life. The checklist is complete. Every box is ticked. Francisco puts the cap on the marker. He looks at the team. They are exhausted, filthy, but proud. They didn't just build a bomb; they built a process. The 'King of Swords' sheathes his blade. ' deploy it.'",
+                              "symbolism": "The Last Box Ticked. The hum of power. The shift from potential to kinetic.",
+                              "beat_goal": "Resolution. The weapon is ready. The Method worked.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Satisfied fatigue",
+                              "scene_tone": "Heavy and finalized",
+                              "timeline_date": "Post-Siege + 13.5 hours",
+                              "timeline_variant": "Assembly Floor",
+                              "location": "Assembly Floor",
+                              "narrative_function": "The Readying.",
+                              "learning_objective_integration": "Demonstrates 'The Art of Possibility'\u2014finding the way."
                             }
                           ]
                         },
@@ -15040,59 +15219,103 @@
                           "hero_journey_beat": "The Road Back",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the abyss.",
                           "save_the_cat_beat": "Dark Night of the Soul",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Abyss",
+                          "save_the_cat_beat_goal": "Transform the 'Methodical' plan from a defensive survival action into a winning gambit through 'Excitable Curiosity'.",
+                          "plot": "The Abyss: The weapon is ready, but a simulation reveals a fatal flaw. Logic fails. Francisco uses 'Curiosity' (Page of Wands) to ask a 'stupid question' that unlocks the true weakness of the enemy.",
                           "character_arcs": {
-                            "Francisco": "Developing intellectual humility and creative flexibility in the face of seemingly impossible challenges.",
-                            "Unexpected_Allies": "New allies emerge from surprising sources - former enemies, neutral parties, even some of Dagon's own forces.",
-                            "Radical_Strategies": "Francisco learns to consider approaches that challenge his assumptions about temporal warfare."
+                            "Francisco": "Integrates the 'Page of Wands'. Reclaims his sense of wonder and play even in the darkest moment.",
+                            "The_Experts": "Stumped by the paradox; they need the 'Beginner's Mind' to solve it.",
+                            "The_Enemy": "Revealed to have a structural weakness based on their lack of imagination."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Introduction of unconventional approaches to timeline manipulation that transcend traditional methods.",
-                            "character_motivation": "Francisco's growing willingness to challenge his own assumptions and embrace new possibilities.",
-                            "strategic_innovation": "Shows how crisis can spark creative breakthroughs in both tactics and strategy."
+                            "the_winning_move": "Explains why the weapon works so well\u2014it exploits a fundamental flaw in Dagon's logic.",
+                            "tone_shift": "Moves the story from 'Grim Survival' back to 'Adventure'."
                           },
                           "location_details": {
-                            "crisis_meeting": "A gathering where Francisco must consider desperate measures and unlikely alliances.",
-                            "innovation_space": "An environment that encourages creative thinking and unconventional solutions."
+                            "the_observation_deck": "A place of looking out, seeing the big picture.",
+                            "the_signal_room": "Where the patterns of the enemy are monitored."
                           },
                           "series_connections": {
-                            "open_mindedness": "Francisco's growing intellectual flexibility will be essential for the paradigm shifts required in Books 8-9.",
-                            "creative_solutions": "His willingness to embrace radical approaches will be crucial for the final confrontation."
+                            "curiosity_as_weapon": "Establishes that understanding the enemy is more lethal than just hitting them.",
+                            "finding_the_glitch": "The discovery here (the 'hum') is a clue to the nature of the simulation in Book 5."
                           },
-                          "summary": "In the lowest depths of defeat, Francisco's boundless curiosity sparks a glimmer of hope. His relentless questioning uncovers hidden secrets within Dagon's plans, revealing weaknesses and possibilities that others have missed. His enthusiasm for discovery becomes a source of strength that begins to turn the tide.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The device is built (EA-068), but the final simulation shows a 1% variance that will kill them all. The experts are tearing their hair out. Francisco wanders away. He goes to the signal room. He listens to the enemy's jamming frequency. He asks a simple, 'childish' question: 'Why is it in B-flat?' The experts dismiss him. But he persists. He is 'Curious' (Page of Wands). He traces the signal. He finds that the jamming isn't random; it's a carrier wave. Dagon is *broadcasting* his position. The 'flaw' is actually a map. They don't need to overpower the jamming; they just need to surf it. The plan shifts from 'Checkmate' to 'High Dive'.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Mixed emotions and growth",
-                          "scene_tone": "Varied and dynamic",
+                          "core_emotion": "Playful discovery",
+                          "scene_tone": "Bright and eureka-filled",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Confronted with the apparent collapse of his plans when Dagon launches a massive counter-offensive, Francisco must open his mind to unexpected allies and radical strategies.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Glitch",
+                              "setup": "The simulation runs red. The device works, but the backlash will destroy the Redoubt. The room falls into silence. It's the 'Dark Night' again. They did everything right, and it failed. Francisco refuses to accept the binary 'Pass/Fail'. He enters 'Curiosity Mode'. He walks around the problem. 'What exactly is the backlash?' 'Harmonic resonance.' 'Resonance with what?'",
+                              "symbolism": "The Red Light. The unanswerable question. The refusal to accept the 'Expert' verdict.",
+                              "beat_goal": "Re-open the problem. Shift from 'Execution' back to 'Exploration'.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Restless inquiry",
+                              "scene_tone": "Frustrated but active",
+                              "timeline_date": "Post-Siege + 14 hours",
+                              "timeline_variant": "War Room",
+                              "location": "War Room",
+                              "narrative_function": "The Twist.",
+                              "learning_objective_integration": "Illustrates 'A Curious Mind'\u2014asking the question no one else asks."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He learns to see beyond conventional approaches and embrace innovative solutions that others might dismiss as impossible.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Signal",
+                              "setup": "Francisco leaves the War Room. He follows the sound of the resonance. It leads him to the Signal Room. The operators are exhausted. The noise is a drone. Francisco listens. He taps his foot. 'It has a rhythm.' He asks to isolate the track. It's not noise; it's data. He realizes Dagon isn't just attacking; he's *talking* to his fleet. The jamming is a two-way street.",
+                              "symbolism": "The Noise becoming Music. The 'Ear' vs. the 'Eye'. Finding the signal in the noise.",
+                              "beat_goal": "The Discovery. The 'Page of Wands' finds the secret path.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Wonder",
+                              "scene_tone": "Mysterious",
+                              "timeline_date": "Post-Siege + 14.5 hours",
+                              "timeline_variant": "Signal Room",
+                              "location": "Signal Room",
+                              "narrative_function": "The Clue.",
+                              "sudowrite_visual_details": [
+                                "The oscilloscope wave dancing.",
+                                "Francisco closing his eyes to listen.",
+                                "The operator looking confused but intrigued."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Pivot",
+                              "setup": "Francisco bursts back into the War Room. 'It's not a wall; it's a door.' He explains. If they tune their device to the enemy's frequency (B-flat), the backlash disappears. In fact, it amplifies their output. They can ride Dagon's own energy network. The experts are skeptical. 'That's insane.' 'It's original.' He forces them to run the sim with the new variable. The red light turns green. The room explodes in disbelief.",
+                              "symbolism": "Turning the Key. The 'Green Light' returning. The triumph of the 'Crazy Idea'.",
+                              "beat_goal": "Validate the discovery. Lock in the victory condition.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Ecstatic",
+                              "scene_tone": "High energy",
+                              "timeline_date": "Post-Siege + 15 hours",
+                              "timeline_variant": "War Room",
+                              "location": "War Room",
+                              "narrative_function": "The Breakthrough.",
+                              "learning_objective_integration": "Demonstrates 'Originals'\u2014championing a novel concept."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Spark",
+                              "setup": "They adjust the device. The frequency matches. The hum changes from a drone to a harmony. Francisco stands at the observation deck. He sees the enemy fleet not as a threat, but as a fuel source. He smiles. He has moved through Valor, Reflection, Openness, Method, and finally Curiosity. He is ready. 'Light it up.'",
+                              "symbolism": "The Harmony. The conductor raising the baton. The spark igniting the engine.",
+                              "beat_goal": "Resolution. The preparations are complete. The climax begins.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Joyful anticipation",
+                              "scene_tone": "Electric",
+                              "timeline_date": "Post-Siege + 16 hours",
+                              "timeline_variant": "Observation Deck",
+                              "location": "Observation Deck",
+                              "narrative_function": "The Launch.",
+                              "sudowrite_visual_details": [
+                                "The lights of the panel syncing with the heartbeat.",
+                                "Francisco's smile\u2014genuine and boyish.",
+                                "The world holding its breath."
+                              ],
+                              "learning_objective_integration": "Reflects 'The Innovator's DNA'\u2014associational thinking winning the day."
                             }
                           ]
                         }
