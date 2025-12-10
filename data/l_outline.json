@@ -15425,59 +15425,103 @@
                           "hero_journey_beat": "Resurrection",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the ultimate boon.",
                           "save_the_cat_beat": "Break into Three",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Ultimate Boon",
+                          "save_the_cat_beat_goal": "Transform the 'Victory' into lasting resilience through 'Regeneration', ensuring the team is stronger for the next phase.",
+                          "plot": "The Ultimate Boon: The immediate threat is gone, but the cost was high. Francisco leads the physical and spiritual rebuilding, proving that 'Resilience' is not just enduring, but improving.",
                           "character_arcs": {
-                            "Francisco": "Learning to maintain clear thinking under extreme pressure, developing systematic approaches to overwhelming problems.",
-                            "Methodical_Allies": "Advisors and allies who help Francisco break down complex challenges into manageable components.",
-                            "Systematic_Resistance": "The development of organized resistance methods that can sustain pressure over time."
+                            "Francisco": "Integrates the 'Nine of Wands'. He is tired, bandaged, but vigilant. He learns to rest without losing readiness.",
+                            "The_Wounded": "Allies who paid the price for the defense; their recovery is the focus.",
+                            "The_Sanctuary": "Physically rebuilt, integrating the 'scars' of the battle into new fortifications."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how methodical approaches can provide stability in chaotic temporal environments.",
-                            "character_motivation": "Francisco's growing understanding that discipline and system can triumph over overwhelming odds.",
-                            "strategic_planning": "Explores how systematic thinking can find solutions to seemingly impossible problems."
+                            "consequences_of_battle": "Shows the aftermath. War isn't just winning; it's cleaning up.",
+                            "antifragile_theme": "Demonstrates how the system gets stronger from the stress."
                           },
                           "location_details": {
-                            "planning_center": "A space designed for systematic analysis and strategic planning under pressure.",
-                            "methodical_process": "The step-by-step approach Francisco uses to navigate the crisis."
+                            "the_infirmary": "The center of the chapter. A place of pain but also healing.",
+                            "the_ruined_gate": "Now being rebuilt with stronger materials."
                           },
                           "series_connections": {
-                            "systematic_thinking": "Francisco's growing methodical abilities will be essential for the complex coordination required in Books 8-9.",
-                            "discipline_theme": "His development of systematic approaches will be crucial for maintaining focus during the series climax."
+                            "healing_practices": "The regenerative magic learned here becomes essential for the final book.",
+                            "bonding_through_trauma": "The shared scars create an unbreakable loyalty."
                           },
-                          "summary": "After hitting rock bottom, Francisco finds inner reserves of strength and begins the process of regeneration. He cultivates deliberate practices that restore his power and purpose, learning that renewal is not just recovery but transformation into something stronger and more capable than before.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The dust settles on the 'Last Man' stand (EA-065). Francisco wakes up in the Infirmary. The battle is won, but the Redoubt is a ruin. 30% casualties. The mood is brittle. Francisco refuses to let them wallow. He initiates 'Regeneration'. He leads the Triage not just of bodies, but of the base itself. He uses the debris of the enemy legion to reinforce the walls\u2014literal 'Antifragile' building. He holds a ritual for the fallen, turning grief into purpose. They end the chapter scarred, but harder.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Despair and emptiness",
-                          "scene_tone": "Melancholic and introspective",
+                          "core_emotion": "Aching but alive",
+                          "scene_tone": "Sore and hopeful",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Amid crushing despair as Dagon's forces seem to be winning, Francisco relies on clear, structured thinking to survive.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Triage",
+                              "setup": "Francisco wakes up. Pain. Noise. He stumbles out of the medical tent. The base is half-destroyed. People are crying. A young medic is overwhelmed. Francisco steps in. He doesn't use magic; he uses order. He categorizes the damage. 'Green. Red. Black.' He forces the chaos into a system again. He sees the cost of his 'Valor'\u2014the broken bodies of those he saved.",
+                              "symbolism": "The Wounded King. The Ashes. The stark reality of the 'Morning After'.",
+                              "beat_goal": "Assess the damage. Face the cost.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Grim responsibility",
+                              "scene_tone": "Somber",
+                              "timeline_date": "Post-Siege + 1 day",
+                              "timeline_variant": "The Ruined Redoubt",
+                              "location": "The Infirmary",
+                              "narrative_function": "The Aftermath.",
+                              "sudowrite_visual_details": [
+                                "Bloody bandages in the mud.",
+                                "The smell of antiseptic and smoke.",
+                                "Francisco's limp."
+                              ],
+                              "learning_objective_integration": "Reflects 'The Power of Full Engagement'\u2014managing energy in crisis."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He methodically charts each step needed to escape the abyss of defeat, using disciplined planning and systematic analysis to find paths through seemingly impossible situations.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "Antifragile",
+                              "setup": "The Engineer (from EA-068) is looking at the breached wall. 'We can rebuild it as it was.' Francisco shakes his head. 'No. Build it stronger.' He points to the wreckage of Dagon's war mashines. 'Use their armor.' They start welding the enemy's strength into their own defense. It is the core concept of Antifragility\u2014the shock makes the system better. The work is therapeutic. The sound of construction replaces the sound of weeping.",
+                              "symbolism": "Kintsugi (repairing with gold). Turning the poison into the cure. The Nine of Wands (the bandaged defender).",
+                              "beat_goal": "The Pivot from Grief to Action. Regeneration begins.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Constructive anger",
+                              "scene_tone": "Building momentum",
+                              "timeline_date": "Post-Siege + 2 days",
+                              "timeline_variant": "The Perimeter",
+                              "location": "The Breach",
+                              "narrative_function": "The Rebuilding.",
+                              "learning_objective_integration": "Demonstrates 'Antifragile'\u2014gaining from disorder."
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Ritual",
+                              "setup": "The physical work is done, but the morale is still low. They need to bury the dead. Francisco organizes a ceremony. It's not religious; it's temporal. They 'lock' the memories of the fallen into the timeline foundation. They become part of the base's history. It honors the grief without letting it paralysis them. Francisco speaks: 'They are the mortar. We are the stone.'",
+                              "symbolism": "The Funeral Pyre / The Cornerstone. Transforming ghosts into ancestors.",
+                              "beat_goal": "Emotional Closure. Binding the team together.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Solemnity",
+                              "scene_tone": "Sacred",
+                              "timeline_date": "Post-Siege + 3 days",
+                              "timeline_variant": "The Memorial Garden",
+                              "location": "The Central Courtyard",
+                              "narrative_function": "The Healing.",
+                              "sudowrite_character_moments": [
+                                "Francisco placing his own Seven of Wands staff on the pyre.",
+                                "Novella taking his hand.",
+                                "The silence that is peaceful, not empty."
+                              ]
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Strengthened Bone",
+                              "setup": "A week later. The Redoubt is different. Ugly, perhaps, with its patchwork armor, but impenetrable. The team is different too. They move with a 'survivor's swagger'. They know they can take the hit. Francisco stands on the new wall (Nine of Wands imagery). He is vigilant. He knows Dagon will come again. But he smiles. 'Let them come.' They have regenerated.",
+                              "symbolism": "The Scar. The Fortified Hill. The shift from 'Pre-War Innocence' to 'Post-War Strength'.",
+                              "beat_goal": "Resolution. The Boon is integrated. They are ready for the next phase.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Quiet confidence",
+                              "scene_tone": "Strong",
+                              "timeline_date": "Post-Siege + 1 week",
+                              "timeline_variant": "The Iron Redoubt",
+                              "location": "The Wall",
+                              "narrative_function": "The Reward.",
+                              "learning_objective_integration": "Reflects 'Rest'\u2014active recovery builds capacity."
                             }
                           ]
                         },
@@ -15564,59 +15608,102 @@
                           "hero_journey_beat": "Resurrection",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to the ultimate boon.",
                           "save_the_cat_beat": "Break into Three",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "The Ultimate Boon",
+                          "save_the_cat_beat_goal": "Secure the 'Ultimate Boon' by establishing a 'Legacy' system that ensures the survival of the timeline beyond the current battle.",
+                          "plot": "The Ultimate Boon (Part 2): With the physical base rebuilt (EA-070), Francisco turns to the political and structural. He realizes 'Valor' isn't enough; they need 'Sustainability' (Ten of Disks).",
                           "character_arcs": {
-                            "Francisco": "Rediscovering his fundamental curiosity and love of learning, finding that wonder can be a source of strength.",
-                            "Hidden_Discoveries": "Francisco's investigations reveal crucial information about Dagon's true plans and weaknesses.",
-                            "Renewed_Hope": "His excitement about new discoveries begins to inspire others and create new possibilities."
+                            "Francisco": "Shifts from 'Commander' to 'Founder'. He stops micromanaging and starts building institutions.",
+                            "The_New_Council": "A representative body formed from the various factions (Venetians, Alexandrians, etc.).",
+                            "The_Next_Generation": "Younger recruits who look at Francisco as a mythic figure, which makes him uncomfortable."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how curiosity and investigation can reveal hidden patterns in timeline manipulation.",
-                            "character_motivation": "Francisco's rediscovery of his love of learning reminds him why he began this journey.",
-                            "discovery_process": "Explores how asking the right questions can reveal solutions to seemingly impossible problems."
+                            "governance_structure": "Explains how the group makes decisions without Francisco dictating everything.",
+                            "long_term_viability": "Shows how they plan to eat/survive for the next year, not just the next day."
                           },
                           "location_details": {
-                            "discovery_space": "The hidden areas where Francisco makes his crucial discoveries about Dagon's plans.",
-                            "curiosity_manifestation": "The physical and temporal effects of Francisco's renewed sense of wonder and investigation."
+                            "the_archive": "A new room dedicated to storing the knowledge of the lost timelines.",
+                            "the_round_table": "The physical symbol of shared power."
                           },
                           "series_connections": {
-                            "curiosity_theme": "Francisco's fundamental curiosity will be essential for understanding the cosmic mysteries revealed in Books 8-9.",
-                            "discovery_power": "His ability to find hidden truths will be crucial for the revelations that drive the series climax."
+                            "the_codex": "The rules written here are referenced in Book 5 during the civil war.",
+                            "franciscos_legacy": "Sets up the theme of his eventual absence/martyrdom."
                           },
-                          "summary": "In the depths of his trial, Francisco discovers that his personal pain and growth can become a source of lasting influence. He begins to understand that his journey is not just about defeating Dagon but about creating systems and wisdom that will endure long after he's gone.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The walls are strong (EA-070), but the society is fragile. Factions are bickering over resources. Francisco realizes his 'Great Man' leadership style is a single point of failure. He needs 'Legacy'. He convenes the first Council. He proposes a constitution. It is boring work compared to fighting, but vital. He faces resistance from those who want him to be a King. He refuses. 'Kings die. Systems last.' He embodies the Ten of Disks\u2014wealth, stability, and inheritance. He creates the 'Flywheel' of governance.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Growing strength and resolve",
-                          "scene_tone": "Mysterious and adventurous",
+                          "core_emotion": "Paternal foresight",
+                          "scene_tone": "Constructive and political",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "In the lowest depths of defeat, Francisco's boundless curiosity sparks a glimmer of hope.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Friction",
+                              "setup": "A dispute breaks out in the mess hall between a Venetian and a Spartan over rations. Francisco breaks it up, but he sees the problem. They are a collection of refugees, not a society. Relying on his charisma to keep the peace is unsustainable. He reads 'Good to Great'. He needs to build a 'Clock', not just be a 'Time Teller'.",
+                              "symbolism": "The Brawl. The ticking clock. The exhaustion of the leader.",
+                              "beat_goal": "Identify the structural weakness. The realization that 'Heroism' doesn't scale.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Frustrated insight",
+                              "scene_tone": "Tense",
+                              "timeline_date": "Post-Siege + 1 week",
+                              "timeline_variant": "Mess Hall",
+                              "location": "The Mess Hall",
+                              "narrative_function": "The problem statement.",
+                              "learning_objective_integration": "Demonstrates 'Good to Great'\u2014building a Level 5 Leadership system."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "His relentless questioning uncovers hidden secrets within Dagon's plans, revealing weaknesses and possibilities that others have missed.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Proposal",
+                              "setup": "Francisco drafts the 'Charter of the Redoubt'. It distributes power. He calls a meeting. He puts the Ten of Disks (Legacy) on the table. He offers the 'Crown' to the law, not himself. The allies are confused. 'You saved us. You should rule.' Francisco explains: 'If I rule, when I die, you die. If the Law rules, we live forever.' He uses the 'Long Game' logic.",
+                              "symbolism": "Magna Carta. The abdication of absolute power for the sake of stability. The Ten of Disks (family/inheritance).",
+                              "beat_goal": "The Debate. Convincing the team to accept responsibility.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Persuasive",
+                              "scene_tone": "Parliamentary",
+                              "timeline_date": "Post-Siege + 8 days",
+                              "timeline_variant": "Council Room",
+                              "location": "Council Room",
+                              "narrative_function": "The Solution.",
+                              "sudowrite_visual_details": [
+                                "The parchment map of the timeline.",
+                                "Francisco sitting *at* the table, not at the head.",
+                                "The skeptical faces slowly nodding."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": "His enthusiasm for discovery becomes a source of strength that begins to turn the tide.",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Flywheel",
+                              "setup": "The new system is implemented. It's clunky at first. Committees, votes, debates. Francisco hates it. He wants to just order things done. But he forces himself to respect the process (Sharpen the Saw). Slowly, it starts to work. A logistics issue is solved without him even knowing about it. The 'Flywheel' turns. Momentum builds. The base starts to hum with self-organized efficiency.",
+                              "symbolism": "The heavy wheel starting to turn. The shift from 'Manic Energy' to 'Stored Power'.",
+                              "beat_goal": "Validation. The system works.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Relief",
+                              "scene_tone": "Productive",
+                              "timeline_date": "Post-Siege + 2 weeks",
+                              "timeline_variant": "The Redoubt",
+                              "location": "Operations Center",
+                              "narrative_function": "The Growth.",
+                              "learning_objective_integration": "Reflects 'The Flywheel Effect'\u2014cumulative effort."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Archive",
+                              "setup": "Francisco visits the new Archive. Scribes are recording the stories of the lost timelines. He sees a child reading about the 'Siege'. He realizes he is becoming a 'Legacy'. It frightens him, but also gives him peace. He has built something that can outlast Dagon. He touches the Ten of Disks. He has secured the 'Ultimate Boon'\u2014not just survival, but history.",
+                              "symbolism": "The Book. The Child. The contrast between the ephemeral battle and the eternal story.",
+                              "beat_goal": "Resolution. The Legacy is secured.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Melancholy pride",
+                              "scene_tone": "Quiet and vast",
+                              "timeline_date": "Post-Siege + 3 weeks",
+                              "timeline_variant": "The Archive",
+                              "location": "The Archive",
+                              "narrative_function": "The Anchor.",
+                              "sudowrite_character_moments": [
+                                "The smell of old paper and new ink.",
+                                "Francisco reading his own name in a history book.",
+                                "The realization that he is no longer just a man, but a symbol."
+                              ]
                             }
                           ]
                         },
@@ -15699,7 +15786,106 @@
                                 "objective3": "Monitor net\u2011worth growth quarterly."
                               }
                             }
-                          }
+                          },
+                          "save_the_cat_beat_goal": "Manage the influx of new resources and allies ('Prosperity') without losing the 'Lean' mindset that ensured survival.",
+                          "plot": "The Ultimate Boon (Part 3): The victory at the Redoubt draws attention. New allies arrive with supplies, magic, and tech. It is a 'Harvest'. Francisco must ensure this abundance doesn't breed complacency (Nine of Disks).",
+                          "character_arcs": {
+                            "Francisco": "Integrates the 'Nine of Disks'. Experience the satisfaction of self-sufficiency and wealth, but learns to invest it wisely.",
+                            "The_Newcomers": "Merchants and stragglers who bring goods but also potential corruption/laziness.",
+                            "The_Quartermaster": "Novella takes a larger role managing the logistics of plenty."
+                          },
+                          "story_gaps_addressed": {
+                            "resource_management": "Shows where the food/ammo comes from for the rest of the book.",
+                            "temptation_of_peace": "Explores the danger of getting comfortable in a war zone."
+                          },
+                          "location_details": {
+                            "the_market": "A new, bustling area in the Redoubt where trade happens.",
+                            "the_secret_garden": "A private space Francisco creates for himself\u2014symbolizing the Nine of Disks' solitary enjoyment."
+                          },
+                          "series_connections": {
+                            "wealth_as_power": "Establishes economic power as a valid form of resistance.",
+                            "the_trade_routes": "The paths opened here are used for spy networks in Book 4."
+                          },
+                          "summary": "The Redoubt is secure (EA-070) and organized (EA-071). Now, it becomes rich. Word spreads that it is a safe haven. Caravans from other timeline pockets arrive. They bring 'The Ultimate Boon' in the form of exotic tech and supplies. Francisco stands in the new Market. He feels the pull of the Nine of Disks\u2014luxury, rest, the enjoyment of his labor. He realizes that 'Prosperity' is a test too. He must use 'The Abundance Code' to multiply these resources, not just consume them. He invests in the community. He turns the base into a thriving city-state.",
+                          "pov": "3rd Person Limited (Francisco)",
+                          "tense": "Past Tense",
+                          "core_emotion": "Satisfaction wary of greed",
+                          "scene_tone": "Rich and busy",
+                          "scenes": [
+                            {
+                              "scene_number": 1,
+                              "scene_title": "The Harvest",
+                              "setup": "A convoy of 'Timeline Nomads' creates a trade route to the Redoubt. They bring rare crystals, food, and energy cells. The base goes from 'Starvation Mode' to feast. People are celebrating. Francisco watches. He sees the relief, but also the slackening of discipline. A guard leaves his post to trade for wine. The 'Boon' is dangerous.",
+                              "symbolism": "The Horn of Plenty. The unexpected feast. The loosening of the belt.",
+                              "beat_goal": "Introduce the new resource. Establish the conflict: Comfort vs. Vigilance.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Wary gratitude",
+                              "scene_tone": "Festive",
+                              "timeline_date": "Post-Siege + 1 month",
+                              "timeline_variant": "The New Market",
+                              "location": "The Courtyard",
+                              "narrative_function": "The Reward.",
+                              "sudowrite_visual_details": [
+                                "Bright silks draped over grey blast walls.",
+                                "The smell of roasting meat masking the ozone.",
+                                "Gold coins changing hands."
+                              ],
+                              "learning_objective_integration": "Reflects 'Think and Grow Rich'\u2014transmuting desire into gold."
+                            },
+                            {
+                              "scene_number": 2,
+                              "scene_title": "The Investment",
+                              "setup": "Novella suggests stockpiling the new resources. 'Hoard it for the next siege.' Francisco disagrees. 'Money is energy. It has to move.' He uses 'Rich Dad Poor Dad' thinking (Assets vs Liabilities). He decides to invest the resources in upgrading the Nomads' wagons and weapons, making them better traders/fighters. He turns a one-time gift into a recurring revenue stream.",
+                              "symbolism": "Planting the seed instead of eating it. The flow of water/gold.",
+                              "beat_goal": "The Strategy. Turning wealth into growth.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Strategic ambition",
+                              "scene_tone": "Business-like",
+                              "timeline_date": "Post-Siege + 5 weeks",
+                              "timeline_variant": "Command Tent",
+                              "location": "Command Tent",
+                              "narrative_function": "The Decision.",
+                              "learning_objective_integration": "Demonstrates 'The Abundance Code'\u2014mindset shift."
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Garden",
+                              "setup": "Francisco takes a moment for himself. He finds a quiet spot on the roof. He uses a bit of the new magic to grow a single, perfect rose (or timeline equivalent). He sits with it. He wears a fine cloak he was gifted. He embodies the Nine of Disks\u2014solitary enjoyment of success. He realizes he doesn't need to be miserable to be a hero. It is okay to enjoy the fruit of his labor. This recharges him.",
+                              "symbolism": "The Nine of Disks card art (woman in a vineyard). The Rose. The moment of beauty in a war zone.",
+                              "beat_goal": "Character Beat. Self-care as a strategic asset.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Peaceful",
+                              "scene_tone": "Luxurious and quiet",
+                              "timeline_date": "Post-Siege + 6 weeks",
+                              "timeline_variant": "The Roof Garden",
+                              "location": "The Roof",
+                              "narrative_function": "The Rest.",
+                              "sudowrite_visual_details": [
+                                "The impossible color of the flower.",
+                                "The texture of the velvet cloak.",
+                                "The stars above, clear for the first time."
+                              ]
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Golden Hour",
+                              "setup": "The Redoubt is booming. It is now a 'City on a Hill'. Francisco looks out over it. He has not just saved them; he has made them prosperous. But the feeling of peace is interrupted. The Nomads bring news: Dagon is moving again. The 'Golden Hour' is over. But this time, they are not a ragtag band; they are a wealthy, well-fed power. Francisco turns from the view. 'Time to spend our capital.'",
+                              "symbolism": "The Sunset. The turning of the season. The Gold transforming back into Steel.",
+                              "beat_goal": "Resolution. Transition to the next conflict.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Ready",
+                              "scene_tone": "Epic",
+                              "timeline_date": "Post-Siege + 2 months",
+                              "timeline_variant": "The Balcony",
+                              "location": "The Balcony",
+                              "narrative_function": "The Warning.",
+                              "learning_objective_integration": "Reflects 'Assets vs Liabilities'\u2014using the asset for defense."
+                            }
+                          ]
                         }
                       }
                     },
@@ -15807,59 +15993,102 @@
                           "hero_journey_beat": "The Road Back",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to flight.",
                           "save_the_cat_beat": "Break into Three",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Flight",
+                          "save_the_cat_beat_goal": "Secure the 'Magic Flight' route by using 'Benevolence' to win over a neutral faction essential for the exit.",
+                          "plot": "The Flight (Part 1): The Redoubt is besieged by Dagon's new offensive. Francisco needs to move the Council to safety. The only path is through the territory of the 'Grey Traders', who hate them. He must use Generosity (Six of Disks) to buy passage, not with bribes, but with genuine aid.",
                           "character_arcs": {
-                            "Francisco": "Developing a long-term perspective that transcends personal victory to focus on lasting positive change.",
-                            "Legacy_Vision": "Francisco begins to see how his experiences can be transformed into systems that help others.",
-                            "Enduring_Impact": "His growing understanding that true victory comes through creating lasting positive change."
+                            "Francisco": "Practices 'The Go-Giver'. Learns that giving away power can generate more power.",
+                            "The_Grey_Traders": "Cynical survivors who are won over by an act of unexpected kindness.",
+                            "The_Council": "Skeptical of Francisco's 'soft' approach; they want to fight through."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how temporal changes can be made permanent and self-sustaining.",
-                            "character_motivation": "Francisco's growing focus on creating lasting positive change rather than just winning.",
-                            "sustainability_theme": "Explores how cosmic changes can be embedded into reality in ways that persist over time."
+                            "escape_route": "Explains how a large group moves through hostile territory undetected.",
+                            "ethical_leadership": "Contrasts Francisco's generosity with Dagon's tyranny."
                           },
                           "location_details": {
-                            "legacy_workshop": "A space where Francisco can design and create lasting systems for positive change.",
-                            "enduring_structures": "The foundations Francisco creates that will outlast his personal involvement."
+                            "the_boundary_lands": "A grey, misty zone between timelines where the Traders hide.",
+                            "the_orphanage": "A hidden enclave of timeline-displaced children the Traders are protecting."
                           },
                           "series_connections": {
-                            "legacy_theme": "Francisco's focus on creating lasting change will be essential for the series resolution.",
-                            "sustainability_focus": "His growing understanding of permanence will be crucial for the final transformation in Book 9."
+                            "the_network": "The Traders become the courier network for the Resistance.",
+                            "karma_mechanic": "The good deed here comes back to save Francisco in Book 3."
                           },
-                          "summary": "Having secured new resources and insights, Francisco turns outward to share his bounty with allies and even former enemies. His strategic generosity builds trust, deepens alliances, and creates unexpected opportunities for peace and cooperation across the timeline wars.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The 'Golden Hour' (EA-072) ends. Dagon attacks with overwhelming force. They cannot hold the Redoubt forever. They need to relocate. The only exit is through the Boundary Lands, controlled by the hostile Grey Traders. The Council wants to fight them. Francisco refuses. He meets the Trader Captain. He sees their camp is starving. Instead of demanding passage, he offers the Redoubt's food surplus (from EA-072). He gives it freely, asking nothing. This 'Six of Disks' act\u2014giving to the scales\u2014shocks the Traders. They not only grant passage; they offer to guide them. Generosity opened the door that force would have sealed.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Wonder and anticipation",
-                          "scene_tone": "Mysterious and adventurous",
+                          "core_emotion": "Generous risk",
+                          "scene_tone": "Diplomatic and humane",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "In the depths of his trial, Francisco discovers that his personal pain and growth can become a source of lasting influence.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Call for Help",
+                              "setup": "The Redoubt is under fire. Dagon's siege engines are pounding the walls. The 'Legacy' (EA-071) is threatened. They need to leave. A distress signal comes from the Boundary Lands. It's the Grey Traders. They are pinned down by a Dagon patrol. The Council says 'Let them die; it's a distraction.' Francisco says 'No. We help.'",
+                              "symbolism": "The Distress Flare. The ignored plea. The choice between Self-Preservation and Benevolence.",
+                              "beat_goal": "The Moral Choice. Choosing to act against tactical logic.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Empathic resolve",
+                              "scene_tone": "Urgent",
+                              "timeline_date": "Post-Siege + 3 months",
+                              "timeline_variant": "War Room",
+                              "location": "War Room",
+                              "narrative_function": "The Test.",
+                              "learning_objective_integration": "Demonstrates 'The Go-Giver'\u2014placing others' interests first."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "He begins to understand that his journey is not just about defeating Dagon but about creating systems and wisdom that will endure long after he's gone.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Gift",
+                              "setup": "Francisco leads a sortie to save the Traders. They drive off the patrol. He meets the Captain, a suspicious, scarred woman. She expects a demand for payment. Francisco sees their starving children (The Orphanage). He calls for the supply wagons. He starts unloading the food. 'This is for you.' The Captain is stunned. 'What do you want?' 'Nothing. We are neighbors.'",
+                              "symbolism": "The Bread breaking. The Six of Disks image (merchant giving alms). The scales balancing.",
+                              "beat_goal": "The Action. The unexpected act of grace.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Pure generosity",
+                              "scene_tone": "Moving",
+                              "timeline_date": "Hours later",
+                              "timeline_variant": "The Grey Camp",
+                              "location": "The Boundary Lands",
+                              "narrative_function": "The Turn.",
+                              "sudowrite_visual_details": [
+                                "The Captain's hand hovering over her weapon, then dropping.",
+                                "The children's eyes widening at the fresh fruit.",
+                                "Francisco's soldiers looking proud, not angry."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Exchange",
+                              "setup": "That night, in the Trader camp. The Captain sits with Francisco. She explains why they hide. Dagon hunts them. Because Francisco helped them, she trusts him. She reveals a secret path through the 'Slipstream' that Dagon doesn't know. It's the 'Magic Flight' route. 'You gave us life,' she says. 'We give you the road.' The Reciprocity Loop (Give and Take) completes.",
+                              "symbolism": "The Map appearing on the table. The shaking of hands. The circle closing.",
+                              "beat_goal": "The Reward. The solution appears because of the character's virtue.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Validated",
+                              "scene_tone": "Secretive",
+                              "timeline_date": "Night",
+                              "timeline_variant": "Captain's Tent",
+                              "location": "Trade Camp",
+                              "narrative_function": "The Boon.",
+                              "learning_objective_integration": "Reflects 'Give and Take'\u2014successful givers create value."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Open Road",
+                              "setup": "The withdrawal begins. The Redoubt is evacuated. The Grey Traders guide the convoy into the mists. Dagon's forces breach the empty base moments later. They find nothing. Francisco looks back at the empty shell of his 'Legacy'. It hurts to leave, but he knows the *people* are safe because he chose Benevolence over Defense. They vanish into the Slipstream.",
+                              "symbolism": "The Empty Fortress. The Fog swallowing the army. The transition from Earth (Redoubt) to Air (Flight).",
+                              "beat_goal": "Resolution. The Escape begins.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Bittersweet relief",
+                              "scene_tone": "Misty",
+                              "timeline_date": "Next Morning",
+                              "timeline_variant": "The Slipstream",
+                              "location": "The Boundary",
+                              "narrative_function": "The Departure.",
+                              "sudowrite_character_moments": [
+                                "Novella nodding to the Trader Captain.",
+                                "Francisco checking the rear guard one last time.",
+                                "The silence of the fog."
+                              ]
                             }
                           ]
                         },
@@ -15942,7 +16171,105 @@
                                 "objective3": "Implement structured debate sessions."
                               }
                             }
-                          }
+                          },
+                          "save_the_cat_beat_goal": "Overcome the final obstacle to the 'Flight' using 'Problem Solving' (Queen of Swords) logic to dismantle Dagon's trap.",
+                          "plot": "The Flight (Part 2): The Slipstream (from EA-073) is blocked by a temporal minefield. Panic rises. Francisco must suppress his fear and use 'Critical Thinking' to solve the puzzle of the mines before Dagon catches them.",
+                          "character_arcs": {
+                            "Francisco": "Channels the 'Queen of Swords'. Cold, precise, cutting through emotion to see the truth.",
+                            "Novella": "Provides the data but is overwhelmed by the complexity; Francisco provides the synthesis.",
+                            "The_Pursuers": "Dagon's forces are closing in, adding a 'ticking clock' to the puzzle."
+                          },
+                          "story_gaps_addressed": {
+                            "intellectual_climax": "Provides a mental challenge to balance the physical action of previous chapters.",
+                            "queen_of_swords_integration": "Shows the necessity of ruthlessness/clarity in leadership."
+                          },
+                          "location_details": {
+                            "the_minefield": "A distortion in the slipstream where time loops aggressively.",
+                            "the_bridge": "The command deck of the lead transport ship."
+                          },
+                          "series_connections": {
+                            "pattern_recognition": "The code Francisco cracks here is reused in the Book 6 heist.",
+                            "trust_in_intellect": "The team learns to trust his brain as much as his 'Wand'."
+                          },
+                          "summary": "The convoy is in the Slipstream, guided by the Traders. Suddenly, they stop. A 'Temporal Minefield' blocks the path. It's Dagon's last card. If they touch a mine, they are erased. Panic erupts on the bridge. The Council shouts contradictory orders. Francisco silences them. He enters 'Queen of Swords' mode. He uses the 'Four-Step Method'. He analyzes the mine pattern. He realizes it's not random; it's a logic gate based on fear. If you move fast, it explodes. If you move slow (Methodical), it opens. He orders the fleet to 'crawl'. It is counter-intuitive with an enemy behind them, but it is the only way.",
+                          "pov": "3rd Person Limited (Francisco)",
+                          "tense": "Past Tense",
+                          "core_emotion": "Ice-cold focus",
+                          "scene_tone": "Tense and cerebral",
+                          "scenes": [
+                            {
+                              "scene_number": 1,
+                              "scene_title": "The Blockade",
+                              "setup": "The Slipstream turns red. The lead scout ship vanishes\u2014erased by a mine. The fleet halts. The radar shows thousands of distortion points ahead. Dagon's fleet is 30 minutes behind. The Captain says 'We have to turn back.' Francisco says 'No. We solve it.' The stakes are total. If he is wrong, everyone dies.",
+                              "symbolism": "The Gordian Knot. The Red Wall. The ticking clock.",
+                              "beat_goal": "The Crisis. Define the problem constraints.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Suppressed panic",
+                              "scene_tone": "High pressure",
+                              "timeline_date": "Post-Siege + 3 months, 2 hours",
+                              "timeline_variant": "Command Deck",
+                              "location": "The Bridge",
+                              "narrative_function": "The Obstacle.",
+                              "learning_objective_integration": "Reflects 'Problem Solving 101'\u2014defining the root cause."
+                            },
+                            {
+                              "scene_number": 2,
+                              "scene_title": "The Dissection",
+                              "setup": "Francisco isolates himself. He pulls up the sensor data. He ignores the screams of the Council. He looks at the pattern. He uses 'The McKinsey Mind' hypothesis approach. Hypothesis A: It's a sensor net. Hypothesis B: It's a velocity trap. He tests B by throwing a probe at high speed. It explodes. He throws one at low speed. It passes. 'It's a fear trap. It punishes running.'",
+                              "symbolism": "The Queen of Swords holding the scales. The Microscope. The silence in the center of the storm.",
+                              "beat_goal": "The Hypothesis. Finding the key.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Clinical detachment",
+                              "scene_tone": "Quietly intense",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Bridge",
+                              "location": "The Bridge",
+                              "narrative_function": "The Analysis.",
+                              "sudowrite_visual_details": [
+                                "The holographic mines pulsing like heartbeats.",
+                                "Francisco's unmoving eyes.",
+                                "The sweat on the helmsman's neck."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Crawl",
+                              "setup": "Francisco gives the order: 'Ahead slow. 5% impulse.' The Council goes crazy. 'They will catch us!' Francisco draws his sword (metaphorically/literally). 'Anyone who increases speed gets stunned.' He imposes his will. The fleet creeps forward. The mines drift past, inches from the hulls. They do not detonate. The tension is unbearable. It is a test of nerve.",
+                              "symbolism": "Walking through fire. The discipline of the slow step. The Queen of Swords cutting through the panic.",
+                              "beat_goal": "The Action. Testing the solution under fire.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Steel will",
+                              "scene_tone": "Suspenseful",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Minefield",
+                              "location": "The Bridge",
+                              "narrative_function": "The Climax.",
+                              "learning_objective_integration": "Demonstrates 'Critical Thinking'\u2014trusting logic over instinct."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Clear Air",
+                              "setup": "The last ship clears the field. The mines dissolve behind them, effectively blocking Dagon (who is moving too fast to stop). The logic trap works both ways. Dagon's vanguard hits the field and is erased. Francisco allows himself to exhale. He sheathes the 'Sword'. He has solved the puzzle. The Slipstream opens up ahead\u2014clear, blue, and free. They have escaped.",
+                              "symbolism": "The breaking of the clouds. The Sword returning to the scabbard. The open sky.",
+                              "beat_goal": "Resolution. The Flight is successful.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Exhausted triumph",
+                              "scene_tone": "Relieved",
+                              "timeline_date": "Hour later",
+                              "timeline_variant": "Open Slipstream",
+                              "location": "The Bridge",
+                              "narrative_function": "The Crossing.",
+                              "sudowrite_character_moments": [
+                                "The helmsman slumping over the console.",
+                                "Francisco's hand trembling slightly as the adrenaline fades.",
+                                "The blue light of the open timeline filling the room."
+                              ]
+                            }
+                          ]
                         },
                         "specific_task_group_3": {
                           "id": "EA-075",
