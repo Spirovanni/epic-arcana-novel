@@ -16556,59 +16556,102 @@
                           "hero_journey_beat": "Resurrection",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to rescue from without.",
                           "save_the_cat_beat": "Finale",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Rescue from Without",
+                          "save_the_cat_beat_goal": "Initiate 'Rescue from Without' by forming an 'Ambitious Circle' (Knight of Disks) to amplify their signal across timelines.",
+                          "plot": "Rescue from Without (Part 1): They are surviving (EA-075), but they are stuck. Francisco needs to contact the Resistance. The problem is interference. He organizes the team into a 'Team of Teams' to build a complex beacon, assigning roles based on talent, not rank (Knight of Disks efficiency).",
                           "character_arcs": {
-                            "Francisco": "Achieving mastery in systematic problem-solving that integrates all his accumulated skills and wisdom.",
-                            "Problem_Resolution": "Francisco's ability to break down complex challenges into solvable components.",
-                            "Breakthrough_Moment": "The culmination of Francisco's growth allowing him to solve previously impossible problems."
+                            "Francisco": "Acts as the 'Connector'. He builds the human network that builds the machine.",
+                            "The_Specialists": "Characters like the Engineer and the Mystic have to work together without ego.",
+                            "The_Skeptics": "Those who think the signal will just attract more enemies."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how systematic problem-solving can resolve even the most complex temporal paradoxes.",
-                            "character_motivation": "Francisco's growing confidence in his ability to find solutions to seemingly impossible challenges.",
-                            "skill_integration": "Explores how all of Francisco's accumulated abilities can work together synergistically."
+                            "communication_method": "Explains how cross-timeline comms work.",
+                            "team_dynamics": "Shows the group functioning as a unit, not just followers."
                           },
                           "location_details": {
-                            "problem_solving_space": "The environment where Francisco can integrate all his resources and abilities for maximum effectiveness.",
-                            "solution_manifestation": "The moment when Francisco's systematic approach yields breakthrough solutions."
+                            "the_beacon_site": "A high point in the raw landscape where reception is best.",
+                            "the_war_room": "A circle of crates where they plan."
                           },
                           "series_connections": {
-                            "problem_solving_mastery": "Francisco's systematic approach will be essential for the complex challenges of Books 7-9.",
-                            "skill_integration": "His ability to combine all his abilities will be crucial for the final confrontation."
+                            "the_first_contact": "The voice they hear is a major cameo from Book 1.",
+                            "network_protocols": "The codes established here are used in the Book 3 climax."
                           },
-                          "summary": "Cornered by overwhelming odds as Dagon launches his final offensive, Francisco rallies his most dedicated allies into a tight formation. They channel their shared ambition for a better future into coordinated action, turning their individual strengths into collective power that can challenge even cosmic forces.",
-                          "pov": "3rd Person Limited",
+                          "summary": "Survival is stable. Now, Escape. Francisco gathers his 'Ambitious Circle'. He puts the Knight of Disks card on the table: hard work, reliability, detail. He breaks the problem (No Signal) into sub-problems (Power, Frequency, Encryption). He assigns micro-teams. 'Eyes on, hands off.' He trusts them to execute. They build a Beacon from scrap. Tensions rise as the work is grindingly hard. But the structure holds. They fire the signal. It punches through the static. A voice answers: 'We hear you. We are coming.'",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Contemplation and patience",
-                          "scene_tone": "Tense and dramatic",
+                          "core_emotion": "Collaborative focus",
+                          "scene_tone": "Industrious",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Through clear, decisive thinking, Francisco merges his accumulated wisdom, resources, and alliances to solve the complex puzzles that have been blocking his progress.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Silos",
+                              "setup": "Work on the Beacon is stalled. The Engineers aren't talking to the Mystics. Both think the other is useless. Francisco sees the 'Silo Effect'. He interrupts the argument. 'You are trying to solve the whole problem alone. Stop.' He forces them to swap roles for an hour. Empathy facilitates flow.",
+                              "symbolism": "The Babel Tower (confusion) vs. The Hive (coordination).",
+                              "beat_goal": "The Friction. Identifying the team failure.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Frustrated patience",
+                              "scene_tone": "Argumentative",
+                              "timeline_date": "Post-Crash + 3 days",
+                              "timeline_variant": "The Work Site",
+                              "location": "Beacon Site",
+                              "narrative_function": "The Obstacle.",
+                              "learning_objective_integration": "Demonstrates 'Team of Teams'\u2014breaking silos."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "His systematic approach to problem-solving creates breakthrough solutions that allow him to escape the immediate dangers and prepare for the final confrontation.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Network",
+                              "setup": "Francisco restructures the team. He creates a 'Shared Consciousness' daily briefing. Everyone knows what everyone else is doing. The Knight of Disks approach: methodical, unglamorous, effective. The work speed triples. The Beacon rises\u2014a mix of twisted metal and glowing runes. It is ugly but perfect.",
+                              "symbolism": "The Geodesic Dome (many parts, one structure). The Knight of Disks plodding forward.",
+                              "beat_goal": "The Solution. The team gels.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Flow",
+                              "scene_tone": "Harmonious",
+                              "timeline_date": "Post-Crash + 5 days",
+                              "timeline_variant": "The Work Site",
+                              "location": "Beacon Site",
+                              "narrative_function": "The Build.",
+                              "sudowrite_visual_details": [
+                                "Sparks flying in rhythm.",
+                                "The hum of the magic aligning with the hum of the generator.",
+                                "Handshakes between rivals."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Signal",
+                              "setup": "The moment of truth. They activate the Beacon. It draws massive power (The Energy Audit comes later). The beam shoots into the purple sky. They wait. Minutes pass. The Skeptics sneer. 'It failed.' Then, the static clears. A pattern emerges. A voice. It is faint, but clear. 'Identify. Identify.'",
+                              "symbolism": "The Lighthouse. The Thread in the dark.",
+                              "beat_goal": "The Climax (of the chapter). Success.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Awe",
+                              "scene_tone": "Tense silence",
+                              "timeline_date": "Post-Crash + 1 week",
+                              "timeline_variant": "The Comms Desk",
+                              "location": "Base Zero",
+                              "narrative_function": "The Breakthrough.",
+                              "learning_objective_integration": "Reflects 'Collaboration'\u2014synergy creates results."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Contact",
+                              "setup": "Francisco takes the mic. He gives the code. The voice confirms. It is General [Name Redacted - Book 1 Cameo]. 'Hold fast. We have your coordinates. Rescue is inbound. ETA 12 hours.' The camp erupts in cheers. But Francisco sees the sensors spike. The signal didn't just attract friends; it attracted *everything*.",
+                              "symbolism": "The Handshake across time. The Warning Light.",
+                              "beat_goal": "Resolution. Hope mixed with new danger.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Relief and dread",
+                              "scene_tone": "Celebratory but ominous",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Comms Desk",
+                              "location": "Base Zero",
+                              "narrative_function": "The Setup for next chapter.",
+                              "sudowrite_character_moments": [
+                                "Francisco gripping the table until his knuckles are white.",
+                                "The tears on Novella's face.",
+                                "The red light blinking on the threat radar."
+                              ]
                             }
                           ]
                         },
@@ -16691,7 +16734,105 @@
                                 "objective3": "Select five for rapid testing."
                               }
                             }
-                          }
+                          },
+                          "save_the_cat_beat_goal": "Defeat the Dagon Interceptor using 'Intellectual Dynamo' (Knight of Swords) rapid innovation to triumph where brute force fails.",
+                          "plot": "Rescue from Without (Part 2): Dagon's Hunter arrives. It shields against their conventional weapons. They are trapped. Francisco realizes he can't outgun it; he has to out-think it. He uses 'Rapid Ideation' techniques (Originals) to repurpose the Beacon into a weapon.",
+                          "character_arcs": {
+                            "Francisco": "Channels the 'Knight of Swords'. Fast, aggressive intellect. He encourages 'Wild Ideas'.",
+                            "The_Hunter": "A machine intelligence that learns and adapts to standard tactics.",
+                            "The_Team": "Forced to improvise under extreme pressure."
+                          },
+                          "story_gaps_addressed": {
+                            "technological_improvisation": "Shows how they use the junk on the planet to fight.",
+                            "enemy_capabilities": "Demonstrates why Dagon is so feared (adaptive AI)."
+                          },
+                          "location_details": {
+                            "the_firing_line": "The edge of their camp where the battle takes place.",
+                            "the_scrap_heap": "The source of their ammunition."
+                          },
+                          "series_connections": {
+                            "the_pulse_weapon": "The device invented here becomes a standard sidearm in later books.",
+                            "adaptive_tactics": "The strategy of 'Changing the Game' becomes Francisco's signature."
+                          },
+                          "summary": "The Hunter lands. It is a sleek, black killing machine. It absorbs their laser fire and fires back. The shield is failing (EA-075's wall). Francisco calls a 'huddle'. 'Stop shooting. It learns from shots. We need something it hasn't seen.' He manages an 'Intellectual Dynamo' session in the middle of a firefight. Someone suggests using the Beacon's power core to overload the local gravity. It's insane. It might kill them all. Francisco says 'Do it.' They rig the device. They fire. It crushes the Hunter into foil. Innovation wins.",
+                          "pov": "3rd Person Limited (Francisco)",
+                          "tense": "Past Tense",
+                          "core_emotion": "Manic creativity",
+                          "scene_tone": "High-octane",
+                          "scenes": [
+                            {
+                              "scene_number": 1,
+                              "scene_title": "The Hunter",
+                              "setup": "The sensors scream. The sky tears open. The Interceptor lands. It ignores the Beacon and targets the life signs. Francisco orders a volley. The Interceptor's shields flare and adapt. It fires a return shot that vaporizes the windmill (EA-075). It is invincible to 'Old Ways'.",
+                              "symbolism": "The Terminator. The Futility of Tradition.",
+                              "beat_goal": "The Threat. Establishing the enemy's superiority.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Fear",
+                              "scene_tone": "Action-horror",
+                              "timeline_date": "Post-Crash + 1 week, 1 hour",
+                              "timeline_variant": "The Perimeter",
+                              "location": "Base Zero",
+                              "narrative_function": "The Crisis.",
+                              "learning_objective_integration": "Demonstrates 'Originals'\u2014status quo failure."
+                            },
+                            {
+                              "scene_number": 2,
+                              "scene_title": "The Brainstorm",
+                              "setup": "Francisco drags the leaders into the bunker. 'Standard tactics are dead. Give me bad ideas. fast.' He forces them into 'Divergent Thinking'. The Engineer suggests a gravity bomb. 'We don't have the mass.' The Mystic suggests a temporal loop. 'We don't have the power.' Then, Novella looks at the Beacon. 'It's broadcasting a signal. What if we broadcast... gravity?'",
+                              "symbolism": "The Spark in the heavy air. The Knight of Swords charging.",
+                              "beat_goal": "The Idea. The pivot from fear to creativity.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Frantic hope",
+                              "scene_tone": "Fast-paced",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Bunker",
+                              "location": "Base Zero",
+                              "narrative_function": "The Plan.",
+                              "sudowrite_visual_details": [
+                                "Dust falling from the ceiling with every impact outside.",
+                                "Francisco writing formulas on the dirt floor.",
+                                "The lightbulb moment in Novella's eyes."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Prototype",
+                              "setup": "They have 5 minutes before the shield fails. They tear the Beacon apart. They rewire the core. It is the ugliest weapon ever made. Wires duct-taped, crystals exposed. The Knight of Swords doesn't care about safety; he cares about speed. They aim it at the Hunter. The Hunter charges.",
+                              "symbolism": "Frankenstein's Monster. The desperate gamble.",
+                              "beat_goal": "The Action. Execution of the insane plan.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Adrenaline",
+                              "scene_tone": "Chaotic",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Breach",
+                              "location": "Base Zero",
+                              "narrative_function": "The Climax.",
+                              "learning_objective_integration": "Reflects 'Rapid Prototyping'\u2014building to think."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Surprise",
+                              "setup": "They activate the device. No laser beam. Just a sound\u2014a 'thrum' that shakes the teeth. The gravity around the Hunter multiplies by 100. The machine crumples like a soda can. Its AI cannot adapt to physics breaking. It implodes. Silence returns. The team stares at their junk-weapon. They are alive.",
+                              "symbolism": "David and Goliath. The victory of Mind over Matter.",
+                              "beat_goal": "Resolution. The immediate threat is gone.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Disbelief",
+                              "scene_tone": "Stunned",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Wreckage",
+                              "location": "Base Zero",
+                              "narrative_function": "The Victory.",
+                              "sudowrite_character_moments": [
+                                "The smoke rising from the crushed machine.",
+                                "Francisco laughing, a sharp, manic sound.",
+                                "The realization that the Beacon is destroyed."
+                              ]
+                            }
+                          ]
                         }
                       }
                     },
@@ -16798,31 +16939,104 @@
                           "hero_journey_beat": "Resurrection",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to rescue from without.",
                           "save_the_cat_beat": "Finale",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Rescue from Without",
+                          "save_the_cat_beat_goal": "Sustain the defense against the siege using 'Energy' (The Emperor) to buy time for the rescue.",
+                          "plot": "Rescue from Without (Part 3): The Hunter is destroyed, but it was just a scout. The enemy main force arrives. They lay siege. The team is exhausted. Francisco channels The Emperor\u2014pure endurance. He teaches them 'The Power of Full Engagement'\u2014managing energy, not time.",
                           "character_arcs": {
-                            "Francisco": "Demonstrating sustained leadership energy that inspires others and maintains momentum through the longest challenges.",
-                            "Energy_Manifestation": "Francisco's vitality becomes a tangible force that energizes and inspires his allies.",
-                            "Sustained_Leadership": "His ability to maintain consistent energy and focus over extended periods."
+                            "Francisco": "Embodies 'The Emperor'. The unshakeable pillar. He cannot break, so he doesn't.",
+                            "Novella": "Reaches her limit and learns to rest strategically.",
+                            "The_Defenders": "Draw strength from Francisco's presence."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how sustained energy can maintain temporal effects over extended periods.",
-                            "character_motivation": "Francisco's growing understanding that leadership requires sustained commitment rather than just dramatic moments.",
-                            "energy_management": "Explores how leaders can maintain their energy and vitality through long struggles."
+                            "limits_of_heroism": "Shows the physical toll of the previous chapters.",
+                            "leadership_by_example": "Francisco does the hardest watch himself."
                           },
                           "location_details": {
-                            "energy_center": "The space where Francisco's sustained energy becomes a source of power for his entire coalition.",
-                            "vitality_manifestation": "The visible effects of Francisco's sustained energy on the people and timelines around him."
+                            "the_forward_post": "A lonely spot where Francisco stands guard.",
+                            "the_sleep_bunker": "Where the team recharges."
                           },
                           "series_connections": {
-                            "sustained_energy": "Francisco's ability to maintain energy over time will be essential for the extended challenges of Books 7-9.",
-                            "inspirational_leadership": "His energizing effect on others will be crucial for maintaining coalition unity."
+                            "the_emperor_state": "This state of hyper-focus is dangerous and addictive; explored in Book 4.",
+                            "the_siege_mentality": "Preparing them for the long war ahead."
                           },
-                          "summary": "Assisted by allies from across the timelines, Francisco reclaims his authority and leadership. His sustained energy and vitality, maintained through all his trials, becomes a source of inspiration and strength for everyone around him, demonstrating that true leadership comes from sustained commitment rather than dramatic gestures.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The Hunter's destruction attracts the swarm. Thousands of drones. They don't attack all at once; they harass. They deny sleep. It is a siege of exhaustion. The team is breaking. Francisco takes the 'Emperor' stance. He organizes shift sleeping. He takes the double watch. He stands on the wall, a statue of will. He manages his internal energy to stay awake for 48 hours. He becomes the battery for the entire group. When he finally sleeps, the others fight harder to protect *him*.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Varies by chapter",
-                          "scene_tone": "Varies by chapter"
+                          "core_emotion": "Grim endurance",
+                          "scene_tone": "Exhausting",
+                          "scenes": [
+                            {
+                              "scene_number": 1,
+                              "scene_title": "The Siege",
+                              "setup": "The Drones arrive. A cloud of metal insects. They dive-bomb at random intervals. No one can sleep. Nerves are fraying. A soldier shoots at a shadow. Francisco sees the strategy: 'They are trying to break our minds before they take our bodies.'",
+                              "symbolism": "The Mosquitoes. The dripping tap. The erosion of will.",
+                              "beat_goal": "The Pressure. Establishing the new threat level.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Weariness",
+                              "scene_tone": "Oppressive",
+                              "timeline_date": "Post-Crash + 8 days",
+                              "timeline_variant": "The Wall",
+                              "location": "Base Zero",
+                              "narrative_function": "The Test of Endurance.",
+                              "learning_objective_integration": "Reflects 'The Power of Full Engagement'\u2014energy management."
+                            },
+                            {
+                              "scene_number": 2,
+                              "scene_title": "The Energy Audit",
+                              "setup": "Francisco pulls the team off the line. 'You are useless like this.' He force-feeds them rations. He orders mandatory sleep. 'But they will attack!' 'Let them. I have the wall.' He teaches them to pulse their energy\u2014intense focus followed by deep recovery. He takes the burden.",
+                              "symbolism": "The Emperor on the Throne. The Father protecting the children.",
+                              "beat_goal": "The Strategy. Prioritizing recovery.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Protective",
+                              "scene_tone": "Quiet",
+                              "timeline_date": "Night",
+                              "timeline_variant": "The Bunker",
+                              "location": "Base Zero",
+                              "narrative_function": "The Sacrifice.",
+                              "sudowrite_visual_details": [
+                                "The dark circles under Novella's eyes.",
+                                "Francisco checking his weapon, his hands steady.",
+                                "The sound of breathing in the bunker."
+                              ]
+                            },
+                            {
+                              "scene_number": 3,
+                              "scene_title": "The Emperor's Stand",
+                              "setup": "Francisco is alone on the wall. The drones come. He shoots them down. One by one. Hour after hour. He enters a trance state. No fear, no fatigue, just action. He is The Emperor\u2014order imposed on chaos. He holds the line through the darkest part of the night. He is the lighthouse.",
+                              "symbolism": "The Stone Statue. The Unblinking Eye. The Force of Will.",
+                              "beat_goal": "The Climax (of endurance). Surviving the night.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Transcendence",
+                              "scene_tone": "Hypnotic",
+                              "timeline_date": "0300 Hours",
+                              "timeline_variant": "The Wall",
+                              "location": "Base Zero",
+                              "narrative_function": "The Feat.",
+                              "learning_objective_integration": "Demonstrates 'Willpower'\u2014depletion and renewal."
+                            },
+                            {
+                              "scene_number": 4,
+                              "scene_title": "The Renewal",
+                              "setup": "Dawn. The team wakes up. They are rested. They rush to the wall. Francisco is still there, surrounded by smoking drone shells. He turns. He smiles. And then he collapses. Not dead, just empty. Novella catches him. 'We have it now,' she says. The team takes the wall, energized by his sacrifice. They are ready for the finale.",
+                              "symbolism": "The Changing of the Guard. The Resurrection.",
+                              "beat_goal": "Resolution. The team is restored.",
+                              "pov": "3rd Person Limited (Novella)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Gratitude",
+                              "scene_tone": "Inspiring",
+                              "timeline_date": "Dawn",
+                              "timeline_variant": "The Wall",
+                              "location": "Base Zero",
+                              "narrative_function": "The Handoff.",
+                              "sudowrite_character_moments": [
+                                "Novella catching Francisco's weight.",
+                                "The light returning to the soldiers' eyes.",
+                                "The sun breaking through the purple clouds."
+                              ]
+                            }
+                          ]
                         }
                       }
                     },
@@ -16930,59 +17144,104 @@
                           "hero_journey_beat": "Return with the Elixir",
                           "hero_journey_beat_objective": "The goal of the hero journey beat is to master of two worlds.",
                           "save_the_cat_beat": "Finale",
-                          "save_the_cat_beat_goal": "",
-                          "plot": "Master of Two Worlds",
+                          "save_the_cat_beat_goal": "Execute the 'Magic Flight' escape using 'Quicken' (Eight of Wands) speed to outrun the final collapse.",
+                          "plot": "Resolution: The Rescue ships arrive. The siege is broken. But the timeline is collapsing. They must run the gauntlet to the extraction point. Francisco wakes up (from EA-078) and leads the sprint. It is pure momentum (Eight of Wands).",
                           "character_arcs": {
-                            "Francisco": "Achieving mastery in collective leadership, able to inspire and coordinate diverse allies for maximum impact.",
-                            "Ambitious_Circle": "Francisco's core allies who share his vision and are willing to risk everything for collective success.",
-                            "Collective_Power": "The emergence of group abilities that transcend individual limitations."
+                            "Francisco": "The Sprinter. He uses 'Atomic Habits'\u2014automatic responses developed during the book\u2014to survive without thinking.",
+                            "Novella": "Keeps the group moving, refusing to let anyone fall behind.",
+                            "The_Rescuers": "Provide covering fire but cannot land; the team must come to them."
                           },
                           "story_gaps_addressed": {
-                            "temporal_mechanics": "Shows how collective temporal manipulation can achieve what individual efforts cannot.",
-                            "character_motivation": "Francisco's growing understanding that individual ambition must be channeled into collective success.",
-                            "teamwork_development": "Explores how diverse individuals can work together to achieve seemingly impossible goals."
+                            "book2_climax": "The final action set piece of the book.",
+                            "transition_to_book3": "Sets up the larger conflict waiting 'outside'."
                           },
                           "location_details": {
-                            "coalition_center": "The space where Francisco's core allies gather to coordinate their collective efforts.",
-                            "collective_action": "The moment when individual abilities merge into something greater than the sum of their parts."
+                            "the_sky_bridge": "A collapsing rock formation they must cross to reach the ships.",
+                            "the_extraction_zone": "Moving target in the air."
                           },
                           "series_connections": {
-                            "collective_theme": "Francisco's mastery of collective action will be essential for the unity required in Books 7-9.",
-                            "ambitious_vision": "His ability to inspire others with shared ambition will be crucial for the final transformation."
+                            "narrative_momentum": "The speed of this ending propels the reader directly into Book 3.",
+                            "the_missing_piece": "They leave something behind that becomes plot relevant later."
                           },
-                          "summary": "With every resource and ability now at his disposal, Francisco accelerates his initiatives, propelling the finale with unstoppable momentum. His mastery of both temporal and conventional leadership allows him to move at the pace of possibility itself, creating rapid positive changes across multiple timelines.",
-                          "pov": "3rd Person Limited",
+                          "summary": "The sky screams. Rescue ships descend. The Drones panic. The timeline begins to delaminate (reality breaking apart). Francisco yells 'Move!' They sprint. It is the Eight of Wands: speed, arrows in flight, direct action. There is no time for plans. They rely on muscle memory (Habits). They dodge falling rocks. They jump gaps. They reach the Sky Bridge. It is crumbling. They have to jump. Francisco throws Novella across. Then he jumps. He is caught in mid-air by a tractor beam. They are pulled up. The timelineimplodes below them. They are out.",
+                          "pov": "3rd Person Limited (Francisco)",
                           "tense": "Past Tense",
-                          "core_emotion": "Urgency and determination",
-                          "scene_tone": "Varied and dynamic",
+                          "core_emotion": [
+                            "Urgency"
+                          ],
+                          "scene_tone": "Breakneck speed",
                           "scenes": [
                             {
                               "scene_number": 1,
-                              "title": "Scene 1",
-                              "setup": "Cornered by overwhelming odds as Dagon launches his final offensive, Francisco rallies his most dedicated allies into a tight formation.",
-                              "symbolism": "Symbolic elements of scene 1",
-                              "beat_goal": "Advance the narrative through scene 1"
+                              "scene_title": "The Skyfall",
+                              "setup": "The clouds break. Allied Cruisers drop into the atmosphere. The sonic boom flattens the drones. It is the cavalry. But the ground is shaking. The 'Raw' timeline (EA-075) is rejecting them. Fissures open. The extraction point is 2 clicks North. 'Run!'",
+                              "symbolism": "The Trumpet Blast. The Earthquake. The finish line.",
+                              "beat_goal": "The Start Gun. Immediate transition to movement.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Panic/Hope",
+                              "scene_tone": "Epic",
+                              "timeline_date": "Dawn + 10 minutes",
+                              "timeline_variant": "Base Zero",
+                              "location": "Base Zero",
+                              "narrative_function": "The Trigger.",
+                              "learning_objective_integration": "Reflects 'The Power of Habit'\u2014cue and response."
                             },
                             {
                               "scene_number": 2,
-                              "title": "Scene 2",
-                              "setup": "They channel their shared ambition for a better future into coordinated action, turning their individual strengths into collective power that can challenge even cosmic forces.",
-                              "symbolism": "Symbolic elements of scene 2",
-                              "beat_goal": "Advance the narrative through scene 2"
+                              "scene_title": "The Sprint",
+                              "setup": "They are running. Drones are chasing. Rocks are falling. Francisco doesn't think. He shoots a drone, jumps a log, pulls a comrade up. It is fluid. He is in Flow (from Book 1). The Eight of Wands energy propels them. They are faster than fear.",
+                              "symbolism": "The Arrow. The blurred background. The tunnel vision of speed.",
+                              "beat_goal": "The Action. overcoming obstacles through speed.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Flow",
+                              "scene_tone": "Fast",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Gauntlet",
+                              "location": "The Wilderness",
+                              "narrative_function": "The Chase.",
+                              "sudowrite_visual_details": [
+                                "The blur of the landscape.",
+                                "The sound of heartbeats matching footfalls.",
+                                "The extraction point growing larger."
+                              ]
                             },
                             {
                               "scene_number": 3,
-                              "title": "Scene 3",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 3",
-                              "beat_goal": "Advance the narrative through scene 3"
+                              "scene_title": "The Link-Up",
+                              "setup": "They reach the Sky Bridge. It's a natural arch. The ship hovers above it. The ramp is down. But the bridge is cracking. The arch breaks. A chasm opens. Novella slides. Francisco grabs her. He swings her over. 'Go!' He is the last one on the crumbling side.",
+                              "symbolism": "The chasm. The helping hand. The leap of faith.",
+                              "beat_goal": "The Climax (of the book). The final jump.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Selfless",
+                              "scene_tone": "Vertical",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Edge",
+                              "location": "The Sky Bridge",
+                              "narrative_function": "The Leap.",
+                              "learning_objective_integration": "Demonstrates 'Momentum'\u2014speed conquers gravity."
                             },
                             {
                               "scene_number": 4,
-                              "title": "Scene 4",
-                              "setup": ".",
-                              "symbolism": "Symbolic elements of scene 4",
-                              "beat_goal": "Advance the narrative through scene 4"
+                              "scene_title": "The Ascension",
+                              "setup": "Francisco jumps. He falls. The ground rushes up. Then\u2014light. The tractor beam catches him. He is yanked upward. He sees the ground explode below him. Base Zero, the Wall, the Generator\u2014all gone. He is pulled into the ship bay. The airlock hisses shut. Silence. He is safe. The 'Flight' is over.",
+                              "symbolism": "The Ascension. The womb of the ship. The silence after the storm.",
+                              "beat_goal": "Resolution. Book 2 ends.",
+                              "pov": "3rd Person Limited (Francisco)",
+                              "tense": "Past Tense",
+                              "core_emotion": "Safety",
+                              "scene_tone": "Quiet finale",
+                              "timeline_date": "Minutes later",
+                              "timeline_variant": "The Rescue Ship",
+                              "location": "Airlock",
+                              "narrative_function": "The End.",
+                              "sudowrite_character_moments": [
+                                "The hiss of pressurization.",
+                                "Francisco checking his limbs\u2014all there.",
+                                "The view of the timeline shrinking in the viewport."
+                              ]
                             }
                           ]
                         },
