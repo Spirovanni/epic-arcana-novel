@@ -428,15 +428,31 @@ const formatChapterForSudowrite = (chapter: Chapter, scenes: Scene[]): string =>
 };
 
 const getChapterIconPath = (chapter: Chapter, bookNumber: number): string => {
+  const defaultPath = `/icons/chapters/book${bookNumber}/chapter${chapter.chapterNumber}.png`;
   const icon = chapter.iconPath?.trim();
   if (icon) {
     if (icon.startsWith('http')) return icon; // external URL already usable
-    if (icon.startsWith('/')) return icon; // already an absolute path in /public
-    if (icon.startsWith('icons/')) return `/${icon}`; // stored without leading slash
-    if (icon.startsWith('chapters/')) return `/icons/${icon}`; // stored relative to icons folder
-    return `/icons/${icon}`; // fallback prefix for bare filenames
+
+    // Normalize any stored path variant into a /icons/... absolute path
+    const normalized = icon.startsWith('/')
+      ? icon
+      : icon.startsWith('icons/')
+        ? `/${icon}`
+        : icon.startsWith('chapters/')
+          ? `/icons/${icon}`
+          : `/icons/${icon}`;
+
+    // If a mismatched book/chapter was stored, fall back to the correctly numbered asset
+    const match = normalized.match(/book(\d+)\/chapter(\d+)/);
+    if (match) {
+      const [, storedBook, storedChapter] = match;
+      if (Number(storedBook) !== bookNumber || Number(storedChapter) !== chapter.chapterNumber) {
+        return defaultPath;
+      }
+    }
+    return normalized;
   }
-  return `/icons/chapters/book${bookNumber}/chapter${chapter.chapterNumber}.png`;
+  return defaultPath;
 };
 
 const handleIconError = (e: React.SyntheticEvent<HTMLImageElement>) => {
