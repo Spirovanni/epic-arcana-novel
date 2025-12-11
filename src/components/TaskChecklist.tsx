@@ -23,37 +23,50 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
 
   const fetchTasksFromChapter = useCallback(async () => {
     try {
-      // Extract tasks from chapter data or l_outline.json
+      // First, try to fetch tasks from the database
       const response = await fetch(`/api/chapters/${chapterId}/tasks`);
+      
       if (response.ok) {
         const data = await response.json();
         
-        // Load completion status for each task
-        const tasksWithStatus = await Promise.all(
-          data.tasks.map(async (task: TaskItem) => {
-            try {
-              const statusResponse = await fetch(`/api/chapters/${chapterId}/tasks/${task.id}`);
-              if (statusResponse.ok) {
-                const statusData = await statusResponse.json();
-                return { ...task, completed: statusData.completed };
-              }
-            } catch (error) {
-              console.error(`Failed to load status for task ${task.id}:`, error);
-            }
-            return task;
-          })
-        );
-        
-        setTasks(tasksWithStatus);
-        onTaskCountChange?.(tasksWithStatus.length);
+        // If no tasks in database, initialize them
+        if (!data.tasks || data.tasks.length === 0) {
+          console.log('[TaskChecklist] No tasks found in DB, initializing...');
+          const extractedTasks = extractTasksFromChapterData();
+          
+          // Create tasks in database
+          await Promise.all(
+            extractedTasks.map(task =>
+              fetch(`/api/chapters/${chapterId}/tasks`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                  taskId: task.id,
+                  title: task.title,
+                  description: task.description,
+                  category: task.category,
+                }),
+              })
+            )
+          );
+          
+          setTasks(extractedTasks);
+          onTaskCountChange?.(extractedTasks.length);
+        } else {
+          // Tasks exist in database, use them
+          console.log(`[TaskChecklist] Loaded ${data.tasks.length} tasks from DB`);
+          setTasks(data.tasks);
+          onTaskCountChange?.(data.tasks.length);
+        }
       } else {
-        // If API doesn't exist, create tasks from chapterData
+        // API error, use extracted tasks as fallback
+        console.warn('[TaskChecklist] API error, using fallback tasks');
         const extractedTasks = extractTasksFromChapterData();
         setTasks(extractedTasks);
         onTaskCountChange?.(extractedTasks.length);
       }
     } catch (error) {
-      console.error('Failed to fetch tasks:', error);
+      console.error('[TaskChecklist] Failed to fetch tasks:', error);
       // Fallback to extracting from chapterData
       const extractedTasks = extractTasksFromChapterData();
       setTasks(extractedTasks);

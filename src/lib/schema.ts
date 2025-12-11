@@ -403,6 +403,22 @@ export const chapterPages = pgTable('chapter_pages', {
   updatedAt: timestamp('updated_at').defaultNow(),
 });
 
+export const chapterTasks = pgTable('chapter_tasks', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
+  taskId: varchar('task_id', { length: 255 }).notNull(), // unique identifier for the task (e.g., 'character_arc_1')
+  title: text('title').notNull(),
+  description: text('description'),
+  category: varchar('category', { length: 100 }).notNull(), // 'character_arcs', 'story_gaps_addressed', 'series_connections'
+  completed: boolean('completed').default(false).notNull(),
+  completedAt: timestamp('completed_at', { mode: 'string' }),
+  userId: varchar('user_id', { length: 255 }), // clerk user ID of who completed it
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+}, (table) => [
+  unique('chapter_task_unique').on(table.chapterId, table.taskId),
+]);
+
 export const scenes = pgTable('scenes', {
   id: uuid('id').primaryKey().defaultRandom(),
   chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
