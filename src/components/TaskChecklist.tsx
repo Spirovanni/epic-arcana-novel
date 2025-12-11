@@ -141,17 +141,22 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
   const toggleTaskCompletion = async (taskId: string) => {
     try {
       const task = tasks.find(t => t.id === taskId);
-      if (!task) return;
+      if (!task) {
+        console.error(`[TaskChecklist] Task ${taskId} not found`);
+        return;
+      }
 
       const newCompletionStatus = !task.completed;
       
-      // Update local state immediately
+      console.log(`[TaskChecklist] Toggling task ${taskId}: ${task.completed} -> ${newCompletionStatus}`);
+      
+      // Update local state immediately (optimistic update)
       setTasks(tasks.map(t => 
         t.id === taskId ? { ...t, completed: newCompletionStatus } : t
       ));
 
       // Save to backend
-      await fetch(`/api/chapters/${chapterId}/tasks/${taskId}`, {
+      const response = await fetch(`/api/chapters/${chapterId}/tasks/${taskId}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -159,12 +164,28 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
         body: JSON.stringify({ completed: newCompletionStatus }),
       });
 
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error(`[TaskChecklist] Failed to update task: ${response.status} - ${errorText}`);
+        
+        // Revert local state on error
+        setTasks(tasks.map(t => 
+          t.id === taskId ? { ...t, completed: !newCompletionStatus } : t
+        ));
+      } else {
+        const result = await response.json();
+        console.log(`[TaskChecklist] Task updated successfully:`, result);
+      }
+
     } catch (error) {
-      console.error('Failed to update task completion:', error);
+      console.error('[TaskChecklist] Failed to update task completion:', error);
       // Revert local state on error
-      setTasks(tasks.map(t => 
-        t.id === taskId ? { ...t, completed: !t.completed } : t
-      ));
+      const task = tasks.find(t => t.id === taskId);
+      if (task) {
+        setTasks(tasks.map(t => 
+          t.id === taskId ? { ...t, completed: task.completed } : t
+        ));
+      }
     }
   };
 
