@@ -621,6 +621,7 @@ export default function ChapterWritingPage() {
   const [permissions, setPermissions] = useState({ canRead: false, canWrite: false, canAdmin: false });
   const [showToolkit, setShowToolkit] = useState(false);
   const [totalTasks, setTotalTasks] = useState(0);
+  const [completedTasks, setCompletedTasks] = useState(0);
   const [isEditingOverview, setIsEditingOverview] = useState(false);
   const [editedChapter, setEditedChapter] = useState<Partial<Chapter> | null>(null);
   const [isSavingOverview, setIsSavingOverview] = useState(false);
@@ -744,6 +745,11 @@ export default function ChapterWritingPage() {
     }
     fetchChapterData();
   }, [chapterId]);
+
+  const handleTaskProgressChange = useCallback((completed: number, total: number) => {
+    setCompletedTasks(completed);
+    setTotalTasks(total);
+  }, []);
 
   // Clean up pages beyond the 15-page limit
   const cleanupExcessPages = useCallback(async () => {
@@ -1293,8 +1299,8 @@ export default function ChapterWritingPage() {
                   <div className={`text-xs ${textColor} opacity-80`}>Scenes</div>
                 </div>
                 <div className={`${isDarkTheme ? 'bg-white/20' : 'bg-black/10'} backdrop-blur-md rounded-lg p-3 border ${isDarkTheme ? 'border-white/30' : 'border-black/20'} text-center`}>
-                  <div className={`text-xl font-bold ${textColor}`}>{stats.taskGroupCount}</div>
-                  <div className={`text-xs ${textColor} opacity-80`}>Tasks</div>
+                  <div className={`text-xl font-bold ${textColor}`}>{`${completedTasks}/${totalTasks || 0}`}</div>
+                  <div className={`text-xs ${textColor} opacity-80`}>Completed Tasks</div>
                 </div>
               </div>
             </div>
@@ -1316,7 +1322,7 @@ export default function ChapterWritingPage() {
             { key: 'overview', label: 'Overview', icon: BookOpenIcon },
             { key: 'write', label: 'Write', icon: SparklesIcon },
             { key: 'scenes', label: `Scenes (${stats.sceneCount})`, icon: ClockIcon },
-            { key: 'tasks', label: `Tasks (${totalTasks})`, icon: AcademicCapIcon },
+            { key: 'tasks', label: `Completed Tasks (${completedTasks}/${totalTasks || 0})`, icon: AcademicCapIcon },
           ].map(({ key, label, icon: Icon }) => (
             <button
               key={key}
@@ -2263,6 +2269,7 @@ export default function ChapterWritingPage() {
               chapterId={chapterId} 
               chapterData={data.chapter} 
               onTaskCountChange={setTotalTasks}
+              onTaskProgressChange={handleTaskProgressChange}
             />
           )}
         </div>

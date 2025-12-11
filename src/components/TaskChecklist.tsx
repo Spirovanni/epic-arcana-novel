@@ -15,9 +15,10 @@ interface TaskChecklistProps {
   chapterId: string;
   chapterData: { id: string; title: string; [key: string]: unknown };
   onTaskCountChange?: (count: number) => void;
+  onTaskProgressChange?: (completed: number, total: number) => void;
 }
 
-export default function TaskChecklist({ chapterId, chapterData, onTaskCountChange }: TaskChecklistProps) {
+export default function TaskChecklist({ chapterId, chapterData, onTaskCountChange, onTaskProgressChange }: TaskChecklistProps) {
   const [tasks, setTasks] = useState<TaskItem[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -140,6 +141,12 @@ export default function TaskChecklist({ chapterId, chapterData, onTaskCountChang
       setLoading(false);
     }
   }, [chapterId, onTaskCountChange, extractTasksFromChapterData]);
+
+  // Keep parent in sync on task progress changes
+  useEffect(() => {
+    const completed = tasks.filter(t => t.completed).length;
+    onTaskProgressChange?.(completed, tasks.length);
+  }, [tasks, onTaskProgressChange]);
 
   useEffect(() => {
     fetchTasksFromChapter();
