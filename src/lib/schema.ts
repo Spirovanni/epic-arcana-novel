@@ -82,142 +82,142 @@ export const trionfiCards = pgTable('trionfi_cards', {
 export const characterTypeEnum = pgEnum('character_type', ['historical', 'mythic', 'fantasy']);
 
 export const characters = pgTable('characters', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    characterType: characterTypeEnum('character_type').notNull(),
-    pronouns: varchar('pronouns', { length: 50 }),
-    relation: varchar('relation', { length: 255 }),
-    personality: text('personality'),
-    background: text('background'),
-    physicalDescription: text('physical_description'),
-    dialogueStyle: text('dialogue_style'),
-    role: varchar('role', { length: 255 }),
-    goal: text('goal'),
-    birthYear: varchar('birth_year', { length: 50 }),
-    died: varchar('died', { length: 50 }),
-    storyYear: varchar('story_year', { length: 50 }),
-    storyAge: varchar('story_age', { length: 50 }),
-    groups: jsonb('groups'),
-    description: text('description'),
-    birthPlace: varchar('birth_place', { length: 255 }),
-    birthPlaceDescription: text('birth_place_description'),
-    deathPlace: varchar('death_place', { length: 255 }),
-    deathPlaceDescription: text('death_place_description'),
-    aka: varchar('aka', { length: 255 }),
-    slug: varchar('slug', { length: 255 }).unique(), // SEO-friendly URL
-    primaryAffinityId: uuid('primary_affinity_id').references(() => trionfiCards.id),
-    evolution: jsonb('evolution'),
-    lastSeenChapter: integer('last_seen_chapter'), // NEW: Track where they are in the book
-    // AI Prompt for Image Generation
-    aiPrompt: text('ai_prompt'),
-    // Character Image
-    imageUrl: varchar('image_url', { length: 255 }),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  characterType: characterTypeEnum('character_type').notNull(),
+  pronouns: varchar('pronouns', { length: 50 }),
+  relation: varchar('relation', { length: 255 }),
+  personality: text('personality'),
+  background: text('background'),
+  physicalDescription: text('physical_description'),
+  dialogueStyle: text('dialogue_style'),
+  role: varchar('role', { length: 255 }),
+  goal: text('goal'),
+  birthYear: varchar('birth_year', { length: 50 }),
+  died: varchar('died', { length: 50 }),
+  storyYear: varchar('story_year', { length: 50 }),
+  storyAge: varchar('story_age', { length: 50 }),
+  groups: jsonb('groups'),
+  description: text('description'),
+  birthPlace: varchar('birth_place', { length: 255 }),
+  birthPlaceDescription: text('birth_place_description'),
+  deathPlace: varchar('death_place', { length: 255 }),
+  deathPlaceDescription: text('death_place_description'),
+  aka: varchar('aka', { length: 255 }),
+  slug: varchar('slug', { length: 255 }).unique(), // SEO-friendly URL
+  primaryAffinityId: uuid('primary_affinity_id').references(() => trionfiCards.id),
+  evolution: jsonb('evolution'),
+  lastSeenChapter: integer('last_seen_chapter'), // NEW: Track where they are in the book
+  // AI Prompt for Image Generation
+  aiPrompt: text('ai_prompt'),
+  // Character Image
+  imageUrl: varchar('image_url', { length: 255 }),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const affinityTypeEnum = pgEnum('affinity_type', ['secondary', 'forbidden']);
 
 export const characterAffinities = pgTable('character_affinities', {
-    characterId: uuid('character_id').references(() => characters.id).notNull(),
-    cardId: uuid('card_id').references(() => trionfiCards.id).notNull(),
-    affinityType: affinityTypeEnum('affinity_type').notNull(),
+  characterId: uuid('character_id').references(() => characters.id).notNull(),
+  cardId: uuid('card_id').references(() => trionfiCards.id).notNull(),
+  affinityType: affinityTypeEnum('affinity_type').notNull(),
 });
 
 export const uniqueCombinations = pgTable('unique_combinations', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    characterId: uuid('character_id').references(() => characters.id).notNull(),
-    name: varchar('name', { length: 255 }).notNull(),
-    effect: text('effect'),
-    cost: text('cost'),
+  id: uuid('id').primaryKey().defaultRandom(),
+  characterId: uuid('character_id').references(() => characters.id).notNull(),
+  name: varchar('name', { length: 255 }).notNull(),
+  effect: text('effect'),
+  cost: text('cost'),
 });
 
 export const uniqueCombinationCards = pgTable('unique_combination_cards', {
-    combinationId: uuid('combination_id').references(() => uniqueCombinations.id).notNull(),
-    cardId: uuid('card_id').references(() => trionfiCards.id).notNull(),
+  combinationId: uuid('combination_id').references(() => uniqueCombinations.id).notNull(),
+  cardId: uuid('card_id').references(() => trionfiCards.id).notNull(),
 });
 
 export const symbolicObjects = pgTable('symbolic_objects', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    role: varchar('role', { length: 255 }),
-    theme: varchar('theme', { length: 255 }),
-    description: text('description'),
-    lore: text('lore'),
-    origin: text('origin'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  role: varchar('role', { length: 255 }),
+  theme: varchar('theme', { length: 255 }),
+  description: text('description'),
+  lore: text('lore'),
+  origin: text('origin'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const militaryOrders = pgTable('military_orders', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    role: varchar('role', { length: 255 }),
-    origin: varchar('origin', { length: 255 }),
-    description: text('description'),
-    lore: text('lore'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  role: varchar('role', { length: 255 }),
+  origin: varchar('origin', { length: 255 }),
+  description: text('description'),
+  lore: text('lore'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const trainComponentTypeEnum = pgEnum('train_component_type', ['locomotive', 'passenger_car', 'observation_car']);
 export const zanettiTrainComponents = pgTable('zanetti_train_components', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull(),
-    type: trainComponentTypeEnum('type').notNull(),
-    details: jsonb('details'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull(),
+  type: trainComponentTypeEnum('type').notNull(),
+  details: jsonb('details'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const stationTypeEnum = pgEnum('station_type', ['major_hub', 'minor_stop']);
 export const temporalStations = pgTable('temporal_stations', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    type: stationTypeEnum('type').notNull(),
-    features: jsonb('features'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  type: stationTypeEnum('type').notNull(),
+  features: jsonb('features'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const temporalTechnology = pgTable('temporal_technology', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    type: varchar('type', { length: 100 }), // e.g., 'Chronological Device', 'Protective Equipment'
-    description: text('description'),
-    details: jsonb('details'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  type: varchar('type', { length: 100 }), // e.g., 'Chronological Device', 'Protective Equipment'
+  description: text('description'),
+  details: jsonb('details'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const temporalEconomy = pgTable('temporal_economy', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    type: varchar('type', { length: 100 }), // e.g., 'Resource', 'Service'
-    description: text('description'),
-    details: jsonb('details'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  type: varchar('type', { length: 100 }), // e.g., 'Resource', 'Service'
+  description: text('description'),
+  details: jsonb('details'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const temporalLaw = pgTable('temporal_law', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    type: varchar('type', { length: 100 }), // e.g., 'Principle', 'Enforcement', 'Legal Document'
-    description: text('description'),
-    details: jsonb('details'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  type: varchar('type', { length: 100 }), // e.g., 'Principle', 'Enforcement', 'Legal Document'
+  description: text('description'),
+  details: jsonb('details'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 export const temporalEducation = pgTable('temporal_education', {
-    id: uuid('id').primaryKey().defaultRandom(),
-    name: varchar('name', { length: 255 }).notNull().unique(),
-    type: varchar('type', { length: 100 }), // e.g., 'Training Program', 'Research Institution'
-    description: text('description'),
-    details: jsonb('details'),
-    createdAt: timestamp('created_at').defaultNow(),
-    updatedAt: timestamp('updated_at').defaultNow(),
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull().unique(),
+  type: varchar('type', { length: 100 }), // e.g., 'Training Program', 'Research Institution'
+  description: text('description'),
+  details: jsonb('details'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
 });
 
 // Timeline events table (single timeline approach)
@@ -846,29 +846,29 @@ export const userCalendarAssignments = pgTable('user_calendar_assignments', {
   userJourneyId: uuid('user_journey_id').notNull().references(() => userJourneys.id, { onDelete: 'cascade' }),
   dayOfYear: integer('day_of_year').notNull(), // 1-365 ONLY - no assignments beyond first year
   assignmentDate: timestamp('assignment_date').notNull(), // The actual calendar date for this assignment
-  
+
   // Assignment content - personalized based on user's assessment results
   title: varchar('title', { length: 255 }).notNull(),
   description: text('description').notNull(),
   dailyTheme: varchar('daily_theme', { length: 255 }).notNull(), // Theme for the day
   personalityFocus: varchar('personality_focus', { length: 255 }).notNull(), // Which aspect of their personality to focus on
-  
+
   // Activities and exercises
   reflectionPrompt: text('reflection_prompt').notNull(),
   practiceExercise: text('practice_exercise').notNull(),
   journalPrompt: text('journal_prompt').notNull(),
   actionItem: text('action_item').notNull(),
-  
+
   // Chapter/Book connection
   bookChapter: varchar('book_chapter', { length: 100 }), // e.g., "Book 1, Chapter 3"
   chapterFocus: varchar('chapter_focus', { length: 255 }), // What this day relates to in the Epic Arcana story
-  
+
   // Progress tracking
   isCompleted: boolean('is_completed').default(false).notNull(),
   completedAt: timestamp('completed_at'),
   userNotes: text('user_notes'), // User's personal notes for this day
   userRating: integer('user_rating'), // 1-5 rating of how helpful this day was
-  
+
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
@@ -881,26 +881,26 @@ export const assignmentTemplates = pgTable('assignment_templates', {
   personalityType: varchar('personality_type', { length: 100 }).notNull(), // e.g., "Gentle Leader", "Wise Mystic"
   enneagramType: integer('enneagram_type'), // 1-9
   dayOfYear: integer('day_of_year').notNull(), // 1-365 ONLY - templates for first year only
-  
+
   // Template content
   title: varchar('title', { length: 255 }).notNull(),
   description: text('description').notNull(),
   dailyTheme: varchar('daily_theme', { length: 255 }).notNull(),
   personalityFocus: varchar('personality_focus', { length: 255 }).notNull(),
-  
+
   reflectionPrompt: text('reflection_prompt').notNull(),
   practiceExercise: text('practice_exercise').notNull(),
   journalPrompt: text('journal_prompt').notNull(),
   actionItem: text('action_item').notNull(),
-  
+
   bookChapter: varchar('book_chapter', { length: 100 }),
   chapterFocus: varchar('chapter_focus', { length: 255 }),
-  
+
   // Metadata
   tags: jsonb('tags'), // Array of tags for categorization
   difficulty: varchar('difficulty', { length: 20 }).default('medium'), // easy, medium, hard
   estimatedTimeMinutes: integer('estimated_time_minutes').default(15), // How long this should take
-  
+
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 }, (table) => [
@@ -983,4 +983,37 @@ export const terminalLearningObjectives = pgTable('terminal_learning_objectives'
   index('terminal_learning_objectives_resource_chapter_idx').on(table.learningResourceId, table.chapterId),
   index('terminal_learning_objectives_chapter_idx').on(table.chapterId),
   index('terminal_learning_objectives_bloom_idx').on(table.bloomLevel),
+]);
+
+// Career System Tables
+export const vocations = pgTable('vocations', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull(),
+  description: text('description'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const guilds = pgTable('guilds', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull(),
+  description: text('description'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+});
+
+export const occupations = pgTable('occupations', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 255 }).notNull(),
+  code: varchar('code', { length: 20 }), // ONET code
+  description: text('description'),
+  parentId: uuid('parent_id'), // Self-reference to create hierarchy
+  vocationId: uuid('vocation_id').references(() => vocations.id),
+  guildId: uuid('guild_id').references(() => guilds.id),
+  dailyWage: integer('daily_wage'),
+  sampleTitles: jsonb('sample_titles'),
+  createdAt: timestamp('created_at').defaultNow(),
+  updatedAt: timestamp('updated_at').defaultNow(),
+}, (table) => [
+  unique('occupations_code_unique').on(table.code),
 ]);
