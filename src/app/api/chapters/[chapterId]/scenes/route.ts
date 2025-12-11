@@ -7,11 +7,18 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
   try {
     const { chapterId } = await params;
     
+    console.log(`[SCENES API] Fetching scenes for chapter ID: ${chapterId}`);
+    
     const chapterScenes = await db
       .select()
       .from(scenes)
       .where(eq(scenes.chapterId, chapterId))
       .orderBy(scenes.sceneNumber);
+
+    console.log(`[SCENES API] Found ${chapterScenes.length} scenes for chapter ${chapterId}`);
+    if (chapterScenes.length > 0) {
+      console.log(`[SCENES API] Scene titles:`, chapterScenes.map(s => `#${s.sceneNumber}: ${s.title}`));
+    }
 
     return NextResponse.json({ scenes: chapterScenes });
   } catch (error) {

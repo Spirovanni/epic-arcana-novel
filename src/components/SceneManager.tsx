@@ -139,13 +139,20 @@ export default function SceneManager({ chapterId }: SceneManagerProps) {
 
   const fetchScenes = useCallback(async () => {
     try {
+      console.log(`[SceneManager] Fetching scenes for chapter: ${chapterId}`);
       const response = await fetch(`/api/chapters/${chapterId}/scenes`);
       if (response.ok) {
         const data = await response.json();
+        console.log(`[SceneManager] Received ${data.scenes?.length || 0} scenes from API`);
+        if (data.scenes && data.scenes.length > 0) {
+          console.log(`[SceneManager] Scene IDs:`, data.scenes.map((s: Scene) => ({ id: s.id, number: s.sceneNumber, title: s.title })));
+        }
         setScenes(data.scenes);
+      } else {
+        console.error(`[SceneManager] Failed to fetch scenes. Status: ${response.status}`);
       }
     } catch (error) {
-      console.error('Failed to fetch scenes:', error);
+      console.error('[SceneManager] Failed to fetch scenes:', error);
     } finally {
       setLoading(false);
     }

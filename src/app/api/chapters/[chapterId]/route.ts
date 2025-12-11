@@ -72,11 +72,21 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       .orderBy(asc(chapterPages.pageNumber));
 
     // Get scenes for the chapter
+    console.log(`[CHAPTER API] Fetching scenes for chapter ID: ${chapterId}`);
     const chapterScenes = await db
       .select()
       .from(scenes)
       .where(eq(scenes.chapterId, chapterId))
       .orderBy(asc(scenes.sceneNumber));
+    console.log(`[CHAPTER API] Found ${chapterScenes.length} scenes`);
+    if (chapterScenes.length > 0) {
+      console.log(`[CHAPTER API] Scene details:`, chapterScenes.map(s => ({ 
+        id: s.id, 
+        number: s.sceneNumber, 
+        title: s.title, 
+        chapterId: s.chapterId 
+      })));
+    }
 
     // Get learning resources for this chapter
     const linkedResources = await db
