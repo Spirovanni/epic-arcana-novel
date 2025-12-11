@@ -513,8 +513,8 @@ const ExpandableDescription = ({ description, textColor, isExpanded, onToggle }:
 };
 
 const getPageGoal = (pageNumber: number): number => {
-  if (pageNumber === 1) return 1000; // First page: 1000 characters
-  return 2000; // All other pages including last page: 2000 characters
+  if (pageNumber === 1) return 1150; // First page: 1150 characters
+  return 1500; // All other pages including last page: 1500 characters
 };
 
 const isPageComplete = (page: ChapterPage, allPages: ChapterPage[]): boolean => {
@@ -523,7 +523,7 @@ const isPageComplete = (page: ChapterPage, allPages: ChapterPage[]): boolean => 
   
   // Special rule for page 15 (final page): only needs 15% to be complete
   if (page.pageNumber === 15) {
-    return charCount >= (goal * 0.15); // 300 characters for page 15 (15% of 2000)
+    return charCount >= (goal * 0.15); // 225 characters for page 15 (15% of 1500)
   }
   
   // Consider complete if at 95% of goal for other pages
