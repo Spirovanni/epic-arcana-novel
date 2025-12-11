@@ -69,7 +69,7 @@ dev-debug.log
 
 Task files
 tasks.json
-tasks/ 
+/.taskmaster/tasks/ 
 
 # Ignore seed files
 seed*.mjs
