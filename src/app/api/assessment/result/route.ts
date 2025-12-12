@@ -7,8 +7,10 @@ import { desc, eq } from 'drizzle-orm'
 export async function GET() {
   try {
     const { userId } = await auth()
+    console.log('[API] Result - userId:', userId)
 
     if (!userId) {
+      console.log('[API] Result - No userId, returning 401')
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
@@ -17,14 +19,18 @@ export async function GET() {
 
     // Look up internal user id
     const existingUser = await db.select().from(users).where(eq(users.clerkId, userId)).limit(1)
+    console.log('[API] Result - existingUser found:', existingUser.length > 0)
     if (existingUser.length === 0) {
       return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
     }
 
+    console.log('[API] Result - Querying results table')
     const results = await db.select().from(userAssessmentResults)
       .where(eq(userAssessmentResults.userId, existingUser[0].id))
       .orderBy(desc(userAssessmentResults.completedAt))
       .limit(1)
+
+    console.log('[API] Result - Query result count:', results.length)
 
     if (!results || results.length === 0) {
       return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
@@ -38,6 +44,7 @@ export async function GET() {
       completedAt: completedAt instanceof Date ? completedAt.toISOString() : completedAt
     }
 
+    console.log('[API] Result - Returning success')
     return NextResponse.json({
       ...(profile || {}),
       ...metadata
