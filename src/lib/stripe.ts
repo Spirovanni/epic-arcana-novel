@@ -1,0 +1,121 @@
+/**
+ * Stripe Integration Utilities
+ * 
+ * Handles Stripe configuration, customer management, and tier mapping
+ */
+
+import Stripe from 'stripe';
+import type { MembershipTier } from './membership';
+
+// Initialize Stripe client
+if (!process.env.STRIPE_SECRET_KEY) {
+  throw new Error('STRIPE_SECRET_KEY is not set in environment variables');
+}
+
+export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
+  apiVersion: '2024-12-18.acacia',
+  typescript: true,
+});
+
+/**
+ * Map Stripe Price IDs to Membership Tiers
+ * These should be set in your .env file and created in Stripe Dashboard
+ */
+export const TIER_PRICE_IDS: Record<MembershipTier, string | null> = {
+  free: null, // Free tier has no price ID
+  basic: process.env.STRIPE_PRICE_ID_BASIC || '',
+  premium: process.env.STRIPE_PRICE_ID_PREMIUM || '',
+  ultimate: process.env.STRIPE_PRICE_ID_ULTIMATE || '',
+};
+
+/**
+ * Map Price ID to Membership Tier
+ */
+export function mapPriceIdToTier(priceId: string): MembershipTier {
+  for (const [tier, tierPriceId] of Object.entries(TIER_PRICE_IDS)) {
+    if (tierPriceId === priceId) {
+      return tier as MembershipTier;
+    }
+  }
+  // Default to free if price ID doesn't match
+  return 'free';
+}
+
+/**
+ * Map Membership Tier to Price ID
+ */
+export function mapTierToPriceId(tier: MembershipTier): string | null {
+  return TIER_PRICE_IDS[tier];
+}
+
+/**
+ * Get or create a Stripe Customer for a user
+ */
+export async function getOrCreateStripeCustomer(
+  email: string,
+  clerkUserId: string,
+  name?: string
+): Promise<Stripe.Customer> {
+  // First, try to find existing customer by email
+  const existingCustomers = await stripe.customers.list({
+    email,
+    limit: 1,
+  });
+
+  if (existingCustomers.data.length > 0) {
+    const customer = existingCustomers.data[0];
+    // Update metadata to include Clerk user ID if not present
+    if (!customer.metadata?.clerkUserId) {
+      await stripe.customers.update(customer.id, {
+        metadata: {
+          ...customer.metadata,
+          clerkUserId,
+        },
+      });
+    }
+    return customer;
+  }
+
+  // Create new customer
+  const customer = await stripe.customers.create({
+    email,
+    name: name || email,
+    metadata: {
+      clerkUserId,
+    },
+  });
+
+  return customer;
+}
+
+/**
+ * Get active subscription for a customer
+ */
+export async function getActiveSubscription(
+  customerId: string
+): Promise<Stripe.Subscription | null> {
+  const subscriptions = await stripe.subscriptions.list({
+    customer: customerId,
+    status: 'active',
+    limit: 1,
+  });
+
+  return subscriptions.data.length > 0 ? subscriptions.data[0] : null;
+}
+
+/**
+ * Get membership tier from active subscription
+ */
+export async function getTierFromSubscription(
+  customerId: string
+): Promise<MembershipTier> {
+  const subscription = await getActiveSubscription(customerId);
+  
+  if (!subscription || subscription.items.data.length === 0) {
+    return 'free';
+  }
+
+  const priceId = subscription.items.data[0].price.id;
+  return mapPriceIdToTier(priceId);
+}
+

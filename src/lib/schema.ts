@@ -1,5 +1,7 @@
 import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real, unique, index } from 'drizzle-orm/pg-core';
 
+export const membershipTierEnum = pgEnum('membership_tier', ['free', 'basic', 'premium', 'ultimate']);
+
 export const users = pgTable('users', {
   id: integer().primaryKey().generatedAlwaysAsIdentity({ name: 'users_id_seq', startWith: 1, increment: 1, minValue: 1, maxValue: 2147483647, cache: 1 }),
   name: varchar({ length: 255 }).notNull(),
@@ -8,6 +10,8 @@ export const users = pgTable('users', {
   createdAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
   role: varchar({ length: 255 }).default('user').notNull(),
+  membershipTier: membershipTierEnum('membership_tier').default('free').notNull(),
+  membershipExpiresAt: timestamp('membership_expires_at', { mode: 'string' }),
   status: varchar({ length: 255 }).default('active').notNull(),
   isVerified: boolean().default(false).notNull(),
   isActive: boolean().default(true).notNull(),
