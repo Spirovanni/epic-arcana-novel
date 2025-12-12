@@ -1,4 +1,6 @@
 import { loadExtendedCanonicalProfiles } from "@/lib/data";
+import Link from "next/link";
+import { loadExtendedCanonicalProfiles } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +18,7 @@ import {
   Target,
   Workflow,
 } from "lucide-react";
+import { careerCatalog, Career } from "@/data/careers";
 
 type SkillPlan = {
   label: string;
@@ -78,63 +81,23 @@ function buildSkillPlan(growth: string[]): SkillPlan[] {
   return basePlan;
 }
 
-function buildCareerOptions(family: string, strengths: string[], growth: string[]): CareerOption[] {
-  const base: CareerOption[] = [
-    {
-      title: "Product Strategist",
-      match: 92,
-      context: "Hybrid / cross-functional pods",
-      shine: [
-        strengths[0] ?? "Sense-making in ambiguous spaces",
-        strengths[1] ?? "Narrative alignment",
-        "Prioritizing tradeoffs",
-      ],
-      buildNext: [
-        growth[0] ?? "Finance fluency",
-        growth[1] ?? "Experiment design at scale",
-      ],
-      signal: ["Pattern-driven", "Influence-heavy", "0→1 & 1→n"],
-    },
-    {
-      title: "Learning Experience Designer",
-      match: 88,
-      context: "Remote-first / education & enablement",
-      shine: [
-        strengths[1] ?? "Human-centered sequencing",
-        strengths[2] ?? "Story-first visuals",
-        "Measurable skill uplift",
-      ],
-      buildNext: [
-        growth[1] ?? "Assessment design",
-        growth[2] ?? "Content ops automation",
-      ],
-      signal: ["Creative", "Data aware", "High empathy"],
-    },
-    {
-      title: "Customer Insights Lead",
-      match: 85,
-      context: "Research + strategy bridge",
-      shine: [
-        strengths[2] ?? "Voice-of-customer synthesis",
-        "Executive-ready briefs",
-        "Aligning roadmap to demand",
-      ],
-      buildNext: [
-        growth[0] ?? "Causal analytics",
-        growth[1] ?? "Workshop facilitation playbooks",
-      ],
-      signal: ["Analytical", "Trusted advisor", "Field + boardroom range"],
-    },
-  ];
+type CareerCard = Career & { displayMatch: number };
 
-  // Nudge the matches based on family to hint personalization.
-  if (family.toLowerCase().includes("creator")) {
-    base[1].match = 93;
-  } else if (family.toLowerCase().includes("strategist") || family.toLowerCase().includes("explorer")) {
-    base[0].match = 94;
+function personalizeCareer(career: Career, family: string): CareerCard {
+  const normalizedFamily = family.toLowerCase();
+  let boost = 0;
+  if (normalizedFamily.includes("strategist") || normalizedFamily.includes("explorer")) {
+    if (career.slug === "product-strategist" || career.slug === "customer-insights-lead") boost = 2;
+  }
+  if (normalizedFamily.includes("creator") || normalizedFamily.includes("story")) {
+    if (career.slug === "learning-experience-designer") boost = 3;
   }
 
-  return base;
+  return { ...career, displayMatch: Math.min(98, career.match + boost) };
+}
+
+function buildCareerOptions(family: string): CareerCard[] {
+  return careerCatalog.map((career) => personalizeCareer(career, family));
 }
 
 const nextSteps = [
@@ -160,7 +123,11 @@ export default async function CareersPage() {
   const snapshot = await getPersonalitySnapshot();
   const strengths = snapshot.drivers;
   const skillPlan = buildSkillPlan(snapshot.growth);
-  const careerOptions = buildCareerOptions(snapshot.family, strengths, snapshot.growth);
+  const careerOptions = buildCareerOptions(snapshot.family);
+  const groupedCareers = careerOptions.reduce<Record<string, CareerCard[]>>((acc, career) => {
+    acc[career.category] = acc[career.category] ? [...acc[career.category], career] : [career];
+    return acc;
+  }, {});
 
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
@@ -314,72 +281,89 @@ export default async function CareersPage() {
             </Card>
           </section>
 
-          <section className="space-y-4">
-            <div className="flex items-center justify-between">
+          <section className="space-y-6">
+            <div className="flex items-center justify-between flex-wrap gap-3">
               <div>
                 <p className="text-sm uppercase tracking-wide text-amber-200">Role short list</p>
-                <h2 className="text-2xl font-semibold text-white">Career matches that fit your signal</h2>
+                <h2 className="text-2xl font-semibold text-white">Career matches grouped by path</h2>
                 <p className="text-slate-300">
-                  Each option pairs where you naturally shine with targeted development moves.
+                  Explore the clusters below and click into any role to see its dedicated page.
                 </p>
               </div>
               <Button variant="outline" className="border-slate-700 bg-white/5 text-white hover:bg-white/10">
-                Compare roles
+                <Link href="/careers">Compare roles</Link>
               </Button>
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-              {careerOptions.map((career) => (
-                <Card key={career.title} className="border-slate-800 bg-slate-900/70 backdrop-blur">
-                  <CardHeader className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-lg text-white">{career.title}</CardTitle>
-                      <Badge className="bg-amber-500 text-slate-950 hover:bg-amber-400">
-                        {career.match}% fit
-                      </Badge>
-                    </div>
-                    <CardDescription className="text-slate-300">{career.context}</CardDescription>
-                    <div className="flex flex-wrap gap-2">
-                      {career.signal.map((tag) => (
-                        <Badge
-                          key={tag}
-                          variant="secondary"
-                          className="border-slate-700 bg-slate-800 text-slate-100"
-                        >
-                          {tag}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardHeader>
-                  <CardContent className="space-y-4 text-sm">
-                    <div className="space-y-1">
-                      <p className="text-xs uppercase tracking-wide text-amber-200">
-                        Where you&apos;ll shine
-                      </p>
-                      <ul className="space-y-1 text-slate-200">
-                        {career.shine.map((item) => (
-                          <li key={item} className="flex items-start gap-2">
-                            <div className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="space-y-1">
-                      <p className="text-xs uppercase tracking-wide text-amber-200">
-                        Build next
-                      </p>
-                      <ul className="space-y-1 text-slate-200">
-                        {career.buildNext.map((item) => (
-                          <li key={item} className="flex items-start gap-2">
-                            <div className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
+            <div className="space-y-8">
+              {Object.entries(groupedCareers).map(([category, roles]) => (
+                <div key={category} className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="h-2 w-2 rounded-full bg-amber-400" />
+                    <h3 className="text-lg font-semibold text-white">{category}</h3>
+                  </div>
+                  <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+                    {roles.map((career) => (
+                      <Card key={career.slug} className="border-slate-800 bg-slate-900/70 backdrop-blur">
+                        <CardHeader className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-lg text-white">
+                              <Link href={`/careers/${career.slug}`} className="hover:text-amber-200">
+                                {career.title}
+                              </Link>
+                            </CardTitle>
+                            <Badge className="bg-amber-500 text-slate-950 hover:bg-amber-400">
+                              {career.displayMatch}% fit
+                            </Badge>
+                          </div>
+                          <CardDescription className="text-slate-300">{career.context}</CardDescription>
+                          <div className="flex flex-wrap gap-2">
+                            {career.signal.map((tag) => (
+                              <Badge
+                                key={tag}
+                                variant="secondary"
+                                className="border-slate-700 bg-slate-800 text-slate-100"
+                              >
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4 text-sm">
+                          <div className="space-y-1">
+                            <p className="text-xs uppercase tracking-wide text-amber-200">
+                              Where you&apos;ll shine
+                            </p>
+                            <ul className="space-y-1 text-slate-200">
+                              {career.shine.map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                  <div className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-400" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <div className="space-y-1">
+                            <p className="text-xs uppercase tracking-wide text-amber-200">
+                              Build next
+                            </p>
+                            <ul className="space-y-1 text-slate-200">
+                              {career.buildNext.map((item) => (
+                                <li key={item} className="flex items-start gap-2">
+                                  <div className="mt-1 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                          <Link href={`/careers/${career.slug}`} className="inline-flex items-center text-amber-200 hover:text-amber-100">
+                            View role page <ArrowRight className="ml-2 h-4 w-4" />
+                          </Link>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </section>
