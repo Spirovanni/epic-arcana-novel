@@ -1,7 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { AssessmentResultSchema } from '@/lib/assessment/types'
-import fs from 'fs'
-import path from 'path'
+import { db } from '@/lib/db'
+import { userAssessmentResults } from '@/lib/schema'
+import { eq, or } from 'drizzle-orm'
 
 export async function GET(request: NextRequest) {
   try {
@@ -15,8 +16,17 @@ export async function GET(request: NextRequest) {
       )
     }
     
-    // Load result from storage
-    const result = await loadResult(resultId)
+    // Load result from database (assessmentId or row id)
+    const rows = await db.select().from(userAssessmentResults)
+      .where(
+        or(
+          eq(userAssessmentResults.assessmentId, resultId),
+          eq(userAssessmentResults.id, resultId)
+        )
+      )
+      .limit(1)
+
+    const result = rows[0]?.personalityProfile
     
     if (!result) {
       return NextResponse.json(
@@ -44,25 +54,5 @@ export async function GET(request: NextRequest) {
       { error: 'Failed to get assessment result' },
       { status: 500 }
     )
-  }
-}
-
-async function loadResult(resultId: string): Promise<any | null> {
-  const dataDir = path.join(process.cwd(), 'data')
-  const resultsFile = path.join(dataDir, '_local_results.json')
-  
-  try {
-    if (!fs.existsSync(resultsFile)) {
-      return null
-    }
-    
-    const fileContent = fs.readFileSync(resultsFile, 'utf-8')
-    const existingResults: Record<string, any> = JSON.parse(fileContent)
-    
-    return existingResults[resultId] || null
-    
-  } catch (error) {
-    console.error('Error loading result:', error)
-    return null
   }
 }

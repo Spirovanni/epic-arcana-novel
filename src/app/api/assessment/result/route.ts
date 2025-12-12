@@ -1,7 +1,8 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { auth } from '@clerk/nextjs/server'
-import fs from 'fs'
-import path from 'path'
+import { db } from '@/lib/db'
+import { users, userAssessmentResults } from '@/lib/schema'
+import { desc, eq } from 'drizzle-orm'
 
 export async function GET() {
   try {
@@ -14,26 +15,22 @@ export async function GET() {
       )
     }
     
-    // Determine storage approach
-    const useFileSystem = !process.env.DATABASE_URL && !process.env.SUPABASE_URL
-    
-    if (useFileSystem) {
-      const result = await getFromLocalFile(userId)
-      if (result) {
-        return NextResponse.json(result)
-      } else {
-        return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
-      }
-    } else {
-      // TODO: Get from database (Supabase or Prisma)
-      // For now, fall back to file system
-      const result = await getFromLocalFile(userId)
-      if (result) {
-        return NextResponse.json(result)
-      } else {
-        return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
-      }
+    // Look up internal user id
+    const existingUser = await db.select().from(users).where(eq(users.clerkId, userId)).limit(1)
+    if (existingUser.length === 0) {
+      return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
     }
+
+    const results = await db.select().from(userAssessmentResults)
+      .where(eq(userAssessmentResults.userId, existingUser[0].id))
+      .orderBy(desc(userAssessmentResults.completedAt))
+      .limit(1)
+
+    if (!results || results.length === 0) {
+      return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
+    }
+
+    return NextResponse.json(results[0].personalityProfile)
     
   } catch (error) {
     console.error('Error retrieving assessment result:', error)
@@ -42,30 +39,5 @@ export async function GET() {
       { error: 'Failed to retrieve assessment result' },
       { status: 500 }
     )
-  }
-}
-
-async function getFromLocalFile(userId: string) {
-  const dataDir = path.join(process.cwd(), 'data')
-  const resultsFile = path.join(dataDir, '_local_results.json')
-  
-  try {
-    if (!fs.existsSync(resultsFile)) {
-      return null
-    }
-    
-    const fileContent = fs.readFileSync(resultsFile, 'utf-8')
-    const existingResults: Record<string, any> = JSON.parse(fileContent)
-    
-    // Find the result for this user
-    const userResult = Object.values(existingResults).find(
-      result => result.userId === userId
-    )
-    
-    return userResult || null
-    
-  } catch (error) {
-    console.error('Error reading results file:', error)
-    return null
   }
 }

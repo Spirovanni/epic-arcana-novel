@@ -6,8 +6,6 @@ import { db } from '@/lib/db'
 import { users, userAssessmentResults, userJourneys, userCalendarAssignments, assignmentTemplates } from '@/lib/schema'
 import { eq, and, desc } from 'drizzle-orm'
 import { resolveHfCalendar } from '@/lib/hfCalendar'
-import fs from 'fs'
-import path from 'path'
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,22 +28,9 @@ export async function POST(request: NextRequest) {
     // Generate a unique result ID
     const resultId = createResultId()
     
-    // Try to save to database first, fall back to file system
-    const useDatabaseStorage = !!process.env.DATABASE_URL
-    
-    if (useDatabaseStorage) {
-      try {
-        const savedResultId = await saveToDatabase(resultId, assessmentResult, userId, journeyStartDate)
-        return NextResponse.json({ resultId: savedResultId })
-      } catch (dbError) {
-        console.error('Database save failed, falling back to file system:', dbError)
-        // Fall through to file system save
-      }
-    }
-    
-    // Fallback to file system storage
-    await saveToLocalFile(resultId, assessmentResult, userId)
-    return NextResponse.json({ resultId })
+    // Save to database only (file-system fallback removed for production safety)
+    const savedResultId = await saveToDatabase(resultId, assessmentResult, userId, journeyStartDate)
+    return NextResponse.json({ resultId: savedResultId })
     
   } catch (error) {
     console.error('Error saving assessment result:', error)
@@ -261,71 +246,4 @@ function generateDefaultAssignment(dayOfYear: number, hfCalendarData: any, perso
     bookChapter: `Book 1, Chapter ${Math.ceil(dayOfYear / 15)}`,
     chapterFocus: `${segment.name} journey and ${daySign.name} teachings`
   };
-}
-
-async function saveToLocalFile(resultId: string, result: unknown, userId: string | null) {
-  const dataDir = path.join(process.cwd(), 'data')
-  const resultsFile = path.join(dataDir, '_local_results.json')
-  
-  // Ensure data directory exists
-  if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true })
-  }
-  
-  // Load existing results
-  let existingResults: Record<string, unknown> = {}
-  try {
-    if (fs.existsSync(resultsFile)) {
-      const fileContent = fs.readFileSync(resultsFile, 'utf-8')
-      existingResults = JSON.parse(fileContent)
-    }
-  } catch {
-    console.warn('Could not load existing results, starting fresh')
-  }
-  
-  // Remove any previous result for this user (for retake functionality)
-  if (userId) {
-    const previousResultId = Object.keys(existingResults).find(id => 
-      (existingResults[id] as any)?.userId === userId
-    )
-    if (previousResultId) {
-      delete existingResults[previousResultId]
-    }
-  }
-  
-  // Add the new result
-  existingResults[resultId] = {
-    ...(result as Record<string, unknown>),
-    userId,
-    savedAt: new Date().toISOString(),
-    resultId
-  }
-  
-  // Save back to file
-  fs.writeFileSync(resultsFile, JSON.stringify(existingResults, null, 2))
-}
-
-async function checkExistingResult(userId: string) {
-  const dataDir = path.join(process.cwd(), 'data')
-  const resultsFile = path.join(dataDir, '_local_results.json')
-  
-  try {
-    if (!fs.existsSync(resultsFile)) {
-      return null
-    }
-    
-    const fileContent = fs.readFileSync(resultsFile, 'utf-8')
-    const existingResults: Record<string, any> = JSON.parse(fileContent)
-    
-    // Find the result for this user
-    const userResult = Object.values(existingResults).find(
-      result => result.userId === userId
-    )
-    
-    return userResult || null
-    
-  } catch (error) {
-    console.error('Error checking existing results:', error)
-    return null
-  }
 }

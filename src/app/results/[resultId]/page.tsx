@@ -6,9 +6,10 @@ import { ColorSwatch } from '@/components/results/ColorSwatch'
 import { TraitLists } from '@/components/results/TraitLists'
 import { PersonalityInsights } from '@/components/assessment/PersonalityInsights'
 import { AssessmentResult } from '@/lib/assessment/types'
+import { db } from '@/lib/db'
+import { userAssessmentResults } from '@/lib/schema'
+import { eq, or } from 'drizzle-orm'
 import Link from 'next/link'
-import fs from 'fs'
-import path from 'path'
 
 interface ResultsPageProps {
   params: Promise<{
@@ -17,23 +18,16 @@ interface ResultsPageProps {
 }
 
 async function loadResult(resultId: string): Promise<AssessmentResult | null> {
-  try {
-    // Try to load from local file storage
-    const resultsFile = path.join(process.cwd(), 'data', '_local_results.json')
-    
-    if (fs.existsSync(resultsFile)) {
-      const fileContent = fs.readFileSync(resultsFile, 'utf-8')
-      const results = JSON.parse(fileContent)
-      return results[resultId] || null
-    }
-    
-    // TODO: Load from database if available
-    
-    return null
-  } catch (error) {
-    console.error('Error loading result:', error)
-    return null
-  }
+  const rows = await db.select().from(userAssessmentResults)
+    .where(
+      or(
+        eq(userAssessmentResults.assessmentId, resultId),
+        eq(userAssessmentResults.id, resultId)
+      )
+    )
+    .limit(1)
+
+  return (rows[0]?.personalityProfile as AssessmentResult) || null
 }
 
 function getInstinctStack(instincts: { SP: number; SO: number; SX: number }): string {

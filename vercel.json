@@ -1,4 +1,16 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "functions": {
+    "**": {
+      "excludeFiles": [
+        "data/career data/**",
+        "data/l_outline.json*",
+        "data/dist/new_personality_profile*.json",
+        "data/dist/new_personality_profile_scored.json",
+        "data/career_pathways.*",
+        "data/occupation_data*.json"
+      ]
+    }
+  }
 }
