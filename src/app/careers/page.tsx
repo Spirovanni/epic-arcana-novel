@@ -1,4 +1,3 @@
-import { loadExtendedCanonicalProfiles } from "@/lib/data";
 import Link from "next/link";
 import { loadExtendedCanonicalProfiles } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
@@ -25,15 +24,6 @@ type SkillPlan = {
   current: number;
   target: number;
   note: string;
-};
-
-type CareerOption = {
-  title: string;
-  match: number;
-  context: string;
-  shine: string[];
-  buildNext: string[];
-  signal: string[];
 };
 
 async function getPersonalitySnapshot() {
