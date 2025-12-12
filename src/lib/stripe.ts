@@ -23,20 +23,33 @@ export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
  */
 export const TIER_PRICE_IDS: Record<MembershipTier, string | null> = {
   free: null, // Free tier has no price ID
-  basic: process.env.STRIPE_PRICE_ID_BASIC || '',
-  premium: process.env.STRIPE_PRICE_ID_PREMIUM || '',
-  ultimate: process.env.STRIPE_PRICE_ID_ULTIMATE || '',
+  basic: process.env.STRIPE_PRICE_ID_BASIC || null,
+  premium: process.env.STRIPE_PRICE_ID_PREMIUM || null,
+  ultimate: process.env.STRIPE_PRICE_ID_ULTIMATE || null,
 };
 
 /**
  * Map Price ID to Membership Tier
+ * 
+ * @param priceId - The Stripe Price ID to map
+ * @returns The corresponding MembershipTier, or 'free' if no match found
  */
 export function mapPriceIdToTier(priceId: string): MembershipTier {
+  // Skip null/empty values to avoid false matches
   for (const [tier, tierPriceId] of Object.entries(TIER_PRICE_IDS)) {
-    if (tierPriceId === priceId) {
+    // Only compare if tierPriceId is a non-empty string
+    if (tierPriceId && tierPriceId === priceId) {
       return tier as MembershipTier;
     }
   }
+  
+  // Log warning if price ID doesn't match (helps with debugging)
+  console.warn(
+    `[Stripe] Price ID "${priceId}" does not match any configured tier. ` +
+    `Ensure STRIPE_PRICE_ID_* environment variables are set correctly. ` +
+    `Defaulting to 'free' tier.`
+  );
+  
   // Default to free if price ID doesn't match
   return 'free';
 }
