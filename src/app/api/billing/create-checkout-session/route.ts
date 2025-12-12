@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { currentUser } from '@clerk/nextjs/server';
-import { stripe, getOrCreateStripeCustomer, mapTierToPriceId } from '@/lib/stripe';
+import { stripe, getOrCreateStripeCustomer, mapTierToPriceId, isStripeConfigured } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { users } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
@@ -25,6 +25,13 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Valid tier required (basic, premium, or ultimate)' },
         { status: 400 }
+      );
+    }
+
+    if (!isStripeConfigured() || !stripe) {
+      return NextResponse.json(
+        { error: 'Billing is not configured' },
+        { status: 503 }
       );
     }
 
@@ -59,7 +66,9 @@ export async function POST(request: NextRequest) {
                     'http://localhost:3000';
 
     // Create checkout session
-    const session = await stripe.checkout.sessions.create({
+    const stripeClient = stripe!;
+
+    const session = await stripeClient.checkout.sessions.create({
       customer: customer.id,
       mode: 'subscription',
       payment_method_types: ['card'],
@@ -101,4 +110,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

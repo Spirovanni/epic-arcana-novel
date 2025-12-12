@@ -271,7 +271,7 @@ export default function AccountPage() {
                     ) : isUpgrade ? (
                       <Button
                         onClick={() => handleCheckout(tier)}
-                        disabled={loading || tier === 'free'}
+                        disabled={loading || pricing.price === 0}
                         className="w-full"
                       >
                         {loading ? (

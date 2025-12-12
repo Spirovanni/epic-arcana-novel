@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { stripe, mapPriceIdToTier } from '@/lib/stripe';
+import { stripe, mapPriceIdToTier, isStripeConfigured } from '@/lib/stripe';
 import { db } from '@/lib/db';
 import { users } from '@/lib/schema';
 import { eq } from 'drizzle-orm';
@@ -28,11 +28,20 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  if (!isStripeConfigured() || !stripe) {
+    console.error('Stripe not configured');
+    return NextResponse.json(
+      { error: 'Stripe not configured' },
+      { status: 503 }
+    );
+  }
+
   let event: Stripe.Event;
+  const stripeClient = stripe;
 
   try {
     // Verify webhook signature
-    event = stripe.webhooks.constructEvent(
+    event = stripeClient.webhooks.constructEvent(
       body,
       signature,
       process.env.STRIPE_WEBHOOK_SECRET
@@ -57,7 +66,7 @@ export async function POST(request: NextRequest) {
 
     try {
       // Get customer from Stripe to find email
-      const customer = await stripe.customers.retrieve(customerId);
+      const customer = await stripeClient.customers.retrieve(customerId);
       
       if (customer.deleted) {
         console.error('Customer was deleted');
@@ -143,4 +152,3 @@ export async function POST(request: NextRequest) {
   // Return 200 to acknowledge receipt
   return NextResponse.json({ received: true });
 }
-

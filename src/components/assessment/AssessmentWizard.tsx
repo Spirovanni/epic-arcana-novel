@@ -36,7 +36,6 @@ const RANDOMIZATION_CONFIG = {
 
 export function AssessmentWizard() {
   const router = useRouter()
-  const { user } = useUser()
   const [showAuthGate, setShowAuthGate] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showMagicalLoading, setShowMagicalLoading] = useState(false)
@@ -71,7 +70,7 @@ export function AssessmentWizard() {
     if (currentStep === 0) {
       startAssessment()
     }
-  }, [currentStep]) // Only depend on currentStep
+  }, [currentStep, startAssessment])
   
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
@@ -376,7 +375,6 @@ export function AssessmentWizard() {
                     <ForcedChoiceItem
                       item={item}
                       answer={forcedChoiceAnswers.find(a => a.itemId === item.id)}
-                      onAnswer={(best, worst) => addForcedChoiceAnswer({ itemId: item.id, best, worst })}
                       onAnswer={(best, worst) => {
                         addForcedChoiceAnswer({ itemId: item.id, best, worst })
                         persistAnswer({ type: 'forced', itemId: item.id, best, worst })

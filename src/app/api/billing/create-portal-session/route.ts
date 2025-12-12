@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { currentUser } from '@clerk/nextjs/server';
-import { stripe, getOrCreateStripeCustomer } from '@/lib/stripe';
+import { stripe, getOrCreateStripeCustomer, isStripeConfigured } from '@/lib/stripe';
 
 export async function POST(request: NextRequest) {
   try {
@@ -22,6 +22,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    if (!isStripeConfigured() || !stripe) {
+      return NextResponse.json(
+        { error: 'Billing is not configured' },
+        { status: 503 }
+      );
+    }
+
     // Get or create Stripe customer
     const customer = await getOrCreateStripeCustomer(
       email,
@@ -35,7 +42,9 @@ export async function POST(request: NextRequest) {
                     'http://localhost:3000';
 
     // Create portal session
-    const portalSession = await stripe.billingPortal.sessions.create({
+    const stripeClient = stripe!;
+
+    const portalSession = await stripeClient.billingPortal.sessions.create({
       customer: customer.id,
       return_url: `${baseUrl}/account`,
     });
@@ -51,4 +60,3 @@ export async function POST(request: NextRequest) {
     );
   }
 }
-

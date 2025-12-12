@@ -7,15 +7,29 @@
 import Stripe from 'stripe';
 import type { MembershipTier } from './membership';
 
-// Initialize Stripe client
-if (!process.env.STRIPE_SECRET_KEY) {
-  throw new Error('STRIPE_SECRET_KEY is not set in environment variables');
+let stripeClient: Stripe | null = null;
+
+if (process.env.STRIPE_SECRET_KEY) {
+  stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY, {
+    apiVersion: '2024-06-20',
+    typescript: true,
+  });
+} else {
+  console.warn('[Stripe] STRIPE_SECRET_KEY not set; Stripe features are disabled.');
 }
 
-export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2024-12-18.acacia',
-  typescript: true,
-});
+export const stripe = stripeClient;
+
+export function isStripeConfigured(): boolean {
+  return Boolean(stripeClient);
+}
+
+function requireStripe(): Stripe {
+  if (!stripeClient) {
+    throw new Error('Stripe is not configured');
+  }
+  return stripeClient;
+}
 
 /**
  * Map Stripe Price IDs to Membership Tiers
@@ -69,8 +83,10 @@ export async function getOrCreateStripeCustomer(
   clerkUserId: string,
   name?: string
 ): Promise<Stripe.Customer> {
+  const client = requireStripe();
+
   // First, try to find existing customer by email
-  const existingCustomers = await stripe.customers.list({
+  const existingCustomers = await client.customers.list({
     email,
     limit: 1,
   });
@@ -79,7 +95,7 @@ export async function getOrCreateStripeCustomer(
     const customer = existingCustomers.data[0];
     // Update metadata to include Clerk user ID if not present
     if (!customer.metadata?.clerkUserId) {
-      await stripe.customers.update(customer.id, {
+      await client.customers.update(customer.id, {
         metadata: {
           ...customer.metadata,
           clerkUserId,
@@ -90,7 +106,7 @@ export async function getOrCreateStripeCustomer(
   }
 
   // Create new customer
-  const customer = await stripe.customers.create({
+  const customer = await client.customers.create({
     email,
     name: name || email,
     metadata: {
@@ -107,7 +123,9 @@ export async function getOrCreateStripeCustomer(
 export async function getActiveSubscription(
   customerId: string
 ): Promise<Stripe.Subscription | null> {
-  const subscriptions = await stripe.subscriptions.list({
+  const client = requireStripe();
+
+  const subscriptions = await client.subscriptions.list({
     customer: customerId,
     status: 'active',
     limit: 1,
@@ -131,4 +149,3 @@ export async function getTierFromSubscription(
   const priceId = subscription.items.data[0].price.id;
   return mapPriceIdToTier(priceId);
 }
-
