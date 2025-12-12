@@ -11,22 +11,27 @@ type ProgressAnswer =
   | { type: 'likert'; itemId: string; rating: number }
 
 async function ensureDbUser() {
-  const user = await currentUser()
-  if (!user) return null
+  try {
+    const user = await currentUser()
+    if (!user) return null
 
-  const existing = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
-  if (existing.length > 0) return existing[0]
+    const existing = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
+    if (existing.length > 0) return existing[0]
 
-  const created = await db.insert(users).values({
-    clerkId: user.id,
-    name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
-    firstName: user.firstName || 'User',
-    lastName: user.lastName || '',
-    email: user.emailAddresses[0]?.emailAddress || '',
-    age: 25
-  }).returning()
+    const created = await db.insert(users).values({
+      clerkId: user.id,
+      name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
+      firstName: user.firstName || 'User',
+      lastName: user.lastName || '',
+      email: user.emailAddresses[0]?.emailAddress || '',
+      age: 25
+    }).returning()
 
-  return created[0]
+    return created[0]
+  } catch (error) {
+    console.error('Clerk user lookup failed:', error)
+    return null
+  }
 }
 
 function getTotalQuestions() {
