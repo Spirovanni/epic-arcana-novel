@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { currentUser } from '@clerk/nextjs/server'
 import { db } from '@/lib/db'
 import { assessments, assessmentAnswers, users } from '@/lib/schema'
-import { and, eq, sql } from 'drizzle-orm'
+import { and, desc, eq, sql } from 'drizzle-orm'
 import { getForcedChoiceItems } from '@/lib/items/forced'
 import { getLikertItems } from '@/lib/items/likert'
 
@@ -150,6 +150,74 @@ export async function POST(request: Request) {
     console.error('Progress save error:', error)
     return NextResponse.json(
       { error: 'Failed to save assessment progress' },
+      { status: 500 }
+    )
+  }
+}
+
+export async function GET() {
+  try {
+    const dbUser = await ensureDbUser()
+    if (!dbUser) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    const [latestAssessment] = await db.select()
+      .from(assessments)
+      .where(eq(assessments.userId, dbUser.id))
+      .orderBy(desc(assessments.updatedAt))
+      .limit(1)
+
+    if (!latestAssessment) {
+      return NextResponse.json({ error: 'No assessment found' }, { status: 404 })
+    }
+
+    const rawAnswers = await db.select({
+      questionId: assessmentAnswers.questionId,
+      selectedOptionIndex: assessmentAnswers.selectedOptionIndex,
+      selectedOptionText: assessmentAnswers.selectedOptionText,
+      scoringData: assessmentAnswers.scoringData
+    })
+      .from(assessmentAnswers)
+      .where(eq(assessmentAnswers.assessmentId, latestAssessment.id))
+
+    const forced: Array<{ itemId: string; best: number; worst: number }> = []
+    const likert: Array<{ itemId: string; rating: number }> = []
+
+    for (const answer of rawAnswers) {
+      const scoringData = (answer.scoringData || {}) as Record<string, unknown>
+      const type = scoringData.type || answer.selectedOptionText
+
+      if (type === 'forced_choice') {
+        const best = Number(scoringData.best ?? answer.selectedOptionIndex)
+        const worst = Number(scoringData.worst)
+        if (Number.isFinite(best) && Number.isFinite(worst)) {
+          forced.push({ itemId: answer.questionId, best, worst })
+        }
+      } else {
+        const rating = Number(scoringData.rating ?? answer.selectedOptionIndex)
+        if (Number.isFinite(rating)) {
+          likert.push({ itemId: answer.questionId, rating })
+        }
+      }
+    }
+
+    const answeredCount = forced.length + likert.length
+    const totalQuestions = latestAssessment.totalQuestions || getTotalQuestions()
+
+    return NextResponse.json({
+      assessmentId: latestAssessment.id,
+      currentQuestionIndex: latestAssessment.currentQuestionIndex ?? answeredCount,
+      totalQuestions,
+      answers: {
+        forced,
+        likert
+      }
+    })
+  } catch (error) {
+    console.error('Progress load error:', error)
+    return NextResponse.json(
+      { error: 'Failed to load assessment progress' },
       { status: 500 }
     )
   }

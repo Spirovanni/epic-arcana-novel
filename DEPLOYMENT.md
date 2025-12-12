@@ -4,6 +4,7 @@
 - [ ] Local testing completed successfully
 - [ ] All changes committed to git
 - [ ] Production DATABASE_URL available
+- [ ] Clerk production keys available (`CLERK_SECRET_KEY`, `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`)
 
 ## Production Deployment Steps
 
@@ -104,6 +105,11 @@ Verify tasks work across all chapters:
 - ✅ Real-time UI updates
 - ✅ Works offline (fallback to local state)
 
+## Authentication / Assessment API Environment
+- Use Clerk production keys on production domains: set `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` to your `pk_live_…` key and `CLERK_SECRET_KEY` to the matching secret.
+- Ensure `DATABASE_URL` points to the production database; `/api/assessment/progress` relies on it for saving/loading assessment answers.
+- After updating env vars in Vercel, redeploy and verify `/assessment` no longer returns 500s and that Clerk loads without the “development keys” warning.
+
 ## Rollback Plan
 
 If issues arise:
@@ -124,4 +130,3 @@ If tasks don't persist after deployment:
 2. Verify DATABASE_URL is set in Vercel environment
 3. Confirm chapter_tasks table exists in production DB
 4. Check browser console for API errors
-
