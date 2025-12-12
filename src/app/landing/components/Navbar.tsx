@@ -37,6 +37,7 @@ export function Navbar() {
           <a href="#world" className="hover:text-white/90 transition-colors tracking-wide">World</a>
           <a href="#community" className="hover:text-white/90 transition-colors tracking-wide">Community</a>
           <a href="#cycle" className="hover:text-white/90 transition-colors tracking-wide">Cycle</a>
+          <Link href="/careers" className="hover:text-white/90 transition-colors tracking-wide">Careers</Link>
           <Link href="/personalities" className="hover:text-white/90 transition-colors tracking-wide">Personalities</Link>
           {isSignedIn && (
             <Link href="/profile" className="hover:text-white/90 transition-colors tracking-wide">Profile</Link>
@@ -99,6 +100,7 @@ export function Navbar() {
               <a href="#world" className="block text-slate-300 hover:text-white/90 transition-colors">World</a>
               <a href="#community" className="block text-slate-300 hover:text-white/90 transition-colors">Community</a>
               <a href="#cycle" className="block text-slate-300 hover:text-white/90 transition-colors">Cycle</a>
+              <Link href="/careers" className="block text-slate-300 hover:text-white/90 transition-colors">Careers</Link>
               <Link href="/personalities" className="block text-slate-300 hover:text-white/90 transition-colors">Personalities</Link>
               <a href="#dashboard" className="block text-slate-300 hover:text-white/90 transition-colors">Dashboard</a>
             </nav>
