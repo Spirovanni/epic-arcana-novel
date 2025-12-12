@@ -7,14 +7,14 @@ import { desc, eq } from 'drizzle-orm'
 export async function GET() {
   try {
     const { userId } = await auth()
-    
+
     if (!userId) {
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
       )
     }
-    
+
     // Look up internal user id
     const existingUser = await db.select().from(users).where(eq(users.clerkId, userId)).limit(1)
     if (existingUser.length === 0) {
@@ -42,12 +42,17 @@ export async function GET() {
       ...(profile || {}),
       ...metadata
     })
-    
+
   } catch (error) {
-    console.error('Error retrieving assessment result:', error)
-    
+    console.error('[API] Error retrieving assessment result:', error)
+    // Detailed logging for debugging
+    if (error instanceof Error) {
+      console.error('[API] Stack:', error.stack)
+      console.error('[API] Message:', error.message)
+    }
+
     return NextResponse.json(
-      { error: 'Failed to retrieve assessment result' },
+      { error: 'Failed to retrieve assessment result', details: String(error) },
       { status: 500 }
     )
   }

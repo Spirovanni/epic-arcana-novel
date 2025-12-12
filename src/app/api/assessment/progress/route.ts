@@ -70,6 +70,7 @@ export async function POST(request: Request) {
   try {
     const dbUser = await ensureDbUser()
     if (!dbUser) {
+      console.log('[API] Progress Save: Unauthorized access attempt')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -152,9 +153,13 @@ export async function POST(request: Request) {
       status: isComplete ? 'completed' : 'in_progress'
     })
   } catch (error) {
-    console.error('Progress save error:', error)
+    console.error('[API] Progress save error:', error)
+    if (error instanceof Error) {
+      console.error('[API] Message:', error.message)
+      console.error('[API] Stack:', error.stack)
+    }
     return NextResponse.json(
-      { error: 'Failed to save assessment progress' },
+      { error: 'Failed to save assessment progress', details: String(error) },
       { status: 500 }
     )
   }
