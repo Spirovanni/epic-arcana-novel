@@ -9,6 +9,7 @@ export interface AssessmentState {
   currentStep: number
   totalSteps: number
   isComplete: boolean
+  assessmentId: string | null
   
   // Answers
   forcedChoiceAnswers: ForcedChoiceAnswer[]
@@ -27,6 +28,7 @@ export interface AssessmentState {
   addLikertAnswer: (answer: LikertAnswer) => void
   updateForcedChoiceAnswer: (itemId: string, answer: Partial<ForcedChoiceAnswer>) => void
   updateLikertAnswer: (itemId: string, rating: number) => void
+  setAssessmentId: (assessmentId: string | null) => void
   startAssessment: () => void
   completeAssessment: () => void
   setResult: (result: AssessmentResult) => void
@@ -47,6 +49,7 @@ export const useAssessmentStore = create<AssessmentState>()(
       currentStep: 0,
       totalSteps: TOTAL_STEPS,
       isComplete: false,
+      assessmentId: null,
       forcedChoiceAnswers: [],
       likertAnswers: [],
       startTime: null,
@@ -69,6 +72,10 @@ export const useAssessmentStore = create<AssessmentState>()(
         set(state => ({
           likertAnswers: [...state.likertAnswers.filter(a => a.itemId !== answer.itemId), answer]
         }))
+      },
+
+      setAssessmentId: (assessmentId: string | null) => {
+        set({ assessmentId })
       },
       
       updateForcedChoiceAnswer: (itemId: string, updates: Partial<ForcedChoiceAnswer>) => {
@@ -96,6 +103,7 @@ export const useAssessmentStore = create<AssessmentState>()(
           startTime: new Date().toISOString(),
           currentStep: 1,
           isComplete: false,
+          assessmentId: null,
           result: null
         })
       },
@@ -115,6 +123,7 @@ export const useAssessmentStore = create<AssessmentState>()(
         set({
           currentStep: 0,
           isComplete: false,
+          assessmentId: null,
           forcedChoiceAnswers: [],
           likertAnswers: [],
           startTime: null,
@@ -165,7 +174,8 @@ export const useAssessmentStore = create<AssessmentState>()(
         likertAnswers: state.likertAnswers,
         startTime: state.startTime,
         currentStep: state.currentStep,
-        isComplete: state.isComplete
+        isComplete: state.isComplete,
+        assessmentId: state.assessmentId
       })
     }
   )

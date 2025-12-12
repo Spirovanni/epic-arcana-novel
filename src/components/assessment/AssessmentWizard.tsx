@@ -55,9 +55,16 @@ export function AssessmentWizard() {
     completeAssessment,
     setResult,
     getAnswersForApi,
-    canProceedToStep,
-    startAssessment
+    startAssessment,
+    resetAssessment,
+    assessmentId,
+    setAssessmentId
   } = useAssessmentStore()
+  const { user, isLoaded, isSignedIn } = useUser()
+  
+  type ProgressPayload = 
+    | { type: 'forced'; itemId: string; best: number; worst: number }
+    | { type: 'likert'; itemId: string; rating: number }
   
   // Initialize assessment if not started
   useEffect(() => {
@@ -68,6 +75,7 @@ export function AssessmentWizard() {
   
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
+  const totalQuestionCount = forcedChoiceItems.length + likertItems.length
   const isCareerStep = currentStep === totalSteps
   
   // Deterministic shuffle function using seeded random
@@ -183,6 +191,76 @@ export function AssessmentWizard() {
     }
   }, [getAnswersForApi, setResult, completeAssessment])
 
+  // Ensure a server-side assessment record exists once the user is signed in
+  useEffect(() => {
+    const ensureSession = async () => {
+      if (!isLoaded || !isSignedIn || assessmentId) return
+      try {
+        const response = await fetch('/api/assessment/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({})
+        })
+        if (response.ok) {
+          const data = await response.json()
+          if (data.assessmentId) {
+            setAssessmentId(data.assessmentId)
+          }
+        }
+      } catch (error) {
+        console.error('Error ensuring assessment session:', error)
+      }
+    }
+    ensureSession()
+  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId])
+
+  const persistAnswer = useCallback(async (payload: ProgressPayload) => {
+    if (!isLoaded || !isSignedIn) return
+    try {
+      const response = await fetch('/api/assessment/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          assessmentId,
+          answer: payload,
+          totalQuestions: totalQuestionCount
+        })
+      })
+      if (response.ok) {
+        const data = await response.json()
+        if (data.assessmentId && data.assessmentId !== assessmentId) {
+          setAssessmentId(data.assessmentId)
+        }
+      }
+    } catch (error) {
+      console.error('Error saving answer progress:', error)
+    }
+  }, [assessmentId, isLoaded, isSignedIn, setAssessmentId, totalQuestionCount])
+
+  const handleReset = useCallback(async () => {
+    const confirmReset = typeof window !== 'undefined'
+      ? window.confirm('Reset your assessment? This will clear your saved answers.')
+      : false
+    if (!confirmReset) return
+
+    const existingAssessmentId = assessmentId
+    resetAssessment()
+    startAssessment()
+    setAssessmentId(null)
+
+    if (isSignedIn && existingAssessmentId) {
+      try {
+        await fetch('/api/assessment/progress', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ assessmentId: existingAssessmentId })
+        })
+      } catch (error) {
+        console.error('Error resetting assessment:', error)
+      }
+    }
+  }, [assessmentId, isSignedIn, resetAssessment, startAssessment, setAssessmentId])
+
   const handleMagicalLoadingComplete = useCallback(() => {
     setShowMagicalLoading(false)
     setIsSubmitting(false)
@@ -250,11 +328,23 @@ export function AssessmentWizard() {
       <div className="container mx-auto px-4 py-8">
         {/* Progress Header - Sticky */}
         <div className="sticky top-20 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
-          <AssessmentProgress 
-            currentStep={currentStep} 
-            totalSteps={totalSteps}
-            className="max-w-4xl mx-auto"
-          />
+          <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
+            <AssessmentProgress 
+              currentStep={currentStep} 
+              totalSteps={totalSteps}
+              className="flex-1"
+            />
+            <Button
+              variant="outline"
+              onClick={handleReset}
+              className="border-red-500/50 text-red-100 hover:bg-red-500/10"
+            >
+              Reset
+            </Button>
+          </div>
+          <div className="max-w-4xl mx-auto text-right text-xs text-gray-400 mt-2">
+            {isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress after each question.'}
+          </div>
         </div>
         
         {/* Assessment Content */}
@@ -287,6 +377,10 @@ export function AssessmentWizard() {
                       item={item}
                       answer={forcedChoiceAnswers.find(a => a.itemId === item.id)}
                       onAnswer={(best, worst) => addForcedChoiceAnswer({ itemId: item.id, best, worst })}
+                      onAnswer={(best, worst) => {
+                        addForcedChoiceAnswer({ itemId: item.id, best, worst })
+                        persistAnswer({ type: 'forced', itemId: item.id, best, worst })
+                      }}
                     />
                   </CardContent>
                 </Card>
@@ -298,7 +392,10 @@ export function AssessmentWizard() {
                     <LikertItem
                       item={item}
                       answer={likertAnswers.find(a => a.itemId === item.id)}
-                      onAnswer={(rating) => updateLikertAnswer(item.id, rating)}
+                      onAnswer={(rating) => {
+                        updateLikertAnswer(item.id, rating)
+                        persistAnswer({ type: 'likert', itemId: item.id, rating })
+                      }}
                     />
                   </CardContent>
                 </Card>

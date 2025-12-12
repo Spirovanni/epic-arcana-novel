@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
+import { useUser } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
 import { getForcedChoiceItems } from '@/lib/items/forced'
@@ -1011,6 +1012,7 @@ export function AdventureAssessmentWizard() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const { isLoaded, isSignedIn } = useUser()
   
   const {
     currentStep,
@@ -1022,7 +1024,10 @@ export function AdventureAssessmentWizard() {
     completeAssessment,
     setResult,
     getAnswersForApi,
-    startAssessment
+    startAssessment,
+    resetAssessment,
+    assessmentId,
+    setAssessmentId
   } = useAssessmentStore()
   
   // Initialize assessment
@@ -1043,6 +1048,80 @@ export function AdventureAssessmentWizard() {
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
   const allItems = [...forcedChoiceItems, ...likertItems]
+  const totalQuestionCount = allItems.length
+
+  // Ensure a server-side assessment record exists once the user is signed in
+  useEffect(() => {
+    const ensureSession = async () => {
+      if (!isLoaded || !isSignedIn || assessmentId) return
+      try {
+        const response = await fetch('/api/assessment/progress', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({})
+        })
+        if (response.ok) {
+          const data = await response.json()
+          if (data.assessmentId) {
+            setAssessmentId(data.assessmentId)
+          }
+        }
+      } catch (error) {
+        console.error('Error ensuring assessment session:', error)
+      }
+    }
+    ensureSession()
+  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId])
+
+  const persistAnswer = useCallback(async (payload: { type: 'forced'; itemId: string; best: number; worst: number } | { type: 'likert'; itemId: string; rating: number }) => {
+    if (!isLoaded || !isSignedIn) return
+    try {
+      const response = await fetch('/api/assessment/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          assessmentId,
+          answer: payload,
+          totalQuestions: totalQuestionCount
+        })
+      })
+      if (response.ok) {
+        const data = await response.json()
+        if (data.assessmentId && data.assessmentId !== assessmentId) {
+          setAssessmentId(data.assessmentId)
+        }
+      }
+    } catch (error) {
+      console.error('Error saving assessment progress:', error)
+    }
+  }, [assessmentId, isLoaded, isSignedIn, setAssessmentId, totalQuestionCount])
+
+  const handleReset = useCallback(async () => {
+    const confirmReset = typeof window !== 'undefined'
+      ? window.confirm('Reset your assessment? This will clear your saved answers.')
+      : false
+    if (!confirmReset) return
+
+    const existingAssessmentId = assessmentId
+    resetAssessment()
+    setCurrentQuestionIndex(0)
+    setAnsweredQuestions(new Set())
+    setIsTransitioning(false)
+    startAssessment()
+    setAssessmentId(null)
+
+    if (isSignedIn && existingAssessmentId) {
+      try {
+        await fetch('/api/assessment/progress', {
+          method: 'DELETE',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ assessmentId: existingAssessmentId })
+        })
+      } catch (error) {
+        console.error('Error resetting assessment:', error)
+      }
+    }
+  }, [assessmentId, isSignedIn, resetAssessment, startAssessment, setAssessmentId])
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
@@ -1089,9 +1168,11 @@ export function AdventureAssessmentWizard() {
         best: answer.best, 
         worst: answer.worst 
       })
+      persistAnswer({ type: 'forced', itemId: currentItem.id, best: answer.best, worst: answer.worst })
     } else {
       // Likert
       updateLikertAnswer(currentItem.id, answer.rating)
+      persistAnswer({ type: 'likert', itemId: currentItem.id, rating: answer.rating })
     }
     
     setAnsweredQuestions(prev => new Set([...prev, currentQuestionIndex]))
@@ -1106,7 +1187,7 @@ export function AdventureAssessmentWizard() {
       }
       setIsTransitioning(false)
     }, 800)
-  }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete])
+  }, [currentQuestionIndex, allItems, addForcedChoiceAnswer, updateLikertAnswer, handleComplete, persistAnswer])
 
   const handleGoBack = useCallback(() => {
     if (currentQuestionIndex > 0) {
@@ -1221,6 +1302,14 @@ export function AdventureAssessmentWizard() {
                     </svg>
                   </button>
                 )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleReset}
+                  className="border-red-500/60 text-red-100 hover:bg-red-500/10 ml-2"
+                >
+                  Reset
+                </Button>
               </div>
             </div>
             <div className="w-full bg-amber-900/30 rounded-full h-2">
@@ -1228,6 +1317,9 @@ export function AdventureAssessmentWizard() {
                 className="bg-gradient-to-r from-amber-600 to-amber-400 h-2 rounded-full transition-all duration-500"
                 style={{ width: `${(Math.min(currentQuestionIndex + 1, allItems.length) / allItems.length) * 100}%` }}
               />
+            </div>
+            <div className="text-right text-xs text-amber-200/70 mt-1">
+              {isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress after each question.'}
             </div>
           </div>
         </div>
