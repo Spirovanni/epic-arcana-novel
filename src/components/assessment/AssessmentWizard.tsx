@@ -199,7 +199,7 @@ export function AssessmentWizard() {
   }, [currentStep, totalSteps, setStep, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
-    router.push(`/dashboard`)
+    router.push(`/results/${resultId}`)
   }, [router])
   
   if (showMagicalLoading) {

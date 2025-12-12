@@ -10,6 +10,8 @@ import { db } from '@/lib/db'
 import { userAssessmentResults } from '@/lib/schema'
 import { eq, or } from 'drizzle-orm'
 import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft, Download } from 'lucide-react'
 
 interface ResultsPageProps {
   params: Promise<{
@@ -75,6 +77,28 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <div className="container mx-auto px-4 py-8">
+        {/* Header Actions */}
+        <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <Button asChild variant="ghost" className="text-gray-200">
+            <Link href="/dashboard">
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Back to dashboard
+            </Link>
+          </Button>
+          <Button
+            variant="outline"
+            className="border-purple-500/60 bg-slate-900/70 text-white hover:bg-purple-500/10"
+            onClick={() => {
+              if (typeof window !== 'undefined') {
+                window.print()
+              }
+            }}
+          >
+            <Download className="mr-2 h-4 w-4" />
+            Download PDF (print view)
+          </Button>
+        </div>
+
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
