@@ -42,7 +42,7 @@ export function AssessmentWizard() {
   const [careerInterests, setCareerInterests] = useState<string[]>([])
   const [careerMustHaves, setCareerMustHaves] = useState<string[]>([])
   const [careerNotes, setCareerNotes] = useState('')
-  
+
   const {
     currentStep,
     totalSteps,
@@ -63,25 +63,25 @@ export function AssessmentWizard() {
   const { user, isLoaded, isSignedIn } = useUser()
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
   const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
-  
-  type ProgressPayload = 
+
+  type ProgressPayload =
     | { type: 'forced'; itemId: string; best: number; worst: number }
     | { type: 'likert'; itemId: string; rating: number }
-  
+
   // Initialize assessment if not started
   useEffect(() => {
     if (currentStep === 0) {
       startAssessment()
     }
   }, [currentStep, startAssessment])
-  
+
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
   const totalQuestionCount = forcedChoiceItems.length + likertItems.length
   const isCareerStep = currentStep === totalSteps
-  
+
   // Deterministic shuffle function using seeded random
-  const shuffleArray = function<T>(array: T[], seed: string): T[] {
+  const shuffleArray = function <T>(array: T[], seed: string): T[] {
     const arr = [...array] // Create a copy
     let hash = 0
     for (let i = 0; i < seed.length; i++) {
@@ -89,35 +89,35 @@ export function AssessmentWizard() {
       hash = ((hash << 5) - hash) + char
       hash = hash & hash // Convert to 32-bit integer
     }
-    
+
     // Use the hash as seed for deterministic randomization
     let randomSeed = Math.abs(hash)
     const random = () => {
       randomSeed = (randomSeed * 9301 + 49297) % 233280
       return randomSeed / 233280
     }
-    
+
     // Fisher-Yates shuffle with seeded random
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(random() * (i + 1))
-      ;[arr[i], arr[j]] = [arr[j], arr[i]]
+        ;[arr[i], arr[j]] = [arr[j], arr[i]]
     }
-    
+
     return arr
   }
-  
+
   // Get items for current step with randomization
   const getItemsForStep = (step: number) => {
     const stepConfig = ITEMS_PER_STEP[step as keyof typeof ITEMS_PER_STEP]
     if (!stepConfig) return { forced: [], likert: [] }
-    
+
     const forcedStartIndex = (step - 1) * 3
     const likertStartIndex = Math.max(0, (step - 4) * 12)
-    
+
     // Get the original slices
     const forcedSlice = forcedChoiceItems.slice(forcedStartIndex, forcedStartIndex + stepConfig.forced)
     const likertSlice = likertItems.slice(likertStartIndex, likertStartIndex + stepConfig.likert)
-    
+
     // Apply randomization if enabled
     if (RANDOMIZATION_CONFIG.enabled && RANDOMIZATION_CONFIG.useUserSeeding) {
       // Create deterministic seeds based on step number and user ID
@@ -126,20 +126,20 @@ export function AssessmentWizard() {
       const seedSubstring = userSeed.slice(0, RANDOMIZATION_CONFIG.seedLength)
       const forcedSeed = `forced-step-${step}-${seedSubstring}`
       const likertSeed = `likert-step-${step}-${seedSubstring}`
-      
+
       return {
         forced: shuffleArray(forcedSlice, forcedSeed),
         likert: shuffleArray(likertSlice, likertSeed)
       }
     }
-    
+
     // Return original order if randomization is disabled
     return {
       forced: forcedSlice,
       likert: likertSlice
     }
   }
-  
+
   const getStepFromAnsweredCount = (count: number, total: number) => {
     if (count <= 3) return 1
     if (count <= 6) return 2
@@ -152,31 +152,31 @@ export function AssessmentWizard() {
 
   const { forced: currentForcedItems, likert: currentLikertItems } = getItemsForStep(currentStep)
   const allCurrentItems = [...currentForcedItems, ...currentLikertItems]
-  
+
   // Check if current step is complete
   const isStepComplete = useMemo(() => {
     if (isCareerStep) return true // optional step
 
     const stepConfig = ITEMS_PER_STEP[currentStep as keyof typeof ITEMS_PER_STEP]
     if (!stepConfig) return false
-    
+
     const forcedComplete = currentForcedItems.every(item => {
       const answer = forcedChoiceAnswers.find(a => a.itemId === item.id)
       return answer && answer.best !== undefined && answer.worst !== undefined
     })
-    
+
     const likertComplete = currentLikertItems.every(item => {
       const answer = likertAnswers.find(a => a.itemId === item.id)
       return answer && answer.rating !== undefined
     })
-    
+
     return forcedComplete && likertComplete
   }, [currentStep, currentForcedItems, currentLikertItems, forcedChoiceAnswers, likertAnswers, isCareerStep])
-  
+
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
     setShowMagicalLoading(true)
-    
+
     try {
       // Score the assessment
       const answers = getAnswersForApi()
@@ -187,15 +187,15 @@ export function AssessmentWizard() {
         },
         body: JSON.stringify(answers),
       })
-      
+
       if (!response.ok) {
         throw new Error('Failed to score assessment')
       }
-      
+
       const result = await response.json()
       setResult(result)
       completeAssessment()
-      
+
     } catch (error) {
       console.error('Error completing assessment:', error)
       setShowMagicalLoading(false)
@@ -208,7 +208,10 @@ export function AssessmentWizard() {
     const ensureSession = async () => {
       if (!isLoaded || !isSignedIn) return
       try {
-        const loadResponse = await fetch('/api/assessment/progress', { method: 'GET' })
+        const loadResponse = await fetch('/api/assessment/progress', {
+          method: 'GET',
+          cache: 'no-store'
+        })
         if (loadResponse.ok) {
           const data = await loadResponse.json()
           if (data.assessmentId) setAssessmentId(data.assessmentId)
@@ -300,7 +303,7 @@ export function AssessmentWizard() {
     setIsSubmitting(false)
     setShowAuthGate(true)
   }, [])
-  
+
   const handleNext = useCallback(async () => {
     if (currentStep < totalSteps) {
       setStep(currentStep + 1)
@@ -309,19 +312,19 @@ export function AssessmentWizard() {
       await handleComplete()
     }
   }, [currentStep, totalSteps, setStep, handleComplete])
-  
+
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}?download=1`)
   }, [router])
-  
+
   if (showMagicalLoading) {
     return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />
   }
-  
+
   if (showAuthGate) {
     return <AuthGate onSuccess={handleAuthSuccess} />
   }
-  
+
   if (allCurrentItems.length === 0 && !isCareerStep) {
     return (
       <div className="text-center py-12">
@@ -329,7 +332,7 @@ export function AssessmentWizard() {
       </div>
     )
   }
-  
+
   const careerInterestOptions = [
     "Product & strategy",
     "Research & insights",
@@ -363,8 +366,8 @@ export function AssessmentWizard() {
         {/* Progress Header - Sticky */}
         <div className="sticky top-20 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
           <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
-            <AssessmentProgress 
-              currentStep={currentStep} 
+            <AssessmentProgress
+              currentStep={currentStep}
               totalSteps={totalSteps}
               className="flex-1"
             />
@@ -391,7 +394,7 @@ export function AssessmentWizard() {
             )}
           </div>
         </div>
-        
+
         {/* Assessment Content */}
         <div className="max-w-4xl mx-auto space-y-8">
           {/* Step Title */}
@@ -411,7 +414,7 @@ export function AssessmentWizard() {
                   : 'Rate how much each statement resonates with you'}
             </p>
           </div>
-          
+
           {/* Items or optional career step */}
           {!isCareerStep ? (
             <div className="space-y-8">
@@ -429,7 +432,7 @@ export function AssessmentWizard() {
                   </CardContent>
                 </Card>
               ))}
-              
+
               {currentLikertItems.map(item => (
                 <Card key={item.id} className="bg-slate-800/50 border-purple-500/30">
                   <CardContent className="p-6">
@@ -506,7 +509,7 @@ export function AssessmentWizard() {
               </Card>
             </div>
           )}
-          
+
           {/* Navigation */}
           <div className="flex justify-between items-center pt-8">
             <Button
@@ -517,28 +520,27 @@ export function AssessmentWizard() {
             >
               Previous
             </Button>
-            
+
             <div className="text-center text-sm text-gray-400">
-              {isStepComplete 
-                ? '✓ Step complete' 
+              {isStepComplete
+                ? '✓ Step complete'
                 : `Answer all questions to continue`
               }
             </div>
-            
+
             <Button
               onClick={handleNext}
               disabled={!isStepComplete || isSubmitting}
               variant="mystical"
-              className={`min-w-[120px] ${
-                currentStep >= totalSteps 
-                  ? 'bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 animate-pulse' 
+              className={`min-w-[120px] ${currentStep >= totalSteps
+                  ? 'bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 animate-pulse'
                   : ''
-              }`}
+                }`}
             >
-              {isSubmitting 
+              {isSubmitting
                 ? 'Channeling Magic...'
-                : currentStep < totalSteps 
-                  ? 'Next Step' 
+                : currentStep < totalSteps
+                  ? 'Next Step'
                   : '✨ Complete Assessment ✨'
               }
             </Button>

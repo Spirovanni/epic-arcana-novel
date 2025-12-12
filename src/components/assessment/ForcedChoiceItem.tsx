@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Card, CardContent } from '@/components/ui/card'
 import { ForcedChoiceItem as ForcedChoiceItemType, ForcedChoiceAnswer } from '@/lib/assessment/types'
 import { cn } from '@/lib/utils'
@@ -12,15 +12,24 @@ interface ForcedChoiceItemProps {
   showLocationHeader?: boolean
 }
 
-export function ForcedChoiceItem({ 
-  item, 
-  answer, 
-  onAnswer, 
-  showLocationHeader = true 
+export function ForcedChoiceItem({
+  item,
+  answer,
+  onAnswer,
+  showLocationHeader = true
 }: ForcedChoiceItemProps) {
+  // Initialize state from props, but also watch for changes (for hydration)
   const [selectedBest, setSelectedBest] = useState<number | null>(answer?.best ?? null)
   const [selectedWorst, setSelectedWorst] = useState<number | null>(answer?.worst ?? null)
-  
+
+  // Sync state when answer prop changes (e.g. after server load)
+  useEffect(() => {
+    if (answer) {
+      setSelectedBest(answer.best)
+      setSelectedWorst(answer.worst)
+    }
+  }, [answer])
+
   const handleOptionClick = (index: number) => {
     if (selectedBest === null) {
       // First selection - mark as best
@@ -47,13 +56,13 @@ export function ForcedChoiceItem({
       onAnswer(selectedBest, index)
     }
   }
-  
+
   const getOptionStatus = (index: number) => {
     if (selectedBest === index) return 'best'
     if (selectedWorst === index) return 'worst'
     return 'unselected'
   }
-  
+
   return (
     <div className="space-y-4">
       {showLocationHeader && (
@@ -66,15 +75,15 @@ export function ForcedChoiceItem({
           </p>
         </div>
       )}
-      
+
       <div className="text-center text-sm text-gray-400 mb-4">
         Choose which option appeals to you <strong>MOST</strong> and which appeals <strong>LEAST</strong>
       </div>
-      
+
       <div className="grid gap-3">
         {item.options.map((option, index) => {
           const status = getOptionStatus(index)
-          
+
           return (
             <Card
               key={index}
@@ -91,7 +100,7 @@ export function ForcedChoiceItem({
                   <p className="text-gray-200 flex-1">
                     {option.label}
                   </p>
-                  
+
                   {status !== 'unselected' && (
                     <div className={cn(
                       "ml-4 px-2 py-1 rounded text-xs font-bold",
@@ -107,7 +116,7 @@ export function ForcedChoiceItem({
           )
         })}
       </div>
-      
+
       {selectedBest !== null && selectedWorst === null && (
         <p className="text-center text-sm text-yellow-400">
           Now choose which option appeals to you LEAST
