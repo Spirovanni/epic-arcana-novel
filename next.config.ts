@@ -5,6 +5,13 @@ const nextConfig: NextConfig = {
     // Temporarily ignore ESLint errors for faster testing
     ignoreDuringBuilds: true,
   },
+  // Exclude local data dumps from serverless bundles to keep function size small
+  outputFileTracingExcludes: {
+    '*': [
+      './data/**',
+      './data/career data/**',
+    ],
+  },
   images: {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],

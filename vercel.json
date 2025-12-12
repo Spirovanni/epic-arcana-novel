@@ -1,9 +1,4 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run build",
-  "functions": {
-    "api/**": {
-      "excludeFiles": "data/**"
-    }
-  }
+  "buildCommand": "npm run build"
 }
