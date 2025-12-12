@@ -57,7 +57,8 @@ export function AssessmentWizard() {
     startAssessment,
     resetAssessment,
     assessmentId,
-    setAssessmentId
+    setAssessmentId,
+    setAnswers
   } = useAssessmentStore()
   const { user, isLoaded, isSignedIn } = useUser()
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
@@ -139,6 +140,16 @@ export function AssessmentWizard() {
     }
   }
   
+  const getStepFromAnsweredCount = (count: number, total: number) => {
+    if (count <= 3) return 1
+    if (count <= 6) return 2
+    if (count <= 9) return 3
+    if (count <= 24) return 4
+    if (count <= 39) return 5
+    if (count < total) return 6
+    return totalSteps
+  }
+
   const { forced: currentForcedItems, likert: currentLikertItems } = getItemsForStep(currentStep)
   const allCurrentItems = [...currentForcedItems, ...currentLikertItems]
   
@@ -195,25 +206,37 @@ export function AssessmentWizard() {
   // Ensure a server-side assessment record exists once the user is signed in
   useEffect(() => {
     const ensureSession = async () => {
-      if (!isLoaded || !isSignedIn || assessmentId) return
+      if (!isLoaded || !isSignedIn) return
       try {
-        const response = await fetch('/api/assessment/progress', {
+        const loadResponse = await fetch('/api/assessment/progress', { method: 'GET' })
+        if (loadResponse.ok) {
+          const data = await loadResponse.json()
+          if (data.assessmentId) setAssessmentId(data.assessmentId)
+          if (data.answers) {
+            setAnswers(data.answers.forced || [], data.answers.likert || [])
+            const answeredCount = (data.answers.forced?.length || 0) + (data.answers.likert?.length || 0)
+            const step = getStepFromAnsweredCount(answeredCount, totalQuestionCount)
+            setStep(step)
+          }
+          return
+        }
+
+        // If nothing exists, create a new assessment session
+        const createResponse = await fetch('/api/assessment/progress', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({})
         })
-        if (response.ok) {
-          const data = await response.json()
-          if (data.assessmentId) {
-            setAssessmentId(data.assessmentId)
-          }
+        if (createResponse.ok) {
+          const data = await createResponse.json()
+          if (data.assessmentId) setAssessmentId(data.assessmentId)
         }
       } catch (error) {
         console.error('Error ensuring assessment session:', error)
       }
     }
     ensureSession()
-  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId])
+  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId, setAnswers, setStep, totalQuestionCount])
 
   const persistAnswer = useCallback(async (payload: ProgressPayload) => {
     setSaveStatus('saving')

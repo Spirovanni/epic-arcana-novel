@@ -29,6 +29,7 @@ export interface AssessmentState {
   updateForcedChoiceAnswer: (itemId: string, answer: Partial<ForcedChoiceAnswer>) => void
   updateLikertAnswer: (itemId: string, rating: number) => void
   setAssessmentId: (assessmentId: string | null) => void
+  setAnswers: (forced: ForcedChoiceAnswer[], likert: LikertAnswer[]) => void
   startAssessment: () => void
   completeAssessment: () => void
   setResult: (result: AssessmentResult) => void
@@ -76,6 +77,13 @@ export const useAssessmentStore = create<AssessmentState>()(
 
       setAssessmentId: (assessmentId: string | null) => {
         set({ assessmentId })
+      },
+
+      setAnswers: (forced: ForcedChoiceAnswer[], likert: LikertAnswer[]) => {
+        set({
+          forcedChoiceAnswers: forced,
+          likertAnswers: likert
+        })
       },
       
       updateForcedChoiceAnswer: (itemId: string, updates: Partial<ForcedChoiceAnswer>) => {
