@@ -38,7 +38,7 @@ export interface AssessmentState {
   canProceedToStep: (step: number) => boolean
 }
 
-const TOTAL_STEPS = 6 // 6 steps as specified
+const TOTAL_STEPS = 7 // 6 core steps + 1 optional career focus
 
 export const useAssessmentStore = create<AssessmentState>()(
   persist(

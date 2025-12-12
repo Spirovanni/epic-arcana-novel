@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import { useUser } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Textarea } from '@/components/ui/textarea'
+import { Badge } from '@/components/ui/badge'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
 import { getForcedChoiceItems } from '@/lib/items/forced'
 import { getLikertItems } from '@/lib/items/likert'
@@ -22,6 +24,7 @@ const ITEMS_PER_STEP = {
   4: { forced: 3, likert: 12 }, // 3 forced choice + 12 likert
   5: { forced: 3, likert: 12 }, // 3 forced choice + 12 likert
   6: { forced: 3, likert: 12 }, // 3 forced choice + 12 likert
+  // Step 7 is optional career focus (no forced/likert items)
 }
 
 // Configuration for question randomization
@@ -37,6 +40,9 @@ export function AssessmentWizard() {
   const [showAuthGate, setShowAuthGate] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showMagicalLoading, setShowMagicalLoading] = useState(false)
+  const [careerInterests, setCareerInterests] = useState<string[]>([])
+  const [careerMustHaves, setCareerMustHaves] = useState<string[]>([])
+  const [careerNotes, setCareerNotes] = useState('')
   
   const {
     currentStep,
@@ -62,6 +68,7 @@ export function AssessmentWizard() {
   
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
+  const isCareerStep = currentStep === totalSteps
   
   // Deterministic shuffle function using seeded random
   const shuffleArray = function<T>(array: T[], seed: string): T[] {
@@ -128,6 +135,8 @@ export function AssessmentWizard() {
   
   // Check if current step is complete
   const isStepComplete = useMemo(() => {
+    if (isCareerStep) return true // optional step
+
     const stepConfig = ITEMS_PER_STEP[currentStep as keyof typeof ITEMS_PER_STEP]
     if (!stepConfig) return false
     
@@ -142,7 +151,7 @@ export function AssessmentWizard() {
     })
     
     return forcedComplete && likertComplete
-  }, [currentStep, currentForcedItems, currentLikertItems, forcedChoiceAnswers, likertAnswers])
+  }, [currentStep, currentForcedItems, currentLikertItems, forcedChoiceAnswers, likertAnswers, isCareerStep])
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
@@ -201,7 +210,7 @@ export function AssessmentWizard() {
     return <AuthGate onSuccess={handleAuthSuccess} />
   }
   
-  if (allCurrentItems.length === 0) {
+  if (allCurrentItems.length === 0 && !isCareerStep) {
     return (
       <div className="text-center py-12">
         <p className="text-gray-400">Loading assessment...</p>
@@ -209,6 +218,32 @@ export function AssessmentWizard() {
     )
   }
   
+  const careerInterestOptions = [
+    "Product & strategy",
+    "Research & insights",
+    "Learning & enablement",
+    "Operations & systems",
+    "Creative direction",
+    "Data & analytics",
+    "People leadership",
+    "Independent / consulting",
+  ]
+
+  const careerMustHaveOptions = [
+    "Remote-first flexibility",
+    "High collaboration",
+    "Deep focus time",
+    "User-facing",
+    "Fast-paced experimentation",
+    "Clear career ladder",
+    "Mission-driven work",
+    "Strong mentorship",
+  ]
+
+  const toggleSelection = (value: string, list: string[], setter: (v: string[]) => void) => {
+    setter(list.includes(value) ? list.filter((v) => v !== value) : [...list, value])
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <AssessmentNavbar />
@@ -227,42 +262,109 @@ export function AssessmentWizard() {
           {/* Step Title */}
           <div className="text-center">
             <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2">
-              {currentStep <= 3 ? 'Story Scenarios' : 'Personal Reflections'}
+              {isCareerStep
+                ? 'Career fit (optional)'
+                : currentStep <= 3
+                  ? 'Story Scenarios'
+                  : 'Personal Reflections'}
             </h1>
             <p className="text-gray-400">
-              {currentStep <= 3 
-                ? 'Choose your most and least preferred responses to each scenario'
-                : 'Rate how much each statement resonates with you'
-              }
+              {isCareerStep
+                ? 'Share what matters for your career so we can tailor suggestions. You can skip this and finish now.'
+                : currentStep <= 3
+                  ? 'Choose your most and least preferred responses to each scenario'
+                  : 'Rate how much each statement resonates with you'}
             </p>
           </div>
           
-          {/* Items */}
-          <div className="space-y-8">
-            {currentForcedItems.map(item => (
-              <Card key={item.id} className="bg-slate-800/50 border-purple-500/30">
-                <CardContent className="p-6">
-                  <ForcedChoiceItem
-                    item={item}
-                    answer={forcedChoiceAnswers.find(a => a.itemId === item.id)}
-                    onAnswer={(best, worst) => addForcedChoiceAnswer({ itemId: item.id, best, worst })}
-                  />
+          {/* Items or optional career step */}
+          {!isCareerStep ? (
+            <div className="space-y-8">
+              {currentForcedItems.map(item => (
+                <Card key={item.id} className="bg-slate-800/50 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <ForcedChoiceItem
+                      item={item}
+                      answer={forcedChoiceAnswers.find(a => a.itemId === item.id)}
+                      onAnswer={(best, worst) => addForcedChoiceAnswer({ itemId: item.id, best, worst })}
+                    />
+                  </CardContent>
+                </Card>
+              ))}
+              
+              {currentLikertItems.map(item => (
+                <Card key={item.id} className="bg-slate-800/50 border-purple-500/30">
+                  <CardContent className="p-6">
+                    <LikertItem
+                      item={item}
+                      answer={likertAnswers.find(a => a.itemId === item.id)}
+                      onAnswer={(rating) => updateLikertAnswer(item.id, rating)}
+                    />
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-6">
+              <Card className="bg-slate-800/50 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-white text-xl">What sounds exciting?</CardTitle>
+                  <CardDescription className="text-slate-300">
+                    Pick any paths that you’d like us to emphasize in career suggestions (optional).
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-2">
+                  {careerInterestOptions.map((option) => (
+                    <Badge
+                      key={option}
+                      className={`cursor-pointer ${careerInterests.includes(option) ? 'bg-purple-500 text-white' : 'bg-slate-900 text-slate-200 border border-purple-500/40'}`}
+                      onClick={() => toggleSelection(option, careerInterests, setCareerInterests)}
+                    >
+                      {option}
+                    </Badge>
+                  ))}
                 </CardContent>
               </Card>
-            ))}
-            
-            {currentLikertItems.map(item => (
-              <Card key={item.id} className="bg-slate-800/50 border-purple-500/30">
-                <CardContent className="p-6">
-                  <LikertItem
-                    item={item}
-                    answer={likertAnswers.find(a => a.itemId === item.id)}
-                    onAnswer={(rating) => updateLikertAnswer(item.id, rating)}
-                  />
+
+              <Card className="bg-slate-800/50 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-white text-xl">Non‑negotiables</CardTitle>
+                  <CardDescription className="text-slate-300">
+                    Choose the conditions that help you thrive (optional).
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-2">
+                  {careerMustHaveOptions.map((option) => (
+                    <Badge
+                      key={option}
+                      className={`cursor-pointer ${careerMustHaves.includes(option) ? 'bg-amber-500 text-slate-950' : 'bg-slate-900 text-slate-200 border border-amber-500/40'}`}
+                      onClick={() => toggleSelection(option, careerMustHaves, setCareerMustHaves)}
+                    >
+                      {option}
+                    </Badge>
+                  ))}
                 </CardContent>
               </Card>
-            ))}
-          </div>
+
+              <Card className="bg-slate-800/50 border-purple-500/30">
+                <CardHeader>
+                  <CardTitle className="text-white text-xl">Add context (optional)</CardTitle>
+                  <CardDescription className="text-slate-300">
+                    Tell us about industries, roles, or constraints to sharpen recommendations.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <Textarea
+                    value={careerNotes}
+                    onChange={(e) => setCareerNotes(e.target.value)}
+                    placeholder="e.g., Interested in climate or education; prefer remote teams; want more stakeholder-facing work."
+                    className="bg-slate-900/80 border-purple-500/30 text-white"
+                  />
+                  <p className="text-xs text-slate-400">Optional — you can finish without filling this out.</p>
+                </CardContent>
+              </Card>
+            </div>
+          )}
           
           {/* Navigation */}
           <div className="flex justify-between items-center pt-8">
