@@ -29,8 +29,12 @@ export async function POST(request: NextRequest) {
     const resultId = createResultId()
     
     // Save to database only (file-system fallback removed for production safety)
-    const savedResultId = await saveToDatabase(resultId, assessmentResult, userId, journeyStartDate)
-    return NextResponse.json({ resultId: savedResultId })
+    const { assessmentResultId, assessmentId } = await saveToDatabase(resultId, assessmentResult, userId, journeyStartDate)
+    return NextResponse.json({ 
+      resultId: assessmentResultId, // legacy key used by clients
+      assessmentResultId,
+      assessmentId
+    })
     
   } catch (error) {
     console.error('Error saving assessment result:', error)
@@ -152,7 +156,10 @@ async function saveToDatabase(resultId: string, result: any, userId: string, jou
     await generateUserAssignments(journeyId, startDate, result);
   }
 
-  return resultId;
+  return {
+    assessmentResultId,
+    assessmentId: resultId
+  };
 }
 
 async function generateUserAssignments(journeyId: string, startDate: Date, assessmentResult: any) {

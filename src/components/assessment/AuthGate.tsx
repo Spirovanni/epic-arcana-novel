@@ -17,14 +17,17 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
   const [isSaving, setIsSaving] = useState(false)
   const [showJourneyStartQuestion, setShowJourneyStartQuestion] = useState(false)
   const [journeyStartDate, setJourneyStartDate] = useState('')
+  const [autoSaveTriggered, setAutoSaveTriggered] = useState(false)
+  const [saveError, setSaveError] = useState<string | null>(null)
   const { isSignedIn, isLoaded } = useUser()
   const { result } = useAssessmentStore()
   const { triggerRefresh } = useAssessmentRefresh()
   
   // Save result and answers, then redirect
-  const handleSaveResult = useCallback(async () => {
-    if (!result || !journeyStartDate) return
+  const handleSaveResult = useCallback(async (overrideJourneyStartDate?: string) => {
+    if (!result) return
     
+    setSaveError(null)
     setIsSaving(true)
     
     try {
@@ -41,10 +44,10 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
       }
 
       // Save result with journey start date
-      const resultWithJourneyStart = {
-        ...result,
-        journeyStartDate: journeyStartDate
-      }
+      const resolvedJourneyStart = overrideJourneyStartDate || journeyStartDate || undefined
+      const resultWithJourneyStart = resolvedJourneyStart
+        ? { ...result, journeyStartDate: resolvedJourneyStart }
+        : result
       
       const response = await fetch('/api/assessment/save', {
         method: 'POST',
@@ -69,18 +72,27 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
       
     } catch (error) {
       console.error('Error saving assessment data:', error)
-      // Handle error state
+      setSaveError('We could not save your results. Please try again.')
+      setShowJourneyStartQuestion(true)
     } finally {
       setIsSaving(false)
     }
   }, [result, journeyStartDate, onSuccess, triggerRefresh])
   
-  // Handle sign-in - show journey start question
+  // Auto-save and redirect when signed in so users hit results immediately
   useEffect(() => {
-    if (isLoaded && isSignedIn && result && !isSaving && !showJourneyStartQuestion) {
-      setShowJourneyStartQuestion(true)
+    if (isLoaded && isSignedIn && result && !isSaving && !autoSaveTriggered) {
+      setAutoSaveTriggered(true)
+      handleSaveResult()
     }
-  }, [isLoaded, isSignedIn, result, isSaving, showJourneyStartQuestion])
+  }, [isLoaded, isSignedIn, result, isSaving, autoSaveTriggered, handleSaveResult])
+  
+  // Prefill journey start date for users who want to schedule immediately
+  useEffect(() => {
+    if (showJourneyStartQuestion && !journeyStartDate) {
+      setJourneyStartDate(new Date().toISOString().split('T')[0])
+    }
+  }, [showJourneyStartQuestion, journeyStartDate])
   
   if (!isLoaded) {
     return (
@@ -106,7 +118,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
           </DialogHeader>
           <div className="text-center py-8">
             <div className="animate-spin h-8 w-8 border-2 border-purple-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-            <p className="text-gray-400">Processing your Epic Arcana profile and initializing your calendar...</p>
+            <p className="text-gray-400">Processing your Epic Arcana profile and preparing your printable report...</p>
           </div>
         </DialogContent>
       </Dialog>
@@ -163,17 +175,32 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
               </p>
             </div>
             
+            {saveError && (
+              <div className="text-sm text-red-400 bg-red-900/20 border border-red-500/40 rounded-md p-3">
+                {saveError}
+              </div>
+            )}
+            
             <Button 
-              onClick={handleSaveResult}
-              disabled={!journeyStartDate}
+              onClick={() => handleSaveResult(journeyStartDate || undefined)}
+              disabled={isSaving}
               className="w-full bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white py-3"
             >
-              Begin My Epic Arcana Journey
+              Save & View My Results
+            </Button>
+            
+            <Button
+              variant="outline"
+              onClick={() => handleSaveResult()}
+              disabled={isSaving}
+              className="w-full border-purple-500/40 text-purple-100 hover:bg-purple-500/10"
+            >
+              Skip scheduling for now
             </Button>
             
             <div className="text-center text-sm text-gray-400">
               <p>
-                Once you begin, you'll receive daily assignments designed to help you explore and develop your unique personality traits through the Human Framework Calendar.
+                Once you begin, you'll receive daily assignments designed to help you explore and develop your unique personality traits through the Human Framework Calendar. You can also skip scheduling and jump straight to your report.
               </p>
             </div>
           </CardContent>
@@ -190,7 +217,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
             ✨ Assessment Complete!
           </CardTitle>
           <CardDescription className="text-gray-300">
-            Your Epic Arcana profile is ready. Sign in to save your results and unlock your full personality report.
+            Your Epic Arcana profile is ready. Sign in to instantly open your results with a printable report.
           </CardDescription>
         </CardHeader>
         
@@ -214,9 +241,9 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
           
           {/* Sign In Options */}
           <div className="space-y-4">
-            <SignInButton mode="modal" forceRedirectUrl="/dashboard">
+            <SignInButton mode="modal">
               <Button variant="mystical" size="lg" className="w-full">
-                Sign In to Save Results
+                Sign in to view results
               </Button>
             </SignInButton>
             

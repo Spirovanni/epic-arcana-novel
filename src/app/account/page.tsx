@@ -293,7 +293,7 @@ export default function AccountPage() {
               );
             })}
           </div>
-        </Card>
+        </div>
 
         {/* Features Comparison */}
         <Card>
@@ -367,4 +367,3 @@ export default function AccountPage() {
     </div>
   );
 }
-

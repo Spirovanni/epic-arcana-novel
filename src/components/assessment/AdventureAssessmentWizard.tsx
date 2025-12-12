@@ -1138,7 +1138,7 @@ export function AdventureAssessmentWizard() {
   }, [currentQuestionIndex, allItems.length, handleComplete])
   
   const handleAuthSuccess = useCallback(async (resultId: string) => {
-    router.push(`/dashboard`)
+    router.push(`/results/${resultId}?download=1`)
   }, [router])
   
   if (showMagicalLoading) {
