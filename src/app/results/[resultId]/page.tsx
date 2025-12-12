@@ -11,6 +11,7 @@ import { eq, or } from 'drizzle-orm'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { ArrowLeft, Download } from 'lucide-react'
+import { PrintOnLoad } from './PrintOnLoad'
 
 interface ResultsPageProps {
   params: Promise<{
@@ -75,6 +76,7 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+      <PrintOnLoad />
       <div className="container mx-auto px-4 py-8">
         {/* Header Actions */}
         <div className="flex items-center justify-between mb-6 flex-wrap gap-3">

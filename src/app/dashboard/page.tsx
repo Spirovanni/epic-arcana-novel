@@ -6,12 +6,62 @@ import { Button } from '@/components/ui/button'
 import { AssessmentButton } from '@/components/ui/AssessmentButton'
 import { Progress } from '@/components/ui/progress'
 import { DashboardLayout } from '@/components/dashboard/DashboardLayout'
-import { StrengthsAnalysis } from '@/components/dashboard/StrengthsAnalysis'
-import { GrowthAnalysis } from '@/components/dashboard/GrowthAnalysis'
 import { PersonalityProfileCard } from '@/components/dashboard/PersonalityProfileCard'
+import { TypeBars } from '@/components/results/TypeBars'
+import { ColorSwatch } from '@/components/results/ColorSwatch'
 import { useAssessmentDataRefresh } from '@/utils/assessmentEvents'
 import Link from 'next/link'
 import { AssessmentResult } from '@/lib/assessment/types'
+import { ArrowUpRight, Download } from 'lucide-react'
+
+type DashboardAssessmentResult = AssessmentResult & {
+  resultId?: string
+  assessmentId?: string
+  completedAt?: string
+}
+
+const formatInstinctStack = (instincts?: DashboardAssessmentResult['instincts']) => {
+  if (!instincts) return '—'
+  return Object.entries(instincts)
+    .sort(([, a], [, b]) => b - a)
+    .map(([key, value]) => `${key} ${Math.round(value * 100)}%`)
+    .join(' · ')
+}
+
+const formatCompletedAt = (timestamp?: string) => {
+  if (!timestamp) return 'Just completed'
+  const date = new Date(timestamp)
+  if (Number.isNaN(date.getTime())) return 'Just completed'
+  return date.toLocaleString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit'
+  })
+}
+
+const formatDuration = (seconds?: number) => {
+  if (!seconds && seconds !== 0) return '—'
+  const mins = Math.floor(seconds / 60)
+  const secs = seconds % 60
+  if (mins <= 0) return `${secs}s`
+  return `${mins}m ${secs.toString().padStart(2, '0')}s`
+}
+
+const getDominantProbability = (result?: DashboardAssessmentResult | null) => {
+  if (!result) return null
+  const key = String(result.dominant_type)
+  const probability = result.type_probs?.[key as keyof typeof result.type_probs]
+  if (typeof probability !== 'number') return null
+  return Math.round(probability * 100)
+}
+
+const getReportPath = (result?: DashboardAssessmentResult | null) => {
+  if (!result) return null
+  if (result.resultId) return `/results/${result.resultId}`
+  if (result.assessmentId) return `/results/${result.assessmentId}`
+  return null
+}
 
 interface AssessmentHistoryItem {
   id: string
@@ -24,7 +74,7 @@ interface AssessmentHistoryItem {
 }
 
 export default function DashboardPage() {
-  const [latestResult, setLatestResult] = useState<AssessmentResult | null>(null)
+  const [latestResult, setLatestResult] = useState<DashboardAssessmentResult | null>(null)
   const [assessmentHistory, setAssessmentHistory] = useState<AssessmentHistoryItem[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -74,6 +124,19 @@ export default function DashboardPage() {
       subtitle: "Discover your personality and unlock your potential",
       hasResult: false
     }
+  }
+
+  const reportPath = getReportPath(latestResult)
+  const dominantProbability = getDominantProbability(latestResult)
+  const instinctStack = formatInstinctStack(latestResult?.instincts)
+  const completedAtLabel = formatCompletedAt(latestResult?.completedAt)
+  const durationLabel = formatDuration(latestResult?.meta?.duration_sec)
+
+  const handleDownloadReport = () => {
+    if (!reportPath) return
+    const url = `${reportPath}?download=1`
+    const newWindow = window.open(url, '_blank')
+    newWindow?.focus()
   }
 
   const welcome = getWelcomeMessage()
@@ -175,6 +238,79 @@ export default function DashboardPage() {
         ) : (
           /* Assessment Complete State */
           <>
+            {latestResult && (
+              <Card className="border-primary/40 bg-gradient-to-r from-slate-900/70 via-purple-900/30 to-slate-900/70 shadow-lg">
+                <CardHeader className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                  <div>
+                    <CardTitle className="text-primary">Personality Assessment</CardTitle>
+                    <CardDescription>
+                      Latest Epic Arcana profile with a downloadable report
+                    </CardDescription>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {reportPath && (
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="border-primary/60 text-primary hover:bg-primary/10"
+                      >
+                        <Link href={reportPath}>
+                          View full report
+                          <ArrowUpRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    )}
+                    <Button
+                      variant="mystical"
+                      className="flex items-center gap-2"
+                      onClick={handleDownloadReport}
+                      disabled={!reportPath}
+                    >
+                      <Download className="h-4 w-4" />
+                      Download report
+                    </Button>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="rounded-lg border border-white/10 bg-slate-900/40 p-4">
+                      <p className="text-xs text-muted-foreground">EA Profile</p>
+                      <p className="text-lg font-semibold">{latestResult.profile.display_name}</p>
+                      <p className="text-sm text-muted-foreground flex items-center gap-2">
+                        <span
+                          className="inline-block h-3 w-3 rounded-full border border-white/20"
+                          style={{ backgroundColor: latestResult.color.rgb_hex }}
+                        />
+                        EA ID {latestResult.ea_id} • Chapter {latestResult.chapter}
+                      </p>
+                    </div>
+                    <div className="rounded-lg border border-white/10 bg-slate-900/40 p-4">
+                      <p className="text-xs text-muted-foreground">Dominant Type</p>
+                      <p className="text-lg font-semibold">Type {latestResult.dominant_type}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {latestResult.profile.family}
+                        {dominantProbability !== null ? ` • ${dominantProbability}% likelihood` : ''}
+                      </p>
+                    </div>
+                    <div className="rounded-lg border border-white/10 bg-slate-900/40 p-4">
+                      <p className="text-xs text-muted-foreground">Instinct Stack</p>
+                      <p className="text-lg font-semibold">{instinctStack}</p>
+                      <p className="text-sm text-muted-foreground">
+                        SP {Math.round(latestResult.instincts.SP * 100)}% • SO {Math.round(latestResult.instincts.SO * 100)}% • SX {Math.round(latestResult.instincts.SX * 100)}%
+                      </p>
+                    </div>
+                    <div className="rounded-lg border border-white/10 bg-slate-900/40 p-4">
+                      <p className="text-xs text-muted-foreground">Report</p>
+                      <p className="text-lg font-semibold">{completedAtLabel}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {durationLabel} • v{latestResult.meta.version}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Personality Profile Card */}
             {latestResult && (
               <div className="grid lg:grid-cols-3 gap-6 mb-8">
@@ -208,6 +344,13 @@ export default function DashboardPage() {
                     </CardContent>
                   </Card>
                 </div>
+              </div>
+            )}
+
+            {latestResult && (
+              <div className="grid lg:grid-cols-2 gap-6">
+                <TypeBars result={latestResult} />
+                <ColorSwatch result={latestResult} />
               </div>
             )}
 

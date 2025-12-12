@@ -30,7 +30,18 @@ export async function GET() {
       return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
     }
 
-    return NextResponse.json(results[0].personalityProfile)
+    const profile = results[0].personalityProfile as Record<string, unknown> | null
+    const completedAt = results[0].completedAt
+    const metadata = {
+      resultId: results[0].id,
+      assessmentId: results[0].assessmentId,
+      completedAt: completedAt instanceof Date ? completedAt.toISOString() : completedAt
+    }
+
+    return NextResponse.json({
+      ...(profile || {}),
+      ...metadata
+    })
     
   } catch (error) {
     console.error('Error retrieving assessment result:', error)
