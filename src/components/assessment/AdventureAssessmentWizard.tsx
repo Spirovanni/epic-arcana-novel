@@ -739,12 +739,11 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
   return (
     <div 
       ref={questionRef}
-      className="h-full w-full flex items-center justify-center p-4 sm:p-6 lg:p-8 xl:p-12 relative"
+      className="h-full w-full flex items-center justify-center p-3 sm:p-4 lg:p-6 xl:p-8 relative"
       style={{
         background: getBackgroundGradient(questionNumber),
-        minHeight: 'calc(100vh - 120px)',
-        marginTop: '120px',
-        transform: 'translateY(-10%)'
+        minHeight: 'calc(100vh - 140px)',
+        marginTop: '100px'
       }}
     >
       {/* Dark overlay */}
@@ -752,7 +751,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       
       {/* Question Content */}
       <div className={cn(
-        "relative z-10 mx-auto w-full",
+        "relative z-10 mx-auto w-full h-full",
         hasImageLayout ? "max-w-7xl" : "max-w-4xl"
       )}>
         {hasImageLayout ? (
@@ -761,24 +760,23 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               // Question 19 - Epic finale with side-by-side layout
               <>
                 {/* Desktop Layout */}
-                <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
+                <div className="hidden lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-10 h-full">
                   {/* Left side - Enhanced Image Card for finale */}
                   <div className="flex-shrink-0">
-                    <div className="relative w-[600px] h-[600px]">
+                    <div className="relative w-full h-full max-h-[640px]">
                       {/* Enhanced glowing backdrop for finale */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-orange-600/40 rounded-2xl blur-3xl scale-110" />
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-600/20 rounded-2xl blur-2xl scale-105" />
                       
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black/20 w-full h-full flex flex-col">
-                        <div className="flex-1 relative">
+                        <div className="flex-1 relative h-full">
                           <Image
                             src={getImageDetails(questionNumber).src}
                             alt={getImageDetails(questionNumber).alt}
-                            width={600}
-                            height={600}
-                            className="object-cover w-full h-full"
+                            fill
+                            className="object-cover"
                             priority
-                            sizes="600px"
+                            sizes="(min-width: 1280px) 560px, 50vw"
                           />
                           {/* Enhanced overlay for finale */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
@@ -805,7 +803,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                     <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-tl from-indigo-400/20 to-transparent rounded-tl-2xl"></div>
                     
                     {/* Enhanced question content */}
-                    <div className="relative bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-2xl overflow-hidden">
+                    <div className="relative bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-2xl overflow-hidden h-full">
                       <FirstQuestionContent 
                         item={item}
                         isForcedChoice={isForcedChoice}
@@ -831,7 +829,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                 
                 {/* Mobile Layout */}
                 <div className="block lg:hidden">
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-4">
                     <div className="relative w-full max-w-sm">
                       {/* Enhanced glowing backdrop for mobile finale */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-orange-600/40 rounded-2xl blur-2xl scale-105" />
@@ -883,22 +881,21 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
               // Questions 1-18 - Side by side layout
               <>
                 {/* Desktop Layout */}
-                <div className="hidden lg:flex lg:items-start lg:gap-8 xl:gap-16">
+                <div className="hidden lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-10 h-full">
                   {/* Left side - Image Card */}
                   <div className="flex-shrink-0">
-                    <div className="relative w-[600px] h-[600px]">
+                    <div className="relative w-full h-full max-h-[640px]">
                       {/* Glowing backdrop for the image */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
-                        <div className="flex-1 relative">
+                        <div className="flex-1 relative h-full">
                           <Image
                             src={getImageDetails(questionNumber).src}
                             alt={getImageDetails(questionNumber).alt}
-                            width={600}
-                            height={600}
-                            className="object-cover w-full h-full"
+                            fill
+                            className="object-cover"
                             priority
-                            sizes="600px"
+                            sizes="(min-width: 1280px) 560px, 50vw"
                           />
                           {/* Subtle overlay for better text contrast */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
@@ -935,7 +932,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                 
                 {/* Mobile Layout */}
                 <div className="block lg:hidden">
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-4">
                     <div className="relative w-full max-w-sm">
                       {/* Glowing backdrop for the image */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
@@ -1013,6 +1010,8 @@ export function AdventureAssessmentWizard() {
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
   const [isTransitioning, setIsTransitioning] = useState(false)
   const { isLoaded, isSignedIn } = useUser()
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
+  const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
   
   const {
     currentStep,
@@ -1074,7 +1073,7 @@ export function AdventureAssessmentWizard() {
   }, [isLoaded, isSignedIn, assessmentId, setAssessmentId])
 
   const persistAnswer = useCallback(async (payload: { type: 'forced'; itemId: string; best: number; worst: number } | { type: 'likert'; itemId: string; rating: number }) => {
-    if (!isLoaded || !isSignedIn) return
+    setSaveStatus('saving')
     try {
       const response = await fetch('/api/assessment/progress', {
         method: 'POST',
@@ -1085,14 +1084,24 @@ export function AdventureAssessmentWizard() {
           totalQuestions: totalQuestionCount
         })
       })
-      if (response.ok) {
-        const data = await response.json()
-        if (data.assessmentId && data.assessmentId !== assessmentId) {
-          setAssessmentId(data.assessmentId)
-        }
+      if (response.status === 401) {
+        setSaveStatus('auth')
+        return
       }
+      if (!response.ok) {
+        setSaveStatus('error')
+        return
+      }
+
+      const data = await response.json()
+      if (data.assessmentId && data.assessmentId !== assessmentId) {
+        setAssessmentId(data.assessmentId)
+      }
+      setSaveStatus('saved')
+      setLastSavedAt(new Date().toLocaleTimeString())
     } catch (error) {
       console.error('Error saving assessment progress:', error)
+      setSaveStatus('error')
     }
   }, [assessmentId, isLoaded, isSignedIn, setAssessmentId, totalQuestionCount])
 
@@ -1318,8 +1327,15 @@ export function AdventureAssessmentWizard() {
                 style={{ width: `${(Math.min(currentQuestionIndex + 1, allItems.length) / allItems.length) * 100}%` }}
               />
             </div>
-            <div className="text-right text-xs text-amber-200/70 mt-1">
-              {isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress after each question.'}
+            <div className="flex justify-between items-center text-xs text-amber-200/80 mt-1">
+              <div>
+                {saveStatus === 'auth' && 'Sign in to save your progress after each question.'}
+                {saveStatus === 'error' && 'Auto-save failed. We will retry on your next answer.'}
+                {saveStatus === 'saved' && lastSavedAt && `Saved at ${lastSavedAt}`}
+                {saveStatus === 'saving' && 'Saving...'}
+                {saveStatus === 'idle' && (isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress.')}
+              </div>
+              {!isSignedIn && <span className="font-semibold text-amber-300">Not signed in</span>}
             </div>
           </div>
         </div>

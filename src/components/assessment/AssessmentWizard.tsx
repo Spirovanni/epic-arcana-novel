@@ -60,6 +60,8 @@ export function AssessmentWizard() {
     setAssessmentId
   } = useAssessmentStore()
   const { user, isLoaded, isSignedIn } = useUser()
+  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
+  const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
   
   type ProgressPayload = 
     | { type: 'forced'; itemId: string; best: number; worst: number }
@@ -214,7 +216,7 @@ export function AssessmentWizard() {
   }, [isLoaded, isSignedIn, assessmentId, setAssessmentId])
 
   const persistAnswer = useCallback(async (payload: ProgressPayload) => {
-    if (!isLoaded || !isSignedIn) return
+    setSaveStatus('saving')
     try {
       const response = await fetch('/api/assessment/progress', {
         method: 'POST',
@@ -225,16 +227,26 @@ export function AssessmentWizard() {
           totalQuestions: totalQuestionCount
         })
       })
-      if (response.ok) {
-        const data = await response.json()
-        if (data.assessmentId && data.assessmentId !== assessmentId) {
-          setAssessmentId(data.assessmentId)
-        }
+      if (response.status === 401) {
+        setSaveStatus('auth')
+        return
       }
+      if (!response.ok) {
+        setSaveStatus('error')
+        return
+      }
+
+      const data = await response.json()
+      if (data.assessmentId && data.assessmentId !== assessmentId) {
+        setAssessmentId(data.assessmentId)
+      }
+      setSaveStatus('saved')
+      setLastSavedAt(new Date().toLocaleTimeString())
     } catch (error) {
       console.error('Error saving answer progress:', error)
+      setSaveStatus('error')
     }
-  }, [assessmentId, isLoaded, isSignedIn, setAssessmentId, totalQuestionCount])
+  }, [assessmentId, setAssessmentId, totalQuestionCount])
 
   const handleReset = useCallback(async () => {
     const confirmReset = typeof window !== 'undefined'
@@ -341,8 +353,19 @@ export function AssessmentWizard() {
               Reset
             </Button>
           </div>
-          <div className="max-w-4xl mx-auto text-right text-xs text-gray-400 mt-2">
-            {isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress after each question.'}
+          <div className="max-w-4xl mx-auto flex justify-between items-center text-xs text-gray-300 mt-2">
+            <div>
+              {saveStatus === 'auth' && 'Sign in to save your progress after each question.'}
+              {saveStatus === 'error' && 'Auto-save failed. We will retry on your next answer.'}
+              {saveStatus === 'saved' && lastSavedAt && `Saved at ${lastSavedAt}`}
+              {saveStatus === 'saving' && 'Saving...'}
+              {saveStatus === 'idle' && (isSignedIn ? 'Progress auto-saves after each question.' : 'Sign in to save your progress.')}
+            </div>
+            {!isSignedIn && (
+              <div className="text-amber-300 font-semibold">
+                Not signed in
+              </div>
+            )}
           </div>
         </div>
         
