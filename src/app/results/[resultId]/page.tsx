@@ -1,5 +1,4 @@
 import { notFound } from 'next/navigation'
-import { Button } from '@/components/ui/button'
 import { ResultHeader } from '@/components/results/ResultHeader'
 import { TypeBars } from '@/components/results/TypeBars'
 import { ColorSwatch } from '@/components/results/ColorSwatch'
