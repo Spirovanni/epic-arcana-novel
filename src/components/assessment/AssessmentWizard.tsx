@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { useUser } from '@clerk/nextjs'
+import { useUser, SignInButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Textarea } from '@/components/ui/textarea'
@@ -16,6 +16,7 @@ import { AssessmentProgress } from '@/components/assessment/AssessmentProgress'
 import { AuthGate } from '@/components/assessment/AuthGate'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
 import { MagicalLoadingScreen } from '@/components/assessment/MagicalLoadingScreen'
+import { useAssessmentPersistence } from '@/hooks/useAssessmentPersistence'
 
 const ITEMS_PER_STEP = {
   1: { forced: 3, likert: 0 }, // 3 forced choice
@@ -56,17 +57,10 @@ export function AssessmentWizard() {
     getAnswersForApi,
     startAssessment,
     resetAssessment,
-    assessmentId,
-    setAssessmentId,
-    setAnswers
+    setAnswers,
+    sessionId
   } = useAssessmentStore()
   const { user, isLoaded, isSignedIn } = useUser()
-  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
-  const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
-
-  type ProgressPayload =
-    | { type: 'forced'; itemId: string; best: number; worst: number }
-    | { type: 'likert'; itemId: string; rating: number }
 
   // Initialize assessment if not started
   useEffect(() => {
@@ -150,6 +144,20 @@ export function AssessmentWizard() {
     return totalSteps
   }
 
+  const {
+    saveStatus,
+    lastSavedAt,
+    persistAnswer,
+    requireAuth,
+    reloadSession,
+    flushPending,
+  } = useAssessmentPersistence({
+    forcedChoiceItems,
+    likertItems,
+    totalQuestionCount,
+    getStepFromAnsweredCount,
+  })
+
   const { forced: currentForcedItems, likert: currentLikertItems } = getItemsForStep(currentStep)
   const allCurrentItems = [...currentForcedItems, ...currentLikertItems]
 
@@ -178,6 +186,7 @@ export function AssessmentWizard() {
     setShowMagicalLoading(true)
 
     try {
+      await flushPending()
       // Score the assessment
       const answers = getAnswersForApi()
       const response = await fetch('/api/assessment/score', {
@@ -201,102 +210,18 @@ export function AssessmentWizard() {
       setShowMagicalLoading(false)
       setIsSubmitting(false)
     }
-  }, [getAnswersForApi, setResult, completeAssessment])
-
-  // Ensure a server-side assessment record exists once the user is signed in
-  useEffect(() => {
-    const ensureSession = async () => {
-      if (!isLoaded || !isSignedIn) return
-      try {
-        const loadResponse = await fetch('/api/assessment/progress', {
-          method: 'GET',
-          cache: 'no-store'
-        })
-        if (loadResponse.ok) {
-          const data = await loadResponse.json()
-          if (data.assessmentId) setAssessmentId(data.assessmentId)
-          if (data.answers) {
-            setAnswers(data.answers.forced || [], data.answers.likert || [])
-            const answeredCount = (data.answers.forced?.length || 0) + (data.answers.likert?.length || 0)
-            const step = getStepFromAnsweredCount(answeredCount, totalQuestionCount)
-            setStep(step)
-          }
-          return
-        }
-
-        // If nothing exists, create a new assessment session
-        const createResponse = await fetch('/api/assessment/progress', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        })
-        if (createResponse.ok) {
-          const data = await createResponse.json()
-          if (data.assessmentId) setAssessmentId(data.assessmentId)
-        }
-      } catch (error) {
-        console.error('Error ensuring assessment session:', error)
-      }
-    }
-    ensureSession()
-  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId, setAnswers, setStep, totalQuestionCount])
-
-  const persistAnswer = useCallback(async (payload: ProgressPayload) => {
-    setSaveStatus('saving')
-    try {
-      const response = await fetch('/api/assessment/progress', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          assessmentId,
-          answer: payload,
-          totalQuestions: totalQuestionCount
-        })
-      })
-      if (response.status === 401) {
-        setSaveStatus('auth')
-        return
-      }
-      if (!response.ok) {
-        setSaveStatus('error')
-        return
-      }
-
-      const data = await response.json()
-      if (data.assessmentId && data.assessmentId !== assessmentId) {
-        setAssessmentId(data.assessmentId)
-      }
-      setSaveStatus('saved')
-      setLastSavedAt(new Date().toLocaleTimeString())
-    } catch (error) {
-      console.error('Error saving answer progress:', error)
-      setSaveStatus('error')
-    }
-  }, [assessmentId, setAssessmentId, totalQuestionCount])
+  }, [flushPending, getAnswersForApi, setResult, completeAssessment])
 
   const handleReset = useCallback(async () => {
     const confirmReset = typeof window !== 'undefined'
       ? window.confirm('Reset your assessment? This will clear your saved answers.')
       : false
     if (!confirmReset) return
-
-    const existingAssessmentId = assessmentId
+    
     resetAssessment()
     startAssessment()
-    setAssessmentId(null)
-
-    if (isSignedIn && existingAssessmentId) {
-      try {
-        await fetch('/api/assessment/progress', {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ assessmentId: existingAssessmentId })
-        })
-      } catch (error) {
-        console.error('Error resetting assessment:', error)
-      }
-    }
-  }, [assessmentId, isSignedIn, resetAssessment, startAssessment, setAssessmentId])
+    await reloadSession()
+  }, [resetAssessment, startAssessment, reloadSession])
 
   const handleMagicalLoadingComplete = useCallback(() => {
     setShowMagicalLoading(false)
@@ -316,6 +241,33 @@ export function AssessmentWizard() {
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}?download=1`)
   }, [router])
+
+  if (isLoaded && requireAuth) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+        <AssessmentNavbar />
+        <div className="flex items-center justify-center py-24 px-4">
+          <Card className="w-full max-w-xl bg-slate-800/80 backdrop-blur-md border-purple-500/30">
+            <CardHeader className="text-center">
+              <CardTitle className="text-2xl bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                Sign in to start your assessment
+              </CardTitle>
+              <CardDescription className="text-gray-300">
+                We save each answer automatically so you can resume anytime and download your full report.
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="flex justify-center">
+              <SignInButton mode="modal">
+                <Button variant="mystical" size="lg">
+                  Sign in with Clerk
+                </Button>
+              </SignInButton>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    )
+  }
 
   if (showMagicalLoading) {
     return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />

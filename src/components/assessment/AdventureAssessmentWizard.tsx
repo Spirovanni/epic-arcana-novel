@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { useUser } from '@clerk/nextjs'
+import { useUser, SignInButton } from '@clerk/nextjs'
 import { Button } from '@/components/ui/button'
 import { useAssessmentStore } from '@/store/useAssessmentStore'
 import { getForcedChoiceItems } from '@/lib/items/forced'
@@ -13,6 +13,7 @@ import { AuthGate } from '@/components/assessment/AuthGate'
 import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
 import { MagicalLoadingScreen } from '@/components/assessment/MagicalLoadingScreen'
 import { cn } from '@/lib/utils'
+import { useAssessmentPersistence } from '@/hooks/useAssessmentPersistence'
 import Image from 'next/image'
 
 const ITEMS_PER_STEP = {
@@ -1010,8 +1011,6 @@ export function AdventureAssessmentWizard() {
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
   const [isTransitioning, setIsTransitioning] = useState(false)
   const { isLoaded, isSignedIn } = useUser()
-  const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth'>('idle')
-  const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
   
   const {
     currentStep,
@@ -1025,10 +1024,9 @@ export function AdventureAssessmentWizard() {
     getAnswersForApi,
     startAssessment,
     resetAssessment,
-    assessmentId,
-    setAssessmentId,
     setAnswers,
-    setStep
+    setStep,
+    sessionId
   } = useAssessmentStore()
   
   // Initialize assessment
@@ -1060,105 +1058,40 @@ export function AdventureAssessmentWizard() {
     return totalSteps
   }
 
-  // Ensure a server-side assessment record exists once the user is signed in
-  useEffect(() => {
-    const ensureSession = async () => {
-      if (!isLoaded || !isSignedIn) return
-      try {
-        const loadResponse = await fetch('/api/assessment/progress', { method: 'GET' })
-        if (loadResponse.ok) {
-          const data = await loadResponse.json()
-          if (data.assessmentId) setAssessmentId(data.assessmentId)
-          if (data.answers) {
-            setAnswers(data.answers.forced || [], data.answers.likert || [])
-            const answeredCount = (data.answers.forced?.length || 0) + (data.answers.likert?.length || 0)
-            const step = getStepFromAnsweredCount(answeredCount, totalQuestionCount)
-            setStep(step)
-          }
-          return
-        }
-
-        const response = await fetch('/api/assessment/progress', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({})
-        })
-        if (response.ok) {
-          const data = await response.json()
-          if (data.assessmentId) setAssessmentId(data.assessmentId)
-        }
-      } catch (error) {
-        console.error('Error ensuring assessment session:', error)
-      }
-    }
-    ensureSession()
-  }, [isLoaded, isSignedIn, assessmentId, setAssessmentId, setAnswers, setStep, totalQuestionCount])
-
-  const persistAnswer = useCallback(async (payload: { type: 'forced'; itemId: string; best: number; worst: number } | { type: 'likert'; itemId: string; rating: number }) => {
-    setSaveStatus('saving')
-    try {
-      const response = await fetch('/api/assessment/progress', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          assessmentId,
-          answer: payload,
-          totalQuestions: totalQuestionCount
-        })
-      })
-      if (response.status === 401) {
-        setSaveStatus('auth')
-        return
-      }
-      if (!response.ok) {
-        setSaveStatus('error')
-        return
-      }
-
-      const data = await response.json()
-      if (data.assessmentId && data.assessmentId !== assessmentId) {
-        setAssessmentId(data.assessmentId)
-      }
-      setSaveStatus('saved')
-      setLastSavedAt(new Date().toLocaleTimeString())
-    } catch (error) {
-      console.error('Error saving assessment progress:', error)
-      setSaveStatus('error')
-    }
-  }, [assessmentId, isLoaded, isSignedIn, setAssessmentId, totalQuestionCount])
+  const {
+    saveStatus,
+    lastSavedAt,
+    persistAnswer,
+    requireAuth,
+    reloadSession,
+    flushPending,
+  } = useAssessmentPersistence({
+    forcedChoiceItems,
+    likertItems,
+    totalQuestionCount,
+    getStepFromAnsweredCount,
+  })
 
   const handleReset = useCallback(async () => {
     const confirmReset = typeof window !== 'undefined'
       ? window.confirm('Reset your assessment? This will clear your saved answers.')
       : false
     if (!confirmReset) return
-
-    const existingAssessmentId = assessmentId
+    
     resetAssessment()
     setCurrentQuestionIndex(0)
     setAnsweredQuestions(new Set())
     setIsTransitioning(false)
     startAssessment()
-    setAssessmentId(null)
-
-    if (isSignedIn && existingAssessmentId) {
-      try {
-        await fetch('/api/assessment/progress', {
-          method: 'DELETE',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ assessmentId: existingAssessmentId })
-        })
-      } catch (error) {
-        console.error('Error resetting assessment:', error)
-      }
-    }
-  }, [assessmentId, isSignedIn, resetAssessment, startAssessment, setAssessmentId])
+    await reloadSession()
+  }, [resetAssessment, startAssessment, reloadSession])
   
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
     setShowMagicalLoading(true)
     
     try {
+      await flushPending()
       const answers = getAnswersForApi()
       const response = await fetch('/api/assessment/score', {
         method: 'POST',
@@ -1181,7 +1114,7 @@ export function AdventureAssessmentWizard() {
       setShowMagicalLoading(false)
       setIsSubmitting(false)
     }
-  }, [getAnswersForApi, setResult, completeAssessment])
+  }, [flushPending, getAnswersForApi, setResult, completeAssessment])
 
   const handleMagicalLoadingComplete = useCallback(() => {
     setShowMagicalLoading(false)
@@ -1252,6 +1185,27 @@ export function AdventureAssessmentWizard() {
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}?download=1`)
   }, [router])
+
+  if (isLoaded && requireAuth) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-900 via-slate-900 to-amber-950">
+        <AssessmentNavbar />
+        <div className="flex items-center justify-center py-16 px-4">
+          <div className="max-w-xl w-full bg-black/60 border border-amber-500/40 rounded-2xl p-8 text-center shadow-2xl">
+            <h2 className="text-3xl font-bold text-amber-300 mb-3">Sign in to begin your journey</h2>
+            <p className="text-amber-100/80 mb-6">
+              We’ll save every answer instantly so you can resume anytime and generate your full Epic Arcana report.
+            </p>
+            <SignInButton mode="modal">
+              <Button size="lg" className="bg-amber-500 hover:bg-amber-400 text-black font-semibold">
+                Sign in with Clerk
+              </Button>
+            </SignInButton>
+          </div>
+        </div>
+      </div>
+    )
+  }
   
   if (showMagicalLoading) {
     return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />

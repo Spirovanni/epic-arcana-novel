@@ -10,6 +10,7 @@ export interface AssessmentState {
   totalSteps: number
   isComplete: boolean
   assessmentId: string | null
+  sessionId: string | null
   
   // Answers
   forcedChoiceAnswers: ForcedChoiceAnswer[]
@@ -29,6 +30,7 @@ export interface AssessmentState {
   updateForcedChoiceAnswer: (itemId: string, answer: Partial<ForcedChoiceAnswer>) => void
   updateLikertAnswer: (itemId: string, rating: number) => void
   setAssessmentId: (assessmentId: string | null) => void
+  setSessionId: (sessionId: string | null) => void
   setAnswers: (forced: ForcedChoiceAnswer[], likert: LikertAnswer[]) => void
   startAssessment: () => void
   completeAssessment: () => void
@@ -51,6 +53,7 @@ export const useAssessmentStore = create<AssessmentState>()(
       totalSteps: TOTAL_STEPS,
       isComplete: false,
       assessmentId: null,
+      sessionId: null,
       forcedChoiceAnswers: [],
       likertAnswers: [],
       startTime: null,
@@ -77,6 +80,10 @@ export const useAssessmentStore = create<AssessmentState>()(
 
       setAssessmentId: (assessmentId: string | null) => {
         set({ assessmentId })
+      },
+
+      setSessionId: (sessionId: string | null) => {
+        set({ sessionId })
       },
 
       setAnswers: (forced: ForcedChoiceAnswer[], likert: LikertAnswer[]) => {
@@ -132,6 +139,7 @@ export const useAssessmentStore = create<AssessmentState>()(
           currentStep: 0,
           isComplete: false,
           assessmentId: null,
+          sessionId: null,
           forcedChoiceAnswers: [],
           likertAnswers: [],
           startTime: null,
@@ -183,7 +191,8 @@ export const useAssessmentStore = create<AssessmentState>()(
         startTime: state.startTime,
         currentStep: state.currentStep,
         isComplete: state.isComplete,
-        assessmentId: state.assessmentId
+        assessmentId: state.assessmentId,
+        sessionId: state.sessionId
       })
     }
   )

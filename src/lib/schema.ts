@@ -9,6 +9,7 @@ export const users = pgTable('users', {
   email: varchar({ length: 255 }).notNull(),
   createdAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
   updatedAt: timestamp({ mode: 'string' }).defaultNow().notNull(),
+  lastSeenAt: timestamp('last_seen_at', { mode: 'string' }),
   role: varchar({ length: 255 }).default('user').notNull(),
   membershipTier: membershipTierEnum('membership_tier').default('free').notNull(),
   membershipExpiresAt: timestamp('membership_expires_at', { mode: 'string' }),
@@ -49,6 +50,38 @@ export const webhookEvents = pgTable('webhook_events', {
 }, (table) => [
   unique('webhook_events_event_id_unique').on(table.eventId),
 ]);
+
+export const assessmentSessionsV2 = pgTable('assessment_sessions_v2', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userId: integer('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
+  status: varchar('status', { length: 50 }).notNull().default('in_progress'),
+  isRetake: boolean('is_retake').notNull().default(false),
+  startedAt: timestamp('started_at', { mode: 'string' }).defaultNow().notNull(),
+  completedAt: timestamp('completed_at', { mode: 'string' }),
+  createdAt: timestamp('created_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  index('assessment_sessions_v2_user_status_idx').on(table.userId, table.status),
+]);
+
+export const assessmentAnswersV2 = pgTable('assessment_answers_v2', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  sessionId: uuid('session_id').notNull().references(() => assessmentSessionsV2.id, { onDelete: 'cascade' }),
+  questionKey: text('question_key').notNull(),
+  answerType: varchar('answer_type', { length: 20 }).notNull().default('likert'),
+  value: jsonb('value').notNull(),
+  answeredAt: timestamp('answered_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  unique('assessment_answers_v2_session_question_unique').on(table.sessionId, table.questionKey),
+  index('assessment_answers_v2_session_idx').on(table.sessionId),
+]);
+
+export const assessmentResultsV2 = pgTable('assessment_results_v2', {
+  sessionId: uuid('session_id').primaryKey().references(() => assessmentSessionsV2.id, { onDelete: 'cascade' }),
+  result: jsonb('result').notNull(),
+  computedAt: timestamp('computed_at', { mode: 'string' }).defaultNow().notNull(),
+});
 
 export const locations = pgTable('locations', {
   id: uuid('id').primaryKey().defaultRandom(),

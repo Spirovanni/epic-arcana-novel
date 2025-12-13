@@ -20,7 +20,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
   const [autoSaveTriggered, setAutoSaveTriggered] = useState(false)
   const [saveError, setSaveError] = useState<string | null>(null)
   const { isSignedIn, isLoaded } = useUser()
-  const { result } = useAssessmentStore()
+  const { result, sessionId } = useAssessmentStore()
   const { triggerRefresh } = useAssessmentRefresh()
   
   // Save result and answers, then redirect
@@ -69,6 +69,14 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
         triggerRefresh() // Trigger refresh of assessment data across the app
         onSuccess(resultId)
       }
+
+      if (sessionId) {
+        await fetch('/api/assessment/complete', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId, result: resultWithJourneyStart })
+        })
+      }
       
     } catch (error) {
       console.error('Error saving assessment data:', error)
@@ -77,7 +85,7 @@ export function AuthGate({ onSuccess }: AuthGateProps) {
     } finally {
       setIsSaving(false)
     }
-  }, [result, journeyStartDate, onSuccess, triggerRefresh])
+  }, [result, journeyStartDate, onSuccess, triggerRefresh, sessionId])
   
   // Auto-save and redirect when signed in so users hit results immediately
   useEffect(() => {
