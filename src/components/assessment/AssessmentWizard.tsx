@@ -151,6 +151,7 @@ export function AssessmentWizard() {
     requireAuth,
     reloadSession,
     flushPending,
+    saveMessage,
   } = useAssessmentPersistence({
     forcedChoiceItems,
     likertItems,
@@ -246,6 +247,13 @@ export function AssessmentWizard() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
         <AssessmentNavbar />
+        {saveMessage && (
+          <div className="mx-auto max-w-3xl px-4 pt-6">
+            <div className="rounded-md border border-red-500/40 bg-red-500/10 text-red-200 px-4 py-3 text-sm">
+              {saveMessage}
+            </div>
+          </div>
+        )}
         <div className="flex items-center justify-center py-24 px-4">
           <Card className="w-full max-w-xl bg-slate-800/80 backdrop-blur-md border-purple-500/30">
             <CardHeader className="text-center">

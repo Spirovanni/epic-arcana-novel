@@ -39,6 +39,7 @@ export function useAssessmentPersistence({
   } = useAssessmentStore()
 
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth' | 'loading'>('loading')
+  const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
   const pendingPayload = useRef<AnswerPayload | null>(null)
   const saveTimer = useRef<NodeJS.Timeout | null>(null)
@@ -115,6 +116,7 @@ export function useAssessmentPersistence({
     if (!pendingPayload.current) return
     if (!sessionId) {
       setSaveStatus('error')
+      setSaveMessage('No active session; cannot save answers. Reload the page to start a new session.')
       return
     }
     const payload = pendingPayload.current
@@ -135,14 +137,20 @@ export function useAssessmentPersistence({
         body: JSON.stringify(body)
       })
       if (!res.ok) {
+        const text = await res.text().catch(() => '')
+        const message = `Save failed (${res.status} ${res.statusText}) ${text ? `- ${text}` : ''}`
         setSaveStatus(res.status === 401 ? 'auth' : 'error')
+        setSaveMessage(message)
+        console.error('[Assessment] save error:', message)
         return
       }
       setSaveStatus('saved')
       setLastSavedAt(new Date().toLocaleTimeString())
+      setSaveMessage(null)
     } catch (error) {
       console.error('Failed to persist answer', error)
       setSaveStatus('error')
+      setSaveMessage('Network error while saving. We will retry on your next action.')
     }
   }, [sessionId])
 
@@ -185,5 +193,6 @@ export function useAssessmentPersistence({
     requireAuth: saveStatus === 'auth',
     reloadSession: loadSession,
     flushPending,
+    saveMessage,
   }
 }
