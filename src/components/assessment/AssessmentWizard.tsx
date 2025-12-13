@@ -325,6 +325,16 @@ export function AssessmentWizard() {
       <div className="container mx-auto px-4 py-8">
         {/* Progress Header - Sticky */}
         <div className="sticky top-20 z-10 bg-slate-900/95 backdrop-blur-sm border-b border-purple-500/20 pb-4 mb-8">
+          {saveStatus === 'error' && saveMessage && (
+            <div className="max-w-4xl mx-auto mb-3 rounded-md border border-red-500/40 bg-red-500/10 text-red-100 px-3 py-2 text-sm">
+              {saveMessage}
+            </div>
+          )}
+          {saveStatus === 'auth' && (
+            <div className="max-w-4xl mx-auto mb-3 rounded-md border border-amber-500/40 bg-amber-500/10 text-amber-50 px-3 py-2 text-sm">
+              Sign in to keep your answers saved across refreshes.
+            </div>
+          )}
           <div className="max-w-4xl mx-auto flex items-center justify-between gap-4">
             <AssessmentProgress
               currentStep={currentStep}

@@ -1065,6 +1065,7 @@ export function AdventureAssessmentWizard() {
     requireAuth,
     reloadSession,
     flushPending,
+    saveMessage,
   } = useAssessmentPersistence({
     forcedChoiceItems,
     likertItems,
@@ -1190,6 +1191,13 @@ export function AdventureAssessmentWizard() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-900 via-slate-900 to-amber-950">
         <AssessmentNavbar />
+        {saveMessage && (
+          <div className="mx-auto max-w-3xl px-4 pt-6">
+            <div className="rounded-md border border-red-500/40 bg-red-500/10 text-red-200 px-4 py-3 text-sm">
+              {saveMessage}
+            </div>
+          </div>
+        )}
         <div className="flex items-center justify-center py-16 px-4">
           <div className="max-w-xl w-full bg-black/60 border border-amber-500/40 rounded-2xl p-8 text-center shadow-2xl">
             <h2 className="text-3xl font-bold text-amber-300 mb-3">Sign in to begin your journey</h2>
@@ -1233,6 +1241,16 @@ export function AdventureAssessmentWizard() {
       <div className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
         <AssessmentNavbar />
         <div className="px-4 pb-2">
+          {saveStatus === 'error' && saveMessage && (
+            <div className="max-w-4xl mx-auto mb-2 rounded-md border border-red-500/40 bg-red-500/10 text-red-100 px-3 py-2 text-sm">
+              {saveMessage}
+            </div>
+          )}
+          {saveStatus === 'auth' && (
+            <div className="max-w-4xl mx-auto mb-2 rounded-md border border-amber-500/40 bg-amber-500/10 text-amber-50 px-3 py-2 text-sm">
+              Sign in to keep your answers saved across refreshes.
+            </div>
+          )}
           <div className="max-w-4xl mx-auto">
             <div className="flex items-center justify-between text-amber-300 text-sm mb-2">
               <div className="flex items-center gap-1">
