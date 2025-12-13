@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { verifyWebhook, type WebhookEvent } from '@clerk/backend/webhooks'
+import { verifyWebhook, type WebhookEvent } from '@clerk/nextjs/webhooks'
 import { db } from '@/lib/db'
 import { webhookEvents } from '@/lib/schema'
 import { eq } from 'drizzle-orm'
@@ -7,14 +7,6 @@ import { handleUserCreated, handleUserDeleted, handleUserUpdated, markEventProce
 
 function getSigningSecret() {
   return process.env.CLERK_WEBHOOK_SIGNING_SECRET || process.env.CLERK_WEBHOOK_SECRET || ''
-}
-
-function buildHeaderMap(req: NextRequest) {
-  const headers: Record<string, string> = {}
-  req.headers.forEach((value, key) => {
-    headers[key] = value
-  })
-  return headers
 }
 
 async function processEvent(evt: WebhookEvent) {
@@ -65,12 +57,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false }, { status: 500 })
   }
 
-  const payload = await req.text()
-  const headers = buildHeaderMap(req)
-
   let evt: WebhookEvent
   try {
-    evt = verifyWebhook({ webhookSecret: signingSecret, payload, headers })
+    evt = await verifyWebhook(req, { signingSecret })
   } catch (error) {
     console.error('Clerk webhook verification failed', error)
     return NextResponse.json({ ok: false }, { status: 400 })

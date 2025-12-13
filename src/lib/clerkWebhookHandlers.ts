@@ -1,9 +1,10 @@
 import { db } from '@/lib/db'
 import { users, webhookEvents } from '@/lib/schema'
 import { eq } from 'drizzle-orm'
-import type { WebhookEvent } from '@clerk/backend'
+import type { WebhookEvent } from '@clerk/nextjs/webhooks'
 
-type DbClient = typeof db
+type TransactionClient = Parameters<Parameters<typeof db.transaction>[0]>[0]
+export type DbOrTx = typeof db | TransactionClient
 
 function extractUserFields(evt: WebhookEvent) {
   const data: any = evt.data || {}
@@ -27,7 +28,7 @@ function extractUserFields(evt: WebhookEvent) {
   }
 }
 
-export async function handleUserCreated(database: DbClient, evt: WebhookEvent) {
+export async function handleUserCreated(database: DbOrTx, evt: WebhookEvent) {
   const { clerkUserId, firstName, lastName, email, imageUrl, name } = extractUserFields(evt)
   if (!clerkUserId) return
 
@@ -57,7 +58,7 @@ export async function handleUserCreated(database: DbClient, evt: WebhookEvent) {
     })
 }
 
-export async function handleUserUpdated(database: DbClient, evt: WebhookEvent) {
+export async function handleUserUpdated(database: DbOrTx, evt: WebhookEvent) {
   const { clerkUserId, firstName, lastName, email, imageUrl, name } = extractUserFields(evt)
   if (!clerkUserId) return
 
@@ -87,7 +88,7 @@ export async function handleUserUpdated(database: DbClient, evt: WebhookEvent) {
     })
 }
 
-export async function handleUserDeleted(database: DbClient, evt: WebhookEvent) {
+export async function handleUserDeleted(database: DbOrTx, evt: WebhookEvent) {
   const data: any = evt.data || {}
   const clerkUserId = data.id as string | undefined
   if (!clerkUserId) return
@@ -95,7 +96,7 @@ export async function handleUserDeleted(database: DbClient, evt: WebhookEvent) {
   await database.delete(users).where(eq(users.clerkId, clerkUserId))
 }
 
-export async function markEventProcessed(database: DbClient, eventId: string, eventType: string) {
+export async function markEventProcessed(database: DbOrTx, eventId: string, eventType: string) {
   await database.insert(webhookEvents).values({
     eventId,
     eventType,
