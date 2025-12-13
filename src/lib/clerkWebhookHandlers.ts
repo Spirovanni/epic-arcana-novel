@@ -34,30 +34,56 @@ export async function handleUserCreated(database: DbOrTx, evt: WebhookEvent) {
 
   const now = new Date().toISOString()
 
-  await database.insert(users)
-    .values({
-      clerkId: clerkUserId,
-      clerkUserId,
-      firstName,
-      lastName,
-      email,
-      name,
-      age: 25,
-      updatedAt: now,
-      imageUrl,
-    })
-    .onConflictDoUpdate({
-      target: users.clerkId,
-      set: {
+  try {
+    await database.insert(users)
+      .values({
+        clerkId: clerkUserId,
         clerkUserId,
         firstName,
         lastName,
         email,
         name,
+        age: 25,
         updatedAt: now,
         imageUrl,
-      }
-    })
+      })
+      .onConflictDoUpdate({
+        target: users.clerkId,
+        set: {
+          clerkUserId,
+          firstName,
+          lastName,
+          email,
+          name,
+          updatedAt: now,
+          imageUrl,
+        }
+      })
+  } catch (error) {
+    console.error('[handleUserCreated] clerk_user_id upsert failed, using legacy shape', error)
+    await database.insert(users)
+      .values({
+        clerkId: clerkUserId,
+        firstName,
+        lastName,
+        email,
+        name,
+        age: 25,
+        updatedAt: now,
+        imageUrl,
+      })
+      .onConflictDoUpdate({
+        target: users.clerkId,
+        set: {
+          firstName,
+          lastName,
+          email,
+          name,
+          updatedAt: now,
+          imageUrl,
+        }
+      })
+  }
 }
 
 export async function handleUserUpdated(database: DbOrTx, evt: WebhookEvent) {
@@ -66,30 +92,56 @@ export async function handleUserUpdated(database: DbOrTx, evt: WebhookEvent) {
 
   const now = new Date().toISOString()
 
-  await database.insert(users)
-    .values({
-      clerkId: clerkUserId,
-      clerkUserId,
-      firstName,
-      lastName,
-      email,
-      name,
-      age: 25,
-      updatedAt: now,
-      imageUrl,
-    })
-    .onConflictDoUpdate({
-      target: users.clerkId,
-      set: {
+  try {
+    await database.insert(users)
+      .values({
+        clerkId: clerkUserId,
         clerkUserId,
         firstName,
         lastName,
         email,
         name,
+        age: 25,
         updatedAt: now,
         imageUrl,
-      }
-    })
+      })
+      .onConflictDoUpdate({
+        target: users.clerkId,
+        set: {
+          clerkUserId,
+          firstName,
+          lastName,
+          email,
+          name,
+          updatedAt: now,
+          imageUrl,
+        }
+      })
+  } catch (error) {
+    console.error('[handleUserUpdated] clerk_user_id upsert failed, using legacy shape', error)
+    await database.insert(users)
+      .values({
+        clerkId: clerkUserId,
+        firstName,
+        lastName,
+        email,
+        name,
+        age: 25,
+        updatedAt: now,
+        imageUrl,
+      })
+      .onConflictDoUpdate({
+        target: users.clerkId,
+        set: {
+          firstName,
+          lastName,
+          email,
+          name,
+          updatedAt: now,
+          imageUrl,
+        }
+      })
+  }
 }
 
 export async function handleUserDeleted(database: DbOrTx, evt: WebhookEvent) {

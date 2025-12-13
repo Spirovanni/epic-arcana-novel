@@ -17,29 +17,55 @@ export async function ensureDbUser() {
   const name = `${firstName} ${lastName}`.trim() || 'User'
   const now = new Date().toISOString()
 
-  const [row] = await db.insert(users).values({
-    clerkId: clerkUser.id,
-    clerkUserId: clerkUser.id,
-    name,
-    firstName,
-    lastName,
-    email,
-    age: 25,
-    imageUrl,
-    lastSeenAt: now,
-  }).onConflictDoUpdate({
-    target: users.clerkId,
-    set: {
+  try {
+    const [row] = await db.insert(users).values({
+      clerkId: clerkUser.id,
       clerkUserId: clerkUser.id,
       name,
       firstName,
       lastName,
       email,
+      age: 25,
       imageUrl,
       lastSeenAt: now,
-      updatedAt: now,
-    }
-  }).returning()
-
-  return row || null
+    }).onConflictDoUpdate({
+      target: users.clerkId,
+      set: {
+        clerkUserId: clerkUser.id,
+        name,
+        firstName,
+        lastName,
+        email,
+        imageUrl,
+        lastSeenAt: now,
+        updatedAt: now,
+      }
+    }).returning()
+    return row || null
+  } catch (error) {
+    // Fallback for deployments where the new clerk_user_id column isn't migrated yet
+    console.error('[ensureDbUser] primary upsert failed, falling back to legacy shape', error)
+    const [legacyRow] = await db.insert(users).values({
+      clerkId: clerkUser.id,
+      name,
+      firstName,
+      lastName,
+      email,
+      age: 25,
+      imageUrl,
+      lastSeenAt: now,
+    }).onConflictDoUpdate({
+      target: users.clerkId,
+      set: {
+        name,
+        firstName,
+        lastName,
+        email,
+        imageUrl,
+        lastSeenAt: now,
+        updatedAt: now,
+      }
+    }).returning()
+    return legacyRow || null
+  }
 }
