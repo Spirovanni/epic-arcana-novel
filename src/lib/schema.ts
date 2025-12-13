@@ -35,9 +35,19 @@ export const users = pgTable('users', {
   clerkId: varchar({ length: 255 }).notNull(),
   firstName: varchar({ length: 255 }).notNull(),
   lastName: varchar({ length: 255 }).notNull(),
+  imageUrl: varchar({ length: 500 }).default('').notNull(),
 }, (table) => [
   unique('users_email_unique').on(table.email),
   unique('users_clerkId_unique').on(table.clerkId),
+]);
+
+export const webhookEvents = pgTable('webhook_events', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  eventId: varchar('event_id', { length: 255 }).notNull(),
+  eventType: varchar('event_type', { length: 255 }).notNull(),
+  processedAt: timestamp('processed_at').defaultNow().notNull(),
+}, (table) => [
+  unique('webhook_events_event_id_unique').on(table.eventId),
 ]);
 
 export const locations = pgTable('locations', {
