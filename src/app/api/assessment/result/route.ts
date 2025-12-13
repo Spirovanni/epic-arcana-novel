@@ -6,7 +6,12 @@ import { desc, eq } from 'drizzle-orm'
 
 export async function GET() {
   try {
-    const { userId } = await auth()
+    // Catch auth failures so they do not bubble as 500s
+    const authResult = await auth().catch((error) => {
+      console.error('[API] Result - Clerk auth failed:', error)
+      return { userId: null }
+    })
+    const userId = authResult?.userId || null
     console.log('[API] Result - userId:', userId)
 
     if (!userId) {
@@ -14,6 +19,14 @@ export async function GET() {
       return NextResponse.json(
         { error: 'Authentication required' },
         { status: 401 }
+      )
+    }
+
+    if (!process.env.DATABASE_URL) {
+      console.error('[API] Result - DATABASE_URL is not configured')
+      return NextResponse.json(
+        { error: 'Server database not configured' },
+        { status: 500 }
       )
     }
 
