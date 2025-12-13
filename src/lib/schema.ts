@@ -34,12 +34,14 @@ export const users = pgTable('users', {
   creditsExhaustedReason: varchar({ length: 255 }).default('').notNull(),
   creditsExhaustedReasonDescription: varchar({ length: 255 }).default('').notNull(),
   clerkId: varchar({ length: 255 }).notNull(),
+  clerkUserId: varchar('clerk_user_id', { length: 255 }),
   firstName: varchar({ length: 255 }).notNull(),
   lastName: varchar({ length: 255 }).notNull(),
   imageUrl: varchar({ length: 500 }).default('').notNull(),
 }, (table) => [
   unique('users_email_unique').on(table.email),
   unique('users_clerkId_unique').on(table.clerkId),
+  unique('users_clerkUserId_unique').on(table.clerkUserId),
 ]);
 
 export const webhookEvents = pgTable('webhook_events', {

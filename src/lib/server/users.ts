@@ -19,6 +19,7 @@ export async function ensureDbUser() {
 
   const [row] = await db.insert(users).values({
     clerkId: clerkUser.id,
+    clerkUserId: clerkUser.id,
     name,
     firstName,
     lastName,
@@ -29,6 +30,7 @@ export async function ensureDbUser() {
   }).onConflictDoUpdate({
     target: users.clerkId,
     set: {
+      clerkUserId: clerkUser.id,
       name,
       firstName,
       lastName,

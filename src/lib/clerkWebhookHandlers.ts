@@ -37,6 +37,7 @@ export async function handleUserCreated(database: DbOrTx, evt: WebhookEvent) {
   await database.insert(users)
     .values({
       clerkId: clerkUserId,
+      clerkUserId,
       firstName,
       lastName,
       email,
@@ -48,6 +49,7 @@ export async function handleUserCreated(database: DbOrTx, evt: WebhookEvent) {
     .onConflictDoUpdate({
       target: users.clerkId,
       set: {
+        clerkUserId,
         firstName,
         lastName,
         email,
@@ -67,6 +69,7 @@ export async function handleUserUpdated(database: DbOrTx, evt: WebhookEvent) {
   await database.insert(users)
     .values({
       clerkId: clerkUserId,
+      clerkUserId,
       firstName,
       lastName,
       email,
@@ -78,6 +81,7 @@ export async function handleUserUpdated(database: DbOrTx, evt: WebhookEvent) {
     .onConflictDoUpdate({
       target: users.clerkId,
       set: {
+        clerkUserId,
         firstName,
         lastName,
         email,

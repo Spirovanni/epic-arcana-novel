@@ -6,7 +6,7 @@ This flow records every assessment answer to Neon through Clerk-authenticated AP
 - `assessment_sessions_v2`: user-bound session with `status`, `isRetake`, timestamps.
 - `assessment_answers_v2`: `UNIQUE(session_id, question_key)` JSONB answers plus `answer_type`.
 - `assessment_results_v2`: one row per session.
-- `users`: adds `last_seen_at` to track activity.
+- `users`: adds `last_seen_at` to track activity and `clerk_user_id` for Clerk mapping (kept alongside legacy `clerkId`).
 
 ## Session Selection
 - `/api/assessment/session` resolves the active session.
