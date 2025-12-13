@@ -109,8 +109,11 @@ async function ensureAssessment(userId: number, totalQuestions: number, provided
 }
 
 export async function POST(request: Request) {
+  console.log('[API] Progress POST: Starting request')
   try {
     const dbUser = await ensureDbUser()
+    console.log('[API] Progress POST: dbUser found?', !!dbUser, dbUser?.id)
+
     if (!dbUser) {
       console.log('[API] Progress Save: Unauthorized access attempt')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
@@ -118,9 +121,12 @@ export async function POST(request: Request) {
 
     const body = await request.json().catch(() => ({}))
     const { assessmentId: providedAssessmentId, answer } = body as { assessmentId?: string; answer?: ProgressAnswer }
+    console.log('[API] Progress POST: Body parsed', { providedAssessmentId, hasAnswer: !!answer })
 
     const totalQuestions = getTotalQuestions()
+    console.log('[API] Progress POST: Ensure assessment for user', dbUser.id)
     const assessment = await ensureAssessment(dbUser.id, totalQuestions, providedAssessmentId)
+    console.log('[API] Progress POST: Assessment ensured', assessment.id)
 
     // If no answer supplied, just return the current session
     if (!answer) {
@@ -208,21 +214,31 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
+  console.log('[API] Progress GET: Starting request')
   try {
     const dbUser = await ensureDbUser()
+    console.log('[API] Progress GET: dbUser found?', !!dbUser, dbUser?.id)
+
     if (!dbUser) {
+      console.log('[API] Progress GET: Unauthorized (no dbUser)')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
+    console.log('[API] Progress GET: Querying latest assessment for user', dbUser.id)
     const [latestAssessment] = await db.select()
       .from(assessments)
       .where(eq(assessments.userId, dbUser.id))
       .orderBy(desc(assessments.updatedAt))
       .limit(1)
 
+    console.log('[API] Progress GET: Latest assessment found?', !!latestAssessment, latestAssessment?.id)
+
     if (!latestAssessment) {
       return NextResponse.json({ error: 'No assessment found' }, { status: 404 })
     }
+
+    // ... rest of code
+
 
     const rawAnswers = await db.select({
       questionId: assessmentAnswers.questionId,
@@ -267,9 +283,12 @@ export async function GET() {
       }
     })
   } catch (error) {
-    console.error('Progress load error:', error)
+    console.error('[API] Progress GET error:', error)
+    if (error instanceof Error) {
+      console.error('[API] Progress GET Stack:', error.stack)
+    }
     return NextResponse.json(
-      { error: 'Failed to load assessment progress' },
+      { error: 'Failed to load assessment progress', details: String(error) },
       { status: 500 }
     )
   }
