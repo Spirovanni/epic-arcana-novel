@@ -18,8 +18,8 @@ function buildHeaderMap(req: NextRequest) {
 }
 
 async function processEvent(evt: WebhookEvent) {
-  const eventId = evt.id
-  const eventType = evt.type
+  const eventId = (evt as any)?.id as string | undefined
+  const eventType = evt.type as string | undefined
   if (!eventId || !eventType) {
     throw new Error('Missing event id or type')
   }
