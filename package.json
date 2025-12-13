@@ -22,7 +22,8 @@
     "seed-character-arcs": "tsx scripts/seed-character-arcs-data.ts",
     "build:personal-style": "tsx src/scripts/build_personal_style.ts",
     "add-style-data": "tsx src/scripts/add_style_data.ts",
-    "upload:personality-profiles": "tsx scripts/uploadPersonalityProfiles.ts"
+    "upload:personality-profiles": "tsx scripts/uploadPersonalityProfiles.ts",
+    "backfill:clerk-users": "tsx scripts/backfillClerkUsers.ts"
   },
   "keywords": [],
   "author": "",
