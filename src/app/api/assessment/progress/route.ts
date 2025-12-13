@@ -13,23 +13,55 @@ type ProgressAnswer =
 async function ensureDbUser() {
   try {
     const user = await currentUser()
-    if (!user) return null
+    if (!user) {
+      console.log('[API] Progress: No Clerk user found')
+      return null
+    }
 
+    // 1. Try to find by Clerk ID
     const existing = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
     if (existing.length > 0) return existing[0]
 
+    // 2. Try to find by Email (to link pre-seeded or existing users)
+    const email = user.emailAddresses[0]?.emailAddress
+    if (email) {
+      console.log(`[API] Progress: Clerk ID ${user.id} not found, checking email ${email}`)
+      const existingByEmail = await db.select().from(users).where(eq(users.email, email)).limit(1)
+
+      if (existingByEmail.length > 0) {
+        // Link the existing user to this Clerk ID
+        console.log(`[API] Progress: Linking existing user ${existingByEmail[0].id} to Clerk ID ${user.id}`)
+        const [updated] = await db.update(users)
+          .set({
+            clerkId: user.id,
+            firstName: user.firstName || existingByEmail[0].firstName,
+            lastName: user.lastName || existingByEmail[0].lastName,
+            imageUrl: user.imageUrl || existingByEmail[0].imageUrl
+          })
+          .where(eq(users.id, existingByEmail[0].id))
+          .returning()
+
+        return updated
+      }
+    }
+
+    // 3. Create new user
+    console.log(`[API] Progress: Creating new user for Clerk ID ${user.id}`)
     const created = await db.insert(users).values({
       clerkId: user.id,
       name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
       firstName: user.firstName || 'User',
       lastName: user.lastName || '',
-      email: user.emailAddresses[0]?.emailAddress || '',
+      email: email || '',
       age: 25
     }).returning()
 
     return created[0]
   } catch (error) {
-    console.error('Clerk user lookup failed:', error)
+    console.error('[API] Progress: Clerk user lookup/creation failed:', error)
+    if (error instanceof Error) {
+      console.error('[API] Stack:', error.stack)
+    }
     return null
   }
 }

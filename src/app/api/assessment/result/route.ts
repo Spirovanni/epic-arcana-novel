@@ -32,12 +32,14 @@ export async function GET() {
 
     // Look up internal user id
     const existingUser = await db.select().from(users).where(eq(users.clerkId, userId)).limit(1)
-    console.log('[API] Result - existingUser found:', existingUser.length > 0)
+    console.log('[API] Result - existingUser found:', existingUser.length > 0, existingUser.length > 0 ? `ID: ${existingUser[0].id}` : '')
+
     if (existingUser.length === 0) {
+      console.log('[API] Result - User not found in DB for clerkId:', userId)
       return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
     }
 
-    console.log('[API] Result - Querying results table')
+    console.log('[API] Result - Querying results table for user:', existingUser[0].id)
     const results = await db.select().from(userAssessmentResults)
       .where(eq(userAssessmentResults.userId, existingUser[0].id))
       .orderBy(desc(userAssessmentResults.completedAt))
