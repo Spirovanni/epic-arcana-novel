@@ -45,18 +45,28 @@ async function ensureDbUser() {
       }
     }
 
-    // 3. Create new user
+    // 3. Create new user (with concurrency handling)
     console.log(`[API] Progress: Creating new user for Clerk ID ${user.id}`)
-    const created = await db.insert(users).values({
-      clerkId: user.id,
-      name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
-      firstName: user.firstName || 'User',
-      lastName: user.lastName || '',
-      email: email || '',
-      age: 25
-    }).returning()
-
-    return created[0]
+    try {
+      const created = await db.insert(users).values({
+        clerkId: user.id,
+        name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
+        firstName: user.firstName || 'User',
+        lastName: user.lastName || '',
+        email: email || '',
+        age: 25
+      }).returning()
+      return created[0]
+    } catch (insertError: any) {
+      // Handle race condition: Unique constraint violation (code 23505)
+      // This happens if another request created the user milliseconds ago
+      if (insertError?.code === '23505') {
+        console.log('[API] Progress: Concurrent creation detected, retrying lookup...')
+        const existingRetry = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
+        if (existingRetry.length > 0) return existingRetry[0]
+      }
+      throw insertError
+    }
   } catch (error) {
     console.error('[API] Progress: Clerk user lookup/creation failed:', error)
     if (error instanceof Error) {
