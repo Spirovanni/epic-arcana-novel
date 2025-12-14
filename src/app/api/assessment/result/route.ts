@@ -1,47 +1,84 @@
 import { NextResponse } from 'next/server'
-import { auth } from '@clerk/nextjs/server'
+import { currentUser } from '@clerk/nextjs/server'
 import { db } from '@/lib/db'
 import { users, userAssessmentResults } from '@/lib/schema'
 import { desc, eq } from 'drizzle-orm'
 
+async function ensureDbUser() {
+  try {
+    const user = await currentUser()
+    if (!user) {
+      console.log('[API] Result: No Clerk user found')
+      return null
+    }
+
+    // 1. Try to find by Clerk ID
+    const existing = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
+    if (existing.length > 0) return existing[0]
+
+    // 2. Try to find by Email
+    const email = user.emailAddresses[0]?.emailAddress
+    if (email) {
+      console.log(`[API] Result: Clerk ID ${user.id} not found, checking email ${email}`)
+      const existingByEmail = await db.select().from(users).where(eq(users.email, email)).limit(1)
+
+      if (existingByEmail.length > 0) {
+        console.log(`[API] Result: Linking existing user ${existingByEmail[0].id} to Clerk ID ${user.id}`)
+        const [updated] = await db.update(users)
+          .set({
+            clerkId: user.id,
+            firstName: user.firstName || existingByEmail[0].firstName,
+            lastName: user.lastName || existingByEmail[0].lastName,
+            imageUrl: user.imageUrl || existingByEmail[0].imageUrl
+          })
+          .where(eq(users.id, existingByEmail[0].id))
+          .returning()
+        return updated
+      }
+    }
+
+    // 3. Create new user (if we reached result page without one, unusual but handle it)
+    console.log(`[API] Result: Creating new user for Clerk ID ${user.id}`)
+    try {
+      const created = await db.insert(users).values({
+        clerkId: user.id,
+        name: `${user.firstName || ''} ${user.lastName || ''}`.trim() || 'User',
+        firstName: user.firstName || 'User',
+        lastName: user.lastName || '',
+        email: email || '',
+        age: 25
+      }).returning()
+      return created[0]
+    } catch (insertError: any) {
+      if (insertError?.code === '23505') {
+        const existingRetry = await db.select().from(users).where(eq(users.clerkId, user.id)).limit(1)
+        if (existingRetry.length > 0) return existingRetry[0]
+      }
+      throw insertError
+    }
+  } catch (error) {
+    console.error('[API] Result: User lookup failed:', error)
+    return null
+  }
+}
+
 export async function GET() {
   try {
-    // Catch auth failures so they do not bubble as 500s
-    const authResult = await auth().catch((error) => {
-      console.error('[API] Result - Clerk auth failed:', error)
-      return { userId: null }
-    })
-    const userId = authResult?.userId || null
-    console.log('[API] Result - userId:', userId)
+    const dbUser = await ensureDbUser()
+    console.log('[API] Result GET: dbUser found?', !!dbUser, dbUser?.id)
 
-    if (!userId) {
-      console.log('[API] Result - No userId, returning 401')
-      return NextResponse.json(
-        { error: 'Authentication required' },
-        { status: 401 }
-      )
+    if (!dbUser) {
+      console.log('[API] Result: Unauthorized (no dbUser)')
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     if (!process.env.DATABASE_URL) {
-      console.error('[API] Result - DATABASE_URL is not configured')
-      return NextResponse.json(
-        { error: 'Server database not configured' },
-        { status: 500 }
-      )
+      return NextResponse.json({ error: 'Server database not configured' }, { status: 500 })
     }
 
-    // Look up internal user id
-    const existingUser = await db.select().from(users).where(eq(users.clerkId, userId)).limit(1)
-    console.log('[API] Result - existingUser found:', existingUser.length > 0, existingUser.length > 0 ? `ID: ${existingUser[0].id}` : '')
-
-    if (existingUser.length === 0) {
-      console.log('[API] Result - User not found in DB for clerkId:', userId)
-      return NextResponse.json({ error: 'No assessment result found' }, { status: 404 })
-    }
-
-    console.log('[API] Result - Querying results table for user:', existingUser[0].id)
+    console.log('[API] Result - Querying results table for user:', dbUser.id)
     const results = await db.select().from(userAssessmentResults)
-      .where(eq(userAssessmentResults.userId, existingUser[0].id))
+      .where(eq(userAssessmentResults.userId, dbUser.id))
       .orderBy(desc(userAssessmentResults.completedAt))
       .limit(1)
 
@@ -67,7 +104,6 @@ export async function GET() {
 
   } catch (error) {
     console.error('[API] Error retrieving assessment result:', error)
-    // Detailed logging for debugging
     if (error instanceof Error) {
       console.error('[API] Stack:', error.stack)
       console.error('[API] Message:', error.message)
