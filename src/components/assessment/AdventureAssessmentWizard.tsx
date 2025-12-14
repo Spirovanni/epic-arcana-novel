@@ -1092,6 +1092,10 @@ export function AdventureAssessmentWizard() {
     sessionId
   } = useAssessmentStore()
 
+  const forcedChoiceItems = getForcedChoiceItems()
+  const likertItems = getLikertItems()
+  const allItems = [...forcedChoiceItems, ...likertItems]
+
   // Initialize assessment
   useEffect(() => {
     if (currentStep === 0 && !isSubmitting) {
@@ -1138,9 +1142,7 @@ export function AdventureAssessmentWizard() {
     }
   }, [])
 
-  const forcedChoiceItems = getForcedChoiceItems()
-  const likertItems = getLikertItems()
-  const allItems = [...forcedChoiceItems, ...likertItems]
+
   const totalQuestionCount = allItems.length
   const getStepFromAnsweredCount = (count: number, total: number) => {
     if (count <= 3) return 1
