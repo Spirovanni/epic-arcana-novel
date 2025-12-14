@@ -31,6 +31,7 @@ interface AdventureQuestionProps {
   onAnswer: (answer: any) => void
   isAnswered: boolean
   questionNumber: number
+  initialAnswer?: any
 }
 
 // Props for question content components
@@ -91,7 +92,7 @@ function FirstQuestionContent({
               <div className="space-y-2 lg:space-y-3">
                 {(item as ForcedChoiceItemType).options.map((option, index) => {
                   const status = getOptionStatus(index)
-                  
+
                   return (
                     <button
                       key={index}
@@ -123,7 +124,7 @@ function FirstQuestionContent({
                   )
                 })}
               </div>
-              
+
               {/* Continue Button for Forced Choice */}
               {canContinue && (
                 <div className="pt-3 lg:pt-4 border-t border-amber-500/20 text-center">
@@ -131,7 +132,7 @@ function FirstQuestionContent({
                     onClick={handleContinue}
                     className={cn(
                       "px-4 sm:px-6 py-2 rounded-lg text-black font-bold text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-md",
-                      questionNumber === 54 
+                      questionNumber === 54
                         ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
                         : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
                     )}
@@ -154,13 +155,13 @@ function FirstQuestionContent({
               "{(item as LikertItemType).statement}"
             </div>
           </div>
-          
+
           {/* Rating Scale - Middle section */}
           <div className="text-center py-8">
             <div className="text-amber-200/80 text-sm mb-8">
               How much does this resonate with you?
             </div>
-            
+
             <div className="flex flex-col items-center max-w-2xl mx-auto">
               {/* Number buttons with increased spacing */}
               <div className="flex space-x-4 mb-6">
@@ -170,8 +171,8 @@ function FirstQuestionContent({
                     className={cn(
                       "w-12 h-12 rounded-full border-2 transition-all duration-300",
                       "hover:scale-110 font-bold",
-                      likertRating === rating 
-                        ? "border-amber-400 bg-amber-400 text-black shadow-amber-400/50 shadow-lg" 
+                      likertRating === rating
+                        ? "border-amber-400 bg-amber-400 text-black shadow-amber-400/50 shadow-lg"
                         : "border-amber-500/40 bg-amber-500/10 text-amber-200 hover:border-amber-400 hover:bg-amber-500/20"
                     )}
                     onClick={() => handleLikertClick(rating)}
@@ -181,7 +182,7 @@ function FirstQuestionContent({
                   </button>
                 ))}
               </div>
-              
+
               {/* Labels below the numbers */}
               <div className="flex justify-between w-full max-w-md">
                 <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
@@ -189,7 +190,7 @@ function FirstQuestionContent({
               </div>
             </div>
           </div>
-          
+
           {/* Continue Button for Likert - Bottom section */}
           {canContinue && (
             <div className="text-center">
@@ -197,7 +198,7 @@ function FirstQuestionContent({
                 onClick={handleContinue}
                 className={cn(
                   "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
-                  questionNumber === 54 
+                  questionNumber === 54
                     ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
                     : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
                 )}
@@ -208,7 +209,7 @@ function FirstQuestionContent({
           )}
         </div>
       )}
-      
+
       {/* Question Progress */}
       <div className="mt-8 pt-6 border-t border-amber-500/20 text-center">
         <div className="text-amber-300/60 text-sm">
@@ -238,7 +239,7 @@ function RegularQuestionContent({
               "{(item as ForcedChoiceItemType).vignette}"
             </div>
           </div>
-          
+
           {/* Instructions */}
           <div className="text-center text-amber-200/80 text-sm border-t border-amber-500/20 pt-4">
             Choose the action that appeals to you <span className="text-green-400 font-semibold">MOST</span> and the one that appeals <span className="text-red-400 font-semibold">LEAST</span>
@@ -253,7 +254,7 @@ function RegularQuestionContent({
           <div className="space-y-4 mt-8">
             {(item as ForcedChoiceItemType).options.map((option, index) => {
               const status = getOptionStatus(index)
-              
+
               return (
                 <button
                   key={index}
@@ -285,7 +286,7 @@ function RegularQuestionContent({
               )
             })}
           </div>
-          
+
           {/* Continue Button for Forced Choice */}
           {canContinue && (
             <div className="mt-8 text-center">
@@ -293,7 +294,7 @@ function RegularQuestionContent({
                 onClick={handleContinue}
                 className={cn(
                   "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
-                  questionNumber === 54 
+                  questionNumber === 54
                     ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
                     : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
                 )}
@@ -314,13 +315,13 @@ function RegularQuestionContent({
               "{(item as LikertItemType).statement}"
             </div>
           </div>
-          
+
           {/* Rating Scale */}
           <div className="text-center">
             <div className="text-amber-200/80 text-sm mb-6">
               How much does this resonate with you?
             </div>
-            
+
             <div className="flex flex-col items-center max-w-2xl mx-auto">
               {/* Number buttons with increased spacing */}
               <div className="flex space-x-4 mb-4">
@@ -330,8 +331,8 @@ function RegularQuestionContent({
                     className={cn(
                       "w-12 h-12 rounded-full border-2 transition-all duration-300",
                       "hover:scale-110 font-bold",
-                      likertRating === rating 
-                        ? "border-amber-400 bg-amber-400 text-black shadow-amber-400/50 shadow-lg" 
+                      likertRating === rating
+                        ? "border-amber-400 bg-amber-400 text-black shadow-amber-400/50 shadow-lg"
                         : "border-amber-500/40 bg-amber-500/10 text-amber-200 hover:border-amber-400 hover:bg-amber-500/20"
                     )}
                     onClick={() => handleLikertClick(rating)}
@@ -341,7 +342,7 @@ function RegularQuestionContent({
                   </button>
                 ))}
               </div>
-              
+
               {/* Labels below the numbers */}
               <div className="flex justify-between w-full max-w-md">
                 <span className="text-red-400 text-sm font-medium">Strongly Disagree</span>
@@ -349,7 +350,7 @@ function RegularQuestionContent({
               </div>
             </div>
           </div>
-          
+
           {/* Continue Button for Likert */}
           {canContinue && (
             <div className="mt-8 text-center">
@@ -357,7 +358,7 @@ function RegularQuestionContent({
                 onClick={handleContinue}
                 className={cn(
                   "px-8 py-4 rounded-xl text-black font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg",
-                  questionNumber === 54 
+                  questionNumber === 54
                     ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
                     : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
                 )}
@@ -368,7 +369,7 @@ function RegularQuestionContent({
           )}
         </div>
       )}
-      
+
       {/* Question Progress */}
       <div className="mt-8 pt-6 border-t border-amber-500/20 text-center">
         <div className="text-amber-300/60 text-sm">
@@ -379,23 +380,84 @@ function RegularQuestionContent({
   )
 }
 
-function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: AdventureQuestionProps) {
+// Update AdventureQuestionProps
+interface AdventureQuestionProps {
+  item: ForcedChoiceItemType | LikertItemType
+  onAnswer: (answer: any) => void
+  isAnswered: boolean
+  questionNumber: number
+  initialAnswer?: any // New prop
+}
+
+// Regular Question Content Component
+interface QuestionContentProps {
+  item: ForcedChoiceItemType | LikertItemType
+  isForcedChoice: boolean
+  selectedBest: number | null
+  selectedWorst: number | null
+  likertRating: number | null
+  getOptionStatus: (index: number) => string
+  handleForcedChoiceClick: (index: number) => void
+  handleLikertClick: (rating: number) => void
+  handleContinue: () => void
+  canContinue: boolean
+  isAnswered: boolean
+  questionNumber: number
+}
+
+function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initialAnswer }: AdventureQuestionProps) {
   const questionRef = useRef<HTMLDivElement>(null)
   const isForcedChoice = 'options' in item
-  const [selectedBest, setSelectedBest] = useState<number | null>(null)
-  const [selectedWorst, setSelectedWorst] = useState<number | null>(null)
-  const [likertRating, setLikertRating] = useState<number | null>(null)
+
+  // Initialize state from initialAnswer if available
+  const [selectedBest, setSelectedBest] = useState<number | null>(() => {
+    if (initialAnswer && 'best' in initialAnswer) return initialAnswer.best
+    return null
+  })
+  const [selectedWorst, setSelectedWorst] = useState<number | null>(() => {
+    if (initialAnswer && 'worst' in initialAnswer) return initialAnswer.worst
+    return null
+  })
+  const [likertRating, setLikertRating] = useState<number | null>(() => {
+    if (initialAnswer && 'rating' in initialAnswer) return initialAnswer.rating
+    return null
+  })
   const [canContinue, setCanContinue] = useState(false)
 
-  // Reset selections when question changes (for retake scenarios)
+  // Initialize canContinue state based on loaded answers
   useEffect(() => {
-    if (!isAnswered) {
+    if (isForcedChoice) {
+      if (selectedBest !== null && selectedWorst !== null) {
+        setCanContinue(true)
+      }
+    } else {
+      if (likertRating !== null) {
+        setCanContinue(true)
+      }
+    }
+  }, []) // Run once on mount
+
+  // Reset/Update selections when question changes
+  useEffect(() => {
+    // If we have a new initialAnswer for this question (e.g. navigated back/forward), use it
+    if (initialAnswer) {
+      if (isForcedChoice) {
+        setSelectedBest(initialAnswer.best ?? null)
+        setSelectedWorst(initialAnswer.worst ?? null)
+        setCanContinue(initialAnswer.best !== null && initialAnswer.worst !== null)
+      } else {
+        setLikertRating(initialAnswer.rating ?? null)
+        setCanContinue(initialAnswer.rating !== null)
+      }
+    } else if (!isAnswered) {
+      // If no answer and not marked as answered, reset
       setSelectedBest(null)
       setSelectedWorst(null)
       setLikertRating(null)
       setCanContinue(false)
     }
-  }, [questionNumber, isAnswered])
+    // If isAnswered but no initialAnswer passed, we might be in a weird state, but usually initialAnswer matches
+  }, [questionNumber, isAnswered, initialAnswer, isForcedChoice])
 
   const handleForcedChoiceClick = (index: number) => {
     if (selectedBest === null) {
@@ -411,6 +473,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       setSelectedWorst(null)
       setCanContinue(false)
     } else {
+      // Change worst selection
       setSelectedWorst(index)
       setCanContinue(true)
     }
@@ -450,7 +513,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
     return gradients[questionNumber % gradients.length]
   }
 
-  
+
   // Questions with image layout (1-54)
   const hasImageLayout = questionNumber >= 1 && questionNumber <= 54
   const isQuestion19 = questionNumber === 19
@@ -464,13 +527,13 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         caption: "The mystical crossroads await your choice..."
       },
       2: {
-        src: "/images/assessment/Question_2.png", 
+        src: "/images/assessment/Question_2.png",
         alt: "The merchant's heartfelt plea - A scene of loss and community support",
         caption: "Compassion calls in the merchant district..."
       },
       3: {
         src: "/images/assessment/Question_3.png",
-        alt: "Ancient knowledge awaits - Scrolls and tomes in the archive of stars", 
+        alt: "Ancient knowledge awaits - Scrolls and tomes in the archive of stars",
         caption: "Ancient wisdom guides your path..."
       },
       4: {
@@ -484,13 +547,13 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         caption: "Your journey continues..."
       },
       6: {
-        src: "/images/assessment/Question_6.png", 
+        src: "/images/assessment/Question_6.png",
         alt: "Question 6 - Adventure scenario",
         caption: "New challenges await..."
       },
       7: {
         src: "/images/assessment/Question_7.png",
-        alt: "Question 7 - Adventure scenario", 
+        alt: "Question 7 - Adventure scenario",
         caption: "The path unfolds before you..."
       },
       8: {
@@ -505,7 +568,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       },
       10: {
         src: "/images/assessment/Question_10.png",
-        alt: "Question 10 - Adventure scenario", 
+        alt: "Question 10 - Adventure scenario",
         caption: "Halfway through your journey..."
       },
       11: {
@@ -525,7 +588,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
       },
       14: {
         src: "/images/assessment/Question_14.png",
-        alt: "Question 14 - Adventure scenario", 
+        alt: "Question 14 - Adventure scenario",
         caption: "Challenges intensify..."
       },
       15: {
@@ -539,7 +602,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         caption: "The final stretch begins..."
       },
       17: {
-        src: "/images/assessment/Question_17.png", 
+        src: "/images/assessment/Question_17.png",
         alt: "Question 17 - Adventure scenario",
         caption: "Almost to the end..."
       },
@@ -729,16 +792,16 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
         caption: "The ultimate conclusion..."
       }
     }
-    
+
     return imageMap[questionNumber] || {
       src: "/images/assessment/Question_1.png",
-      alt: "Adventure scenario", 
+      alt: "Adventure scenario",
       caption: "Your journey continues..."
     }
   }
 
   return (
-    <div 
+    <div
       ref={questionRef}
       className="h-full w-full flex items-center justify-center p-3 sm:p-4 lg:p-6 xl:p-8 relative"
       style={{
@@ -749,7 +812,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
     >
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70" />
-      
+
       {/* Question Content */}
       <div className={cn(
         "relative z-10 mx-auto w-full h-full",
@@ -768,7 +831,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                       {/* Enhanced glowing backdrop for finale */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/40 to-orange-600/40 rounded-2xl blur-3xl scale-110" />
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-indigo-600/20 rounded-2xl blur-2xl scale-105" />
-                      
+
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black/20 w-full h-full flex flex-col">
                         <div className="flex-1 relative h-full">
                           <Image
@@ -783,7 +846,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                           <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-transparent to-purple-500/10" />
                         </div>
-                        
+
                         {/* Enhanced floating caption for finale */}
                         <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-r from-black/90 via-black/80 to-black/90 backdrop-blur-md rounded-lg p-3 border border-amber-400/40 shadow-xl">
                           <p className="text-amber-200 text-sm text-center font-bold tracking-wide">
@@ -794,7 +857,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Right side - Enhanced Question Card for finale */}
                   <div className="flex-1 max-w-2xl relative">
                     {/* Decorative corner accents */}
@@ -802,10 +865,10 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                     <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-bl from-purple-400/20 to-transparent rounded-bl-2xl"></div>
                     <div className="absolute -bottom-2 -left-2 w-16 h-16 bg-gradient-to-tr from-orange-400/20 to-transparent rounded-tr-2xl"></div>
                     <div className="absolute -bottom-2 -right-2 w-16 h-16 bg-gradient-to-tl from-indigo-400/20 to-transparent rounded-tl-2xl"></div>
-                    
+
                     {/* Enhanced question content */}
                     <div className="relative bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-2xl overflow-hidden h-full">
-                      <FirstQuestionContent 
+                      <FirstQuestionContent
                         item={item}
                         isForcedChoice={isForcedChoice}
                         selectedBest={selectedBest}
@@ -820,14 +883,14 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                         questionNumber={questionNumber}
                       />
                     </div>
-                    
+
                     {/* Floating decorative elements */}
                     <div className="absolute top-1/4 -left-4 w-3 h-3 bg-amber-400/40 rounded-full animate-pulse"></div>
-                    <div className="absolute top-1/2 -right-4 w-3 h-3 bg-purple-400/40 rounded-full animate-pulse" style={{animationDelay: '0.7s'}}></div>
-                    <div className="absolute bottom-1/4 -left-4 w-3 h-3 bg-orange-400/40 rounded-full animate-pulse" style={{animationDelay: '1.4s'}}></div>
+                    <div className="absolute top-1/2 -right-4 w-3 h-3 bg-purple-400/40 rounded-full animate-pulse" style={{ animationDelay: '0.7s' }}></div>
+                    <div className="absolute bottom-1/4 -left-4 w-3 h-3 bg-orange-400/40 rounded-full animate-pulse" style={{ animationDelay: '1.4s' }}></div>
                   </div>
                 </div>
-                
+
                 {/* Mobile Layout */}
                 <div className="block lg:hidden">
                   <div className="flex justify-center mb-4">
@@ -847,7 +910,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                         {/* Enhanced overlay for mobile */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                       </div>
-                      
+
                       {/* Enhanced caption for mobile */}
                       <div className="absolute bottom-4 left-4 right-4 bg-black/90 backdrop-blur-sm rounded-lg p-3 border border-amber-400/40">
                         <p className="text-amber-200 text-sm text-center font-bold">
@@ -856,11 +919,11 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="w-full max-w-2xl mx-auto relative">
                     {/* Enhanced mobile question card */}
                     <div className="bg-gradient-to-br from-black/70 via-slate-900/70 to-black/70 rounded-2xl border-2 border-amber-400/40 shadow-xl">
-                      <FirstQuestionContent 
+                      <FirstQuestionContent
                         item={item}
                         isForcedChoice={isForcedChoice}
                         selectedBest={selectedBest}
@@ -901,7 +964,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                           {/* Subtle overlay for better text contrast */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                         </div>
-                        
+
                         {/* Optional floating caption */}
                         <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
                           <p className="text-amber-200 text-sm text-center font-medium">
@@ -911,10 +974,10 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Right side - Question Card */}
                   <div className="flex-1 max-w-2xl">
-                    <FirstQuestionContent 
+                    <FirstQuestionContent
                       item={item}
                       isForcedChoice={isForcedChoice}
                       selectedBest={selectedBest}
@@ -930,7 +993,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                     />
                   </div>
                 </div>
-                
+
                 {/* Mobile Layout */}
                 <div className="block lg:hidden">
                   <div className="flex justify-center mb-4">
@@ -950,7 +1013,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                         {/* Subtle overlay for better text contrast */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                       </div>
-                      
+
                       {/* Optional floating caption */}
                       <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
                         <p className="text-amber-200 text-sm text-center font-medium">
@@ -959,9 +1022,9 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="w-full max-w-2xl mx-auto">
-                    <FirstQuestionContent 
+                    <FirstQuestionContent
                       item={item}
                       isForcedChoice={isForcedChoice}
                       selectedBest={selectedBest}
@@ -982,7 +1045,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber }: Adven
           </>
         ) : (
           // Regular question layout
-          <RegularQuestionContent 
+          <RegularQuestionContent
             item={item}
             isForcedChoice={isForcedChoice}
             selectedBest={selectedBest}
@@ -1011,7 +1074,7 @@ export function AdventureAssessmentWizard() {
   const [answeredQuestions, setAnsweredQuestions] = useState<Set<number>>(new Set())
   const [isTransitioning, setIsTransitioning] = useState(false)
   const { isLoaded, isSignedIn } = useUser()
-  
+
   const {
     currentStep,
     totalSteps,
@@ -1028,7 +1091,7 @@ export function AdventureAssessmentWizard() {
     setStep,
     sessionId
   } = useAssessmentStore()
-  
+
   // Initialize assessment
   useEffect(() => {
     if (currentStep === 0 && !isSubmitting) {
@@ -1043,7 +1106,7 @@ export function AdventureAssessmentWizard() {
       document.body.style.overflow = 'auto'
     }
   }, [])
-  
+
   const forcedChoiceItems = getForcedChoiceItems()
   const likertItems = getLikertItems()
   const allItems = [...forcedChoiceItems, ...likertItems]
@@ -1073,12 +1136,25 @@ export function AdventureAssessmentWizard() {
     getStepFromAnsweredCount,
   })
 
+  const handleSaveAndExit = useCallback(async () => {
+    await flushPending()
+    router.push('/dashboard')
+  }, [flushPending, router])
+
+  const getAnswerForItem = (itemId: string, isForced: boolean) => {
+    if (isForced) {
+      return forcedChoiceAnswers.find(a => a.itemId === itemId)
+    } else {
+      return likertAnswers.find(a => a.itemId === itemId)
+    }
+  }
+
   const handleReset = useCallback(async () => {
     const confirmReset = typeof window !== 'undefined'
       ? window.confirm('Reset your assessment? This will clear your saved answers.')
       : false
     if (!confirmReset) return
-    
+
     resetAssessment()
     setCurrentQuestionIndex(0)
     setAnsweredQuestions(new Set())
@@ -1086,11 +1162,11 @@ export function AdventureAssessmentWizard() {
     startAssessment()
     await reloadSession()
   }, [resetAssessment, startAssessment, reloadSession])
-  
+
   const handleComplete = useCallback(async () => {
     setIsSubmitting(true)
     setShowMagicalLoading(true)
-    
+
     try {
       await flushPending()
       const answers = getAnswersForApi()
@@ -1101,15 +1177,15 @@ export function AdventureAssessmentWizard() {
         },
         body: JSON.stringify(answers),
       })
-      
+
       if (!response.ok) {
         throw new Error('Failed to score assessment')
       }
-      
+
       const result = await response.json()
       setResult(result)
       completeAssessment()
-      
+
     } catch (error) {
       console.error('Error completing assessment:', error)
       setShowMagicalLoading(false)
@@ -1122,16 +1198,16 @@ export function AdventureAssessmentWizard() {
     setIsSubmitting(false)
     setShowAuthGate(true)
   }, [])
-  
+
   const handleAnswer = useCallback((answer: any) => {
     const currentItem = allItems[currentQuestionIndex]
-    
+
     if ('options' in currentItem) {
       // Forced choice
-      addForcedChoiceAnswer({ 
-        itemId: currentItem.id, 
-        best: answer.best, 
-        worst: answer.worst 
+      addForcedChoiceAnswer({
+        itemId: currentItem.id,
+        best: answer.best,
+        worst: answer.worst
       })
       persistAnswer({ type: 'forced', itemId: currentItem.id, best: answer.best, worst: answer.worst })
     } else {
@@ -1139,10 +1215,10 @@ export function AdventureAssessmentWizard() {
       updateLikertAnswer(currentItem.id, answer.rating)
       persistAnswer({ type: 'likert', itemId: currentItem.id, rating: answer.rating })
     }
-    
+
     setAnsweredQuestions(prev => new Set([...prev, currentQuestionIndex]))
     setIsTransitioning(true)
-    
+
     // Slide to next question after a short delay
     setTimeout(() => {
       if (currentQuestionIndex < allItems.length - 1) {
@@ -1182,7 +1258,7 @@ export function AdventureAssessmentWizard() {
       handleComplete()
     }
   }, [currentQuestionIndex, allItems.length, handleComplete])
-  
+
   const handleAuthSuccess = useCallback(async (resultId: string) => {
     router.push(`/results/${resultId}?download=1`)
   }, [router])
@@ -1214,15 +1290,15 @@ export function AdventureAssessmentWizard() {
       </div>
     )
   }
-  
+
   if (showMagicalLoading) {
     return <MagicalLoadingScreen onComplete={handleMagicalLoadingComplete} />
   }
-  
+
   if (showAuthGate) {
     return <AuthGate onSuccess={handleAuthSuccess} />
   }
-  
+
   if (allItems.length === 0) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
@@ -1234,7 +1310,7 @@ export function AdventureAssessmentWizard() {
       </div>
     )
   }
-  
+
   return (
     <div className="bg-black overflow-hidden">
       {/* Fixed Progress Bar */}
@@ -1262,24 +1338,24 @@ export function AdventureAssessmentWizard() {
                     disabled={isTransitioning}
                     title="Go back to previous question"
                   >
-                    <svg 
-                      className="w-4 h-4" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2.5} 
-                        d="M15 19l-7-7 7-7" 
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M15 19l-7-7 7-7"
                       />
                     </svg>
                   </button>
                 )}
                 <span>Your Journey Progress</span>
               </div>
-              
+
               <div className="flex items-center gap-2">
                 <span>{Math.min(currentQuestionIndex + 1, allItems.length)} of {allItems.length}</span>
                 {/* Next Button - Show on all questions except the last one */}
@@ -1290,21 +1366,29 @@ export function AdventureAssessmentWizard() {
                     disabled={isTransitioning}
                     title="Go to next question"
                   >
-                    <svg 
-                      className="w-4 h-4" 
-                      fill="none" 
-                      stroke="currentColor" 
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2.5} 
-                        d="M9 5l7 7-7 7" 
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2.5}
+                        d="M9 5l7 7-7 7"
                       />
                     </svg>
                   </button>
                 )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleSaveAndExit}
+                  className="border-amber-500/60 text-amber-100 hover:bg-amber-500/10 ml-2"
+                >
+                  Save & Exit
+                </Button>
                 <Button
                   variant="outline"
                   size="sm"
@@ -1316,7 +1400,7 @@ export function AdventureAssessmentWizard() {
               </div>
             </div>
             <div className="w-full bg-amber-900/30 rounded-full h-2">
-              <div 
+              <div
                 className="bg-gradient-to-r from-amber-600 to-amber-400 h-2 rounded-full transition-all duration-500"
                 style={{ width: `${(Math.min(currentQuestionIndex + 1, allItems.length) / allItems.length) * 100}%` }}
               />
@@ -1334,21 +1418,21 @@ export function AdventureAssessmentWizard() {
           </div>
         </div>
       </div>
-      
+
       {/* Single Question Container */}
       <div className="relative h-screen overflow-hidden">
         {/* Questions Slider */}
-        <div 
+        <div
           className={`flex h-full transition-transform duration-700 ease-in-out ${isTransitioning ? 'opacity-75' : 'opacity-100'}`}
-          style={{ 
+          style={{
             transform: `translateX(-${currentQuestionIndex * 100}vw)`,
             width: `${(allItems.length + 1) * 100}vw`
           }}
         >
           {/* Individual Questions */}
           {allItems.map((item, index) => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               className="w-screen h-full flex-shrink-0"
               data-question={index}
             >
@@ -1357,10 +1441,11 @@ export function AdventureAssessmentWizard() {
                 onAnswer={handleAnswer}
                 isAnswered={answeredQuestions.has(index)}
                 questionNumber={index + 1}
+                initialAnswer={getAnswerForItem(item.id, 'options' in item)}
               />
             </div>
           ))}
-          
+
           {/* Completion Screen */}
           <div className="w-screen h-full flex-shrink-0 flex items-center justify-center p-6 bg-gradient-to-br from-purple-900 to-black">
             <div className="text-center max-w-2xl mx-auto">
@@ -1369,7 +1454,7 @@ export function AdventureAssessmentWizard() {
                   Journey Complete!
                 </h2>
                 <p className="text-xl text-gray-200 mb-8">
-                  Your adventure through the realms of personality has concluded. 
+                  Your adventure through the realms of personality has concluded.
                   The oracle is now calculating your destiny...
                 </p>
                 {isSubmitting && (
