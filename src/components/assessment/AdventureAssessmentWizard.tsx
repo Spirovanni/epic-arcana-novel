@@ -948,7 +948,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
                 <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full max-w-7xl mx-auto py-12">
                   {/* Left side - Image Card */}
                   <div className="w-full h-full flex items-center justify-center">
-                    <div className="relative w-full max-w-md aspect-square shadow-2xl rounded-2xl">
+                    <div className="relative w-full max-w-xl aspect-square shadow-2xl rounded-2xl">
                       {/* Glowing backdrop for the image */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-3xl scale-105" />
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
