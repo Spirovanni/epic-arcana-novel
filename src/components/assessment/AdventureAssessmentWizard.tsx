@@ -57,7 +57,7 @@ function FirstQuestionContent({
   handleContinue, canContinue, isAnswered, questionNumber
 }: QuestionContentProps) {
   return (
-    <div className="bg-black/60 backdrop-blur-sm rounded-2xl border border-amber-500/30 shadow-2xl w-full h-[600px] flex flex-col">
+    <div className="bg-black/60 backdrop-blur-sm rounded-2xl border border-amber-500/30 shadow-2xl w-full lg:h-auto lg:min-h-[500px] lg:max-h-[80vh] flex flex-col transition-all duration-300">
       {isForcedChoice ? (
         <>
           {/* Fixed header - Location and Vignette */}
@@ -945,10 +945,10 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
               // Questions 1-18 - Side by side layout
               <>
                 {/* Desktop Layout */}
-                <div className="hidden lg:grid lg:grid-cols-2 lg:gap-6 xl:gap-10 h-full">
+                <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full max-w-7xl mx-auto">
                   {/* Left side - Image Card */}
-                  <div className="flex-shrink-0">
-                    <div className="relative w-full h-full max-h-[640px]">
+                  <div className="w-full h-full flex items-center justify-center py-4">
+                    <div className="relative w-full max-w-md aspect-[3/4]">
                       {/* Glowing backdrop for the image */}
                       <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
@@ -959,15 +959,15 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
                             fill
                             className="object-cover"
                             priority
-                            sizes="(min-width: 1280px) 560px, 50vw"
+                            sizes="(min-width: 1280px) 600px, 50vw"
                           />
                           {/* Subtle overlay for better text contrast */}
                           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
                         </div>
 
                         {/* Optional floating caption */}
-                        <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30">
-                          <p className="text-amber-200 text-sm text-center font-medium">
+                        <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30 shadow-lg transform transition-transform hover:scale-105">
+                          <p className="text-amber-200 text-sm text-center font-medium font-serif italic tracking-wide">
                             {getImageDetails(questionNumber).caption}
                           </p>
                         </div>
@@ -976,7 +976,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
                   </div>
 
                   {/* Right side - Question Card */}
-                  <div className="flex-1 max-w-2xl">
+                  <div className="w-full flex items-center justify-center py-4">
                     <FirstQuestionContent
                       item={item}
                       isForcedChoice={isForcedChoice}
