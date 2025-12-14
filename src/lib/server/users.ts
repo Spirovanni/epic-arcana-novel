@@ -20,7 +20,6 @@ export async function ensureDbUser() {
   try {
     const [row] = await db.insert(users).values({
       clerkId: clerkUser.id,
-      clerkUserId: clerkUser.id,
       name,
       firstName,
       lastName,
@@ -31,7 +30,6 @@ export async function ensureDbUser() {
     }).onConflictDoUpdate({
       target: users.clerkId,
       set: {
-        clerkUserId: clerkUser.id,
         name,
         firstName,
         lastName,
@@ -43,7 +41,7 @@ export async function ensureDbUser() {
     }).returning()
     return row || null
   } catch (error) {
-    // Fallback for deployments where the new clerk_user_id column isn't migrated yet
+    // Fallback for deployments where newer columns aren't migrated yet
     console.error('[ensureDbUser] primary upsert failed, falling back to legacy shape', error)
     const [legacyRow] = await db.insert(users).values({
       clerkId: clerkUser.id,

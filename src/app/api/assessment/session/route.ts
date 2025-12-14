@@ -4,6 +4,9 @@ import { assessmentAnswersV2, assessmentSessionsV2 } from '@/lib/schema'
 import { ensureDbUser } from '@/lib/server/users'
 import { and, desc, eq } from 'drizzle-orm'
 
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
 type AnswerMap = Record<string, { answerType?: string; value: unknown; updatedAt?: string }>
 
 function mapAnswers(rows: Array<{ questionKey: string; answerType: string; value: unknown; updatedAt: string; answeredAt: string }>): AnswerMap {
@@ -62,6 +65,6 @@ export async function GET(req: NextRequest) {
     })
   } catch (error) {
     console.error('[api/assessment/session] failed', error)
-    return NextResponse.json({ error: 'Session error', detail: String(error) }, { status: 500 })
+    return NextResponse.json({ error: 'Session error', detail: process.env.NODE_ENV === 'production' ? undefined : String(error) }, { status: 500 })
   }
 }
