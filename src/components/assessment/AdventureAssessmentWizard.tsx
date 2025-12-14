@@ -945,12 +945,12 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
               // Questions 1-18 - Side by side layout
               <>
                 {/* Desktop Layout */}
-                <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center h-full max-w-7xl mx-auto">
+                <div className="hidden lg:grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full max-w-7xl mx-auto py-12">
                   {/* Left side - Image Card */}
-                  <div className="w-full h-full flex items-center justify-center py-4">
-                    <div className="relative w-full max-w-md aspect-[3/4]">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <div className="relative w-full max-w-md aspect-square shadow-2xl rounded-2xl">
                       {/* Glowing backdrop for the image */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-2xl scale-105" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-500/30 to-orange-600/30 rounded-2xl blur-3xl scale-105" />
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-500/30 bg-black/20 w-full h-full flex flex-col">
                         <div className="flex-1 relative h-full">
                           <Image
@@ -966,7 +966,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
                         </div>
 
                         {/* Optional floating caption */}
-                        <div className="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-sm rounded-lg p-3 border border-amber-500/30 shadow-lg transform transition-transform hover:scale-105">
+                        <div className="absolute bottom-6 left-6 right-6 bg-black/80 backdrop-blur-sm rounded-lg p-4 border border-amber-500/30 shadow-lg transform transition-transform hover:scale-105">
                           <p className="text-amber-200 text-sm text-center font-medium font-serif italic tracking-wide">
                             {getImageDetails(questionNumber).caption}
                           </p>
@@ -976,7 +976,7 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
                   </div>
 
                   {/* Right side - Question Card */}
-                  <div className="w-full flex items-center justify-center py-4">
+                  <div className="w-full flex items-center justify-center">
                     <FirstQuestionContent
                       item={item}
                       isForcedChoice={isForcedChoice}
