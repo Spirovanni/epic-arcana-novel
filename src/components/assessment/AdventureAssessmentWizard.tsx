@@ -1099,6 +1099,37 @@ export function AdventureAssessmentWizard() {
     }
   }, [currentStep, startAssessment, isSubmitting])
 
+  // Sync local state with persisted store answers on load
+  useEffect(() => {
+    const totalAnsweredCount = forcedChoiceAnswers.length + likertAnswers.length
+
+    // If we have answers but local state is empty (fresh load/refresh), sync up
+    if (totalAnsweredCount > 0 && answeredQuestions.size === 0) {
+      // 1. Rebuild the set of answered question indices
+      const newAnsweredSet = new Set<number>()
+
+      // Map forced choice answers to indices
+      forcedChoiceAnswers.forEach(ans => {
+        const index = allItems.findIndex(i => i.id === ans.itemId)
+        if (index !== -1) newAnsweredSet.add(index)
+      })
+
+      // Map likert answers to indices
+      likertAnswers.forEach(ans => {
+        const index = allItems.findIndex(i => i.id === ans.itemId)
+        if (index !== -1) newAnsweredSet.add(index)
+      })
+
+      setAnsweredQuestions(newAnsweredSet)
+
+      // 2. Jump to the first unanswered question (which is usually just the count)
+      // Only jump if we are currently at 0 (start)
+      if (currentQuestionIndex === 0) {
+        setCurrentQuestionIndex(totalAnsweredCount)
+      }
+    }
+  }, [forcedChoiceAnswers, likertAnswers, allItems, answeredQuestions.size, currentQuestionIndex])
+
   // Prevent body scroll during assessment
   useEffect(() => {
     document.body.style.overflow = 'hidden'
