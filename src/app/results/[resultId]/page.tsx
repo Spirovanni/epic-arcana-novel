@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import { AssessmentResult } from '@/lib/assessment/types'
+import { AssessmentResult, AssessmentResultSchema } from '@/lib/assessment/types'
 import { db } from '@/lib/db'
 import { userAssessmentResults, assessmentSessionsV2, assessmentResultsV2 } from '@/lib/schema'
 import { eq, or } from 'drizzle-orm'
@@ -48,7 +48,11 @@ async function loadResult(resultId: string): Promise<AssessmentResult | null> {
       .limit(1)
 
     if (rows[0]?.personalityProfile) {
-      return rows[0].personalityProfile as AssessmentResult
+      const parsed = AssessmentResultSchema.safeParse(rows[0].personalityProfile)
+      if (parsed.success) {
+        return parsed.data
+      }
+      console.error('[results] legacy profile failed validation', parsed.error.format())
     }
 
     // Fallback to V2 results
@@ -62,7 +66,11 @@ async function loadResult(resultId: string): Promise<AssessmentResult | null> {
         .limit(1)
 
       if (v2Results.length > 0) {
-        return v2Results[0].result as AssessmentResult
+        const parsed = AssessmentResultSchema.safeParse(v2Results[0].result)
+        if (parsed.success) {
+          return parsed.data
+        }
+        console.error('[results] v2 profile failed validation', parsed.error.format())
       }
     }
 
