@@ -9,6 +9,7 @@ interface LikertItemProps {
   answer?: LikertAnswer
   onAnswer: (rating: number) => void
   showLocationHeader?: boolean
+  previousRating?: number
 }
 
 const SCALE_LABELS = {
@@ -23,7 +24,8 @@ export function LikertItem({
   item, 
   answer, 
   onAnswer, 
-  showLocationHeader = true 
+  showLocationHeader = true,
+  previousRating
 }: LikertItemProps) {
   
   const selectedRating = answer?.rating
@@ -60,7 +62,8 @@ export function LikertItem({
                     "w-full p-3 rounded-lg transition-all duration-200 border-2",
                     selectedRating === rating 
                       ? "border-purple-500 bg-purple-500/20 text-white shadow-lg shadow-purple-500/25" 
-                      : "border-gray-600 bg-slate-700/50 text-gray-300 hover:border-purple-500/50 hover:bg-purple-500/10"
+                      : "border-gray-600 bg-slate-700/50 text-gray-300 hover:border-purple-500/50 hover:bg-purple-500/10",
+                    previousRating === rating && "border-green-500 text-green-200"
                   )}
                 >
                   <div className="text-2xl font-bold mb-1">

@@ -152,6 +152,7 @@ export function AssessmentWizard() {
     reloadSession,
     flushPending,
     saveMessage,
+    previousAnswers,
   } = useAssessmentPersistence({
     forcedChoiceItems,
     likertItems,
@@ -394,6 +395,7 @@ export function AssessmentWizard() {
                     <ForcedChoiceItem
                       item={item}
                       answer={forcedChoiceAnswers.find(a => a.itemId === item.id)}
+                      previousAnswer={previousAnswers[item.id]?.value}
                       onAnswer={(best, worst) => {
                         addForcedChoiceAnswer({ itemId: item.id, best, worst })
                         persistAnswer({ type: 'forced', itemId: item.id, best, worst })
@@ -409,6 +411,7 @@ export function AssessmentWizard() {
                     <LikertItem
                       item={item}
                       answer={likertAnswers.find(a => a.itemId === item.id)}
+                      previousRating={typeof previousAnswers[item.id]?.value?.rating === 'number' ? previousAnswers[item.id].value.rating : undefined}
                       onAnswer={(rating) => {
                         updateLikertAnswer(item.id, rating)
                         persistAnswer({ type: 'likert', itemId: item.id, rating })

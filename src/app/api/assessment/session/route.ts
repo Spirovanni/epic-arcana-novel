@@ -56,12 +56,40 @@ export async function GET(req: NextRequest) {
       .from(assessmentAnswersV2)
       .where(eq(assessmentAnswersV2.sessionId, session.id))
 
+    // For retakes, surface previous completed answers for reference
+    let previousAnswers: AnswerMap | undefined
+    if (retake) {
+      const prevSession = await db.select().from(assessmentSessionsV2)
+        .where(
+          and(
+            eq(assessmentSessionsV2.userId, dbUser.id),
+            eq(assessmentSessionsV2.status, 'completed')
+          )
+        )
+        .orderBy(desc(assessmentSessionsV2.completedAt))
+        .limit(1)
+
+      if (prevSession[0]) {
+        const prevRows = await db.select({
+          questionKey: assessmentAnswersV2.questionKey,
+          answerType: assessmentAnswersV2.answerType,
+          value: assessmentAnswersV2.value,
+          updatedAt: assessmentAnswersV2.updatedAt,
+          answeredAt: assessmentAnswersV2.answeredAt
+        })
+          .from(assessmentAnswersV2)
+          .where(eq(assessmentAnswersV2.sessionId, prevSession[0].id))
+        previousAnswers = mapAnswers(prevRows)
+      }
+    }
+
     return NextResponse.json({
       sessionId: session.id,
       status: session.status,
       isRetake: session.isRetake,
       startedAt: session.startedAt,
-      answers: mapAnswers(answerRows)
+      answers: mapAnswers(answerRows),
+      previousAnswers
     })
   } catch (error) {
     console.error('[api/assessment/session] failed', error)

@@ -10,13 +10,15 @@ interface ForcedChoiceItemProps {
   answer?: ForcedChoiceAnswer
   onAnswer: (best: number, worst: number) => void
   showLocationHeader?: boolean
+  previousAnswer?: { best?: number; worst?: number }
 }
 
 export function ForcedChoiceItem({
   item,
   answer,
   onAnswer,
-  showLocationHeader = true
+  showLocationHeader = true,
+  previousAnswer
 }: ForcedChoiceItemProps) {
   // Initialize state from props, but also watch for changes (for hydration)
   const [selectedBest, setSelectedBest] = useState<number | null>(answer?.best ?? null)
@@ -63,6 +65,9 @@ export function ForcedChoiceItem({
     return 'unselected'
   }
 
+  const prevBest = previousAnswer?.best
+  const prevWorst = previousAnswer?.worst
+
   return (
     <div className="space-y-4">
       {showLocationHeader && (
@@ -100,6 +105,17 @@ export function ForcedChoiceItem({
                   <p className="text-gray-200 flex-1">
                     {option.label}
                   </p>
+
+                  {(prevBest === index || prevWorst === index) && (
+                    <div className="flex items-center gap-2 mr-2">
+                      {prevBest === index && (
+                        <span className="inline-flex h-3 w-3 rounded-full bg-green-400 shadow shadow-green-500/50" title="Previous MOST" />
+                      )}
+                      {prevWorst === index && (
+                        <span className="inline-flex h-3 w-3 rounded-full bg-red-400 shadow shadow-red-500/50" title="Previous LEAST" />
+                      )}
+                    </div>
+                  )}
 
                   {status !== 'unselected' && (
                     <div className={cn(

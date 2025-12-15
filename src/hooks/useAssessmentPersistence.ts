@@ -11,6 +11,7 @@ type AnswerPayload =
   | { type: 'likert'; itemId: string; rating: number }
 
 type ServerAnswer = { answerType?: string; value: any }
+type PreviousAnswerMap = Record<string, ServerAnswer>
 
 type UseAssessmentPersistenceParams = {
   forcedChoiceItems: Array<{ id: string }>
@@ -41,6 +42,7 @@ export function useAssessmentPersistence({
   const [saveStatus, setSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error' | 'auth' | 'loading'>('loading')
   const [saveMessage, setSaveMessage] = useState<string | null>(null)
   const [lastSavedAt, setLastSavedAt] = useState<string | null>(null)
+  const [previousAnswers, setPreviousAnswers] = useState<PreviousAnswerMap>({})
   const pendingPayload = useRef<AnswerPayload | null>(null)
   const saveTimer = useRef<NodeJS.Timeout | null>(null)
   const hasLoadedSession = useRef(false)
@@ -53,22 +55,22 @@ export function useAssessmentPersistence({
     const likert: LikertAnswer[] = []
 
     Object.entries(answers || {}).forEach(([questionKey, entry]) => {
-      const answerType = entry?.answerType || (forcedLookup.has(questionKey) ? 'forced' : 'likert')
-      if (answerType === 'forced') {
-        const best = entry?.value?.best
-        const worst = entry?.value?.worst
-        if (typeof best === 'number' && typeof worst === 'number') {
+    const answerType = entry?.answerType || (forcedLookup.has(questionKey) ? 'forced' : 'likert')
+    if (answerType === 'forced') {
+      const best = entry?.value?.best
+      const worst = entry?.value?.worst
+      if (typeof best === 'number' && typeof worst === 'number') {
           forced.push({ itemId: questionKey, best, worst })
         }
       } else {
         const rating = typeof entry?.value === 'number' ? entry?.value : entry?.value?.rating
         if (typeof rating === 'number') {
           likert.push({ itemId: questionKey, rating })
-        }
       }
-    })
+    }
+  })
 
-    setAnswers(forced, likert)
+  setAnswers(forced, likert)
     const answeredCount = forced.length + likert.length
     const step = getStepFromAnsweredCount(answeredCount, totalQuestionCount)
     setStep(step)
@@ -96,6 +98,9 @@ export function useAssessmentPersistence({
       }
       if (data.answers) {
         hydrateAnswers(data.answers)
+      }
+      if (data.previousAnswers) {
+        setPreviousAnswers(data.previousAnswers as PreviousAnswerMap)
       }
       hasLoadedSession.current = true
       setSaveStatus('saved')
@@ -194,5 +199,6 @@ export function useAssessmentPersistence({
     reloadSession: loadSession,
     flushPending,
     saveMessage,
+    previousAnswers,
   }
 }
