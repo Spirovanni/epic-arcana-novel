@@ -89,6 +89,22 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
   const dimensions = result.dimensions || {}
   const instincts = result.instincts || { SP: 0.33, SO: 0.33, SX: 0.33 }
 
+  // Safe defaults for potentially missing fields
+  const safeResult = {
+    ea_id: result.ea_id || 'EA-Unknown',
+    chapter: result.chapter ?? 1,
+    dominant_type: result.dominant_type ?? 5,
+    wing_bin: result.wing_bin ?? 'N/A',
+    development_bin: result.development_bin ?? 'N/A',
+    color: result.color || { rgb_hex: '#7B68EE' },
+    profile: {
+      display_name: result.profile?.display_name || 'Your Archetype',
+      theme: result.profile?.theme || 'The Journey Awaits',
+      family: result.profile?.family || 'Explorer',
+    },
+    type_probs: result.type_probs || {},
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navbar />
@@ -121,20 +137,20 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-1 bg-amber-500/20 rounded-full text-amber-300 text-sm mb-4">
             <Sparkles className="h-4 w-4" />
-            {result.ea_id || 'Epic Arcana'}
+            {safeResult.ea_id}
           </div>
           <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-300 bg-clip-text text-transparent mb-3">
-            {result.profile?.display_name || 'Your Personality'}
+            {safeResult.profile.display_name}
           </h1>
-          <p className="text-xl text-amber-100/80">{result.profile?.theme || 'Mystical Archetype'}</p>
-          <p className="text-amber-200/60 mt-2">{result.profile?.family || 'Unknown Family'}</p>
+          <p className="text-xl text-amber-100/80">{safeResult.profile.theme}</p>
+          <p className="text-amber-200/60 mt-2">{safeResult.profile.family}</p>
         </div>
 
         {/* Color Badge */}
         <div className="flex justify-center mb-8">
           <div
             className="w-24 h-24 rounded-full shadow-2xl border-4 border-white/20"
-            style={{ backgroundColor: result.color?.rgb_hex || '#7B68EE' }}
+            style={{ backgroundColor: safeResult.color.rgb_hex }}
           />
         </div>
 
@@ -142,25 +158,25 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <Card className="bg-black/40 border-amber-500/30 text-center">
             <CardContent className="pt-6">
-              <p className="text-3xl font-bold text-amber-300">{result.dominant_type}</p>
+              <p className="text-3xl font-bold text-amber-300">{safeResult.dominant_type}</p>
               <p className="text-sm text-amber-100/60">Enneagram</p>
             </CardContent>
           </Card>
           <Card className="bg-black/40 border-purple-500/30 text-center">
             <CardContent className="pt-6">
-              <p className="text-3xl font-bold text-purple-300">{result.chapter}</p>
+              <p className="text-3xl font-bold text-purple-300">{safeResult.chapter}</p>
               <p className="text-sm text-purple-100/60">Chapter</p>
             </CardContent>
           </Card>
           <Card className="bg-black/40 border-blue-500/30 text-center">
             <CardContent className="pt-6">
-              <p className="text-3xl font-bold text-blue-300">{result.wing_bin}</p>
+              <p className="text-3xl font-bold text-blue-300">{safeResult.wing_bin}</p>
               <p className="text-sm text-blue-100/60">Wing Bin</p>
             </CardContent>
           </Card>
           <Card className="bg-black/40 border-green-500/30 text-center">
             <CardContent className="pt-6">
-              <p className="text-3xl font-bold text-green-300">{result.development_bin}</p>
+              <p className="text-3xl font-bold text-green-300">{safeResult.development_bin}</p>
               <p className="text-sm text-green-100/60">Dev Level</p>
             </CardContent>
           </Card>
