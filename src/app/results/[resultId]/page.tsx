@@ -87,6 +87,7 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
   const profileData = result.profile as Record<string, unknown> || {}
   const traits = (profileData?.traits as Record<string, string[]>) || {}
   const dimensions = result.dimensions || {}
+  const instincts = result.instincts || { SP: 0.33, SO: 0.33, SX: 0.33 }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -252,38 +253,40 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
         </div>
 
         {/* Instinct Stack */}
-        <Card className="bg-black/40 border-violet-500/30 mb-8">
-          <CardHeader>
-            <CardTitle className="text-violet-300 flex items-center gap-2">
-              <span className="text-2xl">⚡</span> Instinct Stack
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-center mb-6">
-              <div className="text-3xl font-bold text-white mb-2">
-                {getInstinctStack(result.instincts)}
+        {instincts && (
+          <Card className="bg-black/40 border-violet-500/30 mb-8">
+            <CardHeader>
+              <CardTitle className="text-violet-300 flex items-center gap-2">
+                <span className="text-2xl">⚡</span> Instinct Stack
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-center mb-6">
+                <div className="text-3xl font-bold text-white mb-2">
+                  {getInstinctStack(instincts)}
+                </div>
+                <p className="text-violet-200/60">Primary → Secondary → Tertiary</p>
               </div>
-              <p className="text-violet-200/60">Primary → Secondary → Tertiary</p>
-            </div>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              <div className="p-4 bg-blue-500/10 rounded-lg border border-blue-500/30">
-                <div className="text-lg font-semibold text-blue-300">SP</div>
-                <div className="text-xs text-blue-200/60 mb-2">Self-Preservation</div>
-                <div className="text-2xl font-bold text-white">{Math.round(result.instincts.SP * 100)}%</div>
+              <div className="grid grid-cols-3 gap-4 text-center">
+                <div className="p-4 bg-blue-500/10 rounded-lg border border-blue-500/30">
+                  <div className="text-lg font-semibold text-blue-300">SP</div>
+                  <div className="text-xs text-blue-200/60 mb-2">Self-Preservation</div>
+                  <div className="text-2xl font-bold text-white">{Math.round((instincts.SP || 0) * 100)}%</div>
+                </div>
+                <div className="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
+                  <div className="text-lg font-semibold text-green-300">SO</div>
+                  <div className="text-xs text-green-200/60 mb-2">Social</div>
+                  <div className="text-2xl font-bold text-white">{Math.round((instincts.SO || 0) * 100)}%</div>
+                </div>
+                <div className="p-4 bg-rose-500/10 rounded-lg border border-rose-500/30">
+                  <div className="text-lg font-semibold text-rose-300">SX</div>
+                  <div className="text-xs text-rose-200/60 mb-2">One-to-One</div>
+                  <div className="text-2xl font-bold text-white">{Math.round((instincts.SX || 0) * 100)}%</div>
+                </div>
               </div>
-              <div className="p-4 bg-green-500/10 rounded-lg border border-green-500/30">
-                <div className="text-lg font-semibold text-green-300">SO</div>
-                <div className="text-xs text-green-200/60 mb-2">Social</div>
-                <div className="text-2xl font-bold text-white">{Math.round(result.instincts.SO * 100)}%</div>
-              </div>
-              <div className="p-4 bg-rose-500/10 rounded-lg border border-rose-500/30">
-                <div className="text-lg font-semibold text-rose-300">SX</div>
-                <div className="text-xs text-rose-200/60 mb-2">One-to-One</div>
-                <div className="text-2xl font-bold text-white">{Math.round(result.instincts.SX * 100)}%</div>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        )}
 
         {/* Type Probabilities */}
         {result.type_probs && Object.keys(result.type_probs).length > 0 && (
