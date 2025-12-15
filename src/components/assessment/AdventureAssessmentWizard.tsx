@@ -57,7 +57,7 @@ function FirstQuestionContent({
   handleContinue, canContinue, isAnswered, questionNumber
 }: QuestionContentProps) {
   return (
-    <div className="bg-black/60 backdrop-blur-sm rounded-2xl border border-amber-500/30 shadow-2xl w-full lg:h-auto lg:min-h-[500px] lg:max-h-[80vh] flex flex-col transition-all duration-300">
+    <div className="bg-black/60 backdrop-blur-sm rounded-2xl border border-amber-500/30 shadow-2xl w-full flex flex-col transition-all duration-300 max-h-[calc(100vh-180px)] sm:max-h-[calc(100vh-200px)] lg:min-h-[500px] lg:max-h-[80vh]">
       {isForcedChoice ? (
         <>
           {/* Fixed header - Location and Vignette */}
@@ -125,24 +125,25 @@ function FirstQuestionContent({
                 })}
               </div>
 
-              {/* Continue Button for Forced Choice */}
-              {canContinue && (
-                <div className="pt-3 lg:pt-4 border-t border-amber-500/20 text-center">
-                  <button
-                    onClick={handleContinue}
-                    className={cn(
-                      "px-4 sm:px-6 py-2 rounded-lg text-black font-bold text-xs sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-md",
-                      questionNumber === 54
-                        ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse"
-                        : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
-                    )}
-                  >
-                    {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey"}
-                  </button>
-                </div>
-              )}
             </div>
           </div>
+
+          {/* Continue Button - Fixed at bottom on mobile */}
+          {canContinue && (
+            <div className="flex-shrink-0 p-3 sm:p-4 lg:p-6 pt-0 border-t border-amber-500/20">
+              <button
+                onClick={handleContinue}
+                className={cn(
+                  "w-full sm:w-auto px-6 py-3 sm:py-2 rounded-lg text-black font-bold text-sm sm:text-sm lg:text-base transition-all duration-300 hover:scale-105 shadow-md",
+                  questionNumber === 54
+                    ? "bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-600 hover:from-purple-500 hover:via-indigo-500 hover:to-purple-500 shadow-purple-500/40 animate-pulse text-white"
+                    : "bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 shadow-amber-500/25"
+                )}
+              >
+                {questionNumber === 54 ? "✨ Complete Assessment ✨" : "Continue Journey →"}
+              </button>
+            </div>
+          )}
         </>
       ) : (
         <div className="h-full flex flex-col justify-between py-8">
@@ -803,11 +804,11 @@ function AdventureQuestion({ item, onAnswer, isAnswered, questionNumber, initial
   return (
     <div
       ref={questionRef}
-      className="h-full w-full flex items-center justify-center p-3 sm:p-4 lg:p-6 xl:p-8 relative"
+      className="h-full w-full flex items-center justify-center p-2 sm:p-4 lg:p-6 xl:p-8 relative"
       style={{
         background: getBackgroundGradient(questionNumber),
-        minHeight: 'calc(100vh - 140px)',
-        marginTop: '100px'
+        minHeight: 'calc(100vh - 80px)',
+        marginTop: '60px'
       }}
     >
       {/* Dark overlay */}
