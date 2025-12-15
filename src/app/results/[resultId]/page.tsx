@@ -103,6 +103,7 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
       family: result.profile?.family || 'Explorer',
     },
     type_probs: result.type_probs || {},
+    meta: result.meta || {},
   }
 
   return (
@@ -305,7 +306,7 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
         )}
 
         {/* Type Probabilities */}
-        {result.type_probs && Object.keys(result.type_probs).length > 0 && (
+        {safeResult.type_probs && Object.keys(safeResult.type_probs).length > 0 && (
           <Card className="bg-black/40 border-indigo-500/30 mb-8">
             <CardHeader>
               <CardTitle className="text-indigo-300 flex items-center gap-2">
@@ -315,9 +316,9 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-3 md:grid-cols-9 gap-2">
-                {Object.entries(result.type_probs).sort((a, b) => Number(a[0]) - Number(b[0])).map(([type, prob]) => {
+                {Object.entries(safeResult.type_probs).sort((a, b) => Number(a[0]) - Number(b[0])).map(([type, prob]) => {
                   const probability = typeof prob === 'number' ? Math.round(prob * 100) : 0
-                  const isDominant = Number(type) === result.dominant_type
+                  const isDominant = Number(type) === safeResult.dominant_type
                   return (
                     <div
                       key={type}
@@ -355,10 +356,10 @@ export default async function ResultsPage({ params }: ResultsPageProps) {
         {/* Footer */}
         <footer className="text-center pt-8 border-t border-white/10">
           <Badge variant="outline" className="mb-2 border-amber-500/50 text-amber-300">
-            {result.ea_id} • Chapter {result.chapter}
+            {safeResult.ea_id} • Chapter {safeResult.chapter}
           </Badge>
           <p className="text-white/40 text-sm mt-2">
-            Version {result.meta?.version || '1.0.0'}
+            Version {safeResult.meta?.version || '1.0.0'}
           </p>
         </footer>
       </div>
