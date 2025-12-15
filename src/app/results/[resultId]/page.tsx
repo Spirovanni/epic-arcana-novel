@@ -36,36 +36,41 @@ const DIMENSION_LABELS: Record<string, string> = {
 }
 
 async function loadResult(resultId: string): Promise<AssessmentResult | null> {
-  // First try legacy table
-  const rows = await db.select().from(userAssessmentResults)
-    .where(
-      or(
-        eq(userAssessmentResults.assessmentId, resultId),
-        eq(userAssessmentResults.id, resultId)
+  try {
+    // First try legacy table
+    const rows = await db.select().from(userAssessmentResults)
+      .where(
+        or(
+          eq(userAssessmentResults.assessmentId, resultId),
+          eq(userAssessmentResults.id, resultId)
+        )
       )
-    )
-    .limit(1)
-
-  if (rows[0]?.personalityProfile) {
-    return rows[0].personalityProfile as AssessmentResult
-  }
-
-  // Fallback to V2 results
-  const v2Sessions = await db.select().from(assessmentSessionsV2)
-    .where(eq(assessmentSessionsV2.id, resultId))
-    .limit(1)
-
-  if (v2Sessions.length > 0) {
-    const v2Results = await db.select().from(assessmentResultsV2)
-      .where(eq(assessmentResultsV2.sessionId, v2Sessions[0].id))
       .limit(1)
 
-    if (v2Results.length > 0) {
-      return v2Results[0].result as AssessmentResult
+    if (rows[0]?.personalityProfile) {
+      return rows[0].personalityProfile as AssessmentResult
     }
-  }
 
-  return null
+    // Fallback to V2 results
+    const v2Sessions = await db.select().from(assessmentSessionsV2)
+      .where(eq(assessmentSessionsV2.id, resultId))
+      .limit(1)
+
+    if (v2Sessions.length > 0) {
+      const v2Results = await db.select().from(assessmentResultsV2)
+        .where(eq(assessmentResultsV2.sessionId, v2Sessions[0].id))
+        .limit(1)
+
+      if (v2Results.length > 0) {
+        return v2Results[0].result as AssessmentResult
+      }
+    }
+
+    return null
+  } catch (error) {
+    console.error('Error loading assessment result:', error)
+    return null
+  }
 }
 
 function getInstinctStack(instincts: { SP: number; SO: number; SX: number }): string {
