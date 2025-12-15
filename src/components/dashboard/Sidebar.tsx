@@ -8,17 +8,21 @@ import {
     LayoutDashboard,
     User,
     Calendar,
+    CalendarDays,
+    CalendarRange,
     BookOpen,
     Settings,
     ChevronLeft,
     ChevronRight,
+    ChevronDown,
     Sparkles,
     Target,
     LineChart,
     Lightbulb,
     History,
     Palette,
-    Menu
+    Menu,
+    Clock
 } from 'lucide-react'
 
 // Sidebar context for global state management
@@ -57,6 +61,7 @@ export interface NavItem {
     icon: React.ComponentType<{ className?: string }>
     badge?: string
     disabled?: boolean
+    children?: NavItem[] // Support for sub-items
 }
 
 export interface NavSection {
@@ -69,7 +74,17 @@ export const navigationConfig: NavSection[] = [
         items: [
             { title: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
             { title: 'Profile', href: '/dashboard/profile', icon: User },
-            { title: 'Calendar', href: '/calendar', icon: Calendar },
+            {
+                title: 'Calendar',
+                href: '/dashboard/calendar',
+                icon: Calendar,
+                children: [
+                    { title: 'Today', href: '/dashboard/calendar', icon: Clock },
+                    { title: 'Week View', href: '/dashboard/calendar/week', icon: CalendarDays },
+                    { title: 'Month View', href: '/dashboard/calendar/month', icon: CalendarRange },
+                    { title: 'Year View', href: '/dashboard/calendar/year', icon: Calendar },
+                ]
+            },
         ]
     },
     {
@@ -104,8 +119,74 @@ interface SidebarNavItemProps {
 
 function SidebarNavItem({ item, isCollapsed }: SidebarNavItemProps) {
     const pathname = usePathname()
-    const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
+    // Exact match for active state (not prefix-based for parent items with children)
+    const isExactActive = pathname === item.href
+    const isChildActive = item.children?.some(child => pathname === child.href)
+    const isActive = isExactActive && !item.children
     const Icon = item.icon
+    const [isOpen, setIsOpen] = useState(isChildActive || isExactActive)
+
+    // For items with children, show collapsible
+    if (item.children && item.children.length > 0) {
+        const hasActiveChild = item.children.some(child => pathname === child.href) || pathname === item.href
+
+        return (
+            <div>
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    className={cn(
+                        'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-200 w-full',
+                        'hover:bg-white/10',
+                        hasActiveChild
+                            ? 'text-white'
+                            : 'text-slate-300 hover:text-white',
+                        isCollapsed && 'justify-center px-2'
+                    )}
+                    title={isCollapsed ? item.title : undefined}
+                >
+                    <Icon className={cn('h-5 w-5 shrink-0', hasActiveChild && 'text-purple-400')} />
+                    {!isCollapsed && (
+                        <>
+                            <span className="flex-1 text-left">{item.title}</span>
+                            <ChevronDown
+                                className={cn(
+                                    'h-4 w-4 transition-transform duration-200',
+                                    isOpen && 'rotate-180'
+                                )}
+                            />
+                        </>
+                    )}
+                </button>
+
+                {/* Sub-items */}
+                {!isCollapsed && isOpen && (
+                    <div className="ml-4 mt-1 space-y-1 border-l border-white/10 pl-3">
+                        {item.children.map((child) => {
+                            const ChildIcon = child.icon
+                            const isChildExactActive = pathname === child.href
+
+                            return (
+                                <Link
+                                    key={child.href}
+                                    href={child.href}
+                                    className={cn(
+                                        'flex items-center gap-3 rounded-lg px-3 py-2 text-sm transition-all duration-200',
+                                        'hover:bg-white/10',
+                                        isChildExactActive
+                                            ? 'bg-gradient-to-r from-purple-600/30 to-blue-600/20 text-white border-l-2 border-purple-400 -ml-[13px] pl-[11px]'
+                                            : 'text-slate-400 hover:text-white'
+                                    )}
+                                >
+                                    <ChildIcon className={cn('h-4 w-4 shrink-0', isChildExactActive && 'text-purple-400')} />
+                                    <span>{child.title}</span>
+                                </Link>
+                            )
+                        })}
+                    </div>
+                )}
+            </div>
+        )
+    }
 
     if (item.disabled) {
         return (
@@ -245,3 +326,4 @@ export function MobileSidebarTrigger() {
         </button>
     )
 }
+
