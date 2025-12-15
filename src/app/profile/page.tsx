@@ -79,74 +79,362 @@ export default function ProfilePage() {
     const profile = assessmentResult.personalityProfile || {};
     const traits = profile?.profile?.traits || {};
     const dimensions = profile?.dimensions || assessmentResult.bigFiveScores || {};
+    const userColor = profile?.color?.rgb_hex || '#7B68EE';
 
-    const report = `
-══════════════════════════════════════════════════════════════════
-              EPIC ARCANA PERSONALITY EVALUATION
-══════════════════════════════════════════════════════════════════
-
-PROFILE SUMMARY
-───────────────────────────────────────────────────────────────────
-Display Name:        ${assessmentResult.primaryPlayerType}
-Personality Family:  ${assessmentResult.secondaryPlayerType || 'Not specified'}
-Archetype ID:        ${profile?.ea_id || profile?.profile?.id || 'EA-Unknown'}
-Theme:               ${assessmentResult.heroJourneyStage}
-Enneagram Type:      Type ${assessmentResult.enneagramType}
-Color Position:      ${assessmentResult.colorCyclePosition}
-Trionfi Card:        ${assessmentResult.trionfiCard || 'Not assigned'}
-Completed:           ${new Date(assessmentResult.completedAt).toLocaleDateString()}
-
-
-CORE STRENGTHS
-───────────────────────────────────────────────────────────────────
-${(traits?.strengths || ['Strategic thinking', 'Natural leadership', 'Adaptability']).map((s: string, i: number) => `${i + 1}. ${s}`).join('\n')}
-
-
-SHADOW ASPECTS (Growth Opportunities)
-───────────────────────────────────────────────────────────────────
-${(traits?.shadow || traits?.shadows || ['Overthinking', 'Perfectionism', 'Impatience']).map((s: string, i: number) => `${i + 1}. ${s}`).join('\n')}
-
-
-GROWTH FOCUS AREAS
-───────────────────────────────────────────────────────────────────
-${(traits?.growth_focus || traits?.growthFocus || ['Mindfulness practice', 'Active listening', 'Emotional regulation']).map((g: string, i: number) => `${i + 1}. ${g}`).join('\n')}
-
-
-PSYCHOLOGICAL DIMENSIONS
-───────────────────────────────────────────────────────────────────
-${Object.entries(dimensions).map(([key, value]) => {
+    // Generate styled HTML for print
+    const htmlContent = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Epic Arcana - ${assessmentResult.primaryPlayerType}</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+      color: #f5f5f5;
+      min-height: 100vh;
+      padding: 40px;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(0,0,0,0.4);
+      border-radius: 20px;
+      padding: 40px;
+      border: 2px solid ${userColor}40;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 30px;
+      border-bottom: 2px solid ${userColor}60;
+    }
+    
+    .logo {
+      font-size: 14px;
+      color: ${userColor};
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    
+    .title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 700;
+      background: linear-gradient(135deg, ${userColor}, #ffd700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      font-size: 20px;
+      color: #b8b8b8;
+      font-style: italic;
+    }
+    
+    .color-badge {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: ${userColor};
+      margin: 20px auto;
+      border: 4px solid rgba(255,255,255,0.2);
+      box-shadow: 0 0 30px ${userColor}60;
+    }
+    
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+    
+    .stat-card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 20px 15px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .stat-value {
+      font-size: 32px;
+      font-weight: 700;
+      color: ${userColor};
+    }
+    
+    .stat-label {
+      font-size: 12px;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 5px;
+    }
+    
+    /* Sections */
+    .section {
+      margin-bottom: 35px;
+    }
+    
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+    
+    .section-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+    }
+    
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+    }
+    
+    .strengths .section-icon { background: rgba(16, 185, 129, 0.2); }
+    .strengths .section-title { color: #10b981; }
+    
+    .shadows .section-icon { background: rgba(244, 63, 94, 0.2); }
+    .shadows .section-title { color: #f43f5e; }
+    
+    .growth .section-icon { background: rgba(14, 165, 233, 0.2); }
+    .growth .section-title { color: #0ea5e9; }
+    
+    .dimensions .section-icon { background: rgba(251, 191, 36, 0.2); }
+    .dimensions .section-title { color: #fbbf24; }
+    
+    /* Lists */
+    .trait-list {
+      list-style: none;
+      padding-left: 48px;
+    }
+    
+    .trait-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .trait-list li::before {
+      content: '◆';
+      font-size: 8px;
+    }
+    
+    .strengths .trait-list li::before { color: #10b981; }
+    .shadows .trait-list li::before { color: #f43f5e; }
+    .growth .trait-list li::before { color: #0ea5e9; }
+    
+    /* Dimension Bars */
+    .dimension-item {
+      margin-bottom: 12px;
+      padding-left: 48px;
+    }
+    
+    .dimension-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+    
+    .dimension-label { color: #ccc; }
+    .dimension-value { color: #fbbf24; font-weight: 600; }
+    
+    .dimension-bar {
+      height: 8px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .dimension-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #fbbf24, #f59e0b);
+      border-radius: 4px;
+    }
+    
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 30px;
+      margin-top: 40px;
+      border-top: 2px solid ${userColor}40;
+    }
+    
+    .footer-badge {
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1px solid ${userColor};
+      border-radius: 20px;
+      color: ${userColor};
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .footer-date {
+      color: #666;
+      font-size: 13px;
+    }
+    
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+        color: #1a1a1a;
+        padding: 20px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .container {
+        box-shadow: none;
+        border: 2px solid #ddd;
+        background: white;
+      }
+      .stat-card {
+        background: #f5f5f5;
+      }
+    }
+    
+    .print-button {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, ${userColor}, #ffd700);
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    
+    .print-button:hover { opacity: 0.9; }
+    
+    @media print {
+      .print-button { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <button class="print-button" onclick="window.print()">📄 Save as PDF</button>
+  
+  <div class="container">
+    <div class="header">
+      <div class="logo">✦ EPIC ARCANA ✦</div>
+      <h1 class="title">${assessmentResult.primaryPlayerType}</h1>
+      <p class="subtitle">${assessmentResult.heroJourneyStage}</p>
+      <div class="color-badge"></div>
+    </div>
+    
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-value">${assessmentResult.enneagramType}</div>
+        <div class="stat-label">Enneagram</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${assessmentResult.colorCyclePosition}</div>
+        <div class="stat-label">Chapter</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${profile?.wing_bin ?? 'N/A'}</div>
+        <div class="stat-label">Wing Bin</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${profile?.development_bin ?? 'N/A'}</div>
+        <div class="stat-label">Dev Level</div>
+      </div>
+    </div>
+    
+    <div class="section strengths">
+      <div class="section-header">
+        <div class="section-icon">💪</div>
+        <h2 class="section-title">Core Strengths</h2>
+      </div>
+      <ul class="trait-list">
+        ${(traits?.strengths || ['Strategic thinking', 'Natural leadership', 'Adaptability', 'Problem solving', 'Communication']).map((s: string) => `<li>${s}</li>`).join('')}
+      </ul>
+    </div>
+    
+    <div class="section shadows">
+      <div class="section-header">
+        <div class="section-icon">🌑</div>
+        <h2 class="section-title">Shadow Aspects</h2>
+      </div>
+      <ul class="trait-list">
+        ${(traits?.shadow || traits?.shadows || ['Overthinking', 'Perfectionism', 'Impatience', 'Self-doubt', 'Control tendencies']).map((s: string) => `<li>${s}</li>`).join('')}
+      </ul>
+    </div>
+    
+    <div class="section growth">
+      <div class="section-header">
+        <div class="section-icon">🌱</div>
+        <h2 class="section-title">Growth Focus Areas</h2>
+      </div>
+      <ul class="trait-list">
+        ${(traits?.growth_focus || traits?.growthFocus || ['Mindfulness practice', 'Active listening', 'Emotional regulation', 'Boundary setting', 'Patience cultivation']).map((g: string) => `<li>${g}</li>`).join('')}
+      </ul>
+    </div>
+    
+    <div class="section dimensions">
+      <div class="section-header">
+        <div class="section-icon">📊</div>
+        <h2 class="section-title">Psychological Dimensions</h2>
+      </div>
+      ${Object.entries(dimensions).slice(0, 8).map(([key, value]) => {
       const label = DIMENSION_LABELS[key] || key;
-      const score = typeof value === 'number' ? (value * 100).toFixed(0) : 'N/A';
-      return `${label.padEnd(25)} ${'█'.repeat(Math.round(Number(score) / 10))} ${score}%`;
-    }).join('\n')}
+      const score = typeof value === 'number' ? Math.round(value * 100) : 50;
+      return `
+        <div class="dimension-item">
+          <div class="dimension-header">
+            <span class="dimension-label">${label}</span>
+            <span class="dimension-value">${score}%</span>
+          </div>
+          <div class="dimension-bar">
+            <div class="dimension-fill" style="width: ${score}%"></div>
+          </div>
+        </div>`;
+    }).join('')}
+    </div>
+    
+    <div class="footer">
+      <div class="footer-badge">${profile?.ea_id || 'EA-Unknown'} • Chapter ${assessmentResult.colorCyclePosition}</div>
+      <p class="footer-date">Assessment completed on ${new Date(assessmentResult.completedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+    </div>
+  </div>
+</body>
+</html>`;
 
-
-INTERPRETATION
-───────────────────────────────────────────────────────────────────
-Your assessment results reveal a unique psychological fingerprint. The combination
-of your dominant type (${assessmentResult.enneagramType}) with your specific wing and development
-level places you at Chapter ${assessmentResult.colorCyclePosition} of The Human Framework.
-
-This archetype, "${assessmentResult.primaryPlayerType}", represents individuals who:
-- Approach challenges with a blend of ${traits?.strengths?.[0] || 'strategic thinking'} and ${traits?.strengths?.[1] || 'adaptability'}
-- May struggle with ${traits?.shadow?.[0] || 'overthinking'} under stress
-- Find fulfillment through ${assessmentResult.heroJourneyStage || 'personal growth'}-related activities
-
-Your growth journey focuses on developing greater ${traits?.growth_focus?.[0] || 'self-awareness'}
-while maintaining your core strengths.
-
-
-══════════════════════════════════════════════════════════════════
-           Generated by Epic Arcana Assessment System
-══════════════════════════════════════════════════════════════════
-`;
-    const element = document.createElement("a");
-    const file = new Blob([report], { type: 'text/plain' });
-    element.href = URL.createObjectURL(file);
-    element.download = `EpicArcana_${assessmentResult.primaryPlayerType.replace(/\s+/g, '_')}_Report.txt`;
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
+    // Open in new window for printing
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      printWindow.document.write(htmlContent);
+      printWindow.document.close();
+    }
   };
 
   if (!isLoaded || loading) {
