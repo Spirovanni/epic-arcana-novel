@@ -68,7 +68,7 @@ export const navigationConfig: NavSection[] = [
     {
         items: [
             { title: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
-            { title: 'Profile', href: '/profile', icon: User },
+            { title: 'Profile', href: '/dashboard/profile', icon: User },
             { title: 'Calendar', href: '/calendar', icon: Calendar },
         ]
     },
