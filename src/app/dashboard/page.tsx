@@ -81,10 +81,39 @@ export default function DashboardPage() {
   // Load assessment data from API
   const loadAssessmentData = async () => {
     try {
-      const response = await fetch('/api/assessment/result')
+      const response = await fetch('/api/assessment/results')
       if (response.ok) {
-        const result = await response.json()
-        setLatestResult(result)
+        const data = await response.json()
+        // The results API returns { success: true, result: {...} }
+        if (data.success && data.result) {
+          // Map the result to match our expected format
+          const result = data.result
+          const mappedResult: DashboardAssessmentResult = {
+            // Core fields from personalityProfile
+            ...(result.personalityProfile || {}),
+            // Fallback mappings from top-level fields
+            ea_id: result.personalityProfile?.ea_id || result.trionfiCard || 'EA-Unknown',
+            chapter: result.personalityProfile?.chapter || result.colorCyclePosition || 1,
+            dominant_type: result.personalityProfile?.dominant_type || result.enneagramType || 1,
+            profile: result.personalityProfile?.profile || {
+              display_name: result.primaryPlayerType || 'Explorer',
+              family: result.secondaryPlayerType || 'Unknown',
+              theme: result.heroJourneyStage || 'The Journey Begins',
+              matchScore: 75
+            },
+            color: result.personalityProfile?.color || { rgb_hex: '#7B68EE' },
+            instincts: result.personalityProfile?.instincts || { SP: 0.33, SO: 0.33, SX: 0.34 },
+            dimensions: result.personalityProfile?.dimensions || result.bigFiveScores || {},
+            type_probs: result.personalityProfile?.type_probs || {},
+            meta: result.personalityProfile?.meta || { version: '1.0.0', duration_sec: 0 },
+            // IDs for linking
+            resultId: result.id,
+            completedAt: result.completedAt
+          }
+          setLatestResult(mappedResult)
+        } else {
+          setLatestResult(null)
+        }
       } else if (response.status === 404) {
         // No assessment result found - this is fine
         setLatestResult(null)
@@ -94,7 +123,7 @@ export default function DashboardPage() {
       } else {
         console.error('Error loading assessment result')
       }
-      
+
       // TODO: Load assessment history from API when available
       setAssessmentHistory([])
     } catch (error) {
@@ -192,7 +221,7 @@ export default function DashboardPage() {
                 <AssessmentButton variant="mystical" className="w-full" />
               </CardContent>
             </Card>
-            
+
             <Card className="border-blue-500/30 hover:border-blue-400/50 transition-colors">
               <CardHeader>
                 <CardTitle className="text-blue-600 dark:text-blue-400 flex items-center gap-2">
@@ -206,16 +235,16 @@ export default function DashboardPage() {
                 <p className="text-muted-foreground text-sm mb-4">
                   Experience the Epic Arcana assessment style with a shortened version perfect for first-time explorers.
                 </p>
-                <AssessmentButton 
+                <AssessmentButton
                   href="/assessment?mode=quick"
-                  variant="outline" 
+                  variant="outline"
                   className="w-full border-blue-500/50 hover:bg-blue-500/10"
                 >
                   Try Quick Preview
                 </AssessmentButton>
               </CardContent>
             </Card>
-            
+
             <Card className="border-green-500/30 hover:border-green-400/50 transition-colors">
               <CardHeader>
                 <CardTitle className="text-green-600 dark:text-green-400 flex items-center gap-2">
