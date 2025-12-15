@@ -14,9 +14,9 @@ function MagicalParticles() {
       const radius = 4 + Math.random() * 2
       const theta = Math.random() * Math.PI * 2
       const phi = Math.random() * Math.PI
-      
+
       points[i * 3] = radius * Math.sin(phi) * Math.cos(theta)
-      points[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta) 
+      points[i * 3 + 1] = radius * Math.sin(phi) * Math.sin(theta)
       points[i * 3 + 2] = radius * Math.cos(phi)
     }
     return points
@@ -47,7 +47,7 @@ function MagicalParticles() {
 // Rotating magical ring
 function MagicalRing() {
   const ref = useRef<THREE.Mesh>(null)
-  
+
   useFrame((state) => {
     if (ref.current) {
       ref.current.rotation.z = state.clock.elapsedTime * 2
@@ -66,7 +66,7 @@ function MagicalRing() {
 // Floating orbs
 function FloatingOrbs() {
   const groupRef = useRef<THREE.Group>(null)
-  
+
   useFrame((state) => {
     if (groupRef.current) {
       groupRef.current.rotation.y = state.clock.elapsedTime * 0.5
@@ -88,7 +88,7 @@ function FloatingOrbs() {
 
 function Orb({ position }: { position: [number, number, number] }) {
   const ref = useRef<THREE.Mesh>(null)
-  
+
   useFrame((state) => {
     if (ref.current) {
       ref.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 2 + position[0]) * 0.5
@@ -124,28 +124,29 @@ export function MagicalLoadingScreen({ onComplete }: MagicalLoadingScreenProps) 
   ]
 
   useEffect(() => {
+    const startTime = Date.now()
+    const duration = 36000 // 36 seconds minimum duration
+
     const interval = setInterval(() => {
-      setProgress(prev => {
-        const newProgress = prev + Math.random() * 15 + 5
-        
-        // Update phase and text based on progress
-        const newPhase = Math.floor((newProgress / 100) * loadingMessages.length)
-        if (newPhase !== phase && newPhase < loadingMessages.length) {
-          setPhase(newPhase)
-          setLoadingText(loadingMessages[newPhase])
-        }
-        
-        if (newProgress >= 100) {
-          clearInterval(interval)
-          setTimeout(() => {
-            onComplete()
-          }, 2000) // Show completion for 2 seconds
-          return 100
-        }
-        
-        return newProgress
-      })
-    }, 800)
+      const elapsed = Date.now() - startTime
+      const calculatedProgress = Math.min((elapsed / duration) * 100, 100)
+
+      setProgress(calculatedProgress)
+
+      // Update phase and text based on progress
+      const newPhase = Math.floor((calculatedProgress / 100) * loadingMessages.length)
+      if (newPhase !== phase && newPhase < loadingMessages.length) {
+        setPhase(newPhase)
+        setLoadingText(loadingMessages[newPhase])
+      }
+
+      if (calculatedProgress >= 100) {
+        clearInterval(interval)
+        setTimeout(() => {
+          onComplete()
+        }, 2000)
+      }
+    }, 100) // Update frequency
 
     return () => clearInterval(interval)
   }, [phase, onComplete])
@@ -154,7 +155,7 @@ export function MagicalLoadingScreen({ onComplete }: MagicalLoadingScreenProps) 
     <div className="fixed inset-0 bg-gradient-to-br from-purple-900 via-indigo-900 to-black z-50 flex items-center justify-center">
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-black/50 animate-pulse" />
-      
+
       {/* Three.js Canvas */}
       <div className="absolute inset-0">
         <Canvas camera={{ position: [0, 0, 10], fov: 60 }}>
@@ -181,12 +182,12 @@ export function MagicalLoadingScreen({ onComplete }: MagicalLoadingScreenProps) 
             }}
           />
         ))}
-        
+
         {/* Magical circles */}
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-amber-400/30 rounded-full animate-spin" 
-             style={{ animationDuration: '10s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-purple-400/30 rounded-full animate-spin" 
-             style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 border-2 border-amber-400/30 rounded-full animate-spin"
+          style={{ animationDuration: '10s' }} />
+        <div className="absolute bottom-1/4 right-1/4 w-24 h-24 border-2 border-purple-400/30 rounded-full animate-spin"
+          style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
       </div>
 
       {/* Main content */}
@@ -205,14 +206,14 @@ export function MagicalLoadingScreen({ onComplete }: MagicalLoadingScreenProps) 
         <div className="mb-8">
           <div className="relative w-32 h-32 mx-auto mb-6">
             {/* Rotating outer ring */}
-            <div className="absolute inset-0 border-4 border-amber-400/30 rounded-full animate-spin" 
-                 style={{ animationDuration: '3s' }} />
+            <div className="absolute inset-0 border-4 border-amber-400/30 rounded-full animate-spin"
+              style={{ animationDuration: '3s' }} />
             {/* Counter-rotating inner ring */}
-            <div className="absolute inset-4 border-4 border-purple-400/50 rounded-full animate-spin" 
-                 style={{ animationDuration: '2s', animationDirection: 'reverse' }} />
+            <div className="absolute inset-4 border-4 border-purple-400/50 rounded-full animate-spin"
+              style={{ animationDuration: '2s', animationDirection: 'reverse' }} />
             {/* Pulsing center */}
             <div className="absolute inset-8 bg-gradient-to-r from-amber-400 to-yellow-400 rounded-full animate-pulse" />
-            
+
             {/* Progress indicator */}
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-black font-bold text-xl">
@@ -232,7 +233,7 @@ export function MagicalLoadingScreen({ onComplete }: MagicalLoadingScreenProps) 
         {/* Progress bar */}
         <div className="w-full max-w-md mx-auto">
           <div className="bg-gray-800/50 rounded-full h-4 overflow-hidden border border-amber-400/30">
-            <div 
+            <div
               className="h-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-500 transition-all duration-1000 ease-out relative"
               style={{ width: `${progress}%` }}
             >

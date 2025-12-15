@@ -43,7 +43,7 @@ export default function ProfilePage() {
   const fetchAssessmentResults = async () => {
     try {
       const response = await fetch('/api/assessment/results');
-      
+
       if (!response.ok) {
         if (response.status === 404) {
           setError('No assessment results found. Please complete the assessment first.');
@@ -210,6 +210,38 @@ export default function ProfilePage() {
 
         {/* Assessment Results */}
         <AssessmentResults results={assessmentResult.personalityProfile} />
+
+        {/* Action Buttons */}
+        <div className="flex justify-center mt-8 mb-4">
+          <Button
+            className="bg-amber-600 hover:bg-amber-500 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-amber-500/20 transition-all duration-300 flex items-center gap-2"
+            onClick={() => {
+              // Create a downloadable text file
+              const element = document.createElement("a");
+              const report = `EPIC ARCANA PERSONALITY EVALUATION
+              
+Primary Type: ${assessmentResult.primaryPlayerType}
+Secondary Type: ${assessmentResult.secondaryPlayerType || 'None'}
+Journey Stage: ${assessmentResult.heroJourneyStage}
+Enneagram Type: ${assessmentResult.enneagramType}
+Completed: ${new Date(assessmentResult.completedAt).toLocaleDateString()}
+
+---
+Detailed Analysis
+(Full report content would be generated here based on your unique profile data.)
+`;
+              const file = new Blob([report], { type: 'text/plain' });
+              element.href = URL.createObjectURL(file);
+              element.download = "EpicArcana_Evaluation.txt";
+              document.body.appendChild(element); // Required for this to work in FireFox
+              element.click();
+              document.body.removeChild(element);
+            }}
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+            Download In-Depth Evaluation
+          </Button>
+        </div>
 
         {/* Additional Profile Info */}
         <Card className="mt-8">
