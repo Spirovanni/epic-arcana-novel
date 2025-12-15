@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import { AssessmentResult, AssessmentResultSchema } from '@/lib/assessment/types'
 import { db } from '@/lib/db'
-import { userAssessmentResults, assessmentSessionsV2, assessmentResultsV2 } from '@/lib/schema'
-import { eq, or } from 'drizzle-orm'
+import { userAssessmentResults, assessmentSessionsV2, assessmentResultsV2, users } from '@/lib/schema'
+import { eq, or, desc } from 'drizzle-orm'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
@@ -10,6 +10,7 @@ import { Badge } from '@/components/ui/badge'
 import { ArrowLeft, Download, Sparkles } from 'lucide-react'
 import { PrintOnLoad } from './PrintOnLoad'
 import Navbar from '@/components/Navbar'
+import { auth } from '@clerk/nextjs/server'
 
 interface ResultsPageProps {
   params: Promise<{
@@ -81,6 +82,43 @@ async function loadResult(resultId: string): Promise<AssessmentResult | null> {
   }
 }
 
+async function loadLatestForUser(clerkUserId: string): Promise<AssessmentResult | null> {
+  try {
+    const userRow = await db.select().from(users).where(eq(users.clerkId, clerkUserId)).limit(1)
+    if (!userRow.length) return null
+
+    const [latestLegacy] = await db.select().from(userAssessmentResults)
+      .where(eq(userAssessmentResults.userId, userRow[0].id))
+      .orderBy(desc(userAssessmentResults.completedAt))
+      .limit(1)
+
+    if (latestLegacy?.personalityProfile) {
+      const parsed = AssessmentResultSchema.safeParse(latestLegacy.personalityProfile)
+      if (parsed.success) return parsed.data
+    }
+
+    const [latestSession] = await db.select().from(assessmentSessionsV2)
+      .where(eq(assessmentSessionsV2.userId, userRow[0].id))
+      .orderBy(desc(assessmentSessionsV2.completedAt))
+      .limit(1)
+
+    if (latestSession) {
+      const v2Results = await db.select().from(assessmentResultsV2)
+        .where(eq(assessmentResultsV2.sessionId, latestSession.id))
+        .limit(1)
+      if (v2Results.length > 0) {
+        const parsed = AssessmentResultSchema.safeParse(v2Results[0].result)
+        if (parsed.success) return parsed.data
+      }
+    }
+
+    return null
+  } catch (error) {
+    console.error('[results] loadLatestForUser failed', error)
+    return null
+  }
+}
+
 function getInstinctStack(instincts: { SP: number; SO: number; SX: number }): string {
   return Object.entries(instincts)
     .sort(([, a], [, b]) => b - a)
@@ -90,7 +128,14 @@ function getInstinctStack(instincts: { SP: number; SO: number; SX: number }): st
 
 export default async function ResultsPage({ params }: ResultsPageProps) {
   const { resultId } = await params
-  const result = await loadResult(resultId)
+  let result = await loadResult(resultId)
+
+  if (!result) {
+    const { userId } = await auth()
+    if (userId) {
+      result = await loadLatestForUser(userId)
+    }
+  }
 
   if (!result) {
     notFound()
