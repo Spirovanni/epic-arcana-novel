@@ -1,5 +1,8 @@
 import { pgTable, text, timestamp, uuid, varchar, jsonb, pgEnum, integer, boolean, real, unique, index } from 'drizzle-orm/pg-core';
 
+// Assessment System Enums (placed early so all tables can reference them)
+export const assessmentStatusEnum = pgEnum('assessment_status', ['in_progress', 'completed', 'abandoned']);
+
 export const membershipTierEnum = pgEnum('membership_tier', ['free', 'basic', 'premium', 'ultimate']);
 
 export const users = pgTable('users', {
@@ -784,7 +787,6 @@ export const storyArcGoals = pgTable('story_arc_goals', {
 });
 
 // Assessment System Enums
-export const assessmentStatusEnum = pgEnum('assessment_status', ['in_progress', 'completed', 'abandoned']);
 export const questionTypeEnum = pgEnum('question_type', ['situational', 'preference', 'behavioral', 'personality']);
 
 // Assessment System Tables
