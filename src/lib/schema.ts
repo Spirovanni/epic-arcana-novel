@@ -53,6 +53,60 @@ export const webhookEvents = pgTable('webhook_events', {
   unique('webhook_events_event_id_unique').on(table.eventId),
 ]);
 
+export const appUsers = pgTable('app_users', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  clerkUserId: varchar('clerk_user_id', { length: 255 }).notNull(),
+  email: varchar({ length: 255 }).default('').notNull(),
+  firstName: varchar('first_name', { length: 255 }).default('').notNull(),
+  lastName: varchar('last_name', { length: 255 }).default('').notNull(),
+  imageUrl: varchar('image_url', { length: 500 }).default('').notNull(),
+  createdAt: timestamp('created_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  unique('app_users_clerk_user_id_unique').on(table.clerkUserId),
+  index('app_users_email_idx').on(table.email),
+]);
+
+export const posAssessments = pgTable('pos_assessments', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  userId: uuid('user_id').notNull().references(() => appUsers.id, { onDelete: 'cascade' }),
+  assessmentKey: varchar('assessment_key', { length: 50 }).notNull().default('pos60'),
+  version: varchar({ length: 20 }).notNull().default('v1'),
+  status: assessmentStatusEnum('status').default('in_progress').notNull(),
+  isRetake: boolean('is_retake').default(false).notNull(),
+  startedAt: timestamp('started_at', { mode: 'string' }).defaultNow().notNull(),
+  completedAt: timestamp('completed_at', { mode: 'string' }),
+  createdAt: timestamp('created_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  index('pos_assessments_user_status_idx').on(table.userId, table.status),
+  index('pos_assessments_user_created_idx').on(table.userId, table.createdAt),
+]);
+
+export const posAssessmentAnswers = pgTable('pos_assessment_answers', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  assessmentId: uuid('assessment_id').notNull().references(() => posAssessments.id, { onDelete: 'cascade' }),
+  questionId: varchar('question_id', { length: 100 }).notNull(),
+  value: integer('value').notNull(),
+  createdAt: timestamp('created_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  unique('pos_assessment_answers_assessment_question_unique').on(table.assessmentId, table.questionId),
+  index('pos_assessment_answers_assessment_idx').on(table.assessmentId),
+]);
+
+export const posAssessmentResults = pgTable('pos_assessment_results', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  assessmentId: uuid('assessment_id').notNull().references(() => posAssessments.id, { onDelete: 'cascade' }),
+  domainScores: jsonb('domain_scores').notNull(),
+  facetScores: jsonb('facet_scores').notNull(),
+  insights: jsonb('insights').notNull(),
+  createdAt: timestamp('created_at', { mode: 'string' }).defaultNow().notNull(),
+  updatedAt: timestamp('updated_at', { mode: 'string' }).defaultNow().notNull(),
+}, (table) => [
+  unique('pos_assessment_results_assessment_unique').on(table.assessmentId),
+]);
+
 export const assessmentSessionsV2 = pgTable('assessment_sessions_v2', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: integer('user_id').notNull().references(() => users.id, { onDelete: 'cascade' }),
@@ -471,6 +525,7 @@ export const chapterTasks = pgTable('chapter_tasks', {
 export const scenes = pgTable('scenes', {
   id: uuid('id').primaryKey().defaultRandom(),
   chapterId: uuid('chapter_id').references(() => chapters.id).notNull(),
+  chapterUniqueIdentifier: varchar('chapter_unique_identifier', { length: 50 }),
   sceneNumber: integer('scene_number').notNull(),
   title: varchar('title', { length: 255 }),
   focus: varchar('focus', { length: 255 }),

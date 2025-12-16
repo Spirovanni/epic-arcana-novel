@@ -1,6 +1,6 @@
 import { auth, currentUser } from '@clerk/nextjs/server'
 import { db } from '@/lib/db'
-import { users } from '@/lib/schema'
+import { appUsers, users } from '@/lib/schema'
 import { eq } from 'drizzle-orm'
 
 export async function ensureDbUser() {
@@ -65,5 +65,45 @@ export async function ensureDbUser() {
       }
     }).returning()
     return legacyRow || null
+  }
+}
+
+export async function ensureAppUser() {
+  const { userId } = await auth()
+  if (!userId) return null
+
+  const clerkUser = await currentUser()
+  if (!clerkUser) return null
+
+  const email = clerkUser.emailAddresses?.[0]?.emailAddress || ''
+  const firstName = clerkUser.firstName || 'User'
+  const lastName = clerkUser.lastName || ''
+  const imageUrl = clerkUser.imageUrl || ''
+  const now = new Date().toISOString()
+
+  try {
+    const [row] = await db.insert(appUsers).values({
+      clerkUserId: clerkUser.id,
+      email,
+      firstName,
+      lastName,
+      imageUrl,
+      createdAt: now,
+      updatedAt: now,
+    }).onConflictDoUpdate({
+      target: appUsers.clerkUserId,
+      set: {
+        email,
+        firstName,
+        lastName,
+        imageUrl,
+        updatedAt: now,
+      }
+    }).returning()
+
+    return row || null
+  } catch (error) {
+    console.error('[ensureAppUser] failed to upsert app user', error)
+    return null
   }
 }

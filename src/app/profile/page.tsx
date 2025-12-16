@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import { DomainRadar } from '@/components/pos/DomainRadar';
+import { PosDomainKey } from '@/lib/assessment/pos60_v1';
+import { formatFacetLabel } from '@/lib/assessment/pos60_scoring';
 
 interface AssessmentResult {
   id: string;
@@ -20,6 +23,18 @@ interface AssessmentResult {
   personalityProfile: any;
   completedAt: string;
 }
+
+type PosLatest = {
+  assessmentId: string;
+  completedAt: string | null;
+  domainScores: Record<PosDomainKey, number>;
+  facetScores: Record<PosDomainKey, Record<string, number>>;
+  insights: {
+    strengths: string[];
+    leverage_points: string[];
+    seven_day_plan: Array<{ day: number; focus: string; action: string }>;
+  };
+};
 
 // Dimension display helper
 const DIMENSION_LABELS: Record<string, string> = {
@@ -39,15 +54,37 @@ const DIMENSION_LABELS: Record<string, string> = {
   imagination: 'Imagination',
 };
 
+const POS_DOMAIN_LABELS: Record<PosDomainKey, string> = {
+  focus: 'Focus',
+  planning: 'Planning',
+  execution: 'Execution',
+  collaboration: 'Collaboration',
+  resilience: 'Resilience',
+};
+
+const POS_DOMAIN_COLORS: Record<PosDomainKey, string> = {
+  focus: '#0ea5e9',
+  planning: '#6366f1',
+  execution: '#22c55e',
+  collaboration: '#f59e0b',
+  resilience: '#ef4444',
+};
+
 export default function ProfilePage() {
   const { user, isLoaded } = useUser();
   const [assessmentResult, setAssessmentResult] = useState<AssessmentResult | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [posLatest, setPosLatest] = useState<PosLatest | null>(null);
+  const [posInProgress, setPosInProgress] = useState<{ assessmentId: string } | null>(null);
+  const [posLoading, setPosLoading] = useState(true);
 
   useEffect(() => {
     if (isLoaded && user) {
       fetchAssessmentResults();
+      fetchPosLatest();
+    } else if (isLoaded && !user) {
+      setPosLoading(false);
     }
   }, [isLoaded, user]);
 
@@ -71,6 +108,25 @@ export default function ProfilePage() {
       setError('Failed to load assessment results');
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchPosLatest = async () => {
+    try {
+      const response = await fetch('/api/pos/latest');
+      if (!response.ok) {
+        if (response.status === 401) {
+          return;
+        }
+        throw new Error('Failed to fetch POS-60 results');
+      }
+      const data = await response.json();
+      setPosLatest(data.latest);
+      setPosInProgress(data.inProgress);
+    } catch (err) {
+      console.error('Error fetching POS-60 results:', err);
+    } finally {
+      setPosLoading(false);
     }
   };
 
@@ -456,21 +512,40 @@ export default function ProfilePage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navbar />
         <div className="flex items-center justify-center min-h-[50vh]">
-          <Card className="max-w-md mx-auto bg-black/40 border-amber-500/30">
-            <CardHeader>
-              <CardTitle className="text-2xl text-center text-amber-300">
-                {!user ? 'Authentication Required' : 'No Assessment Results'}
-              </CardTitle>
-              <CardDescription className="text-center text-amber-100/80">
-                {error || 'Please complete the assessment to view your profile.'}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="text-center">
-              <Button asChild className="bg-amber-600 hover:bg-amber-500">
-                <Link href="/assessment">Take Assessment</Link>
-              </Button>
-            </CardContent>
-          </Card>
+          <div className="w-full max-w-3xl px-4 space-y-4">
+            <Card className="bg-black/40 border-amber-500/30">
+              <CardHeader>
+                <CardTitle className="text-2xl text-center text-amber-300">
+                  {!user ? 'Authentication Required' : 'No Assessment Results'}
+                </CardTitle>
+                <CardDescription className="text-center text-amber-100/80">
+                  {error || 'Please complete the assessment to view your profile.'}
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button asChild className="bg-amber-600 hover:bg-amber-500">
+                  <Link href="/assessment">Take Assessment</Link>
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 border-white/20">
+              <CardHeader>
+                <CardTitle className="text-xl text-white">Personal Operating System Report</CardTitle>
+                <CardDescription className="text-amber-100/80">
+                  Opt in to POS-60 for a 10-minute view of your focus, planning, execution, collaboration, and resilience.
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex gap-3">
+                <Button asChild className="bg-white text-slate-900 hover:bg-slate-200">
+                  <Link href="/pos">Take POS-60 (10 min)</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-white/40 text-white hover:bg-white/10">
+                  <Link href="/pos?retake=true">Start fresh</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     );
@@ -495,6 +570,140 @@ export default function ProfilePage() {
           <p className="text-xl text-amber-100/80">{assessmentResult.heroJourneyStage}</p>
           <p className="text-amber-200/60 mt-2">Welcome back, {user.firstName}</p>
         </div>
+
+        {/* Personal Operating System */}
+        <Card className="mb-10 bg-white/90 border-slate-200">
+          <CardHeader>
+            <CardTitle className="text-slate-900">Personal Operating System Report</CardTitle>
+            <CardDescription className="text-slate-600">
+              POS-60 measures focus, planning, execution, collaboration, and resilience. Your answers persist after refresh.
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {posLoading ? (
+              <div className="text-slate-600">Loading POS-60 status...</div>
+            ) : !posLatest ? (
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                <div className="text-slate-700">
+                  <p className="font-semibold text-slate-900 mb-1">Unlock your POS report</p>
+                  <p className="text-sm text-slate-600">
+                    Take the 10-minute POS-60 to see your operating strengths, leverage points, and a 7-day action plan.
+                  </p>
+                </div>
+                <div className="flex gap-3">
+                  {posInProgress ? (
+                    <Button asChild>
+                      <Link href="/pos">Continue</Link>
+                    </Button>
+                  ) : (
+                    <Button asChild>
+                      <Link href="/pos">Take POS-60 (10 min)</Link>
+                    </Button>
+                  )}
+                  <Button variant="outline" asChild>
+                    <Link href="/pos?retake=true">Start fresh</Link>
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <div className="space-y-6">
+                <div className="flex flex-wrap items-center gap-3 justify-between">
+                  <div>
+                    <p className="text-sm text-slate-500">Completed</p>
+                    <p className="text-slate-900 font-semibold">
+                      {posLatest.completedAt
+                        ? new Date(posLatest.completedAt).toLocaleDateString()
+                        : 'Recently'}
+                    </p>
+                  </div>
+                  <div className="flex gap-2">
+                    <Button variant="outline" asChild>
+                      <Link href="/pos">Review</Link>
+                    </Button>
+                    <Button asChild>
+                      <Link href="/pos?retake=true">Retake POS-60</Link>
+                    </Button>
+                  </div>
+                </div>
+
+                <div className="grid gap-6 lg:grid-cols-2">
+                  {(Object.keys(POS_DOMAIN_LABELS) as PosDomainKey[]).map((domain) => (
+                    <Card key={domain} className="border-slate-200">
+                      <CardHeader className="pb-2">
+                        <CardTitle className="text-slate-900 flex items-center justify-between">
+                          <span>{POS_DOMAIN_LABELS[domain]}</span>
+                          <span className="text-2xl font-bold" style={{ color: POS_DOMAIN_COLORS[domain] }}>
+                            {posLatest.domainScores[domain]?.toFixed(1) ?? '—'}
+                          </span>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <DomainRadar domain={domain} facets={posLatest.facetScores[domain] || {}} color={POS_DOMAIN_COLORS[domain]} />
+                        <ul className="mt-4 space-y-2 text-sm text-slate-700">
+                          {Object.entries(posLatest.facetScores[domain] || {}).map(([facet, score]) => (
+                            <li key={facet} className="flex items-center justify-between">
+                              <span>{formatFacetLabel(domain, facet)}</span>
+                              <span className="font-semibold text-slate-900">{score.toFixed(1)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+
+                <div className="grid gap-4 md:grid-cols-3">
+                  <Card className="border-slate-200">
+                    <CardHeader>
+                      <CardTitle className="text-slate-900 text-base">Strengths</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-sm text-emerald-700">
+                        {(posLatest.insights?.strengths || []).map((s, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-slate-200">
+                    <CardHeader>
+                      <CardTitle className="text-slate-900 text-base">Leverage Points</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-sm text-amber-700">
+                        {(posLatest.insights?.leverage_points || []).map((s, idx) => (
+                          <li key={idx} className="flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-amber-500" />
+                            {s}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-slate-200">
+                    <CardHeader>
+                      <CardTitle className="text-slate-900 text-base">7-Day Plan</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <ul className="space-y-2 text-sm text-slate-700">
+                        {(posLatest.insights?.seven_day_plan || []).map((item) => (
+                          <li key={item.day}>
+                            <span className="font-semibold text-slate-900">Day {item.day}:</span> {item.action}
+                          </li>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            )}
+          </CardContent>
+        </Card>
 
         {/* Quick Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
