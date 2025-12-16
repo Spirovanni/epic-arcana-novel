@@ -76,6 +76,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
               { href: '/dashboard/goals', label: 'Goals & Plans', icon: <Target className="w-4 h-4" />, description: 'Personality-driven goals' },
             ]
           },
+          { href: '/pos', label: 'POS-60 (Ops)', icon: <Brain className="w-4 h-4" />, requiresAuth: true },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
           { 
@@ -141,6 +142,7 @@ export function AppNavbar({ variant = 'app' }: AppNavbarProps) {
           { href: '/books', label: 'Books', icon: <Book className="w-4 h-4" /> },
           { href: '/characters', label: 'Characters', icon: <Users className="w-4 h-4" /> },
           { href: '/calendar', label: 'Calendar', icon: <Calendar className="w-4 h-4" /> },
+          { href: '/pos', label: 'POS-60 (Ops)', icon: <Brain className="w-4 h-4" />, requiresAuth: true },
           { href: '/dashboard', label: 'Dashboard', icon: <BarChart3 className="w-4 h-4" />, requiresAuth: true },
           { 
             label: 'Features', 
