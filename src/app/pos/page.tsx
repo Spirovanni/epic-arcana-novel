@@ -1,6 +1,9 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
+import { Suspense, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { POS60_V1, PosDomainKey, PosQuestion } from '@/lib/assessment/pos60_v1'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -90,7 +93,7 @@ function QuestionCard({
   )
 }
 
-export default function PosAssessmentPage() {
+function PosAssessmentPageInner() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const retake = searchParams.get('retake') === 'true'
@@ -275,5 +278,13 @@ export default function PosAssessmentPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function PosAssessmentPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-slate-50 px-4 py-12 text-slate-600">Loading POS-60...</div>}>
+      <PosAssessmentPageInner />
+    </Suspense>
   )
 }
