@@ -52,21 +52,28 @@ function Likert({
     onChange: (v: number) => void
 }) {
     return (
-        <div className="flex gap-3 flex-wrap">
-            {[1, 2, 3, 4, 5].map((v) => (
-                <button
-                    key={v}
-                    onClick={() => onChange(v)}
-                    className={cn(
-                        'w-12 h-12 rounded-full border text-sm font-bold transition-all duration-200 shadow-sm',
-                        value === v
-                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent shadow-purple-500/30 scale-110'
-                            : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:border-slate-500 hover:text-slate-200 hover:bg-slate-800'
-                    )}
-                >
-                    {v}
-                </button>
-            ))}
+        <div className="w-full">
+            <div className="flex justify-between text-xs font-medium text-slate-400 uppercase tracking-wider px-1 mb-3">
+                <span>Strongly Disagree</span>
+                <span className="hidden sm:inline-block">Neutral</span>
+                <span>Strongly Agree</span>
+            </div>
+            <div className="flex justify-between items-center gap-2 bg-slate-900/30 p-3 rounded-2xl border border-slate-800/50">
+                {[1, 2, 3, 4, 5].map((v) => (
+                    <button
+                        key={v}
+                        onClick={() => onChange(v)}
+                        className={cn(
+                            'w-10 h-10 sm:w-12 sm:h-12 rounded-full border text-sm font-bold transition-all duration-200 shadow-sm flex items-center justify-center',
+                            value === v
+                                ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent shadow-lg shadow-purple-500/30 scale-110'
+                                : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:border-slate-500 hover:text-slate-200 hover:bg-slate-800'
+                        )}
+                    >
+                        {v}
+                    </button>
+                ))}
+            </div>
         </div>
     )
 }
