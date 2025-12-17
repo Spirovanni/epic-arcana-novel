@@ -6,6 +6,7 @@ import { POS60_V1, PosDomainKey, PosQuestion } from '@/lib/assessment/pos60_v1'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { AssessmentNavbar } from '@/components/assessment/AssessmentNavbar'
 
 type AnswerMap = Record<string, number>
 
@@ -21,18 +22,20 @@ function DomainNav({
     onSelect: (key: PosDomainKey) => void
 }) {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
             {domains.map((domain) => (
                 <button
                     key={domain.key}
                     onClick={() => onSelect(domain.key)}
                     className={cn(
-                        'rounded-xl border px-4 py-3 text-left transition-all',
-                        active === domain.key ? 'border-slate-900 bg-white shadow' : 'border-slate-200 bg-slate-50 hover:bg-white'
+                        'rounded-xl border px-4 py-3 text-left transition-all duration-300',
+                        active === domain.key
+                            ? 'bg-slate-800 text-purple-300 border-purple-500/50 shadow-lg shadow-purple-900/20'
+                            : 'bg-slate-900/50 text-slate-400 border-slate-800 hover:bg-slate-800 hover:text-slate-200 hover:border-slate-700'
                     )}
                 >
-                    <div className="text-sm font-semibold text-slate-900">{domain.label}</div>
-                    <div className="text-xs text-slate-500">
+                    <div className="text-sm font-semibold">{domain.label}</div>
+                    <div className="text-xs opacity-70 mt-1">
                         {domain.answered}/{domain.count} answered
                     </div>
                 </button>
@@ -49,16 +52,16 @@ function Likert({
     onChange: (v: number) => void
 }) {
     return (
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-3 flex-wrap">
             {[1, 2, 3, 4, 5].map((v) => (
                 <button
                     key={v}
                     onClick={() => onChange(v)}
                     className={cn(
-                        'w-10 h-10 rounded-full border text-sm font-semibold transition-all',
+                        'w-12 h-12 rounded-full border text-sm font-bold transition-all duration-200 shadow-sm',
                         value === v
-                            ? 'bg-slate-900 text-white border-slate-900'
-                            : 'border-slate-200 bg-white text-slate-700 hover:border-slate-400'
+                            ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white border-transparent shadow-purple-500/30 scale-110'
+                            : 'border-slate-700 bg-slate-800/80 text-slate-400 hover:border-slate-500 hover:text-slate-200 hover:bg-slate-800'
                     )}
                 >
                     {v}
@@ -79,9 +82,9 @@ function QuestionCard({
 }) {
     const text = question.prompt || question.statement || question.text || 'Question'
     return (
-        <Card className="border-slate-200 shadow-sm">
-            <CardHeader>
-                <CardTitle className="text-base text-slate-900">{text}</CardTitle>
+        <Card className="bg-slate-800/50 border-purple-500/20 shadow-lg backdrop-blur-sm transition-all hover:border-purple-500/30">
+            <CardHeader className="pb-4">
+                <CardTitle className="text-lg font-medium text-slate-200 leading-relaxed">{text}</CardTitle>
             </CardHeader>
             <CardContent>
                 <Likert value={answer} onChange={onAnswer} />
@@ -189,9 +192,10 @@ function PosAssessmentPageInner() {
 
     if (loading) {
         return (
-            <div className="min-h-screen bg-slate-50">
-                <div className="max-w-3xl mx-auto px-4 py-16">
-                    <div className="text-center text-slate-600">Loading POS-60...</div>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-slate-200">
+                <AssessmentNavbar />
+                <div className="max-w-3xl mx-auto px-4 py-24">
+                    <div className="text-center text-slate-400 animate-pulse">Loading POS-60...</div>
                 </div>
             </div>
         )
@@ -199,13 +203,14 @@ function PosAssessmentPageInner() {
 
     if (!POS60_V1.questions.length) {
         return (
-            <div className="min-h-screen bg-slate-50">
-                <div className="max-w-3xl mx-auto px-4 py-16">
-                    <Card>
+            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 text-slate-200">
+                <AssessmentNavbar />
+                <div className="max-w-3xl mx-auto px-4 py-24">
+                    <Card className="bg-slate-800/50 border-purple-500/30">
                         <CardHeader>
-                            <CardTitle>POS-60 unavailable</CardTitle>
+                            <CardTitle className="text-red-400">POS-60 unavailable</CardTitle>
                         </CardHeader>
-                        <CardContent>The question bank is missing. Please add the POS60_V1 data.</CardContent>
+                        <CardContent className="text-slate-400">The question bank is missing. Please add the POS60_V1 data.</CardContent>
                     </Card>
                 </div>
             </div>
@@ -213,12 +218,18 @@ function PosAssessmentPageInner() {
     }
 
     return (
-        <div className="min-h-screen bg-slate-50">
-            <div className="max-w-5xl mx-auto px-4 py-10">
-                <div className="mb-6">
-                    <p className="text-sm font-semibold text-slate-600 uppercase tracking-wide">Personal Operating System</p>
-                    <h1 className="text-3xl font-bold text-slate-900">POS-60 Assessment</h1>
-                    <p className="text-slate-600 mt-2">10-minute snapshot across focus, planning, execution, collaboration, and resilience.</p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
+            <AssessmentNavbar />
+
+            <div className="max-w-5xl mx-auto px-4 py-12">
+                <div className="mb-10 text-center sm:text-left">
+                    <p className="text-sm font-bold text-purple-400 uppercase tracking-widest mb-2">Personal Operating System</p>
+                    <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-400 to-purple-400 bg-clip-text text-transparent pb-1">
+                        POS-60 Assessment
+                    </h1>
+                    <p className="text-slate-400 mt-3 text-lg max-w-2xl">
+                        A 10-minute snapshot across focus, planning, execution, collaboration, and resilience.
+                    </p>
                 </div>
 
                 <DomainNav
@@ -233,10 +244,12 @@ function PosAssessmentPageInner() {
                 />
 
                 {error ? (
-                    <div className="mb-4 text-red-600 text-sm">{error}</div>
+                    <div className="mb-6 rounded-lg bg-red-900/20 border border-red-500/30 p-4 text-red-300 text-sm">
+                        {error}
+                    </div>
                 ) : null}
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                     {currentDomain?.questions.map((question) => (
                         <QuestionCard
                             key={question.id}
@@ -247,13 +260,14 @@ function PosAssessmentPageInner() {
                     ))}
                 </div>
 
-                <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                    <div className="text-sm text-slate-600">
-                        {totalAnswered}/{totalQuestions} answered
+                <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pt-8 border-t border-purple-500/10">
+                    <div className="text-sm text-slate-500 font-medium">
+                        <span className="text-slate-300">{totalAnswered}</span> <span className="text-slate-600">/</span> <span className="text-slate-400">{totalQuestions} answered</span>
                     </div>
-                    <div className="flex gap-2">
+                    <div className="flex gap-4">
                         <Button
                             variant="outline"
+                            className="border-purple-500/30 text-slate-400 hover:text-slate-200 hover:bg-purple-500/10 hover:border-purple-500/50"
                             disabled={currentIndex <= 0}
                             onClick={() => setActiveDomain(grouped[Math.max(0, currentIndex - 1)].key)}
                         >
@@ -261,14 +275,21 @@ function PosAssessmentPageInner() {
                         </Button>
                         {currentIndex < grouped.length - 1 ? (
                             <Button
+                                variant="mystical"
                                 onClick={() => setActiveDomain(grouped[Math.min(grouped.length - 1, currentIndex + 1)].key)}
                                 disabled={!canContinue}
+                                className="min-w-[120px]"
                             >
-                                Next domain
+                                Next Domain
                             </Button>
                         ) : (
-                            <Button onClick={handleComplete} disabled={submitting || totalAnswered !== totalQuestions}>
-                                {submitting ? 'Submitting...' : 'Submit POS-60'}
+                            <Button
+                                variant="mystical"
+                                onClick={handleComplete}
+                                disabled={submitting || totalAnswered !== totalQuestions}
+                                className="min-w-[140px]"
+                            >
+                                {submitting ? 'Submitting...' : 'Complete & View'}
                             </Button>
                         )}
                     </div>
@@ -280,7 +301,7 @@ function PosAssessmentPageInner() {
 
 export default function PosAssessmentPage() {
     return (
-        <Suspense fallback={<div className="min-h-screen bg-slate-50 px-4 py-12 text-slate-600">Loading POS-60...</div>}>
+        <Suspense fallback={<div className="min-h-screen bg-slate-900 text-slate-400 flex items-center justify-center">Loading...</div>}>
             <PosAssessmentPageInner />
         </Suspense>
     )
