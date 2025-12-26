@@ -23,7 +23,7 @@ const loadBook1ChapterMetadata = (): Record<string, any> => {
 export async function GET(request: Request, { params }: { params: Promise<{ bookId: string }> }) {
   try {
     const { bookId } = await params;
-    
+
     // Determine if bookId is a number or UUID and query accordingly
     let book;
     if (/^\d+$/.test(bookId)) {
@@ -36,7 +36,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     if (book.length === 0) {
       return new NextResponse('Book Not Found', { status: 404 });
     }
-    
+
     // Get all chapters for the book using the actual book UUID
     const actualBookId = book[0].id;
     const bookChapters = await db.select({
@@ -175,27 +175,12 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
         sensoryDetail: scenes.sensoryDetail,
         internalConflict: scenes.internalConflict,
         beatGoal: scenes.beatGoal,
-        tarotSymbolism: scenes.tarotSymbolism,
-        heroJourneyStage: scenes.heroJourneyStage,
         pages: scenes.pages,
         symbolism: scenes.symbolism,
-        primaryTarotCard: scenes.primaryTarotCard,
-        secondaryTarotCards: scenes.secondaryTarotCards,
-        tarotCardId: scenes.tarotCardId,
-        tarotNarrativeRole: scenes.tarotNarrativeRole,
-        franciscoTarotConnection: scenes.franciscoTarotConnection,
-        laSignoraTarotConnection: scenes.laSignoraTarotConnection,
-        dagonTarotConnection: scenes.dagonTarotConnection,
         temporalPowerManifested: scenes.temporalPowerManifested,
         characterGrowthElement: scenes.characterGrowthElement,
         sceneCardProgression: scenes.sceneCardProgression,
-        cardReversalSignificance: scenes.cardReversalSignificance,
-        historicalDate: scenes.historicalDate,
-        storyTimelineDate: scenes.storyTimelineDate,
-        historicalEventIds: scenes.historicalEventIds,
-        temporalDivergencePoint: scenes.temporalDivergencePoint,
         realWorldContext: scenes.realWorldContext,
-        alternateTimelineVariant: scenes.alternateTimelineVariant,
         chronologicalSequence: scenes.chronologicalSequence,
         storySequence: scenes.storySequence,
         timelineSignificance: scenes.timelineSignificance,
@@ -207,7 +192,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
         core_emotion: scenes.core_emotion,
         scene_tone: scenes.scene_tone
       }).from(scenes).where(eq(scenes.chapterId, chapterId)).orderBy(asc(scenes.sceneNumber));
-      
+
       scenesByChapter.set(chapterId, chapterScenes);
     }
 
@@ -220,9 +205,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       const localMeta = book1Meta[chapterKey] || {};
 
       const focusArea = chapter.focusArea || localMeta.focus_area || chapter.focus;
-      const tarotFamily = chapter.tarotFamily 
-        || chapter.newTarotFamily 
-        || localMeta.tarot_family 
+      const tarotFamily = chapter.tarotFamily
+        || chapter.newTarotFamily
+        || localMeta.tarot_family
         || localMeta.new_tarot_family;
       const epicNovelPages = chapter.epicNovelPages || localMeta.epic_novel_pages;
       const epicPreliminarySceneDescription = chapter.epicPreliminarySceneDescription || localMeta.epic_preliminary_scene_description;
@@ -270,7 +255,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
     // Calculate statistics
     const totalScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) => sum + scenes.length, 0);
     const completedChapters = chaptersWithScenes.filter(c => c.title && c.summary && c.scenes.length > 0).length;
-    const completedScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) => 
+    const completedScenes = Array.from(scenesByChapter.values()).reduce((sum, scenes) =>
       sum + scenes.filter((s: { title: string | null; setup: string | null }) => s.title && s.setup).length, 0);
 
     // Get book theme based on book number
