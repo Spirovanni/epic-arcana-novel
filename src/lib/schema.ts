@@ -543,11 +543,26 @@ export const scenes = pgTable('scenes', {
   pages: varchar('pages', { length: 50 }),
   symbolism: text('symbolism'),
   // Enhanced Tarot Integration
+  tarotSymbolism: text('tarot_symbolism'),
+  heroJourneyStage: varchar('hero_journey_stage', { length: 100 }),
+  primaryTarotCard: varchar('primary_tarot_card', { length: 100 }),
+  secondaryTarotCards: jsonb('secondary_tarot_cards'),
+  tarotCardId: uuid('tarot_card_id').references(() => trionfiCards.id),
+  tarotNarrativeRole: varchar('tarot_narrative_role', { length: 255 }),
+  franciscoTarotConnection: text('francisco_tarot_connection'),
+  laSignoraTarotConnection: text('la_signora_tarot_connection'),
+  dagonTarotConnection: text('dagon_tarot_connection'),
   temporalPowerManifested: text('temporal_power_manifested'), // How card's temporal power appears
   characterGrowthElement: text('character_growth_element'), // Character development aspect
   sceneCardProgression: integer('scene_card_progression'), // Position in overall Tarot journey (1-78)
+  cardReversalSignificance: text('card_reversal_significance'),
   // Timeline Coordination
+  historicalDate: varchar('historical_date', { length: 50 }),
+  storyTimelineDate: varchar('story_timeline_date', { length: 50 }),
+  historicalEventIds: jsonb('historical_event_ids'),
+  temporalDivergencePoint: text('temporal_divergence_point'),
   realWorldContext: text('real_world_context'), // Historical context for the scene
+  alternateTimelineVariant: varchar('alternate_timeline_variant', { length: 100 }),
   chronologicalSequence: integer('chronological_sequence'), // Order in real chronology
   storySequence: integer('story_sequence'), // Order in narrative
   timelineSignificance: text('timeline_significance'), // Why this moment matters historically
