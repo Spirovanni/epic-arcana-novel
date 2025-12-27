@@ -12,7 +12,7 @@ type TaskGroup = typeof taskGroups.$inferSelect;
 export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
     const { chapterId } = await params;
-    
+
     // Get comprehensive chapter data
     const chapterData = await db
       .select({
@@ -23,17 +23,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
       .leftJoin(books, eq(chapters.bookId, books.id))
       .where(eq(chapters.id, chapterId))
       .limit(1);
-    
+
     if (chapterData.length === 0) {
       return new NextResponse('Chapter Not Found', { status: 404 });
     }
 
     const { chapter, book } = chapterData[0];
-    
+
     if (!book) {
       return new NextResponse('Book Not Found', { status: 404 });
     }
-    
+
     // Get scenes and task groups for context
     const chapterScenes = await db
       .select()
@@ -83,13 +83,11 @@ function generateWritingPrompts(chapter: Chapter, book: Book, chapterScenes: Sce
 
   // Scene-Based Prompts
   chapterScenes.forEach((scene) => {
-    if (scene.heroJourneyStage) {
-      prompts.push({
-        category: 'Scene Development',
-        title: `Scene ${scene.sceneNumber}: ${scene.title}`,
-        prompt: `Write Scene ${scene.sceneNumber} titled "${scene.title}". This scene represents the ${scene.heroJourneyStage} stage of the hero's journey. Focus: ${scene.focus}. ${scene.description} ${scene.tarotSymbolism ? `Incorporate tarot symbolism: ${scene.tarotSymbolism}` : ''}`
-      });
-    }
+    prompts.push({
+      category: 'Scene Development',
+      title: `Scene ${scene.sceneNumber}: ${scene.title}`,
+      prompt: `Write Scene ${scene.sceneNumber} titled "${scene.title}". Focus: ${scene.focus}. ${scene.description || ''}`
+    });
   });
 
   // Character Development Prompts
