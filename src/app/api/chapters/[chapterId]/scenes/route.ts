@@ -6,9 +6,9 @@ import { eq, desc } from 'drizzle-orm';
 export async function GET(request: Request, { params }: { params: Promise<{ chapterId: string }> }) {
   try {
     const { chapterId } = await params;
-    
+
     console.log(`[SCENES API] Fetching scenes for chapter ID: ${chapterId}`);
-    
+
     const chapterScenes = await db
       .select()
       .from(scenes)
@@ -31,7 +31,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ cha
   try {
     const { chapterId } = await params;
     const data = await request.json();
-    
+
     // Get the next scene number for this chapter
     const lastScene = await db
       .select()
@@ -39,9 +39,9 @@ export async function POST(request: Request, { params }: { params: Promise<{ cha
       .where(eq(scenes.chapterId, chapterId))
       .orderBy(desc(scenes.sceneNumber))
       .limit(1);
-    
+
     const nextSceneNumber = lastScene.length > 0 ? lastScene[0].sceneNumber + 1 : 1;
-    
+
     const newScene = await db
       .insert(scenes)
       .values({
@@ -56,30 +56,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ cha
         beatGoal: data.beatGoal,
         preliminarySceneFocus: data.preliminarySceneFocus,
         preliminarySceneDescription: data.preliminarySceneDescription,
-        tarotSymbolism: data.tarotSymbolism,
-        heroJourneyStage: data.heroJourneyStage,
         pages: data.pages,
-        primaryTarotCard: data.primaryTarotCard,
-        secondaryTarotCards: data.secondaryTarotCards,
-        tarotCardId: data.tarotCardId,
-        tarotNarrativeRole: data.tarotNarrativeRole,
-        franciscoTarotConnection: data.franciscoTarotConnection,
-        laSignoraTarotConnection: data.laSignoraTarotConnection,
-        dagonTarotConnection: data.dagonTarotConnection,
+        symbolism: data.symbolism,
         temporalPowerManifested: data.temporalPowerManifested,
         characterGrowthElement: data.characterGrowthElement,
         sceneCardProgression: data.sceneCardProgression,
-        cardReversalSignificance: data.cardReversalSignificance,
-        historicalDate: data.historicalDate,
-        storyTimelineDate: data.storyTimelineDate,
-        historicalEventIds: data.historicalEventIds,
-        temporalDivergencePoint: data.temporalDivergencePoint,
         realWorldContext: data.realWorldContext,
-        alternateTimelineVariant: data.alternateTimelineVariant,
         chronologicalSequence: data.chronologicalSequence,
         storySequence: data.storySequence,
         timelineSignificance: data.timelineSignificance,
-        // Timeline and context fields
         timeline_date: data.timeline_date,
         timeline_variant: data.timeline_variant,
         location: data.location,
