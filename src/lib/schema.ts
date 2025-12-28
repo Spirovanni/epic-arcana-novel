@@ -532,9 +532,11 @@ export const scenes = pgTable('scenes', {
   sceneNumber: integer('scene_number').notNull(),
   title: varchar('title', { length: 255 }),
   focus: varchar('focus', { length: 255 }),
+  chapterSceneFocus: varchar('chapter_scene_focus', { length: 255 }),
   preliminarySceneFocus: varchar('preliminary_scene_focus', { length: 255 }),
   preliminarySceneDescription: text('preliminary_scene_description'),
   description: text('description'),
+  narrativeFunction: text('narrative_function'),
   // Scene Structure Fields
   setup: text('setup'),
   sensoryDetail: text('sensory_detail'),
@@ -542,38 +544,27 @@ export const scenes = pgTable('scenes', {
   beatGoal: text('beat_goal'),
   pages: varchar('pages', { length: 50 }),
   symbolism: text('symbolism'),
-  // Enhanced Tarot Integration
-  tarotSymbolism: text('tarot_symbolism'),
-  heroJourneyStage: varchar('hero_journey_stage', { length: 100 }),
-  primaryTarotCard: varchar('primary_tarot_card', { length: 100 }),
-  secondaryTarotCards: jsonb('secondary_tarot_cards'),
-  tarotCardId: uuid('tarot_card_id').references(() => trionfiCards.id),
-  tarotNarrativeRole: varchar('tarot_narrative_role', { length: 255 }),
-  franciscoTarotConnection: text('francisco_tarot_connection'),
-  laSignoraTarotConnection: text('la_signora_tarot_connection'),
-  dagonTarotConnection: text('dagon_tarot_connection'),
-  temporalPowerManifested: text('temporal_power_manifested'), // How card's temporal power appears
-  characterGrowthElement: text('character_growth_element'), // Character development aspect
-  sceneCardProgression: integer('scene_card_progression'), // Position in overall Tarot journey (1-78)
-  cardReversalSignificance: text('card_reversal_significance'),
-  // Timeline Coordination
-  historicalDate: varchar('historical_date', { length: 50 }),
-  storyTimelineDate: varchar('story_timeline_date', { length: 50 }),
-  historicalEventIds: jsonb('historical_event_ids'),
-  temporalDivergencePoint: text('temporal_divergence_point'),
-  realWorldContext: text('real_world_context'), // Historical context for the scene
-  alternateTimelineVariant: varchar('alternate_timeline_variant', { length: 100 }),
-  chronologicalSequence: integer('chronological_sequence'), // Order in real chronology
-  storySequence: integer('story_sequence'), // Order in narrative
-  timelineSignificance: text('timeline_significance'), // Why this moment matters historically
-  // Additional timeline and context fields from l_outline.json
-  timeline_date: varchar('timeline_date', { length: 50 }), // e.g., "1/10/1320"
-  timeline_variant: varchar('timeline_variant', { length: 100 }), // e.g., "Prime Timeline", "Timeline Fracture"
-  location: varchar('location', { length: 255 }), // e.g., "Bologna City Square, Italy"
-  pov: varchar('pov', { length: 100 }), // Point of view character or style
-  tense: varchar('tense', { length: 100 }), // Narrative tense
-  core_emotion: varchar('core_emotion', { length: 255 }), // Primary emotional state
-  scene_tone: varchar('scene_tone', { length: 255 }), // Overall atmosphere/tone
+  // Save the Cat Beat (exists in DB)
+  saveTheCatBeat: varchar('save_the_cat_beat', { length: 255 }),
+  // Temporal/Timeline Fields (only those that exist in DB)
+  temporalPowerManifested: text('temporal_power_manifested'),
+  characterGrowthElement: text('character_growth_element'),
+  sceneCardProgression: integer('scene_card_progression'),
+  realWorldContext: text('real_world_context'),
+  chronologicalSequence: integer('chronological_sequence'),
+  storySequence: integer('story_sequence'),
+  timelineSignificance: text('timeline_significance'),
+  timeline_date: varchar('timeline_date', { length: 50 }),
+  timeline_variant: varchar('timeline_variant', { length: 100 }),
+  location: varchar('location', { length: 255 }),
+  pov: varchar('pov', { length: 100 }),
+  tense: varchar('tense', { length: 100 }),
+  core_emotion: varchar('core_emotion', { length: 255 }),
+  scene_tone: varchar('scene_tone', { length: 255 }),
+  seriesConnectionResonance: text('series_connection_resonance'),
+  sudowrite_metadata: jsonb('sudowrite_metadata'),
+  learning_objectives: jsonb('learning_objectives'),
+  foreshadowing_elements: jsonb('foreshadowing_elements'),
   createdAt: timestamp('created_at').defaultNow(),
   updatedAt: timestamp('updated_at').defaultNow(),
 });
