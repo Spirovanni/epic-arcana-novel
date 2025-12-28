@@ -73,27 +73,33 @@ async function main() {
   const chapter23 = chapter23Records[0];
   console.log(`✅ Found Chapter 23 in database\n`);
 
-  // Update Chapter with missing fields
+  // Update Chapter with missing fields (respecting varchar limits)
   console.log('📝 Updating Chapter 23 fields...');
 
+  const truncate = (value: string | null | undefined, maxLength: number): string | null => {
+    if (!value) return null;
+    if (value.length <= maxLength) return value;
+    return value.substring(0, maxLength - 3) + '...';
+  };
+
   const chapterUpdates = {
-    epicNovelPages: ea023Data.epic_novel_pages || null,
-    epicChapterFocus: ea023Data.epic_chapter_focus || null,
-    epicNovelChapterFocus: ea023Data.epic_novel_chapter_focus || null,
-    epicNovelSectionName: ea023Data.epic_novel_section_name || null,
-    tarotCardLink: ea023Data.tarot_card_link || null,
-    tarotFamily: ea023Data.tarot_family || null,
-    tarotCardItem: ea023Data.tarot_card_item || null,
-    newTarotFamily: ea023Data.new_tarot_family || null,
+    epicNovelPages: truncate(ea023Data.epic_novel_pages, 50),
+    epicChapterFocus: truncate(ea023Data.epic_chapter_focus, 255),
+    epicNovelChapterFocus: truncate(ea023Data.epic_novel_chapter_focus, 255),
+    epicNovelSectionName: truncate(ea023Data.epic_novel_section_name, 255),
+    tarotCardLink: truncate(ea023Data.tarot_card_link, 100),
+    tarotFamily: truncate(ea023Data.tarot_family, 50),
+    tarotCardItem: truncate(ea023Data.tarot_card_item, 50),
+    newTarotFamily: truncate(ea023Data.new_tarot_family, 50),
     connectionToMajorTaskGroup: ea023Data.connection_to_the_major_task_group || null,
     specificTaskGroupBooksInfluencedBy: ea023Data.major_activity_theme_books_influenced_by || null,
-    epicPreliminarySceneFocus: ea023Data.epic_preliminary_scene_focus || null,
+    epicPreliminarySceneFocus: truncate(ea023Data.epic_preliminary_scene_focus, 255),
     epicPreliminarySceneDescription: ea023Data.epic_preliminary_scene_description || null,
     summary: ea023Data.summary || null,
-    heroJourneyBeat: ea023Data.hero_journey_beat || null,
-    saveTheCatBeat: ea023Data.save_the_cat_beat || null,
+    heroJourneyBeat: truncate(ea023Data.hero_journey_beat, 100),
+    saveTheCatBeat: truncate(ea023Data.save_the_cat_beat, 100),
     saveTheCatBeatGoal: ea023Data.save_the_cat_beat_goal || null,
-    plotBeat: ea023Data.plot || null,
+    plotBeat: truncate(ea023Data.plot, 100),
     characterArcs: ea023Data.character_arcs || null,
     storyGapsAddressed: ea023Data.story_gaps_addressed || null,
     locationDetails: ea023Data.location_details || null,
