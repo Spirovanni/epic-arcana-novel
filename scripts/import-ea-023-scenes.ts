@@ -1,12 +1,7 @@
-import { drizzle } from 'drizzle-orm/neon-http';
-import { neon } from '@neondatabase/serverless';
 import { eq } from 'drizzle-orm';
+import { db } from '../src/lib/db';
 import { chapters, scenes } from '../src/lib/schema';
 import outlineData from '../data/l_outline.json';
-
-// Initialize database connection
-const sql = neon(process.env.DATABASE_URL!);
-const db = drizzle(sql);
 
 interface OutlineScene {
   scene_number: number;
@@ -41,46 +36,25 @@ interface EA023Data {
 }
 
 function findEA023Data(): EA023Data | null {
-  // Navigate through the outline structure to find EA-023
-  const series = (outlineData as any).SelfImprovementSeries;
-  if (!series?.Books?.trilogies) return null;
+  // Recursively search for EA-023 in the outline structure
+  const search = (obj: any): EA023Data | null => {
+    if (!obj || typeof obj !== 'object') return null;
 
-  // Search through all trilogies and books for EA-023
-  for (const trilogyKey of Object.keys(series.Books.trilogies)) {
-    const trilogy = series.Books.trilogies[trilogyKey];
-    if (!trilogy?.trilogy_books) continue;
-
-    for (const bookKey of Object.keys(trilogy.trilogy_books)) {
-      const book = trilogy.trilogy_books[bookKey];
-
-      // Check task_masters
-      if (book?.task_masters) {
-        for (const tmKey of Object.keys(book.task_masters)) {
-          const tm = book.task_masters[tmKey];
-
-          // Check major_task_groups
-          if (tm?.major_task_groups) {
-            for (const mtgKey of Object.keys(tm.major_task_groups)) {
-              const mtg = tm.major_task_groups[mtgKey];
-
-              // Check major_activity_themes
-              if (mtg?.major_activity_themes) {
-                for (const matKey of Object.keys(mtg.major_activity_themes)) {
-                  const mat = mtg.major_activity_themes[matKey];
-
-                  if (mat?.id === 'EA-023') {
-                    return mat as EA023Data;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
+    // Check if this object is EA-023
+    if (obj.id === 'EA-023') {
+      return obj as EA023Data;
     }
-  }
 
-  return null;
+    // Recursively search all properties
+    for (const key of Object.keys(obj)) {
+      const result = search(obj[key]);
+      if (result) return result;
+    }
+
+    return null;
+  };
+
+  return search(outlineData);
 }
 
 async function main() {
@@ -142,6 +116,8 @@ async function main() {
   console.log(`\n📝 Inserting ${ea023Data.scenes.length} scenes...`);
 
   for (const sceneData of ea023Data.scenes) {
+    // Extract all the fields from the scene and chapter data
+    // Using correct field names from the schema
     const sceneInsert = {
       chapterId: chapter.id,
       sceneNumber: sceneData.scene_number,
@@ -150,12 +126,18 @@ async function main() {
       preliminarySceneFocus: ea023Data.epic_preliminary_scene_focus?.substring(0, 255) || null,
       preliminarySceneDescription: ea023Data.epic_preliminary_scene_description || null,
       description: sceneData.setup || null,
-      tarotSymbolism: sceneData.symbolism || null,
-      heroJourneyStage: ea023Data.hero_journey_beat?.substring(0, 100) || null,
+      setup: sceneData.setup || null,
+      symbolism: sceneData.symbolism || null,
+      beatGoal: sceneData.beat_goal || null,
+      saveTheCatBeat: ea023Data.save_the_cat_beat?.substring(0, 255) || null,
       pages: ea023Data.epic_novel_pages?.substring(0, 50) || null,
-      primaryTarotCard: ea023Data.tarot_card_item?.substring(0, 100) || null,
-      historicalDate: sceneData.timeline_date?.substring(0, 50) || null,
-      alternateTimelineVariant: sceneData.timeline_variant?.substring(0, 100) || null,
+      timeline_date: sceneData.timeline_date?.substring(0, 50) || null,
+      timeline_variant: sceneData.timeline_variant?.substring(0, 100) || null,
+      location: sceneData.location?.substring(0, 255) || null,
+      pov: sceneData.pov?.substring(0, 100) || null,
+      tense: sceneData.tense?.substring(0, 100) || null,
+      core_emotion: sceneData.core_emotion?.substring(0, 255) || null,
+      scene_tone: sceneData.scene_tone?.substring(0, 255) || null,
       storySequence: sceneData.scene_number,
       chronologicalSequence: sceneData.scene_number,
     };
@@ -163,6 +145,8 @@ async function main() {
     await db.insert(scenes).values(sceneInsert);
 
     console.log(`   ✓ Scene ${sceneData.scene_number}: ${sceneData.scene_title}`);
+    console.log(`      POV: ${sceneData.pov || 'N/A'}, Tense: ${sceneData.tense || 'N/A'}`);
+    console.log(`      Location: ${sceneData.location || 'N/A'}, Date: ${sceneData.timeline_date || 'N/A'}`);
   }
 
   console.log(`\n✅ Successfully imported ${ea023Data.scenes.length} scenes for EA-023`);
