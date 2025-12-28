@@ -166,6 +166,7 @@ async function main() {
       .insert(scenes)
       .values({
         chapterId: ch44.id,
+        chapterUniqueIdentifier: 'EA-044',
         sceneNumber: sceneData.scene_number,
         title: sceneData.scene_title,
         setup: sceneData.symbolism,
@@ -386,7 +387,7 @@ async function main() {
       'realWorldContext', 'timelineSignificance', 'saveTheCatBeat', 'sudowrite_metadata',
       'learning_objectives', 'foreshadowing_elements', 'sceneNumber', 'title', 'setup',
       'symbolism', 'beatGoal', 'pov', 'tense', 'core_emotion', 'scene_tone', 'timeline_date',
-      'timeline_variant', 'location',
+      'timeline_variant', 'location', 'chapterUniqueIdentifier',
     ];
 
     const populatedCount = fields.filter(field => verifiedScene[field as keyof typeof verifiedScene] != null).length;
