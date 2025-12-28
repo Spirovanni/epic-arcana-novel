@@ -397,7 +397,7 @@ export function buildSceneValuesFromOutline(
   // ONLY including fields that exist in the actual database
   const base: SceneValueDraft = {
     sceneNumber,
-    chapterUniqueIdentifier: chapterContext.uniqueIdentifier || chapterContext.outlineId,
+    chapterUniqueIdentifier: chapterContext.outlineId || chapterContext.uniqueIdentifier,
 
     // Title field
     title: truncate(cleanse(raw.scene_title || raw.title)) || undefined,
