@@ -11,18 +11,15 @@ export async function GET() {
 
     // Fetch timeline events
     const events = await db.select().from(timelineEvents).orderBy(timelineEvents.year);
-    
+
     // Fetch scenes with their timeline data
     const scenesData = await db.select({
       id: scenes.id,
       sceneNumber: scenes.sceneNumber,
       title: scenes.title,
-      historicalDate: scenes.historicalDate,
-      alternateTimelineVariant: scenes.alternateTimelineVariant,
-      temporalDivergencePoint: scenes.temporalDivergencePoint,
+      timeline_date: scenes.timeline_date,
+      timeline_variant: scenes.timeline_variant,
       realWorldContext: scenes.realWorldContext,
-      heroJourneyStage: scenes.heroJourneyStage,
-      primaryTarotCard: scenes.primaryTarotCard,
       timelineSignificance: scenes.timelineSignificance,
       chronologicalSequence: scenes.chronologicalSequence
     }).from(scenes).orderBy(scenes.sceneNumber);
@@ -45,12 +42,9 @@ export async function GET() {
         id: scene.id,
         sceneNumber: scene.sceneNumber,
         title: scene.title,
-        historicalDate: scene.historicalDate,
-        alternateTimelineVariant: scene.alternateTimelineVariant || 'Unknown',
-        temporalDivergencePoint: scene.temporalDivergencePoint || 'No divergence recorded',
+        timeline_date: scene.timeline_date,
+        timeline_variant: scene.timeline_variant || 'Unknown',
         realWorldContext: scene.realWorldContext || 'Context not available',
-        heroJourneyStage: scene.heroJourneyStage || 'Unknown',
-        primaryTarotCard: scene.primaryTarotCard || 'No card assigned',
         timelineSignificance: scene.timelineSignificance,
         chronologicalSequence: scene.chronologicalSequence
       }))

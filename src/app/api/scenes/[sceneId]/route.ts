@@ -82,25 +82,19 @@ export async function PUT(request: Request, { params }: { params: Promise<{ scen
 
     // Convert camelCase to snake_case for database fields
     const updateData: Partial<typeof scenes.$inferInsert> = {};
-    
+
     // Map frontend field names to database column names
     const fieldMappings: { [key: string]: keyof typeof scenes.$inferInsert } = {
       'title': 'title',
-      'focus': 'focus', 
+      'focus': 'focus',
       'description': 'description',
       'setup': 'setup',
       'sensoryDetail': 'sensoryDetail',
-      'internalConflict': 'internalConflict', 
+      'internalConflict': 'internalConflict',
       'beatGoal': 'beatGoal',
       'beat_goal': 'beatGoal',
       'symbolism': 'symbolism',
-      'tarotSymbolism': 'tarotSymbolism',
-      'heroJourneyStage': 'heroJourneyStage',
       'pages': 'pages',
-      'primaryTarotCard': 'primaryTarotCard',
-      'secondaryTarotCards': 'secondaryTarotCards',
-      'preliminarySceneFocus': 'preliminarySceneFocus',
-      'preliminarySceneDescription': 'preliminarySceneDescription',
       // Timeline and context fields
       'timeline_date': 'timeline_date',
       'timeline_variant': 'timeline_variant',
@@ -110,7 +104,6 @@ export async function PUT(request: Request, { params }: { params: Promise<{ scen
       'core_emotion': 'core_emotion',
       'scene_tone': 'scene_tone',
       'chronologicalSequence': 'chronologicalSequence',
-      'temporalDivergencePoint': 'temporalDivergencePoint',
       'realWorldContext': 'realWorldContext',
       'timelineSignificance': 'timelineSignificance'
     };
