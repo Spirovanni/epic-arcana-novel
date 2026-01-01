@@ -204,29 +204,29 @@ const fetchBookOutline = async (bookRow: { id: string; bookNumber: number; title
 
   const allScenes = chapterIds.length
     ? await db
-        .select({
-          id: scenes.id,
-          chapterId: scenes.chapterId,
-          sceneNumber: scenes.sceneNumber,
-          title: scenes.title,
-          description: scenes.description,
-          setup: scenes.setup,
-          beatGoal: scenes.beatGoal,
-          pov: scenes.pov,
-          location: scenes.location,
-          timeline_date: scenes.timeline_date,
-          core_emotion: scenes.core_emotion,
-          scene_tone: scenes.scene_tone,
-          internalConflict: scenes.internalConflict,
-          sensoryDetail: scenes.sensoryDetail,
-          symbolism: scenes.symbolism,
-          characterGrowthElement: scenes.characterGrowthElement,
-          temporalPowerManifested: scenes.temporalPowerManifested,
-          timelineSignificance: scenes.timelineSignificance,
-        })
-        .from(scenes)
-        .where(inArray(scenes.chapterId, chapterIds))
-        .orderBy(asc(scenes.sceneNumber))
+      .select({
+        id: scenes.id,
+        chapterId: scenes.chapterId,
+        sceneNumber: scenes.sceneNumber,
+        title: scenes.title,
+        description: scenes.description,
+        setup: scenes.setup,
+        beatGoal: scenes.beatGoal,
+        pov: scenes.pov,
+        location: scenes.location,
+        timeline_date: scenes.timeline_date,
+        core_emotion: scenes.core_emotion,
+        scene_tone: scenes.scene_tone,
+        internalConflict: scenes.internalConflict,
+        sensoryDetail: scenes.sensoryDetail,
+        symbolism: scenes.symbolism,
+        characterGrowthElement: scenes.characterGrowthElement,
+        temporalPowerManifested: scenes.temporalPowerManifested,
+        timelineSignificance: scenes.timelineSignificance,
+      })
+      .from(scenes)
+      .where(inArray(scenes.chapterId, chapterIds))
+      .orderBy(asc(scenes.sceneNumber))
     : [];
 
   const scenesByChapter = allScenes.reduce<Map<string, OutlineScene[]>>((acc, scene) => {
@@ -334,7 +334,7 @@ export async function GET(request: Request) {
 
     const pdfBuffer = await buildPdfBuffer(outlines);
 
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(Uint8Array.from(pdfBuffer), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
