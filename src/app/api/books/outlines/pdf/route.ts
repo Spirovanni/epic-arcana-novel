@@ -98,7 +98,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Buffer> => {
     const doc = new PDFDocument({ margin: 50, autoFirstPage: false });
     const chunks: Buffer[] = [];
 
-    doc.on('data', (chunk) => chunks.push(chunk));
+    doc.on('data', (chunk: Buffer) => chunks.push(chunk));
     doc.on('error', reject);
     doc.on('end', () => resolve(Buffer.concat(chunks)));
 
