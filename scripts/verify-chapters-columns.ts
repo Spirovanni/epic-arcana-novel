@@ -37,8 +37,6 @@ async function verifyColumns() {
       }
     }
     
-    const found = existingColumns.rows.map((r: any) => r.column_name);
-    
     if (found.length === 0) {
       console.log('✅ SUCCESS: All scene-specific columns have been removed from the chapters table!');
       console.log(`   Verified removal of ${removedColumns.length} columns.\n`);
