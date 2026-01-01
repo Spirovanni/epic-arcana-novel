@@ -27,13 +27,9 @@ type OutlineScene = {
   timeline_date?: string | null;
   core_emotion?: string | null;
   scene_tone?: string | null;
-  primaryTarotCard?: string | null;
   internalConflict?: string | null;
   sensoryDetail?: string | null;
   symbolism?: string | null;
-  tarotSymbolism?: string | null;
-  tarotNarrativeRole?: string | null;
-  heroJourneyStage?: string | null;
   characterGrowthElement?: string | null;
   temporalPowerManifested?: string | null;
   timelineSignificance?: string | null;
@@ -85,7 +81,6 @@ const formatSceneForSudowrite = (scene: OutlineScene): string => {
   if (scene.temporalPowerManifested) elements.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
   if (scene.characterGrowthElement) elements.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
   if (scene.timelineSignificance) elements.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
-  if (scene.primaryTarotCard) elements.push(`TAROT CARD: ${scene.primaryTarotCard}`);
   if (scene.symbolism) elements.push(`SYMBOLISM: ${scene.symbolism}`);
   if (scene.internalConflict) elements.push(`INTERNAL CONFLICT: ${scene.internalConflict}`);
   if (scene.sensoryDetail) elements.push(`SENSORY: ${scene.sensoryDetail}`);
@@ -222,13 +217,9 @@ const fetchBookOutline = async (bookRow: { id: string; bookNumber: number; title
           timeline_date: scenes.timeline_date,
           core_emotion: scenes.core_emotion,
           scene_tone: scenes.scene_tone,
-          primaryTarotCard: scenes.primaryTarotCard,
           internalConflict: scenes.internalConflict,
           sensoryDetail: scenes.sensoryDetail,
           symbolism: scenes.symbolism,
-          tarotSymbolism: scenes.tarotSymbolism,
-          tarotNarrativeRole: scenes.tarotNarrativeRole,
-          heroJourneyStage: scenes.heroJourneyStage,
           characterGrowthElement: scenes.characterGrowthElement,
           temporalPowerManifested: scenes.temporalPowerManifested,
           timelineSignificance: scenes.timelineSignificance,
