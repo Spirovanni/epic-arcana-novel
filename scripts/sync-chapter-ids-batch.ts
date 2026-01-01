@@ -29,64 +29,95 @@ interface ChapterData {
 }
 
 /**
+ * Recursively traverse JSON to find all objects with EA- IDs
+ */
+function findAllChaptersRecursive(obj: any, path: string = ''): ChapterData[] {
+  const chapters: ChapterData[] = [];
+  
+  if (typeof obj !== 'object' || obj === null) {
+    return chapters;
+  }
+  
+  // Check if this object is a chapter with EA- ID
+  if (obj.id && typeof obj.id === 'string' && obj.id.startsWith('EA-')) {
+    const chapterMatch = obj.chapter?.match(/(\d+)/);
+    const chapterNumber = chapterMatch ? parseInt(chapterMatch[1], 10) : null;
+    
+    // Extract EA- number to help determine book
+    const eaMatch = obj.id.match(/EA-(\d+)/);
+    const eaNumber = eaMatch ? parseInt(eaMatch[1], 10) : null;
+    
+    // Determine book number from EA- number (each book has ~40 chapters)
+    // EA-001 to EA-040 = Book 1, EA-041 to EA-080 = Book 2, etc.
+    let novelBook = obj.novel_book;
+    if (!novelBook && eaNumber) {
+      novelBook = Math.ceil(eaNumber / 40);
+      if (novelBook > 9) novelBook = 9; // Cap at book 9
+    }
+    
+    // Use all_chapter or infer from EA number
+    let allChapter = obj.all_chapter;
+    if (!allChapter && novelBook && eaNumber) {
+      // EA numbers are sequential across all books, so for book N:
+      // all_chapter = EA number - (book-1) * 40
+      allChapter = eaNumber - ((novelBook - 1) * 40);
+      if (allChapter < 1 || allChapter > 40) {
+        // Fallback: just use chapter number from chapter field
+        allChapter = chapterNumber || eaNumber;
+      }
+    }
+    if (!allChapter) {
+      allChapter = chapterNumber || eaNumber || 0;
+    }
+    
+    chapters.push({
+      id: obj.id,
+      unique_identifier: obj.unique_identifier || '',
+      chapter: obj.chapter || '',
+      novel_book: novelBook || 1,
+      all_chapter: allChapter,
+    });
+  }
+  
+  // Recursively search in all child objects/arrays
+  for (const key in obj) {
+    if (Array.isArray(obj[key])) {
+      for (const item of obj[key]) {
+        chapters.push(...findAllChaptersRecursive(item, `${path}.${key}[]`));
+      }
+    } else if (typeof obj[key] === 'object' && obj[key] !== null) {
+      chapters.push(...findAllChaptersRecursive(obj[key], `${path}.${key}`));
+    }
+  }
+  
+  return chapters;
+}
+
+/**
  * Extract all chapters from l_outline.json with their IDs and unique_identifiers
  */
 function extractChaptersFromOutline(outlineData: any): ChapterData[] {
-  const chapters: ChapterData[] = [];
+  // Use recursive search to find ALL chapters with EA- IDs
+  const allChapters = findAllChaptersRecursive(outlineData);
   
-  const trilogyBooks = outlineData.SelfImprovementSeries?.Books?.trilogies;
-  if (!trilogyBooks) {
-    throw new Error('Trilogy books not found in l_outline.json');
-  }
-  
-  // Traverse all books, task masters, major task groups, and specific task groups
-  for (const trilogyKey of Object.keys(trilogyBooks)) {
-    const trilogy = trilogyBooks[trilogyKey];
-    const trilogyBooksObj = trilogy?.trilogy_books;
-    
-    if (!trilogyBooksObj) continue;
-    
-    for (const bookKey of Object.keys(trilogyBooksObj)) {
-      const book = trilogyBooksObj[bookKey];
-      const taskMasters = book?.task_masters;
-      
-      if (!taskMasters) continue;
-      
-      for (const taskMasterKey of Object.keys(taskMasters)) {
-        const taskMaster = taskMasters[taskMasterKey];
-        const majorTaskGroups = taskMaster?.major_task_groups;
-        
-        if (!majorTaskGroups) continue;
-        
-        for (const majorTaskGroupKey of Object.keys(majorTaskGroups)) {
-          const majorTaskGroup = majorTaskGroups[majorTaskGroupKey];
-          const specificTaskGroups = majorTaskGroup?.specific_task_groups;
-          
-          if (!specificTaskGroups) continue;
-          
-          for (const specificTaskGroupKey of Object.keys(specificTaskGroups)) {
-            const specificTaskGroup = specificTaskGroups[specificTaskGroupKey];
-            
-            // Extract chapter data
-            if (specificTaskGroup.id && specificTaskGroup.unique_identifier) {
-              const chapterMatch = specificTaskGroup.chapter?.match(/(\d+)/);
-              const chapterNumber = chapterMatch ? parseInt(chapterMatch[1], 10) : null;
-              
-              if (chapterNumber && specificTaskGroup.novel_book) {
-                chapters.push({
-                  id: specificTaskGroup.id, // EA-001, etc.
-                  unique_identifier: specificTaskGroup.unique_identifier, // STG 1.1.1.1, etc.
-                  chapter: specificTaskGroup.chapter,
-                  novel_book: specificTaskGroup.novel_book,
-                  all_chapter: specificTaskGroup.all_chapter || chapterNumber,
-                });
-              }
-            }
-          }
-        }
+  // Remove duplicates (in case same chapter appears multiple times)
+  const uniqueChapters = new Map<string, ChapterData>();
+  for (const chapter of allChapters) {
+    const key = chapter.id;
+    if (!uniqueChapters.has(key)) {
+      uniqueChapters.set(key, chapter);
+    } else {
+      // If duplicate, prefer the one with more complete data
+      const existing = uniqueChapters.get(key)!;
+      if ((!existing.unique_identifier && chapter.unique_identifier) ||
+          (!existing.novel_book && chapter.novel_book) ||
+          (!existing.all_chapter && chapter.all_chapter)) {
+        uniqueChapters.set(key, chapter);
       }
     }
   }
+  
+  const chapters = Array.from(uniqueChapters.values());
   
   // Sort by book number and chapter number
   chapters.sort((a, b) => {
@@ -165,18 +196,28 @@ async function syncChapterIds(startIndex: number = 0, count: number = 10) {
       const chapter = existingChapters[0];
       
       // Validate that unique_identifier doesn't start with EA-
-      const uniqueIdentifier = chapterData.unique_identifier?.startsWith('EA-')
-        ? null  // Don't set if it starts with EA-
-        : chapterData.unique_identifier;
+      // If unique_identifier starts with EA-, don't update it (keep existing value)
+      let uniqueIdentifier = chapterData.unique_identifier;
+      if (!uniqueIdentifier || uniqueIdentifier.startsWith('EA-')) {
+        // Keep existing unique_identifier if the new one is invalid or starts with EA-
+        uniqueIdentifier = chapter.uniqueIdentifier || null;
+      }
+      
+      // Prepare update data
+      const updateData: any = {
+        chapterId: chapterData.id, // EA-001, EA-002, etc.
+        updatedAt: new Date(),
+      };
+      
+      // Only update unique_identifier if we have a valid one
+      if (uniqueIdentifier && !uniqueIdentifier.startsWith('EA-')) {
+        updateData.uniqueIdentifier = uniqueIdentifier;
+      }
       
       // Update the chapter
       await db
         .update(chapters)
-        .set({
-          chapterId: chapterData.id, // EA-001, EA-002, etc.
-          uniqueIdentifier: uniqueIdentifier || chapter.uniqueIdentifier, // Only update if it doesn't start with EA-
-          updatedAt: new Date(),
-        })
+        .set(updateData)
         .where(eq(chapters.id, chapter.id));
       
       console.log(`✅ Updated: Book ${chapterData.novel_book}, Chapter ${chapterData.all_chapter}`);
