@@ -10,10 +10,49 @@ export async function GET(request: Request, { params }: { params: Promise<{ chap
     // Log the chapter ID being requested for debugging
     console.log(`API: Fetching chapter with ID: ${chapterId}`);
     
-    // Get chapter with book information
+    // Get chapter with book information (explicitly select columns that exist)
     const chapterData = await db
       .select({
-        chapter: chapters,
+        chapter: {
+          id: chapters.id,
+          bookId: chapters.bookId,
+          majorTaskGroupId: chapters.majorTaskGroupId,
+          chapterNumber: chapters.chapterNumber,
+          chapterId: chapters.chapterId,
+          uniqueIdentifier: chapters.uniqueIdentifier,
+          title: chapters.title,
+          focus: chapters.focus,
+          epicNovelPages: chapters.epicNovelPages,
+          epicChapterFocus: chapters.epicChapterFocus,
+          epicNovelChapterFocus: chapters.epicNovelChapterFocus,
+          epicNovelSectionName: chapters.epicNovelSectionName,
+          description: chapters.description,
+          tarotCardLink: chapters.tarotCardLink,
+          tarotFamily: chapters.tarotFamily,
+          tarotCardItem: chapters.tarotCardItem,
+          colorTheme: chapters.colorTheme,
+          iconPath: chapters.iconPath,
+          type: chapters.type,
+          colorName: chapters.colorName,
+          hexCode: chapters.hexCode,
+          red: chapters.red,
+          green: chapters.green,
+          blue: chapters.blue,
+          focusArea: chapters.focusArea,
+          connectionToMajorTaskGroup: chapters.connectionToMajorTaskGroup,
+          specificTaskGroupDescription: chapters.specificTaskGroupDescription,
+          specificTaskGroupTagline: chapters.specificTaskGroupTagline,
+          specificTaskGroupBooksInfluencedBy: chapters.specificTaskGroupBooksInfluencedBy,
+          terminalLearningObjectives: chapters.terminalLearningObjectives,
+          summary: chapters.summary,
+          characterArcs: chapters.characterArcs,
+          storyGapsAddressed: chapters.storyGapsAddressed,
+          epicPreliminarySceneFocus: chapters.epicPreliminarySceneFocus,
+          epicPreliminarySceneDescription: chapters.epicPreliminarySceneDescription,
+          newTarotFamily: chapters.newTarotFamily,
+          createdAt: chapters.createdAt,
+          updatedAt: chapters.updatedAt,
+        },
         book: books
       })
       .from(chapters)
