@@ -104,10 +104,6 @@ interface Chapter {
   specificTaskGroupDescription?: string | null;
   specificTaskGroupTagline?: string | null;
   specificTaskGroupBooksInfluencedBy?: string[] | null;
-  pov?: string | null;
-  tense?: string | null;
-  coreEmotion?: string | null;
-  sceneTone?: string | null;
   colorName?: string | null;
   hexCode?: string | null;
   red?: number | null;
@@ -123,22 +119,9 @@ interface Chapter {
   tarotFamily?: string | null;
   tarotCardLink?: string | null;
   terminalLearningObjectives?: Record<string, unknown>;
-  // Story structure fields
-  sceneNumber?: number | null;
-  heroJourneyBeat?: string | null;
-  heroJourneyBeatObjective?: string | null;
-  plotBeat?: string | null;
-  saveTheCatBeat?: string | null;
-  saveTheCatBeatGoal?: string | null;
   // JSON metadata fields
   characterArcs?: Record<string, unknown> | null;
   storyGapsAddressed?: Record<string, unknown> | null;
-  locationDetails?: Record<string, unknown> | null;
-  seriesConnections?: Record<string, unknown> | null;
-  // Relationship identifiers
-  taskMasterKey?: string | null;
-  majorTaskGroupKey?: string | null;
-  specificTaskGroupKey?: string | null;
   // Learning system data
   learningResources?: LearningResource[];
   scenes: Scene[];
@@ -599,15 +582,11 @@ const ChapterCard = ({
     tarotCardLink: chapter.tarotCardLink || '',
     tarotFamily: chapter.tarotFamily || '',
     tarotCardItem: chapter.tarotCardItem || '',
-    connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
-    specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
-    specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
-    specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
-    pov: chapter.pov || '',
-    tense: chapter.tense || '',
-    coreEmotion: chapter.coreEmotion || '',
-    sceneTone: chapter.sceneTone || '',
-    colorName: chapter.colorName || chapter.colorTheme?.name,
+      connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
+      specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
+      specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
+      specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
+      colorName: chapter.colorName || chapter.colorTheme?.name,
     hexCode: chapter.hexCode || chapter.colorTheme?.hex,
     red: chapter.red ?? chapter.colorTheme?.rgb?.red,
     green: chapter.green ?? chapter.colorTheme?.rgb?.green,
@@ -633,10 +612,6 @@ const ChapterCard = ({
       specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
       specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
       specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
-      pov: chapter.pov || '',
-      tense: chapter.tense || '',
-      coreEmotion: chapter.coreEmotion || '',
-      sceneTone: chapter.sceneTone || '',
       colorName: chapter.colorName || chapter.colorTheme?.name,
       hexCode: chapter.hexCode || chapter.colorTheme?.hex,
       red: chapter.red ?? chapter.colorTheme?.rgb?.red,
@@ -883,34 +858,6 @@ const ChapterCard = ({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <input
                   className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
-                  value={chapterForm.pov || ''}
-                  onChange={(e) => handleFieldChange('pov', e.target.value)}
-                  placeholder="POV"
-                />
-                <input
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
-                  value={chapterForm.tense || ''}
-                  onChange={(e) => handleFieldChange('tense', e.target.value)}
-                  placeholder="Tense"
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <input
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
-                  value={chapterForm.coreEmotion || ''}
-                  onChange={(e) => handleFieldChange('coreEmotion', e.target.value)}
-                  placeholder="Core Emotion"
-                />
-                <input
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
-                  value={chapterForm.sceneTone || ''}
-                  onChange={(e) => handleFieldChange('sceneTone', e.target.value)}
-                  placeholder="Scene Tone"
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <input
-                  className="w-full px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-sm"
                   value={chapterForm.tarotFamily || ''}
                   onChange={(e) => handleFieldChange('tarotFamily', e.target.value)}
                   placeholder="Tarot Family"
@@ -974,15 +921,11 @@ const ChapterCard = ({
                       tarotCardLink: chapter.tarotCardLink || '',
                       tarotFamily: chapter.tarotFamily || '',
                       tarotCardItem: chapter.tarotCardItem || '',
-                      connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
-                      specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
-                      specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
-                      specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
-                      pov: chapter.pov || '',
-                      tense: chapter.tense || '',
-                      coreEmotion: chapter.coreEmotion || '',
-                      sceneTone: chapter.sceneTone || '',
-                      colorName: chapter.colorName || chapter.colorTheme?.name,
+      connectionToMajorTaskGroup: chapter.connectionToMajorTaskGroup || '',
+      specificTaskGroupDescription: chapter.specificTaskGroupDescription || '',
+      specificTaskGroupTagline: chapter.specificTaskGroupTagline || '',
+      specificTaskGroupBooksInfluencedBy: chapter.specificTaskGroupBooksInfluencedBy || [],
+      colorName: chapter.colorName || chapter.colorTheme?.name,
                       hexCode: chapter.hexCode || chapter.colorTheme?.hex,
                       red: chapter.red ?? chapter.colorTheme?.rgb?.red,
                       green: chapter.green ?? chapter.colorTheme?.rgb?.green,
@@ -1026,40 +969,10 @@ const ChapterCard = ({
                     <h4 className="font-semibold text-gray-900 dark:text-gray-100">Narrative Structure</h4>
                   </div>
                   <div className="space-y-2.5 text-sm">
-                    {chapter.heroJourneyBeat && (
-                      <div className="flex items-start gap-2">
-                        <span className="font-semibold text-blue-700 dark:text-blue-300 min-w-fit">Hero's Journey:</span>
-                        <span className="text-gray-700 dark:text-gray-300 bg-blue-100/50 dark:bg-blue-950/50 px-2 py-0.5 rounded">{chapter.heroJourneyBeat}</span>
-                      </div>
-                    )}
-                    {chapter.plotBeat && (
-                      <div className="flex items-start gap-2">
-                        <span className="font-semibold text-amber-700 dark:text-amber-300 min-w-fit">Plot Beat:</span>
-                        <span className="text-gray-700 dark:text-gray-300 bg-amber-100/50 dark:bg-amber-950/50 px-2 py-0.5 rounded">{chapter.plotBeat}</span>
-                      </div>
-                    )}
-                    {chapter.saveTheCatBeat && (
-                      <div className="flex items-start gap-2">
-                        <span className="font-semibold text-purple-700 dark:text-purple-300 min-w-fit">Save the Cat:</span>
-                        <span className="text-gray-700 dark:text-gray-300 bg-purple-100/50 dark:bg-purple-950/50 px-2 py-0.5 rounded">{chapter.saveTheCatBeat}</span>
-                      </div>
-                    )}
                     {chapter.epicPreliminarySceneFocus && (
                       <div className="flex items-start gap-2">
                         <span className="font-semibold text-indigo-700 dark:text-indigo-300 min-w-fit">Scene Focus:</span>
                         <span className="text-gray-700 dark:text-gray-300 bg-indigo-100/50 dark:bg-indigo-950/50 px-2 py-0.5 rounded">{chapter.epicPreliminarySceneFocus}</span>
-                      </div>
-                    )}
-                    {chapter.coreEmotion && (
-                      <div className="flex items-start gap-2">
-                        <span className="font-semibold text-rose-700 dark:text-rose-300 min-w-fit">Core Emotion:</span>
-                        <span className="text-gray-700 dark:text-gray-300 bg-rose-100/50 dark:bg-rose-950/50 px-2 py-0.5 rounded">{chapter.coreEmotion}</span>
-                      </div>
-                    )}
-                    {chapter.sceneTone && (
-                      <div className="flex items-start gap-2">
-                        <span className="font-semibold text-teal-700 dark:text-teal-300 min-w-fit">Tone:</span>
-                        <span className="text-gray-700 dark:text-gray-300 bg-teal-100/50 dark:bg-teal-950/50 px-2 py-0.5 rounded">{chapter.sceneTone}</span>
                       </div>
                     )}
                   </div>

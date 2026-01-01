@@ -472,27 +472,9 @@ export const chapters = pgTable('chapters', {
   specificTaskGroupBooksInfluencedBy: jsonb('specific_task_group_books_influenced_by'),
   terminalLearningObjectives: jsonb('terminal_learning_objectives'),
   summary: text('summary'),
-  // Chapter-level scene metadata
-  pov: varchar('pov', { length: 100 }),
-  tense: varchar('tense', { length: 50 }),
-  coreEmotion: varchar('core_emotion', { length: 255 }),
-  sceneTone: varchar('scene_tone', { length: 255 }),
-  // Story structure and narrative beats
-  sceneNumber: integer('scene_number'),
-  heroJourneyBeat: varchar('hero_journey_beat', { length: 100 }),
-  heroJourneyBeatObjective: text('hero_journey_beat_objective'),
-  plotBeat: varchar('plot_beat', { length: 100 }),
-  saveTheCatBeat: varchar('save_the_cat_beat', { length: 100 }),
-  saveTheCatBeatGoal: text('save_the_cat_beat_goal'),
   // Additional metadata fields
   characterArcs: jsonb('character_arcs'),
   storyGapsAddressed: jsonb('story_gaps_addressed'),
-  locationDetails: jsonb('location_details'),
-  seriesConnections: jsonb('series_connections'),
-  // Relationship identifiers
-  taskMasterKey: varchar('task_master_key', { length: 50 }),
-  majorTaskGroupKey: varchar('major_task_group_key', { length: 50 }),
-  specificTaskGroupKey: varchar('specific_task_group_key', { length: 50 }),
   // Alternative/supplementary fields
   epicPreliminarySceneFocus: varchar('epic_preliminary_scene_focus', { length: 255 }),
   epicPreliminarySceneDescription: text('epic_preliminary_scene_description'),

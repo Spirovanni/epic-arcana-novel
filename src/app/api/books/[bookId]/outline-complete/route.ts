@@ -67,26 +67,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ book
       tarotCardItem: chapters.tarotCardItem,
       connectionToMajorTaskGroup: chapters.connectionToMajorTaskGroup,
       specificTaskGroupBooksInfluencedBy: chapters.specificTaskGroupBooksInfluencedBy,
-      pov: chapters.pov,
-      tense: chapters.tense,
-      coreEmotion: chapters.coreEmotion,
-      sceneTone: chapters.sceneTone,
-      // Story structure fields
-      sceneNumber: chapters.sceneNumber,
-      heroJourneyBeat: chapters.heroJourneyBeat,
-      heroJourneyBeatObjective: chapters.heroJourneyBeatObjective,
-      plotBeat: chapters.plotBeat,
-      saveTheCatBeat: chapters.saveTheCatBeat,
-      saveTheCatBeatGoal: chapters.saveTheCatBeatGoal,
       // JSON metadata fields
       characterArcs: chapters.characterArcs,
       storyGapsAddressed: chapters.storyGapsAddressed,
-      locationDetails: chapters.locationDetails,
-      seriesConnections: chapters.seriesConnections,
-      // Relationship identifiers
-      taskMasterKey: chapters.taskMasterKey,
-      majorTaskGroupKey: chapters.majorTaskGroupKey,
-      specificTaskGroupKey: chapters.specificTaskGroupKey,
       terminalLearningObjectives: chapters.terminalLearningObjectives
     }).from(chapters).where(eq(chapters.bookId, actualBookId)).orderBy(asc(chapters.chapterNumber));
 
