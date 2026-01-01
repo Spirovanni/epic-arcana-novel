@@ -1,4 +1,3 @@
-import { NextResponse } from 'next/server';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import {
   books,
@@ -430,10 +429,13 @@ const fetchBookOutline = async (bookRow: { id: string; bookNumber: number; title
 
 export async function GET(request: Request) {
   try {
+    console.log('[PDF] Starting outline PDF generation...');
+    
     const { searchParams } = new URL(request.url);
     const bookIdFilter = searchParams.get('bookId');
     const bookNumberFilter = searchParams.get('bookNumber');
 
+    console.log('[PDF] Fetching books from database...');
     const allBooks = await db
       .select({
         id: books.id,
@@ -445,6 +447,8 @@ export async function GET(request: Request) {
       .from(books)
       .orderBy(asc(books.bookNumber));
 
+    console.log(`[PDF] Found ${allBooks.length} books`);
+
     const filteredBooks = allBooks.filter((book) => {
       if (bookIdFilter && book.id !== bookIdFilter) return false;
       if (bookNumberFilter && Number(bookNumberFilter) !== book.bookNumber) return false;
@@ -454,16 +458,21 @@ export async function GET(request: Request) {
     const booksToUse = filteredBooks.length > 0 ? filteredBooks : allBooks;
 
     if (booksToUse.length === 0) {
-      return new NextResponse('No books found', { status: 404 });
+      console.log('[PDF] No books found');
+      return new Response('No books found', { status: 404 });
     }
 
+    console.log(`[PDF] Processing ${booksToUse.length} books for outline...`);
     const outlines: BookOutline[] = [];
     for (const book of booksToUse) {
+      console.log(`[PDF] Fetching outline for book ${book.bookNumber}: ${book.title}`);
       const outline = await fetchBookOutline(book);
       outlines.push(outline);
     }
 
+    console.log('[PDF] Building PDF buffer...');
     const pdfBytes = await buildPdfBuffer(outlines);
+    console.log(`[PDF] PDF generated successfully, size: ${pdfBytes.length} bytes`);
 
     return new Response(Buffer.from(pdfBytes), {
       status: 200,
@@ -471,10 +480,16 @@ export async function GET(request: Request) {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="epic-arcana-sudowrite-outline.pdf"',
         'Cache-Control': 'no-store',
+        'Content-Length': pdfBytes.length.toString(),
       },
     });
   } catch (error) {
-    console.error('Error generating outline PDF:', error);
-    return new NextResponse('Internal Server Error', { status: 500 });
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : '';
+    console.error('[PDF] Error generating outline PDF:', errorMessage, errorStack);
+    return new Response(`Error generating PDF: ${errorMessage}`, { 
+      status: 500,
+      headers: { 'Content-Type': 'text/plain' }
+    });
   }
 }
