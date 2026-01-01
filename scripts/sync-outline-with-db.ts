@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 
 /**
  * This script syncs the enhanced scene data from the Neon database
- * back to the l_outline.json file for chapters EA-001 through EA-039
+ * back to the l_outline.json file for chapter EA-013
  */
 
 async function main() {
@@ -22,15 +22,7 @@ async function main() {
   const outline = JSON.parse(outlineContent);
 
   // Chapters to update
-  const chapters = [
-    'EA-001', 'EA-002', 'EA-003', 'EA-004', 'EA-005', 'EA-006',
-    'EA-007', 'EA-008', 'EA-009', 'EA-010', 'EA-011', 'EA-012',
-    'EA-013', 'EA-014', 'EA-015', 'EA-016', 'EA-017', 'EA-018',
-    'EA-019', 'EA-020', 'EA-021', 'EA-022', 'EA-023', 'EA-024',
-    'EA-025', 'EA-026', 'EA-027', 'EA-028', 'EA-029', 'EA-030',
-    'EA-031', 'EA-032', 'EA-033', 'EA-034', 'EA-035', 'EA-036',
-    'EA-037', 'EA-038', 'EA-039'
-  ];
+  const chapters = ['EA-013'];
 
   let totalScenesUpdated = 0;
 
