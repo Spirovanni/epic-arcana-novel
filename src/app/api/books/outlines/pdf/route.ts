@@ -13,6 +13,42 @@ import { and, asc, eq, inArray } from 'drizzle-orm';
 
 export const runtime = 'nodejs';
 
+// Sanitize text for WinAnsi encoding (standard PDF fonts)
+// Replaces special Unicode characters with ASCII equivalents
+const sanitizeForPdf = (text: string | null | undefined): string => {
+  if (!text) return '';
+  return text
+    // Various dash/hyphen characters -> standard hyphen
+    .replace(/[\u2010\u2011\u2012\u2013\u2014\u2015\u2212]/g, '-')
+    // Smart quotes -> standard quotes
+    .replace(/[\u2018\u2019\u201A\u201B]/g, "'")
+    .replace(/[\u201C\u201D\u201E\u201F]/g, '"')
+    // Ellipsis -> three dots
+    .replace(/\u2026/g, '...')
+    // Bullet points -> asterisk
+    .replace(/[\u2022\u2023\u2043]/g, '*')
+    // Non-breaking space -> regular space
+    .replace(/\u00A0/g, ' ')
+    // Other problematic characters
+    .replace(/[\u2000-\u200F]/g, ' ') // Various spaces
+    .replace(/[\u2028\u2029]/g, '\n') // Line/paragraph separators
+    // Remove any remaining non-ASCII characters that might cause issues
+    .replace(/[^\x00-\x7F]/g, (char) => {
+      // Try to keep common accented characters
+      const replacements: Record<string, string> = {
+        'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+        'á': 'a', 'à': 'a', 'â': 'a', 'ä': 'a', 'ã': 'a',
+        'í': 'i', 'ì': 'i', 'î': 'i', 'ï': 'i',
+        'ó': 'o', 'ò': 'o', 'ô': 'o', 'ö': 'o', 'õ': 'o',
+        'ú': 'u', 'ù': 'u', 'û': 'u', 'ü': 'u',
+        'ñ': 'n', 'ç': 'c',
+        '©': '(c)', '®': '(R)', '™': '(TM)',
+        '°': ' degrees',
+      };
+      return replacements[char] || '';
+    });
+};
+
 type OutlineScene = {
   id: string;
   chapterId: string;
@@ -67,22 +103,22 @@ type BookOutline = {
 };
 
 const formatSceneForSudowrite = (scene: OutlineScene): string => {
-  const elements = [`SCENE ${scene.sceneNumber}: ${scene.title || 'Untitled Scene'}`];
+  const elements = [`SCENE ${scene.sceneNumber}: ${sanitizeForPdf(scene.title) || 'Untitled Scene'}`];
 
-  if (scene.description) elements.push(`DESCRIPTION: ${scene.description}`);
-  if (scene.setup) elements.push(`SETUP: ${scene.setup}`);
-  if (scene.beatGoal) elements.push(`SCENE GOAL: ${scene.beatGoal}`);
-  if (scene.pov) elements.push(`POV: ${scene.pov}`);
-  if (scene.core_emotion) elements.push(`CORE EMOTION: ${scene.core_emotion}`);
-  if (scene.scene_tone) elements.push(`TONE: ${scene.scene_tone}`);
-  if (scene.location) elements.push(`LOCATION: ${scene.location}`);
-  if (scene.timeline_date) elements.push(`TIMELINE: ${scene.timeline_date}`);
-  if (scene.temporalPowerManifested) elements.push(`TEMPORAL POWER: ${scene.temporalPowerManifested}`);
-  if (scene.characterGrowthElement) elements.push(`CHARACTER GROWTH: ${scene.characterGrowthElement}`);
-  if (scene.timelineSignificance) elements.push(`TIMELINE SIGNIFICANCE: ${scene.timelineSignificance}`);
-  if (scene.symbolism) elements.push(`SYMBOLISM: ${scene.symbolism}`);
-  if (scene.internalConflict) elements.push(`INTERNAL CONFLICT: ${scene.internalConflict}`);
-  if (scene.sensoryDetail) elements.push(`SENSORY: ${scene.sensoryDetail}`);
+  if (scene.description) elements.push(`DESCRIPTION: ${sanitizeForPdf(scene.description)}`);
+  if (scene.setup) elements.push(`SETUP: ${sanitizeForPdf(scene.setup)}`);
+  if (scene.beatGoal) elements.push(`SCENE GOAL: ${sanitizeForPdf(scene.beatGoal)}`);
+  if (scene.pov) elements.push(`POV: ${sanitizeForPdf(scene.pov)}`);
+  if (scene.core_emotion) elements.push(`CORE EMOTION: ${sanitizeForPdf(scene.core_emotion)}`);
+  if (scene.scene_tone) elements.push(`TONE: ${sanitizeForPdf(scene.scene_tone)}`);
+  if (scene.location) elements.push(`LOCATION: ${sanitizeForPdf(scene.location)}`);
+  if (scene.timeline_date) elements.push(`TIMELINE: ${sanitizeForPdf(scene.timeline_date)}`);
+  if (scene.temporalPowerManifested) elements.push(`TEMPORAL POWER: ${sanitizeForPdf(scene.temporalPowerManifested)}`);
+  if (scene.characterGrowthElement) elements.push(`CHARACTER GROWTH: ${sanitizeForPdf(scene.characterGrowthElement)}`);
+  if (scene.timelineSignificance) elements.push(`TIMELINE SIGNIFICANCE: ${sanitizeForPdf(scene.timelineSignificance)}`);
+  if (scene.symbolism) elements.push(`SYMBOLISM: ${sanitizeForPdf(scene.symbolism)}`);
+  if (scene.internalConflict) elements.push(`INTERNAL CONFLICT: ${sanitizeForPdf(scene.internalConflict)}`);
+  if (scene.sensoryDetail) elements.push(`SENSORY: ${sanitizeForPdf(scene.sensoryDetail)}`);
 
   return elements.join(' | ');
 };
@@ -129,7 +165,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
     };
 
     // Book Title
-    const bookTitle = `Book ${book.bookNumber}: ${book.fictionNovelTitle || book.title}`;
+    const bookTitle = sanitizeForPdf(`Book ${book.bookNumber}: ${book.fictionNovelTitle || book.title}`);
     page.drawText(bookTitle, {
       x: margin,
       y,
@@ -141,7 +177,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
 
     // Book Description
     if (book.description) {
-      const descLines = wrapText(book.description, 85);
+      const descLines = wrapText(sanitizeForPdf(book.description), 85);
       for (const line of descLines) {
         addNewPageIfNeeded(lineHeight);
         page.drawText(line, {
@@ -170,7 +206,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
     for (const chapter of book.chapters) {
       // Chapter Title
       addNewPageIfNeeded(36);
-      const chapterTitle = `Chapter ${chapter.chapterNumber}: ${chapter.title || 'Untitled'}`;
+      const chapterTitle = sanitizeForPdf(`Chapter ${chapter.chapterNumber}: ${chapter.title || 'Untitled'}`);
       page.drawText(chapterTitle, {
         x: margin + 8,
         y,
@@ -183,7 +219,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
       // Chapter summary/description
       const chapterDesc = chapter.summary || chapter.description;
       if (chapterDesc) {
-        const descLines = wrapText(chapterDesc, 80);
+        const descLines = wrapText(sanitizeForPdf(chapterDesc), 80);
         for (const line of descLines) {
           addNewPageIfNeeded(smallLineHeight);
           page.drawText(line, {
@@ -199,11 +235,11 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
 
       // Focus Area / Tarot Family
       const metaParts: string[] = [];
-      if (chapter.focusArea) metaParts.push(`Focus Area: ${chapter.focusArea}`);
-      if (chapter.tarotFamily) metaParts.push(`Tarot Family: ${chapter.tarotFamily}`);
+      if (chapter.focusArea) metaParts.push(`Focus Area: ${sanitizeForPdf(chapter.focusArea)}`);
+      if (chapter.tarotFamily) metaParts.push(`Tarot Family: ${sanitizeForPdf(chapter.tarotFamily)}`);
       if (metaParts.length) {
         addNewPageIfNeeded(smallLineHeight);
-        page.drawText(metaParts.join(' • '), {
+        page.drawText(metaParts.join(' - '), {
           x: margin + 12,
           y,
           size: 8,
@@ -226,7 +262,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
         y -= 14;
 
         for (const scene of chapter.scenes) {
-          const sceneText = `• ${formatSceneForSudowrite(scene)}`;
+          const sceneText = sanitizeForPdf(`* ${formatSceneForSudowrite(scene)}`);
           const sceneLines = wrapText(sceneText, 78);
           for (const line of sceneLines) {
             addNewPageIfNeeded(smallLineHeight);
@@ -256,7 +292,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
         y -= 14;
 
         for (const resource of chapter.learningResources) {
-          const resourceTitle = `- ${resource.title}${resource.author ? ` (${resource.author})` : ''}`;
+          const resourceTitle = sanitizeForPdf(`- ${resource.title}${resource.author ? ` (${resource.author})` : ''}`);
           addNewPageIfNeeded(smallLineHeight);
           page.drawText(resourceTitle, {
             x: margin + 18,
@@ -269,7 +305,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
 
           if (resource.connectionPoints?.length) {
             const points = resource.connectionPoints
-              .map((p) => `${p.pointNumber}. ${p.description}`)
+              .map((p) => `${p.pointNumber}. ${sanitizeForPdf(p.description)}`)
               .join(' | ');
             const pointsText = `Connection Points: ${points}`;
             const pointsLines = wrapText(pointsText, 75);
@@ -288,7 +324,7 @@ const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> 
 
           if (resource.objectives?.length) {
             const objectives = resource.objectives
-              .map((o) => `${o.objectiveNumber}. ${o.description}${o.bloomLevel ? ` (${o.bloomLevel})` : ''}`)
+              .map((o) => `${o.objectiveNumber}. ${sanitizeForPdf(o.description)}${o.bloomLevel ? ` (${sanitizeForPdf(o.bloomLevel)})` : ''}`)
               .join(' | ');
             const objText = `Objectives: ${objectives}`;
             const objLines = wrapText(objText, 75);
