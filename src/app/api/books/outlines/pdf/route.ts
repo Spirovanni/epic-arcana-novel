@@ -465,7 +465,7 @@ export async function GET(request: Request) {
 
     const pdfBytes = await buildPdfBuffer(outlines);
 
-    return new NextResponse(pdfBytes, {
+    return new Response(Buffer.from(pdfBytes), {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
