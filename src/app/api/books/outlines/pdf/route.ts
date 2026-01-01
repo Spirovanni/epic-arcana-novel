@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import PDFDocument from 'pdfkit';
+import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import {
   books,
   chapters,
@@ -88,100 +88,231 @@ const formatSceneForSudowrite = (scene: OutlineScene): string => {
   return elements.join(' | ');
 };
 
-const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Buffer> => {
-  return await new Promise<Buffer>((resolve, reject) => {
-    const doc = new PDFDocument({ margin: 50, autoFirstPage: false });
-    const chunks: Buffer[] = [];
+// Helper to wrap text into lines that fit within a given width
+const wrapText = (text: string, maxCharsPerLine: number): string[] => {
+  const words = text.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
 
-    doc.on('data', (chunk: Buffer) => chunks.push(chunk));
-    doc.on('error', reject);
-    doc.on('end', () => resolve(Buffer.concat(chunks)));
+  for (const word of words) {
+    if ((currentLine + ' ' + word).trim().length <= maxCharsPerLine) {
+      currentLine = (currentLine + ' ' + word).trim();
+    } else {
+      if (currentLine) lines.push(currentLine);
+      currentLine = word;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines;
+};
 
-    bookOutlines.forEach((book) => {
-      doc.addPage();
+const buildPdfBuffer = async (bookOutlines: BookOutline[]): Promise<Uint8Array> => {
+  const pdfDoc = await PDFDocument.create();
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
 
-      doc.fontSize(20).fillColor('#111827').text(`Book ${book.bookNumber}: ${book.fictionNovelTitle || book.title}`, {
-        align: 'left',
+  const pageWidth = 612; // Letter size
+  const pageHeight = 792;
+  const margin = 50;
+  const contentWidth = pageWidth - margin * 2;
+  const lineHeight = 14;
+  const smallLineHeight = 12;
+
+  for (const book of bookOutlines) {
+    let page = pdfDoc.addPage([pageWidth, pageHeight]);
+    let y = pageHeight - margin;
+
+    const addNewPageIfNeeded = (requiredSpace: number) => {
+      if (y - requiredSpace < margin) {
+        page = pdfDoc.addPage([pageWidth, pageHeight]);
+        y = pageHeight - margin;
+      }
+    };
+
+    // Book Title
+    const bookTitle = `Book ${book.bookNumber}: ${book.fictionNovelTitle || book.title}`;
+    page.drawText(bookTitle, {
+      x: margin,
+      y,
+      size: 18,
+      font: boldFont,
+      color: rgb(0.07, 0.09, 0.15),
+    });
+    y -= 28;
+
+    // Book Description
+    if (book.description) {
+      const descLines = wrapText(book.description, 85);
+      for (const line of descLines) {
+        addNewPageIfNeeded(lineHeight);
+        page.drawText(line, {
+          x: margin,
+          y,
+          size: 10,
+          font,
+          color: rgb(0.22, 0.25, 0.32),
+        });
+        y -= lineHeight;
+      }
+    }
+    y -= 16;
+
+    // Section Header
+    addNewPageIfNeeded(24);
+    page.drawText('SUDOWRITE COPY-READY OUTLINE', {
+      x: margin,
+      y,
+      size: 12,
+      font: boldFont,
+      color: rgb(0.06, 0.09, 0.16),
+    });
+    y -= 24;
+
+    for (const chapter of book.chapters) {
+      // Chapter Title
+      addNewPageIfNeeded(36);
+      const chapterTitle = `Chapter ${chapter.chapterNumber}: ${chapter.title || 'Untitled'}`;
+      page.drawText(chapterTitle, {
+        x: margin + 8,
+        y,
+        size: 12,
+        font: boldFont,
+        color: rgb(0.07, 0.09, 0.15),
       });
-      doc.moveDown(0.35);
+      y -= 18;
 
-      if (book.description) {
-        doc.fontSize(11).fillColor('#374151').text(book.description, { width: 500 });
-      } else {
-        doc.fontSize(11).fillColor('#6b7280').text('No description available.', { width: 500 });
+      // Chapter summary/description
+      const chapterDesc = chapter.summary || chapter.description;
+      if (chapterDesc) {
+        const descLines = wrapText(chapterDesc, 80);
+        for (const line of descLines) {
+          addNewPageIfNeeded(smallLineHeight);
+          page.drawText(line, {
+            x: margin + 12,
+            y,
+            size: 9,
+            font,
+            color: rgb(0.22, 0.25, 0.32),
+          });
+          y -= smallLineHeight;
+        }
       }
 
-      doc.moveDown(0.75);
-      doc.fontSize(14).fillColor('#0f172a').text('Sudowrite Copy-Ready Outline', { underline: true });
-      doc.moveDown(0.5);
-
-      book.chapters.forEach((chapter) => {
-        doc.fontSize(14).fillColor('#111827').text(`Chapter ${chapter.chapterNumber}: ${chapter.title || 'Untitled'}`, {
-          indent: 8,
+      // Focus Area / Tarot Family
+      const metaParts: string[] = [];
+      if (chapter.focusArea) metaParts.push(`Focus Area: ${chapter.focusArea}`);
+      if (chapter.tarotFamily) metaParts.push(`Tarot Family: ${chapter.tarotFamily}`);
+      if (metaParts.length) {
+        addNewPageIfNeeded(smallLineHeight);
+        page.drawText(metaParts.join(' • '), {
+          x: margin + 12,
+          y,
+          size: 8,
+          font,
+          color: rgb(0.42, 0.45, 0.49),
         });
+        y -= smallLineHeight + 4;
+      }
 
-        if (chapter.summary || chapter.description) {
-          doc
-            .fontSize(11)
-            .fillColor('#374151')
-            .text(chapter.summary || chapter.description || '', { indent: 12, width: 500 });
-        }
+      // Scenes
+      if (chapter.scenes.length) {
+        addNewPageIfNeeded(18);
+        page.drawText('Scenes:', {
+          x: margin + 12,
+          y,
+          size: 10,
+          font: boldFont,
+          color: rgb(0.07, 0.09, 0.15),
+        });
+        y -= 14;
 
-        if (chapter.focusArea || chapter.tarotFamily) {
-          const meta = [
-            chapter.focusArea ? `Focus Area: ${chapter.focusArea}` : null,
-            chapter.tarotFamily ? `Tarot Family: ${chapter.tarotFamily}` : null,
-          ]
-            .filter(Boolean)
-            .join(' • ');
-          if (meta) {
-            doc.fontSize(10).fillColor('#6b7280').text(meta, { indent: 12 });
+        for (const scene of chapter.scenes) {
+          const sceneText = `• ${formatSceneForSudowrite(scene)}`;
+          const sceneLines = wrapText(sceneText, 78);
+          for (const line of sceneLines) {
+            addNewPageIfNeeded(smallLineHeight);
+            page.drawText(line, {
+              x: margin + 18,
+              y,
+              size: 8,
+              font,
+              color: rgb(0.06, 0.09, 0.16),
+            });
+            y -= smallLineHeight;
           }
         }
+      }
 
-        if (chapter.scenes.length) {
-          doc.moveDown(0.3);
-          doc.fontSize(12).fillColor('#111827').text('Scenes', { indent: 12 });
-          chapter.scenes.forEach((scene) => {
-            doc
-              .fontSize(10)
-              .fillColor('#0f172a')
-              .text(`• ${formatSceneForSudowrite(scene)}`, { indent: 18, width: 500 });
+      // Learning Resources
+      if (chapter.learningResources.length) {
+        y -= 6;
+        addNewPageIfNeeded(18);
+        page.drawText('Learning Resources:', {
+          x: margin + 12,
+          y,
+          size: 10,
+          font: boldFont,
+          color: rgb(0.07, 0.09, 0.15),
+        });
+        y -= 14;
+
+        for (const resource of chapter.learningResources) {
+          const resourceTitle = `- ${resource.title}${resource.author ? ` (${resource.author})` : ''}`;
+          addNewPageIfNeeded(smallLineHeight);
+          page.drawText(resourceTitle, {
+            x: margin + 18,
+            y,
+            size: 8,
+            font,
+            color: rgb(0.06, 0.09, 0.16),
           });
-        }
+          y -= smallLineHeight;
 
-        if (chapter.learningResources.length) {
-          doc.moveDown(0.3);
-          doc.fontSize(12).fillColor('#111827').text('Learning Resources', { indent: 12 });
-
-          chapter.learningResources.forEach((resource) => {
-            doc
-              .fontSize(10)
-              .fillColor('#0f172a')
-              .text(`- ${resource.title}${resource.author ? ` (${resource.author})` : ''}`, { indent: 18, width: 500 });
-
-            if (resource.connectionPoints?.length) {
-              const points = resource.connectionPoints
-                .map((point) => `${point.pointNumber}. ${point.description}`)
-                .join(' | ');
-              doc.fontSize(9.5).fillColor('#374151').text(`Connection Points: ${points}`, { indent: 22, width: 500 });
+          if (resource.connectionPoints?.length) {
+            const points = resource.connectionPoints
+              .map((p) => `${p.pointNumber}. ${p.description}`)
+              .join(' | ');
+            const pointsText = `Connection Points: ${points}`;
+            const pointsLines = wrapText(pointsText, 75);
+            for (const line of pointsLines) {
+              addNewPageIfNeeded(10);
+              page.drawText(line, {
+                x: margin + 22,
+                y,
+                size: 7,
+                font,
+                color: rgb(0.22, 0.25, 0.32),
+              });
+              y -= 10;
             }
+          }
 
-            if (resource.objectives?.length) {
-              const objectives = resource.objectives
-                .map((obj) => `${obj.objectiveNumber}. ${obj.description}${obj.bloomLevel ? ` (${obj.bloomLevel})` : ''}`)
-                .join(' | ');
-              doc.fontSize(9.5).fillColor('#4b5563').text(`Objectives: ${objectives}`, { indent: 22, width: 500 });
+          if (resource.objectives?.length) {
+            const objectives = resource.objectives
+              .map((o) => `${o.objectiveNumber}. ${o.description}${o.bloomLevel ? ` (${o.bloomLevel})` : ''}`)
+              .join(' | ');
+            const objText = `Objectives: ${objectives}`;
+            const objLines = wrapText(objText, 75);
+            for (const line of objLines) {
+              addNewPageIfNeeded(10);
+              page.drawText(line, {
+                x: margin + 22,
+                y,
+                size: 7,
+                font,
+                color: rgb(0.29, 0.34, 0.39),
+              });
+              y -= 10;
             }
-          });
+          }
         }
+      }
 
-        doc.moveDown(0.8);
-      });
-    });
+      y -= 16; // Space between chapters
+    }
+  }
 
-    doc.end();
-  });
+  return await pdfDoc.save();
 };
 
 const fetchBookOutline = async (bookRow: { id: string; bookNumber: number; title: string; fictionNovelTitle: string | null; description: string | null }): Promise<BookOutline> => {
@@ -332,9 +463,9 @@ export async function GET(request: Request) {
       outlines.push(outline);
     }
 
-    const pdfBuffer = await buildPdfBuffer(outlines);
+    const pdfBytes = await buildPdfBuffer(outlines);
 
-    return new NextResponse(Uint8Array.from(pdfBuffer), {
+    return new NextResponse(pdfBytes, {
       status: 200,
       headers: {
         'Content-Type': 'application/pdf',
@@ -347,4 +478,3 @@ export async function GET(request: Request) {
     return new NextResponse('Internal Server Error', { status: 500 });
   }
 }
-
