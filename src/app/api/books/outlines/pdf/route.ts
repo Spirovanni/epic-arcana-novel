@@ -281,6 +281,7 @@ const fetchBookOutline = async (bookRow: { id: string; bookNumber: number; title
 
     chaptersWithDetails.push({
       ...chapter,
+      colorTheme: chapter.colorTheme as OutlineChapter['colorTheme'],
       scenes: scenesByChapter.get(chapter.id) || [],
       learningResources: resourcesWithDetails,
     });
