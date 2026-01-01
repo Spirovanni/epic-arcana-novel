@@ -111,10 +111,8 @@ async function cleanupInvalidChapters() {
       const bookNumber = bookIdToNumber.get(chapter.bookId) || 0;
       const reasons: string[] = [];
       
-      // Check 1: unique_identifier starts with "MAT"
-      if (chapter.uniqueIdentifier?.startsWith('MAT')) {
-        reasons.push('unique_identifier starts with MAT');
-      }
+      // Check 1: unique_identifier starts with "MAT" - REMOVED: MAT chapters are valid!
+      // MAT chapters are valid Major Activity Theme chapters
       
       // Check 2: unique_identifier doesn't have valid STG format (less than 4 numbers)
       if (chapter.uniqueIdentifier && !hasValidStgFormat(chapter.uniqueIdentifier)) {
