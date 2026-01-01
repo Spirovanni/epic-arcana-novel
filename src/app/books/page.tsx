@@ -6,7 +6,7 @@ import { AppNavbar } from '@/components/shared/AppNavbar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { BookOpen, Sparkles } from 'lucide-react';
+import { BookOpen, Sparkles, FileDown } from 'lucide-react';
 
 interface Book {
   id: string;
@@ -40,6 +40,7 @@ const getContrastColor = (hex: string): string => {
 export default function BooksPage() {
   const [books, setBooks] = useState<Book[]>([]);
   const [loading, setLoading] = useState(true);
+  const [downloading, setDownloading] = useState(false);
 
   useEffect(() => {
     async function fetchBooks() {
@@ -57,6 +58,30 @@ export default function BooksPage() {
     }
     fetchBooks();
   }, []);
+
+  const handleDownloadOutline = async () => {
+    setDownloading(true);
+    try {
+      const response = await fetch('/api/books/outlines/pdf');
+      if (!response.ok) {
+        throw new Error(`Failed to generate outline PDF: ${response.statusText}`);
+      }
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'epic-arcana-sudowrite-outline.pdf';
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading outline PDF', error);
+    } finally {
+      setDownloading(false);
+    }
+  };
 
   if (loading) {
     return (
@@ -79,6 +104,18 @@ export default function BooksPage() {
       <AppNavbar />
       
       <div className="container mx-auto px-6 py-8">
+        <div className="flex justify-end mb-6">
+          <Button 
+            onClick={handleDownloadOutline} 
+            disabled={loading || downloading}
+            size="lg"
+            className="flex items-center gap-2"
+          >
+            {downloading ? 'Generating Outline PDF...' : 'Download Sudowrite Outline PDF'}
+            <FileDown className="h-4 w-4" />
+          </Button>
+        </div>
+
         {/* Header Section */}
         <div className="text-center mb-12 space-y-4">
           <div className="flex items-center justify-center gap-3 mb-4">
