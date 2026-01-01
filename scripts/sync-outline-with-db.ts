@@ -3,6 +3,10 @@ import { scenes } from '../src/lib/schema';
 import { eq } from 'drizzle-orm';
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * This script syncs the enhanced scene data from the Neon database
