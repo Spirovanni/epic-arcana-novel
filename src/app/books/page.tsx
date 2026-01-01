@@ -63,11 +63,23 @@ export default function BooksPage() {
     setDownloading(true);
     try {
       const response = await fetch('/api/books/outlines/pdf');
+      
       if (!response.ok) {
-        throw new Error(`Failed to generate outline PDF: ${response.statusText}`);
+        const errorText = await response.text();
+        throw new Error(`Failed to generate outline PDF: ${response.status} ${response.statusText} - ${errorText}`);
+      }
+
+      const contentType = response.headers.get('content-type');
+      if (!contentType?.includes('application/pdf')) {
+        throw new Error(`Unexpected content type: ${contentType}`);
       }
 
       const blob = await response.blob();
+      
+      if (blob.size === 0) {
+        throw new Error('PDF file is empty');
+      }
+
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -78,6 +90,7 @@ export default function BooksPage() {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error downloading outline PDF', error);
+      alert(`Download failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
     } finally {
       setDownloading(false);
     }
