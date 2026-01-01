@@ -444,7 +444,8 @@ export const chapters = pgTable('chapters', {
   bookId: uuid('book_id').references(() => books.id).notNull(),
   majorTaskGroupId: uuid('major_task_group_id').references(() => majorTaskGroups.id),
   chapterNumber: integer('chapter_number').notNull(),
-  uniqueIdentifier: varchar('unique_identifier', { length: 50 }),
+  chapterId: varchar('chapter_id', { length: 50 }), // EA-001, EA-002, etc. from l_outline.json "id" field
+  uniqueIdentifier: varchar('unique_identifier', { length: 50 }), // STG 1.1.1.1, etc. (never EA-*)
   title: varchar('title', { length: 255 }),
   focus: varchar('focus', { length: 255 }),
   epicNovelPages: varchar('epic_novel_pages', { length: 50 }),
