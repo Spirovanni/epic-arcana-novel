@@ -69,7 +69,7 @@ async function main() {
   let sceneCount = 0;
 
   for (const outlineScene of chapterData.scenes) {
-    console.log(`📝 Processing Scene ${outlineScene.scene_number}: ${outlineScene.scene_title}`);
+    console.log(`📝 Processing Scene ${outlineScene.scene_number}: ${outlineScene.scene_title || outlineScene.title}`);
 
     // Check if scene already exists
     const existingScene = await db
@@ -93,7 +93,7 @@ async function main() {
       chapterId: chapter.id,
       chapterUniqueIdentifier: eaId,
       sceneNumber: outlineScene.scene_number,
-      title: truncate(outlineScene.scene_title, 255),
+      title: truncate(outlineScene.scene_title || outlineScene.title, 255),
       setup: outlineScene.setup || null,
       symbolism: outlineScene.symbolism || null,
       beatGoal: outlineScene.beat_goal || null,
