@@ -1,6 +1,6 @@
 import { db } from '../src/lib/db';
 import { chapters, scenes } from '../src/lib/schema';
-import { eq } from 'drizzle-orm';
+import { eq, and } from 'drizzle-orm';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -45,8 +45,12 @@ async function main() {
     const existingScene = await db
       .select()
       .from(scenes)
-      .where(eq(scenes.chapterUniqueIdentifier, 'EA-100'))
-      .where(eq(scenes.sceneNumber, sceneData.scene_number))
+      .where(
+        and(
+          eq(scenes.chapterUniqueIdentifier, 'EA-100'),
+          eq(scenes.sceneNumber, sceneData.scene_number)
+        )
+      )
       .limit(1);
 
     if (existingScene.length > 0) {
