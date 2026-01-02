@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 /**
- * Add EA-017 chapter from l_outline.json to Neon DB
+ * Add EA-020 chapter from l_outline.json to Neon DB
  */
 
 import { db } from '../src/lib/db';
@@ -35,11 +35,11 @@ function sanitizeJsonData(data: any): any {
   return data;
 }
 
-function findEa017(data: any): any {
+function findEa020(data: any): any {
   function traverse(obj: any): any {
     if (typeof obj !== 'object' || obj === null) return null;
     
-    if (obj.id === 'EA-017') {
+    if (obj.id === 'EA-020') {
       return obj;
     }
     
@@ -56,22 +56,22 @@ function findEa017(data: any): any {
   return traverse(data);
 }
 
-async function addEa017() {
-  console.log('🔍 Finding EA-017 in l_outline.json...\n');
+async function addEa020() {
+  console.log('🔍 Finding EA-020 in l_outline.json...\n');
   
   try {
     const outlineFilePath = resolve(__dirname, '../data/l_outline.json');
     const rawData = readFileSync(outlineFilePath, 'utf-8');
     const outlineData = JSON.parse(rawData);
     
-    const chapterData = findEa017(outlineData);
+    const chapterData = findEa020(outlineData);
     
     if (!chapterData) {
-      console.log('❌ EA-017 not found in l_outline.json');
+      console.log('❌ EA-020 not found in l_outline.json');
       process.exit(1);
     }
     
-    console.log('✅ Found EA-017:');
+    console.log('✅ Found EA-020:');
     console.log(`   Title: ${chapterData.specific_task_group_title}`);
     console.log(`   unique_identifier: ${chapterData.unique_identifier}`);
     console.log(`   Book: ${chapterData.novel_book}, Chapter: ${chapterData.all_chapter}\n`);
@@ -110,8 +110,8 @@ async function addEa017() {
     }
     
     const chapterDbData = {
-      chapterId: chapterData.id, // EA-017
-      uniqueIdentifier: chapterData.unique_identifier.startsWith('EA-') ? null : chapterData.unique_identifier, // STG 1.2.2.1
+      chapterId: chapterData.id, // EA-020
+      uniqueIdentifier: chapterData.unique_identifier.startsWith('EA-') ? null : chapterData.unique_identifier, // STG 1.2.3.1
       title: chapterData.specific_task_group_title,
       focusArea: chapterData.focus_area,
       epicNovelPages: chapterData.epic_novel_pages,
@@ -183,13 +183,13 @@ async function addEa017() {
       console.log(`   title: ${chapterDbData.title}`);
     }
     
-    console.log('\n📊 Chapter EA-017 successfully added/updated in Neon DB!');
+    console.log('\n📊 Chapter EA-020 successfully added/updated in Neon DB!');
     
   } catch (error) {
-    console.error('\n❌ Error adding EA-017:', error);
+    console.error('\n❌ Error adding EA-020:', error);
     process.exit(1);
   }
 }
 
-addEa017().catch(console.error);
+addEa020().catch(console.error);
 
