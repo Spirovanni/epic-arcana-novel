@@ -22,7 +22,7 @@ async function main() {
   const outline = JSON.parse(outlineContent);
 
   // Chapters to update
-  const chapters = ['EA-100', 'EA-101'];
+  const chapters = ['EA-102'];
 
   let totalScenesUpdated = 0;
 
