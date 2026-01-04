@@ -1,51 +1,25 @@
 #!/usr/bin/env python3
-import json, sys
-from pathlib import Path
-
-repo_root = Path(__file__).parent.parent
-outline_path = repo_root / "data" / "l_outline.json"
-enhanced_path = repo_root / "scripts" / "ea-142-enhanced-scenes.json"
-backup_path = repo_root / "data" / "l_outline.json.backup-ea142"
-
-print("🔄 EA-142 Scene Replacement")
-print("=" * 50)
-
-with open(enhanced_path, 'r') as f:
+import json
+with open('/Users/xaviermartinez/dev/cursor/epic-arcana-novel/scripts/ea-142-enhanced-scenes.json', 'r') as f:
     enhanced_scenes = json.load(f)
-print(f"   ✅ Loaded {len(enhanced_scenes)} scenes")
-
-with open(outline_path, 'r') as f:
+with open('/Users/xaviermartinez/dev/cursor/epic-arcana-novel/data/l_outline.json', 'r') as f:
     outline = json.load(f)
-
-with open(backup_path, 'w') as f:
-    json.dump(outline, f, indent=2, ensure_ascii=False)
-
-def find_ea_142(obj, path=""):
+def find_and_replace_scenes(obj, target_id):
     if isinstance(obj, dict):
-        if obj.get('id') == 'EA-142' and obj.get('unique_identifier') == 'STG 4.2.3.3':
-            return obj, path
-        for key, value in obj.items():
-            result, rpath = find_ea_142(value, f"{path}.{key}" if path else key)
-            if result: return result, rpath
+        if obj.get('id') == target_id:
+            obj['scenes'] = enhanced_scenes
+            return True
+        for value in obj.values():
+            if find_and_replace_scenes(value, target_id):
+                return True
     elif isinstance(obj, list):
-        for i, item in enumerate(obj):
-            result, rpath = find_ea_142(item, f"{path}[{i}]")
-            if result: return result, rpath
-    return None, ""
-
-node, _ = find_ea_142(outline)
-if not node:
-    print("❌ EA-142 not found")
-    sys.exit(1)
-
-print("   ✅ Found EA-142")
-old_count = len(node.get('scenes', []))
-node['scenes'] = enhanced_scenes
-
-for i, scene in enumerate(enhanced_scenes, 1):
-    print(f"   ✅ Scene {i}: '{scene['title']}'")
-
-with open(outline_path, 'w') as f:
-    json.dump(outline, f, indent=2, ensure_ascii=False)
-
-print(f"\n✅ Complete! ({old_count} → {len(enhanced_scenes)})")
+        for item in obj:
+            if find_and_replace_scenes(item, target_id):
+                return True
+    return False
+if find_and_replace_scenes(outline, 'EA-142'):
+    with open('/Users/xaviermartinez/dev/cursor/epic-arcana-novel/data/l_outline.json', 'w') as f:
+        json.dump(outline, f, indent=2)
+    print("✅ Successfully replaced EA-142 scenes")
+else:
+    print("❌ Could not find EA-142")
