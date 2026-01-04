@@ -123,16 +123,15 @@ function normalizeTimeOfDay(timeOfDay) {
     return 'Afternoon';
   }
 
-  // Default to keeping first word capitalized if we can't categorize
-  const words = timeOfDay.split(/\s+/);
-  const firstWord = words[0];
-
-  // If it's something like "The Ultimatum" or descriptive, use "Afternoon" as default
-  if (lower.startsWith('the ') || words.length > 2) {
-    return 'Afternoon';
+  // Check if it's already a valid time of day (exact match)
+  const validTimesOfDay = ['morning', 'noon', 'afternoon', 'evening', 'night', 'dawn', 'dusk'];
+  if (validTimesOfDay.includes(lower)) {
+    return lower.charAt(0).toUpperCase() + lower.slice(1);
   }
 
-  return firstWord.charAt(0).toUpperCase() + firstWord.slice(1).toLowerCase();
+  // If it's descriptive text (not a time of day), default to Afternoon
+  // This includes things like "Bridge", "Harmonic", "Emotional", "Vision's", "The Ultimatum", etc.
+  return 'Afternoon';
 }
 
 // Recursively process the outline
