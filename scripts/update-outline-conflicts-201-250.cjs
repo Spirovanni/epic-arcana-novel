@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔄 Updating internal_conflict fields in l_outline.json for scenes 151-200...\n');
+console.log('🔄 Updating internal_conflict fields in l_outline.json for scenes 201-250...\n');
 
 // Read the analysis file
-const analysisPath = path.join(__dirname, 'scenes-151-200-analysis.json');
+const analysisPath = path.join(__dirname, 'scenes-201-250-analysis.json');
 const analysis = JSON.parse(fs.readFileSync(analysisPath, 'utf8'));
 
 // Create a lookup map by chapter_id and scene_number for faster matching
@@ -88,3 +88,4 @@ if (updatedCount > 0) {
   console.log(`   (Processed ${processedCount} total scenes)`);
   console.log(`   (Looking for scenes matching ${analysis.length} analysis entries)`);
 }
+
