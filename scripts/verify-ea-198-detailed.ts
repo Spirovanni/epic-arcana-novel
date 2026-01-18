@@ -3,7 +3,7 @@ import { chapters, scenes } from '../src/lib/schema';
 import { eq, and } from 'drizzle-orm';
 
 async function verifyEA198() {
-    console.log('🔍 Verifying EA-172 Import...\n');
+    console.log('🔍 Verifying EA-198 Import...\n');
 
     const chapterNumber = 198;
 
@@ -16,7 +16,7 @@ async function verifyEA198() {
             .limit(1);
 
         if (!chapter) {
-            console.error('❌ Chapter 168 not found');
+            console.error('❌ Chapter 198 not found');
             return;
         }
 
@@ -35,7 +35,7 @@ async function verifyEA198() {
 
         console.log(`✅ Found ${chapterScenes.length} scenes\n`);
 
-        // Expected scene count (default to 3 if not specified)
+        // Expected scene count (3 for EA-198)
         const expectedSceneCount = 3;
 
         if (chapterScenes.length !== expectedSceneCount) {
@@ -98,6 +98,9 @@ async function verifyEA198() {
             console.log(`   ⏱️  Timeline Variant: ${timelineVariantValue}`);
             console.log(`   📅 Timeline Date: ${scene.timelineDate || 'not set'}`);
             console.log(`   📄 Pages: ${scene.pages || 'not set'}`);
+
+            // Check sceneCardProgression
+            console.log(`   🎴 Scene Card Progression: ${scene.sceneCardProgression || 'not set'}`);
             console.log('');
         }
 
@@ -108,7 +111,7 @@ async function verifyEA198() {
         }
 
         console.log('\n' + '='.repeat(50));
-        console.log('✅ Verification complete for EA-168');
+        console.log('✅ Verification complete for EA-198');
 
     } catch (error) {
         console.error('❌ Verification failed:', error);
