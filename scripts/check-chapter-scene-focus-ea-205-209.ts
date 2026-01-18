@@ -3,15 +3,15 @@ import { chapters, scenes } from '../src/lib/schema';
 import { eq, inArray } from 'drizzle-orm';
 
 /**
- * Check chapter_scene_focus format across multiple chapters
+ * Check chapter_scene_focus format for EA-205 through EA-209
  */
 
 async function main() {
-  console.log(`🔍 Checking chapter_scene_focus format...\n`);
+  console.log(`🔍 Checking chapter_scene_focus format for EA-205 to EA-209...\n`);
 
-  // Get reference chapters (earlier chapters to see the pattern)
-  const referenceChapterNumbers = [123, 124, 125, 126, 127];
-  const targetChapterNumbers = [194, 195, 198, 199];
+  // Reference chapters to show expected format
+  const referenceChapterNumbers = [123, 124, 125];
+  const targetChapterNumbers = [205, 206, 207, 208, 209];
   const allChapterNumbers = [...referenceChapterNumbers, ...targetChapterNumbers];
 
   const allChapters = await db
@@ -28,6 +28,7 @@ async function main() {
     const prefix = isTarget ? '🎯' : '📖';
     
     console.log(`${prefix} Chapter ${chapter.chapterNumber}: ${chapter.title}`);
+    console.log(`   EA ID: EA-${chapter.chapterNumber!.toString().padStart(3, '0')}`);
 
     const chapterScenes = await db
       .select()
@@ -44,14 +45,17 @@ async function main() {
     
     for (const scene of chapterScenes) {
       const csf = scene.chapterSceneFocus || '(null)';
-      console.log(`   Scene ${scene.sceneNumber}: "${csf}"`);
+      const hasPrefix = csf.startsWith(`Ch${chapter.chapterNumber}S${scene.sceneNumber}:`);
+      const status = hasPrefix ? '✅' : '❌';
+      console.log(`   ${status} Scene ${scene.sceneNumber}: "${csf}"`);
     }
     console.log('');
   }
 
   console.log('\n📊 Format Analysis:\n');
-  console.log('Reference chapters (123-127) show the expected format.');
-  console.log('Target chapters (194, 195, 198, 199) need to match this format.\n');
+  console.log('Expected format: Ch[NUM]S[SCENE]: [Description]—[Framework details]');
+  console.log('Reference chapters (123-125) show the correct format.');
+  console.log('Target chapters (205-209) will be checked and fixed if needed.\n');
 }
 
 main()
