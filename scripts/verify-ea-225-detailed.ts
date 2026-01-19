@@ -3,17 +3,16 @@ import { chapters, scenes } from '../src/lib/schema';
 import { eq } from 'drizzle-orm';
 
 /**
- * Detailed verification for EA-200 enhanced scenes
+ * Detailed verification for EA-225 enhanced scenes
  */
 
 async function main() {
-  const chapterNumber = 200;
-  const eaId = 'EA-200';
-  const expectedSceneCount = 3;
+  const chapterNumber = 225;
+  const eaId = 'EA-225';
+  const expectedSceneCount = 4;
   
   console.log(`🔍 Verifying ${eaId} enhanced scenes in database...\n`);
 
-  // Find chapter
   const [chapter] = await db
     .select()
     .from(chapters)
@@ -29,7 +28,6 @@ async function main() {
   console.log(`   Title: ${chapter.title}`);
   console.log(`   Unique Identifier: ${chapter.uniqueIdentifier}\n`);
 
-  // Find scenes
   const chapterScenes = await db
     .select()
     .from(scenes)
@@ -42,7 +40,6 @@ async function main() {
     throw new Error(`Expected ${expectedSceneCount} scenes, found ${chapterScenes.length}`);
   }
 
-  // Required fields to verify
   const requiredFields = [
     'sceneNumber',
     'title',
@@ -77,12 +74,10 @@ async function main() {
     'foreshadowing_elements'
   ];
 
-  // Verify each scene
   for (const scene of chapterScenes) {
     console.log(`📝 Scene ${scene.sceneNumber}: ${scene.title}`);
     console.log(`   Database ID: ${scene.id}`);
 
-    // Check required fields
     const missingRequired: string[] = [];
     for (const field of requiredFields) {
       const value = (scene as any)[field];
@@ -97,7 +92,6 @@ async function main() {
     }
     console.log(`   ✅ All required fields present`);
 
-    // Check enhanced fields
     const missingEnhanced: string[] = [];
     for (const field of enhancedFields) {
       const value = (scene as any)[field];
@@ -112,11 +106,9 @@ async function main() {
       console.log(`   ✅ All enhanced fields present`);
     }
 
-    // Verify critical fields
     console.log(`   ✅ Location: ${scene.location}`);
     console.log(`   ✅ Timeline Variant: ${scene.timeline_variant}`);
 
-    // Check focus format (should be ~200+ chars)
     const focusLen = scene.focus?.length || 0;
     if (focusLen < 150) {
       console.log(`   ⚠️  Focus might be too brief (${focusLen} chars)`);
@@ -124,7 +116,6 @@ async function main() {
       console.log(`   ✅ Focus: ${focusLen} characters`);
     }
 
-    // Check chapter_scene_focus format (should start with Ch200S#:)
     const csf = scene.chapterSceneFocus || '';
     if (csf.startsWith(`Ch${chapterNumber}S${scene.sceneNumber}:`)) {
       console.log(`   ✅ Chapter Scene Focus: Proper format`);
@@ -132,23 +123,6 @@ async function main() {
       console.log(`   ⚠️  Chapter Scene Focus: May need format adjustment`);
     }
 
-    // Check preliminary_scene_focus format
-    const psf = scene.preliminarySceneFocus || '';
-    if (psf.length > 50) {
-      console.log(`   ✅ Preliminary Scene Focus: ${psf.length} characters`);
-    } else {
-      console.log(`   ⚠️  Preliminary Scene Focus: Might be too brief (${psf.length} chars)`);
-    }
-
-    // Check preliminary_scene_description format
-    const psd = scene.preliminarySceneDescription || '';
-    if (psd.length > 150) {
-      console.log(`   ✅ Preliminary Scene Description: ${psd.length} characters`);
-    } else {
-      console.log(`   ⚠️  Preliminary Scene Description: Might be too brief (${psd.length} chars)`);
-    }
-
-    // Check JSON fields
     if (scene.learning_objectives) {
       try {
         const parsed = typeof scene.learning_objectives === 'string' 
@@ -172,13 +146,6 @@ async function main() {
         console.log(`   ⚠️  Foreshadowing Elements: JSON parse error`);
       }
     }
-
-    // Verify content length
-    const description = scene.description || '';
-    const setup = scene.setup || '';
-    
-    console.log(`   ✅ Description: ${description.length} characters`);
-    console.log(`   ✅ Setup: ${setup.length} characters`);
 
     console.log('');
   }
