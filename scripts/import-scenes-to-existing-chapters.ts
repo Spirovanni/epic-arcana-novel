@@ -91,7 +91,7 @@ async function main() {
     // Insert base scene data
     const baseSceneData = {
       chapterId: chapter.id,
-      chapterUniqueIdentifier: eaId,
+      chapterUniqueIdentifier: chapter.uniqueIdentifier,
       sceneNumber: outlineScene.scene_number,
       title: truncate(outlineScene.scene_title || outlineScene.title, 255),
       setup: outlineScene.setup || null,

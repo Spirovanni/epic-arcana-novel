@@ -61,7 +61,7 @@ async function main() {
             title: newScene.title,
             setup: newScene.setup,
             symbolism: newScene.symbolism,
-            beat_goal: newScene.beat_goal,
+            beatGoal: newScene.beat_goal,
             pov: newScene.pov,
             tense: newScene.tense,
             core_emotion: newScene.core_emotion,
@@ -87,6 +87,7 @@ async function main() {
             sudowrite_metadata: newScene.sudowrite_metadata,
             learning_objectives: newScene.learning_objectives,
             foreshadowing_elements: newScene.foreshadowing_elements,
+            chapterUniqueIdentifier: chapter.uniqueIdentifier,
           })
           .where(eq(scenes.id, existingScene.id));
         console.log(`   ✅ Updated scene (ID: ${existingScene.id})`);
@@ -94,11 +95,12 @@ async function main() {
         // This case should ideally not happen if scene_number is consistent
         const [insertedScene] = await db.insert(scenes).values({
           chapterId: chapter.id,
+          chapterUniqueIdentifier: chapter.uniqueIdentifier,
           sceneNumber: newScene.scene_number,
           title: newScene.title,
           setup: newScene.setup,
           symbolism: newScene.symbolism,
-          beat_goal: newScene.beat_goal,
+          beatGoal: newScene.beat_goal,
           pov: newScene.pov,
           tense: newScene.tense,
           core_emotion: newScene.core_emotion,
@@ -133,11 +135,12 @@ async function main() {
     for (const newScene of enhancedScenes) {
       const [insertedScene] = await db.insert(scenes).values({
         chapterId: chapter.id,
+        chapterUniqueIdentifier: chapter.uniqueIdentifier,
         sceneNumber: newScene.scene_number,
         title: newScene.title,
         setup: newScene.setup,
         symbolism: newScene.symbolism,
-        beat_goal: newScene.beat_goal,
+        beatGoal: newScene.beat_goal,
         pov: newScene.pov,
         tense: newScene.tense,
         core_emotion: newScene.core_emotion,
