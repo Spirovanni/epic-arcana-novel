@@ -40,8 +40,8 @@ async function main() {
     for (const scene of dbScenes) {
       const hasPov = scene.pov !== null && scene.pov !== '';
       const hasTense = scene.tense !== null && scene.tense !== '';
-      const hasEmotion = scene.coreEmotion !== null && scene.coreEmotion !== '';
-      const hasTone = scene.sceneTone !== null && scene.sceneTone !== '';
+      const hasEmotion = scene.core_emotion !== null && scene.core_emotion !== '';
+      const hasTone = scene.scene_tone !== null && scene.scene_tone !== '';
 
       if (hasPov && hasTense && hasEmotion && hasTone) {
         verifiedScenes++;
@@ -49,8 +49,8 @@ async function main() {
         console.log(`❌ ${eaId} Scene ${scene.sceneNumber}: Missing fields`);
         if (!hasPov) console.log(`   - pov missing`);
         if (!hasTense) console.log(`   - tense missing`);
-        if (!hasEmotion) console.log(`   - coreEmotion missing`);
-        if (!hasTone) console.log(`   - sceneTone missing`);
+        if (!hasEmotion) console.log(`   - core_emotion missing`);
+        if (!hasTone) console.log(`   - scene_tone missing`);
         chapterVerified = false;
         allVerified = false;
       }

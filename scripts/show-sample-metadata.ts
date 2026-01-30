@@ -14,8 +14,8 @@ async function main() {
   console.log(`  Title: ${scenes312[0].title}`);
   console.log(`  POV: ${scenes312[0].pov}`);
   console.log(`  Tense: ${scenes312[0].tense}`);
-  console.log(`  Core Emotion: ${scenes312[0].coreEmotion}`);
-  console.log(`  Scene Tone: ${scenes312[0].sceneTone}`);
+  console.log(`  Core Emotion: ${scenes312[0].core_emotion}`);
+  console.log(`  Scene Tone: ${scenes312[0].scene_tone}`);
 
   console.log('\n' + '='.repeat(80) + '\n');
 
@@ -27,8 +27,8 @@ async function main() {
   console.log(`  Title: ${scenes327[0].title}`);
   console.log(`  POV: ${scenes327[0].pov}`);
   console.log(`  Tense: ${scenes327[0].tense}`);
-  console.log(`  Core Emotion: ${scenes327[0].coreEmotion}`);
-  console.log(`  Scene Tone: ${scenes327[0].sceneTone}`);
+  console.log(`  Core Emotion: ${scenes327[0].core_emotion}`);
+  console.log(`  Scene Tone: ${scenes327[0].scene_tone}`);
 
   console.log('\n' + '='.repeat(80) + '\n');
 
@@ -40,8 +40,8 @@ async function main() {
   console.log(`  Title: ${scenes335[0].title}`);
   console.log(`  POV: ${scenes335[0].pov}`);
   console.log(`  Tense: ${scenes335[0].tense}`);
-  console.log(`  Core Emotion: ${scenes335[0].coreEmotion}`);
-  console.log(`  Scene Tone: ${scenes335[0].sceneTone}`);
+  console.log(`  Core Emotion: ${scenes335[0].core_emotion}`);
+  console.log(`  Scene Tone: ${scenes335[0].scene_tone}`);
 
   console.log('\n' + '='.repeat(80));
 }
