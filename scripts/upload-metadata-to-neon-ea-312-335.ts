@@ -84,8 +84,8 @@ async function main() {
           .set({
             pov: outlineScene.pov || null,
             tense: outlineScene.tense || null,
-            coreEmotion: outlineScene.core_emotion || null,
-            sceneTone: outlineScene.scene_tone || null,
+            core_emotion: outlineScene.core_emotion || null,
+            scene_tone: outlineScene.scene_tone || null,
           })
           .where(eq(scenes.id, dbScene.id));
 
